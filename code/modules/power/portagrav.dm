@@ -23,16 +23,6 @@
 	var/tiles_per_level = 1
 	var/power_per_level = PORTAGRAV_BASE_POWER_PER_LEVEL
 
-/obj/machinery/power/portagrav/get_ru_names()
-	return alist(
-		NOMINATIVE = "портативный гравигенератор",
-		GENITIVE = "портативного гравигенератора",
-		DATIVE = "портативному гравигенератору",
-		ACCUSATIVE = "портативный гравигенератор",
-		INSTRUMENTAL = "портативным гравигенератором",
-		PREPOSITIONAL = "портативном гравигенераторе",
-	)
-
 /obj/machinery/power/portagrav/Initialize(mapload)
 	. = ..()
 	if(mapload)

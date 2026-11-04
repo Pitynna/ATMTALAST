@@ -425,22 +425,12 @@
 	return mutable_appearance('icons/obj/chairs.dmi', "alien_chair_armrest", ABOVE_MOB_LAYER)
 
 /obj/structure/chair/comfy/mouse
-	name = "Кресло Господина Мышкина"
+	name = "Mr. Myshkin's armchair"
 	desc = "Очень дорогое красное кресло из натуральной кожи. Сделано специально по заказу Господина Мышкина."
 	icon_state = "mouse_chair"
 	anchored = TRUE
 	max_integrity = 375
 	buildstacktype = null
-
-/obj/structure/chair/comfy/mouse/get_ru_names()
-	return alist(
-		NOMINATIVE = "кресло господина Мышкина",
-		GENITIVE = "кресла господина Мышкина",
-		DATIVE = "креслу господина Мышкина",
-		ACCUSATIVE = "кресло господина Мышкина",
-		INSTRUMENTAL = "креслом господина Мышкина",
-		PREPOSITIONAL = "кресле господина Мышкина",
-	)
 
 /obj/structure/chair/comfy/mouse/GetArmrest()
 	return mutable_appearance('icons/obj/chairs.dmi', "mouse_chair_armrest")

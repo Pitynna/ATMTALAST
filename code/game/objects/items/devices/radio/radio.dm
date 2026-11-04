@@ -47,7 +47,7 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio
 	name = "shortwave radio"
-	desc = "Базовая портативная рация, способная взаимодействовать с локальными телекоммуникационными сетями."
+	desc = "A basic handheld radio that can communicate with local telecommunication networks."
 	gender = FEMALE
 	icon = 'icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
@@ -122,16 +122,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 	var/requires_tcomms = FALSE // Does this device require tcomms to work.If TRUE it wont function at all without tcomms. If FALSE, it will work without tcomms, just slowly
 	var/instant = FALSE // Should this device instantly communicate if there isnt tcomms
-
-/obj/item/radio/get_ru_names()
-	return alist(
-		NOMINATIVE = "коротковолновая рация",
-		GENITIVE = "коротковолновой рации",
-		DATIVE = "коротковолновой рации",
-		ACCUSATIVE = "коротковолновую рацию",
-		INSTRUMENTAL = "коротковолновой рацией",
-		PREPOSITIONAL = "коротковолновой рации",
-	)
 
 /obj/item/radio/Initialize(mapload)
 	wires = new(src)
@@ -417,20 +407,10 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio/sec
 	name = "security shortwave radio"
-	desc = "Базовая портативная рация, способная взаимодействовать с локальными телекоммуникационными сетями. Специальная модель для сотрудников службы безопасности."
+	desc = "A basic handheld radio that can communicate with local telecommunication networks. This model is painted in black colors."
 	icon_state = "walkietalkie_sec"
 	item_state = "walkietalkie_sec"
 	default_frequency = SEC_FREQ
-
-/obj/item/radio/sec/get_ru_names()
-	return alist(
-		NOMINATIVE = "коротковолновая рация СБ",
-		GENITIVE = "коротковолновой рации СБ",
-		DATIVE = "коротковолновой рации СБ",
-		ACCUSATIVE = "коротковолновую рацию СБ",
-		INSTRUMENTAL = "коротковолновой рацией СБ",
-		PREPOSITIONAL = "коротковолновой рации СБ",
-	)
 
 /obj/item/radio/portal
 	name = "office radio"
@@ -439,17 +419,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 	item_state = "radio_portal"
 	default_frequency = AI_FREQ
 
-/obj/item/radio/portal/get_ru_names()
-	return alist(
-		NOMINATIVE = "офисное радио",
-		GENITIVE = "офисного радио",
-		DATIVE = "офисному радио",
-		ACCUSATIVE = "офисное радио",
-		INSTRUMENTAL = "офисным радио",
-		PREPOSITIONAL = "офисном радио",
-	)
-
-// Interprets the message mode when talking into a radio, possibly returning a connection datum
 /obj/item/radio/proc/handle_message_mode(mob/living/M, list/message_pieces, message_mode)
 	// Otherwise, if a channel is specified, look for it.
 	// If a channel isn't specified, send to common.
@@ -804,16 +773,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 	freqlock = TRUE // don't let cyborgs change the default channel of their internal radio away from common
 	var/mob/living/silicon/robot/myborg = null // Cyborg which owns this radio. Used for power checks
 
-/obj/item/radio/borg/get_ru_names()
-	return alist(
-		NOMINATIVE = "рация робота",
-		GENITIVE = "рации робота",
-		DATIVE = "рации робота",
-		ACCUSATIVE = "рацию робота",
-		INSTRUMENTAL = "рацией робота",
-		PREPOSITIONAL = "рации робота",
-	)
-
 /obj/item/radio/borg/syndicate
 	keyslot = new /obj/item/encryptionkey/syndicate/nukeops
 	default_frequency = SYND_FREQ
@@ -940,30 +899,10 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 	pickup_sound = 'sound/items/handling/pickup/phone_pickup.ogg'
 	dog_fashion = null
 
-/obj/item/radio/phone/get_ru_names()
-	return alist(
-		NOMINATIVE = "телефон",
-		GENITIVE = "телефона",
-		DATIVE = "телефону",
-		ACCUSATIVE = "телефон",
-		INSTRUMENTAL = "телефоном",
-		PREPOSITIONAL = "телефоне",
-	)
-
 /obj/item/radio/phone/medbay
 	name = "medbay phone"
 	desc = "Телефон, настроенный на медицинскую частоту системы связи станции. Дзинь."
 	default_frequency = MED_I_FREQ
-
-/obj/item/radio/phone/medbay/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский телефон",
-		GENITIVE = "медицинского телефона",
-		DATIVE = "медицинскому телефону",
-		ACCUSATIVE = "медицинский телефон",
-		INSTRUMENTAL = "медицинским телефоном",
-		PREPOSITIONAL = "медицинском телефоне",
-	)
 
 /obj/item/radio/phone/medbay/get_internal_channels()
 	return GLOB.default_medbay_channels
@@ -972,16 +911,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio/phone/ussp
 	name = "Red phone"
-	desc = "Телефон, подключённый к частоте СССП в пределах сектора."
+	desc = "Should anything ever go wrong..."
 	has_loudspeaker = TRUE
 	default_frequency = SOV_FREQ
-
-/obj/item/radio/phone/ussp/get_ru_names()
-	return alist(
-		NOMINATIVE = "красный телефон",
-		GENITIVE = "красного телефона",
-		DATIVE = "красному телефону",
-		ACCUSATIVE = "красный телефон",
-		INSTRUMENTAL = "красным телефоном",
-		PREPOSITIONAL = "красном телефоне",
-	)

@@ -1,6 +1,6 @@
 /obj/machinery/power/solar
 	name = "solar panel"
-	desc = "Преобразует солнечный свет в электрическую энергию."
+	desc = "A solar panel. Generates electricity when in contact with sunlight."
 	gender = FEMALE
 	icon = 'icons/obj/engines_and_power/solar_panels.dmi'
 	icon_state = "solar_panel_base"
@@ -15,16 +15,6 @@
 	var/ndir = SOUTH // target dir
 	var/turn_angle = 0
 	var/obj/machinery/power/solar_control/control = null
-
-/obj/machinery/power/solar/get_ru_names()
-	return alist(
-		NOMINATIVE = "солнечная панель",
-		GENITIVE = "солнечной панели",
-		DATIVE = "солнечной панели",
-		ACCUSATIVE = "солнечную панель",
-		INSTRUMENTAL = "солнечной панелью",
-		PREPOSITIONAL = "солнечной панели",
-	)
 
 /obj/machinery/power/solar/Initialize(mapload, obj/item/solar_assembly/S)
 	. = ..()
@@ -197,7 +187,7 @@
 
 /obj/item/solar_assembly
 	name = "solar panel assembly"
-	desc = "Основание для сборки солнечной панели и солнечного датчика."
+	desc = "A solar panel assembly kit, allows constructions of a solar panel, or with a tracking circuit board, a solar tracker."
 	gender = FEMALE
 	icon = 'icons/obj/engines_and_power/solar_panels.dmi'
 	icon_state = "solar_panel_base"
@@ -205,16 +195,6 @@
 	w_class = WEIGHT_CLASS_BULKY // Pretty big!
 	var/tracker = FALSE
 	var/glass_type = null
-
-/obj/item/solar_assembly/get_ru_names()
-	return alist(
-		NOMINATIVE = "заготовка солнечной панели",
-		GENITIVE = "заготовки солнечной панели",
-		DATIVE = "заготовке солнечной панели",
-		ACCUSATIVE = "заготовку солнечной панели",
-		INSTRUMENTAL = "заготовкой солнечной панели",
-		PREPOSITIONAL = "заготовке солнечной панели",
-	)
 
 /obj/item/solar_assembly/attack_hand(mob/user)
 	if(!anchored && !isturf(loc)) // You can't pick it up

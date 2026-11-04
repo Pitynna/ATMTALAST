@@ -6,7 +6,7 @@
 
 /obj/item/storage/garmentbag
 	name = "Garmentbag"
-	desc = "Небольшая сумка, в которой хранится одежда."
+	desc = "This is where all your clothes are stored."
 	icon_state = "garment_bag"
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
@@ -39,16 +39,6 @@
 		/obj/item/clothing/suit/witchhunter,
 		/obj/item/clothing/suit/holidaypriest,
 		/obj/item/clothing/suit/armor/riot/knight,
-	)
-
-/obj/item/storage/garmentbag/get_ru_names()
-	return alist(
-		NOMINATIVE = "сумка для одежды",
-		GENITIVE = "сумки для одежды",
-		DATIVE = "сумке для одежды",
-		ACCUSATIVE = "сумку для одежды",
-		INSTRUMENTAL = "сумкой для одежды",
-		PREPOSITIONAL = "сумке для одежды",
 	)
 
 /obj/item/storage/garmentbag/captains/populate_contents()

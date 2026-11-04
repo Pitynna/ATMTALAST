@@ -13,7 +13,7 @@
 	min_hours = 10
 
 /obj/effect/mob_spawn/human/ussp/general
-	name = "Генерал СССП"
+	name = "USSP general"
 	mob_name = "Генерал СССП"
 	id_job = "Soviet General"
 	important_info = "Вы — не антагонист! Ваша задача управлять остатками экипажа и не дать станции окончательно развалиться."
@@ -65,7 +65,7 @@
 		H.sec_hud_set_ID()
 
 /obj/effect/mob_spawn/human/ussp/engineer
-	name = "Инженер СССП"
+	name = "USSP engineer"
 	mob_name = "Инженер СССП"
 	id_job = "Soviet Engineer"
 	important_info = "Вы — не антагонист! Ваша задача восстановить полученные повреждения и нормализовать функционирование станции."
@@ -116,7 +116,7 @@
 		H.sec_hud_set_ID()
 
 /obj/effect/mob_spawn/human/ussp/security
-	name = "Сотрудник безопасности СССП"
+	name = "USSP security officer"
 	mob_name = "Сотрудник безопасности СССП"
 	id_job = "Soviet Soldier"
 	important_info = "Вы — не антагонист! Ваша задача защищать территорию СССП от враждебных форм жизни и интервентов."
@@ -168,7 +168,7 @@
 		H.sec_hud_set_ID()
 
 /obj/effect/mob_spawn/human/ussp/scientist
-	name = "Учёный СССП"
+	name = "USSP scientist"
 	mob_name = "Учёный СССП"
 	id_job = "Soviet Scientist"
 	important_info = "Вы — не антагонист! Ваша задача восстановить потерянные научные данные и следить за здоровьем экипажа."

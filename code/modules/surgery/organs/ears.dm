@@ -6,16 +6,6 @@
 	parent_organ_zone = BODY_ZONE_HEAD
 	slot = INTERNAL_ORGAN_EARS
 
-/obj/item/organ/internal/ears/get_ru_names()
-	return alist(
-		NOMINATIVE = "уши человека",
-		GENITIVE = "ушей человека",
-		DATIVE = "ушам человека",
-		ACCUSATIVE = "уши человека",
-		INSTRUMENTAL = "ушами человека",
-		PREPOSITIONAL = "ушах человека",
-	)
-
 /obj/item/organ/internal/ears/invincible/internal_receive_damage(amount, silent)
 	return FALSE
 
@@ -68,22 +58,12 @@
 
 /obj/item/organ/internal/ears/cybernetic
 	name = "cybernetic ears"
-	desc = "Электронное устройство, имитирующее работу органических ушей. Функционально не имеет никаких отличий от органического аналога, кроме производственных затрат."
+	desc = "a basic cybernetic designed to mimic the operation of ears."
 	icon_state = "eyes-c"
 	origin_tech = "biotech=4"
 	status = ORGAN_ROBOT
 	pickup_sound = 'sound/items/handling/pickup/component_pickup.ogg'
 	drop_sound = 'sound/items/handling/drop/component_drop.ogg'
-
-/obj/item/organ/internal/ears/cybernetic/get_ru_names()
-	return alist(
-		NOMINATIVE = "кибернетические уши",
-		GENITIVE = "кибернетических ушей",
-		DATIVE = "кибернетическим ушам",
-		ACCUSATIVE = "кибернетические уши",
-		INSTRUMENTAL = "кибернетическими ушами",
-		PREPOSITIONAL = "кибернетических ушах",
-	)
 
 /obj/item/organ/internal/ears/cybernetic/emp_act(severity)
 	. = ..()

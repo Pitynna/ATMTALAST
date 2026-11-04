@@ -17,16 +17,6 @@
 	name = "rock violin"
 	desc = "Золотая виолончель великого рок-виолончель музыканта. Говорят её до сих пор ищут целыми системами!"
 
-/obj/item/instrument/violin/golden/rock/get_ru_names()
-	return alist(
-		NOMINATIVE = "золотая рок-виолончель",
-		GENITIVE = "золотой рок-виолончели",
-		DATIVE = "золотой рок-виолончели",
-		ACCUSATIVE = "золотую рок-виолончель",
-		INSTRUMENTAL = "золотой рок-виолончелью",
-		PREPOSITIONAL = "золотой рок-виолончели",
-	)
-
 /obj/item/instrument/banjo
 	name = "banjo"
 	desc = "A 'Mura' brand banjo. It's pretty much just a drum with a neck and strings."

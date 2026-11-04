@@ -8,7 +8,7 @@
 
 /obj/item/dna_notepad
 	name = "genetic notepad"
-	desc = "Планшет генетика, способный хранить данные блоков генов в удобном виде."
+	desc = "A geneticist's tablet that conveniently stores gene block data."
 	gender = MALE
 	icon = 'icons/obj/device.dmi'
 	icon_state = "genetic_tablet_on"
@@ -21,16 +21,6 @@
 	origin_tech = "programming=2"
 	var/dna_data = list()
 	var/printing = FALSE
-
-/obj/item/dna_notepad/get_ru_names()
-	return alist(
-		NOMINATIVE = "планшет генетика",
-		GENITIVE = "планшета генетика",
-		DATIVE = "планшету генетика",
-		ACCUSATIVE = "планшет генетика",
-		INSTRUMENTAL = "планшетом генетика",
-		PREPOSITIONAL = "планшете генетика",
-	)
 
 /obj/item/dna_notepad/Initialize(mapload)
 	. = ..()

@@ -235,16 +235,6 @@
 	density = FALSE
 	anchored = TRUE
 
-/obj/structure/decorative_structures/garland/get_ru_names()
-	return alist(
-		NOMINATIVE = "новогодняя гирлянда",
-		GENITIVE = "новогодней гирлянды",
-		DATIVE = "новогодней гирлянде",
-		ACCUSATIVE = "новогоднюю гирлянду",
-		INSTRUMENTAL = "новогодней гирляндой",
-		PREPOSITIONAL = "новогодней гирлянде"
-	)
-
 /obj/structure/decorative_structures/garland/Initialize(mapload)
 	. = ..()
 	set_light(2, l_color = "#ffffffbb")

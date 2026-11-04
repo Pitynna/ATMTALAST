@@ -1,6 +1,6 @@
 /obj/structure/delta_statue
 	name = "Kerberos Station Statue"
-	desc = "Гигантская модель станции Керберос, выполненная по заказу компанией Nirolex. Судя по отличиям в конструкции, станцию несколько раз перестраивали."
+	desc = "A giant model of Kerberos station, commissioned from Nirolex. Differences in its design suggest that the station has been rebuilt several times."
 	icon = 'icons/obj/delta_statue.dmi'
 	icon_state = ""
 	density = TRUE

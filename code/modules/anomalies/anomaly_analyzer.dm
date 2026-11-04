@@ -1,5 +1,5 @@
 /obj/item/anomaly_analyzer
-	name = "сканер аномалий"
+	name = "anomaly scanner"
 	desc = "Продвинутое устройство предназначенное для сканирования аномалий. \
 			Выводит достаточно полную информацию о сканируемой аномалии. \
 			Может сканировать аномалии на расстоянии."
@@ -12,16 +12,6 @@
 	var/scan_title = "ERROR_NO_DATA"
 	/// Anomaly info in scan window.
 	var/scan_data
-
-/obj/item/anomaly_analyzer/get_ru_names()
-	return alist(
-		NOMINATIVE = "сканер аномалий", \
-		GENITIVE = "сканера аномалий", \
-		DATIVE = "сканеру аномалий", \
-		ACCUSATIVE = "сканер аномалий", \
-		INSTRUMENTAL = "сканером аномалий", \
-		PREPOSITIONAL = "сканере аномалий",
-	)
 
 /obj/effect/anomaly/proc/get_data()
 	var/list/scan_data = list()

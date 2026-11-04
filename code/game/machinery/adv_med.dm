@@ -1,6 +1,6 @@
 /obj/machinery/bodyscanner
 	name = "body scanner"
-	desc = "Сложное медицинское устройство, используется для сканирования физического состояния гуманоидов."
+	desc = "A sophisticated device which reports most internal and external injuries."
 	icon = 'icons/obj/machines/cryogenic2.dmi'
 	icon_state = "bodyscanner-open"
 	density = TRUE
@@ -14,16 +14,6 @@
 	var/static/list/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/mindshield, /obj/item/implant/tracking, /obj/item/implant/health)
 	var/isPrinting = FALSE
 	var/obj/item/card/id/inserted_id = null
-
-/obj/machinery/bodyscanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский сканер",
-		GENITIVE = "медицинского сканера",
-		DATIVE = "медицинскому сканеру",
-		ACCUSATIVE = "медицинский сканер",
-		INSTRUMENTAL = "медицинским сканером",
-		PREPOSITIONAL = "медицинском сканере",
-	)
 
 /obj/machinery/bodyscanner/Destroy()
 	go_out()

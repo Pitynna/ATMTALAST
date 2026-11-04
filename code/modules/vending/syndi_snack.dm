@@ -1,6 +1,6 @@
 /obj/machinery/vending/syndisnack
 	name = "Getmore Chocolate Corp"
-	desc = "Модифицированный автомат самообслуживания, любезно предоставленный шоколадной корпорацией Getmore, базирующейся на Марсе."
+	desc = "A modified snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars"
 	slogan_list = list(
 		"Попр+обуйте н+аш н+овый бат+ончик с нуг+ой!",
 		"Вдв+ое б+ольше кал+орий за п+олц+ены!",
@@ -27,14 +27,4 @@
 		/obj/item/reagent_containers/food/snacks/sosjerky = 6,
 		/obj/item/reagent_containers/food/snacks/syndicake = 6,
 		/obj/item/reagent_containers/food/snacks/cheesiehonkers = 6,
-	)
-
-/obj/machinery/vending/syndisnack/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Getmore Chocolate Corp",
-		GENITIVE = "торгового автомата Getmore Chocolate Corp",
-		DATIVE = "торговому автомату Getmore Chocolate Corp",
-		ACCUSATIVE = "торговый автомат Getmore Chocolate Corp",
-		INSTRUMENTAL = "торговым автоматом Getmore Chocolate Corp",
-		PREPOSITIONAL = "торговом автомате Getmore Chocolate Corp",
 	)

@@ -11,16 +11,6 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/wiremod_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "сканер",
-		GENITIVE = "сканера",
-		DATIVE = "сканеру",
-		ACCUSATIVE = "сканер",
-		INSTRUMENTAL = "сканером",
-		PREPOSITIONAL = "сканере"
-	)
-
 /obj/item/wiremod_scanner/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

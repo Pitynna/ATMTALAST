@@ -139,7 +139,7 @@
 
 /obj/structure/lattice/catwalk/fireproof
 	name = "strong catwalk"
-	desc = "Усиленный мостик, способный выдерживать высокие температуры и сильные нагрузки."
+	desc = "A reinforced catwalk capable of withstanding high temperatures and heavy loads."
 	armor = list(MELEE = 70, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, FIRE = 100, ACID = 80)
 	max_integrity = 150
 	icon = 'icons/obj/smooth_structures/strong_catwalk.dmi'

@@ -9,16 +9,6 @@
 	var/obj/pipe_type = /obj/structure/logistics_pipe/segment
 	var/pipename
 
-/obj/structure/logistics_construct/get_ru_names()
-	return alist(
-		NOMINATIVE = "сегмент логистической трубы",
-		GENITIVE = "сегмента логистической трубы",
-		DATIVE = "сегменту логистической трубы",
-		ACCUSATIVE = "сегмент логистической трубы",
-		INSTRUMENTAL = "сегментом логистической трубы",
-		PREPOSITIONAL = "сегменте логистической трубы",
-	)
-
 /obj/structure/logistics_construct/Initialize(mapload, pipe_define, dir = SOUTH, obj/made_from)
 	. = ..()
 	if(made_from)

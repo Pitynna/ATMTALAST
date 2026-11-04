@@ -94,19 +94,9 @@
 
 /obj/item/organ/internal/heart/demon
 	name = "demon heart"
-	desc = "Оно всё ещё яростно бьётся, излучая ауру абсолютной ненависти."
+	desc = "Still it beats furiously, emanating an aura of utter hate."
 	icon_state = "demon_heart"
 	origin_tech = "combat=5;biotech=7"
-
-/obj/item/organ/internal/heart/demon/get_ru_names()
-	return alist(
-		NOMINATIVE = "демоническое сердце",
-		GENITIVE = "демонического сердца",
-		DATIVE = "демоническому сердцу",
-		ACCUSATIVE = "демоническое сердце",
-		INSTRUMENTAL = "демоническим сердцем",
-		PREPOSITIONAL = "демоническом сердце",
-	)
 
 /obj/item/organ/internal/heart/demon/update_icon_state()
 	return //always beating visually

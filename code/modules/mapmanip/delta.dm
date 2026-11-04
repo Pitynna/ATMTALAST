@@ -5,10 +5,10 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/delta/maints_med_viro_passage
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/maints_med_viro_passage/closed
-	name = "закрытый проход между техническими помещениями вирусологии и мед. отдела"
+	name = "sealed virology-medical maintenance passage"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/maints_med_viro_passage/space
-	name = "проход с выходом в космос между техническими помещениями вирусологии и мед. отдела"
+	name = "virology-medical maintenance passage with space access"
 
 /// viro maints botany room submap
 /obj/effect/map_effect/marker/mapmanip/submap/extract/delta/better_botany_room
@@ -18,19 +18,19 @@
 	name = "botany insert"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/botany_room/destroyed
-	name = "уничтоженная астероидом комната вместо старой ботаники"
+	name = "asteroid-destroyed room replacing old botany"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/botany_room/surgery
-	name = "старая операционная комната вместо старой ботаники"
+	name = "old surgery room replacing old botany"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/botany_room/better
-	name = "расширенная и более красивая ботаническая комната вместо старой ботаники"
+	name = "expanded botany room replacing old botany"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/botany_room/engi
-	name = "закрытая на бластдоры инженерная комната вместо старой ботаники"
+	name = "engineering room with blast doors replacing old botany"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/botany_room/slightly_worse
-	name = "дополнительные баррикады, установленные перед входом в старую ботанику"
+	name = "barricades outside old botany"
 
 // dorm maints near toilet submap
 
@@ -39,13 +39,13 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/delta/dorm_maints_near_toilet
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/dorm_maints_near_toilet/old_poker
-	name = "заброшенная покерная зона вместо старой комнаты под туалетами"
+	name = "abandoned poker area below the bathrooms"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/dorm_maints_near_toilet/laundry
-	name = "заброшенная комната для стирки вместо старой комнаты под туалетами"
+	name = "abandoned laundry room below the bathrooms"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/dorm_maints_near_toilet/gaming_room
-	name = "заброшенная игровая с игрушками вместо старой комнаты под туалетами"
+	name = "abandoned game room below the bathrooms"
 
 // old sm room
 
@@ -54,13 +54,13 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/delta/old_sm_room
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/old_sm_room/pod_hangar
-	name = "заброшенный ангар подов вместо старого СМа"
+	name = "abandoned pod hangar replacing old supermatter"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/old_sm_room/assistant_room
-	name = "заброшеное логово ассистентов вместо старого СМа"
+	name = "abandoned assistant den replacing old supermatter"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/old_sm_room/old_rooms
-	name = "старые комнаты вместо старого СМа"
+	name = "old rooms replacing old supermatter"
 
 /// Clown-mime rooms submap
 
@@ -71,7 +71,7 @@
 	name = "clown_mime insert"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/clown_mime/shuffle
-	name = "комната клоуна и мима была изменена местами. хихихихи"
+	name = "swapped clown and mime rooms"
 
 /// Old doorms room sumbap
 
@@ -82,10 +82,10 @@
 	name = "clown_mime insert"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/old_doorm_room/working
-	name = "старая комната дормиторий была восстановлена."
+	name = "restored old dormitory"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/old_doorm_room/passage
-	name = "старая комната дормиторий заменена на проходную со всяким мусором"
+	name = "cluttered passage replacing old dormitory"
 
 /obj/effect/map_effect/marker_helper/submap_def/delta/old_doorm_room/medical
-	name = "старая комната дормиторий заменена на дополнительное помещение заброшенного лазарета"
+	name = "abandoned infirmary extension replacing old dormitory"

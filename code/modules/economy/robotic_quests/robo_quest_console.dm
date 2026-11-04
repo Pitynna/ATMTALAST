@@ -23,7 +23,7 @@
 
 /obj/machinery/computer/roboquest
 	name = "Robotics Request Console"
-	desc = "Консоль, используемая для приема запросов на изготовление экзоскелетов."
+	desc = "Console used for receiving requests for construction of exosuits."
 	icon_screen = "robo_ntos_roboquest"
 	icon_keyboard = "rd_key"
 	light_color = LIGHT_COLOR_LAVENDER

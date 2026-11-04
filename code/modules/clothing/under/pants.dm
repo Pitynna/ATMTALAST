@@ -46,16 +46,6 @@
 	species_restricted = list(SPECIES_HUMAN)
 	over_shoes = TRUE
 
-/obj/item/clothing/under/pants/lowjeans/get_ru_names()
-	return alist(
-		NOMINATIVE = "заниженные джинсы",
-		GENITIVE = "заниженных джинсов",
-		DATIVE = "заниженным джинсам",
-		ACCUSATIVE = "заниженные джинсы",
-		INSTRUMENTAL = "заниженными джинсами",
-		PREPOSITIONAL = "заниженных джинсах",
-	)
-
 /obj/item/clothing/under/pants/white
 	name = "white pants"
 	desc = "Plain white pants. Boring."
@@ -159,7 +149,7 @@
 
 /obj/item/clothing/under/pants/combat
 	name = "combat pants"
-	desc = "Тактические штаны для бойцов, следящих за модой."
+	desc = "Medium style tactical pants, for the fashion aware combat units out there."
 	icon_state = "combat_pants"
 	item_color = "combat_pants"
 	sprite_sheets = list(

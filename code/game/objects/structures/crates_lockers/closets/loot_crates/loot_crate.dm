@@ -8,9 +8,6 @@
 	no_throw_opens = TRUE
 	var/datum/loot_tier/tier
 
-/obj/structure/closet/loot_crate/get_ru_names()
-	return tier.ru_names
-
 /obj/structure/closet/loot_crate/Initialize(mapload)
 	. = ..()
 	if(!GLOB.loot_tiers[tier])

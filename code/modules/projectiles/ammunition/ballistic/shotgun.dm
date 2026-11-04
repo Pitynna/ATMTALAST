@@ -223,7 +223,7 @@
 // MARK: Empty tech shell
 /obj/item/ammo_casing/shotgun/techshell
 	name = "unloaded technological shell"
-	desc = "Высокотехнологичная гильза калибра 12g. Совместима с широким спектром материалов для создания уникальных эффектов."
+	desc = "An empty 12 gauge shell, ready to be loaded with all manner of projectiles."
 	ammo_marking = null
 	extra_info = null
 	icon_state = "techshell"
@@ -231,13 +231,3 @@
 	projectile_type = null
 	no_update_names = TRUE
 	no_update_desc = TRUE
-
-/obj/item/ammo_casing/shotgun/techshell/get_ru_names()
-	return alist(
-		NOMINATIVE = "пустая технологическая гильза [caliber]",
-		GENITIVE = "пустой технологической гильзы [caliber]",
-		DATIVE = "пустой технологической гильзе [caliber]",
-		ACCUSATIVE = "пустую технологическую гильзу [caliber]",
-		INSTRUMENTAL = "пустой технологической гильзой [caliber]",
-		PREPOSITIONAL = "пустой технологической гильзе [caliber]"
-	)

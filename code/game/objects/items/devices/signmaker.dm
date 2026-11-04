@@ -162,7 +162,7 @@
 
 /obj/structure/holosoap
 	name = "holographic soap"
-	desc = "Настоящее мыло, только не настоящее."
+	desc = "looks like a real soap, but it's not."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "holo_soap"
 	layer = ABOVE_MOB_LAYER
@@ -171,16 +171,6 @@
 	max_integrity = 1
 
 	var/obj/item/signmaker/projector = null
-
-/obj/structure/holosoap/get_ru_names()
-	return alist(
-		NOMINATIVE = "голографическое мыло",
-		GENITIVE = "голографического мыла",
-		DATIVE = "голографическому мылу",
-		ACCUSATIVE = "голографическое мыло",
-		INSTRUMENTAL = "голографическим мылом",
-		PREPOSITIONAL = "голографическом мыле",
-	)
 
 /obj/structure/holosoap/Initialize(mapload, new_projector)
 	. = ..()
@@ -220,7 +210,7 @@
 
 /obj/structure/holosoap/holosoap_emagged
 	name = "solid holographic soap"
-	desc = "Настоящее мыло, только теперь оно преграждает вам путь."
+	desc = "looks like a real soap, but it's blocking your path now."
 	density = TRUE
 
 #undef CARBON

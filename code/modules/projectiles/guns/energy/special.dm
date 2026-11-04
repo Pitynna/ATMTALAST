@@ -225,21 +225,11 @@
 // MARK: Vortex shotgun
 /obj/item/gun/energy/vortex_shotgun
 	name = "reality vortex wrist mounted shotgun"
-	desc = "Это оружие использует силу вихревой аномалии для локального разрушения ткани реальности."
+	desc = "This weapon uses the power of the vortex core to rip apart the fabric of reality in front of it."
 	icon_state = "flayer" //Sorta wrist mounted? Sorta? Not really but we work with what we got.
 	ammo_type = list(/obj/item/ammo_casing/energy/vortex_blast)
 	fire_sound = 'sound/weapons/bladeslice.ogg'
 	cell_type = /obj/item/stock_parts/cell/infinite
-
-/obj/item/gun/energy/vortex_shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "вортекс-дробовик",
-		GENITIVE = "вортекс-дробовика",
-		DATIVE = "вортекс-дробовику",
-		ACCUSATIVE = "вортекс-дробовик",
-		INSTRUMENTAL = "вортекс-дробовиком",
-		PREPOSITIONAL = "вортекс-дробовике",
-	)
 
 /obj/effect/temp_visual/target_angled/muzzle_flash/vortex_blast
 	invisibility = INVISIBILITY_ABSTRACT // visual is from effect

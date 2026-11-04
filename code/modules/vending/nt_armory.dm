@@ -67,16 +67,6 @@
 	refill_canister = /obj/item/vending_refill/nta
 	tiltable = FALSE //no ert tilt
 
-/obj/machinery/vending/nta/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Ammunition",
-		GENITIVE = "торгового автомата NT Ammunition",
-		DATIVE = "торговому автомату NT Ammunition",
-		ACCUSATIVE = "торговый автомат NT Ammunition",
-		INSTRUMENTAL = "торговым автоматом NT Ammunition",
-		PREPOSITIONAL = "торговом автомате NT Ammunition",
-	)
-
 /obj/machinery/vending/nta/ertarmory
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 
@@ -107,7 +97,7 @@
 
 /obj/machinery/vending/nta/ertarmory/blue
 	name = "NT ERT Medium Gear & Ammunition"
-	desc = "Автомат-помощник по выдаче снаряжения среднего класса."
+	desc = "A ERT Medium equipment vendor."
 	slogan_list = list(
 		"Круш+и череп+а враг+ов Нанотр+ейзен!",
 		"Не забыв+ай, спас+ать — пол+езно!",
@@ -139,19 +129,9 @@
 		/obj/item/storage/fancy/donut_box = 2,
 	)
 
-/obj/machinery/vending/nta/ertarmory/blue/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Medium Gear & Ammunition",
-		GENITIVE = "торгового автомата NT ERT Medium Gear & Ammunition",
-		DATIVE = "торговому автомату NT ERT Medium Gear & Ammunition",
-		ACCUSATIVE = "торговый автомат NT ERT Medium Gear & Ammunition",
-		INSTRUMENTAL = "торговым автоматом NT ERT Medium Gear & Ammunition",
-		PREPOSITIONAL = "торговом автомате NT ERT Medium Gear & Ammunition",
-	)
-
 /obj/machinery/vending/nta/ertarmory/red
 	name = "NT ERT Heavy Gear & Ammunition"
-	desc = "Автомат-помощник по выдаче снаряжения тяжелого класса."
+	desc = "A ERT Heavy equipment vendor."
 	slogan_list = list(
 		"Круш+и череп+а враг+ов Нанотр+ейзен!",
 		"Не забыв+ай, спас+ать — пол+езно!",
@@ -181,16 +161,6 @@
 	)
 	contraband = list(
 		/obj/item/storage/fancy/donut_box = 2,
-	)
-
-/obj/machinery/vending/nta/ertarmory/red/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Heavy Gear & Ammunition",
-		GENITIVE = "торгового автомата NT ERT Heavy Gear & Ammunition",
-		DATIVE = "торговому автомату NT ERT Heavy Gear & Ammunition",
-		ACCUSATIVE = "торговый автомат NT ERT Heavy Gear & Ammunition",
-		INSTRUMENTAL = "торговым автоматом NT ERT Heavy Gear & Ammunition",
-		PREPOSITIONAL = "торговом автомате NT ERT Heavy Gear & Ammunition",
 	)
 
 /obj/machinery/vending/nta/ertarmory/green
@@ -231,16 +201,6 @@
 		/obj/item/storage/fancy/donut_box = 2,
 	)
 
-/obj/machinery/vending/nta/ertarmory/green/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Light Gear & Ammunition",
-		GENITIVE = "торгового автомата NT ERT Light Gear & Ammunition",
-		DATIVE = "торговому автомату NT ERT Light Gear & Ammunition",
-		ACCUSATIVE = "торговый автомат NT ERT Light Gear & Ammunition",
-		INSTRUMENTAL = "торговым автоматом NT ERT Light Gear & Ammunition",
-		PREPOSITIONAL = "торговом автомате NT ERT Light Gear & Ammunition",
-	)
-
 /obj/machinery/vending/nta/ertarmory/green/cc_jail
 	name = "NT CentComm prison guards' Gear & Ammunition"
 	desc = "Автомат с оборудованием для надзирателей тюрьмы Центрального Командования."
@@ -265,16 +225,6 @@
 		/obj/item/storage/fancy/donut_box = 2,
 		/obj/item/ammo_box/shotgun/buck = 4,
 		/obj/item/ammo_box/magazine/enforcer/lethal = 4,
-	)
-
-/obj/machinery/vending/nta/ertarmory/green/cc_jail/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT CentComm prison guards' Gear & Ammunition",
-		GENITIVE = "торгового автомата NT CentComm prison guards' Gear & Ammunition",
-		DATIVE = "торговому автомату NT CentComm prison guards' Gear & Ammunition",
-		ACCUSATIVE = "торговый автомат NT CentComm prison guards' Gear & Ammunition",
-		INSTRUMENTAL = "торговым автоматом NT CentComm prison guards' Gear & Ammunition",
-		PREPOSITIONAL = "торговом автомате NT CentComm prison guards' Gear & Ammunition",
 	)
 
 /obj/machinery/vending/nta/ertarmory/yellow
@@ -312,19 +262,9 @@
 		/obj/item/storage/fancy/donut_box = 2,
 	)
 
-/obj/machinery/vending/nta/ertarmory/yellow/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Death Wish Gear & Ammunition",
-		GENITIVE = "торгового автомата NT ERT Death Wish Gear & Ammunition",
-		DATIVE = "торговому автомату NT ERT Death Wish Gear & Ammunition",
-		ACCUSATIVE = "торговый автомат NT ERT Death Wish Gear & Ammunition",
-		INSTRUMENTAL = "торговым автоматом NT ERT Death Wish Gear & Ammunition",
-		PREPOSITIONAL = "торговом автомате NT ERT Death Wish Gear & Ammunition",
-	)
-
 /obj/machinery/vending/nta/ertarmory/medical
 	name = "NT ERT Medical Gear"
-	desc = "Автомат с медицинским оборудованием ОБР."
+	desc = "A ERT medical equipment vendor."
 	slogan_list = list(
 		"В+ылечи всех р+аненых!",
 		"Не забыв+ай, лечи+ть — пол+езно!",
@@ -365,19 +305,9 @@
 	)
 	contraband = list()
 
-/obj/machinery/vending/nta/ertarmory/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Medical Gear",
-		GENITIVE = "торгового автомата NT ERT Medical Gear",
-		DATIVE = "торговому автомату NT ERT Medical Gear",
-		ACCUSATIVE = "торговый автомат NT ERT Medical Gear",
-		INSTRUMENTAL = "торговым автоматом NT ERT Medical Gear",
-		PREPOSITIONAL = "торговом автомате NT ERT Medical Gear",
-	)
-
 /obj/machinery/vending/nta/ertarmory/engineer
 	name = "NT ERT Engineer Gear"
-	desc = "Автомат с инженерным оборудованием ОБР."
+	desc = "A ERT engineering equipment vendor."
 	slogan_list = list(
 		"Почини всё поломанное!",
 		"Не забыв+ай, чин+ить — пол+езно!",
@@ -408,19 +338,9 @@
 		/obj/item/clothing/head/welding/flamedecal/blue = 1,
 	)
 
-/obj/machinery/vending/nta/ertarmory/engineer/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Engineer Gear",
-		GENITIVE = "торгового автомата NT ERT Engineer Gear",
-		DATIVE = "торговому автомату NT ERT Engineer Gear",
-		ACCUSATIVE = "торговый автомат NT ERT Engineer Gear",
-		INSTRUMENTAL = "торговым автоматом NT ERT Engineer Gear",
-		PREPOSITIONAL = "торговом автомате NT ERT Engineer Gear",
-	)
-
 /obj/machinery/vending/nta/ertarmory/janitor
 	name = "NT ERT Janitor Gear"
-	desc = "Автомат с уборочным оборудованием ОБР."
+	desc = "A ERT ccleaning equipment vendor."
 	slogan_list = list(
 		"В+ымой всё заг+аженное!",
 		"Не забыв+ай, ч+истить — пол+езно!",
@@ -449,16 +369,6 @@
 	contraband = list(
 		/obj/item/grenade/clusterbuster/cleaner = 1,
 		/obj/item/storage/fancy/donut_box = 2,
-	)
-
-/obj/machinery/vending/nta/ertarmory/janitor/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Janitor Gear",
-		GENITIVE = "торгового автомата NT ERT Janitor Gear",
-		DATIVE = "торговому автомату NT ERT Janitor Gear",
-		ACCUSATIVE = "торговый автомат NT ERT Janitor Gear",
-		INSTRUMENTAL = "торговым автоматом NT ERT Janitor Gear",
-		PREPOSITIONAL = "торговом автомате NT ERT Janitor Gear",
 	)
 
 #undef FLICK_NONE

@@ -1,7 +1,7 @@
 // MARK: 84mm HE
 /obj/item/ammo_casing/caseless/rocket
 	ammo_marking = "84 мм HE"
-	desc = "Осколочно-фугасная ракета. Предназначена для поражения пехоты."
+	desc = "An 84mm High Explosive rocket. Fire at people and pray."
 	caliber = CALIBER_84MM
 	w_class = WEIGHT_CLASS_NORMAL //thats the rocket!
 	icon_state = "84mm-he"
@@ -10,7 +10,7 @@
 
 /obj/item/ammo_casing/caseless/rocket/hedp
 	ammo_marking = "84 мм HEDP"
-	desc = "Кумулятивно-осколочная ракета двойного назначения. Предназначена для поражения бронированной техники и тяжёлых экзоскелетов."
+	desc = "An 84mm High Explosive Dual Purpose rocket. Pointy end toward mechs and unarmed civilians."
 	icon_state = "84mm-hedp"
 	projectile_type = /obj/projectile/bullet/a84mm_hedp
 
@@ -31,16 +31,6 @@
 	projectile_type = /obj/projectile/bullet/a40mm
 	muzzle_flash_strength = MUZZLE_FLASH_STRENGTH_NORMAL
 	muzzle_flash_range = MUZZLE_FLASH_RANGE_NORMAL
-
-/obj/item/ammo_casing/a40mm/get_ru_names()
-	return alist(
-		NOMINATIVE = "выстрел [ammo_marking]",
-		GENITIVE = "выстрела [ammo_marking]",
-		DATIVE = "выстрелу [ammo_marking]",
-		ACCUSATIVE = "выстрел [ammo_marking]",
-		INSTRUMENTAL = "выстрелом [ammo_marking]",
-		PREPOSITIONAL = "выстреле [ammo_marking]",
-	)
 
 /obj/item/ammo_casing/a40mm/update_desc(updates = ALL)
 	. = ..()

@@ -2,8 +2,7 @@
 
 /obj/item/weldingtool
 	name = "welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован небольшим баком для топлива."
+	desc = "A basic, handheld welding tool. Useful for welding bits together, and cutting them apart."
 	gender = MALE
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "welder"
@@ -49,16 +48,6 @@
 	var/progress_flash_divisor = 10
 	/// Lighting middleman, lets us do a flicker effect
 	var/datum/light_middleman/middleman
-
-/obj/item/weldingtool/get_ru_names()
-	return alist(
-		NOMINATIVE = "сварочный аппарат",
-		GENITIVE = "сварочного аппарата",
-		DATIVE = "сварочному аппарату",
-		ACCUSATIVE = "сварочный аппарат",
-		INSTRUMENTAL = "сварочным аппаратом",
-		PREPOSITIONAL = "сварочном аппарате"
-	)
 
 /obj/item/weldingtool/Initialize(mapload)
 	. = ..()
@@ -257,65 +246,30 @@
 
 /obj/item/weldingtool/largetank
 	name = "industrial welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован баком для топлива увеличенного объёма."
+	desc = "A heavier welding tool with an expanded fuel reservoir. Otherwise identical to a normal welder."
 	icon_state = "indwelder"
 	belt_icon = "industrial_welding_tool"
 	maximum_fuel = 40
 	materials = list(MAT_METAL=70, MAT_GLASS=60)
 	origin_tech = "engineering=2;plasmatech=2"
 
-/obj/item/weldingtool/largetank/get_ru_names()
-	return alist(
-		NOMINATIVE = "промышленный сварочный аппарат",
-		GENITIVE = "промышленного сварочного аппарата",
-		DATIVE = "промышленному сварочному аппарату",
-		ACCUSATIVE = "промышленный сварочный аппарат",
-		INSTRUMENTAL = "промышленным сварочным аппаратом",
-		PREPOSITIONAL = "промышленном сварочном аппарате"
-	)
-
 /obj/item/weldingtool/largetank/cyborg
 	name = "integrated welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован небольшим баком для топлива. \
-			Специализированная версия для установки в роботизированные системы."
+	desc = "An integrated industrial welding tool used by construction and engineering robots. "
 	toolspeed = 0.5
-
-/obj/item/weldingtool/largetank/cyborg/get_ru_names()
-	return alist(
-		NOMINATIVE = "встроенный сварочный аппарат",
-		GENITIVE = "встроенного сварочного аппарата",
-		DATIVE = "встроенному сварочному аппарату",
-		ACCUSATIVE = "встроенный сварочный аппарат",
-		INSTRUMENTAL = "встроенным сварочным аппаратом",
-		PREPOSITIONAL = "встроенном сварочном аппарате"
-	)
 
 /obj/item/weldingtool/mini
 	name = "emergency welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Уменьшенная версия, предназначенная для чрезвычайных ситуаций."
+	desc = "A small, stripped down welding tool for emergency use only."
 	icon_state = "miniwelder"
 	maximum_fuel = 10
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=30, MAT_GLASS=10)
 	low_fuel_changes_icon = FALSE
 
-/obj/item/weldingtool/mini/get_ru_names()
-	return alist(
-		NOMINATIVE = "аварийный сварочный аппарат",
-		GENITIVE = "аварийного сварочного аппарата",
-		DATIVE = "аварийному сварочному аппарату",
-		ACCUSATIVE = "аварийный сварочный аппарат",
-		INSTRUMENTAL = "аварийным сварочным аппаратом",
-		PREPOSITIONAL = "аварийном сварочном аппарате"
-	)
-
 /obj/item/weldingtool/abductor
 	name = "alien welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Кажется, будто бы запас топлива в баке неиссякаем."
+	desc = "An alien welding tool. Whatever fuel it uses, it never runs out."
 	icon = 'icons/obj/abductor.dmi'
 	item_state = "alienwelder"
 	belt_icon = "alien_welding_tool"
@@ -327,20 +281,9 @@
 	low_fuel_changes_icon = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/weldingtool/abductor/get_ru_names()
-	return alist(
-		NOMINATIVE = "чужеродный сварочный аппарат",
-		GENITIVE = "чужеродного сварочного аппарата",
-		DATIVE = "чужеродному сварочному аппарату",
-		ACCUSATIVE = "чужеродный сварочный аппарат",
-		INSTRUMENTAL = "чужеродным сварочным аппаратом",
-		PREPOSITIONAL = "чужеродном сварочном аппарате"
-	)
-
 /obj/item/weldingtool/hugetank
 	name = "upgraded welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован баком для топлива большого объёма."
+	desc = "A large industrial welding tool with an even further upgraded fuel reservoir."
 	icon_state = "upindwelder"
 	item_state = "upindwelder"
 	belt_icon = "upgraded_welding_tool"
@@ -348,22 +291,9 @@
 	materials = list(MAT_METAL=70, MAT_GLASS=120)
 	origin_tech = "engineering=3;plasmatech=2"
 
-/obj/item/weldingtool/hugetank/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенный сварочный аппарат",
-		GENITIVE = "улучшенного сварочного аппарата",
-		DATIVE = "улучшенному сварочному аппарату",
-		ACCUSATIVE = "улучшенный сварочный аппарат",
-		INSTRUMENTAL = "улучшенным сварочным аппаратом",
-		PREPOSITIONAL = "улучшенном сварочном аппарате"
-	)
-
 /obj/item/weldingtool/experimental
 	name = "experimental welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован баком для топлива увеличенного объёма. \
-			Экспериментальная модель, способная синтезировать топливо и \
-			обладающая уменьшенной нагрузкой на органы зрения пользователя."
+	desc = "A prototype welding tool which uses an experimental fuel breeder to create a near-infinite reserve of fuel. The unusual fuel mixture also means that the flame is less intense on the eyes."
 	icon_state = "exwelder"
 	item_state = "exwelder"
 	belt_icon = "experimental_welding_tool"
@@ -375,56 +305,18 @@
 	refills_over_time = TRUE
 	low_fuel_changes_icon = FALSE
 
-/obj/item/weldingtool/experimental/get_ru_names()
-	return alist(
-		NOMINATIVE = "экспериментальный сварочный аппарат",
-		GENITIVE = "экспериментального сварочного аппарата",
-		DATIVE = "экспериментальному сварочному аппарату",
-		ACCUSATIVE = "экспериментальный сварочный аппарат",
-		INSTRUMENTAL = "экспериментальным сварочным аппаратом",
-		PREPOSITIONAL = "экспериментальном сварочном аппарате"
-	)
-
 /obj/item/weldingtool/experimental/mecha
 	name = "integrated welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован баком для топлива увеличенного объёма. \
-			Экспериментальная модель, способная синтезировать топливо и \
-			обладающая уменьшенной нагрузкой на органы зрения пользователя. \
-			Специализированная версия для установки в роботизированные системы."
+	desc = "An integrated industrial welding tool used by construction and engineering robots. "
 	requires_fuel = FALSE
 	light_intensity = 0
 
-/obj/item/weldingtool/experimental/mecha/get_ru_names()
-	return alist(
-		NOMINATIVE = "встроенный сварочный аппарат",
-		GENITIVE = "встроенного сварочного аппарата",
-		DATIVE = "встроенному сварочному аппарату",
-		ACCUSATIVE = "встроенный сварочный аппарат",
-		INSTRUMENTAL = "встроенным сварочным аппаратом",
-		PREPOSITIONAL = "встроенном сварочном аппарате"
-	)
-
 /obj/item/weldingtool/experimental/brass
 	name = "brass welding tool"
-	desc = "Инструмент, используемый для выполнения сварочных работ. \
-			Оборудован баком для топлива увеличенного объёма. \
-			Способен синтезировать топливо и \
-			обладает уменьшенной нагрузкой на органы зрения пользователя. \
-			На ощупь слегка тёплый."
+	desc = "A brass welder that seems to constantly refuel itself. It is faintly warm to the touch."
 	icon_state = "brasswelder"
 	item_state = "brasswelder"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	force_enabled = 10
-
-/obj/item/weldingtool/experimental/brass/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунный сварочный аппарат",
-		GENITIVE = "латунного сварочного аппарата",
-		DATIVE = "латунному сварочному аппарату",
-		ACCUSATIVE = "латунный сварочный аппарат",
-		INSTRUMENTAL = "латунным сварочным аппаратом",
-		PREPOSITIONAL = "латунном сварочном аппарате"
-	)
 
 #undef GET_FUEL

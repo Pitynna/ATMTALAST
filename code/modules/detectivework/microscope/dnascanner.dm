@@ -1,7 +1,7 @@
 //DNA machine
 /obj/machinery/dnaforensics
-	name = "Анализатор ДНК"
-	desc = "Высокотехнологичная машина, которая предназначена для правильного считывания образцов ДНК."
+	name = "\improper DNA analyzer"
+	desc = "A high-tech machine that is designed to sequence DNA samples."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "dna_open"
 	anchored = TRUE

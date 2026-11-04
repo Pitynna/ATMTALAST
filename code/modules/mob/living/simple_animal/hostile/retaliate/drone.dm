@@ -244,16 +244,6 @@
 	icon_state = "drone_manual"
 	item_state = "book7"
 
-/obj/item/drone_manual/get_ru_names()
-	return alist(
-		NOMINATIVE = "странное руководство",
-		GENITIVE = "странного руководства",
-		DATIVE = "странному руководству",
-		ACCUSATIVE = "странное руководство",
-		INSTRUMENTAL = "странным руководством",
-		PREPOSITIONAL = "странном руководстве",
-	)
-
 /obj/item/drone_manual/attack_self(mob/user)
 	. = ..()
 	to_chat(user, span_alert("После того как вы пробежались глазами по содержанию книги, она рассыпалась пеплом. Но, кажется, вы можете вспомнить пару методов работы, описанных там — самодельные платы и базовую модель самого дрона."))

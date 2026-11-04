@@ -4,7 +4,7 @@
 
 /obj/machinery/photocopier
 	name = "photocopier"
-	desc = "Устройство для сканирования и печати важных документов. На корпусе имеется надпись: \"НЕ САДИТЬСЯ!\"."
+	desc = "For making copies of important documents, or more likely, your ass."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "bigscanner"
 	anchored = TRUE
@@ -73,19 +73,9 @@
 	var/info_box_color = "blue"
 	var/ui_theme = "nanotrasen"// Если темы нету, будет взята стандартная НТ тема для интерфейса
 
-/obj/machinery/photocopier/get_ru_names()
-	return alist(
-		NOMINATIVE = "ксерокс",
-		GENITIVE = "ксерокса",
-		DATIVE = "ксероксу",
-		ACCUSATIVE = "ксерокс",
-		INSTRUMENTAL = "ксероксом",
-		PREPOSITIONAL = "ксероксе",
-	)
-
 /obj/machinery/photocopier/syndie
 	name = "Syndicate photocopier"
-	desc = "Устройство для сканирования и печати важных документов. Они даже не пытаются скрыть, что это их собственность..."
+	desc = "They don't even try to hide it's theirs..."
 	syndicate = TRUE
 	icon_state = "syndiebigscanner"
 	insert_anim = "syndiebigscanner_work"
@@ -94,16 +84,6 @@
 				Синдикат напоминает, что в ваших же интересах \
 				соблюдать данные указания."
 	ui_theme = "syndicate"
-
-/obj/machinery/photocopier/syndie/get_ru_names()
-	return alist(
-		NOMINATIVE = "ксерокс \"Синдиката\"",
-		GENITIVE = "ксерокса \"Синдиката\"",
-		DATIVE = "ксероксу \"Синдиката\"",
-		ACCUSATIVE = "ксерокс \"Синдиката\"",
-		INSTRUMENTAL = "ксероксом \"Синдиката\"",
-		PREPOSITIONAL = "ксероксе \"Синдиката\"",
-	)
 
 /obj/machinery/photocopier/ComponentInitialize()
 	AddElement(/datum/element/elevation, pixel_shift = 8) //enough to look like your bums are on the machine.
@@ -799,7 +779,7 @@
  */
 /obj/item/toner
 	name = "toner cartridge"
-	desc = "Стандартный картридж с чернилами для ксероксов на 30 использований. Пользуется высоким спросом у бюрократов."
+	desc = "Has 140 papers worth of ink in it! Shame you can only use 30 before it runs out of cyan..."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "tonercartridge"
 	w_class = WEIGHT_CLASS_SMALL
@@ -807,15 +787,6 @@
 	var/charges = 5
 	var/max_charges = 5
 
-/obj/item/toner/get_ru_names()
-	return alist(
-		NOMINATIVE = "тонер-картридж",
-		GENITIVE = "тонер-картриджа",
-		DATIVE = "тонер-картриджу",
-		ACCUSATIVE = "тонер-картридж",
-		INSTRUMENTAL = "тонер-картриджом",
-		PREPOSITIONAL = "тонер-картридже",
-	)
 /*
 /obj/item/toner/grind_results()
 	return list(/datum/reagent/iodine = 40, /datum/reagent/iron = 10)
@@ -832,15 +803,6 @@
 	charges = 25
 	max_charges = 25
 
-/obj/item/toner/large/get_ru_names()
-	return alist(
-		NOMINATIVE = "большой тонер-картридж",
-		GENITIVE = "большого тонер-картриджа",
-		DATIVE = "большому тонер-картриджу",
-		ACCUSATIVE = "большой тонер-картридж",
-		INSTRUMENTAL = "большим тонер-картриджом",
-		PREPOSITIONAL = "большом тонер-картридже",
-	)
 /*
 /obj/item/toner/large/grind_results()
 	return list(/datum/reagent/iodine = 90, /datum/reagent/iron = 10)
@@ -854,31 +816,11 @@
 	charges = 200
 	max_charges = 200
 
-/obj/item/toner/extreme/get_ru_names()
-	return alist(
-		NOMINATIVE = "огромный тонер-картридж",
-		GENITIVE = "огромного тонер-картриджа",
-		DATIVE = "огромному тонер-картриджу",
-		ACCUSATIVE = "огромный тонер-картридж",
-		INSTRUMENTAL = "огромным тонер-картриджом",
-		PREPOSITIONAL = "огромном тонер-картридже",
-	)
-
 /obj/item/toner/infinite
 	name = "infinite toner cartridge"
 	desc = "...are you satisfied now?"
 	charges = INFINITY
 	max_charges = INFINITY
-
-/obj/item/toner/infinite/get_ru_names()
-	return alist(
-		NOMINATIVE = "бесконечный тонер-картридж",
-		GENITIVE = "бесконечного тонер-картриджа",
-		DATIVE = "бесконечному тонер-картриджу",
-		ACCUSATIVE = "бесконечный тонер-картридж",
-		INSTRUMENTAL = "бесконечным тонер-картриджом",
-		PREPOSITIONAL = "бесконечном тонер-картридже",
-	)
 
 #undef PHOTOCOPIER_DELAY
 #undef MAX_COPIES_PRINTABLE

@@ -15,16 +15,6 @@
 	/// The currently connected circuit
 	var/obj/item/integrated_circuit/attached_circuit
 
-/obj/item/usb_cable/get_ru_names()
-	return alist(
-		NOMINATIVE = "USB-кабель",
-		GENITIVE = "USB-кабеля",
-		DATIVE = "USB-кабелю",
-		ACCUSATIVE = "USB-кабель",
-		INSTRUMENTAL = "USB-кабелем",
-		PREPOSITIONAL = "USB-кабеле",
-	)
-
 /obj/item/usb_cable/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

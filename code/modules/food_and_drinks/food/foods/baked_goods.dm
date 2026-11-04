@@ -874,23 +874,13 @@
 
 /obj/item/reagent_containers/food/snacks/croissant
 	name = "croissant"
-	desc = "Когда-то эта изысканная слоёная выпечка была доступна только состоятельным людям, но теперь она стала частью вашего повседневного меню."
+	desc = "Once a pastry reserved for the bourgeois, this flaky goodness is now on your table."
 	icon_state = "croissant"
 	bitesize = 4
 	filling_color = "#ecb54f"
 	list_reagents = list("nutriment" = 4, "sugar" = 2)
 	tastes = list("croissant" = 1)
 	foodtype = GRAIN
-
-/obj/item/reagent_containers/food/snacks/croissant/get_ru_names()
-	return alist(
-		NOMINATIVE = "круассан",
-		GENITIVE = "круассана",
-		DATIVE = "круассану",
-		ACCUSATIVE = "круассан",
-		INSTRUMENTAL = "круассаном",
-		PREPOSITIONAL = "круассане",
-	)
 
 /obj/item/reagent_containers/food/snacks/croissant/throwing
 	throwforce = 20

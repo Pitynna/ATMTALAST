@@ -7,21 +7,10 @@ Note: Must be placed within 3 tiles of the R&D Console
 */
 /obj/machinery/r_n_d/destructive_analyzer
 	name = "Destructive Analyzer"
-	desc = "Оборудование, предназначенное для проведения научных исследований методом обратной инженерии \
-			путём разборки различных объектов. Управление происходит с помощью подключаемой консоли."
+	desc = "Learn science by destroying things!"
 	icon_state = "d_analyzer"
 	base_icon_state = "d_analyzer"
 	var/decon_mod = 0
-
-/obj/machinery/r_n_d/destructive_analyzer/get_ru_names()
-	return alist(
-		NOMINATIVE = "деструктивный анализатор",
-		GENITIVE = "деструктивного анализатора",
-		DATIVE = "деструктивному анализатору",
-		ACCUSATIVE = "деструктивный анализатор",
-		INSTRUMENTAL = "деструктивным анализатором",
-		PREPOSITIONAL = "деструктивном анализаторе",
-	)
 
 /obj/machinery/r_n_d/destructive_analyzer/Initialize(mapload)
 	. = ..()

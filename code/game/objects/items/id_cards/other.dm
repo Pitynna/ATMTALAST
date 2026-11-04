@@ -4,16 +4,6 @@
 	item_state = "gold-id"
 	assignment = JOB_TITLE_RU_CAPTAIN
 
-/obj/item/card/id/captains_spare/get_ru_names()
-	return alist(
-		NOMINATIVE = "запасная ID-карта Капитана",
-		GENITIVE = "запасной ID-карты Капитана",
-		DATIVE = "запасной ID-карте Капитана",
-		ACCUSATIVE = "запасную ID-карту Капитана",
-		INSTRUMENTAL = "запасной ID-картой Капитана",
-		PREPOSITIONAL = "запасной ID-карте Капитана",
-	)
-
 /obj/item/card/id/captains_spare/Initialize(mapload)
 	var/datum/job/captain/J = new/datum/job/captain
 	access = J.get_access()
@@ -21,16 +11,12 @@
 	AddElement(/datum/element/high_value_item)
 
 /obj/item/card/id/silver
-	desc = "Идентификационная карта персонала \"Нанотрейзен\". Служит для подтверждения личности, \
-			определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника. \
-			Уникальная серебряная отделка подчёркивает высокий статус владельца."
+	desc = "A silver card which shows honour and dedication."
 	icon_state = "silver"
 	item_state = "silver-id"
 
 /obj/item/card/id/gold
-	desc = "Идентификационная карта персонала \"Нанотрейзен\". Служит для подтверждения личности, \
-			определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника. \
-			Уникальная золотая отделка подчёркивает власть и могущество владельца."
+	desc = "A golden card which shows power and might."
 	icon_state = "gold"
 	item_state = "gold-id"
 
@@ -51,23 +37,11 @@
 
 /obj/item/card/id/admin
 	name = "admin ID card"
-	desc = "Идентификационная карта для Администрации. Служит для подтверждения личности, \
-			определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника. \
-			А ещё для плотного щитспауна."
+	desc = "An administrative identification card used to verify identity, determine facility access and record employee biometrics. Also useful for extensive admin shenanigans."
 	icon_state = "admin"
 	item_state = "gold-id"
 	assignment = "Магистр щитспауна"
 	untrackable = 1
-
-/obj/item/card/id/admin/get_ru_names()
-	return alist(
-		NOMINATIVE = "ID-карта Администрации",
-		GENITIVE = "ID-карты Администрации",
-		DATIVE = "ID-карте Администрации",
-		ACCUSATIVE = "ID-карту Администрации",
-		INSTRUMENTAL = "ID-картой Администрации",
-		PREPOSITIONAL = "ID-карте Администрации",
-	)
 
 /obj/item/card/id/admin/Initialize(mapload)
 	access = get_absolutely_all_accesses()
@@ -75,7 +49,7 @@
 
 /obj/item/card/id/lifetime
 	name = "Lifetime ID Card"
-	desc = "Модифицированная ID-карта, которую выдают лишь тем людям, что посвятили свои жизни высшим интересам \"Нанотрейзен\". Она сияет голубым."
+	desc = "A modified ID card given only to those people who have devoted their lives to the better interests of Nanotrasen. It sparkles blue."
 	icon_state = "lifetimeid"
 
 /obj/item/card/id/library_owl

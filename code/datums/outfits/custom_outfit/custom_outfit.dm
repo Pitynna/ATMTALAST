@@ -1865,7 +1865,7 @@
 			reagent_volumes[reagent_instance.type] = reagent_instance.volume
 
 /obj/item/reagent_containers/food/pill/dental_implant
-	name = "зубной имплант"
+	name = "dental implant"
 
 /datum/reagents_editor/custom_outfit_dental
 	var/datum/custom_outfit/linked_outfit

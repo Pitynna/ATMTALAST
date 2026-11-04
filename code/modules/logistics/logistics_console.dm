@@ -6,16 +6,6 @@
 	light_color = LIGHT_COLOR_BLUE
 	circuit = /obj/item/circuitboard/logistics_core
 
-/obj/machinery/computer/logistics_core/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль ядра логистики",
-		GENITIVE = "консоли ядра логистики",
-		DATIVE = "консоли ядра логистики",
-		ACCUSATIVE = "консоль ядра логистики",
-		INSTRUMENTAL = "консолью ядра логистики",
-		PREPOSITIONAL = "консоли ядра логистики",
-	)
-
 /obj/machinery/computer/logistics_core/attack_ai(mob/user)
 	return attack_hand(user)
 

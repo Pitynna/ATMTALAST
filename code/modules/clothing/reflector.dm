@@ -20,16 +20,6 @@
 	var/list/reflect_zones = list(BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND)
 	var/hit_reflect_chance = 50
 
-/obj/item/clothing/gloves/reflector/get_ru_names()
-	return alist(
-		NOMINATIVE = "рефлекторные перчатки",
-		GENITIVE = "рефлекторных перчаток",
-		DATIVE = "рефлекторнным перчаткам",
-		ACCUSATIVE = "рефлекторнные перчатки",
-		INSTRUMENTAL = "рефлекторными перчатками",
-		PREPOSITIONAL = "рефлекторных перчатках",
-	)
-
 /obj/item/clothing/gloves/reflector/IsReflect(def_zone)
 	if(!(def_zone in reflect_zones))
 		return REFLECT_NOTHING
@@ -65,16 +55,6 @@
 	var/list/reflect_zones = list(BODY_ZONE_HEAD)
 	var/hit_reflect_chance = 50
 
-/obj/item/clothing/head/helmet/reflector/get_ru_names()
-	return alist(
-		NOMINATIVE = "рефлекторная шляпа",
-		GENITIVE = "рефлекторную шляпу",
-		DATIVE = "рефлекторной шляпе",
-		ACCUSATIVE = "рефлекторную шляпу",
-		INSTRUMENTAL = "рефлекторной шляпой",
-		PREPOSITIONAL = "рефлекторной шляпе",
-	)
-
 /obj/item/clothing/head/helmet/reflector/IsReflect(def_zone)
 	if(!(def_zone in reflect_zones))
 		return REFLECT_NOTHING
@@ -103,16 +83,6 @@
 	)
 	var/list/reflect_zones = list(BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
 	var/hit_reflect_chance = 50
-
-/obj/item/clothing/shoes/reflector/get_ru_names()
-	return alist(
-		NOMINATIVE = "рефлекторные ботинки",
-		GENITIVE = "рефлекторных ботинок",
-		DATIVE = "рефлекторным ботинкам",
-		ACCUSATIVE = "рефлекторные ботинки",
-		INSTRUMENTAL = "рефлекторными ботинками",
-		PREPOSITIONAL = "рефлекторных ботинках",
-	)
 
 /obj/item/clothing/shoes/reflector/IsReflect(def_zone)
 	if(!(def_zone in reflect_zones))
@@ -145,16 +115,6 @@
 	)
 	var/static/list/reflect_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
 	var/hit_reflect_chance = 50
-
-/obj/item/clothing/suit/armor/reflector/get_ru_names()
-	return alist(
-		NOMINATIVE = "рефлекторное пальто",
-		GENITIVE = "рефлекторное пальто",
-		DATIVE = "рефлекторному пальто",
-		ACCUSATIVE = "рефлекторное пальто",
-		INSTRUMENTAL = "рефлекторным пальто",
-		PREPOSITIONAL = "рефлекторном пальто",
-	)
 
 /obj/item/clothing/suit/armor/reflector/IsReflect(def_zone)
 	if(!(def_zone in reflect_zones))

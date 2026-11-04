@@ -17,16 +17,6 @@
 	COOLDOWN_DECLARE(bibledelay)
 	var/booklist
 
-/obj/machinery/computer/library/checkout/get_ru_names()
-	return alist(
-		NOMINATIVE = "библиотечный компьютер",
-		GENITIVE = "библиотечного компьютера",
-		DATIVE = "библиотечному компьютеру",
-		ACCUSATIVE = "библиотечный компьютер",
-		INSTRUMENTAL = "библиотечным компьютером",
-		PREPOSITIONAL = "библиотечном компьютере",
-	)
-
 /obj/machinery/computer/library/checkout/attack_hand(mob/user)
 	if(..())
 		return

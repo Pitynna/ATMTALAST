@@ -88,7 +88,7 @@
 
 /obj/item/ecig
 	name = "electronic cigarette"
-	desc = "Гладкий никотиновый испаритель в сдержанном зелёном корпусе. Создаёт плотное, но быстро рассеивающееся облако пара. Одобрен для рабочих зон: дым без пепла и характерного запаха."
+	desc = "A sleek nicotine vaporizer in a discreet green casing. Produces a dense cloud of vapor that quickly dissipates. Approved for work areas: smoke without ash or the usual smell."
 	gender = FEMALE
 	icon = 'icons/obj/device.dmi'
 	icon_state = "ecig"
@@ -98,16 +98,6 @@
 	var/amount_left = 600
 	var/applying = FALSE
 	var/list/reagent = list("nicotine")
-
-/obj/item/ecig/get_ru_names()
-	return alist(
-		NOMINATIVE = "электронная сигарета",
-		GENITIVE = "электронной сигареты",
-		DATIVE = "электронной сигарете",
-		ACCUSATIVE = "электронную сигарету",
-		INSTRUMENTAL = "электронной сигаретой",
-		PREPOSITIONAL = "электронной сигарете"
-	)
 
 /obj/item/ecig/emag_act(mob/user)
 	if(emagged)
@@ -240,20 +230,10 @@
 
 /obj/item/ecig/syndi
 	name = "suspicious e-cigarette"
-	desc = "Гладкий никотиновый испаритель в подозрительном красном корпусе. Выдаёт плотное облако пара с лёгким химическим оттенком."
+	desc = "A sleek nicotine vaporizer in a suspicious red casing. Produces a dense cloud of vapor with a faint chemical undertone."
 	icon_state = "ecig_syndi"
 	item_state = "ecig_syndi"
 	reagent = list("nicotine", "syndiezine")
-
-/obj/item/ecig/syndi/get_ru_names()
-	return alist(
-		NOMINATIVE = "подозрительная электронная сигарета",
-		GENITIVE = "подозрительной электронной сигареты",
-		DATIVE = "подозрительной электронной сигарете",
-		ACCUSATIVE = "подозрительную электронную сигарету",
-		INSTRUMENTAL = "подозрительной электронной сигаретой",
-		PREPOSITIONAL = "подозрительной электронной сигарете"
-	)
 
 #undef MAX_AMOUNT
 #undef SAFE_THRESHOLD

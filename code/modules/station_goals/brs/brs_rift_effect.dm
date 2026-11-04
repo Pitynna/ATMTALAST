@@ -1,5 +1,5 @@
 /obj/effect/abstract/bluespace_rift
-	name = "Неопознанный блюспейс разлом"
+	name = "unidentified bluespace rift"
 	desc = "Аномальное образование с неизвестными свойствами."
 	icon = 'icons/obj/engines_and_power/singularity.dmi'
 	icon_state = "singularity_fog"

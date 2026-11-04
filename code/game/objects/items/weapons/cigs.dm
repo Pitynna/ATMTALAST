@@ -15,7 +15,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/clothing/mask/cigarette
 	name = "cigarette"
-	desc = "Закрученный в бумагу табак."
+	desc = "A roll of tobacco and nicotine."
 	icon_state = "cigoff"
 	throw_speed = 0.5
 	item_state = "cigoff"
@@ -54,16 +54,6 @@ LIGHTERS ARE IN LIGHTERS.DM
 		SPECIES_WOLPIN = 'icons/mob/clothing/species/monkey/mask.dmi',
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/mask.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/mask.dmi',
-	)
-
-/obj/item/clothing/mask/cigarette/get_ru_names()
-	return alist(
-		NOMINATIVE = "сигарета",
-		GENITIVE = "сигареты",
-		DATIVE = "сигарете",
-		ACCUSATIVE = "сигарету",
-		INSTRUMENTAL = "сигаретой",
-		PREPOSITIONAL = "сигарете",
 	)
 
 /obj/item/clothing/mask/cigarette/Initialize(mapload)
@@ -400,22 +390,12 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/clothing/mask/cigarette/rollie
 	name = "rollie"
-	desc = "Рулон высушенных растений, аккуратно завёрнутый в тонкую бумагу."
+	desc = "A roll of dried plant matter wrapped in thin paper. It carries the unmistakable smell of cannabis."
 	icon_state = "spliffoff"
 	icon_on = "spliffon"
 	icon_off = "spliffoff"
 	type_butt = /obj/item/cigbutt/roach
 	item_state = "spliffoff"
-
-/obj/item/clothing/mask/cigarette/rollie/get_ru_names()
-	return alist(
-		NOMINATIVE = "самокрутка",
-		GENITIVE = "самокрутки",
-		DATIVE = "самокрутке",
-		ACCUSATIVE = "самокрутку",
-		INSTRUMENTAL = "самокруткой",
-		PREPOSITIONAL = "самокрутке",
-	)
 
 /obj/item/clothing/mask/cigarette/rollie/Initialize(mapload)
 	. = ..()
@@ -424,7 +404,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/cigbutt/roach
 	name = "roach"
-	desc = "Вонючий старый бычок или, для тех, кто не курит, – выкуренная самокрутка."
+	desc = "A manky old roach, or for non-stoners, a used rollup."
 	icon_state = "roach"
 	item_state = "rolliebutt"
 
@@ -439,7 +419,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/clothing/mask/cigarette/cigar
 	name = "Premium Cigar"
-	desc = "Свёрнутые в трубочку листья табака и... ну, бог его знает. Она просто огромная!"
+	desc = "A huge, brown roll of dried and fermented tobacco, manufactured by Nanotrasen's Robust Tobacco subsidiary."
 	icon_state = "cigaroff"
 	icon_on = "cigaron"
 	icon_off = "cigaroff"
@@ -451,36 +431,16 @@ LIGHTERS ARE IN LIGHTERS.DM
 	muhtar_fashion = /datum/muhtar_fashion/mask/cigar
 	custom_price = PAYCHECK_CREW
 
-/obj/item/clothing/mask/cigarette/cigar/get_ru_names()
-	return alist(
-		NOMINATIVE = "сигара премиум-класса",
-		GENITIVE = "сигары премиум-класса",
-		DATIVE = "сигаре премиум-класса",
-		ACCUSATIVE = "сигару премиум-класса",
-		INSTRUMENTAL = "сигарой премиум-класса",
-		PREPOSITIONAL = "сигаре премиум-класса",
-	)
-
 /obj/item/clothing/mask/cigarette/cigar/cohiba
 	name = "Cohiba Robusto Cigar"
-	desc = "От сигары сложно ожидать чего-то большего."
+	desc = "A premium brand of cigar widely exported and enjoyed across the Orion Sector. There's little more that you could want from a cigar"
 	icon_state = "cigar2off"
 	icon_on = "cigar2on"
 	icon_off = "cigar2off"
 	custom_premium_price = PAYCHECK_COMMAND
-/obj/item/clothing/mask/cigarette/cigar/cohiba/get_ru_names()
-	return alist(
-		NOMINATIVE = "Сигара Коиба Робусто",
-		GENITIVE = "Сигары Коиба Робусто",
-		DATIVE = "Сигаре Коиба Робусто",
-		ACCUSATIVE = "Сигару Коиба Робусто",
-		INSTRUMENTAL = "Сигарой Коиба Робусто",
-		PREPOSITIONAL = "Сигаре Коиба Робусто",
-	)
-
 /obj/item/clothing/mask/cigarette/cigar/havana
 	name = "Premium Havanian Cigar"
-	desc = "Лучшая сигара в наблюдаемой Вселенной."
+	desc = "A luxury cigar imported straight from Sol. Only fit for the best of the best. You feel badass merely glimpsing it..."
 	icon_state = "cigar2off"
 	icon_on = "cigar2on"
 	icon_off = "cigar2off"
@@ -489,35 +449,15 @@ LIGHTERS ARE IN LIGHTERS.DM
 	list_reagents = list("nicotine" = 180)
 	custom_premium_price = PAYCHECK_MAX * 2 // cause they're expensive as hell
 
-/obj/item/clothing/mask/cigarette/cigar/havana/get_ru_names()
-	return alist(
-		NOMINATIVE = "Гаванская Сигара премиум-класса",
-		GENITIVE = "Гаванская Сигары премиум-класса",
-		DATIVE = "Гаванская Сигаре премиум-класса",
-		ACCUSATIVE = "Гаванская Сигару премиум-класса",
-		INSTRUMENTAL = "Гаванская Сигарой премиум-класса",
-		PREPOSITIONAL = "Гаванская Сигаре премиум-класса",
-	)
-
 /obj/item/cigbutt
 	name = "cigarette butt"
-	desc = "Обмякшие останки выкуренной сигареты."
+	desc = "A manky old cigarette butt."
 	gender = MALE
 	icon = 'icons/obj/clothing/masks.dmi'
 	icon_state = "cigbutt"
 	item_state = "cigbutt"
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 1
-
-/obj/item/cigbutt/get_ru_names()
-	return alist(
-		NOMINATIVE = "окурок",
-		GENITIVE = "окурка",
-		DATIVE = "окурку",
-		ACCUSATIVE = "окурок",
-		INSTRUMENTAL = "окурком",
-		PREPOSITIONAL = "окурке",
-	)
 
 /obj/item/cigbutt/Initialize(mapload)
 	. = ..()
@@ -532,7 +472,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/cigbutt/cigarbutt
 	name = "cigar butt"
-	desc = "Обмякшие останки выкуренной сигары."
+	desc = "A manky old cigar butt."
 	icon_state = "cigarbutt"
 	item_state = "cigarbutt"
 
@@ -565,7 +505,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/clothing/mask/cigarette/pipe
 	name = "smoking pipe"
-	desc = "Трубка для курения. Вероятно, сделана из пенопласта или чего-то такого."
+	desc = "A fancy smoking pipe carved from polished morta, otherwise known as bog wood. Preferred by sophisticated gentlemen and those posing as sophisticated gentlemen."
 	icon_state = "pipeoff"
 	item_state = "pipeoff"
 	icon_on = "pipeon"  //Note - these are in masks.dmi
@@ -573,16 +513,6 @@ LIGHTERS ARE IN LIGHTERS.DM
 	smoketime = 500
 	chem_volume = 200
 	list_reagents = list("nicotine" = 200)
-
-/obj/item/clothing/mask/cigarette/pipe/get_ru_names()
-	return alist(
-		NOMINATIVE = "курительная трубка",
-		GENITIVE = "курительной трубки",
-		DATIVE = "курительной трубке",
-		ACCUSATIVE = "курительную трубку",
-		INSTRUMENTAL = "курительной трубкой",
-		PREPOSITIONAL = "курительной трубке",
-	)
 
 /obj/item/clothing/mask/cigarette/pipe/light(flavor_text = null)
 	if(!lit)
@@ -646,7 +576,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/clothing/mask/cigarette/pipe/cobpipe
 	name = "corn cob pipe"
-	desc = "Система доставки никотина, популяризированная жителями провинций и пользующаяся популярностью и в наше время. В основном у разного рода хипстеров."
+	desc = "A nicotine delivery system popularized by folksy backwoodsmen and kept popular in the modern age and beyond by space hipsters."
 	icon_state = "cobpipeoff"
 	item_state = "cobpipeoff"
 	icon_on = "cobpipeon"  //Note - these are in masks.dmi
@@ -654,56 +584,22 @@ LIGHTERS ARE IN LIGHTERS.DM
 	smoketime = 800
 	chem_volume = 40
 
-/obj/item/clothing/mask/cigarette/pipe/cobpipe/get_ru_names()
-	return alist(
-		NOMINATIVE = "кукурузная курительная трубка",
-		GENITIVE = "кукурузной курительной трубки",
-		DATIVE = "кукурузной курительной трубке",
-		ACCUSATIVE = "кукурузную курительную трубку",
-		INSTRUMENTAL = "кукурузной курительной трубкой",
-		PREPOSITIONAL = "кукурузной курительной трубке",
-	)
-
 /obj/item/clothing/mask/cigarette/pipe/oldpipe
 	name = "robust smoking pipe"
-	desc = "Потрёпанная курительная трубка. Выглядит жёстко!"
+	desc = "A worn out smoking pipe. Looks robust"
 	icon_state = "oldpipeoff"
 	item_state = "oldpipeoff"
 	icon_on = "oldpipeon"
 	icon_off = "oldpipeoff"
 
-/obj/item/clothing/mask/cigarette/pipe/oldpipe/get_ru_names()
-	return alist(
-		NOMINATIVE = "крепкая курительная трубка",
-		GENITIVE = "крепкой курительной трубки",
-		DATIVE = "крепкой курительной трубке",
-		ACCUSATIVE = "крепкую курительную трубку",
-		INSTRUMENTAL = "крепкой курительной трубкой",
-		PREPOSITIONAL = "крепкой курительной трубке",
-	)
-
-///////////
-//ROLLING//
-///////////
-
 /obj/item/rollingpaper
 	name = "rolling paper"
-	desc = "Тонкий лист бумаги, используемый для изготовления сигарет."
+	desc = "A thin piece of paper used to make fine smokeables."
 	gender = FEMALE
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig_paper"
 	item_state = "cig_paper"
 	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/rollingpaper/get_ru_names()
-	return alist(
-		NOMINATIVE = "папиросная бумага",
-		GENITIVE = "папиросной бумаги",
-		DATIVE = "папиросной бумаге",
-		ACCUSATIVE = "папиросная бумага",
-		INSTRUMENTAL = "папиросной бумагой",
-		PREPOSITIONAL = "папиросной бумаге",
-	)
 
 /obj/item/rollingpaper/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)
 	if(!proximity_flag)
@@ -732,22 +628,12 @@ LIGHTERS ARE IN LIGHTERS.DM
 
 /obj/item/clothing/mask/holo_cigar
 	name = "Holo-Cigar"
-	desc = "Изящная электронная сигара, изготовленна в Солнечной Системе. При одном взгляде на нее чувствуешь себя крутым..."
+	desc = "A sleek electronic cigar imported straight from Sol. You feel badass merely glimpsing it..."
 	icon_state = "holocigaroff"
 	item_state = "holocigaroff"
 	var/enabled = FALSE
 	/// Tracks if this is the first cycle smoking the cigar.
 	var/has_smoked = FALSE
-
-/obj/item/clothing/mask/holo_cigar/get_ru_names()
-	return alist(
-		NOMINATIVE = "голографическая сигара",
-		GENITIVE = "голографической сигары",
-		DATIVE = "голографической сигаре",
-		ACCUSATIVE = "голографическую сигару",
-		INSTRUMENTAL = "голографической сигарой",
-		PREPOSITIONAL = "голографической сигаре",
-	)
 
 /obj/item/clothing/mask/holo_cigar/Destroy()
 	. = ..()

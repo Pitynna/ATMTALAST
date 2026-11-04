@@ -2,22 +2,12 @@
 
 /obj/machinery/power/reactor_power
 	name = "reactor output terminal"
-	desc = "Пучок тяжёлых силовых кабелей для отвода энергии, вырабатываемой реактором."
+	desc = "A bundle of heavy watt power cables for managing power output from the reactor."
 	icon_state = "term"
 	plane = FLOOR_PLANE
 	layer = WIRE_TERMINAL_LAYER // A bit above wires
 	resistance_flags = INDESTRUCTIBLE
 	var/obj/machinery/atmospherics/fission_reactor/linked_reactor
-
-/obj/machinery/power/reactor_power/get_ru_names()
-	return alist(
-		NOMINATIVE = "силовой терминал реактора",
-		GENITIVE = "силового терминала реактора",
-		DATIVE = "силовому терминалу реактора",
-		ACCUSATIVE = "силовой терминал реактора",
-		INSTRUMENTAL = "силовым терминалом реактора",
-		PREPOSITIONAL = "силовом терминале реактора",
-	)
 
 /obj/machinery/power/reactor_power/Initialize(mapload)
 	. = ..()
@@ -39,7 +29,7 @@
 
 /obj/machinery/computer/fission_monitor
 	name = "NGCR monitoring console"
-	desc = "Следит за состоянием газоохлаждаемого реактора деления корпорации \"Нанотрейзен\"."
+	desc = "Used to monitor the Nanotrasen Gas Cooled Fission Reactor."
 	icon_keyboard = "power_key"
 	icon_screen = "smmon_0"
 	circuit = /obj/item/circuitboard/fission_monitor
@@ -50,16 +40,6 @@
 	var/obj/machinery/atmospherics/fission_reactor/active
 	/// Is this monitor a controller? Affected by visibility from the reactor
 	var/controller = TRUE
-
-/obj/machinery/computer/fission_monitor/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль мониторинга NGCR",
-		GENITIVE = "консоли мониторинга NGCR",
-		DATIVE = "консоли мониторинга NGCR",
-		ACCUSATIVE = "консоль мониторинга NGCR",
-		INSTRUMENTAL = "консолью мониторинга NGCR",
-		PREPOSITIONAL = "консоли мониторинга NGCR",
-	)
 
 /obj/machinery/computer/fission_monitor/Initialize(mapload)
 	. = ..()
@@ -208,23 +188,13 @@
 
 /obj/item/slag
 	name = "corium slag"
-	desc = "Огромная глыба активного ядерного топлива, спёкшаяся с конструкционными металлами реактора."
+	desc = "A large clump of active nuclear fuel fused with structural reactor metals."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "big_molten"
 	move_resist = MOVE_FORCE_STRONG // Massive chunk of metal slag, shouldnt be moving it without carrying.
 	w_class = WEIGHT_CLASS_HUGE
 	force = 15
 	throwforce = 10
-
-/obj/item/slag/get_ru_names()
-	return alist(
-		NOMINATIVE = "кориумвый шлак",
-		GENITIVE = "кориумового шлака",
-		DATIVE = "кориумовому шлаку",
-		ACCUSATIVE = "кориумовый шлак",
-		INSTRUMENTAL = "кориумовым шлаком",
-		PREPOSITIONAL = "кориумовом шлаке",
-	)
 
 /obj/item/slag/Initialize(mapload)
 	. = ..()
@@ -240,17 +210,7 @@
 
 /obj/item/grenade/nuclear_starter
 	name = "Neutronic Agitator"
-	desc = "Бросаемое устройство, способное вызвать искусственный запуск в камерах со стержнями. Не действует на камеры в неправильном положении или без стержней."
-
-/obj/item/grenade/nuclear_starter/get_ru_names()
-	return alist(
-		NOMINATIVE = "нейтронный агитатор",
-		GENITIVE = "нейтронного агитатора",
-		DATIVE = "нейтронному агитатору",
-		ACCUSATIVE = "нейтронный агитатор",
-		INSTRUMENTAL = "нейтронным агитатором",
-		PREPOSITIONAL = "нейтронном агитаторе",
-	)
+	desc = "A throwable device capable of inducing an artificial startup in rod chambers. Won't do anything for chambers not positioned correctly, or chambers without any rods inserted."
 
 /obj/item/grenade/nuclear_starter/deconstruct(disassembled)
 	qdel(src)
@@ -391,23 +351,13 @@
 	flags = ON_BORDER | NODECONSTRUCT | INDESTRUCTIBLE
 	max_integrity = 200
 
-/obj/structure/railing/pool_lining/get_ru_names()
-	return alist(
-		NOMINATIVE = "бортик бассейна",
-		GENITIVE = "бортика бассейна",
-		DATIVE = "бортику бассейна",
-		ACCUSATIVE = "бортик бассейна",
-		INSTRUMENTAL = "бортиком бассейна",
-		PREPOSITIONAL = "бортике бассейна",
-	)
-
 /obj/structure/railing/pool_lining/ex_act(severity)
 	if(severity == EXPLODE_HEAVY || severity == EXPLODE_DEVASTATE)
 		qdel(src)
 
 /obj/item/effect/pool_overlay
 	name = "holding pool"
-	desc = "вода"
+	desc = "water"
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "seadeep"
 	alpha = 75
@@ -415,30 +365,10 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
 
-/obj/item/effect/pool_overlay/get_ru_names()
-	return alist(
-		NOMINATIVE = "защитный бассейн",
-		GENITIVE = "защитного бассейна",
-		DATIVE = "защитному бассейну",
-		ACCUSATIVE = "защитный бассейн",
-		INSTRUMENTAL = "защитным бассейном",
-		PREPOSITIONAL = "защитном бассейне",
-	)
-
 /obj/structure/railing/corner/pool_corner
 	name = "pool lining"
 	icon = 'icons/obj/fission/pool.dmi'
 	icon_state = "bordercorner"
-
-/obj/structure/railing/corner/pool_corner/get_ru_names()
-	return alist(
-		NOMINATIVE = "бортик бассейна",
-		GENITIVE = "бортика бассейна",
-		DATIVE = "бортику бассейна",
-		ACCUSATIVE = "бортик бассейна",
-		INSTRUMENTAL = "бортиком бассейна",
-		PREPOSITIONAL = "бортике бассейна",
-	)
 
 /obj/structure/railing/corner/pool_corner/inner
 	icon_state = "innercorner"
@@ -483,23 +413,11 @@
 
 /obj/item/rod_fabricator_upgrade
 	name = "Nuclear Fabricator Upgrade"
-	desc = "Диск с проектами, содержащий головокружительное количество чертежей и улучшений для изготовления ядерных стержней."
+	desc = "A design disk containing a dizzying amount of designs and improvements for nuclear rod fabrication."
 	icon = 'icons/obj/module.dmi'
 	icon_state = "datadisk5"
 	drop_sound = 'sound/items/handling/drop/disk_drop.ogg'
 	pickup_sound =  'sound/items/handling/pickup/disk_pickup.ogg'
-
-/obj/item/rod_fabricator_upgrade/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшение ядерного фабрикатора",
-		GENITIVE = "улучшения ядерного фабрикатора",
-		DATIVE = "улучшению ядерного фабрикатора",
-		ACCUSATIVE = "улучшение ядерного фабрикатора",
-		INSTRUMENTAL = "улучшением ядерного фабрикатора",
-		PREPOSITIONAL = "улучшении ядерного фабрикатора",
-	)
-
-// MARK: Chamber Doors
 
 /obj/effect/temp_visual/chamber_closing
 	icon = 'icons/obj/fission/reactor_chamber.dmi'

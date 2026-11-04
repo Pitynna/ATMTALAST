@@ -23,7 +23,7 @@
 	)
 
 /obj/machinery/brs_server
-	name = "Сервер сканирования блюспейс разлома"
+	name = "bluespace rift scanning server"
 	icon = 'icons/obj/machines/BRS/scanner_server.dmi'
 	icon_state = "scan_server"
 	anchored = TRUE

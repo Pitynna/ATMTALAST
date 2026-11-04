@@ -1,7 +1,7 @@
 /**********************Lazarus Injector**********************/
 /obj/item/lazarus_injector
 	name = "lazarus injector"
-	desc = "Шприц с коктейлем наномашин и химикатов, способный оживлять мёртвых животных, делая их дружелюбными к пользователю. К сожалению, процесс бесполезен для высших форм жизни и крайне дорог, поэтому устройства хранились на складе, пока какой-то руководитель не решил, что они станут отличной мотивацией для сотрудников."
+	desc = "An injector with a cocktail of nanomachines and chemicals, this device can seemingly raise animals from the dead, making them become friendly to the user. Unfortunately, the process is useless on higher forms of life and incredibly costly, so these were hidden in storage until an executive thought they'd be great motivation for some of their employees."
 	icon = 'icons/obj/hypo.dmi'
 	icon_state = "lazarus_hypo"
 	item_state = "hypo"
@@ -12,16 +12,6 @@
 	var/loaded = TRUE
 	var/malfunctioning = FALSE
 	var/revive_type = SENTIENCE_ORGANIC //So you can't revive boss monsters or robots with it
-
-/obj/item/lazarus_injector/get_ru_names()
-	return alist(
-		NOMINATIVE = "инъектор Лазаря",
-		GENITIVE = "инъектора Лазаря",
-		DATIVE = "инъектору Лазаря",
-		ACCUSATIVE = "инъектор Лазаря",
-		INSTRUMENTAL = "инъектором Лазаря",
-		PREPOSITIONAL = "инъекторе Лазаря",
-	)
 
 /obj/item/lazarus_injector/update_icon_state()
 	icon_state = "lazarus_[loaded ? "hypo" : "empty"]"
@@ -84,23 +74,13 @@
 
 /obj/item/mobcapsule
 	name = "lazarus capsule"
-	desc = "Позволяет удобно хранить и транспортировать существ, обработанных инъектором."
+	desc = "It allows you to store and deploy lazarus-injected creatures easier."
 	icon = 'icons/obj/mobcap.dmi'
 	icon_state = "mobcap0"
 	w_class = WEIGHT_CLASS_TINY
 	var/mob/living/simple_animal/captured = null
 	var/colorindex = 0
 	var/capture_type = SENTIENCE_ORGANIC //So you can't capture boss monsters or robots with it
-
-/obj/item/mobcapsule/get_ru_names()
-	return alist(
-		NOMINATIVE = "капсула Лазаря",
-		GENITIVE = "капсулы Лазаря",
-		DATIVE = "капсуле Лазаря",
-		ACCUSATIVE = "капсулу Лазаря",
-		INSTRUMENTAL = "капсулой Лазаря",
-		PREPOSITIONAL = "капсуле Лазаря",
-	)
 
 /obj/item/mobcapsule/Destroy()
 	if(captured)

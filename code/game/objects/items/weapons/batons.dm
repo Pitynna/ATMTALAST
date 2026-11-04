@@ -1,9 +1,7 @@
 /obj/item/melee/baton
 	icon = 'icons/obj/weapons/baton.dmi'
 	name = "police baton"
-	desc = "Несмертельное холодное оружие, представляющее собой деревянную палку. \
-			Используется охранными и силовыми структурами для обезвреживания преступных элементов. \
-			Несколько старомодно, но всё ещё относительно популярно в отдалённых частях Галактики."
+	desc = "A stun baton for incapacitating people with."
 	gender = FEMALE
 	icon_state = "baton"
 	item_state = "classic_baton"
@@ -43,16 +41,6 @@
 	COOLDOWN_DECLARE(stun_cooldown)
 	/// What term do we use to describe our baton being 'ready', or the phrase to use when var/active is TRUE.
 	var/activated_word = "готова"
-
-/obj/item/melee/baton/get_ru_names()
-	return alist(
-		NOMINATIVE = "полицейская дубинка",
-		GENITIVE = "полицейской дубинки",
-		DATIVE = "полицейской дубинке",
-		ACCUSATIVE = "полицейскую дубинку",
-		INSTRUMENTAL = "полицейской дубинкой",
-		PREPOSITIONAL = "полицейской дубинке"
-	)
 
 /obj/item/melee/baton/Initialize(mapload)
 	. = ..()
@@ -304,27 +292,14 @@
 
 /obj/item/melee/baton/ntcane
 	name = "fancy cane"
-	desc = "Инструмент для создания опоры при ходьбе, а также аристократический аксессуар. Рукоять отделана изящной гравировкой. \
-			Достаточно увесистая, благодарая чему может использоваться для самообороны."
+	desc = "A cane with special engraving on it. It seems well suited for fending off assailants..."
 	icon_state = "cane_nt"
 	item_state = "cane_nt"
 	needs_permit = FALSE
 
-/obj/item/melee/baton/ntcane/get_ru_names()
-	return alist(
-		NOMINATIVE = "парадная трость",
-		GENITIVE = "парадной трости",
-		DATIVE = "парадной трости",
-		ACCUSATIVE = "парадную трость",
-		INSTRUMENTAL = "парадной тростью",
-		PREPOSITIONAL = "парадной трости"
-	)
-
-// Telescopic baton
 /obj/item/melee/baton/telescopic
 	name = "telescopic baton"
-	desc = "Средство самообороны, представляющее собой несмертельное холодное оружие. \
-			Складывается и раскладывается, что облегчает ношение, в том числе скрытое."
+	desc = "A compact yet robust personal defense weapon. Can be concealed when folded."
 	icon_state = "telebaton"
 	item_state = null
 	w_class = WEIGHT_CLASS_SMALL
@@ -340,16 +315,6 @@
 	var/extend_item_state = "telebaton"
 	/// The force on extension.
 	var/extend_force = 10
-
-/obj/item/melee/baton/telescopic/get_ru_names()
-	return alist(
-		NOMINATIVE = "телескопическая дубинка",
-		GENITIVE = "телескопической дубинки",
-		DATIVE = "телескопической дубинке",
-		ACCUSATIVE = "телескопическую дубинку",
-		INSTRUMENTAL = "телескопической дубинкой",
-		PREPOSITIONAL = "телескопической дубинке"
-	)
 
 /obj/item/melee/baton/telescopic/ComponentInitialize()
 	. = ..()
@@ -390,9 +355,7 @@
 // One and only
 /obj/item/melee/baton/security
 	name = "stunbaton"
-	desc = "Несмертельное средство обезвреживания. Удар во включенном состоянии генерирует маломощный электрический импульс, \
-			вызывающий резкое сокращение мышц цели и последующее оглушение. Работает от сменного аккумулятора. \
-			Используется многими силовыми и охранными структурами по всей Галактике."
+	desc = "A stun baton for incapacitating people with."
 	icon_state = "stunbaton"
 	base_icon_state = "stunbaton"
 	item_state = "baton"
@@ -420,16 +383,6 @@
 	var/obj/item/stock_parts/cell/cell
 	/// How much power does it cost to stun someone.
 	var/cell_hit_cost = 500
-
-/obj/item/melee/baton/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "оглушающая дубинка",
-		GENITIVE = "оглушающей дубинки",
-		DATIVE = "оглушающей дубинке",
-		ACCUSATIVE = "оглушающую дубинку",
-		INSTRUMENTAL = "оглушающей дубинкой",
-		PREPOSITIONAL = "оглушающей дубинке"
-	)
 
 /obj/item/melee/baton/security/Initialize(mapload)
 	. = ..()
@@ -632,8 +585,7 @@
 // Makeshift stun baton. Replacement for stun gloves.
 /obj/item/melee/baton/security/cattleprod
 	name = "stunprod"
-	desc = "Кустарное оружие несмертельного действия. Представляет собой металлический прут с прикреплённым воспламенителем, \
-			запитанным от батареи. Громоздкий и неудобный аналог стандартных оглушающих дубинок."
+	desc = "An improvised stun baton."
 	gender = MALE
 	icon_state = "stunprod_nocell"
 	base_icon_state = "stunprod"
@@ -646,17 +598,6 @@
 	slot_flags = ITEM_SLOT_BACK
 	/// Our prescious sparks holder
 	var/obj/item/assembly/igniter/sparkler
-
-/obj/item/melee/baton/security/cattleprod/get_ru_names()
-	return alist(
-		NOMINATIVE = "оглушающий прут",
-		GENITIVE = "оглушающего прута",
-		DATIVE = "оглушающему пруту",
-		ACCUSATIVE = "оглушающий прут",
-		INSTRUMENTAL = "оглушающим прутом",
-		PREPOSITIONAL = "оглушающем пруте"
-	)
-
 
 /obj/item/melee/baton/security/cattleprod/Initialize(mapload)
 	. = ..()
@@ -678,23 +619,11 @@
 // Teleprod
 /obj/item/melee/baton/security/cattleprod/teleprod
 	name = "teleprod"
-	desc = "Металлический прут с прикреплённым блюспейс-кристаллом, \
-			подключённым к батарее. От наконечника кристалла веет странной энергией. \
-			Его точно безопасно трогать?"
+	desc = "A prod with a bluespace crystal on the end. The crystal doesn't look too fun to touch."
 	icon_state = "teleprod_nocell"
 	base_icon_state = "teleprod"
 	item_state = "teleprod"
 	origin_tech = "combat=2;bluespace=4;materials=3"
-
-/obj/item/melee/baton/security/cattleprod/teleprod/get_ru_names()
-	return alist(
-		NOMINATIVE = "теле-прут",
-		GENITIVE = "теле-прута",
-		DATIVE = "теле-пруту",
-		ACCUSATIVE = "теле-прут",
-		INSTRUMENTAL = "теле-прутом",
-		PREPOSITIONAL = "теле-пруте"
-	)
 
 /obj/item/melee/baton/security/cattleprod/teleprod/clumsy_check(mob/living/carbon/human/user, mob/living/intented_target)
 	. = ..()

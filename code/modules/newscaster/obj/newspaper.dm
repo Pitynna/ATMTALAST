@@ -9,7 +9,7 @@
  */
 /obj/item/newspaper
 	name = "newspaper"
-	desc = "Выпуск газеты \"Грифон\", распространяемой на объектах \"Нанотрейзен\"."
+	desc = "An issue of The Griffon, the newspaper circulating aboard Nanotrasen Space Stations."
 	gender = FEMALE
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "newspaper"
@@ -50,16 +50,6 @@
 		"Ресторан \"Звёздный Вкус\": Блюда, которые вы никогда не пробовали! И, возможно, никогда не захотите попробовать снова.",
 		"Клуб \"Нулевая Гравитация\": Танцуйте до тех пор, пока не упадёте! Или пока вас не выбросит за борт.",
 		"Офицеры дуреют от этой кожуры! Самые скользкие кожурки во всей система Тау Кита..."
-	)
-
-/obj/item/newspaper/get_ru_names()
-	return alist(
-		NOMINATIVE = "газета",
-		GENITIVE = "газеты",
-		DATIVE = "газете",
-		ACCUSATIVE = "газету",
-		INSTRUMENTAL = "газетой",
-		PREPOSITIONAL = "газете",
 	)
 
 /obj/item/newspaper/Initialize(mapload)

@@ -1,6 +1,6 @@
 /obj/machinery/vending/boozeomat
 	name = "Booze-O-Mat"
-	desc = "Чудо техники, предположительно способное выдать идеальный напиток для вас в тот момент, когда вы об этом попросите."
+	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one."
 	icon_state = "boozeomat_off"
 	panel_overlay = "boozeomat_panel"
 	screen_overlay = "boozeomat"
@@ -91,16 +91,6 @@
 	contraband = list(
 		/obj/item/reagent_containers/cup/glass/tea = 10,
 		/obj/item/reagent_containers/cup/glass/bottle/fernet = 5,
-	)
-
-/obj/machinery/vending/boozeomat/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Booze-O-Mat",
-		GENITIVE = "торгового автомата Booze-O-Mat",
-		DATIVE = "торговому автомату Booze-O-Mat",
-		ACCUSATIVE = "торговый автомат Booze-O-Mat",
-		INSTRUMENTAL = "торговым автоматом Booze-O-Mat",
-		PREPOSITIONAL = "торговом автомате Booze-O-Mat",
 	)
 
 /obj/machinery/vending/boozeomat/syndicate_access

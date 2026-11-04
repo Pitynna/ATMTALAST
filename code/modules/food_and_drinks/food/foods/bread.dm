@@ -139,31 +139,11 @@
 	trash = null
 	list_reagents = list("nutriment" = 7, "bread" = 5)
 
-/obj/item/reagent_containers/food/snacks/breadslice/stale/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрствый хлеб",
-		GENITIVE = "чёрствого хлеба",
-		DATIVE = "чёрствому хлебу",
-		ACCUSATIVE = "чёрствый хлеб",
-		INSTRUMENTAL = "чёрствым хлебом",
-		PREPOSITIONAL = "чёрством хлебе",
-	)
-
 /obj/item/reagent_containers/food/snacks/breadslice/moldy
 	name = "moldy bread"
 	gender = MALE
 	trash = null
 	list_reagents = list("nutriment" = 2, "bread" = 5, "fungus" = 1)
-
-/obj/item/reagent_containers/food/snacks/breadslice/moldy/get_ru_names()
-	return alist(
-			NOMINATIVE = "заплесневелый хлеб",
-			GENITIVE = "заплесневелого хлеба",
-			DATIVE = "заплесневелому хлебу",
-			ACCUSATIVE = "заплесневелый хлеб",
-			INSTRUMENTAL = "заплесневелым хлебом",
-			PREPOSITIONAL = "заплесневелом хлебе",
-		)
 
 /obj/item/reagent_containers/food/snacks/breadslice/burned
 	name = "burned bread slice"
@@ -238,16 +218,6 @@
 	tastes = list("bread" = 2)
 	foodtype = GRAIN
 	slot_flags = ITEM_SLOT_BELT
-
-/obj/item/reagent_containers/food/snacks/baguette/get_ru_names()
-	return alist(
-		NOMINATIVE = "багет",
-		GENITIVE = "багета",
-		DATIVE = "багету",
-		ACCUSATIVE = "багет",
-		INSTRUMENTAL = "багетом",
-		PREPOSITIONAL = "багете",
-	)
 
 /obj/item/reagent_containers/food/snacks/baguette/combat
 	sharp = TRUE

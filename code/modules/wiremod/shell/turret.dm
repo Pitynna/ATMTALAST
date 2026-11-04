@@ -9,16 +9,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	origin_tech = "programming=7;combat=7;engineering=6"
 
-/obj/item/turret_integration_module/get_ru_names()
-	return alist(
-		NOMINATIVE = "интегральный модуль",
-		GENITIVE = "интегрального модуля",
-		DATIVE = "интегральному модулю",
-		ACCUSATIVE = "интегральный модуль",
-		INSTRUMENTAL = "интегральным модулем",
-		PREPOSITIONAL = "интегральном модуле"
-	)
-
 /obj/machinery/porta_turret/integrated
 	name = "integrated turret"
 	desc = "Турель без собственной системы опознавания целей. Стреляет только по указанию интегральной схемы."
@@ -30,16 +20,6 @@
 	icon_state = "integrated_turretCover"
 	salvage_sensor = /obj/item/turret_integration_module
 	sprite_prefix = "integrated_"
-
-/obj/machinery/porta_turret/integrated/get_ru_names()
-	return alist(
-		NOMINATIVE = "интегральная турель",
-		GENITIVE = "интегральной турели",
-		DATIVE = "интегральной турели",
-		ACCUSATIVE = "интегральную турель",
-		INSTRUMENTAL = "интегральной турелью",
-		PREPOSITIONAL = "интегральной турели"
-	)
 
 /obj/machinery/porta_turret/integrated/Initialize(mapload)
 	. = ..()

@@ -1,10 +1,10 @@
 /obj/item/paper/fluff/henderson_report
-	name = "Важное уведомление — Миссис Хендерсон"
+	name = "Important Notice - Mrs. Henderson"
 	info = "Ничего интересного."
 
 /obj/effect/mob_spawn/human/doctor/alive/lavaland
 	name = "broken rejuvenation pod"
-	desc = "Медицинское устройство, предназначеное для стабилизации пациентов. Эта, кажется, сломана, а человек внутри находится в коме."
+	desc = "A small sleeper typically used to instantly restore minor wounds. This one seems broken, and its occupant is comatose."
 	mob_name = "a translocated vet"
 	description = "Вы — интерн, работающий в ветеринарной клинике, который внезапно оказался на Лаваленде. Удачи."
 	flavour_text = "Всё произошло так быстро: вы залечивали царапину от кошки в слипере, а когда очнулись, клиника опустела.\n\
@@ -16,16 +16,6 @@
 	allow_gender_pick = TRUE
 	allow_name_pick = TRUE
 	outfit = /datum/outfit/job/doctor/alive/lavaland
-
-/obj/effect/mob_spawn/human/doctor/alive/lavaland/get_ru_names()
-	return alist(
-		NOMINATIVE = "слипер",
-		GENITIVE = "слипера",
-		DATIVE = "слиперу",
-		ACCUSATIVE = "слипер",
-		INSTRUMENTAL = "слипером",
-		PREPOSITIONAL = "слипере",
-	)
 
 /datum/outfit/job/doctor/alive/lavaland
 

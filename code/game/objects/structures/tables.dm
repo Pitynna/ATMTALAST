@@ -445,7 +445,7 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 
 /obj/structure/table/glass
 	name = "glass table"
-	desc = "Выглядит хрупко. Наверное, не стоит на него натыкаться."
+	desc = "Looks fragile. You should totally flip it. It is begging for it."
 	icon = 'icons/obj/smooth_structures/glass_table.dmi'
 	icon_state = "glass_table-0"
 	buildstack = /obj/item/stack/sheet/glass
@@ -458,16 +458,6 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 	smoothing_groups = SMOOTH_GROUP_GLASS_TABLES
 	canSmoothWith = SMOOTH_GROUP_GLASS_TABLES
 	base_icon_state = "glass_table"
-
-/obj/structure/table/glass/get_ru_names()
-	return alist(
-		NOMINATIVE = "стеклянный стол",
-		GENITIVE = "стеклянного стола",
-		DATIVE = "стеклянному столу",
-		ACCUSATIVE = "стеклянный стол",
-		INSTRUMENTAL = "стеклянным столом",
-		PREPOSITIONAL = "стеклянном столе",
-	)
 
 /obj/structure/table/glass/Initialize(mapload)
 	. = ..()

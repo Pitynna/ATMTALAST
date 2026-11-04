@@ -15,16 +15,6 @@
 	light_on = FALSE
 	var/locked = FALSE
 
-/obj/structure/wiremod_manipulator/get_ru_names()
-	return alist(
-		NOMINATIVE = "манипулятор",
-		GENITIVE = "манипулятора",
-		DATIVE = "манипулятору",
-		ACCUSATIVE = "манипулятор",
-		INSTRUMENTAL = "манипулятором",
-		PREPOSITIONAL = "манипуляторе"
-	)
-
 /obj/structure/wiremod_manipulator/Initialize(mapload)
 	. = ..()
 	AddComponent( \

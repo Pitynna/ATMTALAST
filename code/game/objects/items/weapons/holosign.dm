@@ -1,6 +1,6 @@
 /obj/item/holosign_creator
 	name = "holographic sign projector"
-	desc = "Этого не должно быть, сообщите в баг-репорт."
+	desc = "This shouldnt exist, if it does, tell a coder."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "signmaker"
 	item_state = "signmaker"
@@ -65,19 +65,9 @@
 
 /obj/item/holosign_creator/janitor
 	name = "Janitorial Holosign projector"
-	desc = "Удобный голографический проектор, отображающий знак уборщика."
+	desc = "A handy-dandy holographic projector that displays a janitorial sign."
 	belt_icon = "sign_projector"
 	var/wet_enabled = TRUE
-
-/obj/item/holosign_creator/janitor/get_ru_names()
-	return alist(
-		NOMINATIVE = "голо-проектор уборщика",
-		GENITIVE = "голо-проектора уборщика",
-		DATIVE = "голо-проектору уборщика",
-		ACCUSATIVE = "голо-проектор уборщика",
-		INSTRUMENTAL = "голо-проектором уборщика",
-		PREPOSITIONAL = "голо-проекторе уборщика",
-	)
 
 /obj/item/holosign_creator/janitor/click_alt(mob/living/user)
 	wet_enabled = !wet_enabled
@@ -104,7 +94,7 @@
 
 /obj/item/holosign_creator/security
 	name = "security holobarrier projector"
-	desc = "Голографический проектор, который создаёт голографические барьеры службы безопасности."
+	desc = "A holographic projector that creates holographic security barriers."
 	icon_state = "signmaker_sec"
 	item_state = "signmaker_sec"
 	belt_icon = "security_sign_projector"
@@ -112,70 +102,30 @@
 	creation_time = 30
 	max_signs = 6
 
-/obj/item/holosign_creator/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "голо-проектор службы безопасности",
-		GENITIVE = "голо-проектора службы безопасности",
-		DATIVE = "голо-проектору службы безопасности",
-		ACCUSATIVE = "голо-проектор службы безопасности",
-		INSTRUMENTAL = "голо-проектором службы безопасности",
-		PREPOSITIONAL = "голо-проекторе службы безопасности",
-	)
-
 /obj/item/holosign_creator/engineering
 	name = "engineering holobarrier projector"
-	desc = "Голографический проектор, который создаёт инженерные голографические барьеры."
+	desc = "A holographic projector that creates holographic engineering barriers."
 	icon_state = "signmaker_engi"
 	item_state = "signmaker_engi"
 	holosign_type = /obj/structure/holosign/barrier/engineering
 	creation_time = 30
 	max_signs = 6
 
-/obj/item/holosign_creator/engineering/get_ru_names()
-	return alist(
-		NOMINATIVE = "инженерный голо-проектор",
-		GENITIVE = "инженерного голо-проектора",
-		DATIVE = "инженерному голо-проектору",
-		ACCUSATIVE = "инженерный голо-проектор",
-		INSTRUMENTAL = "инженерным голо-проектором",
-		PREPOSITIONAL = "инженерном голо-проекторе",
-	)
-
 /obj/item/holosign_creator/atmos
 	name = "ATMOS holofan projector"
-	desc = "Голографический проектор, создающий голографические барьеры, препятствующие изменению атмосферы."
+	desc = "A holographic projector that creates holographic barriers that prevent changes in atmosphere conditions."
 	icon_state = "signmaker_engi"
 	item_state = "signmaker_engi"
 	holosign_type = /obj/structure/holosign/barrier/atmos
 	max_signs = 6
 
-/obj/item/holosign_creator/atmos/get_ru_names()
-	return alist(
-		NOMINATIVE = "атмосферный голо-проектор",
-		GENITIVE = "атмосферного голо-проектора",
-		DATIVE = "атмосферному голо-проектору",
-		ACCUSATIVE = "атмосферный голо-проектор",
-		INSTRUMENTAL = "атмосферным голо-проектором",
-		PREPOSITIONAL = "атмосферном голо-проекторе",
-	)
-
 /obj/item/holosign_creator/cyborg
 	name = "Energy Barrier Projector"
-	desc = "Голографический проектор, создающий хрупкие энергетические поля."
+	desc = "A holographic projector that creates fragile energy fields."
 	creation_time = 15
 	max_signs = 9
 	holosign_type = /obj/structure/holosign/barrier/cyborg
 	var/shock = 0
-
-/obj/item/holosign_creator/cyborg/get_ru_names()
-	return alist(
-		NOMINATIVE = "проектор энерго-барьера",
-		GENITIVE = "проектора энерго-барьера",
-		DATIVE = "проектору энерго-барьера",
-		ACCUSATIVE = "проектор энерго-барьера",
-		INSTRUMENTAL = "проектором энерго-барьера",
-		PREPOSITIONAL = "проекторе энерго-барьера",
-	)
 
 /obj/item/holosign_creator/cyborg/attack_self(mob/user)
 	if(isrobot(user))

@@ -250,19 +250,9 @@
 
 /obj/structure/statue/silver/secborg/piano
 	name = "piano robot"
-	desc = "Статуя робота во фраке сидящего за пианино в открытом космосе. Судя по всему он здесь уже давно. И у него отличный металлический блестящий зад."
+	desc = "A statue of a robot in a tailcoat playing a piano in open space. It seems to have been here a long time. It also has an excellent, shiny metal backside."
 	icon = 'icons/mob/robots.dmi'
 	icon_state = "Robot-MAN"
-
-/obj/structure/statue/silver/secborg/piano/get_ru_names()
-	return alist(
-		NOMINATIVE = "робот-пианист в глубоком космосе",
-		GENITIVE = "робота-пианиста в глубоком космосе",
-		DATIVE = "роботу-пианисту в глубоком космосе",
-		ACCUSATIVE = "робота-пианиста в глубоком космосе",
-		INSTRUMENTAL = "роботом-пианистом в глубоком космосе",
-		PREPOSITIONAL = "роботе-пианисте в глубоком космосе",
-	)
 
 /obj/structure/statue/silver/medborg
 	name = "statue of a medical cyborg"
@@ -318,8 +308,8 @@
 			spam_flag = 0
 
 /obj/structure/statue/bananium/clown/unique
-	name = "статуя великого Хонкера"
-	desc = "Искусно слепленная статуя из бананиума, бананового сока и непонятного белого материала. Судя по его выдающейся улыбки, двум золотым гудкам в руках и наряду, он был лучшим стендапером и шутником на станции. Полное имя, к сожалению плохо читаемо и затерто, похоже кто-то явно завидовал его таланту."
+	name = "statue of the Great Honker"
+	desc = "An expertly sculpted statue made from bananium, banana juice and an unidentified white material. Its remarkable smile, two golden horns and outfit suggest that it depicts the station's finest comedian. The full name is unfortunately worn and illegible; someone clearly envied his talent."
 	icon_state = "clown_unique"
 
 /obj/structure/statue/sandstone
@@ -334,7 +324,7 @@
 
 /obj/structure/statue/sandstone/venus //call me when we add marble i guess
 	name = "statue of a pure maiden"
-	desc = "Похоже, что это древняя мраморная статуя. Девушка имеет длинные косы, которые спускаются по всему телу до пола. В руках она держит ящик инструментов. Пожалуй, это лучшее изображение женщины, которое вы когда-либо видели. Художник должен действительно быть мастером своего дела. Жаль что рука сломана."
+	desc = "An ancient marble statue. The subject is depicted with a floor-length braid and is wielding a toolbox. By Jove, it's easily the most gorgeous depiction of a woman you've ever seen. The artist must truly be a master of his craft. Shame about the broken arm, though."
 	icon = 'icons/obj/statuelarge.dmi'
 	icon_state = "venus"
 
@@ -357,8 +347,8 @@
 	return CLICK_ACTION_SUCCESS
 
 /obj/structure/statue/tranquillite/mime/unique
-	name = "статуя гордости пантомимы"
-	desc = "Искусно слепленная статуя из транквилиума, если приглядеться, то на статую надета старая униформа мима, перекрашенная под текстуру транквилиума, а рот статуи заклеен скотчем. Похоже кто-то полностью отдавал себя искусству пантомимы. На груди виднеется медаль с еле различимой закрашенной надписью \"За Отвагу\", поверх которой написано \"За Военные Преступления\"."
+	name = "statue of the Pride of Pantomime"
+	desc = "An expertly sculpted tranquillite statue. On closer inspection, it wears an old mime uniform painted to resemble tranquillite, and its mouth is taped shut. Someone clearly devoted themselves entirely to pantomime. A medal on its chest bears a barely legible painted-over inscription, For Bravery, with For War Crimes written on top."
 	icon_state = "mime_unique"
 
 /obj/structure/statue/kidanstatue
@@ -397,37 +387,35 @@
 	anchored = TRUE
 /obj/structure/statue/elwycco
 	name = "Unknown Hero"
-	desc = "Похоже это какой-то очень важный человек, или очень значимый для многих людей. Вы замечаете огроменный топор в его руках, с выгравированным числом 220. Что это число значит? Каждый понимает по своему, однако по слухам оно означает количество его жертв. \n Надпись на табличке — Мы с тобой, Шустрила! Аве, Легион!"
+	desc = "This appears to be a very important person, or someone important to many people. He holds an enormous axe engraved with the number 220. Everyone interprets the number differently, but rumor says it is his victim count.\nThe plaque reads: We stand with you, Shustrila! Ave, Legion!"
 	icon_state = "elwycco"
 	anchored = TRUE
 	oreAmount = 0
 
 /obj/structure/statue/thaumicnik
 	name = "Unknown Hero"
-	desc = "Перед собою вы наблюдаете интересного молодого человека, который держит в руках чертежи станции очень похожие на станцию Керберос. Возможно он как то принимал участие в разработке или в конструировании этой станции. В другой же руке вы замечаете планшет с листком, на котором расписаны какие-то даты и заметки к ним. Все что удается вам разглядеть, так это заголовок *event-times* на листочке. \n Надпись на табличке — Один из главных инженеров, принимающих участие в разработке передовой научно-исследовательской станции Kerberos."
+	desc = "An intriguing young man holds station blueprints that closely resemble Kerberos. Perhaps he helped design or build it. In his other hand is a clipboard covered in dates and notes; all you can make out is the heading event-times.\nThe plaque reads: One of the chief engineers involved in developing the advanced Kerberos research station."
 	icon_state = "thaumicnik"
 	anchored = TRUE
 	oreAmount = 0
 
 /obj/structure/statue/hooker
 	name = "Unknown Hero"
-	desc = "Возможно вы и не встречали подобного героя, ведь он всегда ходит в маске, и в белом техническом халате. Скорее всего, он все ещё скрывается среди экипажа, но уже другой личностью. \n Надпись на табличке — Герой, который пожертвовав собою, уничтожил угрозу станции. Награжден посмертно."
+	desc = "You may never have met this hero, who always wears a mask and a white technical coat. Perhaps he still hides among the crew under another identity.\nThe plaque reads: A hero who sacrificed himself to destroy a threat to the station. Awarded posthumously."
 	icon_state = "hooker"
 	anchored = TRUE
 	oreAmount = 0
 
 /obj/structure/statue/artchair
 	name = "Unknown Hero"
-	desc = "ещё один герой корп. Nanotrasen. Вы замечаете интересную деталь, что спинка стула похожа на тюремное окошко. Так же на нем почему-то присутствует кровь, которая уже налегает слоями и хранится около года. По всей видимости этот стул символизирует какую то личность, которая внесла большой вклад в развитие и поддержание нашей галактической системы. \n Надпись на табличке — Спасибо тебе за все, мы всегда были и будем рады тебе."
+	desc = "Another Nanotrasen hero. The chair's back resembles a prison window, and blood has accumulated on it in layers for about a year. It apparently represents someone who contributed greatly to developing and maintaining our galactic system.\nThe plaque reads: Thank you for everything. You have always been, and will always be, welcome here."
 	icon_state = "artchair"
 	anchored = TRUE
 	oreAmount = 0
 
 /obj/structure/statue/furukai
-	name = "София Вайт"
-	desc = "Загадочная девушка, ныне одна из множества офицеров \"Синдиката\". Получившая столь высокую позицию не за связи, а за свои способности. \
-			Движимая местью за потерю родной сестры из-за коррупционных верхушек \"Нанотрейзен\", она вступила в Синдикат,  \
-			где стала известна и как способный агент и как отличный инженер. Хоть ее позывной и отсылал на пушистых, в душе она их ненавидела..."
+	name = "Sophia White"
+	desc = "A mysterious woman, now one of the Syndicate's many officers. She earned her position through ability rather than connections. Driven by revenge after losing her sister to Nanotrasen's corrupt leadership, she joined the Syndicate and became known as both a skilled agent and an excellent engineer. Despite her furry-sounding callsign, she hated them deep down..."
 	icon = 'icons/obj/statuelarge.dmi'
 	icon_state = "furukai"
 	pixel_y = 7
@@ -435,10 +423,8 @@
 	oreAmount = 0
 
 /obj/structure/statue/ell_good
-	name = "Mr.Буум"
-	desc = "Загадочный клоун с жёлтым оттенком кожи и выразительными зелёными глазами. Лучший двойной агент \"Синдиката\" умудрявшийся захватить власть множества объектов. \
-			Его имя часто произносят неправильно из-за чего его заслуги по документам принадлежат сразу нескольким Буумам. \
-			Так же знаменит тем, что убедил руководство НТ тратить время, силы и средства, на золотой унитаз."
+	name = "Mr. Boom"
+	desc = "A mysterious yellow-skinned clown with striking green eyes. The Syndicate's finest double agent, he managed to seize control of numerous facilities. His name is often mispronounced, leaving his achievements credited to several different Booms. Also famous for convincing Nanotrasen management to spend time, effort and money on a golden toilet."
 	icon = 'icons/obj/statuelarge.dmi'
 	icon_state = "ell_good"
 	pixel_y = 7
@@ -446,8 +432,8 @@
 	oreAmount = 0
 
 /obj/structure/statue/mooniverse
-	name = "Неизвестный агент"
-	desc = "Информация на табличке под статуей исцарапана и нечитабельна..."
+	name = "Unknown Agent"
+	desc = "The plaque beneath the statue is scratched and illegible..."
 	icon = 'icons/obj/statuelarge.dmi'
 	icon_state = "mooniverse"
 	pixel_y = 7

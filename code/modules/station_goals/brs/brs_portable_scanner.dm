@@ -24,7 +24,7 @@
 	)
 
 /obj/machinery/brs_portable_scanner
-	name = "Портативный сканер блюспейс разлома"
+	name = "portable bluespace rift scanner"
 	icon = 'icons/obj/machines/BRS/scanner_dynamic.dmi'
 	icon_state = "scanner"
 	luminosity = 1

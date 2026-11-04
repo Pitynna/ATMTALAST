@@ -217,8 +217,7 @@
  */
 /obj/structure/barricade/dropwall
 	name = "dropwall"
-	desc = "Временный энергетический щит, питаемый от небольшого генератора. \
-			Уничтожение генератора приведёт к полному отключению всех привязанных к нему щитов."
+	desc = "A temporary deployable energy shield powered by a generator. Breaking the generator will destroy all the shields connected to it."
 	icon = 'icons/obj/dropwall.dmi'
 	icon_state = "dropwall_dead" //sprite chosen in init
 	armor = list(MELEE = 0, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 10, FIRE = 10, ACID = 0) // Copied from the security barrier, but no melee armor
@@ -232,16 +231,6 @@
 	var/core_shield = FALSE
 	/// This variable is to tell the shield what it's source is.
 	var/obj/structure/dropwall_generator/source = null
-
-/obj/structure/barricade/dropwall/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергетический щит",
-		GENITIVE = "энергетического щита",
-		DATIVE = "энергетическому щиту",
-		ACCUSATIVE = "энергетический щит",
-		INSTRUMENTAL = "энергетическим щитом",
-		PREPOSITIONAL = "энергетическом щите"
-	)
 
 /obj/structure/barricade/dropwall/Initialize(mapload, owner, core, dir_1, dir_2)
 	. = ..()
@@ -272,8 +261,7 @@
 
 /obj/item/grenade/barrier/dropwall
 	name = "dropwall shield generator"
-	desc = "Генератор энергетического щита, разработанный корпорацией \"Стальная Гвардия\". Используется для создания временного \
-			укрытия, при этом позволяя вести безопасную стрельбу с внутренней стороны щита."
+	desc = "This generator designed by Shellguard Munitions's spartan division is used to deploy a temporary cover that blocks projectiles and explosions from a direction, while allowing projectiles to pass freely from behind."
 	actions_types = list(/datum/action/item_action/toggle_barrier_spread)
 	icon = 'icons/obj/dropwall.dmi'
 	icon_state = "dropwall"
@@ -285,16 +273,6 @@
 	var/deployed = FALSE
 	/// Mob who armed it. Needed for the get_dir proc
 	var/armer
-
-/obj/item/grenade/barrier/dropwall/get_ru_names()
-	return alist(
-		NOMINATIVE = "граната энергощита",
-		GENITIVE = "граната энергощита",
-		DATIVE = "граната энергощита",
-		ACCUSATIVE = "граната энергощита",
-		INSTRUMENTAL = "граната энергощита",
-		PREPOSITIONAL = "граната энергощита"
-	)
 
 /obj/item/grenade/barrier/dropwall/toggle_mode(mob/user)
 	switch(mode)
@@ -331,8 +309,7 @@
 
 /obj/structure/dropwall_generator
 	name = "deployed dropwall shield generator"
-	desc = "Генератор энергетического щита, разработанный корпорацией \"Стальная гвардия\". Используется для создания временного \
-			укрытия, при этом позволяя вести безопасную стрельбу со стороны генератора."
+	desc = "This generator designed by Shellguard Munitions's spartan division is used to deploy a temporary cover that blocks projectiles and explosions from a direction, while allowing projectiles to pass freely from behind."
 	icon = 'icons/obj/dropwall.dmi'
 	icon_state = "dropwall_deployed"
 	max_integrity = 25 // 2 shots
@@ -344,16 +321,6 @@
 	/// The type of dropwall
 	var/barricade_type = /obj/structure/barricade/dropwall
 	var/cycle
-
-/obj/structure/dropwall_generator/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор энергощита",
-		GENITIVE = "генератора энергощита",
-		DATIVE = "генератору энергощита",
-		ACCUSATIVE = "генератор энергощита",
-		INSTRUMENTAL = "генератором энергощита",
-		PREPOSITIONAL = "генераторе энергощита"
-	)
 
 /obj/structure/dropwall_generator/Initialize(mapload, direction, uptime)
 	. = ..()
@@ -421,34 +388,14 @@
 
 /obj/item/used_dropwall
 	name = "broken dropwall generator"
-	desc = "Этот генератор вышел из строя и уже ни на что не сгодится."
+	desc = "This dropwall has ran out of charge, but some materials could possibly be reclaimed."
 	icon = 'icons/obj/dropwall.dmi'
 	icon_state = "dropwall_dead"
 	item_state = "grenade"
 	materials = list(MAT_METAL = 500, MAT_GLASS = 300) //plasma burned up for power or something, plus not that much to reclaim
 
-/obj/item/used_dropwall/get_ru_names()
-	return alist(
-		NOMINATIVE = "сломанный генератор энергощита",
-		GENITIVE = "сломанного генератора энергощита",
-		DATIVE = "сломанному генератору энергощита",
-		ACCUSATIVE = "сломанный генератор энергощита",
-		INSTRUMENTAL = "сломанным генератором энергощита",
-		PREPOSITIONAL = "сломанном генераторе энергощита"
-	)
-
 /obj/item/storage/box/syndie_kit/dropwall
 	name = "dropwall generator box"
-
-/obj/item/storage/box/syndie_kit/dropwall/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка с генераторами энергощита",
-		GENITIVE = "коробку с генераторами энергощита",
-		DATIVE = "коробке с генераторами энергощита",
-		ACCUSATIVE = "коробку с генераторами энергощита",
-		INSTRUMENTAL = "коробке с генераторами энергощита",
-		PREPOSITIONAL = "коробкой с генераторами энергощита"
-	)
 
 /obj/item/storage/box/syndie_kit/dropwall/sec
 	icon_state = "box_security"
@@ -470,15 +417,6 @@
 	generator_type = /obj/structure/dropwall_generator/firewall/strong
 	uptime = 5 MINUTES
 
-/obj/item/grenade/barrier/dropwall/firewall/get_ru_names()
-	return alist(
-		NOMINATIVE = "граната огненного щита",
-		GENITIVE = "граната огненного щита",
-		DATIVE = "граната огненного щита",
-		ACCUSATIVE = "граната огненного щита",
-		INSTRUMENTAL = "граната огненного щита",
-		PREPOSITIONAL = "граната огненного щита"
-	)
 /obj/structure/dropwall_generator/firewall
 	name = "deployed firewall shield generator"
 	barricade_type = /obj/structure/barricade/dropwall/firewall
@@ -488,16 +426,6 @@
 
 /obj/structure/dropwall_generator/firewall/strong
 	barricade_type = /obj/structure/barricade/dropwall/firewall/strong
-
-/obj/structure/dropwall_generator/firewall/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор огненного щита",
-		GENITIVE = "генератора огненного щита",
-		DATIVE = "генератору огненного щита",
-		ACCUSATIVE = "генератор огненного щита",
-		INSTRUMENTAL = "генератором огненного щита",
-		PREPOSITIONAL = "генераторе огненного щита"
-	)
 
 /obj/structure/barricade/dropwall/firewall
 	/// Can our dropwall inflict stamina damage in each shot?

@@ -535,18 +535,8 @@ Difficulty: Hard
 
 /obj/effect/decal/cleanable/blood/gibs/bubblegum
 	name = "thick blood"
-	desc = "Густая, разбрызганная кровь."
+	desc = "Thick, splattered blood."
 	random_icon_states = list("gib3", "gib5", "gib6")
-
-/obj/effect/decal/cleanable/blood/gibs/bubblegum/get_ru_names()
-	return alist(
-		NOMINATIVE = "густая кровь",
-		GENITIVE = "густой крови",
-		DATIVE = "густой крови",
-		ACCUSATIVE = "густую кровь",
-		INSTRUMENTAL = "густой кровью",
-		PREPOSITIONAL = "густой крови",
-	)
 
 /obj/effect/decal/cleanable/blood/gibs/bubblegum/can_bloodcrawl_in()
 	return TRUE

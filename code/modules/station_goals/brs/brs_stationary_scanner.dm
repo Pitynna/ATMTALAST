@@ -24,7 +24,7 @@
 	)
 
 /obj/machinery/power/brs_stationary_scanner
-	name = "Стационарный сканер блюспейс разлома"
+	name = "stationary bluespace rift scanner"
 	icon = 'icons/obj/machines/BRS/scanner_static.dmi'
 	icon_state = "scanner"
 	pixel_x = -32

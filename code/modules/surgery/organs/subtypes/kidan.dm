@@ -6,16 +6,6 @@
 	item_state = "kidan_liver"
 	alcohol_intensity = 0.5
 
-/obj/item/organ/internal/liver/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "печень кидана",
-		GENITIVE = "печени кидана",
-		DATIVE = "печени кидана",
-		ACCUSATIVE = "печень кидана",
-		INSTRUMENTAL = "печенью кидана",
-		PREPOSITIONAL = "печени кидана",
-	)
-
 #define KIDAN_LANTERN_HUNGERCOST 0.5
 #define KIDAN_LANTERN_MINHUNGER 150
 #define KIDAN_LANTERN_LIGHT 5
@@ -23,7 +13,7 @@
 /obj/item/organ/internal/lantern
 	species_type = /datum/species/kidan
 	name = "Bioluminescent Lantern"
-	desc = "Специальная железа, состоящая из ткани, которая излучает свет за счёт химической реакции кислорода, белков и крови. Эта принадлежала кидану."
+	desc = "A specialized tissue that reacts with oxygen, nutriment and blood to produce light in Kidan."
 	gender = FEMALE
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	icon_state = "kid_lantern"
@@ -35,16 +25,6 @@
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
 	var/colour
 	var/glowing = 0
-
-/obj/item/organ/internal/lantern/get_ru_names()
-	return alist(
-		NOMINATIVE = "биолюминесцентная железа",
-		GENITIVE = "биолюминесцентной железы",
-		DATIVE = "биолюминесцентной железе",
-		ACCUSATIVE = "биолюминесцентную железу",
-		INSTRUMENTAL = "биолюминесцентной железй",
-		PREPOSITIONAL = "биолюминесцентной железе",
-	)
 
 /obj/item/organ/internal/lantern/ui_action_click(mob/user, datum/action/action, leftclick)
 	if(toggle_biolum())
@@ -146,30 +126,10 @@
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_eyes"
 
-/obj/item/organ/internal/eyes/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаза кидана",
-		GENITIVE = "глаз кидана",
-		DATIVE = "глазам кидана",
-		ACCUSATIVE = "глаза кидана",
-		INSTRUMENTAL = "глазами кидана",
-		PREPOSITIONAL = "глазах кидана",
-	)
-
 /obj/item/organ/internal/ears/kidan
 	species_type = /datum/species/kidan
 	name = "kidan ears"
 	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали кидану."
-
-/obj/item/organ/internal/ears/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "уши кидана",
-		GENITIVE = "ушей кидана",
-		DATIVE = "ушам кидана",
-		ACCUSATIVE = "уши кидана",
-		INSTRUMENTAL = "ушами кидана",
-		PREPOSITIONAL = "ушах кидана",
-	)
 
 /obj/item/organ/internal/heart/kidan
 	species_type = /datum/species/kidan
@@ -179,16 +139,6 @@
 	item_state = "kidan_heart-on"
 	item_base = "kidan_heart"
 
-/obj/item/organ/internal/heart/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "сердце кидана",
-		GENITIVE = "сердца кидана",
-		DATIVE = "сердцу кидана",
-		ACCUSATIVE = "сердце кидана",
-		INSTRUMENTAL = "сердцем кидана",
-		PREPOSITIONAL = "сердце кидана",
-	)
-
 /obj/item/organ/internal/brain/kidan
 	species_type = /datum/species/kidan
 	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал кидану."
@@ -196,16 +146,6 @@
 	item_state = "kidan_brain"
 	mmi_icon = 'icons/obj/species_organs/kidan.dmi'
 	parent_organ_zone = BODY_ZONE_CHEST
-
-/obj/item/organ/internal/brain/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозг кидана",
-		GENITIVE = "мозга кидана",
-		DATIVE = "мозгу кидана",
-		ACCUSATIVE = "мозг кидана",
-		INSTRUMENTAL = "мозгом кидана",
-		PREPOSITIONAL = "мозге кидана",
-	)
 
 /obj/item/organ/internal/brain/kidan/on_life()
 	. = ..()
@@ -225,32 +165,12 @@
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_lungs"
 
-/obj/item/organ/internal/lungs/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "лёгкие кидана",
-		GENITIVE = "лёгких кидана",
-		DATIVE = "лёгким кидана",
-		ACCUSATIVE = "лёгкие кидана",
-		INSTRUMENTAL = "лёгкими кидана",
-		PREPOSITIONAL = "лёгких кидана",
-	)
-
 /obj/item/organ/internal/kidneys/kidan
 	species_type = /datum/species/kidan
 	name = "kidan kidneys"
 	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали кидану."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_kidneys"
-
-/obj/item/organ/internal/kidneys/kidan/get_ru_names()
-	return alist(
-		NOMINATIVE = "почки кидана",
-		GENITIVE = "почек кидана",
-		DATIVE = "почкам кидана",
-		ACCUSATIVE = "почки кидана",
-		INSTRUMENTAL = "почками кидана",
-		PREPOSITIONAL = "почках кидана",
-	)
 
 /obj/item/organ/external/head/kidan
 	species_type = /datum/species/kidan

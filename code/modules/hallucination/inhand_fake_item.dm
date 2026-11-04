@@ -135,7 +135,7 @@
 	hallucinator.playsound_local(get_turf(hallucinator), 'sound/magic/summon_magic.ogg', 50, TRUE)
 
 /obj/item/hallucinated
-	name = "мираж"
+	name = "mirage"
 	plane = ABOVE_HUD_PLANE
 	interaction_flags_click = NONE
 	interaction_flags_atom = NONE

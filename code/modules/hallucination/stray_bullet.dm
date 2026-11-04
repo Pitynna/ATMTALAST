@@ -33,7 +33,7 @@
 	return TRUE
 
 /obj/effect/client_image_holder/hallucination/fake_projectile
-	name = "пуля"
+	name = "bullet"
 	image_layer = ABOVE_MOB_LAYER
 	var/hal_icon = 'icons/obj/weapons/guns/projectiles.dmi'
 	var/hal_icon_state
@@ -81,28 +81,28 @@
 	qdel(src)
 
 /obj/effect/client_image_holder/hallucination/fake_projectile/bullet
-	name = "пулей"
+	name = "bullet"
 	hal_icon_state = "bullet"
 	hal_fire_sound = 'sound/weapons/gunshots/1suppres.ogg'
 	hal_hitsound = 'sound/weapons/bullet2.ogg'
 	stamina_damage = 50
 
 /obj/effect/client_image_holder/hallucination/fake_projectile/laser
-	name = "лазером"
+	name = "laser"
 	hal_icon_state = "laser"
 	hal_fire_sound = 'sound/weapons/gunshots/1laser10.ogg'
 	hal_hitsound = 'sound/weapons/sear.ogg'
 	stamina_damage = 30
 
 /obj/effect/client_image_holder/hallucination/fake_projectile/disabler
-	name = "дизейблером"
+	name = "disabler"
 	hal_icon_state = "omnilaser"
 	hal_fire_sound = 'sound/weapons/gunshots/1taser.ogg'
 	hal_hitsound = 'sound/weapons/tase.ogg'
 	stamina_damage = 10
 
 /obj/effect/client_image_holder/hallucination/fake_projectile/ebow
-	name = "болтом"
+	name = "bolt"
 	hal_icon_state = "cbbolt"
 	hal_fire_sound = 'sound/weapons/gunshots/1heavysuppres.ogg'
 	hal_hitsound = null

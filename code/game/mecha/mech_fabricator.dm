@@ -10,8 +10,7 @@
  */
 /obj/machinery/mecha_part_fabricator
 	name = "exosuit fabricator"
-	desc = "Промышленное оборудование, предназначенное для печати крупногабаритных компонентов экзоскелетов и роботизированных систем. \
-			Использует широкий спектр материалов в качестве сырья."
+	desc = "Nothing is being built."
 	icon = 'icons/obj/machines/robotics.dmi'
 	icon_state = "fabricator"
 	interaction_flags_atom = parent_type::interaction_flags_atom | INTERACT_ATOM_MOUSEDROP_IGNORE_CHECKS
@@ -49,16 +48,6 @@
 	/// Whether the queue is currently being processed.
 	var/processing_queue = FALSE
 	var/ui_theme = "nanotrasen"
-
-/obj/machinery/mecha_part_fabricator/get_ru_names()
-	return alist(
-		NOMINATIVE = "фабрикатор экзоскелетов",
-		GENITIVE = "фабрикатора экзоскелетов",
-		DATIVE = "фабрикатору экзоскелетов",
-		ACCUSATIVE = "фабрикатор экзоскелетов",
-		INSTRUMENTAL = "фабрикатором экзоскелетов",
-		PREPOSITIONAL = "фабрикаторе экзоскелетов",
-	)
 
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)
 	. = ..()
@@ -547,36 +536,14 @@
  */
 /obj/machinery/mecha_part_fabricator/robot
 	name = "robotic fabricator"
-	desc = "Промышленное оборудование, предназначенное для печати компонентов роботизированных систем. \
-			Использует широкий спектр материалов в качестве сырья."
+	desc = "Industrial equipment for printing robotic components. Accepts a wide variety of raw materials."
 	categories = list(MECH_FAB_CATEGORY_CYBORG)
-
-/obj/machinery/mecha_part_fabricator/robot/get_ru_names()
-	return alist(
-		NOMINATIVE = "фабрикатор роботов",
-		GENITIVE = "фабрикатора роботов",
-		DATIVE = "фабрикатору роботов",
-		ACCUSATIVE = "фабрикатор роботов",
-		INSTRUMENTAL = "фабрикатором роботов",
-		PREPOSITIONAL = "фабрикаторе роботов",
-	)
 
 /obj/machinery/mecha_part_fabricator/syndicate
 	name = "Syndicate exosuit fabricator"
-	desc = "Промышленное оборудование, предназначенное для печати крупногабаритных компонентов экзоскелетов и роботизированных систем. \
-			Использует широкий спектр материалов в качестве сырья. Специализированная версия, используемая на объектах \"Синдиката\"."
+	desc = "Nothing is being built."
 	req_access = list(ACCESS_SYNDICATE)
 	ui_theme = "nologo"
-
-/obj/machinery/mecha_part_fabricator/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "фабрикатор экзоскелетов \"Синдиката\"",
-		GENITIVE = "фабрикатора экзоскелетов \"Синдиката\"",
-		DATIVE = "фабрикатору экзоскелетов \"Синдиката\"",
-		ACCUSATIVE = "фабрикатор экзоскелетов \"Синдиката\"",
-		INSTRUMENTAL = "фабрикатором экзоскелетов \"Синдиката\"",
-		PREPOSITIONAL = "фабрикаторе экзоскелетов \"Синдиката\"",
-	)
 
 /obj/machinery/mecha_part_fabricator/syndicate/Initialize(mapload)
 	. = ..()

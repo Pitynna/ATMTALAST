@@ -9,16 +9,6 @@
 	gender = FEMALE
 	icon_state = "wiremod"
 
-/obj/item/assembly/wiremod/get_ru_names()
-	return alist(
-		NOMINATIVE = "программируемая сборка",
-		GENITIVE = "программируемой сборки",
-		DATIVE = "программируемой сборке",
-		ACCUSATIVE = "программируемую сборку",
-		INSTRUMENTAL = "программируемой сборкой",
-		PREPOSITIONAL = "программируемой сборке"
-	)
-
 /obj/item/assembly/wiremod/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

@@ -12,16 +12,6 @@
 	item_color = "yellow"
 	resistance_flags = NONE
 
-/obj/item/clothing/gloves/color/yellow/get_ru_names()
-	return alist(
-		NOMINATIVE = "изоляционные перчатки",
-		GENITIVE = "изоляционных перчаток",
-		DATIVE = "изоляционным перчаткам",
-		ACCUSATIVE = "изоляционные перчатки",
-		INSTRUMENTAL = "изоляционными перчатками",
-		PREPOSITIONAL = "изоляционных перчатках",
-	)
-
 /obj/item/clothing/gloves/color/yellow/power
 	var/old_mclick_override
 	var/datum/middleClickOverride/power_gloves/mclick_override = new /datum/middleClickOverride/power_gloves
@@ -96,8 +86,7 @@
 	siemens_coefficient = pick(0,0,0,0.5,0.5,0.5,0.75)
 
 /obj/item/clothing/gloves/color/black
-	desc = "Перчатки чёрного цвета из плотного материала. \
-			Обладают повышенной стойкостью к высоким температурам."
+	desc = "A pair of black gloves made of fire-resistant fabric."
 	name = "black gloves"
 	icon_state = "black"
 	item_color = "black"
@@ -107,16 +96,6 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 	var/can_be_cut = 1
-
-/obj/item/clothing/gloves/color/black/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрные перчатки",
-		GENITIVE = "чёрных перчаток",
-		DATIVE = "чёрным перчаткам",
-		ACCUSATIVE = "чёрные перчатки",
-		INSTRUMENTAL = "чёрными перчатками",
-		PREPOSITIONAL = "чёрных перчатках"
-	)
 
 /obj/item/clothing/gloves/color/black/hos
 	item_color = "hosred"		//Exists for washing machines. Is not different from black gloves in any way.
@@ -147,21 +126,11 @@
 
 /obj/item/clothing/gloves/color/black/goliath
 	name = "goliath gloves"
-	desc = "Примитивные перчатки, которые облегчают переноску."
+	desc = "Rudimentary gloves that aid in carrying."
 	icon_state = "goligloves"
 	item_state = "goligloves"
 	armor = list(MELEE = 20, BULLET = 10, LASER = 10, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50)
 	can_be_cut = FALSE
-
-/obj/item/clothing/gloves/color/black/goliath/get_ru_names()
-	return alist(
-		NOMINATIVE = "перчатки из шкуры голиафа",
-		GENITIVE = "перчаток из шкуры голиафа",
-		DATIVE = "перчаткам из шкуры голиафа",
-		ACCUSATIVE = "перчатки из шкуры голиафа",
-		INSTRUMENTAL = "перчатками из шкуры голиафа",
-		PREPOSITIONAL = "перчатках из шкуры голиафа",
-	)
 
 /obj/item/clothing/gloves/color/black/ballistic
 	name = "armored gloves"
@@ -265,8 +234,7 @@
 
 /obj/item/clothing/gloves/color/latex
 	name = "latex gloves"
-	desc = "Дешёвые стерильные перчатки белого цвета, изготовленные из латекса. \
-			Обеспечивают защиту от биологических загрязнений и практически не пропускают вредные вещества."
+	desc = "A pair of thin sterile gloves made from latex. The material's thin enough that fingerprints can still be transferred to objects you touch."
 	icon_state = "latex"
 	item_state = "lgloves"
 	belt_icon = "latex_gloves"
@@ -277,57 +245,23 @@
 	resistance_flags = NONE
 	clothing_traits = list(TRAIT_QUICK_CARRY)
 
-/obj/item/clothing/gloves/color/latex/get_ru_names()
-	return alist(
-		NOMINATIVE = "латексные перчатки",
-		GENITIVE = "латексных перчаток",
-		DATIVE = "латексным перчаткам",
-		ACCUSATIVE = "латексные перчатки",
-		INSTRUMENTAL = "латексными перчатками",
-		PREPOSITIONAL = "латексных перчатках",
-	)
-
 /obj/item/clothing/gloves/color/latex/nitrile
 	name = "nitrile gloves"
-	desc = "Высокопрочные стерильные перчатки, изготовленные из синтетического нитрила. \
-			Обеспечивают защиту от биологических загрязнений и практически не пропускают вредные вещества. \
-			Обычно используются врачами и криминалистами."
+	desc = "A pair of high-quality sterile gloves made from thick nitrile material. "
 	icon_state = "nitrile"
 	item_state = "nitrile"
 	transfer_prints = FALSE
 	item_color = "medical"
 	clothing_traits = list(TRAIT_QUICKER_CARRY)
 
-/obj/item/clothing/gloves/color/latex/nitrile/get_ru_names()
-	return alist(
-		NOMINATIVE = "нитриловые перчатки",
-		GENITIVE = "нитриловых перчаток",
-		DATIVE = "нитриловым перчаткам",
-		ACCUSATIVE = "нитриловые перчатки",
-		INSTRUMENTAL = "нитриловыми перчатками",
-		PREPOSITIONAL = "нитриловых перчатках",
-	)
-
 /obj/item/clothing/gloves/color/latex/modified
 	name = "modified medical gloves"
-	desc = "Передовые медицинские перчатки, созданные из сверхтонкого гибридного полимера, сочетающего эластичность латекса и прочность нитрила. \
-			Обеспечивают защиту от биологических загрязнений и практически не пропускают вредные вещества. \
-			Обеспечивают удобство и повышенную точность при проведении хирургических операций."
+	desc = "They are very soft and light to the touch and do not hinder movement at all."
 	icon_state = "modified"
 	item_state = "modified"
 	item_color = "modified"
 	surgeryspeedmod = -0.3
 	clothing_traits = list(TRAIT_QUICKER_CARRY)
-
-/obj/item/clothing/gloves/color/latex/modified/get_ru_names()
-	return alist(
-		NOMINATIVE = "модифицированные медицинские перчатки",
-		GENITIVE = "модифицированных медицинских перчаток",
-		DATIVE = "модифицированным медицинским перчаткам",
-		ACCUSATIVE = "модифицированные медицинские перчатки",
-		INSTRUMENTAL = "модифицированными медицинскими перчатками",
-		PREPOSITIONAL = "модифицированных медицинских перчатках",
-	)
 
 /obj/item/clothing/gloves/color/latex/inugami
 	name = "medical gloves Inugami"
@@ -342,16 +276,6 @@
 	surgery_step_time = 0.5 SECONDS
 	surgery_germ_chance = 50
 	clothing_traits = list(TRAIT_QUICKER_CARRY)
-
-/obj/item/clothing/gloves/color/latex/inugami/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинские перчатки Inugami",
-		GENITIVE = "медицинских перчаток Inugami",
-		DATIVE = "медицинским перчаткам Inugami",
-		ACCUSATIVE = "медицинские перчатки Inugami",
-		INSTRUMENTAL = "медицинскими перчатками Inugami",
-		PREPOSITIONAL = "медицинских перчатках Inugami",
-	)
 
 /obj/item/clothing/gloves/color/latex/inugami/ComponentInitialize()
 	. = ..()

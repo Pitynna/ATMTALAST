@@ -1,6 +1,6 @@
 /obj/machinery/vending/autodrobe
 	name = "AutoDrobe"
-	desc = "Автомат по продаже костюмов на любой вкус и цвет."
+	desc = "A vending machine for costumes."
 	icon_state = "theater_off"
 	panel_overlay = "theater_panel"
 	screen_overlay = "theater"
@@ -231,16 +231,6 @@
 	)
 
 	refill_canister = /obj/item/vending_refill/autodrobe
-
-/obj/machinery/vending/autodrobe/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат AutoDrobe",
-		GENITIVE = "торгового автомата AutoDrobe",
-		DATIVE = "торговому автомату AutoDrobe",
-		ACCUSATIVE = "торговый автомат AutoDrobe",
-		INSTRUMENTAL = "торговым автоматом AutoDrobe",
-		PREPOSITIONAL = "торговом автомате AutoDrobe",
-	)
 
 /obj/machinery/vending/autodrobe/free
 	all_products_free = TRUE

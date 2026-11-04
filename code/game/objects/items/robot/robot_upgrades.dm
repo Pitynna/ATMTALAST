@@ -144,7 +144,7 @@
 
 /obj/item/borg/upgrade/magboots
 	name = "cyborg floor magnet module"
-	desc = "Данный модуль позволить киборгу примагничиваться к полу, таким образом позволяя эффективно передвигаться в условиях отсутсвия гравитации."
+	desc = "This module lets a cyborg magnetically attach to the floor for effective movement in zero gravity."
 	icon_state = "cyborg_upgrade3"
 	origin_tech = "engineering=4;materials=4powerstorage=4"
 
@@ -800,22 +800,12 @@
 
 /obj/item/borg/upgrade/mounted_seat
 	name = "robotic mounted seat module"
-	desc = "Модуль для киборгов в виде сидения. Позволяет окружающим садиться на робота и использовать его в качестве эффективного средства передвижения."
+	desc = "A cyborg-mounted seat that lets others ride the robot as an effective means of transportation."
 	icon_state = "seat_module"
 	require_module = TRUE
 	origin_tech = "engineering=3;materials=3;"
 	var/datum/action/innate/toggle_seat/toggle_action = new
 	var/datum/action/innate/launch_riders/launch_action = new
-
-/obj/item/borg/upgrade/mounted_seat/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль встроенного сидения",
-		GENITIVE = "модуля встроенного сидения",
-		DATIVE = "модулю встроенного сидения",
-		ACCUSATIVE = "модуль встроенного сидения",
-		INSTRUMENTAL = "модулем встроенного сидения",
-		PREPOSITIONAL = "модуле встроенного сидения",
-	)
 
 /obj/item/borg/upgrade/mounted_seat/emag_act(mob/user)
 	if(!emagged)
@@ -876,18 +866,8 @@
 
 /obj/item/borg/upgrade/ai
 	name = "B.O.R.I.S. module"
-	desc = "Модуль Блюспейс Ориентированной Роботической Искусственной Сети. При установке в киборга, позволяет ИИ управлять им напрямую."
+	desc = "Bluespace Optimized Remote Intelligence Synchronization. An uplink device which takes the place of an MMI in cyborg endoskeletons, creating a robotic shell controlled by an AI."
 	icon_state = "r_boris"
-
-/obj/item/borg/upgrade/ai/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль Б.О.Р.И.С.",
-		GENITIVE = "модуля Б.О.Р.И.С.",
-		DATIVE = "модулю Б.О.Р.И.С.",
-		ACCUSATIVE = "модуль Б.О.Р.И.С.",
-		INSTRUMENTAL = "модулем Б.О.Р.И.С.",
-		PREPOSITIONAL = "модуле Б.О.Р.И.С.",
-	)
 
 /obj/item/borg/upgrade/ai/action(mob/living/silicon/robot/robot, mob/living/user = usr)
 	. = ..()
@@ -908,21 +888,11 @@
 
 /obj/item/borg/upgrade/borg_mining_sat_upgr
 	name = "mining cyborg satchel upgrade"
-	desc = "Магнитное улучшение сумки для руды, позволяющее собирать руду в области 3 на 3."
+	desc = "A magnetic ore satchel upgrade that collects ore in a 3-by-3 area."
 	icon_state = "cyborg_upgrade3"
 	origin_tech = "magnets=3,materials=3;engineering=2"
 	require_module = TRUE
 	module_type = /obj/item/robot_module/miner
-
-/obj/item/borg/upgrade/borg_mining_sat_upgr/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль рудного магнита",
-		GENITIVE = "модуля рудного магнита",
-		DATIVE = "модулю рудного магнита",
-		ACCUSATIVE = "модуль рудного магнита",
-		INSTRUMENTAL = "модулем рудного магнита",
-		PREPOSITIONAL = "модуле рудного магнита",
-	)
 
 /obj/item/borg/upgrade/borg_mining_sat_upgr/action(mob/living/silicon/robot/robot, mob/user)
 	if(!..())

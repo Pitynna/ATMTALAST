@@ -8,6 +8,6 @@
 
 /obj/structure/bed/mattress/dirty
 	name = "dirty mattress"
-	desc = "Грязный, вонючий матрас, заляпанный различными жидкостями. Здесь не то что прилечь нельзя, к этому вовсе прикасаться не хочется..."
+	desc = "An old, filthy mattress covered in strange and unidentifiable stains. It looks quite uncomfortable."
 	icon_state = "dirty_mattress"
 	comfort = 0

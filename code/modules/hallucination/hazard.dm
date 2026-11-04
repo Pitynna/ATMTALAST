@@ -55,7 +55,7 @@
 	return
 
 /obj/effect/client_image_holder/hallucination/danger/lava
-	name = "лава"
+	name = "lava"
 	image_icon = 'icons/turf/floors/lava.dmi'
 
 /obj/effect/client_image_holder/hallucination/danger/lava/generate_image()
@@ -68,7 +68,7 @@
 	afflicted.cause_hallucination(/datum/hallucination/fire, "fake lava hallucination")
 
 /obj/effect/client_image_holder/hallucination/danger/chasm
-	name = "разлом"
+	name = "chasm"
 	image_icon = 'icons/turf/floors/Chasms.dmi'
 
 /obj/effect/client_image_holder/hallucination/danger/chasm/generate_image()

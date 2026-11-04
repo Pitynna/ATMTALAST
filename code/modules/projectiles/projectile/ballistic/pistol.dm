@@ -49,27 +49,6 @@
 	damage = 28
 	stamina = 20
 
-/obj/projectile/bullet/weakbullet3/fortynr/get_ru_names()
-	return alist(
-		NOMINATIVE = "пуля",
-		GENITIVE = "пули",
-		DATIVE = "пуле",
-		ACCUSATIVE = "пулю",
-		INSTRUMENTAL = "пулей",
-		PREPOSITIONAL = "пуле",
-	)
-
-/obj/projectile/bullet/weakbullet4/get_ru_names()
-	return alist(
-		NOMINATIVE = "резиновая пуля",
-		GENITIVE = "резиновой пули",
-		DATIVE = "резиновой пуле",
-		ACCUSATIVE = "резиновую пулю",
-		INSTRUMENTAL = "резиновой пулей",
-		PREPOSITIONAL = "резиновой пуле",
-	)
-
-// MARK: .45
 /obj/projectile/bullet/midbullet
 	damage = 23
 	stamina = 33 //four rounds from the c20r knocks people down
@@ -128,13 +107,3 @@
 	stamina = 1
 	armour_penetration = 5
 	ricochet_chance = 10
-
-/obj/projectile/bullet/ftt762/get_ru_names()
-	return alist(
-		NOMINATIVE = "старая пуля FMJ 7,62x25 мм TT",
-		GENITIVE = "старой пули FMJ 7,62x25 мм TT",
-		DATIVE = "старой пуле FMJ 7,62x25 мм TT",
-		ACCUSATIVE = "старую пулю FMJ 7,62x25 мм TT",
-		INSTRUMENTAL = "старой пулей FMJ 7,62x25 мм TT",
-		PREPOSITIONAL = "старой пуле FMJ 7,62x25 мм TT",
-	)

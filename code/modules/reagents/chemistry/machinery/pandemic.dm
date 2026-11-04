@@ -1,6 +1,6 @@
 /obj/machinery/computer/pandemic
 	name = "PanD.E.M.I.C 220"
-	desc = "Высокотехнологичная машина, предназначенная для исследования и работы с вирусными культурами. Лучший друг вирусолога!"
+	desc = "Used to work with viruses."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "mixer0"
 	circuit = /obj/item/circuitboard/pandemic
@@ -9,16 +9,6 @@
 	var/obj/item/reagent_containers/beaker = null
 	var/wait = null
 	var/printing = null
-
-/obj/machinery/computer/pandemic/get_ru_names()
-	return alist(
-		NOMINATIVE = "Панд.Е.М.И.К 220",
-		GENITIVE = "Панд.Е.М.И.К 220",
-		DATIVE = "Панд.Е.М.И.К 220",
-		ACCUSATIVE = "Панд.Е.М.И.К 220",
-		INSTRUMENTAL = "Панд.Е.М.И.К 220",
-		PREPOSITIONAL = "Панд.Е.М.И.К 220",
-	)
 
 /obj/machinery/computer/pandemic/examine(mob/user)
 	. = ..()

@@ -5,16 +5,6 @@
 	implant_state = "implant-nanotrasen"
 	implant_data = /datum/implant_fluff/suppression
 
-/obj/item/implant/suppression/get_ru_names()
-	return alist(
-		NOMINATIVE = "био-чип подавления",
-		GENITIVE = "био-чипа подавления",
-		DATIVE = "био-чипу подавления",
-		ACCUSATIVE = "био-чип подавления",
-		INSTRUMENTAL = "био-чипом подавления",
-		PREPOSITIONAL = "био-чипе подавления",
-	)
-
 /obj/item/implant/suppression/implant(mob/living/carbon/human/target, mob/user, force = FALSE)
 	. = ..()
 	if(!.)
@@ -41,27 +31,7 @@
 	name = "bio-chip implanter (suppression)"
 	imp = /obj/item/implant/suppression
 
-/obj/item/implanter/suppression/get_ru_names()
-	return alist(
-		NOMINATIVE = "имплантер био-чипов \"Подавление\"",
-		GENITIVE = "имплантера био-чипов \"Подавление\"",
-		DATIVE = "имплантеру био-чипов \"Подавление\"",
-		ACCUSATIVE = "имплантер био-чипов \"Подавление\"",
-		INSTRUMENTAL = "имплантером био-чипов \"Подавление\"",
-		PREPOSITIONAL = "имплантере био-чипов \"Подавление\"",
-	)
-
 /obj/item/implantcase/suppression
 	name = "bio-chip case - 'Suppression'"
 	desc = "Стеклянный кейс, содержащий био-чип \"Подавление\"."
 	imp = /obj/item/implant/suppression
-
-/obj/item/implantcase/suppression/get_ru_names()
-	return alist(
-		NOMINATIVE = "контейнер для био-чипа — \"Подавление\"",
-		GENITIVE = "контейнера для био-чипа — \"Подавление\"",
-		DATIVE = "контейнеру для био-чипа — \"Подавление\"",
-		ACCUSATIVE = "контейнер для био-чипа — \"Подавление\"",
-		INSTRUMENTAL = "контейнером для био-чипа — \"Подавление\"",
-		PREPOSITIONAL = "контейнере для био-чипа — \"Подавление\"",
-	)

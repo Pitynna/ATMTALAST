@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/bracer
 	name = "bone bracers"
-	desc = "На случай, если вы ожидаете удара в руку. Обеспечивает достаточную защиту для ваших рук."
+	desc = "For when you're expecting to get slapped on the wrist. Offers modest protection to your arms."
 	icon_state = "bracers"
 	item_state = "bracers"
 	item_color = null	//So they don't wash.
@@ -13,34 +13,14 @@
 	resistance_flags = NONE
 	armor = list(MELEE = 10, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 15, BIO = 10, FIRE = 0, ACID = 0)
 
-/obj/item/clothing/gloves/bracer/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяные наручи",
-		GENITIVE = "костяных наручей",
-		DATIVE = "костяным наручам",
-		ACCUSATIVE = "костяные наручи",
-		INSTRUMENTAL = "костяными наручами",
-		PREPOSITIONAL = "костяных наручах",
-	)
-
 /obj/item/clothing/gloves/fingerless/weaver
 	name = "weaver chitin gloves"
-	desc = "Серые беспалые перчатки, сделанные из шкуры мёртвого паукообразного, найденного на Лазисе. Лёгкие и удобные, они позволяют владельцу драться эффективнее в рукопашном бою."
+	desc = "Grey gloves without fingertips made from the hide of a dead arachnid found on lavaland. Makes wearer stronger in disarming ability."
 	icon_state = "weaver_chitin"
 	item_state = "weaver_chitin"
 	extra_knock_chance = 20
 	var/stamdamage_low = 10
 	var/stamdamage_high = 15
-
-/obj/item/clothing/gloves/fingerless/weaver/get_ru_names()
-	return alist(
-		NOMINATIVE = "перчатки из хитина ткача",
-		GENITIVE = "перчаток из хитина ткача",
-		DATIVE = "перчаткам из хитина ткача",
-		ACCUSATIVE = "перчатки из хитина ткача",
-		INSTRUMENTAL = "перчатками из хитина ткача",
-		PREPOSITIONAL = "перчатках из хитина ткача",
-	)
 
 /obj/item/clothing/gloves/fingerless/weaver/Touch(atom/A, proximity)
 	. = FALSE

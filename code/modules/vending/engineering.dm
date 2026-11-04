@@ -1,6 +1,6 @@
 /obj/machinery/vending/engineering
 	name = "Robco Tool Maker"
-	desc = "Всё, что вам требуется для самостоятельного обслуживания станции."
+	desc = "Everything you need for do-it-yourself station repair."
 	icon_state = "engi_off"
 	panel_overlay = "engi_panel"
 	screen_overlay = "engi"
@@ -39,14 +39,4 @@
 		/obj/item/stock_parts/micro_laser = 5,
 		/obj/item/stock_parts/matter_bin = 5,
 		/obj/item/stock_parts/manipulator = 5,
-	)
-
-/obj/machinery/vending/engineering/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Robco Tool Maker",
-		GENITIVE = "торгового автомата Robco Tool Maker",
-		DATIVE = "торговому автомату Robco Tool Maker",
-		ACCUSATIVE = "торговый автомат Robco Tool Maker",
-		INSTRUMENTAL = "торговым автоматом Robco Tool Maker",
-		PREPOSITIONAL = "торговом автомате Robco Tool Maker",
 	)

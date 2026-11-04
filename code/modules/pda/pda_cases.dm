@@ -1,5 +1,5 @@
 /obj/item/pda_case
-	name = "silicone PDA сase"
+	name = "silicone PDA case"
 	desc = "Прозрачный силиконовый чехол."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda_case"

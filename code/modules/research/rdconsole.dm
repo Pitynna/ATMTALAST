@@ -158,17 +158,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				return_name = initial(our_reagent.name)
 	return capitalize(return_name)
 
-/obj/machinery/computer/rdconsole/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО",
-		GENITIVE = "консоли НИО",
-		DATIVE = "консоли НИО",
-		ACCUSATIVE = "консоль НИО",
-		INSTRUMENTAL = "консолью НИО",
-		PREPOSITIONAL = "консоли НИО",
-	)
-
-/// Makes sure it is properly sync'ed up with the devices attached to it (if any).
 /obj/machinery/computer/rdconsole/proc/SyncRDevices()
 	for(var/obj/machinery/r_n_d/D in range(range, src))
 		if(!isnull(D.linked_console) || D.panel_open)
@@ -1150,20 +1139,8 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/core
 	name = "core R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Является основным узлом НИО."
+	desc = "A console used to interface with R&D tools."
 	id = 1
-
-/obj/machinery/computer/rdconsole/core/get_ru_names()
-	return alist(
-		NOMINATIVE = "главная консоль НИО",
-		GENITIVE = "главной консоли НИО",
-		DATIVE = "главной консоли НИО",
-		ACCUSATIVE = "главную консоль НИО",
-		INSTRUMENTAL = "главной консолью НИО",
-		PREPOSITIONAL = "главной консоли НИО",
-	)
 
 /obj/machinery/computer/rdconsole/core/old_frame
 	icon = 'icons/obj/machines/computer3.dmi'
@@ -1173,60 +1150,24 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/robotics
 	name = "robotics R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия, используемая в отделах робототехники."
+	desc = "A console used to interface with R&D tools."
 	id = 2
 	req_access = list(ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/rdconsole/robotics
 
-/obj/machinery/computer/rdconsole/robotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "робототехническая консоль НИО",
-		GENITIVE = "робототехнической консоли НИО",
-		DATIVE = "робототехнической консоли НИО",
-		ACCUSATIVE = "робототехническую консоль НИО",
-		INSTRUMENTAL = "робототехнической консолью НИО",
-		PREPOSITIONAL = "робототехнической консоли НИО",
-	)
-
 /obj/machinery/computer/rdconsole/experiment
 	name = "E.X.P.E.R.I-MENTOR R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия, используемая для работы с \"Э.К.С.П.Е.Р.И-МЕНТОР\"."
+	desc = "A console used to interface with R&D tools."
 	id = 3
 	range = 5
 	circuit = /obj/item/circuitboard/rdconsole/experiment
 
-/obj/machinery/computer/rdconsole/experiment/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		GENITIVE = "консоли НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		DATIVE = "консоли НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		ACCUSATIVE = "консоль НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		INSTRUMENTAL = "консолью НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		PREPOSITIONAL = "консоли НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-	)
-
 /obj/machinery/computer/rdconsole/mechanics
 	name = "mechanics R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия, используемая в мастерской для челноков."
+	desc = "A console used to interface with R&D tools."
 	id = 4
 	req_access = list(ACCESS_MECHANIC)
 	circuit = /obj/item/circuitboard/rdconsole/mechanics
-
-/obj/machinery/computer/rdconsole/mechanics/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО (Мастерская челноков)",
-		GENITIVE = "консоли НИО (Мастерская челноков)",
-		DATIVE = "консоли НИО (Мастерская челноков)",
-		ACCUSATIVE = "консоль НИО (Мастерская челноков)",
-		INSTRUMENTAL = "консолью НИО (Мастерская челноков)",
-		PREPOSITIONAL = "консоли НИО (Мастерская челноков)",
-	)
 
 /obj/machinery/computer/rdconsole/mechanics/old_frame
 	icon = 'icons/obj/machines/computer3.dmi'
@@ -1235,22 +1176,10 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/public
 	name = "public R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия без ограничений по уровню доступа пользователя."
+	desc = "A console used to interface with R&D tools."
 	id = 5
 	req_access = list()
 	circuit = /obj/item/circuitboard/rdconsole/public
-
-/obj/machinery/computer/rdconsole/public/get_ru_names()
-	return alist(
-		NOMINATIVE = "публичная консоль НИО",
-		GENITIVE = "публичной консоли НИО",
-		DATIVE = "публичной консоли НИО",
-		ACCUSATIVE = "публичную консоль НИО",
-		INSTRUMENTAL = "публичной консолью НИО",
-		PREPOSITIONAL = "публичной консоли НИО",
-	)
 
 /obj/machinery/computer/rdconsole/cargo
 	name = "cargo R&D console"
@@ -1264,16 +1193,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	icon_state = "cargocomp"
 	icon_screen = "cargocomp_screen_passive"
 	icon_keyboard = null
-
-/obj/machinery/computer/rdconsole/cargo/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО отдела Снабжения",
-		GENITIVE = "консоли НИО отдела Снабжения",
-		DATIVE = "консоли НИО отдела Снабжения",
-		ACCUSATIVE = "консоль НИО отдела Снабжения",
-		INSTRUMENTAL = "консолью НИО отдела Снабжения",
-		PREPOSITIONAL = "консоли НИО отдела Снабжения"
-	)
 
 #undef TECH_UPDATE_DELAY
 #undef DESIGN_UPDATE_DELAY

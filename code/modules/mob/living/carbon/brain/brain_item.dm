@@ -22,16 +22,6 @@
 	/// The original body for this brain, if this valriable is null - brain can apply any body without desease.
 	var/datum/weakref/original_body = null
 
-/obj/item/organ/internal/brain/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозг человека",
-		GENITIVE = "мозга человека",
-		DATIVE = "мозгу человека",
-		ACCUSATIVE = "мозг человека",
-		INSTRUMENTAL = "мозгом человека",
-		PREPOSITIONAL = "мозге человека",
-	)
-
 /obj/item/organ/internal/brain/Destroy()
 	QDEL_NULL(brainmob)
 	original_body = null
@@ -145,19 +135,9 @@
 
 /obj/item/organ/internal/brain/golem
 	name = "runic mind"
-	desc = "Туго свёрнутый свиток, испещрённый неразборчивыми рунами."
+	desc = "A tightly furled roll of paper, covered with indecipherable runes."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
-
-/obj/item/organ/internal/brain/golem/get_ru_names()
-	return alist(
-		NOMINATIVE = "рунический разум",
-		GENITIVE = "рунического разума",
-		DATIVE = "руническому разуму",
-		ACCUSATIVE = "рунический разум",
-		INSTRUMENTAL = "руническим разумом",
-		PREPOSITIONAL = "руническом разуме",
-	)
 
 /obj/item/organ/internal/brain/Destroy() //copypasted from MMIs.
 	QDEL_NULL(brainmob)

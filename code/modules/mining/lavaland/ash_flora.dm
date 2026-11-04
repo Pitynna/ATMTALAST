@@ -5,7 +5,7 @@
 	icon_state = "l_mushroom1"
 	base_icon_state = "l_mushroom"
 	name = "large mushrooms"
-	desc = "Несколько крупных грибов, покрытых тонким слоем пепла и, вероятно, спорами."
+	desc = "A number of large mushrooms, covered in a faint layer of ash and what can only be spores."
 	anchored = TRUE
 	var/harvested_name = "укороченные грибы"
 	var/harvested_desc = "Быстро отрастающие грибы, ранее известные своими крупными размерами."
@@ -22,16 +22,6 @@
 	var/base_icon
 	var/regrowth_time_low = 8 MINUTES
 	var/regrowth_time_high = 16 MINUTES
-
-/obj/structure/flora/ash/get_ru_names()
-	return alist(
-		NOMINATIVE = "крупные грибы",
-		GENITIVE = "крупных грибов",
-		DATIVE = "крупным грибам",
-		ACCUSATIVE = "крупные грибы",
-		INSTRUMENTAL = "крупными грибами",
-		PREPOSITIONAL = "крупных грибах",
-	)
 
 /obj/structure/flora/ash/Initialize(mapload)
 	. = ..()
@@ -104,7 +94,7 @@
 
 /obj/structure/flora/ash/leaf_shroom
 	name = "leafy mushrooms"
-	desc = "Несколько грибов, каждый из которых окружает зеленоватый спорангий листоподобными структурами."
+	desc = "A number of mushrooms, each of which surrounds a greenish sporangium with a number of leaf-like structures."
 	icon_state = "s_mushroom1"
 	base_icon_state = "s_mushroom"
 	harvested_name = "безлистные грибы"
@@ -119,19 +109,9 @@
 	regrowth_time_low = 2400
 	regrowth_time_high = 6000
 
-/obj/structure/flora/ash/leaf_shroom/get_ru_names()
-	return alist(
-		NOMINATIVE = "лиственные грибы",
-		GENITIVE = "лиственных грибов",
-		DATIVE = "лиственным грибам",
-		ACCUSATIVE = "лиственные грибы",
-		INSTRUMENTAL = "лиственными грибами",
-		PREPOSITIONAL = "лиственных грибах",
-	)
-
 /obj/structure/flora/ash/cap_shroom
 	name = "tall mushrooms"
-	desc = "Несколько грибов, у крупнейших экземпляров которых на середине ножки расположены копытовидные наросты."
+	desc = "Several mushrooms, the larger of which have a ring of conks at the midpoint of their stems."
 	icon_state = "r_mushroom1"
 	base_icon_state = "r_mushroom"
 	harvested_name = "малые грибы"
@@ -145,20 +125,10 @@
 	regrowth_time_low = 3000
 	regrowth_time_high = 5400
 
-/obj/structure/flora/ash/cap_shroom/get_ru_names()
-	return alist(
-		NOMINATIVE = "высокие грибы",
-		GENITIVE = "высоких грибов",
-		DATIVE = "высоким грибам",
-		ACCUSATIVE = "высокие грибы",
-		INSTRUMENTAL = "высокими грибами",
-		PREPOSITIONAL = "высоких грибах",
-	)
-
 /obj/structure/flora/ash/stem_shroom
 
 	name = "numerous mushrooms"
-	desc = "Большое скопление грибов, некоторые из которых имеют длинные мясистые ножки. Они излучают свет!"
+	desc = "A large number of mushrooms, some of which have long, fleshy stems. They're radiating light!"
 	icon_state = "t_mushroom1"
 	base_icon_state = "t_mushroom"
 	light_range = 1.5
@@ -174,19 +144,9 @@
 	regrowth_time_low = 3000
 	regrowth_time_high = 6000
 
-/obj/structure/flora/ash/stem_shroom/get_ru_names()
-	return alist(
-		NOMINATIVE = "скопление грибов",
-		GENITIVE = "скопления грибов",
-		DATIVE = "скоплению грибов",
-		ACCUSATIVE = "скопление грибов",
-		INSTRUMENTAL = "скоплением грибов",
-		PREPOSITIONAL = "скоплении грибов",
-	)
-
 /obj/structure/flora/ash/cacti
 	name = "fruiting cacti"
-	desc = "Несколько колючих кактусов, усыпанных спелыми плодами и покрытых тонким слоем пепла."
+	desc = "Several prickly cacti, brimming with ripe fruit and covered in a thin layer of ash."
 	icon_state = "cactus1"
 	base_icon_state = "cactus"
 	harvested_name = "кактусы"
@@ -200,16 +160,6 @@
 	harvest_message_high = "Вы собираете пару кактусовых плодов."
 	regrowth_time_high = 7200
 
-/obj/structure/flora/ash/cacti/get_ru_names()
-	return alist(
-		NOMINATIVE = "фруктовый кактус",
-		GENITIVE = "фруктового кактуса",
-		DATIVE = "фруктовому кактусу",
-		ACCUSATIVE = "фруктовый кактус",
-		INSTRUMENTAL = "фруктовым кактусом",
-		PREPOSITIONAL = "фруктовом кактусе",
-	)
-
 /obj/structure/flora/ash/cacti/Initialize(mapload)
 	. = ..()
 	// min dmg 3, max dmg 6, prob(70)
@@ -217,7 +167,7 @@
 
 /obj/structure/flora/ash/fireblossom
 	name = "fire blossom"
-	desc = "Странный цветок, который часто растёт возле лавовых потоков."
+	desc = "An odd flower that grows commonly near bodies of lava."
 	icon_state = "fireblossom"
 	base_icon_state = "fireblossom"
 	harvested_name = "стебли огнецвета"
@@ -233,16 +183,6 @@
 	harvest_message_high = "Вы собираете большое количество качественных цветков."
 	regrowth_time_low = 2500
 	regrowth_time_high = 4000
-
-/obj/structure/flora/ash/fireblossom/get_ru_names()
-	return alist(
-		NOMINATIVE = "огнецвет",
-		GENITIVE = "огнецвета",
-		DATIVE = "огнецвету",
-		ACCUSATIVE = "огнецвет",
-		INSTRUMENTAL = "огнецветом",
-		PREPOSITIONAL = "огнецвете",
-	)
 
 /obj/structure/flora/ash/coaltree
 	icon_state = "coaltree1"
@@ -261,34 +201,14 @@
 	regrowth_time_low = 4000
 	regrowth_time_high = 6000
 
-/obj/structure/flora/ash/coaltree/get_ru_names()
-	return alist(
-		NOMINATIVE = "угледрево",
-		GENITIVE = "угледрева",
-		DATIVE = "угледреву",
-		ACCUSATIVE = "угледрево",
-		INSTRUMENTAL = "угледревом",
-		PREPOSITIONAL = "угледреве",
-	)
-
 /obj/item/reagent_containers/food/snacks/grown/ash_flora
 	name = "mushroom shavings"
-	desc = "Стружка с высокого гриба. В достаточном количестве может служить ёмкостью."
+	desc = "Some shavings from a tall mushroom. With enough, might serve as a bowl."
 	icon = 'icons/obj/lavaland/ash_flora.dmi'
 	icon_state = "mushroom_shavings"
 	max_integrity = 100
 	seed = /obj/item/seeds/lavaland/polypore
 	wine_power = 0.2
-
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/get_ru_names()
-	return alist(
-		NOMINATIVE = "грибная стружка",
-		GENITIVE = "грибной стружки",
-		DATIVE = "грибной стружке",
-		ACCUSATIVE = "грибную стружку",
-		INSTRUMENTAL = "грибной стружкой",
-		PREPOSITIONAL = "грибной стружке",
-	)
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/Initialize(mapload)
 	. = ..()
@@ -299,89 +219,39 @@
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf
 	name = "mushroom leaf"
-	desc = "Лист, растущий на грибе."
+	desc = "A leaf, from a mushroom."
 	icon_state = "mushroom_leaf"
 	seed = /obj/item/seeds/lavaland/porcini
 	wine_power = 0.4
 
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf/get_ru_names()
-	return alist(
-		NOMINATIVE = "грибной лист",
-		GENITIVE = "грибного листа",
-		DATIVE = "грибному листу",
-		ACCUSATIVE = "грибной лист",
-		INSTRUMENTAL = "грибным листом",
-		PREPOSITIONAL = "грибном листе",
-	)
-
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_cap
 	name = "mushroom cap"
-	desc = "Шляпка крупного гриба."
+	desc = "The cap of a large mushroom."
 	icon_state = "mushroom_cap"
 	seed = /obj/item/seeds/lavaland/inocybe
 	wine_power = 0.7
 
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_cap/get_ru_names()
-	return alist(
-		NOMINATIVE = "грибная шляпка",
-		GENITIVE = "грибной шляпки",
-		DATIVE = "грибной шляпке",
-		ACCUSATIVE = "грибную шляпку",
-		INSTRUMENTAL = "грибной шляпкой",
-		PREPOSITIONAL = "грибной шляпке",
-	)
-
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem
 	name = "mushroom stem"
-	desc = "Длинная ножка гриба. Слегка светится."
+	desc = "A long mushroom stem. It's slightly glowing."
 	icon_state = "mushroom_stem"
 	seed = /obj/item/seeds/lavaland/ember
 	wine_power = 0.6
 
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem/get_ru_names()
-	return alist(
-		NOMINATIVE = "грибная ножка",
-		GENITIVE = "грибной ножки",
-		DATIVE = "грибной ножке",
-		ACCUSATIVE = "грибную ножку",
-		INSTRUMENTAL = "грибной ножкой",
-		PREPOSITIONAL = "грибной ножке",
-	)
-
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit
 	name = "cactus fruit"
-	desc = "Плод кактуса с толстой красноватой кожурой. И слоем пепла."
+	desc = "A cactus fruit covered in a thick, reddish skin. And some ash."
 	icon_state = "cactus_fruit"
 	seed = /obj/item/seeds/lavaland/cactus
 	wine_power = 0.5
 
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit/get_ru_names()
-	return alist(
-		NOMINATIVE = "плод кактуса",
-		GENITIVE = "плода кактуса",
-		DATIVE = "плоду кактуса",
-		ACCUSATIVE = "плод кактуса",
-		INSTRUMENTAL = "плодом кактуса",
-		PREPOSITIONAL = "плоде кактуса",
-	)
-
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/fireblossom
 	name = "fire blossom"
-	desc = "Обычный цветок огнецвета."
+	desc = "A flower from a fire blossom."
 	icon_state = "fireblossom"
 	slot_flags = ITEM_SLOT_HEAD
 	seed = /obj/item/seeds/lavaland/fireblossom
 	wine_power = 0.4
-
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/fireblossom/get_ru_names()
-	return alist(
-		NOMINATIVE = "цветок огнецвета",
-		GENITIVE = "цветка огнецвета",
-		DATIVE = "цветку огнецвета",
-		ACCUSATIVE = "цветок огнецвета",
-		INSTRUMENTAL = "цветком огнецвета",
-		PREPOSITIONAL = "цветке огнецвета",
-	)
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/coaltree_log
 	name = "coaltree log"
@@ -394,16 +264,6 @@
 	wine_power = 0.5
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/reagent_containers/food/snacks/grown/ash_flora/coaltree_log/get_ru_names()
-	return alist(
-		NOMINATIVE = "бревно угледрева",
-		GENITIVE = "бревна угледрева",
-		DATIVE = "бревну угледрева",
-		ACCUSATIVE = "бревно угледрева",
-		INSTRUMENTAL = "бревном угледрева",
-		PREPOSITIONAL = "бревне угледрева",
-	)
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/coaltree_log/attackby(obj/item/I, mob/user, params)
 	if(I.sharp)
@@ -518,19 +378,6 @@
 	genes = list(/datum/plant_gene/trait/fire_resistance)
 	reagents_add = list("nutriment" = 0.04, "coaltree_extract" = 0.1)
 
-/obj/item/seeds/lavaland/coaltree/get_ru_names()
-	return alist(
-		NOMINATIVE = "пачка семян угледрева",
-		GENITIVE = "пачки семян угледрева",
-		DATIVE = "пачке семян угледрева",
-		ACCUSATIVE = "пачку семян угледрева",
-		INSTRUMENTAL = "пачкой семян угледрева",
-		PREPOSITIONAL = "пачке семян угледрева",
-	)
-
-//CRAFTING
-
-//what you can craft with these things
 /datum/crafting_recipe/mushroom_bowl
 	name = "Mushroom Bowl"
 	result = /obj/item/reagent_containers/cup/glass/mushroom_bowl
@@ -540,20 +387,10 @@
 
 /obj/item/reagent_containers/cup/glass/mushroom_bowl
 	name = "mushroom bowl"
-	desc = "Мисковая чаша. Не еда, хотя когда-то могла содержать её."
+	desc = "A bowl made out of mushrooms. Not food, though it might have contained some at some point."
 	icon = 'icons/obj/lavaland/ash_flora.dmi'
 	icon_state = "mushroom_bowl"
 	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/reagent_containers/cup/glass/mushroom_bowl/get_ru_names()
-	return alist(
-		NOMINATIVE = "грибная чаша",
-		GENITIVE = "грибной чаши",
-		DATIVE = "грибной чаше",
-		ACCUSATIVE = "грибную чашу",
-		INSTRUMENTAL = "грибной чашей",
-		PREPOSITIONAL = "грибной чаше",
-	)
 
 /obj/item/reagent_containers/cup/glass/mushroom_bowl/attackby(obj/item/I, mob/user, params)
 	if(!istype(I, /obj/item/lavaland_dye))

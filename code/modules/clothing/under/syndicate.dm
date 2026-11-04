@@ -1,6 +1,6 @@
 /obj/item/clothing/under/syndicate
 	name = "tactical turtleneck"
-	desc = "Водолазка с цифровым камуфляжным принтом и брюки карго, которые выглядят слегка подозрительно."
+	desc = "A non-descript and slightly suspicious looking turtleneck with digital camouflage cargo pants."
 	icon_state = "syndicate"
 	item_state = "bl_suit"
 	item_color = "syndicate"
@@ -8,77 +8,27 @@
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 40)
 	dying_key = DYE_REGISTRY_UNDER
 
-/obj/item/clothing/under/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактическая водолазка",
-		GENITIVE = "тактической водолазки",
-		DATIVE = "тактической водолазке",
-		ACCUSATIVE = "тактическую водолазку",
-		INSTRUMENTAL = "тактической водолазкой",
-		PREPOSITIONAL = "тактической водолазке",
-	)
-
 /obj/item/clothing/under/syndicate/combat
 	name = "combat turtleneck"
 
-/obj/item/clothing/under/syndicate/combat/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевая водолазка",
-		GENITIVE = "боевой водолазки",
-		DATIVE = "боевой водолазке",
-		ACCUSATIVE = "боевую водолазку",
-		INSTRUMENTAL = "боевой водолазкой",
-		PREPOSITIONAL = "боевой водолазке",
-	)
-
 /obj/item/clothing/under/syndicate/tacticool
 	name = "tacticool turtleneck"
-	desc = "Увидев это, хочется приобрести карабин СКС, уйти в лес и \"оперировать\""
+	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-."
 	icon_state = "tactifool"
 	item_color = "tactifool"
 	has_sensor = TRUE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 40)
-
-/obj/item/clothing/under/syndicate/tacticool/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактикульная водолазка",
-		GENITIVE = "тактикульной водолазки",
-		DATIVE = "тактикульной водолазке",
-		ACCUSATIVE = "тактикульную водолазку",
-		INSTRUMENTAL = "тактикульной водолазкой",
-		PREPOSITIONAL = "тактикульной водолазке",
-	)
 
 /obj/item/clothing/under/syndicate/tacticool/skirt
 	name = "tacticool skirt"
 	icon_state = "tactifoolf"
 	item_color = "tactifoolf"
 
-/obj/item/clothing/under/syndicate/tacticool/skirt/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактикульная юбка",
-		GENITIVE = "тактикульной юбки",
-		DATIVE = "тактикульной юбке",
-		ACCUSATIVE = "тактикульную юбку",
-		INSTRUMENTAL = "тактикульной юбкой",
-		PREPOSITIONAL = "тактикульной юбке",
-	)
-
 /obj/item/clothing/under/syndicate/sniper
 	name = "Tactical turtleneck suit"
-	desc = "Тактическая водолазка с двойным швом, замаскированная под гражданский шелковый костюм. Предназначена для самых требовательных оперативников. Воротник очень острый."
+	desc = "A double seamed tactical turtleneck disguised as a civilian grade silk suit. Intended for the most formal operator. The collar is really sharp."
 	icon_state = "really_black_suit"
 	item_color = "black_suit"
-
-/obj/item/clothing/under/syndicate/sniper/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактический формальный костюм",
-		GENITIVE = "тактического формального костюма",
-		DATIVE = "тактическому формальному костюму",
-		ACCUSATIVE = "тактический формальный костюм",
-		INSTRUMENTAL = "тактическим формальным костюмом",
-		PREPOSITIONAL = "тактическом формальном костюме",
-	)
 
 /obj/item/clothing/under/syndicate/sniper_civ
 	name = "Executive tacticool suit"
@@ -87,50 +37,20 @@
 	item_color = "black_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
 
-/obj/item/clothing/under/syndicate/sniper_civ/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактикульный формальный костюм",
-		GENITIVE = "тактикульного формального костюма",
-		DATIVE = "тактикульному формальному костюму",
-		ACCUSATIVE = "тактикульный формальный костюм",
-		INSTRUMENTAL = "тактикульным формальным костюмом",
-		PREPOSITIONAL = "тактикульном формальном костюме",
-	)
-
 /obj/item/clothing/under/syndicate/blackops
 	name = "Black ops coverall"
-	desc = "Прочный комбинезон, созданный для тайных операций в тылу врага. Благодаря кевларовым вставкам, он обеспечивает лёгкую защиту."
+	desc = "Robust coverall made for covert oprations deep within enemy territory. Offers small protection to it's user due to durathread and kevlar inserts."
 	icon_state = "blackops"
 	item_state = "blackops"
 	armor = list(MELEE = 15, BULLET = 15, LASER = 15,ENERGY = 0, BOMB = 10, BIO = 0, FIRE = 10, ACID = 0)
 
-/obj/item/clothing/under/syndicate/blackops/get_ru_names()
-	return alist(
-		NOMINATIVE = "комбинезон для спецопераций",
-		GENITIVE = "комбинезона для спецопераций",
-		DATIVE = "комбинезону для спецопераций",
-		ACCUSATIVE = "комбинезон для спецопераций",
-		INSTRUMENTAL = "комбинезоном для спецопераций",
-		PREPOSITIONAL = "комбинезоне для спецопераций",
-	)
-
 /obj/item/clothing/under/syndicate/blackops_civ
 	name = "Black ops coverall"
-	desc = "Стильный комбинезон, но из дешёвого материала. Не предназначен для активного использования в бою."
+	desc = "Nice looking coverall made out of cheap fabric, not suitible for real combat."
 	icon_state = "blackops"
 	item_state = "blackops"
 	has_sensor = TRUE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
-
-/obj/item/clothing/under/syndicate/blackops_civ/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактикульный комбинезон для спецопераций",
-		GENITIVE = "тактикульного комбинезона для спецопераций",
-		DATIVE = "тактикульному комбинезону для спецопераций",
-		ACCUSATIVE = "тактикульный комбинезон для спецопераций",
-		INSTRUMENTAL = "тактикульным комбинезоном для спецопераций",
-		PREPOSITIONAL = "тактикульном комбинезоне для спецопераций",
-	)
 
 /obj/item/clothing/under/plasmaman/syndie
 	name = "tacticool envirosuit"
@@ -139,13 +59,3 @@
 	item_color = "syndie_envirosuit"
 	has_sensor = 0
 	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/under/plasmaman/syndie/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактический защитный костюм плазмолюда",
-		GENITIVE = "тактического защитного костюма плазмолюда",
-		DATIVE = "тактическому защитному костюму плазмолюда",
-		ACCUSATIVE = "тактический защитный костюм плазмолюда",
-		INSTRUMENTAL = "тактическим защитным костюмом плазмолюда",
-		PREPOSITIONAL = "тактическом защитном костюме плазмолюда",
-	)

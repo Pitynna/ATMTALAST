@@ -31,13 +31,3 @@
 		/obj/item/mmi/syndie = 2,
 		/obj/item/robotanalyzer = 2,
 	)
-
-/obj/machinery/vending/syndierobotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Syndie Robo-Deluxe",
-		GENITIVE = "торгового автомата Syndie Robo-Deluxe",
-		DATIVE = "торговому автомату Syndie Robo-Deluxe",
-		ACCUSATIVE = "торговый автомат Syndie Robo-Deluxe",
-		INSTRUMENTAL = "торговым автоматом Syndie Robo-Deluxe",
-		PREPOSITIONAL = "торговом автомате Syndie Robo-Deluxe",
-	)

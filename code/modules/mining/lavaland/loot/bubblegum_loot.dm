@@ -1,16 +1,6 @@
 /obj/structure/closet/crate/necropolis/bubblegum
 	name = "bubblegum chest"
 
-/obj/structure/closet/crate/necropolis/bubblegum/get_ru_names()
-	return alist(
-		NOMINATIVE = "сундук Бубльгума",
-		GENITIVE = "сундука Бубльгума",
-		DATIVE = "сундуку Бубльгума",
-		ACCUSATIVE = "сундук Бубльгума",
-		INSTRUMENTAL = "сундуком Бубльгума",
-		PREPOSITIONAL = "сундуке Бубльгума",
-	)
-
 /obj/structure/closet/crate/necropolis/bubblegum/populate_contents()
 	new /obj/item/clothing/suit/space/hostile_environment(src)
 	new /obj/item/clothing/head/helmet/space/hostile_environment(src)
@@ -20,16 +10,6 @@
 /obj/structure/closet/crate/necropolis/bubblegum/crusher
 	name = "bloody bubblegum chest"
 
-/obj/structure/closet/crate/necropolis/bubblegum/crusher/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровавый сундук Бубльгума",
-		GENITIVE = "кровавого сундука Бубльгума",
-		DATIVE = "кровавому сундуку Бубльгума",
-		ACCUSATIVE = "кровавый сундук Бубльгума",
-		INSTRUMENTAL = "кровавым сундуком Бубльгума",
-		PREPOSITIONAL = "кровавом сундуке Бубльгума",
-	)
-
 /obj/structure/closet/crate/necropolis/bubblegum/crusher/populate_contents()
 	. = ..()
 	new /obj/item/crusher_trophy/demon_claws(src)
@@ -38,19 +18,9 @@
 
 /obj/item/mayhem
 	name = "mayhem in a bottle"
-	desc = "Зачарованная бутыль с кровью, чей аромат повергает всех вокруг в убийственное безумие."
+	desc = "A magically infused bottle of blood, the scent of which will drive anyone nearby into a murderous frenzy."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "vial"
-
-/obj/item/mayhem/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка хаоса",
-		GENITIVE = "бутылки хаоса",
-		DATIVE = "бутылке хаоса",
-		ACCUSATIVE = "бутылку хаоса",
-		INSTRUMENTAL = "бутылкой хаоса",
-		PREPOSITIONAL = "бутылке хаоса",
-	)
 
 /obj/item/mayhem/attack_self(mob/user)
 	for(var/mob/living/carbon/human/H in range(7,user))
@@ -68,18 +38,8 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll2"
 	color = "#FF0000"
-	desc = "Отметьте цель для смертной казни."
+	desc = "Mark your target for death."
 	var/used = FALSE
-
-/obj/item/blood_contract/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровавый контракт",
-		GENITIVE = "кровавого контракта",
-		DATIVE = "кровавому контракту",
-		ACCUSATIVE = "кровавый контракт",
-		INSTRUMENTAL = "кровавым контрактом",
-		PREPOSITIONAL = "кровавом контракте",
-	)
 
 /obj/item/blood_contract/attack_self(mob/user)
 	if(used)
@@ -219,16 +179,6 @@
 	COOLDOWN_DECLARE(move_cooldown)
 	/// Cooldown between attacks
 	COOLDOWN_DECLARE(attack_cooldown)
-
-/obj/item/soulscythe/get_ru_names()
-	return alist(
-		NOMINATIVE = "коса души",
-		GENITIVE = "косы души",
-		DATIVE = "косе души",
-		ACCUSATIVE = "косу души",
-		INSTRUMENTAL = "косой души",
-		PREPOSITIONAL = "косе души",
-	)
 
 /obj/item/soulscythe/Initialize(mapload)
 	. = ..()

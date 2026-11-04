@@ -9,7 +9,7 @@
 
 /obj/structure/nest
 	name = "tunnel"
-	desc = "Тёмный и извилистый туннель, ведущий в недра."
+	desc = "A twisted, dark passage to the underground."
 	icon = 'icons/mob/nest.dmi'
 	icon_state = "hole"
 
@@ -23,16 +23,6 @@
 	var/spawn_max = 2				// Maximum number of mob spawns
 	var/spawn_mob_options = list(/mob/living/simple_animal/crab)	// The nest picks one mob type of this list and spawns them
 	var/spawn_trigger_distance = 7	// The triggered nest will look this many tiles around itself to find other triggerable nests
-
-/obj/structure/nest/get_ru_names()
-	return alist(
-		NOMINATIVE = "туннель",
-		GENITIVE = "туннеля",
-		DATIVE = "туннелю",
-		ACCUSATIVE = "туннель",
-		INSTRUMENTAL = "туннелем",
-		PREPOSITIONAL = "туннеле",
-	)
 
 /obj/structure/nest/Initialize(mapload)
 	. = ..()

@@ -1,7 +1,7 @@
 
 /obj/item/mixing_bowl
 	name = "mixing bowl"
-	desc = "Для смешивания всего, что может оказаться на кухне. И не только."
+	desc = "Mixing it up in the kitchen."
 	flags = OPENCONTAINER
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "mixing_bowl"
@@ -10,16 +10,6 @@
 	var/clean_icon = "mixing_bowl"
 	var/dirty_icon = "mixing_bowl_dirty"
 	var/is_GUI_opened = FALSE
-
-/obj/item/mixing_bowl/get_ru_names()
-	return alist(
-		NOMINATIVE = "миска для смешивания",
-		GENITIVE = "миски для смешивания",
-		DATIVE = "миске для смешивания",
-		ACCUSATIVE = "миску для смешивания",
-		INSTRUMENTAL = "миской для смешивания",
-		PREPOSITIONAL = "миске для смешивания"
-	)
 
 /obj/item/mixing_bowl/Initialize(mapload)
 	. = ..()

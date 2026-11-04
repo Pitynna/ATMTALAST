@@ -344,23 +344,13 @@ research holder datum.
 
 /obj/item/disk/tech_disk
 	name = "technology disk"
-	desc = "Переносной носитель данных, специализированный для хранения научной информации."
+	desc = "A disk for storing technology data for further research."
 	icon_state = "datadisk2"
 	materials = list(MAT_METAL=30, MAT_GLASS=10)
 	var/datum/tech/stored
 	var/default_name = "technology disk"
 	var/default_desc = "Переносной носитель данных, специализированный для хранения научной информации."
 	var/default_ru_names = alist(
-		NOMINATIVE = "дискета технологий",
-		GENITIVE = "дискеты технологий",
-		DATIVE = "дискете технологий",
-		ACCUSATIVE = "дискету технологий",
-		INSTRUMENTAL = "дискетой технологий",
-		PREPOSITIONAL = "дискете технологий"
-	)
-
-/obj/item/disk/tech_disk/get_ru_names()
-	return alist(
 		NOMINATIVE = "дискета технологий",
 		GENITIVE = "дискеты технологий",
 		DATIVE = "дискете технологий",
@@ -439,23 +429,13 @@ research holder datum.
 /obj/structure/closet/crate/full_tech
 	name = "Crate with Tech Disks"
 
-/obj/structure/closet/crate/full_tech/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик с дискетами технологий",
-		GENITIVE = "ящика с дискетами технологий",
-		DATIVE = "ящику с дискетами технологий",
-		ACCUSATIVE = "ящик с дискетами технологий",
-		INSTRUMENTAL = "ящиком с дискетами технологий",
-		PREPOSITIONAL = "ящике с дискетами технологий"
-	)
-
 /obj/structure/closet/crate/full_tech/populate_contents()
 	for(var/path in subtypesof(/obj/item/disk/tech_disk/loaded))
 		new path(src)
 
 /obj/item/disk/design_disk
 	name = "Component Design Disk"
-	desc = "Переносной носитель данных, специализированный для хранения шаблонов печати."
+	desc = "A disk for storing device design data for construction in lathes."
 	icon_state = "datadisk2"
 	materials = list(MAT_METAL=100, MAT_GLASS=100)
 	var/datum/design/blueprint
@@ -464,16 +444,6 @@ research holder datum.
 	var/default_name = "Component Design Disk"
 	var/default_desc = "Переносной носитель данных, специализированный для хранения шаблонов печати."
 	var/default_ru_names = alist(
-		NOMINATIVE = "дискета шаблона печати",
-		GENITIVE = "дискеты шаблона печати",
-		DATIVE = "дискете шаблона печати",
-		ACCUSATIVE = "дискету шаблона печати",
-		INSTRUMENTAL = "дискетой шаблона печати",
-		PREPOSITIONAL = "дискете шаблона печати"
-	)
-
-/obj/item/disk/design_disk/get_ru_names()
-	return alist(
 		NOMINATIVE = "дискета шаблона печати",
 		GENITIVE = "дискеты шаблона печати",
 		DATIVE = "дискете шаблона печати",
@@ -508,16 +478,6 @@ research holder datum.
 	name = "golem creation disk"
 	icon_state = "datadisk1"
 
-/obj/item/disk/design_disk/golem_shell/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета для создания голема",
-		GENITIVE = "дискеты для создания голема",
-		DATIVE = "дискете для создания голема",
-		ACCUSATIVE = "дискету для создания голема",
-		INSTRUMENTAL = "дискетой для создания голема",
-		PREPOSITIONAL = "дискете для создания голема"
-	)
-
 /obj/item/disk/design_disk/golem_shell/Initialize(mapload)
 	. = ..()
 	var/datum/design/golem_shell/G = new
@@ -531,9 +491,6 @@ research holder datum.
 	icon_state = "datadisk5"
 	var/design_type
 
-/obj/item/disk/design_disk/station_goal_machinery/brs_server/get_ru_names()
-	return alist()
-
 /obj/item/disk/design_disk/station_goal_machinery/Initialize(mapload)
 	. = ..()
 	if(isnull(design_type))
@@ -546,59 +503,17 @@ research holder datum.
 	desc = "Экспериментальный проект сервера сканирования блюспейс-разломов."
 	design_type = /datum/design/brs_server
 
-/obj/item/disk/design_disk/station_goal_machinery/brs_server/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Сервер сканирования БС-разломов)",
-		GENITIVE = "дискеты шаблона печати (Сервер сканирования БС-разломов)",
-		DATIVE = "дискете шаблона печати (Сервер сканирования БС-разломов)",
-		ACCUSATIVE = "дискету шаблона печати (Сервер сканирования БС-разломов)",
-		INSTRUMENTAL = "дискетой шаблона печати (Сервер сканирования БС-разломов)",
-		PREPOSITIONAL = "дискете шаблона печати (Сервер сканирования БС-разломов)"
-	)
-
 /obj/item/disk/design_disk/station_goal_machinery/brs_portable_scanner
 	name = "Bluespace rift portable scanner design"
 	desc = "Экспериментальный проект портативного сканера блюспейс-разломов."
 	design_type = /datum/design/brs_portable_scanner
-
-/obj/item/disk/design_disk/station_goal_machinery/brs_portable_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Портативный сканер БС-разломов)",
-		GENITIVE = "дискеты шаблона печати (Портативный сканер БС-разломов)",
-		DATIVE = "дискете шаблона печати (Портативный сканер БС-разломов)",
-		ACCUSATIVE = "дискету шаблона печати (Портативный сканер БС-разломов)",
-		INSTRUMENTAL = "дискетой шаблона печати (Портативный сканер БС-разломов)",
-		PREPOSITIONAL = "дискете шаблона печати (Портативный сканер БС-разломов)"
-	)
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_stationary_scanner
 	name = "Bluespace rift stationary scanner design"
 	desc = "Экспериментальный проект стационарного сканера блюспейс-разломов."
 	design_type = /datum/design/brs_stationary_scanner
 
-/obj/item/disk/design_disk/station_goal_machinery/brs_stationary_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Стационарный сканер БС-разломов)",
-		GENITIVE = "дискеты шаблона печати (Стационарный сканер БС-разломов)",
-		DATIVE = "дискете шаблона печати (Стационарный сканер БС-разломов)",
-		ACCUSATIVE = "дискету шаблона печати (Стационарный сканер БС-разломов)",
-		INSTRUMENTAL = "дискетой шаблона печати (Стационарный сканер БС-разломов)",
-		PREPOSITIONAL = "дискете шаблона печати (Стационарный сканер БС-разломов)"
-	)
-
-
 /obj/item/disk/design_disk/tailblade/blade_nt
 	name = "Tail laserblade implant design"
-	desc = "Переносной носитель данных, специализированный для хранения шаблонов печати. \
-			Получен корпорацией \"Нанотрейзен\" по уникальному контракту с \"Кибернетикой М’Саи\"."
+	desc = "A laser blade designed to be hidden inside the tail. Latest design of House Eshie'Ssharahss, issued to Nanotrasen in exclusive contract."
 	blueprint = new /datum/design/tailblade
-
-/obj/item/disk/design_disk/tailblade/blade_nt/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Имплант хвостового лазера)",
-		GENITIVE = "дискеты шаблона печати (Имплант хвостового лазера)",
-		DATIVE = "дискете шаблона печати (Имплант хвостового лазера)",
-		ACCUSATIVE = "дискету шаблона печати (Имплант хвостового лазера)",
-		INSTRUMENTAL = "дискетой шаблона печати (Имплант хвостового лазера)",
-		PREPOSITIONAL = "дискете шаблона печати (Имплант хвостового лазера)"
-	)

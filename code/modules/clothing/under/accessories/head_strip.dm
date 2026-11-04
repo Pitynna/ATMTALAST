@@ -1,7 +1,7 @@
 // MARK: Base
 /obj/item/clothing/accessory/head_strip
 	abstract_type = /obj/item/clothing/accessory/head_strip
-	name = "НАПИШИ БАГ-РЕПОРТ"
+	name = "FILE A BUG REPORT"
 	icon_state = null
 	item_state = null
 	gender = FEMALE
@@ -45,20 +45,6 @@
 	if(. && locate(/obj/item/clothing/accessory/head_strip, uniform.contents))
 		return FALSE
 
-/obj/item/clothing/accessory/head_strip/get_ru_names()
-	if(!strip_ru_name)
-		stack_trace("head strip does not have a 'strip_ru_name'")
-	var/name_in_quotes = "\"[strip_ru_name]\"" || name
-	return alist(
-		NOMINATIVE = "нашивка [name_in_quotes]",
-		GENITIVE = "нашивки [name_in_quotes]",
-		DATIVE = "нашивке [name_in_quotes]",
-		ACCUSATIVE = "нашивку [name_in_quotes]",
-		INSTRUMENTAL = "нашивкой [name_in_quotes]",
-		PREPOSITIONAL = "нашивке [name_in_quotes]",
-	)
-
-// MARK: Subtypes
 /obj/item/clothing/accessory/head_strip/captain
 	name = "Captain's strip"
 	desc = "Плотно сшитая круглая нашивка из синего бархата с позолотой, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый золотыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся управление станцией."
@@ -201,7 +187,7 @@
 
 /obj/item/clothing/accessory/head_strip/lawyers_badge
 	name = "attorney's badge"
-	desc = "Наполняет вас убежденностью в СПРАВЕДЛИВОСТЬ. Юристы стремятся демонстрировать её всем, кого встречают."
+	desc = "Fills you with the conviction of JUSTICE. Lawyers tend to want to show it to everyone they meet."
 	icon_state = "lawyerbadge"
 	item_state = "lawyerbadge"
 	gender = MALE

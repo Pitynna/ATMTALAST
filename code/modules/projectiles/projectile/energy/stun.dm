@@ -17,16 +17,6 @@
 	///Damage will be handled on the MOB side, to prevent window shattering.
 	var/tasered_duration = 8 SECONDS
 
-/obj/projectile/energy/electrode/get_ru_names()
-	return alist(
-		NOMINATIVE = "электрод",
-		GENITIVE = "электрода",
-		DATIVE = "электроду",
-		ACCUSATIVE = "электрод",
-		INSTRUMENTAL = "электродом",
-		PREPOSITIONAL = "электроде",
-	)
-
 /obj/projectile/energy/electrode/on_hit(atom/target, blocked = 0)
 	. = ..()
 	if(!ismob(target) || blocked >= 100) //Fully blocked by mob or collided with dense object - burst into sparks!

@@ -11,16 +11,6 @@
 	/// Inserted core of anomaly.
 	var/obj/item/assembly/signaler/core/core = null
 
-/obj/item/assembly/anomaly_beacon/get_ru_names()
-	return alist(
-		NOMINATIVE = "аномальный маячок",
-		GENITIVE = "аномального маячка",
-		DATIVE = "аномальному маячку",
-		ACCUSATIVE = "аномальный маячок",
-		INSTRUMENTAL = "аномальным маячком",
-		PREPOSITIONAL = "аномальном маячке",
-	)
-
 /obj/item/assembly/anomaly_beacon/activate()
 	if(!core)
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)

@@ -723,7 +723,7 @@
 
 /obj/item/spellbook
 	name = "spell book"
-	desc = "Легендарная книга заклинаний, используемая могущественными магами."
+	desc = "The legendary book of spells of the wizard."
 	gender = FEMALE
 	icon = 'icons/obj/library.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/library_lefthand.dmi'
@@ -746,16 +746,6 @@
 	var/static/list/spell_categories = list("Offensive", "Defensive", "Mobility", "Assistance", "Rituals")
 	var/static/list/item_categories = list("Artefacts", "Spell books", "Weapons and Armors", "Staves", "Summons")
 	var/static/list/loadout_categories = list("Standard", "Unique")
-
-/obj/item/spellbook/get_ru_names()
-	return alist(
-		NOMINATIVE = "книга заклинаний",
-		GENITIVE = "книги заклинаний",
-		DATIVE = "книге заклинаний",
-		ACCUSATIVE = "книгу заклинаний",
-		INSTRUMENTAL = "книгой заклинаний",
-		PREPOSITIONAL = "книге заклинаний",
-	)
 
 /obj/item/spellbook/proc/create_spellbook()
 	var/entry_types = subtypesof(/datum/spellbook_entry) - /datum/spellbook_entry/item - /datum/spellbook_entry/summon - /datum/spellbook_entry/loadout
@@ -974,17 +964,7 @@
 	skip_refunds = TRUE
 	name = "spellbook of "
 	uses = 1
-	desc = "Эту шаблонную книгу заклинаний не должно было видеть ни одно живое существо..."
-
-/obj/item/spellbook/oneuse/get_ru_names()
-	return alist(
-		NOMINATIVE = "гримуар [spellname_ru]",
-		GENITIVE = "гримуара [spellname_ru]",
-		DATIVE = "гримуару [spellname_ru]",
-		ACCUSATIVE = "гримуар [spellname_ru]",
-		INSTRUMENTAL = "гримуаром [spellname_ru]",
-		PREPOSITIONAL = "гримуаре [spellname_ru]",
-	)
+	desc = "This template spellbook was never meant for the eyes of man..."
 
 /obj/item/spellbook/oneuse/magic_charge_act(mob/user)
 	. = NONE
@@ -1039,7 +1019,7 @@
 	spellname_ru = "Огненного шара"
 	icon_state = "bookfireball"
 	item_state = "bookfireball"
-	desc = "На ощупь эта книга достаточно тёплая."
+	desc = "This book feels warm to the touch."
 
 /obj/item/spellbook/oneuse/fireball/recoil(mob/user as mob)
 	..()
@@ -1052,7 +1032,7 @@
 	spellname_ru = "Дыма"
 	icon_state = "booksmoke"
 	item_state = "booksmoke"
-	desc = "Эта книга переполнена тёмными искусствами."
+	desc = "This book is overflowing with the dank arts."
 
 /obj/item/spellbook/oneuse/smoke/recoil(mob/user as mob)
 	..()
@@ -1065,7 +1045,7 @@
 	spellname_ru = "Слепоты"
 	icon_state = "bookblind"
 	item_state = "bookblind"
-	desc = "Как ни посмотри, эта книга остаётся размытой в ваших глазах."
+	desc = "This book looks blurry, no matter how you look at it."
 
 /obj/item/spellbook/oneuse/blind/recoil(mob/user)
 	..()
@@ -1080,7 +1060,7 @@
 	spellname_ru = "Перемещения разума"
 	icon_state = "bookmindswap"
 	item_state = "bookmindswap"
-	desc = "Обложка этой книги выглядит нетронутой, хотя её страницы выглядят изношенными и истрёпанными."
+	desc = "This book's cover is pristine, though its pages look ragged and torn."
 	var/mob/stored_swap = null  //Used in used book recoils to store an identity for mindswaps
 
 /obj/item/spellbook/oneuse/mindswap/get_ru_names_cached()
@@ -1141,7 +1121,7 @@
 	spellname_ru = "Силовой стены"
 	icon_state = "bookforcewall"
 	item_state = "bookforcewall"
-	desc = "На обложке этой книги всё кричит о любви к мимам."
+	desc = "This book has a dedication to mimes everywhere inside the front cover."
 
 /obj/item/spellbook/oneuse/forcewall/recoil(mob/user as mob)
 	..()
@@ -1156,7 +1136,7 @@
 	spellname_ru = "Открывания"
 	icon_state = "bookknock"
 	item_state = "bookknock"
-	desc = "Эту книгу тяжело держать закрытой."
+	desc = "This book is hard to hold closed properly."
 
 /obj/item/spellbook/oneuse/knock/recoil(mob/living/user)
 	..()
@@ -1169,7 +1149,7 @@
 	spellname_ru = "Лошадиной силы"
 	icon_state = "bookhorses"
 	item_state = "bookhorses"
-	desc = "В этой книге больше лошадиных сил, чем во всех челноках в обозримой вселенной."
+	desc = "This book is more horse than your mind has room for."
 
 /obj/item/spellbook/oneuse/horsemask/recoil(mob/living/carbon/user)
 	if(ishuman(user))
@@ -1192,7 +1172,7 @@
 	spellname_ru = "Заряда"
 	icon_state = "bookcharge"
 	item_state = "bookcharge"
-	desc = "Эта книга на 100% состоит из постпотребительской магии."
+	desc = "This book is made of 100% post-consumer wizard."
 
 /obj/item/spellbook/oneuse/charge/recoil(mob/user)
 	..()
@@ -1205,7 +1185,7 @@
 	spellname_ru = "Мгновенного вызова"
 	icon_state = "booksummons"
 	item_state = "booksummons"
-	desc = "Эта книга яркая и броская, ее очень трудно не заметить."
+	desc = "This book is bright and garish, very hard to miss."
 
 /obj/item/spellbook/oneuse/summonitem/recoil(mob/user)
 	..()
@@ -1218,7 +1198,7 @@
 	spellname_ru = "Распада"
 	icon_state = "bookfireball"
 	item_state = "bookfireball"
-	desc = "При прикосновении к этой книге у вас складывается чувство, будто она способна разорвать что угодно на мелкие кусочки."
+	desc = "This book feels like it will rip stuff apart."
 
 /obj/item/spellbook/oneuse/sacredflame
 	spell_type = /datum/action/cooldown/spell/aoe/sacred_flame
@@ -1226,7 +1206,7 @@
 	spellname_ru = "Священного пламени"
 	icon_state = "booksacredflame"
 	item_state = "booksacredflame"
-	desc = "Эта книга призывает вас стать единным с пламенем, сжигающим изнутри... И позвать остальных присоединиться к вам."
+	desc = "Become one with the flames that burn within... and invite others to do so as well."
 
 /obj/item/spellbook/oneuse/goliath_dash
 	spell_type = /datum/action/cooldown/spell/pointed/goliath_dash
@@ -1234,7 +1214,7 @@
 	spellname_ru = "Рывка Голиафа"
 	icon_state = "bookgoliathdash"
 	item_state = "bookgoliathdash"
-	desc = "Эта книга достаточно горяча, а щупальца, что лезут из неё, извиваются и держат ваши руки."
+	desc = "Dash like a goliath!"
 
 /obj/item/spellbook/oneuse/watchers_look
 	spell_type =/datum/action/cooldown/spell/pointed/projectile/watchers_look
@@ -1242,7 +1222,7 @@
 	spellname_ru = "Взгляда наблюдателя"
 	icon_state = "bookwatcherlook"
 	item_state = "bookwatcherlook"
-	desc = "Глаз на обложке следит за вашим взглядом..."
+	desc = "Shoot with your eyes like a watcher!"
 
 
 // MARK: BLOCK 3.3: RANDOM BOOK
@@ -1267,19 +1247,9 @@
 	spell_type  = /datum/action/cooldown/spell/forcewall/mime
 	spellname = "Невидимая стена"
 	name = "Miming Manual"
-	desc = "В книге представлены разнообразные фотографии, на которых запечатлены мимы в процессе выступления, а также несколько иллюстрированных руководств."
+	desc = "It contains various pictures of mimes mid-performance, aswell as some illustrated tutorials."
 	icon_state = "bookmime"
 	item_state = "bookmime"
-
-/obj/item/spellbook/oneuse/mime/get_ru_names()
-	return alist(
-		NOMINATIVE = "руководство по пантомимам",
-		GENITIVE = "руководства по пантомимам",
-		DATIVE = "руководству по пантомимам",
-		ACCUSATIVE = "руководство по пантомимам",
-		INSTRUMENTAL = "руководством по пантомимам",
-		PREPOSITIONAL = "руководстве по пантомимам",
-	)
 
 /obj/item/spellbook/oneuse/mime/attack_self(mob/user)
 	if(!user.mind)
@@ -1309,7 +1279,7 @@
 /obj/item/spellbook/oneuse/mime/fingergun
 	spell_type = /datum/action/cooldown/spell/conjure_item/fingergun
 	spellname = "Пальцы-пистолеты"
-	desc = "Содержит изображения оружия, а также способы его имитации с помощью пантомим."
+	desc = "It contains illustrations of guns and how to mime them."
 
 /obj/item/spellbook/oneuse/mime/fingergun/fake
 	spell_type = /datum/action/cooldown/spell/conjure_item/fingergun/fake
@@ -1317,4 +1287,4 @@
 /obj/item/spellbook/oneuse/mime/greaterwall
 	spell_type = /datum/action/cooldown/spell/forcewall/greater/mime
 	spellname = "Великая Невидимая стена"
-	desc = "Содержит изображения выдающихся сооружений, которые оставили след в истории человечества."
+	desc = "It contains illustrations of the great walls of human history."

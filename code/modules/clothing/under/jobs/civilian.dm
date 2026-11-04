@@ -283,41 +283,20 @@
 
 /obj/item/clothing/under/rank/miner
 	name = "shaft miner's jumpsuit"
-	desc = "Стильный комбинезон с прочными подкладками. Покрыты тонким слоем грязи и пепла, \
-			который, видимо, уже никогда не смоется."
+	desc = "It's a snappy jumpsuit with a sturdy set of overalls. It is very dirty."
 	icon_state = "miner"
 	item_state = "miner"
 	item_color = "miner"
 
-/obj/item/clothing/under/rank/miner/get_ru_names()
-	return alist(
-		NOMINATIVE = "шахтёрский комбинезон",
-		GENITIVE = "шахтёрского комбинезона",
-		DATIVE = "шахтёрскому комбинезону",
-		ACCUSATIVE = "шахтёрский комбинезон",
-		INSTRUMENTAL = "шахтёрским комбинезоном",
-		PREPOSITIONAL = "шахтёрском комбинезоне"
-	)
-
 /obj/item/clothing/under/rank/miner/alt
 	name = "shaft miner's sweater"
-	desc = "Уютный рабочий свитер в старомодном стиле."
+	desc = "Cozy, old-style work sweater."
 	icon_state = "miner_alt"
 	item_state = "miner_alt"
 	item_color = "miner_alt"
 
-/obj/item/clothing/under/rank/miner/alt/get_ru_names()
-	return alist(
-		NOMINATIVE = "шахтёрский свитер",
-		GENITIVE = "шахтёрского свитера",
-		DATIVE = "шахтёрскому свитеру",
-		ACCUSATIVE = "шахтёрский свитер",
-		INSTRUMENTAL = "шахтёрским свитером",
-		PREPOSITIONAL = "шахтёрском свитере"
-	)
-
 /obj/item/clothing/under/rank/miner/lavaland
-	desc = "Зелёная униформа, созданная для работы в опасных условиях."
+	desc = "A green uniform for operating in hazardous environments."
 	icon_state = "explorer"
 	item_state = "explorer"
 	item_color = "explorer"

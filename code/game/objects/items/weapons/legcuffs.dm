@@ -1,6 +1,6 @@
 /obj/item/restraints/legcuffs
 	name = "leg cuffs"
-	desc = "Используйте это, чтобы держать заключённых в узде."
+	desc = "Use this to keep prisoners in line."
 	gender = PLURAL
 	icon_state = "handcuff"
 	item_state = "legcuff"
@@ -10,38 +10,18 @@
 	slowdown = 7
 	breakout_time = 30 SECONDS
 
-/obj/item/restraints/legcuffs/get_ru_names()
-	return alist(
-		NOMINATIVE = "кандалы",
-		GENITIVE = "кандалов",
-		DATIVE = "кандалам",
-		ACCUSATIVE = "кандалы",
-		INSTRUMENTAL = "кандалами",
-		PREPOSITIONAL = "кандалах",
-	)
-
 /obj/item/restraints/legcuffs/beartrap
 	name = "bear trap"
 	gender = MALE
 	throw_speed = 1
 	throw_range = 1
 	icon_state = "beartrap"
-	desc = "Капкан для поимки медведей и тех, кому тоже не повезёт иметь ноги."
+	desc = "A trap used to catch bears and other legged creatures."
 	origin_tech = "engineering=4"
 	var/armed = FALSE
 	var/trap_damage = 20
 	var/obj/item/grenade/iedcasing/IED = null
 	var/obj/item/assembly/signaler/sig = null
-
-/obj/item/restraints/legcuffs/beartrap/get_ru_names()
-	return alist(
-		NOMINATIVE = "капкан",
-		GENITIVE = "капкана",
-		DATIVE = "капкану",
-		ACCUSATIVE = "капкан",
-		INSTRUMENTAL = "капканом",
-		PREPOSITIONAL = "капкане",
-	)
 
 /obj/item/restraints/legcuffs/beartrap/Initialize(mapload)
 	. = ..()
@@ -184,7 +164,7 @@
 
 /obj/item/restraints/legcuffs/bola
 	name = "bola"
-	desc = "Метательное оружие, предназначенное для сковывания движений цели. При попадании обвивается вокруг ног цели, затрудняя передвижение."
+	desc = "A restraining device designed to be thrown at the target. Upon connecting with said target, it will wrap around their legs, making it difficult for them to move quickly."
 	icon_state = "bola"
 	item_state = "bola"
 	breakout_time = 6 SECONDS	//easy to apply, easy to break out of
@@ -214,16 +194,6 @@
 	var/knockdown_amt = 0
 	/// Cyclic bola spin sound.
 	var/spin_sound = 'sound/items/bola_spin.ogg'
-
-/obj/item/restraints/legcuffs/bola/get_ru_names()
-	return alist(
-		NOMINATIVE = "бола",
-		GENITIVE = "болы",
-		DATIVE = "боле",
-		ACCUSATIVE = "болу",
-		INSTRUMENTAL = "болой",
-		PREPOSITIONAL = "боле",
-	)
 
 /obj/item/restraints/legcuffs/bola/Initialize(mapload)
 	. = ..()
@@ -342,26 +312,16 @@
 
 /obj/item/restraints/legcuffs/bola/tactical //traitor variant
 	name = "reinforced bola"
-	desc = "Укреплённая бола, сделанная из длинной стальной цепи. Выглядит достаточно тяжёлой, чтобы сбить цель с ног."
+	desc = "A strong bola, made with a long steel chain. It looks heavy, enough so that it could trip somebody."
 	icon_state = "bola_r"
 	item_state = "bola_r"
 	origin_tech = "engineering=4;combat=3"
 	breakout_time = 10 SECONDS
 	weaken_amt = 2 SECONDS
 
-/obj/item/restraints/legcuffs/bola/tactical/get_ru_names()
-	return alist(
-		NOMINATIVE = "укреплённая бола",
-		GENITIVE = "укреплённой болы",
-		DATIVE = "укрёпленной боле",
-		ACCUSATIVE = "укреплённую болу",
-		INSTRUMENTAL = "укреплённой болой",
-		PREPOSITIONAL = "укреплённой боле",
-	)
-
 /obj/item/restraints/legcuffs/bola/energy //For Security
 	name = "energy bola"
-	desc = "Бола из твёрдой энергии, разработанная специально для службы безопасности. Предназначена для поимки особо прытких преступников."
+	desc = "A specialized hard-light bola designed to ensnare fleeing criminals and aid in arrests."
 	icon_state = "ebola"
 	item_state = "ebola"
 	hitsound = 'sound/weapons/tase.ogg'
@@ -370,32 +330,12 @@
 	reusable = FALSE
 	custom_price = PAYCHECK_MIN * 1.2
 
-/obj/item/restraints/legcuffs/bola/energy/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергетическая бола",
-		GENITIVE = "энергетической болы",
-		DATIVE = "энергетической боле",
-		ACCUSATIVE = "энергетическую болу",
-		INSTRUMENTAL = "энергетической болой",
-		PREPOSITIONAL = "энергетической боле",
-	)
-
 /obj/item/restraints/legcuffs/bola/sinew
 	name = "skull bola"
-	desc = "Это примитивное метательное оружие, созданное из останков врагов, может показаться ненадёжным, но оно демонстрирует поразительную эффективность."
+	desc = "A primitive bola made from the remains of your enemies. It doesn't look very reliable."
 	icon_state = "bola_watcher"
 	item_state = "bola_watcher"
 	reusable = FALSE
-
-/obj/item/restraints/legcuffs/bola/sinew/get_ru_names()
-	return alist(
-		NOMINATIVE = "бола из черепов",
-		GENITIVE = "болы из черепов",
-		DATIVE = "боле из черепов",
-		ACCUSATIVE = "болу из черепов",
-		INSTRUMENTAL = "болой из черепов",
-		PREPOSITIONAL = "боле из черепов",
-	)
 
 /obj/item/restraints/legcuffs/bola/sinew/dropped(mob/living/carbon/user, slot, silent = FALSE)
 	. = ..()

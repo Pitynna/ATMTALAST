@@ -714,21 +714,10 @@
 // Surgeon
 /obj/item/clothing/suit/apron/surgical
 	name = "surgical apron"
-	desc = "Стерильный хирургический фартук синего цвета, предназначенный для ношения хирургами в операционных. \
-			Изготовлен из многослойного материала с антисептической пропиткой, оборудован креплениями для хирургических инструментов."
+	desc = "A sterile blue surgical apron."
 	icon_state = "surgical"
 	item_state = "surgical"
 	allowed = list(/obj/item/scalpel, /obj/item/surgical_drapes, /obj/item/cautery, /obj/item/hemostat, /obj/item/retractor)
-
-/obj/item/clothing/suit/apron/surgical/get_ru_names()
-	return alist(
-		NOMINATIVE = "хирургический фартук",
-		GENITIVE = "хирургического фартука",
-		DATIVE = "хирургическому фартуку",
-		ACCUSATIVE = "хирургический фартук",
-		INSTRUMENTAL = "хирургическим фартуком",
-		PREPOSITIONAL = "хирургическом фартуке",
-	)
 
 /obj/item/clothing/suit/hop_jacket
 	name = "head of personnel's jacket"

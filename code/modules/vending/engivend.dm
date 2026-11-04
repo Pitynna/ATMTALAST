@@ -1,6 +1,6 @@
 /obj/machinery/vending/engivend
 	name = "Engi-Vend"
-	desc = "Автомат с запасными инструментами. Что? Вы ожидали какого-нибудь остроумного описания?"
+	desc = "Spare tool vending. What? Did you expect some witty description?"
 	icon_state = "engivend_off"
 	panel_overlay = "engivend_panel"
 	screen_overlay = "engivend"
@@ -32,14 +32,4 @@
 		/obj/item/clothing/glasses/meson = 3,
 		/obj/item/rcd = 3,
 		/obj/item/storage/belt/utility = 3,
-	)
-
-/obj/machinery/vending/engivend/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Engi-Vend",
-		GENITIVE = "торгового автомата Engi-Vend",
-		DATIVE = "торговому автомату Engi-Vend",
-		ACCUSATIVE = "торговый автомат Engi-Vend",
-		INSTRUMENTAL = "торговым автоматом Engi-Vend",
-		PREPOSITIONAL = "торговом автомате Engi-Vend",
 	)

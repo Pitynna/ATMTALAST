@@ -1,7 +1,8 @@
 /**********************Jaunter**********************/
 /obj/item/wormhole_jaunter
 	name = "wormhole jaunter"
-	desc = "Одноразовое устройство, использующее устаревшую технологию червоточин. \"Нанотрейзен\" переключилась на блюспейс для более точной телепортации. Перемещение через создаваемые им червоточины, мягко говоря, некомфортно.\nБлагодаря модификациям Свободных Големов, этот генератор червоточин обеспечивает защиту от пропастей."
+	desc = "A single use device harnessing outdated wormhole technology, Nanotrasen has since turned its eyes to bluespace for more accurate teleportation. \
+		The wormholes it creates are unpleasant to travel through, to say the least. If attached to your belt, it'll automatically activate should you fall into a chasm."
 	icon_state = "Jaunter"
 	item_state = "electronic"
 	w_class = WEIGHT_CLASS_SMALL
@@ -9,16 +10,6 @@
 	throw_range = 5
 	origin_tech = "bluespace=2"
 	slot_flags = ITEM_SLOT_BELT
-
-/obj/item/wormhole_jaunter/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор червоточин",
-		GENITIVE = "генератора червоточин",
-		DATIVE = "генератору червоточин",
-		ACCUSATIVE = "генератор червоточин",
-		INSTRUMENTAL = "генератором червоточин",
-		PREPOSITIONAL = "генераторе червоточин",
-	)
 
 /obj/item/wormhole_jaunter/attack_self(mob/user)
 	user.visible_message(span_notice("[user.name] активиру[PLUR_ET_YUT(user)] [declent_ru(ACCUSATIVE)]!"))
@@ -93,19 +84,9 @@
 	name = "jaunt tunnel"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "bhole3"
-	desc = "Стабильная дыра во вселенной, созданная генератором червоточин. Слово \"турбулентный\" не передаёт, насколько жёстким может быть прохождение через неё, но по крайней мере она всегда доставит вас куда-то рядом с маяком."
+	desc = "A stable hole in the universe made by a wormhole jaunter. Turbulent doesn't even begin to describe how rough passage through one of these is, but at least it will always get you somewhere near a beacon."
 	failchance = 0
 	light_on = FALSE
-
-/obj/effect/portal/jaunt_tunnel/get_ru_names()
-	return alist(
-		NOMINATIVE = "стабильная червоточина",
-		GENITIVE = "стабильной червоточины",
-		DATIVE = "стабильной червоточине",
-		ACCUSATIVE = "стабильную червоточину",
-		INSTRUMENTAL = "стабильной червоточиной",
-		PREPOSITIONAL = "стабильной червоточине",
-	)
 
 /obj/effect/portal/jaunt_tunnel/update_overlays()
 	. = list()	// we need no mask here
@@ -167,20 +148,10 @@
 
 /obj/item/grenade/jaunter_grenade
 	name = "chasm jaunter recovery grenade"
-	desc = "Граната \"НТ-Пьяный набор\". Первоначально созданная \"Нанотрейзен\" для поиска всех маяков в области и создания червоточин к ним, теперь используется шахтёрами для спасения коллег из пропастей."
+	desc = "NT-Drunk Dialer Grenade. Originally built by NT for locating all beacons in an area and creating wormholes to them, it now finds use to miners for recovering allies from chasms."
 	icon_state = "mirage"
 	/// Mob that threw the grenade.
 	var/mob/living/thrower
-
-/obj/item/grenade/jaunter_grenade/get_ru_names()
-	return alist(
-		NOMINATIVE = "граната спасения из пропасти",
-		GENITIVE = "гранаты спасения из пропасти",
-		DATIVE = "гранате спасения из пропасти",
-		ACCUSATIVE = "гранату спасения из пропасти",
-		INSTRUMENTAL = "гранатой спасения из пропасти",
-		PREPOSITIONAL = "гранате спасения из пропасти",
-	)
 
 /obj/item/grenade/jaunter_grenade/Destroy()
 	thrower = null

@@ -81,16 +81,6 @@
 	implant_data = /datum/implant_fluff/fake_mindshield
 	icon_state = "fake_mindshield0"
 
-/obj/item/implant/fake_mindshield/get_ru_names()
-	return alist(
-		NOMINATIVE = "фальшивый имплант защиты разума",
-		GENITIVE = "фальшивого импланта защиты разума",
-		DATIVE = "фальшивому импланту защиты разума",
-		ACCUSATIVE = "фальшивый имплант защиты разума",
-		INSTRUMENTAL = "фальшивым имплантом защиты разума",
-		PREPOSITIONAL = "фальшивом импланте защиты разума",
-	)
-
 /obj/item/implant/fake_mindshield/implant(mob/living/target, mob/user, force = FALSE)
 	. = ..()
 	if(!.)

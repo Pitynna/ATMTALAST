@@ -1,6 +1,6 @@
 /obj/machinery/cooker/deepfryer
 	name = "deep fryer"
-	desc = "Промышленный аппарат для глубокой прожарки в раскалённом масле. Позволяет придать хрустящую корочку <i>чему угодно</i>. Буквально."
+	desc = "Deep fried <i>everything</i>."
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "fryer_off"
 	thiscooktype = "обжарено во фритюре"
@@ -13,16 +13,6 @@
 	openicon = "fryer_open"
 	has_specials = 1
 	upgradeable = 1
-
-/obj/machinery/cooker/deepfryer/get_ru_names()
-	return alist(
-		NOMINATIVE = "фритюрница",
-		GENITIVE = "фритюрницы",
-		DATIVE = "фритюрнице",
-		ACCUSATIVE = "фритюрницу",
-		INSTRUMENTAL = "фритюрницей",
-		PREPOSITIONAL = "фритюрнице"
-	)
 
 /obj/machinery/cooker/deepfryer/Initialize(mapload)
 	. = ..()

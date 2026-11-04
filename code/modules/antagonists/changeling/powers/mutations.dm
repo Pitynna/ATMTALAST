@@ -156,7 +156,7 @@
 
 /obj/item/melee/changeling/arm_blade
 	name = "arm blade"
-	desc = "Уродливый клинок из костей и плоти, что режет людей, как масло."
+	desc = "A grotesque blade made of bone and flesh that cleaves through people like a hot knife through butter."
 	icon_state = "arm_blade"
 	item_state = "arm_blade"
 	item_flags = ABSTRACT|DROPDEL
@@ -169,16 +169,6 @@
 	throw_range = 0
 	throw_speed = 0
 	gender = FEMALE
-
-/obj/item/melee/changeling/arm_blade/get_ru_names()
-	return alist(
-		NOMINATIVE = "рука-клинок",
-		GENITIVE = "руки-клинка",
-		DATIVE = "руке-клинку",
-		ACCUSATIVE = "руку-клинок",
-		INSTRUMENTAL = "рукой-клинком",
-		PREPOSITIONAL = "руке-клинке",
-	)
 
 /obj/item/melee/changeling/arm_blade/add_parry_component()
 	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.25, _parryable_attack_types = NON_PROJECTILE_ATTACKS, _parry_cooldown = (1 / 3) SECONDS)
@@ -238,7 +228,7 @@
 
 /obj/item/melee/changeling/fleshy_maul
 	name = "fleshy maul"
-	desc = "Огромный молот из костей и плоти, что давит кости в пыль."
+	desc = "An enormous maul made out of bone and flesh that crushes limbs in the dust"
 	icon_state = "flesh_maul"
 	item_state = "flesh_maul"
 	item_flags = ABSTRACT|DROPDEL
@@ -249,16 +239,6 @@
 	throw_range = 0
 	throw_speed = 0
 	gender = MALE
-
-/obj/item/melee/changeling/fleshy_maul/get_ru_names()
-	return alist(
-		NOMINATIVE = "молот из плоти",
-		GENITIVE = "молота из плоти",
-		DATIVE = "молоту из плоти",
-		ACCUSATIVE = "молот из плоти",
-		INSTRUMENTAL = "молотом из плоти",
-		PREPOSITIONAL = "молоте из плоти",
-	)
 
 /obj/item/melee/changeling/fleshy_maul/ComponentInitialize()
 	. = ..()
@@ -314,7 +294,7 @@
 
 /obj/item/gun/magic/tentacle
 	name = "tentacle"
-	desc = "Мясистое щупальце, что может хватать людей или предметы."
+	desc = "A fleshy tentacle that can stretch out and grab things or people."
 	icon = 'icons/obj/items.dmi'
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
@@ -356,7 +336,7 @@
 
 /obj/item/shield/riot/changeling
 	name = "shield-like mass"
-	desc = "Щит из плотной костяной ткани. На нём можно разглядеть скрюченные в безумном узоре пальцы."
+	desc = "A mass of tough, boney tissue. You can still see the fingers as a twisted pattern in the shield."
 	w_class = WEIGHT_CLASS_HUGE
 	item_flags = ABSTRACT|DROPDEL
 	icon_state = "ling_shield"
@@ -384,7 +364,7 @@
 
 /obj/item/clothing/suit/space/changeling
 	name = "flesh mass"
-	desc = "Огромная масса плоти, предоставляющая сносную защиту от давления и температуры."
+	desc = "A huge, bulky mass of pressure and temperature-resistant organic tissue, evolved to facilitate space travel."
 	icon_state = "lingspacesuit"
 	item_flags = DROPDEL
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals)
@@ -400,7 +380,7 @@
 
 /obj/item/clothing/head/helmet/space/changeling
 	name = "flesh mass"
-	desc = "Масса плоти, предоставляющая сносную защиту от давления и температуры, с стекловидным хитиновым покрытием спереди."
+	desc = "A covering of pressure and temperature-resistant organic tissue with a glass-like chitin front."
 	icon_state = "lingspacehelmet"
 	item_flags = DROPDEL
 	armor = list(MELEE = 20, BULLET = 10, LASER = 0, ENERGY = 30, BOMB = 0, BIO = 100, FIRE = 90, ACID = 90)
@@ -432,7 +412,7 @@
 
 /obj/item/clothing/suit/armor/changeling
 	name = "chitinous mass"
-	desc = "Твёрдое  покрытие из чёрного хитина."
+	desc = "A tough, hard covering of black chitin."
 	icon_state = "lingarmor"
 	clothing_flags = THICKMATERIAL
 	flags_inv = HIDEJUMPSUIT|HIDEGLOVES|HIDESHOES|HIDETAIL
@@ -454,7 +434,7 @@
 
 /obj/item/clothing/head/helmet/changeling
 	name = "chitinous mass"
-	desc = "Твёрдое  покрытие из чёрного хитина с прозрачной оболочкой спереди."
+	desc = "A tough, hard covering of black chitin with transparent chitin in front."
 	icon_state = "lingarmorhelmet"
 	clothing_flags = THICKMATERIAL|PEPPERPROOF
 	flags_inv = HIDEMASK|HIDEHEADSETS|HIDEGLASSES|HIDENAME|HIDEHAIR

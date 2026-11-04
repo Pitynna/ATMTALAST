@@ -7,9 +7,7 @@
  */
 /obj/machinery/tcomms/relay
 	name = "telecommunications relay"
-	desc = "Реле телекоммуникационной системы — узел маршрутизации сигнала, обеспечивающий связь на объекте посредством подключения к удалённому ядру телекоммуникаций. \
-			Представляет собой массивное устройство с металлическим корпусом, оснащённым защитой от электромагнитных помех, \
-			антеннами для передачи сигнала, а также дисплеем, отображающим данные о текущих подключениях и конфигурации системы."
+	desc = "A large device with several radio antennas on it."
 	gender = NEUTER
 	icon_state = "relay"
 	// This starts as off so you cant make cores as hot spares
@@ -22,16 +20,6 @@
 	var/linked = FALSE
 	/// Is this link invisible on the hub?
 	var/hidden_link = FALSE
-
-/obj/machinery/tcomms/relay/get_ru_names()
-	return alist(
-		NOMINATIVE = "реле телекоммуникаций",
-		GENITIVE = "реле телекоммуникаций",
-		DATIVE = "реле телекоммуникаций",
-		ACCUSATIVE = "реле телекоммуникаций",
-		INSTRUMENTAL = "реле телекоммуникаций",
-		PREPOSITIONAL = "реле телекоммуникаций",
-	)
 
 /**
  * Initializer for the relay.

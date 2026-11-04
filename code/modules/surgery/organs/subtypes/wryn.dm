@@ -11,16 +11,6 @@
 	/// Stored hair style, defines only on creation and changes original h_style when inserted
 	var/hair_style = "Normal antennae"
 
-/obj/item/organ/internal/wryn/hivenode/get_ru_names()
-	return alist(
-		NOMINATIVE = "антенна",
-		GENITIVE = "антенны",
-		DATIVE = "антенне",
-		ACCUSATIVE = "антенну",
-		INSTRUMENTAL = "антенной",
-		PREPOSITIONAL = "антенне",
-	)
-
 /obj/item/organ/internal/wryn/hivenode/Initialize(mapload)
 	if(iscarbon(loc))
 		var/mob/living/carbon/carbon = loc
@@ -59,16 +49,6 @@
 	var/datum/action/innate/wryn/toggle_producing/toggle_producing = new
 	var/wax = 25
 	var/producing = FALSE
-
-/obj/item/organ/internal/wryn/glands/get_ru_names()
-	return alist(
-		NOMINATIVE = "восковые железы",
-		GENITIVE = "восковых желез",
-		DATIVE = "восковым железам",
-		ACCUSATIVE = "восковые железы",
-		INSTRUMENTAL = "восковыми железами",
-		PREPOSITIONAL = "восковых железах",
-	)
 
 /obj/item/organ/internal/wryn/glands/on_life()
 	if(!producing)
@@ -126,16 +106,6 @@
 	item_state = "wryn_brain"
 	mmi_icon = 'icons/obj/species_organs/wryn.dmi'
 
-/obj/item/organ/internal/brain/wryn/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозг врина",
-		GENITIVE = "мозга врина",
-		DATIVE = "мозгу врина",
-		ACCUSATIVE = "мозг врина",
-		INSTRUMENTAL = "мозгом врина",
-		PREPOSITIONAL = "мозге врина",
-	)
-
 /obj/item/organ/internal/heart/wryn
 	species_type = /datum/species/wryn
 	name = "wryn heart"
@@ -143,16 +113,6 @@
 	icon = 'icons/obj/species_organs/wryn.dmi'
 	item_state = "wryn_heart-on"
 	item_base = "wryn_heart"
-
-/obj/item/organ/internal/heart/wryn/get_ru_names()
-	return alist(
-		NOMINATIVE = "сердце врина",
-		GENITIVE = "сердца врина",
-		DATIVE = "сердцу врина",
-		ACCUSATIVE = "сердце врина",
-		INSTRUMENTAL = "сердцем врина",
-		PREPOSITIONAL = "сердце врина",
-	)
 
 /obj/item/organ/internal/eyes/wryn
 	species_type = /datum/species/wryn
@@ -162,30 +122,10 @@
 	item_state = "wryn_eyes"
 	see_in_dark = 3
 
-/obj/item/organ/internal/eyes/wryn/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаза врина",
-		GENITIVE = "глаз врина",
-		DATIVE = "глазам врина",
-		ACCUSATIVE = "глаза врина",
-		INSTRUMENTAL = "глазами врина",
-		PREPOSITIONAL = "глазах врина",
-	)
-
 /obj/item/organ/internal/ears/wryn
 	species_type = /datum/species/wryn
 	name = "wryn ears"
 	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали врину."
-
-/obj/item/organ/internal/ears/wryn/get_ru_names()
-	return alist(
-		NOMINATIVE = "уши врина",
-		GENITIVE = "ушей врина",
-		DATIVE = "ушам врина",
-		ACCUSATIVE = "уши врина",
-		INSTRUMENTAL = "ушами врина",
-		PREPOSITIONAL = "ушах врина",
-	)
 
 /obj/item/organ/external/tail/wryn
 	species_type = /datum/species/wryn
@@ -194,16 +134,6 @@
 	icon_name = "wryntail_s"
 	max_damage = 35
 	min_broken_damage = 25
-
-/obj/item/organ/external/tail/wryn/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост врина",
-		GENITIVE = "хвоста врина",
-		DATIVE = "хвосту врина",
-		ACCUSATIVE = "хвост врина",
-		INSTRUMENTAL = "хвостом врина",
-		PREPOSITIONAL = "хвосте врина",
-	)
 
 /obj/item/organ/external/chest/wryn
 	encased = "хитиновую оболочку на груди"

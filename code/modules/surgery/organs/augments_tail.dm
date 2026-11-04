@@ -129,16 +129,6 @@
 	slash_sound = 'sound/weapons/slash.ogg'
 	biological = TRUE
 
-/obj/item/organ/internal/cyberimp/tail/blade/organic_upgrade/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвостовая опухоль",
-		GENITIVE = "хвостовой опухоли",
-		DATIVE = "хвостовой опухоли",
-		ACCUSATIVE = "хвостовую опухоль",
-		INSTRUMENTAL = "хвостовой опухолью",
-		PREPOSITIONAL = "хвостовом сгустке",
-	)
-
 /obj/item/organ/internal/cyberimp/tail/blade/organic_upgrade/update_icon_state()
 	return
 

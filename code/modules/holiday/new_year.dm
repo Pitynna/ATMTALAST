@@ -108,18 +108,8 @@
 
 /obj/item/storage/backpack/santabag/ded_moroz
 	name = "presents bag"
-	desc = "Сумка, набитая подарками. Артефакт, принадлежавший широко известному старику, которого любили во всем СССП."
+	desc = "Bag filled with presents. Artifact of a widely-known old man loved across entire USSP."
 	max_combined_w_class = 120
-
-/obj/item/storage/backpack/santabag/ded_moroz/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок с подарками",
-		GENITIVE = "мешка с подарками",
-		DATIVE = "мешку с подарками",
-		ACCUSATIVE = "мешок с подарками",
-		INSTRUMENTAL = "мешком с подарками",
-		PREPOSITIONAL = "мешке с подарками"
-	)
 
 /obj/item/storage/backpack/santabag/ded_moroz/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] надева[PLUR_ET_UT(user)] [declent_ru(ACCUSATIVE)] на свою голову и туго затягива[PLUR_ET_UT(user)]! Похоже, у н[GEND_HIS_HER(user)] нет новогоднего настроения..."))

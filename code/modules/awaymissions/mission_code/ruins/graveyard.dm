@@ -21,7 +21,7 @@
 
 /obj/machinery/computer/shuttle/funeral
 	name = "Funeral \"The Undertaker\" Shuttle Console"
-	desc = "Используется для вызова и отправки похоронного шаттла \"The Undertaker\"."
+	desc = "Used to call and send the funeral \"The Undertaker\" shuttle."
 	shuttleId = "funeral"
 	possible_destinations = "graveyard_church;graveyard_dock"
 
@@ -196,7 +196,7 @@
 
 
 /obj/item/book/philosophy_of_death
-	name = "Философия смерти"
+	name = "The Philosophy of Death"
 	desc = "Эта книга переплетена вручную и украшена по краям позолотой. Видно, что ее создатель не сомневался в ее важности."
 	icon_state = "demonomicon"
 	item_state = "demonomicon"

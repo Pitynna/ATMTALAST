@@ -1,19 +1,9 @@
 /// A deck of unum cards. Classic.
 /obj/item/deck/unum
 	name = "UNUM! deck"
-	desc = "Колода карт UNUM! Правила для домашних ссор не входят в комплект."
+	desc = "A deck of UNUM! cards. House rules to argue over not included."
 	icon_state = "deck_unum_full"
 	card_style = "unum"
-
-/obj/item/deck/unum/get_ru_names()
-	return alist(
-		NOMINATIVE = "колода карт UNUM",
-		GENITIVE = "колоды карт UNUM",
-		DATIVE = "колоде карт UNUM",
-		ACCUSATIVE = "колоду карт UNUM",
-		INSTRUMENTAL = "колодой карт UNUM",
-		PREPOSITIONAL = "колоде карт UNUM",
-	)
 
 /obj/item/deck/unum/build_deck()
 	var/list/ru_color = list(

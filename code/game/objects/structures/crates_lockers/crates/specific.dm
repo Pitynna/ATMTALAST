@@ -98,30 +98,10 @@
 	name = "vault crate"
 	icon_state = "vaultcrate"
 
-/obj/structure/closet/crate/vault/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик с ценностями",
-		GENITIVE = "ящика с ценностями",
-		DATIVE = "ящику с ценностями",
-		ACCUSATIVE = "ящик с ценностями",
-		INSTRUMENTAL = "ящиком с ценностями",
-		PREPOSITIONAL = "ящике с ценностями",
-	)
-
 /obj/structure/closet/crate/wooden //i'm sure hope this won't be used as cheese strat to obtain cargo points
 	name = "wooden crate"
 	desc = "Ящик, сделанный из дерева."
 	icon_state = "wooden_crate"
-
-/obj/structure/closet/crate/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянный ящик",
-		GENITIVE = "деревянного ящика",
-		DATIVE = "деревянному ящику",
-		ACCUSATIVE = "деревянный ящик",
-		INSTRUMENTAL = "деревянным ящиком",
-		PREPOSITIONAL = "деревянном ящике",
-	)
 
 /obj/structure/closet/crate/hydroponics
 	name = "hydroponics crate"

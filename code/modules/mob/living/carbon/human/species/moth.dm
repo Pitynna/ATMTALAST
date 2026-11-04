@@ -209,8 +209,8 @@
 	qdel(C)
 
 /obj/structure/moth/cocoon
-	name = "Кокон Ниан"
-	desc = "Кто-то завернулся в кокон."
+	name = "\improper Nian cocoon"
+	desc = "Someone wrapped in a Nian cocoon."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "cocoon1"
 	color = LIGHT_COLOR_DIM_YELLOW //So tiders (hopefully) don't decide to immediately bust them open

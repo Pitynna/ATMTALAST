@@ -247,23 +247,13 @@
 
 /obj/item/clothing/accessory/necklace/herald_cloak
 	name = "cloak of the prophet"
-	desc = "Плащ, позволяющий путешествовать через идеальное отражение мира."
+	desc = "A cloak which lts you travel through a perfect reflection of the world."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "herald_cloak"
 	item_state = "herald_cloak"
 	item_color = "herald_cloak"
 	allow_duplicates = FALSE
 	actions_types = list(/datum/action/item_action/accessory/herald)
-
-/obj/item/clothing/accessory/necklace/herald_cloak/get_ru_names()
-	return alist(
-		NOMINATIVE = "плащ пророка",
-		GENITIVE = "плаща пророка",
-		DATIVE = "плащу пророка",
-		ACCUSATIVE = "плащ пророка",
-		INSTRUMENTAL = "плащом пророка",
-		PREPOSITIONAL = "плаще пророка",
-	)
 
 /obj/item/clothing/accessory/necklace/herald_cloak/attack_self()
 	if(has_suit)

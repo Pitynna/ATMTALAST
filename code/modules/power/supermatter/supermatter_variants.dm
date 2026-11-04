@@ -5,7 +5,7 @@
 /// Shard SM.
 /obj/machinery/power/supermatter_crystal/shard
 	name = "supermatter shard"
-	desc = "Странно полупрозрачный и переливающийся кристалл, который выглядит так, будто когда-то был частью более крупной структуры."
+	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure."
 	base_icon_state = "sm_shard"
 	icon_state = "sm_shard"
 	anchored = FALSE
@@ -13,16 +13,6 @@
 	explosion_power = 12
 	layer = ABOVE_MOB_LAYER
 	moveable = TRUE
-
-/obj/machinery/power/supermatter_crystal/shard/get_ru_names()
-	return alist(
-		NOMINATIVE = "осколок суперматерии",
-		GENITIVE = "осколка суперматерии",
-		DATIVE = "осколку суперматерии",
-		ACCUSATIVE = "осколок суперматерии",
-		INSTRUMENTAL = "осколком суперматерии",
-		PREPOSITIONAL = "осколке суперматерии"
-	)
 
 /obj/machinery/power/supermatter_crystal/shard/Initialize(mapload)
 	. = ..()
@@ -41,17 +31,6 @@
 	anchored = TRUE
 	moveable = FALSE
 
-/obj/machinery/power/supermatter_crystal/shard/engine/get_ru_names()
-	return alist(
-		NOMINATIVE = "закрепленный осколок суперматерии",
-		GENITIVE = "закрепленного осколка суперматерии",
-		DATIVE = "закрепленному осколку суперматерии",
-		ACCUSATIVE = "закрепленный осколок суперматерии",
-		INSTRUMENTAL = "закрепленным осколком суперматерии",
-		PREPOSITIONAL = "закрепленном осколке суперматерии"
-	)
-
-/// When you wanna make a supermatter shard for the dramatic effect, but don't want it exploding suddenly
 /obj/machinery/power/supermatter_crystal/shard/hugbox
 	name = "anchored supermatter shard"
 	disable_damage = TRUE
@@ -60,13 +39,3 @@
 	disable_process = SM_PROCESS_DISABLED
 	moveable = FALSE
 	anchored = TRUE
-
-/obj/machinery/power/supermatter_crystal/shard/hugbox/get_ru_names()
-	return alist(
-		NOMINATIVE = "закрепленный осколок суперматерии",
-		GENITIVE = "закрепленного осколка суперматерии",
-		DATIVE = "закрепленному осколку суперматерии",
-		ACCUSATIVE = "закрепленный осколок суперматерии",
-		INSTRUMENTAL = "закрепленным осколком суперматерии",
-		PREPOSITIONAL = "закрепленном осколке суперматерии"
-	)

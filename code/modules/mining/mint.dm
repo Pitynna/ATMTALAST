@@ -19,16 +19,6 @@
 	/// Inserted money bag.
 	var/obj/item/storage/bag/money/money_bag
 
-/obj/machinery/mineral/mint/get_ru_names()
-	return alist(
-		NOMINATIVE = "монетный пресс",
-		GENITIVE = "монетного пресса",
-		DATIVE = "монетному прессу",
-		ACCUSATIVE = "монетный пресс",
-		INSTRUMENTAL = "монетным прессом",
-		PREPOSITIONAL = "монетном прессе",
-	)
-
 /obj/machinery/mineral/mint/Initialize(mapload)
 	. = ..()
 	var/static/list/coin_materials = list()

@@ -13,16 +13,6 @@
 	mount_requirements = MOUNTED_FRAME_SIMFLOOR | MOUNTED_FRAME_NOSPACE
 	metal_sheets_refunded = 0
 
-/obj/item/mounted/frame/torch_holder/get_ru_names()
-	return alist(
-		NOMINATIVE = "крепление для факела",
-		GENITIVE = "крепления для факела",
-		DATIVE = "креплению для факела",
-		ACCUSATIVE = "крепление для факела",
-		INSTRUMENTAL = "креплением для факела",
-		PREPOSITIONAL = "креплении для факела",
-	)
-
 /obj/item/mounted/frame/torch_holder/do_build(turf/on_wall, mob/user)
 	to_chat(user, span_notice("Вы начинаете устанавливать [declent_ru(ACCUSATIVE)] на [on_wall.declent_ru(ACCUSATIVE)]."))
 	playsound(get_turf(src), 'sound/machines/click.ogg', 75, TRUE)
@@ -65,16 +55,6 @@
 	var/fuel_upp = 0
 	/// Timer for our torch.
 	var/timer = null
-
-/obj/structure/torch_holder/get_ru_names()
-	return alist(
-		NOMINATIVE = "крепление для факела",
-		GENITIVE = "крепления для факела",
-		DATIVE = "креплению для факела",
-		ACCUSATIVE = "крепление для факела",
-		INSTRUMENTAL = "креплением для факела",
-		PREPOSITIONAL = "креплении для факела",
-	)
 
 /obj/structure/torch_holder/Initialize(mapload) //mapping version, preloaded with torch
 	. = ..()
@@ -254,16 +234,6 @@
 	desc = "Красиво выглядящее крепление для факела. Поверхность проржавела от времени, а сам факел практически прирос к креплению."
 	icon_state = "torch_holder_complete"
 	ancient = TRUE
-
-/obj/structure/torch_holder/mapping/get_ru_names()
-	return alist(
-		NOMINATIVE = "древнее крепление для факела",
-		GENITIVE = "древнего крепления для факела",
-		DATIVE = "древнему креплению для факела",
-		ACCUSATIVE = "древнее крепление для факела",
-		INSTRUMENTAL = "древним креплением для факела",
-		PREPOSITIONAL = "древнем креплении для факела",
-	)
 
 /obj/structure/torch_holder/mapping/Initialize(mapload)
 	. = ..()

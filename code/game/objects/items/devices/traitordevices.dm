@@ -15,7 +15,7 @@ effective or pretty fucking useless.
 
 /obj/item/batterer
 	name = "mind batterer"
-	desc = "Странное устройство с двумя антеннами."
+	desc = "A dangerous syndicate device focused on crowd control and escapes. Causes brain damage, confusion, and other nasty effects to those surrounding the user."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "batterer"
 	throwforce = 5
@@ -27,16 +27,6 @@ effective or pretty fucking useless.
 	origin_tech = "magnets=3;combat=3;syndicate=3"
 
 	var/charges = 3
-
-/obj/item/batterer/get_ru_names()
-	return alist(
-		NOMINATIVE = "подавитель разума",
-		GENITIVE = "подавителя разума",
-		DATIVE = "подавителю разума",
-		ACCUSATIVE = "подавитель разума",
-		INSTRUMENTAL = "подавителем разума",
-		PREPOSITIONAL = "подавителе разума",
-	)
 
 /obj/item/batterer/examine(mob/user)
 	. = ..()
@@ -82,7 +72,7 @@ effective or pretty fucking useless.
 
 /obj/item/rad_laser
 	name = "Health Analyzer"
-	desc = "Ручной сканер тела, способный определить жизненные показатели субъекта. К концу сканера прикреплён необычный микролазер."
+	desc = "A hand-held body scanner able to distinguish vital signs of the subject. A strange microlaser is hooked on to the scanning end."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "health2"
 	item_state = "healthanalyzer"
@@ -97,16 +87,6 @@ effective or pretty fucking useless.
 	var/intensity = 5 // how much damage the radiation does
 	var/wavelength = 10 // time it takes for the radiation to kick in, in seconds
 	var/used = 0 // is it cooling down?
-
-/obj/item/rad_laser/get_ru_names()
-	return alist(
-		NOMINATIVE = "анализатор здоровья",
-		GENITIVE = "анализатора здоровья",
-		DATIVE = "анализатору здоровья",
-		ACCUSATIVE = "анализатор здоровья",
-		INSTRUMENTAL = "анализатором здоровья",
-		PREPOSITIONAL = "анализаторе здоровья",
-	)
 
 /obj/item/rad_laser/update_icon_state()
 	icon_state = used ? "health1" : "health2"

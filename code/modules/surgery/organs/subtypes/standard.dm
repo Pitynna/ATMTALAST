@@ -20,16 +20,6 @@
 	encased = "грудную клетку"
 	convertable_children = list(/obj/item/organ/external/groin)
 
-/obj/item/organ/external/chest/get_ru_names()
-	return alist(
-		NOMINATIVE = "грудь",
-		GENITIVE = "груди",
-		DATIVE = "груди",
-		ACCUSATIVE = "грудь",
-		INSTRUMENTAL = "грудью",
-		PREPOSITIONAL = "груди",
-	)
-
 /obj/item/organ/external/chest/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
@@ -58,19 +48,9 @@
 	amputation_point = "поясницу"
 	gendered_icon = TRUE
 
-/obj/item/organ/external/groin/get_ru_names()
-	return alist(
-		NOMINATIVE = "живот",
-		GENITIVE = "живота",
-		DATIVE = "животу",
-		ACCUSATIVE = "живот",
-		INSTRUMENTAL = "животом",
-		PREPOSITIONAL = "животе",
-	)
-
 /obj/item/organ/external/arm
 	name = "left arm"
-	desc = "Левая рука."
+	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	gender = FEMALE
 	icon_name = "l_arm"
 	limb_zone = BODY_ZONE_L_ARM
@@ -81,16 +61,6 @@
 	amputation_point = "левое плечо"
 	can_grasp = TRUE
 	convertable_children = list(/obj/item/organ/external/hand)
-
-/obj/item/organ/external/arm/get_ru_names()
-	return alist(
-		NOMINATIVE = "левая рука",
-		GENITIVE = "левой руки",
-		DATIVE = "левой руке",
-		ACCUSATIVE = "левую руку",
-		INSTRUMENTAL = "левой рукой",
-		PREPOSITIONAL = "левой руке",
-	)
 
 /obj/item/organ/external/arm/replaced(mob/living/carbon/human/target, special = ORGAN_MANIPULATION_DEFAULT)
 	. = ..()
@@ -138,26 +108,16 @@
 
 /obj/item/organ/external/arm/right
 	name = "right arm"
-	desc = "Правая рука."
+	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	icon_name = "r_arm"
 	limb_zone = BODY_ZONE_R_ARM
 	limb_body_flag = ARM_RIGHT
 	amputation_point = "правое плечо"
 	convertable_children = list(/obj/item/organ/external/hand/right)
 
-/obj/item/organ/external/arm/right/get_ru_names()
-	return alist(
-		NOMINATIVE = "правая рука",
-		GENITIVE = "правой руки",
-		DATIVE = "правой руке",
-		ACCUSATIVE = "правую руку",
-		INSTRUMENTAL = "правой рукой",
-		PREPOSITIONAL = "правой руке",
-	)
-
 /obj/item/organ/external/leg
 	name = "left leg"
-	desc = "Левая нога."
+	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	gender = FEMALE
 	icon_name = "l_leg"
 	limb_zone = BODY_ZONE_L_LEG
@@ -169,16 +129,6 @@
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
 	amputation_point = "левое бедро"
 	convertable_children = list(/obj/item/organ/external/foot)
-
-/obj/item/organ/external/leg/get_ru_names()
-	return alist(
-		NOMINATIVE = "левая нога",
-		GENITIVE = "левой ноги",
-		DATIVE = "левой ноге",
-		ACCUSATIVE = "левую ногу",
-		INSTRUMENTAL = "левой ногой",
-		PREPOSITIONAL = "левой ноге",
-	)
 
 /obj/item/organ/external/leg/replaced(mob/living/carbon/human/target, special = ORGAN_MANIPULATION_DEFAULT)
 	. = ..()
@@ -238,23 +188,13 @@
 
 /obj/item/organ/external/leg/right
 	name = "right leg"
-	desc = "Правая нога."
+	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	icon_name = "r_leg"
 	limb_zone = BODY_ZONE_R_LEG
 	limb_body_flag = LEG_RIGHT
 	icon_position = RIGHT
 	amputation_point = "правое бедро"
 	convertable_children = list(/obj/item/organ/external/foot/right)
-
-/obj/item/organ/external/leg/right/get_ru_names()
-	return alist(
-		NOMINATIVE = "правая нога",
-		GENITIVE = "правой ноги",
-		DATIVE = "правой ноге",
-		ACCUSATIVE = "правую ногу",
-		INSTRUMENTAL = "правой ногой",
-		PREPOSITIONAL = "правой ноге",
-	)
 
 /obj/item/organ/external/foot
 	name = "left foot"
@@ -273,16 +213,6 @@
 	icon_position = LEFT
 	parent_organ_zone = BODY_ZONE_L_LEG
 	amputation_point = "левую лодыжку"
-
-/obj/item/organ/external/foot/get_ru_names()
-	return alist(
-		NOMINATIVE = "левая ступня",
-		GENITIVE = "левой ступни",
-		DATIVE = "левой ступне",
-		ACCUSATIVE = "левую ступню",
-		INSTRUMENTAL = "левой ступнёй",
-		PREPOSITIONAL = "левой ступне",
-	)
 
 /obj/item/organ/external/foot/replaced(mob/living/carbon/human/target, special = ORGAN_MANIPULATION_DEFAULT)
 	. = ..()
@@ -390,16 +320,6 @@
 	parent_organ_zone = BODY_ZONE_R_LEG
 	amputation_point = "правую лодыжку"
 
-/obj/item/organ/external/foot/right/get_ru_names()
-	return alist(
-		NOMINATIVE = "правая ступня",
-		GENITIVE = "правой ступни",
-		DATIVE = "правой ступне",
-		ACCUSATIVE = "правую ступню",
-		INSTRUMENTAL = "правой ступнёй",
-		PREPOSITIONAL = "правой ступне",
-	)
-
 /obj/item/organ/external/hand
 	name = "left hand"
 	desc = "Левая кисть."
@@ -417,16 +337,6 @@
 	parent_organ_zone = BODY_ZONE_L_ARM
 	amputation_point = "левое запястье"
 	can_grasp = TRUE
-
-/obj/item/organ/external/hand/get_ru_names()
-	return alist(
-		NOMINATIVE = "левая кисть",
-		GENITIVE = "левой кисти",
-		DATIVE = "левой кисти",
-		ACCUSATIVE = "левую кисть",
-		INSTRUMENTAL = "левой кистью",
-		PREPOSITIONAL = "левой кисти",
-	)
 
 /obj/item/organ/external/hand/remove(mob/living/carbon/human/user, special = ORGAN_MANIPULATION_DEFAULT, ignore_children = FALSE)
 	. = ..()
@@ -525,19 +435,9 @@
 	parent_organ_zone = BODY_ZONE_R_ARM
 	amputation_point = "правое запястье"
 
-/obj/item/organ/external/hand/right/get_ru_names()
-	return alist(
-		NOMINATIVE = "правая кисть",
-		GENITIVE = "правой кисти",
-		DATIVE = "правой кисти",
-		ACCUSATIVE = "правую кисть",
-		INSTRUMENTAL = "правой кистью",
-		PREPOSITIONAL = "правой кисти",
-	)
-
 /obj/item/organ/external/head
 	name = "head"
-	desc = "Голова."
+	desc = "A standard reinforced braincase, with spine-plugged neural socket and sensor gimbals."
 	gender = FEMALE
 	limb_zone = BODY_ZONE_HEAD
 	icon_name = "head"
@@ -577,16 +477,6 @@
 	var/lip_color
 	///Current lipstick trait, if any (such as TRAIT_KISS_OF_DEATH)
 	var/stored_lipstick_trait
-
-/obj/item/organ/external/head/get_ru_names()
-	return alist(
-		NOMINATIVE = "голова",
-		GENITIVE = "головы",
-		DATIVE = "голове",
-		ACCUSATIVE = "голову",
-		INSTRUMENTAL = "головой",
-		PREPOSITIONAL = "голове",
-	)
 
 /obj/item/organ/external/head/remove(mob/living/user, special = ORGAN_MANIPULATION_DEFAULT, ignore_children = FALSE)
 	if(owner && special == ORGAN_MANIPULATION_DEFAULT)
@@ -687,16 +577,6 @@
 	var/list/m_colours = list("tail" = "#000000")
 	s_col = "#000000"
 
-/obj/item/organ/external/tail/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост",
-		GENITIVE = "хвоста",
-		DATIVE = "хвосту",
-		ACCUSATIVE = "хвост",
-		INSTRUMENTAL = "хвостом",
-		PREPOSITIONAL = "хвосте",
-	)
-
 /obj/item/organ/external/tail/Initialize(mapload, special = ORGAN_MANIPULATION_NOEFFECT)
 	. = ..()
 
@@ -731,31 +611,11 @@
 	max_damage = 15
 	min_broken_damage = 10
 
-/obj/item/organ/external/tail/monkey/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост обезьяны",
-		GENITIVE = "хвоста обезьяны",
-		DATIVE = "хвосту обезьяны",
-		ACCUSATIVE = "хвост обезьяны",
-		INSTRUMENTAL = "хвостом обезьяны",
-		PREPOSITIONAL = "хвосте обезьяны",
-	)
-
 /obj/item/organ/external/tail/monkey/tajaran
 	name = "farwa tail"
 	desc = "Хвост фарвы."
 	icon_name = "farwatail_s"
 	species_type = /datum/species/monkey/tajaran
-
-/obj/item/organ/external/tail/monkey/tajaran/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост фарвы",
-		GENITIVE = "хвоста фарвы",
-		DATIVE = "хвосту фарвы",
-		ACCUSATIVE = "хвост фарвы",
-		INSTRUMENTAL = "хвостом фарвы",
-		PREPOSITIONAL = "хвосте фарвы",
-	)
 
 /obj/item/organ/external/tail/monkey/vulpkanin
 	name = "wolpin tail"
@@ -763,31 +623,11 @@
 	icon_name = "wolpintail_s"
 	species_type = /datum/species/monkey/vulpkanin
 
-/obj/item/organ/external/tail/monkey/vulpkanin/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост вульпина",
-		GENITIVE = "хвоста вульпина",
-		DATIVE = "хвосту вульпина",
-		ACCUSATIVE = "хвост вульпина",
-		INSTRUMENTAL = "хвостом вульпина",
-		PREPOSITIONAL = "хвосте вульпина",
-	)
-
 /obj/item/organ/external/tail/monkey/unathi
 	name = "stok tail"
 	desc = "Хвост стока."
 	icon_name = "stoktail_s"
 	species_type = /datum/species/monkey/unathi
-
-/obj/item/organ/external/tail/monkey/unathi/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост стока",
-		GENITIVE = "хвоста стока",
-		DATIVE = "хвосту стока",
-		ACCUSATIVE = "хвост стока",
-		INSTRUMENTAL = "хвостом стока",
-		PREPOSITIONAL = "хвосте стока",
-	)
 
 /obj/item/organ/external/wing
 	name = "wings"
@@ -806,16 +646,6 @@
 	var/list/m_styles = list("wing" = "None")
 	var/list/m_colours = list("wing" = "#000000")
 	s_col = "#000000"
-
-/obj/item/organ/external/wing/get_ru_names()
-	return alist(
-		NOMINATIVE = "крылья",
-		GENITIVE = "крыльев",
-		DATIVE = "крыльям",
-		ACCUSATIVE = "крылья",
-		INSTRUMENTAL = "крыльями",
-		PREPOSITIONAL = "крыльях",
-	)
 
 /obj/item/organ/external/wing/Initialize(mapload, special = ORGAN_MANIPULATION_NOEFFECT)
 	. = ..()

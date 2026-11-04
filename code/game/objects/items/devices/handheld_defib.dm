@@ -3,7 +3,7 @@
 
 /obj/item/handheld_defibrillator
 	name = "handheld defibrillator"
-	desc = "Компактное устройство жёлтого цвета, используемое для экстренной кардиостимуляции."
+	desc = "Used to restart stopped hearts."
 	gender = MALE
 	icon = 'icons/obj/handheld_defibrillator.dmi'
 	icon_state = "defib_passive-on"
@@ -25,16 +25,6 @@
 	/// Maximum number of charges to which restoration occurs
 	var/max_charges = 1
 
-
-/obj/item/handheld_defibrillator/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручной дефибриллятор",
-		GENITIVE = "ручного дефибриллятора",
-		DATIVE = "ручному дефибриллятору",
-		ACCUSATIVE = "ручной дефибриллятор",
-		INSTRUMENTAL = "ручным дефибриллятором",
-		PREPOSITIONAL = "ручном дефибрилляторе",
-	)
 
 /obj/item/handheld_defibrillator/Initialize(mapload)
 	. = ..()
@@ -133,30 +123,16 @@
 
 /obj/item/handheld_defibrillator/syndie
 	name = "combat handheld defibrillator"
-	desc = "Компактное устройство матово-чёрного цвета, используемое для экстренной кардиостимуляции. \
-			За счёт интеграции конденсаторов нового поколения скорость перезарядки была увеличена втрое по сравнению со стандартной моделью. \
-			Специализированная боевая версия, используемая элитными тактическими отрядами \"Синдиката\"."
+	desc = "Used to restart stopped hearts (Not nanotrasen's pigs hearts)."
 	icon_state = "syndie_defib_passive-on"
 	item_state = "syndie_defib_passive"
 	icon_base = "syndie_defib"
 	charge_time = 30
 	shield_ignore = TRUE
 
-/obj/item/handheld_defibrillator/syndie/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой ручной дефибриллятор",
-		GENITIVE = "боевого ручного дефибриллятора",
-		DATIVE = "боевому ручному дефибриллятору",
-		ACCUSATIVE = "боевой ручной дефибриллятор",
-		INSTRUMENTAL = "боевым ручным дефибриллятором",
-		PREPOSITIONAL = "боевом ручном дефибрилляторе",
-	)
-
 /obj/item/handheld_defibrillator/advanced
 	name = "advanced handheld defibrillator"
-	desc = "Компактное устройство тёмно-синего цвета с противоударными вставками, предназначенное для экстренной кардиостимуляции. \
-			Использование продвинутых конденсаторов и энергомодуля нового поколения позволило повысить скорость перезарядки батареи, \
-			а также увеличить её максимальную вместимость до трёх зарядов."
+	desc = "A compact dark-blue device with impact-resistant padding, designed for emergency cardiac stimulation. Advanced capacitors and a new-generation power module allow faster recharging and storage of up to three charges."
 	icon_state = "adv_defib_passive-3"
 	item_state = "adv_defib_passive"
 	icon_base = "adv_defib"
@@ -166,16 +142,6 @@
 	charges = 3
 	max_charges = 3
 	charge_time = 70
-
-/obj/item/handheld_defibrillator/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый ручной дефибриллятор",
-		GENITIVE = " продвинутого ручного дефибриллятора",
-		DATIVE = "продвинутому ручному дефибриллятору",
-		ACCUSATIVE = "продвинутый ручной дефибриллятор",
-		INSTRUMENTAL = "продвинутым ручным дефибриллятором",
-		PREPOSITIONAL = "продвинутом ручном дефибрилляторе",
-	)
 
 /obj/item/handheld_defibrillator/advanced/examine(mob/user)
 	. = ..()

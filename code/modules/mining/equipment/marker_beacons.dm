@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, list(
 	name = "marker beacon"
 	singular_name = "marker beacon"
 	logistics_count_amount = TRUE
-	desc = "Устройства освещения пути. Используются шахтёрами для разметки маршрутов и обозначения опасностей."
+	desc = "Prism-brand path illumination devices. Used by miners to mark paths and warn of danger."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "marker"
 	armor = list(MELEE = 50, BULLET = 75, LASER = 75, ENERGY = 75, BOMB = 25, BIO = 100, FIRE = 25, ACID = 0)
@@ -26,16 +26,6 @@ GLOBAL_LIST_INIT(marker_beacon_colors, list(
 	merge_type = /obj/item/stack/marker_beacon
 	max_amount = 100
 	var/picked_color = "random"
-
-/obj/item/stack/marker_beacon/get_ru_names()
-	return alist(
-		NOMINATIVE = "маркерный маячок",
-		GENITIVE = "маркерного маячка",
-		DATIVE = "маркерному маячку",
-		ACCUSATIVE = "маркерный маячок",
-		INSTRUMENTAL = "маркерным маячком",
-		PREPOSITIONAL = "маркерном маячке",
-	)
 
 /obj/item/stack/marker_beacon/ten //miners start with 10 of these
 	amount = 10
@@ -80,7 +70,7 @@ GLOBAL_LIST_INIT(marker_beacon_colors, list(
 
 /obj/structure/marker_beacon
 	name = "marker beacon"
-	desc = "Устройство освещения пути. Надёжно закреплено и светится ровным светом."
+	desc = "A Prism-brand path illumination device. It is anchored in place and glowing steadily."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "marker"
 	layer = BELOW_OPEN_DOOR_LAYER

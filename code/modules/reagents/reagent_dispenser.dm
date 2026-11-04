@@ -80,16 +80,6 @@
 	reagent_id = "holywater"
 	icon_state = "holywater_tank"
 
-/obj/structure/reagent_dispensers/holywatertank/get_ru_names()
-	return alist(
-		NOMINATIVE = "бак святой воды",
-		GENITIVE = "бака святой воды",
-		DATIVE = "баку святой воды",
-		ACCUSATIVE = "бак святой воды",
-		INSTRUMENTAL = "баком святой воды",
-		PREPOSITIONAL = "баке святой воды",
-	)
-
 /obj/structure/reagent_dispensers/oil
 	name = "oil tank"
 	desc = "A tank of oil, commonly used to by robotics to fix leaking IPCs or just to loosen up those rusted underused parts."

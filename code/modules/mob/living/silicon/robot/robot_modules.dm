@@ -626,7 +626,7 @@
 	return ..()
 
 /obj/item/robot_module/janitor/ert
-	name = "Сombat Janitor"
+	name = "Combat Janitor"
 
 /obj/item/robot_module/janitor/ert/on_apply(mob/living/silicon/robot/robot)
 

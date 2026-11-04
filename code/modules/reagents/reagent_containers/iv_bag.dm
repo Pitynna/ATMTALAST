@@ -4,7 +4,7 @@
 // MARK: IV Bag
 /obj/item/reagent_containers/iv_bag
 	name = "IV Bag"
-	desc = "Пакет с тонкой иглой на конце. Предназначен для введения пациентам веществ прямо в кровоток в течение определённого времени."
+	desc = "A bag with a fine needle attached at the end for injecting patients with fluids over a period of time."
 	gender = FEMALE
 	icon = 'icons/goonstation/objects/iv.dmi'
 	lefthand_file = 'icons/goonstation/mob/inhands/items_lefthand.dmi'
@@ -21,16 +21,6 @@
 	var/mode = IV_INJECT
 	var/mob/living/carbon/human/injection_target
 	var/obj/item/organ/external/injection_limb
-
-/obj/item/reagent_containers/iv_bag/get_ru_names()
-	return alist(
-		NOMINATIVE = "капельница",
-		GENITIVE = "капельницы",
-		DATIVE = "капельнице",
-		ACCUSATIVE = "капельницу",
-		INSTRUMENTAL = "капельницей",
-		PREPOSITIONAL = "капельнице",
-	)
 
 /obj/item/reagent_containers/iv_bag/Initialize(mapload, vol)
 	. = ..()
@@ -226,16 +216,6 @@
 /obj/item/reagent_containers/iv_bag/salglu
 	list_reagents = list("salglu_solution" = 200)
 
-/obj/item/reagent_containers/iv_bag/salglu/get_ru_names()
-	return alist(
-		NOMINATIVE = "капельница (Физраствор)",
-		GENITIVE = "капельницы (Физраствор)",
-		DATIVE = "капельнице (Физраствор)",
-		ACCUSATIVE = "капельницу (Физраствор)",
-		INSTRUMENTAL = "капельницей (Физраствор)",
-		PREPOSITIONAL = "капельнице (Физраствор)",
-	)
-
 /obj/item/reagent_containers/iv_bag/salglu/Initialize(mapload)
 	name = "[initial(name)] - Saline Glucose"
 	. = ..()
@@ -261,25 +241,12 @@
 		"Wryn" = "Врин"
 	)
 
-/obj/item/reagent_containers/iv_bag/blood/get_ru_names()
-	return alist(
-			NOMINATIVE = "капельница — [get_ru_names_for_blood_species()[blood_species]] ([blood_type])" ,
-			GENITIVE = "капельницы — [get_ru_names_for_blood_species()[blood_species]] ([blood_type])",
-			DATIVE = "капельнице — [get_ru_names_for_blood_species()[blood_species]] ([blood_type])",
-			ACCUSATIVE = "капельницу — [get_ru_names_for_blood_species()[blood_species]] ([blood_type])",
-			INSTRUMENTAL = "капельницей — [get_ru_names_for_blood_species()[blood_species]] ([blood_type])",
-			PREPOSITIONAL = "капельнице — [get_ru_names_for_blood_species()[blood_species]] ([blood_type])",
-		)
-
 /obj/item/reagent_containers/iv_bag/blood/Initialize(mapload)
 	. = ..()
 	if(blood_type != null && blood_species != null)
 		name = "[initial(name)] - [blood_species] ([blood_type])"
 		reagents.add_reagent("blood", 200, list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=blood_type,"blood_species"=blood_species,"resistances"=null,"trace_chem"=null))
 		update_icon(UPDATE_OVERLAYS)
-
-/obj/item/reagent_containers/iv_bag/blood/random/get_ru_names()
-	return null
 
 /obj/item/reagent_containers/iv_bag/blood/random/get_ru_names_cached()
 	return null
@@ -349,16 +316,6 @@
 /obj/item/reagent_containers/iv_bag/bloodsynthetic/oxygenis
 	var/blood_species = "Oxygen - synthetic"
 
-/obj/item/reagent_containers/iv_bag/bloodsynthetic/oxygenis/get_ru_names()
-	return alist(
-			NOMINATIVE = "капельница — Синтетическая кровь (Кислород)" ,
-			GENITIVE = "капельницы — Синтетическая кровь (Кислород)",
-			DATIVE = "капельнице — Синтетическая кровь (Кислород)",
-			ACCUSATIVE = "капельницу — Синтетическая кровь (Кислород)",
-			INSTRUMENTAL = "капельницей — Синтетическая кровь (Кислород)",
-			PREPOSITIONAL = "капельнице — Синтетическая кровь (Кислород)",
-		)
-
 /obj/item/reagent_containers/iv_bag/bloodsynthetic/oxygenis/Initialize(mapload)
 	. = ..()
 	if(blood_type != null && blood_species != null)
@@ -367,16 +324,6 @@
 		update_icon(UPDATE_OVERLAYS)
 /obj/item/reagent_containers/iv_bag/bloodsynthetic/nitrogenis
 	var/blood_species = "Vox - synthetic"
-
-/obj/item/reagent_containers/iv_bag/bloodsynthetic/nitrogenis/get_ru_names()
-	return alist(
-			NOMINATIVE = "капельница — Синтетическая кровь (Азот)" ,
-			GENITIVE = "капельницы — Синтетическая кровь (Азот)",
-			DATIVE = "капельнице — Синтетическая кровь (Азот)",
-			ACCUSATIVE = "капельницу — Синтетическая кровь (Азот)",
-			INSTRUMENTAL = "капельницей — Синтетическая кровь (Азот)",
-			PREPOSITIONAL = "капельнице — Синтетическая кровь (Азот)",
-		)
 
 /obj/item/reagent_containers/iv_bag/bloodsynthetic/nitrogenis/Initialize(mapload)
 	. = ..()
@@ -387,16 +334,6 @@
 
 /obj/item/reagent_containers/iv_bag/slime
 	list_reagents = list("slimejelly" = 200)
-
-/obj/item/reagent_containers/iv_bag/slime/get_ru_names()
-	return alist(
-		NOMINATIVE = "капельница — Слаймовое желе" ,
-		GENITIVE = "капельницы — Слаймовое желе",
-		DATIVE = "капельнице — Слаймовое желе",
-		ACCUSATIVE = "капельницу — Слаймовое желе",
-		INSTRUMENTAL = "капельницей — Слаймовое желе",
-		PREPOSITIONAL = "капельнице — Слаймовое желе",
-	)
 
 /obj/item/reagent_containers/iv_bag/slime/Initialize(mapload)
 	name = "[initial(name)] - Slime Jelly"

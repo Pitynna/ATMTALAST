@@ -416,18 +416,6 @@
 	mob_species = /datum/species/skeleton
 	mob_color = "#454545"
 
-/obj/effect/mob_spawn/human/corpse/charredskeleton/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленные останки",
-		GENITIVE = "обугленных останков",
-		DATIVE = "обугленным останкам",
-		ACCUSATIVE = "обугленные останки",
-		INSTRUMENTAL = "обугленными останками",
-		PREPOSITIONAL = "об обугленных останках",
-	)
-
-//Legion infested mobs
-
 /obj/effect/mob_spawn/human/corpse/damaged/legioninfested/dwarf/equip(mob/living/carbon/human/H, use_prefs = FALSE, _mob_name = FALSE, _mob_gender = FALSE, _mob_species = FALSE)
 	. = ..()
 	H.force_gene_block(GLOB.smallsizeblock, TRUE)

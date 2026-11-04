@@ -3,7 +3,7 @@
 
 /obj/machinery/computer/aiupload
 	name = "AI upload console"
-	desc = "Используется для манипуляций с законами ИИ."
+	desc = "Used to upload laws to the AI."
 	icon_screen = "command"
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/aiupload
@@ -204,7 +204,7 @@
 
 /obj/machinery/computer/aiupload/cyborg
 	name = "cyborg upload console"
-	desc = "Используется для манипуляций с законами киборгов."
+	desc = "Used to upload laws to Cyborgs."
 	req_access = list(ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/borgupload
 

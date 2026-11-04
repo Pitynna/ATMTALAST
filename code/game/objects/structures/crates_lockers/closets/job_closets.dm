@@ -168,16 +168,6 @@
 	name = "burial clothes"
 	desc = "В данном ящике хранится траурная одежда."
 
-/obj/structure/closet/burial/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик с траурной одеждой",
-		GENITIVE = "ящика с траурной одеждой",
-		DATIVE = "ящику с траурной одеждой",
-		ACCUSATIVE = "ящик с траурной одеждой",
-		INSTRUMENTAL = "ящиком с траурной одеждой",
-		PREPOSITIONAL = "ящике с траурной одеждой",
-	)
-
 /obj/structure/closet/burial/populate_contents()
 	for(var/i = 1 to 7)
 		new /obj/item/clothing/under/burial(src)

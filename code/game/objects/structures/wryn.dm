@@ -20,7 +20,7 @@
 
 /obj/structure/wryn/wax
 	name = "wax"
-	desc = "Похоже на толстую стенку из воска."
+	desc = "Looks like some kind of thick wax."
 	icon = 'icons/obj/smooth_structures/wryn/wall.dmi'
 	icon_state = "wall"
 	base_icon_state = "wall"
@@ -55,23 +55,13 @@
 
 /obj/structure/wryn/wax/wall
 	name = "wax wall"
-	desc = "Похоже на затвердевшую массу воска."
+	desc = "Thick wax solidified into a wall."
 	smoothing_groups = SMOOTH_GROUP_WRYN_WAX_WALL + SMOOTH_GROUP_WRYN_WAX_WINDOW
 	obj_flags = BLOCK_Z_IN_DOWN | BLOCK_Z_IN_UP
 
-/obj/structure/wryn/wax/wall/get_ru_names()
-	return alist(
-		NOMINATIVE = "соты",
-		GENITIVE = "сот",
-		DATIVE = "сотам",
-		ACCUSATIVE = "соты",
-		INSTRUMENTAL = "сотами",
-		PREPOSITIONAL = "сотах",
-	)
-
 /obj/structure/wryn/wax/window
 	name = "wax window"
-	desc = "Воск на этой стенке настолько тонкий, что через него может проходить свет."
+	desc = "Wax just thin enough to let light pass through."
 	icon = 'icons/obj/smooth_structures/wryn/window.dmi'
 	base_icon_state = "window"
 	icon_state = "window-0"
@@ -79,21 +69,11 @@
 	opacity = FALSE
 	max_integrity = 20
 
-/obj/structure/wryn/wax/window/get_ru_names()
-	return alist(
-		NOMINATIVE = "прозрачныые соты",
-		GENITIVE = "прозрачных сот",
-		DATIVE = "прозрачным сотам сотам",
-		ACCUSATIVE = "прозрачные соты",
-		INSTRUMENTAL = "прозрачными сотами",
-		PREPOSITIONAL = "прозрачных сотах",
-	)
-
 /obj/structure/wryn/floor
 	icon = 'icons/obj/smooth_structures/wryn/floor.dmi'
 	gender = PLURAL
 	name = "wax floor"
-	desc = "Что-то жёлтое и липкое покрывает пол... Так стоп..."
+	desc = "A sticky yellow surface covers the floor."
 	anchored = TRUE
 	layer = TURF_LAYER
 	plane = FLOOR_PLANE
@@ -104,18 +84,6 @@
 	var/current_dir
 	var/static/list/floorImageCache
 	obj_flags = BLOCK_Z_OUT_DOWN | BLOCK_Z_IN_UP
-
-/obj/structure/wryn/floor/get_ru_names()
-	return alist(
-		NOMINATIVE = "пол из воска",
-		GENITIVE = "пола из воска",
-		DATIVE = "полу из воска",
-		ACCUSATIVE = "пол из воска",
-		INSTRUMENTAL = "полом из воска",
-		PREPOSITIONAL = "поле из воска",
-	)
-
-// wax floor procs
 
 /obj/structure/wryn/floor/update_overlays()
 	. = ..()
@@ -165,7 +133,7 @@
 
 /obj/structure/alien/resin/door/wax
 	name = "wax door"
-	desc = "Объёмная масса воска, напоминающая дверь."
+	desc = "A bulky mass of wax resembling a door."
 	icon = 'icons/obj/smooth_structures/wryn/wax_door.dmi'
 	icon_state = "wax_door_closed"
 	icon_closed = "wax_door_closed"
@@ -173,16 +141,6 @@
 	icon_closing = "wax_door_closing"
 	icon_opening = "wax_door_opening"
 	max_integrity = 50
-
-/obj/structure/alien/resin/door/wax/get_ru_names()
-	return alist(
-		NOMINATIVE = "дверь из сот",
-		GENITIVE = "двери из сот",
-		DATIVE = "двери из сот",
-		ACCUSATIVE = "дверь из сот",
-		INSTRUMENTAL = "дверью из сот",
-		PREPOSITIONAL = "двери из сот",
-	)
 
 /obj/structure/alien/resin/door/wax/ComponentInitialize()
 	. = ..()

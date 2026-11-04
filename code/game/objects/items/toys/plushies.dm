@@ -2,7 +2,7 @@
 /obj/item/toy/plushie
 	abstract_type = /obj/item/toy/plushie
 	name = "plushie"
-	desc = "Очаровательная, мягкая и приятная на ощупь плюшевая игрушка."
+	desc = "An adorable, soft, and cuddly plushie."
 	attack_verb = list("тыкнул", "ударил", "шлёпнул")
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FLAMMABLE
@@ -75,16 +75,6 @@
 	icon_state = "redfox"
 	gender = FEMALE
 
-/obj/item/toy/plushie/fox/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая лиса",
-		GENITIVE = "плюшевой лисы",
-		DATIVE = "плюшевой лисе",
-		ACCUSATIVE = "плюшевую лису",
-		INSTRUMENTAL = "плюшевой лисой",
-		PREPOSITIONAL = "плюшевой лисе",
-	)
-
 /obj/item/toy/plushie/fox/black
 	name = "black fox plushie"
 	icon_state = "blackfox"
@@ -124,16 +114,6 @@
 	cuddle_verb = list("Мяу!", "Мурр!")
 	gender = MALE
 
-/obj/item/toy/plushie/cat/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый кот",
-		GENITIVE = "плюшевого кота",
-		DATIVE = "плюшевому коту",
-		ACCUSATIVE = "плюшевого кота",
-		INSTRUMENTAL = "плюшевым котом",
-		PREPOSITIONAL = "плюшевом коте",
-	)
-
 /obj/item/toy/plushie/cat/grey
 	name = "grey cat plushie"
 	icon_state = "greycat"
@@ -164,31 +144,11 @@
 	icon_state = "razymist_cat"
 	cuddle_verb = list("Я знаю всё обо всём, спроси меня о чём-нибудь!", "Сегодня я особенно мудр!", "Мяу!", "Мурр!")
 
-/obj/item/toy/plushie/cat/kotrazumist/get_ru_names()
-	return alist(
-		NOMINATIVE = "кот-разумист",
-		GENITIVE = "кота-разумиста",
-		DATIVE = "коту-разумисту",
-		ACCUSATIVE = "кота-разумиста",
-		INSTRUMENTAL = "котом-разумистом",
-		PREPOSITIONAL = "коте-разумисте",
-	)
-
 /obj/item/toy/plushie/cat/ricehat
 	name = "Rice Cat"
 	desc = "Белая плюшевая кошка в соломенной шляпе, полученной за тяжелый труд на рисовом поле."
 	icon_state = "ricehat_cat"
 	cuddle_verb = list("Добро пожаловать на рисовые поля!", "Где мой рис?!", "Мяу!", "Мурр!")
-
-/obj/item/toy/plushie/cat/ricehat/get_ru_names()
-	return alist(
-		NOMINATIVE = "кот в рисовой шляпе",
-		GENITIVE = "кота в рисовой шляпе",
-		DATIVE = "коту в рисовой шляпе",
-		ACCUSATIVE = "кота в рисовой шляпе",
-		INSTRUMENTAL = "котом в рисовой шляпе",
-		PREPOSITIONAL = "коте в рисовой шляпе",
-	)
 
 /obj/item/toy/plushie/manulplushie
 	name = "manul plushie"
@@ -197,66 +157,24 @@
 	item_state = "kotik_hand"
 	gender = FEMALE
 
-/obj/item/toy/plushie/manulplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушка Манула",
-		GENITIVE = "игрушки Манула",
-		DATIVE = "игрушке Манула",
-		ACCUSATIVE = "игрушку Манула",
-		INSTRUMENTAL = "игрушкой Манула",
-		PREPOSITIONAL = "игрушке Манула",
-	)
-
-// MARK: Cat Toy
 /obj/item/toy/plushie/cattoy
 	name = "toy mouse"
-	desc = "Яркая игрушечная мышка!"
+	desc = "A colorful toy mouse!"
 	icon_state = "toy_mouse"
 	gender = FEMALE
 
-/obj/item/toy/plushie/cattoy/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечная мышь",
-		GENITIVE = "игрушечной мыши",
-		DATIVE = "игрушечной мыши",
-		ACCUSATIVE = "игрушечную мышь",
-		INSTRUMENTAL = "игрушечной мышью",
-		PREPOSITIONAL = "игрушечной мыши",
-	)
-
-// MARK: Race plushies
 /obj/item/toy/plushie/voxplushie
 	name = "vox plushie"
-	desc = "Сшитый из разных кусков вокc, только что со своего Скипджека. Нажмите на живот, чтобы услышать его нереальный визг!"
+	desc = "A stitched-together vox, fresh from the skipjack. Press its belly to hear it skree!"
 	icon_state = "plushie_vox"
 	poof_sound = 'sound/voice/shriek1.ogg'
 	cuddle_verb = "Skreee!"
 	gender = MALE
 
-/obj/item/toy/plushie/voxplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый вокс",
-		GENITIVE = "плюшевого вокса",
-		DATIVE = "плюшевому воксу",
-		ACCUSATIVE = "плюшевого вокса",
-		INSTRUMENTAL = "плюшевым воксом",
-		PREPOSITIONAL = "плюшевом воксе",
-	)
-
 /obj/item/toy/plushie/voxplushie/brick
 	name = "vox brick toy"
 	desc = "Мини-прималис. Главное в воксе — держать клюв Кирпичом. Игрушка сшитая основателем камневидного базирования в перерыве между рейдами."
 	color = "#ff78f4"
-
-/obj/item/toy/plushie/voxplushie/brick/get_ru_names()
-	return alist(
-		NOMINATIVE = "Кирпич",
-		GENITIVE = "Кирпича",
-		DATIVE = "Кирпичу",
-		ACCUSATIVE = "Кирпича",
-		INSTRUMENTAL = "Кирпичом",
-		PREPOSITIONAL = "Кирпиче",
-	)
 
 /obj/item/toy/plushie/shardplushie
 	name = "Shard plushie"
@@ -268,35 +186,15 @@
 	poof_sound = 'sound/effects/supermatter.ogg'
 	gender = MALE
 
-/obj/item/toy/plushie/shardplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый кристалл суперматерии",
-		GENITIVE = "плюшевого кристалла суперматерии",
-		DATIVE = "плюшевому кристаллу суперматерии",
-		ACCUSATIVE = "плюшевый кристалл суперматерии",
-		INSTRUMENTAL = "плюшевым кристаллом суперматерии",
-		PREPOSITIONAL = "плюшевом кристалле суперматерии",
-	)
-
 /obj/item/toy/plushie/greyplushie
-	name = "Плюшевый грей"
-	desc = "Плюшевая кукла грея в толстовке. Кукла входит в серию \"Пришелец\" и имеет свитер, большую голову и мультяшные глаза. Любит мехи."
+	name = "grey plushie"
+	desc = "A plushie of a grey wearing a sweatshirt. As a part of the 'The Alien' series, the doll features a sweater, an oversized head, and cartoonish eyes."
 	icon_state = "plushie_grey"
 	item_state = "plushie_grey"
 	cuddle_verb = list("☝︎❒︎♏︎♏︎⧫︎♓︎■︎♑︎⬧︎📬︎", "☟︎□︎⬥︎ ♋︎❒︎♏︎ ⍓︎□︎◆︎✍︎", "☹︎♓︎●︎◆︎ ♓︎⬧︎ ⧫︎♒︎♏︎ ♌︎♏︎⬧︎⧫︎", "✋︎ ●︎□︎❖︎♏︎ ❍︎♏︎♍︎♒︎⬧︎✏︎")
 	var/singed = FALSE
 	COOLDOWN_DECLARE(scream_cooldown)
 	gender = MALE
-
-/obj/item/toy/plushie/greyplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый грей",
-		GENITIVE = "плюшевого грея",
-		DATIVE = "плюшевому грею",
-		ACCUSATIVE = "плюшевого грея",
-		INSTRUMENTAL = "плюшевым греем",
-		PREPOSITIONAL = "плюшевом грее",
-	)
 
 /obj/item/toy/plushie/greyplushie/water_act(volume, temperature, source, method = REAGENT_TOUCH) //If water touches the plushie the following code executes.
 	. = ..()
@@ -318,19 +216,9 @@
 
 /obj/item/toy/plushie/ipcplushie
 	name = "IPC plushie"
-	desc = "Очаровательная плюшевая игрушка КПБ прямо из Нью-Кэнаана. Пожалуй, даже прочнее, чем настоящая. Функционально напоминает тостер."
+	desc = "An adorable IPC plushie, straight from New Canaan. Arguably more durable than the real deal. Toaster functionality included."
 	icon_state = "plushie_ipc"
 	gender = MALE
-
-/obj/item/toy/plushie/ipcplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый КПБ",
-		GENITIVE = "плюшевого КПБ",
-		DATIVE = "плюшевому КПБ",
-		ACCUSATIVE = "плюшевого КПБ",
-		INSTRUMENTAL = "плюшевым КПБ",
-		PREPOSITIONAL = "плюшевом КПБ",
-	)
 
 /obj/item/toy/plushie/ipcplushie/attackby(obj/item/I, mob/user, params)
 	if(!istype(I, /obj/item/reagent_containers/food/snacks/breadslice))
@@ -347,23 +235,13 @@
 
 /obj/item/toy/plushie/lizard_plushie
 	name = "lizard plushie"
-	desc = "Очаровательная плюшевая игрушка в виде унатха"
+	desc = "An adorable stuffed toy that resembles a lizardperson."
 	icon_state = "map_plushie_lizard"
 	item_state = "plushie_lizard"
 	greyscale_config = /datum/greyscale_config/plush_lizard
 	greyscale_config_inhand_left = /datum/greyscale_config/plush_lizard_left
 	greyscale_config_inhand_right = /datum/greyscale_config/plush_lizard_right
 	gender = MALE
-
-/obj/item/toy/plushie/lizard_plushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый унатх",
-		GENITIVE = "плюшевого унатха",
-		DATIVE = "плюшевому унатху",
-		ACCUSATIVE = "плюшевого унатха",
-		INSTRUMENTAL = "плюшевым унатхом",
-		PREPOSITIONAL = "плюшевом унатхе",
-	)
 
 /obj/item/toy/plushie/lizard_plushie/Initialize(mapload)
 	. = ..()
@@ -393,16 +271,6 @@
 	icon_state = "plushie_ashwalker1"
 	attack_verb = list("порезал", "шлёпнул", "протаранил")
 	gender = MALE
-
-/obj/item/toy/plushie/ashwalkerplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый пеплоходец",
-		GENITIVE = "плюшевого пеплоходца",
-		DATIVE = "плюшевому пеплоходцу",
-		ACCUSATIVE = "плюшевого пеплоходца",
-		INSTRUMENTAL = "плюшевым пеплоходцем",
-		PREPOSITIONAL = "плюшевом пеплоходце",
-	)
 
 /obj/item/toy/plushie/ashwalkerplushie/Initialize(mapload)
 	. = ..()
@@ -446,22 +314,12 @@
 
 /obj/item/toy/plushie/nianplushie
 	name = "nian plushie"
-	desc = "Мягкая плюшевая игрушка в виде Ниана, добытая прямо из Тёмной Туманности. Потяните за усики, чтобы услышать жужжание!"
+	desc = "A silky nian plushie, straight from the nebula. Pull its antenna to hear it buzz!"
 	icon_state = "plushie_nian"
 	item_state = "plushie_nian"
 	poof_sound = 'sound/voice/scream_moth.ogg'
 	cuddle_verb = list("Бжжж!", "Бззз!", "Жуж!")
 	gender = MALE
-
-/obj/item/toy/plushie/nianplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый ниан",
-		GENITIVE = "плюшевого ниана",
-		DATIVE = "плюшевому ниану",
-		ACCUSATIVE = "плюшевого ниана",
-		INSTRUMENTAL = "плюшевым нианом",
-		PREPOSITIONAL = "плюшевом ниане",
-	)
 
 /obj/item/toy/plushie/nianplushie/beeplushie
 	name = "bee plushie"
@@ -471,17 +329,6 @@
 	attack_verb = list("ужалил", "жужанул", "опылил")
 	gender = FEMALE
 
-/obj/item/toy/plushie/nianplushie/beeplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая пчёлка",
-		GENITIVE = "плюшевой пчёлки",
-		DATIVE = "плюшевой пчёлке",
-		ACCUSATIVE = "плюшевую пчёлку",
-		INSTRUMENTAL = "плюшевой пчёлкой",
-		PREPOSITIONAL = "плюшевой пчёлке",
-	)
-
-// MARK: Heads plushies
 /obj/item/toy/plushie/rdplushie
 	name = "RD doll"
 	desc = "Это обычная кукла РД."
@@ -498,16 +345,6 @@
 	)
 	var/tired = 0
 	gender = FEMALE
-
-/obj/item/toy/plushie/rdplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая кукла РД",
-		GENITIVE = "плюшевой куклы РД",
-		DATIVE = "плюшевой кукле РД",
-		ACCUSATIVE = "плюшевую куклу РД",
-		INSTRUMENTAL = "плюшевой куклой РД",
-		PREPOSITIONAL = "плюшевой кукле РД",
-	)
 
 /obj/item/toy/plushie/rdplushie/cuddle_counter(mob/user)
 	if(++tired < 50)
@@ -549,16 +386,6 @@
 	)
 	gender = FEMALE
 
-/obj/item/toy/plushie/gsbplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая кукла ГСБ",
-		GENITIVE = "плюшевой куклы ГСБ",
-		DATIVE = "плюшевой кукле ГСБ",
-		ACCUSATIVE = "плюшевую куклу ГСБ",
-		INSTRUMENTAL = "плюшевой куклой ГСБ",
-		PREPOSITIONAL = "плюшевой кукле ГСБ",
-	)
-
 /obj/item/toy/plushie/cmoplushie
 	name = "CMO doll"
 	desc = "Миниатюрная плюшевая копия главного врача в синем халате. Её карманы забиты таблетницами, а от неё самой немного пахнет антисептиком и формальдегидом."
@@ -579,17 +406,6 @@
 	var/high = FALSE
 	gender = FEMALE
 
-/obj/item/toy/plushie/cmoplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая кукла СМО",
-		GENITIVE = "плюшевой куклы СМО",
-		DATIVE = "плюшевой кукле СМО",
-		ACCUSATIVE = "плюшевую куклу СМО",
-		INSTRUMENTAL = "плюшевой куклой СМО",
-		PREPOSITIONAL = "плюшевой кукле СМО",
-	)
-
-// Smoking CMO
 /obj/item/toy/plushie/cmoplushie/attackby(obj/item/item, mob/user, params)
 	if(high)
 		return ATTACK_CHAIN_BLOCKED
@@ -636,35 +452,14 @@
 	)
 	gender = FEMALE
 
-/obj/item/toy/plushie/hopplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая кукла ГП",
-		GENITIVE = "плюшевой куклы ГП",
-		DATIVE = "плюшевой кукле ГП",
-		ACCUSATIVE = "плюшевую куклу ГП",
-		INSTRUMENTAL = "плюшевой куклой ГП",
-		PREPOSITIONAL = "плюшевой кукле ГП",
-	)
-
-// MARK: Sharks
 /obj/item/toy/plushie/blahaj
 	name = "shark plushie"
-	desc = "Уменьшенная, более дружелюбная и пушистая версия чем настоящая."
+	desc = "A plushie depicting a somewhat cartoonish shark. The tag calls it a 'hákarl', noting that it was made by an obscure furniture manufacturer in old Scandinavia."
 	icon_state = "blahaj"
 	item_state = "blahaj"
 	attack_verb = list("жеванул", "обглодал", "укусил")
 	poof_sound = 'sound/weapons/bite.ogg'
 	gender = FEMALE
-
-/obj/item/toy/plushie/blahaj/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая акула",
-		GENITIVE = "плюшевой акулы",
-		DATIVE = "плюшевой акуле",
-		ACCUSATIVE = "плюшевую акулу",
-		INSTRUMENTAL = "плюшевой акулой",
-		PREPOSITIONAL = "плюшевой акуле",
-	)
 
 /obj/item/toy/plushie/blahaj/twohanded
 	name = "akula plushie"
@@ -682,21 +477,11 @@
 // MARK: Plasmamans
 /obj/item/toy/plushie/plasmamanplushie
 	name = "plasmaman plushie"
-	desc = "Мягкая игрушка, похожая на ваших плазменных коллег. Как бы дизайнер не старался, её не получилось сделать милой."
+	desc = "A friendly plasma-being in plush form. WARNING: KEEP AWAY FROM OPEN FLAME!"
 	icon_state = "plasmaman_plushie_civillian"
 	poof_sound = 'sound/effects/extinguish.ogg'
 	cuddle_verb = "Плазззма Вечна!"
 	gender = MALE
-
-/obj/item/toy/plushie/plasmamanplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый плазмамен",
-		GENITIVE = "плюшевого плазмамена",
-		DATIVE = "плюшевому плазмамену",
-		ACCUSATIVE = "плюшевого плазмамена",
-		INSTRUMENTAL = "плюшевым плазмаменом",
-		PREPOSITIONAL = "плюшевом плазмамене",
-	)
 
 /obj/item/toy/plushie/plasmamanplushie/random/Initialize(mapload)
 	. = ..()
@@ -751,21 +536,11 @@
 // MARK: Carp plushie
 /obj/item/toy/plushie/carp
 	name = "space carp plushie"
-	desc = "Очаровательная плюшевая игрушка, похожая на космического карпа."
+	desc = "An adorable stuffed toy that resembles a space carp."
 	icon_state = "carpplushie"
 	attack_verb = list("укусил", "пожрал", "шлёпнул")
 	poof_sound = 'sound/weapons/bite.ogg'
 	gender = MALE
-
-/obj/item/toy/plushie/carp/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый карп",
-		GENITIVE = "плюшевого карпа",
-		DATIVE = "плюшевому карпу",
-		ACCUSATIVE = "плюшевого карпа",
-		INSTRUMENTAL = "плюшевым карпом",
-		PREPOSITIONAL = "плюшевом карпе",
-	)
 
 /obj/random/carp_plushie
 	name = "Random Carp Plushie"
@@ -823,16 +598,6 @@
 	icon_state = "hampter"
 	gender = MALE
 
-/obj/item/toy/plushie/hampter/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый хомяк",
-		GENITIVE = "плюшевого хомяка",
-		DATIVE = "плюшевому хомяку",
-		ACCUSATIVE = "плюшевого хомяка",
-		INSTRUMENTAL = "плюшевым хомяком",
-		PREPOSITIONAL = "плюшевом хомяке",
-	)
-
 /obj/item/toy/plushie/hampter/asisstant
 	name = "Hampter the Assitant"
 	desc = "Более или менее полезный."
@@ -861,16 +626,6 @@
 	item_state = "beaver_plushie"
 	gender = MALE
 
-/obj/item/toy/plushie/beaver/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый бобёр",
-		GENITIVE = "плюшевого бобра",
-		DATIVE = "плюшевому бобру",
-		ACCUSATIVE = "плюшевого бобра",
-		INSTRUMENTAL = "плюшевым бобром",
-		PREPOSITIONAL = "плюшевом бобре",
-	)
-
 /obj/item/toy/plushie/beaver/sounded //only adminspawn
 	desc = "Милая мягкая игрушка бобра. Держа его в руках, вы едва можете сдержаться от криков счастья. Эта выглядит ещё лучше, чем обычно!"
 	poof_sound = 'sound/items/beaver_plushie.ogg'
@@ -882,45 +637,15 @@
 	icon_state = "corgi"
 	gender = MALE
 
-/obj/item/toy/plushie/corgi/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый корги",
-		GENITIVE = "плюшевого корги",
-		DATIVE = "плюшевому корги",
-		ACCUSATIVE = "плюшевого корги",
-		INSTRUMENTAL = "плюшевым корги",
-		PREPOSITIONAL = "плюшевом корги",
-	)
-
 /obj/item/toy/plushie/girly_corgi
 	name = "corgi plushie"
 	icon_state = "girlycorgi"
 	gender = FEMALE
 
-/obj/item/toy/plushie/girly_corgi/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая корги",
-		GENITIVE = "плюшевой корги",
-		DATIVE = "плюшевой корги",
-		ACCUSATIVE = "плюшевую корги",
-		INSTRUMENTAL = "плюшевой корги",
-		PREPOSITIONAL = "плюшевой корги",
-	)
-
 /obj/item/toy/plushie/robo_corgi
 	name = "borgi plushie"
 	icon_state = "robotcorgi"
 	gender = MALE
-
-/obj/item/toy/plushie/robo_corgi/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый робо-корги",
-		GENITIVE = "плюшевого робо-корги",
-		DATIVE = "плюшевому робо-корги",
-		ACCUSATIVE = "плюшевого робо-корги",
-		INSTRUMENTAL = "плюшевым робо-корги",
-		PREPOSITIONAL = "плюшевом робо-корги",
-	)
 
 /obj/item/toy/plushie/snail
 	name = "'snail' plushie"
@@ -929,110 +654,40 @@
 	item_state = "snailplushie"
 	gender = FEMALE
 
-/obj/item/toy/plushie/snail/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая улитка",
-		GENITIVE = "плюшевой улитки",
-		DATIVE = "плюшевой улитке",
-		ACCUSATIVE = "плюшевую улитку",
-		INSTRUMENTAL = "плюшевой улиткой",
-		PREPOSITIONAL = "плюшевой улитке",
-	)
-
 /obj/item/toy/plushie/octopus
 	name = "octopus plushie"
 	icon_state = "loveable"
 	gender = MALE
-
-/obj/item/toy/plushie/octopus/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый осьминог",
-		GENITIVE = "плюшевого осьминога",
-		DATIVE = "плюшевому осьминогу",
-		ACCUSATIVE = "плюшевого осьминога",
-		INSTRUMENTAL = "плюшевым осьминогом",
-		PREPOSITIONAL = "плюшевом осьминоге",
-	)
 
 /obj/item/toy/plushie/face_hugger
 	name = "facehugger plushie"
 	icon_state = "huggable"
 	gender = MALE
 
-/obj/item/toy/plushie/face_hugger/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый лицехват",
-		GENITIVE = "плюшевого лицехвата",
-		DATIVE = "плюшевому лицехвату",
-		ACCUSATIVE = "плюшевого лицехвата",
-		INSTRUMENTAL = "плюшевым лицехватом",
-		PREPOSITIONAL = "плюшевом лицехвате",
-	)
-
 /obj/item/toy/plushie/deer
 	name = "deer plushie"
 	icon_state = "deer"
 	gender = MALE
 
-/obj/item/toy/plushie/deer/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый олень",
-		GENITIVE = "плюшевого оленя",
-		DATIVE = "плюшевому оленю",
-		ACCUSATIVE = "плюшевого оленя",
-		INSTRUMENTAL = "плюшевым оленем",
-		PREPOSITIONAL = "плюшевом олене",
-	)
-
 /obj/item/toy/plushie/snakeplushie
 	name = "snake plushie"
-	desc = "Очаровательная плюшевая игрушка, похожая на змею. Не путать с настоящей."
+	desc = "An adorable stuffed toy that resembles a snake. Not to be mistaken for the real thing."
 	icon_state = "plushie_snake"
 	item_state = "plushie_snake"
 	gender = FEMALE
 
-/obj/item/toy/plushie/snakeplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевая змея",
-		GENITIVE = "плюшевой змеи",
-		DATIVE = "плюшевой змее",
-		ACCUSATIVE = "плюшевую змею",
-		INSTRUMENTAL = "плюшевой змеёй",
-		PREPOSITIONAL = "плюшевой змее",
-	)
-
 /obj/item/toy/plushie/nukeplushie
 	name = "operative plushie"
-	desc = "Мягкая игрушка, напоминающая ядерного оперативника \"Синдиката\". На этикетке указано, что оперативники вымышленные."
+	desc = "An stuffed toy that resembles a syndicate nuclear operative. The tag claims operatives to be purely fictitious."
 	icon_state = "plushie_nuke"
 	item_state = "plushie_nuke"
 
-/obj/item/toy/plushie/nukeplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый оперативник \"Синдиката\"",
-		GENITIVE = "плюшевого оперативника \"Синдиката\"",
-		DATIVE = "плюшевому оперативнику \"Синдиката\"",
-		ACCUSATIVE = "плюшевого оперативника \"Синдиката\"",
-		INSTRUMENTAL = "плюшевым оперативником \"Синдиката\"",
-		PREPOSITIONAL = "плюшевом оперативнике \"Синдиката\"",
-	)
-
 /obj/item/toy/plushie/slimeplushie
 	name = "slime plushie"
-	desc = "Очаровательная мягкая игрушка, похожая на слайма. На самом деле это просто плюшевый мячик с лицом. Настоящий антистресс."
+	desc = "An adorable stuffed toy that resembles a slime. It is practically just a hacky sack."
 	icon_state = "plushie_slime"
 	item_state = "plushie_slime"
 	gender = MALE
-
-/obj/item/toy/plushie/slimeplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый слайм",
-		GENITIVE = "плюшевого слайма",
-		DATIVE = "плюшевому слайму",
-		ACCUSATIVE = "плюшевого слайма",
-		INSTRUMENTAL = "плюшевым слаймом",
-		PREPOSITIONAL = "плюшевом слайме",
-	)
 
 /obj/item/toy/plushie/fennecplushie
 	name = "fennec plushie"
@@ -1041,30 +696,10 @@
 	item_state = "fox"
 	gender = MALE
 
-/obj/item/toy/plushie/fennecplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый фенек",
-		GENITIVE = "плюшевого фенека",
-		DATIVE = "плюшевому фенеку",
-		ACCUSATIVE = "плюшевого фенека",
-		INSTRUMENTAL = "плюшевым фенеком",
-		PREPOSITIONAL = "плюшевом фенеке",
-	)
-
 /obj/item/toy/plushie/beepsky
 	name = "plush Officer Sweepsky"
 	desc = "Плюшевая игрушка в виде популярного и трудолюбивого робота-уборщика! Он бы полюбил вас, будь у него эмоции."
 	icon_state = "beepskyplushie"
-
-/obj/item/toy/plushie/beepsky/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый робот-уборщик",
-		GENITIVE = "плюшевого робота-уборщика",
-		DATIVE = "плюшевому роботу-уборщику",
-		ACCUSATIVE = "плюшевого робота-уборщика",
-		INSTRUMENTAL = "плюшевым роботом-уборщиком",
-		PREPOSITIONAL = "плюшевом роботе-уборщике",
-	)
 
 /obj/item/toy/plushie/axolotlplushie
 	name = "axolotl plushie"
@@ -1076,16 +711,6 @@
 	cuddle_verb = "Squeeek!"
 	gender = MALE
 
-/obj/item/toy/plushie/axolotlplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый аксолотль",
-		GENITIVE = "плюшевого аксолотля",
-		DATIVE = "плюшевому аксолотлю",
-		ACCUSATIVE = "плюшевого аксолотля",
-		INSTRUMENTAL = "плюшевым аксолотлем",
-		PREPOSITIONAL = "плюшевом аксолотле",
-	)
-
 /obj/item/toy/plushie/realgoat
 	name = "goat plushie"
 	desc = "Несмотря на то, что это милая мягкая игрушка, он вас изобьет, или, по крайней мере, избил бы, если бы мог."
@@ -1094,16 +719,6 @@
 	poof_sound = 'sound/items/goatsound.ogg'
 	cuddle_verb = "Baaaaah!"
 	gender = MALE
-
-/obj/item/toy/plushie/realgoat/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый козёл",
-		GENITIVE = "плюшевого козла",
-		DATIVE = "плюшевому козлу",
-		ACCUSATIVE = "плюшевого козла",
-		INSTRUMENTAL = "плюшевым козлом",
-		PREPOSITIONAL = "плюшевом козле",
-	)
 
 /obj/item/toy/plushie/rouny
 	name = "runner plushie"
@@ -1114,32 +729,12 @@
 	cuddle_verb = "Бежиииииим!"
 	gender = MALE
 
-/obj/item/toy/plushie/rouny/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый \"Руни\"",
-		GENITIVE = "плюшевого \"Руни\"",
-		DATIVE = "плюшевому \"Руни\"",
-		ACCUSATIVE = "плюшевого \"Руни\"",
-		INSTRUMENTAL = "плюшевым \"Руни\"",
-		PREPOSITIONAL = "плюшевом \"Руни\"",
-	)
-
 /obj/item/toy/plushie/banbanana
 	name = "BANana"
-	desc = "Интересно, а что будет если я его почищу?"
+	desc = "It's an excellent prop for a clown."
 	icon_state = "banana"
 	poof_sound = 'sound/effects/adminhelp.ogg'
 	gender = MALE
-
-/obj/item/toy/plushie/banbanana/get_ru_names()
-	return alist(
-		NOMINATIVE = "БАНан",
-		GENITIVE = "БАНана ",
-		DATIVE = "БАНану",
-		ACCUSATIVE = "БАНан",
-		INSTRUMENTAL = "БАНаном",
-		PREPOSITIONAL = "БАНане",
-	)
 
 /obj/item/toy/plushie/banbanana/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	. = ..()
@@ -1155,16 +750,6 @@
 	gender = FEMALE
 	COOLDOWN_DECLARE(oink_cooldown)
 	COOLDOWN_DECLARE(message_cooldown)
-
-/obj/item/toy/plushie/pig/get_ru_names()
-	return alist(
-		NOMINATIVE = "резиновая свинья",
-		GENITIVE = "резиновой свиньи",
-		DATIVE = "резиновой свинье",
-		ACCUSATIVE = "резиновую свинью",
-		INSTRUMENTAL = "резиновой свиньёй",
-		PREPOSITIONAL = "резиновой свинье",
-	)
 
 /obj/item/toy/plushie/pig/proc/oink(mob/user, msg)
 	if(!COOLDOWN_FINISHED(src, oink_cooldown))
@@ -1223,16 +808,6 @@
 	poof_sound = 'sound/misc/demon_attack1.ogg'
 	gender = MALE
 
-/obj/item/toy/plushie/bubblegumplushie/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый Бубльгум",
-		GENITIVE = "плюшевого Бубльгума",
-		DATIVE = "плюшевому Бубльгуму",
-		ACCUSATIVE = "плюшевого Бубльгума",
-		INSTRUMENTAL = "плюшевым Бубльгумом",
-		PREPOSITIONAL = "плюшевом Бубльгуме",
-	)
-
 /obj/item/toy/plushie/bubblegumplushie/perform_special_interaction(mob/user)
 	playsound(src, 'sound/effects/meteorimpact.ogg', 40, TRUE)
 	user.visible_message("[get_examine_icon(viewers(user))] [span_danger("Бубльгум топает...")]")
@@ -1247,16 +822,6 @@
 	poof_sound = 'sound/items/wahwah.ogg'
 	gender = MALE
 
-/obj/item/toy/plushie/chikaboomchik/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый чикабумчик",
-		GENITIVE = "плюшевого чикабумчика",
-		DATIVE = "плюшевому чикабумчику",
-		ACCUSATIVE = "плюшевого чикабумчика",
-		INSTRUMENTAL = "плюшевым чикабумчиком",
-		PREPOSITIONAL = "плюшевом чикабумчике",
-	)
-
 #define EVIL_MODE_CHANCE 5
 
 /obj/item/toy/plushie/wet_owl
@@ -1270,16 +835,6 @@
 	var/is_evil = FALSE
 	var/cooldown_time = 2 SECONDS
 	COOLDOWN_DECLARE(water_cooldown)
-
-/obj/item/toy/plushie/wet_owl/get_ru_names()
-	return alist(
-		NOMINATIVE = "мокрая сова",
-		GENITIVE = "мокрой совы",
-		DATIVE = "мокрой сове",
-		ACCUSATIVE = "мокрую сову",
-		INSTRUMENTAL = "мокрой совой",
-		PREPOSITIONAL = "мокрой сове",
-	)
 
 /obj/item/toy/plushie/wet_owl/water_act(volume, temperature, source, method)
 	. = ..()
@@ -1350,16 +905,6 @@
 	var/plushie_color
 	gender = MALE
 
-/obj/item/toy/plushie/ninja/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый ниндзя",
-		GENITIVE = "плюшевого ниндзя",
-		DATIVE = "плюшевому ниндзя",
-		ACCUSATIVE = "плюшевого ниндзя",
-		INSTRUMENTAL = "плюшевым ниндзя",
-		PREPOSITIONAL = "плюшевом ниндзя",
-	)
-
 /obj/item/toy/plushie/ninja/update_icon_state()
 	switch(plushie_color)
 		if("green")
@@ -1388,17 +933,6 @@
 	poof_sound = 'sound/misc/alien-giggle.ogg'
 	gender = MALE
 
-/obj/item/toy/plushie/glorp/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый глорп",
-		GENITIVE = "плюшевого глорпа",
-		DATIVE = "плюшевому глорпу",
-		ACCUSATIVE = "плюшевого глорпа",
-		INSTRUMENTAL = "плюшевым глорпом",
-		PREPOSITIONAL = "плюшевом глорпе",
-	)
-
-//shitspawn
 /obj/item/toy/plushie/pizdosik
 	name = "plushie pizdosik"
 	desc = "Плюшевый работяга. Он устал... Дайте ему отдохнуть..."
@@ -1406,13 +940,3 @@
 	item_state = "pizdosik"
 	poof_sound = 'sound/misc/pizdosik.ogg'
 	gender = MALE
-
-/obj/item/toy/plushie/pizdosik/get_ru_names()
-	return alist(
-		NOMINATIVE = "плюшевый пиздосик",
-		GENITIVE = "плюшевого пиздосика",
-		DATIVE = "плюшевому пиздосику",
-		ACCUSATIVE = "плюшевого пиздосика",
-		INSTRUMENTAL = "плюшевым пиздосиком",
-		PREPOSITIONAL = "плюшевом пиздосике",
-	)

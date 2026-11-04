@@ -40,9 +40,7 @@
 // MARK: SABR-9
 /obj/item/gun/projectile/automatic/smg/saber
 	name = "SABR-9 submachine gun"
-	desc = "Компактный пистолет-пулемёт калибра 9x19 мм, выпускаемый по лицензии \"Aegis Ordinance\". \
-			Поддерживает одиночный режим огня и очередь. Встроенный коллиматорный прицел, низкая отдача, средняя точность. \
-			Закупается \"Нанотрейзен\" для снаряжения охранных структур корпорации."
+	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
 	origin_tech = "combat=4;materials=2"
 	fire_sound = 'sound/weapons/gunshots/1c20.ogg'
@@ -58,16 +56,6 @@
 	starting_attachment_types = list(/obj/item/gun_module/rail/scope/collimator, /obj/item/gun_module/stock)
 	chambered_light_exists = TRUE
 
-/obj/item/gun/projectile/automatic/smg/saber/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт SABR-9",
-		GENITIVE = "пистолета-пулемёта SABR-9",
-		DATIVE = "пистолету-пулемёту SABR-9",
-		ACCUSATIVE = "пистолет-пулемёт SABR-9",
-		INSTRUMENTAL = "пистолетом-пулемётом SABR-9",
-		PREPOSITIONAL = "пистолете-пулемёте SABR-9",
-	)
-
 /obj/item/gun/projectile/automatic/smg/saber/rubber
 
 /obj/item/gun/projectile/automatic/smg/saber/rubber/Initialize(mapload)
@@ -77,8 +65,7 @@
 // MARK: DCA S45
 /obj/item/gun/projectile/automatic/smg/c20r
 	name = "DCA S45 submachine gun"
-	desc = "Пистолет-пулемёт калибра .45 производства \"Donk Co. Arms\". Может стрелять в режиме одиночного огня, автоматического и очередями по 2. \
-			Управляемая отдача и высокая для класса точность делают его предпочтительным выбором для ближнего и среднего боя."
+	desc = "A .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
 	item_state = "c20r"
 	origin_tech = "combat=5;materials=2;syndicate=6"
@@ -96,16 +83,6 @@
 	chambered_light_exists = TRUE
 	mag_ammo_counter_exists = TRUE
 	mag_ammo_counter_size = 4
-
-/obj/item/gun/projectile/automatic/smg/c20r/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт DCA S45",
-		GENITIVE = "пистолета-пулемёта DCA S45",
-		DATIVE = "пистолету-пулемёту DCA S45",
-		ACCUSATIVE = "пистолет-пулемёт DCA S45",
-		INSTRUMENTAL = "пистолетом-пулемётом DCA S45",
-		PREPOSITIONAL = "пистолете-пулемёте DCA S45",
-	)
 
 /obj/item/gun/projectile/automatic/smg/c20r/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
@@ -134,16 +111,6 @@
 	recoil = GUN_RECOIL_LOW
 	fire_delay = 0.2 SECONDS
 
-/obj/item/gun/projectile/automatic/smg/c20r/auto/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт \"Жнец\"",
-		GENITIVE = "пистолета-пулемёта \"Жнец\"",
-		DATIVE = "пистолету-пулемёту \"Жнец\"",
-		ACCUSATIVE = "пистолет-пулемёт \"Жнец\"",
-		INSTRUMENTAL = "пистолетом-пулемётом \"Жнец\"",
-		PREPOSITIONAL = "пистолете-пулемёте \"Жнец\"",
-	)
-
 /obj/item/gun/projectile/automatic/smg/c20r/rusted
 	damage_mod = 0.85
 	fire_delay = 0.3 SECONDS
@@ -156,9 +123,7 @@
 // MARK: WT550
 /obj/item/gun/projectile/automatic/smg/wt550
 	name = "WT-550 submachine gun"
-	desc = "Компактный пистолет-пулемёт калибра 4,6x30 мм, выпускаемый по лицензии \"Aegis Ordinance\". Поддерживает три режима огня: \
-			одиночный, очередь по 2 патрона и автоматический. Имеет три слота под тактические модули. \
-			Состоит на вооружении многих корпоративных охранных структур, в том числе \"Нанотрейзен\"."
+	desc = "An outdated personal defense weapon utilized by law enforcement. Chambered in 4.6x30mm."
 	icon_state = "wt550"
 	item_state = "arg"
 	fire_delay = 0.25 SECONDS
@@ -179,16 +144,6 @@
 	chambered_light_exists = TRUE
 	mag_ammo_counter_exists = TRUE
 
-/obj/item/gun/projectile/automatic/smg/wt550/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт WT-550",
-		GENITIVE = "пистолета-пулемёта WT-550",
-		DATIVE = "пистолету-пулемёту WT-550",
-		ACCUSATIVE = "пистолет-пулемёт WT-550",
-		INSTRUMENTAL = "пистолетом-пулемётом WT-550",
-		PREPOSITIONAL = "пистолете-пулемёте WT-550",
-	)
-
 /obj/item/gun/projectile/automatic/smg/wt550/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
 		lore = "WT-550 — относительно дешёвый пистолет-пулемёт под патрон 4,6x30 мм, выпускаемый по производственной лицензии \"Aegis Ordinance\". \
@@ -207,8 +162,7 @@
 // MARK: DCA S91 Peacekeeper
 /obj/item/gun/projectile/automatic/smg/sp91rc
 	name = "DCA S91 \"Peacekeeper\" submachine gun"
-	desc = "Пистолет-пулемёт калибра .45 N&R производства \"Donk Co. Arms\". Поддерживает три режима огня: \
-			одиночный, очередь по 2 патрона и автоматический. Предназначен для нелетального подавления беспорядков."
+	desc = "Compact submachine gun designed for riot control."
 	icon_state = "sp91"
 	item_state = "SP-91-RC"
 	accuracy = GUN_ACCURACY_RIFLE_EXTEND_SPREAD
@@ -227,17 +181,6 @@
 	chambered_light_exists = TRUE
 	mag_ammo_counter_exists = TRUE
 
-/obj/item/gun/projectile/automatic/smg/sp91rc/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт DCA S91 \"Миротворец\"",
-		GENITIVE = "пистолета-пулемёта DCA S91 \"Миротворец\"",
-		DATIVE = "пистолету-пулемёту DCA S91 \"Миротворец\"",
-		ACCUSATIVE = "пистолет-пулемёт DCA S91 \"Миротворец\"",
-		INSTRUMENTAL = "пистолетом-пулемётом DCA S91 \"Миротворец\"",
-		PREPOSITIONAL = "пистолете-пулемёте DCA S91 \"Миротворец\"",
-	)
-
-// MARK: A-12 "Sparkle"
 /obj/item/gun/projectile/automatic/smg/sparkle_a12
 	name = "A-12 \"Sparkle\" submachine gun"
 	desc = "Пистолет-пулемёт под калибр 9x19 мм, произведённый \"Aegis Ordinance\". \
@@ -262,20 +205,9 @@
 	chambered_light_exists = TRUE
 	mag_ammo_counter_exists = TRUE
 
-/obj/item/gun/projectile/automatic/smg/sparkle_a12/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт A-12 \"Искра\"",
-		GENITIVE = "пистолета-пулемёта A-12 \"Искра\"",
-		DATIVE = "пистолету-пулемёту A-12 \"Искра\"",
-		ACCUSATIVE = "пистолет-пулемёт A-12 \"Искра\"",
-		INSTRUMENTAL = "пистолетом-пулемётом A-12 \"Искра\"",
-		PREPOSITIONAL = "пистолете-пулемёте A-12 \"Искра\"",
-	)
-
-// MARK: Type-U3 Uzi
 /obj/item/gun/projectile/automatic/smg/mini_uzi
 	name = "Type U3 Uzi"
-	desc = "Полностью автоматический лёгкий пистолет-пулемёт калибра 9x19 мм."
+	desc = "A fully-loaded lightweight blowback-operated submachine gun that uses 30-rounds 9mm magazines."
 	icon_state = "mini-uzi"
 	origin_tech = "combat=4;materials=2;syndicate=4"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
@@ -290,20 +222,9 @@
 	recoil = GUN_RECOIL_LOW
 	weapon_weight = WEAPON_LIGHT
 
-/obj/item/gun/projectile/automatic/smg/mini_uzi/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт Type 3 UZI",
-		GENITIVE = "пистолета-пулемёта Type 3 UZI",
-		DATIVE = "пистолету-пулемёту Type 3 UZI",
-		ACCUSATIVE = "пистолет-пулемёт Type 3 UZI",
-		INSTRUMENTAL = "пистолетом-пулемётом Type 3 UZI",
-		PREPOSITIONAL = "пистолете-пулемёте Type 3 UZI",
-	)
-
-// MARK: Tommy Gun
 /obj/item/gun/projectile/automatic/tommygun
 	name = "Thompson SMG"
-	desc = "Старинный пистолет-пулемёт калибра 9x19 мм."
+	desc = "A genuine 'Chicago Typewriter'."
 	icon_state = "tommygun"
 	item_state = "shotgun"
 	w_class = WEIGHT_CLASS_HUGE
@@ -315,17 +236,6 @@
 	fire_delay = 0.2 SECONDS
 	recoil = GUN_RECOIL_MEDIUM
 
-/obj/item/gun/projectile/automatic/tommygun/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт Томсона",
-		GENITIVE = "пистолета-пулемёта Томсона",
-		DATIVE = "пистолету-пулемёту Томсона",
-		ACCUSATIVE = "пистолет-пулемёт Томсона",
-		INSTRUMENTAL = "пистолетом-пулемётом Томсона",
-		PREPOSITIONAL = "пистолете-пулемёте Томсона",
-	)
-
-// MARK: SFG-5
 /obj/item/gun/projectile/automatic/smg/sfg
 	name = "SFG-5"
 	desc = "Современный пистолет-пулемёт калибра 9x19 мм."
@@ -342,20 +252,9 @@
 	)
 	recoil = GUN_RECOIL_MEDIUM
 
-/obj/item/gun/projectile/automatic/smg/sfg/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт SFG-5",
-		GENITIVE = "пистолета-пулемёта SFG-5",
-		DATIVE = "пистолету-пулемёту SFG-5",
-		ACCUSATIVE = "пистолет-пулемёт SFG-5",
-		INSTRUMENTAL = "пистолетом-пулемётом SFG-5",
-		PREPOSITIONAL = "пистолете-пулемёте SFG-5",
-	)
-
-// MARK: PPSh
 /obj/item/gun/projectile/automatic/smg/ppsh
 	name = "PPSh submachine gun"
-	desc = "Стариннный пистолет-пулемёт калибра 7,62x25 мм."
+	desc = "A submachine gun favored by Soviet soldiers."
 	icon_state = "ppsh"
 	item_state = "ppsh"
 	mag_type = /obj/item/ammo_box/magazine/ppsh
@@ -372,16 +271,6 @@
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 5, ATTACHMENT_OFFSET_Y = 5),
 	)
 	recoil = GUN_RECOIL_HIGH
-
-/obj/item/gun/projectile/automatic/smg/ppsh/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемёт ППШ",
-		GENITIVE = "пистолета-пулемёта ППШ",
-		DATIVE = "пистолету-пулемёту ППШ",
-		ACCUSATIVE = "пистолет-пулемёт ППШ",
-		INSTRUMENTAL = "пистолетом-пулемётом ППШ",
-		PREPOSITIONAL = "пистолете-пулемёте ППШ",
-	)
 
 /obj/item/gun/projectile/automatic/smg/ppsh/rusted
 	damage_mod = 0.75
@@ -416,13 +305,3 @@
 	chambered_light_exists = TRUE
 	mag_ammo_counter_exists = TRUE
 	mag_ammo_counter_size = 5
-
-/obj/item/gun/projectile/automatic/smg/kedr/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет-пулемет K-45",
-		GENITIVE = "пистолета-пулемёта K-45",
-		DATIVE = "пистолету-пулемету K-45",
-		ACCUSATIVE = "пистолет-пулемет K-45",
-		INSTRUMENTAL = "пистолетом-пулеметом K-45",
-		PREPOSITIONAL = "пистолете-пулемете K-45",
-	)

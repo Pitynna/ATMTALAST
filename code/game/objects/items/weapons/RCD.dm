@@ -1,6 +1,6 @@
 /obj/item/rcd
 	name = "rapid-construction-device (RCD)"
-	desc = "Устройство используемое для быстрого строительства и сноса стен, полов и шлюзов."
+	desc = "A device used to rapidly build and deconstruct walls, floors and airlocks."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "rcd"
 	righthand_file = 'icons/mob/inhands/tools_righthand.dmi'
@@ -482,7 +482,7 @@
 
 /obj/item/rcd_ammo
 	name = "compressed matter cartridge"
-	desc = "Сильно сжатая материя для RCD."
+	desc = "Highly compressed matter for the RCD."
 	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "rcd"
 	righthand_file = 'icons/mob/inhands/tools_righthand.dmi'
@@ -498,7 +498,7 @@
 /obj/item/rcd/mecha_ref
 	abstract_type = /obj/item/rcd/mecha_ref
 	name = "Mecha inner RCD"
-	desc = "Вы не должены этого видеть, напишите баг-репорт."
+	desc = "You should not be able to see it..."
 	power_use_multiplier = 250
 	var/obj/mecha/chassis = null
 	/// Weakref to the mecha equipment module that owns this internal RCD.

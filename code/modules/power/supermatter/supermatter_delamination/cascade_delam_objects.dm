@@ -1,6 +1,6 @@
 /obj/crystal_mass
 	name = "crystal mass"
-	desc = "Эта огромная кристаллическая масса надвигается на вас, потрескивая и скрежеща при каждом, казалось бы, случайном движении."
+	desc = "You see this massive crystal mass looming towards you, cracking and screeching at every seemingly random movement."
 	gender = FEMALE
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "crystal_cascade_1"
@@ -16,16 +16,6 @@
 	var/list/possible_dirs
 	///Cooldown on the expansion process
 	COOLDOWN_DECLARE(sm_wall_cooldown)
-
-/obj/crystal_mass/get_ru_names()
-	return alist(
-		NOMINATIVE = "кристаллическая масса",
-		GENITIVE = "кристаллической массы",
-		DATIVE = "кристаллической массе",
-		ACCUSATIVE = "кристаллическую массу",
-		INSTRUMENTAL = "кристаллической массой",
-		PREPOSITIONAL = "кристаллической массе",
-	)
 
 /obj/crystal_mass/ComponentInitialize()
 	AddElement(/datum/element/supermatter_crystal, null, null)
@@ -131,7 +121,7 @@
 
 /obj/cascade_portal
 	name = "bluespace rift"
-	desc = "Ваш разум начинает кружиться, пытаясь осознать увиденное."
+	desc = "Your mind begins to spin as it tries to comprehend what it sees."
 	icon = 'icons/effects/224x224.dmi'
 	icon_state = "reality"
 	anchored = TRUE
@@ -145,16 +135,6 @@
 	pixel_x = -96
 	pixel_y = -96
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-
-/obj/cascade_portal/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс-разлом",
-		GENITIVE = "блюспейс-разлома",
-		DATIVE = "блюспейс-разлому",
-		ACCUSATIVE = "блюспейс-разлом",
-		INSTRUMENTAL = "блюспейс-разломом",
-		PREPOSITIONAL = "блюспейс-разломе",
-	)
 
 /obj/cascade_portal/Initialize(mapload)
 	. = ..()

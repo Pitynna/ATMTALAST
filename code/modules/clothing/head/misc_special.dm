@@ -374,16 +374,6 @@
 	)
 	flags_inv = HIDEHEADSETS|HIDEHAIR
 
-/obj/item/clothing/head/shapka_pepega/get_ru_names()
-	return alist(
-		NOMINATIVE = "лягушачья шапка",
-		GENITIVE = "лягушачьей шапки",
-		DATIVE = "лягушачьей шапке",
-		ACCUSATIVE = "лягушачью шапку",
-		INSTRUMENTAL = "лягушачьей шапкой",
-		PREPOSITIONAL = "лягушачьей шапке",
-	)
-
 /obj/item/clothing/head/carp_hat
 	name = "carp hat"
 	desc = "Шапочка в виде устрашающего хищника космоса. Мило!"
@@ -400,13 +390,3 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/head.dmi',
 	)
 	flags_inv = HIDEHEADSETS|HIDEHEADHAIR
-
-/obj/item/clothing/head/carp_hat/get_ru_names()
-	return alist(
-		NOMINATIVE = "карповая шапка",
-		GENITIVE = "карповой шапки",
-		DATIVE = "карповой шапке",
-		ACCUSATIVE = "капровую шапку",
-		INSTRUMENTAL = "карповой шапкой",
-		PREPOSITIONAL = "карповой шапке",
-	)

@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 
 /obj/item/extraction_pack
 	name = "fulton extraction pack"
-	desc = "Cистема подъема и доставки людей и предметов воздушным путем. Можно переместить всё, что не прикручено намертво. Свяжите комплект с маяком, активировав его в руке."
+	desc = "A balloon that can be used to extract equipment or personnel to a Fulton Recovery Beacon. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand."
 	gender = MALE
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_pack"
@@ -13,16 +13,6 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 	var/can_use_indoors
 	var/safe_for_living_creatures = TRUE
 	var/max_force_fulton = MOVE_FORCE_STRONG
-
-/obj/item/extraction_pack/get_ru_names()
-	return alist(
-		NOMINATIVE = "фултон",
-		GENITIVE = "фултона",
-		DATIVE = "фултону",
-		ACCUSATIVE = "фултон",
-		INSTRUMENTAL = "фултоном",
-		PREPOSITIONAL = "фултоне",
-	)
 
 /obj/item/extraction_pack/examine(mob/user)
 	. = ..()
@@ -158,19 +148,9 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 
 /obj/item/fulton_core
 	name = "extraction beacon signaller"
-	desc = "Излучает сигнал, на который могут ориентироваться устройства фултон. Активируйте в руке, чтобы создать маяк."
+	desc = "When built, emits a signal which fulton recovery devices can lock onto. Activate in hand to unfold into a beacon."
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "subspace_amplifier"
-
-/obj/item/fulton_core/get_ru_names()
-	return alist(
-		NOMINATIVE = "маяк фултона",
-		GENITIVE = "маяка фултона",
-		DATIVE = "маяку фултона",
-		ACCUSATIVE = "маяк фултона",
-		INSTRUMENTAL = "маяком фултона",
-		PREPOSITIONAL = "маяке фултона",
-	)
 
 /obj/item/fulton_core/attack_self(mob/user)
 	if(do_after(user, 1.5 SECONDS, user) && !QDELETED(src))
@@ -180,21 +160,11 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 
 /obj/structure/extraction_point
 	name = "fulton recovery beacon"
-	desc = "Излучает сигнал, на который могут ориентироваться устройства фултон."
+	desc = "A beacon for the fulton recovery system. Activate a pack in your hand to link it to a beacon."
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_point"
 	anchored = TRUE
 	var/beacon_network = "station"
-
-/obj/structure/extraction_point/get_ru_names()
-	return alist(
-		NOMINATIVE = "маяк фултона",
-		GENITIVE = "маяка фултона",
-		DATIVE = "маяку фултона",
-		ACCUSATIVE = "маяк фултона",
-		INSTRUMENTAL = "маяком фултона",
-		PREPOSITIONAL = "маяке фултона",
-	)
 
 /obj/structure/extraction_point/Initialize(mapload)
 	. = ..()

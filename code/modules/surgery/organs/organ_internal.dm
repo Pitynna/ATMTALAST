@@ -237,21 +237,11 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 
 /obj/item/organ/internal/appendix
 	name = "appendix"
-	desc = "Придаток слепой кишки. Является рудиментарным органом, поэтому не несёт полезной функции для организма."
+	desc = "An appendix which looks perfectly healthy."
 	icon_state = "appendix"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
 	slot = INTERNAL_ORGAN_APPENDIX
 	var/inflamed = FALSE
-
-/obj/item/organ/internal/appendix/get_ru_names()
-	return alist(
-		NOMINATIVE = "аппендикс",
-		GENITIVE = "аппендикса",
-		DATIVE = "аппендиксу",
-		ACCUSATIVE = "аппендикс",
-		INSTRUMENTAL = "аппендиксом",
-		PREPOSITIONAL = "аппендиксе",
-	)
 
 /obj/item/organ/internal/appendix/remove(mob/living/carbon/M, special = ORGAN_MANIPULATION_DEFAULT)
 	for(var/datum/disease/appendicitis/A in M.diseases)
@@ -279,7 +269,7 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 //shadowling tumor
 /obj/item/organ/internal/shadowtumor
 	name = "black tumor"
-	desc = "Небольшой чёрный сгусток с тянущимися щупальцами красного цвета. При воздействии на него света он сморщивается и сворачивается."
+	desc = "A tiny black mass with red tendrils trailing from it. It seems to shrivel in the light."
 	gender = FEMALE
 	icon_state = "blacktumor"
 	origin_tech = "biotech=5"
@@ -287,16 +277,6 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 	parent_organ_zone = BODY_ZONE_HEAD
 	slot = INTERNAL_ORGAN_BRAIN_TUMOR
 	max_integrity = 3
-
-/obj/item/organ/internal/shadowtumor/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрная опухоль",
-		GENITIVE = "чёрной опухоли",
-		DATIVE = "чёрной опухоли",
-		ACCUSATIVE = "чёрную опухоль",
-		INSTRUMENTAL = "чёрной опухолью",
-		PREPOSITIONAL = "чёрной опухоли",
-	)
 
 /obj/item/organ/internal/shadowtumor/Initialize(mapload)
 	. = ..()
@@ -324,7 +304,7 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 
 /obj/item/organ/internal/honktumor
 	name = "banana tumor"
-	desc = "Небольшой жёлтый сгусток, по форме напоминающий... банан?"
+	desc = "A tiny yellow mass shaped like..a banana?"
 	gender = FEMALE
 	icon_state = "honktumor"
 	origin_tech = "biotech=1"
@@ -335,16 +315,6 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 	var/organhonked = 0
 	var/suffering_delay = 900
 	var/datum/component/squeak
-
-/obj/item/organ/internal/honktumor/get_ru_names()
-	return alist(
-		NOMINATIVE = "банановая опухоль",
-		GENITIVE = "банановой опухоли",
-		DATIVE = "банановой опухоли",
-		ACCUSATIVE = "банановую опухоль",
-		INSTRUMENTAL = "банановой опухолью",
-		PREPOSITIONAL = "банановой опухоли",
-	)
 
 /obj/item/organ/internal/honktumor/insert(mob/living/carbon/M, special = ORGAN_MANIPULATION_DEFAULT)
 	..()
@@ -396,7 +366,7 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 
 /obj/item/organ/internal/honkbladder
 	name = "honk bladder"
-	desc = "Наполненный воздухом мешок, который издаёт звуки, напоминающие велосипедный гудок."
+	desc = "a air filled sac that produces honking noises."
 	icon_state = "honktumor"//Not making a new icon
 	origin_tech = "biotech=1"
 	w_class = WEIGHT_CLASS_TINY
@@ -404,16 +374,6 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 	slot = INTERNAL_ORGAN_HONK_BLADDER
 	destroy_on_removal = TRUE
 	var/datum/component/squeak
-
-/obj/item/organ/internal/honkbladder/get_ru_names()
-	return alist(
-		NOMINATIVE = "гудящий пузырь",
-		GENITIVE = "гудящего пузыря",
-		DATIVE = "гудящему пузырю",
-		ACCUSATIVE = "гудящий пузырь",
-		INSTRUMENTAL = "гудящим пузырём",
-		PREPOSITIONAL = "гудящем пузыре",
-	)
 
 /obj/item/organ/internal/honkbladder/insert(mob/living/carbon/M, special = ORGAN_MANIPULATION_DEFAULT)
 	squeak = M.AddComponent(/datum/component/squeak, list('sound/effects/clownstep1.ogg','sound/effects/clownstep2.ogg'), 50, falloff_exponent = 20)
@@ -425,22 +385,12 @@ GLOBAL_LIST_EMPTY(organ_rott_overlay_icons)
 
 /obj/item/organ/internal/beard
 	name = "beard organ"
-	desc = "Пусть те, кто достоин, носят бороду Торбьёрнсдоттир."
+	desc = "Let they who is worthy wear the beard of Thorbjorndottir."
 	icon_state = "liver"
 	origin_tech = "biotech=1"
 	w_class = WEIGHT_CLASS_TINY
 	parent_organ_zone = BODY_ZONE_HEAD
 	slot = INTERNAL_ORGAN_HAIR
-
-/obj/item/organ/internal/beard/get_ru_names()
-	return alist(
-		NOMINATIVE = "бородатый орган",
-		GENITIVE = "бородатого органа",
-		DATIVE = "бородатому органу",
-		ACCUSATIVE = "бородатый орган",
-		INSTRUMENTAL = "бородатым органом",
-		PREPOSITIONAL = "бородатом органе",
-	)
 
 /obj/item/organ/internal/beard/on_life()
 

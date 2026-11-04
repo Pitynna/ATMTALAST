@@ -295,7 +295,7 @@
 // Broodmother's loot: Broodmother Tongue
 /obj/item/crusher_trophy/broodmother_tongue
 	name = "broodmother tongue"
-	desc = "Язык матери целой стаи. На ощупь очень губчатый, интересно что будет если на него надавить? Может быть прикреплен на крушитель в качестве трофея."
+	desc = "The tongue of a broodmother. If attached a certain way, makes for a suitable crusher trophy. It also feels very spongey, I wonder what would happen if you squeezed it?..."
 	gender = MALE
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "broodmother_tongue"
@@ -303,16 +303,6 @@
 	bonus_value = 75 // same reasoning as legionnaire trophy, target if moving will dodge it, and things like hiero trophy does more anyway.
 	/// Time at which the item becomes usable again
 	var/use_time
-
-/obj/item/crusher_trophy/broodmother_tongue/get_ru_names()
-	return alist(
-		NOMINATIVE = "материнский язык",
-		GENITIVE = "материнского языка",
-		DATIVE = "материнскому языку",
-		ACCUSATIVE = "материнский язык",
-		INSTRUMENTAL = "материнским языком",
-		PREPOSITIONAL = "материнском языке",
-	)
 
 /obj/item/crusher_trophy/broodmother_tongue/effect_desc()
 	return "Взрыв метки с <b>[bonus_value]%</b> шансом призывает поле щупалец под врагом"

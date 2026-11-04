@@ -3,7 +3,7 @@
 
 /obj/item/reagent_containers/syringe
 	name = "syringe"
-	desc = "Это шприц. Он предназачен для введения и извлечения веществ из кровотока субъекта, а также для многих других целей."
+	desc = "A syringe."
 	icon = 'icons/goonstation/objects/syringe.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
@@ -24,16 +24,6 @@
 	var/penetrates_thick = FALSE
 	///If this variable is true, the syringe will work through unathi skin
 	var/ignores_pierceimmune = FALSE
-
-/obj/item/reagent_containers/syringe/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц",
-		GENITIVE = "шприца",
-		DATIVE = "шприцу",
-		ACCUSATIVE = "шприц",
-		INSTRUMENTAL = "шприцем",
-		PREPOSITIONAL = "шприце",
-	)
 
 /obj/item/reagent_containers/syringe/Initialize(mapload)
 	if(list_reagents) //syringe starts in inject mode if its already got something inside
@@ -187,202 +177,72 @@
 
 /obj/item/reagent_containers/syringe/antiviral
 	name = "Syringe (spaceacillin)"
-	desc = "Щприц с антибиотическим средством."
+	desc = "Contains antiviral agents."
 	list_reagents = list("spaceacillin" = 15)
-
-/obj/item/reagent_containers/syringe/antiviral/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Космоциллин)",
-		GENITIVE = "шприца (Космоциллин)",
-		DATIVE = "шприцу (Космоциллин)",
-		ACCUSATIVE = "шприц (Космоциллин)",
-		INSTRUMENTAL = "шприцем (Космоциллин)",
-		PREPOSITIONAL = "шприце (Космоциллин)",
-	)
 
 /obj/item/reagent_containers/syringe/charcoal
 	name = "Syringe (charcoal)"
-	desc = "Шприц со средством против отравлений."
+	desc = "Contains charcoal - used to treat toxins and damage from toxins."
 	list_reagents = list("charcoal" = 15)
-
-/obj/item/reagent_containers/syringe/charcoal/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Активированный уголь)",
-		GENITIVE = "шприца (Активированный уголь)",
-		DATIVE = "шприцу (Активированный уголь)",
-		ACCUSATIVE = "шприц (Активированный уголь)",
-		INSTRUMENTAL = "шприцем (Активированный уголь)",
-		PREPOSITIONAL = "шприце (Активированный уголь)",
-	)
 
 /obj/item/reagent_containers/syringe/epinephrine
 	name = "Syringe (Epinephrine)"
-	desc = "Шприц со средством для стабилизации критических пациентов."
+	desc = "Contains epinephrine - used to stabilize patients."
 	list_reagents = list("epinephrine" = 15)
-
-/obj/item/reagent_containers/syringe/epinephrine/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Эпинефрин)",
-		GENITIVE = "шприца (Эпинефрин)",
-		DATIVE = "шприцу (Эпинефрин)",
-		ACCUSATIVE = "шприц (Эпинефрин)",
-		INSTRUMENTAL = "шприцем (Эпинефрин)",
-		PREPOSITIONAL = "шприце (Эпинефрин)",
-	)
 
 /obj/item/reagent_containers/syringe/insulin
 	name = "Syringe (insulin)"
-	desc = "Шприц со средством для борьбы с диабетической комой."
+	desc = "Contains insulin - used to treat diabetes."
 	list_reagents = list("insulin" = 15)
-
-/obj/item/reagent_containers/syringe/insulin/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Инсулин)",
-		GENITIVE = "шприца (Инсулин)",
-		DATIVE = "шприцу (Инсулин)",
-		ACCUSATIVE = "шприц (Инсулин)",
-		INSTRUMENTAL = "шприцем (Инсулин)",
-		PREPOSITIONAL = "шприце (Инсулин)",
-	)
 
 /obj/item/reagent_containers/syringe/calomel
 	name = "Syringe (calomel)"
-	desc = "Шприц со средством для выведения веществ из кровотока."
+	desc = "Contains calomel, which be used to purge impurities, but is highly toxic itself."
 	list_reagents = list("calomel" = 15)
-
-/obj/item/reagent_containers/syringe/calomel/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Каломель)",
-		GENITIVE = "шприца (Каломель)",
-		DATIVE = "шприцу (Каломель)",
-		ACCUSATIVE = "шприц (Каломель)",
-		INSTRUMENTAL = "шприцем (Каломель)",
-		PREPOSITIONAL = "шприце (Каломель)",
-	)
 
 /obj/item/reagent_containers/syringe/heparin
 	name = "Syringe (heparin)"
-	desc = "Шприц с антикоагулянтом."
+	desc = "Contains heparin, a blood anticoagulant."
 	list_reagents = list("heparin" = 15)
-
-/obj/item/reagent_containers/syringe/heparin/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Гепарин)",
-		GENITIVE = "шприца (Гепарин)",
-		DATIVE = "шприцу (Гепарин)",
-		ACCUSATIVE = "шприц (Гепарин)",
-		INSTRUMENTAL = "шприцем (Гепарин)",
-		PREPOSITIONAL = "шприце (Гепарин)",
-	)
 
 /obj/item/reagent_containers/syringe/bioterror
 	name = "bioterror syringe"
-	desc = "Щприц с несколькими нервно-паралитическими ядами."
+	desc = "Contains several paralyzing reagents."
 	list_reagents = list("neurotoxin" = 5, "capulettium_plus" = 5, "sodium_thiopental" = 5)
-
-/obj/item/reagent_containers/syringe/bioterror/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Нейротоксины)",
-		GENITIVE = "шприца (Нейротоксины)",
-		DATIVE = "шприцу (Нейротоксины)",
-		ACCUSATIVE = "шприц (Нейротоксины)",
-		INSTRUMENTAL = "шприцем (Нейротоксины)",
-		PREPOSITIONAL = "шприце (Нейротоксины)",
-	)
 
 /obj/item/reagent_containers/syringe/gluttony
 	name = "Gluttony's Blessing"
-	desc = "Странный шприц, измазанный в зелёной жиже."
+	desc = "A syringe recovered from a dread place. It probably isn't wise to use."
 	amount_per_transfer_from_this = 1
 	volume = 1
 	list_reagents = list("gluttonytoxin" = 1)
 
-/obj/item/reagent_containers/syringe/gluttony/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Благословение Чревоугодия)",
-		GENITIVE = "шприца (Благословение Чревоугодия)",
-		DATIVE = "шприцу (Благословение Чревоугодия)",
-		ACCUSATIVE = "шприц (Благословение Чревоугодия)",
-		INSTRUMENTAL = "шприцем (Благословение Чревоугодия)",
-		PREPOSITIONAL = "шприце (Благословение Чревоугодия)",
-	)
-
 /obj/item/reagent_containers/syringe/capulettium_plus
 	name = "capulettium plus syringe"
-	desc = "Шприц со средством для имитации смерти."
+	desc = "For silencing targets. Allows for fake deaths."
 	list_reagents = list("capulettium_plus" = 15)
-
-/obj/item/reagent_containers/syringe/capulettium_plus/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Капулеттий+)",
-		GENITIVE = "шприца (Капулеттий+)",
-		DATIVE = "шприцу (Капулеттий+)",
-		ACCUSATIVE = "шприц (Капулеттий+)",
-		INSTRUMENTAL = "шприцем (Капулеттий+)",
-		PREPOSITIONAL = "шприце (Капулеттий+)",
-	)
 
 /obj/item/reagent_containers/syringe/sarin
 	name = "sarin syringe"
-	desc = "Щприц со смертельно опасным нервно-паралитическим ядом."
+	desc = "A deadly neurotoxin, for killing."
 	list_reagents = list("sarin" = 15)
-
-/obj/item/reagent_containers/syringe/sarin/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Зарин)",
-		GENITIVE = "шприца (Зарин)",
-		DATIVE = "шприцу (Зарин)",
-		ACCUSATIVE = "шприц (Зарин)",
-		INSTRUMENTAL = "шприцем (Зарин)",
-		PREPOSITIONAL = "шприце (Зарин)",
-	)
 
 /obj/item/reagent_containers/syringe/pancuronium
 	name = "pancuronium syringe"
-	desc = "Шприц с парализующим веществом."
+	desc = "A powerful paralyzing poison."
 	list_reagents = list("pancuronium" = 15)
-
-/obj/item/reagent_containers/syringe/pancuronium/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Панкуроний+)",
-		GENITIVE = "шприца (Панкуроний+)",
-		DATIVE = "шприцу (Панкуроний+)",
-		ACCUSATIVE = "шприц (Панкуроний+)",
-		INSTRUMENTAL = "шприцем (Панкуроний+)",
-		PREPOSITIONAL = "шприце (Панкуроний+)",
-	)
 
 /obj/item/reagent_containers/syringe/lethal
 	name = "lethal injection syringe"
-	desc = "Шприц, используемый для смертельных инъекций. Вмещает в себя вплоть до <b>50</b> единиц вещества."
+	desc = "A syringe used for lethal injections. It can hold up to 50 units."
 	amount_per_transfer_from_this = 50
 	volume = 50
 	list_reagents = list("toxin" = 15, "pancuronium" = 10, "cyanide" = 5, "facid" = 10, "fluorine" = 10)
 
-/obj/item/reagent_containers/syringe/lethal/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Смертельная инъекция)",
-		GENITIVE = "шприца (Смертельная инъекция)",
-		DATIVE = "шприцу (Смертельная инъекция)",
-		ACCUSATIVE = "шприц (Смертельная инъекция)",
-		INSTRUMENTAL = "шприцем (Смертельная инъекция)",
-		PREPOSITIONAL = "шприце (Смертельная инъекция)",
-	)
-
 /obj/item/reagent_containers/syringe/steroids
-	name = "Syringe (Стероиды)"
+	name = "steroid syringe"
 	desc = "Шприц с опасным для здоровья веществом, которое способствует быстрому увеличению мышечной массы."
 	list_reagents = list("steroids" = 15)
-
-/obj/item/reagent_containers/syringe/steroids/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц (Стероиды)",
-		GENITIVE = "шприца (Стероиды)",
-		DATIVE = "шприцу (Стероиды)",
-		ACCUSATIVE = "шприц (Стероиды)",
-		INSTRUMENTAL = "шприцем (Стероиды)",
-		PREPOSITIONAL = "шприце (Стероиды)",
-	)
 
 #undef SYRINGE_DRAW
 #undef SYRINGE_INJECT

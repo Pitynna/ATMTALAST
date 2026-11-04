@@ -3,7 +3,7 @@
 //Cleanbot assembly
 /obj/item/bot_assembly/bucket_sensor
 	name = "Proxy bucket"
-	desc = "Это ведро, к которому прикреплён сенсор."
+	desc = "It's a bucket. With a sensor attached."
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "bucket_proxy"
 	force = 3
@@ -60,7 +60,7 @@
 
 /obj/item/bot_assembly/ed209_assembly
 	name = "ED-209 assembly"
-	desc = "Заготовка для чего-то серьёзного."
+	desc = "Some sort of bizarre assembly."
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "ed209_frame"
 	item_state = "ed209_frame"
@@ -303,7 +303,7 @@
 
 //Floorbot assemblies
 /obj/item/bot_assembly/toolbox_tiles
-	desc = "Это ящик для инструментов, из которого торчат плитки пола."
+	desc = "It's a toolbox with tiles sticking out the top"
 	name = "tiles and toolbox"
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "toolbox_tiles"
@@ -316,7 +316,7 @@
 	var/toolbox_color = "" //Blank for blue, r for red, y for yellow, etc.
 
 /obj/item/bot_assembly/toolbox_tiles/sensor
-	desc = "Это ящик для инструментов, из которого торчат плитки пола. К нему прикреплён датчик движения."
+	desc = "It's a toolbox with tiles sticking out the top and a sensor attached"
 	name = "tiles, toolbox and sensor arrangement"
 	icon_state = "toolbox_tiles_sensor"
 
@@ -497,7 +497,7 @@
 
 /obj/item/bot_assembly/firstaid_arm_assembly
 	name = "incomplete medibot assembly."
-	desc = "Аптечка первой помощи с прикрепленной роботизированной рукой."
+	desc = "A first aid kit with a robot arm permanently grafted to it."
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "firstaid_arm"
 	req_access = list(ACCESS_MEDICAL, ACCESS_ROBOTICS)
@@ -603,7 +603,7 @@
 //Secbot Assembly
 /obj/item/bot_assembly/secbot_assembly
 	name = "incomplete securitron assembly"
-	desc = "Замудрённая конструкция, состоящая из датчика движения, шлема и сигнального устройства."
+	desc = "Some sort of bizarre assembly made from a proximity sensor, helmet, and signaler."
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "helmet_signaler"
 	item_state = "helmet"
@@ -804,7 +804,7 @@
 
 /obj/item/bot_assembly/griefsky_assembly
 	name = "General Griefsky assembly"
-	desc = "Причудливая конструкция. Выглядит мощно."
+	desc = "Some sort of bizarre assembly."
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "griefsky_assembly"
 	item_state = "griefsky_assembly"
@@ -962,7 +962,7 @@
 
 /obj/item/bot_assembly/honkbot_arm_assembly
 	name = "incomplete honkbot assembly"
-	desc = "Клоунская коробка с прикрепленной роботизированной рукой."
+	desc = "The clown's up to no good once more"
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "honkbot_arm"
 	req_access = list(ACCESS_CLOWN, ACCESS_ROBOTICS, ACCESS_MIME)

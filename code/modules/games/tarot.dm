@@ -3,18 +3,8 @@
 
 /obj/item/deck/tarot
 	name = "deck of tarot cards"
-	desc = "Для всех ваших оккультных нужд!"
+	desc = "For all your occult needs!"
 	icon_state = "deck_tarot"
-
-/obj/item/deck/tarot/get_ru_names()
-	return alist(
-		NOMINATIVE = "колода карт таро",
-		GENITIVE = "колоды карт таро",
-		DATIVE = "колоде карт таро",
-		ACCUSATIVE = "колоду карт таро",
-		INSTRUMENTAL = "колодой карт таро",
-		PREPOSITIONAL = "колоде карт таро",
-	)
 
 /obj/item/deck/tarot/build_deck()
 	for(var/tarotname in list("Шут", "Маг", "Верховная Жрица", "Императрица", "Император", "Иерофант", "Влюблённые", "Колесница", "Сила", "Отшельник", "Колесо Фортуны", "Справедливость", "Повешенный", "Смерть", "Умеренность", "Дьявол", "Башня", "Звезда", "Луна", "Солнце", "Суд", "Мир"))

@@ -174,7 +174,7 @@
 
 /obj/item/storage/bag/ore
 	name = "mining satchel"
-	desc = "Эта малютка может хранить и переносить руду."
+	desc = "This little bugger can be used to store and transport ores."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "satchel"
 	origin_tech = "engineering=2"
@@ -184,16 +184,6 @@
 	can_hold = list(/obj/item/stack/ore)
 	var/aoe = FALSE
 	var/mob/listening_to
-
-/obj/item/storage/bag/ore/get_ru_names()
-	return alist(
-		NOMINATIVE = "шахтёрская сумка",
-		GENITIVE = "шахтёрской сумки",
-		DATIVE = "шахтёрской сумке",
-		ACCUSATIVE = "шахтёрскую сумку",
-		INSTRUMENTAL = "шахтёрской сумкой",
-		PREPOSITIONAL = "шахтёрской сумке",
-	)
 
 /obj/item/storage/bag/ore/Destroy()
 	if(!listening_to)
@@ -272,38 +262,18 @@
 
 /obj/item/storage/bag/ore/bigger
 	name = "industrial mining satchel"
-	desc = "Усовершенствованная версия с дополнительными карманами для руды."
+	desc = "This bugger can be used to store and transport ores. This one has additional utility pockets for ore."
 	icon_state = "satchel_better"
 	storage_slots = 16 //little better
 	max_combined_w_class = 320
 
-/obj/item/storage/bag/ore/bigger/get_ru_names()
-	return alist(
-		NOMINATIVE = "промышленная шахтёрская сумка",
-		GENITIVE = "промышленной шахтёрской сумки",
-		DATIVE = "промышленной шахтёрской сумке",
-		ACCUSATIVE = "промышленную шахтёрскую сумку",
-		INSTRUMENTAL = "промышленной шахтёрской сумкой",
-		PREPOSITIONAL = "промышленной шахтёрской сумке",
-	)
-
 /obj/item/storage/bag/ore/holding //miners, your messiah has arrived
 	name = "mining satchel of holding"
-	desc = "Революционное решение — бесконечное хранилище для руды с защитой от сбоев."
+	desc = "A revolution in convenience, this satchel allows for infinite ore storage. It's been outfitted with anti-malfunction safety measures."
 	storage_slots = INFINITY
 	max_combined_w_class = INFINITY
 	origin_tech = "bluespace=4;materials=3;engineering=3"
 	icon_state = "satchel_bspace"
-
-/obj/item/storage/bag/ore/holding/get_ru_names()
-	return alist(
-		NOMINATIVE = "шахтёрская сумка хранения",
-		GENITIVE = "шахтёрской сумки хранения",
-		DATIVE = "шахтёрской сумке хранения",
-		ACCUSATIVE = "шахтёрскую сумку хранения",
-		INSTRUMENTAL = "шахтёрской сумкой хранения",
-		PREPOSITIONAL = "шахтёрской сумке хранения",
-	)
 
 /obj/item/storage/bag/ore/holding/cyborg
 	name = "cyborg mining satchel of holding"
@@ -314,23 +284,13 @@
 
 /obj/item/storage/bag/gem
 	name = "gem satchel"
-	desc = "Вы ожидали чего-то более стильного, как в мультфильмах про грабителей."
+	desc = "You thought it would be more like what those cartoon robbers wear."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "gem_satchel"
 	storage_slots = 48
 	max_combined_w_class = 48
 	can_hold = list(/obj/item/gem)
 	storage_with_item_size = WEIGHT_CLASS_NORMAL
-
-/obj/item/storage/bag/gem/get_ru_names()
-	return alist(
-		NOMINATIVE = "сумка для самоцветов",
-		GENITIVE = "сумки для самоцветов",
-		DATIVE = "сумке для самоцветов",
-		ACCUSATIVE = "сумку для самоцветов",
-		INSTRUMENTAL = "сумкой для самоцветов",
-		PREPOSITIONAL = "сумке для самоцветов",
-	)
 
 /obj/item/storage/bag/gem/cyborg
 	name = "cyborg gem satchel"
@@ -357,16 +317,6 @@
 	var/obj/item/grenade/plastic/miningcharge/nextbombbutmining = null
 	var/obj/item/grenade/plastic/nextchosen = null
 	var/bombs_left = 0
-
-/obj/item/storage/bag/kaboom/get_ru_names()
-	return alist(
-		NOMINATIVE = "Система Размещения Зарядов",
-		GENITIVE = "Системы Размещения Зарядов",
-		DATIVE = "Системе Размещения Зарядов",
-		ACCUSATIVE = "Систему Размещения Зарядов",
-		INSTRUMENTAL = "Системой Размещения Зарядов",
-		PREPOSITIONAL = "Системе Размещения Зарядов",
-	)
 
 /obj/item/storage/bag/kaboom/proc/bombradialmenu(mob/user)
 	if(!LAZYLEN(contents))
@@ -650,7 +600,7 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 
 /obj/item/storage/bag/books
 	name = "book bag"
-	desc = "Красная сумка, предназначенная для удобной транспортировки и хранения книг."
+	desc = "A bag for books."
 	gender = FEMALE
 	icon = 'icons/obj/library.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/library_lefthand.dmi'
@@ -667,23 +617,9 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	resistance_flags = FLAMMABLE
 	storage_with_item_size = WEIGHT_CLASS_NORMAL
 
-/obj/item/storage/bag/books/get_ru_names()
-	return alist(
-		NOMINATIVE = "книжная сумка",
-		GENITIVE = "книжной сумки",
-		DATIVE = "книжной сумке",
-		ACCUSATIVE = "книжную сумку",
-		INSTRUMENTAL = "книжной сумкой",
-		PREPOSITIONAL = "книжной сумке",
-	)
-
-////////////////////////////////////////
-// MARK:	Construction bag
-////////////////////////////////////////
-
 /obj/item/storage/bag/construction
 	name = "construction bag"
-	desc = "Вместительная сумка, оснащённая множеством карманов и отделений для систематизации и переноски деталей."
+	desc = "A bag for storing various small scale construction supplies, such as wiring and circuit boards."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "construction_bag"
 	storage_slots = 50
@@ -706,23 +642,9 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	resistance_flags = FLAMMABLE
 	storage_with_item_size = WEIGHT_CLASS_NORMAL
 
-/obj/item/storage/bag/construction/get_ru_names()
-	return alist(
-		NOMINATIVE = "строительная сумка",
-		GENITIVE = "строительной сумки",
-		DATIVE = "строительной сумке",
-		ACCUSATIVE = "строительную сумку",
-		INSTRUMENTAL = "строительной сумкой",
-		PREPOSITIONAL = "строительной сумке"
-	)
-
-////////////////////////////////////////
-// MARK:	Tray
-////////////////////////////////////////
-
 /obj/item/storage/bag/tray
 	name = "serving tray"
-	desc = "Металлический поднос, на который можно выкладывать еду и напитки."
+	desc = "A metal tray to lay food on."
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "tray"
 	force = 5
@@ -736,16 +658,6 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	cant_hold = list(/obj/item/disk/nuclear) // Prevents some cheesing
 	pickup_sound = SFX_TRAY_PICKUP
 	drop_sound = SFX_TRAY_DROP
-
-/obj/item/storage/bag/tray/get_ru_names()
-	return alist(
-		NOMINATIVE = "поднос",
-		GENITIVE = "подноса",
-		DATIVE = "подносу",
-		ACCUSATIVE = "поднос",
-		INSTRUMENTAL = "подносом",
-		PREPOSITIONAL = "подносе",
-	)
 
 /obj/item/storage/bag/tray/attack(mob/living/target, mob/living/user, list/modifiers, def_zone, skip_attack_anim)
 	. = ..()
@@ -820,24 +732,13 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 
 /obj/item/storage/bag/tray/danger
 	name = "tray"
-	desc = "Металлический поднос для еды с острыми как бритва краями."
+	desc = "A metal tray to lay food on."
 	icon_state = "dangertray"
 	throwforce = 25
 	armour_penetration = 15
 	sharp = TRUE
 	materials = list(MAT_METAL=3000)
 
-/obj/item/storage/bag/tray/danger/get_ru_names()
-	return alist(
-		NOMINATIVE = "поднос",
-		GENITIVE = "подноса",
-		DATIVE = "подносу",
-		ACCUSATIVE = "поднос",
-		INSTRUMENTAL = "подносом",
-		PREPOSITIONAL = "подносе",
-	)
-
-// Sprites from CM13
 /obj/item/storage/bag/tray/surgical_tray
 	name = "surgical tray"
 	desc = "A small metallic tray covered in sterile tarp. Intended to store surgical tools in a neat and clean fashion."
@@ -928,7 +829,7 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 
 /obj/item/storage/bag/medpouch
 	name = "medicinal pouch"
-	desc = "Небольшой мешочек для хранения трав, припарок, наживки и мелких предметов."
+	desc = "A small pouch for holding plants, poultices, resin, and pestles."
 	icon_state = "pouch_ash"
 	storage_slots = 40
 	max_combined_w_class = 200
@@ -942,16 +843,6 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	)
 	storage_with_item_size = WEIGHT_CLASS_NORMAL
 
-/obj/item/storage/bag/medpouch/get_ru_names()
-	return alist(
-		NOMINATIVE = "лекарственный мешочек",
-		GENITIVE = "лекарственного мешочка",
-		DATIVE = "лекарственному мешочку",
-		ACCUSATIVE = "лекарственный мешочек",
-		INSTRUMENTAL = "лекарственным мешочком",
-		PREPOSITIONAL = "лекарственном мешочке",
-	)
-
 /obj/item/storage/bag/medpouch/fishing
 	name = "fishing pouch"
 	desc = "Небольшой мешочек для хранения различной наживки и частей рыб."
@@ -961,14 +852,4 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 		/obj/item/reagent_containers/food/snacks/charred_krill,
 		/obj/item/stack/sheet/cartilage_plate,
 		/obj/item/stack/sheet/razor_sharp_teeth,
-	)
-
-/obj/item/storage/bag/medpouch/fishing/get_ru_names()
-	return alist(
-		NOMINATIVE = "рыболовный мешочек",
-		GENITIVE = "рыболовного мешочка",
-		DATIVE = "рыболовному мешочку",
-		ACCUSATIVE = "рыболовный мешочек",
-		INSTRUMENTAL = "рыболовным мешочком",
-		PREPOSITIONAL = "рыболовном мешочке",
 	)

@@ -1,6 +1,6 @@
 /obj/machinery/computer/monitor
 	name = "power monitoring console"
-	desc = "Используется для мониторинга уровня энергопотребления на всей станции."
+	desc = "Used to monitor power levels across the station."
 	icon_screen = "power"
 	icon_keyboard = "power_key"
 	use_power = ACTIVE_POWER_USE
@@ -23,7 +23,7 @@
 
 /obj/machinery/computer/monitor/secret //Hides the power monitor (such as ones on ruins & CentCom) from PDA's to prevent metagaming.
 	name = "outdated power monitoring console"
-	desc = "Используется для отслеживания уровня энергопотребления в локальной сети."
+	desc = "It monitors power levels across the local powernet."
 	circuit = /obj/item/circuitboard/powermonitor/secret
 	is_secret_monitor = TRUE
 

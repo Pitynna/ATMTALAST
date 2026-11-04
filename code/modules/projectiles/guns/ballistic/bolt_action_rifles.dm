@@ -3,7 +3,7 @@
 // MARK: Basic (Mosin-Nagant)
 /obj/item/gun/projectile/shotgun/boltaction
 	name = "Mosin Nagant"
-	desc = "Старинная винтовка с продольно-скользящим затвором калибра 7,62x54 мм."
+	desc = "An ancient design commonly used by the conscript forces of the USSP. Chambered in 7.62mm. Has a bayonet lug for attaching a knife."
 	gender = FEMALE
 	icon_state = "moistnugget"
 	item_state = "moistnugget"
@@ -18,16 +18,6 @@
 	)
 	recoil = GUN_RECOIL_MEDIUM
 	available_reload_animation = FALSE
-
-/obj/item/gun/projectile/shotgun/boltaction/get_ru_names()
-	return alist(
-		NOMINATIVE = "винтовка Мосина",
-		GENITIVE = "винтовки Мосина",
-		DATIVE = "винтовке Мосина",
-		ACCUSATIVE = "винтовку Мосина",
-		INSTRUMENTAL = "винтовкой Мосина",
-		PREPOSITIONAL = "винтовке Мосина",
-	)
 
 /obj/item/gun/projectile/shotgun/boltaction/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
@@ -68,19 +58,9 @@
 // MARK: Enchanted
 /obj/item/gun/projectile/shotgun/boltaction/enchanted
 	name = "enchanted bolt action rifle"
-	desc = "Магическая винтовка, стреляющая магическими пулями."
+	desc = "Careful not to lose your head."
 	var/guns_left = 30
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted
-
-/obj/item/gun/projectile/shotgun/boltaction/enchanted/get_ru_names()
-	return alist(
-		NOMINATIVE = "магическая винтовка",
-		GENITIVE = "магической винтовки",
-		DATIVE = "магической винтовке",
-		ACCUSATIVE = "магическую винтовку",
-		INSTRUMENTAL = "магической винтовкой",
-		PREPOSITIONAL = "магической винтовке",
-	)
 
 /obj/item/gun/projectile/shotgun/boltaction/enchanted/Initialize(mapload)
 	. = ..()
@@ -112,23 +92,13 @@
 
 /obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage
 	name = "arcane barrage"
-	desc = "Пау пау пау."
+	desc = "Pew Pew Pew."
 	fire_sound = 'sound/weapons/emitter.ogg'
 	icon_state = "arcane_barrage"
 	item_state = "arcane_barrage"
 	slot_flags = null
 	item_flags = NOBLUDGEON|DROPDEL|ABSTRACT
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/arcane_barrage
-
-/obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage/get_ru_names()
-	return alist(
-		NOMINATIVE = "магический шквал",
-		GENITIVE = "магического шквала",
-		DATIVE = "магическому шквалу",
-		ACCUSATIVE = "магический шквал",
-		INSTRUMENTAL = "магическим шквалом",
-		PREPOSITIONAL = "магическом шквале",
-	)
 
 /obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage/examine(mob/user)
 	var/f_name = "\a [src]."
@@ -140,7 +110,7 @@
 
 /obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage/blood
 	name = "blood bolt barrage"
-	desc = "Кровь за кровь."
+	desc = "A crackling orb of blood-red energy, straining for the chance to kill. Simply point at the target, and let it loose."
 	item_state = "disintegrate"
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
@@ -151,13 +121,3 @@
 	pickup_sound = 'sound/effects/splat.ogg'
 	drop_sound = 'sound/effects/splat.ogg'
 	item_flags = NOBLUDGEON|DROPDEL
-
-/obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage/blood/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровавый шквал",
-		GENITIVE = "кровавого шквала",
-		DATIVE = "кровавому шквалу",
-		ACCUSATIVE = "кровавый шквал",
-		INSTRUMENTAL = "кровавым шквалом",
-		PREPOSITIONAL = "кровавом шквале",
-	)

@@ -231,20 +231,10 @@
 #undef SNAKE_ALERT_COOLDOWN
 
 /obj/structure/closet/cardboard/agent/nullspace
-	name = "блюспейс коробка"
+	name = "bluespace box"
 	desc = "Коробка пропитанная силой блюспейса, созданная лучшими учёными с планеты клоунов."
 	gender = FEMALE
 	default_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
-
-/obj/structure/closet/cardboard/agent/nullspace/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс коробка",
-		GENITIVE = "блюспейс коробки",
-		DATIVE = "блюспейс коробке",
-		ACCUSATIVE = "блюспейс коробку",
-		INSTRUMENTAL = "блюспейс коробкой",
-		PREPOSITIONAL = "блюспейс коробке",
-	)
 
 /obj/structure/closet/cardboard/agent/nullspace/go_invisible()
 	return

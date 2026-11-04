@@ -1,6 +1,6 @@
 /obj/machinery/vending/security
 	name = "SecTech"
-	desc = "Раздатчик снаряжения службы безопасности."
+	desc = "A security equipment vendor."
 	slogan_list = list(
 		"Круш+и череп+а прест+упников!",
 		"Отб+ей н+есколько гол+ов!",
@@ -76,19 +76,9 @@
 	)
 	refill_canister = /obj/item/vending_refill/security
 
-/obj/machinery/vending/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат SecTech",
-		GENITIVE = "торгового автомата SecTech",
-		DATIVE = "торговому автомату SecTech",
-		ACCUSATIVE = "торговый автомат SecTech",
-		INSTRUMENTAL = "торговым автоматом SecTech",
-		PREPOSITIONAL = "торговом автомате SecTech",
-	)
-
 /obj/machinery/vending/security/training
 	name = "SecTech Training"
-	desc = "Раздатчик тренировочного снаряжения службы безопасности."
+	desc = "A security training equipment vendor."
 	slogan_list = list(
 		"Соблюд+ай чистот+у на стр+ельбище!",
 		"Да мо+я б+абушка стрел+яет л+учше!",
@@ -112,16 +102,6 @@
 		/obj/item/gun/projectile/automatic/toy = 2,
 	)
 	contraband = list(/obj/item/toy/figure/secofficer = 1)
-
-/obj/machinery/vending/security/training/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат SecTech Training",
-		GENITIVE = "торгового автомата SecTech Training",
-		DATIVE = "торговому автомату SecTech Training",
-		ACCUSATIVE = "торговый автомат SecTech Training",
-		INSTRUMENTAL = "торговым автоматом SecTech Training",
-		PREPOSITIONAL = "торговом автомате SecTech Training",
-	)
 
 /obj/machinery/vending/security/attackby(obj/item/item, mob/user, params)
 	if(user.a_intent == INTENT_HARM || !powered())
@@ -157,7 +137,7 @@
 
 /obj/machinery/vending/security/ert
 	name = "NT ERT Consumables Gear"
-	desc = "Расходное оборудование для различных ситуаций."
+	desc = "A consumable equipment for different situations."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	refill_canister = /obj/item/vending_refill/nta
 	density = FALSE
@@ -181,19 +161,9 @@
 	)
 	refill_canister = /obj/item/vending_refill/nta
 
-/obj/machinery/vending/security/ert/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT ERT Consumables Gear",
-		GENITIVE = "торгового автомата NT ERT Consumables Gear",
-		DATIVE = "торговому автомату NT ERT Consumables Gear",
-		ACCUSATIVE = "торговый автомат NT ERT Consumables Gear",
-		INSTRUMENTAL = "торговым автоматом NT ERT Consumables Gear",
-		PREPOSITIONAL = "торговом автомате NT ERT Consumables Gear",
-	)
-
 /obj/item/security_voucher
 	name = "security voucher"
-	desc = "Жетон, позволяющий получить набор оружия из торгового автомата \"SecTech\". Выдаётся всем сотрудникам службы безопасности в штатном порядке."
+	desc = "A token to redeem a weapon kit. Use it on a SecTech."
 	gender = MALE
 	icon_state = "security_voucher"
 	w_class = WEIGHT_CLASS_SMALL
@@ -206,16 +176,6 @@
 		for(var/datum/security_voucher_kit/kit as anything in kits)
 			available_kits[kit.kit_box] = image(kit.icon, kit.icon_state)
 	return available_kits.Copy()
-
-/obj/item/security_voucher/get_ru_names()
-	return alist(
-		NOMINATIVE = "ваучер",
-		GENITIVE = "ваучера",
-		DATIVE = "ваучеру",
-		ACCUSATIVE = "ваучер",
-		INSTRUMENTAL = "ваучером",
-		PREPOSITIONAL = "ваучере",
-	)
 
 /obj/item/security_voucher/detective
 	name = "detective's security voucher"
@@ -230,16 +190,6 @@
 		for(var/datum/security_voucher_kit/kit as anything in kits)
 			detectives_available_kits[kit.kit_box] = image(kit.icon, kit.icon_state)
 	return detectives_available_kits.Copy()
-
-/obj/item/security_voucher/detective/get_ru_names()
-	return alist(
-		NOMINATIVE = "детективский ваучер",
-		GENITIVE = "детективского ваучера",
-		DATIVE = "детективскому ваучеру",
-		ACCUSATIVE = "детективский ваучер",
-		INSTRUMENTAL = "детективским ваучером",
-		PREPOSITIONAL = "детективском ваучере",
-	)
 
 /datum/security_voucher_kit
 	var/obj/item/storage/box/kit_box

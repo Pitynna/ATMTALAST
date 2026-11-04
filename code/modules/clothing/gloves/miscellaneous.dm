@@ -82,13 +82,3 @@
 /obj/item/clothing/gloves/adaptive_gloves/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/item_skins)
-
-/obj/item/clothing/gloves/adaptive_gloves/get_ru_names()
-	return alist(
-		NOMINATIVE = "адаптивные перчатки",
-		GENITIVE = "адаптивных перчаток",
-		DATIVE = "адаптивным перчаткам",
-		ACCUSATIVE = "адаптивные перчатки",
-		INSTRUMENTAL = "адаптивными перчатками",
-		PREPOSITIONAL = "адаптивных перчатках",
-	)

@@ -117,20 +117,10 @@
 
 /obj/item/stack/sheet/animalhide/weaver_chitin
 	name = "weaver chitin"
-	desc = "Фрагмент закалённого многослойного хитина из панциря костномозгового ткача."
+	desc = "A chunk of hardened and layered chitin from a marrow weaver's carapace."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "chitin"
 	singular_name = "chitin chunk"
-
-/obj/item/stack/sheet/animalhide/weaver_chitin/get_ru_names()
-	return alist(
-		NOMINATIVE = "хитин ткача",
-		GENITIVE = "хитина ткача",
-		DATIVE = "хитину ткача",
-		ACCUSATIVE = "хитин ткача",
-		INSTRUMENTAL = "хитином ткача",
-		PREPOSITIONAL = "хитине ткача",
-	)
 
 /obj/item/stack/sheet/animalhide/weaver_chitin/five
 	amount = 5

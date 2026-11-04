@@ -86,17 +86,7 @@
 
 /obj/structure/spider/terrorweb/white
 	name = "infested web"
-	desc = "Эта паутина покрыта сотнями крошечных кусающих пауков и их яицами."
-
-/obj/structure/spider/terrorweb/white/get_ru_names()
-	return alist(
-		NOMINATIVE = "зараженная паутина",
-		GENITIVE = "зараженной паутины",
-		DATIVE = "зараженной паутине",
-		ACCUSATIVE = "зараженную паутину",
-		INSTRUMENTAL = "зараженной паутиной",
-		PREPOSITIONAL = "зараженной паутине",
-	)
+	desc = "This web is covered in hundreds of tiny, biting spiders - and their eggs."
 
 /obj/structure/spider/terrorweb/white/web_special_ability(mob/living/carbon/C)
 	if(istype(C))

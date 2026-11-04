@@ -1,6 +1,6 @@
 /obj/item/wrench
 	name = "wrench"
-	desc = "Инструмент, используемый для закручивания и откручивания гаек и болтов."
+	desc = "A standard adjustable wrench made of forged steel. Can be used to fasten or remove bolts, and deconstruct objects."
 	gender = MALE
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "wrench"
@@ -21,16 +21,6 @@
 	tool_behaviour = TOOL_WRENCH
 	toolbox_radial_menu_compatibility = TRUE
 
-/obj/item/wrench/get_ru_names()
-	return alist(
-		NOMINATIVE = "гаечный ключ",
-		GENITIVE = "гаечного ключа",
-		DATIVE = "гаечному ключу",
-		ACCUSATIVE = "гаечный ключ",
-		INSTRUMENTAL = "гаечным ключом",
-		PREPOSITIONAL = "гаечном ключе"
-	)
-
 /obj/item/wrench/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/falling_hazard, damage = force, hardhat_safety = TRUE, crushes = FALSE, impact_sound = hitsound)
@@ -43,26 +33,14 @@
 
 /obj/item/wrench/brass
 	name = "brass wrench"
-	desc = "Инструмент, используемый для закручивания и откручивания гаек и болтов. \
-			На ощупь слегка тёплый."
+	desc = "A brass adjustable wrench. It's faintly warm to the touch."
 	icon_state = "wrench_brass"
 	toolspeed = 0.5
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
-/obj/item/wrench/brass/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунный гаечный ключ",
-		GENITIVE = "латунного гаечного ключа",
-		DATIVE = "латунному гаечному ключу",
-		ACCUSATIVE = "латунный гаечный ключ",
-		INSTRUMENTAL = "латунным гаечным ключом",
-		PREPOSITIONAL = "латунном гаечном ключе"
-	)
-
 /obj/item/wrench/abductor
 	name = "alien wrench"
-	desc = "Инструмент, используемый для закручивания и откручивания гаек и болтов. \
-			Заставляет проворачиваться зажатые между губками предметы."
+	desc = "A polarized wrench. It causes anything placed between the jaws to turn."
 	icon = 'icons/obj/abductor.dmi'
 	item_state = "wrench_alien"
 	belt_icon = "alien_wrench"
@@ -71,36 +49,14 @@
 	origin_tech = "materials=5;engineering=5;abductor=3"
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/wrench/abductor/get_ru_names()
-	return alist(
-		NOMINATIVE = "чужеродный гаечный ключ",
-		GENITIVE = "чужеродного гаечного ключа",
-		DATIVE = "чужеродному гаечному ключу",
-		ACCUSATIVE = "чужеродный гаечный ключ",
-		INSTRUMENTAL = "чужеродным гаечным ключом",
-		PREPOSITIONAL = "чужеродном гаечном ключе"
-	)
-
 /obj/item/wrench/cyborg
 	name = "automatic wrench"
-	desc = "Инструмент, используемый для закручивания и откручивания гаек и болтов. \
-			Специализированная версия для установки в роботизированные системы."
+	desc = "A powered industrial wrench commonly found in construction and engineering robots. More efficient than most manual wrenches."
 	toolspeed = 0.5
-
-/obj/item/wrench/cyborg/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоматический гаечный ключ",
-		GENITIVE = "автоматического гаечного ключа",
-		DATIVE = "автоматическому гаечному ключу",
-		ACCUSATIVE = "автоматический гаечный ключ",
-		INSTRUMENTAL = "автоматическим гаечным ключом",
-		PREPOSITIONAL = "автоматическом гаечном ключе"
-	)
 
 /obj/item/wrench/power
 	name = "hand drill"
-	desc = "Электрическая инструмент, используемый для завинчивания объектов с резьбой \
-			и закручивания болтов и гаек."
+	desc = "A powerful, hand-held drill fitted with a long-lasting battery. It has a bolt driver head attached."
 	icon_state = "drill_bolt"
 	item_state = "drill"
 	belt_icon = "hand_drill"
@@ -111,16 +67,6 @@
 	throwforce = 8
 	attack_verb = list("продырявил", "уколол")
 	toolspeed = 0.25
-
-/obj/item/wrench/power/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручная дрель",
-		GENITIVE = "ручной дрели",
-		DATIVE = "ручной дрели",
-		ACCUSATIVE = "ручную дрель",
-		INSTRUMENTAL = "ручной дрелью",
-		PREPOSITIONAL = "ручной дрели"
-	)
 
 /obj/item/wrench/power/examine(mob/user)
 	. = ..()
@@ -139,22 +85,11 @@
 
 /obj/item/wrench/medical
 	name = "medical wrench"
-	desc = "Инструмент, используемый для закручивания и откручивания гаек и болтов. \
-			Что делает его медицинским? Кто знает..."
+	desc = "A standard adjustable wrench covered in medical iconography. Its outer surface is mostly covered in rubber, and it seems to be more efficient than a normal wrench."
 	icon_state = "wrench_medical"
 	force = 2 //MEDICAL
 	throwforce = 4
 	origin_tech = "materials=1;engineering=1;biotech=3"
-
-/obj/item/wrench/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский гаечный ключ",
-		GENITIVE = "медицинского гаечного ключа",
-		DATIVE = "медицинскому гаечному ключу",
-		ACCUSATIVE = "медицинский гаечный ключ",
-		INSTRUMENTAL = "медицинским гаечным ключом",
-		PREPOSITIONAL = "медицинском гаечном ключе"
-	)
 
 /obj/item/wrench/medical/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] мол[PLUR_IT_YAT(user)]ся [declent_ru(DATIVE)], чтобы тот забрал [GEND_HIS_HER(user)] душу. Это похоже на попытку самоубийства!"))
@@ -194,13 +129,3 @@
 	greyscale_config_inhand_left = null
 	greyscale_config_inhand_right = null
 	greyscale_colors = null
-
-/obj/item/wrench/industrial/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый гаечный ключ",
-		GENITIVE = "продвинутого гаечного ключа",
-		DATIVE = "продвинутому гаечному ключу",
-		ACCUSATIVE = "продвинутый гаечный ключ",
-		INSTRUMENTAL = "продвинутым гаечным ключом",
-		PREPOSITIONAL = "продвинутом гаечном ключе"
-	)

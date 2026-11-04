@@ -7,7 +7,7 @@
  */
 /obj/item/rcs
 	name = "rapid-crate-sender (RCS)"
-	desc = "Устройство для телепортации ящиков и шкафов на телепады карго."
+	desc = "A device used to teleport crates and closets to cargo telepads."
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "rcs"
 	item_state = "rcd"
@@ -25,16 +25,6 @@
 	var/teleporting = FALSE
 	/// How much power does each teleport use?
 	var/chargecost = 1000
-
-/obj/item/rcs/get_ru_names()
-	return alist(
-		NOMINATIVE = "система быстрой доставки (RCS)",
-		GENITIVE = "системы быстрой доставки (RCS)",
-		DATIVE = "системе быстрой доставки (RCS)",
-		ACCUSATIVE = "систему быстрой доставки (RCS)",
-		INSTRUMENTAL = "системой быстрой доставки (RCS)",
-		PREPOSITIONAL = "системе быстрой доставки (RCS)",
-	)
 
 /obj/item/rcs/get_cell()
 	return rcell

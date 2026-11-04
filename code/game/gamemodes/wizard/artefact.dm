@@ -710,7 +710,7 @@ GLOBAL_LIST_EMPTY(multiverse)
 
 /obj/item/voodoo
 	name = "wicker doll"
-	desc = "Выглядит зловеще."
+	desc = "Something creepy about it."
 	gender = FEMALE
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "voodoo"
@@ -721,16 +721,6 @@ GLOBAL_LIST_EMPTY(multiverse)
 	var/datum/weakref/link_ref
 	var/cooldown_time = 3 SECONDS
 	COOLDOWN_DECLARE(cooldown)
-
-/obj/item/voodoo/get_ru_names()
-	return alist(
-		NOMINATIVE = "плетёная кукла",
-		GENITIVE = "плетёной куклы",
-		DATIVE = "плетёной кукле",
-		ACCUSATIVE = "плетёную куклу",
-		INSTRUMENTAL = "плетёной куклой",
-		PREPOSITIONAL = "плетёной кукле",
-	)
 
 /obj/item/voodoo/attackby(obj/item/I, mob/user, params)
 	var/mob/living/target = target_ref?.resolve()

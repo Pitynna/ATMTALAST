@@ -4,7 +4,7 @@
  */
 /obj/item/craft_blueprints
 	name = "crafting blueprints"
-	desc = "Чертежи для крафта"
+	desc = "Crafting blueprints."
 	icon = 'icons/obj/craft_blueprints.dmi'
 	icon_state = "blueprint"
 	interaction_flags_mouse_drop = NEED_HANDS
@@ -26,16 +26,6 @@
 	var/obj/item/craft_blueprints/copy_type = /obj/item/craft_blueprints/copy
 	/// Requred toner in percent
 	var/required_toner = 10
-
-/obj/item/craft_blueprints/get_ru_names()
-	return alist(
-		NOMINATIVE = "чертежи для крафта",
-		GENITIVE = "чертежей для крафта",
-		DATIVE = "чертежам для крафта",
-		ACCUSATIVE = "чертежи для крафта",
-		INSTRUMENTAL = "чертежами для крафта",
-		PREPOSITIONAL = "чертежах для крафта",
-	)
 
 /obj/item/craft_blueprints/copy
 	icon_state = "whiteprint"

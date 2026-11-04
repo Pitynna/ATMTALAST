@@ -8,16 +8,6 @@
 	/// how strong the fire will be
 	var/fire_stacks = 0.3
 
-/obj/projectile/energy/floraalpha/get_ru_names()
-	return alist(
-		NOMINATIVE = "альфа-соматорей",
-		GENITIVE = "альфа-соматорея",
-		DATIVE = "альфа-соматорею",
-		ACCUSATIVE = "альфа-соматорей",
-		INSTRUMENTAL = "альфа-соматореем",
-		PREPOSITIONAL = "альфа-соматорее",
-	)
-
 /obj/projectile/energy/floraalpha/prehit(atom/target)
 	if(target && !HAS_TRAIT(target, TRAIT_PLANT_ORIGIN)) // burn damage for only plant
 		damage = 0
@@ -63,30 +53,9 @@
 	nodamage = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 
-/obj/projectile/energy/florabeta/get_ru_names()
-	return alist(
-		NOMINATIVE = "бета-соматорей",
-		GENITIVE = "бета-соматорея",
-		DATIVE = "бета-соматорею",
-		ACCUSATIVE = "бета-соматорей",
-		INSTRUMENTAL = "бета-соматореем",
-		PREPOSITIONAL = "бета-соматорее",
-	)
-
-// MARK: Gamma
 /obj/projectile/energy/floragamma
 	name = "gamma somatoray"
 	icon_state = "energy2"
 	damage_type = TOX
 	nodamage = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
-
-/obj/projectile/energy/floragamma/get_ru_names()
-	return alist(
-		NOMINATIVE = "гамма-соматорей",
-		GENITIVE = "гамма-соматорея",
-		DATIVE = "гамма-соматорею",
-		ACCUSATIVE = "гамма-соматорей",
-		INSTRUMENTAL = "гамма-соматореем",
-		PREPOSITIONAL = "гамма-соматорее",
-	)

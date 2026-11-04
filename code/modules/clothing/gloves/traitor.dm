@@ -1,19 +1,9 @@
 /obj/item/clothing/gloves/color/yellow/stun
 	name = "stun gloves"
-	desc = "Эти перчатки не защитят ваших врагов от электрического удара."
+	desc = "Horrendous and awful. It smells like cancer. The fact it has wires attached to it is incidental."
 	var/obj/item/stock_parts/cell/cell = null
 	var/stun_strength = 2 SECONDS
 	var/stun_cost = 1500
-
-/obj/item/clothing/gloves/color/yellow/stun/get_ru_names()
-	return alist(
-		NOMINATIVE = "оглушающие перчатки",
-		GENITIVE = "оглушающих перчаток",
-		DATIVE = "оглушающим перчаткам",
-		ACCUSATIVE = "оглушающие перчатки",
-		INSTRUMENTAL = "оглушающими перчатками",
-		PREPOSITIONAL = "оглушающих перчатках",
-	)
 
 /obj/item/clothing/gloves/color/yellow/stun/get_cell()
 	return cell

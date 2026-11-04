@@ -206,13 +206,3 @@
 	list_reagents = list("adminordrazine" = 1, "vitamin" = 2, "orangejuice" = 5, "nutriment" = 5)
 	antable = FALSE
 	bitecount = 3
-
-/obj/item/reagent_containers/food/snacks/grown/citrus/tangerine/get_ru_names()
-	return alist(
-		NOMINATIVE = "мандарин",
-		GENITIVE = "мандарина",
-		DATIVE = "мандарину",
-		ACCUSATIVE = "мандарин",
-		INSTRUMENTAL = "мандарином",
-		PREPOSITIONAL = "мандарине",
-	)

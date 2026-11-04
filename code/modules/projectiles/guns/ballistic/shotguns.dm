@@ -5,9 +5,7 @@
 // MARK: RS-870
 /obj/item/gun/projectile/shotgun/riot
 	name = "RS-870 shotgun"
-	desc = "Помповый дробовик 12-го калибра, выпускаемый по лицензии \"Aegis Ordinance\". \
-			Имеет удлинённый магазин на 6 патронов и несколько креплений под тактические модули. \
-			Входит в стандартное оснащение службы безопасности \"Нанотрейзен\"."
+	desc = "A sturdy shotgun by Starstrike Arms, featuring a longer magazine and a fixed tactical stock designed for non-lethal riot control."
 	icon_state = "riotshotgun"
 	item_state = "riotshotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
@@ -19,16 +17,6 @@
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 23, ATTACHMENT_OFFSET_Y = 1),
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 4, ATTACHMENT_OFFSET_Y = 5),
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 7, ATTACHMENT_OFFSET_Y = -6),
-	)
-
-/obj/item/gun/projectile/shotgun/riot/get_ru_names()
-	return alist(
-		NOMINATIVE = "дробовик RS-870",
-		GENITIVE = "дробовика RS-870",
-		DATIVE = "дробовику RS-870",
-		ACCUSATIVE = "дробовик RS-870",
-		INSTRUMENTAL = "дробовиком RS-870",
-		PREPOSITIONAL = "дробовике RS-870",
 	)
 
 /obj/item/gun/projectile/shotgun/riot/add_deep_lore()
@@ -237,16 +225,6 @@
 	)
 	reload_sound = 'sound/weapons/gun_interactions/winchester_reload.ogg'
 
-/obj/item/gun/projectile/shotgun/winchester/get_ru_names()
-	return alist(
-		NOMINATIVE = "рычажный дробовик \"Фронтир\"",
-		GENITIVE = "рычажного дробовика \"Фронтир\"",
-		DATIVE = "рычажному дробовику \"Фронтир\"",
-		ACCUSATIVE = "рычажный дробовик \"Фронтир\"",
-		INSTRUMENTAL = "рычажным дробовиком \"Фронтир\"",
-		PREPOSITIONAL = "рычажном дробовике \"Фронтир\"",
-	)
-
 /obj/item/gun/projectile/shotgun/winchester/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
 		lore = "Схема рычажного дробовика под патрон 12x70 мм была загружена в библиотеку \"Canon de Frontira\" анонимным автором \
@@ -280,16 +258,6 @@
 	icon_state = "winchester_cargo"
 	item_state = "winchester_cargo"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/winchester/cargo
-
-/obj/item/gun/projectile/shotgun/winchester/cargo/get_ru_names()
-	return alist(
-		NOMINATIVE = "рычажный дробовик \"Защитник карго\"",
-		GENITIVE = "рычажного дробовика \"Защитник карго\"",
-		DATIVE = "рычажному дробовику \"Защитник карго\"",
-		ACCUSATIVE = "рычажный дробовик \"Защитник карго\"",
-		INSTRUMENTAL = "рычажным дробовиком \"Защитник карго\"",
-		PREPOSITIONAL = "рычажном дробовике \"Защитник карго\"",
-	)
 
 /obj/item/gun/projectile/shotgun/winchester/cargo/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
@@ -326,8 +294,7 @@
 // MARK: SG20 Ferox
 /obj/item/gun/projectile/shotgun/automatic/combat
 	name = "SG20 \"Ferox\" shotgun"
-	desc = "Самозарядный тактический дробовик 12-го калибра производства \"Mars Special\". Имеет трубчатый магазин на 6 патронов. \
-			Оснащён креплениями для дополнительных модулей."
+	desc = "A semi automatic shotgun by Starstrike Arms, with tactical furniture and a six-shell magazine capacity."
 	icon_state = "cshotgun"
 	item_state = "cshotgun"
 	origin_tech = "combat=6"
@@ -343,20 +310,9 @@
 	)
 	recoil = GUN_RECOIL_HIGH
 
-/obj/item/gun/projectile/shotgun/automatic/combat/get_ru_names()
-	return alist(
-		NOMINATIVE = "дробовик SG20 \"Феррокс\"",
-		GENITIVE = "дробовика SG20 \"Феррокс\"",
-		DATIVE = "дробовику SG20 \"Феррокс\"",
-		ACCUSATIVE = "дробовик SG20 \"Феррокс\"",
-		INSTRUMENTAL = "дробовиком SG20 \"Феррокс\"",
-		PREPOSITIONAL = "дробовике SG20 \"Феррокс\"",
-	)
-
-// MARK: Dual Tube
 /obj/item/gun/projectile/shotgun/automatic/dual_tube
 	name = "cycler shotgun"
-	desc = "Автоматический дробовик с двумя разделёнными трубчатыми магазинами."
+	desc = "A prototype shotgun by Starstrike Arms with two separate magazine tubes, allowing you to quickly toggle between ammo types."
 	icon_state = "cycler"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube
 	w_class = WEIGHT_CLASS_HUGE
@@ -369,16 +325,6 @@
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 3, ATTACHMENT_OFFSET_Y = 7),
 	)
 	recoil = GUN_RECOIL_HIGH
-
-/obj/item/gun/projectile/shotgun/automatic/dual_tube/get_ru_names()
-	return alist(
-		NOMINATIVE = "двухмагазинный дробовик",
-		GENITIVE = "двухмагазинного дробовика",
-		DATIVE = "двухмагазинному дробовику",
-		ACCUSATIVE = "двухмагазинный дробовик",
-		INSTRUMENTAL = "двухмагазинным дробовиком",
-		PREPOSITIONAL = "двухмагазинном дробовике",
-	)
 
 /obj/item/gun/projectile/shotgun/automatic/dual_tube/Initialize(mapload)
 	. = ..()
@@ -415,8 +361,7 @@
 // MARK: Bulldog
 /obj/item/gun/projectile/automatic/shotgun/bulldog
 	name = "\"Bulldog\" mag-fed shotgun"
-	desc = "Компактный самозарядный дробовик 12-го калибра с магазинным питанием. Полуавтоматический режим огня, высокая отдача, \
-			крепления для тактических модулей. Собирается по открытой схеме из библиотеки \"Canon de Frontira\"."
+	desc = "A compact semi-automatic shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines."
 	icon_state = "bulldog"
 	item_state = "bulldog"
 	origin_tech = "combat=6;materials=4;syndicate=6"
@@ -435,16 +380,6 @@
 	)
 	recoil = GUN_RECOIL_HIGH
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
-
-/obj/item/gun/projectile/automatic/shotgun/bulldog/get_ru_names()
-	return alist(
-		NOMINATIVE = "магазинный дробовик \"Бульдог\"",
-		GENITIVE = "магазинного дробовика \"Бульдог\"",
-		DATIVE = "магазинному дробовику \"Бульдог\"",
-		ACCUSATIVE = "магазинный дробовик \"Бульдог\"",
-		INSTRUMENTAL = "магазинным дробовиком \"Бульдог\"",
-		PREPOSITIONAL = "магазинном дробовике \"Бульдог\"",
-	)
 
 /obj/item/gun/projectile/automatic/shotgun/bulldog/ComponentInitialize()
 	. = ..()
@@ -483,20 +418,9 @@
 	mag_type = /obj/item/ammo_box/magazine/cheap_m12g
 	color = COLOR_ASSEMBLY_BROWN
 
-/obj/item/gun/projectile/automatic/shotgun/bulldog/mastiff/get_ru_names()
-	return alist(
-		NOMINATIVE = "магазинный дробовик \"Мастифф\"",
-		GENITIVE = "магазинного дробовика \"Мастифф\"",
-		DATIVE = "магазинному дробовику \"Мастифф\"",
-		ACCUSATIVE = "магазинный дробовик \"Мастифф\"",
-		INSTRUMENTAL = "магазинным дробовиком \"Мастифф\"",
-		PREPOSITIONAL = "магазинном дробовике \"Мастифф\"",
-	)
-
-// MARK: AS-12 Minotaur
 /obj/item/gun/projectile/automatic/shotgun/minotaur
 	name = "AS-12 \"Minotaur\" shotgun"
-	desc = "Автоматический дробовик 12-го калибра с магазинным питанием."
+	desc = "Smooth, powerful, highly illegal. The newest full auto shotgun available at the market, utilizes standard 12g drum mags. Property of Gorlex Marauders."
 	icon_state = "minotaur"
 	item_state = "minotaur"
 	origin_tech = "combat=6;materials=4;syndicate=6"
@@ -514,16 +438,6 @@
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 7, ATTACHMENT_OFFSET_Y = -5),
 	)
 	recoil = GUN_RECOIL_HIGH
-
-/obj/item/gun/projectile/automatic/shotgun/minotaur/get_ru_names()
-	return alist(
-		NOMINATIVE = "магазинный дробовик AS-12 \"Минотавр\"",
-		GENITIVE = "магазинного дробовика AS-12 \"Минотавр\"",
-		DATIVE = "магазинному дробовику AS-12 \"Минотавр\"",
-		ACCUSATIVE = "магазинный дробовик AS-12 \"Минотавр\"",
-		INSTRUMENTAL = "магазинным дробовиком AS-12 \"Минотавр\"",
-		PREPOSITIONAL = "магазинном дробовике AS-12 \"Минотавр\"",
-	)
 
 /obj/item/gun/projectile/automatic/shotgun/minotaur/ComponentInitialize()
 	. = ..()
@@ -553,16 +467,6 @@
 	)
 	recoil = GUN_RECOIL_HIGH
 
-/obj/item/gun/projectile/automatic/cats/get_ru_names()
-	return alist(
-		NOMINATIVE = "дробовик SG40 \"Вастус\"",
-		GENITIVE = "дробовика SG40 \"Вастус\"",
-		DATIVE = "дробовику SG40 \"Вастус\"",
-		ACCUSATIVE = "дробовик SG40 \"Вастус\"",
-		INSTRUMENTAL = "дробовиком SG40 \"Вастус\"",
-		PREPOSITIONAL = "дробовике SG40 \"Вастус\"",
-	)
-
 /obj/item/gun/projectile/automatic/cats/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
 		lore = "SG40 \"Вастус\" — автоматический дробовик 12-го калибра, разработанный \"Mars Special\" по военному заказу \
@@ -582,8 +486,7 @@
 // MARK: Double-barreled
 /obj/item/gun/projectile/revolver/doublebarrel
 	name = "double-barreled shotgun"
-	desc = "Двуствольный дробовик 12-го калибра, собранный по открытой схеме из библиотеки \"Canon de Frontira\". \
-			Два патрона, высокая отдача, отсутствие креплений. Встречается повсеместно во множестве вариаций."
+	desc = "A true classic, by Starstrike Arms."
 	icon_state = "dshotgun-base"
 	item_state = "dshotgun-base"
 	w_class = WEIGHT_CLASS_BULKY
@@ -598,16 +501,6 @@
 	recoil = GUN_RECOIL_HIGH
 	attachable_allowed = GUN_MODULE_CLASS_NONE
 	can_air_shoot = FALSE
-
-/obj/item/gun/projectile/revolver/doublebarrel/get_ru_names()
-	return alist(
-		NOMINATIVE = "двуствольный дробовик",
-		GENITIVE = "двуствольного дробовика",
-		DATIVE = "двуствольному дробовику",
-		ACCUSATIVE = "двуствольный дробовик",
-		INSTRUMENTAL = "двуствольным дробовиком",
-		PREPOSITIONAL = "двуствольном дробовике",
-	)
 
 /obj/item/gun/projectile/revolver/doublebarrel/ComponentInitialize()
 	. = ..()
@@ -658,8 +551,7 @@
 // MARK: Improvised
 /obj/item/gun/projectile/revolver/doublebarrel/improvised
 	name = "improvised shotgun"
-	desc = "Собранный из подручных материалов дробовик 12 калибра, конструкционно представляющий собой модифицированный кусок трубы.\
-			Экстремальная отдача, минимальная точность и нулевое удобство использования."
+	desc = "Essentially a tube that aims shotgun shells."
 	icon_state = "ishotgun"
 	slot_flags = null
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
@@ -669,16 +561,6 @@
 	var/slung = FALSE
 	accuracy = GUN_ACCURACY_MINIMAL
 	recoil = GUN_RECOIL_MEGA
-
-/obj/item/gun/projectile/revolver/doublebarrel/improvised/get_ru_names()
-	return alist(
-		NOMINATIVE = "кустарный дробовик",
-		GENITIVE = "кустарного дробовика",
-		DATIVE = "кустарному дробовику",
-		ACCUSATIVE = "кустарный дробовик",
-		INSTRUMENTAL = "кустарным дробовиком",
-		PREPOSITIONAL = "кустарном дробовике",
-	)
 
 /obj/item/gun/projectile/revolver/doublebarrel/improvised/attackby(obj/item/I, mob/user, params)
 	if(iscoil(I))
@@ -711,7 +593,7 @@
 // MARK: Cane shotgun
 /obj/item/gun/projectile/revolver/doublebarrel/improvised/cane
 	name = "cane"
-	desc = "Трость — верный спутник настоящего джентльмена. Или клоуна."
+	desc = "A cane used by a true gentleman. Or a clown."
 	gender = FEMALE
 	icon = 'icons/obj/items.dmi'
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
@@ -730,16 +612,6 @@
 	needs_permit = FALSE //its just a cane beepsky.....
 	accuracy = GUN_ACCURACY_SHOTGUN
 	recoil = GUN_RECOIL_MEDIUM
-
-/obj/item/gun/projectile/revolver/doublebarrel/improvised/cane/get_ru_names()
-	return alist(
-		NOMINATIVE = "трость",
-		GENITIVE = "трости",
-		DATIVE = "трости",
-		ACCUSATIVE = "трость",
-		INSTRUMENTAL = "тростью",
-		PREPOSITIONAL = "трости",
-	)
 
 /obj/item/gun/projectile/revolver/doublebarrel/improvised/cane/is_crutch()
 	return 2

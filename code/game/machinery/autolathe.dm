@@ -1,7 +1,6 @@
 /obj/machinery/autolathe
 	name = "autolathe"
-	desc = "Оборудование, предназначенное для печати изделий базового уровня сложности \
-			на основе шаблонов для печати. Использует металл и стекло в качестве сырья."
+	desc = "It produces items using metal and glass."
 	icon_state = "autolathe"
 	density = TRUE
 	idle_power_usage = 10
@@ -44,16 +43,6 @@
 		AUTOLATHE_CATEGORY_MISC,
 		AUTOLATHE_CATEGORY_DINNERWARE,
 		AUTOLATHE_CATEGORY_IMPORTED,
-	)
-
-/obj/machinery/autolathe/get_ru_names()
-	return alist(
-		NOMINATIVE = "автолат",
-		GENITIVE = "автолата",
-		DATIVE = "автолату",
-		ACCUSATIVE = "автолат",
-		INSTRUMENTAL = "автолатом",
-		PREPOSITIONAL = "автолате",
 	)
 
 /obj/machinery/autolathe/Initialize(mapload)
@@ -508,25 +497,13 @@
 
 /obj/machinery/autolathe/security
 	name = "security autolathe"
-	desc = "Оборудование, предназначенное для печати изделий базового уровня сложности \
-			на основе шаблонов для печати. Использует металл и стекло в качестве сырья. \
-			Специализированная модель для силовых структур, поставляемая с дополнительными шаблонами."
+	desc = "Autolathe with preloaded open recipes"
 	icon = 'icons/obj/machines/sec_autolathe.dmi'
 
 /obj/machinery/autolathe/security/Initialize(mapload)
 	. = ..()
 	wires?.cut(WIRE_AUTOLATHE_HACK)
 	adjust_hacked(TRUE)
-
-/obj/machinery/autolathe/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "автолат службы безопасности",
-		GENITIVE = "автолата службы безопасности",
-		DATIVE = "автолату службы безопасности",
-		ACCUSATIVE = "автолат службы безопасности",
-		INSTRUMENTAL = "автолатом службы безопасности",
-		PREPOSITIONAL = "автолате службы безопасности",
-	)
 
 /obj/machinery/autolathe/security/logistics
 

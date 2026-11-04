@@ -2,7 +2,7 @@
 
 /obj/machinery/computer/security
 	name = "security camera console"
-	desc = "Используется для доступа к сетям камер на станции."
+	desc = "Used to access the various cameras networks on the station."
 
 	icon_keyboard = "security_key"
 	icon_screen = "cameras"
@@ -238,7 +238,7 @@
 // Other computer monitors.
 /obj/machinery/computer/security/telescreen
 	name = "telescreen"
-	desc = "Используется для просмотра сети камер."
+	desc = "Used for watching camera networks."
 	icon_state = "telescreen_console"
 	icon_screen = "telescreen"
 	icon_keyboard = null
@@ -266,7 +266,7 @@
 
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
-	desc = "Чёрт возьми, лучше бы они показывали Paradise TV."
+	desc = "Damn, they better have Paradise TV on these things."
 	icon_state = "entertainment_console"
 	icon_screen = "entertainment_off"
 	light_color = "#FFEEDB"
@@ -355,39 +355,39 @@
 
 /obj/machinery/computer/security/telescreen/singularity
 	name = "Singularity Engine Telescreen"
-	desc = "Используется для наблюдения за зоной содержания сингулярности."
+	desc = "Used for watching the singularity chamber."
 	network = list("Singularity")
 	circuit = /obj/item/circuitboard/camera/telescreen/singularity
 
 /obj/machinery/computer/security/telescreen/nfr
 	name = "NFR Engine Telescreen"
-	desc = "Используется для наблюдения за активной зоной ядерного реактора."
+	desc = "Used to monitor the active zone of a nuclear reactor."
 	network = list("NFR")
 	circuit = /obj/item/circuitboard/camera/telescreen/nfr
 
 /obj/machinery/computer/security/telescreen/toxin_chamber
 	name = "Toxins Telescreen"
-	desc = "Используется для наблюдения за полигоном."
+	desc = "Used for watching the test chamber."
 	network = list("Toxins")
 
 /obj/machinery/computer/security/telescreen/test_chamber
 	name = "Test Chamber Telescreen"
-	desc = "Используется для наблюдения за полигоном."
+	desc = "Used for watching the test chamber."
 	network = list("TestChamber")
 
 /obj/machinery/computer/security/telescreen/research
 	name = "Research Monitor"
-	desc = "С помощью этого монитора Директор Исследований может наблюдать за своими подхалимами из безопасного места."
+	desc = "Used for watching the horrors within the test chamber."
 	network = list("Research","Research Outpost","RD")
 
 /obj/machinery/computer/security/telescreen/prison
 	name = "Prison Monitor"
-	desc = "Используется для мониторинга помещений тюремного блока."
+	desc = "Used for watching Prison Wing holding areas."
 	network = list("Prison")
 
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"
-	desc = "Старый телевизор, подключенный к сети камер станции."
+	desc = "An old TV hooked into the station's camera network."
 	icon_state = "television"
 	icon_keyboard = null
 	icon_screen = "detective_tv"
@@ -398,7 +398,7 @@
 
 /obj/machinery/computer/security/mining
 	name = "outpost camera monitor"
-	desc = "Используется для доступа к различным камерам на аванпосте."
+	desc = "Used to access the various cameras on the outpost."
 	icon_keyboard = "mining_key"
 	icon_screen = "mining"
 	light_color = "#F9BBFC"
@@ -407,7 +407,7 @@
 
 /obj/machinery/computer/security/engineering
 	name = "engineering camera monitor"
-	desc = "Используется для отслеживания возникающих пожаров и аварий."
+	desc = "Used to monitor fires and breaches."
 	icon_keyboard = "power_key"
 	icon_screen = "engie_cams"
 	light_color = "#FAC54B"
@@ -439,7 +439,7 @@
 
 /obj/machinery/computer/security/labor_camp
 	name = "labor camp camera console"
-	desc = "Используется для слежки за каторжными заключенными."
+	desc = "Used to keep watch over penal labor prisoners."
 	network = list("Labor Camp")
 
 /obj/machinery/camera/labor_camp

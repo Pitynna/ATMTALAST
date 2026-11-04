@@ -279,15 +279,15 @@
 	payload = /obj/item/grenade/clusterbuster/emp
 
 /obj/item/grenade/clusterbuster/admincleaner
-	desc = "Для уборки <b>действительно</b> больших беспорядков."
+	desc = "For cleaning <b>really</b> big messes."
 	payload = /obj/item/grenade/chem_grenade/cleaner/everything
 
 /obj/item/grenade/clusterbuster/admincleaner/organic
-	desc = "Для очистки множества остатков, на множестве мест преступлений."
+	desc = "For cleaning remnants of many, many crime scenes."
 	payload = /obj/item/grenade/chem_grenade/cleaner/organic
 
 /obj/item/grenade/clusterbuster/admincleaner/object
-	desc = "Для уборки типичной корпоративной вечеринки Nanotrasen."
+	desc = "For cleaning up after a typical Nanotrasen office party."
 	payload = /obj/item/grenade/chem_grenade/cleaner/object
 
 #undef CLUSTERBUSTER_PAYLOAD_POWER

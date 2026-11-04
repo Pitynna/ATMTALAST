@@ -442,13 +442,13 @@
 
 /obj/item/toy/crayon/spraycan/paintkit/bigbrother
 	name = "Paintkit «Big Brother»"
-	desc = "Баллончик с черно-золотым корпусом. В комплекте идет одноразовый трафарет для покраски сварочного шлема. К нему прикреплена записка, на которой написано: «Eyes everywhere»."
+	desc = "A spray can with a black-and-gold casing. Includes a disposable stencil for painting a welding helmet and a note reading: Eyes everywhere."
 	icon_state = "spraycan_bigbrother"
 	weld_icons = list("Big Brother" = "welding_bigbrother")
 
 /obj/item/toy/crayon/spraycan/paintkit/slavic
 	name = "Paintkit «Slavic»"
-	desc = "Баллончик с корпусом цвета хаки. В комплекте идет одноразовый трафарет для покраски сварочного шлема. К нему прикреплена записка, на которой написано: «Head, eyes, blyad»."
+	desc = "A spray can with a khaki casing. Includes a disposable stencil for painting a welding helmet and a note reading: Head, eyes, blyad."
 	icon_state = "spraycan_slavic"
 	weld_icons = list("Slavic" = "welding_slavic")
 

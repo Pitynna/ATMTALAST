@@ -1,22 +1,12 @@
 /obj/item/grenade/clown_grenade
 	name = "Banana Grenade"
-	desc = "Банановые кожурки торговой марки \"ХОНК!\" в специальном аппликаторе, который позволяет быстро наносить их на большие поверхности."
+	desc = "HONK! brand Bananas. In a special applicator for rapid slipping of wide areas."
 	icon_state = "banana"
 	force = 2.0
 	var/stage = 0
 	var/state = 0
 	var/path = 0
 	var/affected_area = 2
-
-/obj/item/grenade/clown_grenade/get_ru_names()
-	return alist(
-		NOMINATIVE = "банановая граната",
-		GENITIVE = "банановой гранаты",
-		DATIVE = "банановой гранате",
-		ACCUSATIVE = "банановую гранату",
-		INSTRUMENTAL = "банановой гранатой",
-		PREPOSITIONAL = "банановой гранате",
-	)
 
 /obj/item/grenade/clown_grenade/prime()
 	. = ..()

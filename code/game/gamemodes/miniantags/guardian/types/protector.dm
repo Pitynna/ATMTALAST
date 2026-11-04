@@ -96,7 +96,7 @@
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 /obj/effect/forcefield/wizard/guardian
-	desc = "Непробиваемый барьер неизвестной сущности."
+	desc = "An impenetrable barrier created by an unknown entity."
 	icon_state = "at_shield2"
 	initial_duration = 15 SECONDS
 

@@ -95,7 +95,7 @@
 	qdel(src)
 
 /obj/effect/client_image_holder/hallucination/fake_grenade
-	name = "граната"
+	name = "grenade"
 	var/direction
 	var/distance = 9
 

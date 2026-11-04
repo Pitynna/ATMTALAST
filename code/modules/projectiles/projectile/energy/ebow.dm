@@ -10,16 +10,6 @@
 	stutter = 2 SECONDS
 	shockbull = TRUE
 
-/obj/projectile/energy/bolt/get_ru_names()
-	return alist(
-		NOMINATIVE = "болт",
-		GENITIVE = "болта",
-		DATIVE = "болту",
-		ACCUSATIVE = "болт",
-		INSTRUMENTAL = "болтом",
-		PREPOSITIONAL = "болте",
-	)
-
 /obj/projectile/energy/bolt/on_hit(atom/target)
 	. = ..()
 	var/mob/living/simple_animal/hostile/carp/carp = target
@@ -51,16 +41,6 @@
 	hitsound = 'sound/weapons/pierce.ogg'
 	nodamage = TRUE
 	shockbull = TRUE
-
-/obj/projectile/energy/bolttoy/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечный болт",
-		GENITIVE = "игрушечного болта",
-		DATIVE = "игрушечному болту",
-		ACCUSATIVE = "игрушечный болт",
-		INSTRUMENTAL = "игрушечным болтом",
-		PREPOSITIONAL = "игрушечном болте",
-	)
 
 /obj/projectile/energy/bolttoy/on_hit(atom/target, blocked, hit_zone)
 	. = ..()

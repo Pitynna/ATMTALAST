@@ -152,21 +152,11 @@
 
 /obj/structure/spider/terrorweb
 	name = "terror web"
-	desc = "Вязкая и липкая паутина."
+	desc = "It's stringy and sticky!"
 	max_integrity = 20 // two welders, or one laser shot (15 for the normal spider webs)
 	creates_cover = TRUE
 	icon_state = "stickyweb1"
 	var/creator_ckey = null
-
-/obj/structure/spider/terrorweb/get_ru_names()
-	return alist(
-		NOMINATIVE = "паутина Ужаса",
-		GENITIVE = "паутины Ужаса",
-		DATIVE = "паутине Ужаса",
-		ACCUSATIVE = "паутину Ужаса",
-		INSTRUMENTAL = "паутиной Ужаса",
-		PREPOSITIONAL = "паутине Ужаса",
-	)
 
 /obj/structure/spider/terrorweb/Initialize(mapload)
 	. = ..()

@@ -2,7 +2,7 @@
 //------------------------------------SUPPLY POD-------------------------------------//
 /obj/structure/closet/supplypod
 	name = "supply pod" //Names and descriptions are normally created with the setStyle() proc during initialization, but we have these default values here as a failsafe
-	desc = "Капсула снабжения \"Нанотрейзен\"."
+	desc = "A supply drop pod."
 	gender = FEMALE
 	icon = 'icons/obj/supplypods.dmi'
 	icon_state = "pod" //This is a common base sprite shared by a number of pods
@@ -56,16 +56,6 @@
 	var/shrapnel_type = /obj/projectile/shrapnel
 	var/shrapnel_magnitude = 3
 	var/list/reverse_option_list = list(MOB_OPTION=FALSE, UNANCHORED_OPTION=FALSE, ANCHORED_OPTION=FALSE, MECHA_OPTION=FALSE)
-
-/obj/structure/closet/supplypod/get_ru_names()
-	return alist(
-		NOMINATIVE = "капсула снабжения",
-		GENITIVE = "капсулы снабжения",
-		DATIVE = "капсуле снабжения",
-		ACCUSATIVE = "капсулу снабжения",
-		INSTRUMENTAL = "капсулой снабжения",
-		PREPOSITIONAL = "капсуле снабжения",
-	)
 
 /obj/structure/closet/supplypod/bluespacepod
 	style = /datum/pod_style/advanced
@@ -176,16 +166,6 @@
 	style = /datum/pod_style/syndicate
 	specialised = TRUE
 
-/obj/structure/closet/supplypod/back_to_station/get_ru_names()
-	return alist(
-		NOMINATIVE = "кроваво-красная капсула снабжения",
-		GENITIVE = "кроваво-красной капсулы снабжения",
-		DATIVE = "кроваво-красной капсуле снабжения",
-		ACCUSATIVE = "кроваво-красную капсулу снабжения",
-		INSTRUMENTAL = "кроваво-красной капсулой снабжения",
-		PREPOSITIONAL = "кроваво-красной капсуле снабжения",
-	)
-
 /obj/structure/closet/supplypod/deadmatch_missile
 	name = "cruise missile"
 	desc = "Огромная ракета, вероятно, запущенная из какой-то далёкой ракетной шахты в дальнем космосе."
@@ -195,16 +175,6 @@
 	specialised = TRUE
 	delays = list(POD_TRANSIT = 2.6 SECONDS, POD_FALLING = 0.4 SECONDS)
 	effectMissile = TRUE
-
-/obj/structure/closet/supplypod/deadmatch_missile/get_ru_names()
-	return alist(
-		NOMINATIVE = "крылатая ракета",
-		GENITIVE = "крылатой ракеты",
-		DATIVE = "крылатой ракете",
-		ACCUSATIVE = "крылатую ракету",
-		INSTRUMENTAL = "крылатой ракете",
-		PREPOSITIONAL = "крылатой ракетой",
-	)
 
 /obj/structure/closet/supplypod/deadmatch_missile/endgame
 	explosionSize = list(80, 100, 120, 0)
@@ -707,16 +677,6 @@
 	var/foreground = "rubble_fg"
 	var/verticle_offset = 0
 
-/obj/effect/supplypod_rubble/get_ru_names()
-	return alist(
-		NOMINATIVE = "обломки",
-		GENITIVE = "обломков",
-		DATIVE = "обломкам",
-		ACCUSATIVE = "обломки",
-		INSTRUMENTAL = "обломками",
-		PREPOSITIONAL = "обломках",
-	)
-
 /obj/effect/supplypod_rubble/proc/getForeground(obj/structure/closet/supplypod/pod)
 	var/mutable_appearance/rubble_overlay = mutable_appearance('icons/obj/supplypods.dmi', foreground)
 	rubble_overlay.appearance_flags = KEEP_APART|RESET_TRANSFORM
@@ -758,7 +718,7 @@
 
 /obj/effect/pod_landingzone //This is the object that forceMoves the supplypod to its location
 	name = "Landing Zone Indicator"
-	desc = "Голографическая проекция, обозначающая зону приземления чего-либо. Наверное, лучше стоять в стороне."
+	desc = "A holographic projection designating the landing zone of something. It's probably best to stand back."
 	icon = 'icons/obj/supplypods_32x32.dmi'
 	icon_state = "LZ"
 	layer = PROJECTILE_HIT_THRESHOLD_LAYER
@@ -767,16 +727,6 @@
 	var/obj/structure/closet/supplypod/pod //The supplyPod that will be landing ontop of this pod_landingzone
 	var/obj/effect/pod_landingzone_effect/helper
 	var/list/smoke_effects = new /list(13)
-
-/obj/effect/pod_landingzone/get_ru_names()
-	return alist(
-		NOMINATIVE = "индикатор зоны приземления",
-		GENITIVE = "индикатора зоны приземления",
-		DATIVE = "индикатору зоны приземления",
-		ACCUSATIVE = "индикатор зоны приземления",
-		INSTRUMENTAL = "индикатором зоны приземления",
-		PREPOSITIONAL = "индикаторе зоны приземления",
-	)
 
 /obj/effect/pod_landingzone/Initialize(mapload, podParam, single_order = null, clientman)
 	. = ..()

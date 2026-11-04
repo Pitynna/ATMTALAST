@@ -4,16 +4,6 @@
 	var/points = 0
 	var/ordernumber = 0
 
-/obj/item/paper/manifest/get_ru_names()
-	return alist(
-		NOMINATIVE = "манифест снабжения",
-		GENITIVE = "манифеста снабжения",
-		DATIVE = "манифесту снабжения",
-		ACCUSATIVE = "манифест снабжения",
-		INSTRUMENTAL = "манифестом снабжения",
-		PREPOSITIONAL = "манифесте снабжения",
-	)
-
 /obj/item/paper/manifest/proc/is_approved()
 	return LAZYLEN(stamped) && !is_denied()
 
@@ -431,7 +421,7 @@
  **************************/
 /obj/machinery/computer/supplycomp
 	name = "Supply Shuttle Console"
-	desc = "Компьютер, используемый для оформления заказов на поставку. Предназначен для пользования персоналом Отдела снабжения."
+	desc = "Used to order supplies."
 	icon_screen = "supply"
 	req_access = list(ACCESS_CARGO)
 	circuit = /obj/item/circuitboard/supplycomp
@@ -442,33 +432,13 @@
 	/// Can we order contraband
 	var/can_order_contraband = FALSE
 
-/obj/machinery/computer/supplycomp/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль оформления заказов",
-		GENITIVE = "консоли оформления заказов",
-		DATIVE = "консоли оформления заказов",
-		ACCUSATIVE = "консоль оформления заказов",
-		INSTRUMENTAL = "консолью оформления заказов",
-		PREPOSITIONAL = "консоли оформления заказов",
-	)
-
 /obj/machinery/computer/supplycomp/public
 	name = "Supply Ordering Console"
-	desc = "Используется для оформления заказов. Предназначено для общего пользования."
+	desc = "Used to order supplies from cargo staff."
 	icon_screen = "request"
 	circuit = /obj/item/circuitboard/ordercomp
 	req_access = list()
 	is_public = TRUE
-
-/obj/machinery/computer/supplycomp/public/get_ru_names()
-	return alist(
-		NOMINATIVE = "публичная консоль оформления заказов",
-		GENITIVE = "публичной консоли оформления заказов",
-		DATIVE = "публичной консоли оформления заказов",
-		ACCUSATIVE = "публичную консоль оформления заказов",
-		INSTRUMENTAL = "публичной консолью оформления заказов",
-		PREPOSITIONAL = "публичной консоли оформления заказов",
-	)
 
 /obj/machinery/computer/supplycomp/Initialize(mapload, obj/structure/computerframe/frame)
 	. = ..()

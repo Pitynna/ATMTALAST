@@ -1,5 +1,5 @@
 /obj/machinery/vox_shop
-	name = "Киконсоль Закиказов"
+	name = "Order Kikonsole"
 	desc = "Технология связывающая воксов на дальних рубежах."
 	icon = 'icons/obj/machines/trader_machine.dmi'
 	icon_state = "shop"

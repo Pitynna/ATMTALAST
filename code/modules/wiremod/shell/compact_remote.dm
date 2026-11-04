@@ -11,16 +11,6 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/compact_remote/get_ru_names()
-	return alist(
-		NOMINATIVE = "компактный пульт дистанционного управления",
-		GENITIVE = "компактного пульта дистанционного управления",
-		DATIVE = "компактному пульту дистанционного управления",
-		ACCUSATIVE = "компактный пульт дистанционного управления",
-		INSTRUMENTAL = "компактным пультом дистанционного управления",
-		PREPOSITIONAL = "компактном пульте дистанционного управления"
-	)
-
 /obj/item/compact_remote/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

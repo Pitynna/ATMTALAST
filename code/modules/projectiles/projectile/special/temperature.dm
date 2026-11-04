@@ -11,16 +11,6 @@
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	hitsound = 'sound/weapons/tap.ogg'
 
-/obj/projectile/temp/get_ru_names()
-	return alist(
-		NOMINATIVE = "температурный луч",
-		GENITIVE = "температурного луча",
-		DATIVE = "температурному лучу",
-		ACCUSATIVE = "температурный луч",
-		INSTRUMENTAL = "температурным лучом",
-		PREPOSITIONAL = "температурном луче",
-	)
-
 /obj/projectile/temp/Initialize(mapload, shot_temp)
 	if(!isnull(shot_temp))
 		temperature = shot_temp
@@ -181,16 +171,6 @@
 	nodamage = FALSE
 	temperature = 700 //Heats you up!
 	speed = 0.6
-
-/obj/projectile/temp/basilisk/magmawing/get_ru_names()
-	return alist(
-		NOMINATIVE = "опаляющий выброс",
-		GENITIVE = "опаляющего выброса",
-		DATIVE = "опаляющему выбросу",
-		ACCUSATIVE = "опаляющий выброс",
-		INSTRUMENTAL = "опаляющим выбросом",
-		PREPOSITIONAL = "опаляющем выбросе",
-	)
 
 /obj/projectile/temp/basilisk/magmawing/on_hit(atom/target, blocked = FALSE)
 	. = ..()

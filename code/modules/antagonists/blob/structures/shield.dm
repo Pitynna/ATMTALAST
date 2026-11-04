@@ -1,7 +1,7 @@
 /obj/structure/blob/shield
 	name = "strong blob"
 	icon_state = "blob_shield"
-	desc = "Сплошная стена слегка подергивающихся щупалец."
+	desc = "Some blob creature thingy"
 	var/damaged_desc = "Стена дергающихся щупалец."
 	max_integrity = BLOB_STRONG_MAX_HP
 	health_regen = BLOB_STRONG_HP_REGEN

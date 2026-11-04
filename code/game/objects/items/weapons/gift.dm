@@ -1,7 +1,7 @@
 /// Gifts to give to players, will contain a nice toy or other fun item for them to play with.
 /obj/item/gift
 	name = "gift"
-	desc = "Ураа!! Подарочееек!"
+	desc = "A wrapped item."
 	icon = 'icons/obj/storage/wrapping.dmi'
 	icon_state = "giftdeliverybox_map"
 	item_state = "gift"
@@ -14,16 +14,6 @@
 
 	/// Legacy shit for storage, useless, need to del it
 	var/obj/item/gift = null
-
-/obj/item/gift/get_ru_names()
-	return alist(
-		NOMINATIVE = "подарок",
-		GENITIVE = "подарка",
-		DATIVE = "подарку",
-		ACCUSATIVE = "подарок",
-		INSTRUMENTAL = "подарком",
-		PREPOSITIONAL = "подарке"
-	)
 
 /obj/item/gift/Initialize(mapload)
 	. = ..()

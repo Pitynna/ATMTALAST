@@ -36,7 +36,7 @@
 
 /obj/machinery/customat
 	name = "Customat"
-	desc = "Торговый автомат с кастомным содержимым."
+	desc = "A vending machine with a custom selection of goods."
 	icon = 'icons/obj/machines/customat.dmi'
 	icon_state = "custommate-off"
 	anchored = TRUE
@@ -152,16 +152,6 @@
 
 	/// Direct ref to the trunk pipe underneath us
 	var/obj/structure/disposalpipe/trunk/trunk
-
-/obj/machinery/customat/get_ru_names()
-	return alist(
-		NOMINATIVE = "кастомат",
-		GENITIVE = "кастомата",
-		DATIVE = "кастомату",
-		ACCUSATIVE = "кастомат",
-		INSTRUMENTAL = "кастоматом",
-		PREPOSITIONAL = "кастомате"
-	)
 
 /obj/machinery/customat/proc/set_up_components()
 	component_parts = list()

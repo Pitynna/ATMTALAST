@@ -1,6 +1,6 @@
 /obj/machinery/vending/clothesmate
 	name = "ClothesMate"
-	desc = "Автомат по продаже разнообразной одежды."
+	desc = "A vending machine for clothing."
 	icon_state = "clothes_off"
 	panel_overlay = "clothes_panel"
 	screen_overlay = "clothes"
@@ -155,16 +155,6 @@
 	)
 
 	refill_canister = /obj/item/vending_refill/clothing
-
-/obj/machinery/vending/clothesmate/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат ClothesMate",
-		GENITIVE = "торгового автомата ClothesMate",
-		DATIVE = "торговому автомату ClothesMate",
-		ACCUSATIVE = "торговый автомат ClothesMate",
-		INSTRUMENTAL = "торговым автоматом ClothesMate",
-		PREPOSITIONAL = "торговом автомате ClothesMate",
-	)
 
 /obj/machinery/vending/clothesmate/free
 	all_products_free = TRUE

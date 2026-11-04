@@ -5,7 +5,7 @@
 
 /obj/machinery/power/tracker
 	name = "solar tracker"
-	desc = "Устройство, управляющее углом наклона солнечных панелей в зависимости от направления солнечного света."
+	desc = "A solar directional tracker."
 	icon = 'icons/obj/engines_and_power/solar_panels.dmi'
 	icon_state = "solar_tracker"
 	density = TRUE
@@ -15,16 +15,6 @@
 	var/id = 0
 	var/sun_angle = 0		// sun angle as set by sun datum
 	var/obj/machinery/power/solar_control/control = null
-
-/obj/machinery/power/tracker/get_ru_names()
-	return alist(
-		NOMINATIVE = "солнечный датчик",
-		GENITIVE = "солнечного датчика",
-		DATIVE = "солнечному датчику",
-		ACCUSATIVE = "солнечный датчик",
-		INSTRUMENTAL = "солнечным датчиком",
-		PREPOSITIONAL = "солнечном датчке",
-	)
 
 /obj/machinery/power/tracker/Initialize(mapload, obj/item/solar_assembly/S)
 	. = ..()

@@ -604,19 +604,9 @@ GLOBAL_LIST_INIT(cardboard_recipes, list(
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "bone"
 	singular_name = "bone"
-	desc = "Кто-то выпил их молоко."
+	desc = "Someone's been drinking their milk."
 	force = 7
 	origin_tech = "materials=2;biotech=2"
-
-/obj/item/stack/sheet/bone/get_ru_names()
-	return alist(
-		NOMINATIVE = "кости",
-		GENITIVE = "костей",
-		DATIVE = "костям",
-		ACCUSATIVE = "кости",
-		INSTRUMENTAL = "костями",
-		PREPOSITIONAL = "костях",
-	)
 
 /obj/item/stack/sheet/razor_sharp_teeth
 	name = "razor sharp teeth"
@@ -632,17 +622,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list(
 	throwforce = 15
 	origin_tech = "materials=4;biotech=5"
 
-/obj/item/stack/sheet/razor_sharp_teeth/get_ru_names()
-	return alist(
-		NOMINATIVE = "бритвенно-острые зубы",
-		GENITIVE = "бритвенно-острых зубов",
-		DATIVE = "бритвенно-острым зубам",
-		ACCUSATIVE = "бритвенно-острые зубы",
-		INSTRUMENTAL = "бритвенно-острыми зубами",
-		PREPOSITIONAL = "бритвенно-острых зубах",
-	)
-
-// MARK: PLASTIC
 GLOBAL_LIST_INIT(plastic_recipes, list(
 	new /datum/stack_recipe_list("storage", list(
 		new /datum/stack_recipe("plastic bag", /obj/item/storage/bag/plasticbag, 3, on_floor = TRUE),

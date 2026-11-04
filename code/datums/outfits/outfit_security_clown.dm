@@ -135,38 +135,38 @@
 /obj/item/pda/clown/security
 	default_request_console_cartridge = /obj/item/cartridge/request_console/clown_security
 	icon_state = "pda-security-clown"
-	desc = "Переносной микрокомпьютер от Синктроник Системс, LTD. Этот КПК разработан по заказу тайного покупателя, пожелавшего хонкнуться нераскрытым. Поверхность покрыта политетрафторэтиленом и банановым налётом."
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. This PDA was commissioned by a secret customer who wished to remain honknonymous. Its surface is coated in polytetrafluoroethylene and banana residue."
 
 /obj/item/card/id/security/clown
 	name = "Security-Clown ID"
 	registered_name = "Officer Clown"
 	icon_state = "clownsecurity"
-	desc = "Смотря на эту карту, вы понимаете что Центральное командование обладает специфичным чувством юмора."
+	desc = "Looking at this card, you realize that Central Command has a peculiar sense of humor."
 	access = list(ACCESS_SECURITY, ACCESS_CLOWN, ACCESS_THEATRE, ACCESS_BRIG, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_WEAPONS)
 
 /obj/item/radio/headset/headset_sec/clown
-	name = "наушник клоуна службы безопасности"
-	desc = "Для использования элитных хонк-подразделений. HONK!"
+	name = "security clown's headset"
+	desc = "For use by elite honk units. HONK!"
 	icon_state = "sec_headset_alt"
 	item_state = "sec_headset_alt"
 	ks1type = /obj/item/encryptionkey/headset_sec
 	ks2type = /obj/item/encryptionkey/headset_service
 
 /obj/item/clothing/under/rank/security/clown
-	desc = "Костюм из прочного материала со следами бананового сока, обеспечивает надежную защиту своему владельцу. Когда-то вселенская федерация клоунов и Центрального Коммандование вело ожесточенные споры о введении этой униформы для надзирателя службы безопасности. По итогу споров было выдвинуто решение о запрете этой униформы в рядах НТ, а федерация клоунов забрала все экземпляры себе и пустило их в ход на личные нужды. HONK!"
+	desc = "A sturdy uniform stained with banana juice, offering its wearer reliable protection. The Universal Clown Federation and Central Command once fiercely debated issuing it to security wardens. Nanotrasen ultimately banned the uniform, and the Clown Federation reclaimed every copy for its own use. HONK!"
 	name = "warden clown jumpsuit"
 	icon_state = "security_clown"
 	item_color = "security_clown"
 
 /obj/item/gun/energy/clown/security
-	name = "ХОНК-ружье офицера"
-	desc = "Личное оружие клоуна офицера. Смертоносное для ментального состояния каждого на ком было применено. Запрещено конвенкцией НТ 12 раз. Разрешено конвенкцией советов клоунов 13 раз. На рукояти выгривирован \"HONK\" и нацарапаны пару зачернутых черточек.";
+	name = "officer's HONK gun"
+	desc = "A security clown's personal weapon. Devastating to the mental health of anyone on the receiving end. Banned twelve times by Nanotrasen conventions and approved thirteen times by clown councils. Its grip bears an engraved HONK and several crossed-out tally marks."
 	icon_state = "honkrifle_security"
 	item_state = null
 
 /obj/item/gun/energy/clown/security/warden
-	name = "Личное ХОНК-ружье смотрителя"
-	desc = "Личное смертоносное оружие клоуна-смотрителя, выданное за заслуги перед НТ и \[ДАННЫЕ ХОНКНУТЫ\]. Ходят слухи что это один из первых экземпляров произведенных во время войны мимов и клоунов на родной планете клоунов.";
+	name = "warden's personal HONK gun"
+	desc = "A clown warden's personal lethal weapon, awarded for services to Nanotrasen and (DATA HONKED). Rumor has it that this is one of the first examples manufactured during the mime-clown war on the clowns' homeworld."
 
 //=========== plasmamet clothes ===========
 /obj/item/clothing/head/helmet/space/plasmaman/security/security/clown

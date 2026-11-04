@@ -1,21 +1,11 @@
 /obj/vehicle/ridden/lavaboat
 	name = "lava boat"
-	desc = "Лодка, предназначенная для передвижения по лаве."
+	desc = "A boat used for traversing lava."
 	icon_state = "goliath_boat"
 	icon = 'icons/obj/lavaland/dragonboat.dmi'
 	layer = ABOVE_MOB_LAYER
 	key_type = /obj/item/oar
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-
-/obj/vehicle/ridden/lavaboat/get_ru_names()
-	return alist(
-		NOMINATIVE = "лавовая лодка",
-		GENITIVE = "лавой лодки",
-		DATIVE = "лавовой лодке",
-		ACCUSATIVE = "лавовую лодку",
-		INSTRUMENTAL = "лавовой лодкой",
-		PREPOSITIONAL = "лавовой лодке",
-	)
 
 /obj/vehicle/ridden/lavaboat/Initialize(mapload)
 	. = ..()
@@ -25,19 +15,9 @@
 
 /obj/item/ship_in_a_bottle
 	name = "ship in a bottle"
-	desc = "Крошечный корабль в бутылке."
+	desc = "A tiny ship inside a bottle."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "ship_bottle"
-
-/obj/item/ship_in_a_bottle/get_ru_names()
-	return alist(
-		NOMINATIVE = "корабль в бутылке",
-		GENITIVE = "корабля в бутылке",
-		DATIVE = "кораблю в бутылке",
-		ACCUSATIVE = "корабль в бутылке",
-		INSTRUMENTAL = "кораблём в бутылке",
-		PREPOSITIONAL = "корабле в бутылке",
-	)
 
 /obj/item/ship_in_a_bottle/attack_self(mob/user)
 	to_chat(user, "Вы не совсем понимаете, как они вообще загоняют корабли в эти штуки, но кажется знаете, как его оттуда достать.")
@@ -47,18 +27,8 @@
 
 /obj/vehicle/ridden/lavaboat/dragon
 	name = "mysterious boat"
-	desc = "Эта лодка может плыть туда, куда вы захотите, без помощи вёсел!"
+	desc = "This boat moves where you will it, without the need for an oar."
 	key_type = null
-
-/obj/vehicle/ridden/lavaboat/dragon/get_ru_names()
-	return alist(
-		NOMINATIVE = "таинственная лодка",
-		GENITIVE = "таинственной лодки",
-		DATIVE = "таинственной лодке",
-		ACCUSATIVE = "таинственную лодку",
-		INSTRUMENTAL = "таинственной лодкой",
-		PREPOSITIONAL = "таинственной лодке",
-	)
 
 /obj/vehicle/ridden/lavaboat/dragon/Initialize(mapload)
 	. = ..()
@@ -70,20 +40,10 @@
 	icon = 'icons/obj/vehicles/vehicles.dmi'
 	icon_state = "oar"
 	item_state = "rods"
-	desc = "Гидроприводной ручной двигатель. Не требует топлива. Cертифицировано для рек, луж и лавовых озёр." // Oh no, we've lost ore-oar joke
+	desc = "Not to be confused with the kind Research hassles you for."
 	attack_verb = list("ударил", "огрел", "вмазал", "стукнул", "шлёпнул", "врезал")
 	force = 12
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-
-/obj/item/oar/get_ru_names()
-	return alist(
-		NOMINATIVE = "весло",
-		GENITIVE = "весла",
-		DATIVE = "веслу",
-		ACCUSATIVE = "весло",
-		INSTRUMENTAL = "веслом",
-		PREPOSITIONAL = "весле",
-	)
 
 /datum/crafting_recipe/oar
 	name = "goliath bone oar"

@@ -68,5 +68,5 @@
 	gender = FEMALE
 	image_icon = 'icons/mob/human.dmi'
 	image_state = "mother"
-	name = "Ваша мать"
+	name = "Your Mother"
 	desc = "Она недовольна."

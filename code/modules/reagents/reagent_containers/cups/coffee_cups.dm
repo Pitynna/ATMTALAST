@@ -26,17 +26,6 @@
 	can_lid = TRUE
 	fill_icon_thresholds = list(55, 70, 85, 100)
 
-/obj/item/reagent_containers/cup/glass/coffee_cup/normal/get_ru_names()
-	return alist(
-		NOMINATIVE = "стакан кофе",
-		GENITIVE = "стакана кофе",
-		DATIVE = "стакану кофе",
-		ACCUSATIVE = "стакан кофе",
-		INSTRUMENTAL = "стаканом кофе",
-		PREPOSITIONAL = "стакане кофе"
-	)
-
-// MARK: Small coffee cup
 /obj/item/reagent_containers/cup/glass/coffee_cup/small
 	name = "small coffee cup"
 	desc = "Небольшой бумажный стакан. Обычно в таких подают кофе. Далеко не самый удобный."
@@ -46,16 +35,6 @@
 	volume = 30
 	fill_icon_thresholds = list(40, 60, 80, 100)
 
-/obj/item/reagent_containers/cup/glass/coffee_cup/small/get_ru_names()
-	return alist(
-		NOMINATIVE = "стаканчик кофе",
-		GENITIVE = "стаканчика кофе",
-		DATIVE = "стаканчику кофе",
-		ACCUSATIVE = "стаканчик кофе",
-		INSTRUMENTAL = "стаканчиком кофе",
-		PREPOSITIONAL = "стаканчике кофе"
-	)
-
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee
 	list_reagents = list("coffee" = 30)
 
@@ -63,16 +42,6 @@
 	name = "cup of suspicious liquid"
 	desc = "На боковой стороне крупными, едва заметными, чернилами напечатан символ химической опасности."
 	var/selected_reagent
-
-/obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor/small/get_ru_names()
-	return alist(
-		NOMINATIVE = "стаканчик подозрительной жидкости",
-		GENITIVE = "стаканчика подозрительной жидкости",
-		DATIVE = "стаканчику подозрительной жидкости",
-		ACCUSATIVE = "стаканчик подозрительной жидкости",
-		INSTRUMENTAL = "стаканчиком подозрительной жидкости",
-		PREPOSITIONAL = "стаканчике подозрительной жидкости"
-	)
 
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor/Initialize(mapload)
 	. = ..()

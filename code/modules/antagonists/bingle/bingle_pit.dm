@@ -45,16 +45,6 @@
 	/// Have we evolved our current bingles or not
 	var/bingles_evolved
 
-/obj/structure/bingle_hole/get_ru_names()
-	return alist(
-		NOMINATIVE = "яма Бинглов",
-		GENITIVE = "ямы Бинглов",
-		DATIVE = "яме Бинглов",
-		ACCUSATIVE = "яму Бинглов",
-		INSTRUMENTAL = "ямой Бинглов",
-		PREPOSITIONAL = "яме Бинглов"
-	)
-
 /obj/structure/bingle_hole/Initialize(mapload)
 	..()
 	bingle_team = GLOB.antagonist_teams[/datum/team/bingles]
@@ -447,16 +437,6 @@
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_OPAQUE
 	var/obj/structure/bingle_hole/parent_pit
-
-/obj/structure/bingle_pit_overlay/get_ru_names()
-	return alist(
-		NOMINATIVE = "яма Бинглов",
-		GENITIVE = "ямы Бинглов",
-		DATIVE = "яме Бинглов",
-		ACCUSATIVE = "яму Бинглов",
-		INSTRUMENTAL = "ямой Бинглов",
-		PREPOSITIONAL = "яме Бинглов"
-	)
 
 /obj/structure/bingle_pit_overlay/Initialize(mapload, obj/structure/bingle_hole/parent_pit)
 	. = ..()

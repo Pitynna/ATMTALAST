@@ -49,7 +49,7 @@
 
 // MARK: Dominator
 /obj/item/gun/energy/dominator
-	name = "Доминатор"
+	name = "Dominator"
 	desc = "Проприетарное высокотехнологичное оружие правоохранительной организации Sibyl System, произведённое специально для борьбы с преступностью."
 	icon = 'icons/obj/weapons/dominator.dmi'
 	icon_state = "dominator"
@@ -140,16 +140,6 @@
 /obj/item/gun/energy/specter/sibyl/Initialize(mapload)
 	. = ..()
 	install_sibyl()
-
-/obj/item/gun/energy/specter/get_ru_names()
-	return alist(
-		NOMINATIVE = "Спектр",
-		GENITIVE = "Спектра",
-		DATIVE = "Спектру",
-		ACCUSATIVE = "Спектр",
-		INSTRUMENTAL = "Спектром",
-		PREPOSITIONAL = "Спектре",
-	)
 
 /obj/item/gun/energy/specter/ComponentInitialize()
 	. = ..()

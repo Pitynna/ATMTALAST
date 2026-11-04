@@ -2,23 +2,13 @@
 
 /obj/item/bodybag
 	name = "body bag"
-	desc = "Сложенный мешок, предназначенный для хранения и транспортировки трупов."
+	desc = "A folded bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bodybag_folded"
 	item_state = "bodybag"
 	w_class = WEIGHT_CLASS_SMALL
 	///Stored path we use for spawning a new body bag entity when unfolded.
 	var/unfoldedbag_path = /obj/structure/closet/body_bag
-
-/obj/item/bodybag/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок для трупов",
-		GENITIVE = "мешка для трупов",
-		DATIVE = "мешку для трупов",
-		ACCUSATIVE = "мешок для трупов",
-		INSTRUMENTAL = "мешком для трупов",
-		PREPOSITIONAL = "мешке для трупов",
-	)
 
 /obj/item/bodybag/attack_self(mob/user)
 	if(loc == user)
@@ -59,7 +49,7 @@
 
 /obj/structure/closet/body_bag
 	name = "body bag"
-	desc = "Пластиковый мешок, предназначенный для хранения и транспортировки трупов."
+	desc = "A plastic bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bodybag_closed"
 	icon_closed = "bodybag_closed"
@@ -76,16 +66,6 @@
 	ignore_shoves = TRUE
 	var/foldedbag_path = /obj/item/bodybag
 	var/obj/item/bodybag/foldedbag_instance = null
-
-/obj/structure/closet/body_bag/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок для трупов",
-		GENITIVE = "мешка для трупов",
-		DATIVE = "мешку для трупов",
-		ACCUSATIVE = "мешок для трупов",
-		INSTRUMENTAL = "мешком для трупов",
-		PREPOSITIONAL = "мешке для трупов",
-	)
 
 /obj/structure/closet/body_bag/attackby(obj/item/I, mob/user, params)
 	if(is_pen(I))
@@ -170,55 +150,25 @@
 
 /obj/item/bodybag/biohazard
 	name = "biohazard bodybag"
-	desc = "Сложенный мешок, предназначенный для хранения и транспортировки инфицированных трупов."
+	desc = "A folded bag designed for the storage and transportation of infected cadavers."
 	icon_state = "bodybag_biohazard_folded"
 	item_state = "bodybag_biohazard"
 	unfoldedbag_path = /obj/structure/closet/body_bag/biohazard
 
-/obj/item/bodybag/biohazard/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок для инфицированных трупов",
-		GENITIVE = "мешка для инфицированных трупов",
-		DATIVE = "мешку для инфицированных трупов",
-		ACCUSATIVE = "мешок для инфицированных трупов",
-		INSTRUMENTAL = "мешком для инфицированных трупов",
-		PREPOSITIONAL = "мешке для инфицированных трупов",
-	)
-
 /obj/structure/closet/body_bag/biohazard
 	name = "biohazard body bag"
-	desc = "Пластиковый мешок, предназначенный для хранения и транспортировки инфицированных трупов."
+	desc = "A plastic bag designed for the storage and transportation of infected cadavers."
 	icon_state = "bodybag_biohazard_closed"
 	icon_closed = "bodybag_biohazard_closed"
 	icon_opened = "bodybag_biohazard_open"
 	foldedbag_path = /obj/item/bodybag/biohazard
 
-/obj/structure/closet/body_bag/biohazard/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок для инфицированных трупов",
-		GENITIVE = "мешка для инфицированных трупов",
-		DATIVE = "мешку для инфицированных трупов",
-		ACCUSATIVE = "мешок для инфицированных трупов",
-		INSTRUMENTAL = "мешком для инфицированных трупов",
-		PREPOSITIONAL = "мешке для инфицированных трупов",
-	)
-
 /obj/item/bodybag/bluespace
 	name = "bluespace body bag"
-	desc = "Сложенный блюспейс мешок, предназначенный для хранения и транспортировки трупов."
+	desc = "A folded bluespace body bag designed for the storage and transportation of cadavers."
 	icon_state = "bluebag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/bluespace
 	item_flags = NO_MAT_REDEMPTION
-
-/obj/item/bodybag/bluespace/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс мешок для трупов",
-		GENITIVE = "блюспейс мешка для трупов",
-		DATIVE = "блюспейс мешку для трупов",
-		ACCUSATIVE = "блюспейс мешок для трупов",
-		INSTRUMENTAL = "блюспейс мешком для трупов",
-		PREPOSITIONAL = "блюспейс мешке для трупов",
-	)
 
 /obj/item/bodybag/bluespace/examine(mob/user)
 	. = ..()
@@ -268,21 +218,11 @@
 
 /obj/structure/closet/body_bag/bluespace
 	name = "bluespace body bag"
-	desc = "Блюспейс мешок, предназначенный для хранения и транспортировки трупов."
+	desc = "A bluespace body bag designed for the storage and transportation of cadavers."
 	icon_state = "bluebag_closed"
 	icon_closed = "bluebag_closed"
 	icon_opened = "bluebag_open"
 	foldedbag_path = /obj/item/bodybag/bluespace
-
-/obj/structure/closet/body_bag/bluespace/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс мешок для трупов",
-		GENITIVE = "блюспейс мешка для трупов",
-		DATIVE = "блюспейс мешку для трупов",
-		ACCUSATIVE = "блюспейс мешок для трупов",
-		INSTRUMENTAL = "блюспейс мешком для трупов",
-		PREPOSITIONAL = "блюспейс мешке для трупов",
-	)
 
 /obj/structure/closet/body_bag/bluespace/attempt_fold(mob/living/carbon/human/the_folder)
 	. = FALSE
@@ -331,81 +271,38 @@
 
 /obj/item/bodybag/environmental
 	name = "environmental protection bag"
-	desc = "Продвинутый мешок, созданный для защиты от опасной окружающей среды или экстремально низкого давления."
+	desc = "An advanced bag designed to protect against hazardous environments or extremely low pressure."
 	icon_state = "envirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental
 	w_class = WEIGHT_CLASS_NORMAL //It's reinforced and insulated, like a beefed-up sleeping bag, so it has a higher bulkiness than regular bodybag
 	resistance_flags = ACID_PROOF | FIRE_PROOF | FREEZE_PROOF
 
-/obj/item/bodybag/environmental/get_ru_names()
-	return alist(
-		NOMINATIVE = "защитный мешок",
-		GENITIVE = "защитного мешка",
-		DATIVE = "защитному мешку",
-		ACCUSATIVE = "защитный мешок",
-		INSTRUMENTAL = "защитным мешком",
-		PREPOSITIONAL = "защитном мешке"
-	)
-
 /obj/item/bodybag/environmental/nanotrasen
 	name = "elite environmental protection bag"
-	desc = "Продвинутая версия защитного мешка, способная полностью обезопасить содержимое от любого воздействия внешней среды."
+	desc = "An advanced protective bag capable of completely shielding its contents from environmental hazards."
 	icon_state = "ntenvirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/nanotrasen
 	resistance_flags = ACID_PROOF | FIRE_PROOF | FREEZE_PROOF | LAVA_PROOF
 
-/obj/item/bodybag/environmental/nanotrasen/get_ru_names()
-	return alist(
-		NOMINATIVE = "элитный защитный мешок",
-		GENITIVE = "элитного защитного мешка",
-		DATIVE = "элитному защитному мешку",
-		ACCUSATIVE = "элитный защитный мешок",
-		INSTRUMENTAL = "элитным защитным мешком",
-		PREPOSITIONAL = "элитном защитном мешке"
-	)
-
 /obj/item/bodybag/environmental/prisoner
 	name = "prisoner transport bag"
-	desc = "Мешок, созданный для транспортировки заключённых в условиях враждебной окружающей среды. Оснащён стяжками, \
-			позволяющими насильно удерживать заключённого внутри."
+	desc = "A bag designed to transport prisoners through hostile environments. Equipped with restraints to forcibly keep its occupant inside."
 	icon_state = "prisonerenvirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/prisoner
-
-/obj/item/bodybag/environmental/prisoner/get_ru_names()
-	return alist(
-		NOMINATIVE = "защитный мешок для заключённых",
-		GENITIVE = "защитного мешка для заключённых",
-		DATIVE = "защитному мешку для заключённых",
-		ACCUSATIVE = "защитный мешок для заключённых",
-		INSTRUMENTAL = "защитным мешком для заключённых",
-		PREPOSITIONAL = "защитном мешке для заключённых"
-	)
 
 /obj/item/bodybag/environmental/prisoner/pressurized
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/prisoner/pressurized
 
 /obj/item/bodybag/environmental/prisoner/syndicate
 	name = "syndicate prisoner transport bag"
-	desc = "Мешок, созданный для транспортировки пленников синдиката в условиях враждебной окружающей среды. Оснащён стяжками, \
-			позволяющими насильно удерживать пленника внутри."
+	desc = "A bag designed to transport Syndicate captives through hostile environments. Equipped with restraints to forcibly keep its occupant inside."
 	icon_state = "syndieenvirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/prisoner/pressurized/syndicate
 	resistance_flags = ACID_PROOF | FIRE_PROOF | FREEZE_PROOF | LAVA_PROOF
 
-/obj/item/bodybag/environmental/prisoner/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок для заключённых синдиката",
-		GENITIVE = "мешка для заключённых синдиката",
-		DATIVE = "мешку для заключённых синдиката",
-		ACCUSATIVE = "мешок для заключённых синдиката",
-		INSTRUMENTAL = "мешком для заключённых синдиката",
-		PREPOSITIONAL = "мешке для заключённых синдиката"
-	)
-
-/// Environmental bags. They protect against bad weather.
 /obj/structure/closet/body_bag/environmental
 	name = "environmental protection bag"
-	desc = "Продвинутый мешок, созданный для защиты от опасной окружающей среды или экстремально низкого давления."
+	desc = "An advanced bag designed to protect against hazardous environments or extremely low pressure."
 	icon_state = "envirobag"
 	mob_storage_capacity = 1
 	contents_pressure_protection = 0.8
@@ -415,16 +312,6 @@
 	var/list/weather_protection = list(TRAIT_ASHSTORM_IMMUNE, TRAIT_RADSTORM_IMMUNE, TRAIT_SNOWSTORM_IMMUNE) // Does not protect against lava or the The Floor Is Lava spell.
 	/// The contents of the gas to be distributed to an occupant. Set in Initialize()
 	var/datum/gas_mixture/air_contents = null
-
-/obj/structure/closet/body_bag/environmental/get_ru_names()
-	return alist(
-		NOMINATIVE = "защитный мешок",
-		GENITIVE = "защитного мешка",
-		DATIVE = "защитному мешку",
-		ACCUSATIVE = "защитный мешок",
-		INSTRUMENTAL = "защитным мешком",
-		PREPOSITIONAL = "защитном мешке"
-	)
 
 /obj/structure/closet/body_bag/environmental/Initialize(mapload)
 	. = ..()
@@ -471,28 +358,16 @@
 
 /obj/structure/closet/body_bag/environmental/nanotrasen
 	name = "elite environmental protection bag"
-	desc = "Продвинутая версия защитного мешка, способная полностью обезопасить содержимое от любого воздействия внешней среды."
+	desc = "An advanced protective bag capable of completely shielding its contents from environmental hazards."
 	icon_state = "ntenvirobag"
 	contents_pressure_protection = 1
 	contents_thermal_insulation = 1
 	foldedbag_path = /obj/item/bodybag/environmental/nanotrasen
 	weather_protection = list(TRAIT_WEATHER_IMMUNE)
 
-/obj/structure/closet/body_bag/environmental/nanotrasen/get_ru_names()
-	return alist(
-		NOMINATIVE = "элитный защитный мешок",
-		GENITIVE = "элитного защитного мешка",
-		DATIVE = "элитному защитному мешку",
-		ACCUSATIVE = "элитный защитный мешок",
-		INSTRUMENTAL = "элитным защитным мешком",
-		PREPOSITIONAL = "элитном защитном мешке"
-	)
-
-/// Securable enviro. bags
 /obj/structure/closet/body_bag/environmental/prisoner
 	name = "prisoner transport bag"
-	desc = "Мешок, созданный для транспортировки заключённых в условиях враждебной окружающей среды. Оснащён зажимами, \
-			позволяющими насильно удерживать заключённого внутри."
+	desc = "A bag designed to transport prisoners through hostile environments. Equipped with clamps to forcibly keep its occupant inside."
 	icon_state = "prisonerenvirobag"
 	foldedbag_path = /obj/item/bodybag/environmental/prisoner
 	breakout_time = 1 MINUTES
@@ -502,16 +377,6 @@
 	var/sinched = FALSE
 	/// The sound that plays when the bag is done sinching.
 	var/sinch_sound = 'sound/items/handling/equip/toolbelt_equip.ogg'
-
-/obj/structure/closet/body_bag/environmental/prisoner/get_ru_names()
-	return alist(
-		NOMINATIVE = "защитный мешок для заключённых",
-		GENITIVE = "защитного мешка для заключённых",
-		DATIVE = "защитному мешку для заключённых",
-		ACCUSATIVE = "защитный мешок для заключённых",
-		INSTRUMENTAL = "защитным мешком для заключённых",
-		PREPOSITIONAL = "защитном мешке для заключённых"
-	)
 
 /obj/structure/closet/body_bag/environmental/prisoner/attempt_fold(mob/living/carbon/human/the_folder)
 	if(sinched)
@@ -615,9 +480,7 @@
 
 /obj/structure/closet/body_bag/environmental/prisoner/syndicate
 	name = "syndicate prisoner transport bag"
-	desc = "Мешок, используемый \"Синдикатом\" для транспортировки живых целей в условиях враждебной окружающей среды. Оснащён зажимами, \
-			позволяющими насильно удерживать цель внутри. Зарекомендовал себя как эффективный инструмент после использования \
-			в серии успешных похищений."
+	desc = "A bag used by the Syndicate to transport living targets through hostile environments. Equipped with clamps to forcibly keep its target inside. Proven effective in a series of successful kidnappings."
 	icon_state = "syndieenvirobag"
 	contents_pressure_protection = 1
 	contents_thermal_insulation = 1
@@ -636,21 +499,11 @@
 
 /obj/structure/closet/body_bag/environmental/hardlight
 	name = "hardlight bodybag"
-	desc = "Мешок, созданный на основе твёрдого света. Достаточно крепкий, чтобы поддерживать атмосферу внутри."
+	desc = "A bag made from hard light, strong enough to maintain an atmosphere inside."
 	icon_state = "holobag_med"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	foldedbag_path = null
 	weather_protection = list(TRAIT_SNOWSTORM_IMMUNE)
-
-/obj/structure/closet/body_bag/environmental/hardlight/get_ru_names()
-	return alist(
-		NOMINATIVE = "голографический защитный мешок",
-		GENITIVE = "голографического защитного мешка",
-		DATIVE = "голографическому защитному мешку",
-		ACCUSATIVE = "голографический защитный мешок",
-		INSTRUMENTAL = "голографическим защитным мешком",
-		PREPOSITIONAL = "голографическом защитном мешке"
-	)
 
 /obj/structure/closet/body_bag/environmental/hardlight/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type in list(BRUTE, BURN))
@@ -658,23 +511,11 @@
 
 /obj/structure/closet/body_bag/environmental/prisoner/hardlight
 	name = "hardlight prisoner bodybag"
-	desc = "Мешок, созданный на основе твёрдого света. Достаточно крепкий, чтобы поддерживать атмосферу внутри. \
-			Имеет зажимы для транспортировки заключённых."
+	desc = "A bag made from hard light, strong enough to maintain an atmosphere inside. Includes clamps for transporting prisoners."
 	icon_state = "holobag_sec"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	foldedbag_path = null
 	weather_protection = list(TRAIT_SNOWSTORM_IMMUNE)
-
-/obj/structure/closet/body_bag/environmental/prisoner/hardlight/get_ru_names()
-	return alist(
-		NOMINATIVE = "голографический защитный мешок для заключённых",
-		GENITIVE = "голографического защитного мешка для заключённых",
-		DATIVE = "голографическому защитному мешку для заключённых",
-		ACCUSATIVE = "голографический защитный мешок для заключённых",
-		INSTRUMENTAL = "голографическим защитным мешком для заключённых",
-		PREPOSITIONAL = "голографическом защитном мешке для заключённых"
-	)
-
 
 /obj/structure/closet/body_bag/environmental/prisoner/hardlight/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	if(damage_type in list(BRUTE, BURN))

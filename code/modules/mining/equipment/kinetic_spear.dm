@@ -43,16 +43,6 @@ Kinetic spear - alternative mining weapon, used as... spear.
 	icon_state = "syndie_spear"
 	core = /obj/item/mining_spear_core/syndie
 
-/obj/item/twohanded/mining_spear/get_ru_names()
-	return alist(
-			NOMINATIVE = "прото-кинетическое копьё",
-			GENITIVE = "прото-кинетического попья",
-			DATIVE = "прото-кинетическому копью",
-			ACCUSATIVE = "прото-кинетическое копьё",
-			INSTRUMENTAL = "прото-кинетическим копьем",
-			PREPOSITIONAL = "прото-кинетическом копье",
-	)
-
 /obj/item/twohanded/mining_spear/Initialize(mapload)
 	. = ..()
 	if(!core)
@@ -294,16 +284,6 @@ Spear cores. Gives spear special abilities and quirks
 	var/spear_recall_after_miss = FALSE
 	var/spear_can_hurt_on_station = FALSE
 
-/obj/item/mining_spear_core/get_ru_names()
-	return alist(
-			NOMINATIVE = "ядро прото-кинетического попья",
-			GENITIVE = "ядра прото-кинетического попья",
-			DATIVE = "ядру прото-кинетического попья",
-			ACCUSATIVE = "ядро прото-кинетического попья",
-			INSTRUMENTAL = "ядром прото-кинетического попья",
-			PREPOSITIONAL = "ядре прото-кинетического попья",
-	)
-
 /obj/item/mining_spear_core/proc/on_insert(obj/item/twohanded/mining_spear/spear)
 	spear.force = spear_force
 	spear.force_unwielded = spear_force_unwielded
@@ -338,16 +318,6 @@ Spear cores. Gives spear special abilities and quirks
 	name = "standart spear core"
 	desc = "Стандартное ядро кинетического копья. Не имеет явных особенностей по сравнению с другими ядрами."
 
-/obj/item/mining_spear_core/standart/get_ru_names()
-	return alist(
-			NOMINATIVE = "стандартное ядро прото-кинетического копья",
-			GENITIVE = "стандартного ядра прото-кинетического копья",
-			DATIVE = "стандартному ядру прото-кинетического копья",
-			ACCUSATIVE = "стандартное ядро прото-кинетического копья",
-			INSTRUMENTAL = "стандартным ядром прото-кинетического копья",
-			PREPOSITIONAL = "стандартном ядре прото-кинетического копья",
-	)
-
 /obj/item/mining_spear_core/standart/get_effect_description()
 	return "Вызывает кровотечение у фауны, нанося ей массивные повреждения."
 
@@ -368,16 +338,6 @@ Spear cores. Gives spear special abilities and quirks
 	spear_overlay = "overlay_yellow"
 	charged_glow_color = "#F0B541"
 
-/obj/item/mining_spear_core/recall/get_ru_names()
-	return alist(
-			NOMINATIVE = "улучшенное ядро прото-кинетического копья",
-			GENITIVE = "улучшенного ядра прото-кинетического копья",
-			DATIVE = "улучшенному ядру прото-кинетического копья",
-			ACCUSATIVE = "улучшенное ядро прото-кинетического копья",
-			INSTRUMENTAL = "улучшенным ядром прото-кинетического копья",
-			PREPOSITIONAL = "улучшенном ядре прото-кинетического копья",
-	)
-
 /obj/item/mining_spear_core/recall/get_effect_description()
 	return "Копье всегда будет призвано обратно, даже в случае промаха."
 
@@ -392,16 +352,6 @@ Spear cores. Gives spear special abilities and quirks
 	spear_force_wielded = 24
 	spear_throwforce = 26
 	spear_bonus_fauna_damage = 45
-
-/obj/item/mining_spear_core/hunting/get_ru_names()
-	return alist(
-			NOMINATIVE = "охотничье ядро прото-кинетического копья",
-			GENITIVE = "охотничьего ядра прото-кинетического копья",
-			DATIVE = "охотничьему ядру прото-кинетического копья",
-			ACCUSATIVE = "охотничье ядро прото-кинетического копья",
-			INSTRUMENTAL = "охотничьим ядром прото-кинетического копья",
-			PREPOSITIONAL = "охотничьем ядре прото-кинетического копья",
-	)
 
 /obj/item/mining_spear_core/hunting/get_effect_description()
 	return "Усиливает ущерб от попаданий по фауне."
@@ -418,16 +368,6 @@ Spear cores. Gives spear special abilities and quirks
 	/// How much do we heal in our charged effect?
 	var/heal_amount = 10
 
-/obj/item/mining_spear_core/healing/get_ru_names()
-	return alist(
-			NOMINATIVE = "лечебное ядро прото-кинетического копья",
-			GENITIVE = "лечебного ядра прото-кинетического копья",
-			DATIVE = "лечебному ядру прото-кинетического копья",
-			ACCUSATIVE = "лечебное ядро прото-кинетического копья",
-			INSTRUMENTAL = "лечебным ядром прото-кинетического копья",
-			PREPOSITIONAL = "лечебном ядре прото-кинетического копья",
-	)
-
 /obj/item/mining_spear_core/healing/get_effect_description()
 	return "Лечит пользователя за каждое успешное попадание по фауне."
 
@@ -440,16 +380,6 @@ Spear cores. Gives spear special abilities and quirks
 	desc = "Модифицированное ядро кинетического копья, наносящее ущерб всей фауне поблизости. Безопасно для использования рядом с гуманоидами."
 	spear_overlay = "overlay_purple"
 	charged_glow_color = "#CC2F7B"
-
-/obj/item/mining_spear_core/aoe_effect/get_ru_names()
-	return alist(
-			NOMINATIVE = "взрывное ядро прото-кинетического копья",
-			GENITIVE = "взрывного ядра прото-кинетического копья",
-			DATIVE = "взрывному ядру прото-кинетического копья",
-			ACCUSATIVE = "взрывное ядро прото-кинетического копья",
-			INSTRUMENTAL = "взрывным ядром прото-кинетического копья",
-			PREPOSITIONAL = "взрывном ядре прото-кинетического копья",
-	)
 
 /obj/item/mining_spear_core/aoe_effect/get_effect_description()
 	return "Наносит ущерб и накладывает кровотечение всей фауне в радиусе пяти тайлов от места попадания."
@@ -477,16 +407,6 @@ Spear cores. Gives spear special abilities and quirks
 	spear_bonus_fauna_damage = 25
 	spear_recall_after_miss = TRUE
 	spear_can_hurt_on_station = TRUE
-
-/obj/item/mining_spear_core/syndie/get_ru_names()
-	return alist(
-			NOMINATIVE = "синди-ядро прото-кинетического копья",
-			GENITIVE = "синди-ядра прото-кинетического копья",
-			DATIVE = "синди-ядру прото-кинетического копья",
-			ACCUSATIVE = "синди-ядро прото-кинетического копья",
-			INSTRUMENTAL = "синди-ядром прото-кинетического копья",
-			PREPOSITIONAL = "синди-ядре прото-кинетического копья",
-	)
 
 /obj/item/mining_spear_core/syndie/get_effect_description()
 	return "Позволяет вести охоту на людей на станции. При поподании по гуманоиду лезвие копья отделяется и застревает в вашей жертве."

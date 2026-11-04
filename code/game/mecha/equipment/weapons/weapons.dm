@@ -389,31 +389,11 @@
 	icon_state = "mecha_missilerack"
 	projectile = /obj/item/missile/heavy
 
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/heavy/get_ru_names()
-	return alist(
-		NOMINATIVE = "тяжёлая пусковая ракетная установка SRX-13",
-		GENITIVE = "тяжёлой пусковой ракетной установки SRX-13",
-		DATIVE = "тяжёлой пусковой ракетной установке SRX-13",
-		ACCUSATIVE = "тяжёлую пусковую ракетную установку SRX-13",
-		INSTRUMENTAL = "тяжёлой пусковой ракетной установкой SRX-13",
-		PREPOSITIONAL = "тяжёлой пусковой ракетной установке SRX-13",
-	)
-
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/medium
 	name = "SRM-8 Missile Rack"
 	gender = FEMALE
 	icon_state = "mecha_missilerack"
 	projectile = /obj/item/missile
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/medium/get_ru_names()
-	return alist(
-		NOMINATIVE = "пусковая ракетная установка SRM-8",
-		GENITIVE = "пусковой ракетной установки SRM-8",
-		DATIVE = "пусковой ракетной установке SRM-8",
-		ACCUSATIVE = "пусковую ракетную установку SRM-8",
-		INSTRUMENTAL = "пусковой ракетной установкой SRM-8",
-		PREPOSITIONAL = "пусковой ракетной установке SRM-8",
-	)
 
 /obj/item/missile
 	icon = 'icons/obj/weapons/grenade.dmi'

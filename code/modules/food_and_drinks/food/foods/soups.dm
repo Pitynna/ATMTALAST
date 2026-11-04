@@ -103,16 +103,6 @@
 	tastes = list("wood" = 1)
 	foodtype = GROSS
 
-/obj/item/reagent_containers/food/snacks/soup/sawdustsoup/get_ru_names()
-	return alist(
-		NOMINATIVE = "суп из опилок",
-		GENITIVE = "супа из опилок",
-		DATIVE = "супу из опилок",
-		ACCUSATIVE = "суп из опилок",
-		INSTRUMENTAL = "супом из опилок",
-		PREPOSITIONAL = "супе из опилок",
-	)
-
 /obj/item/reagent_containers/food/snacks/soup/tomatosoup
 	name = "tomato soup"
 	desc = "Drinking this feels like being a vampire! A tomato vampire..."
@@ -189,16 +179,6 @@
 	antable = FALSE
 	bitesize = 0.01
 	randomize_position = FALSE
-
-/obj/item/reagent_containers/food/snacks/soup/stew/batya/get_ru_names()
-	return alist(
-		NOMINATIVE = "великий суп",
-		GENITIVE = "великого супа",
-		DATIVE = "великому супу",
-		ACCUSATIVE = "великий суп",
-		INSTRUMENTAL = "великим супом",
-		PREPOSITIONAL = "великом супе",
-	)
 
 /obj/item/reagent_containers/food/snacks/soup/stewedsoymeat
 	name = "stewed soy meat"

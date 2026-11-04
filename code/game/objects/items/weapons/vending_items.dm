@@ -1,6 +1,6 @@
 /obj/item/vending_refill
 	name = "resupply canister"
-	desc = "Контейнер, предназначенный для пополнения ассортимента торгового автомата."
+	desc = "A vending machine restock cart."
 	gender = MALE
 	icon = 'icons/obj/vending_restock.dmi'
 	icon_state = "refill_snack"
@@ -20,16 +20,6 @@
 	var/list/product_categories
 	var/list/contraband
 	var/list/premium
-
-/obj/item/vending_refill/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор пополнения",
-		GENITIVE = "набора пополнения",
-		DATIVE = "набору пополнения",
-		ACCUSATIVE = "набор пополнения",
-		INSTRUMENTAL = "набором пополнения",
-		PREPOSITIONAL = "наборе пополнения",
-	)
 
 /obj/item/vending_refill/Initialize(mapload)
 	. = ..()

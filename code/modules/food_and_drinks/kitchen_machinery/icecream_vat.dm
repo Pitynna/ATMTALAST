@@ -13,16 +13,6 @@
 	var/obj/item/reagent_containers/cup/beaker = null
 	var/useramount = 15	//Last used amount
 
-/obj/machinery/icemachine/get_ru_names()
-	return alist(
-		NOMINATIVE = "Крем-Мастер Делюкс",
-		GENITIVE = "Крем-Мастер Делюкс",
-		DATIVE = "Крем-Мастер Делюкс",
-		ACCUSATIVE = "Крем-Мастер Делюкс",
-		INSTRUMENTAL = "Крем-Мастер Делюкс",
-		PREPOSITIONAL = "Крем-Мастер Делюкс"
-	)
-
 /obj/machinery/icemachine/proc/generate_name(reagent_name)
 	var/name_prefix = pick("Капитан", "Доктор", "Мега", "Весёлый", "Генерал", "Профессор")
 	var/name_suffix = pick(" Кремберос", " Взбивайс", " Сладкоежка", " Муссон", " Пломбир", " Эскимо", " Зефирко")

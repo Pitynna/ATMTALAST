@@ -1,6 +1,6 @@
 /obj/machinery/vending/tool
 	name = "YouTool"
-	desc = "Инструменты для инструментов."
+	desc = "Tools for tools."
 	icon_state = "tool_off"
 	panel_overlay = "tool_panel"
 	screen_overlay = "tool"
@@ -33,16 +33,6 @@
 	)
 	contraband = list(
 		/obj/item/clothing/gloves/color/yellow = 1,
-	)
-
-/obj/machinery/vending/tool/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат YouTool",
-		GENITIVE = "торгового автомата YouTool",
-		DATIVE = "торговому автомату YouTool",
-		ACCUSATIVE = "торговый автомат YouTool",
-		INSTRUMENTAL = "торговым автоматом YouTool",
-		PREPOSITIONAL = "торговом автомате YouTool",
 	)
 
 /obj/machinery/vending/tool/free

@@ -1,5 +1,5 @@
 /obj/projectile/energy/bsg
-	name = "Сфера чистой БС энергии"
+	name = "orb of pure bluespace energy"
 	icon_state = "bluespace"
 	impact_effect_type = /obj/effect/temp_visual/bsg_kaboom
 	damage = 60

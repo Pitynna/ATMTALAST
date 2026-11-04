@@ -7,16 +7,6 @@
 	slot = INTERNAL_ORGAN_BRAIN_COMPUTER_INTERFACE
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/organ/internal/cyberimp/brain/bci/get_ru_names()
-	return alist(
-		NOMINATIVE = "интерфейс \"Мозг-Компьютер\"",
-		GENITIVE = "интерфейса \"Мозг-Компьютер\"",
-		DATIVE = "интерфейсу \"Мозг-Компьютер\"",
-		ACCUSATIVE = "интерфейс \"Мозг-Компьютер\"",
-		INSTRUMENTAL = "интерфейсом \"Мозг-Компьютер\"",
-		PREPOSITIONAL = "интерфейсе \"Мозг-Компьютер\""
-	)
-
 /obj/item/organ/internal/cyberimp/brain/bci/Initialize(mapload)
 	. = ..()
 
@@ -306,16 +296,6 @@
 	var/obj/item/organ/internal/cyberimp/brain/bci/bci_to_implant
 
 	COOLDOWN_DECLARE(message_cooldown)
-
-/obj/machinery/bci_implanter/get_ru_names()
-	return alist(
-		NOMINATIVE = "камера манипуляций интерфейсом \"Мозг-компьютер\"",
-		GENITIVE = "камеры манипуляций интерфейсом \"Мозг-компьютер\"",
-		DATIVE = "камере манипуляций интерфейсом \"Мозг-компьютер\"",
-		ACCUSATIVE = "камеру манипуляций интерфейсом \"Мозг-компьютер\"",
-		INSTRUMENTAL = "камерой манипуляций интерфейсом \"Мозг-компьютер\"",
-		PREPOSITIONAL = "камере манипуляций интерфейсом \"Мозг-компьютер\""
-	)
 
 /obj/machinery/bci_implanter/examine(mob/user)
 	. = ..()

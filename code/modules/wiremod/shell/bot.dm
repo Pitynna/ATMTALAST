@@ -12,16 +12,6 @@
 	light_system = OVERLAY_LIGHT
 	light_on = FALSE
 
-/obj/structure/bot/get_ru_names()
-	return alist(
-		NOMINATIVE = "бот",
-		GENITIVE = "бота",
-		DATIVE = "боту",
-		ACCUSATIVE = "бота",
-		INSTRUMENTAL = "ботом",
-		PREPOSITIONAL = "боте"
-	)
-
 /obj/structure/bot/Initialize(mapload)
 	. = ..()
 	AddComponent( \

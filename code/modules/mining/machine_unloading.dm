@@ -10,16 +10,6 @@
 	output_dir = EAST
 	speed_process = 1
 
-/obj/machinery/mineral/unloading_machine/get_ru_names()
-	return alist(
-		NOMINATIVE = "разгрузочная машина",
-		GENITIVE = "разгрузочной машины",
-		DATIVE = "разгрузочной машине",
-		ACCUSATIVE = "разгрузочную машину",
-		INSTRUMENTAL = "разгрузочной машиной",
-		PREPOSITIONAL = "разгрузочной машине",
-	)
-
 /obj/machinery/mineral/unloading_machine/process()
 	var/turf/T = get_step(src,input_dir)
 	if(T)

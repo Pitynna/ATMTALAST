@@ -35,16 +35,6 @@ GLOBAL_LIST_EMPTY(active_entertainment_cameras)
 	. = ..()
 	soundloop = new(src, FALSE)
 
-/obj/item/broadcast_camera/get_ru_names()
-	return alist(
-		NOMINATIVE = "трансляционная камера",
-		GENITIVE = "трансляционной камеры",
-		DATIVE = "трансляционной камере",
-		ACCUSATIVE = "трансляционную камеру",
-		INSTRUMENTAL = "трансляционной камерой",
-		PREPOSITIONAL = "трансляционной камере",
-	)
-
 /obj/item/broadcast_camera/Destroy(force)
 	if(camera) // null until toggled on
 		GLOB.active_entertainment_cameras -= camera

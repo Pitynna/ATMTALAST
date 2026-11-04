@@ -2,7 +2,7 @@
 
 /obj/item/defibrillator
 	name = "defibrillator"
-	desc = "Прибор, генерирующий высоковольтный импульс, позволяющий запустить остановившееся сердце."
+	desc = "A device that delivers powerful shocks to detachable paddles that resuscitate incapacitated patients."
 	icon = 'icons/obj/defib.dmi'
 	icon_state = "defibunit"
 	item_state = "defibunit"
@@ -37,16 +37,6 @@
 	var/emag_proof = FALSE
 	/// Type of paddles that should be attached to this defib.
 	var/obj/item/twohanded/shockpaddles/paddle_type = /obj/item/twohanded/shockpaddles
-
-/obj/item/defibrillator/get_ru_names()
-	return alist(
-		NOMINATIVE = "дефибриллятор",
-		GENITIVE = "дефибриллятора",
-		DATIVE = "дефибриллятору",
-		ACCUSATIVE = "дефибриллятор",
-		INSTRUMENTAL = "дефибриллятором",
-		PREPOSITIONAL = "дефибрилляторе",
-	)
 
 /obj/item/defibrillator/Initialize(mapload) // Base version starts without a cell for rnd
 	. = ..()
@@ -241,23 +231,13 @@
 
 /obj/item/defibrillator/compact
 	name = "compact defibrillator"
-	desc = "Переносной дефибриллятор, оборудован для ношения на поясе."
+	desc = "A belt-mounted defibrillator that can be rapidly deployed."
 	icon_state = "defibcompact"
 	item_state = "defibcompact"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	origin_tech = "biotech=5"
 	heart_attack_probability = 10
-
-/obj/item/defibrillator/compact/get_ru_names()
-	return alist(
-		NOMINATIVE = "компактный дефибриллятор",
-		GENITIVE = "компактного дефибриллятора",
-		DATIVE = "компактному дефибриллятору",
-		ACCUSATIVE = "компактный дефибриллятор",
-		INSTRUMENTAL = "компактным дефибриллятором",
-		PREPOSITIONAL = "компактном дефибрилляторе",
-	)
 
 /obj/item/defibrillator/compact/item_action_slot_check(slot, mob/user, datum/action/action)
 	if(slot == ITEM_SLOT_BELT)
@@ -270,23 +250,13 @@
 
 /obj/item/defibrillator/compact/combat
 	name = "combat defibrillator"
-	desc = "Переносной дефибриллятор кроваво-красного цвета, оборудован для ношения на поясе. Не оснащён протоколами безопасности, в отличие от обычных дефибрилляторов. Может работать через скафандры."
+	desc = "A belt-mounted blood-red defibrillator that can be rapidly deployed. Does not have the restrictions or safeties of conventional defibrillators and can revive through space suits."
 	icon_state = "defibcombat"
 	item_state = "defibcombat"
 	paddle_type = /obj/item/twohanded/shockpaddles/syndicate
 	ignore_hardsuits = TRUE
 	safety = FALSE
 	heart_attack_probability = 100
-
-/obj/item/defibrillator/compact/combat/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой дефибриллятор",
-		GENITIVE = "боевого дефибриллятора",
-		DATIVE = "боевому дефибриллятору",
-		ACCUSATIVE = "боевой дефибриллятор",
-		INSTRUMENTAL = "боевым дефибриллятором",
-		PREPOSITIONAL = "боевом дефибрилляторе",
-	)
 
 /obj/item/defibrillator/compact/combat/loaded/Initialize(mapload)
 	. = ..()
@@ -295,7 +265,7 @@
 
 /obj/item/defibrillator/compact/advanced
 	name = "advanced compact defibrillator"
-	desc = "Высокотехнологичный продвинутый дефибриллятор, созданный для использования в самых экстремальных условиях. Выполнен из передовых материалов, благодаря чему его почти невозможно повредить или уничтожить. Использует экспериментальную батарею с функций самозаряда. Может работать через скафандры."
+	desc = "A belt-mounted state-of-the-art defibrillator that can be rapidly deployed in all environments. The casing is EMP-shielded and heavily reinforced, making it immune to most sources of damage."
 	icon_state = "defibnt"
 	item_state = "defibnt"
 	paddle_type = /obj/item/twohanded/shockpaddles/advanced
@@ -304,16 +274,6 @@
 	heart_attack_probability = 100
 
 	var/next_emp_message //to prevent spam from the emagging message on the advanced defibrillator
-
-/obj/item/defibrillator/compact/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый компактный дефибриллятор",
-		GENITIVE = "продвинутого компактного дефибриллятора",
-		DATIVE = "продвинутому компактному дефибриллятору",
-		ACCUSATIVE = "продвинутый компактный дефибриллятор",
-		INSTRUMENTAL = "продвинутым компактным дефибриллятором",
-		PREPOSITIONAL = "продвинутом компактном дефибрилляторе",
-	)
 
 /obj/item/defibrillator/compact/advanced/Initialize(mapload)
 	. = ..()
@@ -335,7 +295,7 @@
 
 /obj/item/twohanded/shockpaddles
 	name = "defibrillator paddles"
-	desc = "Пара электродов с тонкими металлическими пластинами, оснащённых пластиковыми ручками. Используются для подачи мощных ударов электрическим током."
+	desc = "A pair of plastic-gripped paddles with flat metal surfaces that are used to deliver powerful electric shocks."
 	icon = 'icons/obj/defib.dmi'
 	icon_state = "defibpaddles0"
 	item_state = "defibpaddles0"
@@ -352,50 +312,20 @@
 	var/on_cooldown = FALSE
 	var/req_defib = TRUE
 
-/obj/item/twohanded/shockpaddles/get_ru_names()
-	return alist(
-		NOMINATIVE = "электроды дефибриллятора",
-		GENITIVE = "электродов дефибриллятора",
-		DATIVE = "электродам дефибриллятора",
-		ACCUSATIVE = "электроды дефибриллятора",
-		INSTRUMENTAL = "электродами дефибриллятора",
-		PREPOSITIONAL = "электродах дефибриллятора",
-	)
-
 /obj/item/twohanded/shockpaddles/advanced
 	name = "advanced defibrillator paddles"
-	desc = "Пара высокотехнологичных электродов с тонкими пласталевыми пластинами, оснащённых пластиковыми ручками. Используются для подачи мощных ударов электрическим током, могут действовать сквозь слой брони."
+	desc = "A pair of high-tech paddles with flat plasteel surfaces that are used to deliver powerful electric shocks. They possess the ability to penetrate armor to deliver shock."
 	icon_state = "ntpaddles0"
 	item_state = "ntpaddles0"
 	base_icon_state = "ntpaddles"
 
-/obj/item/twohanded/shockpaddles/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "электроды продвинутого дефибриллятора",
-		GENITIVE = "электродов продвинутого дефибриллятора",
-		DATIVE = "электродам продвинутого дефибриллятора",
-		ACCUSATIVE = "электроды продвинутого дефибриллятора",
-		INSTRUMENTAL = "электродами продвинутого дефибриллятора",
-		PREPOSITIONAL = "электродах продвинутого дефибриллятора",
-	)
-
 /obj/item/twohanded/shockpaddles/syndicate
 	name = "combat defibrillator paddles"
 	desc = "A pair of high-tech paddles with flat plasteel surfaces to revive deceased operatives (unless they exploded). They possess both the ability to penetrate armor and to deliver powerful or disabling shocks offensively."
-	desc = "Пара высокотехнологичных электродов с тонкими пласталевыми пластинами, оснащённых пластиковыми ручками. Используются для подачи мощных ударов электрическим током, могут действовать сквозь слой брони. Одинаково хорошо подходят как для оживления мёртвых оперативников, так и для устранения противников."
+	desc = "A pair of high-tech paddles with flat plasteel surfaces to revive deceased operatives (unless they exploded). They possess both the ability to penetrate armor and to deliver powerful or disabling shocks offensively."
 	icon_state = "syndiepaddles0"
 	item_state = "syndiepaddles0"
 	base_icon_state = "syndiepaddles"
-
-/obj/item/twohanded/shockpaddles/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "электроды боевого дефибриллятора",
-		GENITIVE = "электродов боевого дефибриллятора",
-		DATIVE = "электродам боевого дефибриллятора",
-		ACCUSATIVE = "электроды боевого дефибриллятора",
-		INSTRUMENTAL = "электродами боевого дефибриллятора",
-		PREPOSITIONAL = "электродах боевого дефибриллятора",
-	)
 
 /obj/item/twohanded/shockpaddles/Initialize(mapload, obj/item/defibrillator/mainunit)
 	. = ..()
@@ -493,7 +423,7 @@
 	return TRUE
 
 /obj/item/twohanded/shockpaddles/borg
-	desc = "Пара встроенных электродов с тонкими металлическими пластинами. Используются для подачи мощных ударов электрическим током."
+	desc = "A pair of mounted paddles with flat metal surfaces that are used to deliver powerful electric shocks."
 	var/safety = TRUE
 	req_defib = FALSE
 

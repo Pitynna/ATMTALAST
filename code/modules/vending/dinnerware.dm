@@ -1,6 +1,6 @@
 /obj/machinery/vending/dinnerware
 	name = "Plasteel Chef's Dinnerware Vendor"
-	desc = "Поставщик кухонного и ресторанного оборудования."
+	desc = "A kitchen and restaurant equipment vendor."
 	slogan_list = list(
 		"Ммм, прод+укты пит+ания!",
 		"П+ища и пищев+ые принадл+ежности.",
@@ -55,16 +55,6 @@
 		/obj/item/kitchen/knife/butcher = 2,
 	)
 	refill_canister = /obj/item/vending_refill/dinnerware
-
-/obj/machinery/vending/dinnerware/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Plasteel Chef's Dinnerware Vendor",
-		GENITIVE = "торгового автомата Plasteel Chef's Dinnerware Vendor",
-		DATIVE = "торговому автомату Plasteel Chef's Dinnerware Vendor",
-		ACCUSATIVE = "торговый автомат Plasteel Chef's Dinnerware Vendor",
-		INSTRUMENTAL = "торговым автоматом Plasteel Chef's Dinnerware Vendor",
-		PREPOSITIONAL = "торговом автомате Plasteel Chef's Dinnerware Vendor",
-	)
 
 /obj/machinery/vending/dinnerware/old
 	products = list(

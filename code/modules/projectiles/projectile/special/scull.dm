@@ -9,16 +9,6 @@
 	armour_penetration = 100
 	hitsound = null
 
-/obj/projectile/skull_projectile/get_ru_names()
-	return alist(
-		NOMINATIVE = "заражённый череп",
-		GENITIVE = "заражённого черепа",
-		DATIVE = "заражённому черепу",
-		ACCUSATIVE = "заражённый череп",
-		INSTRUMENTAL = "заражённым черепом",
-		PREPOSITIONAL = "заражённом черепе",
-	)
-
 /obj/projectile/skull_projectile/Destroy()
 	var/obj/item/gun/magic/skull_gun/skull_gun = locate() in firer
 	if(skull_gun)

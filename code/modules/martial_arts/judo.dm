@@ -18,7 +18,7 @@
 //Corporate Judo Belt
 
 /obj/item/storage/belt/security/judobelt
-	name = "Пояс Корпоративного Дзюдо"
+	name = "Corporate Judo belt"
 	desc = "Позволяет вам использовать Корпоративное Дзюдо. \
 			По статистике собранной независимым исследователем, \
 			владеющие этим поясом на 40% чаще покупают продукцию Мистера Чанга."
@@ -29,16 +29,6 @@
 	max_combined_w_class = 7
 	custom_price = PAYCHECK_MAX
 	var/datum/martial_art/judo/style
-
-/obj/item/storage/belt/security/judobelt/get_ru_names()
-	return alist(
-		NOMINATIVE = "Пояс Корпоративного Дзюдо",
-		GENITIVE = "Пояса Корпоративного Дзюдо",
-		DATIVE = "Поясу Корпоративного Дзюдо",
-		ACCUSATIVE = "Пояс Корпоративного Дзюдо",
-		INSTRUMENTAL = "Поясом Корпоративного Дзюдо",
-		PREPOSITIONAL = "Поясе Корпоративного Дзюдо",
-	)
 
 /obj/item/storage/belt/security/judobelt/Initialize(mapload)
 	. = ..()

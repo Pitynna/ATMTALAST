@@ -14,16 +14,6 @@
 	/// We keep the KA here to use the properties of its modkits when projectile hit the target.
 	var/obj/item/gun/energy/kinetic_accelerator/kinetic_gun
 
-/obj/projectile/kinetic/get_ru_names()
-	return alist(
-		NOMINATIVE = "кинетическая сила",
-		GENITIVE = "кинетической силы",
-		DATIVE = "кинетической силе",
-		ACCUSATIVE = "кинетическую силу",
-		INSTRUMENTAL = "кинетической силой",
-		PREPOSITIONAL = "кинетической силе"
-	)
-
 /obj/projectile/kinetic/Destroy()
 	kinetic_gun = null
 	return ..()

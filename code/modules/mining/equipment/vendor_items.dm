@@ -4,7 +4,7 @@
 /**********************Facehugger toy**********************/
 /obj/item/clothing/mask/facehugger/toy
 	item_state = "facehugger_inactive"
-	desc = "Игрушка, которую часто используют, чтобы подшутить над другими шахтерами, подкладывая ее в их кровати. После того, как за что-то зацепишься, требуется некоторое время для подзарядки."
+	desc = "A toy often used to play pranks on other miners by putting it in their beds. It takes a bit to recharge after latching onto something."
 	real = 0
 	sterile = 1
 	mob_throw_hit_sound = null

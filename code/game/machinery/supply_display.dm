@@ -1,5 +1,5 @@
 /obj/machinery/status_display/supply_display
-	name = "дисплей статуса доставки"
+	name = "supply status display"
 	is_supply = TRUE
 
 /obj/machinery/status_display/supply_display/update()

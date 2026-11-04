@@ -35,22 +35,12 @@
 // MARK: New Year Trees
 /obj/structure/flora/tree/new_year
 	name = "new year tree"
-	desc = "Чудесно украшенная новогодняя ёлка."
+	desc = "A beautifully decorated New Year's tree."
 	icon = 'icons/obj/flora/new_year/new_year_tree.dmi'
 	icon_state = "new_year_tree"
 
-/obj/structure/flora/tree/new_year/get_ru_names()
-	return alist(
-		NOMINATIVE = "новогодняя ёлка",
-		GENITIVE = "новогодней ёлки",
-		DATIVE = "новогодней ёлке",
-		ACCUSATIVE = "новогоднюю ёлку",
-		INSTRUMENTAL = "новогодней ёлкой",
-		PREPOSITIONAL = "новогодней ёлке"
-	)
-
 /obj/structure/flora/tree/new_year/presents
-	desc = "Чудесно украшенная новогодняя ёлка. А под ней подарки!"
+	desc = "A beautifully decorated New Year's tree. There are presents underneath!"
 	icon_state = "new_year_tree_presents"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF // protected by the christmas spirit
 	/// The type of gift created during interaction
@@ -86,7 +76,7 @@
 	user.put_in_hands(present)
 
 /obj/structure/flora/tree/new_year/presents/unlimited
-	desc = "Чудесно украшенная новогодняя ёлка. У неё, казалось бы, бесконечный запас подарков!"
+	desc = "A beautifully decorated New Year's tree with a seemingly endless supply of presents!"
 	unlimited = TRUE
 
 // MARK: Pine Trees
@@ -723,32 +713,12 @@
 
 /obj/structure/festivus
 	name = "festivus pole"
-	desc = "На прошлогодних \"Испытаниях Силы\" директор исследований умудрился забросить этот неподвижный стержень, пролетавший мимо, прямиком в цветочный горшок."
+	desc = "During last year's Feats of Strength, the research director somehow threw this immovable rod as it flew past, landing it right in a flowerpot."
 	icon = 'icons/obj/flora/pinetrees.dmi'
 	icon_state = "festivus_pole"
 
-/obj/structure/festivus/get_ru_names()
-	return alist(
-		NOMINATIVE = "горшок силы",
-		GENITIVE = "горшка силы",
-		DATIVE = "горшка силы",
-		ACCUSATIVE = "горшок силы",
-		INSTRUMENTAL = "горшком силы",
-		PREPOSITIONAL = "горшке силы",
-	)
-
 /obj/structure/festivus/anchored
 	name = "suplexed rod"
-	desc = "Настоящий подвиг силы, почти не уступающий прошлогоднему."
+	desc = "A true feat of strength, almost as impressive as last year's."
 	icon_state = "anchored_rod"
 	anchored = TRUE
-
-/obj/structure/festivus/anchored/get_ru_names()
-	return alist(
-		NOMINATIVE = "остановленный стержень",
-		GENITIVE = "остановленного стерженя",
-		DATIVE = "остановленному стерженю",
-		ACCUSATIVE = "остановленный стержень",
-		INSTRUMENTAL = "остановленным стерженем",
-		PREPOSITIONAL = "остановленном стержене",
-	)

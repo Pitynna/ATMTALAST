@@ -1,7 +1,7 @@
 //The necropolis gate is used to call forth Legion from the Necropolis.
 /obj/structure/necropolis_gate
 	name = "necropolis gate"
-	desc = "Огромные каменные врата, украшенные древними письменами."
+	desc = "A massive stone gateway."
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "gate_full"
 	flags = ON_BORDER
@@ -22,16 +22,6 @@
 	var/static/mutable_appearance/dais_overlay
 	var/obj/structure/opacity_blocker/sight_blocker
 	var/sight_blocker_distance = 1
-
-/obj/structure/necropolis_gate/get_ru_names()
-	return alist(
-		NOMINATIVE = "врата Некрополя",
-		GENITIVE = "врат Некрополя",
-		DATIVE = "вратам Некрополя",
-		ACCUSATIVE = "врата Некрополя",
-		INSTRUMENTAL = "вратами Некрополя",
-		PREPOSITIONAL = "вратах Некрополя",
-	)
 
 /obj/structure/necropolis_gate/Initialize(mapload)
 	. = ..()
@@ -175,7 +165,7 @@
 
 GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 /obj/structure/necropolis_gate/legion_gate
-	desc = "Массивные, внушительные врата, расположенные внутри высокой каменной башни."
+	desc = "A tremendous, impossibly large gateway, set into a massive tower of stone."
 	sight_blocker_distance = 2
 	var/legion_triggered = FALSE
 
@@ -246,7 +236,7 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 
 /obj/structure/necropolis_arch
 	name = "necropolis arch"
-	desc = "Массивная арка над вратами Некрополя, вставленная в массивную каменную башню."
+	desc = "A massive arch over the necropolis gate, set into a massive tower of stone."
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "arch_full"
 	appearance_flags = LONG_GLIDE
@@ -257,16 +247,6 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/open = FALSE
 	var/static/mutable_appearance/top_overlay
-
-/obj/structure/necropolis_arch/get_ru_names()
-	return alist(
-		NOMINATIVE = "арка Некрополя",
-		GENITIVE = "арки Некрополя",
-		DATIVE = "арке Некрополя",
-		ACCUSATIVE = "арку Некрополя",
-		INSTRUMENTAL = "аркой Некрополя",
-		PREPOSITIONAL = "арке Некрополя",
-	)
 
 /obj/structure/necropolis_arch/Initialize(mapload)
 	. = ..()
@@ -302,16 +282,6 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	var/fall_on_cross = STABLE //If the tile has some sort of effect when crossed
 	var/fallen = FALSE //If the tile is unusable
 	var/falling = FALSE //If the tile is falling
-
-/obj/structure/stone_tile/get_ru_names()
-	return alist(
-		NOMINATIVE = "каменная плитка",
-		GENITIVE = "каменной плитки",
-		DATIVE = "каменной плитке",
-		ACCUSATIVE = "каменную плитку",
-		INSTRUMENTAL = "каменной плиткой",
-		PREPOSITIONAL = "каменной плитке",
-	)
 
 /obj/structure/stone_tile/Initialize(mapload)
 	. = ..()
@@ -402,31 +372,11 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	tile_key = "pristine_block"
 	tile_random_sprite_max = 4
 
-/obj/structure/stone_tile/block/get_ru_names()
-	return alist(
-		NOMINATIVE = "каменный блок",
-		GENITIVE = "каменного блока",
-		DATIVE = "каменному блоку",
-		ACCUSATIVE = "каменный блок",
-		INSTRUMENTAL = "каменным блоком",
-		PREPOSITIONAL = "каменном блоке",
-	)
-
 /obj/structure/stone_tile/slab
 	name = "stone slab"
 	icon_state = "pristine_slab1"
 	tile_key = "pristine_slab"
 	tile_random_sprite_max = 4
-
-/obj/structure/stone_tile/slab/get_ru_names()
-	return alist(
-		NOMINATIVE = "каменная плита",
-		GENITIVE = "каменной плиты",
-		DATIVE = "каменной плите",
-		ACCUSATIVE = "каменную плиту",
-		INSTRUMENTAL = "каменной плитой",
-		PREPOSITIONAL = "каменной плите",
-	)
 
 /obj/structure/stone_tile/slab/bone
 	name = "stone bone slab"
@@ -435,31 +385,11 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	tile_random_sprite_max = 1
 	color = "#fffff0"
 
-/obj/structure/stone_tile/slab/bone/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяная каменная плита",
-		GENITIVE = "костяной каменной плиты",
-		DATIVE = "костяной каменной плите",
-		ACCUSATIVE = "костяную каменную плиту",
-		INSTRUMENTAL = "костяной каменной плитой",
-		PREPOSITIONAL = "костяной каменной плите",
-	)
-
 /obj/structure/stone_tile/center
 	name = "stone center tile"
 	icon_state = "pristine_center1"
 	tile_key = "pristine_center"
 	tile_random_sprite_max = 4
-
-/obj/structure/stone_tile/center/get_ru_names()
-	return alist(
-		NOMINATIVE = "центральная каменная плитка",
-		GENITIVE = "центральной каменной плитки",
-		DATIVE = "центральной каменной плитке",
-		ACCUSATIVE = "центральную каменную плитку",
-		INSTRUMENTAL = "центральной каменной плиткой",
-		PREPOSITIONAL = "центральной каменной плитке",
-	)
 
 /obj/structure/stone_tile/surrounding
 	name = "stone surrounding slab"
@@ -467,62 +397,21 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	tile_key = "pristine_surrounding"
 	tile_random_sprite_max = 2
 
-/obj/structure/stone_tile/surrounding/get_ru_names()
-	return alist(
-		NOMINATIVE = "окаймляющая каменная плита",
-		GENITIVE = "окаймляющей каменной плиты",
-		DATIVE = "окаймляющей каменной плите",
-		ACCUSATIVE = "окаймляющую каменную плиту",
-		INSTRUMENTAL = "окаймляющей каменной плитой",
-		PREPOSITIONAL = "окаймляющей каменной плите",
-	)
-
 /obj/structure/stone_tile/surrounding_tile
 	name = "stone surrounding tile"
 	icon_state = "pristine_surrounding_tile1"
 	tile_key = "pristine_surrounding_tile"
 	tile_random_sprite_max = 2
 
-/obj/structure/stone_tile/surrounding_tile/get_ru_names()
-	return alist(
-		NOMINATIVE = "окаймляющая каменная плитка",
-		GENITIVE = "окаймляющей каменной плитки",
-		DATIVE = "окаймляющей каменной плитке",
-		ACCUSATIVE = "окаймляющую каменную плитку",
-		INSTRUMENTAL = "окаймляющей каменной плиткой",
-		PREPOSITIONAL = "окаймляющей каменной плитке",
-	)
-
-//cracked stone tiles
 /obj/structure/stone_tile/cracked
 	name = "cracked stone tile"
 	icon_state = "cracked_tile1"
 	tile_key = "cracked_tile"
 
-/obj/structure/stone_tile/cracked/get_ru_names()
-	return alist(
-		NOMINATIVE = "треснувшая каменная плитка",
-		GENITIVE = "треснувшей каменной плитки",
-		DATIVE = "треснувшей каменной плитке",
-		ACCUSATIVE = "треснувшую каменную плитку",
-		INSTRUMENTAL = "треснувшей каменной плиткой",
-		PREPOSITIONAL = "треснувшей каменной плитке",
-	)
-
 /obj/structure/stone_tile/block/cracked
 	name = "cracked stone block"
 	icon_state = "cracked_block1"
 	tile_key = "cracked_block"
-
-/obj/structure/stone_tile/block/cracked/get_ru_names()
-	return alist(
-		NOMINATIVE = "треснувший каменный блок",
-		GENITIVE = "треснувшего каменного блока",
-		DATIVE = "треснувшему каменному блоку",
-		ACCUSATIVE = "треснувший каменный блок",
-		INSTRUMENTAL = "треснувшим каменным блоком",
-		PREPOSITIONAL = "треснувшем каменном блоке",
-	)
 
 /obj/structure/stone_tile/slab/cracked
 	name = "cracked stone slab"
@@ -530,30 +419,10 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	tile_key = "cracked_slab"
 	tile_random_sprite_max = 1
 
-/obj/structure/stone_tile/slab/cracked/get_ru_names()
-	return alist(
-		NOMINATIVE = "треснувшая каменная плита",
-		GENITIVE = "треснувшей каменной плиты",
-		DATIVE = "треснувшей каменной плите",
-		ACCUSATIVE = "треснувшую каменную плиту",
-		INSTRUMENTAL = "треснувшей каменной плитой",
-		PREPOSITIONAL = "треснувшей каменной плите",
-	)
-
 /obj/structure/stone_tile/center/cracked
 	name = "cracked stone center tile"
 	icon_state = "cracked_center1"
 	tile_key = "cracked_center"
-
-/obj/structure/stone_tile/center/cracked/get_ru_names()
-	return alist(
-		NOMINATIVE = "треснувшая центральная плитка",
-		GENITIVE = "треснувшей центральной плитки",
-		DATIVE = "треснувшей центральной плитке",
-		ACCUSATIVE = "треснувшую центральную плитку",
-		INSTRUMENTAL = "треснувшей центральной плиткой",
-		PREPOSITIONAL = "треснувшей центральной плитке",
-	)
 
 /obj/structure/stone_tile/surrounding/cracked
 	name = "cracked stone surrounding slab"
@@ -561,121 +430,40 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	tile_key = "cracked_surrounding"
 	tile_random_sprite_max = 1
 
-/obj/structure/stone_tile/surrounding/cracked/get_ru_names()
-	return alist(
-		NOMINATIVE = "треснувшая окаймляющая плита",
-		GENITIVE = "треснувшей окаймляющей плиты",
-		DATIVE = "треснувшей окаймляющей плите",
-		ACCUSATIVE = "треснувшую окаймляющую плиту",
-		INSTRUMENTAL = "треснувшей окаймляющей плитой",
-		PREPOSITIONAL = "треснувшей окаймляющей плите",
-	)
-
 /obj/structure/stone_tile/surrounding_tile/cracked
 	name = "cracked stone surrounding tile"
 	icon_state = "cracked_surrounding_tile1"
 	tile_key = "cracked_surrounding_tile"
 
-/obj/structure/stone_tile/surrounding_tile/cracked/get_ru_names()
-	return alist(
-		NOMINATIVE = "треснувшая окаймляющая плитка",
-		GENITIVE = "треснувшей окаймляющей плитки",
-		DATIVE = "треснувшей окаймляющей плитке",
-		ACCUSATIVE = "треснувшую окаймляющую плитку",
-		INSTRUMENTAL = "треснувшей окаймляющей плиткой",
-		PREPOSITIONAL = "треснувшей окаймляющей плитке",
-	)
-
-//burnt stone tiles
 /obj/structure/stone_tile/burnt
 	name = "burnt stone tile"
 	icon_state = "burnt_tile1"
 	tile_key = "burnt_tile"
-
-/obj/structure/stone_tile/burnt/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленная каменная плитка",
-		GENITIVE = "обугленной каменной плитки",
-		DATIVE = "обугленной каменной плитке",
-		ACCUSATIVE = "обугленную каменную плитку",
-		INSTRUMENTAL = "обугленной каменной плиткой",
-		PREPOSITIONAL = "обугленной каменной плитке",
-	)
 
 /obj/structure/stone_tile/block/burnt
 	name = "burnt stone block"
 	icon_state = "burnt_block1"
 	tile_key = "burnt_block"
 
-/obj/structure/stone_tile/block/burnt/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленный каменный блок",
-		GENITIVE = "обугленного каменного блока",
-		DATIVE = "обугленному каменному блоку",
-		ACCUSATIVE = "обугленный каменный блок",
-		INSTRUMENTAL = "обугленным каменным блоком",
-		PREPOSITIONAL = "обугленном каменном блоке",
-	)
-
 /obj/structure/stone_tile/slab/burnt
 	name = "burnt stone slab"
 	icon_state = "burnt_slab1"
 	tile_key = "burnt_slab"
-
-/obj/structure/stone_tile/slab/burnt/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленная каменная плита",
-		GENITIVE = "обугленной каменной плиты",
-		DATIVE = "обугленной каменной плите",
-		ACCUSATIVE = "обугленную каменную плиту",
-		INSTRUMENTAL = "обугленной каменной плитой",
-		PREPOSITIONAL = "обугленной каменной плите",
-	)
 
 /obj/structure/stone_tile/center/burnt
 	name = "burnt stone center tile"
 	icon_state = "burnt_center1"
 	tile_key = "burnt_center"
 
-/obj/structure/stone_tile/center/burnt/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленная центральная плитка",
-		GENITIVE = "обугленной центральной плитки",
-		DATIVE = "обугленной центральной плитке",
-		ACCUSATIVE = "обугленную центральную плитку",
-		INSTRUMENTAL = "обугленной центральной плиткой",
-		PREPOSITIONAL = "обугленной центральной плитке",
-	)
-
 /obj/structure/stone_tile/surrounding/burnt
 	name = "burnt stone surrounding slab"
 	icon_state = "burnt_surrounding1"
 	tile_key = "burnt_surrounding"
 
-/obj/structure/stone_tile/surrounding/burnt/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленная окаймляющая плита",
-		GENITIVE = "обугленной окаймляющей плиты",
-		DATIVE = "обугленной окаймляющей плите",
-		ACCUSATIVE = "обугленную окаймляющую плиту",
-		INSTRUMENTAL = "обугленной окаймляющей плитой",
-		PREPOSITIONAL = "обугленной окаймляющей плите",
-	)
-
 /obj/structure/stone_tile/surrounding_tile/burnt
 	name = "burnt stone surrounding tile"
 	icon_state = "burnt_surrounding_tile1"
 	tile_key = "burnt_surrounding_tile"
-
-/obj/structure/stone_tile/surrounding_tile/burnt/get_ru_names()
-	return alist(
-		NOMINATIVE = "обугленная окаймляющая плитка",
-		GENITIVE = "обугленной окаймляющей плитки",
-		DATIVE = "обугленной окаймляющей плитке",
-		ACCUSATIVE = "обугленную окаймляющую плитку",
-		INSTRUMENTAL = "обугленной окаймляющей плиткой",
-		PREPOSITIONAL = "обугленной окаймляющей плитке",
-	)
 
 /obj/structure/stone_tile/bone
 

@@ -2,7 +2,7 @@
 
 /obj/item/reagent_containers/borghypo
 	name = "Cyborg Hypospray"
-	desc = "Передовой химический синтезатор, оборудованный системой инъекции, разработанный для тяжёлого медицинского оборудования."
+	desc = "An advanced chemical synthesizer and injection system, designed for heavy-duty medical equipment."
 	icon = 'icons/obj/hypo.dmi'
 	item_state = "hypo"
 	icon_state = "borghypo"
@@ -27,19 +27,9 @@
 	QDEL_LIST(reagent_list)
 	return ..()
 
-/obj/item/reagent_containers/borghypo/get_ru_names()
-	return alist(
-		NOMINATIVE = "робо-гипоспрей",
-		GENITIVE = "робо-гипоспрея",
-		DATIVE = "робо-гипоспрею",
-		ACCUSATIVE = "робо-гипоспрей",
-		INSTRUMENTAL = "робо-гипоспреем",
-		PREPOSITIONAL = "робо-гипоспрее",
-	)
-
 /obj/item/reagent_containers/borghypo/syndicate
 	name = "syndicate cyborg hypospray"
-	desc = "Передовой химический синтезатор, оборудованный системой инъекции, разработанный для тяжёлого медицинского оборудования. Специальная версия, производимая \"Синдикатом\" для установки в боевых роботов поддержики, оснащённая передовыми лечебными препаратами."
+	desc = "An experimental piece of Syndicate technology used to produce powerful restorative nanites used to very quickly restore injuries of all types. Also metabolizes potassium iodide, for radiation poisoning, and hydrocodone, for field surgery and pain relief."
 	icon_state = "borghypo_s"
 	charge_cost = 20
 	recharge_time = 2
@@ -52,19 +42,9 @@
 	bypass_protection = TRUE
 	upgrade_path = null //no upgrades
 
-/obj/item/reagent_containers/borghypo/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "Синди-робо-гипоспрей",
-		GENITIVE = "Синди-робо-гипоспрея",
-		DATIVE = "Синди-робо-гипоспрею",
-		ACCUSATIVE = "Синди-робо-гипоспрей",
-		INSTRUMENTAL = "Синди-робо-гипоспреем",
-		PREPOSITIONAL = "Синди-робо-гипоспрее",
-	)
-
 /obj/item/reagent_containers/borghypo/upgraded
 	name = "upgraded cyborg hypospray"
-	desc = "Улучшенная версия робо-гипоспрея. Передовой химический синтезатор, оборудованный системой инъекции, разработанный для тяжёлого медицинского оборудования."
+	desc = "An upgraded advanced chemical synthesizer and injection system, designed for heavy-duty medical equipment."
 	reagent_ids = list( \
 		"salglu_solution" = list('icons/effects/bleed.dmi', "bleed10"), \
 		"mannitol" = list('icons/obj/species_organs/grey.dmi', "brain2"), \
@@ -76,16 +56,6 @@
 		"calomel" = list('icons/obj/janitor.dmi', "soap"), \
 		"oculine" = list('icons/obj/surgery.dmi', "eyes"))
 	upgrade_path = null //no upgrades
-
-/obj/item/reagent_containers/borghypo/upgraded/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенный робо-гипоспрей",
-		GENITIVE = "улучшенного робо-гипоспрея",
-		DATIVE = "улучшенному робо-гипоспрею",
-		ACCUSATIVE = "улучшенный робо-гипоспрей",
-		INSTRUMENTAL = "улучшенным робо-гипоспреем",
-		PREPOSITIONAL = "улучшенном робо-гипоспрее",
-	)
 
 /obj/item/reagent_containers/borghypo/upgraded/super
 	bypass_protection = TRUE
@@ -205,25 +175,15 @@
 
 /obj/item/reagent_containers/borghypo/basic
 	name = "Basic Medical Hypospray"
-	desc = "Сильно упрощённая версия медицинского гипоспрея, способная ввести узко-ограниченный набор лекарственных медикаментов для оказания первой помощи."
+	desc = "A very basic medical hypospray, capable of providing simple medical treatment in emergencies."
 	reagent_ids = list( \
 		"salglu_solution" = list('icons/effects/bleed.dmi', "bleed10"), \
 		"epinephrine" = list('icons/obj/surgery.dmi', "heart-on"))
 	upgrade_path = /obj/item/reagent_containers/borghypo/basic/upgraded
 
-/obj/item/reagent_containers/borghypo/basic/get_ru_names()
-	return alist(
-		NOMINATIVE = "стандартный медицинский гипоспрей",
-		GENITIVE = "стандартного медицинского гипоспрея",
-		DATIVE = "стандартному медицинскому гипоспрею",
-		ACCUSATIVE = "стандартный медицинский гипоспрей",
-		INSTRUMENTAL = "стандартным медицинским гипоспреем",
-		PREPOSITIONAL = "стандартном медицинском гипоспрее",
-	)
-
 /obj/item/reagent_containers/borghypo/basic/upgraded
 	name = "Upgraded Basic Medical Hypospray"
-	desc = "Упрощённная версия медицинского гипоспрея, способная ввести ограниченный набор медикаментов для лечения пациентов."
+	desc = "Basic medical hypospray, capable of providing standart medical treatment."
 	reagent_ids = list( \
 		"salglu_solution" = list('icons/effects/bleed.dmi', "bleed10"), \
 		"epinephrine" = list('icons/obj/surgery.dmi', "heart-on"), \
@@ -232,19 +192,9 @@
 		"salbutamol" = list('icons/obj/surgery.dmi', "lungs"))
 	upgrade_path = null //no upgrades
 
-/obj/item/reagent_containers/borghypo/basic/upgraded/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенный медицинский гипоспрей",
-		GENITIVE = "улучшенного медицинского гипоспрея",
-		DATIVE = "улучшенному медицинскому гипоспрею",
-		ACCUSATIVE = "улучшенный медицинский гипоспрей",
-		INSTRUMENTAL = "улучшенным медицинским гипоспреем",
-		PREPOSITIONAL = "улучшенном медицинском гипоспрее",
-	)
-
 /obj/item/reagent_containers/borghypo/emagged
 	name = "ERR3NU1l_INJ3C70R"
-	desc = "Этот инъектор будет впрыскивать смертоносные химикаты в каждого, кому не посчастливилось оказаться врагом \"Синдиката\". Кто бы мог подумать, что роботы \"Нанотрейзен\" способы синтезировать такое?"
+	desc = "This injector will deliver deadly chemicals into anyone not fortunate enough to end up as an enemy to Syndicate. Who could've thought NanoTrasen borgs can synthesize that?"
 	item_state = "borghypo_emag"
 	icon_state = "borghypo_emag"
 	amount_per_transfer_from_this = 10
@@ -255,15 +205,5 @@
 		"cyanide" = list('icons/mob/screen_corgi.dmi', "tox1"), \
 		"sodium_thiopental" = list('icons/obj/surgery.dmi', "lungs"))
 	upgrade_path = null //no upgrades
-
-/obj/item/reagent_containers/borghypo/emagged/get_ru_names()
-	return alist(
-		NOMINATIVE = "0ШNBK4_IИБ3KT0Я",
-		GENITIVE = "0ШNBK4_IИБ3KT0Я",
-		DATIVE = "0ШNBK4_IИБ3KT0Я",
-		ACCUSATIVE = "0ШNBK4_IИБ3KT0Я",
-		INSTRUMENTAL = "0ШNBK4_IИБ3KT0Я",
-		PREPOSITIONAL = "0ШNBK4_IИБ3KT0Я",
-	)
 
 #undef BORGHYPO_REFILL_VALUE

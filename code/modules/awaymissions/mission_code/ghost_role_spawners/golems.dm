@@ -5,33 +5,13 @@
 	name = "incomplete free golem shell"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "construct"
-	desc = "Незавершённое тело голема. Добавьте десять листов любого минерала, чтобы завершить его."
+	desc = "The incomplete body of a golem. Add ten sheets of any mineral to finish."
 	var/shell_type = /obj/effect/mob_spawn/human/golem
 	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/golem_shell/get_ru_names()
-	return alist(
-		NOMINATIVE = "незавершённая оболочка свободного голема",
-		GENITIVE = "незавершённой оболочки свободного голема",
-		DATIVE = "незавершённой оболочке свободного голема",
-		ACCUSATIVE = "незавершённую оболочку свободного голема",
-		INSTRUMENTAL = "незавершённой оболочкой свободного голема",
-		PREPOSITIONAL = "незавершённой оболочке свободного голема",
-	)
 
 /obj/item/golem_shell/servant
 	name = "incomplete servant golem shell"
 	shell_type = /obj/effect/mob_spawn/human/golem/servant
-
-/obj/item/golem_shell/servant/get_ru_names()
-	return alist(
-		NOMINATIVE = "незавершённая оболочка голема-слуги",
-		GENITIVE = "незавершённой оболочки голема-слуги",
-		DATIVE = "незавершённой оболочке голема-слуги",
-		ACCUSATIVE = "незавершённую оболочку голема-слуги",
-		INSTRUMENTAL = "незавершённой оболочкой голема-слуги",
-		PREPOSITIONAL = "незавершённой оболочке голема-слуги",
-	)
 
 /obj/item/golem_shell/attackby(obj/item/I, mob/user, params)
 	. = ..()
@@ -81,7 +61,7 @@
 
 /obj/effect/mob_spawn/human/golem
 	name = "inert free golem shell"
-	desc = "Гуманоидная форма, пустая, безжизненная, но полная потенциала."
+	desc = "A humanoid shape, empty, lifeless, and full of potential."
 	mob_name = "a free golem"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "construct"
@@ -97,16 +77,6 @@
 	important_info = "Вы не антагонист. Не вмешивайтесь в дела станции, и не создавайте ИИ."
 	description = "Как свободный голем на Лавленде, вы не можете использовать большинство оружия, но можете добывать ресурсы, проводить исследования и создавать себе подобных. Заработайте достаточно очков добычи руды, и вы сможете даже улететь на своём шаттле."
 	flavour_text = "Вы — свободный голем. Ваш клан поклоняется Освободителю.\nВ своей бесконечной и божественной мудрости он освободил ваш клан, чтобы вы могли путешествовать по звёздам, сказав: \"Да делайте что хотите\".\nХотя вы связаны с тем, кто вас создал, в вашем обществе принято повторять эти же слова новорождённым големам, чтобы ни один голем больше не был вынужден служить."
-
-/obj/effect/mob_spawn/human/golem/get_ru_names()
-	return alist(
-		NOMINATIVE = "инертная оболочка свободного голема",
-		GENITIVE = "инертной оболочки свободного голема",
-		DATIVE = "инертной оболочке свободного голема",
-		ACCUSATIVE = "инертную оболочку свободного голема",
-		INSTRUMENTAL = "инертной оболочкой свободного голема",
-		PREPOSITIONAL = "инертной оболочке свободного голема",
-	)
 
 /obj/effect/mob_spawn/human/golem/Initialize(mapload, datum/species/golem/species = null, mob/creator = null)
 	if(species) //spawners list uses object name to register so this goes before ..()
@@ -175,27 +145,7 @@
 	name = "inert servant golem shell"
 	mob_name = "a servant golem"
 
-/obj/effect/mob_spawn/human/golem/servant/get_ru_names()
-	return alist(
-		NOMINATIVE = "инертная оболочка голема-слуги",
-		GENITIVE = "инертной оболочки голема-слуги",
-		DATIVE = "инертной оболочке голема-слуги",
-		ACCUSATIVE = "инертную оболочку голема-слуги",
-		INSTRUMENTAL = "инертной оболочкой голема-слуги",
-		PREPOSITIONAL = "инертной оболочке голема-слуги",
-	)
-
 /obj/effect/mob_spawn/human/golem/adamantine
 	name = "dust-caked free golem shell"
 	can_transfer = FALSE
 	mob_species = /datum/species/golem/adamantine
-
-/obj/effect/mob_spawn/human/golem/adamantine/get_ru_names()
-	return alist(
-		NOMINATIVE = "покрытая пылью оболочка свободного голема",
-		GENITIVE = "покрытой пылью оболочки свободного голема",
-		DATIVE = "покрытой пылью оболочке свободного голема",
-		ACCUSATIVE = "покрытую пылью оболочку свободного голема",
-		INSTRUMENTAL = "покрытой пылью оболочкой свободного голема",
-		PREPOSITIONAL = "покрытой пылью оболочке свободного голема",
-	)

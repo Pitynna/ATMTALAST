@@ -309,16 +309,6 @@
 	layer = BELOW_MOB_LAYER
 	var/mob/living/spawner
 
-/obj/effect/temp_visual/goliath_tentacle/get_ru_names()
-	return alist(
-		NOMINATIVE = "щупальце голиафа",
-		GENITIVE = "щупальца голиафа",
-		DATIVE = "щупальцу голиафа",
-		ACCUSATIVE = "щупальце голиафа",
-		INSTRUMENTAL = "щупальцем голиафа",
-		PREPOSITIONAL = "щупальце голиафа",
-	)
-
 /obj/effect/temp_visual/goliath_tentacle/Initialize(mapload, mob/living/new_spawner)
 	. = ..()
 	for(var/obj/effect/temp_visual/goliath_tentacle/T in loc)

@@ -33,16 +33,6 @@
 	/// our initial matrix
 	var/matrix/initial_matrix
 
-/obj/item/grapple_gun/get_ru_names()
-	return alist(
-		NOMINATIVE = "крюк-кошка",
-		GENITIVE = "крюка-кошки",
-		DATIVE = "крюку-кошке",
-		ACCUSATIVE = "крюк-кошку",
-		INSTRUMENTAL = "крюком-кошкой",
-		PREPOSITIONAL = "крюке-кошке",
-	)
-
 /obj/item/grapple_gun/Initialize(mapload)
 	. = ..()
 	zipline_sound = new(src)

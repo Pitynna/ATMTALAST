@@ -1,20 +1,10 @@
 // MARK: Balloons
 /obj/item/toy/waterballoon
 	name = "water balloon"
-	desc = "Полупрозрачный воздушный шарик. В нём ничего нет."
+	desc = "A translucent balloon. There's nothing in it."
 	icon = 'icons/obj/toys/balloons.dmi'
 	icon_state = "balloon_red-e"
 	item_state = "waterballoon-e"
-
-/obj/item/toy/waterballoon/get_ru_names()
-	return alist(
-		NOMINATIVE = "шарик",
-		GENITIVE = "шарика",
-		DATIVE = "шарику",
-		ACCUSATIVE = "шарик",
-		INSTRUMENTAL = "шариком",
-		PREPOSITIONAL = "шарике",
-	)
 
 /obj/item/toy/waterballoon/Initialize(mapload)
 	. = ..()
@@ -99,7 +89,7 @@
 
 /obj/item/toy/balloon
 	name = "balloon"
-	desc = "Праздничный шарик. Использованные блюспейс технологии позволили ему парить при любых условиях."
+	desc = "A translucent balloon. There's nothing in it."
 	icon = 'icons/obj/toys/balloons.dmi'
 	icon_state = "balloon"
 	item_state = "balloon"
@@ -109,16 +99,6 @@
 	var/random_color = TRUE
 	/// the string describing the name of balloon's current colour.
 	var/current_color
-
-/obj/item/toy/balloon/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздушный шарик",
-		GENITIVE = "воздушного шарика",
-		DATIVE = "воздушному шарику",
-		ACCUSATIVE = "воздушный шарик",
-		INSTRUMENTAL = "воздушным шариком",
-		PREPOSITIONAL = "воздушном шарике",
-	)
 
 /obj/item/toy/balloon/long
 	name = "long balloon"
@@ -235,16 +215,6 @@
 	item_state = "corgi"
 	random_color = FALSE
 
-/obj/item/toy/balloon/corgi/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздушный шарик-корги",
-		GENITIVE = "воздушного шарика-корги",
-		DATIVE = "воздушному шарику-корги",
-		ACCUSATIVE = "воздушный шарик-корги",
-		INSTRUMENTAL = "воздушным шариком-корги",
-		PREPOSITIONAL = "воздушном шарике-корги",
-	)
-
 /obj/item/toy/balloon/heart
 	name = "heart balloon"
 	desc = "Воздушный шарик в форме сердца. Как мило!"
@@ -252,50 +222,20 @@
 	item_state = "heart"
 	random_color = FALSE
 
-/obj/item/toy/balloon/heart/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздушный шарик-сердце",
-		GENITIVE = "воздушного шарика-сердца",
-		DATIVE = "воздушному шарику-сердцу",
-		ACCUSATIVE = "воздушный шарик-сердце",
-		INSTRUMENTAL = "воздушным шариком-сердцем",
-		PREPOSITIONAL = "воздушном шарике-сердце",
-	)
-
 /obj/item/toy/balloon/syndicate
 	name = "syndicate balloon"
-	desc = "Этикетка на задней стороне гласит: \"Смерть НТ!11!\"."
+	desc = "There is a tag on the back that reads \"FUK NT!11!\"."
 	icon_state = "syndballoon"
 	item_state = "syndballoon"
 	random_color = FALSE
 
-/obj/item/toy/balloon/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздушный шарик синдиката",
-		GENITIVE = "воздушного шарика синдиката",
-		DATIVE = "воздушному шарику синдиката",
-		ACCUSATIVE = "воздушный шарик синдиката",
-		INSTRUMENTAL = "воздушным шариком синдиката",
-		PREPOSITIONAL = "воздушном шарике синдиката",
-	)
-
 /obj/item/toy/balloon/contractor
 	name = "contractor balloon"
-	desc = "Черно-золотой шар, который носят только легендарные агенты \"Синдиката\"."
+	desc = "A black and gold balloon carried only by legendary Syndicate agents."
 	gender = MALE
 	icon_state = "contractorballoon"
 	item_state = "contractorballoon"
 	random_color = FALSE
-
-/obj/item/toy/balloon/contractor/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздушный шарик контрактника",
-		GENITIVE = "воздушного шарика контрактника",
-		DATIVE = "воздушному шарику контрактника",
-		ACCUSATIVE = "воздушный шарик контрактника",
-		INSTRUMENTAL = "воздушным шариком контрактника",
-		PREPOSITIONAL = "воздушном шарике контрактника",
-	)
 
 /obj/item/toy/balloon/arrest
 	name = "arreyst balloon"
@@ -303,16 +243,6 @@
 	icon_state = "arrestballoon"
 	item_state = "arrestballoon"
 	random_color = FALSE
-
-/obj/item/toy/balloon/arrest/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздушный шарик \"В розыске\"",
-		GENITIVE = "воздушного шарика \"В розыске\"",
-		DATIVE = "воздушному шарику \"В розыске\"",
-		ACCUSATIVE = "воздушный шарик \"В розыске\"",
-		INSTRUMENTAL = "воздушным шариком \"В розыске\"",
-		PREPOSITIONAL = "воздушном шарике \"В розыске\"",
-	)
 
 #undef BALLOON_COLORS
 

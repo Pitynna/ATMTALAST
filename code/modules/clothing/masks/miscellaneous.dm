@@ -216,9 +216,7 @@
 
 /obj/item/clothing/mask/surgical
 	name = "sterile mask"
-	desc = "Одноразовая маска, изготовленная из стерильного материала. \
-			Обеспечивает защиту от биологического загрязнения и воздушно-капельных инфекций. \
-			Обладает высокой степенью проницаемости газов и практически не пропускает вредные вещества."
+	desc = "A sterile mask designed to help prevent the spread of diseases."
 	icon_state = "sterile"
 	item_state = "sterile"
 	w_class = WEIGHT_CLASS_TINY
@@ -244,16 +242,6 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/mask.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/mask.dmi',
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/mask.dmi',
-	)
-
-/obj/item/clothing/mask/surgical/get_ru_names()
-	return alist(
-		NOMINATIVE = "стерильная маска",
-		GENITIVE = "стерильной маски",
-		DATIVE = "стерильной маске",
-		ACCUSATIVE = "стерильную маску",
-		INSTRUMENTAL = "стерильной маской",
-		PREPOSITIONAL = "стерильной маске",
 	)
 
 /obj/item/clothing/mask/surgical/ComponentInitialize()
@@ -495,16 +483,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/mask.dmi',
 		SPECIES_KIDAN = 'icons/mob/clothing/species/kidan/mask.dmi',
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/mask.dmi',
-	)
-
-/obj/item/clothing/mask/gas/clown_hat/sweettooth/get_ru_names()
-	return alist(
-		NOMINATIVE = "Маска Сладкоежки",
-		GENITIVE = "Маски Сладкоежки",
-		DATIVE = "Маске Сладкоежки",
-		ACCUSATIVE = "Маску Сладкоежки",
-		INSTRUMENTAL = "Маской Сладкоежки",
-		PREPOSITIONAL = "Маске Сладкоежки",
 	)
 
 /obj/item/clothing/mask/gas/clown_hat/rockso
@@ -749,16 +727,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/head.dmi',
 	)
 
-/obj/item/clothing/head/paper_bag/get_ru_names()
-	return alist(
-		NOMINATIVE = "бумажный пакет",
-		GENITIVE = "бумажного пакета",
-		DATIVE = "бумажному пакету",
-		ACCUSATIVE = "бумажный пакет",
-		INSTRUMENTAL = "бумажным пакетом",
-		PREPOSITIONAL = "бумажном пакете",
-	)
-
 /obj/item/clothing/head/paper_bag/dropped(mob/user, slot, silent = FALSE)
 	. = ..()
 	if(!user || slot != ITEM_SLOT_HEAD)
@@ -779,7 +747,7 @@
 // MARK: Whistle
 /obj/item/clothing/mask/whistle
 	name = "whistle"
-	desc = "Компактное сигнальное устройство, издающее громкий и четкий звук, используемое для подачи сигналов, привлечения внимания и координации действий в различных ситуациях, от спортивных мероприятий до чрезвычайных происшествий."
+	desc = "A metal pea-whistle. Can be blown while held, or worn in the mouth."
 	icon_state = "whistle"
 	item_state = "whistle"
 	gender = MALE
@@ -789,16 +757,6 @@
 	/// Sound use for activate whistle
 	var/activate_sound = 'sound/items/whistle.ogg'
 	COOLDOWN_DECLARE(use_cd)
-
-/obj/item/clothing/mask/whistle/get_ru_names()
-	return alist(
-		NOMINATIVE = "свисток",
-		GENITIVE = "свистка",
-		DATIVE = "свистку",
-		ACCUSATIVE = "свисток",
-		INSTRUMENTAL = "свистком",
-		PREPOSITIONAL = "свистке",
-	)
 
 /obj/item/clothing/mask/whistle/ComponentInitialize()
 	. = ..()

@@ -2,16 +2,6 @@
 /obj/structure/closet/crate/necropolis/colossus
 	name = "colossus chest"
 
-/obj/structure/closet/crate/necropolis/colossus/get_ru_names()
-	return alist(
-		NOMINATIVE = "сундук колосса",
-		GENITIVE = "сундука колосса",
-		DATIVE = "сундуку колосса",
-		ACCUSATIVE = "сундук колосса",
-		INSTRUMENTAL = "сундуком колосса",
-		PREPOSITIONAL = "сундуке колосса",
-	)
-
 /obj/structure/closet/crate/necropolis/colossus/populate_contents()
 	var/list/choices = subtypesof(/obj/machinery/anomalous_crystal)
 	var/random_crystal = pick(choices)
@@ -22,16 +12,6 @@
 /obj/structure/closet/crate/necropolis/colossus/crusher
 	name = "angelic colossus chest"
 
-/obj/structure/closet/crate/necropolis/colossus/crusher/get_ru_names()
-	return alist(
-		NOMINATIVE = "ангельский сундук колосса",
-		GENITIVE = "ангельского сундука колосса",
-		DATIVE = "ангельскому сундуку колосса",
-		ACCUSATIVE = "ангельский сундук колосса",
-		INSTRUMENTAL = "ангельским сундуком колосса",
-		PREPOSITIONAL = "ангельском сундуке колосса",
-	)
-
 /obj/structure/closet/crate/necropolis/colossus/crusher/populate_contents()
 	. = ..()
 	new /obj/item/crusher_trophy/blaster_tubes(src)
@@ -41,7 +21,7 @@
 
 /obj/machinery/anomalous_crystal
 	name = "anomalous crystal"
-	desc = "Странный осколок кристалла. Нахождение рядом с ним наполняет вас смесью восторга и ужаса."
+	desc = "A strange chunk of crystal, being in the presence of it fills you with equal parts excitement and dread."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "anomaly_crystal"
 	light_range = 8
@@ -54,16 +34,6 @@
 	var/cooldown_add = 30
 	var/list/affected_targets = list()
 	var/activation_sound = 'sound/effects/break_stone.ogg'
-
-/obj/machinery/anomalous_crystal/get_ru_names()
-	return alist(
-		NOMINATIVE = "аномальный кристалл",
-		GENITIVE = "аномального кристалла",
-		DATIVE = "аномальному кристаллу",
-		ACCUSATIVE = "аномальный кристалл",
-		INSTRUMENTAL = "аномальным кристаллом",
-		PREPOSITIONAL = "аномальном кристалле",
-	)
 
 /obj/machinery/anomalous_crystal/Initialize(mapload)
 	. = ..()
@@ -396,22 +366,12 @@
 
 /obj/structure/closet/stasis
 	name = "quantum entanglement stasis warp field"
-	desc = "Вы едва можете осознать эту вещь... поэтому и не видите её."
+	desc = "You can hardly comprehend this thing... which is why you can't see it."
 	icon_state = null //This shouldn't even be visible, so if it DOES show up, at least nobody will notice
 	anchored = TRUE
 	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
 	var/mob/living/simple_animal/holder_animal
 	var/datum/action/cooldown/spell/exit_possession/posession_spell
-
-/obj/structure/closet/stasis/get_ru_names()
-	return alist(
-		NOMINATIVE = "квантовое стазисное поле",
-		GENITIVE = "квантового стазисного поля",
-		DATIVE = "квантовому стазисному полю",
-		ACCUSATIVE = "квантовое стазисное поле",
-		INSTRUMENTAL = "квантовым стазисным полем",
-		PREPOSITIONAL = "квантовом стазисном поле",
-	)
 
 /obj/structure/closet/stasis/process()
 	if(holder_animal)

@@ -236,6 +236,6 @@
 	)
 
 /obj/structure/mecha_wreckage/sidewinder
-	name = "Обломки Сайдвиндера"
-	desc = "Корпорация будет ОЧЕНЬ недовольна этим. Вы хоть знаете СКОЛЬКО он стоит?!"
+	name = "Sidewinder wreckage"
+	desc = "The corporation will be VERY unhappy about this. Do you have any idea how much it COSTS?!"
 	icon_state = "sidewinder-broken"

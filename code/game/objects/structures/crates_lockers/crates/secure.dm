@@ -275,75 +275,25 @@
 	material_drop = /obj/item/stack/sheet/mineral/plastitanium
 	req_access = list(ACCESS_MEDICAL)
 
-/obj/structure/closet/crate/secure/blood/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (человеческий)",
-		GENITIVE = "комплекта донорской крови (человеческий)",
-		DATIVE = "комплекту донорской крови (человеческий)",
-		ACCUSATIVE = "комплект донорской крови (человеческий)",
-		INSTRUMENTAL = "комплектом донорской крови (человеческий)",
-		PREPOSITIONAL = "комплекте донорской крови (человеческий)",
-	)
-
 /obj/structure/closet/crate/secure/blood/xeno
 	name = "secure xenoblood crate"
 	desc = "Ящик, содержащий капельницы с кровью различных рас."
 	icon_state = "xenobloodcrate"
-
-/obj/structure/closet/crate/secure/blood/xeno/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (ксено)",
-		GENITIVE = "комплекта донорской крови (ксено)",
-		DATIVE = "комплекту донорской крови (ксено)",
-		ACCUSATIVE = "комплект донорской крови (ксено)",
-		INSTRUMENTAL = "комплектом донорской крови (ксено)",
-		PREPOSITIONAL = "комплекте донорской крови (ксено)",
-	)
 
 /obj/structure/closet/crate/secure/blood/mixed
 	name = "secure mixed blood crate"
 	desc = "Ящик, содержащий капельницы с различной кровью."
 	icon_state = "mixbloodcrate"
 
-/obj/structure/closet/crate/secure/blood/mixed/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (смешанная)",
-		GENITIVE = "комплекта донорской крови (смешанная)",
-		DATIVE = "комплекту донорской крови (смешанная)",
-		ACCUSATIVE = "комплект донорской крови (смешанная)",
-		INSTRUMENTAL = "комплектом донорской крови (смешанная)",
-		PREPOSITIONAL = "комплекте донорской крови (смешанная)",
-	)
-
 /obj/structure/closet/crate/secure/blood/nitrogenis
 	name = "secure nitrogenis blood crate"
 	desc = "Ящик, содержащий капельницы с синтетической кровью (Азот)."
 	icon_state = "syntheticbloodcrate"
 
-/obj/structure/closet/crate/secure/blood/nitrogenis/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (синтетическая кровь — азот)",
-		GENITIVE = "комплекта донорской крови (синтетическая кровь — азот)",
-		DATIVE = "комплекту донорской крови (синтетическая кровь — азот)",
-		ACCUSATIVE = "комплект донорской крови (синтетическая кровь — азот)",
-		INSTRUMENTAL = "комплектом донорской крови (синтетическая кровь — азот)",
-		PREPOSITIONAL = "комплекте донорской крови (синтетическая кровь — азот)",
-	)
-
 /obj/structure/closet/crate/secure/blood/oxygenis
 	name = "secure synthetic blood crate"
 	desc = "Ящик, содержащий капельницы с синтетической кровью (Кислород)."
 	icon_state = "nitrogenbloodcrate"
-
-/obj/structure/closet/crate/secure/blood/oxygenis/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (синтетическая кровь — кислород)",
-		GENITIVE = "комплекта донорской крови (синтетическая кровь — кислород)",
-		DATIVE = "комплекту донорской крови (синтетическая кровь — кислород)",
-		ACCUSATIVE = "комплект донорской крови (синтетическая кровь — кислород)",
-		INSTRUMENTAL = "комплектом донорской крови (синтетическая кровь — кислород)",
-		PREPOSITIONAL = "комплекте донорской крови (синтетическая кровь — кислород)",
-	)
 
 /obj/structure/closet/crate/secure/engineering/teg
 	name = "thermoelectric generator crate"

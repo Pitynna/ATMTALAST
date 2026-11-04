@@ -2,7 +2,7 @@
 
 /obj/machinery/computer/operating
 	name = "operating computer"
-	desc = "Высокотехнологичный медицинский компьютер, используемый для контролирования процесса хиругических операций."
+	desc = "An advanced medical computer used to monitor surgical procedures."
 	icon_keyboard = "med_key"
 	icon_screen = "crew"
 	circuit = /obj/item/circuitboard/operating
@@ -21,16 +21,6 @@
 	/// about the mob - use `table.patient` instead.
 	var/mob/living/carbon/currentPatient
 	var/patientStatusHolder //Hold the last instance of table.patient.status. When table.patient.status no longer matches this variable, the computer should tell the doctor
-
-/obj/machinery/computer/operating/get_ru_names()
-	return alist(
-		NOMINATIVE = "операционный компьютер",
-		GENITIVE = "операционного компьютера",
-		DATIVE = "операционному компьютеру",
-		ACCUSATIVE = "операционный компьютер",
-		INSTRUMENTAL = "операционным компьютером",
-		PREPOSITIONAL = "операционном компьютере",
-	)
 
 /obj/machinery/computer/operating/Initialize(mapload)
 	. = ..()

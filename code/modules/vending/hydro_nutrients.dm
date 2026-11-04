@@ -1,6 +1,6 @@
 /obj/machinery/vending/hydronutrients
 	name = "NutriMax"
-	desc = "Поставщик питательных веществ для растений."
+	desc = "A plant nutrients vendor"
 	slogan_list = list(
 		"Вам не н+адо уд+обрять п+очву ест+ественным путём — р+азве +это не чуд+есно?",
 		"Теп+ерь на 50 проц+ентов м+еньше в+они!",
@@ -36,14 +36,4 @@
 	contraband = list(
 		/obj/item/reagent_containers/cup/bottle/ammonia = 10,
 		/obj/item/reagent_containers/cup/bottle/diethylamine = 5,
-	)
-
-/obj/machinery/vending/hydronutrients/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NutriMax",
-		GENITIVE = "торгового автомата NutriMax",
-		DATIVE = "торговому автомату NutriMax",
-		ACCUSATIVE = "торговый автомат NutriMax",
-		INSTRUMENTAL = "торговым автоматом NutriMax",
-		PREPOSITIONAL = "торговом автомате NutriMax",
 	)

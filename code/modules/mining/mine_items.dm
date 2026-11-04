@@ -6,16 +6,6 @@
 	icon_state = "at_shield1"
 	invisibility = INVISIBILITY_ABSTRACT
 
-/obj/effect/light_emitter/get_ru_names()
-	return alist(
-		NOMINATIVE = "световой излучатель",
-		GENITIVE = "светового излучателя",
-		DATIVE = "световому излучателю",
-		ACCUSATIVE = "световой излучатель",
-		INSTRUMENTAL = "световым излучателем",
-		PREPOSITIONAL = "световом излучателе",
-	)
-
 /obj/effect/light_emitter/Initialize(mapload)
 	. = ..()
 	icon_state = null
@@ -37,16 +27,6 @@
 	name = "mining wardrobe"
 	desc = "Стандартный шкаф, в котором хранится сменная шахтёрская одежда."
 	icon_state = "mine_ward"
-
-/obj/structure/closet/wardrobe/miner/get_ru_names()
-	return alist(
-		NOMINATIVE = "шахтёрский гардероб",
-		GENITIVE = "шахтёрского гардероба",
-		DATIVE = "шахтёрскому гардеробу",
-		ACCUSATIVE = "шахтёрский гардероб",
-		INSTRUMENTAL = "шахтёрским гардеробом",
-		PREPOSITIONAL = "шахтёрском гардеробе",
-	)
 
 /obj/structure/closet/wardrobe/miner/populate_contents()
 	new /obj/item/storage/backpack/duffel(src)
@@ -71,16 +51,6 @@
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
-/obj/structure/closet/secure_closet/miner/get_ru_names()
-	return alist(
-		NOMINATIVE = "снаряжение шахтёра",
-		GENITIVE = "снаряжения шахтёра",
-		DATIVE = "снаряжению шахтёра",
-		ACCUSATIVE = "снаряжение шахтёра",
-		INSTRUMENTAL = "снаряжением шахтёра",
-		PREPOSITIONAL = "снаряжении шахтёра",
-	)
-
 /obj/structure/closet/secure_closet/miner/populate_contents()
 	new /obj/item/stack/sheet/mineral/sandbags(src, 5)
 	new /obj/item/shovel(src)
@@ -99,16 +69,6 @@
 	desc = "Шкаф с электронным замком, в котором хранятся личные вещи шахтёрского врача."
 	icon_state = "mining_medic"
 	req_access = list(ACCESS_MEDICAL)
-
-/obj/structure/closet/secure_closet/mining_medic/get_ru_names()
-	return alist(
-		NOMINATIVE = "снаряжение шахтёрского медика",
-		GENITIVE = "снаряжения шахтёрского медика",
-		DATIVE = "снаряжению шахтёрского медика",
-		ACCUSATIVE = "снаряжение шахтёрского медика",
-		INSTRUMENTAL = "снаряжением шахтёрского медика",
-		PREPOSITIONAL = "снаряжении шахтёрского медика",
-	)
 
 /obj/structure/closet/secure_closet/mining_medic/populate_contents()
 	new /obj/item/storage/backpack/medic(src)
@@ -130,27 +90,17 @@
 
 /obj/machinery/computer/shuttle/mining
 	name = "Mining Shuttle Console"
-	desc = "Используется для вызова и отправки шахтёрского шаттла."
+	desc = "Used to call and send the mining shuttle."
 	circuit = /obj/item/circuitboard/mining_shuttle
 	shuttleId = "mining"
 	possible_destinations = "mining_home;mining_away"
 	lockdown_affected = TRUE
 
-/obj/machinery/computer/shuttle/mining/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления шахтёрским шаттлом",
-		GENITIVE = "консоли управления шахтёрским шаттлом",
-		DATIVE = "консоли управления шахтёрским шаттлом",
-		ACCUSATIVE = "консоль управления шахтёрским шаттлом",
-		INSTRUMENTAL = "консолью управления шахтёрским шаттлом",
-		PREPOSITIONAL = "консоли управления шахтёрским шаттлом",
-	)
-
 /******************************Lantern*******************************/
 
 /obj/item/flashlight/lantern
 	name = "lantern"
-	desc = "Шахтёрская лампа."
+	desc = "A mining lantern."
 	gender = FEMALE
 	icon_state = "lantern"
 	item_state = "lantern"
@@ -160,16 +110,6 @@
 	light_system = OVERLAY_LIGHT
 	var/obj/item/gem/inserted_gem = null
 	var/mutable_appearance/lantern_light_overlay
-
-/obj/item/flashlight/lantern/get_ru_names()
-	return alist(
-		NOMINATIVE = "лампа",
-		GENITIVE = "лампы",
-		DATIVE = "лампе",
-		ACCUSATIVE = "лампу",
-		INSTRUMENTAL = "лампой",
-		PREPOSITIONAL = "лампе",
-	)
 
 /obj/item/flashlight/lantern/Initialize(mapload)
 	. = ..()
@@ -249,16 +189,6 @@
 
 /obj/structure/closet/crate/miningcar
 	name = "mining car"
-	desc = "Шахтёрская вагонетка. К сожалению, рельсов на Лазисе нет. Зато её можно тащить."
+	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
 	gender = FEMALE
 	icon_state = "miningcar"
-
-/obj/structure/closet/crate/miningcar/get_ru_names()
-	return alist(
-		NOMINATIVE = "вагонетка",
-		GENITIVE = "вагонетки",
-		DATIVE = "вагонетке",
-		ACCUSATIVE = "вагонетку",
-		INSTRUMENTAL = "вагонеткой",
-		PREPOSITIONAL = "вагонетке",
-	)

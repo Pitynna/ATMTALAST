@@ -2,8 +2,7 @@
 
 /obj/item/clothing/shoes/magboots/gravity
 	name = "gravitational boots"
-	desc = "Эти экспериментальные магбутсы обходят замедление обычных, за счёт миниатюрных гравитационных в подошвах. \
-			К сожалению, для работы им необходимо ядро гравитационной аномалии."
+	desc = "These experimental boots try to get around the restrictions of magboots by installing miniature gravitational generators in the soles. Sadly, power hungry, and needs a gravitational anomaly core."
 	icon_state = "gravboots0"
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/gravity_jump) //combination of magboots and jumpboots
 	strip_delay = 10 SECONDS
@@ -20,16 +19,6 @@
 	var/power_consumption_rate = 30 // How much power is used by the boots each cycle when magboots are active
 	var/obj/item/assembly/signaler/core/gravitational/core = null
 	var/obj/item/stock_parts/cell/cell = null
-
-/obj/item/clothing/shoes/magboots/gravity/get_ru_names()
-	return alist(
-		NOMINATIVE = "гравитационные ботинки", \
-		GENITIVE = "гравитационных ботинок", \
-		DATIVE = "гравитационным ботинкам", \
-		ACCUSATIVE = "гравитационные ботинки", \
-		INSTRUMENTAL = "гравитационными ботинками", \
-		PREPOSITIONAL = "гравитационных ботинках",
-	)
 
 /obj/item/clothing/shoes/magboots/gravity/Initialize(mapload)
 	. = ..()

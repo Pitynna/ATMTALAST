@@ -81,6 +81,6 @@
 
 /// A movable borer sprite that crawls from the vent to the hallucinator.
 /obj/effect/client_image_holder/hallucination/borer
-	name = "мозговой червь"
+	name = "cortical borer"
 	image_icon = 'icons/mob/animal.dmi'
 	image_state = "brainslug"

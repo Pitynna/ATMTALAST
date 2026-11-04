@@ -8,16 +8,6 @@
 	/// The marked atom of this multitool
 	var/atom/marked_atom
 
-/obj/item/multitool/circuit/get_ru_names()
-	return alist(
-		NOMINATIVE = "мультиметр для схем",
-		GENITIVE = "мультиметра для схем",
-		DATIVE = "мультиметру для схем",
-		ACCUSATIVE = "мультиметр для схем",
-		INSTRUMENTAL = "мультиметром для схем",
-		PREPOSITIONAL = "мультиметре для схем"
-	)
-
 /obj/item/multitool/circuit/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

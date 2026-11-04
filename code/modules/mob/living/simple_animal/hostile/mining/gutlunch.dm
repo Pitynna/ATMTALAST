@@ -124,16 +124,6 @@
 /obj/item/udder/gutlunch
 	name = "nutrient sac"
 
-/obj/item/udder/gutlunch/get_ru_names()
-	return alist(
-		NOMINATIVE = "питательный мешок",
-		GENITIVE = "питательного мешка",
-		DATIVE = "питательному мешку",
-		ACCUSATIVE = "питательный мешок",
-		INSTRUMENTAL = "питательным мешком",
-		PREPOSITIONAL = "питательном мешке",
-	)
-
 /obj/item/udder/gutlunch/Initialize(mapload)
 	. = ..()
 	reagents.maximum_volume = 50

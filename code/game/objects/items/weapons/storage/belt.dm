@@ -183,8 +183,7 @@
 
 /obj/item/storage/belt/medical
 	name = "medical belt"
-	desc = "Универсальный медицинский пояс, предназначенный для размещения и переноски медицинских приспособлений и лекарственных средств. \
-			Оборудован рядом карманов и креплений для мелких предметов. Используется медицинским персоналом."
+	desc = "Can hold various medical equipment."
 	icon_state = "medicalbelt"
 	item_state = "medical"
 	use_item_overlays = TRUE
@@ -215,16 +214,6 @@
 		/obj/item/radio,
 	)
 	use_to_pickup = TRUE //Allow medical belt to pick up medicine
-
-/obj/item/storage/belt/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский пояс",
-		GENITIVE = "медицинского пояса",
-		DATIVE = "медицинскому поясу",
-		ACCUSATIVE = "медицинский пояс",
-		INSTRUMENTAL = "медицинским поясом",
-		PREPOSITIONAL = "медицинском поясе",
-	)
 
 /obj/item/storage/belt/medical/filled/populate_contents()
 	new /obj/item/reagent_containers/applicator/brute(src)
@@ -257,8 +246,7 @@
 
 /obj/item/storage/belt/medical/surgery
 	name = "surgical belt"
-	desc = "Универсальный хирургический пояс, предназначенный для размещения и переноски хирургических инструментов. \
-			Оборудован нескользящими вставками для удержания инструментов. Используется хирургическим персоналом."
+	desc = "Can hold various surgical tools."
 	icon_state = "surgicalbelt"
 	item_state = "surgical"
 	max_combined_w_class = 17
@@ -276,16 +264,6 @@
 		/obj/item/radio,
 		/obj/item/clothing/gloves/color/latex,
 		/obj/item/reagent_containers/spray/cleaner,
-	)
-
-/obj/item/storage/belt/medical/surgery/get_ru_names()
-	return alist(
-		NOMINATIVE = "хирургический пояс",
-		GENITIVE = "хирургического пояса",
-		DATIVE = "хирургическому поясу",
-		ACCUSATIVE = "хирургический пояс",
-		INSTRUMENTAL = "хирургическим поясом",
-		PREPOSITIONAL = "хирургическом поясе",
 	)
 
 /obj/item/storage/belt/medical/surgery/loaded/populate_contents()
@@ -320,16 +298,6 @@
 		/obj/item/clothing/gloves/color/latex,
 		/obj/item/reagent_containers/applicator,
 		/obj/item/reagent_containers/spray/cleaner,
-	)
-
-/obj/item/storage/belt/medical/surgery/abductor/get_ru_names()
-	return alist(
-		NOMINATIVE = "инопланетный хирургический пояс",
-		GENITIVE = "инопланетного хирургического пояса",
-		DATIVE = "инопланетному хирургическому поясу",
-		ACCUSATIVE = "инопланетный хирургический пояс",
-		INSTRUMENTAL = "инопланетным хирургическим поясом",
-		PREPOSITIONAL = "инопланетном хирургическом поясе",
 	)
 
 /obj/item/storage/belt/medical/surgery/abductor/loaded/populate_contents()
@@ -441,7 +409,7 @@
 
 /obj/item/storage/belt/security/webbing
 	name = "security webbing"
-	desc = "Универсальная разгрузка, вмещающая снаряжение службы безопасности."
+	desc = "Unique and versatile chest rig, can hold security gear."
 	icon_state = "securitywebbing"
 	item_state = "securitywebbing"
 	storage_slots = 6
@@ -449,16 +417,6 @@
 	custom_price = 2 * PAYCHECK_MAX
 	/// Fast reload duration
 	var/fast_reload_delay = 1.5 SECONDS
-
-/obj/item/storage/belt/security/webbing/get_ru_names()
-	return alist(
-		NOMINATIVE = "разгрузка СБ",
-		GENITIVE = "разгрузки СБ",
-		DATIVE = "разгрузке СБ",
-		ACCUSATIVE = "разгрузку СБ",
-		INSTRUMENTAL = "разгрузкой СБ",
-		PREPOSITIONAL = "разгрузке СБ",
-	)
 
 /obj/item/storage/belt/security/webbing/ComponentInitialize()
 	. = ..()
@@ -511,17 +469,7 @@
 
 /obj/item/storage/belt/security/webbing/srt
 	name = "SRT webbing"
-	desc = "Уникальная и универсальная нагрудная разгрузочная система, вмещающая снаряжение отряда специального назначения."
-
-/obj/item/storage/belt/security/webbing/srt/get_ru_names()
-	return alist(
-		NOMINATIVE = "разгрузка ОСН",
-		GENITIVE = "разгрузки ОСН",
-		DATIVE = "разгрузке ОСН",
-		ACCUSATIVE = "разгрузку ОСН",
-		INSTRUMENTAL = "разгрузкой ОСН",
-		PREPOSITIONAL = "разгрузке ОСН",
-	)
+	desc = "Unique and versatile chest rig, can hold SRT gear."
 
 /obj/item/storage/belt/security/webbing/srt/full/populate_contents()
 	new /obj/item/flashlight/seclite(src)
@@ -545,16 +493,6 @@
 	custom_price = PAYCHECK_MAX
 	fast_reload_delay = 2 SECONDS
 
-/obj/item/storage/belt/security/webbing/pouch/get_ru_names()
-	return alist(
-		NOMINATIVE = "подсумок",
-		GENITIVE = "подсумка",
-		DATIVE = "подсумку",
-		ACCUSATIVE = "подсумок",
-		INSTRUMENTAL = "подсумком",
-		PREPOSITIONAL = "подсумке",
-	)
-
 /obj/item/storage/belt/security/webbing/pouch/fast
 	name = "fast pouch"
 	desc = "Подсумок на два магазина, модифицированный для быстрой перезарядки."
@@ -562,17 +500,6 @@
 	item_state = "pouch_fast"
 	custom_price = 4 * PAYCHECK_MAX
 	fast_reload_delay = 0.2 SECONDS
-
-/obj/item/storage/belt/security/webbing/pouch/fast/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый подсумок",
-		GENITIVE = "продвинутого подсумка",
-		DATIVE = "продвинутому подсумку",
-		ACCUSATIVE = "продвинутый подсумок",
-		INSTRUMENTAL = "продвинутым подсумком",
-		PREPOSITIONAL = "продвинутом подсумке",
-	)
-
 
 /obj/item/storage/belt/soulstone
 	name = "soul stone belt"
@@ -699,16 +626,6 @@
 	max_w_class = WEIGHT_CLASS_NORMAL //Rockets are normal
 	can_hold = /obj/item/ammo_casing/caseless/rocket
 
-/obj/item/storage/belt/rocketman/get_ru_names()
-	return alist(
-		NOMINATIVE = "пояс с ракетами",
-		GENITIVE = "пояса с ракетами",
-		DATIVE = "поясу с ракетами",
-		ACCUSATIVE = "пояс с ракетами",
-		INSTRUMENTAL = "поясом с ракетами",
-		PREPOSITIONAL = "поясе с ракетами",
-	)
-
 /obj/item/storage/belt/rocketman/populate_contents()
 	for(var/I in 1 to 3)
 		new /obj/item/ammo_casing/caseless/rocket(src)
@@ -823,7 +740,7 @@
 
 /obj/item/storage/belt/lazarus
 	name = "trainer's belt"
-	desc = "Для шахтёров-мастеров — хранит капсулы Лазаря."
+	desc = "For the mining master, holds your lazarus capsules."
 	icon_state = "lazarusbelt_0"
 	item_state = "lazbelt"
 	w_class = WEIGHT_CLASS_BULKY
@@ -832,16 +749,6 @@
 	can_hold = list(
 		/obj/item/mobcapsule,
 		/obj/item/radio,
-	)
-
-/obj/item/storage/belt/lazarus/get_ru_names()
-	return alist(
-		NOMINATIVE = "пояс тренера",
-		GENITIVE = "пояса тренера",
-		DATIVE = "поясу тренера",
-		ACCUSATIVE = "пояс тренера",
-		INSTRUMENTAL = "поясом тренера",
-		PREPOSITIONAL = "поясе тренера",
 	)
 
 /obj/item/storage/belt/lazarus/Initialize(mapload)
@@ -859,7 +766,7 @@
 
 /obj/item/storage/belt/bandolier
 	name = "bandolier"
-	desc = "Патронташ для хранения патронов к дробовику."
+	desc = "A bandolier for holding shotgun ammunition."
 	icon_state = "bandolier_0"
 	item_state = "bandolier"
 	base_icon_state = "bandolier"
@@ -867,16 +774,6 @@
 	max_combined_w_class = 16
 	display_contents_with_number = TRUE
 	can_hold = list(/obj/item/ammo_casing/shotgun)
-
-/obj/item/storage/belt/bandolier/get_ru_names()
-	return alist(
-		NOMINATIVE = "патронташ",
-		GENITIVE = "патронташа",
-		DATIVE = "патронташу",
-		ACCUSATIVE = "патронташ",
-		INSTRUMENTAL = "патронташем",
-		PREPOSITIONAL = "патронташе",
-	)
 
 /obj/item/storage/belt/bandolier/Initialize(mapload)
 	. = ..()
@@ -903,7 +800,7 @@
 
 /obj/item/storage/belt/holster
 	name = "shoulder holster"
-	desc = "Кобура, предназначенная для хранения пистолета."
+	desc = "A holster to conceal a carried handgun. WARNING: Badasses only."
 	icon_state = "holster"
 	item_state = "holster"
 	storage_slots = 1
@@ -1211,7 +1108,7 @@
 
 /obj/item/storage/belt/mining
 	name = "explorer's webbing"
-	desc = "Универсальная нагрудная система, высоко ценимая шахтёрами и охотниками."
+	desc = "A versatile chest rig, cherished by miners and hunters alike."
 	icon_state = "explorer1"
 	item_state = "explorer1"
 	storage_slots = 6
@@ -1258,16 +1155,6 @@
 		/obj/item/storage/fancy/cigarettes,
 	)
 
-/obj/item/storage/belt/mining/get_ru_names()
-	return alist(
-		NOMINATIVE = "разгрузка исследователя",
-		GENITIVE = "разгрузки исследователя",
-		DATIVE = "разгрузке исследователя",
-		ACCUSATIVE = "разгрузку исследователя",
-		INSTRUMENTAL = "разгрузкой исследователя",
-		PREPOSITIONAL = "разгрузке исследователя",
-	)
-
 /obj/item/storage/belt/mining/vendor/Initialize(mapload)
 	. = ..()
 	new /obj/item/survivalcapsule(src)
@@ -1281,7 +1168,7 @@
 
 /obj/item/storage/belt/mining/primitive
 	name = "hunter's belt"
-	desc = "Универсальный пояс, сплетённый из сухожилий."
+	desc = "A versatile belt, woven from sinew."
 	icon_state = "hunter_belt"
 	item_state = "ebelt"
 	use_item_overlays = TRUE
@@ -1313,16 +1200,6 @@
 		/obj/item/acid_bladder,
 	)
 	cant_hold = list(/obj/item/pickaxe/drill)
-
-/obj/item/storage/belt/mining/primitive/get_ru_names()
-	return alist(
-		NOMINATIVE = "охотничий пояс",
-		GENITIVE = "охотничьего пояса",
-		DATIVE = "охотничьему поясу",
-		ACCUSATIVE = "охотничий пояс",
-		INSTRUMENTAL = "охотничьим поясом",
-		PREPOSITIONAL = "охотничьем поясе",
-	)
 
 /obj/item/storage/belt/chef
 	name = "culinary tool apron"

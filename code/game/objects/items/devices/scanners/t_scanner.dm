@@ -16,7 +16,7 @@
 	var/pulse_duration = 1 SECONDS
 
 /obj/item/t_scanner/extended_range
-	name = "T-ray сканер расширенной дальности"
+	name = "extended-range T-ray scanner"
 	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
 	\nДанная модель обладает расширенным радиусом действия."
 	icon_state = "t-ray-range0"
@@ -26,7 +26,7 @@
 	materials = list(MAT_METAL=300)
 
 /obj/item/t_scanner/longer_pulse
-	name = "T-ray сканер с продолжительным импульсом"
+	name = "long-pulse T-ray scanner"
 	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
 	\nДанная модель способна генерировать более продолжительные импульсы."
 	icon_state = "t-ray-pulse0"
@@ -36,7 +36,7 @@
 	materials = list(MAT_METAL=300)
 
 /obj/item/t_scanner/advanced
-	name = "Продвинутый T-ray сканер"
+	name = "advanced T-ray scanner"
 	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
 	\nДанная модель способна генерировать более продолжительные импульсы и обладает расширенным радиусом действия."
 	icon_state = "t-ray-advanced0"
@@ -47,7 +47,7 @@
 	materials = list(MAT_METAL=300)
 
 /obj/item/t_scanner/science
-	name = "Научный T-ray сканер"
+	name = "scientific T-ray scanner"
 	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
 	\nВысокотехнологичная модель, способная генерировать очень продолжительные импульсы в пределах большого радиуса."
 	icon_state = "t-ray-science0"
@@ -58,7 +58,7 @@
 	materials = list(MAT_METAL=500)
 
 /obj/item/t_scanner/experimental	//a high-risk that cannot be disassembled, since this garbage was invented by, well, you know who.
-	name = "Экспериментальный T-ray сканер"
+	name = "experimental T-ray scanner"
 	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
 	\nЭкспериментальный образец, обладающий расширенным радиусом действия и более продолжительным импульсом. \
 	\nСудя по его виду, эта вещь была собрана безумными учеными в ходе спонтанных экспериментов."
@@ -136,7 +136,7 @@
 		flick_overlay(t_ray_images, list(viewer.client), flick_time)
 
 /obj/item/t_scanner/security
-	name = "Противо-маскировочное ТГц устройство"
+	name = "anti-cloaking THz device"
 	desc = "Излучатель терагерцевого типа используемый для сканирования области на наличие замаскированных биоорганизмов. Устройство уязвимо для ЭМИ излучения."
 	item_state = "sb_t-ray"
 	icon_state = "sb_t-ray0"

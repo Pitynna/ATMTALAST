@@ -5,7 +5,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat
 	name = "meat"
-	desc = "Кусок сырого мяса. Большинство гуманоидов не стало бы есть его в сыром виде."
+	desc = "A slab of meat"
 	w_class = WEIGHT_CLASS_SMALL
 	gender = MALE
 	icon_state = "meat"
@@ -14,16 +14,6 @@
 	list_reagents = list("protein" = 3)
 	tastes = list("мяса" = 1)
 	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/meat/get_ru_names()
-	return alist(
-		NOMINATIVE = "кусок мяса",
-		GENITIVE = "куска мяса",
-		DATIVE = "куску мяса",
-		ACCUSATIVE = "кусок мяса",
-		INSTRUMENTAL = "куском мяса",
-		PREPOSITIONAL = "куске мяса",
-	)
 
 /obj/item/reagent_containers/food/snacks/meat/attackby(obj/item/I, mob/user, params)
 	. = ..()
@@ -84,16 +74,6 @@
 	list_reagents = list("protein" = 4, "vitamin" = 1)
 	tastes = list("мяса" = 1)
 	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/roasted_meat/get_ru_names()
-	return alist(
-		NOMINATIVE = "жаренное мясо",
-		GENITIVE = "жаренного мяса",
-		DATIVE = "жаренному мясу",
-		ACCUSATIVE = "жаренное мясо",
-		INSTRUMENTAL = "жаренным мясом",
-		PREPOSITIONAL = "жаренном мясе",
-	)
 
 /obj/item/reagent_containers/food/snacks/meat/syntiflesh
 	name = "synthetic meat"
@@ -322,12 +302,12 @@
 	list_reagents = list("protein" = 3, "porktonium" = 10)
 
 /obj/item/reagent_containers/food/snacks/meat/ham/old
-	name = "жесткая ветчина"
+	name = "tough ham"
 	desc = "Мясо почтенного хряка."
 	list_reagents = list("protein" = 2, "porktonium" = 10)
 
 /obj/item/reagent_containers/food/snacks/meat/mouse
-	name = "мышатина"
+	name = "mouse meat"
 	desc = "На безрыбье и мышь мясо. Кто знает чем питался этот грызун до его подачи к столу."
 	icon_state = "meat_clear"
 	list_reagents = list("nutriment" = 2, "blood" = 3, "toxin" = 1)
@@ -449,21 +429,11 @@
 
 /obj/item/reagent_containers/food/snacks/monstermeat/spiderleg
 	name = "spider leg"
-	desc = "Всё ещё дёргающаяся лапка гигантского паука. Вы ведь не будете это есть, правда?"
+	desc = "A still twitching leg of a giant spider. You don't really want to eat this, do you?"
 	gender = FEMALE
 	icon_state = "spiderleg"
 	list_reagents = list("protein" = 2, "toxin" = 2)
 	tastes = list("паутины" = 1, "слабых подёргиваний во рту" = 1)
-
-/obj/item/reagent_containers/food/snacks/monstermeat/spiderleg/get_ru_names()
-	return alist(
-		NOMINATIVE = "паучья лапка",
-		GENITIVE = "паучьей лапки",
-		DATIVE = "паучьей лапке",
-		ACCUSATIVE = "паучью лапку",
-		INSTRUMENTAL = "паучьей лапкой",
-		PREPOSITIONAL = "паучьей лапке",
-	)
 
 /obj/item/reagent_containers/food/snacks/monstermeat/spiderleg/burn()
 	visible_message(span_notice("[DECLENT_RU_CAP(src, NOMINATIVE)] приготовилась!"))
@@ -487,21 +457,11 @@
 
 /obj/item/reagent_containers/food/snacks/monstermeat/goliath
 	name = "goliath meat"
-	desc = "Кусок мяса голиафа. Сейчас не очень съедобно, но в лаве оно готовится отлично."
+	desc = "A slab of goliath meat. It's not very edible now, but it cooks great in lava."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "goliathmeat"
 	list_reagents = list("protein" = 3, "toxin" = 5)
 	tastes = list("жёсткого мяса" = 1)
-
-/obj/item/reagent_containers/food/snacks/monstermeat/goliath/get_ru_names()
-	return alist(
-		NOMINATIVE = "мясо голиафа",
-		GENITIVE = "мяса голиафа",
-		DATIVE = "мясу голиафа",
-		ACCUSATIVE = "мясо голиафа",
-		INSTRUMENTAL = "мясом голиафа",
-		PREPOSITIONAL = "мясе голиафа",
-	)
 
 /obj/item/reagent_containers/food/snacks/monstermeat/goliath/burn()
 	visible_message(span_notice("[DECLENT_RU_CAP(src, NOMINATIVE)] приготовилось!"))
@@ -510,20 +470,10 @@
 
 /obj/item/reagent_containers/food/snacks/monstermeat/goldgrub
 	name = "goldgrub meat"
-	desc = "Плотные слизистые, покрытые золотистой шкурой зелёные внутренности. Были извлечены из Златожора. Легенды гласят, что мясо ценится в традиционной медицине, однако сейчас оно крайне ядовито."
+	desc = "Gross, slimy, and green intestines with goldgrub skin, retrieved from a Goldgrub. Legends say it is valuable in traditional medicines, however it's highly toxic now."
 	icon_state = "Goldgrubmeat"
 	list_reagents = list("grub_juice" = 5, "toxin" = 10)
 	tastes = list("слизистого мяса" = 1)
-
-/obj/item/reagent_containers/food/snacks/monstermeat/goldgrub/get_ru_names()
-	return alist(
-		NOMINATIVE = "мясо златожора",
-		GENITIVE = "мяса златожора",
-		DATIVE = "мясу златожору",
-		ACCUSATIVE = "мясо златожора",
-		INSTRUMENTAL = "мясом златожором",
-		PREPOSITIONAL = "мясе златожора",
-	)
 
 /obj/item/reagent_containers/food/snacks/monstermeat/goldgrub/burn()
 	visible_message(span_notice("[DECLENT_RU_CAP(src, NOMINATIVE)] приготовилось!"))
@@ -772,7 +722,7 @@
 
 /obj/item/reagent_containers/food/snacks/goliath_steak
 	name = "goliath steak"
-	desc = "Восхитительный стейк из мяса голиафа, прожаренный прямо в лаве. Так первобытно."
+	desc = "A delicious, lava cooked steak."
 	w_class = WEIGHT_CLASS_SMALL
 	gender = MALE
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -781,16 +731,6 @@
 	list_reagents = list("protein" = 6, "vitamin" = 2)
 	tastes = list("нежного мяса" = 1)
 	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/goliath_steak/get_ru_names()
-	return alist(
-		NOMINATIVE = "стейк из мяса голиафа",
-		GENITIVE = "стейка из мяса голиафа",
-		DATIVE = "стейку из мяса голиафа",
-		ACCUSATIVE = "стейк из мяса голиафа",
-		INSTRUMENTAL = "стейком из мяса голиафа",
-		PREPOSITIONAL = "стейке из мяса голиафа",
-	)
 
 /obj/item/reagent_containers/food/snacks/roasted_spiderleg
 	name = "roasted spider leg"
@@ -803,16 +743,6 @@
 	list_reagents = list("protein" = 4, "vitamin" = 1)
 	tastes = list("паутины" = 1, "мяса" = 1)
 	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/roasted_spiderleg/get_ru_names()
-	return alist(
-		NOMINATIVE = "жаренная паучья лапка",
-		GENITIVE = "жаренной паучьей лапки",
-		DATIVE = "жаренной паучьей лапке",
-		ACCUSATIVE = "жаренную паучью лапку",
-		INSTRUMENTAL = "жаренной паучьей лапкой",
-		PREPOSITIONAL = "жаренной паучьей лапке",
-	)
 
 /obj/item/reagent_containers/food/snacks/goldgrubmeat
 	name= "goldgrub steak"
@@ -1142,7 +1072,7 @@
 /obj/item/reagent_containers/food/snacks/appendix
 //yes, this is the same as meat. I might do something different in future
 	name = "appendix"
-	desc = "Придаток слепой кишки. Является рудиментарным органом, поэтому не несёт полезной функции для организма."
+	desc = "An appendix which looks perfectly healthy."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "appendix"
 	filling_color = "#E00D34"

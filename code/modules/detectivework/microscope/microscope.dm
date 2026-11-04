@@ -3,8 +3,8 @@
 
 //microscope code itself
 /obj/machinery/microscope
-	name = "Электронный микроскоп"
-	desc = "Высокотехнологичный микроскоп, способный увеличивать изображение до 3000 раз."
+	name = "microscope"
+	desc = "A microscope capable of magnifying images up to 3000 times. Used in analyzing fibers, fingerprints, and gunpower residue samples."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "microscope"
 	anchored = TRUE

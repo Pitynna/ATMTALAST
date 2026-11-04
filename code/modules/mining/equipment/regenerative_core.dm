@@ -1,22 +1,12 @@
 /*********************Hivelord stabilizer****************/
 /obj/item/hivelordstabilizer
 	name = "hivelord stabilizer"
-	desc = "Введите стабилизатор в ядро легиона, чтобы предотвратить его гниение, сохраняя исцеляющие свойства."
+	desc = "Inject a hivelord core with this stabilizer to preserve its healing powers indefinitely."
 	gender = MALE
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle19"
 	w_class = WEIGHT_CLASS_TINY
 	origin_tech = "biotech=3"
-
-/obj/item/hivelordstabilizer/get_ru_names()
-	return alist(
-		NOMINATIVE = "стабилизатор ядра",
-		GENITIVE = "стабилизатора ядра",
-		DATIVE = "стабилизатору ядра",
-		ACCUSATIVE = "стабилизатор ядра",
-		INSTRUMENTAL = "стабилизатором ядра",
-		PREPOSITIONAL = "стабилизаторе ядра",
-	)
 
 /obj/item/hivelordstabilizer/molten_mass
 	name = "gooey molten mass"
@@ -31,16 +21,6 @@
 	light_power = 3
 	light_color = "#FFBF00"
 	light_system = OVERLAY_LIGHT
-
-/obj/item/hivelordstabilizer/molten_mass/get_ru_names()
-	return alist(
-		NOMINATIVE = "сплавленный сгусток",
-		GENITIVE = "сплавленного сгустка",
-		DATIVE = "сплавленному сгустку",
-		ACCUSATIVE = "сплавленный сгусток",
-		INSTRUMENTAL = "сплавленным сгустком",
-		PREPOSITIONAL = "сплавленном сгустке",
-	)
 
 /obj/item/hivelordstabilizer/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)
 	. = ..()
@@ -62,7 +42,7 @@
 /************************Hivelord core*******************/
 /obj/item/organ/internal/regenerative_core
 	name = "regenerative core"
-	desc = "Всё, что осталось от легиона. Может поддерживать ваше тело, но быстро сгниёт."
+	desc = "All that remains of a hivelord. It can be used to help keep your body going, but it will rapidly decay into uselessness."
 	icon_state = "roro core 2"
 	item_flags = NOBLUDGEON
 	slot = INTERNAL_ORGAN_HIVECORE
@@ -70,16 +50,6 @@
 	actions_types = list(/datum/action/item_action/organ_action/use)
 	var/inert = 0
 	var/preserved = 0
-
-/obj/item/organ/internal/regenerative_core/get_ru_names()
-	return alist(
-		NOMINATIVE = "регенеративное ядро",
-		GENITIVE = "регенеративного ядра",
-		DATIVE = "регенеративному ядру",
-		ACCUSATIVE = "регенеративное ядро",
-		INSTRUMENTAL = "регенеративным ядром",
-		PREPOSITIONAL = "регенеративном ядре",
-	)
 
 /obj/item/organ/internal/regenerative_core/Initialize(mapload)
 	. = ..()
@@ -200,7 +170,7 @@
 
 /*************************Legion core********************/
 /obj/item/organ/internal/regenerative_core/legion
-	desc = "Странный камень, испускающий разряды энергии. Может полностью исцелить, но быстро разложится."
+	desc = "A strange rock that crackles with power. It can be used to heal completely, but it will rapidly decay into uselessness."
 	icon_state = "legion_soul"
 
 /obj/item/organ/internal/regenerative_core/legion/pre_preserved
@@ -239,7 +209,7 @@
 
 /obj/item/organ/internal/legion_tumour
 	name = "legion tumour"
-	desc = "Пульсирующая масса плоти и чёрных щупалец, способная регенерировать ткани за страшную цену."
+	desc = "A mass of pulsing flesh and dark tendrils, containing the power to regenerate flesh at a terrible cost."
 	icon_state = "legion_remains"
 	slot = INTERNAL_ORGAN_PARASITE_EGG
 	/// What stage of growth the corruption has reached.
@@ -258,16 +228,6 @@
 		'sound/voice/lowHiss2.ogg',
 		'sound/voice/lowHiss3.ogg',
 		'sound/voice/lowHiss4.ogg',
-	)
-
-/obj/item/organ/internal/legion_tumour/get_ru_names()
-	return alist(
-		NOMINATIVE = "опухоль легиона",
-		GENITIVE = "опухоли легиона",
-		DATIVE = "опухоли легиона",
-		ACCUSATIVE = "опухоль легиона",
-		INSTRUMENTAL = "опухолью легиона",
-		PREPOSITIONAL = "опухоли легиона",
 	)
 
 /obj/item/organ/internal/legion_tumour/insert(mob/living/carbon/egg_owner, special)

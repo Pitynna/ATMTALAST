@@ -512,16 +512,6 @@
 	name = "admiral hat"
 	desc = "Шляпа снятая с головы самого адмирала флота НТ. Или ССП? ТСФ? Не важно. Она снята с головы о-о-очень важной шишки."
 
-/obj/item/clothing/head/lordadmiralhat/admiral/get_ru_names()
-	return alist(
-		NOMINATIVE = "адмиральская шляпа",
-		GENITIVE = "адмиральской шляпы",
-		DATIVE = "адмиральской шляпе",
-		ACCUSATIVE = "адмиральскую шляпу",
-		INSTRUMENTAL = "адмиральской шляпы",
-		PREPOSITIONAL = "адмиральской шляпе",
-	)
-
 /obj/item/clothing/head/human_head
 	name = "bloated human head"
 	desc = "A horribly bloated and mismatched human head."
@@ -536,16 +526,6 @@
 	item_state = "oldhumanhelmet"
 	flags_inv = HIDENAME|HIDEHEADSETS|HIDE_ALL_HAIR
 	species_restricted = list("exclude", SPECIES_VOX, SPECIES_VOX_ARMALIS)
-
-/obj/item/clothing/head/oldhuman_head/get_ru_names()
-	return alist(
-		NOMINATIVE = "старая силиконовая маска",
-		GENITIVE = "старой силиконовой маски",
-		DATIVE = "старой силиконовой маске",
-		ACCUSATIVE = "старую силиконовую маску",
-		INSTRUMENTAL = "старой силиконовой маской",
-		PREPOSITIONAL = "старой силиконовой маске",
-	)
 
 /obj/item/clothing/head/papersack
 	name = "paper sack hat"
@@ -627,19 +607,9 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/head.dmi',
 	)
 
-/obj/item/clothing/head/scorched_skull/get_ru_names()
-	return alist(
-		NOMINATIVE = "обожжённый череп",
-		GENITIVE = "обожжённого черепа",
-		DATIVE = "обожжённому черепу",
-		ACCUSATIVE = "обожжённый череп",
-		INSTRUMENTAL = "обожжённым черепом",
-		PREPOSITIONAL = "обожжённом черепе",
-	)
-
 /obj/item/clothing/head/roach
 	name = "roach"
-	desc = "Символ шамана племени, визуально отличающий его от соплеменников. Ценится как трофей среди шахтёров."
+	desc = "A manky old roach, or for non-stoners, a used rollup."
 	icon_state = "roach"
 	item_state = "roach"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
@@ -654,16 +624,6 @@
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/head.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/head.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/head.dmi',
-	)
-
-/obj/item/clothing/head/roach/get_ru_names()
-	return alist(
-		NOMINATIVE = "роуч",
-		GENITIVE = "роуча",
-		DATIVE = "роучу",
-		ACCUSATIVE = "роуч",
-		INSTRUMENTAL = "роучем",
-		PREPOSITIONAL = "роуче",
 	)
 
 /obj/item/clothing/head/mr_chang_band
@@ -749,16 +709,6 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/head.dmi',
 	)
 
-/obj/item/clothing/head/colour/headband/get_ru_names()
-	return alist(
-		NOMINATIVE = "повязка на голову",
-		GENITIVE = "повязки на голову",
-		DATIVE = "повязке на голову",
-		ACCUSATIVE = "повязку на голову",
-		INSTRUMENTAL = "повязкой на голову",
-		PREPOSITIONAL = "повязке на голову",
-	)
-
 /obj/item/clothing/head/colour/headband/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
@@ -770,28 +720,8 @@
 	item_state = "jew_hat"
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/clothing/head/jew_hat/get_ru_names()
-	return alist(
-		NOMINATIVE = "кипа",
-		GENITIVE = "кипы",
-		DATIVE = "кипе",
-		ACCUSATIVE = "кипу",
-		INSTRUMENTAL = "кипой",
-		PREPOSITIONAL = "кипе",
-	)
-
 /obj/item/clothing/head/flatcap
 	name = "flat cap"
-	desc = "Острый козырёк, плоский верх. Стоит надеть — и вас охватывает непреодолимое желание курить и спрашивать у прохожих время."
+	desc = "A working man's cap."
 	icon_state = "flatcap"
 	item_state = "flatcap"
-
-/obj/item/clothing/head/flatcap/get_ru_names()
-	return alist(
-		NOMINATIVE = "картуз",
-		GENITIVE = "картуза",
-		DATIVE = "картузу",
-		ACCUSATIVE = "картуз",
-		INSTRUMENTAL = "картузом",
-		PREPOSITIONAL = "картузе",
-	)

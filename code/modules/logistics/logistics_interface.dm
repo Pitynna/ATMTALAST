@@ -9,16 +9,6 @@
 	materials = list(MAT_METAL = 500, MAT_GLASS = 200)
 	var/mode = LOGISTICS_MODE_SEND
 
-/obj/item/logistics_interface/get_ru_names()
-	return alist(
-		NOMINATIVE = "плата логистического интерфейса",
-		GENITIVE = "платы логистического интерфейса",
-		DATIVE = "плате логистического интерфейса",
-		ACCUSATIVE = "плату логистического интерфейса",
-		INSTRUMENTAL = "платой логистического интерфейса",
-		PREPOSITIONAL = "плате логистического интерфейса",
-	)
-
 /obj/item/logistics_interface/Initialize(mapload)
 	. = ..()
 	update_appearance(UPDATE_NAME | UPDATE_DESC)

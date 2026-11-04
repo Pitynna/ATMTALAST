@@ -10,16 +10,6 @@
 	fridge_circuit = /obj/item/circuitboard/smart_container
 	starting_matter_bins = 4
 
-/obj/machinery/smartfridge/smart_container/get_ru_names()
-	return alist(
-		NOMINATIVE = "умный контейнер",
-		GENITIVE = "умного контейнера",
-		DATIVE = "умному контейнеру",
-		ACCUSATIVE = "умный контейнер",
-		INSTRUMENTAL = "умным контейнером",
-		PREPOSITIONAL = "умном контейнере",
-	)
-
 /obj/machinery/smartfridge/smart_container/Initialize(mapload)
 	. = ..()
 	accepted_items_typecache = typecacheof(/obj/item)

@@ -1,6 +1,6 @@
 /obj/machinery/vending/crittercare
 	name = "CritterCare"
-	desc = "Торговый автомат по продаже зоотоваров."
+	desc = "A vending machine for pet supplies."
 	slogan_list = list(
 		"Здесь всё, чт+обы ваш пит+омец был всем дов+олен!",
 		"Крут+ые пит+омцы засл+уживают крут+ой ош+ейник!",
@@ -49,14 +49,4 @@
 	premium = list(
 		/obj/item/toy/pet_rock/fred = 1,
 		/obj/item/toy/pet_rock/roxie = 1,
-	)
-
-/obj/machinery/vending/crittercare/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат CritterCare",
-		GENITIVE = "торгового автомата CritterCare",
-		DATIVE = "торговому автомату CritterCare",
-		ACCUSATIVE = "торговый автомат CritterCare",
-		INSTRUMENTAL = "торговым автоматом CritterCare",
-		PREPOSITIONAL = "торговом автомате CritterCare",
 	)

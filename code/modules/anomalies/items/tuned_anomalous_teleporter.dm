@@ -34,16 +34,6 @@
 	COOLDOWN_DECLARE(tuned_anomalous_teleporter_cooldown) // declare cooldown for teleportations
 	COOLDOWN_DECLARE(emp_cooldown) // declare cooldown for EMP
 
-/obj/item/assembly/tuned_anomalous_teleporter/get_ru_names()
-	return alist(
-		NOMINATIVE = "настраеваемый аномальный телепортер", \
-		GENITIVE = "настраеваемого аномального телепортера", \
-		DATIVE = "настраеваемому аномальному телепортеру", \
-		ACCUSATIVE = "настраеваемый аномальный телепортер", \
-		INSTRUMENTAL = "настраеваемым аномальным телепортером", \
-		PREPOSITIONAL = "настраеваемом аномальном телепортере",
-	)
-
 /obj/item/assembly/tuned_anomalous_teleporter/Initialize(mapload)
 	. = ..()
 	update_core()

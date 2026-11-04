@@ -72,16 +72,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	/// List of items you get after butchering it
 	var/list/butcher_loot = list()
 
-/obj/item/lavaland_fish/get_ru_names()
-	return alist(
-		NOMINATIVE = "рыба",
-		GENITIVE = "рыбы",
-		DATIVE = "рыбе",
-		ACCUSATIVE = "рыбу",
-		INSTRUMENTAL = "рыбой",
-		PREPOSITIONAL = "рыбе",
-	)
-
 /obj/item/lavaland_fish/shoreline // all this subtypes used in actual fishing
 
 /obj/item/lavaland_fish/deep_water
@@ -170,16 +160,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/effect/spawner/random_spawners/lavaland_random_loot = 1,
 	)
 
-/obj/item/lavaland_fish/shoreline/ash_crab/get_ru_names()
-	return alist(
-		NOMINATIVE = "пепельный рак",
-		GENITIVE = "пепельного рака",
-		DATIVE = "пепельному раку",
-		ACCUSATIVE = "пепельного рака",
-		INSTRUMENTAL = "пепельным раком",
-		PREPOSITIONAL = "пепельном раке",
-	)
-
 /obj/item/lavaland_fish/shoreline/dead_horseman
 	name = "dead horseman"
 	desc = "Небольших размеров рыба, питающаяся преимущественно кровавыми пиявками, зарытыми в пепле. Получила своё название из-за своего характерного внешнего вида — голова всадника внешне напоминает гуманоидный череп. Ценится местными племенами в первую очередь из-за селезёнки, содержащей в себе частицы киновари и используемой для создания коричневого красителя."
@@ -190,16 +170,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/effect/spawner/random_spawners/forty_pc_skull = 1,
 		/obj/item/reagent_containers/food/snacks/lavaland/soft_meat = 1,
 		/obj/item/lavaland_dye/cinnabar = 1,
-	)
-
-/obj/item/lavaland_fish/shoreline/dead_horseman/get_ru_names()
-	return alist(
-		NOMINATIVE = "мёртвый всадник",
-		GENITIVE = "мёртвого всадника",
-		DATIVE = "мёртвому всаднику",
-		ACCUSATIVE = "мёртвого всадника",
-		INSTRUMENTAL = "мёртвым всадником",
-		PREPOSITIONAL = "мёртвом всаднике",
 	)
 
 /obj/item/lavaland_fish/shoreline/shellfish
@@ -214,16 +184,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/lavaland_dye/crimson = 1,
 	)
 
-/obj/item/lavaland_fish/shoreline/shellfish/get_ru_names()
-	return alist(
-		NOMINATIVE = "лавовый панцирник", //there is actual fish - панцирник, so our little different
-		GENITIVE = "лавового панцирника",
-		DATIVE = "лавовому панцирнику",
-		ACCUSATIVE = "лавового панцирника",
-		INSTRUMENTAL = "лавовым панцирником",
-		PREPOSITIONAL = "лавовом панцирнике",
-	)
-
 /obj/item/lavaland_fish/deep_water/bottom_eel
 	name = "bottom eel"
 	desc = "Эта длинная склизская рыба обитает на огромной глубине, питаясь преимущественно личинками и другой мелкой рыбой. Для защиты от других хищников, эта рыба имеет бритвенно-острый хвост, который местные племена приспосабливают в качестве наконечника для копья."
@@ -234,16 +194,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/reagent_containers/food/snacks/lavaland/eel_filet = 1,
 		/obj/item/kitchen/knife/combat/survival/bone/eel = 1,
 		/obj/item/lavaland_dye/indigo = 1,
-	)
-
-/obj/item/lavaland_fish/deep_water/bottom_eel/get_ru_names()
-	return alist(
-		NOMINATIVE = "донный угорь",
-		GENITIVE = "донного угря",
-		DATIVE = "донному угрю",
-		ACCUSATIVE = "донного угря",
-		INSTRUMENTAL = "донным угрём",
-		PREPOSITIONAL = "донном угре",
 	)
 
 /obj/item/lavaland_fish/deep_water/red_devourer
@@ -260,16 +210,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/lavaland_dye/crimson = 1,
 	)
 
-/obj/item/lavaland_fish/deep_water/red_devourer/get_ru_names()
-	return alist(
-		NOMINATIVE = "красный пожиратель",
-		GENITIVE = "красного пожирателя",
-		DATIVE = "красному пожирателю",
-		ACCUSATIVE = "красного пожирателя",
-		INSTRUMENTAL = "красным пожирателем",
-		PREPOSITIONAL = "красном пожирателе",
-	)
-
 /obj/item/lavaland_fish/deep_water/magma_hammerhead
 	name = "magma hammerhead"
 	desc = "Огромная глубоководная рыба тёмного окраса с характерной головой, отдалённо напоминающей молот. Несмотря на угрожающий внешний вид, данный тип рыб преимущественно охотится на мелких ракообразных, придавливая их своем \"молотом\" ко дну и раздавливая их панцирь. По краям их головы находятся странноватые сгустки, синергирующие с регенеративными ядрами."
@@ -280,16 +220,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	butcher_loot = list(
 		/obj/item/hivelordstabilizer/molten_mass = 2,
 		/obj/item/lavaland_dye/cinnabar = 1,
-	)
-
-/obj/item/lavaland_fish/deep_water/magma_hammerhead/get_ru_names()
-	return alist(
-		NOMINATIVE = "магмовая акула-молот",
-		GENITIVE = "магмовой акулы-молота",
-		DATIVE = "магмовой акуле-молоту",
-		ACCUSATIVE = "магмовую акулу-молот",
-		INSTRUMENTAL = "магмовой акулой-молотом",
-		PREPOSITIONAL = "магмовой акуле-молоте",
 	)
 
 /obj/item/lavaland_fish/deep_water/blind_reaper
@@ -306,16 +236,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/lavaland_dye/indigo = 1,
 	)
 
-/obj/item/lavaland_fish/deep_water/blind_reaper/get_ru_names()
-	return alist(
-		NOMINATIVE = "ослеплённый жнец",
-		GENITIVE = "ослеплённого жнеца",
-		DATIVE = "ослеплённому жнецу",
-		ACCUSATIVE = "ослеплённого жнеца",
-		INSTRUMENTAL = "ослеплённым жнецом",
-		PREPOSITIONAL = "ослеплённом жнеце",
-	)
-
 /obj/item/lavaland_fish/deep_water/herald_of_carnage
 	name = "herald of carnage"
 	desc = "Эта массивная рыба, имеющая в своей пасти сотни бритвенно острых зубов, признана высшим хищником среди всего подводного мира Лазис Ардакса. Её массивные зелёные глаза используются в качестве украшения для самых прославленных охотников среди местных племён. В её желудке достаточно часто находят останки других рыб. И не только рыб."
@@ -330,16 +250,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/lavaland_dye/mint = 1,
 	)
 
-/obj/item/lavaland_fish/deep_water/herald_of_carnage/get_ru_names()
-	return alist(
-		NOMINATIVE = "вестник резни",
-		GENITIVE = "вестника резни",
-		DATIVE = "вестнику резни",
-		ACCUSATIVE = "вестника резни",
-		INSTRUMENTAL = "вестником резни",
-		PREPOSITIONAL = "вестнике резни",
-	)
-
 /obj/item/lavaland_fish/deep_water/sulfuric_tramp
 	name = "sulfuric tramp"
 	desc = "Данный вид рыб никогда не был зафиксирован ни в одной исследовательской работе по изучению фауны Лазис Ардакса — это инвазивный вид, попавший в лавовые реки в результате крушения контрабандистского судна, перевозившего фауну с неизвестной кислотной планеты. Судя по всему, эти рыбы нашли свою нишу в пищевой цепи."
@@ -350,16 +260,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/t_scanner/adv_mining_scanner/bleary_eye = 1,
 		/obj/item/acid_bladder = 1,
 		/obj/item/lavaland_dye/amber = 1,
-	)
-
-/obj/item/lavaland_fish/deep_water/sulfuric_tramp/get_ru_names()
-	return alist(
-		NOMINATIVE = "сернистый странник",
-		GENITIVE = "сернистого странника",
-		DATIVE = "сернистому страннику",
-		ACCUSATIVE = "сернистого странника",
-		INSTRUMENTAL = "сернистым странником",
-		PREPOSITIONAL = "сернистом страннике",
 	)
 
 /obj/item/lavaland_fish/deep_water/sulfuric_tramp/check_special_harvest()

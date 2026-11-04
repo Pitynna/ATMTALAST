@@ -26,16 +26,6 @@
 	var/static/logs_decryption_key = null
 	var/list/design_blacklist = list()
 
-/obj/machinery/r_n_d/server/get_ru_names()
-	return alist(
-		NOMINATIVE = "сервер НИО",
-		GENITIVE = "сервера НИО",
-		DATIVE = "серверу НИО",
-		ACCUSATIVE = "сервер НИО",
-		INSTRUMENTAL = "сервером НИО",
-		PREPOSITIONAL = "сервере НИО",
-	)
-
 /obj/machinery/r_n_d/server/Initialize(mapload)
 	. = ..()
 	if(!logs_decryption_key)
@@ -248,45 +238,15 @@
 	server_id = 1
 	plays_sound = 1
 
-/obj/machinery/r_n_d/server/core/get_ru_names()
-	return alist(
-		NOMINATIVE = "центральный сервер НИО",
-		GENITIVE = "центрального сервера НИО",
-		DATIVE = "центральному серверу НИО",
-		ACCUSATIVE = "центральный сервер НИО",
-		INSTRUMENTAL = "центральным сервером НИО",
-		PREPOSITIONAL = "центральном сервере НИО",
-	)
-
 /obj/machinery/r_n_d/server/robotics
 	name = "Robotics and Mechanic R&D Server"
 	id_with_upload_string = "1;2;4;6"
 	id_with_download_string = "1;2;4;6"
 	server_id = 2
 
-/obj/machinery/r_n_d/server/robotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "сервер робототехники и механики НИО",
-		GENITIVE = "сервера робототехники и механики НИО",
-		DATIVE = "серверу робототехники и механики НИО",
-		ACCUSATIVE = "сервер робототехники и механики НИО",
-		INSTRUMENTAL = "сервером робототехники и механики НИО",
-		PREPOSITIONAL = "сервере робототехники и механики НИО",
-	)
-
 /obj/machinery/r_n_d/server/centcom
 	name = "CentComm. Central R&D Database"
 	server_id = -1
-
-/obj/machinery/r_n_d/server/centcom/get_ru_names()
-	return alist(
-		NOMINATIVE = "сервер НИО ЦК",
-		GENITIVE = "сервера НИО ЦК",
-		DATIVE = "серверу НИО ЦК",
-		ACCUSATIVE = "сервер НИО ЦК",
-		INSTRUMENTAL = "сервером НИО ЦК",
-		PREPOSITIONAL = "сервере НИО ЦК",
-	)
 
 /obj/machinery/r_n_d/server/centcom/Initialize(mapload)
 	. = ..()
@@ -332,16 +292,6 @@
 	var/list/consoles = list()
 	var/badmin = 0
 	var/syndicate = 0 //добавленный для синдибазы флаг
-
-/obj/machinery/computer/rdservercontrol/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления серверами НИО",
-		GENITIVE = "консоли управления серверами НИО",
-		DATIVE = "консоли управления серверами НИО",
-		ACCUSATIVE = "консоль управления серверами НИО",
-		INSTRUMENTAL = "консолью управления серверами НИО",
-		PREPOSITIONAL = "консоли управления серверами НИО",
-	)
 
 /obj/machinery/computer/rdservercontrol/Initialize(mapload)
 	. = ..()

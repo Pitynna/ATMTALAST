@@ -1,6 +1,6 @@
 /obj/item/grenade
 	name = "grenade"
-	desc = "Взрывчатое устройство, предназначенное для ручного подрыва."
+	desc = "A hand held grenade with an adjustable timer."
 	gender = FEMALE
 	w_class = WEIGHT_CLASS_SMALL
 	icon = 'icons/obj/weapons/grenade.dmi'

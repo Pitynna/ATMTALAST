@@ -1,7 +1,7 @@
 // MARK: L6 SAW
 /obj/item/gun/projectile/automatic/l6_saw
 	name = "L6 SAW"
-	desc = "Тяжёлый ручной пулемёт калибра 7,62x51 мм, модифицированный для использования в ближнем бою. Обеспечивает высокую плотность огня ценой значительной отдачи."
+	desc = "A next-generation medium machine gun designed by Aussec Armory for CQB use aboard ships and stations. Chambered in 7.62x51mm Federal."
 	gender = MALE
 	icon = 'icons/obj/weapons/guns_48x32.dmi'
 	icon_state = "l6saw"
@@ -31,16 +31,6 @@
 	if(held_item == src)
 		context[SCREENTIP_CONTEXT_LMB] = "[cover_open ? "За" : "От"]крыть крышку"
 		return CONTEXTUAL_SCREENTIP_SET
-
-/obj/item/gun/projectile/automatic/l6_saw/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручной пулемёт L6 SAW",
-		GENITIVE = "ручного пулемёта L6 SAW",
-		DATIVE = "ручному пулемёту L6 SAW",
-		ACCUSATIVE = "ручной пулемёт L6 SAW",
-		INSTRUMENTAL = "ручным пулемётом L6 SAW",
-		PREPOSITIONAL = "ручном пулемёте L6 SAW",
-	)
 
 /obj/item/gun/projectile/automatic/l6_saw/attack_self(mob/user)
 	cover_open = !cover_open

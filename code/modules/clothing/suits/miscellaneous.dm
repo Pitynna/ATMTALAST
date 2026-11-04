@@ -1228,7 +1228,7 @@
 
 /obj/item/clothing/suit/hooded/hijab
 	name = "hijab"
-	desc = "Тёмное одеяние скрывающее тело."
+	desc = "A cloth worn around the head for modesty and dignity."
 	icon_state = "hijab"
 	flags_inv = HIDETAIL
 	hoodtype = /obj/item/clothing/head/hooded/hijab
@@ -1474,7 +1474,7 @@
 
 /obj/item/clothing/suit/towel
 	name = "towel"
-	desc = "Мягкое хлопковое полотенце."
+	desc = "A soft cotton towel."
 	icon_state = "towel_long"
 	item_state = "towel"
 	item_flags = SKIP_ATTACK_MESSAGE
@@ -1494,16 +1494,6 @@
 		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
-	)
-
-/obj/item/clothing/suit/towel/get_ru_names()
-	return alist(
-		NOMINATIVE = "полотенце",
-		GENITIVE = "полотенца",
-		DATIVE = "полотенцу",
-		ACCUSATIVE = "полотенце",
-		INSTRUMENTAL = "полотенцем",
-		PREPOSITIONAL = "полотенце",
 	)
 
 /obj/item/clothing/suit/towel/Initialize(mapload)
@@ -1627,16 +1617,6 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/suit.dmi',
 	)
 
-/obj/item/clothing/suit/hooded/ghostfacesuit/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрный балахон",
-		GENITIVE = "чёрного балахона",
-		DATIVE = "чёрному балахону",
-		ACCUSATIVE = "чёрный балахон",
-		INSTRUMENTAL = "чёрным балахоном",
-		PREPOSITIONAL = "чёрном балахоне",
-	)
-
 /obj/item/clothing/suit/hooded/ghostfacesuit/update_icon_state()
 	return
 
@@ -1650,16 +1630,6 @@
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/suit.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/suit.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/suit.dmi',
-	)
-
-/obj/item/clothing/head/hooded/ghostface/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрный капюшон",
-		GENITIVE = "чёрного капюшона",
-		DATIVE = "чёрному капюшону",
-		ACCUSATIVE = "чёрный капюшон",
-		INSTRUMENTAL = "чёрным капюшоном",
-		PREPOSITIONAL = "чёрном капюшоне",
 	)
 
 /obj/item/clothing/head/hooded/ghostface/true
@@ -1693,16 +1663,6 @@
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
 	)
 
-/obj/item/clothing/suit/hooded/penguin_costume/get_ru_names()
-	return alist(
-		NOMINATIVE = "костюм пингвина",
-		GENITIVE = "костюма пингвина",
-		DATIVE = "костюму пингвина",
-		ACCUSATIVE = "костюм пингвина",
-		INSTRUMENTAL = "костюмом пингвина",
-		PREPOSITIONAL = "костюме пингвина",
-	)
-
 /obj/item/clothing/head/hooded/penguin_hood
 	name = "penguin hood"
 	desc = "Капюшон от костюма пингвина."
@@ -1715,16 +1675,6 @@
 		SPECIES_KIDAN = 'icons/mob/clothing/species/kidan/head.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/head.dmi',
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/head.dmi',
-	)
-
-/obj/item/clothing/head/hooded/penguin_hood/get_ru_names()
-	return alist(
-		NOMINATIVE = "капюшон костюма пингвина",
-		GENITIVE = "капюшона костюма пингвина",
-		DATIVE = "капюшону костюма пингвина",
-		ACCUSATIVE = "капюшон костюма пингвина",
-		INSTRUMENTAL = "капюшоном костюмома пингвина",
-		PREPOSITIONAL = "капюшоне костюма пингвина",
 	)
 
 /obj/item/clothing/suit/storage/bomber
@@ -1742,35 +1692,15 @@
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
 
-/obj/item/clothing/suit/storage/bomber/get_ru_names()
-	return alist(
-		NOMINATIVE = "толстовка",
-		GENITIVE = "толстовки",
-		DATIVE = "толстовке",
-		ACCUSATIVE = "толстовку",
-		INSTRUMENTAL = "толстовкой",
-		PREPOSITIONAL = "толстовке",
-	)
-
 /obj/item/clothing/suit/storage/zazalord
 	name = "zaza-lord swag bomber"
 	desc = "Бомбер, выпущенный ограниченным тиражом корпорацией \"Robust Softdrinks\" в рамках рекламной компании нового напитка \"Заза\". Выдавался за собранные крышки от бутылок."
 	icon_state = "hoody_zaza"
 	item_state = "hoody_zaza"
 
-/obj/item/clothing/suit/storage/zazalord/get_ru_names()
-	return alist(
-		NOMINATIVE = "заза-лорд бомбер",
-		GENITIVE = "заза-лорд бомбера",
-		DATIVE = "заза-лорд бомберу",
-		ACCUSATIVE = "заза-лорд бомбера",
-		INSTRUMENTAL = "заза-лорд бомбером",
-		PREPOSITIONAL = "заза-лорд бомбере",
-	)
-
 /obj/item/clothing/suit/red_jacket
 	name = "red jacket"
-	desc = "Стильная красная короткая куртка."
+	desc = "A red forensics technician jacket."
 	icon_state = "red_jacket"
 	item_state = "red_jacket"
 	body_parts_covered = UPPER_TORSO|ARMS

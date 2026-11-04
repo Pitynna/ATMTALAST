@@ -77,8 +77,8 @@
 	origin_tech = "engineering=3"
 
 /obj/machinery/computer/sat_control
-	name = "Управление спутниками"
-	desc = "Используется для управления спутниковой сетью."
+	name = "Satellite control"
+	desc = "Used to control the satellite network."
 	circuit = /obj/item/circuitboard/computer/sat_control
 	icon_screen = "accelerator"
 	icon_keyboard = "rd_key"
@@ -165,7 +165,7 @@
 
 /obj/machinery/satellite/meteor_shield
 	name = "meteor shield satellite"
-	desc = "Автономный модуль, синхронизированный с другими спутниками, формирует защитное поле вокруг станции, предназначенное для отражения ударов метеоров."
+	desc = "Meteor Point Defense Satellite."
 	mode = "M-SHIELD"
 	speed_process = TRUE
 	var/kill_range = 14

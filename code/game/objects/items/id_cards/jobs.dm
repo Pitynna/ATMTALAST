@@ -4,40 +4,18 @@
 
 /obj/item/card/id/syndicate_command
 	name = "syndicate ID card"
-	desc = "Стандартная идентификационная карта персонала \"Синдиката\". Служит для подтверждения личности, \
-			определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника."
+	desc = "An ID straight from the Syndicate."
 	icon_state = "syndie"
 	item_state = "syndieofficer-id"
 	assignment = JOB_TITLE_RU_SYNDICATE_OFFICER
 	untrackable = 1
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND, ACCESS_EXTERNAL_AIRLOCKS)
 
-/obj/item/card/id/syndicate_command/get_ru_names()
-	return alist(
-		NOMINATIVE = "ID-карта \"Синдиката\"",
-		GENITIVE = "ID-карты \"Синдиката\"",
-		DATIVE = "ID-карте \"Синдиката\"",
-		ACCUSATIVE = "ID-карту \"Синдиката\"",
-		INSTRUMENTAL = "ID-картой \"Синдиката\"",
-		PREPOSITIONAL = "ID-карте \"Синдиката\"",
-	)
-
 /obj/item/card/id/centcom
 	name = "central command ID card"
-	desc = "Стандартная идентификационная карта персонала Центрального Командования \"Нанотрейзен\" в секторе \"Эпсилон Лукусты\". \
-			Служит для подтверждения личности, определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника."
+	desc = "An ID straight from Central Command."
 	icon_state = "centcom"
 	item_state = "centcomm-id"
-
-/obj/item/card/id/centcom/get_ru_names()
-	return alist(
-		NOMINATIVE = "ID-карта ЦК",
-		GENITIVE = "ID-карты ЦК",
-		DATIVE = "ID-карте ЦК",
-		ACCUSATIVE = "ID-карту ЦК",
-		INSTRUMENTAL = "ID-картой ЦК",
-		PREPOSITIONAL = "ID-карте ЦК",
-	)
 
 /obj/item/card/id/centcom/Initialize(mapload)
 	access = get_all_centcom_access()
@@ -138,7 +116,7 @@
 /obj/item/card/id/qm
 	icon_state = "qm"
 	item_state = "qm-id"
-	desc = "Слава Каргонии!"
+	desc = "Glory to Cargonia!"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 
 /obj/item/card/id/genetics

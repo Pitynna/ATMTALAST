@@ -97,7 +97,7 @@
 
 /obj/item/organ/internal/cyberimp/eyes/scope
 	name = "Kaleido Optics eyes"
-	desc = "Эти кибернетические глазные импланты позволят вам приближать далёкие объекты. Многие пользователи находят это дезориентирующим и им трудно взаимодействовать с предметами вблизи, когда имплант активен."
+	desc = "These cybernetic eye implants will let you zoom in on far away objects. Many users find it disorienting, and find it hard to interact with things near them when active."
 	icon_state = "eyes-c-kaleido"
 	eye_colour = "#6f00ff"
 	flash_protect = FLASH_PROTECTION_EXTRA_SENSITIVE
@@ -105,16 +105,6 @@
 	materials = list(MAT_METAL = 600, MAT_GLASS = 600)
 	var/scope_range = 0.8 //Only used in initialize. Greatly nerfed zoom range, since you are not taking the time zoom delay the lwap has.
 	var/active = FALSE
-
-/obj/item/organ/internal/cyberimp/eyes/scope/get_ru_names()
-	return alist(
-		NOMINATIVE = "глазной имплант \"Калейдо Оптикс\"",
-		GENITIVE = "глазного импланта \"Калейдо Оптикс\"",
-		DATIVE = "глазному импланту \"Калейдо Оптикс\"",
-		ACCUSATIVE = "глазной имплант \"Калейдо Оптикс\"",
-		INSTRUMENTAL = "глазным имплантом \"Калейдо Оптикс\"",
-		PREPOSITIONAL = "глазном импланте \"Калейдо Оптикс\"",
-	)
 
 /obj/item/organ/internal/cyberimp/eyes/scope/Initialize(mapload)
 	. = ..()
@@ -133,23 +123,12 @@
 
 /obj/item/organ/internal/cyberimp/eyes/scope/hardened
 	name = "Hardened Kaleido Optics eyes"
-	desc = "Эти кибернетические глазные импланты позволят вам приближать далёкие объекты. Многие пользователи находят это дезориентирующим и им трудно взаимодействовать с предметами вблизи, когда имплант активен. Эта пара была усилена для персонала специальных операций и обладает улучшенной функцией приближения."
+	desc = "These cybernetic eye implants will let you zoom in on far away objects. Many users find it disorienting, and find it hard to interact with things near them when active. This pair has been hardened for special operations personnel, and has enhanced zoom functionality."
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	origin_tech = "materials=6;programming=5;biotech=6;magnets=6;syndicate=3"
 	scope_range = 1.25
 	emp_proof = TRUE
 
-/obj/item/organ/internal/cyberimp/eyes/scope/hardened/get_ru_names()
-	return alist(
-		NOMINATIVE = "укреплённый глазной имплант \"Калейдо Оптикс\"",
-		GENITIVE = "укреплённого глазного импланта \"Калейдо Оптикс\"",
-		DATIVE = "укреплённому глазному импланту \"Калейдо Оптикс\"",
-		ACCUSATIVE = "укреплённый глазной имплант \"Калейдо Оптикс\"",
-		INSTRUMENTAL = "укреплённым глазным имплантом \"Калейдо Оптикс\"",
-		PREPOSITIONAL = "укреплённом глазном импланте \"Калейдо Оптикс\"",
-	)
-
-// HUD implants
 /obj/item/organ/internal/cyberimp/eyes/hud
 	name = "HUD implant"
 	desc = "These cybernetic eyes will display a HUD over everything you see. Maybe."
@@ -228,17 +207,6 @@
 	icon_state = "universal_implant"
 	aug_message = "Этот имплант не имеет смысла..."
 
-/obj/item/organ/internal/cyberimp/eyes/hud/universal/get_ru_names()
-	return alist(
-		NOMINATIVE = "универсальный ИЛС имплант",
-		GENITIVE = "универсального ИЛС импланта",
-		DATIVE = "универсальному ИЛС импланту",
-		ACCUSATIVE = "универсальный ИЛС имплант",
-		INSTRUMENTAL = "универсальным ИЛС имплантом",
-		PREPOSITIONAL = "универсальном ИЛС импланте",
-	)
-
-// MARK: mini map implant
 /obj/item/organ/internal/cyberimp/eyes/map
 	name = "citizen map implant"
 	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности."

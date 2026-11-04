@@ -31,16 +31,6 @@
 	// Stores the current charge overlay state to avoid unnecessary icon updates.
 	var/charge_overlay_state = ""
 
-/obj/item/twohanded/spear/secspear/get_ru_names()
-	return alist(
-		NOMINATIVE = "телескопическое энергетическое копьё",
-		GENITIVE = "телескопического энергетического копья",
-		DATIVE = "телескопическому энергетическому копью",
-		ACCUSATIVE = "телескопическое энергетическое копьё",
-		INSTRUMENTAL = "телескопическим энергетическим копьём",
-		PREPOSITIONAL = "телескопическом энергетическом копье",
-	)
-
 /obj/item/twohanded/spear/secspear/Initialize(mapload)
 	cell = new cell(src)
 	add_traits(list(TRAIT_TWOHANDED_BLOCKED, TRAIT_CLEAVE_BLOCKED), UNIQUE_TRAIT_SOURCE(src))

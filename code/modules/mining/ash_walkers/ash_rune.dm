@@ -10,16 +10,6 @@
 	///Is our rune activated? Another sanity check, love it
 	var/activated = FALSE
 
-/obj/effect/decal/ash_rune_centre/get_ru_names()
-	return alist(
-		NOMINATIVE = "пепельный сигил",
-		GENITIVE = "пепельного сигила",
-		DATIVE = "пепельному сигилу",
-		ACCUSATIVE = "пепельный сигил",
-		INSTRUMENTAL = "пепельным сигилом",
-		PREPOSITIONAL = "пепельном сигиле",
-	)
-
 /obj/effect/decal/ash_rune_centre/Initialize(mapload)
 	. = ..()
 	var/number = rand(1, 36)
@@ -72,16 +62,6 @@
 	plane = FLOOR_PLANE
 	layer = TURF_DECAL_LAYER
 
-/obj/effect/rune_fluff_marks/get_ru_names()
-	return alist(
-		NOMINATIVE = "пепельная руна",
-		GENITIVE = "пепельной руны",
-		DATIVE = "пепельной руне",
-		ACCUSATIVE = "пепельную руну",
-		INSTRUMENTAL = "пепельной руной",
-		PREPOSITIONAL = "пепельной руне",
-	)
-
 /obj/effect/rune_fluff_marks/Initialize(mapload)
 	. = ..()
 	icon_state = ""
@@ -100,16 +80,6 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	plane = FLOOR_PLANE
 	layer = TURF_DECAL_LAYER
-
-/obj/effect/rune_animation_landmark/get_ru_names()
-	return alist(
-		NOMINATIVE = "пепельная руна",
-		GENITIVE = "пепельной руны",
-		DATIVE = "пепельной руне",
-		ACCUSATIVE = "пепельную руну",
-		INSTRUMENTAL = "пепельной руной",
-		PREPOSITIONAL = "пепельной руне",
-	)
 
 /obj/effect/rune_animation_landmark/Initialize(mapload)
 	. = ..()

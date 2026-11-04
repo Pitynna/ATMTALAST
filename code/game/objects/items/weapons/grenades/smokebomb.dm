@@ -1,20 +1,9 @@
 /obj/item/grenade/smokebomb
 	name = "smoke bomb"
-	desc = "Взрывчатое устройство, предназначенное для ручного подрыва. При детонации испускает дым, \
-			создающий дымовую завесу."
+	desc = "A grenade filled with chemical agents that will turn into a dense smoke when detonated, making it impossible to see through without specialised optics."
 	icon_state = "smokebomb"
 	det_time = 2 SECONDS
 	var/datum/effect_system/fluid_spread/smoke/bad/smoke
-
-/obj/item/grenade/smokebomb/get_ru_names()
-	return alist(
-		NOMINATIVE = "дымовая граната",
-		GENITIVE = "дымовой гранаты",
-		DATIVE = "дымовой гранате",
-		ACCUSATIVE = "дымовую гранату",
-		INSTRUMENTAL = "дымовой гранатой",
-		PREPOSITIONAL = "дымовой гранате"
-	)
 
 /obj/item/grenade/smokebomb/Initialize(mapload)
 	. = ..()

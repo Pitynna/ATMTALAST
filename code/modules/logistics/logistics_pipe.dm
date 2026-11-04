@@ -20,16 +20,6 @@
 	var/datum/component/logistics_interface/linked_interface
 	COOLDOWN_DECLARE(eject_effects_cd)
 
-/obj/structure/logistics_pipe/get_ru_names()
-	return alist(
-		NOMINATIVE = "логистическая труба",
-		GENITIVE = "логистической трубы",
-		DATIVE = "логистической трубе",
-		ACCUSATIVE = "логистическую трубу",
-		INSTRUMENTAL = "логистической трубой",
-		PREPOSITIONAL = "логистической трубе",
-	)
-
 /obj/structure/logistics_pipe/Initialize(mapload, obj/structure/logistics_construct/made_from)
 	. = ..()
 	if(made_from)

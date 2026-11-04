@@ -2,8 +2,8 @@
 #define ANOMALY_strength_MOVE_MULTIPLIER 2
 
 /obj/effect/anomaly
-	name = "аномалия"
-	desc = "Загадочная аномалия. Обычно такую можно наблюдать только в станционном секторе."
+	name = "anomaly"
+	desc = "A mysterious anomaly, seen commonly only in the region of space that the station orbits..."
 	icon_state = "bhole3"
 	gender = FEMALE
 	density = TRUE
@@ -43,16 +43,6 @@
 	var/obj/effect/warp_effect/supermatter/warp
 	/// If FALSE, there won't be warp effect.
 	var/has_warp = FALSE
-
-/obj/effect/anomaly/get_ru_names()
-	return alist(
-		NOMINATIVE = "аномалия", \
-		GENITIVE = "аномалии", \
-		DATIVE = "аномалии", \
-		ACCUSATIVE = "аномалию", \
-		INSTRUMENTAL = "аномалией", \
-		PREPOSITIONAL = "аномалии",
-	)
 
 /obj/effect/anomaly/proc/size_by_strength(cur_strength)
 	if(!cur_strength)

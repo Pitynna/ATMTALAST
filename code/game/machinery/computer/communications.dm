@@ -20,7 +20,7 @@ GLOBAL_VAR_INIT(captain_auth_access, ACCESS_CAPTAIN)
 // The communications computer
 /obj/machinery/computer/communications
 	name = "communications console"
-	desc = "Консоль, с помощью которой капитан может связаться с Центральным командованием или изменить уровень угрозы. Она так-же позволяет командному составу вызвать эвакуационный шаттл."
+	desc = "This allows the Captain to contact Central Command, or change the alert level. It also allows the command staff to call the Escape Shuttle."
 	icon_keyboard = "tech_key"
 	icon_screen = "comm"
 	req_access = list(ACCESS_HEADS)
@@ -46,16 +46,6 @@ GLOBAL_VAR_INIT(captain_auth_access, ACCESS_CAPTAIN)
 	var/datum/announcer/announcer = new(config_type = /datum/announcement_configuration/comms_console)
 
 	light_color = LIGHT_COLOR_BLUE
-
-/obj/machinery/computer/communications/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль связи",
-		GENITIVE = "консоли связи",
-		DATIVE = "консоли связи",
-		ACCUSATIVE = "консоль связи",
-		INSTRUMENTAL = "консолью связи",
-		PREPOSITIONAL = "консоли связи",
-	)
 
 /obj/machinery/computer/communications/Initialize(mapload)
 	. = ..()

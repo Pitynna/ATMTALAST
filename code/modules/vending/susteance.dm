@@ -1,6 +1,6 @@
 /obj/machinery/vending/sustenance
 	name = "Sustenance Vendor"
-	desc = "Торговый автомат, в котором продаются продукты питания, в соответствии с разделом 47-С Соглашения об этическом обращении с заключёнными \"Нанотрейзен\"."
+	desc = "A vending machine which vends food, as required by section 47-C of the NT's Prisoner Ethical Treatment Agreement."
 	slogan_list = list(
 		"При+ятного аппет+ита!",
 		"Дост+аточное кол+ичество кал+орий для интенс+ивной раб+оты.",
@@ -36,16 +36,6 @@
 		/obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee = 12,
 		/obj/item/tank/internals/emergency_oxygen = 6,
 		/obj/item/clothing/mask/breath = 6,
-	)
-
-/obj/machinery/vending/sustenance/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Sustenance Vendor",
-		GENITIVE = "торгового автомата Sustenance Vendor",
-		DATIVE = "торговому автомату Sustenance Vendor",
-		ACCUSATIVE = "торговый автомат Sustenance Vendor",
-		INSTRUMENTAL = "торговым автоматом Sustenance Vendor",
-		PREPOSITIONAL = "торговом автомате Sustenance Vendor",
 	)
 
 /obj/machinery/vending/sustenance/additional

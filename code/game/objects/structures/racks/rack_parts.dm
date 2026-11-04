@@ -1,7 +1,7 @@
 // MARK: Rack Parts
 /obj/item/rack_parts
 	name = "rack parts"
-	desc = "Детали разобранного стеллажа."
+	desc = "Parts of a rack."
 	gender = PLURAL
 	icon = 'icons/obj/structures/rack.dmi'
 	icon_state = "rack_parts"
@@ -12,16 +12,6 @@
 	var/building = FALSE
 	/// The type of structure that this item creates.
 	var/rack_type = /obj/structure/rack
-
-/obj/item/rack_parts/get_ru_names()
-	return alist(
-		NOMINATIVE = "детали стеллажа",
-		GENITIVE = "деталей стеллажа",
-		DATIVE = "деталям стеллажа",
-		ACCUSATIVE = "детали стеллажа",
-		INSTRUMENTAL = "деталями стеллажа",
-		PREPOSITIONAL = "деталях стеллажа",
-	)
 
 /obj/item/rack_parts/Initialize(mapload)
 	. = ..()
@@ -79,17 +69,6 @@
 	materials = list(MAT_METAL = 2000)
 	rack_type = /obj/structure/rack/gunrack
 
-/obj/item/rack_parts/gunrack_parts/get_ru_names()
-	return alist(
-		NOMINATIVE = "детали стеллажа для оружия",
-		GENITIVE = "деталей стеллажа для оружия",
-		DATIVE = "деталям стеллажа для оружия",
-		ACCUSATIVE = "детали стеллажа для оружия",
-		INSTRUMENTAL = "деталями стеллажа для оружия",
-		PREPOSITIONAL = "деталях стеллажа для оружия",
-	)
-
-// MARK: Cargo Shelf Parts
 /obj/item/rack_parts/cargo_shelf
 	name = "crate shelf parts"
 	desc = "Детали стеллажа, предназначенного для хранения ящиков."
@@ -97,13 +76,3 @@
 	item_state = "shelf_parts"
 	materials = list(MAT_METAL = 2000)
 	rack_type = /obj/structure/cargo_shelf
-
-/obj/item/rack_parts/cargo_shelf/get_ru_names()
-	return alist(
-		NOMINATIVE = "детали стеллажа для ящиков",
-		GENITIVE = "деталей стеллажа для ящиков",
-		DATIVE = "деталям стеллажа для ящиков",
-		ACCUSATIVE = "детали стеллажа для ящиков",
-		INSTRUMENTAL = "деталями стеллажа для ящиков",
-		PREPOSITIONAL = "деталях стеллажа для ящиков",
-	)

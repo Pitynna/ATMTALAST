@@ -7,16 +7,6 @@
 	origin_tech = "materials=3;engineering=2"
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/mining_satchel_upgrade/get_ru_names()
-	return alist(
-		NOMINATIVE = "магнитное улучшение сумок для руды",
-		GENITIVE = "магнитного улучшения сумок для руды",
-		DATIVE = "магнитному улучшению сумок для руды",
-		ACCUSATIVE = "магнитное улучшение сумок для руды",
-		INSTRUMENTAL = "магнитным улучшением сумок для руды",
-		PREPOSITIONAL = "магнитном улучшении сумок для руды",
-	)
-
 /obj/item/mining_satchel_upgrade/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()
 	if(. & ITEM_INTERACT_ANY_BLOCKER)

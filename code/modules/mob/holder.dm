@@ -368,7 +368,7 @@
 	icon_state = "wooly_mouse"
 
 /obj/item/holder/mouse_rep
-	name = "Господин Мышкин"
+	name = "Mr. Myshkin"
 	desc = "Самый уважаемый грызун во вселенной."
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "mouse_rep"

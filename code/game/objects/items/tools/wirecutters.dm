@@ -1,6 +1,6 @@
 /obj/item/wirecutters
 	name = "wirecutters"
-	desc = "Инструмент, предназначенный для перекусывания различных материалов."
+	desc = "A small pair of wirecutters, used for snipping electrical cabling. The handgrips are made of cheap plastic, and will not protect against electrical shocks."
 	gender = PLURAL
 	icon = 'icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/wirecutters"
@@ -46,16 +46,6 @@
 		"yellow" = "#d58c18"
 	)
 
-/obj/item/wirecutters/get_ru_names()
-	return alist(
-		NOMINATIVE = "кусачки",
-		GENITIVE = "кусачек",
-		DATIVE = "кусачкам",
-		ACCUSATIVE = "кусачки",
-		INSTRUMENTAL = "кусачками",
-		PREPOSITIONAL = "кусачках"
-	)
-
 /obj/item/wirecutters/Initialize(mapload, param_color = null)
 	if(random_color)
 		var/our_color = param_color || pick(wirecutter_colors)
@@ -89,8 +79,7 @@
 
 /obj/item/wirecutters/brass
 	name = "brass wirecutters"
-	desc = "Инструмент, предназначенный для перекусывания различных материалов. \
-			Ручка на ощупь ледяная."
+	desc = "A pair of wirecutters made of brass. The handle feels freezing cold to the touch."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "cutters_brass"
 	belt_icon = "cutters_brass"
@@ -104,20 +93,9 @@
 	random_color = FALSE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
-/obj/item/wirecutters/brass/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунные кусачки",
-		GENITIVE = "латунных кусачек",
-		DATIVE = "латунным кусачкам",
-		ACCUSATIVE = "латунные кусачки",
-		INSTRUMENTAL = "латунными кусачками",
-		PREPOSITIONAL = "латунных кусачках"
-	)
-
 /obj/item/wirecutters/abductor
 	name = "alien wirecutters"
-	desc = "Инструмент, предназначенный для перекусывания различных материалов. \
-			Лезвия из серебристо-зелёного металла кажутся невероятно острыми."
+	desc = "Extremely sharp wirecutters, made out of a silvery-green metal."
 	icon_state = "cutters"
 	icon = 'icons/obj/abductor.dmi'
 	item_state = "cutters_alien"
@@ -132,38 +110,15 @@
 	greyscale_config_belt = null
 	greyscale_colors = null
 
-/obj/item/wirecutters/abductor/get_ru_names()
-	return alist(
-		NOMINATIVE = "чужеродные кусачки",
-		GENITIVE = "чужеродных кусачек",
-		DATIVE = "чужеродным кусачкам",
-		ACCUSATIVE = "чужеродные кусачки",
-		INSTRUMENTAL = "чужеродными кусачками",
-		PREPOSITIONAL = "чужеродных кусачках"
-	)
-
 /obj/item/wirecutters/cyborg
 	name = "alien wirecutters"
-	desc = "Инструмент, предназначенный для перекусывания различных материалов. \
-			Специализированная версия для установки в роботизированные системы."
+	desc = "A pair of integrated wirecutters used by construction and engineering robots."
 	toolspeed = 0.5
 	flags = parent_type::flags | NO_NEW_GAGS_PREVIEW
 
-/obj/item/wirecutters/cyborg/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоматизированные кусачки",
-		GENITIVE = "автоматизированных кусачек",
-		DATIVE = "автоматизированным кусачкам",
-		ACCUSATIVE = "автоматизированные кусачки",
-		INSTRUMENTAL = "автоматизированными кусачками",
-		PREPOSITIONAL = "автоматизированных кусачках"
-	)
-
 /obj/item/wirecutters/power
 	name = "jaws of life"
-	desc = "Гидравлический инструмент, предназначенный для использования в качестве рычага или для перерезания материалов. \
-			Изначально использовался для спасательных работ, откуда и получил своё название, \
-			но в дальнейшем получил развитие в качестве инженерного инструмента."
+	desc = "A compact and powerful industrial tool with a modular head. This one has a set of large cutting blades attached."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "jaws_cutter"
 	item_state = "jawsoflife"
@@ -180,16 +135,6 @@
 	toolspeed = 0.25
 	random_color = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/wirecutters/power/get_ru_names()
-	return alist(
-		NOMINATIVE = "челюсти жизни",
-		GENITIVE = "челюстей жизни",
-		DATIVE = "челюстям жизни",
-		ACCUSATIVE = "челюсти жизни",
-		INSTRUMENTAL = "челюстями жизни",
-		PREPOSITIONAL = "челюстях жизни"
-	)
 
 /obj/item/wirecutters/power/examine(mob/user)
 	. = ..()
@@ -230,13 +175,3 @@
 	greyscale_config_inhand_left = null
 	greyscale_config_inhand_right = null
 	greyscale_colors = null
-
-/obj/item/wirecutters/industrial/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутые кусачки",
-		GENITIVE = "продвинутых кусачек",
-		DATIVE = "продвинутым кусачкам",
-		ACCUSATIVE = "родвинутые кусачки",
-		INSTRUMENTAL = "продвинутыми кусачками",
-		PREPOSITIONAL = "продвинутых кусачках"
-	)

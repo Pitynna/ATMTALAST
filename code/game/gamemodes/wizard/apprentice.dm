@@ -124,16 +124,16 @@
 // MARK: BLOCK 1.3: APPRENTICE CHOOSE BOOK
 
 /obj/item/contract/apprentice_choose_book
-	name = "магический учебник"
-	desc = "Магический учебник, позволяющий ученику-владельцу определиться в своем обучении."
+	name = "magic textbook"
+	desc = "A magic textbook that lets its apprentice owner choose a course of study."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "book15"
 
 	var/mob/living/carbon/human/owner
 
 /obj/item/contract/apprentice_choose_book/infinity_book
-	name = "магический учебник полукровки"
-	desc = "Магический учебник с яркой выраженной подписью какой-то полукровки.\nПохоже он как-то переписал магию, из-за которой учебник не стирает буквы после использования.\nОткуда он у вас?!"
+	name = "half-blood's magic textbook"
+	desc = "A magic textbook bearing the unmistakable signature of some half-blood.\nThey seem to have rewritten its magic so that the writing no longer disappears after use.\nWhere did you get this?!"
 	infinity_uses = 1
 
 /obj/item/contract/apprentice_choose_book/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -254,8 +254,8 @@
 	magical = TRUE
 	slowdown = 0
 	icon_state = "psyamp"
-	name = "Роба межпространства"
-	desc = "Магическая роба прислужника школы пространства, оберегающий владельца от перемещений в агрессивных средах."
+	name = "interdimensional robe"
+	desc = "The magical robe of a follower of the school of space, protecting its wearer while traveling through hostile environments."
 	permeability_coefficient = 0.01
 	armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 20, FIRE = 100, ACID = 100)
 	strip_delay = 5 SECONDS
@@ -265,8 +265,8 @@
 /obj/item/clothing/head/helmet/space/head/psyamp
 	magical = TRUE
 	icon_state = "amp"
-	name = "Капюшон Межпространства"
-	desc = "Магический головной убор робы прислужника школы пространства, оберегающий от перемещений в агрессивных средах."
+	name = "interdimensional hood"
+	desc = "A magical hood worn with the robe of a follower of the school of space, offering protection while traveling through hostile environments."
 	gas_transfer_coefficient = 0.01
 	armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 20, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -290,8 +290,8 @@
 
 /obj/item/clothing/suit/storage/blacktrenchcoat/suit/saboteur
 	magical = TRUE
-	name = "Роба саботёра"
-	desc = "Магическая роба-саботёра. Стильная и приталенная!"
+	name = "saboteur's robe"
+	desc = "A saboteur's magical robe. Stylish and tailored!"
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 20, FIRE = 100, ACID = 100)
@@ -301,8 +301,8 @@
 
 /obj/item/clothing/head/fedora/head/saboteur
 	magical = TRUE
-	name = "Федора саботёра"
-	desc = "Магическая федора-саботёра. Стильная и уважаемая!"
+	name = "saboteur's fedora"
+	desc = "A saboteur's magical fedora. Stylish and respectable!"
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 20, FIRE = 100, ACID = 100)
@@ -345,8 +345,8 @@
 	owner.equip_or_collect(new /obj/item/clothing/suit/victcoat/red/suit/fire_robe, ITEM_SLOT_CLOTH_OUTER)
 
 /obj/item/clothing/suit/victcoat/red/suit/fire_robe
-	name = "Роба огня"
-	desc = "Магическая роба последователей школы огня."
+	name = "fire robe"
+	desc = "A magical robe worn by followers of the school of fire."
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 20, FIRE = 100, ACID = 100)
@@ -423,8 +423,8 @@
 	owner.equip_or_collect(new /obj/item/clothing/suit/wizrobe/sacrificial_robe, ITEM_SLOT_CLOTH_OUTER)
 
 /obj/item/clothing/suit/wizrobe/sacrificial_robe
-	name = "Жертвенная роба"
-	desc = "Магическая роба последователей школы крови."
+	name = "sacrificial robe"
+	desc = "A magical robe worn by followers of the school of blood."
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	armor = list(MELEE = 30, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 20, FIRE = 100, ACID = 100)

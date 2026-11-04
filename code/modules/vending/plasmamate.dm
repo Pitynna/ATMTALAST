@@ -45,13 +45,3 @@
 		/obj/item/storage/lockbox/plasma/clown = 5,
 		/obj/item/storage/lockbox/plasma/blueshield = 1,
 	)
-
-/obj/machinery/vending/plasmamate/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат PlasmaMate",
-		GENITIVE = "торгового автомата PlasmaMate",
-		DATIVE = "торговому автомату PlasmaMate",
-		ACCUSATIVE = "торговый автомат PlasmaMate",
-		INSTRUMENTAL = "торговым автоматом PlasmaMate",
-		PREPOSITIONAL = "торговом автомате PlasmaMate",
-	)

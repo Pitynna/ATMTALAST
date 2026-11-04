@@ -30,16 +30,6 @@
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/neck.dmi',
 	)
 
-/obj/item/camera/get_ru_names()
-	return alist(
-		NOMINATIVE = "фотоаппарат",
-		GENITIVE = "фотоаппарата",
-		DATIVE = "фотоаппарату",
-		ACCUSATIVE = "фотоаппарат",
-		INSTRUMENTAL = "фотоаппаратом",
-		PREPOSITIONAL = "фотоаппарате"
-	)
-
 /obj/item/camera/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/shell,\

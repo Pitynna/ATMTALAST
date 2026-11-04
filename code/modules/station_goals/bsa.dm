@@ -136,18 +136,8 @@ GLOBAL_LIST_EMPTY(BSA_modes_list)
 
 /obj/machinery/bsa/back
 	name = "Bluespace Artillery Generator"
-	desc = "Генерирует импульс для орудия. Требуется соединение с фузором."
+	desc = "Generates cannon pulse. Needs to be linked with a fusor. "
 	icon_state = "power_box"
-
-/obj/machinery/bsa/back/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор блюспейс-артиллерии",
-		GENITIVE = "генератора блюспейс-артиллерии",
-		DATIVE = "генератору блюспейс-артиллерии",
-		ACCUSATIVE = "генератор блюспейс-артиллерии",
-		INSTRUMENTAL = "генератором блюспейс-артиллерии",
-		PREPOSITIONAL = "генераторе блюспейс-артиллерии",
-	)
 
 /obj/machinery/bsa/back/wrench_act(mob/living/user, obj/item/I)
 	return default_unfasten_wrench(user, I, 1 SECONDS)
@@ -164,18 +154,8 @@ GLOBAL_LIST_EMPTY(BSA_modes_list)
 
 /obj/machinery/bsa/front
 	name = "Bluespace Artillery Bore"
-	desc = "Не стойте перед орудием во время работы. Требуется соединение с фузором."
+	desc = "Do not stand in front of cannon during operation. Needs to be linked with a fusor."
 	icon_state = "emitter_center"
-
-/obj/machinery/bsa/front/get_ru_names()
-	return alist(
-		NOMINATIVE = "ускоритель блюспейс-артиллерии",
-		GENITIVE = "ускорителя блюспейс-артиллерии",
-		DATIVE = "ускорителю блюспейс-артиллерии",
-		ACCUSATIVE = "ускоритель блюспейс-артиллерии",
-		INSTRUMENTAL = "ускорителем блюспейс-артиллерии",
-		PREPOSITIONAL = "ускорителе блюспейс-артиллерии",
-	)
 
 /obj/machinery/bsa/front/wrench_act(mob/living/user, obj/item/I)
 	return default_unfasten_wrench(user, I, 1 SECONDS)
@@ -192,20 +172,10 @@ GLOBAL_LIST_EMPTY(BSA_modes_list)
 
 /obj/machinery/bsa/middle
 	name = "Bluespace Artillery Fusor"
-	desc = "Содержимое засекречено военно-космическим командованием \"Нанотрейзен\". Требуется соединение с другими компонентами БСА с помощью мультиметра."
+	desc = "Contents classifed by Nanotrasen Naval Command. Needs to be linked with the other BSA parts using multitool."
 	icon_state = "fuel_chamber"
 	var/obj/machinery/bsa/back/back
 	var/obj/machinery/bsa/front/front
-
-/obj/machinery/bsa/middle/get_ru_names()
-	return alist(
-		NOMINATIVE = "фузор блюспейс-артиллерии",
-		GENITIVE = "фузора блюспейс-артиллерии",
-		DATIVE = "фузору блюспейс-артиллерии",
-		ACCUSATIVE = "фузор блюспейс-артиллерии",
-		INSTRUMENTAL = "фузором блюспейс-артиллерии",
-		PREPOSITIONAL = "фузоре блюспейс-артиллерии",
-	)
 
 /obj/machinery/bsa/middle/wrench_act(mob/living/user, obj/item/I)
 	return default_unfasten_wrench(user, I, 1 SECONDS)
@@ -265,7 +235,7 @@ GLOBAL_LIST_EMPTY(BSA_modes_list)
 
 /obj/machinery/bsa/full
 	name = "Bluespace Artillery"
-	desc = "Дальнобойная блюспейс-артиллерия."
+	desc = "Long range bluespace artillery."
 	icon = 'icons/obj/lavaland/cannon.dmi'
 	icon_state = "cannon_west"
 
@@ -282,16 +252,6 @@ GLOBAL_LIST_EMPTY(BSA_modes_list)
 	pixel_x = -192
 	bound_width = 352
 	bound_x = -192
-
-/obj/machinery/bsa/full/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс-артиллерия",
-		GENITIVE = "блюспейс-артиллерии",
-		DATIVE = "блюспейс-артиллерии",
-		ACCUSATIVE = "блюспейс-артиллерию",
-		INSTRUMENTAL = "блюспейс-артиллерией",
-		PREPOSITIONAL = "блюспейс-артиллерии",
-	)
 
 /obj/machinery/bsa/full/Destroy()
 	if(controller && controller.cannon == src)
@@ -492,16 +452,6 @@ GLOBAL_LIST_EMPTY(BSA_modes_list)
 	var/atom/movable/screen/map_view/camera/cam_screen
 	var/last_camera_turf = null
 	var/image/crosshair
-
-/obj/machinery/computer/bsa_control/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления БСА",
-		GENITIVE = "консоли управления БСА",
-		DATIVE = "консоли управления БСА",
-		ACCUSATIVE = "консоль управления БСА",
-		INSTRUMENTAL = "консолью управления БСА",
-		PREPOSITIONAL = "консоли управления БСА",
-	)
 
 /obj/machinery/computer/bsa_control/Initialize(mapload)
 	. = ..()

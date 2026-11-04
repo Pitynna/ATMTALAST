@@ -1,6 +1,6 @@
 /obj/machinery/vending/plasmaresearch
 	name = "Toximate 3000"
-	desc = "Всё, что вам нужно, в одном удобном месте!"
+	desc = "All the fine parts you need in one vending machine!"
 
 	panel_overlay = "generic_panel"
 	screen_overlay = "generic"
@@ -22,14 +22,4 @@
 		/obj/item/assembly/voice = 3,
 		/obj/item/assembly/health = 3,
 		/obj/item/assembly/infra = 3,
-	)
-
-/obj/machinery/vending/plasmaresearch/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Toximate 3000",
-		GENITIVE = "торгового автомата Toximate 3000",
-		DATIVE = "торговому автомату Toximate 3000",
-		ACCUSATIVE = "торговый автомат Toximate 3000",
-		INSTRUMENTAL = "торговым автоматом Toximate 3000",
-		PREPOSITIONAL = "торговом автомате Toximate 3000",
 	)

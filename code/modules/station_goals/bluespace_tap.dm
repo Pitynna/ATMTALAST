@@ -243,16 +243,6 @@
 	/// How high the machine can be run before it starts having a chance for dimension breaches.
 	var/safe_levels = 10
 
-/obj/machinery/power/bluespace_tap/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс сборщик",
-		GENITIVE = "блюспейс сборщика",
-		DATIVE = "блюспейс сборщику",
-		ACCUSATIVE = "блюспейс сборщик",
-		INSTRUMENTAL = "блюспейс сборщиком",
-		PREPOSITIONAL = "блюспейс сборщике",
-	)
-
 /obj/machinery/power/bluespace_tap/Initialize(mapload)
 	. = ..()
 	//more code stolen from dna vault, inculding comment below. Taking bets on that datum being made ever.

@@ -63,17 +63,7 @@
 
 /obj/structure/spider/terrorweb/widow
 	name = "sinister web"
-	desc = "На нитях этой паутины сверкают капли тёмной жидкости."
-
-/obj/structure/spider/terrorweb/widow/get_ru_names()
-	return alist(
-		NOMINATIVE = "зловещая паутина",
-		GENITIVE = "зловещей паутины",
-		DATIVE = "зловещей паутине",
-		ACCUSATIVE = "зловещую паутину",
-		INSTRUMENTAL = "зловещей паутиной",
-		PREPOSITIONAL = "зловещей паутине",
-	)
+	desc = "This web has beads of a dark fluid on its strands."
 
 /obj/structure/spider/terrorweb/widow/web_special_ability(mob/living/carbon/C)
 	if(istype(C))

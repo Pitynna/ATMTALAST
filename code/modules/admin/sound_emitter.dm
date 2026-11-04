@@ -20,16 +20,6 @@
 	var/list/hearing_mobs
 	var/started = FALSE
 
-/obj/effect/sound_emitter/get_ru_names()
-	return alist(
-		NOMINATIVE = "излучатель звука",
-		GENITIVE = "излучателя звука",
-		DATIVE = "излучателю звука",
-		ACCUSATIVE = "излучатель звука",
-		INSTRUMENTAL = "излучателем звука",
-		PREPOSITIONAL = "излучателе звука",
-	)
-
 /obj/effect/sound_emitter/Destroy(force)
 	. = ..()
 

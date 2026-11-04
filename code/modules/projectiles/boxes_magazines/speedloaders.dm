@@ -5,16 +5,6 @@
 	can_fast_load = FALSE
 	var/gun_name = "револьверов"
 
-/obj/item/ammo_box/speedloader/get_ru_names()
-	return alist(
-		NOMINATIVE = "ускоритель заряжания [get_cartridge_marking()]",
-		GENITIVE = "ускорителя заряжания [get_cartridge_marking()]",
-		DATIVE = "ускорителю заряжания [get_cartridge_marking()]",
-		ACCUSATIVE = "ускоритель заряжания [get_cartridge_marking()]",
-		INSTRUMENTAL = "ускорителем заряжания [get_cartridge_marking()]",
-		PREPOSITIONAL = "ускорителе заряжания [get_cartridge_marking()]",
-	)
-
 /obj/item/ammo_box/speedloader/update_desc(updates = ALL)
 	. = ..()
 	desc = "Устройство для быстрой перезарядки [gun_name] калибра [caliber]. Вмещает вплоть до [max_ammo] \
@@ -177,17 +167,6 @@
 	multiple_sprites = 1
 	gun_name = "винтовок"
 
-/obj/item/ammo_box/speedloader/a762/get_ru_names()
-	return alist(
-		NOMINATIVE = "обойма [get_cartridge_marking()]",
-		GENITIVE = "обоймы [get_cartridge_marking()]",
-		DATIVE = "обойме [get_cartridge_marking()]",
-		ACCUSATIVE = "обойму [get_cartridge_marking()]",
-		INSTRUMENTAL = "обоймой [get_cartridge_marking()]",
-		PREPOSITIONAL = "обойме [get_cartridge_marking()]",
-	)
-
-// MARK: Misc
 /obj/item/ammo_box/speedloader/caps
 	ammo_type = /obj/item/ammo_casing/cap
 	caliber = CALIBER_CAP

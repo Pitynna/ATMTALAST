@@ -1,6 +1,6 @@
 /obj/item/storage/briefcase
 	name = "briefcase"
-	desc = "Он сделан из НАСТОЯЩЕЙ искусственной кожи и всё ещё с ценником. Его владелец, должно быть, настоящий профессионал."
+	desc = "It's made of AUTHENTIC faux-leather and has a price-tag still attached. Its owner must be a real professional."
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "briefcase"
 	righthand_file = 'icons/mob/inhands/storage_righthand.dmi'
@@ -19,7 +19,7 @@
 	max_integrity = 150
 
 /obj/item/storage/briefcase/sniperbundle
-	desc = "На его этикетке написано \"настоящая закаленная кожа капитана\", но подозрительно отсутствуют другие метки или бренды. Пахнет как L'Air du Temps."
+	desc = "Its label reads \"genuine hardened Captain leather\", but suspiciously has no other tags or branding. Smells like L'Air du Temps."
 	force = 10
 
 /obj/item/storage/briefcase/sniperbundle/populate_contents()
@@ -106,16 +106,6 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	w_class = WEIGHT_CLASS_BULKY
 	var/opened = FALSE
-
-/obj/item/case_with_bipki/get_ru_names()
-	return alist(
-		NOMINATIVE = "чемодан с бипками",
-		GENITIVE = "чемодана с бипками",
-		DATIVE = "чемодану с бипками",
-		ACCUSATIVE = "чемодан с бипками",
-		INSTRUMENTAL = "чемоданом с бипками",
-		PREPOSITIONAL = "чемодане с бипками",
-	)
 
 /obj/item/case_with_bipki/attack_self(mob/user)
 	. = ..()

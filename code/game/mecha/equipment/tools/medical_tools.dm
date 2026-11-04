@@ -532,23 +532,13 @@
 
 /obj/item/mecha_parts/mecha_equipment/medical/beamgun
 	name = "Medical Beamgun"
-	desc = "Передает целебные наниты своим сфокусированным лучом прямо из вашего уютного меха. Не скрещивайте лучи!"
+	desc = "Delivers volatile medical nanites in a focused beam. Don't cross the beams!"
 	icon_state = "mech_beamgun"
 	origin_tech = "bluespace=6;biotech=6;powerstorage=6"
 	equip_cooldown = 1.5 SECONDS
 	energy_drain = 50
 	range = MECHA_MELEE | MECHA_RANGED
 	var/obj/item/gun/medbeam/mech/mbeam
-
-/obj/item/mecha_parts/mecha_equipment/medical/beamgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "Медицинская Лучпушка",
-		GENITIVE = "Медицинской Лучпушки",
-		DATIVE = "Медицинской Лучпушке",
-		ACCUSATIVE = "Медицинскую Лучпушку",
-		INSTRUMENTAL = "Медицинской Лучпушкой",
-		PREPOSITIONAL = "Медицинская Лучпушке",
-	)
 
 /obj/item/mecha_parts/mecha_equipment/medical/beamgun/Initialize(mapload)
 	. = ..()

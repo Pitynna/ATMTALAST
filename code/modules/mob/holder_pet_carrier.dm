@@ -1,5 +1,5 @@
 /obj/item/pet_carrier
-	name = "маленькая переноска"
+	name = "small pet carrier"
 	desc = "Переноска для маленьких животных."
 	icon_state = "pet_carrier"
 	item_state = "pet_carrier"
@@ -17,7 +17,7 @@
 	var/contains_pet_color_close = "#949494ff"
 
 /obj/item/pet_carrier/normal
-	name = "переноска"
+	name = "pet carrier"
 	desc = "Переноска для небольших животных."
 	icon_state = "pet_carrier_normal"
 	item_state = "pet_carrier_normal"

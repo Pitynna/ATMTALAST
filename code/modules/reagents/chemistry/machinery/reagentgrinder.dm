@@ -1,6 +1,6 @@
 /obj/machinery/reagentgrinder
 	name = "All-In-One Grinder"
-	desc = "Измельчает, дробит, разжижает и извлекает вещества из предметов, помещённых внутрь. Ради всего святого, не суйте туда свои пальцы."
+	desc = "A chef's 9th most powerful weapon, right after the grill. Used for grinding items into reagents."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "juicer1"
 	anchored = TRUE
@@ -93,16 +93,6 @@
 	)
 
 	var/list/holdingitems = list()
-
-/obj/machinery/reagentgrinder/get_ru_names()
-	return alist(
-		NOMINATIVE = "универсальный блендер",
-		GENITIVE = "универсального блендера",
-		DATIVE = "универсальному блендеру",
-		ACCUSATIVE = "универсальный блендер",
-		INSTRUMENTAL = "универсальным блендером",
-		PREPOSITIONAL = "универсальном блендере",
-	)
 
 /obj/machinery/reagentgrinder/examine(mob/user)
 	. = ..()

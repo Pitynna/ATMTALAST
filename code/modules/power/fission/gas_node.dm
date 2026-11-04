@@ -2,7 +2,7 @@
 
 /obj/machinery/atmospherics/unary/reactor_gas_node
 	name = "reactor gas intake"
-	desc = "Надёжный газовый впуск, подающий газ в реактор."
+	desc = "A sturdy-looking gas inlet that injects gas into the reactor."
 	icon = 'icons/obj/fission/reactor_machines.dmi'
 	icon_state = "gas_node"
 	layer = GAS_PIPE_VISIBLE_LAYER
@@ -15,30 +15,9 @@
 	/// Is this vent taking air in or out. TRUE by default.
 	var/intake_vent = TRUE
 
-/obj/machinery/atmospherics/unary/reactor_gas_node/get_ru_names()
-	return alist(
-		NOMINATIVE = "впуск газа реактора",
-		GENITIVE = "впуска газа реактора",
-		DATIVE = "впуску газа реактора",
-		ACCUSATIVE = "впуск газа реактора",
-		INSTRUMENTAL = "впуском газа реактора",
-		PREPOSITIONAL = "впуске газа реактора",
-	)
-
 /obj/machinery/atmospherics/unary/reactor_gas_node/output
 	name = "Reactor Gas Extractor"
 	intake_vent = FALSE
-
-/obj/machinery/atmospherics/unary/reactor_gas_node/output/get_ru_names()
-	return alist(
-		NOMINATIVE = "выпуск газа реактора",
-		GENITIVE = "выпуска газа реактора",
-		DATIVE = "выпуску газа реактора",
-		ACCUSATIVE = "выпуск газа реактора",
-		INSTRUMENTAL = "выпуском газа реактора",
-		PREPOSITIONAL = "выпуске газа реактора",
-	)
-
 
 /obj/machinery/atmospherics/unary/reactor_gas_node/Initialize(mapload)
 	. = ..()
@@ -183,17 +162,6 @@
 
 /obj/machinery/atmospherics/unary/reactor_gas_node/moderator
 	name = "Reactor Gas Moderator"
-
-/obj/machinery/atmospherics/unary/reactor_gas_node/moderator/get_ru_names()
-	return alist(
-		NOMINATIVE = "газовый модератор реактора",
-		GENITIVE = "газового модератора реактора",
-		DATIVE = "газовому модератору реактора",
-		ACCUSATIVE = "газовый модератор реактора",
-		INSTRUMENTAL = "газовым модератором реактора",
-		PREPOSITIONAL = "газовом модераторе реактора",
-	)
-
 
 /obj/machinery/atmospherics/unary/reactor_gas_node/moderator/Initialize(mapload)
 	. = ..()

@@ -208,20 +208,10 @@
 
 /obj/effect/decal/cleanable/vomit/spacematter
 	name = "spacematter vomit"
-	desc = "Несмотря на опасность, она ослепительно красива. Впрочем, вам, наверное, стоит отойти от неё подальше."
+	desc = "Despite the hazard, its dazzlingly beautiful. You should probably get away from it though."
 	icon_state = "vomitnebula_1"
 	random_icon_states = list("vomitnebula_1", "vomitnebula_2", "vomitnebula_3", "vomitnebula_4")
 	no_scoop = TRUE
-
-/obj/effect/decal/cleanable/vomit/spacematter/get_ru_names()
-	return alist(
-		NOMINATIVE = "космоматериальная рвота",
-		GENITIVE = "космоматериальной рвоты",
-		DATIVE = "космоматериальной рвоте",
-		ACCUSATIVE = "космоматериальную рвоту",
-		INSTRUMENTAL = "космоматериальной рвотой",
-		PREPOSITIONAL = "космоматериальной рвоте",
-	)
 
 /obj/effect/decal/cleanable/vomit/spacematter/Initialize(mapload)
 	. = ..()

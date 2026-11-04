@@ -14,16 +14,6 @@
 	var/stored_money = 0
 	var/locked = FALSE
 
-/obj/structure/money_bot/get_ru_names()
-	return alist(
-		NOMINATIVE = "бот-банкомат",
-		GENITIVE = "бота-банкомата",
-		DATIVE = "боту-банкомату",
-		ACCUSATIVE = "бота-банкомата",
-		INSTRUMENTAL = "ботом-банкоматом",
-		PREPOSITIONAL = "боте-банкомате"
-	)
-
 /obj/structure/money_bot/deconstruct(disassembled)
 	new /obj/item/stack/spacecash(drop_location(), stored_money)
 	return ..()

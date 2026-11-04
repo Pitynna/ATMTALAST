@@ -1,6 +1,6 @@
 /obj/item/gun/syringe/dart_gun
 	name = "dart gun"
-	desc = "Компактный метатель дротиков для доставки химических коктейлей."
+	desc = "A small gas-powered dartgun, capable of delivering chemical cocktails swiftly across short distances."
 	icon = 'icons/obj/weapons/vox_guns.dmi'
 	icon_state = "dartgun"
 	item_state = "dartgun"

@@ -289,13 +289,3 @@
 	charges = 5
 	var/telecrystals = 0
 	messenger_plugins = list(new/datum/data/pda/messenger_plugin/virus/frame)
-
-/obj/item/cartridge/frame/get_ru_names()
-	return alist(
-		NOMINATIVE = "картридж П.О.Д.С.Т.А.В.А.",
-		GENITIVE = "картриджа П.О.Д.С.Т.А.В.А.",
-		DATIVE = "картриджу П.О.Д.С.Т.А.В.А.",
-		ACCUSATIVE = "картридж П.О.Д.С.Т.А.В.А.",
-		INSTRUMENTAL = "картриджем П.О.Д.С.Т.А.В.А.",
-		PREPOSITIONAL = "картридже П.О.Д.С.Т.А.В.А.",
-	)

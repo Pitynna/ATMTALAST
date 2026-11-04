@@ -157,8 +157,7 @@
 
 /obj/item/circuit_component/quantumpad
 	display_name = "Квантовая платформа"
-	desc = "Квантовая платформа, связанная через блюспейс. \
-			Используется для телепортации предметов на другие квантовые платформы."
+	desc = "A quantum pad linked through bluespace. Used to teleport items to other quantum pads."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL
 
 	var/datum/port/input/target_pad

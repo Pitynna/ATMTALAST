@@ -330,23 +330,14 @@
 
 /obj/item/clothing/suit/armor/laserproof
 	name = "Ablative Armor Vest"
-	desc = "Экспериментальный высокотехнологичный бронежилет, изготовленный из светоотражающего материала, предназначен для отражения энергетических лучей. Устаревшая амуниция, была снята с вооружения \"Нанотрейзен\"."
+	desc = "A high-tech armor vest specializing against energy attacks. A miniaturized energy shielding system deflects incoming shots on a short cooldown, while a reflective outer shell and \
+		specialized heat dissipation materials protect against direct energy impacts. Unfortunately, it offers little in the way of defense against solid projectiles or melee weapons."
 	icon_state = "armor_reflec"
 	item_state = "armor_reflec"
 	blood_overlay_type = "armor"
 	armor = list(MELEE = 10, BULLET = 10, LASER = 60, ENERGY = 50, BOMB = 0, BIO = 0, FIRE = 100, ACID = 100)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/hit_reflect_chance = 50
-
-/obj/item/clothing/suit/armor/laserproof/get_ru_names()
-	return alist(
-		NOMINATIVE = "абляционный бронежилет",
-		GENITIVE = "абляционного бронежилета",
-		DATIVE = "абляционному бронежилету",
-		ACCUSATIVE = "абляционный бронежилет",
-		INSTRUMENTAL = "абляционным бронежилетом",
-		PREPOSITIONAL = "абляционном бронежилете",
-	)
 
 /obj/item/clothing/suit/armor/laserproof/Initialize(mapload)
 	. = ..()
@@ -630,7 +621,7 @@
 	name = "drake armour"
 	icon_state = "dragon"
 	item_state = "dragon"
-	desc = "Доспехи, созданные из останков пепельного дракона."
+	desc = "A suit of armour fashioned from the remains of an ash drake."
 	allowed = ALLOWED_MINING_SUIT_ITEMS
 	armor = list(MELEE = 70, BULLET = 30, LASER = 50, ENERGY = 40, BOMB = 70, BIO = 60, FIRE = 100, ACID = 100)
 	hoodtype = /obj/item/clothing/head/hooded/drake
@@ -648,16 +639,6 @@
 	)
 	hide_tail_by_species = list(SPECIES_VULPKANIN)
 
-/obj/item/clothing/suit/hooded/drake/get_ru_names()
-	return alist(
-		NOMINATIVE = "доспех из дрейка",
-		GENITIVE = "доспеха из дрейка",
-		DATIVE = "доспеху из дрейка",
-		ACCUSATIVE = "доспех из дрейка",
-		INSTRUMENTAL = "доспехом из дрейка",
-		PREPOSITIONAL = "доспехе из дрейка",
-	)
-
 /obj/item/clothing/suit/hooded/drake/on_changed_z_level(turf/old_turf, turf/new_turf, same_z_layer, notify_contents)
 	. = ..()
 	// We are in the nullspace
@@ -672,22 +653,12 @@
 	name = "drake helmet"
 	icon_state = "dragon"
 	item_state = "dragon"
-	desc = "Череп дрейка."
+	desc = "The skull of a dragon."
 	armor = list(MELEE = 70, BULLET = 30, LASER = 50, ENERGY = 40, BOMB = 70, BIO = 60, FIRE = 100, ACID = 100)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	flags_cover = HEADCOVERSEYES
-
-/obj/item/clothing/head/hooded/drake/get_ru_names()
-	return alist(
-		NOMINATIVE = "шлем из дрейка",
-		GENITIVE = "шлема из дрейка",
-		DATIVE = "шлему из дрейка",
-		ACCUSATIVE = "шлем из дрейка",
-		INSTRUMENTAL = "шлемом из дрейка",
-		PREPOSITIONAL = "шлеме из дрейка",
-	)
 
 /obj/item/clothing/head/hooded/drake/on_changed_z_level(turf/old_turf, turf/new_turf, same_z_layer, notify_contents)
 	. = ..()
@@ -703,39 +674,19 @@
 	name = "goliath cloak"
 	icon_state = "goliath_cloak"
 	item_state = "goliath_cloak"
-	desc = "Прочный и практичный плащ, созданный из различных материалов, добытых из монстров. Он пользуется большим спросом у тех, кто ведёт жизнь отшельника или изгнанника."
+	desc = "A staunch, practical cape made out of numerous monster materials, it is coveted amongst exiles & hermits."
 	allowed = ALLOWED_MINING_SUIT_ITEMS
 	armor = list(MELEE = 35, BULLET = 10, LASER = 25, ENERGY = 15, BOMB = 35, BIO = 0, FIRE = 50, ACID = 50) //a fair alternative to bone armor, requiring alternative materials and gaining a suit slot
 	hoodtype = /obj/item/clothing/head/hooded/goliath
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
-/obj/item/clothing/suit/hooded/goliath/get_ru_names()
-	return alist(
-		NOMINATIVE = "накидка из голиафа",
-		GENITIVE = "накидки из голиафа",
-		DATIVE = "накидке из голиафа",
-		ACCUSATIVE = "накидку из голиафа",
-		INSTRUMENTAL = "накидкой из голиафа",
-		PREPOSITIONAL = "накидке из голиафа",
-	)
-
 /obj/item/clothing/head/hooded/goliath
 	name = "goliath cloak hood"
 	icon_state = "golhood"
 	item_state = "golhood"
-	desc = "Защитный и скрывающий капюшон."
+	desc = "A protective & concealing hood."
 	armor = list(MELEE = 35, BULLET = 10, LASER = 25, ENERGY = 15, BOMB = 35, BIO = 0, FIRE = 50, ACID = 50)
 	flags_cover = HEADCOVERSEYES
-
-/obj/item/clothing/head/hooded/goliath/get_ru_names()
-	return alist(
-		NOMINATIVE = "капюшон накидки из голиафа",
-		GENITIVE = "капюшона накидки из голиафа",
-		DATIVE = "капюшону накидки из голиафа",
-		ACCUSATIVE = "капюшон накидки из голиафа",
-		INSTRUMENTAL = "капюшоном накидки из голиафа",
-		PREPOSITIONAL = "капюшоне накидки из голиафа",
-	)
 
 /obj/item/clothing/suit/hooded/goliath/wizard
 	armor = list(MELEE = 60, BULLET = 10, LASER = 25, ENERGY = 10, BOMB = 25, BIO = 0, FIRE = 80, ACID = 60)
@@ -746,21 +697,10 @@
 	name = "shaman skull"
 	icon_state = "shamskull"
 	item_state = "shamskull"
-	desc = "К передней части переделанного шлема прикрутили череп какого-то дохлого зверя."
+	desc = "The skull of a long dead animal bolted to the front of a repurposed pan."
 	armor = list(MELEE = 60, BULLET = 10, LASER = 25, ENERGY = 10, BOMB = 25, BIO = 0, FIRE = 80, ACID = 60)
 	magical = TRUE
 
-/obj/item/clothing/head/hooded/goliath/wizard/get_ru_names()
-	return alist(
-		NOMINATIVE = "череп шамана",
-		GENITIVE = "черепа шамана",
-		DATIVE = "черепу шамана",
-		ACCUSATIVE = "череп шамана",
-		INSTRUMENTAL = "черепом шамана",
-		PREPOSITIONAL = "черепе шамана",
-	)
-
-//mob_size using for crusher mark
 /obj/item/clothing/suit/hooded/goliath/wizard/equipped(mob/living/user, slot, initial = FALSE)
 	. = ..()
 	if(istype(user) && slot == ITEM_SLOT_HEAD)
@@ -773,7 +713,7 @@
 
 /obj/item/clothing/suit/armor/bone
 	name = "bone armor"
-	desc = "Племенной доспех, созданный из костей животных."
+	desc = "A tribal armor plate, crafted from animal bone."
 	icon_state = "bonearmor"
 	item_state = "bonearmor"
 	blood_overlay_type = "armor"
@@ -789,16 +729,6 @@
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
 	hide_tail_by_species = list(SPECIES_VULPKANIN)
-
-/obj/item/clothing/suit/armor/bone/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяная броня",
-		GENITIVE = "костяной брони",
-		DATIVE = "костяной броне",
-		ACCUSATIVE = "костяную броню",
-		INSTRUMENTAL = "костяной броней",
-		PREPOSITIONAL = "костяной броне",
-	)
 
 /obj/item/clothing/suit/armor/makeshift_armor
 	name = "makeshift armor"
@@ -843,16 +773,6 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/suit.dmi',
 	)
 
-/obj/item/clothing/suit/armor/cartilage/get_ru_names()
-	return alist(
-		NOMINATIVE = "броня из хрящевых пластин",
-		GENITIVE = "брони из хрящевых пластин",
-		DATIVE = "броне из хрящевых пластин",
-		ACCUSATIVE = "броню из хрящевых пластин",
-		INSTRUMENTAL = "броней из хрящевых пластин",
-		PREPOSITIONAL = "броне из хрящевых пластин",
-	)
-
 /obj/item/clothing/suit/armor/cartilage/cartilage_pads
 	name = "cartilage shoulder pads"
 	desc = "Достаточно крепкие наплечники, сделанные из хрящевых пластин. Защищают тело, но не предоставляют защиты для ног. Могут быть улучшены до полноценной брони в случае, если будут соединены с поножами, сделанными из того же материала."
@@ -860,16 +780,6 @@
 	icon_state = "cartilage_shoulder_pads"
 	item_state = "cartilage_shoulder_pads"
 	body_parts_covered = UPPER_TORSO|ARMS
-
-/obj/item/clothing/suit/armor/cartilage/cartilage_pads/get_ru_names()
-	return alist(
-		NOMINATIVE = "наплечники из хрящевых пластин",
-		GENITIVE = "наплечников из хрящевых пластин",
-		DATIVE = "наплечникам из хрящевых пластин",
-		ACCUSATIVE = "наплечники из хрящевых пластин",
-		INSTRUMENTAL = "наплечниками из хрящевых пластин",
-		PREPOSITIONAL = "наплечниках из хрящевых пластин",
-	)
 
 /obj/item/clothing/suit/armor/cartilage/cartilage_pads/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/clothing/suit/armor/cartilage/cartilage_greaves))
@@ -892,16 +802,6 @@
 	icon_state = "cartilage_greaves"
 	item_state = "cartilage_greaves"
 	body_parts_covered = LOWER_TORSO|LEGS
-
-/obj/item/clothing/suit/armor/cartilage/cartilage_greaves/get_ru_names()
-	return alist(
-		NOMINATIVE = "поножи из хрящевых пластин",
-		GENITIVE = "поножей из хрящевых пластин",
-		DATIVE = "поножам из хрящевых пластин",
-		ACCUSATIVE = "поножи из хрящевых пластин",
-		INSTRUMENTAL = "поножами из хрящевых пластин",
-		PREPOSITIONAL = "поножах из хрящевых пластин",
-	)
 
 /obj/item/clothing/suit/armor/cartilage/cartilage_greaves/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/clothing/suit/armor/cartilage/cartilage_pads))

@@ -4,7 +4,7 @@
 
 /obj/machinery/computer/teleporter
 	name = "teleporter control console"
-	desc = "Используется для управления привязанными телепортационными узлами и станциями."
+	desc = "Used to control a linked teleportation Hub and Station."
 	icon_screen = "teleport"
 	icon_keyboard = "teleport_key"
 	circuit = /obj/item/circuitboard/teleporter

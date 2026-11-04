@@ -176,16 +176,6 @@
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 8, ATTACHMENT_OFFSET_Y = -5),
 	)
 
-/obj/item/gun/energy/gun/nuclear/gate/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергетический карабин \"Сектор\"",
-		GENITIVE = "энергетического карабина \"Сектор\"",
-		DATIVE = "энергетическому карабину \"Сектор\"",
-		ACCUSATIVE = "энергетический карабин \"Сектор\"",
-		INSTRUMENTAL = "энергетическим карабином \"Сектор\"",
-		PREPOSITIONAL = "энергетическом карабине \"Сектор\""
-	)
-
 /obj/item/gun/energy/gun/nuclear/gate/update_icon_state()
 	. = ..()
 	item_state = "[initial(icon_state)]_[ratio]"
@@ -194,7 +184,7 @@
 // MARK: Laser Gatling gun
 /obj/item/gun/energy/gun/minigun
 	name = "Laser gatling gun"
-	desc = "Огромное лазерное орудие, обладающее выдающейся скорострельностью и поражающей силой. Говорят, что 12 секунд стрельбы из этой малышки обойдутся вам в 400 тысяч кредитов."
+	desc = "An advanced laser cannon with an incredible rate of fire. Requires a bulky backpack power source to use."
 	icon_state = "gatling"
 	item_state = "gatling"
 	fire_sound = "lasergatling"
@@ -220,16 +210,6 @@
 	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
 	var/force_unwielded = 10
 	var/force_wielded = 20
-
-/obj/item/gun/energy/gun/minigun/get_ru_names()
-	return alist(
-		NOMINATIVE = "Гатлинг-лазер",
-		GENITIVE = "Гатлинг-лазера",
-		DATIVE = "Гатлинг-лазеру",
-		ACCUSATIVE = "Гатлинг-лазер",
-		INSTRUMENTAL = "Гатлинг-лазером",
-		PREPOSITIONAL = "Гатлинг-лазере",
-	)
 
 /obj/item/gun/energy/gun/minigun/ComponentInitialize()
 	. = ..()
@@ -262,14 +242,4 @@
 	Является модификацией Гатлинг-лазера. Имеет самую совершенную батарею в мире, самозаряд которой полностью компенсирует энергозатраты при стрельбе."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse)
 	cell_type = /obj/item/stock_parts/cell/infinite
-
-/obj/item/gun/energy/gun/minigun/pulse/get_ru_names()
-	return alist(
-		NOMINATIVE = "Гатлинг-пульсер",
-		GENITIVE = "Гатлинг-пульсера",
-		DATIVE = "Гатлинг-пульсеру",
-		ACCUSATIVE = "Гатлинг-пульсер",
-		INSTRUMENTAL = "Гатлинг-пульсером",
-		PREPOSITIONAL = "Гатлинг-пульсере",
-	)
 

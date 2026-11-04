@@ -1,6 +1,6 @@
 /obj/item/gun/medbeam
 	name = "Medical Beamgun"
-	desc = "Передает целебные наниты своим сфокусированным лучом. Не скрещивайте лучи!"
+	desc = "Delivers volatile medical nanites in a focused beam. Don't cross the beams!"
 	icon = 'icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	item_state = "chronogun"
@@ -14,16 +14,6 @@
 	var/max_range = 8
 	var/active = FALSE
 	var/mounted = FALSE
-
-/obj/item/gun/medbeam/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинская лучевая пушка",
-		GENITIVE = "медицинской лучевой пушки",
-		DATIVE = "медицинской лучевой пушке",
-		ACCUSATIVE = "медицинскую лучевую пушку",
-		INSTRUMENTAL = "медицинской лучевой пушкой",
-		PREPOSITIONAL = "медицинской лучевой пушке",
-	)
 
 /obj/item/gun/medbeam/Initialize(mapload)
 	. = ..()

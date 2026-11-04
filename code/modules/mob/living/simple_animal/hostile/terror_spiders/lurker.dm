@@ -87,17 +87,7 @@
 /obj/structure/spider/terrorweb/gray
 	alpha = 80
 	name = "transparent web"
-	desc = "Эта паутина частично прозрачна, поэтому её труднее увидеть и легче попасться."
-
-/obj/structure/spider/terrorweb/gray/get_ru_names()
-	return alist(
-		NOMINATIVE = "прозрачная паутина",
-		GENITIVE = "прозрачной паутины",
-		DATIVE = "прозрачной паутине",
-		ACCUSATIVE = "прозрачную паутину",
-		INSTRUMENTAL = "прозрачной паутиной",
-		PREPOSITIONAL = "прозрачной паутине",
-	)
+	desc = "This web is partly transparent, making it harder to see, and easier to get caught by."
 
 /obj/structure/spider/terrorweb/gray/web_special_ability(mob/living/carbon/C) //super deadly web
 	if(istype(C))

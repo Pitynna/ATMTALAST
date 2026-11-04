@@ -22,16 +22,6 @@
 	var/machinedir = EAST
 	speed_process = TRUE
 
-/obj/machinery/mineral/processing_unit_console/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль производственного аппарата",
-		GENITIVE = "консоли производственного аппарата",
-		DATIVE = "консоли производственного аппарата",
-		ACCUSATIVE = "консоль производственного аппарата",
-		INSTRUMENTAL = "консолью производственного аппарата",
-		PREPOSITIONAL = "консоли производственного аппарата",
-	)
-
 /obj/machinery/mineral/processing_unit_console/Initialize(mapload)
 	. = ..()
 	machine = locate(/obj/machinery/mineral/processing_unit, get_step(src, machinedir))
@@ -98,16 +88,6 @@
 	var/selected_alloy = null
 	var/datum/research/files
 	speed_process = TRUE
-
-/obj/machinery/mineral/processing_unit/get_ru_names()
-	return alist(
-		NOMINATIVE = "плавильная печь",
-		GENITIVE = "плавильной печи",
-		DATIVE = "плавильной печи",
-		ACCUSATIVE = "плавильную печь",
-		INSTRUMENTAL = "плавильной печью",
-		PREPOSITIONAL = "плавильной печи",
-	)
 
 /obj/machinery/mineral/processing_unit/Initialize(mapload)
 	. = ..()

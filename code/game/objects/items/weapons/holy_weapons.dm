@@ -625,16 +625,6 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 	/// List of clowns currently affected by the silencing and grayscale effect.
 	var/list/smited_clowns
 
-/obj/item/nullrod/rosary/bread/get_ru_names()
-	return alist(
-		NOMINATIVE = "молитвенный хлеб",
-		GENITIVE = "молитвенного хлеба",
-		DATIVE = "молитвенному хлебу",
-		ACCUSATIVE = "молитвенный хлеб",
-		INSTRUMENTAL = "молитвенным хлебом",
-		PREPOSITIONAL = "молитвенном хлебе"
-	)
-
 /obj/item/nullrod/rosary/bread/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
 	if(!ishuman(user) || !(slot & ITEM_SLOT_HANDS))

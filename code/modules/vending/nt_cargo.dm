@@ -48,7 +48,7 @@
 
 /obj/machinery/vending/ntc/medal
 	name = "NT Cargo Encouragement"
-	desc = "Тяжелый кейс с медалями на любой вкус и цвет."
+	desc = "A encourage vendor with many of medal types."
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "medalbox"
 
@@ -67,19 +67,9 @@
 		/obj/item/clothing/accessory/medal/gold/heroism = 5,
 	)
 
-/obj/machinery/vending/ntc/medal/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Cargo Encouragement",
-		GENITIVE = "торгового автомата NT Cargo Encouragement",
-		DATIVE = "торговому автомату NT Cargo Encouragement",
-		ACCUSATIVE = "торговый автомат NT Cargo Encouragement",
-		INSTRUMENTAL = "торговым автоматом NT Cargo Encouragement",
-		PREPOSITIONAL = "торговом автомате NT Cargo Encouragement",
-	)
-
 /obj/machinery/vending/ntc/medical
 	name = "NT Cargo Medical Gear"
-	desc = "Различное медицинское оборудование для доставки."
+	desc = "A some medical equipment vendor for cargo."
 	base_icon_state = "nta-medical"
 	deny_overlay = "nta-medical_deny"
 
@@ -96,19 +86,9 @@
 		/obj/item/vending_refill/medical = 10,
 	)
 
-/obj/machinery/vending/ntc/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Cargo Medical Gear",
-		GENITIVE = "торгового автомата NT Cargo Medical Gear",
-		DATIVE = "торговому автомату NT Cargo Medical Gear",
-		ACCUSATIVE = "торговый автомат NT Cargo Medical Gear",
-		INSTRUMENTAL = "торговым автоматом NT Cargo Medical Gear",
-		PREPOSITIONAL = "торговом автомате NT Cargo Medical Gear",
-	)
-
 /obj/machinery/vending/ntc/engineering
 	name = "NT Cargo Engineering Gear"
-	desc = "Различное инженерное оборудование для доставки."
+	desc = "A some engineering equipment vendor for cargo."
 	base_icon_state = "nta-engi"
 	deny_overlay = "nta-engi_deny"
 
@@ -123,19 +103,9 @@
 		/obj/item/grenade/chem_grenade/metalfoam = 30,
 	)
 
-/obj/machinery/vending/ntc/engineering/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Cargo Engineering Gear",
-		GENITIVE = "торгового автомата NT Cargo Engineering Gear",
-		DATIVE = "торговому автомату NT Cargo Engineering Gear",
-		ACCUSATIVE = "торговый автомат NT Cargo Engineering Gear",
-		INSTRUMENTAL = "торговым автоматом NT Cargo Engineering Gear",
-		PREPOSITIONAL = "торговом автомате NT Cargo Engineering Gear",
-	)
-
 /obj/machinery/vending/ntc/janitor
 	name = "NT Cargo Janitor Gear"
-	desc = "Различное уборочное оборудование для доставки."
+	desc = "A some janitor equipment vendor for cargo."
 	base_icon_state = "nta-janitor"
 	deny_overlay = "nta-janitor_deny"
 
@@ -155,19 +125,9 @@
 		/obj/item/grenade/clusterbuster/antiweed = 30,
 	)
 
-/obj/machinery/vending/ntc/janitor/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Cargo Janitor Gear",
-		GENITIVE = "торгового автомата NT Cargo Janitor Gear",
-		DATIVE = "торговому автомату NT Cargo Janitor Gear",
-		ACCUSATIVE = "торговый автомат NT Cargo Janitor Gear",
-		INSTRUMENTAL = "торговым автоматом NT Cargo Janitor Gear",
-		PREPOSITIONAL = "торговом автомате NT Cargo Janitor Gear",
-	)
-
 /obj/machinery/vending/ntcrates
 	name = "NT Cargo Preset Gear"
-	desc = "Предварительный комплект оборудования для доставки, на все случаи жизни."
+	desc = "A already preset of equipments vendor for cargo."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	refill_canister = /obj/item/vending_refill/nta
 	icon_state = "magivend_off"
@@ -206,16 +166,6 @@
 		),
 	)
 
-/obj/machinery/vending/ntcrates/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Cargo Preset Gear",
-		GENITIVE = "торгового автомата NT Cargo Preset Gear",
-		DATIVE = "торговому автомату NT Cargo Preset Gear",
-		ACCUSATIVE = "торговый автомат NT Cargo Preset Gear",
-		INSTRUMENTAL = "торговым автоматом NT Cargo Preset Gear",
-		PREPOSITIONAL = "торговом автомате NT Cargo Preset Gear",
-	)
-
 /obj/machinery/vending/ntc/ert
 	name = "NT Response Team Base Gear"
 	desc = "Автомат с базовым снаряжением ОБР."
@@ -235,19 +185,9 @@
 		/obj/item/storage/box/survival/responseteam/red/janitor = 100,
 	)
 
-/obj/machinery/vending/ntc/ert/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Response Team Base Gear",
-		GENITIVE = "торгового автомата NT Response Team Base Gear",
-		DATIVE = "торговому автомату NT Response Team Base Gear",
-		ACCUSATIVE = "торговый автомат NT Response Team Base Gear",
-		INSTRUMENTAL = "торговым автоматом NT Response Team Base Gear",
-		PREPOSITIONAL = "торговом автомате NT Response Team Base Gear",
-	)
-
 /obj/machinery/vending/ntc_resources
-	name = "NT Matter Сompression Vendor"
-	desc = "Этот автомат использует передовую технологию сжатия и может хранить в себе большой объем ресурсов."
+	name = "NT Matter Compression Vendor"
+	desc = "Its vendor use advanced technology of matter compression and can have a many volume of resources."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	refill_canister = /obj/item/vending_refill/nta
 	icon_state = "engi_off"
@@ -300,16 +240,6 @@
 		),
 	)
 
-/obj/machinery/vending/ntc_resources/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Matter Сompression Vendor",
-		GENITIVE = "торгового автомата NT Matter Сompression Vendor",
-		DATIVE = "торговому автомату NT Matter Сompression Vendor",
-		ACCUSATIVE = "торговый автомат NT Matter Сompression Vendor",
-		INSTRUMENTAL = "торговым автоматом NT Matter Сompression Vendor",
-		PREPOSITIONAL = "торговом автомате NT Matter Сompression Vendor",
-	)
-
 /obj/machinery/vending/mech/ntc
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	refill_canister = /obj/item/vending_refill/nta
@@ -330,16 +260,6 @@
 		/obj/mecha/working/clarke = 10,
 	)
 
-/obj/machinery/vending/mech/ntc/exousuit/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		GENITIVE = "торгового автомата NT Exosuit Bluespace Transporter",
-		DATIVE = "торговому автомату NT Exosuit Bluespace Transporter",
-		ACCUSATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		INSTRUMENTAL = "торговым автоматом NT Exosuit Bluespace Transporter",
-		PREPOSITIONAL = "торговом автомате NT Exosuit Bluespace Transporter",
-	)
-
 /obj/machinery/vending/mech/ntc/equipment
 	name = "NT Exosuit Bluespace Transporter"
 	desc = "Фабрикатор с передовой технологией блюспейс-транспортировки ресурсов."
@@ -356,16 +276,6 @@
 		/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster = 10,
 		/obj/item/mecha_parts/mecha_equipment/repair_droid = 10,
 		/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay = 10,
-	)
-
-/obj/machinery/vending/mech/ntc/equipment/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		GENITIVE = "торгового автомата NT Exosuit Bluespace Transporter",
-		DATIVE = "торговому автомату NT Exosuit Bluespace Transporter",
-		ACCUSATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		INSTRUMENTAL = "торговым автоматом NT Exosuit Bluespace Transporter",
-		PREPOSITIONAL = "торговом автомате NT Exosuit Bluespace Transporter",
 	)
 
 /obj/machinery/vending/mech/ntc/weapon
@@ -392,16 +302,6 @@
 		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/amlg = 10,
 	)
 
-/obj/machinery/vending/mech/ntc/weapon/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		GENITIVE = "торгового автомата NT Exosuit Bluespace Transporter",
-		DATIVE = "торговому автомату NT Exosuit Bluespace Transporter",
-		ACCUSATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		INSTRUMENTAL = "торговым автоматом NT Exosuit Bluespace Transporter",
-		PREPOSITIONAL = "торговом автомате NT Exosuit Bluespace Transporter",
-	)
-
 /obj/machinery/vending/mech/ntc/tools
 	name = "NT Exosuit Bluespace Transporter"
 	desc = "Фабрикатор с передовой технологией блюспейс-транспортировки ресурсов."
@@ -422,16 +322,6 @@
 		/obj/item/mecha_parts/mecha_equipment/extinguisher = 10,
 		/obj/item/mecha_parts/mecha_equipment/cable_layer = 10,
 		/obj/item/mecha_parts/mecha_equipment/wormhole_generator = 10,
-	)
-
-/obj/machinery/vending/mech/ntc/tools/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		GENITIVE = "торгового автомата NT Exosuit Bluespace Transporter",
-		DATIVE = "торговому автомату NT Exosuit Bluespace Transporter",
-		ACCUSATIVE = "торговый автомат NT Exosuit Bluespace Transporter",
-		INSTRUMENTAL = "торговым автоматом NT Exosuit Bluespace Transporter",
-		PREPOSITIONAL = "торговом автомате NT Exosuit Bluespace Transporter",
 	)
 
 #undef FLICK_NONE

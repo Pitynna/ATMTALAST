@@ -569,7 +569,7 @@
  */
 /obj/item/gun/magic/skull_gun
 	name = "infected skull"
-	desc = "Деформированный череп, передающий могильную лихорадку."
+	desc = "Malformed skull which transfers grave fever."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "ashen_skull"
 	item_state = "ashen_skull"
@@ -584,16 +584,6 @@
 	throw_range = 0
 	throw_speed = 0
 	var/datum/action/cooldown/spell/infected_trophy/parent_spell
-
-/obj/item/gun/magic/skull_gun/get_ru_names()
-	return alist(
-		NOMINATIVE = "заражённый череп",
-		GENITIVE = "заражённого черепа",
-		DATIVE = "заражённому черепу",
-		ACCUSATIVE = "заражённый череп",
-		INSTRUMENTAL = "заражённым черепом",
-		PREPOSITIONAL = "заражённом черепе",
-	)
 
 /obj/item/gun/magic/skull_gun/Initialize(mapload, spell)
 	. = ..()
@@ -1279,7 +1269,7 @@
  */
 /obj/structure/closet/coffin/vampire
 	name = "mysterious coffin"
-	desc = "Даже при взгляде на этот гроб волосы встают дыбом."
+	desc = "Even looking at this coffin makes your hair stand on end."
 	max_integrity = 500
 	color = "#7F0000"
 	anchored = TRUE
@@ -1309,16 +1299,6 @@
 
 	var/fullpower_unlocked = FALSE
 	var/fullpower_heal_done = FALSE
-
-/obj/structure/closet/coffin/vampire/get_ru_names()
-	return alist(
-		NOMINATIVE = "таинственный гроб",
-		GENITIVE = "таинственного гроба",
-		DATIVE = "таинственному гробу",
-		ACCUSATIVE = "таинственный гроб",
-		INSTRUMENTAL = "таинственным гробом",
-		PREPOSITIONAL = "таинственном гробе",
-	)
 
 /obj/structure/closet/coffin/vampire/Initialize(mapload, mob/living/carbon/human/_human_vampire)
 	. = ..()

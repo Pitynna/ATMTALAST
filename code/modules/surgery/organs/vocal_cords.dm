@@ -42,16 +42,6 @@ GLOBAL_DATUM_INIT(multispin_words, /regex, regex("like a record baby|как пл
 	parent_organ_zone = BODY_ZONE_PRECISE_MOUTH
 	var/spans = null
 
-/obj/item/organ/internal/vocal_cords/get_ru_names()
-	return alist(
-		NOMINATIVE = "голосовые связки",
-		GENITIVE = "голосовых связок",
-		DATIVE = "голосовым связкам",
-		ACCUSATIVE = "голосовые связки",
-		INSTRUMENTAL = "голосовыми связками",
-		PREPOSITIONAL = "голосовых связках",
-	)
-
 /obj/item/organ/internal/vocal_cords/proc/can_speak_with() //if there is any limitation to speaking with these cords
 	return TRUE
 
@@ -63,36 +53,16 @@ GLOBAL_DATUM_INIT(multispin_words, /regex, regex("like a record baby|как пл
 
 /obj/item/organ/internal/adamantine_resonator
 	name = "adamantine resonator"
-	desc = "Частицы адамантина присутствуют во всех големах, унаследованные от их магической природы. Позволяют \"слышать\" послания своих создателей."
+	desc = "Fragments of adamantine exist in all golems, stemming from their origins as purely magical constructs. These are used to \"hear\" messages from their leaders."
 	parent_organ_zone = BODY_ZONE_HEAD
 	slot = INTERNAL_ORGAN_RESONATOR
 	icon_state = "adamantine_resonator"
 
-/obj/item/organ/internal/adamantine_resonator/get_ru_names()
-	return alist(
-		NOMINATIVE = "адамантиновый резонатор",
-		GENITIVE = "адамантинового резонатора",
-		DATIVE = "адамантиновому резонатору",
-		ACCUSATIVE = "адамантиновый резонатор",
-		INSTRUMENTAL = "адамантиновым резонатором",
-		PREPOSITIONAL = "адамантиновом резонаторе",
-	)
-
 /obj/item/organ/internal/vocal_cords/adamantine
 	name = "adamantine vocal cords"
-	desc = "При резонансе адамантина все ближайшие частицы входят в синхронизацию. Големы используют это для передачи сообщений сородичам."
+	desc = "When adamantine resonates, it causes all nearby pieces of adamantine to resonate as well. Adamantine golems use this to broadcast messages to nearby golems."
 	actions_types = list(/datum/action/item_action/organ_action/use/adamantine_vocal_cords)
 	icon_state = "adamantine_cords"
-
-/obj/item/organ/internal/vocal_cords/adamantine/get_ru_names()
-	return alist(
-		NOMINATIVE = "адамантиновые голосовые связки",
-		GENITIVE = "адамантиновых голосовых связок",
-		DATIVE = "адамантиновым голосовым связкам",
-		ACCUSATIVE = "адамантиновые голосовые связки",
-		INSTRUMENTAL = "адамантиновыми голосовыми связками",
-		PREPOSITIONAL = "адамантиновых голосовых связках",
-	)
 
 /datum/action/item_action/organ_action/use/adamantine_vocal_cords/do_effect(trigger_flags)
 	var/message = tgui_input_text(owner, "Отправить резонирующее сообщение всем ближайшим големам.", "Резонанс")
@@ -111,7 +81,7 @@ GLOBAL_DATUM_INIT(multispin_words, /regex, regex("like a record baby|как пл
 //Colossus drop, forces the listeners to obey certain commands
 /obj/item/organ/internal/vocal_cords/colossus
 	name = "divine vocal cords"
-	desc = "Они несут глас древнего бога."
+	desc = "They carry the voice of an ancient god."
 	icon_state = "voice_of_god"
 	actions_types = list(/datum/action/item_action/organ_action/colossus)
 	var/next_command = 0
@@ -121,16 +91,6 @@ GLOBAL_DATUM_INIT(multispin_words, /regex, regex("like a record baby|как пл
 	var/cooldown_none = 150
 	var/base_multiplier = 1
 	spans = "colossus yell"
-
-/obj/item/organ/internal/vocal_cords/colossus/get_ru_names()
-	return alist(
-		NOMINATIVE = "связки бога",
-		GENITIVE = "связок бога",
-		DATIVE = "связкам бога",
-		ACCUSATIVE = "связки бога",
-		INSTRUMENTAL = "связками бога",
-		PREPOSITIONAL = "связках бога",
-	)
 
 /datum/action/item_action/organ_action/colossus
 	name = "Глас Божий"

@@ -1008,7 +1008,7 @@
 
 /obj/machinery/computer/shuttle/ruins_transport_shuttle // this shuttle made for station and listening post of ussp since they have lore connection between eachother, btw the shuttle existed before the change but was deleted for some reason.
 	name = "Transport Shuttle Console"
-	desc = "Используется для управления Транспортным шаттлом."
+	desc = "Used to control the Transport Shuttle."
 	circuit = /obj/item/circuitboard/ruins_transport_shuttle
 	shuttleId = "ruins_transport_shuttle"
 	possible_destinations = "ussp_dock;dj_post;sindiecake_dock;ussp_gorky17"
@@ -1020,27 +1020,27 @@
 
 /obj/machinery/computer/shuttle/ruins_civil_shuttle // made another shuttle, this one will fly between spacebar and twin nexus hotel. just another way to get to it.
 	name = "Regular Civilian Shuttle Console"
-	desc = "Используется для управления обычным гражданским шаттлом."
+	desc = "Used to control the Regular Civilian Shuttle."
 	circuit = /obj/item/circuitboard/ruins_civil_shuttle
 	shuttleId = "ruins_civil_shuttle"
 	possible_destinations = "spacebar;spacehotelv1;ntstation"
 
 /obj/machinery/computer/shuttle/white_ship
 	name = "White Ship Console"
-	desc = "Используется для управления Белым кораблём."
+	desc = "Used to control the NEV Limulus expeditionary vessel."
 	circuit = /obj/item/circuitboard/white_ship
 	shuttleId = "whiteship"
 	possible_destinations = null // Set at runtime
 
 /obj/machinery/computer/shuttle/engineering
 	name = "Engineering Shuttle Console"
-	desc = "Используется для вызова и отправки инженерного шаттла."
+	desc = "Used to call and send the engineering shuttle."
 	shuttleId = "engineering"
 	possible_destinations = "engineering_home;engineering_away"
 
 /obj/machinery/computer/shuttle/science
 	name = "Science Shuttle Console"
-	desc = "Используется для вызова и отправки научного шаттла."
+	desc = "Used to call and send the science shuttle."
 	shuttleId = "science"
 	possible_destinations = "science_home;science_away"
 
@@ -1053,7 +1053,7 @@
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/admin
 	name = "Admin shuttle navigation computer"
-	desc = "Используется, чтобы указать точное местоположение для отправки админского шаттла."
+	desc = "Used to designate a precise transit location for the admin shuttle."
 	shuttleId = "admin"
 	shuttlePortId = "admin_custom"
 	view_range = 14
@@ -1075,7 +1075,7 @@
 
 /obj/machinery/computer/shuttle/golem_ship
 	name = "Golem Ship Console"
-	desc = "Используется для управления шаттлом големов."
+	desc = "Used to control the Golem Ship."
 	circuit = /obj/item/circuitboard/shuttle/golem_ship
 	shuttleId = "freegolem"
 	possible_destinations = "freegolem_lavaland;freegolem_space;freegolem_ussp"
@@ -1088,7 +1088,7 @@
 
 /obj/machinery/computer/shuttle/golem_ship/recall
 	name = "golem ship recall terminal"
-	desc = "Используется для отзыва шаттла големов."
+	desc = "Used to recall the Golem Ship."
 	possible_destinations = "freegolem_lavaland"
 	resistance_flags = INDESTRUCTIBLE
 

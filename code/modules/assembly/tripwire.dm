@@ -11,16 +11,6 @@
 	layer = LOW_OBJ_LAYER
 	var/obj/item/tripwire/master_base
 
-/obj/structure/tripwire_bridge/get_ru_names()
-	return alist(
-		NOMINATIVE = "провод растяжки",
-		GENITIVE = "провода растяжки",
-		DATIVE = "проводу растяжки",
-		ACCUSATIVE = "провод растяжки",
-		INSTRUMENTAL = "проводом растяжки",
-		PREPOSITIONAL = "проводе растяжки",
-	)
-
 /obj/structure/tripwire_bridge/Initialize(mapload)
 	. = ..()
 	RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(on_entered))
@@ -90,16 +80,6 @@
 
 	var/datum/weakref/creator_mind = null
 	var/datum/weakref/payload_mind = null
-
-/obj/item/tripwire/get_ru_names()
-	return alist(
-		NOMINATIVE = "растяжка",
-		GENITIVE = "растяжки",
-		DATIVE = "растяжке",
-		ACCUSATIVE = "растяжку",
-		INSTRUMENTAL = "растяжкой",
-		PREPOSITIONAL = "растяжке",
-	)
 
 /obj/item/tripwire/Destroy()
 	if(is_active)

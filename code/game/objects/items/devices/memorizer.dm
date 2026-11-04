@@ -158,8 +158,8 @@
 	burn_out()
 
 /obj/item/memorizer/syndicate
-	name = "Нейрализатор"
-	desc = "Если перед вами сработает это устройство, скорее всего вы не сможете об этом вспомнить!"
+	name = "neuralyzer"
+	desc = "If this device goes off in front of you, you probably won't remember it!"
 	origin_tech = "abductor=3;syndicate=2"
 
 /obj/item/memorizer/syndicate/memorize_carbon(mob/living/carbon/fucking_target, mob/user = null, power = 10 SECONDS, targeted = TRUE)

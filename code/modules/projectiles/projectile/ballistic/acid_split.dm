@@ -4,16 +4,6 @@
 	damage = 25
 	damage_type = TOX
 
-/obj/projectile/bullet/acid_split/get_ru_names()
-	return alist(
-		NOMINATIVE = "слюна с кислотой",
-		GENITIVE = "слюны с кислотой",
-		DATIVE = "слюне с кислотой",
-		ACCUSATIVE = "слюну с кислотой",
-		INSTRUMENTAL = "слюной с кислотой",
-		PREPOSITIONAL = "слюне с кислотой",
-	)
-
 /obj/projectile/bullet/acid_split/prehit(atom/target)
 	if(HAS_TRAIT(target, TRAIT_I_WANT_BRAINS))
 		nodamage = TRUE

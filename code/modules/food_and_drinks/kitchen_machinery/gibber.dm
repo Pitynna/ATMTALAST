@@ -2,7 +2,7 @@
 
 /obj/machinery/gibber
 	name = "Gibber"
-	desc = "Промышленная мясорубка для утилизации органических отходов. Эффективно перерабатывает биомассу гуманоидного типа в мясосодержащий продукт."
+	desc = "The name isn't descriptive enough?"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "grinder"
 	density = TRUE
@@ -23,16 +23,6 @@
 
 	idle_power_usage = 2
 	active_power_usage = 500
-
-/obj/machinery/gibber/get_ru_names()
-	return alist(
-		NOMINATIVE = "мясорубка",
-		GENITIVE = "мясорубки",
-		DATIVE = "мясорубке",
-		ACCUSATIVE = "мясорубку",
-		INSTRUMENTAL = "мясорубкой",
-		PREPOSITIONAL = "мясорубке"
-	)
 
 /obj/machinery/gibber/Initialize(mapload)
 	. = ..()

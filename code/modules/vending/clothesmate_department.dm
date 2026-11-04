@@ -38,16 +38,6 @@
 	)
 	vend_reply = "Спас+ибо за исп+ользование автом+ата-пом+ощника в в+ыборе од+ежды отд+ела!"
 
-/obj/machinery/vending/department_clothesmate/get_ru_names()
-	return alist(
-		NOMINATIVE = "сломанный торговый автомат Departament ClothesMate",
-		GENITIVE = "сломанного торгового автомата Departament ClothesMate",
-		DATIVE = "сломанному торговому автомату Departament ClothesMate",
-		ACCUSATIVE = "сломанный торговый автомат Departament ClothesMate",
-		INSTRUMENTAL = "сломанным торговым автоматом Departament ClothesMate",
-		PREPOSITIONAL = "сломанном торговом автомате Departament ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/security
 	name = "Departament Security ClothesMate"
 	desc = "Автомат-помощник по выдаче одежды Службы безопасности."
@@ -149,16 +139,6 @@
 				/obj/item/storage/backpack/duffel/security = 5,
 			),
 		),
-	)
-
-/obj/machinery/vending/department_clothesmate/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Security ClothesMate",
-		GENITIVE = "торгового автомата Departament Security ClothesMate",
-		DATIVE = "торговому автомату Departament Security ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Security ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Security ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Security ClothesMate",
 	)
 
 /obj/machinery/vending/department_clothesmate/medical
@@ -284,16 +264,6 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Medical ClothesMate",
-		GENITIVE = "торгового автомата Departament Medical ClothesMate",
-		DATIVE = "торговому автомату Departament Medical ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Medical ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Medical ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Medical ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/engineering
 	name = "Departament Engineering ClothesMate"
 	desc = "Автомат-помощник по выдаче одежды Инженерного отдела."
@@ -380,16 +350,6 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/engineering/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Engineering ClothesMat",
-		GENITIVE = "торгового автомата Departament Engineering ClothesMat",
-		DATIVE = "торговому автомату Departament Engineering ClothesMat",
-		ACCUSATIVE = "торговый автомат Departament Engineering ClothesMat",
-		INSTRUMENTAL = "торговым автоматом Departament Engineering ClothesMat",
-		PREPOSITIONAL = "торговом автомате Departament Engineering ClothesMat",
-	)
-
 /obj/machinery/vending/department_clothesmate/science
 	name = "Departament Science ClothesMate"
 	desc = "Автомат-помощник по выдаче одежды Научного отдела."
@@ -466,16 +426,6 @@
 				/obj/item/storage/backpack/duffel/science = 5,
 			),
 		),
-	)
-
-/obj/machinery/vending/department_clothesmate/science/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Science ClothesMate",
-		GENITIVE = "торгового автомата Departament Science ClothesMate",
-		DATIVE = "торговому автомату Departament Science ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Science ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Science ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Science ClothesMate",
 	)
 
 /obj/machinery/vending/department_clothesmate/cargo
@@ -560,16 +510,6 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/cargo/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Cargo ClothesMate",
-		GENITIVE = "торгового автомата Departament Cargo ClothesMate",
-		DATIVE = "торговому автомату Departament Cargo ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Cargo ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Cargo ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Cargo ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/law
 	name = "Departament Law ClothesMate"
 	desc = "Автомат-помощник по выдаче одежды Юридического отдела."
@@ -645,32 +585,12 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/law/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Law ClothesMate",
-		GENITIVE = "торгового автомата Departament Law ClothesMate",
-		DATIVE = "торговому автомату Departament Law ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Law ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Law ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Law ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/service
 	name = "Departament Service ClothesMate"
 	desc = "Автомат-помощник по выдаче одежды Отдела обслуживания."
 	req_access = list()
 	products = list()
 	refill_canister = /obj/item/vending_refill/clothing/service
-
-/obj/machinery/vending/department_clothesmate/service/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Service ClothesMate",
-		GENITIVE = "торгового автомата Departament Service ClothesMate",
-		DATIVE = "торговому автомату Departament Service ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Service ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Service ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Service ClothesMate",
-	)
 
 /obj/machinery/vending/department_clothesmate/service/chaplain
 	name = "Departament Service ClothesMate Chaplain"
@@ -738,16 +658,6 @@
 				/obj/item/storage/backpack/cultpack = 5,
 			),
 		),
-	)
-
-/obj/machinery/vending/department_clothesmate/service/chaplain/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Service ClothesMate Chaplain",
-		GENITIVE = "торгового автомата Departament Service ClothesMate Chaplain",
-		DATIVE = "торговому автомату Departament Service ClothesMate Chaplain",
-		ACCUSATIVE = "торговый автомат Departament Service ClothesMate Chaplain",
-		INSTRUMENTAL = "торговым автоматом Departament Service ClothesMate Chaplain",
-		PREPOSITIONAL = "торговом автомате Departament Service ClothesMate Chaplain",
 	)
 
 /obj/machinery/vending/department_clothesmate/service/botanical
@@ -818,14 +728,4 @@
 				/obj/item/storage/backpack/duffel/hydro = 5,
 			),
 		),
-	)
-
-/obj/machinery/vending/department_clothesmate/service/botanical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Service ClothesMate Botanical",
-		GENITIVE = "торгового автомата Departament Service ClothesMate Botanical",
-		DATIVE = "торговому автомату Departament Service ClothesMate Botanical",
-		ACCUSATIVE = "торговый автомат Departament Service ClothesMate Botanical",
-		INSTRUMENTAL = "торговым автоматом Departament Service ClothesMate Botanical",
-		PREPOSITIONAL = "торговом автомате Departament Service ClothesMate Botanical",
 	)

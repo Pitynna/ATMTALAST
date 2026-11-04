@@ -46,7 +46,7 @@
 
 /obj/effect/decal/remains/mouse
 	name = "remains"
-	desc = "Некогда бывшая мышь. Её останки. Больше не будет пищать..."
+	desc = "What was once a mouse. Only its remains are left. No more squeaking..."
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "mouse_skeleton"
 	anchored = FALSE

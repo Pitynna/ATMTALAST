@@ -10,16 +10,6 @@
 	speed = 2
 	range = 15
 
-/obj/projectile/hook/get_ru_names()
-	return alist(
-		NOMINATIVE = "крюк",
-		GENITIVE = "крюка",
-		DATIVE = "крюку",
-		ACCUSATIVE = "крюк",
-		INSTRUMENTAL = "крюком",
-		PREPOSITIONAL = "крюке",
-	)
-
 /obj/projectile/hook/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_RICOCHET, INNATE_TRAIT)

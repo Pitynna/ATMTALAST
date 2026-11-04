@@ -11,7 +11,7 @@
 
 /obj/structure/bed
 	name = "bed"
-	desc = "Нужна для того, чтобы полежать, поспать или привязать кого-нибудь."
+	desc = "This is used to lie in, sleep in or strap on."
 	gender = FEMALE
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "bed"
@@ -32,19 +32,19 @@
 
 /obj/structure/bed/psych
 	name = "psych bed"
-	desc = "Для максимального комфорта на психиатрическом обследовании."
+	desc = "For prime comfort during psychiatric evaluations."
 	icon_state = "psychbed"
 	buildstackamount = 5
 
 /obj/structure/bed/alien
 	name = "resting contraption"
-	desc = "Выглядит подозрительно похожей на земные кровати, неужели инопланетяне крадут наши технологии?"
+	desc = "This looks similar to contraptions from Earth. Could aliens be stealing our technology?"
 	icon_state = "abed"
 	comfort = 0.3
 
 /obj/structure/bed/sandstone
 	name = "sandstone plate"
-	desc = "При желании на ней можно уснуть."
+	desc = "This is used to lie on, feels farm."
 	icon_state = "bed_sand"
 	resistance_flags = FIRE_PROOF
 	max_integrity = 200
@@ -54,7 +54,7 @@
 
 /obj/structure/bed/old
 	name = "old bed"
-	desc = "Она выглядит крайне неудобной, и вы бы не хотели спать на такой."
+	desc = "This is a very old spring bed, it looks extremely UNCOMFORTABLE, you would not lie on it for anything in your life."
 	icon_state = "catwalkcouch1"
 	comfort = 0
 
@@ -66,32 +66,12 @@
 	buildstacktype = /obj/item/stack/sheet/cloth
 	buildstackamount = 5
 
-/obj/structure/bed/wicker/get_ru_names()
-	return alist(
-		NOMINATIVE = "плетёная кровать",
-		GENITIVE = "плетёной кровати",
-		DATIVE = "плетёной кровати",
-		ACCUSATIVE = "плетёную кровать",
-		INSTRUMENTAL = "плетёной кроватью",
-		PREPOSITIONAL = "плетёной кровати",
-	)
-
 /obj/structure/bed/leather
 	name = "leather bed"
 	desc = "Куски кожи, грубо сшитые друг с другом и прикреплённые к деревянной раме. Не самое удобное место для лежания."
 	icon_state = "leather_bed"
 	comfort = 1.2
 	buildstacktype = /obj/item/stack/sheet/leather
-
-/obj/structure/bed/leather/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровать из кожи",
-		GENITIVE = "кровати из кожи",
-		DATIVE = "кровати из кожи",
-		ACCUSATIVE = "кровать из кожи",
-		INSTRUMENTAL = "кроватью из кожи",
-		PREPOSITIONAL = "кровати из кожи",
-	)
 
 /obj/structure/bed/wooden
 	name = "wooden bed"
@@ -101,32 +81,12 @@
 	buildstacktype = /obj/item/stack/sheet/wood
 	buildstackamount = 5
 
-/obj/structure/bed/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянная кровать",
-		GENITIVE = "деревянной кровати",
-		DATIVE = "деревянной кровати",
-		ACCUSATIVE = "деревянную кровать",
-		INSTRUMENTAL = "деревянной кроватью",
-		PREPOSITIONAL = "деревянной кровати",
-	)
-
 /obj/structure/bed/cardboard
 	name = "cardboard bed"
 	desc = "Лежанка, сделанная из картона. Ты что, бомж?"
 	icon_state = "cardboard_bed"
 	comfort = 0.1
 	buildstacktype = /obj/item/stack/sheet/cardboard
-
-/obj/structure/bed/cardboard/get_ru_names()
-	return alist(
-		NOMINATIVE = "лежанка из картона",
-		GENITIVE = "лежанки из картона",
-		DATIVE = "лежанке из картона",
-		ACCUSATIVE = "лежанку из картона",
-		INSTRUMENTAL = "лежанкой из картона",
-		PREPOSITIONAL = "лежанке из картона",
-	)
 
 /obj/structure/bed/cardboard/wrench_act(mob/user, obj/item/wrench)
 	return FALSE
@@ -191,16 +151,6 @@
 	var/icon_down = "down"
 	var/folded = /obj/item/roller
 
-/obj/structure/bed/roller/get_ru_names()
-	return alist(
-		NOMINATIVE = "каталка",
-		GENITIVE = "каталки",
-		DATIVE = "каталке",
-		ACCUSATIVE = "каталку",
-		INSTRUMENTAL = "каталкой",
-		PREPOSITIONAL = "каталке",
-	)
-
 /obj/structure/bed/roller/wrench_act(mob/user, obj/item/wrench)
 	return FALSE
 
@@ -248,25 +198,15 @@
 
 /obj/structure/bed/roller/holo
 	name = "holo stretcher"
-	desc = "Используется для транспортировки пациентов. Почему они не падают?"
+	desc = "A retracted hardlight stretcher that can be carried around."
 	icon_state = "holo_down"
 	icon_up = "holo_up"
 	icon_down = "holo_down"
 	folded = /obj/item/roller/holo
 
-/obj/structure/bed/roller/holo/get_ru_names()
-	return alist(
-		NOMINATIVE = "носилки",
-		GENITIVE = "носилок",
-		DATIVE = "носилкам",
-		ACCUSATIVE = "носилки",
-		INSTRUMENTAL = "носилками",
-		PREPOSITIONAL = "носилках",
-	)
-
 /obj/item/roller
 	name = "roller stretcher"
-	desc = "Это сложенная каталка на роликах. Её можно развернуть."
+	desc = "A collapsed roller bed that can be carried around."
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "folded"
 	interaction_flags_mouse_drop = NEED_DEXTERITY | NEED_HANDS
@@ -274,16 +214,6 @@
 	var/collectable = TRUE
 	var/extended = /obj/structure/bed/roller
 	w_class = WEIGHT_CLASS_BULKY // Can't be put in backpacks.
-
-/obj/item/roller/get_ru_names()
-	return alist(
-		NOMINATIVE = "каталка",
-		GENITIVE = "каталки",
-		DATIVE = "каталке",
-		ACCUSATIVE = "каталку",
-		INSTRUMENTAL = "каталкой",
-		PREPOSITIONAL = "каталке",
-	)
 
 /obj/item/roller/attack_self(mob/user)
 	var/obj/structure/bed/roller/roller = new extended(drop_location())
@@ -335,26 +265,16 @@
 
 /obj/item/roller/holo
 	name = "holo stretcher"
-	desc = "Это голографические носилки из твердого света? Их можно развернуть и носить с собой."
+	desc = "A retracted hardlight stretcher that can be carried around."
 	icon_state = "holo_retracted"
 	w_class = WEIGHT_CLASS_SMALL
 	origin_tech = "magnets=3;biotech=4;powerstorage=3"
 	extended = /obj/structure/bed/roller/holo
 	collectable = FALSE
 
-/obj/item/roller/holo/get_ru_names()
-	return alist(
-		NOMINATIVE = "носилки",
-		GENITIVE = "носилок",
-		DATIVE = "носилкам",
-		ACCUSATIVE = "носилки",
-		INSTRUMENTAL = "носилками",
-		PREPOSITIONAL = "носилках",
-	)
-
 /obj/item/roller_holder
 	name = "roller stretcher rack"
-	desc = "В нём можно перевозить сложенную каталку."
+	desc = "A rack for carrying a collapsed roller bed."
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "folded"
 	var/obj/item/roller/held = /obj/item/roller
@@ -385,7 +305,7 @@
 /obj/structure/bed/dogbed
 	name = "dog bed"
 	icon_state = "dogbed"
-	desc = "Ваш питомец не потеряется, даже если гравитация отключится."
+	desc = "A comfy-looking dog bed. You can even strap your pet in, just in case the gravity turns off."
 	anchored = FALSE
 	buildstackamount = 10
 	buildstacktype = /obj/item/stack/sheet/wood
@@ -394,20 +314,20 @@
 
 /obj/structure/bed/dogbed/ian
 	name = "Ian's bed"
-	desc = "Выглядит удобной."
+	desc = "Ian's bed! Looks comfy."
 	anchored = TRUE
 
 /obj/structure/bed/dogbed/renault
 	name = "Renault's bed"
-	desc = "Выглядит, как производитель машин 21 века."
+	desc = "Renault's bed! Looks comfy. A foxy person needs a foxy pet."
 	anchored = TRUE
 
 /obj/structure/bed/dogbed/runtime
 	name = "Runtime's bed"
-	desc = "Похожа на ошибку."
+	desc = "A comfy-looking cat bed. You can even strap your pet in, in case the gravity turns off."
 	anchored = TRUE
 
 /obj/structure/bed/dogbed/pet
-	name = "Удобная лежанка"
+	name = "cozy pet bed"
 	desc = "Комфортная лежанка для любимейшего питомца отдела."
 	anchored = TRUE

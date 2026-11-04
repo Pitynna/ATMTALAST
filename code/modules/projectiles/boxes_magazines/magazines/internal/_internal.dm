@@ -2,16 +2,6 @@
 	desc = "Oh god, this shouldn't be here!"
 	can_fast_load = TRUE
 
-/obj/item/ammo_box/magazine/internal/get_ru_names()
-	return alist(
-		NOMINATIVE = "внутренний магазин [gun_name] [get_cartridge_marking()]",
-		GENITIVE = "внутреннего магазина [gun_name] [get_cartridge_marking()]",
-		DATIVE = "внутреннему магазину [gun_name] [get_cartridge_marking()]",
-		ACCUSATIVE = "внутренний магазин [gun_name] [get_cartridge_marking()]",
-		INSTRUMENTAL = "внутренним магазином [gun_name] [get_cartridge_marking()]",
-		PREPOSITIONAL = "внутреннем магазине [gun_name] [get_cartridge_marking()]",
-	)
-
 /obj/item/ammo_box/magazine/internal/update_desc(updates = ALL)
 	. = ..()
 	desc = "Несъёмный магазин для [gun_name ? gun_name : "огнестрельного оружия"]. \

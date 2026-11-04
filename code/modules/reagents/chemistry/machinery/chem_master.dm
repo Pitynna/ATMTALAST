@@ -17,7 +17,7 @@
 
 /obj/machinery/chem_master
 	name = "ChemMaster 3000"
-	desc = "Химическое оборудование, предназначенное для преобразования реагентов в таблетки, пластыри и бутылки."
+	desc = "Used to turn reagents into pills, patches, and store them in bottles."
 	density = TRUE
 	anchored = TRUE
 	icon = 'icons/obj/chemical.dmi'
@@ -52,16 +52,6 @@
 	)
 	var/list/datum/chemical_production_mode/production_modes = list()
 	var/static/list/bottle_styles
-
-/obj/machinery/chem_master/get_ru_names()
-	return alist(
-		NOMINATIVE = "ХимМастер 3000",
-		GENITIVE = "ХимМастера 3000",
-		DATIVE = "ХимМастеру 3000",
-		ACCUSATIVE = "ХимМастер 3000",
-		INSTRUMENTAL = "ХимМастером 3000",
-		PREPOSITIONAL = "ХимМастере 3000",
-	)
 
 /obj/machinery/chem_master/Initialize(mapload)
 	. = ..()
@@ -536,18 +526,8 @@
 
 /obj/machinery/chem_master/condimaster
 	name = "CondiMaster 3000"
-	desc = "Химическое оборудование, специализированное под кулинарные нужды. Позволяет создавать пакеты со специями или бутыли, как вы того пожелаете."
+	desc = "Used to remove reagents from that single beaker you're using, or create condiment packs and bottles; your choice."
 	condi = TRUE
-
-/obj/machinery/chem_master/condimaster/get_ru_names()
-	return alist(
-		NOMINATIVE = "КондиМастер 3000",
-		GENITIVE = "КондиМастера 3000",
-		DATIVE = "КондиМастеру 3000",
-		ACCUSATIVE = "КондиМастер 3000",
-		INSTRUMENTAL = "КондиМастером 3000",
-		PREPOSITIONAL = "КондиМастере 3000",
-	)
 
 /obj/machinery/chem_master/condimaster/Initialize(mapload)
 	. = ..()

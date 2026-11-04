@@ -12,7 +12,7 @@
 
 /obj/item/clothing/mask/facehugger
 	name = "alien"
-	desc = "На конце хвоста у него есть что-то вроде трубки."
+	desc = "It has some sort of a tube at the end of its tail."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "facehugger"
 	item_state = "facehugger"
@@ -41,16 +41,6 @@
 	var/strength = 3
 
 	var/mob/living/simple_animal/hostile/facehugger/holdered_mob
-
-/obj/item/clothing/mask/facehugger/get_ru_names()
-	return alist(
-		NOMINATIVE = "лицехват",
-		GENITIVE = "лицехвата",
-		DATIVE = "лицехвату",
-		ACCUSATIVE = "лицехвата",
-		INSTRUMENTAL = "лицехватом",
-		PREPOSITIONAL = "лицехвате",
-	)
 
 /obj/item/clothing/mask/facehugger/Initialize(mapload, mob/hugger)
 	. = ..()
@@ -381,19 +371,9 @@
 
 /obj/item/clothing/mask/facehugger/lamarr
 	name = "Lamarr"
-	desc = "В худшем случае она попытается... спариться с вашей головой." //hope we don't get sued over a harmless reference, rite?
+	desc = "The worst she might do is attempt to... couple with your head." //hope we don't get sued over a harmless reference, rite?
 	sterile = 1
 	holder_flags = ALIEN_HOLDER | HUMAN_HOLDER
-
-/obj/item/clothing/mask/facehugger/lamarr/get_ru_names()
-	return alist(
-		NOMINATIVE = "ламарр",
-		GENITIVE = "ламарр",
-		DATIVE = "ламарр",
-		ACCUSATIVE = "ламарр",
-		INSTRUMENTAL = "ламарр",
-		PREPOSITIONAL = "ламарр",
-	)
 
 /obj/item/clothing/mask/facehugger/lamarr/Initialize(mapload, hugger)
 	. = ..()

@@ -1,6 +1,6 @@
 /obj/item/storage/dart_cartridge
 	name = "dart cartridge"
-	desc = "Подставка для дротиков."
+	desc = "A rack of hollow darts."
 	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "darts-0"
 	item_state = "rcdammo"

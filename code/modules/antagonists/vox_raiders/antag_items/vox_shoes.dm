@@ -4,7 +4,7 @@
 
 /obj/item/clothing/shoes/magboots/vox
 	name = "vox magclaws"
-	desc = "Тяжелые бронированные налапочники для когтистых лап причудливой формы."
+	desc = "A pair of heavy, jagged armoured foot pieces, seemingly suitable for a velociraptor."
 	item_state = "boots-vox"
 	icon_state = "boots-vox"
 	icon = 'icons/obj/clothing/species/vox/shoes.dmi'

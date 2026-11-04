@@ -11,16 +11,6 @@
 	var/teleport_target = null
 	accuracy = GUN_ACCURACY_PISTOL
 
-/obj/item/gun/energy/telegun/get_ru_names()
-	return alist(
-		NOMINATIVE = "телепушка",
-		GENITIVE = "телепушки",
-		DATIVE = "телепушке",
-		ACCUSATIVE = "телепушку",
-		INSTRUMENTAL = "телепушкой",
-		PREPOSITIONAL = "телепушке",
-	)
-
 /obj/item/gun/energy/telegun/Destroy()
 	teleport_target = null
 	return ..()

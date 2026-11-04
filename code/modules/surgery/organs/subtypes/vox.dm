@@ -7,16 +7,6 @@
 	alcohol_intensity = 1.6
 	sterile = TRUE
 
-/obj/item/organ/internal/liver/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "печень вокса",
-		GENITIVE = "печени вокса",
-		DATIVE = "печени вокса",
-		ACCUSATIVE = "печень вокса",
-		INSTRUMENTAL = "печенью вокса",
-		PREPOSITIONAL = "печени вокса",
-	)
-
 /obj/item/organ/internal/eyes/vox
 	species_type = /datum/species/vox
 	name = "vox eyeballs"
@@ -25,30 +15,10 @@
 	item_state = "vox_eyes"
 	sterile = TRUE
 
-/obj/item/organ/internal/eyes/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаза вокса",
-		GENITIVE = "глаз вокса",
-		DATIVE = "глазам вокса",
-		ACCUSATIVE = "глаза вокса",
-		INSTRUMENTAL = "глазами вокса",
-		PREPOSITIONAL = "глазах вокса",
-	)
-
 /obj/item/organ/internal/ears/vox
 	species_type = /datum/species/vox
 	name = "vox ears"
 	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали воксу."
-
-/obj/item/organ/internal/ears/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "уши вокса",
-		GENITIVE = "ушей вокса",
-		DATIVE = "ушам вокса",
-		ACCUSATIVE = "уши вокса",
-		INSTRUMENTAL = "ушами вокса",
-		PREPOSITIONAL = "ушах вокса",
-	)
 
 /obj/item/organ/internal/heart/vox
 	species_type = /datum/species/vox
@@ -59,35 +29,15 @@
 	item_base = "vox_heart"
 	sterile = TRUE
 
-/obj/item/organ/internal/heart/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "сердце вокса",
-		GENITIVE = "сердца вокса",
-		DATIVE = "сердцу вокса",
-		ACCUSATIVE = "сердце вокса",
-		INSTRUMENTAL = "сердцем вокса",
-		PREPOSITIONAL = "сердце вокса",
-	)
-
 /obj/item/organ/internal/brain/vox
 	species_type = /datum/species/vox
 	name = "cortical stack"
-	desc = "Двойной мозг, мозжечок которого является органическим, а кора представлена сложным электронным устройством. Фактически, именно здесь и находится разум вокса."
+	desc = "A peculiarly advanced bio-electronic device that seems to hold the memories and identity of a Vox."
 	icon = 'icons/obj/species_organs/vox.dmi'
 	icon_state = "cortical-stack"
 	item_state = "vox_cortical-stack"
 	mmi_icon = 'icons/obj/species_organs/vox.dmi'
 	sterile = TRUE
-
-/obj/item/organ/internal/brain/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозговой стек",
-		GENITIVE = "мозгового стека",
-		DATIVE = "мозговому стеку",
-		ACCUSATIVE = "мозговой стек",
-		INSTRUMENTAL = "мозговым стеком",
-		PREPOSITIONAL = "мозговом стеке",
-	)
 
 /obj/item/organ/internal/kidneys/vox
 	species_type = /datum/species/vox
@@ -97,19 +47,9 @@
 	item_state = "vox_kidneys"
 	sterile = TRUE
 
-/obj/item/organ/internal/kidneys/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "почки вокса",
-		GENITIVE = "почек вокса",
-		DATIVE = "почкам вокса",
-		ACCUSATIVE = "почки вокса",
-		INSTRUMENTAL = "почками вокса",
-		PREPOSITIONAL = "почках вокса",
-	)
-
 /obj/item/organ/internal/lungs/vox
 	name = "vox lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали воксу."
+	desc = "They're filled with dust....wow."
 	icon = 'icons/obj/species_organs/vox.dmi'
 	item_state = "vox_lungs"
 
@@ -118,16 +58,6 @@
 	safe_nitro_min = 16 //We breathe THIS!
 	oxy_damage_type = TOX //And it poisons us
 
-/obj/item/organ/internal/lungs/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "лёгкие вокса",
-		GENITIVE = "лёгких вокса",
-		DATIVE = "лёгким вокса",
-		ACCUSATIVE = "лёгкие вокса",
-		INSTRUMENTAL = "лёгкими вокса",
-		PREPOSITIONAL = "лёгких вокса",
-	)
-
 /obj/item/organ/external/tail/vox
 	species_type = /datum/species/vox
 	name = "vox tail"
@@ -135,13 +65,3 @@
 	icon_name = "voxtail_s"
 	max_damage = 25
 	min_broken_damage = 20
-
-/obj/item/organ/external/tail/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "хвост вокса",
-		GENITIVE = "хвоста вокса",
-		DATIVE = "хвосту вокса",
-		ACCUSATIVE = "хвост вокса",
-		INSTRUMENTAL = "хвостом вокса",
-		PREPOSITIONAL = "хвосте вокса",
-	)

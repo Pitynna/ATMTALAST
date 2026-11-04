@@ -184,91 +184,41 @@
 // MARK: Can Types
 /obj/item/reagent_containers/cup/soda_cans/cola
 	name = "space cola"
-	desc = "Это кола. Нестареющая классика."
+	desc = "Cola. In space."
 	icon_state = "cola"
 	list_reagents = list("cola" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/cola/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка колы",
-		GENITIVE = "банки колы",
-		DATIVE = "банке колы",
-		ACCUSATIVE = "банку колы",
-		INSTRUMENTAL = "банкой колы",
-		PREPOSITIONAL = "банке колы",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/energy
 	name = "heart attack"
-	desc = "Пока сердце вам не скажет - \"Моя остановка\"."
+	desc = "The heart will say: - My stop."
 	icon_state = "heart_attack"
 	item_state = "heart_attack"
 	list_reagents = list("energetik" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/energy/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка энергетика \"Сердечный Приступ\"",
-		GENITIVE = "банки энергетика \"Сердечный Приступ\"",
-		DATIVE = "банке энергетика \"Сердечный Приступ\"",
-		ACCUSATIVE = "банку энергетика \"Сердечный Приступ\"",
-		INSTRUMENTAL = "банкой энергетика \"Сердечный Приступ\"",
-		PREPOSITIONAL = "банке энергетика \"Сердечный Приступ\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/energy/trop
 	name = "tropical spasm"
-	desc = "Почувствуйте бодрящий вкус тропических фруктов!"
+	desc = "Get a taste of hunting down USSP soldiers."
 	icon_state = "tropical_spasm"
 	item_state = "tropical_spasm"
 	list_reagents = list("trop_eng" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/energy/trop/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка энергетика \"Тропический Спазм\"",
-		GENITIVE = "банки энергетика \"Тропический Спазм\"",
-		DATIVE = "банке энергетика \"Тропический Спазм\"",
-		ACCUSATIVE = "банку энергетика \"Тропический Спазм\"",
-		INSTRUMENTAL = "банкой энергетика \"Тропический Спазм\"",
-		PREPOSITIONAL = "банке энергетика \"Тропический Спазм\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/energy/milk
 	name = "milk flow"
-	desc = "Для самых профессиональных геймеров."
+	desc = "For pro gamers."
 	icon_state = "milk_flow"
 	item_state = "milk_flow"
 	list_reagents = list("milk_eng" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/energy/milk/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка энергетика \"Молочный Удар\"",
-		GENITIVE = "банки энергетика \"Молочный Удар\"",
-		DATIVE = "банке энергетика \"Молочный Удар\"",
-		ACCUSATIVE = "банку энергетика \"Молочный Удар\"",
-		INSTRUMENTAL = "банкой энергетика \"Молочный Удар\"",
-		PREPOSITIONAL = "банке энергетика \"Молочный Удар\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/energy/grey
 	name = "GreyPower"
-	desc = "Ваши руки будут гореть от \"Грей Энерджи\"."
+	desc = "Your hands will burn from GreyPower."
 	icon_state = "GreyPower"
 	item_state = "GreyPower"
 	list_reagents = list("grey_eng" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/energy/grey/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка энергетика \"Грей Энерджи\"",
-		GENITIVE = "банки энергетика \"Грей Энерджи\"",
-		DATIVE = "банке энергетика \"Грей Энерджи\"",
-		ACCUSATIVE = "банку энергетика \"Грей Энерджи\"",
-		INSTRUMENTAL = "банкой энергетика \"Грей Энерджи\"",
-		PREPOSITIONAL = "банке энергетика \"Грей Энерджи\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/beer
 	name = "space beer"
-	desc = "Вода, солод и хмель — а больше и не требуется."
+	desc = "Contains only water, malt and hops."
 	icon_state = "beer"
 	is_glass = 1
 	list_reagents = list("beer" = 30)
@@ -276,335 +226,124 @@
 /obj/item/reagent_containers/cup/soda_cans/beer/almost_empty
 	list_reagents = list("beer" = 1)
 
-/obj/item/reagent_containers/cup/soda_cans/beer/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка пива",
-		GENITIVE = "бутылки пива",
-		DATIVE = "бутылке пива",
-		ACCUSATIVE = "бутылку пива",
-		INSTRUMENTAL = "бутылкой пива",
-		PREPOSITIONAL = "бутылке пива",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/non_alcoholic_beer
 	name = "non-alcoholic beer"
-	desc = "Любимое пойло студентов и тех, кто за рулём."
+	desc = "A favorite thing of all students and those who drive."
 	icon_state = "alcoholfreebeercan"
 	list_reagents = list("noalco_beer" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/non_alcoholic_beer/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка безалкогольного пива",
-		GENITIVE = "бутылки безалкогольного пива",
-		DATIVE = "бутылке безалкогольного пива",
-		ACCUSATIVE = "бутылку безалкогольного пива",
-		INSTRUMENTAL = "бутылкой безалкогольного пива",
-		PREPOSITIONAL = "бутылке безалкогольного пива",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/adminbooze
 	name = "admin booze"
-	desc = "Бутылированные слёзы Гриффона. Пить со всей осторожностью."
+	desc = "Bottled Griffon tears. Drink with caution."
 	icon_state = "adminbooze"
 	is_glass = 1
 	list_reagents = list("adminordrazine" = 5, "capsaicin" = 5, "methamphetamine"= 20, "thirteenloko" = 20)
 
-/obj/item/reagent_containers/cup/soda_cans/adminbooze/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка настойки \"Админово Пойло\"",
-		GENITIVE = "бутылки настойки \"Админово Пойло\"",
-		DATIVE = "бутылке настойки \"Админово Пойло\"",
-		ACCUSATIVE = "бутылку настойки \"Админово Пойло\"",
-		INSTRUMENTAL = "бутылкой настойки \"Админово Пойло\"",
-		PREPOSITIONAL = "бутылке настойки \"Админово Пойло\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/madminmalt
 	name = "madmin malt"
-	desc = "Бутылированная эссенция ярости администрации. Пить с <i>ПРЕДЕЛЬНОЙ</i> осторожностью."
+	desc = "Bottled essence of angry admins. Drink with <i>EXTREME</i> caution."
 	icon_state = "madminmalt"
 	is_glass = 1
 	list_reagents = list("hell_water" = 20, "neurotoxin" = 15, "thirteenloko" = 15)
 
-/obj/item/reagent_containers/cup/soda_cans/madminmalt/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка настойки \"Ярость Админа\"",
-		GENITIVE = "бутылки настойки \"Ярость Админа\"",
-		DATIVE = "бутылке настойки \"Ярость Админа\"",
-		ACCUSATIVE = "бутылку настойки \"Ярость Админа\"",
-		INSTRUMENTAL = "бутылкой настойки \"Ярость Админа\"",
-		PREPOSITIONAL = "бутылке настойки \"Ярость Админа\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/badminbrew
 	name = "badmin brew"
-	desc = "Бутылированная эссенция со вкусом щитспавна и ужасных ивентов. Наверное, это вам пить не стоит."
+	desc = "Bottled trickery and terrible admin work. Probably shouldn't drink this one at all."
 	icon_state = "badminbrew"
 	is_glass = 1
 	list_reagents = list("mutagen" = 25, "charcoal" = 10, "thirteenloko" = 15)
 
-/obj/item/reagent_containers/cup/soda_cans/badminbrew/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка настойки \"Плохой Админ\"",
-		GENITIVE = "бутылки настойки \"Плохой Админ\"",
-		DATIVE = "бутылке настойки \"Плохой Админ\"",
-		ACCUSATIVE = "бутылку настойки \"Плохой Админ\"",
-		INSTRUMENTAL = "бутылкой настойки \"Плохой Админ\"",
-		PREPOSITIONAL = "бутылке настойки \"Плохой Админ\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/ale
 	name = "Tail Tells Tales Ale"
-	desc = "К этикетке прикреплён хвостик, который тянется по всей длине банки. Если вы его оторвете, то сможете прочитать короткую легенду на его обратной стороне."
+	desc = "The label has a tail drawn on it that extends the entire length of the bottle. If you rip it off, you can read some short tale or legend on the back of the label."
 	icon_state = "alebottle"
 	item_state = "beer"
 	is_glass = 1
 	list_reagents = list("ale" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/ale/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка эля \"Хвостатые Истории\"",
-		GENITIVE = "бутылки эля \"Хвостатые Истории\"",
-		DATIVE = "бутылке эля \"Хвостатые Истории\"",
-		ACCUSATIVE = "бутылку эля \"Хвостатые Истории\"",
-		INSTRUMENTAL = "бутылкой эля \"Хвостатые Истории\"",
-		PREPOSITIONAL = "бутылке эля \"Хвостатые Истории\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/space_mountain_wind
 	name = "Space Mountain Wind"
-	desc = "Проходит насквозь, словно космический ветер."
+	desc = "Blows right through you like a space wind."
 	icon_state = "space_mountain_wind"
 	list_reagents = list("spacemountainwind" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/space_mountain_wind/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка газировки \"Космический Маунтин Винд\"",
-		GENITIVE = "банки газировки \"Космический Маунтин Винд\"",
-		DATIVE = "банке газировки \"Космический Маунтин Винд\"",
-		ACCUSATIVE = "банку газировки \"Космический Маунтин Винд\"",
-		INSTRUMENTAL = "банкой газировки \"Космический Маунтин Винд\"",
-		PREPOSITIONAL = "банке газировки \"Космический Маунтин Винд\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/thirteenloko
 	name = "Thirteen Loko"
-	desc = "Главный Врач предупредил, что употребление этого напитка может привести к судорогам, слепоте, опьянению или даже смерти. Пожалуйста, пейте осторожно."
+	desc = "The CMO has advised crew members that consumption of Thirteen Loko may result in seizures, blindness, drunkenness, or even death. Please Drink Responsibly."
 	icon_state = "thirteen_loko"
 	list_reagents = list("thirteenloko" = 25, "psilocybin" = 5)
 
-/obj/item/reagent_containers/cup/soda_cans/thirteenloko/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка алкогольной газировки \"Тринадцатый Локо\"",
-		GENITIVE = "банки алкогольной газировки \"Тринадцатый Локо\"",
-		DATIVE = "банке алкогольной газировки \"Тринадцатый Локо\"",
-		ACCUSATIVE = "банку алкогольной газировки \"Тринадцатый Локо\"",
-		INSTRUMENTAL = "банкой алкогольной газировки \"Тринадцатый Локо\"",
-		PREPOSITIONAL = "банке алкогольной газировки \"Тринадцатый Локо\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/dr_gibb
 	name = "Dr. Gibb"
-	desc = "Освежающая смесь из 42 различных вкусов!"
+	desc = "A delicious mixture of 42 different flavors."
 	icon_state = "dr_gibb"
 	list_reagents = list("dr_gibb" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/dr_gibb/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка газировки \"Доктор Гибб\"",
-		GENITIVE = "банки газировки \"Доктор Гибб\"",
-		DATIVE = "банке газировки \"Доктор Гибб\"",
-		ACCUSATIVE = "банку газировки \"Доктор Гибб\"",
-		INSTRUMENTAL = "банкой газировки \"Доктор Гибб\"",
-		PREPOSITIONAL = "банке газировки \"Доктор Гибб\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/starkist
 	name = "Star-kist"
-	desc = "Вкус звёзд в жидком виде. И тунца..?"
+	desc = "The taste of a star in liquid form. And, a bit of tuna...?"
 	icon_state = "starkist"
 	list_reagents = list("brownstar" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/starkist/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка газировки \"Стар-Кист\"",
-		GENITIVE = "банки газировки \"Стар-Кист\"",
-		DATIVE = "банке газировки \"Стар-Кист\"",
-		ACCUSATIVE = "банку газировки \"Стар-Кист\"",
-		INSTRUMENTAL = "банкой газировки \"Стар-Кист\"",
-		PREPOSITIONAL = "банке газировки \"Стар-Кист\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/space_up
 	name = "Space-Up"
-	desc = "На вкус как дыра в обшивке у вас во рту. Да, звучит странно."
+	desc = "Tastes like a hull breach in your mouth."
 	icon_state = "space-up"
 	list_reagents = list("space_up" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/space_up/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка газировки \"Спейс-Ап\"",
-		GENITIVE = "банки газировки \"Спейс-Ап\"",
-		DATIVE = "банке газировки \"Спейс-Ап\"",
-		ACCUSATIVE = "банку газировки \"Спейс-Ап\"",
-		INSTRUMENTAL = "банкой газировки \"Спейс-Ап\"",
-		PREPOSITIONAL = "банке газировки \"Спейс-Ап\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/lemon_lime
 	name = "Lemon-Lime"
-	desc = "Терпкая газировка, состоящяя на 0,5% из натуральных цитрусовых!"
+	desc = "You wanted ORANGE. It gave you Lemon Lime."
 	icon_state = "lemon-lime"
 	list_reagents = list("lemon_lime" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/lemon_lime/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка газировки \"Лимон-Лайм\"",
-		GENITIVE = "банки газировки \"Лимон-Лайм\"",
-		DATIVE = "банке газировки \"Лимон-Лайм\"",
-		ACCUSATIVE = "банку газировки \"Лимон-Лайм\"",
-		INSTRUMENTAL = "банкой газировки \"Лимон-Лайм\"",
-		PREPOSITIONAL = "банке газировки \"Лимон-Лайм\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/iced_tea
 	name = "Vrisk Serket Iced Tea"
-	desc = "Этот сладкий, освежающий вкус южной земли. Так вот откуда он, да? Южная Земля, верно?"
+	desc = "That sweet, refreshing southern earthy flavor. That's where it's from, right? South Earth?"
 	icon_state = "ice_tea_can"
 	list_reagents = list("icetea" = 30)
 
-/obj/item/reagent_containers/cup/soda_cans/iced_tea/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка чая со льдом \"Вриск Секретный\"",
-		GENITIVE = "банки чая со льдом \"Вриск Секретный\"",
-		DATIVE = "банке чая со льдом \"Вриск Секретный\"",
-		ACCUSATIVE = "банку чая со льдом \"Вриск Секретный\"",
-		INSTRUMENTAL = "банкой чая со льдом \"Вриск Секретный\"",
-		PREPOSITIONAL = "банке чая со льдом \"Вриск Секретный\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/grape_juice
 	name = "Refreshing Purple Grapel Juice"
-	desc = "500 страниц правил о том, как начать драку с этим соком!"
+	desc = "500 pages of rules of how to appropriately enter into a combat with this juice!"
 	icon_state = "purple_can"
 	list_reagents = list("grapejuice" = 30)
-/obj/item/reagent_containers/cup/soda_cans/grape_juice/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка виноградного сока \"Освежающе-Фиолетовый\"",
-		GENITIVE = "банки виноградного сока \"Освежающе-Фиолетовый\"",
-		DATIVE = "банке виноградного сока \"Освежающе-Фиолетовый\"",
-		ACCUSATIVE = "банку виноградного сока \"Освежающе-Фиолетовый\"",
-		INSTRUMENTAL = "банкой виноградного сока \"Освежающе-Фиолетовый\"",
-		PREPOSITIONAL = "банке виноградного сока \"Освежающе-Фиолетовый\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/tonic
 	name = "T-Borg's Tonic Water"
-	desc = "Вкус странный, но, по крайней мере, хинин держит Космическую Малярию на расстоянии."
+	desc = "Quinine tastes funny, but at least it'll keep that Space Malaria away."
 	icon_state = "tonic"
 	list_reagents = list("tonic" = 50)
 
-/obj/item/reagent_containers/cup/soda_cans/tonic/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка тоника \"Т-Борг\"",
-		GENITIVE = "банки тоника \"Т-Борг\"",
-		DATIVE = "банке тоника \"Т-Борг\"",
-		ACCUSATIVE = "банку тоника \"Т-Борг\"",
-		INSTRUMENTAL = "банкой тоника \"Т-Борг\"",
-		PREPOSITIONAL = "банке тоника \"Т-Борг\"",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/sodawater
 	name = "soda water"
-	desc = "Вода с газами. Освежает и приятно щекочет во рту."
+	desc = "A can of soda water. Still water's more refreshing cousin."
 	icon_state = "sodawater"
 	list_reagents = list("sodawater" = 50)
 
-/obj/item/reagent_containers/cup/soda_cans/sodawater/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка содовой",
-		GENITIVE = "банки содовой",
-		DATIVE = "банке содовой",
-		ACCUSATIVE = "банку содовой",
-		INSTRUMENTAL = "банкой содовой",
-		PREPOSITIONAL = "банке содовой",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/synthanol
 	name = "Beep's Classic Synthanol"
-	desc = "Бухло для КПБ. Что бы там не находилось внутри, им нравится."
+	desc = "A can of IPC booze, however that works."
 	icon_state = "synthanolcan"
 	list_reagents = list("synthanol" = 50)
 
-/obj/item/reagent_containers/cup/soda_cans/synthanol/get_ru_names()
-	return alist(
-		NOMINATIVE = "банка синтанола \"Биб Классический\"",
-		GENITIVE = "банки синтанола \"Биб Классический\"",
-		DATIVE = "банке синтанола \"Биб Классический\"",
-		ACCUSATIVE = "банку синтанола \"Биб Классический\"",
-		INSTRUMENTAL = "банкой синтанола \"Биб Классический\"",
-		PREPOSITIONAL = "банке синтанола \"Биб Классический\"",
-	)
-
-// MARK: Bottler Stuff
 /obj/item/reagent_containers/cup/soda_cans/bottler
 	name = "generic beverage container"
-	desc = "Это даже не должно быть заспавненным. Позор тебе, педаль."
+	desc = "this shouldn't ever be spawned. shame on you"
 	icon_state = "glass_bottle"
 	fill_icon_thresholds = list(1, 10, 20, 30, 40, 50)
 
-/obj/item/reagent_containers/cup/soda_cans/bottler/get_ru_names()
-	return alist(
-		NOMINATIVE = "ёмкость для стандартного напитка",
-		GENITIVE = "ёмкости для стандартного напитка",
-		DATIVE = "ёмкости для стандартного напитка",
-		ACCUSATIVE = "ёмкость для стандартного напитка",
-		INSTRUMENTAL = "ёмкостью для стандартного напитка",
-		PREPOSITIONAL = "ёмкости для стандартного напитка",
-	)
-
 /obj/item/reagent_containers/cup/soda_cans/bottler/glass_bottle
 	name = "glass bottle"
-	desc = "Стеклянная бутылка, подходящая для напитков."
+	desc = "A glass bottle suitable for beverages."
 	is_glass = 1
-
-/obj/item/reagent_containers/cup/soda_cans/bottler/glass_bottle/get_ru_names()
-	return alist(
-		NOMINATIVE = "стеклянная бутылка",
-		GENITIVE = "стеклянной бутылки",
-		DATIVE = "стеклянной бутылке",
-		ACCUSATIVE = "стеклянную бутылку",
-		INSTRUMENTAL = "стеклянной бутылкой",
-		PREPOSITIONAL = "стеклянной бутылке",
-	)
 
 /obj/item/reagent_containers/cup/soda_cans/bottler/plastic_bottle
 	name = "plastic bottle"
-	desc = "Пластиковая бутылка, подходящая для напитков."
+	desc = "A plastic bottle suitable for beverages."
 	icon_state = "plastic_bottle"
 	is_plastic = 1
-
-/obj/item/reagent_containers/cup/soda_cans/bottler/plastic_bottle/get_ru_names()
-	return alist(
-		NOMINATIVE = "пластиковая бутылка",
-		GENITIVE = "пластиковой бутылки",
-		DATIVE = "пластиковой бутылке",
-		ACCUSATIVE = "пластиковую бутылку",
-		INSTRUMENTAL = "пластиковой бутылкой",
-		PREPOSITIONAL = "пластиковой бутылке",
-	)
 
 /obj/item/reagent_containers/cup/soda_cans/bottler/metal_can
 	name = "metal can"
 	desc = "A metal can suitable for beverages."
 	icon_state = "metal_can"
-
-/obj/item/reagent_containers/cup/soda_cans/bottler/metal_can/get_ru_names()
-	return alist(
-		NOMINATIVE = "металлическая банка",
-		GENITIVE = "металлической банки",
-		DATIVE = "металлической банке",
-		ACCUSATIVE = "металлическую банку",
-		INSTRUMENTAL = "металлической банкой",
-		PREPOSITIONAL = "металлической банке",
-	)

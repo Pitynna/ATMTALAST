@@ -44,16 +44,6 @@
 	name = "AVD-CNED bowman headset"
 	ks2type = /obj/item/encryptionkey/all
 
-/obj/item/radio/headset/centcom/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактическая гарнитура AVD-CNED",
-		GENITIVE = "тактической гарнитуры AVD-CNED",
-		DATIVE = "тактической гарнитуре AVD-CNED",
-		ACCUSATIVE = "тактическую гарнитуру AVD-CNED",
-		INSTRUMENTAL = "тактической гарнитурой AVD-CNED",
-		PREPOSITIONAL = "тактической гарнитуре AVD-CNED",
-	)
-
 /obj/item/encryptionkey/all
 	name = "AVD-CNED Encryption Key"
 	icon = 'icons/obj/radio.dmi'
@@ -63,16 +53,6 @@
 	channels = list(ERT_FREQ_NAME = 1, DTH_FREQ_NAME = 1, SCI_FREQ_NAME = 1, COMM_FREQ_NAME = 1, MED_FREQ_NAME = 1, ENG_FREQ_NAME = 1, SEC_FREQ_NAME = 1, SUP_FREQ_NAME = 1, SRV_FREQ_NAME = 1, PRS_FREQ_NAME = 1, PROC_FREQ_NAME = 1) // just in case
 	syndie = TRUE
 
-/obj/item/encryptionkey/all/get_ru_names()
-	return alist(
-		NOMINATIVE = "ключ шифрования AVD-CNED",
-		GENITIVE = "ключа шифрования AVD-CNED",
-		DATIVE = "ключу шифрования AVD-CNED",
-		ACCUSATIVE = "ключ шифрования AVD-CNED",
-		INSTRUMENTAL = "ключом шифрования AVD-CNED",
-		PREPOSITIONAL = "ключе шифрования AVD-CNED",
-	)
-
 /obj/item/encryptionkey/all/Initialize(mapload)
 	. = ..()
 	for(var/channel in SSradio.radiochannels)
@@ -80,28 +60,18 @@
 
 /obj/item/clothing/mask/gas/welding/advanced
 	name = "AVD-CNED welding mask"
-	desc = "Повреждение сетчатки — это не шутка."
+	desc = "Retinal damage is no joke."
 	tint = FLASH_PROTECTION_NONE
 
-/obj/item/clothing/mask/gas/welding/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "сварочная маска AVD-CNED",
-		GENITIVE = "сварочной маски AVD-CNED",
-		DATIVE = "сварочной маске AVD-CNED",
-		ACCUSATIVE = "сварочную маску AVD-CNED",
-		INSTRUMENTAL = "сварочной маской AVD-CNED",
-		PREPOSITIONAL = "сварочной маске AVD-CNED",
-	)
-
 /obj/item/gun/magic/wand/resurrection/debug
-	desc = "Возможно ли что-то более могущественное, чем обычная магия? Эта палочка."
+	desc = "Is it possible for something to be even more powerful than regular magic? This wand is."
 	max_charges = 500
 	variable_charges = FALSE
 	can_charge = TRUE
 	recharge_rate = 1
 
 /obj/item/gun/magic/wand/death/debug
-	desc = "В некоторых тёмных кругах это известно как «друг тестировщика-клонера»."
+	desc = "In some obscure circles, this is known as the 'cloning tester's friend'."
 	max_charges = 500
 	variable_charges = FALSE
 	can_charge = TRUE
@@ -109,7 +79,7 @@
 
 /obj/item/clothing/glasses/hud/debug
 	name = "AVD-CNED glasses"
-	desc = "Медицинский, охранно-диагностический худ."
+	desc = "Diagnostic, Hydroponic, Medical, and Security HUD. Built-in advanced reagent scanner. Protects the wearer from supermatter hallucinations and welding flashes."
 	icon_state = "nvgmeson"
 	flash_protect = FLASH_PROTECTION_WELDER
 
@@ -119,16 +89,6 @@
 	examine_extensions = EXAMINE_HUD_SECURITY_READ | EXAMINE_HUD_SECURITY_WRITE | EXAMINE_HUD_MEDICAL | EXAMINE_HUD_SKILLS
 
 	var/xray = FALSE
-
-/obj/item/clothing/glasses/hud/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "очки AVD-CNED",
-		GENITIVE = "очков AVD-CNED",
-		DATIVE = "очкам AVD-CNED",
-		ACCUSATIVE = "очки AVD-CNED",
-		INSTRUMENTAL = "очками AVD-CNED",
-		PREPOSITIONAL = "очках AVD-CNED",
-	)
 
 /obj/item/clothing/glasses/hud/debug/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -177,22 +137,12 @@
 
 /obj/item/debug/human_spawner
 	name = "human spawner"
-	desc = "Создайте гуманоида, нацелившись на турф и нажав ЛКМ. Используйте в руке, чтобы изменить расу."
+	desc = "Spawn a human by aiming at a turf and clicking. Use in hand to change type."
 	icon = 'icons/obj/weapons/magic.dmi'
 	icon_state = "nothingwand"
 	w_class = WEIGHT_CLASS_SMALL
 	var/datum/species/selected_species
 	var/valid_species = list()
-
-/obj/item/debug/human_spawner/get_ru_names()
-	return alist(
-		NOMINATIVE = "создатель гуманоидов",
-		GENITIVE = "создателя гуманоидов",
-		DATIVE = "создателю гуманоидов",
-		ACCUSATIVE = "создатель гуманоидов",
-		INSTRUMENTAL = "создателем гуманоидов",
-		PREPOSITIONAL = "создателе гуманоидов",
-	)
 
 /obj/item/debug/human_spawner/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)
 	. = ..()
@@ -212,16 +162,6 @@
 	matter = INFINITY
 	locked = FALSE
 
-/obj/item/rcd/combat/admin/get_ru_names()
-	return alist(
-		NOMINATIVE = "AVD-CNED УБС",
-		GENITIVE = "AVD-CNED УБС",
-		DATIVE = "AVD-CNED УБС",
-		ACCUSATIVE = "AVD-CNED УБС",
-		INSTRUMENTAL = "AVD-CNED УБС",
-		PREPOSITIONAL = "AVD-CNED УБС",
-	)
-
 /obj/item/stack/spacecash/debug
 	amount = 50000
 	max_amount = 50000
@@ -232,30 +172,10 @@
 	scan_time = 1 SECONDS
 	scan_cd = 0
 
-/obj/item/bodyanalyzer/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "портативный анализатор тела AVD-CNED",
-		GENITIVE = "портативного анализатора тела AVD-CNED",
-		DATIVE = "портативному анализатору тела AVD-CNED",
-		ACCUSATIVE = "портативный анализатор тела AVD-CNED",
-		INSTRUMENTAL = "портативным анализатором тела AVD-CNED",
-		PREPOSITIONAL = "портативном анализаторе тела AVD-CNED",
-	)
-
 /obj/item/scalpel/laser/manager/debug
 	name = "AVD-CNED IMS"
-	desc = "Чудо современной медицины. Этот инструмент действует как любой другой хирургический инструмент и заканчиает операции в кратчайшие сроки. Эй, а как ты вообще это заполучил?"
+	desc = "A wonder of modern medicine. This tool functions as any other sort of surgery tool, and finishes in only a fraction of the time. Hey, how'd you get your hands on this, anyway?"
 	toolspeed = 0.01
-
-/obj/item/scalpel/laser/manager/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "лазерный скальпель AVD-CNED",
-		GENITIVE = "лазерного скальпеля AVD-CNED",
-		DATIVE = "лазерному скальпелю AVD-CNED",
-		ACCUSATIVE = "лазерный скальпель AVD-CNED",
-		INSTRUMENTAL = "лазерным скальпелем AVD-CNED",
-		PREPOSITIONAL = "лазерном скальпеле AVD-CNED",
-	)
 
 /obj/item/scalpel/laser/manager/debug/attack_self(mob/user)
 	. = ..()
@@ -277,19 +197,9 @@
 		/obj/item/bodyanalyzer/debug
 	)
 
-/obj/item/organ/internal/cyberimp/arm/surgery/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "хирургический имплант AVD-CNED",
-		GENITIVE = "хирургического импланта AVD-CNED",
-		DATIVE = "хирургическому импланту AVD-CNED",
-		ACCUSATIVE = "хирургический имплант AVD-CNED",
-		INSTRUMENTAL = "хирургическим имплантом AVD-CNED",
-		PREPOSITIONAL = "хирургическом импланте AVD-CNED",
-	)
-
 /obj/item/organ/internal/cyberimp/arm/janitorial/advanced
 	name = "AVD-CNED janitorial toolset"
-	desc = "Набор продвинутых инструментов для уборки, спрятанных за скрытой панелью на руке пользователя с электрошокером? Какого черта."
+	desc = "A set of advanced janitorial tools hidden behind a concealed panel on the user's arm."
 	parent_organ_zone = BODY_ZONE_L_ARM
 	slot = INTERNAL_ORGAN_L_ARM_DEVICE
 
@@ -301,85 +211,31 @@
 		/obj/item/gun/energy/gun/advtaser/mounted // yeah why not
 	)
 
-/obj/item/organ/internal/cyberimp/arm/janitorial/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "имплант уборщика AVD-CNED",
-		GENITIVE = "импланта уборщика AVD-CNED",
-		DATIVE = "импланту уборщика AVD-CNED",
-		ACCUSATIVE = "имплант уборщика AVD-CNED",
-		INSTRUMENTAL = "имплантом уборщика AVD-CNED",
-		PREPOSITIONAL = "импланте уборщика AVD-CNED",
-	)
-
 /obj/item/mop/advanced/debug
 	name = "AVD-CNED mop"
-	desc = "Я знаю, что ты хочешь это сделать. Сделайте дерьмо скользким."
+	desc = "I know you want to do it. Make shit slippery."
 	mopcap = 100
 	mopspeed = 1
 	refill_rate = 50
 
-/obj/item/mop/advanced/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "швабра AVD-CNED",
-		GENITIVE = "швабры AVD-CNED",
-		DATIVE = "швабре AVD-CNED",
-		ACCUSATIVE = "швабру AVD-CNED",
-		INSTRUMENTAL = "шваброй AVD-CNED",
-		PREPOSITIONAL = "швабре AVD-CNED",
-	)
-
 /obj/item/soap/syndie/debug
 	name = "super soap"
-	desc = "Самое быстрое мыло на космическом западе."
+	desc = "The fastest soap in the space-west."
 	cleanspeed = 1
-
-/obj/item/soap/syndie/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "супер-мыло",
-		GENITIVE = "супер-мыла",
-		DATIVE = "супер-мылу",
-		ACCUSATIVE = "супер-мыло",
-		INSTRUMENTAL = "супер-мылом",
-		PREPOSITIONAL = "супер-мыле",
-	)
 
 /obj/item/lightreplacer/bluespace/debug
 	name = "AVD-CNED light... thingy. You know what it is."
 	max_uses = 20000
 	uses = 20000
 
-/obj/item/lightreplacer/bluespace/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "заменитель ламп AVD-CNED",
-		GENITIVE = "заменителя ламп AVD-CNED",
-		DATIVE = "заменителю ламп AVD-CNED",
-		ACCUSATIVE = "заменитель ламп AVD-CNED",
-		INSTRUMENTAL = "заменителем ламп AVD-CNED",
-		PREPOSITIONAL = "заменителе ламп AVD-CNED",
-	)
-
 /obj/item/reagent_containers/spray/cleaner/advanced/debug
 	name = "AVD-CNED advanced space cleaner"
-	desc = "AVD-CNED! — непенящееся чистящее средство для помещений! Как чудесно."
+	desc = "AVD-CNED!-brand non-foaming space cleaner! How fancy."
 	volume = 50000
 	spray_maxrange = 10
 	spray_currentrange = 10
 	list_reagents = list("cleaner" = 50000)
 	delay = 0.1 SECONDS // it costs 1000 reagents to fire this cleaner... for 12 seconds.
-
-/obj/item/reagent_containers/spray/cleaner/advanced/debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "усовершенствованный космический очиститель AVD-CNED",
-		GENITIVE = "усовершенствованного космического очистителя AVD-CNED",
-		DATIVE = "усовершенствованному космическому очистителю AVD-CNED",
-		ACCUSATIVE = "усовершенствованный космический очиститель AVD-CNED",
-		INSTRUMENTAL = "усовершенствованным космическим очистителем AVD-CNED",
-		PREPOSITIONAL = "усовершенствованном космическом очистителе AVD-CNED",
-	)
-
-//
-// Funny matryoshka doll boxes
-//
 
 /obj/item/storage/box/debug
 	max_w_class = WEIGHT_CLASS_GIGANTIC
@@ -388,16 +244,6 @@
 
 /obj/item/storage/box/debug/debugtools
 	name = "debug tools"
-
-/obj/item/storage/box/debug/debugtools/get_ru_names()
-	return alist(
-		NOMINATIVE = "инструменты отладки",
-		GENITIVE = "инструментов отладки",
-		DATIVE = "инструментам отладки",
-		ACCUSATIVE = "инструменты отладки",
-		INSTRUMENTAL = "инструментами отладки",
-		PREPOSITIONAL = "инструментах отладки",
-	)
 
 /obj/item/storage/box/debug/debugtools/populate_contents()
 	new /obj/item/card/emag(src)
@@ -413,16 +259,6 @@
 
 /obj/item/storage/box/debug/material
 	name = "box of materials"
-
-/obj/item/storage/box/debug/material/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка с материалами",
-		GENITIVE = "коробки с материалами",
-		DATIVE = "коробке с материалами",
-		ACCUSATIVE = "коробку с материалами",
-		INSTRUMENTAL = "коробкой с материалами",
-		PREPOSITIONAL = "коробке с материалами",
-	)
 
 /obj/item/storage/box/debug/material/populate_contents()
 	new /obj/item/stack/sheet/metal/fifty(src)
@@ -452,17 +288,6 @@
 /obj/item/storage/box/debug/misc_debug
 	name = "misc admin items"
 
-/obj/item/storage/box/debug/misc_debug/get_ru_names()
-	return alist(
-		NOMINATIVE = "прочие предметы администратора",
-		GENITIVE = "прочих административных предметов администратора",
-		DATIVE = "прочим предметам администратора",
-		ACCUSATIVE = "прочие предметы администратора",
-		INSTRUMENTAL = "прочими предметами администратора",
-		PREPOSITIONAL = "прочих предметах администратора",
-	)
-
-// put cool admin-only shit here :)
 /obj/item/storage/box/debug/misc_debug/populate_contents()
 	new /obj/item/badminBook(src)
 	new /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka(src)

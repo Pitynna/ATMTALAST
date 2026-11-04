@@ -7,16 +7,6 @@
 	icon_state = "lepopen"
 	var/used = FALSE
 
-/obj/item/dnascrambler/get_ru_names()
-	return alist(
-		NOMINATIVE = "шифратор ДНК",
-		GENITIVE = "шифратора ДНК",
-		DATIVE = "шифратору ДНК",
-		ACCUSATIVE = "шифратор ДНК",
-		INSTRUMENTAL = "шифратором ДНК",
-		PREPOSITIONAL = "шифраторе ДНК",
-	)
-
 /obj/item/dnascrambler/update_icon_state()
 	if(used)
 		icon_state = "lepopen0"

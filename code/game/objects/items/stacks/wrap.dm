@@ -3,7 +3,7 @@
  */
 /obj/item/stack/wrapping_paper
 	name = "wrapping paper"
-	desc = "Оберните подарки этой праздничной бумагой."
+	desc = "You can use this to wrap items in."
 	icon = 'icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/stack/wrapping_paper/xmas"
 	post_init_icon_state = "wrap_paper"
@@ -46,16 +46,6 @@
 //preset wrapping paper meant to fill the original color configuration
 /obj/item/stack/wrapping_paper/xmas
 	greyscale_colors = "#00FF00#FF0000"
-
-/obj/item/stack/wrapping_paper/get_ru_names()
-	return alist(
-		NOMINATIVE = "обёрточная бумага",
-		GENITIVE = "обёрточной бумаги",
-		DATIVE = "обёрточной бумаге",
-		ACCUSATIVE = "обёрточную бумагу",
-		INSTRUMENTAL = "обёрточной бумагой",
-		PREPOSITIONAL = "обёрточной бумаге"
-	)
 
 /obj/item/stack/wrapping_paper/attack_self(mob/user)
 	to_chat(user, span_notice("Её нужно использовать на уже упакованной посылке!"))

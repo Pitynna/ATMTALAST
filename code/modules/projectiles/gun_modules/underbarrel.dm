@@ -66,16 +66,6 @@
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 0)
 	custom_price = PAYCHECK_LOWER
 
-/obj/item/gun_module/under/flashlight/pistol/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный фонарь для пистолетов",
-		GENITIVE = "подствольного фонаря для пистолетов",
-		DATIVE = "подствольному фонарю для пистолетов",
-		ACCUSATIVE = "подствольный фонарь для пистолетов",
-		INSTRUMENTAL = "подствольным фонарём для пистолетов",
-		PREPOSITIONAL = "подствольном фонаре для пистолетов",
-	)
-
 /obj/item/gun_module/under/flashlight/rifle
 	name = "rifle underbarrel light"
 	desc = "Фонарь, предназначенный для установки на цевьё. Несовместим с пистолетами."
@@ -85,16 +75,6 @@
 	class = GUN_MODULE_CLASS_SHOTGUN_UNDER | GUN_MODULE_CLASS_RIFLE_UNDER
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 0)
 	custom_price = 1.5 * PAYCHECK_LOWER
-
-/obj/item/gun_module/under/flashlight/rifle/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный фонарь",
-		GENITIVE = "подствольного фонаря",
-		DATIVE = "подствольному фонарю",
-		ACCUSATIVE = "подствольный фонарь",
-		INSTRUMENTAL = "подствольным фонарём",
-		PREPOSITIONAL = "подствольном фонаре",
-	)
 
 /**
  * MARK: Handguard
@@ -130,16 +110,6 @@
 	spread_reduction = 0.20
 	custom_price = 2 * PAYCHECK_LOWER
 
-/obj/item/gun_module/under/hand/simple/get_ru_names()
-	return alist(
-		NOMINATIVE = "прямая рукоятка",
-		GENITIVE = "прямой рукоятки",
-		DATIVE = "прямую рукоятку",
-		ACCUSATIVE = "прямая рукоятка",
-		INSTRUMENTAL = "прямой рукояткой",
-		PREPOSITIONAL = "прямой рукоятке",
-	)
-
 /obj/item/gun_module/under/hand/angle
 	name = "rifle angle hand"
 	desc = "Угловая рукоятка, предназначенная для установки на нижнюю планку цевья. Повышает удобство стрельбы."
@@ -150,16 +120,6 @@
 	class = GUN_MODULE_CLASS_SHOTGUN_UNDER | GUN_MODULE_CLASS_RIFLE_UNDER
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 0)
 	custom_price = 3 * PAYCHECK_LOWER
-
-/obj/item/gun_module/under/hand/angle/get_ru_names()
-	return alist(
-		NOMINATIVE = "угловая рукоятка",
-		GENITIVE = "угловой рукоятки",
-		DATIVE = "угловой рукоятке",
-		ACCUSATIVE = "угловую рукоятку",
-		INSTRUMENTAL = "угловой рукояткой",
-		PREPOSITIONAL = "угловой рукоятке",
-	)
 
 /**
  * MARK: Laser Sight
@@ -235,32 +195,10 @@
 	name = "laser sight (ray)"
 	component_type = /datum/component/laser_sight/ray
 
-/obj/item/gun_module/under/laser/ray/get_ru_names()
-	return alist(
-		NOMINATIVE = "лазерный целеуказатель (луч)",
-		GENITIVE = "лазерного целеуказателя (луч)",
-		DATIVE = "лазерному целеуказателю (луч)",
-		ACCUSATIVE = "лазерный целеуказатель (луч)",
-		INSTRUMENTAL = "лазерным целеуказателем (луч)",
-		PREPOSITIONAL = "лазерном целеуказателе (луч)",
-	)
-
 /obj/item/gun_module/under/laser/point
 	name = "laser sight (point)"
 	component_type = /datum/component/laser_sight/point
 
-/obj/item/gun_module/under/laser/point/get_ru_names()
-	return alist(
-		NOMINATIVE = "лазерный целеуказатель (точка)",
-		GENITIVE = "лазерного целеуказателя (точка)",
-		DATIVE = "лазерному целеуказателю (точка)",
-		ACCUSATIVE = "лазерный целеуказатель (точка)",
-		INSTRUMENTAL = "лазерным целеуказателем (точка)",
-		PREPOSITIONAL = "лазерном целеуказателе (точка)",
-	)
-
-
-// MARK: Bayonet
 /obj/item/gun_module/under/bayonet
 	name = "bayonet"
 	desc = "Универсальный короткий клинок, оснащенный специальным креплением для монтажа на ствол винтовки. Основное предназначение — нанесение колющего удара в ближнем бою. Компактный дизайн и надежность конструкции делают его эффективным вспомогательным оружием."
@@ -283,16 +221,6 @@
 	/// Variable for save gun old sharp var
 	var/old_sharp
 
-/obj/item/gun_module/under/bayonet/get_ru_names()
-	return alist(
-		NOMINATIVE = "штык-нож",
-		GENITIVE = "штык-ножа",
-		DATIVE = "штык-ножу",
-		ACCUSATIVE = "штык-нож",
-		INSTRUMENTAL = "штык-ножом",
-		PREPOSITIONAL = "штык-ноже",
-	)
-
 /obj/item/gun_module/under/bayonet/sharpen_act(obj/item/whetstone/whetstone, mob/user)
 	. = ..()
 	if(!.)
@@ -309,16 +237,6 @@
 	force = 15
 	custom_price = 3 * PAYCHECK_CREW
 	bonus_force = 10
-
-/obj/item/gun_module/under/bayonet/long/get_ru_names()
-	return alist(
-		NOMINATIVE = "длинный штык-нож",
-		GENITIVE = "длинного штык-ножа",
-		DATIVE = "длинному штык-ножу",
-		ACCUSATIVE = "длинный штык-нож",
-		INSTRUMENTAL = "длинным штык-ножом",
-		PREPOSITIONAL = "длинном штык-ноже",
-	)
 
 /obj/item/gun_module/under/bayonet/on_attach(obj/item/gun/target_gun, mob/user)
 	target_gun.force += bonus_force
@@ -394,16 +312,6 @@
 	overlay_state = "grenade_o"
 	internal_gun_type = /obj/item/gun/projectile/revolver/grenadelauncher
 
-/obj/item/gun_module/under/gun/grenade_launcher/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный гранатомёт",
-		GENITIVE = "подствольного гранатомёта",
-		DATIVE = "подствольному гранатомёту",
-		ACCUSATIVE = "подствольный гранатомёт",
-		INSTRUMENTAL = "подствольным гранатомётом",
-		PREPOSITIONAL = "подствольном гранатомёте",
-	)
-
 /obj/item/gun_module/under/gun/grenade_launcher/try_reload_internal_gun(obj/item/item, mob/living/user, list/modifiers)
 	var/obj/item/gun/projectile/revolver/grenadelauncher/launcher = internal_gun
 	if(launcher && istype(launcher) && launcher.get_ammo() > 0)
@@ -426,16 +334,6 @@
 	overlay_state = "shotgun_o"
 	internal_gun_type = /obj/item/gun/projectile/shotgun/riot/short
 
-/obj/item/gun_module/under/gun/shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный дробовик",
-		GENITIVE = "подствольного дробовика",
-		DATIVE = "подствольному дробовику",
-		ACCUSATIVE = "подствольный дробовик",
-		INSTRUMENTAL = "подствольным дробовиком",
-		PREPOSITIONAL = "подствольном дробовике",
-	)
-
 /obj/item/gun_module/under/gun/shotgun/fire_internal_gun(obj/item/item, mob/user, atom/target, list/modifiers)
 	. = ..()
 	var/obj/item/gun/projectile/shotgun/riot/short/shotgun = internal_gun
@@ -449,13 +347,3 @@
 	icon_state = "shotgun"
 	overlay_state = "shotgun_o"
 	internal_gun_type = /obj/item/gun/energy/taser
-
-/obj/item/gun_module/under/gun/shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный тазер",
-		GENITIVE = "подствольного тазера",
-		DATIVE = "подствольному тазеру",
-		ACCUSATIVE = "подствольный тазер",
-		INSTRUMENTAL = "подствольным тазером",
-		PREPOSITIONAL = "подствольном тазере",
-	)

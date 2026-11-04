@@ -2,7 +2,7 @@
 
 /obj/item/autopsy_scanner
 	name = "autopsy scanner"
-	desc = "Небольшое устройство, используемое для проведения аутопсии."
+	desc = "Extracts information on wounds."
 	icon = 'icons/obj/autopsy_scanner.dmi'
 	icon_state = "autopsy_scanner"
 	flags = CONDUCT
@@ -17,16 +17,6 @@
 	var/timeofscan = null
 	var/target_rank = null
 	STATIC_COOLDOWN_DECLARE(print_cooldown)
-
-/obj/item/autopsy_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "сканер аутопсии",
-		GENITIVE = "сканера аутопсии",
-		DATIVE = "сканеру аутопсии",
-		ACCUSATIVE = "сканер аутопсии",
-		INSTRUMENTAL = "сканером аутопсии",
-		PREPOSITIONAL = "сканере аутопсии",
-	)
 
 /obj/item/autopsy_scanner/Destroy()
 	QDEL_LIST_ASSOC_VAL(wdata)

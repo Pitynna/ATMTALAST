@@ -10,7 +10,7 @@
  */
 /obj/item/storage/firstaid
 	name = "first-aid kit"
-	desc = "Если вы видите это, напишите сообщение об ошибке, что-то пошло не так!"
+	desc = "It's an emergency medical kit for those serious boo-boos."
 	gender = FEMALE
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "firstaid"
@@ -30,32 +30,12 @@
 	var/med_bot_skin = null
 	var/syndicate_aligned = FALSE
 
-/obj/item/storage/firstaid/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи",
-		GENITIVE = "аптечки первой помощи",
-		DATIVE = "аптечке первой помощи",
-		ACCUSATIVE = "аптечку первой помощи",
-		INSTRUMENTAL = "аптечкой первой помощи",
-		PREPOSITIONAL = "аптечке первой помощи",
-	)
-
 /obj/item/storage/firstaid/fire
 	name = "fire first-aid kit"
-	desc = "Это аптечка для экстренной первой помощи при серьёзных термических повреждениях."
+	desc = "A medical kit that contains several medical patches and pills for treating burns. Contains one epinephrine syringe for emergency use and a health analyzer."
 	icon_state = "ointment"
 	item_state = "medkit_burn"
 	med_bot_skin = "ointment"
-
-/obj/item/storage/firstaid/fire/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Терм.)",
-		GENITIVE = "аптечки первой помощи (Терм.)",
-		DATIVE = "аптечке первой помощи (Терм.)",
-		ACCUSATIVE = "аптечку первой помощи (Терм.)",
-		INSTRUMENTAL = "аптечкой первой помощи (Терм.)",
-		PREPOSITIONAL = "аптечке первой помощи (Терм.)",
-	)
 
 /obj/item/storage/firstaid/fire/Initialize(mapload)
 	. = ..()
@@ -73,17 +53,7 @@
 	return
 
 /obj/item/storage/firstaid/regular
-	desc = "Это аптечка общего назначения для экстренной первой помощи."
-
-/obj/item/storage/firstaid/regular/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Общая)",
-		GENITIVE = "аптечки первой помощи (Общая)",
-		DATIVE = "аптечке первой помощи (Общая)",
-		ACCUSATIVE = "аптечку первой помощи (Общая)",
-		INSTRUMENTAL = "аптечкой первой помощи (Общая)",
-		PREPOSITIONAL = "аптечке первой помощи (Общая)",
-	)
+	desc = "A general medical kit that contains medical patches for both brute damage and burn damage. Also contains an epinephrine syringe for emergency use and a health analyzer."
 
 /obj/item/storage/firstaid/regular/populate_contents()
 	new /obj/item/reagent_containers/food/pill/patch/styptic(src)
@@ -98,17 +68,7 @@
 	return
 
 /obj/item/storage/firstaid/doctor
-	desc = "Это аптечка для экстренной первой помощи при повреждениях, улучшенная версия."
-
-/obj/item/storage/firstaid/doctor/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Общая+)",
-		GENITIVE = "аптечки первой помощи (Общая+)",
-		DATIVE = "аптечке первой помощи (Общая+)",
-		ACCUSATIVE = "аптечку первой помощи (Общая+)",
-		INSTRUMENTAL = "аптечкой первой помощи (Общая+)",
-		PREPOSITIONAL = "аптечке первой помощи (Общая+)",
-	)
+	desc = "A general medical kit that contains medical patches for both brute damage and burn damage. Also contains an epinephrine syringe for emergency use and a health analyzer"
 
 /obj/item/storage/firstaid/doctor/populate_contents()
 	new /obj/item/reagent_containers/applicator/brute(src)
@@ -124,20 +84,10 @@
 
 /obj/item/storage/firstaid/toxin
 	name = "toxin first aid kit"
-	desc = "Это аптечка для экстренной первой помощи при отравлениях."
+	desc = "A medical kit designed to counter poisoning by common toxins. Contains three pills and syringes, and a health analyzer to determine the health of the patient."
 	icon_state = "antitoxin"
 	item_state = "medkit_tox"
 	med_bot_skin = "tox"
-
-/obj/item/storage/firstaid/toxin/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Отравления)",
-		GENITIVE = "аптечки первой помощи (Отравления)",
-		DATIVE = "аптечке первой помощи (Отравления)",
-		ACCUSATIVE = "аптечку первой помощи (Отравления)",
-		INSTRUMENTAL = "аптечкой первой помощи (Отравления)",
-		PREPOSITIONAL = "аптечке первой помощи (Отравления)",
-	)
 
 /obj/item/storage/firstaid/toxin/Initialize(mapload)
 	. = ..()
@@ -157,20 +107,10 @@
 
 /obj/item/storage/firstaid/o2
 	name = "oxygen deprivation first aid kit"
-	desc = "Это аптечка для экстренной первой помощи при удушьях."
+	desc = "A first aid kit that contains four pills of salbutamol, which is able to counter injuries caused by suffocation. Also contains a health analyzer to determine the health of the patient."
 	icon_state = "o2"
 	item_state = "medkit_oxy"
 	med_bot_skin = "o2"
-
-/obj/item/storage/firstaid/o2/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Удушье)",
-		GENITIVE = "аптечки первой помощи (Удушье)",
-		DATIVE = "аптечке первой помощи (Удушье)",
-		ACCUSATIVE = "аптечку первой помощи (Удушье)",
-		INSTRUMENTAL = "аптечкой первой помощи (Удушье)",
-		PREPOSITIONAL = "аптечке первой помощи (Удушье)",
-	)
 
 /obj/item/storage/firstaid/o2/populate_contents()
 	new /obj/item/reagent_containers/food/pill/salbutamol(src)
@@ -184,20 +124,10 @@
 
 /obj/item/storage/firstaid/brute
 	name = "brute trauma treatment kit"
-	desc = "Это аптечка для экстренной первой помощи при серьёзных механических повреждениях."
+	desc = "A medical kit that contains several medical patches and pills for treating brute injuries. Contains one epinephrine syringe for emergency use and a health analyzer."
 	icon_state = "brute"
 	item_state = "medkit_brute"
 	med_bot_skin = "brute"
-
-/obj/item/storage/firstaid/brute/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Мех.)",
-		GENITIVE = "аптечки первой помощи (Мех.)",
-		DATIVE = "аптечке первой помощи (Мех.)",
-		ACCUSATIVE = "аптечку первой помощи (Мех.)",
-		INSTRUMENTAL = "аптечкой первой помощи (Мех.)",
-		PREPOSITIONAL = "аптечке первой помощи (Мех.)",
-	)
 
 /obj/item/storage/firstaid/brute/Initialize(mapload)
 	. = ..()
@@ -217,20 +147,10 @@
 
 /obj/item/storage/firstaid/adv
 	name = "advanced first-aid kit"
-	desc = "Это аптечка для экстренной первой помощи, продвинутая версия."
+	desc = "Contains advanced medical treatments."
 	icon_state = "advfirstaid"
 	item_state = "medkit_advanced"
 	med_bot_skin = "adv"
-
-/obj/item/storage/firstaid/adv/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Продвинутая)",
-		GENITIVE = "аптечки первой помощи (Продвинутая)",
-		DATIVE = "аптечке первой помощи (Продвинутая)",
-		ACCUSATIVE = "аптечку первой помощи (Продвинутая)",
-		INSTRUMENTAL = "аптечкой первой помощи (Продвинутая)",
-		PREPOSITIONAL = "аптечке первой помощи (Продвинутая)",
-	)
 
 /obj/item/storage/firstaid/adv/populate_contents()
 	new /obj/item/stack/medical/bruise_pack(src)
@@ -251,16 +171,6 @@
 	item_state = "medkit_advanced"
 	med_bot_skin = "adv"
 
-/obj/item/storage/firstaid/premium/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Премиум)",
-		GENITIVE = "аптечки первой помощи (Премиум)",
-		DATIVE = "аптечке первой помощи (Премиум)",
-		ACCUSATIVE = "аптечку первой помощи (Премиум)",
-		INSTRUMENTAL = "аптечкой первой помощи (Премиум)",
-		PREPOSITIONAL = "аптечке первой помощи (Премиум)",
-	)
-
 /obj/item/storage/firstaid/premium/populate_contents()
 	new /obj/item/stack/medical/bruise_pack/extended(src)
 	new /obj/item/stack/medical/bruise_pack/extended(src)
@@ -275,20 +185,10 @@
 
 /obj/item/storage/firstaid/paramed
 	name = "paramed first-aid kit"
-	desc = "Это аптечка для экстренной первой помощи при, специализированная версия для Парамедика."
+	desc = "A medical kit that contains several medical patches and injectors for the treatment of various diseases."
 	icon_state = "firstaid_paramed"
 	item_state = "medkit_paramed"
 	med_bot_skin = "paramed"
-
-/obj/item/storage/firstaid/paramed/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Парамедик)",
-		GENITIVE = "аптечки первой помощи (Парамедик)",
-		DATIVE = "аптечке первой помощи (Парамедик)",
-		ACCUSATIVE = "аптечку первой помощи (Парамедик)",
-		INSTRUMENTAL = "аптечкой первой помощи (Парамедик)",
-		PREPOSITIONAL = "аптечке первой помощи (Парамедик)",
-	)
 
 /obj/item/storage/firstaid/paramed/populate_contents()
 	new /obj/item/reagent_containers/hypospray/autoinjector(src)
@@ -304,21 +204,11 @@
 
 /obj/item/storage/firstaid/machine
 	name = "machine repair kit"
-	desc = "Это набор для полевого ремонта синтетических форм жизни при повреждениях."
+	desc = "A kit that contains supplies to repair IPCs on the go."
 	gender = MALE
 	icon_state = "machinefirstaid"
 	item_state = "medkit_mechanical"
 	med_bot_skin = "machine"
-
-/obj/item/storage/firstaid/machine/get_ru_names()
-	return alist(
-		NOMINATIVE = "ремонтный набор (Синт.)",
-		GENITIVE = "ремонтного набора (Синт.)",
-		DATIVE = "ремонтному набору (Синт.)",
-		ACCUSATIVE = "ремонтный набор (Синт.)",
-		INSTRUMENTAL = "ремонтным набором (Синт.)",
-		PREPOSITIONAL = "ремонтном наборе (Синт.)",
-	)
 
 /obj/item/storage/firstaid/machine/populate_contents()
 	new /obj/item/weldingtool(src)
@@ -332,7 +222,7 @@
 
 /obj/item/storage/firstaid/tactical
 	name = "NT first-aid kit"
-	desc = "Тактическая аптечка, содержащая в себе всё самое необходимое для лечения в пылу боя."
+	desc = "I hope you've got insurance."
 	icon_state = "NTfirstaid"
 	item_state = "medkit_ert"
 	max_w_class = WEIGHT_CLASS_NORMAL
@@ -342,29 +232,9 @@
 	req_access = list(ACCESS_SYNDICATE)
 	med_bot_skin = "bezerk"
 
-/obj/item/storage/firstaid/tactical/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактическая аптечка НТ",
-		GENITIVE = "тактической аптечки НТ",
-		DATIVE = "тактической аптечке НТ",
-		ACCUSATIVE = "тактическую аптечку НТ",
-		INSTRUMENTAL = "тактической аптечкой НТ",
-		PREPOSITIONAL = "тактической аптечке НТ",
-	)
-
 /obj/item/storage/firstaid/tactical/sst
 	desc = "Тактическая аптечка, содержащая в себе всё самое необходимое для лечения в пылу боя. Узкоспециализированная версия для бойцов элитных сил."
 	syndicate_aligned = TRUE
-
-/obj/item/storage/firstaid/tactical/sst/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутая тактическая аптечка",
-		GENITIVE = "продвинутой тактической аптечки",
-		DATIVE = "продвинутой тактической аптечке",
-		ACCUSATIVE = "продвинутую тактическую аптечку",
-		INSTRUMENTAL = "продвинутой тактической аптечкой",
-		PREPOSITIONAL = "продвинутой тактической аптечке",
-	)
 
 /obj/item/storage/firstaid/tactical/populate_contents()
 	new /obj/item/defibrillator/compact/loaded(src)
@@ -379,7 +249,7 @@
 
 /obj/item/storage/firstaid/ertm
 	name = "NT ert-aid kit"
-	desc = "Тактическая аптечка, содержащая в себе всё самое необходимое для лечения в пылу боя. Продвинутая версия."
+	desc = "I hope you've got insurance."
 	icon_state = "NTeraid"
 	item_state = "medkit_ert2"
 	max_w_class = WEIGHT_CLASS_NORMAL
@@ -387,16 +257,6 @@
 	treatment_brute = "bicaridine"
 	treatment_fire = "kelotane"
 	med_bot_skin = "bezerk"
-
-/obj/item/storage/firstaid/ertm/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутая тактическая аптечка НТ",
-		GENITIVE = "продвинутой тактической аптечки НТ",
-		DATIVE = "продвинутой тактической аптечке НТ",
-		ACCUSATIVE = "продвинутую тактическую аптечку НТ",
-		INSTRUMENTAL = "продвинутой тактической аптечкой НТ",
-		PREPOSITIONAL = "продвинутой тактической аптечке НТ",
-	)
 
 /obj/item/storage/firstaid/ertm/populate_contents()
 	new /obj/item/reagent_containers/hypospray/ertm/hydrocodone(src)
@@ -411,7 +271,7 @@
 
 /obj/item/storage/firstaid/syndie
 	name = "first-aid tacticool kit"
-	desc = "Тактическая аптечка, содержащая в себе всё самое необходимое для лечения в пылу боя. Узкоспециализированная версия."
+	desc = "I hope you've got insurance."
 	icon_state = "bezerk"
 	item_state = "medkit_bezerk"
 	max_w_class = WEIGHT_CLASS_NORMAL
@@ -421,16 +281,6 @@
 	req_access = list(ACCESS_SYNDICATE)
 	med_bot_skin = "bezerk"
 	syndicate_aligned = TRUE
-
-/obj/item/storage/firstaid/syndie/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактическая аптечка",
-		GENITIVE = "тактической аптечки",
-		DATIVE = "тактической аптечке",
-		ACCUSATIVE = "тактическую аптечку",
-		INSTRUMENTAL = "тактической аптечкой",
-		PREPOSITIONAL = "тактической аптечке",
-	)
 
 /obj/item/storage/firstaid/syndie/populate_contents()
 	new /obj/item/reagent_containers/hypospray/combat(src)
@@ -445,7 +295,7 @@
 
 /obj/item/storage/firstaid/surgery
 	name = "field surgery kit"
-	desc = "Тактическая версия спортивной сумки с медицинскими опознавательными знаками. Содержит в себе набор инструментов для полевой хирургии."
+	desc = "A kit for surgery in the field."
 	gender = MALE
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "duffel-med"
@@ -458,16 +308,6 @@
 	storage_slots = 10
 	can_hold = list(/obj/item/roller,/obj/item/bonesetter,/obj/item/bonegel, /obj/item/scalpel, /obj/item/hemostat,
 		/obj/item/cautery, /obj/item/retractor, /obj/item/FixOVein, /obj/item/surgicaldrill, /obj/item/circular_saw)
-
-/obj/item/storage/firstaid/surgery/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор полевой хирургии",
-		GENITIVE = "набора полевой хирургии",
-		DATIVE = "набору полевой хирургии",
-		ACCUSATIVE = "набор полевой хирургии",
-		INSTRUMENTAL = "набором полевой хирургии",
-		PREPOSITIONAL = "наборе полевой хирургии",
-	)
 
 /obj/item/storage/firstaid/surgery/populate_contents()
 	new /obj/item/roller(src)
@@ -483,7 +323,7 @@
 
 /obj/item/storage/firstaid/crew
 	name = "crewmember first aid kit"
-	desc = "Небольшого размера подсумок, содержащий в себе минимальный набор медикаментов для экстренных ситуаций. Выдаётся сотрудникам \"Нанотрейзен\" в обязательным порядке."
+	desc = "A standart issued first aid kit for crewmembers. NanoTrasen appreciates you!"
 	icon_state = "blue_medpack"
 	item_state = "blue_medpack"
 	w_class = WEIGHT_CLASS_SMALL
@@ -496,16 +336,6 @@
 		/obj/item/tourniquet,
 	)
 	storage_slots = 9
-
-/obj/item/storage/firstaid/crew/get_ru_names()
-	return alist(
-		NOMINATIVE = "экстренная аптечка",
-		GENITIVE = "экстренной аптечки",
-		DATIVE = "экстренной аптечке",
-		ACCUSATIVE = "экстренную аптечку",
-		INSTRUMENTAL = "экстренной аптечкой",
-		PREPOSITIONAL = "экстренной аптечке",
-	)
 
 /obj/item/storage/firstaid/crew/ComponentInitialize()
 	. = ..()
@@ -524,17 +354,7 @@
 
 /obj/item/storage/firstaid/crew/nucleation
 	name = "nucleation first aid kit"
-	desc = "Небольшого размера подсумок, содержащий в себе минимальный набор медикаментов для экстренных ситуаций. Специализированная версия для сотрудников НТ, подвергшихся «синдрому суперматериальной дисплазии»."
-
-/obj/item/storage/firstaid/crew/nucleation/get_ru_names()
-	return alist(
-		NOMINATIVE = "экстренная аптечка (Нуклеация)",
-		GENITIVE = "экстренной аптечки (Нуклеация)",
-		DATIVE = "экстренной аптечке (Нуклеация)",
-		ACCUSATIVE = "экстренную аптечку (Нуклеация)",
-		INSTRUMENTAL = "экстренной аптечкой (Нуклеация)",
-		PREPOSITIONAL = "экстренной аптечке (Нуклеация)",
-	)
+	desc = "A standart issued first aid kit for 'SMDS' affected crewmembers. NanoTrasen appreciates you!"
 
 /obj/item/storage/firstaid/crew/nucleation/populate_contents()
 	new /obj/item/reagent_containers/hypospray/autoinjector/radium(src)
@@ -548,16 +368,6 @@
 /obj/item/storage/firstaid/crew/unathi
 	name = "unathi first aid kit"
 	desc = "Небольшого размера подсумок, содержащий в себе минимальный набор медикаментов для экстренных ситуаций. Специализированная версия для сотрудников НТ, чья кожа слишком толстая для использования патчей."
-
-/obj/item/storage/firstaid/crew/unathi/get_ru_names()
-	return alist(
-		NOMINATIVE = "экстренная аптечка (Унати)",
-		GENITIVE = "экстренной аптечки (Унати)",
-		DATIVE = "экстренной аптечке (Унати)",
-		ACCUSATIVE = "экстренную аптечку (Унати)",
-		INSTRUMENTAL = "экстренной аптечкой (Унати)",
-		PREPOSITIONAL = "экстренной аптечке (Унати)"
-	)
 
 /obj/item/storage/firstaid/crew/unathi/populate_contents()
 	new /obj/item/reagent_containers/hypospray/autoinjector(src)
@@ -574,23 +384,13 @@
 	icon_state = "mining_medic_firstaid"
 	item_state = "medkit_mining"
 
-/obj/item/storage/firstaid/doctor/mining_medic/get_ru_names()
-	return alist(
-		NOMINATIVE = "аптечка первой помощи (Шахтёрский Врач)",
-		GENITIVE = "аптечки первой помощи (Шахтёрский Врач)",
-		DATIVE = "аптечке первой помощи (Шахтёрский Врач)",
-		ACCUSATIVE = "аптечку первой помощи (Шахтёрский Врач)",
-		INSTRUMENTAL = "аптечкой первой помощи (Шахтёрский Врач)",
-		PREPOSITIONAL = "аптечке первой помощи (Шахтёрский Врач)",
-	)
-
 /*
  * MARK: Pill Bottles
  */
 
 /obj/item/storage/pill_bottle
 	name = "pill bottle"
-	desc = "Герметичный стеклянный флакон, предназначенный для хранения таблеток."
+	desc = "It's an airtight container for storing medication."
 	gender = MALE
 	icon_state = "pill_canister"
 	icon = 'icons/obj/chemical.dmi'
@@ -617,16 +417,6 @@
 	var/wrapper_color = null
 	/// The icon state of the wrapper overlay.
 	var/wrapper_state = "pill_bottle_wrap"
-
-/obj/item/storage/pill_bottle/get_ru_names()
-	return alist(
-		NOMINATIVE = "пузырёк для таблеток",
-		GENITIVE = "пузырька для таблеток",
-		DATIVE = "пузырьку для таблеток",
-		ACCUSATIVE = "пузырёк для таблеток",
-		INSTRUMENTAL = "пузырьком для таблеток",
-		PREPOSITIONAL = "пузырьке для таблеток",
-	)
 
 /obj/item/storage/pill_bottle/Initialize(mapload)
 	. = ..()
@@ -702,7 +492,7 @@
 
 /obj/item/storage/pill_bottle/patch_pack
 	name = "patch pack"
-	desc = "Небольшой коробок, предназначенный для хранения медицинских пластырей."
+	desc = "It's a container for storing medical patches."
 	icon_state = "patch_pack"
 	item_state = "patch_pack"
 	belt_icon = "patch_pack"
@@ -712,16 +502,6 @@
 	can_hold = list(/obj/item/reagent_containers/food/pill/patch)
 	cant_hold = list()
 	wrapper_state = "patch_pack_wrap"
-
-/obj/item/storage/pill_bottle/patch_pack/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробок для пластырей",
-		GENITIVE = "коробка для пластырей",
-		DATIVE = "коробку для пластырей",
-		ACCUSATIVE = "коробок для пластырей",
-		INSTRUMENTAL = "коробком для пластырей",
-		PREPOSITIONAL = "коробке для пластырей",
-	)
 
 /obj/item/storage/pill_bottle/patch_pack/filled/populate_contents()
 	for(var/i in 1 to 10)
@@ -750,30 +530,10 @@
 	allow_wrap = FALSE
 	origin_tech = "materials=2;bluespace=1;biotech=1;plasmatech=1"
 
-/obj/item/storage/pill_bottle/bluespace/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс-хранилище для лекарств",
-		GENITIVE = "блюспейс-хранилищя для лекарств",
-		DATIVE = "блюспейс-хранилищу для лекарств",
-		ACCUSATIVE = "блюспейс-хранилище для лекарств",
-		INSTRUMENTAL = "блюспейс-хранилищем для лекарств",
-		PREPOSITIONAL = "блюспейс-хранилище для лекарств",
-	)
-
 /obj/item/storage/pill_bottle/charcoal
 	name = "Pill bottle (Charcoal)"
-	desc = "Герметичный стеклянный флакон, предназначенный для хранения таблеток. Заполнен таблетками с активированным углём."
+	desc = "Contains pills used to counter toxins."
 	wrapper_color = COLOR_GREEN
-
-/obj/item/storage/pill_bottle/charcoal/get_ru_names()
-	return alist(
-		NOMINATIVE = "пузырёк для таблеток (Активированный уголь)",
-		GENITIVE = "пузырька для таблеток (Активированный уголь)",
-		DATIVE = "пузырьку для таблеток (Активированный уголь)",
-		ACCUSATIVE = "пузырёк для таблеток (Активированный уголь)",
-		INSTRUMENTAL = "пузырьком для таблеток (Активированный уголь)",
-		PREPOSITIONAL = "пузырьке для таблеток (Активированный уголь)",
-	)
 
 /obj/item/storage/pill_bottle/charcoal/populate_contents()
 	for(var/I in 1 to 7)
@@ -781,18 +541,8 @@
 
 /obj/item/storage/pill_bottle/painkillers
 	name = "Pill Bottle (Salicylic Acid)"
-	desc = "Герметичный стеклянный флакон, предназначенный для хранения таблеток. Заполнен таблетками с салициловой кислотой."
+	desc = "Contains various pills for minor pain relief."
 	wrapper_color = COLOR_RED
-
-/obj/item/storage/pill_bottle/painkillers/get_ru_names()
-	return alist(
-		NOMINATIVE = "пузырёк для таблеток (Салициловая кислота)",
-		GENITIVE = "пузырька для таблеток (Салициловая кислота)",
-		DATIVE = "пузырьку для таблеток (Салициловая кислота)",
-		ACCUSATIVE = "пузырёк для таблеток (Салициловая кислота)",
-		INSTRUMENTAL = "пузырьком для таблеток (Салициловая кислота)",
-		PREPOSITIONAL = "пузырьке для таблеток (Салициловая кислота)",
-	)
 
 /obj/item/storage/pill_bottle/painkillers/populate_contents()
 	for(var/I in 1 to 8)

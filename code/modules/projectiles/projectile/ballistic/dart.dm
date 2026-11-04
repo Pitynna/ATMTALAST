@@ -7,16 +7,6 @@
 	var/volume = 50
 	var/piercing = FALSE
 
-/obj/projectile/bullet/dart/get_ru_names()
-	return alist(
-		NOMINATIVE = "дротик",
-		GENITIVE = "дротика",
-		DATIVE = "дротику",
-		ACCUSATIVE = "дротик",
-		INSTRUMENTAL = "дротиком",
-		PREPOSITIONAL = "дротике",
-	)
-
 /obj/projectile/bullet/dart/Initialize(mapload)
 	. = ..()
 
@@ -57,16 +47,6 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "syringeproj"
 	volume = 15
-
-/obj/projectile/bullet/dart/syringe/get_ru_names()
-	return alist(
-		NOMINATIVE = "шприц",
-		GENITIVE = "шприца",
-		DATIVE = "шприцу",
-		ACCUSATIVE = "шприц",
-		INSTRUMENTAL = "шприцем",
-		PREPOSITIONAL = "шприце",
-	)
 
 /obj/projectile/bullet/dart/syringe/tranquilizer
 

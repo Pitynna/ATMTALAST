@@ -1,6 +1,6 @@
 /obj/mecha/combat/sidewinder // если вдруг будет введен оригинал, просьба заменить адрес на sidewinder/full_load для соблюдения логики и избежания ошибок
-	name = "Экспериментальный Сайдвиндер"
-	desc = "Экпериментальная разработка НТ, стоимость которой сравнится со всей станцией Керберос и всем её содержимым. Смотря на это чудо, вы нутром понимаете последствия, если она поломается. Они будут печальными. Очень. Для всех."
+	name = "experimental Sidewinder"
+	desc = "An experimental Nanotrasen design costing as much as the entire Kerberos station and everything aboard it. Looking at this marvel, you instinctively understand the consequences of breaking it. They would be bad. Very bad. For everyone."
 	icon_state = "sidewinder"
 	initial_icon = "sidewinder"
 	step_in = 1

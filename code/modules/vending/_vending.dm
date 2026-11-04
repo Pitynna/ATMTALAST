@@ -51,7 +51,7 @@
 
 /obj/machinery/vending
 	name = "Vendomat"
-	desc = "Обычный торговый автомат."
+	desc = "A generic vending machine."
 	icon = 'icons/obj/machines/vending.dmi'
 	icon_state = "generic_off"
 	anchored = TRUE
@@ -257,16 +257,6 @@
 	 * Otherwise, free buy works normally.
 	 */
 	var/vandal_secure = FALSE
-
-/obj/machinery/vending/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат",
-		GENITIVE = "торгового автомата",
-		DATIVE = "торговому автомату",
-		ACCUSATIVE = "торговый автомат",
-		INSTRUMENTAL = "торговым автоматом",
-		PREPOSITIONAL = "торговом автомате",
-	)
 
 /**
  * Initialize the vending machine

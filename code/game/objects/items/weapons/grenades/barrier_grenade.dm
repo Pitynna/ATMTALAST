@@ -4,21 +4,10 @@
 
 /obj/item/grenade/barrier
 	name = "barrier grenade"
-	desc = "Взрывчатое устройство, предназначенное для ручного подрыва. \
-			Создаёт баррикаду на месте детонации. Поддерживает 3 режима развёртывания."
+	desc = "Instant cover."
 	icon_state = "barrier"
 	actions_types = list(/datum/action/item_action/toggle_barrier_spread)
 	var/mode = SINGLE
-
-/obj/item/grenade/barrier/get_ru_names()
-	return alist(
-		NOMINATIVE = "барьерная граната",
-		GENITIVE = "барьерной гранаты",
-		DATIVE = "барьерной гранате",
-		ACCUSATIVE = "барьерную гранату",
-		INSTRUMENTAL = "барьерной гранатой",
-		PREPOSITIONAL = "барьерной гранате"
-	)
 
 /obj/item/grenade/barrier/examine(mob/user)
 	. = ..()

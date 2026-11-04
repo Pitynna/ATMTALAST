@@ -9,8 +9,8 @@
 	)
 
 /obj/effect/mob_spawn/human/seed_vault
-	name = "Сохранившийся террариум"
-	desc = "Древняя машина, которая, кажется, использовалась для хранения растительных материалов. Стекла закрыты ковром из лозы."
+	name = "preserved terrarium"
+	desc = "An ancient machine that seems to be used for storing plant matter. The glass is obstructed by a mat of vines."
 	mob_name = "a lifebringer"
 	icon = 'icons/obj/lavaland/spawners.dmi'
 	icon_state = "terrarium"
@@ -23,16 +23,6 @@
 	хранилища семян и распространили их по всей вселенной на каждую планету, которую смогли нанести на карту.\nВы находитесь в одном из таких хранилищ. Ваша цель — культивировать и распространять жизнь везде, где это возможно, \
 	ожидая контакта от ваших создателей.\nПредполагаемое время последнего контакта: 5x10^3 тысячелетий назад."
 	assignedrole = "Lifebringer"
-
-/obj/effect/mob_spawn/human/seed_vault/get_ru_names()
-	return alist(
-		NOMINATIVE = "сохранившийся террариум",
-		GENITIVE = "сохранившегося террариума",
-		DATIVE = "сохранившемуся террариуму",
-		ACCUSATIVE = "сохранившийся террариум",
-		INSTRUMENTAL = "сохранившимся террариумом",
-		PREPOSITIONAL = "сохранившемся террариуме",
-	)
 
 /obj/effect/mob_spawn/human/seed_vault/special(mob/living/new_spawn)
 	var/plant_name = pick("Tomato", "Potato", "Broccoli", "Carrot", "Ambrosia", "Pumpkin", "Ivy", "Kudzu", "Banana", "Moss", "Flower", "Bloom", "Root", "Bark", "Glowshroom", "Petal", "Leaf", \

@@ -29,16 +29,6 @@
 		/obj/item/reagent_containers/food/snacks/grown/peaslaugh = "laughsyrup"
 	)
 
-/obj/machinery/juicer/get_ru_names()
-	return alist(
-		NOMINATIVE = "соковыжималка",
-		GENITIVE = "соковыжималки",
-		DATIVE = "соковыжималке",
-		ACCUSATIVE = "соковыжималку",
-		INSTRUMENTAL = "соковыжималкой",
-		PREPOSITIONAL = "соковыжималке"
-	)
-
 /obj/machinery/juicer/Initialize(mapload)
 	. = ..()
 	beaker = new /obj/item/reagent_containers/cup/beaker/large(src)

@@ -108,7 +108,7 @@
 
 /obj/structure/shadowcocoon
 	name = "shadowy cocoon"
-	desc = "Объект, завёрнутый в густую, почти осязаемую тьму. Его поверхность дрожит и переливается, словно живая, а вокруг него клубится непроглядный мрак."
+	desc = "Something wrapped in what seems to be manifested darkness. Its surface distorts unnaturally, and it emanates deep shadows."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shadowcocoon"
 	light_power = -4
@@ -120,16 +120,6 @@
 	var/time_since_last_hallucination = 0
 	/// Will we play hallucination sounds or not
 	var/silent = TRUE
-
-/obj/structure/shadowcocoon/get_ru_names()
-	return alist(
-		NOMINATIVE = "теневой кокон",
-		GENITIVE = "теневого кокона",
-		DATIVE = "теневому кокону",
-		ACCUSATIVE = "теневой кокон",
-		INSTRUMENTAL = "теневым коконом",
-		PREPOSITIONAL = "теневом коконе",
-	)
 
 /obj/structure/shadowcocoon/Initialize(mapload)
 	. = ..()
@@ -188,18 +178,8 @@
 
 /obj/item/organ/internal/heart/demon/shadow
 	name = "heart of darkness"
-	desc = "Оно всё ещё яростно бьётся, излучая ауру страха."
+	desc = "It still beats furiously, emitting an aura of fear."
 	color = COLOR_BLACK
-
-/obj/item/organ/internal/heart/demon/shadow/get_ru_names()
-	return alist(
-		NOMINATIVE = "сердце тьмы",
-		GENITIVE = "сердца тьмы",
-		DATIVE = "сердцу тьмы",
-		ACCUSATIVE = "сердце тьмы",
-		INSTRUMENTAL = "сердцем тьмы",
-		PREPOSITIONAL = "сердце тьмы",
-	)
 
 /obj/item/organ/internal/heart/demon/shadow/attack_self(mob/living/user)
 	. = ..()

@@ -29,13 +29,3 @@
 		/obj/item/assembly/voice = 2,
 		/obj/item/assembly/health = 2,
 	)
-
-/obj/machinery/vending/assist/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Assistomate",
-		GENITIVE = "торгового автомата Assistomate",
-		DATIVE = "торговому автомату Assistomate",
-		ACCUSATIVE = "торговый автомат Assistomate",
-		INSTRUMENTAL = "торговым автоматом Assistomate",
-		PREPOSITIONAL = "торговом автомате Assistomate",
-	)

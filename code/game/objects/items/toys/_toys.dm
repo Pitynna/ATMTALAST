@@ -34,37 +34,17 @@
 // MARK: Fake singularity
 /obj/item/toy/spinningtoy
 	name = "Gravitational Singularity"
-	desc = "Знаменитая вращающаяся игрушка марки \"Сингуло\"."
+	desc = "\"Singulo\" brand spinning toy."
 	icon = 'icons/obj/engines_and_power/singularity.dmi'
 	icon_state = "singularity_s1"
 	item_flags = NO_PIXEL_RANDOM_DROP
 
-/obj/item/toy/spinningtoy/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечная сингулярность",
-		GENITIVE = "игрушечной сингулярности",
-		DATIVE = "игрушечной сингулярности",
-		ACCUSATIVE = "игрушечную сингулярность",
-		INSTRUMENTAL = "игрушечной сингулярностью",
-		PREPOSITIONAL = "игрушечной сингулярности",
-	)
-
 /obj/item/toy/nuke
 	name = "Nuclear Fission Explosive toy"
-	desc = "Пластиковая модель ядерной боеголовки."
+	desc = "A plastic model of a Nuclear Fission Explosive."
 	icon_state = "nuketoyidle"
 	w_class = WEIGHT_CLASS_SMALL
 	var/animation_stage = 0
-
-/obj/item/toy/nuke/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечная ядерная боеголовка",
-		GENITIVE = "игрушечной ядерной боеголовки",
-		DATIVE = "игрушечной ядерной боеголовке",
-		ACCUSATIVE = "игрушечную ядерную боеголовку",
-		INSTRUMENTAL = "игрушечной ядерной боеголовкой",
-		PREPOSITIONAL = "игрушечной ядерной боеголовке",
-	)
 
 /obj/item/toy/nuke/update_icon_state()
 	switch(animation_stage)
@@ -116,19 +96,9 @@
 // MARK: Fake meteor
 /obj/item/toy/minimeteor
 	name = "Mini-Meteor"
-	desc = "Вновь почувствуйте то волнение когда начинается метеоритный дождь! Компания \"Сладкие Мясо-риты\" не несёт ответственности за любые травмы, головные боли или потерю слуха."
+	desc = "Relive the excitement of a meteor shower! SweetMeat-eor. Co is not responsible for any injuries, headaches or hearing loss caused by Mini-Meteor."
 	icon_state = "minimeteor"
 	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/toy/minimeteor/get_ru_names()
-	return alist(
-		NOMINATIVE = "мини-метеор",
-		GENITIVE = "мини-метеора",
-		DATIVE = "мини-метеору",
-		ACCUSATIVE = "мини-метеор",
-		INSTRUMENTAL = "мини-метеором",
-		PREPOSITIONAL = "мини-метеоре",
-	)
 
 /obj/item/toy/minimeteor/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	..()
@@ -141,19 +111,9 @@
 // MARK: AI core
 /obj/item/toy/AI
 	name = "toy AI"
-	desc = "Небольшая игрушечная модель ядра станционного Искусственного Интеллекта с реальными функциями объявления законов!"
+	desc = "A little toy model AI core with real law announcing action!"
 	icon_state = "AI"
 	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/toy/AI/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушка \"Искуственный Интеллект\"",
-		GENITIVE = "игрушки \"Искуственный Интеллект\"",
-		DATIVE = "игрушке \"Искуственный Интеллект\"",
-		ACCUSATIVE = "игрушку \"Искуственный Интеллект\"",
-		INSTRUMENTAL = "игрушкой \"Искуственный Интеллект\"",
-		PREPOSITIONAL = "игрушке \"Искуственный Интеллект\"",
-	)
 
 /obj/item/toy/AI/attack_self(mob/user)
 	if(!COOLDOWN_FINISHED(src, cooldown))
@@ -170,7 +130,7 @@
 // MARK: Pet Rocks
 /obj/item/toy/pet_rock
 	name = "pet rock"
-	desc = "Идеальный питомец!"
+	desc = "The perfect pet!"
 	icon_state = "pet_rock"
 	w_class = WEIGHT_CLASS_SMALL
 	force = 5
@@ -178,45 +138,15 @@
 	attack_verb = list("атаковал", "ударил", "окаменил")
 	hitsound = SFX_SWING_HIT
 
-/obj/item/toy/pet_rock/get_ru_names()
-	return alist(
-		NOMINATIVE = "камень-питомец",
-		GENITIVE = "камня-питомца",
-		DATIVE = "камню-питомцу",
-		ACCUSATIVE = "камень-питомец",
-		INSTRUMENTAL = "камнем-питомцем",
-		PREPOSITIONAL = "камне-питомце",
-	)
-
 /obj/item/toy/pet_rock/fred
 	name = "fred"
-	desc = "Фред, самый хороший мальчик-питомец в галактике!"
+	desc = "Fred, the bestest boy pet in the whole wide universe!"
 	icon_state = "fred"
-
-/obj/item/toy/pet_rock/fred/get_ru_names()
-	return alist(
-		NOMINATIVE = "камень-питомец Фред",
-		GENITIVE = "камня-питомца Фреда",
-		DATIVE = "камню-питомцу Фреду",
-		ACCUSATIVE = "камень-питомца Фреда",
-		INSTRUMENTAL = "камнем-питомцем Фредом",
-		PREPOSITIONAL = "камне-питомце Фреде",
-	)
 
 /obj/item/toy/pet_rock/roxie
 	name = "roxie"
-	desc = "Рокси, самая хорошая девочка-питомец в галактике!"
+	desc = "Roxie, the bestest girl pet in the whole wide universe!"
 	icon_state = "roxie"
-
-/obj/item/toy/pet_rock/roxie/get_ru_names()
-	return alist(
-		NOMINATIVE = "камень-питомец Рокси",
-		GENITIVE = "камня-питомца Рокси",
-		DATIVE = "камню-питомцу Рокси",
-		ACCUSATIVE = "камень-питомца Рокси",
-		INSTRUMENTAL = "камнем-питомцем Рокси",
-		PREPOSITIONAL = "камне-питомце Рокси",
-	)
 
 /obj/item/toy/pet_rock/naughty_coal
 	name = "Naughty coal"
@@ -225,30 +155,10 @@
 	icon_state = "naughty_coal"
 	resistance_flags = FLAMMABLE
 
-/obj/item/toy/pet_rock/naughty_coal/get_ru_names()
-	return alist(
-		NOMINATIVE = "уголь для непослушных",
-		GENITIVE = "угля для непослушных",
-		DATIVE = "углю для непослушных",
-		ACCUSATIVE = "уголь для непослушных",
-		INSTRUMENTAL = "углём для непослушных",
-		PREPOSITIONAL = "угле для непослушных",
-	)
-
 /obj/item/toy/inflatable_duck
 	name = "inflatable duck"
-	desc = "Не нужно беспокоиться о том, утонешь ты или выплывешь, когда можно просто держаться на плаву!"
+	desc = "No bother to sink or swim when you can just float!"
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "inflatable"
 	item_state = "inflatable"
 	slot_flags = ITEM_SLOT_BELT
-
-/obj/item/toy/inflatable_duck/get_ru_names()
-	return alist(
-		NOMINATIVE = "надувная утка",
-		GENITIVE = "надувной утки",
-		DATIVE = "надувной утке",
-		ACCUSATIVE = "надувную утку",
-		INSTRUMENTAL = "надувной уткой",
-		PREPOSITIONAL = "надувной утке",
-	)

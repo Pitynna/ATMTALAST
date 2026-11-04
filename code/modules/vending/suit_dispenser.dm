@@ -1,6 +1,6 @@
 /obj/machinery/vending/suitdispenser
 	name = "Suitlord 9000"
-	desc = "На мгновение вы задумываетесь, почему все ваши рубашки и брюки сшиты вместе. От этого у вас начинает болеть голова, и вы перестаёте."
+	desc = "You wonder for a moment why all of your shirts and pants come conjoined. This hurts your head and you stop thinking about it."
 
 	icon_state = "suits_off"
 	panel_overlay = "suits_panel"
@@ -46,16 +46,6 @@
 	)
 	premium = list(
 		/obj/item/clothing/under/rainbow = 1,
-	)
-
-/obj/machinery/vending/suitdispenser/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Suitlord 9000",
-		GENITIVE = "торгового автомата Suitlord 9000",
-		DATIVE = "торговому автомату Suitlord 9000",
-		ACCUSATIVE = "торговый автомат Suitlord 9000",
-		INSTRUMENTAL = "торговым автоматом Suitlord 9000",
-		PREPOSITIONAL = "торговом автомате Suitlord 9000",
 	)
 
 /obj/machinery/vending/suitdispenser/free

@@ -43,7 +43,7 @@
 	id = /obj/item/card/id
 
 /obj/effect/mob_spawn/human/corpse/syndicatehazmat
-	name = "Неизвестный"
+	name = "Unknown"
 	hair_style = "bald"
 	facial_hair_style = "shaved"
 	id_job = "Карта доступа 03-c"

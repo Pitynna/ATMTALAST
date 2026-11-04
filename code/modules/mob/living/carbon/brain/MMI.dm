@@ -271,16 +271,6 @@
 	syndiemmi = 1
 	var/datum/action/innate/overdrive/overdrive = new
 
-/obj/item/mmi/syndie/get_ru_names()
-	return alist(
-		NOMINATIVE = "НКИ \"Синдиката\"",
-		GENITIVE = "НКИ \"Синдиката\"",
-		DATIVE = "НКИ \"Синдиката\"",
-		ACCUSATIVE = "НКИ \"Синдиката\"",
-		INSTRUMENTAL = "НКИ \"Синдиката\"",
-		PREPOSITIONAL = "НКИ \"Синдиката\"",
-	)
-
 /obj/item/mmi/syndie/apply_effects(mob/living/silicon/robot/borg)
 	if(!overdrive.used)
 		overdrive.Grant(borg)

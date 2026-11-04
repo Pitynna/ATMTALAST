@@ -10,16 +10,6 @@
 	item_state = "acid_bladder"
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/acid_bladder/get_ru_names()
-	return alist(
-		NOMINATIVE = "кислотный мешочек",
-		GENITIVE = "кислотного мешочка",
-		DATIVE = "кислотному мешочку",
-		ACCUSATIVE = "кислотный мешочек",
-		INSTRUMENTAL = "кислотным мешочком",
-		PREPOSITIONAL = "кислотном мешочке",
-	)
-
 /obj/item/acid_bladder/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
 	if(isliving(hit_atom))
@@ -50,17 +40,6 @@
 	item_state = "circular_saw_blade"
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/circular_saw_blade/get_ru_names()
-	return alist(
-		NOMINATIVE = "лезвие дисковой пилы",
-		GENITIVE = "лезвия дисковой пилы",
-		DATIVE = "лезвию дисковой пилы",
-		ACCUSATIVE = "лезвие дисковой пилы",
-		INSTRUMENTAL = "лезвием дисковой пилы",
-		PREPOSITIONAL = "лезвии дисковой пилы",
-	)
-
-//**********Grace of Lazis **********//
 /obj/structure/grace_of_lazis
 	name = "grace of lazis"
 	desc = "Огромное количество мяса, насаженного на костяное копье. Символ невероятно удачного сезона охоты."
@@ -71,16 +50,6 @@
 	density = TRUE
 	max_integrity = 1000
 	var/meat_parts = 40
-
-/obj/structure/grace_of_lazis/get_ru_names()
-	return alist(
-		NOMINATIVE = "благодать Лазис Ардакса",
-		GENITIVE = "благодати Лазис Ардакса",
-		DATIVE = "благодати Лазис Ардакса",
-		ACCUSATIVE = "благодать Лазис Ардакса",
-		INSTRUMENTAL = "благодатью Лазис Ардакса",
-		PREPOSITIONAL = "благодати Лазис Ардакса",
-	)
 
 /obj/structure/grace_of_lazis/attackby(obj/item/I, mob/user, params)
 	if(!istype(I, /obj/item/kitchen/knife))
@@ -125,18 +94,8 @@
 	title = "Руководство по Готовке"
 	wiki_title = "Еда_пеплоходцев"
 
-/obj/item/book/manual/lavaland_scroll/get_ru_names()
-	return alist(
-		NOMINATIVE = "свиток готовки",
-		GENITIVE = "свитка готовки",
-		DATIVE = "свитку готовки",
-		ACCUSATIVE = "свиток готовки",
-		INSTRUMENTAL = "свитком готовки",
-		PREPOSITIONAL = "свитке готовки",
-	)
-
 /obj/structure/fluff/ash_statue //used to mark point of interest
-	name = "тотем"
+	name = "totem"
 	desc = "Массивный каменный столб с прикреплённым к нему черепом убитого зверя. Кажется, вы зашли в охотничьи угодья пеплоходцев."
 	icon = 'icons/obj/lavaland/grace_of_lazis.dmi'
 	icon_state = "totem_stone"
@@ -144,16 +103,6 @@
 	deconstructible = FALSE
 	/// Used in shaman spell. Perfect for finding stuff ic
 	var/special_name = "точка интереса"
-
-/obj/structure/fluff/ash_statue/get_ru_names()
-	return alist(
-		NOMINATIVE = "пепельный тотем",
-		GENITIVE = "пепельного тотема",
-		DATIVE = "пепельному тотему",
-		ACCUSATIVE = "пепельный тотем",
-		INSTRUMENTAL = "пепельным тотемом",
-		PREPOSITIONAL = "пепельном тотеме",
-	)
 
 /obj/structure/fluff/ash_statue/Initialize(mapload)
 	name = "тотем — [special_name]"
@@ -176,16 +125,6 @@
 	var/applied_dye = null
 	var/applied_dye_fluff_name = null
 
-/obj/structure/ash_totem/get_ru_names()
-	return alist(
-		NOMINATIVE = "тотем",
-		GENITIVE = "тотема",
-		DATIVE = "тотему",
-		ACCUSATIVE = "тотем",
-		INSTRUMENTAL = "тотемом",
-		PREPOSITIONAL = "тотеме",
-	)
-
 /obj/structure/ash_totem/examine(mob/user)
 	. = ..()
 	. += span_notice("Эта статуя может использоваться вместо полноценного пеплоходца, если будет построена у ритуальной руны.")
@@ -202,45 +141,15 @@
 	name = "wooden totem"
 	desc = "Массивная статуя, сделанная из цельного куска древесины. Рисунок на статуе отдалённо напоминает человеческое лицо, искаженное в гримасе ужаса."
 
-/obj/structure/ash_totem/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянный тотем",
-		GENITIVE = "деревянного тотема",
-		DATIVE = "деревянному тотему",
-		ACCUSATIVE = "деревянный тотем",
-		INSTRUMENTAL = "деревянным тотемом",
-		PREPOSITIONAL = "деревянном тотеме",
-	)
-
 /obj/structure/ash_totem/stone
 	name = "stone totem"
 	desc = "Массивная каменная статуя с прикреплённым к ней черепом убитого животного. Сухожилия, держащие череп на месте, медленно покачиваются на ветру."
 	icon_state = "totem_stone"
 
-/obj/structure/ash_totem/stone/get_ru_names()
-	return alist(
-		NOMINATIVE = "каменный тотем",
-		GENITIVE = "каменного тотема",
-		DATIVE = "каменному тотему",
-		ACCUSATIVE = "каменный тотем",
-		INSTRUMENTAL = "каменным тотемом",
-		PREPOSITIONAL = "каменном тотеме",
-	)
-
 /obj/structure/ash_totem/bone
 	name = "bone totem"
 	desc = "Массивная статуя, сделанная из огромной кости. Вы не знаете, какому именно животному принадлежит эта кость, и вы явно не хотите это узнавать."
 	icon_state = "totem_bone"
-
-/obj/structure/ash_totem/bone/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяной тотем",
-		GENITIVE = "костяного тотема",
-		DATIVE = "костяному тотему",
-		ACCUSATIVE = "костяной тотем",
-		INSTRUMENTAL = "костяным тотемом",
-		PREPOSITIONAL = "костяном тотеме",
-	)
 
 /obj/structure/chair/stool/wooden
 	name = "wooden stool"
@@ -248,16 +157,6 @@
 	gender = FEMALE
 	icon_state = "wooden_stool"
 	item_chair = /obj/item/chair/stool/wooden
-
-/obj/structure/chair/stool/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянная табуретка",
-		GENITIVE = "деревянной табуретки",
-		DATIVE = "деревянной табуретке",
-		ACCUSATIVE = "деревянную табуретку",
-		INSTRUMENTAL = "деревянной табуреткой",
-		PREPOSITIONAL = "деревянной табуретке",
-	)
 
 /obj/item/chair/stool/wooden
 	name = "wooden stool"
@@ -270,13 +169,3 @@
 	force = 8
 	origin_type = /obj/structure/chair/stool/wooden
 	break_chance = 10
-
-/obj/item/chair/stool/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянная табуретка",
-		GENITIVE = "деревянной табуретки",
-		DATIVE = "деревянной табуретке",
-		ACCUSATIVE = "деревянную табуретку",
-		INSTRUMENTAL = "деревянной табуреткой",
-		PREPOSITIONAL = "деревянной табуретке",
-	)

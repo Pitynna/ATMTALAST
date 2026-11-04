@@ -1,6 +1,6 @@
 /obj/machinery/papershredder
 	name = "paper shredder"
-	desc = "Устройство для тех документов, которых вы не хотите видеть."
+	desc = "For those documents you don't want seen."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "papershredder0"
 	density = TRUE
@@ -16,16 +16,6 @@
 		/obj/item/paper_bundle = 3,
 		/obj/item/folder = 4,
 		/obj/item/book = 5,
-	)
-
-/obj/machinery/papershredder/get_ru_names()
-	return alist(
-		NOMINATIVE = "измельчитель бумаги",
-		GENITIVE = "измельчителя бумаги",
-		DATIVE = "измельчителю бумаги",
-		ACCUSATIVE = "измельчитель бумаги",
-		INSTRUMENTAL = "измельчителем бумаги",
-		PREPOSITIONAL = "измельчителе бумаги",
 	)
 
 /obj/machinery/papershredder/attackby(obj/item/I, mob/user, params)
@@ -154,7 +144,7 @@ GAME_VERB_SRC(/obj/machinery/papershredder, empty_contents, range(1), "Опус�
 
 /obj/item/shredded_paper
 	name = "shredded paper"
-	desc = "Куча разорванной бумаги."
+	desc = "The remains of a private, confidential, or otherwise sensitive document."
 	gender = MALE
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "shredded_paper"
@@ -163,16 +153,6 @@ GAME_VERB_SRC(/obj/machinery/papershredder, empty_contents, range(1), "Опус�
 	layer = 4
 	max_integrity = 25
 	throw_range = 3
-
-/obj/item/shredded_paper/get_ru_names()
-	return alist(
-		NOMINATIVE = "измельчённая бумага",
-		GENITIVE = "измельчённой бумаги",
-		DATIVE = "измельчённой бумаге",
-		ACCUSATIVE = "измельчённую бумагу",
-		INSTRUMENTAL = "измельчонной бумагой",
-		PREPOSITIONAL = "измельчённой бумаге",
-	)
 
 /obj/item/shredded_paper/Initialize(mapload)
 	. = ..()

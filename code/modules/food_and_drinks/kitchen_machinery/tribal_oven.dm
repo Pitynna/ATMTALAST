@@ -15,16 +15,6 @@
 	efficiency = 1 //we don't have parts, soo
 	transfer_reagents_from_ingredients = FALSE
 
-/obj/machinery/kitchen_machine/tribal_oven/get_ru_names()
-	return alist(
-		NOMINATIVE = "каменная печь",
-		GENITIVE = "каменной печи",
-		DATIVE = "каменной печи",
-		ACCUSATIVE = "каменную печь",
-		INSTRUMENTAL = "каменной печью",
-		PREPOSITIONAL = "каменной печи",
-	)
-
 /obj/machinery/kitchen_machine/tribal_oven/screwdriver_act()
 	return FALSE
 

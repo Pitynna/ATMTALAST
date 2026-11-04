@@ -1,6 +1,6 @@
 /obj/item/ammo_casing
 	name = "bullet casing"
-	desc = "Иногда гильза от пули — это просто гильза, и ничего более."
+	desc = "A bullet casing."
 	gender = FEMALE
 	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "s-casing"
@@ -276,7 +276,7 @@
 // MARK: Caseless
 // TODO: port caseless element from TG — https://github.com/tgstation/tgstation/pull/76335
 /obj/item/ammo_casing/caseless
-	desc = "Безгильзовый патрон."
+	desc = "A caseless bullet casing."
 
 /obj/item/ammo_casing/caseless/after_fire()
 	qdel(src)

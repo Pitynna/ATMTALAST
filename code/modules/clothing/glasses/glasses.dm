@@ -165,7 +165,7 @@
 // MARK: Prescription Glasses
 /obj/item/clothing/glasses/regular
 	name = "prescription glasses"
-	desc = "Очки с диоптрическими линзами, предназначенные для ношения при нарушениях зрения."
+	desc = "Made by Nerd. Co."
 	icon_state = "glasses"
 	item_state = "glasses"
 	prescription = TRUE
@@ -181,25 +181,15 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/regular/get_ru_names()
-	return alist(
-		NOMINATIVE = "диоптрические очки",
-		GENITIVE = "диоптрических очков",
-		DATIVE = "диоптрическим очкам",
-		ACCUSATIVE = "диоптрические очки",
-		INSTRUMENTAL = "диоптрическими очками",
-		PREPOSITIONAL = "диоптрических очках",
-	)
-
 /obj/item/clothing/glasses/regular/hipster
-	desc = "Очки с диоптрическими линзами, предназначенные для ношения при нарушениях зрения. Обладают уникальным дизайном."
+	desc = "Made by Uncool. Co."
 	icon_state = "hipster_glasses"
 	item_state = "hipster_glasses"
 
 // MARK: Sunglasses
 /obj/item/clothing/glasses/sunglasses
 	name = "sunglasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flashes."
 	icon_state = "sun"
 	item_state = "sunglasses"
 	see_in_dark = 1
@@ -218,19 +208,9 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/sunglasses/get_ru_names()
-	return alist(
-		NOMINATIVE = "солнцезащитные очки",
-		GENITIVE = "солнцезащитных очков",
-		DATIVE = "солнцезащитным очкам",
-		ACCUSATIVE = "солнцезащитные очки",
-		INSTRUMENTAL = "солнцезащитными очками",
-		PREPOSITIONAL = "солнцезащитных очках",
-	)
-
 /obj/item/clothing/glasses/sunglasses_fake
 	name = "cheap sunglasses"
-	desc = "Предназначенные для защиты от УФ-излучения, на деле эти очки абсолютно неэффективны. Зато выглядят стильно."
+	desc = "Cheap, plastic sunglasses. They don't even have UV protection."
 	icon_state = "sun"
 	item_state = "sunglasses"
 	sprite_sheets = list(
@@ -244,53 +224,22 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/sunglasses_fake/get_ru_names()
-	return alist(
-		NOMINATIVE = "дешёвые солнцезащитные очки",
-		GENITIVE = "дешёвых солнцезащитных очков",
-		DATIVE = "дешёвым солнцезащитным очкам",
-		ACCUSATIVE = "дешёвые солнцезащитные очки",
-		INSTRUMENTAL = "дешёвыми солнцезащитными очками",
-		PREPOSITIONAL = "дешёвых солнцезащитных очках",
-	)
-
 /obj/item/clothing/glasses/sunglasses_fake/holo
 	name = "holographic sunglasses"
 	desc = "Защищают от голографических УФ-лучей голографического солнца."
-
-/obj/item/clothing/glasses/sunglasses_fake/holo/get_ru_names()
-	return alist(
-		NOMINATIVE = "голографические солнцезащитные очки",
-		GENITIVE = "голографических солнцезащитных очков",
-		DATIVE = "голографическим солнцезащитным очкам",
-		ACCUSATIVE = "голографические солнцезащитные очки",
-		INSTRUMENTAL = "голографическими солнцезащитными очками",
-		PREPOSITIONAL = "голографических солнцезащитных очках",
-	)
 
 /obj/item/clothing/glasses/sunglasses/prescription
 	prescription = TRUE
 
 /obj/item/clothing/glasses/sunglasses/big
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. Большие линзы для большего стиля."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks many flashes."
 	icon_state = "bigsunglasses"
 	item_state = "bigsunglasses"
 
 /obj/item/clothing/glasses/sunglasses/noir
 	name = "noir sunglasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			От них веет чрезвычайной старомодностью."
+	desc = "Somehow these seem even more out-of-date than normal sunglasses."
 	actions_types = list(/datum/action/item_action/noir)
-
-/obj/item/clothing/glasses/sunglasses/noir/get_ru_names()
-	return alist(
-		NOMINATIVE = "нуарные солнцезащитные очки",
-		GENITIVE = "нуарных солнцезащитных очков",
-		DATIVE = "нуарным солнцезащитным очкам",
-		ACCUSATIVE = "нуарные солнцезащитные очки",
-		INSTRUMENTAL = "нуарными солнцезащитными очками",
-		PREPOSITIONAL = "нуарных солнцезащитных очках",
-	)
 
 /obj/item/clothing/glasses/sunglasses/noir/attack_self(mob/user)
 	toggle_noir(user)
@@ -304,8 +253,7 @@
 	user.update_client_colour()
 
 /obj/item/clothing/glasses/sunglasses/yeah
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			На оправе расположена небольшая кнопка."
+	desc = "H.C Limited edition."
 	COOLDOWN_DECLARE(use_cooldown)
 	actions_types = list(/datum/action/item_action/YEEEAAAAAHHHHHHHHHHHHH)
 
@@ -324,18 +272,7 @@
 
 /obj/item/clothing/glasses/sunglasses/lasers
 	name = "high-tech sunglasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			По бокам расположено большое количество миниатюрных датчиков и панелей."
-
-/obj/item/clothing/glasses/sunglasses/lasers/get_ru_names()
-	return alist(
-		NOMINATIVE = "высокотехнологичные солнцезащитные очки",
-		GENITIVE = "высокотехнологичных солнцезащитных очков",
-		DATIVE = "высокотехнологичным солнцезащитным очкам",
-		ACCUSATIVE = "высокотехнологичные солнцезащитные очки",
-		INSTRUMENTAL = "высокотехнологичными солнцезащитными очками",
-		PREPOSITIONAL = "высокотехнологичных солнцезащитных очках",
-	)
+	desc = "A peculiar set of sunglasses; they have various chips and other panels attached to the sides of the frames."
 
 /obj/item/clothing/glasses/sunglasses/lasers/Initialize(mapload)
 	. = ..()
@@ -355,7 +292,7 @@
 
 /obj/item/clothing/glasses/sunglasses/blindfold
 	name = "blindfold"
-	desc = "Закрывает глаза, лишая зрения."
+	desc = "Covers the eyes, preventing sight."
 	gender = FEMALE
 	icon_state = "blindfold_white"
 	item_state = "blindfold_white"
@@ -363,16 +300,6 @@
 	tint = 3 // to make them blind
 	prescription_upgradable = FALSE
 	var/colour = null
-
-/obj/item/clothing/glasses/sunglasses/blindfold/get_ru_names()
-	return alist(
-		NOMINATIVE = "повязка на глаза",
-		GENITIVE = "повязки на глаза",
-		DATIVE = "повязке на глаза",
-		ACCUSATIVE = "повязку на глаза",
-		INSTRUMENTAL = "повязкой на глаза",
-		PREPOSITIONAL = "повязке на глаза",
-	)
 
 /obj/item/clothing/glasses/sunglasses/blindfold/Initialize(mapload)
 	. = ..()
@@ -392,16 +319,6 @@
 	tint = 0
 	prescription_upgradable = FALSE
 
-/obj/item/clothing/glasses/sunglasses/blindfold_fake/get_ru_names()
-	return alist(
-		NOMINATIVE = "тонкая повязка на глаза",
-		GENITIVE = "тонкой повязки на глаза",
-		DATIVE = "тонкой повязке на глаза",
-		ACCUSATIVE = "тонкую повязку на глаза",
-		INSTRUMENTAL = "тонкой повязкой на глаза",
-		PREPOSITIONAL = "тонкой повязке на глаза",
-	)
-
 /obj/item/clothing/glasses/sunglasses/blindfold_fake/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
@@ -413,20 +330,9 @@
 	icon_state = "cucumbermask"
 	item_state = "cucumbermask"
 
-/obj/item/clothing/glasses/sunglasses/blindfold/cucumbermask/get_ru_names()
-	return alist(
-		NOMINATIVE = "огуречная маска",
-		GENITIVE = "огуречной маски",
-		DATIVE = "огуречной маске",
-		ACCUSATIVE = "огуречную маску",
-		INSTRUMENTAL = "огуречной маской",
-		PREPOSITIONAL = "огуречной маске",
-	)
-
-// MARK: Meson Glasses
 /obj/item/clothing/glasses/meson
 	name = "optical meson scanner"
-	desc = "Специальные очки, используемые для визуального обнаружения брешей и полостей в окружающем пространстве."
+	desc = "Used for seeing walls, floors, and stuff through anything."
 	gender = MALE
 	icon_state = "meson"
 	item_state = "meson"
@@ -447,16 +353,6 @@
 	)
 	var/active_on_equip = TRUE
 
-/obj/item/clothing/glasses/meson/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптический мезонный сканер",
-		GENITIVE = "оптического мезонного сканера",
-		DATIVE = "оптическому мезонному сканеру",
-		ACCUSATIVE = "оптический мезонный сканер",
-		INSTRUMENTAL = "оптическим мезонным сканером",
-		PREPOSITIONAL = "оптическом мезонном сканере"
-	)
-
 /obj/item/clothing/glasses/meson/equipped(mob/user, slot, initial)
 	. = ..()
 	if(active_on_equip && slot == ITEM_SLOT_EYES)
@@ -469,23 +365,12 @@
 
 /obj/item/clothing/glasses/meson/sunglasses
 	name = "meson sunglasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			Оснащены системой мезонного зрения, предназначенной для визуального обнаружения брешей и полостей в окружающем пространстве."
+	desc = "Sunglasses with an inbuilt scanner that can see through both walls and flooring."
 	gender = PLURAL
 	icon_state = "sunmeson"
 	item_state = "sunmeson"
 	flash_protect = FLASH_PROTECTION_FLASH
 	tint = 1
-
-/obj/item/clothing/glasses/meson/sunglasses/get_ru_names()
-	return alist(
-		NOMINATIVE = "мезонные солнцезащитные очки",
-		GENITIVE = "мезонных солнцезащитных очков",
-		DATIVE = "мезонным солнцезащитным очкам",
-		ACCUSATIVE = "мезонные солнцезащитные очки",
-		INSTRUMENTAL = "мезонными солнцезащитными очками",
-		PREPOSITIONAL = "мезонных солнцезащитных очках",
-	)
 
 /obj/item/clothing/glasses/meson/heart
 	name = "heart meson glasses"
@@ -495,20 +380,9 @@
 	icon_state = "heart_meson"
 	item_state = "heart_meson"
 
-/obj/item/clothing/glasses/meson/heart/get_ru_names()
-	return alist(
-		NOMINATIVE = "мезонные очки-сердечки",
-		GENITIVE = "мезонных очков-сердечек",
-		DATIVE = "мезонным очкам-сердечкам",
-		ACCUSATIVE = "мезонные очки-сердечки",
-		INSTRUMENTAL = "мезонными очками-сердечками",
-		PREPOSITIONAL = "мезонных очках-сердечках",
-	)
-
 /obj/item/clothing/glasses/meson/night
 	name = "night vision optical meson scanner"
-	desc = "Специальные очки, используемые для визуального обнаружения брешей и полостей в окружающем пространстве. \
-			Данная модель оснащена светочувствительной матрицей, повышающей видимость в условиях ограниченного освещения."
+	desc = "An optical meson scanner fitted with an amplified visible light spectrum overlay, providing greater visual clarity in darkness."
 	gender = PLURAL
 	icon_state = "nvgmeson"
 	item_state = "nvgmeson"
@@ -517,23 +391,12 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	prescription_upgradable = FALSE
 
-/obj/item/clothing/glasses/meson/night/get_ru_names()
-	return alist(
-		NOMINATIVE = "мезонные очки ночного видения",
-		GENITIVE = "мезонных очков ночного видения",
-		DATIVE = "мезонным очкам ночного видения",
-		ACCUSATIVE = "мезонные очки ночного видения",
-		INSTRUMENTAL = "мезонными очками ночного видения",
-		PREPOSITIONAL = "мезонных очках ночного видения"
-	)
-
 /obj/item/clothing/glasses/meson/prescription
 	prescription = TRUE
 
 /obj/item/clothing/glasses/meson/gar
 	name = "gar mesons"
-	desc = "Специальные очки, используемые для визуального обнаружения брешей и полостей в окружающем пространстве. \
-			Обладают уникальным дизайном."
+	desc = "Do the impossible, see the invisible!"
 	gender = PLURAL
 	icon_state = "garm"
 	item_state = "garm"
@@ -544,33 +407,13 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharp = TRUE
 
-/obj/item/clothing/glasses/meson/gar/get_ru_names()
-	return alist(
-		NOMINATIVE = "гар-мезонные очки",
-		GENITIVE = "гар-мезонных очков",
-		DATIVE = "гар-мезонным очкам",
-		ACCUSATIVE = "гар-мезонные очки",
-		INSTRUMENTAL = "гар-мезонными очками",
-		PREPOSITIONAL = "гар-мезонных очках"
-	)
-
 /obj/item/clothing/glasses/meson/cyber
 	name = "eye replacement implant"
-	desc = "Имплантированная замена левого глаза с функцией мезонного зрения. Позволяет видеть бреши и полости в окружающем пространстве."
+	desc = "An implanted replacement for a left eye with meson vision capabilities."
 	icon_state = "cybereye-green"
 	item_state = "eyepatch"
 	flags_cover = NONE
 	prescription_upgradable = FALSE
-
-/obj/item/clothing/glasses/meson/cyber/get_ru_names()
-	return alist(
-		NOMINATIVE = "имплант замены глаза",
-		GENITIVE = "импланта замены глаза",
-		DATIVE = "импланту замены глаза",
-		ACCUSATIVE = "имплант замены глаза",
-		INSTRUMENTAL = "имплантом замены глаза",
-		PREPOSITIONAL = "импланте замены глаза",
-	)
 
 /obj/item/clothing/glasses/meson/cyber/Initialize(mapload)
 	. = ..()
@@ -581,16 +424,6 @@
 	desc = "Технологичный визор для глаз. Оснащён системой мезонного зрения, предназначенной для визуального обнаружения брешей и полостей в окружающем пространстве."
 	icon_state = "mesonvisor"
 	item_state = "mesonvisor"
-
-/obj/item/clothing/glasses/meson/visor/get_ru_names()
-	return alist(
-		NOMINATIVE = "мезонный оптический визор",
-		GENITIVE = "мезонного оптического визора",
-		DATIVE = "мезонному оптическому визору",
-		ACCUSATIVE = "мезонный оптический визор",
-		INSTRUMENTAL = "мезонным оптическим визором",
-		PREPOSITIONAL = "мезонном оптическом визоре",
-	)
 
 /obj/item/clothing/glasses/meson/monocle
 	name = "meson monocle scanner"
@@ -604,40 +437,18 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/meson/monocle/get_ru_names()
-	return alist(
-		NOMINATIVE = "мезонный моноколь",
-		GENITIVE = "мезонного монокля",
-		DATIVE = "мезонному моноклю",
-		ACCUSATIVE = "мезонный моноколь",
-		INSTRUMENTAL = "мезонным моноклем",
-		PREPOSITIONAL = "мезонном монокле",
-	)
-
 /obj/item/clothing/glasses/meson/atmos
 	name = "atmospherics scanner goggles"
-	desc = "Специальные очки, используемые для визуального обнаружения брешей и полостей в окружающем пространстве, а также \
-			визуализации атмосферного давления."
+	desc = "Used by atmospherics techs to visualize pressure, see station structure, and see underfloor objects such as cables and pipes."
 	gender = PLURAL
 	icon_state = "trayson-pressure"
 	item_state =  null
 	origin_tech = "materials=3;magnets=2;engineering=2"
 	clothing_traits = list(TRAIT_PRESSURE_VISION)
 
-/obj/item/clothing/glasses/meson/atmos/get_ru_names()
-	return alist(
-		NOMINATIVE = "атмосферные сканирующие очки",
-		GENITIVE = "атмосферных сканирующих очков",
-		DATIVE = "атмосферным сканирующим очкам",
-		ACCUSATIVE = "атмосферные сканирующие очки",
-		INSTRUMENTAL = "атмосферными сканирующими очками",
-		PREPOSITIONAL = "атмосферных сканирующих очках",
-	)
-
-// MARK: Science Glasses
 /obj/item/clothing/glasses/science
 	name = "science goggles"
-	desc = "Специальные очки, защищающие глаза от химикатов. Оснащены научным сканером."
+	desc = "A pair of snazzy goggles used to protect against chemical spills. Fitted with an analyzer for scanning items and reagents."
 	icon_state = "purple"
 	item_state = "purple"
 	origin_tech = "magnets=2;engineering=1"
@@ -656,37 +467,16 @@
 	)
 	actions_types = list(/datum/action/item_action/toggle_research_scanner)
 
-/obj/item/clothing/glasses/science/get_ru_names()
-	return alist(
-		NOMINATIVE = "научные очки",
-		GENITIVE = "научных очков",
-		DATIVE = "научным очкам",
-		ACCUSATIVE = "научные очки",
-		INSTRUMENTAL = "научными очками",
-		PREPOSITIONAL = "научных очках",
-	)
-
 /obj/item/clothing/glasses/science/item_action_slot_check(slot, mob/user, datum/action/action)
 	if(slot == ITEM_SLOT_EYES)
 		return TRUE
 
 /obj/item/clothing/glasses/science/night
 	name = "night vision science goggle"
-	desc = "Специальные очки, защищающие глаза от химикатов. Оснащены научным сканером, \
-			а также светочувствительной матрицей, повышающей видимость в условиях ограниченного освещения."
+	desc = "Now you can science in darkness."
 	icon_state = "nvpurple"
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE //don't render darkness while wearing these
-
-/obj/item/clothing/glasses/science/night/get_ru_names()
-	return alist(
-		NOMINATIVE = "научные очки ночного видения",
-		GENITIVE = "научных очков ночного видения",
-		DATIVE = "научным очкам ночного видения",
-		ACCUSATIVE = "научные очки ночного видения",
-		INSTRUMENTAL = "научными очками ночного видения",
-		PREPOSITIONAL = "научных очках ночного видения",
-	)
 
 /obj/item/clothing/glasses/science/heart
 	name = "heart science glasses"
@@ -694,32 +484,12 @@
 	icon_state = "heart_science"
 	item_state = "heart_science"
 
-/obj/item/clothing/glasses/science/heart/get_ru_names()
-	return alist(
-		NOMINATIVE = "научные очки-сердечки",
-		GENITIVE = "научных очков-сердечек",
-		DATIVE = "научным очкам-сердечкам",
-		ACCUSATIVE = "научные очки-сердечки",
-		INSTRUMENTAL = "научными очками-сердечками",
-		PREPOSITIONAL = "научных очках-сердечках",
-	)
-
 /obj/item/clothing/glasses/science/visor
 	name = "science optical visor"
 	desc = "Технологичный визор для глаз. Оснащён научным сканером, а также защищает глаза от воздействия химикатов."
 	gender = MALE
 	icon_state = "sciencevisor"
 	item_state = "sciencevisor"
-
-/obj/item/clothing/glasses/science/visor/get_ru_names()
-	return alist(
-		NOMINATIVE = "научный оптический визор",
-		GENITIVE = "научного оптического визора",
-		DATIVE = "научному оптическому визору",
-		ACCUSATIVE = "научный оптический визор",
-		INSTRUMENTAL = "научным оптическим визором",
-		PREPOSITIONAL = "научном оптическом визоре",
-	)
 
 /obj/item/clothing/glasses/science/monocle
 	name = "science hud monocle"
@@ -734,38 +504,16 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/science/monocle/get_ru_names()
-	return alist(
-		NOMINATIVE = "научный ИЛС-моноколь",
-		GENITIVE = "научного ИЛС-монокля",
-		DATIVE = "научному ИЛС-моноклю",
-		ACCUSATIVE = "научный ИЛС-моноколь",
-		INSTRUMENTAL = "научным ИЛС-моноклем",
-		PREPOSITIONAL = "научном ИЛС-монокле",
-	)
-
 /obj/item/clothing/glasses/science/sunglasses
 	name = "sunscanners"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			Оснащены научным сканером."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Outfitted with an apparatus to scan individual reagents, tech potentials, and the internal components of machines."
 	see_in_dark = 1
 	flash_protect = FLASH_PROTECTION_FLASH
 	tint = 1
 
-/obj/item/clothing/glasses/science/sunglasses/get_ru_names()
-	return alist(
-		NOMINATIVE = "научные солнцезащитные очки",
-		GENITIVE = "научных солнцезащитных очков",
-		DATIVE = "научным солнцезащитным очкам",
-		ACCUSATIVE = "научные солнцезащитные очки",
-		INSTRUMENTAL = "научными солнцезащитными очками",
-		PREPOSITIONAL = "научных солнцезащитных очках",
-	)
-
-// MARK: Material Scanner
 /obj/item/clothing/glasses/material
 	name = "optical material scanner"
-	desc = "Специализированные очки, визуализирующие ряд определённых материалов сквозь препятствия."
+	desc = "Very confusing glasses."
 	gender = MALE
 	icon_state = "material"
 	item_state = "glasses"
@@ -783,32 +531,12 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/material/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптический сканер материалов",
-		GENITIVE = "оптического сканера материалов",
-		DATIVE = "оптическому сканеру материалов",
-		ACCUSATIVE = "оптический сканер материалов",
-		INSTRUMENTAL = "оптическим сканером материалов",
-		PREPOSITIONAL = "оптическом сканере материалов",
-	)
-
 /obj/item/clothing/glasses/material/cyber
 	name = "eye replacement implant"
-	desc = "Имплантированная замена левого глаза с функцией распознавания определённых материалов сквозь препятствия."
+	desc = "An implanted replacement for a left eye with material vision capabilities."
 	icon_state = "cybereye-blue"
 	item_state = "eyepatch"
 	flags_cover = NONE
-
-/obj/item/clothing/glasses/material/cyber/get_ru_names()
-	return alist(
-		NOMINATIVE = "имплант замены глаза",
-		GENITIVE = "импланта замены глаза",
-		DATIVE = "импланту замены глаза",
-		ACCUSATIVE = "имплант замены глаза",
-		INSTRUMENTAL = "имплантом замены глаза",
-		PREPOSITIONAL = "импланте замены глаза",
-	)
 
 /obj/item/clothing/glasses/material/cyber/Initialize(mapload)
 	. = ..()
@@ -817,7 +545,7 @@
 // MARK: Welding Glasses
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
-	desc = "Специализированные очки с УФ-экранированием высокого уровня. Предназначены для защиты глаз носителя при выполнении сварочных работ."
+	desc = "Protects the eyes from welders, approved by the mad scientist association."
 	icon_state = "welding-g"
 	item_state = "welding-g"
 	actions_types = list(/datum/action/item_action/toggle)
@@ -837,16 +565,6 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/welding/get_ru_names()
-	return alist(
-		NOMINATIVE = "сварочные очки",
-		GENITIVE = "сварочных очков",
-		DATIVE = "сварочным очкам",
-		ACCUSATIVE = "сварочные очки",
-		INSTRUMENTAL = "сварочными очками",
-		PREPOSITIONAL = "сварочных очках",
-	)
-
 /obj/item/clothing/glasses/welding/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/right_click_mapper/attack_self, "Переключить [declent_ru(ACCUSATIVE)]")
@@ -856,26 +574,14 @@
 
 /obj/item/clothing/glasses/welding/superior
 	name = "superior welding goggles"
-	desc = "Специализированные очки с УФ-экранированием высокого уровня. Предназначены для защиты глаз носителя при выполнении сварочных работ. \
-			Линзы выполнены из дорогостоящих материалов, благодаря чему они не ухудшают обзор, в отличие от более дешёвых аналогов."
+	desc = "Welding goggles made from more expensive materials, strangely smells like potatoes."
 	icon_state = "rwelding-g"
 	item_state = "rwelding-g"
 	tint = 0
 
-/obj/item/clothing/glasses/welding/superior/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенные сварочные очки",
-		GENITIVE = "улучшенных сварочных очков",
-		DATIVE = "улучшенным сварочным очкам",
-		ACCUSATIVE = "улучшенные сварочные очки",
-		INSTRUMENTAL = "улучшенными сварочными очками",
-		PREPOSITIONAL = "улучшенных сварочных очках",
-	)
-
-// MARK: Thermal Glasses
 /obj/item/clothing/glasses/thermal
 	name = "optical thermal scanner"
-	desc = "Высокотехнологичный оптический прибор, предназначенный для обнаружения тепловых сигнатур живых существ сквозь препятствия."
+	desc = "Thermals in the shape of glasses."
 	gender = MALE
 	icon_state = "thermal"
 	item_state = "thermal"
@@ -892,16 +598,6 @@
 		SPECIES_WOLPIN = 'icons/mob/clothing/species/monkey/eyes.dmi',
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/eyes.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
-	)
-
-/obj/item/clothing/glasses/thermal/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптический термальный сканер",
-		GENITIVE = "оптического термального сканера",
-		DATIVE = "оптическому термальному сканеру",
-		ACCUSATIVE = "оптический термальный сканер",
-		INSTRUMENTAL = "оптическим термальным сканером",
-		PREPOSITIONAL = "оптическом термальном сканере",
 	)
 
 /obj/item/clothing/glasses/thermal/emp_act(severity)
@@ -922,40 +618,18 @@
 	icon_state = "sunthermal"
 	item_state = "sunthermal"
 
-/obj/item/clothing/glasses/thermal_fake/get_ru_names()
-	return alist(
-		NOMINATIVE = "тармальные сонцезащитные очхи",
-		GENITIVE = "тармальных сонцезащитных очхов",
-		DATIVE = "тармальным сонцезащитным очхам",
-		ACCUSATIVE = "тармальные сонцезащитные очхи",
-		INSTRUMENTAL = "тармальными сонцезащитными очхами",
-		PREPOSITIONAL = "тармальных сонцезащитных очхах",
-	)
-
 /obj/item/clothing/glasses/thermal/sunglasses
 	name = "thermal sunglasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			Оснащены тепловизионной системой, позволяющей обнаруживать тепловые сигнатуры живых существ сквозь препятствия."
+	desc = "How does it even works?.."
 	gender = PLURAL
 	icon_state = "sunthermal"
 	item_state = "sunthermal"
 	flash_protect = FLASH_PROTECTION_FLASH
 	tint = 1
 
-/obj/item/clothing/glasses/thermal/sunglasses/get_ru_names()
-	return alist(
-		NOMINATIVE = "термальные солнцезащитные очки",
-		GENITIVE = "термальных солнцезащитных очков",
-		DATIVE = "термальным солнцезащитным очкам",
-		ACCUSATIVE = "термальные солнцезащитные очки",
-		INSTRUMENTAL = "термальными солнцезащитными очками",
-		PREPOSITIONAL = "термальных солнцезащитных очках",
-	)
-
 /obj/item/clothing/glasses/thermal/monocle
 	name = "thermal monocle scanner"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён тепловизионной системой, позволяющей обнаруживать тепловые сигнатуры живых существ сквозь препятствия."
+	desc = "A thermal monocle."
 	icon_state = "monothermal"
 	item_state = "monohud"
 	sprite_sheets = list(
@@ -964,48 +638,18 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/thermal/monocle/get_ru_names()
-	return alist(
-		NOMINATIVE = "термальный моноколь",
-		GENITIVE = "термального монокля",
-		DATIVE = "термальному моноклю",
-		ACCUSATIVE = "термальный моноколь",
-		INSTRUMENTAL = "термальным моноклем",
-		PREPOSITIONAL = "термальном монокле",
-	)
-
 /obj/item/clothing/glasses/thermal/eyepatch
 	name = "optical thermal eyepatch"
-	desc = "Повязка на глаз со встроенной тепловизионной системой, позволяющей обнаруживать тепловые сигнатуры живых существ сквозь препятствия."
+	desc = "An eyepatch with built-in thermal optics."
 	gender = FEMALE
 	icon_state = "eyepatch"
 	item_state = "eyepatch"
 
-/obj/item/clothing/glasses/thermal/eyepatch/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптическая термальная повязка на глаз",
-		GENITIVE = "оптической термальной повязки на глаз",
-		DATIVE = "оптической термальной повязке на глаз",
-		ACCUSATIVE = "оптическую термальную повязку на глаз",
-		INSTRUMENTAL = "оптической термальной повязкой на глаз",
-		PREPOSITIONAL = "оптической термальной повязке на глаз",
-	)
-
 /obj/item/clothing/glasses/thermal/cyber
 	name = "eye replacement implant"
-	desc = "Имплантированная замена левого глаза с функцией термального зрения. Позволяет обнаруживать тепловые сигнатуры живых существ сквозь препятствия."
+	desc = "An implanted replacement for a left eye with thermal vision capabilities."
 	icon_state = "cybereye-red"
 	item_state = "eyepatch"
-
-/obj/item/clothing/glasses/thermal/cyber/get_ru_names()
-	return alist(
-		NOMINATIVE = "имплант замены глаза",
-		GENITIVE = "импланта замены глаза",
-		DATIVE = "импланту замены глаза",
-		ACCUSATIVE = "имплант замены глаза",
-		INSTRUMENTAL = "имплантом замены глаза",
-		PREPOSITIONAL = "импланте замены глаза",
-	)
 
 /obj/item/clothing/glasses/thermal/cyber/Initialize(mapload)
 	. = ..()
@@ -1014,7 +658,7 @@
 // MARK: Godeye
 /obj/item/clothing/glasses/hud/godeye
 	name = "eye of god"
-	desc = "Странный глаз, который, как говорят, вырвали у всевидящего существа, некогда бродившего по пустошам."
+	desc = "A strange eye, said to have been torn from an omniscient creature that used to roam the wastes."
 	gender = MALE
 	icon_state = "godeye"
 	item_state = "godeye"
@@ -1035,16 +679,6 @@
 		SPECIES_WOLPIN = 'icons/mob/clothing/species/monkey/eyes.dmi',
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/eyes.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
-	)
-
-/obj/item/clothing/glasses/hud/godeye/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаз бога",
-		GENITIVE = "глаза бога",
-		DATIVE = "глазу бога",
-		ACCUSATIVE = "глаз бога",
-		INSTRUMENTAL = "глазом бога",
-		PREPOSITIONAL = "глазе бога",
 	)
 
 /obj/item/clothing/glasses/hud/godeye/Initialize(mapload)
@@ -1079,7 +713,7 @@
 // MARK: Tajaran Veil
 /obj/item/clothing/glasses/tajblind
 	name = "embroidered veil"
-	desc = "Адомайская вуаль, скрывающая глаза владельца от посторонних, но не затрудняя обзор носителю."
+	desc = "An Ahdominian made veil that allows the user to see while obscuring their eyes."
 	gender = FEMALE
 	icon_state = "tajblind"
 	item_state = "tajblind"
@@ -1097,34 +731,14 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/tajblind/get_ru_names()
-	return alist(
-		NOMINATIVE = "вышитая вуаль",
-		GENITIVE = "вышитой вуали",
-		DATIVE = "вышитой вуали",
-		ACCUSATIVE = "вышитую вуаль",
-		INSTRUMENTAL = "вышитой вуалью",
-		PREPOSITIONAL = "вышитой вуали",
-	)
-
 /obj/item/clothing/glasses/tajblind/eng
 	name = "industrial veil"
-	desc = "Адомайская вуаль, скрывающая глаза владельца от посторонних, но не затрудняя обзор носителю. Эта модель оснащена мезонным сканером и УФ-экранированием."
+	desc = "An Ahdominian made veil that allows the user to see while obscuring their eyes. This ones are with meson scanners and welding shield."
 	icon_state = "tajblind_engi"
 	item_state = "tajblind_engi"
 	vision_flags = SEE_TURFS
 	flash_protect = FLASH_PROTECTION_WELDER
 	var/flash_protect_up = FLASH_PROTECTION_NONE
-
-/obj/item/clothing/glasses/tajblind/eng/get_ru_names()
-	return alist(
-		NOMINATIVE = "инженерная вуаль",
-		GENITIVE = "инженерной вуали",
-		DATIVE = "инженерной вуали",
-		ACCUSATIVE = "инженерную вуаль",
-		INSTRUMENTAL = "инженерной вуалью",
-		PREPOSITIONAL = "инженерной вуали",
-	)
 
 /obj/item/clothing/glasses/tajblind/eng/sunglasses
 	flash_protect_up = FLASH_PROTECTION_FLASH
@@ -1137,39 +751,19 @@
 
 /obj/item/clothing/glasses/tajblind/sci
 	name = "science veil"
-	desc = "Адомайская вуаль, скрывающая глаза владельца от посторонних, но не затрудняя обзор носителю. Эта модель оснащена научным сканером."
+	desc = "An Ahdominian made veil that allows the user to see while obscuring their eyes. This ones are with reagent and research scanners."
 	icon_state = "tajblind_sci"
 	item_state = "tajblind_sci"
 	examine_extensions = EXAMINE_HUD_SCIENCE
 	actions_types = list(/datum/action/item_action/toggle_research_scanner,/datum/action/item_action/toggle)
 
-/obj/item/clothing/glasses/tajblind/sci/get_ru_names()
-	return alist(
-		NOMINATIVE = "научная вуаль",
-		GENITIVE = "научной вуали",
-		DATIVE = "научной вуали",
-		ACCUSATIVE = "научную вуаль",
-		INSTRUMENTAL = "научной вуалью",
-		PREPOSITIONAL = "научной вуали",
-	)
-
 /obj/item/clothing/glasses/tajblind/cargo
 	name = "meson veil"
-	desc = "Адомайская вуаль, скрывающая глаза владельца от посторонних, но не затрудняя обзор носителю. Эта модель оснащена мезонным сканером."
+	desc = "An Ahdominian made veil that allows the user to see while obscuring their eyes. This ones are with meson scanners."
 	icon_state = "tajblind_cargo"
 	item_state = "tajblind_cargo"
 	vision_flags = SEE_TURFS
 	prescription_upgradable = TRUE
-
-/obj/item/clothing/glasses/tajblind/cargo/get_ru_names()
-	return alist(
-		NOMINATIVE = "мезонная вуаль",
-		GENITIVE = "мезонной вуали",
-		DATIVE = "мезонной вуали",
-		ACCUSATIVE = "мезонную вуаль",
-		INSTRUMENTAL = "мезонной вуалью",
-		PREPOSITIONAL = "мезонной вуали",
-	)
 
 /obj/item/clothing/glasses/tajblind/cargo/sunglasses
 	flash_protect = FLASH_PROTECTION_FLASH
@@ -1190,7 +784,7 @@
 // MARK: Misc Glasses
 /obj/item/clothing/glasses/heart
 	name = "heart-shaped glasses"
-	desc = "Дешёвые пластиковые очки причудливой формы."
+	desc = "Cheap plastic glasses with a fancy shape."
 	icon_state = "heart"
 	item_state = "heart"
 	sprite_sheets = list(
@@ -1204,16 +798,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/heart/get_ru_names()
-	return alist(
-		NOMINATIVE = "очки-сердечки",
-		GENITIVE = "очков-сердечек",
-		DATIVE = "очкам-сердечкам",
-		ACCUSATIVE = "очки-сердечки",
-		INSTRUMENTAL = "очками-сердечками",
-		PREPOSITIONAL = "очках-сердечках",
-	)
-
 /obj/item/clothing/glasses/heart/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
@@ -1224,19 +808,9 @@
 	icon_state = "goldblue"
 	item_state = "goldblue"
 
-/obj/item/clothing/glasses/goldblue/get_ru_names()
-	return alist(
-		NOMINATIVE = "очки в золотистой оправе",
-		GENITIVE = "очков в золотистой оправе",
-		DATIVE = "очкам в золотистой оправе",
-		ACCUSATIVE = "очки в золотистой оправе",
-		INSTRUMENTAL = "очками в золотистой оправе",
-		PREPOSITIONAL = "очках в золотистой оправе",
-	)
-
 /obj/item/clothing/glasses/night
 	name = "night vision goggles"
-	desc = "Оптический прибор, улучшающий видимость в условиях ограниченного освещения."
+	desc = "You can totally see in the dark now!"
 	icon_state = "night"
 	item_state = "glasses"
 	origin_tech = "materials=4;magnets=4;plasmatech=4;engineering=4"
@@ -1254,19 +828,9 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/night/get_ru_names()
-	return alist(
-		NOMINATIVE = "очки ночного видения",
-		GENITIVE = "очков ночного видения",
-		DATIVE = "очкам ночного видения",
-		ACCUSATIVE = "очки ночного видения",
-		INSTRUMENTAL = "очками ночного видения",
-		PREPOSITIONAL = "очках ночного видения",
-	)
-
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
-	desc = "Стильная повязка, закрывающая глаз."
+	desc = "Yarr."
 	gender = FEMALE
 	icon_state = "eyepatch"
 	item_state = "eyepatch"
@@ -1282,19 +846,9 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/eyepatch/get_ru_names()
-	return alist(
-		NOMINATIVE = "повязка на глаз",
-		GENITIVE = "повязки на глаз",
-		DATIVE = "повязке на глаз",
-		ACCUSATIVE = "повязку на глаз",
-		INSTRUMENTAL = "повязкой на глаз",
-		PREPOSITIONAL = "повязке на глаз",
-	)
-
 /obj/item/clothing/glasses/monocle
 	name = "monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица."
+	desc = "Such a dapper eyepiece!"
 	icon_state = "monocle"
 	item_state = "monohud"
 	gender = MALE
@@ -1311,19 +865,9 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/monocle/get_ru_names()
-	return alist(
-		NOMINATIVE = "моноколь",
-		GENITIVE = "монокля",
-		DATIVE = "моноклю",
-		ACCUSATIVE = "моноколь",
-		INSTRUMENTAL = "моноклем",
-		PREPOSITIONAL = "монокле",
-	)
-
 /obj/item/clothing/glasses/threedglasses
 	name = "3D glasses"
-	desc = "Когда-то давно люди использовали такие очки, чтобы делать изображение на экранах трёхмерным."
+	desc = "A long time ago, people used these glasses to makes images from screens threedimensional."
 	icon_state = "3d"
 	item_state = "3d"
 
@@ -1338,19 +882,9 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 
-/obj/item/clothing/glasses/threedglasses/get_ru_names()
-	return alist(
-		NOMINATIVE = "3D-очки",
-		GENITIVE = "3D-очков",
-		DATIVE = "3D-очкам",
-		ACCUSATIVE = "3D-очки",
-		INSTRUMENTAL = "3D-очками",
-		PREPOSITIONAL = "3D-очках",
-	)
-
 /obj/item/clothing/glasses/gglasses
 	name = "green glasses"
-	desc = "Очки цвета тёмной зелени — выглядят зловеще."
+	desc = "Forest green glasses, like the kind you'd wear when hatching a nasty scheme."
 	icon_state = "gglasses"
 	item_state = "gglasses"
 
@@ -1365,13 +899,3 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/eyes.dmi',
 	)
 	prescription_upgradable = TRUE
-
-/obj/item/clothing/glasses/gglasses/get_ru_names()
-	return alist(
-		NOMINATIVE = "зелёные очки",
-		GENITIVE = "зелёных очков",
-		DATIVE = "зелёным очкам",
-		ACCUSATIVE = "зелёные очки",
-		INSTRUMENTAL = "зелёными очками",
-		PREPOSITIONAL = "зелёных очках",
-	)

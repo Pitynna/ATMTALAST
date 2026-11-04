@@ -43,7 +43,7 @@
 
 // MARK: .257 Improvised
 /obj/item/ammo_casing/revolver/improvised
-	desc = "Полностью металлическая гильза, из которой течёт масло. Это явно ненадёжный патрон."
+	desc = "Full metal shell leaking oil. This is clearly an unreliable bullet."
 	ammo_marking = ".257"
 	icon_state = "rev-improv-casing"
 	materials = list(MAT_METAL = 100)
@@ -57,7 +57,7 @@
 	desc = initial(desc)
 
 /obj/item/ammo_casing/revolver/improvised/phosphorus
-	desc = "Полностью металлическая гильза, из которой течёт масло и фосфор. Это явно ненадёжный патрон."
+	desc = "Full metal shell leaking oil and phosphorous. This is clearly an unreliable bullet."
 	ammo_marking = ".257 \"Фосфор\""
 	icon_state = "rev-phosphor-casing"
 	projectile_type = /obj/projectile/bullet/weakbullet3/c257/phosphorus
@@ -71,16 +71,6 @@
 	var/max_damage = 25
 	/// Damage set by the plant
 	var/damage = 25 //max potency, is set
-
-/obj/item/ammo_casing/pea/get_ru_names()
-	return alist(
-		NOMINATIVE = "гильза гороховой пули",
-		GENITIVE = "гильзы гороховой пули",
-		DATIVE = "гильзе гороховой пули",
-		ACCUSATIVE = "гильзу гороховой пули",
-		INSTRUMENTAL = "гильзой гороховой пули",
-		PREPOSITIONAL = "гильзе гороховой пули",
-	)
 
 /obj/item/ammo_casing/pea/Initialize(mapload)
 	. = ..()

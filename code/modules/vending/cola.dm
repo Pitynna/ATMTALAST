@@ -1,6 +1,6 @@
 /obj/machinery/vending/cola
 	name = "Robust Softdrinks"
-	desc = "Автомат с безалкогольными напитками, предоставляемый компанией Robust Industries, LLC."
+	desc = "A soft drink vendor provided by Robust Industries, LLC."
 	icon_state = "cola-machine_off"
 	panel_overlay = "cola-machine_panel"
 	screen_overlay = "cola-machine"
@@ -40,13 +40,3 @@
 		/obj/item/reagent_containers/cup/soda_cans/thirteenloko = 5,
 	)
 	refill_canister = /obj/item/vending_refill/cola
-
-/obj/machinery/vending/cola/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Robust Softdrinks",
-		GENITIVE = "торгового автомата Robust Softdrinks",
-		DATIVE = "торговому автомату Robust Softdrinks",
-		ACCUSATIVE = "торговый автомат Robust Softdrinks",
-		INSTRUMENTAL = "торговым автоматом Robust Softdrinks",
-		PREPOSITIONAL = "торговом автомате Robust Softdrinks",
-	)

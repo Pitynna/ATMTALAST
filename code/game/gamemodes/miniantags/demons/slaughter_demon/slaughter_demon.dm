@@ -75,17 +75,7 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "innards"
 	name = "pile of viscera"
-	desc = "Омерзительная масса из разорванной плоти и органов."
-
-/obj/effect/decal/cleanable/blood/innards/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровавое месиво",
-		GENITIVE = "кровавого месива",
-		DATIVE = "кровавому месиву",
-		ACCUSATIVE = "кровавое месиво",
-		INSTRUMENTAL = "кровавым месивом",
-		PREPOSITIONAL = "кровавом месиве",
-	)
+	desc = "A repulsive pile of guts and gore."
 
 /mob/living/simple_animal/demon/slaughter/proc/release_consumed(mob/living/consumed)
 	consumed?.forceMove(get_turf(src))

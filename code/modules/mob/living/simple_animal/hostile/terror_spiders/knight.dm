@@ -118,14 +118,4 @@
 /obj/structure/spider/terrorweb/knight
 	max_integrity = 30
 	name = "reinforced web"
-	desc = "Эта паутина усилена прочными нитями для дополнительной прочности."
-
-/obj/structure/spider/terrorweb/knight/get_ru_names()
-	return alist(
-		NOMINATIVE = "укрепленная паутина",
-		GENITIVE = "укрепленной паутины",
-		DATIVE = "укрепленной паутине",
-		ACCUSATIVE = "укрепленную паутину",
-		INSTRUMENTAL = "укрепленной паутиной",
-		PREPOSITIONAL = "укрепленной паутине",
-	)
+	desc = "This web is reinforced with extra strands, for added strength."

@@ -23,16 +23,6 @@
 	/// Inserted vortex anomaly core.
 	var/obj/item/assembly/signaler/core/vortex/core = null
 
-/obj/item/gun/syringe/rapidsyringe/experimental/get_ru_names()
-	return alist(
-		NOMINATIVE = "экспериментальный шприцемёт", \
-		GENITIVE = "экспериментального шприцемёта", \
-		DATIVE = "экспериментальному шприцемёту", \
-		ACCUSATIVE = "экспериментальный шприцемёт", \
-		INSTRUMENTAL = "экспериментальным шприцемётом", \
-		PREPOSITIONAL = "экспериментальном шприцемёте",
-	)
-
 /obj/item/gun/syringe/rapidsyringe/experimental/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)

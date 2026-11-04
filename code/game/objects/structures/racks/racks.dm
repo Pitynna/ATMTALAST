@@ -1,7 +1,7 @@
 // MARK: Rack
 /obj/structure/rack
 	name = "rack"
-	desc = "Белый крупный стеллаж, удобен для хранения различных вещей."
+	desc = "Different from the Middle Ages version."
 	gender = MALE
 	icon = 'icons/obj/structures/rack.dmi'
 	icon_state = "rack"
@@ -14,16 +14,6 @@
 	var/wooden_version = FALSE
 	/// The type of parts created when deconstructing.
 	var/parts_type = /obj/item/rack_parts
-
-/obj/structure/rack/get_ru_names()
-	return alist(
-		NOMINATIVE = "стеллаж",
-		GENITIVE = "стеллажа",
-		DATIVE = "стеллажу",
-		ACCUSATIVE = "стеллаж",
-		INSTRUMENTAL = "стеллажом",
-		PREPOSITIONAL = "стеллаже",
-	)
 
 /obj/structure/rack/ComponentInitialize()
 	AddElement(/datum/element/climbable)
@@ -121,7 +111,7 @@
 // MARK: Skeletal Minibar
 /obj/structure/rack/skeletal_bar
 	name = "skeletal minibar"
-	desc = "Сделано из черепов павших."
+	desc = "Made with the skulls of the fallen."
 	icon_state = "minibar"
 
 /obj/structure/rack/skeletal_bar/left
@@ -133,7 +123,7 @@
 // MARK: Gun Rack
 /obj/structure/rack/gunrack
 	name = "gun rack"
-	desc = "Оружейная стойка для хранения оружия."
+	desc = "A rack for stowing firearms."
 	icon_state = "gunrack"
 	parts_type = /obj/item/rack_parts/gunrack_parts
 
@@ -197,16 +187,6 @@
 	icon_state = "wooden_rack"
 	wooden_version = TRUE
 	obj_flags = NODECONSTRUCT
-
-/obj/structure/rack/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянный стеллаж",
-		GENITIVE = "деревянного стеллажа",
-		DATIVE = "деревянному стеллажу",
-		ACCUSATIVE = "деревянный стеллаж",
-		INSTRUMENTAL = "деревянным стеллажом",
-		PREPOSITIONAL = "деревянном стеллаже",
-	)
 
 /obj/structure/rack/wooden/Initialize(mapload)
 	. = ..()

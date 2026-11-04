@@ -282,16 +282,6 @@
 	gender = MALE
 	anchored = TRUE
 
-/obj/effect/decal/remains/mouse/Pinkie/get_ru_names()
-	return alist(
-		NOMINATIVE = "Пинки",
-		GENITIVE = "Пинки",
-		DATIVE = "Пинки",
-		ACCUSATIVE = "Пинки",
-		INSTRUMENTAL = "Пинки",
-		PREPOSITIONAL = "Пинки",
-	)
-
 /mob/living/simple_animal/mouse/rat/Ratatui
 	name = "Ratatui"
 	real_name = "Рататуй"

@@ -365,7 +365,7 @@
 /// FOAM STRUCTURE. Formed by metal foams. Dense and opaque, but easy to break
 /obj/structure/foamedmetal
 	name = "foamed metal"
-	desc = "Легкая стена из вспененного металла"
+	desc = "A lightweight foamed metal wall."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "metalfoam"
 	density = TRUE
@@ -376,16 +376,6 @@
 	gender = PLURAL
 	max_integrity = 20
 	obj_flags = BLOCK_Z_IN_DOWN | BLOCK_Z_IN_UP
-
-/obj/structure/foamedmetal/get_ru_names()
-	return alist(
-		NOMINATIVE = "пенометалл",
-		GENITIVE = "пенометалла",
-		DATIVE = "пенометаллу",
-		ACCUSATIVE = "пенометалл",
-		INSTRUMENTAL = "пенометаллом",
-		PREPOSITIONAL = "пенометалле",
-	)
 
 /obj/structure/foamedmetal/Initialize(mapload)
 	. = ..()
@@ -424,22 +414,12 @@
 /// Atmos Backpack Resin, transparent, prevents atmos and filters the air
 /obj/structure/foamedmetal/resin
 	name = "ATMOS Resin"
-	desc = "Легкая прозрачная смола, используемая для тушения пожаров, очистки воздуха от токсинов и восстановления безопасной температуры воздуха."
+	desc = "A light, transparent resin used to extinguish fires, remove airborne toxins and restore a safe air temperature."
 	opacity = FALSE
 	icon_state = "atmos_resin"
 	alpha = 120
 	max_integrity = 10
 	pass_flags_self = PASSGLASS
-
-/obj/structure/foamedmetal/resin/get_ru_names()
-	return alist(
-		NOMINATIVE = "атмосферная смола",
-		GENITIVE = "атмосферной смолы",
-		DATIVE = "атмосферной смоле",
-		ACCUSATIVE = "атмосферную смолу",
-		INSTRUMENTAL = "атмосферной смолой",
-		PREPOSITIONAL = "атмосферной смоле",
-	)
 
 /obj/structure/foamedmetal/resin/Initialize(mapload)
 	. = ..()

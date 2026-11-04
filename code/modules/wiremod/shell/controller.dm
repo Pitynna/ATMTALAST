@@ -13,16 +13,6 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/controller/get_ru_names()
-	return alist(
-		NOMINATIVE = "контроллер",
-		GENITIVE = "контроллера",
-		DATIVE = "контроллеру",
-		ACCUSATIVE = "контроллер",
-		INSTRUMENTAL = "контроллером",
-		PREPOSITIONAL = "контроллере"
-	)
-
 /obj/item/controller/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

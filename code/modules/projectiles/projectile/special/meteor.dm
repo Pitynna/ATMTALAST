@@ -6,16 +6,6 @@
 	nodamage = TRUE
 	hitsound = 'sound/effects/meteorimpact.ogg'
 
-/obj/projectile/meteor/get_ru_names()
-	return alist(
-		NOMINATIVE = "метеор",
-		GENITIVE = "метеора",
-		DATIVE = "метеору",
-		ACCUSATIVE = "метеор",
-		INSTRUMENTAL = "метеором",
-		PREPOSITIONAL = "метеоре",
-	)
-
 /obj/projectile/meteor/on_hit(atom/target, blocked, hit_zone)
 	. = ..()
 	if(blocked >= 100)

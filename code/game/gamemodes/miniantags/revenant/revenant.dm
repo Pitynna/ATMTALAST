@@ -406,7 +406,7 @@
 
 /obj/item/ectoplasm/revenant
 	name = "glimmering residue"
-	desc = "Куча мелкой синей пыли. Вокруг неё вьются тонкие фиолетовые туманные завитки."
+	desc = "A pile of fine blue dust. Small tendrils of violet mist swirl around it."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "revenantEctoplasm"
 	w_class = WEIGHT_CLASS_SMALL
@@ -415,16 +415,6 @@
 	var/essence = 75 //the maximum essence of the reforming revenant
 	var/inert = FALSE
 	var/client/client_to_revive
-
-/obj/item/ectoplasm/revenant/get_ru_names()
-	return alist(
-		NOMINATIVE = "фантомная пыль",
-		GENITIVE = "фантомной пыли",
-		DATIVE = "фантомной пыли",
-		ACCUSATIVE = "фантомную пыль",
-		INSTRUMENTAL = "фантомной пылью",
-		PREPOSITIONAL = "фантомной пыли",
-	)
 
 /obj/item/ectoplasm/revenant/Initialize(mapload)
 	. = ..()

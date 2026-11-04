@@ -71,16 +71,6 @@
 	post_init_icon_state = "bench_middle"
 	comfort = 0.1
 
-/obj/structure/chair/sofa/bench/get_ru_names()
-	return alist(
-		NOMINATIVE = "скамья",
-		GENITIVE = "скамьи",
-		DATIVE = "скамье",
-		ACCUSATIVE = "скамью",
-		INSTRUMENTAL = "скамьёй",
-		PREPOSITIONAL = "скамье"
-	)
-
 /obj/structure/chair/sofa/bench/left
 	icon_state = "/obj/structure/chair/sofa/bench/left"
 	greyscale_config = /datum/greyscale_config/bench_left

@@ -58,13 +58,3 @@
 		/obj/item/storage/box/teargas = 2,
 		/obj/item/ammo_box/a357 = 1,
 	)
-
-/obj/machinery/vending/ammo/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Liberty",
-		GENITIVE = "торгового автомата Liberty",
-		DATIVE = "торговому автомату Liberty",
-		ACCUSATIVE = "торговый автомат Liberty",
-		INSTRUMENTAL = "торговым автоматом Liberty",
-		PREPOSITIONAL = "торговом автомате Liberty",
-	)

@@ -1,6 +1,6 @@
 /obj/machinery/vending/wallmed
 	name = "NanoMed"
-	desc = "Настенный раздатчик медикаментов."
+	desc = "Wall-mounted Medical Equipment dispenser."
 	slogan_list = list(
 		"Ид+и и спас+и н+есколько ж+изней!",
 		"Прихват+ите немн+ого на вс+який сл+учай!",
@@ -42,21 +42,11 @@
 	refill_canister = /obj/item/vending_refill/wallmed
 	tiltable = FALSE
 
-/obj/machinery/vending/wallmed/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NanoMed",
-		GENITIVE = "торгового автомата NanoMed",
-		DATIVE = "торговому автомату NanoMed",
-		ACCUSATIVE = "торговый автомат NanoMed",
-		INSTRUMENTAL = "торговым автоматом NanoMed",
-		PREPOSITIONAL = "торговом автомате NanoMed",
-	)
-
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/wallmed, 25, 30)
 
 /obj/machinery/vending/wallmed/syndicate
 	name = "SyndiWallMed"
-	desc = "<b>Злое</b> воплощение настенного раздатчика медицинских изделий."
+	desc = "<b>EVIL</b> wall-mounted Medical Equipment dispenser."
 	screen_overlay = "syndimed"
 	deny_overlay = "syndimed_deny"
 
@@ -70,13 +60,3 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/wallmed, 25, 30)
 	)
 
 	req_access = list(ACCESS_SYNDICATE)
-
-/obj/machinery/vending/wallmed/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат SyndiWallMed",
-		GENITIVE = "торгового автомата SyndiWallMed",
-		DATIVE = "торговому автомату SyndiWallMed",
-		ACCUSATIVE = "торговый автомат SyndiWallMed",
-		INSTRUMENTAL = "торговым автоматом SyndiWallMed",
-		PREPOSITIONAL = "торговом автомате SyndiWallMed",
-	)

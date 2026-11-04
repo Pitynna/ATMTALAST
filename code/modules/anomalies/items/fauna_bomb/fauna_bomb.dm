@@ -44,16 +44,6 @@
 	/// Number of current target choosing. Used to not stop choosing because of multiclicks.
 	var/cur_choosing = 0
 
-/obj/item/fauna_bomb/get_ru_names()
-	return alist(
-		NOMINATIVE = "фаунная бомба", \
-		GENITIVE = "фаунной бомбы", \
-		DATIVE = "фаунной бомбе", \
-		ACCUSATIVE = "фаунную бомбу", \
-		INSTRUMENTAL = "фаунной бомбой", \
-		PREPOSITIONAL = "фаунной бомбе",
-	)
-
 /obj/item/fauna_bomb/Destroy()
 	for(var/mob/living/mob in created_mobs)
 		mob.death()

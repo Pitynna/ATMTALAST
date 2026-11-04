@@ -72,7 +72,7 @@
 
 /obj/item/voice_changer/ghostface
 	name = "Ghostface emmission"
-	desc = "Вы не должны были этого видеть. Пожалуйста, сообщите о нахождении этого предмета в #баг-репорты-v2"
+	desc = "You shouldn't be seeing this!"
 	voice = "Ghostface"
 	active = TRUE
 	actions_types = null

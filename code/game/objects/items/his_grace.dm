@@ -6,7 +6,7 @@
 //Using His Grace effectively requires extreme speed and care.
 /obj/item/his_grace
 	name = "artistic toolbox"
-	desc = "Покрашенный в ярко-зелёные цвета тулбокс. От одного его вида становится страшно."
+	desc = "A toolbox painted bright green. Looking at it makes you feel uneasy."
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "toolbox_green"
 	righthand_file = 'icons/mob/inhands/storage_righthand.dmi'
@@ -29,16 +29,6 @@
 	var/ascended = FALSE
 	var/rogue = FALSE
 	var/datum/grace_tier/tier
-
-/obj/item/his_grace/get_ru_names()
-	return alist(
-		NOMINATIVE = "артистический ящик для инструментов",
-		GENITIVE = "артистического ящика для инструментов",
-		DATIVE = "артистическому ящику для инструментов",
-		ACCUSATIVE = "артистический ящик для инструментов",
-		INSTRUMENTAL = "артистическим ящиком для инструментов",
-		PREPOSITIONAL = "артистическом ящике для инструментов",
-	)
 
 /obj/item/his_grace/ui_action_click(mob/user, datum/action/action, leftclick)
 	if(!user.has_status_effect(STATUS_EFFECT_HISGRACE))

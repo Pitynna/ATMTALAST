@@ -335,7 +335,7 @@ Difficulty: Very Hard
 
 /obj/effect/temp_visual/at_shield
 	name = "anti-toolbox field"
-	desc = "Мерцающее силовое поле, защищающее колосса."
+	desc = "A shimmering forcefield protecting the colossus."
 	icon_state = "at_shield2"
 	layer = FLY_LAYER
 	light_range = 2

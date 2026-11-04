@@ -15,7 +15,7 @@
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/ert
 	name = "specops navigation computer"
-	desc = "Используется, чтобы указать точное местоположение для отправки ОБР."
+	desc = "Used to designate a precise transit location for the specops shuttle."
 	shuttleId = "specops"
 	shuttlePortId = "specops_custom"
 	view_range = 13

@@ -16,15 +16,6 @@
 	clumsy_check = FALSE
 	needs_permit = FALSE
 
-/obj/item/gun/energy/wiremod_gun/get_ru_names()
-	return alist(
-		NOMINATIVE = "сигнальная пушка",
-		GENITIVE = "сигнальной пушки",
-		DATIVE = "сигнальной пушке",
-		ACCUSATIVE = "сигнальную пушку",
-		INSTRUMENTAL = "сигнальной пушкой",
-		PREPOSITIONAL = "сигнальной пушке"
-	)
 /obj/item/ammo_casing/energy/wiremod_gun
 	projectile_type = /obj/projectile/energy/wiremod_gun
 	harmful = FALSE

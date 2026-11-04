@@ -60,7 +60,7 @@
 
 /obj/item/implant/deathrattle
 	name = "deathrattle implant"
-	desc = "Надеюсь, что никто из ваших товарищей не погибнет! Но если погибнет, то вы об этом узнаете."
+	desc = "Hope no one else dies, prepare for when they do."
 	activated = BIOCHIP_ACTIVATED_PASSIVE
 	trigger_causes = BIOCHIP_TRIGGER_DEATH_ANY
 	implant_state = "implant-nanotrasen"
@@ -69,27 +69,7 @@
 /obj/item/implant/deathrattle/death_trigger(mob/source, gibbed)
 	activate("death")
 
-/obj/item/implant/deathrattle/get_ru_names()
-	return alist(
-		NOMINATIVE = "имплант предсмертного отзвука",
-		GENITIVE = "импланта предсмертного отзвука",
-		DATIVE = "импланту предсмертного отзвука",
-		ACCUSATIVE = "имплант предсмертного отзвука",
-		INSTRUMENTAL = "имплантом предсмертного отзвука",
-		PREPOSITIONAL = "импланте предсмертного отзвука",
-	)
-
 /obj/item/implantcase/deathrattle
 	name = "implant case - 'Deathrattle'"
-	desc = "Стеклянный кейс, хранящий имплант предсмертного отзвука."
+	desc = "A glass case containing a deathrattle implant."
 	imp = /obj/item/implant/deathrattle
-
-/obj/item/implantcase/deathrattle/get_ru_names()
-	return alist(
-		NOMINATIVE = "кейс с имплантом предсмертного отзвука",
-		GENITIVE = "кейса с имплантом предсмертного отзвука",
-		DATIVE = "кейсу с имплантом предсмертного отзвука",
-		ACCUSATIVE = "кейс с имплантом предсмертного отзвука",
-		INSTRUMENTAL = "кейсом с имплантом предсмертного отзвука",
-		PREPOSITIONAL = "кейсе с имплантом предсмертного отзвука",
-	)

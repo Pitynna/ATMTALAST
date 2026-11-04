@@ -29,16 +29,6 @@ GLOBAL_VAR_INIT(sibsys_automode, TRUE)
 		UnregisterSignal(SSsecurity_level, COMSIG_SECURITY_LEVEL_CHANGED)
 	. = ..()
 
-/obj/item/gun_module/sibyl/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль Sibyl System",
-		GENITIVE = "модуля Sibyl System",
-		DATIVE = "модулю Sibyl System",
-		ACCUSATIVE = "модуль Sibyl System",
-		INSTRUMENTAL = "модулем Sibyl System",
-		PREPOSITIONAL = "модуле Sibyl System",
-	)
-
 /obj/item/gun_module/sibyl/create_overlay()
 	return null
 

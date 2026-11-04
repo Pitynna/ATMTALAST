@@ -141,8 +141,8 @@
 
 /// Pheromones spawnable by kida, only perceivable by other kida
 /obj/effect/kidan_pheromones
-	name = "Феромоны киданов"
-	desc = "Особые феромоны, выделяемые киданами."
+	name = "kidan pheromones"
+	desc = "Special pheromones secreted by a kidan."
 	gender = PLURAL
 	hud_possible = list(KIDAN_PHEROMONES_HUD)
 

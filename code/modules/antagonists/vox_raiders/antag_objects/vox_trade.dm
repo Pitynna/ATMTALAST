@@ -1,5 +1,5 @@
 /obj/machinery/vox_trader
-	name = "Расчичетчикик"
+	name = "Kashier"
 	desc = "Приемная и расчетная связная машина для ценностей. Проста также как еда воксов."
 	icon = 'icons/obj/machines/trader_machine.dmi'
 	icon_state = "trader-idle-off"

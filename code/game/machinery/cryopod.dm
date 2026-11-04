@@ -14,7 +14,7 @@
 
 /obj/machinery/computer/cryopod
 	name = "cryogenic oversight console"
-	desc = "Интерфейс управления системой контроля за криогенным хранилищем."
+	desc = "An interface between crew and the cryogenic storage oversight systems."
 	icon = 'icons/obj/machines/cryogenic2.dmi'
 	icon_state = "cellconsole"
 	circuit = /obj/item/circuitboard/cryopodcontrol
@@ -252,19 +252,6 @@
 	var/static/list/do_not_preserve_items = list (
 		/obj/item/mmi/robotic_brain
 	)
-
-/obj/machinery/cryopod/get_ru_names()
-	return alist(
-		NOMINATIVE = "криогенный морозильник",
-		GENITIVE = "криогенного морозильника",
-		DATIVE = "криогенному морозильнику",
-		ACCUSATIVE = "криогенный морозильник",
-		INSTRUMENTAL = "криогенным морозильником",
-		PREPOSITIONAL = "криогенном морозильнике",
-	)
-
-//////
-//Syndie cryopod.
 
 /obj/machinery/cryopod/syndie
 	icon_state = "cryo_s"
@@ -626,7 +613,7 @@
 
 /obj/machinery/computer/cryopod/robot
 	name = "robotic storage console"
-	desc = "Интерфейс управления системой контроля за робо-хранилищем."
+	desc = "An interface between crew and the robotic storage systems."
 	icon = 'icons/obj/machines/robot_storage.dmi'
 	icon_state = "console"
 	circuit = /obj/item/circuitboard/robotstoragecontrol

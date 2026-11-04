@@ -354,7 +354,7 @@ Just a object used in constructing fire alarms
 
 /obj/item/circuit_component/firealarm
 	display_name = "Пожарная сигнализация"
-	desc = "Интерфейс управления пожарной сигнализацией."
+	desc = "A fire alarm control interface."
 
 	var/datum/port/input/alarm_trigger
 	var/datum/port/input/reset_trigger

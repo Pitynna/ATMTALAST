@@ -13,7 +13,7 @@
 
 /obj/structure/toilet
 	name = "toilet"
-	desc = "Унитаз марки НТ-451. Предназначен для смыва мелких отходов. Выглядит необычайно чистым."
+	desc = "The HT-451, a torque rotation-based, waste disposal unit for small matter. This one seems remarkably clean."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "toilet00"
 	anchored = TRUE
@@ -22,16 +22,6 @@
 	var/cistern = 0			//if the cistern bit is open
 	var/w_items = 0			//the combined w_class of all the items in the cistern
 	var/mob/living/swirlie = null	//the mob being given a swirlie
-
-/obj/structure/toilet/get_ru_names()
-	return alist(
-		NOMINATIVE = "унитаз",
-		GENITIVE = "унитаза",
-		DATIVE = "унитазу",
-		ACCUSATIVE = "унитаз",
-		INSTRUMENTAL = "унитазом",
-		PREPOSITIONAL = "унитазе",
-	)
 
 MAPPING_DIRECTIONAL_HELPERS_CUSTOM(/obj/structure/toilet, SHIFTING_TOILET, -SHIFTING_TOILET, 0, 0)
 
@@ -325,8 +315,8 @@ MAPPING_DIRECTIONAL_HELPERS_CUSTOM(/obj/structure/toilet/secret, SHIFTING_TOILET
 			I.forceMove(src)
 
 /obj/structure/toilet/golden_toilet
-	name = "Золотой унитаз"
-	desc = "Поговаривают, что 7 веков назад у каждого арабского шейха был такой унитаз. Им явно кто-то пользовался..."
+	name = "Golden Toilet"
+	desc = "They say every Arabian sheikh owned a toilet like this seven centuries ago. Someone has clearly used it..."
 	icon_state = "gold_toilet00"
 
 /obj/structure/toilet/golden_toilet/update_icon_state()
@@ -336,8 +326,8 @@ MAPPING_DIRECTIONAL_HELPERS_CUSTOM(/obj/structure/toilet/secret, SHIFTING_TOILET
 MAPPING_DIRECTIONAL_HELPERS_CUSTOM(/obj/structure/toilet/golden_toilet, SHIFTING_TOILET, -SHIFTING_TOILET, 0, 0)
 
 /obj/structure/toilet/captain_toilet
-	name = "Унитаз Капитана"
-	desc = "Престижное седалище для престижной персоны. Судя по форме, был идеально подготовлен под седальное место Капитана."
+	name = "captain's toilet"
+	desc = "A prestigious seat for a prestigious person. Its shape suggests that it was tailored precisely to the captain's backside."
 	icon_state = "captain_toilet00"
 
 /obj/structure/toilet/captain_toilet/update_icon_state()
@@ -789,8 +779,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (16), (16))
 	attack_verb = list("квакнул", "пискнул")
 
 /obj/item/bikehorn/rubberducky/captain
-	name = "уточка-капитан"
-	desc = "Капитан всех уточек на этой станции. Крайне важная и престижная уточка. Выпущены в ограниченных экземплярах и только для капитанов. Ценная находка для коллекционеров."
+	name = "captain rubber duck"
+	desc = "The captain of every rubber duck on this station. An extremely important and prestigious duck, produced in limited numbers exclusively for captains. A valuable collector's find."
 	icon_state = "captain_rubberducky"
 	item_state = "captain_rubberducky"
 
@@ -1053,22 +1043,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (SHIFTING_SINK_KITCHEN)
 
 /obj/structure/sink/puddle	//splishy splashy ^_^
 	name = "puddle"
-	desc = "Неглубокий водоём с мутноватой водой. Идеален для мытья рук, полива грядок и философских размышлений о том, кто в нём купался до вас."
+	desc = "A puddle of clean water. Looks refreshing."
 	icon_state = "puddle"
 	can_move = 0
 	can_rotate = 0
 	resistance_flags = UNACIDABLE
 	has_water_reclaimer = FALSE
-
-/obj/structure/sink/puddle/get_ru_names()
-	return alist(
-		NOMINATIVE = "пруд",
-		GENITIVE = "пруда",
-		DATIVE = "пруду",
-		ACCUSATIVE = "пруд",
-		INSTRUMENTAL = "прудом",
-		PREPOSITIONAL = "пруде",
-	)
 
 /obj/structure/sink/puddle/Initialize(mapload)
 	. = ..()

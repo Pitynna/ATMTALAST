@@ -1,6 +1,6 @@
 /obj/item/storm_staff
 	name = "staff of storms"
-	desc = "Древний посох, извлечённый из останков Легиона. Ветер колышется, когда вы двигаете им."
+	desc = "An ancient staff retrieved from the remains of Legion. The wind stirs as you move it."
 	icon_state = "staffofstorms"
 	item_state = "staffofstorms"
 	icon = 'icons/obj/weapons/magic.dmi'
@@ -16,16 +16,6 @@
 	var/static/list/excluded_areas = list(/area/space)
 	///This is a list of turfs currently being targeted.
 	var/list/targeted_turfs = list()
-
-/obj/item/storm_staff/get_ru_names()
-	return alist(
-		NOMINATIVE = "посох бурь",
-		GENITIVE = "посоха бурь",
-		DATIVE = "посоху бурь",
-		ACCUSATIVE = "посох бурь",
-		INSTRUMENTAL = "посохом бурь",
-		PREPOSITIONAL = "посохе бурь",
-	)
 
 /obj/item/storm_staff/Destroy()
 	targeted_turfs = null

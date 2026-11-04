@@ -1,6 +1,6 @@
 /obj/machinery/computer/pod
 	name = "mass drivers and pod doors control"
-	desc = "Элемент управления для запуска капсул. Некоторые предпочитают запускать из них мехов."
+	desc = "A control for launching pods. Some people prefer firing Mechas."
 	icon_screen = "mass_driver"
 	light_color = "#555555"
 	circuit = /obj/item/circuitboard/pod
@@ -269,7 +269,7 @@
 
 /obj/machinery/computer/pod/old/syndicate
 	name = "external airlock controls"
-	desc = "Синдикат работает в условиях ограниченного бюджета. Управляет внешними шлюзами."
+	desc = "The Syndicate operate on a tight budget. Operates external airlocks."
 	req_access = list(ACCESS_SYNDICATE)
 	circuit = /obj/item/circuitboard/syndicatedoor
 	light_color = "#00FFFF"
@@ -284,7 +284,7 @@
 
 /obj/machinery/computer/pod/old/swf
 	name = "Magix System IV"
-	desc = "Таинственный артефакт, в котором сконцентрировано огромное количество магической энергии."
+	desc = "An arcane artifact that holds much magic. Running E-Knock 2.2: Sorceror's Edition"
 	circuit = /obj/item/circuitboard/swfdoor
 
 /obj/machinery/computer/pod/deathsquad

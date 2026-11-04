@@ -17,16 +17,6 @@
 	var/list/obj/item/stored_items = list()
 	var/locked = FALSE
 
-/obj/structure/dispenser_bot/get_ru_names()
-	return alist(
-		NOMINATIVE = "бот-раздатчик",
-		GENITIVE = "бота-раздатчика",
-		DATIVE = "боту-раздатчику",
-		ACCUSATIVE = "бота-раздатчика",
-		INSTRUMENTAL = "ботом-раздатчиком",
-		PREPOSITIONAL = "боте-раздатчике"
-	)
-
 /obj/structure/dispenser_bot/deconstruct(disassembled)
 	for(var/obj/item/stored_item as anything in stored_items)
 		remove_item(stored_item)

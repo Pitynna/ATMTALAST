@@ -1,6 +1,6 @@
 /obj/machinery/vending/cart
 	name = "PTech"
-	desc = "Торговый автомат от компании \"PTech\": \"лучшие КПК в галактике!\""
+	desc = "Cartridges for PDA's."
 	slogan_list = list(
 		"Не заб+удьте закуп+ить п+ару к+артриджей!",
 		"К+артриджы и КПК! КПК и к+артриджи!",
@@ -32,14 +32,4 @@
 	contraband = list(
 		/obj/item/cartridge/clown = 1,
 		/obj/item/cartridge/mime = 1,
-	)
-
-/obj/machinery/vending/cart/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат PTech",
-		GENITIVE = "торгового автомата PTech",
-		DATIVE = "торговому автомату PTech",
-		ACCUSATIVE = "торговый автомат PTech",
-		INSTRUMENTAL = "торговым автоматом PTech",
-		PREPOSITIONAL = "торговом автомате PTech",
 	)

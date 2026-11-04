@@ -215,23 +215,13 @@
 //Pandora's loot: Hope //Hope I know what to make it do
 /obj/item/clothing/accessory/necklace/pandora_hope
 	name = "Hope"
-	desc = "Находится на дне Пандоры. Когда всё зло было выпущено, это единственное, что осталось внутри."
+	desc = "Found at the bottom of Pandora. After all the evil was released, this was the only thing left inside."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "hope"
 	item_state = "hope"
 	item_color = "hope"
 	allow_duplicates = FALSE
 	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/accessory/necklace/pandora_hope/get_ru_names()
-	return alist(
-		NOMINATIVE = "надежда",
-		GENITIVE = "надежды",
-		DATIVE = "надежде",
-		ACCUSATIVE = "надежду",
-		INSTRUMENTAL = "надеждой",
-		PREPOSITIONAL = "надежде",
-	)
 
 /obj/item/clothing/accessory/necklace/pandora_hope/on_attached(obj/item/clothing/under/new_suit, mob/attacher)
 	. = ..()

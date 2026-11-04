@@ -24,8 +24,8 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 	new /obj/effect/immovablerod(startT, endT)
 
 /obj/effect/immovablerod
-	name = "\proper незыблемый стержень"
-	desc = "Что это за херня?"
+	name = "\improper Immovable Rod"
+	desc = "What the fuck is that?"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "immrod"
 	throwforce = 100

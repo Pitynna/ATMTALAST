@@ -1,8 +1,6 @@
 /obj/item/clothing/mask/breath
 	name = "breath mask"
-	desc = "Стандартная дыхательная маска с уплотнённым ободком для герметичности. \
-			Предназначена для защиты дыхательных путей от загрязнённого воздуха и обеспечения подачи дыхательной смеси через подключение к баллону с газом. \
-			Обладает средней степенью проницаемости веществ и минимальным коэффициентом проницаемости газов."
+	desc = "A close-fitting mask that can be connected to an air supply."
 	icon_state = "breath"
 	item_state = "breath"
 	clothing_flags = AIRTIGHT
@@ -32,16 +30,6 @@
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/mask.dmi',
 	)
 
-/obj/item/clothing/mask/breath/get_ru_names()
-	return alist(
-		NOMINATIVE = "дыхательная маска",
-		GENITIVE = "дыхательной маски",
-		DATIVE = "дыхательной маске",
-		ACCUSATIVE = "дыхательную маску",
-		INSTRUMENTAL = "дыхательной маской",
-		PREPOSITIONAL = "дыхательной маске",
-	)
-
 /obj/item/clothing/mask/breath/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/right_click_mapper/attack_self, "Поднять/Опустить [declent_ru(ACCUSATIVE)]")
@@ -55,45 +43,20 @@
 
 /obj/item/clothing/mask/breath/medical
 	name = "medical mask"
-	desc = "Стерильная медицинская маска повышенной герметичности. \
-			Обладает минимальным коэффициентом проницаемости газов и практически не пропускает вредные вещества. \
-			Предназначена для анестезии при проведении хирургических операций путём ввода седативной дыхательной смеси."
+	desc = "A close-fitting sterile mask that can be connected to an air supply."
 	icon_state = "medical"
 	item_state = "m_mask"
 	permeability_coefficient = 0.01
 	put_on_delay = 10
 
-/obj/item/clothing/mask/breath/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинская маска",
-		GENITIVE = "медицинской маски",
-		DATIVE = "медицинской маске",
-		ACCUSATIVE = "медицинскую маску",
-		INSTRUMENTAL = "медицинской маской",
-		PREPOSITIONAL = "медицинской маске",
-	)
-
 /obj/item/clothing/mask/breath/vox
 	name = "vox breath mask"
-	desc = "Специализированная дыхательная маска, созданная с учётом анатомии воксов. \
-			Оборудована уплотнённым ободком для герметичности. \
-			Предназначена для защиты дыхательных путей от загрязнённого воздуха и обеспечения подачи дыхательной смеси через подключение к баллону с газом. \
-			Обладает минимальным коэффициентом проницаемости газов и практически не пропускает вредные вещества."
+	desc = "A weirdly-shaped breath mask."
 	icon_state = "voxmask"
 	item_state = "voxmask"
 	permeability_coefficient = 0.01
 	species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS) //These should fit the "Mega Vox" just fine.
 	actions_types = null
-
-/obj/item/clothing/mask/breath/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "дыхательная маска для воксов",
-		GENITIVE = "дыхательной маски для воксов",
-		DATIVE = "дыхательной маске для воксов",
-		ACCUSATIVE = "дыхательную маску для воксов",
-		INSTRUMENTAL = "дыхательной маской для воксов",
-		PREPOSITIONAL = "дыхательной маске для воксов",
-	)
 
 /obj/item/clothing/mask/breath/vox/attack_self(mob/user)
 	return
@@ -103,15 +66,5 @@
 
 /obj/item/clothing/mask/breath/vox/respirator
 	name = "vox respirator"
-	desc = "Эта маска для дыхания странной формы, похоже, предназначена для вокс-рейдера."
+	desc = "A weirdly-shaped breath mask, this one seems to designed for a vox beak."
 	icon_state = "voxmask2"
-
-/obj/item/clothing/mask/breath/vox/get_ru_names()
-	return alist(
-		NOMINATIVE = "респиратор воксов",
-		GENITIVE = "респиратора воксов",
-		DATIVE = "респиратору воксов",
-		ACCUSATIVE = "респиратор воксов",
-		INSTRUMENTAL = "респиратором воксов",
-		PREPOSITIONAL = "респираторе воксов",
-	)

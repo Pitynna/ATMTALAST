@@ -12,7 +12,7 @@
 
 /obj/structure/bookcase
 	name = "bookcase"
-	desc = "Большой книжный шкаф."
+	desc = "A set of shelves for storing books."
 	gender = MALE
 	icon = 'icons/obj/library.dmi'
 	icon_state = "book-0"
@@ -30,16 +30,6 @@
 	var/random_category = null
 	/// How many random books to generate.
 	var/books_to_load = 0
-
-/obj/structure/bookcase/get_ru_names()
-	return alist(
-		NOMINATIVE = "книжный шкаф",
-		GENITIVE = "книжного шкафа",
-		DATIVE = "книжному шкафу",
-		ACCUSATIVE = "книжный шкаф",
-		INSTRUMENTAL = "книжным шкафом",
-		PREPOSITIONAL = "книжном шкафе",
-	)
 
 /obj/structure/bookcase/Initialize(mapload)
 	. = ..()
@@ -251,16 +241,6 @@
 	/// Book DRM. If this var is TRUE, it cannot be scanned and re-uploaded
 	var/has_drm = FALSE
 
-/obj/item/book/get_ru_names()
-	return alist(
-		NOMINATIVE = "книга",
-		GENITIVE = "книги",
-		DATIVE = "книге",
-		ACCUSATIVE = "книгу",
-		INSTRUMENTAL = "книгой",
-		PREPOSITIONAL = "книге",
-	)
-
 /obj/item/book/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/falling_hazard, damage = 5, hardhat_safety = TRUE, crushes = FALSE, impact_sound = drop_sound)
@@ -420,7 +400,7 @@
  */
 /obj/item/barcodescanner
 	name = "barcode scanner"
-	desc = "Небольшое устройство для считывания штрих-кода с книг."
+	desc = "A scanner used for managing library books, one can connect it the library system by tapping on a computer with it in hand."
 	gender = MALE
 	icon = 'icons/obj/library.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/library_lefthand.dmi'
@@ -433,16 +413,6 @@
 	var/obj/machinery/computer/library/checkout/computer // Associated computer - Modes 1 to 3 use this
 	var/obj/item/book/book	 //  Currently scanned book
 	var/mode = 0					// 0 - Scan only, 1 - Scan and Set Buffer, 2 - Scan and Attempt to Check In, 3 - Scan and Attempt to Add to Inventory
-
-/obj/item/barcodescanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "сканнер штрих-кодов",
-		GENITIVE = "сканнера штрих-кодов",
-		DATIVE = "сканнеру штрих-кодов",
-		ACCUSATIVE = "сканнер штрих-кодов",
-		INSTRUMENTAL = "сканнером штрих-кодов",
-		PREPOSITIONAL = "сканнере штрих-кодов",
-	)
 
 /obj/item/barcodescanner/attack_self(mob/user)
 	mode += 1

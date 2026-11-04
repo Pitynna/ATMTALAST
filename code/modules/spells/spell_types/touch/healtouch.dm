@@ -18,19 +18,9 @@
 
 /obj/item/melee/touch_attack/healtouch
 	name = "healing touch"
-	desc = "Целительная аура, вырывающаяся из вашей руки. При прикосновении к гуманоиду заживляет его раны."
+	desc = "A blaze of life-granting energy from the hand. Heals minor to moderate injuries."
 	icon_state = "disintegrate" //ironic huh
 	item_state = "disintegrate"
-
-/obj/item/melee/touch_attack/healtouch/get_ru_names()
-	return alist(
-		NOMINATIVE = "целебное касание",
-		GENITIVE = "целебного касания",
-		DATIVE = "целебному касанию",
-		ACCUSATIVE = "целебное касание",
-		INSTRUMENTAL = "целебным касанием",
-		PREPOSITIONAL = "целебном касании",
-	)
 
 /datum/action/cooldown/spell/touch/healtouch/is_valid_target(atom/cast_on)
 	if(!ishuman(cast_on))

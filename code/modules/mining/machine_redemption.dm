@@ -11,8 +11,7 @@
  */
 /obj/machinery/mineral/ore_redemption
 	name = "ore redemption machine"
-	desc = "Промышленное устройство, перерабатывающее руду в готовые листы материалов. Автоматически начисляет баллы \
-			на аккаунт подключённой ID-карты в зависимости от типа руды, которые можно обменять в раздатчике шахтёрского оборудования."
+	desc = "A machine that accepts ore and instantly transforms it into workable material sheets. Points for ore are generated based on type and can be redeemed at a mining equipment vendor."
 	gender = FEMALE
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
@@ -58,16 +57,6 @@
 	var/obj/item/disk/design_disk/inserted_disk
 	var/invalid_material
 	COOLDOWN_DECLARE(messages_cooldown)
-
-/obj/machinery/mineral/ore_redemption/get_ru_names()
-	return alist(
-		NOMINATIVE = "печь для руды",
-		GENITIVE = "печи для руды",
-		DATIVE = "печи для руды",
-		ACCUSATIVE = "печь для руды",
-		INSTRUMENTAL = "печью для руды",
-		PREPOSITIONAL = "печи для руды",
-	)
 
 /obj/machinery/mineral/ore_redemption/Initialize(mapload)
 	. = ..()
@@ -131,16 +120,6 @@
 	name = "labor camp ore redemption machine"
 	req_access = list()
 	anyone_claim = TRUE
-
-/obj/machinery/mineral/ore_redemption/labor/get_ru_names()
-	return alist(
-		NOMINATIVE = "печь для руды трудового лагеря",
-		GENITIVE = "печи для руды трудового лагеря",
-		DATIVE = "печи для руды трудового лагеря",
-		ACCUSATIVE = "печь для руды трудового лагеря",
-		INSTRUMENTAL = "печью для руды трудового лагеря",
-		PREPOSITIONAL = "печи для руды трудового лагеря",
-	)
 
 /obj/machinery/mineral/ore_redemption/labor/Initialize(mapload)
 	. = ..()

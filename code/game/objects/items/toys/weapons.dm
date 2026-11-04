@@ -11,7 +11,7 @@
 // MARK: Toy swords
 /obj/item/toy/sword
 	name = "toy sword"
-	desc = "Дешевая пластиковая копия энергетического меча. Реалистичные звуки! Для детей от 8 лет и старше."
+	desc = "A cheap, plastic replica of an energy sword. Realistic sounds! Ages 8 and up."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "sword0"
 	item_state = "sword0"
@@ -20,16 +20,6 @@
 	attack_verb = list("атаковал", "ударил")
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
-
-/obj/item/toy/sword/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечный меч",
-		GENITIVE = "игрушечного меча",
-		DATIVE = "игрушечному мечу",
-		ACCUSATIVE = "игрушечного меча",
-		INSTRUMENTAL = "игрушечным мечом",
-		PREPOSITIONAL = "игрушечном мече",
-	)
 
 /obj/item/toy/sword/Initialize(mapload)
 	. = ..()
@@ -88,7 +78,7 @@
 // MARK: Subtype of Double-Bladed Energy Swords
 /obj/item/twohanded/dualsaber/toy
 	name = "double-bladed toy sword"
-	desc = "Дешевая пластиковая копия ДВУХ энергетических мечей. Вдвойне веселее!"
+	desc = "A cheap, plastic replica of TWO energy swords.  Double the fun!"
 	force = 0
 	throwforce = 0
 	throw_speed = 3
@@ -99,16 +89,6 @@
 	light_range = 0
 	sharp_when_wielded = FALSE // It's a toy
 	needs_permit = FALSE
-
-/obj/item/twohanded/dualsaber/toy/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечный двойной меч",
-		GENITIVE = "игрушечного двойного меча",
-		DATIVE = "игрушечному двойному мечу",
-		ACCUSATIVE = "игрушечный двойной меч",
-		INSTRUMENTAL = "игрушечным двойным мечом",
-		PREPOSITIONAL = "игрушечном двойном мече",
-	)
 
 /obj/item/twohanded/dualsaber/toy/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = ITEM_ATTACK)
 	return HIT_RESULT_FAILED
@@ -122,7 +102,7 @@
 
 /obj/item/toy/katana
 	name = "replica katana"
-	desc = "Неоправданно слабая в настольных играх."
+	desc = "Woefully underpowered in D20."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "katana"
 	item_state = "katana"
@@ -135,16 +115,6 @@
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
 
-/obj/item/toy/katana/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечная катана",
-		GENITIVE = "игрушечной катаны",
-		DATIVE = "игрушечной катане",
-		ACCUSATIVE = "игрушечную катану",
-		INSTRUMENTAL = "игрушечной катаной",
-		PREPOSITIONAL = "игрушечной катане",
-	)
-
 /obj/item/toy/katana/suicide_act(mob/user)
 	var/dmsg = pick("[user] пыта[PLUR_ET_YUT(user)]ся воткнуть [declent_ru(ACCUSATIVE)] себе в живот, но он ломается! Выглядит так, будто [GEND_HE_SHE(user)] умр[PLUR_YOT_UT(user)] от стыда.",
 					"[user] пыта[PLUR_ET_YUT(user)]ся воткнуть [declent_ru(ACCUSATIVE)] себе в живот, но он гнётся и ломается пополам! Выглядит так, будто [GEND_HE_SHE(user)] умр[PLUR_YOT_UT(user)] от стыда.",
@@ -155,7 +125,7 @@
 // MARK: Foam Armblade
 /obj/item/toy/foamblade
 	name = "foam armblade"
-	desc = "На нём написано: \"Фанат мистера Сигма номер один\"."
+	desc = "it says \"Sternside Changs #1 fan\" on it. "
 	icon_state = "foamblade"
 	item_state = "arm_blade"
 	attack_verb = list("уколол", "поглотил", "пронзил")
@@ -164,34 +134,13 @@
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
 
-/obj/item/toy/foamblade/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечный армблейд",
-		GENITIVE = "игрушечного армблейда",
-		DATIVE = "игрушечному армблейду",
-		ACCUSATIVE = "игрушечный армблейд",
-		INSTRUMENTAL = "игрушечным армблейдом",
-		PREPOSITIONAL = "игрушечном армблейде",
-	)
-
-// MARK: Toy/fake flash
 /obj/item/toy/flash
 	name = "toy flash"
-	desc = "ЗА РЕВОЛЮЦИЮ! — Ой, подождите, это же просто игрушка."
+	desc = "FOR THE REVOLU- Oh wait, that's just a toy."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "flash"
 	item_state = "flashtool"
 	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/toy/flash/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечный флешер",
-		GENITIVE = "игрушечного флешера",
-		DATIVE = "игрушечному флешеру",
-		ACCUSATIVE = "игрушечный флешер",
-		INSTRUMENTAL = "игрушечным флешером",
-		PREPOSITIONAL = "игрушечном флешере",
-	)
 
 /obj/item/toy/flash/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	playsound(loc, 'sound/weapons/flash.ogg', 100, TRUE)
@@ -202,22 +151,12 @@
 // MARK: Rubber Chainsaw
 /obj/item/twohanded/toy/chainsaw
 	name = "Toy Chainsaw"
-	desc = "Игрушечная бензопила с резиновым лезвием. Для детей от 8 лет и старше."
+	desc = "A toy chainsaw with a rubber edge. Ages 8 and up"
 	icon_state = "chainsaw0"
 	throw_speed = 4
 	throw_range = 20
 	wieldsound = 'sound/weapons/chainsaw_start.ogg'
 	attack_verb = list("пропилил", "порезал", "покромсал", "рубанул")
-
-/obj/item/twohanded/toy/chainsaw/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечная бензопила",
-		GENITIVE = "игрушечной бензопилы",
-		DATIVE = "игрушечной бензопиле",
-		ACCUSATIVE = "игрушечную бензопилу",
-		INSTRUMENTAL = "игрушечной бензопилой",
-		PREPOSITIONAL = "игрушечной бензопиле",
-	)
 
 /obj/item/twohanded/toy/chainsaw/update_icon_state()
 	icon_state = "chainsaw[HAS_TRAIT(src, TRAIT_WIELDED)]"
@@ -234,17 +173,6 @@
 	attack_verb = list("заробастил")
 	hitsound = 'sound/items/squeaktoy.ogg'
 
-/obj/item/toy/toolbox/get_ru_names()
-	return alist(
-		NOMINATIVE = "резиновый тулбокс",
-		GENITIVE = "резинового тулбокса",
-		DATIVE = "резиновому тулбоксу",
-		ACCUSATIVE = "резиновый тулбокс",
-		INSTRUMENTAL = "резиновым тулбоксом",
-		PREPOSITIONAL = "резиновом тулбоксе",
-	)
-
-// MARK: Russian roulette
 /obj/item/toy/russian_revolver
 	name = "russian revolver"
 	desc = "For fun and games!"

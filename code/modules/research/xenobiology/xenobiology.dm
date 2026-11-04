@@ -369,22 +369,12 @@
 /obj/item/slimepotion/transference
 	name = "consciousness transference potion"
 	id = "Transference"
-	desc = "Странное вещество наподобие слизи. При использовании позволяет перенести сознание в менее развитое существо."
+	desc = "A strange slime-based chemical that, when used, allows the user to transfer their consciousness to a lesser being."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle19"
 	origin_tech = "biotech=6"
 	var/prompted = FALSE
 	var/animal_type = SENTIENCE_ORGANIC
-
-/obj/item/slimepotion/transference/get_ru_names()
-	return alist(
-		NOMINATIVE = "зелье переноса сознания",
-		GENITIVE = "зелья переноса сознания",
-		DATIVE = "зелью переноса сознания",
-		ACCUSATIVE = "зелье переноса сознания",
-		INSTRUMENTAL = "зельем переноса сознания",
-		PREPOSITIONAL = "зелье переноса сознания"
-	)
 
 /obj/item/slimepotion/transference/afterattack(mob/living/target, mob/user, proximity_flag, list/modifiers, status)
 	if(!proximity_flag || user.incapacitated() || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))

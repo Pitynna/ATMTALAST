@@ -9,9 +9,7 @@ Note: Must be placed west/left of and R&D console to function.
 */
 /obj/machinery/r_n_d/protolathe
 	name = "protolathe"
-	desc = "Оборудование, предназначенное для печати изделий высокого уровня сложности \
-			на основе шаблонов для печати. Использует широкий спектр материалов в качестве сырья. \
-			Управление происходит с помощью подключаемой консоли."
+	desc = "Converts raw materials into useful objects."
 	icon_state = "protolathe"
 	base_icon_state = "protolathe"
 	container_type = OPENCONTAINER
@@ -31,16 +29,6 @@ Note: Must be placed west/left of and R&D console to function.
 	)
 
 	reagents = new()
-
-/obj/machinery/r_n_d/protolathe/get_ru_names()
-	return alist(
-		NOMINATIVE = "протолат",
-		GENITIVE = "протолата",
-		DATIVE = "протолату",
-		ACCUSATIVE = "протолат",
-		INSTRUMENTAL = "протолатом",
-		PREPOSITIONAL = "протолате",
-	)
 
 /obj/machinery/r_n_d/protolathe/Initialize(mapload)
 	. = ..()

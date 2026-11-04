@@ -267,7 +267,7 @@
 
 /obj/machinery/bfl_receiver
 	name = "BFL Receiver"
-	desc = "Кнопка активации выглядит подозрительно. Возможно, следует открыть шахту вручную с помощью лома."
+	desc = "Activate button doesn't look right. Probably should open the pit manually, try using a crowbar."
 	icon = 'icons/obj/machines/bfl/hole.dmi'
 	icon_state = "Receiver_Off"
 	anchored = TRUE
@@ -290,16 +290,6 @@
 	var/ore_count = 0
 	///Used for storing last icon update for receiver lights on borders of receiver
 	var/last_light_state_number = 0
-
-/obj/machinery/bfl_receiver/get_ru_names()
-	return alist(
-		NOMINATIVE = "приёмник BFL",
-		GENITIVE = "приёмника BFL",
-		DATIVE = "приёмнику BFL",
-		ACCUSATIVE = "приёмник BFL",
-		INSTRUMENTAL = "приёмником BFL",
-		PREPOSITIONAL = "приёмнике BFL",
-	)
 
 /obj/machinery/bfl_receiver/Initialize(mapload)
 	. = ..()
@@ -437,7 +427,7 @@
 ////////
 /obj/machinery/bfl_lens
 	name = "High-precision lens"
-	desc = "Чрезвычайно хрупкая, обращайтесь осторожно."
+	desc = "Extremely fragile, handle with care."
 	icon = 'icons/obj/machines/bfl/hole.dmi'
 	icon_state = "Lens_Pull"
 	max_integrity = 40
@@ -446,16 +436,6 @@
 
 	var/step_count = 0
 	var/state = FALSE
-
-/obj/machinery/bfl_lens/get_ru_names()
-	return alist(
-		NOMINATIVE = "высокоточная линза",
-		GENITIVE = "высокоточной линзы",
-		DATIVE = "высокоточной линзе",
-		ACCUSATIVE = "высокоточную линзу",
-		INSTRUMENTAL = "высокоточной линзой",
-		PREPOSITIONAL = "высокоточной линзе",
-	)
 
 /obj/machinery/bfl_lens/update_icon_state()
 	if(state)
@@ -550,7 +530,7 @@
 
 /obj/singularity/bfl_red
 	name = "BFL"
-	desc = "Гигантский лазер, предназначенный для добычи руды."
+	desc = "Giant laser, which is supposed for mining"
 	icon = 'icons/obj/machines/bfl/laser.dmi'
 	icon_state = "Laser_Red"
 	pixel_x = -32
@@ -579,19 +559,9 @@
 
 /obj/effect/bfl_laser
 	name = "big laser beam"
-	desc = "Огромный сияющий луч, бьющий сверху вниз. Лучше не касаться."
+	desc = "A huge shining laser beam, goes through above hitting down. You wouldn't like to touch it."
 	icon = 'icons/obj/machines/bfl/laser_tile.dmi'
 	icon_state = "laser"
-
-/obj/effect/bfl_laser/get_ru_names()
-	return alist(
-		NOMINATIVE = "луч мегалазера",
-		GENITIVE = "луча мегалазера",
-		DATIVE = "лучу мегалазера",
-		ACCUSATIVE = "луч мегалазера",
-		INSTRUMENTAL = "лучом мегалазера",
-		PREPOSITIONAL = "луче мегалазера",
-	)
 
 /obj/effect/bfl_laser/Initialize(mapload)
 	. = ..()

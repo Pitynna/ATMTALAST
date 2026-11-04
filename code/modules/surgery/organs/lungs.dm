@@ -48,16 +48,6 @@
 	var/heat_level_3_damage = HEAT_GAS_DAMAGE_LEVEL_3
 	var/heat_damage_types = list(BURN = 1)
 
-/obj/item/organ/internal/lungs/get_ru_names()
-	return alist(
-		NOMINATIVE = "лёгкие человека",
-		GENITIVE = "лёгких человека",
-		DATIVE = "лёгким человека",
-		ACCUSATIVE = "лёгкие человека",
-		INSTRUMENTAL = "лёгкими человека",
-		PREPOSITIONAL = "лёгких человека",
-	)
-
 /obj/item/organ/internal/lungs/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF || !is_robotic())
@@ -312,23 +302,13 @@
 
 /obj/item/organ/internal/lungs/cybernetic
 	name = "cybernetic lungs"
-	desc = "Электронное устройство, имитирующее работу органических лёгких. Функционально не имеет никаких отличий от органического аналога, кроме производственных затрат."
+	desc = "A cybernetic version of the lungs found in traditional humanoid entities. It functions the same as an organic lung and is merely meant as a replacement."
 	icon_state = "lungs-c"
 	origin_tech = "biotech=4"
 	status = ORGAN_ROBOT
 	var/species_state = "человек"
 	pickup_sound = 'sound/items/handling/pickup/component_pickup.ogg'
 	drop_sound = 'sound/items/handling/drop/component_drop.ogg'
-
-/obj/item/organ/internal/lungs/cybernetic/get_ru_names()
-	return alist(
-		NOMINATIVE = "кибернетические лёгкие",
-		GENITIVE = "кибернетических лёгких",
-		DATIVE = "кибернетическим лёгким",
-		ACCUSATIVE = "кибернетические лёгкие",
-		INSTRUMENTAL = "кибернетическими лёгкими",
-		PREPOSITIONAL = "кибернетических лёгких",
-	)
 
 /obj/item/organ/internal/lungs/cybernetic/examine(mob/user)
 	. = ..()
@@ -363,7 +343,7 @@
 
 /obj/item/organ/internal/lungs/cybernetic/upgraded
 	name = "upgraded cybernetic lungs"
-	desc = "Продвинутая версия кибернетических лёгких. Оснащены системой фильтрации, удаляющей токсины и углекислый газ из поступаемого воздуха. Очень уязвимы к ЭМИ."
+	desc = "A more advanced version of the stock cybernetic lungs. They are capable of filtering out lower levels of toxins and carbon dioxide."
 	icon_state = "lungs-c-u"
 	origin_tech = "biotech=5"
 
@@ -373,16 +353,6 @@
 	cold_level_1_threshold = 200
 	cold_level_2_threshold = 140
 	cold_level_3_threshold = 100
-
-/obj/item/organ/internal/lungs/cybernetic/upgraded/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенные кибернетические лёгкие",
-		GENITIVE = "улучшенных кибернетических лёгких",
-		DATIVE = "улучшенным кибернетическим лёгким",
-		ACCUSATIVE = "улучшенные кибернетические лёгкие",
-		INSTRUMENTAL = "улучшенными кибернетическими лёгкими",
-		PREPOSITIONAL = "улучшенных кибернетических лёгких",
-	)
 
 /obj/item/organ/internal/lungs/cybernetic/upgraded/insert(mob/living/carbon/human/target, special)
 	. = ..()

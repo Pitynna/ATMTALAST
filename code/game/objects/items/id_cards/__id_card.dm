@@ -6,7 +6,7 @@
 
 /obj/item/card
 	name = "card"
-	desc = "Пластиковая карточка."
+	desc = "A card."
 	gender = FEMALE
 	icon = 'icons/obj/card.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -19,8 +19,7 @@
 
 /obj/item/card/id
 	name = "identification card"
-	desc = "Стандартная идентификационная карта персонала \"Нанотрейзен\". Служит для подтверждения личности, \
-			определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника."
+	desc = "A card used to provide ID and determine access across the station."
 	icon_state = "id"
 	item_state = "card-id"
 	slot_flags = ITEM_SLOT_ID
@@ -65,16 +64,6 @@
 	var/obj/item/card/id/guest/guest_pass = null
 
 	var/cart_prefix = "`s ID-card"
-
-/obj/item/card/id/get_ru_names()
-	return alist(
-		NOMINATIVE = "ID-карта",
-		GENITIVE = "ID-карты",
-		DATIVE = "ID-карте",
-		ACCUSATIVE = "ID-карту",
-		INSTRUMENTAL = "ID-картой",
-		PREPOSITIONAL = "ID-карте",
-	)
 
 /obj/item/card/id/Initialize(mapload)
 	. = ..()

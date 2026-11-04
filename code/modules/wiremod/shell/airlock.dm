@@ -13,16 +13,6 @@
 	name = "circuit airlock"
 	autoclose = FALSE
 
-/obj/machinery/door/airlock/shell/get_ru_names()
-	return alist(
-		NOMINATIVE = "программируемый шлюз",
-		GENITIVE = "программируемого шлюза",
-		DATIVE = "программируемому шлюзу",
-		ACCUSATIVE = "программируемый шлюз",
-		INSTRUMENTAL = "программируемым шлюзом",
-		PREPOSITIONAL = "программируемом шлюзе"
-	)
-
 /obj/machinery/door/airlock/shell/Initialize(mapload)
 	. = ..()
 	AddComponent( \

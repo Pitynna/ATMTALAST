@@ -212,7 +212,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/structure/elite_tumor
 	name = "pulsing tumor"
-	desc = "Странная, пульсирующая опухоль, торчащая из земли. Вы чувствуете побуждение протянуть руку и коснуться её..."
+	desc = "An odd, pulsing tumor sticking out of the ground. You feel compelled to reach out and touch it..."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	icon = 'icons/obj/lavaland/tumor.dmi'
 	icon_state = "tumor"
@@ -235,16 +235,6 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 	///List of invaders that have teleportes into the arena *multiple times*. They will be suffering.
 	var/list/invaders = list()
-
-/obj/structure/elite_tumor/get_ru_names()
-	return alist(
-		NOMINATIVE = "пульсирующая опухоль",
-		GENITIVE = "пульсирующей опухоли",
-		DATIVE = "пульсирующей опухоли",
-		ACCUSATIVE = "пульсирующую опухоль",
-		INSTRUMENTAL = "пульсирующей опухолью",
-		PREPOSITIONAL = "пульсирующей опухоли",
-	)
 
 /obj/structure/elite_tumor/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -493,23 +483,13 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/item/tumor_shard
 	name = "tumor shard"
-	desc = "Странный острый кристаллический осколок из необычной опухоли Лазиса. Если пронзить им труп элиты Лазиса, это воскресит существо — при условии, что его душа ещё не ушла. Воскрешённые элиты имеют только половину здоровья, и абсолютно лояльны к своему воскресителю."
+	desc = "A strange, sharp, crystal shard from an odd tumor on Lavaland. Stabbing the corpse of a lavaland elite with this will revive them, assuming their soul still lingers. Revived lavaland elites only have half their max health, but are completely loyal to their reviver."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "crevice_shard"
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
 	throw_speed = 3
 	throw_range = 5
-
-/obj/item/tumor_shard/get_ru_names()
-	return alist(
-		NOMINATIVE = "осколок опухоли",
-		GENITIVE = "осколка опухоли",
-		DATIVE = "осколку опухоли",
-		ACCUSATIVE = "осколок опухоли",
-		INSTRUMENTAL = "осколком опухоли",
-		PREPOSITIONAL = "осколке опухоли",
-	)
 
 /obj/item/tumor_shard/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)
 	. = ..()
@@ -554,16 +534,6 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	smooth = SMOOTH_BITMASK
 	canSmoothWith = SMOOTH_GROUP_HIERO_VORTEX
 	smoothing_groups = SMOOTH_GROUP_HIERO_VORTEX
-
-/obj/effect/temp_visual/elite_tumor_wall/get_ru_names()
-	return alist(
-		NOMINATIVE = "магическая стена",
-		GENITIVE = "магической стены",
-		DATIVE = "магической стене",
-		ACCUSATIVE = "магическую стену",
-		INSTRUMENTAL = "магической стеной",
-		PREPOSITIONAL = "магической стене",
-	)
 
 /obj/effect/temp_visual/elite_tumor_wall/Initialize(mapload, new_caster)
 	. = ..()

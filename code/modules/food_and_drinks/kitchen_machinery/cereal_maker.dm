@@ -1,22 +1,12 @@
 /obj/machinery/cooker/cerealmaker
 	name = "cereal maker"
-	desc = "Делает хлопья практически из чего угодно. Вкусно, практично, синтетично."
+	desc = "Now with Dann O's available!"
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "cereal_off"
 	thiscooktype = "хлопья"
 	cooktime = 200
 	onicon = "cereal_on"
 	officon = "cereal_off"
-
-/obj/machinery/cooker/cerealmaker/get_ru_names()
-	return alist(
-		NOMINATIVE = "аппарат для хлопьев",
-		GENITIVE = "аппарата для хлопьев",
-		DATIVE = "аппарату для хлопьев",
-		ACCUSATIVE = "аппарат для хлопьев",
-		INSTRUMENTAL = "аппаратом для хлопьев",
-		PREPOSITIONAL = "аппарате для хлопьев"
-	)
 
 /obj/machinery/cooker/cerealmaker/setIcon(obj/item/copyme, obj/item/copyto)
 	var/image/img = new(copyme.icon, copyme.icon_state)

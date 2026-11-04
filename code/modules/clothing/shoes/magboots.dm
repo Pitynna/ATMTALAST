@@ -115,7 +115,7 @@
 
 /obj/item/clothing/shoes/magboots/clown
 	name = "clown shoes"
-	desc = "Это обычные башмаки клоуна. Чёрт возьми, они такие огромные! Сбоку мигает красная лампочка."
+	desc = "The prankster's standard-issue clowning shoes. Damn they're huge! There's a red light on the side."
 	icon_state = "clownmag0"
 	base_icon_state = "clownmag"
 	item_state = "clown_shoes"
@@ -128,16 +128,6 @@
 	pickup_sound = 'sound/items/handling/pickup/shoes_pickup.ogg'
 	drop_sound = 'sound/items/handling/drop/shoes_drop.ogg'
 	var/enabled_waddle = TRUE
-
-/obj/item/clothing/shoes/magboots/clown/get_ru_names()
-	return alist(
-		NOMINATIVE = "клоунские башмаки",
-		GENITIVE = "клоунских башмаков",
-		DATIVE = "клоунским башмакам",
-		ACCUSATIVE = "клоунские башмаки",
-		INSTRUMENTAL = "клоунскими башмаками",
-		PREPOSITIONAL = "клоунских башмаках",
-	)
 
 /obj/item/clothing/shoes/magboots/clown/Initialize(mapload)
 	. = ..()

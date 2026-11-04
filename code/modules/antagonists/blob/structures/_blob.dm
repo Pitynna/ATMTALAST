@@ -3,7 +3,7 @@
 	name = "blob"
 	icon = 'icons/mob/blob.dmi'
 	light_range = 3
-	desc = "Толстая стена извивающихся щупалец."
+	desc = "Some blob creature thingy."
 	opacity = TRUE
 	anchored = TRUE
 	pass_flags_self = PASSBLOB

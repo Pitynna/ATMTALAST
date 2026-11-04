@@ -66,7 +66,7 @@
 /// The portal used in the [/datum/event/tear] midround.
 /obj/effect/tear
 	name = "dimensional tear"
-	desc = "Пространственно-временной разрыв."
+	desc = "A tear in the dimensional fabric of space and time."
 	icon = 'icons/effects/tear.dmi'
 	icon_state = "tear"
 	light_range = 3
@@ -85,16 +85,6 @@
 		/mob/living/simple_animal/hostile/netherworld,
 		/mob/living/simple_animal/hostile/netherworld/migo,
 		/mob/living/simple_animal/hostile/faithless)
-
-/obj/effect/tear/get_ru_names()
-	return alist(
-		NOMINATIVE = "пространственный разрыв",
-		GENITIVE = "пространственного разрыва",
-		DATIVE = "пространственному разрыву",
-		ACCUSATIVE = "пространственный разрыв",
-		INSTRUMENTAL = "пространственным разрывом",
-		PREPOSITIONAL = "пространственном разрыве",
-	)
 
 /obj/effect/tear/Initialize(mapload)
 	. = ..()

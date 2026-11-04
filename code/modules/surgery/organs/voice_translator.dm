@@ -50,16 +50,6 @@
 	origin_tech = "materials=2;biotech=3;engineering=3;programming=3;abductor=2"
 	species_restrictions = list(SPECIES_GREY, SPECIES_ABDUCTOR)
 
-/obj/item/organ/internal/cyberimp/mouth/translator/grey_retraslator/get_ru_names()
-	return alist(
-		NOMINATIVE = "ретранслятор псионического голоса",
-		GENITIVE = "ретранслятора псионического голоса",
-		DATIVE = "ретранслятору псионического голоса",
-		ACCUSATIVE = "ретранслятор псионического голоса",
-		INSTRUMENTAL = "ретранслятором псионического голоса",
-		PREPOSITIONAL = "ретрансляторе псионического голоса",
-	)
-
 /obj/item/organ/internal/cyberimp/mouth/translator/Initialize(mapload)
 	. = ..()
 
@@ -392,18 +382,6 @@
 	origin_tech = "materials=2;programming=3;abductor=1"
 	extra_slots = UPGRADE_SLOTS_GREY
 
-/obj/item/translator_upgrade/grey_retraslator/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль улучшения РПГ",
-		GENITIVE = "модуля улучшения РПГ",
-		DATIVE = "модулю улучшения РПГ",
-		ACCUSATIVE = "модуль улучшения РПГ",
-		INSTRUMENTAL = "модулем улучшения РПГ",
-		PREPOSITIONAL = "модуле улучшения РПГ",
-	)
-
-	// LANGUAGE TRANSLATOR CHIPS //
-
 /obj/item/translator_chip
 	name = "language chip"
 	desc = "Крошечный чип с мигающим индикатором."
@@ -413,16 +391,6 @@
 	origin_tech = "materials=1;programming=2"
 	var/datum/language/stored_language
 	var/stored_language_rus
-
-/obj/item/translator_chip/get_ru_names()
-	return alist(
-		NOMINATIVE = "языковой чип",
-		GENITIVE = "языкового чипа",
-		DATIVE = "языковому чипу",
-		ACCUSATIVE = "языковой чип",
-		INSTRUMENTAL = "языковым чипом",
-		PREPOSITIONAL = "языковом чипе",
-	)
 
 /obj/item/translator_chip/Initialize(mapload)
 	. = ..()

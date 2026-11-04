@@ -6,16 +6,6 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/keyboard_shell/get_ru_names()
-	return alist(
-		NOMINATIVE = "оболочка клавиатуры",
-		GENITIVE = "оболочки клавиатуры",
-		DATIVE = "оболочке клавиатуры",
-		ACCUSATIVE = "оболочку клавиатуры",
-		INSTRUMENTAL = "оболочкой клавиатуры",
-		PREPOSITIONAL = "оболочке клавиатуры"
-	)
-
 /obj/item/keyboard_shell/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)

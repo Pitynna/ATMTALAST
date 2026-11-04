@@ -1,7 +1,7 @@
 // MARK: Ammo box
 /obj/item/ammo_box
 	name = "ammo box (generic)"
-	desc = "Коробка с боеприпасами."
+	desc = "A box of ammo?"
 	gender = FEMALE
 	icon_state = "357"
 	icon = 'icons/obj/weapons/ammo.dmi'
@@ -36,16 +36,6 @@
 	var/bullet_load_duration = 0.4 SECONDS
 	/// Additional info to be added to examine text.
 	var/extra_info = ""
-
-/obj/item/ammo_box/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка [get_ammo_descriptor()] [get_cartridge_marking()]",
-		GENITIVE = "коробки [get_ammo_descriptor()] [get_cartridge_marking()]",
-		DATIVE = "коробке [get_ammo_descriptor()] [get_cartridge_marking()]",
-		ACCUSATIVE = "коробку [get_ammo_descriptor()] [get_cartridge_marking()]",
-		INSTRUMENTAL = "коробкой [get_ammo_descriptor()] [get_cartridge_marking()]",
-		PREPOSITIONAL = "коробке [get_ammo_descriptor()] [get_cartridge_marking()]",
-	)
 
 /obj/item/ammo_box/Initialize(mapload)
 	. = ..()
@@ -334,16 +324,6 @@
 	/// Name of the gun this magazine is for.
 	/// Should be in genitive case like `"пистолета \"Стечкин\""` or `"пулемёта L6 SAW"`.
 	var/gun_name = ""
-
-/obj/item/ammo_box/magazine/get_ru_names()
-	return alist(
-		NOMINATIVE = "магазин [gun_name] [get_cartridge_marking()]",
-		GENITIVE = "магазина [gun_name] [get_cartridge_marking()]",
-		DATIVE = "магазину [gun_name] [get_cartridge_marking()]",
-		ACCUSATIVE = "магазин [gun_name] [get_cartridge_marking()]",
-		INSTRUMENTAL = "магазином [gun_name] [get_cartridge_marking()]",
-		PREPOSITIONAL = "магазине [gun_name] [get_cartridge_marking()]",
-	)
 
 /obj/item/ammo_box/magazine/update_desc(updates = ALL)
 	. = ..()

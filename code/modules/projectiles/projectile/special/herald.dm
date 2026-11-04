@@ -5,30 +5,10 @@
 	armour_penetration = 35
 	speed = 2
 
-/obj/projectile/herald/get_ru_names()
-	return alist(
-		NOMINATIVE = "смертоносный заряд",
-		GENITIVE = "смертоносного заряда",
-		DATIVE = "смертоносному заряду",
-		ACCUSATIVE = "смертоносный заряд",
-		INSTRUMENTAL = "смертоносным зарядом",
-		PREPOSITIONAL = "смертоносном заряде",
-	)
-
 /obj/projectile/herald/teleshot
 	name = "golden bolt"
 	damage = 25
 	color = rgb(255,255,102)
-
-/obj/projectile/herald/teleshot/get_ru_names()
-	return alist(
-		NOMINATIVE = "золотой заряд",
-		GENITIVE = "золотого заряда",
-		DATIVE = "золотому заряду",
-		ACCUSATIVE = "золотой заряд",
-		INSTRUMENTAL = "золотым зарядом",
-		PREPOSITIONAL = "золотом заряде",
-	)
 
 /obj/projectile/herald/prehit(atom/target)
 	if(ismob(target) && ismob(firer))

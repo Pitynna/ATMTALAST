@@ -1,5 +1,5 @@
 /obj/machinery/power/anomaly_generator
-	name = "генератор аномалий"
+	name = "anomaly generator"
 	desc = "Необычного вида машина, разработанная на основе эксперементальной технологии, предназначенная для \
 			генерации аномалий."
 	density = TRUE
@@ -49,16 +49,6 @@
 
 	/// Sound cooldown
 	COOLDOWN_DECLARE(sound_cooldown)
-
-/obj/machinery/power/anomaly_generator/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор аномалий", \
-		GENITIVE = "генератора аномалий", \
-		DATIVE = "генератору аномалий", \
-		ACCUSATIVE = "генератор аномалий", \
-		INSTRUMENTAL = "генератором аномалий", \
-		PREPOSITIONAL = "генераторе аномалий",
-	)
 
 /obj/machinery/power/anomaly_generator/Initialize(mapload)
 	. = ..()

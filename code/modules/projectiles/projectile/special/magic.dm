@@ -15,16 +15,6 @@
 	/// determines the drain cost on the antimagic item
 	var/antimagic_charge_cost = 1
 
-/obj/projectile/magic/get_ru_names()
-	return alist(
-		NOMINATIVE = "разряд пустоты",
-		GENITIVE = "разряда пустоты",
-		DATIVE = "разряду пустоты",
-		ACCUSATIVE = "разряд пустоты",
-		INSTRUMENTAL = "разрядом пустоты",
-		PREPOSITIONAL = "разряде пустоты",
-	)
-
 /obj/projectile/magic/prehit(atom/target)
 	. = ..()
 
@@ -140,16 +130,6 @@
 	impact_light_range =  2.5
 	impact_light_color_override = LIGHT_COLOR_PURPLE
 
-/obj/projectile/magic/death/get_ru_names()
-	return alist(
-		NOMINATIVE = "заряд смерти",
-		GENITIVE = "заряда смерти",
-		DATIVE = "заряду смерти",
-		ACCUSATIVE = "заряд смерти",
-		INSTRUMENTAL = "зарядом смерти",
-		PREPOSITIONAL = "заряде смерти",
-	)
-
 /obj/projectile/magic/death/on_hit(mob/living/carbon/C)
 	. = ..()
 	if(isliving(C))
@@ -173,16 +153,6 @@
 	var/exp_light = 2
 	var/exp_flash = 3
 	var/exp_fire = 2
-
-/obj/projectile/magic/fireball/get_ru_names()
-	return alist(
-		NOMINATIVE = "огненный шар",
-		GENITIVE = "огненного шара",
-		DATIVE = "огненному шару",
-		ACCUSATIVE = "огненный шар",
-		INSTRUMENTAL = "огненным шаром",
-		PREPOSITIONAL = "огненном шаре",
-	)
 
 /obj/projectile/magic/fireball/Range()
 	var/turf/T1 = get_step(src,turn(dir, -45))
@@ -220,16 +190,6 @@
 	var/hellfire_power = BURN_LEVEL_TIER_1
 	var/hellfire_type = /datum/reagent/napalm/hellfire
 
-/obj/projectile/magic/fireball/infernal/get_ru_names()
-	return alist(
-		NOMINATIVE = "адский фаербол",
-		GENITIVE = "адского фаербола",
-		DATIVE = "адскому фаерболу",
-		ACCUSATIVE = "адский фаербол",
-		INSTRUMENTAL = "адским фаерболом",
-		PREPOSITIONAL = "адском фаерболе",
-	)
-
 /obj/projectile/magic/fireball/infernal/acsend
 	name = "acsend fireball"
 	hellfire_power = BURN_LEVEL_TIER_9
@@ -244,16 +204,6 @@
 /obj/projectile/magic/resurrection
 	name = "bolt of resurrection"
 	icon_state = "ion"
-
-/obj/projectile/magic/resurrection/get_ru_names()
-	return alist(
-		NOMINATIVE = "воскрешающий заряд",
-		GENITIVE = "воскрешающего заряда",
-		DATIVE = "воскрешающему заряду",
-		ACCUSATIVE = "воскрешающий заряд",
-		INSTRUMENTAL = "воскрешающим зарядом",
-		PREPOSITIONAL = "воскрешающем заряде",
-	)
 
 /obj/projectile/magic/resurrection/on_hit(mob/living/carbon/target)
 	. = ..()
@@ -280,16 +230,6 @@
 	var/inner_tele_radius = 0
 	var/outer_tele_radius = 6
 
-/obj/projectile/magic/teleport/get_ru_names()
-	return alist(
-		NOMINATIVE = "телепортационный импульс",
-		GENITIVE = "телепортационного импульса",
-		DATIVE = "телепортационному импульсу",
-		ACCUSATIVE = "телепортационный импульс",
-		INSTRUMENTAL = "телепортационным импульсом",
-		PREPOSITIONAL = "телепортационном импульсе",
-	)
-
 /obj/projectile/magic/teleport/on_hit(mob/target)
 	. = ..()
 	var/teleammount = 0
@@ -310,16 +250,6 @@
 	var/list/door_types = list(/obj/structure/mineral_door/wood,/obj/structure/mineral_door/iron,/obj/structure/mineral_door/silver,\
 		/obj/structure/mineral_door/gold,/obj/structure/mineral_door/uranium,/obj/structure/mineral_door/sandstone,/obj/structure/mineral_door/transparent/plasma,\
 		/obj/structure/mineral_door/transparent/diamond)
-
-/obj/projectile/magic/door/get_ru_names()
-	return alist(
-		NOMINATIVE = "заряд создания дверей",
-		GENITIVE = "заряда создания дверей",
-		DATIVE = "заряду создания дверей",
-		ACCUSATIVE = "заряд создания дверей",
-		INSTRUMENTAL = "зарядом создания дверей",
-		PREPOSITIONAL = "заряде создания дверей",
-	)
 
 /obj/projectile/magic/door/on_hit(atom/target)
 	. = ..()
@@ -355,16 +285,6 @@
 	name = "bolt of change"
 	icon_state = "ice_1"
 	damage_type = BURN
-
-/obj/projectile/magic/change/get_ru_names()
-	return alist(
-		NOMINATIVE = "заряд полиморфа",
-		GENITIVE = "заряда полиморфа",
-		DATIVE = "заряду полиморфа",
-		ACCUSATIVE = "заряд полиморфа",
-		INSTRUMENTAL = "зарядом полиморфа",
-		PREPOSITIONAL = "заряде полиморфа",
-	)
 
 /obj/projectile/magic/change/on_hit(atom/change)
 	. = ..()
@@ -534,16 +454,6 @@
 	icon_state = "red_1"
 	damage_type = BURN
 
-/obj/projectile/magic/animate/get_ru_names()
-	return alist(
-		NOMINATIVE = "анимационный заряд",
-		GENITIVE = "анимационного заряда",
-		DATIVE = "анимационному заряду",
-		ACCUSATIVE = "анимационный заряд",
-		INSTRUMENTAL = "анимационным зарядом",
-		PREPOSITIONAL = "анимационном заряде",
-	)
-
 /obj/projectile/magic/animate/on_hit(atom/target, blocked = 0, hit_zone)
 	. = ..()
 
@@ -584,33 +494,12 @@
 	dismember_head = TRUE
 	nodamage = FALSE
 
-/obj/projectile/magic/spellblade/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергия лезвия",
-		GENITIVE = "энергии лезвия",
-		DATIVE = "энергии лезвия",
-		ACCUSATIVE = "энергию лезвия",
-		INSTRUMENTAL = "энергией лезвия",
-		PREPOSITIONAL = "энергии лезвия",
-	)
-
-// MARK: Slipping
 /obj/projectile/magic/slipping
 	name = "magical banana"
 	icon = 'icons/obj/hydroponics/harvest.dmi'
 	icon_state = "banana"
 	hitsound = 'sound/items/bikehorn.ogg'
 	var/slip_disable_time = 10 SECONDS
-
-/obj/projectile/magic/slipping/get_ru_names()
-	return alist(
-		NOMINATIVE = "волшебный банан",
-		GENITIVE = "волшебного банана",
-		DATIVE = "волшебному банану",
-		ACCUSATIVE = "волшебный банан",
-		INSTRUMENTAL = "волшебным бананом",
-		PREPOSITIONAL = "волшебном банане",
-	)
 
 /obj/projectile/magic/slipping/Initialize(mapload)
 	. = ..()
@@ -644,16 +533,6 @@
 	hitsound = 'sound/weapons/barragespellhit.ogg'
 	forced_accuracy = TRUE
 
-/obj/projectile/magic/arcane_barrage/get_ru_names()
-	return alist(
-		NOMINATIVE = "тайный заряд",
-		GENITIVE = "тайного заряда",
-		DATIVE = "тайному заряду",
-		ACCUSATIVE = "тайный заряд",
-		INSTRUMENTAL = "тайным зарядом",
-		PREPOSITIONAL = "тайном заряде",
-	)
-
 /obj/projectile/magic/arcane_barrage/blood
 	name = "blood bolt"
 	icon_state = "blood_bolt"
@@ -672,16 +551,6 @@
 	speed = 1
 	hitsound = 'sound/shadowdemon/shadowattack1.ogg' // Plays when hitting something living or a light
 	var/hit = FALSE
-
-/obj/projectile/magic/shadow_hand/get_ru_names()
-	return alist(
-		NOMINATIVE = "теневая рука",
-		GENITIVE = "теневой руки",
-		DATIVE = "теневой руке",
-		ACCUSATIVE = "теневую руку",
-		INSTRUMENTAL = "теневой рукой",
-		PREPOSITIONAL = "теневой руке",
-	)
 
 /obj/projectile/magic/shadow_hand/fire(setAngle)
 	if(firer)
@@ -709,16 +578,6 @@
 	// parry this you filthy casual
 	reflectability = REFLECTABILITY_NEVER
 	icon_state = null
-
-/obj/projectile/magic/demonic_grasp/get_ru_names()
-	return alist(
-			NOMINATIVE = "демоническая хватка",
-			GENITIVE = "демонической хватки",
-			DATIVE = "демонической хватке",
-			ACCUSATIVE = "демоническую хватку",
-			INSTRUMENTAL = "демонической хваткой",
-			PREPOSITIONAL = "демонической хватке",
-		)
 
 /obj/projectile/magic/demonic_grasp/pixel_move(trajectory_multiplier)
 	. = ..()

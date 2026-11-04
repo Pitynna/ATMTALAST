@@ -18,16 +18,6 @@
 	var/obj/item/grenade/bomb = null
 	var/datum/action/innate/wheelchair/bell/bell_action
 
-/obj/vehicle/ridden/wheelchair/get_ru_names()
-	return alist(
-		NOMINATIVE = "инвалидная коляска",
-		GENITIVE = "инвалидной коляски",
-		DATIVE = "инвалидной коляске",
-		ACCUSATIVE = "инвалидную коляску",
-		INSTRUMENTAL = "инвалидной коляской",
-		PREPOSITIONAL = "инвалидной коляске",
-	)
-
 /obj/vehicle/ridden/wheelchair/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/ridable, /datum/component/riding/vehicle/wheelchair)

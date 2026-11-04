@@ -1,5 +1,5 @@
 /obj/item/hardsuit_taser_proof
-	name = "Набор улучшения ТПРГ-1"
+	name = "TPRG-1 upgrade kit"
 	desc = "Данное улучшение позволяет хардсьюту поглащать слабые энергетические снаряды."
 	icon = 'icons/obj/hardsuits_modules.dmi'
 	icon_state = "powersink"

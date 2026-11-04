@@ -161,20 +161,10 @@
 
 /obj/item/tank/jetpack/void
 	name = "Void Jetpack (Oxygen)"
-	desc = "Реактивный ранец, оптимизированный для использования в космическом вакууме. Корпус из жаропрочного сплава покрыт синей изоляционной эмалью. Разработан NASA."
+	desc = "It works well in a void."
 	icon_state = "jetpack_void"
 	item_state =  "jetpack_void"
 	volume = 40
-
-/obj/item/tank/jetpack/void/get_ru_names()
-	return alist(
-		NOMINATIVE = "вакуумный реактивный ранец (Кислород)",
-		GENITIVE = "вакуумного реактивного ранца (Кислород)",
-		DATIVE = "вакуумному реактивному ранцу (Кислород)",
-		ACCUSATIVE = "вакуумный реактивный ранец (Кислород)",
-		INSTRUMENTAL = "вакуумным реактивным ранцем (Кислород)",
-		PREPOSITIONAL = "вакуумном реактивном ранце (Кислород)",
-	)
 
 /obj/item/tank/jetpack/oxygen
 	name = "Jetpack (Oxygen)"

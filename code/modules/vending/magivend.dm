@@ -1,6 +1,6 @@
 /obj/machinery/vending/magivend
 	name = "MagiVend"
-	desc = "Волшебный торговый автомат."
+	desc = "A magic vending machine."
 	icon_state = "magivend_off"
 	panel_overlay = "magivend_panel"
 	screen_overlay = "magivend"
@@ -60,13 +60,3 @@
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
 	tiltable = FALSE
-
-/obj/machinery/vending/magivend/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат MagiVend",
-		GENITIVE = "торгового автомата MagiVend",
-		DATIVE = "торговому автомату MagiVend",
-		ACCUSATIVE = "торговый автомат MagiVend",
-		INSTRUMENTAL = "торговым автоматом MagiVend",
-		PREPOSITIONAL = "торговом автомате MagiVend",
-	)

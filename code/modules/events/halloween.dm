@@ -24,49 +24,17 @@
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "skeletoncookie"
 
-/obj/item/reagent_containers/food/snacks/cookie/spookyskull/get_ru_names()
-	return alist(
-		NOMINATIVE = "печенье-череп",
-		GENITIVE = "печенья-черепа",
-		DATIVE = "печенью-черепу",
-		ACCUSATIVE = "печенье-череп",
-		INSTRUMENTAL = "печеньем-черепом",
-		PREPOSITIONAL = "печенье-черепе",
-	)
-
 /obj/item/reagent_containers/food/snacks/cookie/spookycoffin
 	name = "coffin cookie"
 	desc = "Жутко! Со вкусом вкуснейшего кофе!!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "coffincookie"
 
-/obj/item/reagent_containers/food/snacks/cookie/spookycoffin/get_ru_names()
-	return alist(
-		NOMINATIVE = "печенье-гроб",
-		GENITIVE = "печенья-гроба",
-		DATIVE = "печенью-гробу",
-		ACCUSATIVE = "печенье-гроб",
-		INSTRUMENTAL = "печеньем-гробом",
-		PREPOSITIONAL = "печенье-гробе",
-	)
-
-//spooky items
-
 /obj/item/storage/spooky
 	name = "trick-o-treat bag"
 	desc = "Тыквообразная сумка, в которой полно всяких вкусностей!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "treatbag"
-
-/obj/item/storage/spooky/get_ru_names()
-	return alist(
-		NOMINATIVE = "сумка для сладостей",
-		GENITIVE = "сумки для сладостей",
-		DATIVE = "сумке для сладостей",
-		ACCUSATIVE = "сумку для сладостей",
-		INSTRUMENTAL = "сумкой для сладостей",
-		PREPOSITIONAL = "сумке для сладостей",
-	)
 
 /obj/item/storage/spooky/populate_contents()
 	. = ..()

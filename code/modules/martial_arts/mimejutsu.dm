@@ -50,21 +50,11 @@
 
 /obj/item/mimejutsu_scroll
 	name = "Mimejutsu manual"
-	desc =	"Старое пособие по боевому искусству мимов."
+	desc =	"Its a beret with a note stapled to it..."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "mimemanual"
 	item_state = "mimemanual"
 	var/used = FALSE
-
-/obj/item/mimejutsu_scroll/get_ru_names()
-	return alist(
-		NOMINATIVE = "мануал Мимдзютсю",
-		GENITIVE = "мануала Мимдзютсю",
-		DATIVE = "мануалу Мимдзютсю",
-		ACCUSATIVE = "мануал Мимдзютсю",
-		INSTRUMENTAL = "мануалом Мимдзютсю",
-		PREPOSITIONAL = "мануале Мимдзютсю",
-	)
 
 /obj/item/mimejutsu_scroll/attack_self(mob/user)
 	if(!ishuman(user))

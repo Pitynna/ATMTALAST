@@ -17,7 +17,7 @@
 
 /obj/machinery/computer/atmoscontrol/laptop
 	name = "atmospherics laptop"
-	desc = "Дешёвый ноутбук корпорации Nanotrasen."
+	desc = "Cheap Nanotrasen laptop."
 	icon_state = "medlaptop"
 	density = FALSE
 

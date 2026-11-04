@@ -295,7 +295,7 @@
 //The legionnaire's bonfire, which can be swapped positions with.  Also sets flammable living beings on fire when they walk over it.
 /obj/structure/legionnaire_bonfire
 	name = "bone pile"
-	desc = "Груда костей, которая иногда слегка шевелится. Вероятно, стоит разбить их."
+	desc = "A pile of bones which seems to occasionally move a little. It's probably a good idea to smash them."
 	icon = 'icons/obj/lavaland/legionnaire_bonfire.dmi'
 	icon_state = "bonfire"
 	max_integrity = 100
@@ -304,16 +304,6 @@
 	light_range = 4
 	light_color = COLOR_SOFT_RED
 	var/mob/living/simple_animal/hostile/asteroid/elite/legionnaire/myowner = null
-
-/obj/structure/legionnaire_bonfire/get_ru_names()
-	return alist(
-		NOMINATIVE = "груда костей",
-		GENITIVE = "груды костей",
-		DATIVE = "груде костей",
-		ACCUSATIVE = "груду костей",
-		INSTRUMENTAL = "грудой костей",
-		PREPOSITIONAL = "груде костей",
-	)
 
 /obj/structure/legionnaire_bonfire/Initialize(mapload)
 	. = ..()
@@ -358,7 +348,7 @@
 
 /obj/item/crusher_trophy/legionnaire_spine
 	name = "legionnaire spine"
-	desc = "Позвоночник легионера. Может быть прикреплен на крушитель в качестве трофея. Или можете его потрясти, может что-то случится."
+	desc = "The spine of a legionnaire. With some creativity, you could use it as a crusher trophy. Alternatively, shaking it might do something as well."
 	gender = MALE
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "legionnaire_spine"
@@ -366,16 +356,6 @@
 	bonus_value = 75 // listen this dies in one hit, this can be a high chance.
 	/// Time at which the item becomes usable again
 	var/next_use_time
-
-/obj/item/crusher_trophy/legionnaire_spine/get_ru_names()
-	return alist(
-		NOMINATIVE = "позвоночник легионера",
-		GENITIVE = "позвоночника легионера",
-		DATIVE = "позвоночнику легионера",
-		ACCUSATIVE = "позвоночник легионера",
-		INSTRUMENTAL = "позвоночником легионера",
-		PREPOSITIONAL = "позвоночнике легионера",
-	)
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/legionnaire
 	health = 25
