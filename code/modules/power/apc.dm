@@ -277,8 +277,6 @@
 			cell.charge = start_charge * cell.maxcharge / 100 // (convert percentage to actual value)
 		make_terminal()
 
-	if(is_taipan(z)) // Синдидоступ при сборке на тайпане
-		req_access = list(ACCESS_SYNDICATE)
 	cog = null // Or you can't put it in
 
 	//if area isn't specified use current
@@ -646,8 +644,7 @@
 		if(!do_after(user, 2 SECONDS * coil.toolspeed, src, category = DA_CAT_TOOL) || opened == APC_CLOSED || terminal || !host_turf.can_have_cabling() || host_turf.underfloor_accessibility != UNDERFLOOR_INTERACTABLE || !has_electronics() || QDELETED(coil))
 			return ATTACK_CHAIN_PROCEED
 		var/obj/structure/cable/node = host_turf.get_cable_node()
-		CALCULATE_SKILL_MOD(user, ELECTRICITY_NEGATIVE_CHANCE_MOD, prob_mod)
-		if(prob(50 * prob_mod) && electrocute_mob(user, node, node, 1, TRUE))
+		if(prob(50) && electrocute_mob(user, node, node, 1, TRUE))
 			do_sparks(5, TRUE, src)
 			return ATTACK_CHAIN_BLOCKED_ALL
 		if(!coil.use(10))

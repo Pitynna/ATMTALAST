@@ -230,8 +230,6 @@ GLOBAL_LIST_EMPTY(sfx_datum_by_key)
 #define SFX_HONKBOT_E "honkbot_e"
 #define SFX_GOOSE "goose"
 #define SFX_HULL_CREAKING "hull_creaking"
-#define SFX_HYPERTORUS_CALM "hypertorus_calm"
-#define SFX_HYPERTORUS_MELTING "hypertorus_melting"
 #define SFX_LAW "law"
 #define SFX_PAGE_TURN "page_turn"
 #define SFX_PUNCH "punch"

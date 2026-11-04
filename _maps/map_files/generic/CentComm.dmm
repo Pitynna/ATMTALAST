@@ -1024,7 +1024,6 @@
 	},
 /area/centcom/syndicate_base/outside)
 "ayt" = (
-/obj/machinery/syndiepad/receivepad,
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "SFBQMLoad"
@@ -1212,7 +1211,6 @@
 	},
 /area/centcom/central_command_areas/supply)
 "aDX" = (
-/obj/machinery/computer/syndie_supplycomp,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -3329,9 +3327,6 @@
 	},
 /area/centcom/syndicate_base/cargo)
 "bPp" = (
-/obj/machinery/syndiepad/admin/loadpad{
-	target_id = "syndie_cargo_port2"
-	},
 /obj/structure/curtain/black{
 	pixel_y = 32
 	},
@@ -7698,7 +7693,6 @@
 	},
 /area/shuttle/administration)
 "dVl" = (
-/obj/machinery/computer/syndie_supplycomp,
 /turf/simulated/floor/carpet,
 /area/centcom/syndicate_base/control)
 "dVQ" = (
@@ -12658,38 +12652,6 @@
 /area/centcom/ninja/outpost)
 "ggh" = (
 /obj/structure/table/wood,
-/obj/item/card/id/syndicate/botanist{
-	pixel_x = -9;
-	pixel_y = 9
-	},
-/obj/item/card/id/syndicate/cargo{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/card/id/syndicate/engineer{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/obj/item/card/id/syndicate/kitchen{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/card/id/syndicate/medic{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/card/id/syndicate/scientist{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/card/id/syndicate/research_director{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/card/id/syndicate/comms_officer{
-	pixel_x = -2;
-	pixel_y = 2
-	},
 /obj/item/card/id/syndicate/anyone{
 	pixel_x = -1;
 	pixel_y = 1
@@ -17077,7 +17039,6 @@
 	},
 /area/shuttle/ninja)
 "iwt" = (
-/obj/machinery/syndiepad/admin/loadpad,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -23949,7 +23910,6 @@
 	},
 /area/centcom/central_command_areas/evacuation)
 "lmr" = (
-/obj/machinery/syndiepad/receivepad,
 /obj/machinery/conveyor/inverted{
 	dir = 5;
 	id = "SFBQMLoad"
@@ -27834,7 +27794,6 @@
 /turf/space,
 /area/space)
 "mWl" = (
-/obj/machinery/syndiepad/receivepad,
 /turf/simulated/floor/carpet,
 /area/centcom/syndicate_base/control)
 "mWn" = (
@@ -28475,9 +28434,6 @@
 /obj/structure/window/reinforced{
 	color = "red";
 	dir = 4
-	},
-/obj/machinery/computer/syndie_supplycomp{
-	pixel_x = -6
 	},
 /turf/simulated/floor/carpet/black,
 /area/centcom/syndicate_base/control)
@@ -30685,16 +30641,6 @@
 /area/shuttle/siberia)
 "oix" = (
 /obj/structure/rack/holorack,
-/obj/item/circuitboard/syndicatesupplycomp/public{
-	pixel_x = -4;
-	pixel_y = 8
-	},
-/obj/item/circuitboard/syndicatesupplycomp{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/circuitboard/quantumpad/syndiepad,
-/obj/item/circuitboard/syndicate_teleporter,
 /obj/item/circuitboard/mechfab/syndicate{
 	pixel_x = 3;
 	pixel_y = -3
@@ -30791,7 +30737,6 @@
 	},
 /area/centcom/syndicate_base/elite_squad)
 "olk" = (
-/obj/machinery/syndiepad/loadpad,
 /obj/machinery/conveyor/inverted{
 	dir = 6;
 	id = "SFBQMLoad2"
@@ -34285,7 +34230,6 @@
 	},
 /area/shuttle/escape)
 "pST" = (
-/obj/machinery/syndiepad/loadpad,
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "SFBQMLoad2"
@@ -35186,7 +35130,6 @@
 /turf/simulated/floor/carpet,
 /area/centcom/central_command_areas/zone/one)
 "qmc" = (
-/obj/machinery/computer/syndie_supplycomp,
 /turf/simulated/floor/shuttle{
 	icon = 'icons/turf/floors.dmi';
 	icon_state = "dark"
@@ -37656,7 +37599,6 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/stamp/syndicate/taipan,
 /turf/simulated/floor/carpet/black,
 /area/centcom/syndicate_base/control)
 "rmG" = (
@@ -38961,7 +38903,7 @@
 	pixel_y = 32
 	},
 /obj/item/paper/syndimemo{
-	info = "Дней без рассекречивания Тайпана: 0"
+	info = "Дней без рассекречивания базы: 0"
 	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_base/control)
@@ -41024,7 +40966,6 @@
 /turf/simulated/floor/indestructible/grass,
 /area/centcom/syndicate_base/outside)
 "sLW" = (
-/obj/structure/closet/secure_closet/syndicate/medbay,
 /turf/simulated/floor/plasteel{
 	icon_state = "navybluealt"
 	},
@@ -44635,9 +44576,6 @@
 /turf/simulated/floor/mineral/plastitanium,
 /area/centcom/syndicate_base/elite_squad)
 "uor" = (
-/obj/machinery/syndiepad/admin/loadpad{
-	target_id = "syndie_cargo_port1"
-	},
 /obj/structure/curtain/black{
 	pixel_y = 32
 	},
@@ -51674,7 +51612,6 @@
 	},
 /area/centcom/central_command_areas/supply)
 "xzh" = (
-/obj/machinery/syndiepad/loadpad,
 /turf/simulated/floor/carpet,
 /area/centcom/syndicate_base/control)
 "xzN" = (
@@ -53012,7 +52949,6 @@
 	},
 /area/centcom/central_command_areas/zone/three)
 "ylz" = (
-/obj/machinery/syndiepad/admin/receivepad,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},

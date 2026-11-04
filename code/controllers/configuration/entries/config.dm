@@ -690,8 +690,6 @@
 
 /datum/config_entry/flag/item_animations_enabled
 
-/datum/config_entry/flag/disable_taipan
-
 /datum/config_entry/flag/disable_lavaland
 
 /datum/config_entry/flag/config_errors_runtime

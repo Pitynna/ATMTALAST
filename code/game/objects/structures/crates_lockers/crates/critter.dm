@@ -50,11 +50,8 @@
 		already_opened = TRUE
 		return ..()
 
-	var/is_syndicate_area = istype(get_area(src), /area/syndicate/unpowered/syndicate_space_base)
 	for(var/i in 1 to amount)
-		var/mob/living/simple_animal/pet = new content_mob(loc)
-		if(is_syndicate_area)
-			pet.faction += "syndicate" // so that the turrets don't shoot at the animals from syndicate cargo
+		new content_mob(loc)
 	already_opened = TRUE
 	return ..()
 

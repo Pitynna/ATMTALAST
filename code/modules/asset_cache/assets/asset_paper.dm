@@ -16,7 +16,6 @@
 		"large_stamp-law.png" = 'icons/misc/paper_icons/large_stamp-law.png',
 		"large_stamp-cent.png" = 'icons/misc/paper_icons/large_stamp-cent.png',
 		"large_stamp-syndicate.png" = 'icons/misc/paper_icons/large_stamp-syndicate.png',
-		"large_stamp-taipan.png" = 'icons/misc/paper_icons/large_stamp-taipan.png',
 		"large_stamp-rep.png" = 'icons/misc/paper_icons/large_stamp-rep.png',
 		"large_stamp-magistrate.png" = 'icons/misc/paper_icons/large_stamp-magistrate.png',
 		"large_stamp-ward.png" = 'icons/misc/paper_icons/large_stamp-ward.png',

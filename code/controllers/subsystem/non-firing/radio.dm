@@ -14,7 +14,6 @@ SUBSYSTEM_DEF(radio)
 		ERT_FREQ_NAME = ERT_FREQ,
 		DTH_FREQ_NAME = DTH_FREQ,
 		SYND_FREQ_NAME = SYND_FREQ,
-		SYND_TAIPAN_FREQ_NAME = SYND_TAIPAN_FREQ,
 		SYNDTEAM_FREQ_NAME = SYNDTEAM_FREQ,
 		SOV_FREQ_NAME = SOV_FREQ,
 		SUP_FREQ_NAME = SUP_FREQ,
@@ -33,9 +32,9 @@ SUBSYSTEM_DEF(radio)
 		VOX_RAID_FREQ_NAME = VOX_RAID_FREQ,
 	)
 	var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
-	var/list/ANTAG_FREQS = list(SYND_FREQ, SYNDTEAM_FREQ, SYND_TAIPAN_FREQ, VOX_RAID_FREQ)
+	var/list/ANTAG_FREQS = list(SYND_FREQ, SYNDTEAM_FREQ, VOX_RAID_FREQ)
 	var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, MED_FREQ, SEC_FREQ, PRS_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ, PROC_FREQ, T1_FREQ, T2_FREQ, T3_FREQ)
-	var/list/syndicate_blacklist = list(SPY_SPIDER_FREQ, EVENT_ALPHA_FREQ, EVENT_BETA_FREQ, EVENT_GAMMA_FREQ, SYND_TAIPAN_FREQ)	//list of frequencies syndicate headset can't hear
+	var/list/syndicate_blacklist = list(SPY_SPIDER_FREQ, EVENT_ALPHA_FREQ, EVENT_BETA_FREQ, EVENT_GAMMA_FREQ)	//list of frequencies syndicate headset can't hear
 	var/list/datum/radio_frequency/frequencies = list()
 
 // This is a disgusting hack to stop this tripping CI when this thing needs to FUCKING DIE
@@ -49,9 +48,6 @@ SUBSYSTEM_DEF(radio)
 
 // This is fucking disgusting and needs to die
 /datum/controller/subsystem/radio/proc/frequency_span_class(frequency)
-	// Taipan!
-	if(frequency == SYND_TAIPAN_FREQ)
-		return "taipan"
 	// Antags!
 	if(frequency in ANTAG_FREQS)
 		return "syndradio"

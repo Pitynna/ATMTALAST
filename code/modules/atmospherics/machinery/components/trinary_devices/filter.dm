@@ -130,19 +130,6 @@
 			FILTER_GAS(TLV_N2O, sleeping_agent)
 			FILTER_GAS(TLV_H2, hydrogen)
 			FILTER_GAS(TLV_H2O, water_vapor)
-			FILTER_GAS(TLV_TRITIUM, tritium)
-			FILTER_GAS(TLV_BZ, bz)
-			FILTER_GAS(TLV_PLUOXIUM, pluoxium)
-			FILTER_GAS(TLV_MIASMA, miasma)
-			FILTER_GAS(TLV_FREON, freon)
-			FILTER_GAS(TLV_NITRIUM, nitrium)
-			FILTER_GAS(TLV_HEALIUM, healium)
-			FILTER_GAS(TLV_PROTO_NITRATE, proto_nitrate)
-			FILTER_GAS(TLV_ZAUKER, zauker)
-			FILTER_GAS(TLV_HALON, halon)
-			FILTER_GAS(TLV_HELIUM, helium)
-			FILTER_GAS(TLV_ANTINOBLIUM, antinoblium)
-			FILTER_GAS(TLV_HYPERNOBLIUM, hypernoblium)
 			else
 				filtered_out = null
 

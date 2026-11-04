@@ -418,7 +418,6 @@
 
 	loot_panel = new(src)
 
-	skills_select_window = new()
 
 	view_size = new(src)
 	view_size.resetFormat()
@@ -547,7 +546,6 @@
 	QDEL_NULL(tooltips)
 	QDEL_NULL(loot_panel)
 	QDEL_NULL(parallax_rock)
-	QDEL_NULL(skills_select_window)
 	seen_messages = null
 	sound_tokens = null
 	Master.UpdateTickRate()

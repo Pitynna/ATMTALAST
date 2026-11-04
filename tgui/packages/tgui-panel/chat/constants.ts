@@ -71,7 +71,7 @@ export const MESSAGE_TYPES: MessageType[] = [
     name: 'Радио',
     description: 'Сообщения по всем каналам радио-связи.',
     selector:
-      '.alert, .syndradio, .centradio, .airadio, .entradio, .comradio, .secradio, .prisradio, .engradio, .medradio, .sciradio, .supradio, .srvradio, .expradio, .radio, .deptradio, .newscaster, .taipan, .sovradio, .spider_clan',
+      '.alert, .syndradio, .centradio, .airadio, .entradio, .comradio, .secradio, .prisradio, .engradio, .medradio, .sciradio, .supradio, .srvradio, .expradio, .radio, .deptradio, .newscaster, .sovradio, .spider_clan',
   },
   {
     type: MESSAGE_TYPE_INFO,

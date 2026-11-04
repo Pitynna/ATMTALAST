@@ -291,10 +291,10 @@
 			Использует особые протоколы связи для доступа к зашифрованным каналам \"Синдиката\" и прослушивания закрытых каналов \"Нанотрейзен\". \
 			Работает автономно без необходимости прямого подключения к местным телекоммуникационным системам. \
 			Элитная модель, созданная для командного состава \"Синдиката\"."
-	icon_state = "taipan_headset"
-	item_state = "taipan_headset"
+	icon_state = "syndie_headset"
+	item_state = "syndie_headset"
 	ks1type = /obj/item/encryptionkey/syndteam
-	ks2type = /obj/item/encryptionkey/syndicate/taipan
+	ks2type = /obj/item/encryptionkey/syndicate
 	freerange = TRUE
 	freqlock = FALSE
 	item_flags = BANGPROTECT_MINOR
@@ -308,34 +308,6 @@
 		INSTRUMENTAL = "тактической гарнитурой Офицера \"Синдиката\"",
 		PREPOSITIONAL = "тактической гарнитуре Офицера \"Синдиката\"",
 	)
-
-/obj/item/radio/headset/syndicate/taipan
-	name = "syndicate taipan headset"
-	desc = "Тактическая гарнитура, разработанная по технологиям \"Синдиката\". \
-			Система активного шумоподавления защищает органы слуха пользователя от громких звуков. \
-			Использует особые протоколы связи для доступа к зашифрованным каналам \"Синдиката\" и прослушивания закрытых каналов \"Нанотрейзен\". \
-			Работает автономно без необходимости прямого подключения к местным телекоммуникационным системам. \
-			Специальная модель для сотрудников \"Синдиката\", оперирующих в секторе Эпсилон Лукусты."
-	icon_state = "taipan_headset"
-	item_state = "taipan_headset"
-	ks1type = /obj/item/encryptionkey/syndicate/taipan
-	item_flags = BANGPROTECT_MINOR
-	default_frequency = SYND_TAIPAN_FREQ
-
-/obj/item/radio/headset/syndicate/taipan/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактическая гарнитура \"Синдиката\" (Тайпан)",
-		GENITIVE = "тактическую гарнитуру \"Синдиката\" (Тайпан)",
-		DATIVE = "тактической гарнитуры \"Синдиката\" (Тайпан)",
-		ACCUSATIVE = "тактическую гарнитуру \"Синдиката\" (Тайпан)",
-		INSTRUMENTAL = "тактической гарнитурой \"Синдиката\" (Тайпан)",
-		PREPOSITIONAL = "тактической гарнитуре \"Синдиката\" (Тайпан)",
-	)
-
-/obj/item/radio/headset/syndicate/taipan/tcomms_agent
-	ks1type = /obj/item/encryptionkey/syndicate/taipan/tcomms_agent
-	freerange = TRUE
-	freqlock = FALSE
 
 /obj/item/radio/headset/alt/soviet
 	name = "Soviet bowman headset"

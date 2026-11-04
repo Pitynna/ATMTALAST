@@ -521,7 +521,7 @@
 
 /obj/item/storage/box/syndicate_permits/populate_contents()
 	for(var/I in 1 to 7)
-		new /obj/item/areaeditor/permit/syndicate(src)
+		new /obj/item/areaeditor/permit(src)
 
 /obj/item/storage/box/ids
 	name = "spare IDs"

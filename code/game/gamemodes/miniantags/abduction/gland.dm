@@ -345,7 +345,3 @@
 	if(istype(turf))
 		turf.atmos_spawn_air(gas_flag, gas_amount, T20C)
 	owner.vomit()
-
-/obj/item/organ/internal/heart/gland/toxic_gas/bz
-	gas_flag = LINDA_SPAWN_BZ
-	gas_amount = 50

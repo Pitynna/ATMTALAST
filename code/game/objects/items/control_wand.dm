@@ -201,13 +201,6 @@
 	icon_state = "gangtool-blue"
 	region_access = list(REGION_CENTCOMM)
 
-/obj/item/door_remote/taipan
-	name = "Taipan door remote"
-	desc = "High-ranking Syndicate officials only."
-	icon_state = "gangtool-syndie"
-	region_access = list(REGION_TAIPAN)
-	z_cross = FALSE
-
 /obj/item/door_remote/omni/access_tuner
 	name = "access tuner"
 	desc = "A device used for illegally interfacing with doors."

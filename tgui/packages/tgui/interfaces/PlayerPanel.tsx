@@ -676,13 +676,6 @@ const MobManipulationSection = (_props: unknown) => {
               MIRROR UI TO ADMIN
             </Button>
           ) : null}
-          <Button
-            fluid
-            icon="circle-user"
-            onClick={() => handleAction('editskills')}
-          >
-            EDIT SKILLS
-          </Button>
         </Grid.Column>
         <Grid.Column size={6}>
           <Button

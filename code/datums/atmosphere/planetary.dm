@@ -13,8 +13,6 @@
 	)
 	restricted_gases = list(
 		ATMOSPHERE_TOXINS = 0.1,
-		ATMOSPHERE_BZ = 1.2,
-		ATMOSPHERE_MIASMA = 1.2,
 		ATMOSPHERE_WATER_VAPOR = 0.1,
 	)
 	restricted_chance = 30
@@ -41,7 +39,6 @@
 	restricted_gases = list(
 		ATMOSPHERE_TOXINS = 0.1,
 		ATMOSPHERE_WATER_VAPOR = 0.1,
-		ATMOSPHERE_MIASMA = 1.2,
 	)
 	restricted_chance = 20
 

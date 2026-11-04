@@ -26,10 +26,9 @@
 	light_range = 5
 	light_on = FALSE
 	var/adaptive_damage_bonus = 0
+	var/charge_timer
 	var/upgraded = FALSE //whether is our crusher is magmite-upgraded
 	var/obj/projectile/destabilizer/destab = /obj/projectile/destabilizer
-	/// Timer before our crusher recharges
-	var/charge_timer
 
 /obj/item/twohanded/kinetic_crusher/get_ru_names()
 	return alist(

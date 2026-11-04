@@ -80,7 +80,7 @@
 
 /obj/item/circuit_component/compare/access/ui_static_data(mob/user)
 	var/list/data = list(
-		"regions"= get_accesslist_static_data(REGION_GENERAL, parent?.admin_only ? REGION_TAIPAN : REGION_COMMAND)
+		"regions"= get_accesslist_static_data(REGION_GENERAL, REGION_COMMAND)
 	)
 
 	return data

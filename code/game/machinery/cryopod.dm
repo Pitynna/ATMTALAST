@@ -403,10 +403,6 @@
 		if(!SSticker.mode.cult_objs.find_new_sacrifice_target())
 			SSticker.mode.cult_objs.ready_to_summon()
 
-	// We should track when taipan players get despawned
-	if(occupant.mind in GLOB.taipan_players_active)
-		GLOB.taipan_players_active -= occupant.mind
-
 	// Update any existing objectives involving this mob.
 	if(occupant.mind)
 		for(var/datum/objective/O in GLOB.all_objectives)
@@ -419,8 +415,6 @@
 		// Handle job slot/tater cleanup.
 		var/job = occupant.mind.assigned_role
 
-		if(istype(src, /obj/machinery/cryopod/syndie))
-			free_taipan_role(job)
 
 		SSjobs.FreeRole(job)
 
@@ -691,18 +685,12 @@
 		var/obj/O = person_to_cryo.loc
 		O.force_eject_occupant(person_to_cryo)
 	var/list/free_cryopods = list()
-	var/list/free_syndie_cryopods = list()
 	for(var/obj/machinery/cryopod/P in SSmachines.get_by_type(/obj/machinery/cryopod))
-		if(!P.occupant && istype(get_area(P), /area/syndicate/unpowered/syndicate_space_base) && istype(P, /obj/machinery/cryopod/syndie))
-			free_syndie_cryopods += P
-		else if(!P.occupant && istype(get_area(P), /area/station/commons/sleep))
+		if(!P.occupant && istype(get_area(P), /area/station/commons/sleep))
 			free_cryopods += P
 	var/obj/machinery/cryopod/target_cryopod = null
 	if(length(free_cryopods))
-		if(person_to_cryo.find_taipan_hud_number_by_job()) //Если вернёт хоть что то значит тайпановец. Иначе вернёт null
-			target_cryopod = safepick(free_syndie_cryopods)
-		else
-			target_cryopod = safepick(free_cryopods)
+		target_cryopod = safepick(free_cryopods)
 		if(target_cryopod.check_occupant_allowed(person_to_cryo))
 			var/turf/T = get_turf(person_to_cryo)
 			var/obj/effect/portal/SP = new /obj/effect/portal(T, null, null, 4 SECONDS, null, FALSE)

@@ -130,10 +130,6 @@
 	item_color = "syndicate"
 	dye_color = DYE_SYNDICATE
 
-/obj/item/stamp/syndicate/taipan
-	name = "taipan rubber stamp"
-	icon_state = "stamp-taipan"
-
 /obj/item/stamp/mime
 	name = "mime's rubber stamp"
 	icon_state = "stamp-mime"

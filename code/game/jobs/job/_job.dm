@@ -108,14 +108,6 @@
 	/// Traits added to the mind of the mob assigned this job
 	var/list/mind_traits
 
-	/// Skill levels by job list
-	var/list/skill_levels = list()
-	/// Discount skills category
-	var/list/discount_skill_category = list()
-	/// Skill levels by alt titles jobs
-	var/alist/alt_skill_levels = null
-	var/base_free_skill_point = DEFAULT_FREE_POINTS
-
 #define MAX_START_MONEY_MULTIPLIER 3
 
 /datum/job/New()
@@ -125,13 +117,6 @@
 
 	min_start_money = paycheck
 	max_start_money = paycheck * MAX_START_MONEY_MULTIPLIER
-
-	var/typecache_key = discount_skill_category.Join("-")
-	if(typecache_key in GLOB.discount_categories_typecaches)
-		discount_skill_category = GLOB.discount_categories_typecaches[typecache_key]
-		return
-	discount_skill_category = typecacheof(discount_skill_category)
-	GLOB.discount_categories_typecaches[typecache_key] = discount_skill_category
 
 #undef MAX_START_MONEY_MULTIPLIER
 
@@ -158,7 +143,6 @@
 	if(outfit)
 		H.equipOutfit(outfit, visualsOnly)
 
-	H.mind?.recalculate_skills(ref_job = title)
 	H.dna.species.after_equip_job(src, H, visualsOnly)
 
 	if(!visualsOnly && announce)
@@ -351,8 +335,6 @@
 		var/obj/item/mod/control/mod_control = H.back
 		mod_control.quick_activation()
 
-	INVOKE_ASYNC(src, PROC_REF(skill_select_offer), H)
-
 	return TRUE
 
 /datum/outfit/job/proc/imprint_idcard(mob/living/carbon/human/H)
@@ -389,12 +371,6 @@
 		PDA.ownrank = C.rank
 		PDA.update_appearance(UPDATE_NAME)
 
-/datum/outfit/job/proc/skill_select_offer(mob/living/carbon/human/user)
-	var/choice = tgui_alert(user, message = "Хотите настроить навыки?", title = "Настройка навыков", buttons = list("Да", "Позже"))
-	if(choice == "Да")
-		var/datum/ui_module/skills_upgrade_win/skills_win = new()
-		skills_win.show(user, user)
-
 /datum/outfit/job/get_chameleon_disguise_info()
 	var/list/types = ..()
 	if(allow_backbag_choice && backpack)
@@ -419,16 +395,3 @@
 		if(job_exp >= job_requirement)
 			return FALSE
 	return TRUE
-
-/datum/job/proc/get_skill_level(skill_type, alt_job_title)
-	var/list/used_skill_table = skill_levels
-
-	if(alt_job_title && alt_skill_levels)
-		var/list/alt_skills = alt_skill_levels[alt_job_title]
-		if(alt_skills)
-			used_skill_table = alt_skills
-
-	var/level = used_skill_table[skill_type]
-	if(level == null)
-		return SKILL_LEVEL_NONE
-	return level

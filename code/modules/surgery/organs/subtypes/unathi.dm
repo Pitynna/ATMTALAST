@@ -141,7 +141,6 @@
 	safe_oxygen_min = 8 // can breathe on lavaland
 	safe_co2_max = 30
 	safe_toxins_max = 1
-	BZ_trip_balls_min = 3
 
 /obj/item/organ/internal/lungs/unathi/ash_walker/get_ru_names()
 	return alist(

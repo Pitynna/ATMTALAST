@@ -664,8 +664,6 @@
 
 /obj/machinery/smartfridge/secure/extract/Initialize(mapload)
 	. = ..()
-	if(is_taipan(z)) // Синдидоступ при сборке на тайпане
-		req_access = list(ACCESS_SYNDICATE)
 	accepted_items_typecache = typecacheof(list(
 		/obj/item/slime_extract
 	))

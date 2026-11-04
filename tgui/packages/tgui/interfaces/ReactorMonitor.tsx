@@ -11,7 +11,7 @@ import { toFixed } from 'tgui-core/math';
 import { useBackend } from '../backend';
 import { getGasColor, getGasLabel } from '../constants';
 import { Window } from '../layouts';
-import { HelpDummy, HoverHelp } from './Hypertorus/helpers';
+import { HelpDummy, HoverHelp } from './common/AtmosHelp';
 
 interface FissionReactorData {
   active: number;

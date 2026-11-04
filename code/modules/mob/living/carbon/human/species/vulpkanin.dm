@@ -87,11 +87,6 @@
 	)
 	autohiss_exempt = list("Канилунц")
 
-	max_select_skills = list(
-		/datum/skill/general/cooking = 1,
-		/datum/skill/medical/surgery = 1,
-	)
-
 /datum/species/vulpkanin/handle_death(gibbed, mob/living/carbon/human/H)
 	H.stop_tail_wagging()
 

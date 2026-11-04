@@ -40,11 +40,6 @@
 	. = ..()
 	if(!logs_decryption_key)
 		logs_decryption_key = GenerateKey()
-	if(is_taipan(z))
-		syndicate = 1
-		req_access = list(ACCESS_SYNDICATE_RESEARCH_DIRECTOR)
-		icon_state = "syndie_server"
-		base_icon_state = "syndie_server"
 	component_parts = list()
 	component_parts += new /obj/item/circuitboard/rdserver(null)
 	component_parts += new /obj/item/stock_parts/scanning_module(null)
@@ -350,10 +345,6 @@
 
 /obj/machinery/computer/rdservercontrol/Initialize(mapload)
 	. = ..()
-	if(is_taipan(z))
-		syndicate = 1
-		req_access = list(ACCESS_SYNDICATE_RESEARCH_DIRECTOR)
-
 /obj/machinery/computer/rdservercontrol/emag_act(mob/user)
 	if(emagged)
 		return FALSE

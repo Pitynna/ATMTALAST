@@ -123,21 +123,10 @@
 		if("clear_all")
 			selected_accesses = list()
 
+#undef MAX_BRAIN_DAMAGE
+
 /obj/item/access_control/syndicate
 	name = "suspicious access control electronics"
 	req_access = list(ACCESS_SYNDICATE)
-	/// An associative list containing all station accesses. Includes their name and access number. For use with the UI.
-	var/static/list/syndie_door_accesses_list = list()
-	region_min = REGION_TAIPAN
-	region_max = REGION_TAIPAN
-
-/obj/item/access_control/syndicate/Initialize(mapload)
-	. = ..()
-	if(!length(syndie_door_accesses_list))
-		for(var/access in get_taipan_syndicate_access())
-			syndie_door_accesses_list += list(list(
-				"name" = get_access_desc(access),
-				"id" = access))
-	current_door_accesses_list = syndie_door_accesses_list
-
-#undef MAX_BRAIN_DAMAGE
+	region_min = REGION_COMMAND
+	region_max = REGION_COMMAND

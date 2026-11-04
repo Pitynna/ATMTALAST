@@ -208,7 +208,7 @@
 /obj/machinery/suit_storage_unit/syndicate/comms
 	suit_type = /obj/item/mod/control/pre_equipped/elite
 	magboots_type = /obj/item/clothing/shoes/magboots/syndie/advance
-	req_access = list(ACCESS_SYNDICATE_COMMS_OFFICER)
+	req_access = list(ACCESS_SYNDICATE)
 
 /obj/machinery/suit_storage_unit/ert
 	req_access = list(ACCESS_CENT_GENERAL)

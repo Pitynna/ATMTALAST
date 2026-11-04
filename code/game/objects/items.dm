@@ -1507,12 +1507,7 @@ GAME_VERB_SRC(/obj/item, verb_pickup, oview(1), "Pick up", VERB_CATEGORY_HIDDEN)
 	for(var/addition in deltas)
 		delta += addition
 
-	var/final_force = force + delta
-	if(!HAS_TRAIT(attacker, TRAIT_MELEE_WEAPON))
-		return final_force
-
-	CALCULATE_SKILL_MOD(attacker, MELEE_DAMAGE_MOD, skill_mod)
-	return final_force * skill_mod
+	return force + delta
 
 /// Returns the icon used for overlaying the object on a belt
 /obj/item/proc/get_belt_overlay()

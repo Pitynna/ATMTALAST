@@ -19,8 +19,6 @@ GLOBAL_LIST_EMPTY(navigation_computers)
 GLOBAL_LIST_EMPTY(station_turfs)
 
 GLOBAL_LIST_EMPTY(machines)
-GLOBAL_LIST_EMPTY(syndiepads)											//list of all syndiepads
-GLOBAL_LIST_EMPTY(syndie_cargo_consoles)								//list of all syndie cargo consoles
 GLOBAL_LIST_EMPTY(rcd_list)												//list of Rapid Construction Devices.
 GLOBAL_LIST_EMPTY(supplypod_loading_bays)
 

@@ -60,18 +60,6 @@
 	greyscale_colors = "#941c1c#3c3c3c#18ff00"
 	change_voice = FALSE
 
-/obj/item/encryptionkey/syndicate/taipan
-	change_voice = FALSE
-	greyscale_colors = "#3c3c3c#ffad00#ffad00"
-	channels = list(SYND_TAIPAN_FREQ_NAME = 1)
-
-/obj/item/encryptionkey/syndicate/taipan/borg
-	channels = list(SYND_TAIPAN_FREQ_NAME = 1, SYND_FREQ_NAME = 1)
-
-/obj/item/encryptionkey/syndicate/taipan/tcomms_agent
-	greyscale_colors = "#ffad00#ffad00#3c3c3c"
-	channels = list(SYND_TAIPAN_FREQ_NAME = 1, SYND_FREQ_NAME = 1, PUB_FREQ_NAME = 1)
-
 /obj/item/encryptionkey/syndteam
 	name = "syndicate encryption key"
 	desc = "Ключ шифрования, устанавливаемый в гарнитуру. Содержит в себе лучшее хакерское ПО, доступное на чёрном рынке и позволяющее получить доступ ко всем частотам \"Нанотрейзен\"."
@@ -610,7 +598,7 @@
 	greyscale_config = /datum/greyscale_config/encryptionkey_double_stripe
 	greyscale_colors = "#ffe964#87e748"
 	channels = list(PUB_FREQ_NAME = 1, SCI_FREQ_NAME = 1, COMM_FREQ_NAME = 1, MED_FREQ_NAME = 1, ENG_FREQ_NAME = 1, SEC_FREQ_NAME = 1, PRS_FREQ_NAME = 1, SUP_FREQ_NAME = 1, SRV_FREQ_NAME = 1, PROC_FREQ_NAME = 1, AI_FREQ_NAME = 1, SYND_FREQ_NAME = 1,  \
-		ERT_FREQ_NAME = 1, DTH_FREQ_NAME = 1, SYND_TAIPAN_FREQ_NAME = 1, SYNDTEAM_FREQ_NAME = 1, SOV_FREQ_NAME = 1, MED_I_FREQ_NAME = 1, SEC_I_FREQ_NAME = 1, SPY_SPIDER_FREQ_NAME = 1, NINJA_FREQ_NAME = 1, EVENT_ALPHA_FREQ_NAME = 1, EVENT_BETA_FREQ_NAME = 1, EVENT_GAMMA_FREQ_NAME = 1, VOX_RAID_FREQ_NAME = 1)
+		ERT_FREQ_NAME = 1, DTH_FREQ_NAME = 1, SYNDTEAM_FREQ_NAME = 1, SOV_FREQ_NAME = 1, MED_I_FREQ_NAME = 1, SEC_I_FREQ_NAME = 1, SPY_SPIDER_FREQ_NAME = 1, NINJA_FREQ_NAME = 1, EVENT_ALPHA_FREQ_NAME = 1, EVENT_BETA_FREQ_NAME = 1, EVENT_GAMMA_FREQ_NAME = 1, VOX_RAID_FREQ_NAME = 1)
 
 /obj/item/encryptionkey/admin/get_ru_names()
 	return alist(

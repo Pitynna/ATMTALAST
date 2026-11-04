@@ -222,7 +222,7 @@
 	to_chat(user, span_notice("Вы разворачиваете лестницу. Она уходит значительно дальше, чем вы ожидали."))
 	var/last_ladder = null
 	for(var/i in 1 to world.maxz)
-		if(is_admin_level(i) || is_away_level(i) || is_taipan(i))
+		if(is_admin_level(i) || is_away_level(i))
 			continue
 		var/turf/T2 = locate(ladder_x, ladder_y, i)
 		var/area/new_area = get_area(T2)

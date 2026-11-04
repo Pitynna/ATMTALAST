@@ -10,8 +10,6 @@
 	switch(display_freq)
 		if(SYND_FREQ)
 			freq_text = "#unkn"
-		if(SYND_TAIPAN_FREQ)
-			freq_text = "#noid"
 		if(SYNDTEAM_FREQ)
 			freq_text = "#unid"
 		else

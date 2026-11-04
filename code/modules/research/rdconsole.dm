@@ -213,15 +213,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	))
 	files = new /datum/research(src) //Setup the research data holder.
 	matching_designs = list()
-	if(is_taipan(z))
-		syndicate = 1
-		ui_theme = "syndicate"
-		icon_screen = "syndie_rdcomp"
-		icon_keyboard = "syndie_key"
-		req_access = list(ACCESS_SYNDICATE_SCIENTIST)
-		id = 0027
-		update_icon()
-
 	SyncRDevices()
 
 /obj/machinery/computer/rdconsole/Destroy()
@@ -391,12 +382,10 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			return
 
 	linked_destroy.busy = TRUE
-	CALCULATE_SKILL_MOD(user, RESEARCH_DURATION_MOD, skill_duration_mod)
-	var/deconstruct_delay = DECONSTRUCT_DELAY * skill_duration_mod
 	flick("[linked_destroy.base_icon_state]_process", linked_destroy)
-	add_wait_message("Разборка объекта и обновление базы данных...", deconstruct_delay)
+	add_wait_message("Разборка объекта и обновление базы данных...", DECONSTRUCT_DELAY)
 	playsound(loc, 'sound/machines/rnd_machines/destructor_scanning.ogg', HALFWAY_SOUND_VOLUME, TRUE, -1, use_reverb = TRUE)
-	addtimer(CALLBACK(src, PROC_REF(finish_destroyer), temp_tech, user), deconstruct_delay)
+	addtimer(CALLBACK(src, PROC_REF(finish_destroyer), temp_tech, user), DECONSTRUCT_DELAY)
 
 // Sends salvaged materials to a linked protolathe, if any.
 /obj/machinery/computer/rdconsole/proc/send_mats()
@@ -417,10 +406,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	if(!linked_destroy || !temp_tech)
 		return FALSE
 
-	var/success = TRUE
-	if(user)
-		CALCULATE_SKILL_MOD(user, RESEARCH_SUCCESS_MOD, skill_chance_mod)
-		success = prob(100 * skill_chance_mod)
 
 	var/actually_increased = FALSE
 
@@ -428,7 +413,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		if(!linked_destroy.loaded_item)
 			if(user)
 				to_chat(user, span_danger("[DECLENT_RU_CAP(linked_destroy, NOMINATIVE)] пуст!"))
-		else if(success)
+		else
 			var/tech_log
 			for(var/T in temp_tech)
 				var/new_level = files.UpdateTech(T, temp_tech[T])
@@ -482,14 +467,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		to_chat(user, span_danger("Выбран неизвестный шаблон печати!"))
 		return FALSE
 
-	var/skill_rand_prob = 1
-	if(usr)
-		CALCULATE_SKILL_MOD(user, PROTOLATHE_RAND_BUILD_PROB, calculated_prob)
-		skill_rand_prob = calculated_prob
-	skill_rand_prob *= 100
-	if(user && prob(skill_rand_prob))
-		being_built = pick(matching_designs)
-
 	for(var/obj/machinery/r_n_d/server/rnd_server as anything in connected_servers)
 		if(!rnd_server || QDELETED(rnd_server))
 			continue
@@ -512,28 +489,19 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	var/max_amount = is_lathe ? 10 : 1
 	amount = max(1, min(max_amount, amount))
 
-	var/protolathe_skill_level
-	GET_SKILL_LEVEL(user, /datum/skill/research/protolathe, calculated_level)
-	protolathe_skill_level = calculated_level ||= SKILL_LEVEL_BASIC
-	if(protolathe_skill_level < SKILL_LEVEL_BASIC)
-		amount += rand(0, 3)
-
 	var/power = BUILD_POWER
 	for(var/M in being_built.materials)
 		power += round(being_built.materials[M] * amount / 5)
 	power = max(BUILD_POWER, power)
 
-	var/skill_duration_mod = 1
-	if(user)
-		CALCULATE_SKILL_MOD(user, PROTOLATHE_DURATION_MOD, calculated_duration)
-		skill_duration_mod = calculated_duration
+	// goes down (1 -> 0.4) with upgrades
 	var/coeff = machine.efficiency_coeff
 
 	var/time_to_construct = 0
 	if(is_imprinter)
-		time_to_construct = IMPRINTER_DELAY * amount * skill_duration_mod
+		time_to_construct = IMPRINTER_DELAY * amount
 	else
-		time_to_construct = PROTOLATHE_CONSTRUCT_DELAY * coeff * skill_duration_mod * being_built.lathe_time_factor * (amount ** 0.8)
+		time_to_construct = PROTOLATHE_CONSTRUCT_DELAY * coeff * being_built.lathe_time_factor * amount ** 0.8
 
 	if(is_lathe)
 		if(user)
@@ -548,11 +516,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	machine.busy = TRUE
 	use_power(power)
 
-	var/skill_resource_mod = 1
-	if(user)
-		CALCULATE_SKILL_MOD(user, PROTOLATHE_RESOURCE_MOD, calculated_resource)
-		skill_resource_mod = calculated_resource
-	coeff *= skill_resource_mod
 	var/list/efficient_mats = list()
 	for(var/MAT in being_built.materials)
 		efficient_mats[MAT] = being_built.materials[MAT] * coeff
@@ -596,7 +559,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	if(user)
 		investigate_log("[key_name_log(user)] built [amount] of [being_built.build_path] via [machine].", INVESTIGATE_RESEARCH)
 
-	var/locked = being_built.locked && !is_taipan(z)
+	var/locked = being_built.locked
 
 	for(var/print_index in 1 to amount)
 		var/obj/new_item = new being_built.build_path(!user ? src : machine.loc)

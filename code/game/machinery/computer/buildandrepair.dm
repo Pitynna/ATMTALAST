@@ -477,23 +477,6 @@
 	build_path = /obj/machinery/computer/supplyquest/workers
 	origin_tech = "programming=3"
 
-/obj/item/circuitboard/syndicatesupplycomp
-	board_name = "Syndicate Supply Pad Console"
-	greyscale_colors = CIRCUIT_COLOR_SUPPLY
-	build_path = /obj/machinery/computer/syndie_supplycomp
-	origin_tech = "programming=3;syndicate=3"
-
-/obj/item/circuitboard/syndicatesupplycomp/public
-	board_name = "Syndicate Public Supply Pad Console"
-	build_path = /obj/machinery/computer/syndie_supplycomp/public
-
-/obj/item/circuitboard/syndicate_teleporter
-	board_name = "Syndicate Redspace Teleporter"
-	icon_state = "syndicate_circuit"
-	greyscale_config = null
-	build_path = /obj/machinery/computer/syndicate_depot/teleporter/taipan
-	origin_tech = "programming=6;bluespace=5;syndicate=8"
-
 /obj/item/circuitboard/operating
 	board_name = "Operating Computer"
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
@@ -764,8 +747,7 @@
 
 /obj/structure/computerframe/wrench_act(mob/living/user, obj/item/I)
 	. = TRUE
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(!I.use_tool(src, user, 2 SECONDS * construction_mod, volume = I.tool_volume))
+	if(!I.use_tool(src, user, 2 SECONDS, volume = I.tool_volume))
 		return .
 	set_anchored(!anchored)
 	to_chat(user, span_notice("You [anchored ? "fasten the frame into place" : "unfasten the frame"]."))
@@ -871,8 +853,7 @@
 				return ATTACK_CHAIN_PROCEED
 			coil.play_tool_sound(src)
 			to_chat(user, span_notice("You start to add cables to the frame..."))
-			CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-			if(!do_after(user, 2 SECONDS * coil.toolspeed * construction_mod, src, category = DA_CAT_TOOL) || state != STATE_NOWIRES || QDELETED(coil))
+			if(!do_after(user, 2 SECONDS * coil.toolspeed, src, category = DA_CAT_TOOL) || state != STATE_NOWIRES || QDELETED(coil))
 				return ATTACK_CHAIN_PROCEED
 			if(!coil.use(5))
 				to_chat(user, span_warning("At some point during construction you lost some cable. Make sure you have five lengths before trying again."))
@@ -892,8 +873,7 @@
 				return ATTACK_CHAIN_PROCEED
 			glass.play_tool_sound(src)
 			to_chat(user, span_notice("You start to add the glass panel to the frame..."))
-			CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-			if(!do_after(user, 2 SECONDS * glass.toolspeed * construction_mod, src, category = DA_CAT_TOOL) || state != STATE_WIRES || QDELETED(glass))
+			if(!do_after(user, 2 SECONDS * glass.toolspeed, src, category = DA_CAT_TOOL) || state != STATE_WIRES || QDELETED(glass))
 				return ATTACK_CHAIN_PROCEED
 			if(!glass.use(2))
 				to_chat(user, span_warning("At some point during construction you lost some glass. Make sure you have two sheets before trying again."))

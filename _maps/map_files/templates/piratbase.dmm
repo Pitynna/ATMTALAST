@@ -2119,7 +2119,7 @@
 "gP" = (
 /obj/structure/rack,
 /obj/item/gun/energy/taser,
-/obj/item/gun/energy/laser/hitscan/carbine{
+/obj/item/gun/energy/laser{
 	pixel_x = 1
 	},
 /turf/simulated/floor/plasteel{

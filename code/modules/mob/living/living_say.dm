@@ -77,7 +77,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":ц" = WHISPER_CHANNEL,			"#ц" = WHISPER_CHANNEL,			"№ц" = WHISPER_CHANNEL,			".ц" = WHISPER_CHANNEL,
 	":е" = SYND_FREQ_NAME,			"#е" = SYND_FREQ_NAME,			"№е" = SYND_FREQ_NAME,			".е" = SYND_FREQ_NAME,
 	":э" = SOV_FREQ_NAME,				"#э" = SOV_FREQ_NAME,			"№э" = SOV_FREQ_NAME,			".э" = SOV_FREQ_NAME,
-	":б" = SYND_TAIPAN_FREQ_NAME,		"#б" = SYND_TAIPAN_FREQ_NAME,	"№б" = SYND_TAIPAN_FREQ_NAME,	".б" = SYND_TAIPAN_FREQ_NAME,
 	":г" = SUP_FREQ_NAME,				"#г" = SUP_FREQ_NAME,			"№г" = SUP_FREQ_NAME,			".г" = SUP_FREQ_NAME,
 	":я" = SRV_FREQ_NAME,				"#я" = SRV_FREQ_NAME,			"№я" = SRV_FREQ_NAME,			".я" = SRV_FREQ_NAME,
 	":з" = AI_FREQ_NAME,				"#з" = AI_FREQ_NAME,			"№з" = AI_FREQ_NAME,			".з" = AI_FREQ_NAME,
@@ -100,7 +99,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":Ц" = WHISPER_CHANNEL,			"#Ц" = WHISPER_CHANNEL,			"№Ц" = WHISPER_CHANNEL,			".Ц" = WHISPER_CHANNEL,
 	":Е" = SYND_FREQ_NAME,			"#Е" = SYND_FREQ_NAME,			"№Е" = SYND_FREQ_NAME,			".Е" = SYND_FREQ_NAME,
 	":Э" = SOV_FREQ_NAME,				"#Э" = SOV_FREQ_NAME,			"№Э" = SOV_FREQ_NAME,			".Э" = SOV_FREQ_NAME,
-	":Б" = SYND_TAIPAN_FREQ_NAME,		"#Б" = SYND_TAIPAN_FREQ_NAME,	"№Б" = SYND_TAIPAN_FREQ_NAME,	".Б" = SYND_TAIPAN_FREQ_NAME,
 	":Г" = SUP_FREQ_NAME,				"#Г" = SUP_FREQ_NAME,			"№Г" = SUP_FREQ_NAME,			".Г" = SUP_FREQ_NAME,
 	":Я" = SRV_FREQ_NAME,				"#Я" = SRV_FREQ_NAME,			"№Я" = SRV_FREQ_NAME,			".Я" = SRV_FREQ_NAME,
 	":З" = AI_FREQ_NAME,				"#З" = AI_FREQ_NAME,			"№З" = AI_FREQ_NAME,			".З" = AI_FREQ_NAME,
@@ -112,7 +110,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	// English symbols no case
 	":~" = CORDS_MODE,				"#~" = CORDS_MODE,				"№~" = CORDS_MODE,				".~" = CORDS_MODE,
-	":," = SYND_TAIPAN_FREQ_NAME,		"#," = SYND_TAIPAN_FREQ_NAME,	"№," = SYND_TAIPAN_FREQ_NAME,	".," = SYND_TAIPAN_FREQ_NAME,
 	// Russian symbols no case
 		// None yet.
 
@@ -339,7 +336,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 		var/msg
 		if((!first_piece.speaking || !(first_piece.speaking.flags & NO_TALK_MSG)) && client)
 			msg = span_notice("[src] говор[PLUR_IT_YAT(src)] в [used_radios[1]]")
-			var/static/list/special_radio_channels = list(SYND_FREQ_NAME, SYNDTEAM_FREQ_NAME, SEC_FREQ_NAME, PROC_FREQ_NAME, COMM_FREQ_NAME, ERT_FREQ_NAME, DTH_FREQ_NAME, NINJA_FREQ_NAME, SYND_TAIPAN_FREQ_NAME, SOV_FREQ_NAME)
+			var/static/list/special_radio_channels = list(SYND_FREQ_NAME, SYNDTEAM_FREQ_NAME, SEC_FREQ_NAME, PROC_FREQ_NAME, COMM_FREQ_NAME, ERT_FREQ_NAME, DTH_FREQ_NAME, NINJA_FREQ_NAME, SOV_FREQ_NAME)
 			if(message_mode in special_radio_channels)
 				SEND_SOUND(src, sound('sound/items/radio_security.ogg', volume = rand(4, 16) * 5 * client.prefs.get_channel_volume(CHANNEL_RADIO_NOISE), channel = CHANNEL_RADIO_NOISE))
 			else

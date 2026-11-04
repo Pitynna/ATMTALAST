@@ -81,11 +81,6 @@
 /obj/machinery/computer/guestpass/proc/get_changeable_accesses()
 	return giver.access
 
-/obj/machinery/computer/guestpass/syndicate
-	name = "Syndicate guest pass terminal"
-	region_min = REGION_TAIPAN
-	region_max = REGION_TAIPAN
-
 /obj/machinery/computer/guestpass/hop
 	name = "HoP guest pass terminal"
 

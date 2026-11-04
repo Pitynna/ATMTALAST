@@ -28,19 +28,6 @@
 	)
 	exp_type = EXP_TYPE_SERVICE
 	outfit = /datum/outfit/job/hop
-	skill_levels = list(
-		/datum/skill/general/cooking = SKILL_LEVEL_ADVANCED,
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_ADVANCED,
-		/datum/skill/service/botany = SKILL_LEVEL_ADVANCED,
-		/datum/skill/service/cleaning = SKILL_LEVEL_ADVANCED,
-		/datum/skill/combat/accuracy = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/guns = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/melee = SKILL_LEVEL_BEGINNER,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general)
-	base_free_skill_point = DEFAULT_FREE_POINTS_FOR_SERVICE_JOBS
-
 
 /datum/outfit/job/hop
 	name = JOB_TITLE_RU_HOP
@@ -58,6 +45,7 @@
 		/obj/item/storage/box/ids = 1,
 		/obj/item/melee/baton/telescopic = 1,
 	)
+
 	implants = list()
 
 /datum/job/service
@@ -71,8 +59,6 @@
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_CREW
-	discount_skill_category = list(/datum/skill/service)
-	base_free_skill_point = DEFAULT_FREE_POINTS_FOR_SERVICE_JOBS
 
 /datum/job/service/bartender
 	title = JOB_TITLE_BARTENDER
@@ -85,13 +71,6 @@
 		ALT_JOB_TITLE_RU_BARISTA,
 	)
 	outfit = /datum/outfit/job/bartender
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BASIC,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_PROFESSIONAL,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/guns = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/bartender
 	name = JOB_TITLE_RU_BARTENDER
@@ -127,15 +106,6 @@
 		ALT_JOB_TITLE_RU_ART_CHEF,
 	)
 	outfit = /datum/outfit/job/chef
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_PROFESSIONAL,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BASIC,
-		/datum/skill/service/botany = SKILL_LEVEL_BASIC,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/fists = SKILL_LEVEL_BASIC,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general/cooking)
 
 /datum/outfit/job/chef
 	name = JOB_TITLE_RU_CHEF
@@ -182,13 +152,6 @@
 		ALT_JOB_TITLE_RU_AGROBIOLOGIST,
 	)
 	outfit = /datum/outfit/job/botanist
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/botany = SKILL_LEVEL_PROFESSIONAL,
-	)
 
 /datum/outfit/job/botanist
 	name = JOB_TITLE_RU_BOTANIST
@@ -218,12 +181,6 @@
 		ALT_JOB_TITLE_RU_COMEDIANT,
 	)
 	outfit = /datum/outfit/job/clown
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/clown
 	name = JOB_TITLE_RU_CLOWN
@@ -434,12 +391,6 @@
 		ALT_JOB_TITLE_RU_PANTHOMIMIST,
 	)
 	outfit = /datum/outfit/job/mime
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/mime
 	name = JOB_TITLE_RU_MIME
@@ -489,13 +440,6 @@
 		ALT_JOB_TITLE_RU_CLEANING_SPECIALIST,
 	)
 	outfit = /datum/outfit/job/janitor
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_PROFESSIONAL,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general/carrying)
 
 /datum/outfit/job/janitor
 	name = JOB_TITLE_RU_JANITOR
@@ -519,11 +463,6 @@
 		ALT_JOB_TITLE_RU_CORRESPONDENT,
 	)
 	outfit = /datum/outfit/job/librarian
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/librarian
 	name = JOB_TITLE_RU_LIBRARIAN
@@ -554,14 +493,6 @@
 		ALT_JOB_TITLE_RU_SPIRITUAL_MENTOR,
 	)
 	outfit = /datum/outfit/job/chaplain
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/carrying = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/melee = SKILL_LEVEL_BASIC,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general/carrying, /datum/skill/combat/melee)
 
 /datum/outfit/job/chaplain
 	name = JOB_TITLE_RU_CHAPLAIN

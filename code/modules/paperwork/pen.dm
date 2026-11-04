@@ -198,7 +198,6 @@
 	name = "survival pen"
 	desc = "Последнее слово в портативных технологиях выживания, эта ручка была разработана как миниатюрная алмазная кирка."
 	icon_state = "digging_pen"
-	tool_behaviour = TOOL_MINING //For the classic "digging out of prison with a spoon but you're in space so this analogy doesn't work" situation.
 	toolspeed = 10 //You will never willingly choose to use one of these over a shovel.
 	colour = COLOR_BLUE
 	usesound = 'sound/effects/picaxe1.ogg'

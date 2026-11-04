@@ -20,10 +20,6 @@
 	. = ..()
 	install_sibyl()
 
-/obj/item/gun/energy/laser/hitscan/carbine/sibyl/Initialize(mapload)
-	. = ..()
-	install_sibyl()
-
 // MARK: Practice
 /obj/item/gun/energy/laser/practice
 	name = "practice laser gun"

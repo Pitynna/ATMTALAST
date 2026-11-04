@@ -21,3 +21,6 @@
 #define COMSIG_GET_HUNGER_MODS "get_hunger_mods"
 /// Called when proc need to get weak mob modifier.
 #define COMSIG_GET_WEAK_MOB_MODIFIERS "get_weak_mob_modifiers"
+
+#define COMSIG_GET_PULL_SLOWDOWN_MODIFIERS "get_pull_slowdown_modifiers"
+#define COMSIG_GET_GRAB_SPEED_MODIFIERS "get_grab_speed_modifiers"

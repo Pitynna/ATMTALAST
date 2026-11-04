@@ -28,7 +28,6 @@ GLOBAL_LIST_INIT(default_security_channels, list(
 
 GLOBAL_LIST_INIT(default_syndicate_channels, list(
 	num2text(SYND_FREQ) = list(ACCESS_SYNDICATE),
-	num2text(SYND_TAIPAN_FREQ) = list(ACCESS_SYNDICATE)
 ))
 
 GLOBAL_LIST_INIT(default_pirate_channels, list(
@@ -822,9 +821,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 /obj/item/radio/borg/syndicate
 	keyslot = new /obj/item/encryptionkey/syndicate/nukeops
 	default_frequency = SYND_FREQ
-
-/obj/item/radio/borg/syndicate/taipan
-	keyslot = new /obj/item/encryptionkey/syndicate/taipan/borg
 
 /obj/item/radio/borg/syndicate/ui_status(mob/user, datum/ui_state/state)
 	. = ..()

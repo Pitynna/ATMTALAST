@@ -236,8 +236,7 @@
 		return
 	var/time = max(50 * (1 - obj_integrity / max_integrity), 5)
 	WELDER_ATTEMPT_REPAIR_MESSAGE
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(I.use_tool(src, user, time * construction_mod, volume = I.tool_volume))
+	if(I.use_tool(src, user, time, volume = I.tool_volume))
 		WELDER_REPAIR_SUCCESS_MESSAGE
 		update_integrity(max_integrity)
 		update_icon()
@@ -256,9 +255,8 @@
 	if(!I.tool_use_check(user, 0))
 		return FALSE
 
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
 	to_chat(user, span_notice("Now [anchored ? "un" : ""]securing [name]."))
-	if(!I.use_tool(src, user, time * construction_mod, volume = I.tool_volume))
+	if(!I.use_tool(src, user, time, volume = I.tool_volume))
 		return FALSE
 
 	to_chat(user, span_notice("You've [anchored ? "un" : ""]secured [name]."))

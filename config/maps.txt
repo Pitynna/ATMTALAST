@@ -33,8 +33,6 @@ EXTRA_SPACE_RUIN_LEVELS_MAX 8
 # of ruins.
 LAVALAND_BUDGET 100
 
-## Disable the loading of "Taipan"
-#DISABLE_TAIPAN
 
 ## Disable the loading of Lavaland
 #DISABLE_LAVALAND

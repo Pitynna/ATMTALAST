@@ -23293,11 +23293,11 @@
 "fcF" = (
 /obj/structure/rack/gunrack,
 /obj/effect/turf_decal/delivery/red/hollow,
-/obj/item/gun/energy/laser/hitscan/carbine{
+/obj/item/gun/energy/laser{
 	pixel_x = -6
 	},
-/obj/item/gun/energy/laser/hitscan/carbine,
-/obj/item/gun/energy/laser/hitscan/carbine{
+/obj/item/gun/energy/laser,
+/obj/item/gun/energy/laser{
 	pixel_x = 6
 	},
 /obj/structure/window/reinforced{
@@ -38367,9 +38367,6 @@
 "ijq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/mob/living/simple_animal/bot/secbot/griefsky/syndicate{
-	faction = list("dk2")
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -114526,9 +114523,6 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
 "yfU" = (
-/mob/living/simple_animal/bot/secbot/griefsky/syndicate{
-	faction = list("dk2")
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},

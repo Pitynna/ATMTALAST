@@ -77,8 +77,7 @@
 	return ..()
 
 /datum/component/parry/process(seconds_per_tick)
-	CALCULATE_SKILL_MOD(current_user, SHIELD_MOD, shield_skill_mod)
-	current_user?.adjustStaminaLoss(stamina_coefficient * seconds_per_tick SECONDS * shield_skill_mod)
+	current_user?.adjustStaminaLoss(stamina_coefficient * seconds_per_tick SECONDS)
 
 /datum/component/parry/proc/equipped(datum/source, mob/user, slot)
 	SIGNAL_HANDLER
@@ -156,9 +155,7 @@
 	if(armor_penetration_flat >= 100)
 		return
 
-	CALCULATE_SKILL_MOD(owner, SHIELD_MOD, shield_skill_mod)
-
-	var/stamina_damage = (stamina_coefficient * ((damage + armor_penetration_flat)) + stamina_constant) * shield_skill_mod
+	var/stamina_damage = stamina_coefficient * (damage + armor_penetration_flat) + stamina_constant
 
 	if(!no_parry_sound)
 		var/sound_to_play

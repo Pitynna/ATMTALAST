@@ -1061,7 +1061,6 @@
 	space_turfs_only = FALSE
 	access_admin_zone = TRUE	//can we park on Admin z_lvls?
 	access_mining = TRUE		//can we park on Lavaland z_lvl?
-	access_taipan = TRUE		//can we park on Taipan z_lvl?
 	access_away = TRUE		//can we park on Away_Mission z_lvl?
 	access_derelict = TRUE		//can we park in Unexplored Space?
 

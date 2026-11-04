@@ -85,12 +85,6 @@
 	component_parts += new /obj/item/stack/sheet/glass(null)
 	RefreshParts()
 	ADD_TRAIT(src, TRAIT_LOGISTICS_COMPATIBLE, INNATE_TRAIT)
-	// Special access for built on Taipan machines
-	var/area/area = get_area(src)
-	if(istype(area, /area/syndicate/unpowered/syndicate_space_base))
-		req_access = list(ACCESS_SYNDICATE)
-		req_access_claim = ACCESS_SYNDICATE
-
 /obj/machinery/mineral/ore_redemption/upgraded/Initialize(mapload)
 	. = ..()
 	component_parts = list()

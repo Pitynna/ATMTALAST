@@ -1,5 +1,5 @@
 /**
- * Syndicate Agent ID card + Taipan variants
+ * Syndicate Agent ID cards
  */
 
 #define NOT_SPECIFIED "НЕ ЗАДАНО"
@@ -378,7 +378,7 @@
 	cart_prefix = "`s Legitimate Human ID Card"
 	assignment = "Торговец"
 
-//MARK: Taipan variants
+//MARK: Command ID
 
 /obj/item/card/id/syndicate/command
 	initial_access = list(
@@ -386,88 +386,9 @@
 		ACCESS_SYNDICATE,
 		ACCESS_SYNDICATE_LEADER,
 		ACCESS_SYNDICATE_COMMAND,
-		ACCESS_SYNDICATE_COMMS_OFFICER,
-		ACCESS_SYNDICATE_RESEARCH_DIRECTOR,
 		ACCESS_EXTERNAL_AIRLOCKS,
-		ACCESS_SYNDICATE_SCIENTIST,
-		ACCESS_SYNDICATE_CARGO,
-		ACCESS_SYNDICATE_KITCHEN,
-		ACCESS_SYNDICATE_MEDICAL,
-		ACCESS_SYNDICATE_BOTANY,
-		ACCESS_SYNDICATE_ENGINE,
 	)
 	icon_state = "commander"
 	item_state = "syndieofficer-id"
-
-/obj/item/card/id/syndicate/scientist
-	icon_state = "syndiernd"
-	item_state = "syndiernd-id"
-	initial_access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE_SCIENTIST, ACCESS_SYNDICATE_MEDICAL)
-	rank = JOB_TITLE_TAIPAN_SCIENTIST
-
-/obj/item/card/id/syndicate/cargo
-	initial_access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE_CARGO)
-	icon_state = "syndiecargo"
-	item_state = "syndiecargo-id"
-	rank = JOB_TITLE_TAIPAN_CARGO
-
-/obj/item/card/id/syndicate/kitchen
-	initial_access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE_KITCHEN, ACCESS_SYNDICATE_BOTANY)
-	icon_state = "syndiechef"
-	item_state = "syndiechef-id"
-	rank = JOB_TITLE_TAIPAN_CHEF
-
-/obj/item/card/id/syndicate/engineer
-	initial_access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE_ENGINE)
-	icon_state = "syndieengineer"
-	item_state = "syndieengineer-id"
-	rank = JOB_TITLE_TAIPAN_ENGINEER
-
-/obj/item/card/id/syndicate/medic
-	initial_access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE_MEDICAL)
-	icon_state = "syndiemedical"
-	item_state = "syndiemedical-id"
-	rank = JOB_TITLE_TAIPAN_MEDIC
-
-/obj/item/card/id/syndicate/botanist
-	initial_access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE_BOTANY)
-	icon_state = "syndiebotany"
-	item_state = "syndiebotany-id"
-	rank = JOB_TITLE_TAIPAN_BOTANIST
-
-/obj/item/card/id/syndicate/comms_officer
-	initial_access = list(
-		ACCESS_MAINT_TUNNELS,
-		ACCESS_SYNDICATE,
-		ACCESS_SYNDICATE_COMMS_OFFICER,
-		ACCESS_EXTERNAL_AIRLOCKS,
-		ACCESS_SYNDICATE_SCIENTIST,
-		ACCESS_SYNDICATE_CARGO,
-		ACCESS_SYNDICATE_KITCHEN,
-		ACCESS_SYNDICATE_ENGINE,
-		ACCESS_SYNDICATE_MEDICAL,
-		ACCESS_SYNDICATE_BOTANY,
-		ACCESS_SYNDICATE_RESEARCH_DIRECTOR,
-	)
-	icon_state = "commander"
-	item_state = "syndieofficer-id"
-	rank = JOB_TITLE_TAIPAN_COMMS
-
-/obj/item/card/id/syndicate/research_director
-	initial_access = list(
-		ACCESS_MAINT_TUNNELS,
-		ACCESS_SYNDICATE,
-		ACCESS_EXTERNAL_AIRLOCKS,
-		ACCESS_SYNDICATE_SCIENTIST,
-		ACCESS_SYNDICATE_CARGO,
-		ACCESS_SYNDICATE_KITCHEN,
-		ACCESS_SYNDICATE_ENGINE,
-		ACCESS_SYNDICATE_MEDICAL,
-		ACCESS_SYNDICATE_BOTANY,
-		ACCESS_SYNDICATE_RESEARCH_DIRECTOR,
-	)
-	icon_state = "syndierd"
-	item_state = "syndierd-id"
-	rank = JOB_TITLE_TAIPAN_RD
 
 #undef NOT_SPECIFIED

@@ -197,7 +197,7 @@ const NodePreview = (props: NodePreviewProps) => {
         </LabeledList>
       ) : (
         <Stack fill vertical align="center" justify="center">
-          <Stack.Item className="hypertorus__unselectable">
+          <Stack.Item style={{ userSelect: 'none' }}>
             <Icon
               fontSize={4}
               name="circle-question"

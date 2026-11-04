@@ -103,41 +103,21 @@ GLOBAL_LIST_INIT(reactor_moderator_effects, build_reactor_gas_effects(/datum/rea
 	radiation_mod = 0.04
 	desc = "Улучшает контроль над реакцией, но повышает радиационный фон."
 
-/datum/reactor_gas_effect/moderator/pluoxium
-	gas_id = TLV_PLUOXIUM
-	control_mod = 6
-	desc = "Значительно улучшает контроль без повышения радиации."
-
 /datum/reactor_gas_effect/moderator/carbon_dioxide
 	gas_id = TLV_CO2
 	control_mod = 8
 	radiation_mod = 0.08
 	desc = "Максимальный контроль ценой экстремальной радиации."
 
-/datum/reactor_gas_effect/moderator/bz
-	gas_id = TLV_BZ
-	permeability_mod = 0.2
-	desc = "Улучшает поглощение тепла от стержней."
-
 /datum/reactor_gas_effect/moderator/water_vapor
 	gas_id = TLV_H2O
 	permeability_mod = 0.4
 	desc = "Значительно улучшает поглощение тепла от стержней."
 
-/datum/reactor_gas_effect/moderator/hypernoblium
-	gas_id = TLV_HYPERNOBLIUM
-	permeability_mod = 2
-	desc = "Экстремально улучшает поглощение тепла от стержней."
-
 /datum/reactor_gas_effect/moderator/nitryl
 	gas_id = TLV_N2O
 	depletion_mod = 0.67
 	desc = "Ускоряет износ топливных стержней."
-
-/datum/reactor_gas_effect/moderator/healium
-	gas_id = TLV_HEALIUM
-	integrity_restore = 1
-	desc = "Восстанавливает целостность реактора."
 
 /datum/reactor_gas_effect/moderator/nitryl/extra_effects(obj/machinery/atmospherics/fission_reactor/reactor, datum/gas_mixture/gas_mix, mole_fraction)
 	if(prob(5))
@@ -148,13 +128,6 @@ GLOBAL_LIST_INIT(reactor_moderator_effects, build_reactor_gas_effects(/datum/rea
 	power_per_mole = 10 WATTS
 	heat_per_mole = 5
 	desc = "Горит в активной зоне как топливо."
-
-/datum/reactor_gas_effect/moderator/tritium
-	gas_id = TLV_TRITIUM
-	power_per_mole = 100 WATTS
-	heat_per_mole = 50
-	radiation_mod = 0.2
-	desc = "Сверхэффективное топливо. Повышает радиационный фон."
 
 /datum/reactor_gas_effect/moderator/oxygen
 	gas_id = TLV_O2

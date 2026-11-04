@@ -74,10 +74,6 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 /obj/machinery/clonepod/Initialize(mapload)
 	. = ..()
 
-	if(is_taipan(z)) //Синдидоступ и никаких анонсов о клонированных при сборке на тайпане
-		radio_announce = FALSE
-		req_access = list(ACCESS_SYNDICATE)
-
 	countdown = new(src)
 
 	component_parts = list()
@@ -302,9 +298,6 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 
 	for(var/datum/language/L in R.languages)
 		H.add_language(L.name)
-
-	if(is_taipan(z))
-		H.faction.Add("syndicate")	// So that Syndie guys remain Syndie guys after cloning
 
 	H.check_genes(MUTCHK_FORCED) // Ensures species that get powers by the species proc handle_dna keep them
 

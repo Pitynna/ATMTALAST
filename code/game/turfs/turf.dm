@@ -993,7 +993,6 @@
 		else
 			current_hotspot.temperature = air.temperature()
 			current_hotspot.volume = CELL_VOLUME
-		current_hotspot.coldfire_possible = !!air.freon()
 	else
 		fuel_burnt = current_hotspot.fuel_burnt
 

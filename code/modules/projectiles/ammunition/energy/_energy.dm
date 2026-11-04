@@ -13,5 +13,3 @@
 	var/fluff_select_name
 	/// Sibyl System classification tier
 	var/sibyl_tier = SIBYL_TIER_NONLETHAL
-	/// Color, used in color-dependant guns
-	var/overlay_color = COLOR_WHITE

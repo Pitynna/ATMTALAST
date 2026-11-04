@@ -48,10 +48,6 @@ Note: Must be placed west/left of and R&D console to function.
 	create_reagents()
 	RefreshParts()
 	ADD_TRAIT(src, TRAIT_LOGISTICS_COMPATIBLE, INNATE_TRAIT)
-	if(is_taipan(z))
-		icon_state = "syndie_protolathe"
-		base_icon_state = "syndie_protolathe"
-
 /obj/machinery/r_n_d/protolathe/proc/init_parts()
 	component_parts = list()
 	component_parts += new /obj/item/circuitboard/protolathe(null)

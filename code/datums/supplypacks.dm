@@ -720,60 +720,21 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	)
 
 /datum/supply_packs/security/laser
-	name = "Лазерные карабины класса «Страж»"
+	name = "Лазерные карабины"
 	contains = list(
-		/obj/item/gun/energy/laser/hitscan/carbine,
-		/obj/item/gun/energy/laser/hitscan/carbine,
-		/obj/item/gun/energy/laser/hitscan/carbine,
+		/obj/item/gun/energy/laser,
+		/obj/item/gun/energy/laser,
+		/obj/item/gun/energy/laser,
 	)
 	cost = 20
-	containername = "ящик лазерных карабинов класса «Страж»"
+	containername = "ящик лазерных карабинов"
 	container_ru_names = alist(
-		NOMINATIVE = "ящик лазерных карабинов класса «Страж»",
-		GENITIVE = "ящика лазерных карабинов класса «Страж»",
-		DATIVE = "ящику лазерных карабинов класса «Страж»",
-		ACCUSATIVE = "ящик лазерных карабинов класса «Страж»",
-		INSTRUMENTAL = "ящиком лазерных карабинов класса «Страж»",
-		PREPOSITIONAL = "ящике лазерных карабинов класса «Страж»",
-	)
-
-/datum/supply_packs/security/energy_accum_laser
-	name = "Аккумуляторные карабины класса «Скорпион»"
-	contains = list(
-		/obj/item/gun/energy/accumulator/energy_carbine,
-		/obj/item/gun/energy/accumulator/energy_carbine,
-		/obj/item/gun/energy/accumulator/energy_carbine,
-		/obj/item/weapon_cell/energy_gun,
-		/obj/item/weapon_cell/energy_gun,
-		/obj/item/weapon_cell/energy_gun,
-	)
-	cost = 40
-	containername = "ящик аккумуляторных карабинов класса «Скорпион»"
-	container_ru_names = alist(
-		NOMINATIVE = "ящик аккумуляторных карабинов класса «Скорпион»",
-		GENITIVE = "ящика аккумуляторных карабинов класса «Скорпион»",
-		DATIVE = "ящику аккумуляторных карабинов класса «Скорпион»",
-		ACCUSATIVE = "ящик аккумуляторных карабинов класса «Скорпион»",
-		INSTRUMENTAL = "ящиком аккумуляторных карабинов класса «Скорпион»",
-		PREPOSITIONAL = "ящике аккумуляторных карабинов класса «Скорпион»",
-	)
-
-/datum/supply_packs/security/automatic_laser
-	name = "Автоматические лазерные карабины класса «Гроза»"
-	contains = list(
-		/obj/item/gun/energy/laser/automatic/carbine,
-		/obj/item/gun/energy/laser/automatic/carbine,
-		/obj/item/gun/energy/laser/automatic/carbine,
-	)
-	cost = 30
-	containername = "ящик автоматических лазерных карабинов класса «Гроза»"
-	container_ru_names = alist(
-		NOMINATIVE = "ящик автоматических лазерных карабинов класса «Гроза»",
-		GENITIVE = "ящика автоматических лазерных карабинов класса «Гроза»",
-		DATIVE = "ящику автоматических лазерных карабинов класса «Гроза»",
-		ACCUSATIVE = "ящик автоматических лазерных карабинов класса «Гроза»",
-		INSTRUMENTAL = "ящиком автоматических лазерных карабинов класса «Гроза»",
-		PREPOSITIONAL = "ящике автоматических лазерных карабинов класса «Гроза»",
+		NOMINATIVE = "ящик лазерных карабинов",
+		GENITIVE = "ящика лазерных карабинов",
+		DATIVE = "ящику лазерных карабинов",
+		ACCUSATIVE = "ящик лазерных карабинов",
+		INSTRUMENTAL = "ящиком лазерных карабинов",
+		PREPOSITIONAL = "ящике лазерных карабинов",
 	)
 
 /datum/supply_packs/security/taser
@@ -1123,7 +1084,6 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 		PREPOSITIONAL = "ящике ружейных пуль",
 	)
 
-/*
 /datum/supply_packs/security/armory/expenergy
 	name = "Энергетические карабины"
 	contains = list(
@@ -1142,7 +1102,6 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 		INSTRUMENTAL = "ящиком энергетических карабинов",
 		PREPOSITIONAL = "ящике энергетических карабинов",
 	)
-*/
 
 /datum/supply_packs/security/armory/epistol // costs 3/5ths of the normal e-guns for 3/4ths the total ammo, making it cheaper to arm more people, but less convient for any one person
 	name = "Энергетические пистолеты"
@@ -6324,30 +6283,6 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 		PREPOSITIONAL = "ящике наборов пополнения Кастоматов",
 	)
 
-/datum/supply_packs/vending/manuals
-	name = "Набор различных руководств"
-	contains = list(
-		/obj/item/book/skill_manual/general/random,
-		/obj/item/book/skill_manual/general/random,
-		/obj/item/book/skill_manual/general/random,
-		/obj/item/book/skill_manual/general/random,
-		/obj/item/book/skill_manual/general/random,
-	)
-	credits_cost = 5000
-	containername = "ящик различных руководств"
-	container_ru_names = alist(
-		NOMINATIVE = "ящик различных руководств",
-		GENITIVE = "ящика различных руководств",
-		DATIVE = "ящику различных руководств",
-		ACCUSATIVE = "ящик различных руководств",
-		INSTRUMENTAL = "ящиком различных руководств",
-		PREPOSITIONAL = "ящике различных руководств",
-	)
-
-//////////////////////////////////////////////////////////////////////////////
-// MARK: CONTRABAND SUPPLY
-//////////////////////////////////////////////////////////////////////////////
-
 /datum/supply_packs/contraband
 	name = "HEADER"
 	group = SUPPLY_CONTRABAND
@@ -6888,24 +6823,4 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 		ACCUSATIVE = "ящик с пистолетом пулеметом \"Узи\"",
 		INSTRUMENTAL = "ящиком с пистолетом пулеметом \"Узи\"",
 		PREPOSITIONAL = "ящике с пистолетом пулеметом \"Узи\"",
-	)
-
-/datum/supply_packs/contraband/neurotrainers
-	name = "Случайные нейротренеры навыков"
-	contains = list(
-		/obj/item/neurotrainer/random,
-		/obj/item/neurotrainer/random,
-		/obj/item/neurotrainer/random,
-	)
-	credits_cost = 50000
-	containertype = /obj/structure/closet/crate/syndicate
-	required_tech = list(RESEARCH_TREE_ILLEGAL = 3, RESEARCH_TREE_BIOTECH = 7, RESEARCH_TREE_MAGNETS = 5)
-	containername = "ящик со случайными нейротренерами навыков"
-	container_ru_names = alist(
-		NOMINATIVE = "ящик со случайными нейротренерами навыков",
-		GENITIVE = "ящика со случайными нейротренерами навыков",
-		DATIVE = "ящику со случайными нейротренерами навыков",
-		ACCUSATIVE = "ящик со случайными нейротренерами навыков",
-		INSTRUMENTAL = "ящиком со случайными нейротренерами навыков",
-		PREPOSITIONAL = "ящике со случайными нейротренерами навыков",
 	)

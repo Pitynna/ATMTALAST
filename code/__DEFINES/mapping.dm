@@ -12,6 +12,5 @@ GLOBAL_LIST_EMPTY(lazis_primary_turfs)
 #define DISABLE_LAVALAND (1<<0)
 #define DISABLE_AWAY_MISSIONS (1<<1)
 #define DISABLE_SPACE_RUINS (1<<2)
-#define DISABLE_TAIPAN (1<<3)
 
 #define DISABLE_ALL ALL

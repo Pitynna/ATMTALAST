@@ -210,11 +210,6 @@
 	var/list/datum/mind/raiders = list() //Antags.
 	var/list/raid_objectives = list() //Raid objectives
 
-	/// Personal skill bonuses granted by the game mode to specific minds (mind -> (skill_type -> level)); applied as max()
-	var/list/mode_skill_bonuses = list()
-	/// Additive skill bonuses granted by the game mode to specific minds (mind -> (skill_type -> bonus)); applied as level + bonus
-	var/list/mode_skill_additive_bonuses = list()
-
 /datum/game_mode/proc/announce() //to be calles when round starts
 	to_chat(world, "<b>Notice</b>: [src] did not define announce()")
 
@@ -551,7 +546,7 @@
 	var/turf/player_turf = get_turf(player)
 	if(!player_turf)	// nullspace, eh?
 		return FALSE
-	if(!is_level_reachable(player_turf.z) && !is_away_level(player_turf.z))	// taipan is not available, mkay?
+	if(!is_level_reachable(player_turf.z) && !is_away_level(player_turf.z))
 		return FALSE
 	if(is_monkeybasic(player))	// no monkas
 		return FALSE
@@ -984,12 +979,6 @@
 	else
 		message_text += "<hr><b>Аномальных особенностей текущей смены не обнаружено.</b><br>"
 	print_command_report(message_text, "Информация о состоянии станции", FALSE)
-
-/datum/game_mode/proc/get_mode_skill_bonuses_for(datum/mind/target_mind)
-	return mode_skill_bonuses[target_mind]
-
-/datum/game_mode/proc/get_mode_additive_skill_bonuses_for(datum/mind/target_mind)
-	return mode_skill_additive_bonuses[target_mind]
 
 #undef ROUNDSTART_LOGOUT_REPORT_TIME
 #undef STATION_GOAL_BUDGET

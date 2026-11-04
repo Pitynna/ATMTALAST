@@ -1218,9 +1218,7 @@
 		return
 	var/announce_channel = PUB_FREQ			// Channel toggler for mobs, who dies in specific locations.
 	var/area/t = get_area(M)
-	if(M.z == level_name_to_num(RAMSS_TAIPAN))
-		announce_channel = SYND_TAIPAN_FREQ		// Taipan channel for Руж.
-	else if(istype(t, /area/centcom))
+	if(istype(t, /area/centcom))
 		announce_channel = ERT_FREQ	// For animals who dare to infiltrate CC.
 	else if(istype(t, /area/centcom/syndicate_base) || istype(t, /area/shuttle/syndicate_elite) || istype(t, /area/shuttle/syndicate_sit))
 		announce_channel = SYNDTEAM_FREQ		// Just to be sure ...

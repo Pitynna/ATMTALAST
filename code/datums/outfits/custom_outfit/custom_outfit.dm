@@ -297,7 +297,7 @@
 
 /datum/custom_outfit/ui_static_data(mob/user)
 	. = ..()
-	.["access_regions"] = get_accesslist_static_data(REGION_GENERAL, REGION_TAIPAN)
+	.["access_regions"] = get_accesslist_static_data(REGION_GENERAL, REGION_COMMAND)
 	.["joblist"] = get_joblist_for_tgui()
 
 /datum/custom_outfit/ui_data(mob/user, datum/tgui/ui = null)
@@ -2176,7 +2176,7 @@
 	if(QDELETED(linked_outfit))
 		return
 	var/list/data = list()
-	data["access_regions"] = get_accesslist_static_data(REGION_GENERAL, REGION_TAIPAN)
+	data["access_regions"] = get_accesslist_static_data(REGION_GENERAL, REGION_COMMAND)
 	data["joblist"] = linked_outfit.get_joblist_for_tgui()
 	data["ranklist"] = linked_outfit.get_ranklist_for_tgui()
 	return data

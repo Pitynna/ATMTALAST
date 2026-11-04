@@ -19,8 +19,8 @@
 	/// An associative list containing all station accesses. Includes their name and access number. For use with the UI.
 	var/static/list/syndie_door_accesses_list = list()
 
-	region_min = REGION_TAIPAN
-	region_max = REGION_TAIPAN
+	region_min = REGION_COMMAND
+	region_max = REGION_COMMAND
 
 	window_type = /obj/structure/window/plastitanium
 	wall_type = /turf/simulated/wall/mineral/plastitanium
@@ -64,7 +64,7 @@
 				"image" = get_airlock_image(type)
 			))
 	if(!length(syndie_door_accesses_list))
-		for(var/access in get_taipan_syndicate_access())
+		for(var/access in list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_COMMAND))
 			syndie_door_accesses_list += list(list(
 				"name" = get_syndicate_access_desc(access),
 				"id" = access

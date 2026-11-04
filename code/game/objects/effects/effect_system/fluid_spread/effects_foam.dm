@@ -28,16 +28,11 @@
 	var/allow_duplicate_results = TRUE
 	/// The amount of time this foam stick around for before it dissipates.
 	var/lifetime = 8 SECONDS
-	/// The orignal value of lifetime
-	var/original_lifetime = 8 SECONDS
 	/// Whether or not this foam should be slippery.
 	var/slippery_foam = TRUE
 
-/obj/effect/particle_effect/fluid/foam/Initialize(mapload, fluid_group, source, lifetime, slippery)
+/obj/effect/particle_effect/fluid/foam/Initialize(mapload)
 	. = ..()
-	src.lifetime = lifetime ? lifetime : src.lifetime
-	src.original_lifetime = src.lifetime
-	src.slippery_foam = !isnull(slippery) ? slippery : slippery_foam
 	if(slippery_foam)
 		AddComponent(/datum/component/slippery, SLIPPERY_TIME_FOAM, can_slip_callback = CALLBACK(src, PROC_REF(try_slip)))
 	if(HAS_TRAIT(loc, TRAIT_ELEVATED_TURF))
@@ -162,7 +157,7 @@
 				continue
 			foam_mob(foaming, seconds_per_tick)
 
-		var/obj/effect/particle_effect/fluid/foam/spread_foam = new type(spread_turf, group, src, src.original_lifetime, src.slippery_foam)
+		var/obj/effect/particle_effect/fluid/foam/spread_foam = new type(spread_turf, group, src)
 		reagents.copy_to(spread_foam, (reagents.total_volume))
 		spread_foam.add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 		spread_foam.result_type = result_type
@@ -206,8 +201,8 @@
 		carry.remove_reagent(reagent, carry.total_volume, safety = TRUE)
 	carry.copy_to(chemholder, carry.total_volume, safety = TRUE)
 
-/datum/effect_system/fluid_spread/foam/start(log = FALSE, lifetime, slippery)
-	var/obj/effect/particle_effect/fluid/foam/foam = new effect_type(location, new /datum/fluid_group(amount), null, lifetime, slippery)
+/datum/effect_system/fluid_spread/foam/start(log = FALSE)
+	var/obj/effect/particle_effect/fluid/foam/foam = new effect_type(location, new /datum/fluid_group(amount))
 	var/foamcolor = mix_color_from_reagents(chemholder.reagent_list)
 	if(reagent_scale > 1) // Make room in case we were created by a particularly stuffed payload.
 		foam.reagents.maximum_volume *= reagent_scale
@@ -329,14 +324,6 @@
 	cares_about_temperature = FALSE
 
 /// A variant of resin foam that is created from halon combustion. It does not dissolve in heat to allow the gas to spread before foaming.
-/obj/effect/particle_effect/fluid/foam/metal/resin/halon
-
-/obj/effect/particle_effect/fluid/foam/metal/resin/halon/Initialize(mapload)
-	. = ..()
-
-/obj/effect/particle_effect/fluid/foam/metal/resin/halon/temperature_expose(exposed_temperature, exposed_volume)
-	return // Doesn't dissolve in heat.
-
 /// A variant of metal foam which only produces walls at area boundaries.
 /obj/effect/particle_effect/fluid/foam/metal/smart
 	name = "smart foam"
@@ -366,9 +353,6 @@
 
 /datum/effect_system/fluid_spread/foam/metal/resin
 	effect_type = /obj/effect/particle_effect/fluid/foam/metal/resin
-
-/datum/effect_system/fluid_spread/foam/metal/resin/halon
-	effect_type = /obj/effect/particle_effect/fluid/foam/metal/resin/halon
 
 /obj/effect/particle_effect/fluid/foam/dirty
 	name = "dirty foam"

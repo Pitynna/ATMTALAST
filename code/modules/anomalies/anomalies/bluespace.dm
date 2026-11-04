@@ -272,7 +272,7 @@
 	if(prob(10) && !isanomaly(target))
 		var/list/possible_z = list()
 		for(var/i in 1 to world.maxz)
-			if(is_admin_level(i) || is_away_level(i) || is_taipan(i) || !is_teleport_allowed(i))
+			if(is_admin_level(i) || is_away_level(i) || !is_teleport_allowed(i))
 				continue
 
 			possible_z.Add(i)

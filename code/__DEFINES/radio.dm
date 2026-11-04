@@ -18,7 +18,6 @@
 #define RADIO_HIGH_FREQ 1600 //maximum radio freq
 
 #define SYND_FREQ 1213
-#define SYND_TAIPAN_FREQ 1227 //Taipan frequency
 #define SYNDTEAM_FREQ 1244
 #define SOV_FREQ 1217 //Soviet
 #define SPY_SPIDER_FREQ 1251
@@ -93,7 +92,6 @@
 #define ERT_FREQ_NAME "ОБР"
 #define DTH_FREQ_NAME "ССО"
 #define SYND_FREQ_NAME "Синдикат"
-#define SYND_TAIPAN_FREQ_NAME "СиндиТайпан"
 #define SYNDTEAM_FREQ_NAME "СиндиДОС"
 #define SOV_FREQ_NAME "СССП"
 #define SUP_FREQ_NAME "Снабжение"

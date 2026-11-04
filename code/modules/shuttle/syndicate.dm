@@ -71,7 +71,7 @@
 	req_access = list(ACCESS_SYNDICATE)
 	bubble_icon = "syndibot"
 	shuttleId = "sst"
-	possible_destinations = "sst_home;sst_away;sst_custom;sst_taipan"
+	possible_destinations = "sst_home;sst_away;sst_custom"
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/machinery/computer/shuttle/sit
@@ -82,7 +82,7 @@
 	req_access = list(ACCESS_SYNDICATE)
 	bubble_icon = "syndibot"
 	shuttleId = "sit"
-	possible_destinations = "sit_arrivals;sit_engshuttle;sit_away;sit_custom;sit_taipan"
+	possible_destinations = "sit_arrivals;sit_engshuttle;sit_away;sit_custom"
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate
@@ -106,7 +106,6 @@
 	shuttlePortId = "sst_custom"
 	x_offset = 0
 	y_offset = 0
-	access_taipan = TRUE
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sit
 	name = "SIT shuttle navigation computer"
@@ -115,6 +114,5 @@
 	shuttlePortId = "sit_custom"
 	x_offset = 0
 	y_offset = 0
-	access_taipan = TRUE
 
 #undef SYNDICATE_CHALLENGE_TIMER

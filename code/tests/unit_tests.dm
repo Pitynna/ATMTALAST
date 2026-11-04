@@ -18,6 +18,7 @@
 #include "test_detect_room.dm"
 #include "test_elements.dm"
 #include "test_emotes.dm"
+#include "test_gas_mixture.dm"
 #include "test_get_turf_pixel.dm"
 #include "test_greyscale_config.dm"
 #include "test_init_sanity.dm"

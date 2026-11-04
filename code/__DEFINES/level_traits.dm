@@ -36,7 +36,6 @@ GLOBAL_VAR(station_level_z_scratch)
 
 #define is_explorable_space(z) check_level_trait(z, SPAWN_RUINS)
 
-#define is_taipan(z) check_level_trait(z, TAIPAN)
 
 #define is_multi_z_level(z) (check_level_trait(z, ZTRAIT_UP) || check_level_trait(z, ZTRAIT_DOWN))
 
