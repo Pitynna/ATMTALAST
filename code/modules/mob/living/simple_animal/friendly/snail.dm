@@ -6,7 +6,6 @@
 	icon_living = "snail"
 	icon_dead = "snail_dead"
 	speak = list("Бхх.", "Бхухх.", "Бхххх.", "Бххуухх.")
-	tts_seed = "Ladyvashj"
 	health = 100
 	maxHealth = 100
 	speed = 10
@@ -81,7 +80,6 @@
 	icon_dead = "yeeslow_dead"
 	icon_resting = "yeeslow_scared"
 	speak = list("Бухх.", "Хухх.")
-	tts_seed = "Ladyvashj"
 	health = 500
 	maxHealth = 500
 	speed = 20

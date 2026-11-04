@@ -4,7 +4,6 @@
 /obj/effect/mob_spawn/human/thunderdome
 	roundstart = FALSE
 	death = FALSE
-	allow_tts_pick = FALSE
 	banType = ROLE_THUNDERDOME
 	var/datum/mini_game/thunderdome_battle/thunderdome
 

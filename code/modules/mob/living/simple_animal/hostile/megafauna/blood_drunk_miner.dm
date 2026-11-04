@@ -30,7 +30,6 @@ Difficulty: Medium
 	icon = 'icons/mob/lavaland/blood_drunk.dmi'
 	light_color = "#E4C7C5"
 	speak_emote = list("ревёт")
-	tts_seed = "Chen"
 	speed = 3
 	projectiletype = /obj/projectile/kinetic/miner
 	projectilesound = 'sound/weapons/kenetic_accel.ogg'

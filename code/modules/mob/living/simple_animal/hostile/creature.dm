@@ -2,7 +2,6 @@
 	name = "creature"
 	desc = "A sanity-destroying otherthing."
 	speak_emote = list("бормочет")
-	tts_seed = "Earth"
 	icon_state = "otherthing"
 	icon_living = "otherthing"
 	icon_dead = "otherthing-dead"

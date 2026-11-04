@@ -1458,23 +1458,7 @@
 	else if(href_list["custom_equip"])
 		return SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/custom_equipment, locateUID(href_list["custom_equip"]))
 
-	else if(href_list["change_voice"])
-		if(!check_rights(R_ADMIN))
-			return
-
-		var/mob/M = locateUID(href_list["change_voice"])
-		if(!isliving(M))
-			to_chat(usr, span_warning("This can only be used on instances of type /living"), confidential = TRUE)
-			return
-		var/old_tts_seed = M.tts_seed
-		var/new_tts_seed = M.change_voice(usr, override = TRUE)
-		if(!new_tts_seed)
-			return
-
-		to_chat(M, span_notice("Your voice has been changed from [old_tts_seed] to [new_tts_seed]."), confidential = TRUE)
-		log_and_message_admins("has changed [key_name_admin(M)]'s voice from [old_tts_seed] to [new_tts_seed]")
-
-	else if(href_list["update_mob_sprite"])
+	if(href_list["update_mob_sprite"])
 		if(!check_rights(R_ADMIN))
 			return
 

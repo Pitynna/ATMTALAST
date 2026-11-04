@@ -28,7 +28,6 @@
 	freq_ventcrawl_idle =  1800
 	can_wrap = FALSE
 	web_type = null
-	tts_seed = "Zuljin"
 	special_abillity = list(
 		/datum/action/cooldown/spell/emplosion/terror_emp,
 		/datum/action/cooldown/spell/explosion/terror_spider,

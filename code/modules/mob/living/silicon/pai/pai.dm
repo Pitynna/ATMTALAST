@@ -140,14 +140,12 @@
 	var/datum/action/innate/pai_soft/pai_choose_chassis/pai_choose_chassis_action = new
 	var/datum/action/innate/pai_soft/pai_fold_out/pai_fold_out_action = new
 	var/datum/action/innate/pai_soft/pai_fold_up/pai_fold_up_action = new
-	var/datum/action/innate/pai_soft/pai_change_voice/pai_change_voice_action = new
 	var/datum/action/innate/pai_soft/pai_suicide/pai_suicide_action = new
 
 	pai_soft.Grant(src)
 	pai_choose_chassis_action.Grant(src)
 	pai_fold_out_action.Grant(src)
 	pai_fold_up_action.Grant(src)
-	pai_change_voice_action.Grant(src)
 	pai_suicide_action.Grant(src)
 
 	/// PDA
@@ -687,15 +685,6 @@ GAME_VERB_PROC(/mob/living/silicon/pai, choose_verbs, "Модуляция реч
 /datum/action/innate/pai_soft/pai_fold_up/Activate()
 	var/mob/living/silicon/pai/pai = owner
 	pai.fold_up()
-
-/datum/action/innate/pai_soft/pai_change_voice
-	name = "Изменить голос"
-	desc = "Изменение звука голосового модуля"
-	button_icon_state = "pai-action4"
-
-/datum/action/innate/pai_soft/pai_change_voice/Activate()
-	var/mob/living/silicon/pai/pai = owner
-	pai.change_voice()
 
 /datum/action/innate/pai_soft/pai_suicide
 	name = "Самоуничтожение"

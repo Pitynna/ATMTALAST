@@ -14,7 +14,6 @@
 	density = TRUE
 	name = "Mind-Scan Machine"
 	desc = "A very complex machine with a capability of scanning the brain of it's occupant to retrieve any valuable information they possess."
-	tts_seed = "Sorceress"
 	icon = 'icons/obj/ninjaobjects.dmi'
 	icon_state = "ninja_sleeper"
 	/// Нельзя чтобы такая дорогая технология была сломана игроком по фану

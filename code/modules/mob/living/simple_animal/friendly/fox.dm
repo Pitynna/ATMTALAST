@@ -11,7 +11,6 @@
 	speak_emote = list("хихикает", "лает", "рявкает")
 	emote_hear = list("хихикает", "лает", "рявкает")
 	emote_see = list("трясёт головой", "дрожит")
-	tts_seed = "Jaina"
 	yelp_sound = 'sound/creatures/fox_yelp.ogg' //Used on death.
 	turns_per_move = 5
 	nightvision = 6
@@ -87,7 +86,6 @@
 	gender = MALE
 	unique_pet = TRUE
 	gold_core_spawnable = NO_SPAWN
-	tts_seed = "Barney"
 
 /mob/living/simple_animal/pet/dog/fox/Renault/get_ru_names()
 	return alist(
@@ -111,7 +109,6 @@
 	unique_pet = TRUE
 	gold_core_spawnable = NO_SPAWN
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-	tts_seed = "Barney"
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 
@@ -181,7 +178,6 @@
 	icon_resting = "fennec_rest"
 	nightvision = 10
 	holder_type = /obj/item/holder/fennec
-	tts_seed = "Riffleman"
 
 /mob/living/simple_animal/pet/dog/fox/fennec/get_ru_names()
 	return alist(

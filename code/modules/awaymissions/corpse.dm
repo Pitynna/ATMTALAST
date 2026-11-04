@@ -38,7 +38,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	var/allow_species_pick = FALSE
 	var/allow_gender_pick = FALSE
 	var/allow_name_pick = FALSE
-	var/allow_tts_pick = TRUE // defaulted to TRUE because some "simple mob" mob_spawns may require custom voice
 	var/mob_species = null
 
 	var/assignedrole
@@ -163,10 +162,8 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	var/mob/living/mob = new mob_type(get_turf(src)) // Living mobs only
 	if(!random)
 		mob.real_name = mob_name ? mob_name : mob.name
-		mob.tts_seed = SStts.get_random_seed(mob)
 		if(mob.dna)
 			mob.dna.real_name = mob_name
-			mob.dna.tts_seed_dna = mob.tts_seed
 
 		if(mob.mind)
 			mob.mind.name = mob_name
@@ -213,9 +210,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 		mob.mind.offstation_role = offstation_role
 		special(mob, name)
 		MM.name = mob.real_name
-		if(allow_tts_pick)
-			mob.change_voice()
-
 	if(uses > 0)
 		uses--
 

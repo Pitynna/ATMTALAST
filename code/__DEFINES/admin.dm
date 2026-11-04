@@ -6,7 +6,6 @@
 #define MUTE_PRAY (1<<2)
 #define MUTE_ADMINHELP (1<<3)
 #define MUTE_DEADCHAT (1<<4)
-#define MUTE_TTS (1<<5)
 #define MUTE_EMOTE (1<<6)
 #define MUTE_INTERNET_REQUEST (1<<7)
 #define MUTE_ALL ALL

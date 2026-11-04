@@ -84,7 +84,6 @@
 	CT.target = user.mind
 	CT.explanation_text = "[user.real_name] — Ваш начальник. [GEND_HIS_HER_CAP(user)] приказы являются первоочередными."
 	partner.mind.objectives += CT
-	partner.change_voice()
 
 /obj/item/antag_spawner/contractor_partner/check_uplink_validity()
 	if(checking)

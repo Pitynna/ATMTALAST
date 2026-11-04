@@ -3,7 +3,6 @@
 	real_name = "Construct"
 	speak_emote = list("шипит")
 	emote_hear = list("визжит", "воет")
-	tts_seed = "Acolyte"
 	response_help  = "thinks better of touching"
 	response_disarm = "flails at"
 	response_harm   = "punches"
@@ -182,7 +181,6 @@
 	construct_spells = list(/datum/action/cooldown/spell/nightvision, /datum/action/cooldown/spell/jaunt/ethereal_jaunt/shift)
 	retreat_distance = 2 //AI wraiths will move in and out of combat
 	playstyle_string = "<b>You are a Wraith. Though relatively fragile, you are fast, deadly, and even able to phase through walls.</b>"
-	tts_seed = "Kelthuzad"
 	hud_type = /datum/hud/construct/wraith
 
 /mob/living/simple_animal/hostile/construct/wraith/hostile //actually hostile, will move around, hit things

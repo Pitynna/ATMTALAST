@@ -71,7 +71,6 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(vuap_personal, R_ADMIN|R_MOD, "Open TGUI PP", /mob)
 					"pray" = check_mute(player.client.ckey, MUTE_PRAY),
 					"adminhelp" = check_mute(player.client.ckey, MUTE_ADMINHELP),
 					"deadchat" = check_mute(player.client.ckey, MUTE_DEADCHAT),
-					"tts" = check_mute(player.client.ckey, MUTE_TTS),
 					"emote" = check_mute(player.client.ckey, MUTE_EMOTE),
 					"webreq" = check_mute(player.client.ckey, MUTE_INTERNET_REQUEST),
 					"all" = check_mute(player.client.ckey, MUTE_ALL)
@@ -316,9 +315,6 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(vuap_personal, R_ADMIN|R_MOD, "Open TGUI PP", /mob)
 		if("customquip")
 			usr.client.holder.Topic(null, list("custom_equip" = selected_player.UID()))
 			return
-		if("changevoice")
-			usr.client.holder.Topic(null, list("change_voice" = selected_player.UID()))
-			return
 		if("checkcontents")
 			usr.client.holder.Topic(null, list("check_contents" = selected_player.UID()))
 			return
@@ -384,10 +380,6 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(vuap_personal, R_ADMIN|R_MOD, "Open TGUI PP", /mob)
 					return
 				if("deadchat")
 					cmd_admin_mute(selected_player, MUTE_DEADCHAT)
-					ui.send_update()
-					return
-				if("tts")
-					cmd_admin_mute(selected_player, MUTE_TTS)
 					ui.send_update()
 					return
 				if("emote")

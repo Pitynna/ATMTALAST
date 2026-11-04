@@ -123,7 +123,6 @@
 	gold_core_spawnable = NO_SPAWN
 	resting = TRUE
 	gender = FEMALE
-	tts_seed = "Widowmaker"
 
 /mob/living/simple_animal/pet/cat/white/Penny/get_ru_names()
 	return alist(
@@ -204,7 +203,6 @@
 	speak_emote = list("угукает", "ухает")
 	emote_hear = list("угукает!", "ухает!", "размахивает своими крыльями!")
 	emote_see = list("встряхивает свои перья.", "машет крылышками.", "дрожит.")
-	tts_seed = "Priest"
 	faction = list("neutral")
 	maxHealth = 50
 	health = 50

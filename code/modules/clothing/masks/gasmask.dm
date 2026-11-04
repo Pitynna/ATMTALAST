@@ -198,7 +198,6 @@
 
 /obj/item/clothing/mask/gas/swat/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/tts_modifier, SOUND_EFFECT_MASKFILTER)
 
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"
@@ -210,7 +209,6 @@
 
 /obj/item/clothing/mask/gas/syndicate/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/tts_modifier, SOUND_EFFECT_MASKFILTER)
 
 /obj/item/clothing/mask/gas/syndicate/get_ru_names()
 	return alist(
@@ -691,7 +689,6 @@
 
 /obj/item/clothing/mask/gas/sechailer/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/tts_modifier, SOUND_EFFECT_MASKFILTER)
 
 /obj/item/clothing/mask/gas/sechailer/ComponentInitialize()
 	. = ..()
@@ -701,8 +698,6 @@
 	. = ..()
 	if(.)
 		w_class = up ? WEIGHT_CLASS_SMALL : WEIGHT_CLASS_NORMAL
-		if(user)
-			SEND_SIGNAL(src, COMSIG_MASKFILTER_UPDATE_STATE, user)
 
 /obj/item/clothing/mask/gas/sechailer/force_adjust_mask()
 	. = ..()

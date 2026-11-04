@@ -78,7 +78,6 @@ ADMIN_VERB(gimmick_team, R_EVENT, "Отправить \"Гиммик комма�
 		SSticker.mode.update_eventmisc_icons_added(H.mind)
 		H.mind.offstation_role = TRUE
 		H.possess_by_player(thisplayer.key)
-		H.change_voice()
 		if(dresscode != "Naked")
 			H.equipOutfit(dresscode, FALSE)
 

@@ -14,7 +14,6 @@
 	density = TRUE
 	name = "Blood-Scan Machine"
 	desc = "A very complex machine designed to scan blood samples on the smallest level. Created by the Spider-Clan to scan the blood of the most otherworldly beasts and creatures."
-	tts_seed = "Sorceress"
 	icon = 'icons/obj/ninjaobjects.dmi'
 	icon_state = "BSM_0"
 	pixel_x = 4

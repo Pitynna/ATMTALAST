@@ -7,7 +7,6 @@
 	icon_living = "magicarp"
 	icon_dead = "magicarp_dead"
 	icon_gib = "magicarp_gib"
-	tts_seed = "Peon"
 	turns_per_move = 5
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/carpmeat = 2)
 	response_help = "pets"

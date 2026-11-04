@@ -32,7 +32,6 @@
 	hasnested = TRUE
 	special_abillity = list(/datum/action/cooldown/spell/aoe/terror_shriek_princess)
 	var/spider_max_children = 20
-	tts_seed = "Lissandra"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/queen/princess/get_ru_names()
 	return alist(

@@ -17,7 +17,6 @@
 	icon_living = "snake"
 	icon_dead = "snake_dead"
 	speak_emote = list("шипит")
-	tts_seed = "Ladyvashj"
 	attacktext = "кусает"
 	attack_sound = 'sound/weapons/bite.ogg'
 	death_sound = 'sound/creatures/snake_death.ogg'
@@ -244,7 +243,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/hostile/retaliate/poison/snake/rouge, c
 	icon_living = "riraha"
 	icon_dead = "riraha_dead"
 	speak_emote = list("шипит")
-	tts_seed = "Xenia"
 	melee_damage_lower = 1
 	melee_damage_upper = 3
 	faction = list("neutral")

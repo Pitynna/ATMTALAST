@@ -94,16 +94,6 @@
 		if(!is_used_species_available(client.prefs.species))
 			to_chat(usr, span_warning("Вы не можете играть за выбранную расу персонажа, так как она в данный момент недоступна для вас! Пожалуйста, выберите другую расу."))
 			return FALSE
-		if(CONFIG_GET(flag/tts_enabled))
-			if(!client.prefs.tts_seed)
-				to_chat(usr, span_danger("Пожалуйста, настройте голос вашего персонажа! Не забудьте сохранить изменения."))
-				client.prefs.ShowChoices(src)
-				return FALSE
-			var/datum/tts_seed/seed = SStts.tts_seeds[client.prefs.tts_seed]
-			if(client.donator_level < seed.donator_level)
-				to_chat(usr, span_danger("К сожалению, выбранный вами голос персонажа больше не доступен на вашем текущем уровне подписки."))
-				client.prefs.ShowChoices(src)
-				return FALSE
 		ready = !ready
 		client << output(ready, "title_browser:ready")
 
@@ -219,16 +209,6 @@
 		if(!is_used_species_available(client.prefs.species))
 			to_chat(usr, span_warning("Вы не можете играть за выбранную расу персонажа, так как она в данный момент недоступна для вас! Пожалуйста, выберите другую расу."))
 			return
-		if(CONFIG_GET(flag/tts_enabled))
-			if(!client.prefs.tts_seed)
-				to_chat(usr, span_danger("Пожалуйста, настройте голос вашего персонажа! Не забудьте сохранить изменения."))
-				client.prefs.ShowChoices(src)
-				return FALSE
-			var/datum/tts_seed/seed = SStts.tts_seeds[client.prefs.tts_seed]
-			if(client.donator_level < seed.donator_level)
-				to_chat(usr, span_danger("К сожалению, выбранный вами голос персонажа больше не доступен на вашем текущем уровне подписки."))
-				client.prefs.ShowChoices(src)
-				return FALSE
 		if(SSticker?.mode?.late_join(src))
 			return
 		LateChoices()

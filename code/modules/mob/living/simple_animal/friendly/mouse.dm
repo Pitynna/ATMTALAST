@@ -21,7 +21,6 @@
 	damaged_sound = list('sound/creatures/rat_wound.ogg')
 	death_sound = 'sound/creatures/rat_death.ogg'
 	faction = list("neutral", "rodent")
-	tts_seed = "Gyro"
 	speak_chance = 1
 	turns_per_move = 5
 	nightvision = 6
@@ -358,14 +357,12 @@
 	icon_living = "mouse_white"
 	icon_dead = "mouse_white_dead"
 	icon_resting = "mouse_white_sleep"
-	tts_seed = "Meepo"
 
 /mob/living/simple_animal/mouse/brown
 	icon_state = "mouse_brown"
 	icon_living = "mouse_brown"
 	icon_dead = "mouse_brown_dead"
 	icon_resting = "mouse_brown_sleep"
-	tts_seed = "Clockwerk"
 
 //TOM IS ALIVE! SQUEEEEEEEE~K :)
 /mob/living/simple_animal/mouse/brown/Tom
@@ -374,7 +371,6 @@
 	response_harm   = "splats"
 	unique_pet = TRUE
 	gold_core_spawnable = NO_SPAWN
-	tts_seed = "Arthas"
 	maxHealth = 10
 	health = 10
 
@@ -532,7 +528,6 @@ GLOBAL_VAR_INIT(wooly_mouse_count, 0)
 	name = "wooly mouse baby"
 	real_name = "лохматая мышка"
 	desc = "Очень миленькая и пушистая мышка!"
-	tts_seed = "Meepo"
 	turns_per_move = 2
 	response_help  = "полапал"
 	response_disarm = "аккуратно отодвинул"

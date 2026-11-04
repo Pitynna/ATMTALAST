@@ -12,7 +12,6 @@
 	melee_damage_lower = 8
 	melee_damage_upper = 15
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/security = 3)
-	tts_seed = "Furion"
 	speed = -1
 
 /mob/living/simple_animal/pet/dog/security/ranger
@@ -23,7 +22,6 @@
 	icon_living = "ranger"
 	icon_resting = "ranger_rest"
 	icon_dead = "ranger_dead"
-	tts_seed = "Pudge"
 
 /mob/living/simple_animal/pet/dog/security/warden
 	name = "Джульбарс"
@@ -33,7 +31,6 @@
 	icon_living = "german_shep2"
 	icon_resting = "german_shep2_rest"
 	icon_dead = "german_shep2_dead"
-	tts_seed = "pantheon"
 
 /mob/living/simple_animal/pet/dog/security/Initialize(mapload)
 	. = ..()
@@ -191,7 +188,6 @@
 	icon_resting = "blackdog_rest"
 	icon_dead = "blackdog_dead"
 	icon_resting = "blackdog_rest"
-	tts_seed = "Thrall"
 
 /mob/living/simple_animal/pet/dog/security/detective/add_strippable_element()
 	AddElement(/datum/element/strippable, create_strippable_list(list(/datum/strippable_item/pet_collar)))

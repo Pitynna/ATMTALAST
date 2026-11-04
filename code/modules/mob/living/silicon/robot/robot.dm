@@ -31,7 +31,6 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		VERB_META(/mob/living/silicon/, subsystem_law_manager),
 	)
 
-	tts_effect_override = SOUND_EFFECT_ROBOT
 
 	var/sight_mode = 0
 	var/custom_name = ""
@@ -364,7 +363,6 @@ GAME_VERB(/mob/living/silicon/robot, Namepick, "Сменить имя", VERB_CAT
 	rename_self(braintype, 1)
 
 GAME_VERB_DESC(/mob/living/silicon/robot, Change_Voice, "Сменить голос", "Express yourself!", VERB_CATEGORY_ROBOTCOMMANDS)
-	change_voice()
 
 /mob/living/silicon/robot/proc/sync()
 	if(lawupdate && connected_ai)
@@ -2247,7 +2245,6 @@ GAME_VERB(/mob/living/silicon/robot, powerwarn, "Состояние заряда
 	deployed = TRUE
 	lawupdate = 0
 	grant_shell_actions()
-	tts_seed = AI.tts_seed
 	lawsync()
 
 	set_hud_image_state(DIAG_AISHELL_STAT_HUD, "hudtrackingai-active")

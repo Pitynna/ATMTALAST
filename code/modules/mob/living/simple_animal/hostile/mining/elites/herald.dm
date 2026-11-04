@@ -40,7 +40,6 @@
 	death_sound = 'sound/misc/demon_dies.ogg'
 	deathmessage = "начинает дрожать и становится прозрачным..."
 	loot_drop = /obj/item/clothing/accessory/necklace/herald_cloak
-	tts_seed = "Abathur"
 
 	attack_action_types = list(
 		/datum/action/innate/elite_attack/herald_trishot,

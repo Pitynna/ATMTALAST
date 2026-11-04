@@ -1,7 +1,6 @@
 /mob/living/captive_brain
 	name = "host brain"
 	real_name = "host brain"
-	tts_seed = "Gman"
 	var/host_resisting = FALSE
 
 /mob/living/captive_brain/say(message, verb = "говор[PLUR_IT_YAT(src)]", sanitize = TRUE, ignore_speech_problems = FALSE, ignore_atmospherics = FALSE, ignore_languages = FALSE, ignore_emotes = FALSE)
@@ -72,7 +71,6 @@
 	speak_emote = list("щебечет", "стрекочет")
 	emote_hear = list("щебечет", "стрекочет")
 
-	tts_seed = "Gman_e2"
 
 	response_disarm = "подталкивает"
 	response_harm = "топчет"

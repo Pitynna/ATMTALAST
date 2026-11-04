@@ -7,9 +7,6 @@
 
 	. = ..()
 
-	if(!tts_seed)
-		tts_seed = SStts.get_random_seed(src)
-
 	// Physiology needs to be created before species, as some species modify physiology
 	physiology = new(src)
 
@@ -115,14 +112,8 @@
 
 /mob/living/carbon/human/diona/Initialize(mapload)
 	. = ..(mapload, /datum/species/diona)
-	if(!tts_seed)
-		tts_seed = "Priest"
-
 /mob/living/carbon/human/pod_diona/Initialize(mapload)
 	. = ..(mapload, /datum/species/diona/pod)
-	if(!tts_seed)
-		tts_seed = "Priest"
-
 /mob/living/carbon/human/machine/Initialize(mapload)
 	. = ..(mapload, /datum/species/machine)
 
@@ -1033,7 +1024,6 @@ GAME_VERB_SRC(/mob/living/carbon/human, check_pulse, view(1), "Проверит�
 	// DNA ready
 	dna.ready_dna(src, TRUE, monkeybasic)
 	dna.real_name = real_name
-	dna.tts_seed_dna = tts_seed
 	sync_organ_dna()
 
 /mob/living/carbon/human/proc/change_dna(datum/dna/new_dna, include_species_change = FALSE, keep_flavor_text = FALSE)

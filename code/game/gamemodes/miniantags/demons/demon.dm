@@ -3,7 +3,6 @@
 	desc = "Если вы это видите, составьте баг-репорт в Discord."
 	speak_emote = list("клокочет", "урчит", "булькает")
 	emote_hear = list("визжит", "воет")
-	tts_seed = "Mannoroth"
 	response_help  = "решает не трогать"
 	response_disarm = "машет в сторону"
 	response_harm   = "бьёт"

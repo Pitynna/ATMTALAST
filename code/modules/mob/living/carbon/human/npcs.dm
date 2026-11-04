@@ -17,7 +17,6 @@
 	prom_collar.on_attached(prom, src)
 	equip_to_slot_if_possible(prom, ITEM_SLOT_CLOTH_INNER)
 
-	tts_seed = "Chen"
 
 /mob/living/carbon/human/lesser/monkey/punpun/can_use_machinery(obj/machinery/mas)
 	. = ..()

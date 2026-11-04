@@ -13,7 +13,6 @@
 	ranged_cooldown_time = 120
 	friendly = "воет на"
 	speak_emote = list("ревёт")
-	tts_seed = "Bloodseeker"
 	vision_range = 4
 	speed = 3
 	maxHealth = 300

@@ -6,7 +6,6 @@ GLOBAL_LIST_EMPTY(parasites)
 	real_name = "Guardian Spirit"
 	desc = "Таинственное существо, которое всегда настороже, охраняет своего подопечного."
 	speak_emote = list("распевает", "поёт", "произносит нараспев", "интонирует")
-	tts_seed = "Earth"
 	bubble_icon = "guardian"
 	response_help  = "gently pets"
 	response_disarm = "flails at"

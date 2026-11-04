@@ -16,7 +16,6 @@
 	mob_size = MOB_SIZE_LARGE
 	pixel_y_lying_offset = -20
 	hud_type = /datum/hud/devil
-	tts_seed = "Mannoroth"
 	looting_icon_mode = LOOT_ICON_ICON_TO_HTML
 	var/datum/antagonist/devil/devilinfo
 	var/ascended = FALSE
@@ -39,7 +38,6 @@
 	ascended = TRUE
 	health = 1000
 	icon_state = "arch_devil"
-	tts_seed = "Dread_bm"
 
 /mob/living/carbon/true_devil/ascended/ex_act(severity, ex_target)
 	return FALSE

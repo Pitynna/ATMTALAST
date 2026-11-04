@@ -10,7 +10,6 @@
 	speak_emote = list("клекочет", "гогочет")
 	emote_hear = list("кудахчет", "крякает","гогочет")
 	emote_see = list("потрясывает спинкой", "шлёпает себя крыльями", "чистит перья")
-	tts_seed = "Narrator"
 	faction = list("penguin")
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/bird = 4)
 	nightvision = 5

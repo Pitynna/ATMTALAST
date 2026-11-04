@@ -14,7 +14,6 @@
 	friendly = "pokes"
 	attacktext = "порезал"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	tts_seed = "Earth"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	pressure_resistance = 100
 	stop_automated_movement = TRUE
@@ -129,7 +128,6 @@
 	pressure_resistance = 100
 	universal_speak = 1
 	gold_core_spawnable = NO_SPAWN
-	tts_seed = "Earth"
 
 /mob/living/simple_animal/mouse/clockwork/ComponentInitialize()
 	. = ..()

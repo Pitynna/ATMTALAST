@@ -10,7 +10,6 @@
 	health = 50
 	speak_emote = list("шипит")
 	emote_hear = list("воет", "визжит")
-	tts_seed = "Kelthuzad"
 	response_help  = "протягивает руку сквозь"
 	response_disarm = "размахивает перед"
 	response_harm   = "бьёт кулаком по"
@@ -80,7 +79,6 @@
 
 /mob/living/simple_animal/shade/talisman
 	faction = list("neutral")
-	tts_seed = "Alextraza_echo"
 	// Ckey check for master of talisman
 	var/master
 

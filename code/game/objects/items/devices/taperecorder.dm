@@ -10,7 +10,6 @@
 	force = 2
 	drop_sound = 'sound/items/handling/drop/taperecorder_drop.ogg'
 	pickup_sound = 'sound/items/handling/pickup/taperecorder_pickup.ogg'
-	tts_seed = "Xenia"
 	/// If its currently recording.
 	var/recording = FALSE
 	/// If its playing back auto via atom_say.
@@ -155,11 +154,9 @@
 
 /obj/item/taperecorder/proc/recorder_say(message, datum/tape_piece/record_datum)
 	if(record_datum)
-		tts_seed = record_datum.tts_seed
 		atom_say_verb = record_datum.message_verb || "говорит"
 		atom_say("[record_datum.message]")
 	else
-		tts_seed = initial(tts_seed)
 		atom_say_verb = "говорит"
 		if(silent_mode)
 			balloon_alert(ismob(loc) ? loc : null, "[message]")
@@ -197,7 +194,6 @@
 		piece.speaker_name = null
 		piece.message = "Запись началась."
 		piece.message_verb = null
-		piece.tts_seed = initial(tts_seed)
 		mytape.storedinfo += piece
 		var/used = mytape.used_capacity	//to stop runtimes when you eject the tape
 		var/max = mytape.max_capacity
@@ -221,7 +217,6 @@
 		piece.speaker_name = null
 		piece.message = "Запись остановлена."
 		piece.message_verb = null
-		piece.tts_seed = initial(tts_seed)
 		mytape.storedinfo += piece
 		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
 		recorder_say("Запись остановлена.")
@@ -293,7 +288,6 @@
 	piece.speaker_name = M.name
 	piece.message = msg
 	piece.message_verb = "says"
-	piece.tts_seed = M.tts_seed
 
 	if(M.AmountStuttering())
 		piece.message_verb = "stammers"
@@ -313,7 +307,6 @@
 		piece.speaker_name = M.name
 		piece.message = msg
 		piece.message_verb = null
-		piece.tts_seed = initial(tts_seed)
 		mytape.storedinfo += piece
 
 /obj/item/taperecorder/proc/print_transcript(mob/user)
@@ -459,6 +452,5 @@ GAME_VERB_SRC(/obj/item/tape, wipe, view(1), "Стереть плёнку", VERB
 	var/speaker_name
 	var/message
 	var/message_verb
-	var/tts_seed
 	var/transcript
 

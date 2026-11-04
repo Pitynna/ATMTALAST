@@ -60,7 +60,6 @@
 /datum/hallucination/your_mother/proc/talk(text)
 	hallucinator.create_chat_message(mother, text, list("sans-serif"), null)
 	to_chat(hallucinator, span_italics("<b>[mother.name]</b> говорит: \"[text]\""))
-	INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, mother, hallucinator, text, mother.tts_seed, TRUE, SOUND_EFFECT_NONE, TTS_TRAIT_RATE_MEDIUM)
 
 /datum/hallucination/your_mother/proc/exit()
 	qdel(src)
@@ -71,4 +70,3 @@
 	image_state = "mother"
 	name = "Ваша мать"
 	desc = "Она недовольна."
-	tts_seed = "Grelod"

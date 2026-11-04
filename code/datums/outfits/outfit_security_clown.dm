@@ -130,7 +130,6 @@
 		I.access.Add(ACCESS_CLOWN, ACCESS_MIME, ACCESS_THEATRE)
 		I.assignment = name
 	H.update_hud_set()
-	H.grant_mimicking()
 
 //=========== security clown equipment ===========
 /obj/item/pda/clown/security

@@ -41,7 +41,6 @@
 	pass_flags = PASSTABLE
 	can_collar = TRUE
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
-	tts_seed = "Sniper"
 	faction = list("neutral", "jungle")
 
 	speak_emote = list("кричит", "говорит", "орёт")
@@ -659,7 +658,6 @@ GAME_VERB_PROC_DESC(/mob/living/simple_animal/parrot, perch_player, "Присе�
 /mob/living/simple_animal/parrot/Poly
 	name = "Поли"
 	desc = "Попугай Поли. Эксперт по квантовой теории крекеров."
-	tts_seed = "Gyro"
 	unique_pet = TRUE
 	gold_core_spawnable = NO_SPAWN
 

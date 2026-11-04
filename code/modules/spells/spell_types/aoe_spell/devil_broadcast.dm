@@ -16,5 +16,4 @@
 
 /datum/action/cooldown/spell/aoe/devil_broadcast/cast_on_thing_in_aoe(atom/victim, atom/caster)
 	to_chat(victim, message)
-	INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, caster, victim, message, caster.tts_seed, TRUE)
 

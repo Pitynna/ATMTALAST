@@ -17,7 +17,6 @@
 	harm_intent_damage = 5
 	attacktext = "хлещет"
 	speak_emote = list("телепатически вопит")
-	tts_seed = "Ladyvashj"
 	attack_sound = 'sound/weapons/pierce.ogg'
 	throw_message = "проходит сквозь странное тело"
 	ranged_cooldown_time = 20
@@ -92,7 +91,6 @@
 	melee_damage_upper = 2
 	attacktext = "кромсает"
 	speak_emote = list("телепатически вопит")
-	tts_seed = "Ladyvashj"
 	attack_sound = 'sound/weapons/pierce.ogg'
 	throw_message = "проходит сквозь странное тело"
 	obj_damage = 0
@@ -200,7 +198,6 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	speak_emote = list("отдаётся эхом")
-	tts_seed = "Bloodseeker"
 	throw_message = "отскакивает от"
 	crusher_loot = /obj/item/crusher_trophy/legion_skull
 	loot = list(/obj/item/organ/internal/regenerative_core/legion)
@@ -388,7 +385,6 @@
 	obj_damage = 30
 	nightvision = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
-	tts_seed = "Mannoroth"
 	mob_size = MOB_SIZE_LARGE
 
 /mob/living/simple_animal/hostile/big_legion/get_ru_names()

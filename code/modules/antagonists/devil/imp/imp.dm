@@ -32,7 +32,6 @@
 	del_on_death = TRUE
 	deathmessage = "кричит в агонии, превращаясь в сернистый дым."
 	death_sound = 'sound/misc/demon_dies.ogg'
-	tts_seed = "demon"
 
 /mob/living/simple_animal/imp/get_ru_names()
 	return alist(

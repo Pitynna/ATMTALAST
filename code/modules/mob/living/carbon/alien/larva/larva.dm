@@ -11,7 +11,6 @@
 	density = FALSE
 	ventcrawler_trait = TRAIT_VENTCRAWLER_ALWAYS
 	rotate_on_lying = FALSE
-	tts_seed = "Templar"
 	can_evolve = TRUE
 	death_message = "с тошнотворным шипением выдыха%(ет,ют)% воздух и пада%(ет,ют)% на пол..."
 	death_sound = null

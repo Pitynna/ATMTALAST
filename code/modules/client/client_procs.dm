@@ -458,7 +458,6 @@
 	tgui_panel.window.send_message("donations/load_data", list(
 		"monthDonations" = SSdonations.month_donations,
 		"targetDonation" = SSdonations.target_donation,
-		"ttsTargetDonation" = SSdonations.tts_target_donation,
 		"donationsText" = SSdonations.donations_text,
 		"boostyUrl" = SSdonations.boosty_url,
 		"kofiUrl" = SSdonations.kofi_url,

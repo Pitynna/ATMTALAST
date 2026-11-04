@@ -5,7 +5,6 @@
 	icon_state = "gangtool-purple"
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=200)
-	tts_seed = "Xenia"
 
 /obj/item/ttsdevice/Initialize(mapload)
 	. = ..()
@@ -49,4 +48,3 @@
 		return
 	new_name = reject_bad_name(new_name)
 	name = "[new_name]’s [initial(name)]"
-	change_voice(user)

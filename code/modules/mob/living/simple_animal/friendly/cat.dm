@@ -28,7 +28,6 @@
 	var/mob/living/simple_animal/mouse/movement_target
 	var/eats_mice = TRUE
 	footstep_type = FOOTSTEP_MOB_CLAW
-	tts_seed = "Valerian"
 	holder_type = /obj/item/holder/cat2
 	var/sitting = FALSE
 
@@ -40,7 +39,6 @@
 	icon_dead = "floppa_dead"
 	icon_resting = "floppa_rest"
 	unique_pet = TRUE
-	tts_seed = "Uther"
 	holder_type = null
 
 //RUNTIME IS ALIVE! SQUEEEEEEEE~
@@ -349,7 +347,6 @@ GAME_VERB(/mob/living/simple_animal/pet/cat, sit, "Сесть", VERB_CATEGORY_IC
 	gender = FEMALE
 	mob_size = MOB_SIZE_LARGE	//THICK!!!
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat = 8)
-	tts_seed = "Huntress"
 	maxHealth = 40	//Sooooo faaaat...
 	health = 40
 	speed = 10		// TOO FAT

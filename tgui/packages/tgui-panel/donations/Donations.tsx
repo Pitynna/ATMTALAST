@@ -15,8 +15,8 @@ export const Donations = (props: unknown) => {
   const donation = useAtomValue(metaAtom);
   if (!donation) return null;
   const currentValue = donation.monthDonations;
-  const middleValue = donation.targetDonation;
-  const maxValue = donation.ttsTargetDonation;
+  const maxValue = Math.max(1, donation.targetDonation);
+  const middleValue = 0.8 * maxValue;
   const infoText = donation.donationsText;
   const boostyRef = donation.boostyUrl;
   const kofiRef = donation.kofiUrl;

@@ -25,7 +25,6 @@
 	web_type = /obj/structure/spider/terrorweb/green
 	special_abillity = list(/datum/action/cooldown/spell/aoe/terror_healing)
 	spider_intro_text = "Будучи Лекарем Ужаса, ваша задача — исцелять других пауков и откладывать яйца. Чем больше трупов вы поглотили, тем эффективнее исцеление и тем больше яиц вы сможете отложить."
-	tts_seed = "Jolene"
 	var/feedings_to_lay = 3
 
 /mob/living/simple_animal/hostile/poison/terror_spider/healer/get_ru_names()

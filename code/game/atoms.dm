@@ -161,8 +161,6 @@
 	/// Used for changing icon states for different base sprites.
 	var/base_icon_state
 
-	var/tts_seed = "Arthas"
-	var/tts_atom_say_effect = SOUND_EFFECT_RADIO
 
 	///AI controller that controls this atom. type on init, then turned into an instance during runtime
 	var/datum/ai_controller/ai_controller
@@ -1184,7 +1182,6 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 /atom/proc/atom_say(message, use_tts = TRUE)
 	if(!message)
 		return
-	var/message_tts = message
 	message = replace_characters(message, list("+"))
 
 	var/list/speech_bubble_hearers = list()
@@ -1199,46 +1196,11 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 			if(M.client.prefs.toggles2 & PREFTOGGLE_2_RUNECHAT)
 				M.create_chat_message(src, message, list("italics"))
 
-			if(use_tts)
-				var/traits = TTS_TRAIT_RATE_MEDIUM
-				INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, src, M, message_tts, tts_seed, TRUE, tts_atom_say_effect, traits)
-
 	if(length(speech_bubble_hearers))
 		var/image/I = image('icons/mob/talk.dmi', src, "[bubble_icon][say_test(message)]", FLY_LAYER)
 		SET_PLANE_EXPLICIT(I, ABOVE_GAME_PLANE, src)
 		I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 		INVOKE_ASYNC(GLOBAL_PROC, /proc/flick_overlay, I, speech_bubble_hearers, 30)
-
-/atom/proc/select_voice(mob/user, silent_target = FALSE, override = FALSE)
-	if(!ismob(src) && !user)
-		return null
-	var/tts_test_str = "Так звучит мой голос."
-
-	var/tts_seeds
-	if(user && (check_rights(R_ADMIN, FALSE, user) || override))
-		tts_seeds = SStts.tts_seeds_names
-	else
-		tts_seeds = SStts.get_available_seeds(src)
-
-	var/new_tts_seed = tgui_input_list(user || src, "Выберите предпочитаемый голос:", "Выбор голоса", tts_seeds, tts_seed)
-	if(!new_tts_seed)
-		new_tts_seed = tts_seed
-	if(!silent_target && ismob(src) && src != user)
-		INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, null, src, tts_test_str, new_tts_seed, FALSE)
-	if(user)
-		INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, null, user, tts_test_str, new_tts_seed, FALSE)
-	return new_tts_seed
-
-/atom/proc/change_voice(mob/user, override = FALSE)
-	set waitfor = FALSE
-	var/new_tts_seed = select_voice(user, override = override)
-	if(!new_tts_seed)
-		return null
-	return update_tts_seed(new_tts_seed)
-
-/atom/proc/update_tts_seed(new_tts_seed)
-	tts_seed = new_tts_seed
-	return new_tts_seed
 
 /atom/proc/speech_bubble(bubble_state = "", bubble_loc = src, list/bubble_recipients = list())
 	return
@@ -1573,9 +1535,6 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 
 /atom/proc/GetVoice()
 	return name
-
-/atom/proc/GetTTSVoice()
-	return tts_seed
 
 /// Passes Stat Browser Panel clicks to the game and calls client click on an atom
 /atom/Topic(href, list/href_list)

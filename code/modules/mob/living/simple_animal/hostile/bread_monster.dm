@@ -23,7 +23,6 @@ GLOBAL_LIST_EMPTY(bread_monsters)
 	death_sound = 'sound/creatures/breadmonster/bread_death.ogg'
 	melee_damage_lower = 7
 	melee_damage_upper = 7
-	tts_seed = "Peon"
 	obj_damage = 15
 	var/tele_limit = 5
 	var/damage_increase = 1

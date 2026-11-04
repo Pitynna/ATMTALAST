@@ -142,7 +142,6 @@ ADMIN_VERB(show_old_player_panel, R_ADMIN|R_MOD, "Show Old Player Panel", ADMIN_
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_PRAY]'><span style='color: [check_mute(M.client.ckey, MUTE_PRAY) ? "#ffaa00" : "#aabbff"];'>PRAY</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_ADMINHELP]'><span style='color: [check_mute(M.client.ckey, MUTE_ADMINHELP) ? "#ffaa00" : "#aabbff"];'>ADMINHELP</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_DEADCHAT]'><span style='color: [check_mute(M.client.ckey, MUTE_DEADCHAT) ?"#ffaa00" : "#aabbff"];'>DEADCHAT</span></a> |
-			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_TTS]'><span style='color: [check_mute(M.client.ckey, MUTE_TTS)?"#ffaa00":"#aabbff"];'>TTS</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_EMOTE]'><span style='color: [check_mute(M.client.ckey, MUTE_EMOTE) ? "#ffaa00" : "#aabbff"];'>EMOTE</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_INTERNET_REQUEST]'><span style='color: [check_mute(M.client.ckey, MUTE_INTERNET_REQUEST) ? "#ffaa00" : "#aabbff"];'>WEBREQ</span></a>\]
 			(<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_ALL]'><span style='color: [check_mute(M.client.ckey, MUTE_ALL) ? "#ffaa00" : "#aabbff"];'>toggle all</span></a>)
@@ -159,7 +158,6 @@ ADMIN_VERB(show_old_player_panel, R_ADMIN|R_MOD, "Show Old Player Panel", ADMIN_
 			<a href='byond://?_src_=holder;select_equip=[M.UID()]'>Select Equipment</a> |
 			<a href='byond://?_src_=holder;custom_equip=[M.UID()]'>Custom Equipment</a> |
 			<a href='byond://?_src_=holder;update_mob_sprite=[M.UID()]'>Update Mob Sprite</a> |
-			<a href='byond://?_src_=holder;change_voice=[M.UID()]'>Change Voice</a> |
 			"}
 		if(isliving(M))
 			body += {"<a href='byond://?_src_=holder;check_contents=[M.UID()]'>Check Contents</a> |"}

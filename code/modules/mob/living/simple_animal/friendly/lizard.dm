@@ -6,7 +6,6 @@
 	icon_dead = "lizard_dead"
 	icon_gib = "lizard_gib"
 	speak_emote = list("шипит")
-	tts_seed = "Ladyvashj"
 	death_sound = 'sound/creatures/lizard_death.ogg'
 	health = 5
 	maxHealth = 5

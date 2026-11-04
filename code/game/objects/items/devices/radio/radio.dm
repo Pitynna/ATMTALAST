@@ -973,7 +973,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 	return GLOB.default_medbay_channels
 
 /obj/item/radio/bot
-	tts_seed = null
 
 /obj/item/radio/phone/ussp
 	name = "Red phone"

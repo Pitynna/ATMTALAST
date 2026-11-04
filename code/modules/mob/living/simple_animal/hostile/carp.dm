@@ -25,7 +25,6 @@
 	attacktext = "кусает"
 	attack_sound = 'sound/weapons/bite.ogg'
 	speak_emote = list("гаркает")
-	tts_seed = "Peon"
 
 	//Space carp aren't affected by atmos.
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -154,7 +153,6 @@
 	melee_damage_upper = 30
 
 	var/regen_cooldown = 0
-	tts_seed = "Shaker"
 
 /mob/living/simple_animal/hostile/carp/megacarp/get_ru_names()
 	return alist(

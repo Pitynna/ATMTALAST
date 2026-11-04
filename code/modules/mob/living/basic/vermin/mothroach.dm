@@ -7,7 +7,6 @@
 	icon_dead = "mothroach_dead"
 	holder_type = /obj/item/holder/mothroach
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/monstermeat/xenomeat = 1)
-	tts_seed = "Tychus"
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT
 	gold_core_spawnable = FRIENDLY_SPAWN
 	mob_size = MOB_SIZE_SMALL

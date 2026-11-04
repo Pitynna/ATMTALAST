@@ -27,7 +27,6 @@
 		/datum/action/cooldown/spell/aoe/terror_healing/greater,
 	)
 	spider_intro_text = "Будучи Матерью Ужаса, ваша задача — массовое исцеление пауков. Вы пассивно исцеляете всех пауков вокруг вас и наносите наносите урон гуманоидам. Вы также можете создавать желе, употребив которое, пауки быстро исцеляются. Ваша вторая способность действует аналогично желе, но работает по области для всех пауков в радиусе вашей видимости!"
-	tts_seed = "Deathwhisper"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/mother/get_ru_names()
 	return alist(

@@ -39,7 +39,6 @@
 	death_sound = 'sound/magic/repulse.ogg'
 	deathmessage = "мерцает, после чего его верхняя часть с грохотом обрушивается."
 	loot_drop = /obj/item/clothing/accessory/necklace/pandora_hope
-	tts_seed = "Zyra"
 
 	attack_action_types = list(
 		/datum/action/innate/elite_attack/chaser_burst,

@@ -22,7 +22,6 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	VERB_META(/mob/living/silicon/ai, botcall),
 	VERB_META(/mob/living/silicon/ai, change_arrival_message),
 	VERB_META(/mob/living/silicon/ai, arrivals_announcement),
-	VERB_META(/mob/living/silicon/ai, ai_change_voice),
 ))
 
 //Not sure why this is necessary...
@@ -1028,9 +1027,6 @@ GAME_VERB_PROC_DESC(/mob/living/silicon/ai, toggle_camera_light, "Подсвет
 
 GAME_VERB_PROC_DESC(/mob/living/silicon/ai, sensor_mode, "Сенсоры камеры", "Augment visual feed with internal sensor overlays.", VERB_CATEGORY_AICOMMANDS)
 	toggle_sensor_mode()
-
-GAME_VERB_PROC_DESC(/mob/living/silicon/ai, ai_change_voice, "Сменить голос", "Express yourself!", VERB_CATEGORY_AICOMMANDS)
-	change_voice()
 
 GAME_VERB_PROC_DESC(/mob/living/silicon/ai, arrivals_announcement, "Авто-оповещения о прибытии", "Change whether or not you wish to announce arrivals.", VERB_CATEGORY_AICOMMANDS)
 	announce_arrivals = !announce_arrivals

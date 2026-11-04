@@ -11,7 +11,6 @@ interface MuteStates {
   adminhelp: boolean;
   deadchat: boolean;
   emote: boolean;
-  tts: boolean;
   webreq: boolean;
   all: boolean;
 }
@@ -659,13 +658,6 @@ const MobManipulationSection = (_props: unknown) => {
             onClick={() => handleAction('customquip')}
           >
             CUSTOM EQUIPMENT
-          </Button>
-          <Button
-            fluid
-            icon="microphone"
-            onClick={() => handleAction('changevoice')}
-          >
-            CHANGE VOICE
           </Button>
           {isButtonAllowed('event') ? (
             <Button

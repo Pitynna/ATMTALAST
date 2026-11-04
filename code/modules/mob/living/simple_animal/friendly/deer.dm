@@ -7,7 +7,6 @@
 	speak = list("фыркает")
 	speak_emote = list("фыркает")
 	emote_see = list("трясёт головой")
-	tts_seed = "Villagerm"
 	speak_chance = 1
 	turns_per_move = 5
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat = 4)

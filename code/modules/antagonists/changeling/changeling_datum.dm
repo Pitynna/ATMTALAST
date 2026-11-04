@@ -61,7 +61,6 @@ GLOBAL_LIST_INIT(possible_changeling_IDs, list("Alpha","Beta","Gamma","Delta","E
 	/// A name that will display in place of the changeling's real name when speaking.
 	var/mimicking = ""
 	/// TTS seed used in mimic voice ability.
-	var/tts_mimicking = ""
 	/// Spawned by headslug event
 	var/evented
 	/// Check for event headslugs not to do start things in the time of popping after first pop
@@ -296,7 +295,6 @@ GLOBAL_LIST_INIT(possible_changeling_IDs, list("Alpha","Beta","Gamma","Delta","E
 	chem_charges = min(chem_charges, chem_storage)
 	chem_recharge_slowdown = initial(chem_recharge_slowdown)
 	mimicking = ""
-	tts_mimicking = ""
 
 /**
  * Removes a changeling's abilities.

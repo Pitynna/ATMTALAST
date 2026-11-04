@@ -37,7 +37,6 @@
 	move_to_delay = 5
 	deathmessage = "взрывается, разлетаясь на куски!"
 	loot_drop = /obj/item/crusher_trophy/broodmother_tongue
-	tts_seed = "Azalina"
 
 	attack_action_types = list(
 		/datum/action/innate/elite_attack/tentacle_patch,

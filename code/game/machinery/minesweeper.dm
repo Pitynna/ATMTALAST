@@ -13,7 +13,6 @@
 	icon_state = "minesweeper"
 	desc = "Классическая аркадная игра про флашки, цифры и БОМБЫ."
 	light_color = LIGHT_COLOR_BLUE
-	tts_seed = "Livsy"
 	token_price = 10
 	/// Livsy says after win
 	var/list/win_phrases = list("Ох, ну надо же!", "Вот это да!", "Видимо в этот раз без взрыва!")

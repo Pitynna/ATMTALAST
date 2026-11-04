@@ -52,7 +52,6 @@
 
 	key = null
 	ckey = null
-	tts_effect_override_source = null
 	return ..()
 
 /mob/Initialize(mapload)
@@ -1060,11 +1059,6 @@ GAME_VERB(/mob/dead/observer, respawn, "Стать животным", VERB_CATEG
 	. = list()
 	for(var/obj/item/access_location in get_access_locations())
 		. |= access_location.GetAccess()
-
-/mob/update_tts_seed(new_tts_seed)
-	. = ..()
-	if(. && dna)
-		dna.tts_seed_dna = new_tts_seed
 
 /*
  * * Creates Log Record for Log Viewer

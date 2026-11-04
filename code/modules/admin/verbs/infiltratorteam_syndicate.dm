@@ -106,7 +106,6 @@ ADMIN_VERB(syndicate_infiltration_team, R_ADMIN, "Отправить Дивер�
 	new_syndicate_infiltrator.mind.special_role = "Syndicate Infiltrator"
 	new_syndicate_infiltrator.mind.offstation_role = TRUE //they can flee to z2 so make them inelligible as antag targets
 	SSticker.mode.sit |= new_syndicate_infiltrator.mind //Adds them to extra antag list
-	new_syndicate_infiltrator.change_voice()
 	new_syndicate_infiltrator.equip_syndicate_infiltrator(syndicate_leader_selected, uplink_tc, is_mgmt)
 	return new_syndicate_infiltrator
 

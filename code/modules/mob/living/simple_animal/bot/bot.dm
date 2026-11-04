@@ -19,7 +19,6 @@
 	pass_flags = PASSFLAPS
 	AI_delay_max = 0 SECONDS
 	speak_emote = list("констатирует")
-	tts_seed = null
 	friendly = "утыкается в"
 	bubble_icon = "machine"
 	faction = list("neutral", "silicon")
@@ -464,7 +463,6 @@
 		bot_name = name
 		name = paicard.pai.name
 		faction = user.faction
-		tts_seed = paicard.pai.tts_seed
 		add_attack_logs(user, paicard.pai, "Uploaded to [bot_name]")
 		return ATTACK_CHAIN_BLOCKED_ALL
 
@@ -1177,7 +1175,6 @@ Pass the desired type path itself, declaring a temporary var beforehand is not r
 		paicard = null
 		name = bot_name
 		faction = initial(faction)
-		tts_seed = initial(tts_seed)
 
 /mob/living/simple_animal/bot/proc/ejectpairemote(mob/user)
 	if(bot_core.allowed(user) && paicard)

@@ -59,7 +59,6 @@
 	var/datum/action/innate/terrorspider/queen/queennest/queennest_action
 	var/datum/action/innate/terrorspider/queen/queensense/queensense_action
 	var/datum/action/innate/terrorspider/queen/queeneggs/queeneggs_action
-	tts_seed = "Anivia"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/queen/get_ru_names()
 	return alist(

@@ -29,7 +29,6 @@
 	var/list/emote_hear = list()
 	/// Unlike speak_emote, the list of things in this variable only show by themselves with no spoken text. IE: Ian barks, Ian yaps.
 	var/list/emote_see = list()
-	tts_seed = "Kleiner"
 	/// The sound played when talk.
 	var/list/talk_sound = null
 

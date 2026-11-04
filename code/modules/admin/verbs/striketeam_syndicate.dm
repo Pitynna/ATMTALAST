@@ -111,7 +111,6 @@ ADMIN_VERB(syndicate_strike_team, R_EVENT, "Отправить Ударный О
 	new_syndicate_commando.mind.assigned_role = SPECIAL_ROLE_SYNDICATE_DEATHSQUAD
 	new_syndicate_commando.mind.special_role = SPECIAL_ROLE_SYNDICATE_DEATHSQUAD
 	new_syndicate_commando.mind.offstation_role = TRUE
-	new_syndicate_commando.change_voice()
 	SSticker.mode.sst |= new_syndicate_commando.mind	//Adds them to current traitor list. Which is really the extra antagonist list.
 	if(is_leader)
 		new_syndicate_commando.equipOutfit(/datum/outfit/admin/syndicate_strike_team/officer)
