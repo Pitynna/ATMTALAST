@@ -64,10 +64,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_BLOB = /datum/game_mode/blob, // Blob
 	ROLE_CHANGELING = /datum/game_mode/changeling, // Changeling
 	ROLE_BORER, // Cortical borer
-	ROLE_CULTIST = /datum/game_mode/cult, // Cultist
-	ROLE_CLOCKER = /datum/game_mode/clockwork, // Clockwork Cultist
 	ROLE_DEMON, // Demons (Slaughter/Laughter/Shadow)
-	ROLE_DEVIL, // Devil
 	ROLE_GSPIDER, // Giant spider
 	ROLE_GUARDIAN, // Guardian
 	ROLE_ELITE, // Lavaland Elite
@@ -80,11 +77,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_REVENANT, // Revenant
 	ROLE_REV = /datum/game_mode/revolution, // Revolutionary
 	ROLE_SENTIENT, // Sentient animal
-	ROLE_SHADOWLING = /datum/game_mode/shadowling, // Shadowling
-	ROLE_SPACE_DRAGON, // Space dragon
-	ROLE_NINJA, // Space ninja
 	ROLE_TERROR_SPIDER, // Terror Spider
-	ROLE_THIEF = /datum/game_mode/thief, // Thief
 	ROLE_THUNDERDOME, // Thunderdome
 	ROLE_TRADER, // Trader
 	ROLE_TRAITOR = /datum/game_mode/traitor, // Traitor
@@ -93,8 +86,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_WIZARD = /datum/game_mode/wizard, // Wizard
 	ROLE_ALIEN, // Xenomorph
 	ROLE_BINGLE, // Bingle
-	ROLE_SWARMER, // Swarmer
-	ROLE_ZOMBIE,
 ))
 
 #define ROLE_PRISONERS_MAX_COUNT 4

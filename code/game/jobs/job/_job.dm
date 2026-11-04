@@ -331,10 +331,6 @@
 
 		LAZYCLEARLIST(gear_leftovers)
 
-	if(ismodcontrol(H.back))
-		var/obj/item/mod/control/mod_control = H.back
-		mod_control.quick_activation()
-
 	return TRUE
 
 /datum/outfit/job/proc/imprint_idcard(mob/living/carbon/human/H)

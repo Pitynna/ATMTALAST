@@ -1373,9 +1373,6 @@
 /area/ruin/space/USSP_gorky17/check1)
 "gn" = (
 /obj/structure/table,
-/obj/machinery/ninja_bloodscan_machine{
-	desc = "A very complex machine designed to scan blood samples on the smallest level."
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkpurplefull"
 	},
@@ -2812,10 +2809,6 @@
 	},
 /area/ruin/space/USSP_gorky17/engineering)
 "mJ" = (
-/obj/machinery/atmospherics/unary/tank/air/ninja{
-	dir = 8;
-	volume = 20000
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -6327,7 +6320,6 @@
 	},
 /area/ruin/space/USSP_gorky17/common)
 "BA" = (
-/obj/machinery/atmospherics/unary/tank/air/ninja,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/gate)
 "BC" = (
@@ -6775,12 +6767,10 @@
 /obj/structure/closet/crate/secure/biohazard{
 	req_access = list(122)
 	},
-/obj/item/melee/cultblade,
 /obj/item/paper/poisonedtalisman,
 /obj/item/circuitboard/HONKputer,
 /obj/item/soulstone,
 /obj/effect/turf_decal/delivery/red/partial,
-/obj/item/whetstone/cult,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/gate)
 "DK" = (

@@ -46,10 +46,6 @@
 	pixel_y = -24;
 	specialfunctions = 4
 	},
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	bruteloss = 15;
-	health = 85
-	},
 /turf/simulated/floor/plasteel{
 	icon_regular_floor = "yellowsiding";
 	icon_state = "tranquillite"
@@ -988,10 +984,6 @@
 /obj/structure/closet/medical_wall{
 	pixel_x = 32
 	},
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	bruteloss = 35;
-	health = 65
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "barber"
 	},
@@ -1016,10 +1008,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/vomit,
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 15;
-	health = 60
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "barber"
 	},
@@ -1058,10 +1046,6 @@
 	name = "Room 1 Shutters Control";
 	pixel_x = 26;
 	pixel_y = -2
-	},
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 30;
-	health = 45
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -1163,10 +1147,6 @@
 "yE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/hologram/holopad,
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 50;
-	health = 20
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -1179,10 +1159,6 @@
 "yU" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
-	},
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 15;
-	health = 60
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -1654,10 +1630,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	bruteloss = 35;
-	health = 65
-	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "darkblue"
@@ -1696,10 +1668,6 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 55;
-	health = 20
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -1805,10 +1773,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	bruteloss = 15;
-	health = 85
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -1915,10 +1879,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/clothing/under/retro/medical{
 	name = "old medical officer's uniform"
-	},
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 30;
-	health = 45
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -2186,10 +2146,6 @@
 "XB" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 30;
-	health = 45
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
@@ -2202,10 +2158,6 @@
 /area/shuttle/abandoned)
 "XK" = (
 /obj/structure/chair/comfy/shuttle,
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	bruteloss = 35;
-	health = 65
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -2237,10 +2189,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
-	},
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	bruteloss = 65;
-	health = 35
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "barber"

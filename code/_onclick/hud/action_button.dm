@@ -67,10 +67,8 @@
 		return TRUE
 	var/trigger_flags
 
-	if(LAZYACCESS(modifiers, RIGHT_CLICK))
-		trigger_flags |= TRIGGER_SECONDARY_ACTION
-
 	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		trigger_flags |= TRIGGER_SECONDARY_ACTION
 		linked_action.AltTrigger(usr, trigger_flags = trigger_flags)
 		linked_action.UpdateButtonIcon()
 		return TRUE

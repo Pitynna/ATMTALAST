@@ -62,30 +62,6 @@
 		'sound/misc/notice1.ogg',
 	)
 
-/datum/hallucination/station_message/cult_summon
-
-/datum/hallucination/station_message/cult_summon/do_fake_alert()
-	var/list/manifest_names = list()
-	for(var/datum/data/record/record as anything in GLOB.data_core.general)
-		if(record.fields["name"] == hallucinator.real_name)
-			continue
-		if(record.fields["rank"] in GLOB.security_positions)
-			continue
-		manifest_names += record.fields["name"]
-
-	if(!length(manifest_names))
-		return CANCEL_FAKE_ALERT
-
-	var/turf/fake_summon_turf = get_safe_random_station_turf()
-	if(!fake_summon_turf)
-		return CANCEL_FAKE_ALERT
-
-	announce_to_hallucinator(
-		"Осколки древнего бога призываются [pick(manifest_names)] в [get_area(fake_summon_turf)] из неизвестного измерения. Сорвите ритуал любой ценой!",
-		"[command_name()] Дела высших измерений",
-		null,
-	)
-
 /datum/hallucination/station_message/meteors
 	random_hallucination_weight = 2
 
@@ -105,27 +81,6 @@
 		"Общая тревога!",
 		null,
 	)
-
-/datum/hallucination/station_message/cult_summon/clock_cult_ark
-
-/datum/hallucination/station_message/cult_summon/clock_cult_ark/start()
-	hallucinator.playsound_local(hallucinator, 'sound/magic/clockwork/clockcult_gateway_charging.ogg', 50, FALSE, pressure_affected = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(play_gateway_disrupted_sound)), 15 SECONDS)
-	return TRUE
-
-/datum/hallucination/station_message/cult_summon/clock_cult_ark/proc/play_gateway_disrupted_sound()
-	if(QDELETED(src))
-		return
-
-	hallucinator.playsound_local(hallucinator, 'sound/magic/clockwork/clockcult_gateway_disrupted.ogg', 50, FALSE, pressure_affected = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(play_distant_explosion_sound)), 2.7 SECONDS)
-
-/datum/hallucination/station_message/cult_summon/clock_cult_ark/proc/play_distant_explosion_sound()
-	if(QDELETED(src))
-		return
-
-	hallucinator.playsound_local(get_turf(hallucinator), SFX_EXPLOSION_CREAKING, 50, FALSE, pressure_affected = FALSE)
-	qdel(src)
 
 /datum/hallucination/station_message/cc_execution
 

@@ -985,9 +985,6 @@
 	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
 	var/obj/item/voice_changer/ghostface/voice_changer
 
-/obj/item/clothing/mask/gas/ghostface/true/devil
-	icon_state = "devil_ghostface_mask"
-
 /obj/item/clothing/mask/gas/ghostface/true/Initialize(mapload)
 	. = ..()
 	voice_changer = new(src)
@@ -995,9 +992,6 @@
 /obj/item/clothing/mask/gas/ghostface/true/Destroy()
 	QDEL_NULL(voice_changer)
 	return ..()
-
-/obj/item/clothing/mask/gas/ghostface/devil
-	icon_state = "devil_ghostface_mask"
 
 /obj/item/clothing/mask/gas/mining_medic
 	name = "mining respirator"

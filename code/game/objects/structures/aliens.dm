@@ -91,14 +91,6 @@
 /obj/structure/alien/resin/wall/get_superconductivity(direction)
 	return FALSE
 
-/obj/structure/alien/resin/wall/shadowling //For chrysalis
-	name = "chrysalis wall"
-	desc = "Some sort of purple substance in an egglike shape. It pulses and throbs from within and seems impenetrable."
-	max_integrity = INFINITY
-
-/obj/structure/alien/resin/wall/shadowling/playdestroysound(source)
-	playsound(source, 'sound/effects/splat.ogg', 30, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
-
 /obj/structure/alien/resin/membrane
 	name = "resin membrane"
 	desc = "Resin just thin enough to let light pass through."

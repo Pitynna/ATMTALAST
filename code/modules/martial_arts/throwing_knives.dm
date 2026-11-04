@@ -16,7 +16,6 @@
 		/obj/item/kitchen/knife/glassshiv,
 		/obj/item/kitchen/knife/glassshiv/plasma,
 		/obj/item/kitchen/knife/ghostface_knife,
-		/obj/item/kitchen/knife/ghostface_knife/devil
 	)
 	var/knife_embed_chance = 100
 	var/knife_bonus_damage = 5

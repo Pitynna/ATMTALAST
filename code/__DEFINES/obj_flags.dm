@@ -87,7 +87,7 @@
 #define FIXED_SLOWDOWN (1<<5)
 /// Checks for finger coverage, prevents damage from nettles
 #define FINGERS_COVERED (1<<6)
-/// prevents from placing on plasmaman helmet or modsuit hat holder
+/// prevents from placing on plasmaman helmets
 #define STACKABLE_HELMET_EXEMPT (1<<7)
 /// Usable as casting clothes by wizards (matters for suits, glasses and headwear)
 #define CASTING_CLOTHES (1<<8)

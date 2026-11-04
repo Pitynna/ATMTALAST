@@ -82,7 +82,6 @@ GLOBAL_LIST_EMPTY(blurb_witnesses)
 /// List of cargo consoles that print reports on completed/expired orders
 GLOBAL_LIST_EMPTY(cargo_announcers)
 
-GLOBAL_LIST_EMPTY(devil_contracts)
 
 GLOBAL_LIST_EMPTY(nuke_codes)
 
@@ -95,5 +94,3 @@ GLOBAL_LIST_EMPTY(ash_storm_sounds)
 GLOBAL_LIST_EMPTY(snowstorm_sounds)
 
 GLOBAL_LIST_EMPTY(world_flora)
-
-GLOBAL_LIST_EMPTY(zombie_classes)

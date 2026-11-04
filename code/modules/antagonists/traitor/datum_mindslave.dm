@@ -120,6 +120,3 @@
 	. = ..()
 	var/mob/mob = .
 	REMOVE_TRAIT(mob, TRAIT_NECROMANT_CURSED, UNIQUE_TRAIT_SOURCE(src))
-
-/datum/antagonist/mindslave/necromancy/plague_zombie
-	name = "Necromancy-risen Plague Zombie"

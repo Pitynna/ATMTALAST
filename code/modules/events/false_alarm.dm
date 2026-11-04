@@ -16,7 +16,6 @@
 		/datum/event/prison_break,
 		/datum/event/rogue_drone,
 		/datum/event/solar_flare,
-		/datum/event/space_dragon,
 		/datum/event/spider_infestation,
 		/datum/event/tear,
 		/datum/event/traders,

@@ -67,7 +67,6 @@
 /datum/game_mode/traitor/post_setup()
 	for(var/datum/mind/traitor in pre_traitors)
 		var/datum/antagonist/traitor/new_antag = new
-		new_antag.contractor_pending = new(traitor)
 		addtimer(CALLBACK(traitor, TYPE_PROC_REF(/datum/mind, add_antag_datum), new_antag), rand(1 SECONDS, 10 SECONDS))
 	if(pre_malf_AI)
 		addtimer(CALLBACK(pre_malf_AI, TYPE_PROC_REF(/datum/mind, add_antag_datum), /datum/antagonist/malf_ai), rand(1 SECONDS, 10 SECONDS))
@@ -136,27 +135,6 @@
 			else
 				special_role_text = "antagonist"
 
-			var/datum/antagonist/contractor/contractor = traitor?.has_antag_datum(/datum/antagonist/contractor)
-			var/obj/item/contractor_uplink/uplink = contractor?.contractor_uplink_ref?.resolve()
-			if(istype(contractor) && uplink)
-				var/count = 1
-				var/earned_tc = uplink.hub.reward_tc_paid_out
-				for(var/datum/syndicate_contract/s_contract in uplink.hub.contracts)
-					// Locations
-					var/locations = list()
-					for(var/area/c_area in s_contract.contract.candidate_zones)
-						locations += (c_area == s_contract.contract.extraction_zone ? "<b><u>[c_area.map_name]</u></b>" : c_area.map_name)
-					var/display_locations = english_list(locations, and_text = " or ")
-					// Result
-					var/result = ""
-					if(s_contract.status == CONTRACT_STATUS_COMPLETED)
-						result = "<font color='green'><b>Success!</b></font>"
-					else if(s_contract.status != CONTRACT_STATUS_INACTIVE)
-						result = "<font color='red'>Fail.</font>"
-					text += "<br><font color='orange'><b>Contract #[count]</b></font>: Kidnap and extract [s_contract.target_name] at [display_locations]. [result]"
-					count++
-				text += "<br><font color='orange'><b>[earned_tc] TC were earned from the contracts.</b></font>"
-
 			if(traitorwin)
 				text += "<br><font color='green'><b>The [special_role_text] was successful!</b></font><br>"
 				SSblackbox.record_feedback("tally", "traitor_success", 1, "SUCCESS")
@@ -170,11 +148,6 @@
 				text += printplayer(mindslave)
 				var/datum/mind/master_mind = SSticker.mode.implanted[mindslave]
 				text += " (slaved by: <b>[master_mind.name]</b>)<br>"
-
-		if(length(SSticker.mode.support))
-			text += "<br><br><span style='font-size: 2;'><b>The Contractor Support Units were:</b></span><br>"
-			for(var/datum/mind/csu in SSticker.mode.support)
-				text += "[printplayer(csu)]<br>"
 
 		var/phrases = jointext(GLOB.syndicate_code_phrase, ", ")
 		var/responses = jointext(GLOB.syndicate_code_response, ", ")

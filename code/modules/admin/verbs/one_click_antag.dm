@@ -9,14 +9,10 @@ ADMIN_VERB(one_click_antag, R_SERVER|R_EVENT, "Create Antagonist", "Auto-create 
 		<a href='byond://?src=[UID()];makeAntag=1'>Make Traitors</a><br>
 		<a href='byond://?src=[UID()];makeAntag=2'>Make Changelings</a><br>
 		<a href='byond://?src=[UID()];makeAntag=3'>Make Revolutionaries</a><br>
-		<a href='byond://?src=[UID()];makeAntag=4'>Make Cult</a><br>
-		<a href='byond://?src=[UID()];makeAntag=5'>Make Clockwork Cult</a><br>
 		<a href='byond://?src=[UID()];makeAntag=6'>Make Wizard (Requires Ghosts)</a><br>
 		<a href='byond://?src=[UID()];makeAntag=7'>Make Vampires</a><br>
 		<a href='byond://?src=[UID()];makeAntag=8'>Make Vox Raiders (Requires Ghosts)</a><br>
 		<a href='byond://?src=[UID()];makeAntag=9'>Make Abductor Team (Requires Ghosts)</a><br>
-		<a href='byond://?src=[UID()];makeAntag=10'>Make Space Ninja (Requires Ghosts)</a><br>
-		<a href='byond://?src=[UID()];makeAntag=11'>Make Thieves</a><br>
 		<a href='byond://?src=[UID()];makeAntag=12'>Make Blobs</a><br>
 		<a href='byond://?src=[UID()];makeAntag=13'>Make Terror Spiders</a><br>
 		<a href='byond://?src=[UID()];makeAntag=14'>Make Aliens</a><br>
@@ -181,66 +177,6 @@ ADMIN_VERB(one_click_antag, R_SERVER|R_EVENT, "Create Antagonist", "Auto-create 
 		return 1
 	return 0
 
-/datum/admins/proc/makeCult()
-
-	var/datum/game_mode/cult/temp = new
-	if(CONFIG_GET(flag/protect_roles_from_antagonist))
-		temp.restricted_jobs += temp.protected_jobs
-
-	var/list/mob/living/carbon/human/candidates = list()
-	var/mob/living/carbon/human/H = null
-	var/antnum = tgui_input_number(owner, "How many cultists do you want to create? Enter 0 to cancel.", "Amount:", 0)
-	if(!antnum || antnum <= 0) // 5 because cultist can really screw balance over if spawned in high amount.
-		return
-	log_admin("[key_name(owner)] tried making a Cult with One-Click-Antag")
-	message_admins("[key_name_admin(owner)] tried making a Cult with One-Click-Antag")
-
-	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
-		if(CandCheck(ROLE_CULTIST, applicant, temp))
-			candidates += applicant
-
-	if(length(candidates))
-		var/numCultists = min(length(candidates), antnum)
-
-		for(var/I in 1 to numCultists)
-			H = pick(candidates)
-			to_chat(H, CULT_GREETING)
-			SSticker.mode.add_cultist(H.mind)
-			SSticker.mode.equip_cultist(H)
-			candidates.Remove(H)
-		return TRUE
-	return FALSE
-
-/datum/admins/proc/makeClockwork()
-
-	var/datum/game_mode/clockwork/temp = new
-	if(CONFIG_GET(flag/protect_roles_from_antagonist))
-		temp.restricted_jobs += temp.protected_jobs
-
-	var/list/mob/living/carbon/human/candidates = list()
-	var/mob/living/carbon/human/H = null
-	var/antnum = tgui_input_number(owner, "How many cultists do you want to create? Enter 0 to cancel.", "Amount:", 0)
-	if(!antnum || antnum <= 0) // 5 because cultist can really screw balance over if spawned in high amount.
-		return
-	log_admin("[key_name(owner)] tried making a Clockwork Cult with One-Click-Antag")
-	message_admins("[key_name_admin(owner)] tried making a Clockwork Cult with One-Click-Antag")
-
-	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
-		if(CandCheck(ROLE_CLOCKER, applicant, temp))
-			candidates += applicant
-
-	if(length(candidates))
-		var/numclocks = min(length(candidates), antnum)
-
-		for(var/I in 1 to numclocks)
-			H = pick(candidates)
-			to_chat(H, CLOCK_GREETING)
-			SSticker.mode.add_clocker(H.mind)
-			SSticker.mode.equip_clocker(H)
-			candidates.Remove(H)
-		return TRUE
-	return FALSE
-
 /datum/admins/proc/makeNukeTeam()
 
 	var/list/mob/candidates = list()
@@ -306,32 +242,6 @@ ADMIN_VERB(one_click_antag, R_SERVER|R_EVENT, "Create Antagonist", "Auto-create 
 	log_and_message_admins("tried making Aliens with One-Click-Antag")
 	spawn_aliens(antnum)
 	return TRUE
-
-/datum/admins/proc/makeSpaceNinja()
-	. = FALSE
-	var/confirm = tgui_alert(usr, "Are you sure?", "Confirm creation", list("Yes", "No"))
-	if(confirm != "Yes")
-		return
-	var/datum/objective/custom_objective = null
-	if(tgui_alert(usr, "Хотите ли вы выдать этому ниндзя особую цель?", "Особая цель", list("Да", "Нет")) == "Да")
-		var/expl = sanitize(tgui_input_text(usr, "Custom objective:", "Objective", "", encode = FALSE))
-		if(!expl)
-			return
-		custom_objective = new
-		custom_objective.needs_target = FALSE
-		custom_objective.explanation_text = expl
-	var/image/I = new('icons/mob/ninja_previews.dmi', "ninja_preview_new_hood_green")
-	var/list/candidates = SSghost_spawns.poll_candidates("Do you wish to be considered for the position of a Spider Clan Assassin'?", ROLE_NINJA, source = I)
-
-	log_admin("[key_name(owner)] tried making a Space Ninja with One-Click-Antag")
-	message_admins("[key_name_admin(owner)] tried making a Space Ninja with One-Click-Antag")
-
-	if(length(candidates))
-		var/mob/dead/observer/selected = pick(candidates)
-		candidates -= selected
-		var/mob/living/carbon/human/new_character = makeBody(selected)
-		new_character.mind.make_Space_Ninja(custom_objective)
-		return TRUE
 
 /proc/makeBody(mob/dead/observer/G_found) // Uses stripped down and bastardized code from respawn character
 	if(!G_found || !G_found.key)	return
@@ -457,36 +367,6 @@ ADMIN_VERB(one_click_antag, R_SERVER|R_EVENT, "Create Antagonist", "Auto-create 
 	else
 		return 0
 	return 1
-
-/datum/admins/proc/makeThieves()
-	var/datum/game_mode/thief/temp = new
-	if(CONFIG_GET(flag/protect_roles_from_antagonist))
-		temp.restricted_jobs += temp.protected_jobs
-
-	var/list/mob/living/carbon/human/candidates = list()
-	var/mob/living/carbon/human/H = null
-
-	var/antnum = tgui_input_number(owner, "How many thieves you want to create? Enter 0 to cancel", "Amount:", 0)
-	if(!antnum || antnum <= 0)
-		return 0
-
-	log_admin("[key_name(owner)] tried making Thieves with One-Click-Antag")
-	message_admins("[key_name_admin(owner)] tried making Thieves with One-Click-Antag")
-
-	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
-		if(CandCheck(ROLE_THIEF, applicant, temp))
-			candidates += applicant
-
-	if(length(candidates))
-		var/numThieves = min(length(candidates), antnum)
-
-		for(var/i = 0, i<numThieves, i++)
-			H = pick(candidates)
-			H.mind.make_Thief()
-			candidates.Remove(H)
-
-		return 1
-	return 0
 
 /datum/admins/proc/makeVoxRaiders()
 	var/confirm = tgui_alert(usr, "Создать команду воксов-рейдеров?", "Подтверждение", list("Да", "Нет"))

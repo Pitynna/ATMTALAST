@@ -41,7 +41,6 @@
 
 /mob/living/simple_animal/shade/death(gibbed)
 	. = ..()
-	SSticker.mode.remove_cultist(mind, FALSE)
 
 /mob/living/simple_animal/shade/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
@@ -59,12 +58,6 @@
 
 /mob/living/simple_animal/shade/Process_Spacemove(movement_dir = NONE, continuous_move = FALSE)
 	return TRUE
-
-/mob/living/simple_animal/shade/cult/Initialize(mapload)
-	. = ..()
-	icon_state = SSticker.cultdat?.shade_icon_state
-	ADD_TRAIT(src, TRAIT_HEALS_FROM_CULT_PYLONS, INNATE_TRAIT)
-	AddElement(/datum/element/simple_flying)
 
 /mob/living/simple_animal/shade/holy
 	holy = TRUE

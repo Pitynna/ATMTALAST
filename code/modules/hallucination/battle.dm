@@ -100,18 +100,6 @@
 	return TRUE
 
 /// A hallucination of someone being stun batonned, and subsequently harmbatonned.
-/datum/hallucination/battle/contractor_baton
-
-/datum/hallucination/battle/contractor_baton/start()
-	. = ..()
-	if(!.)
-		return
-
-	hallucinator.playsound_local(source_turf, 'sound/weapons/contractorbatonhit.ogg', 60, TRUE)
-	hallucinator.playsound_local(source_turf, get_sfx(SFX_BODYFALL), 50, TRUE)
-	addtimer(CALLBACK(src, PROC_REF(fake_cuff)), 2 SECONDS)
-	return TRUE
-
 /// A hallucination of someone being stun batonned, and subsequently harmbatonned.
 /datum/hallucination/battle/harm_baton
 

@@ -623,16 +623,6 @@
 	else
 		. += "ledb"
 
-/obj/item/storage/lockbox/vials/zombie_cure
-	name = "secure vial storage box - 'Anti-Plague Sequences'"
-
-/obj/item/storage/lockbox/vials/zombie_cure/populate_contents()
-	new /obj/item/reagent_containers/cup/bottle/zombiecure1(src)
-	new /obj/item/reagent_containers/cup/bottle/zombiecure2(src)
-	new /obj/item/reagent_containers/cup/bottle/zombiecure3(src)
-	new /obj/item/reagent_containers/cup/bottle/zombiecure4(src)
-
-
 /*
  * MARK: Aquatic Starter Kit
  */

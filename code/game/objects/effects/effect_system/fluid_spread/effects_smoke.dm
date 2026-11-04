@@ -421,9 +421,6 @@
 /datum/effect_system/fluid_spread/smoke/vomiting
 	effect_type = /obj/effect/particle_effect/fluid/smoke/vomiting
 
-/datum/effect_system/fluid_spread/smoke/zombie
-	effect_type = /obj/effect/particle_effect/fluid/smoke/vomiting/zombie
-
 /////////////////////////////////////////////
 // Chem smoke
 /////////////////////////////////////////////

@@ -1267,45 +1267,5 @@ GLOBAL_LIST_EMPTY(cached_heal_materials)
  * Fragile but empowered by Ratvar. Becomes a clock cultist upon creation.
  * Features brass construction and special cult abilities.
  */
-/datum/species/golem/clockwork
-	name = SPECIES_GOLEM_CLOCKWORK
-	prefix = "Латунн"
-	special_names = null
-	golem_colour = rgb(176, 136, 32)
-	skinned_type = /obj/item/stack/sheet/brass
-	special_names = list(
-		MALE = list("Сплав", "Брусок", "Кусок", "Мужик", "Кирпич", "Минерал", "Буреходец", "Пожарник", "Лавоходец", "Лавоплавунец", "Тяжеступ", "Работяга", "Тяжеловес", "Увалень", "Бугай", "Пупс"),
-		FEMALE = list("Дева"),
-		NEUTER = null,
-	)
-	speed_mod = 0
-	chance_name_male = 70
-	chance_name_neuter = 10
-	special_name_chance = 40
-
-	material_heal = 40
-	amount_required_for_heal = 2
-	self_heal_delay = 1 SECONDS
-
-/datum/species/golem/clockwork/get_info_text()
-	return info_text = "Будучи [span_danger("латунный големом")], вы очень хрупкие, но взамен имеете силу Ратвара."
-
-/datum/species/golem/clockwork/on_species_gain(mob/living/carbon/human/H)
-	. = ..()
-	if(!isclocker(H))
-		SSticker.mode.add_clocker(H.mind)
-
-/datum/species/golem/clockwork/handle_death(gibbed, mob/living/carbon/human/H)
-	H.visible_message(span_danger("[H] crumbles into cogs and gears! Then leftovers suddenly dusts!"))
-	for(var/obj/item/W in H)
-		H.drop_item_ground(W)
-	new /obj/item/clockwork/clockgolem_remains(get_turf(H))
-	H.dust() // One-try only
-
-/datum/species/golem/clockwork/get_heal_material_types()
-	return list(
-		/obj/item/stack/sheet/brass,
-	)
-
 #undef GOLEM_END_PR_1
 #undef GOLEM_END_PR_2

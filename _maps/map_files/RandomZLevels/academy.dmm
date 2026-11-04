@@ -676,7 +676,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "dm" = (
-/obj/structure/cult/archives,
 /obj/item/twohanded/staff,
 /turf/simulated/floor/wood/fancy/oak,
 /area/awaymission/academy/classrooms)
@@ -3709,7 +3708,6 @@
 	dir = 4
 	},
 /obj/structure/stone_tile,
-/obj/item/melee/cultblade,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},

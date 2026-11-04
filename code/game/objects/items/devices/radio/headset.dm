@@ -1197,7 +1197,6 @@
 	var/static/list/valid_headset_types
 	var/static/list/forbidden_headset_types = list(
 		/obj/item/radio/headset/syndicate,
-		/obj/item/radio/headset/ninja,
 		/obj/item/radio/headset/abductor
 	)
 	var/static/list/forbidden_headset_typecache

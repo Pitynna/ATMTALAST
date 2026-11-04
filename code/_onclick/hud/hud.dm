@@ -34,7 +34,6 @@
 	var/atom/movable/screen/module_store_icon
 	var/atom/movable/screen/combo/combo_display
 
-	var/atom/movable/screen/devil/soul_counter/devilsouldisplay
 
 	var/list/static_inventory = list()		//the screen objects which are static
 	var/list/toggleable_inventory = list()	//the screen objects which can be hidden
@@ -158,7 +157,6 @@
 	QDEL_NULL(ninja_focus_display)
 	QDEL_NULL(wind_up_timer)
 	QDEL_NULL(nightvisionicon)
-	QDEL_NULL(devilsouldisplay)
 	QDEL_NULL(combo_display)
 
 	QDEL_LIST_ASSOC_VAL(master_groups)

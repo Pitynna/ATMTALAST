@@ -1665,26 +1665,7 @@
 /obj/item/clothing/head/hooded/ghostface/true
 	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/hooded/ghostfacesuit/devil
-	desc = "Чёрный с прожилками красного просторный балахон, что может навеивать смутные напоминания о чём-то."
-	icon_state = "devil_ghostface_suit"
-	item_state = "devil_ghostface_suit"
-
-/obj/item/clothing/suit/hooded/ghostfacesuit/devil/get_ru_names()
-	return alist(
-		NOMINATIVE = "кроваво-чёрный балахон",
-		GENITIVE = "кроваво-чёрного балахона",
-		DATIVE = "кроваво-чёрному балахону",
-		ACCUSATIVE = "кроваво-чёрный балахон",
-		INSTRUMENTAL = "кроваво-чёрным балахоном",
-		PREPOSITIONAL = "кроваво-чёрном балахоне",
-	)
-
 /obj/item/clothing/suit/hooded/ghostfacesuit/true
-	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
-	hoodtype = /obj/item/clothing/head/hooded/ghostface/true
-
-/obj/item/clothing/suit/hooded/ghostfacesuit/devil/true
 	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
 	hoodtype = /obj/item/clothing/head/hooded/ghostface/true
 

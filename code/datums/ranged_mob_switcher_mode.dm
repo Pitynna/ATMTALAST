@@ -24,28 +24,3 @@
 	var/icon_state
 
 // MARK: Combat swarmer modes
-/datum/ranged_mob_switcher_mode/combat_swarmer_double
-	name = "Двойной выстрел"
-	cooldown = 1.2 SECONDS
-	proj_type = /obj/projectile/beam/disabler/swarmer/double
-	amount = 2
-	rapid_fire_delay = 0.2 SECONDS
-	icon = 'icons/mob/actions/actions_swarmer.dmi'
-	icon_state = "double"
-	sound = 'sound/weapons/taser2.ogg'
-
-/datum/ranged_mob_switcher_mode/combat_swarmer_strong
-	name = "Сильный выстрел"
-	cooldown = 1.5 SECONDS
-	proj_type = /obj/projectile/beam/disabler/swarmer/empowered
-	icon = 'icons/mob/actions/actions_swarmer.dmi'
-	icon_state = "power"
-	sound = 'sound/weapons/taser2.ogg'
-
-/datum/ranged_mob_switcher_mode/combat_swarmer_sabotage
-	name = "Саботажный выстрел"
-	cooldown = 1.5 SECONDS
-	proj_type = /obj/projectile/beam/disabler/swarmer/sabotage
-	icon = 'icons/mob/actions/actions_swarmer.dmi'
-	icon_state = "sabotage"
-	sound = 'sound/weapons/taser2.ogg'

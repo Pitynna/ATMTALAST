@@ -575,7 +575,7 @@ GAME_VERB_NATIVE(/mob, MouseSubstitute, ".mouse", VERB_CATEGORY_HIDDEN, params a
 	if(slot_flags & ITEM_SLOT_CLOTH_OUTER)
 		slot_strings += "нагрудник"
 	if(slot_flags & ITEM_SLOT_CLOTH_INNER)
-		slot_strings += "костюм" //TODO modsuit: cursed
+		slot_strings += "костюм"
 	if(slot_flags & ITEM_SLOT_SUITSTORE)
 		slot_strings += "хранилище костюма"
 	if(slot_flags & (ITEM_SLOT_POCKET_LEFT|ITEM_SLOT_POCKET_RIGHT))
@@ -675,7 +675,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	var/selected_borg_name = null
 	var/list/available_borgs = list()
 	for(var/mob/living/silicon/robot/borg in GLOB.player_list)
-		if(borg.stat == DEAD || borg.connected_ai || borg.scrambledcodes || isdrone(borg) || iscogscarab(borg) || isclocker(borg) || borg.shell)
+		if((borg.stat == DEAD) || (borg.connected_ai) || (borg.scrambledcodes) || (isdrone(borg)) || (borg.shell))
 			continue
 		var/borg_name = "[borg.real_name] ([borg.modtype?.name] [borg.braintype])"
 		available_borgs[borg_name] = borg
@@ -691,8 +691,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 		if(ai.stat == DEAD)
 			continue
 		if(ai.control_disabled)
-			continue
-		if(isclocker(ai)) // The active AIs list used for uploads. Avoid changing laws even if the AI is fully converted
 			continue
 		. += ai
 	return .
@@ -802,8 +800,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 		mob_list.Add(mob_instance)
 	for(var/mob/living/carbon/human/mob_instance in sorted_mobs)
 		mob_list.Add(mob_instance)
-	for(var/mob/living/carbon/true_devil/mob_instance in sorted_mobs)
-		mob_list.Add(mob_instance)
 	for(var/mob/living/carbon/brain/mob_instance in sorted_mobs)
 		mob_list.Add(mob_instance)
 	for(var/mob/living/carbon/alien/mob_instance in sorted_mobs)
@@ -857,3 +853,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 		sleep(0.1 SECONDS)
 	if(set_original_dir)
 		target_movable.setDir(original_dir)
+
+/mob/living/proc/owns_soul()
+	return mind && mind.soulOwner == mind

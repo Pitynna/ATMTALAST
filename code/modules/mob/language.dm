@@ -661,23 +661,6 @@
 	else
 		..(speaker,message)
 
-/datum/language/shadowling
-	name = LANGUAGE_HIVE_SHADOWLING
-	desc = "Тенеморфы и их рабы способны общаться через псионический коллективный разум."
-	speech_verbs = list("сообща%(ет,ют)%")
-	colour = "shadowling"
-	key = "8"
-	flags = RESTRICTED | HIVEMIND | NOBABEL
-	follow = TRUE
-
-/datum/language/shadowling/broadcast(mob/living/speaker, message, speaker_mask)
-	if(speaker.mind && speaker.mind.special_role == SPECIAL_ROLE_SHADOWLING)
-		..(speaker,"[span_bold(span_fontsize3(message))]", span_shadowling(span_fontsize3("([speaker.mind.special_role]) [speaker]")))
-	else if(speaker.mind && speaker.mind.special_role)
-		..(speaker, message, "([speaker.mind.special_role]) [speaker]")
-	else
-		..(speaker, message)
-
 /datum/language/abductor
 	name = LANGUAGE_HIVE_ABDUCTOR
 	desc = "Абдукторы не способны к речи, но обладают псионической связью для связи с себе подобными."
@@ -761,7 +744,7 @@
 	for(var/mob/living/S in GLOB.alive_mob_list)
 		if(!S.binarycheck())
 			continue
-		else if(drone_only && !(isdrone(S) || iscogscarab(S)))
+		else if((drone_only) && (!(isdrone(S) || FALSE)))
 			continue
 		else if(isAI(S))
 			message_start = list("<i><span class='game say'>[name], <a href='byond://?src=[S.UID()];track=[speaker.UID()]'>[span_name("[speaker.name]")]</a>")
@@ -803,17 +786,6 @@
 	follow = TRUE
 	syllables = list ("beep", "boop")
 
-/datum/language/swarmer
-	name = LANGUAGE_HIVE_SWARMER
-	desc = "Сильно закодированный инопланетный бинарный паттерн."
-	speech_verbs = list("сообща%(ет,ют)%", "констатиру%(ет,ют)%")
-	ask_verbs = list("запрашива%(ет,ют)%", "дела%(ет,ют)% запрос")
-	exclaim_verbs = list("восклица%(ет,ют)%")
-	colour = "say_quote"
-	key = "as"//Zwarmer...Or Zerg!
-	flags = RESTRICTED | HIVEMIND | NOBABEL
-	follow = TRUE
-
 /datum/language/human/monkey
 	name = LANGUAGE_MONKEY_HUMAN
 	desc = "Уаа-Ааа-Аа!"
@@ -849,36 +821,8 @@
 
 /datum/language/angel/proc/get_spans(mob/speaker)
 	. = colour //reset spans, just in case someone gets deculted or the cords change owner
-	if(iscultist(speaker))
-		. += " narsiesmall"
-
 /datum/language/angel/format_message(message, mob/speaker)
 	return span_message("<span class='[get_spans(speaker)]'>[message]</span>")
-
-/datum/language/zombie
-	name = LANGUAGE_ZOMBIE
-	desc = "Стонущий язык плотоядных зомби. Мозгииии..."
-	speech_verbs = list("стона%(ет,ют)%")
-	ask_verbs = list("стона%(ет,ют)%")
-	exclaim_verbs = list("кричи%(ет,ют)%")
-	colour = "zombie"
-	key = "zz"
-	flags = RESTRICTED | NOBABEL
-	syllables = list("Мозги", "Мозгииии", "Плоть", "Гррр", "Хннг", "Мооозги", "Мооозгиии")
-	english_names = TRUE
-
-/datum/language/zombie/scramble(input)
-	var/terminator = "..."
-	if(!length(input))
-		return "[pick(syllables)][terminator]"
-
-	var/last_letter = copytext(input, length(input))
-	if(last_letter in list("?", "!"))
-		terminator = last_letter
-
-	if(prob(90) || !length(input))
-		return "[pick(syllables)][terminator]"
-	return "[copytext_char(input, 1, min(7, length(input)))][terminator]"
 
 // Can we speak this language, as opposed to just understanding it?
 /mob/proc/can_speak_language(datum/language/speaking)

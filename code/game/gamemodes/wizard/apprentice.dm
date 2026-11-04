@@ -420,9 +420,9 @@
 	chain.desc = "Цепь последователя школы крови для нанесения увечий и пускания крови."
 	chain.force = 15
 	owner.equip_or_collect(chain, ITEM_SLOT_HAND_RIGHT)
-	owner.equip_or_collect(new /obj/item/clothing/suit/hooded/cultrobes/suit/sacrificial_robe, ITEM_SLOT_CLOTH_OUTER)
+	owner.equip_or_collect(new /obj/item/clothing/suit/wizrobe/sacrificial_robe, ITEM_SLOT_CLOTH_OUTER)
 
-/obj/item/clothing/suit/hooded/cultrobes/suit/sacrificial_robe
+/obj/item/clothing/suit/wizrobe/sacrificial_robe
 	name = "Жертвенная роба"
 	desc = "Магическая роба последователей школы крови."
 	gas_transfer_coefficient = 0.01

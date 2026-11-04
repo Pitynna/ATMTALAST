@@ -253,7 +253,6 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 
 	//Clockwork enchantment
 	/// What's the type on enchantment on it? 0
-	var/enchant_type = NO_SPELL
 	/// List(datum)
 	var/list/enchants = null
 
@@ -500,14 +499,6 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 			msg += span_danger("Пригодные материалы отсутствуют.<br>")
 		msg += "*--------*"
 		. += msg
-
-	if(isclocker(user) && enchant_type)
-		if(enchant_type == CASTING_SPELL)
-			. += span_notice("Предыдущее заклинание еще активно!<br>")
-		for(var/datum/spell_enchant/S in enchants)
-			if(S.enchantment == enchant_type)
-				. += span_notice("Обнаружено запечатанное заклинание \"[S.name]\" внутри.<br>")
-				break
 
 	if(exists_skin_change)
 		. += span_notice("Используйте <b>Alt+ЛКМ</b>, чтобы выбрать скин.")
@@ -925,10 +916,6 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 		if(container.can_be_inserted(src, TRUE))
 			return container.handle_item_insertion(src)
 
-	for(var/obj/item/mod/control/control in possible)
-		if(control.can_be_inserted(src, TRUE))
-			return control.handle_item_insertion(src)
-
 	if(drop_on_fail)
 		if(src in user.get_equipped_items(INCLUDE_POCKETS | INCLUDE_HELD))
 			user.drop_item_ground(src)
@@ -1299,16 +1286,6 @@ GAME_VERB_SRC(/obj/item, verb_pickup, oview(1), "Pick up", VERB_CATEGORY_HIDDEN)
 		materials_coeff = 1 / new_coeff
 	for(var/material in materials)
 		materials[material] *= materials_coeff
-
-/obj/item/proc/deplete_spell()
-	enchant_type = NO_SPELL
-	var/enchant_action = locate(/datum/action/item_action/activate/enchant) in actions
-	if(enchant_action)
-		qdel(enchant_action)
-	update_icon()
-
-/obj/item/proc/add_enchant()
-	return
 
 /obj/item/update_atom_colour()
 	. = ..()

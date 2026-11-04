@@ -63,22 +63,6 @@
 		PREPOSITIONAL = "капсуле снабжения Центрального командования",
 	)
 
-/datum/pod_style/contractor
-	name = "contractor supply pod"
-	ui_name = "Контрактника"
-	desc = "Устрашающая капсула снабжения, покрытая золотыми знаками \"Синдиката\". Наверное, лучше держаться подальше."
-	icon_state = "darkpod"
-	decal_icon = "contractor"
-	id = "contractor"
-	ru_names = alist(
-		NOMINATIVE = "капсула снабжения контрактника",
-		GENITIVE = "капсулы снабжения контрактника",
-		DATIVE = "капсуле снабжения контрактника",
-		ACCUSATIVE = "капсулу снабжения контрактника",
-		INSTRUMENTAL = "капсулой снабжения контрактника",
-		PREPOSITIONAL = "капсуле снабжения контрактника",
-	)
-
 /datum/pod_style/syndicate
 	name = "blood-red supply pod"
 	ui_name = "\"Синдиката\""
@@ -270,21 +254,3 @@
 	glow_color = null
 	rubble_type = RUBBLE_NONE
 	id = "seethrough"
-
-/datum/pod_style/swarmer
-	name = "Swarmer deploy pod"
-	ui_name = "Свармер"
-	desc = "Капсула \"Свармеров\", используемая для массовых высадок на объекты, подлежащие захвату."
-	has_door = FALSE
-	icon_state = "swarmer"
-	decal_icon = null
-	glow_color = "blue"
-	id = "swarmer"
-	ru_names = alist(
-		NOMINATIVE = "капсула высадки Свармеров",
-		GENITIVE = "капсулы высадки Свармеров",
-		DATIVE = "капсуле высадки Свармеров",
-		ACCUSATIVE = "капсулу высадки Свармеров",
-		INSTRUMENTAL = "капсулой высадки Свармеров",
-		PREPOSITIONAL = "капсуле высадки Свармеров",
-	)

@@ -995,8 +995,6 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 	. = ..()
 
 	if(ishuman(user) && hide_tail_by_species && slot == ITEM_SLOT_CLOTH_OUTER)
-		if("modsuit" in hide_tail_by_species)
-			return
 		if(user.dna.species.name in hide_tail_by_species)
 			if(!(flags_inv & HIDETAIL)) //Hide the tail if the user's species is in the hide_tail_by_species list and the tail isn't already hidden.
 				flags_inv |= HIDETAIL

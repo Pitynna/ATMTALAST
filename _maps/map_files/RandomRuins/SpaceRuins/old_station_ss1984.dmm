@@ -2358,7 +2358,6 @@
 /turf/simulated/wall/rust,
 /area/ruin/space/ancientstation/charlie_kitchen)
 "jc" = (
-/obj/item/clothing/shoes/cult,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/template_noop)
 "jf" = (

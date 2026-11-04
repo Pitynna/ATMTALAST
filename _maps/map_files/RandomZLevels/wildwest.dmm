@@ -3,14 +3,13 @@
 /turf/space,
 /area/space)
 "ab" = (
-/turf/simulated/wall/indestructible/cult,
+/turf/simulated/wall/indestructible,
 /area/awaymission/wwvault)
 "ac" = (
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/awaymission/wwvault)
 "ad" = (
-/obj/structure/cult/pylon,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/awaymission/wwvault)
 "ae" = (
 /turf/simulated/floor/shuttle/plating{
@@ -19,7 +18,7 @@
 /area/awaymission/wwvault)
 "af" = (
 /mob/living/simple_animal/hostile/faithless,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/awaymission/wwvault)
 "ag" = (
 /turf/simulated/floor/shuttle/plating{
@@ -37,8 +36,7 @@
 	},
 /area/awaymission/wwvault)
 "al" = (
-/obj/effect/gateway,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/awaymission/wwvault)
 "am" = (
 /mob/living/simple_animal/hostile/faithless,
@@ -58,7 +56,6 @@
 	},
 /area/awaymission/wwvault)
 "aq" = (
-/obj/structure/cult/pylon,
 /turf/simulated/floor/shuttle/plating{
 	icon_state = "gcircuitoff"
 	},
@@ -140,7 +137,6 @@
 	},
 /area/awaymission/wwvault)
 "aB" = (
-/obj/structure/cult/pylon,
 /turf/simulated/floor/shuttle/plating{
 	icon_state = "bcircuitoff"
 	},
@@ -162,14 +158,14 @@
 	locked = 1;
 	use_power = 0
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/awaymission/wwvault)
 "aG" = (
 /turf/simulated/mineral,
 /area/space/nearstation)
 "aK" = (
 /obj/effect/mob_spawn/human/miner,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/awaymission/wwvault)
 "aM" = (
 /turf/simulated/mineral/random,
@@ -178,7 +174,7 @@
 /turf/simulated/mineral,
 /area/awaymission/wwmines)
 "aO" = (
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/space/nearstation)
 "aQ" = (
 /turf/simulated/wall/indestructible/mineral_rock,
@@ -188,7 +184,7 @@
 /area/awaymission/wwmines)
 "aS" = (
 /obj/effect/mob_spawn/human/corpse/syndicatecommando,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/space/nearstation)
 "aU" = (
 /turf/simulated/wall/mineral/sandstone,
@@ -201,7 +197,7 @@
 /obj/item/paper{
 	info = "meat grinder requires sacri"
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/space/nearstation)
 "aX" = (
 /turf/simulated/floor/plating/ironsand,
@@ -1938,7 +1934,7 @@
 	},
 /area/awaymission/wwrefine)
 "hv" = (
-/turf/simulated/wall/indestructible/cult,
+/turf/simulated/wall/indestructible,
 /area/awaymission/wwrefine)
 "hy" = (
 /obj/structure/table/reinforced,

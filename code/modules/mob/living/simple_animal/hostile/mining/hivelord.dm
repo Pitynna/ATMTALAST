@@ -433,7 +433,7 @@
 	H.force_gene_block(GLOB.smallsizeblock, TRUE)
 
 /obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize(mapload)
-	var/type = pickweight(list("Miner" = 66, "Ashwalker" = 10, "Golem" = 10,"Clown" = 10, pick(list("Shadow", "YeOlde","Operative", "Cultist")) = 4))
+	var/type = pickweight(list("Miner" = 66, "Ashwalker" = 10, "Golem" = 10,"Clown" = 10, pick(list("Shadow", "YeOlde","Operative")) = 4))
 	switch(type)
 		if("Miner")
 			mob_species = pickweight(list(/datum/species/human = 72, /datum/species/unathi = 28))
@@ -516,12 +516,4 @@
 			glasses = /obj/item/clothing/glasses/sunglasses/blindfold/black
 			back = /obj/item/tank/internals/oxygen
 			mask = /obj/item/clothing/mask/breath
-		if("Cultist")
-			uniform = /obj/item/clothing/under/roman
-			suit = /obj/item/clothing/suit/hooded/cultrobes
-			suit_store = /obj/item/tome
-			r_pocket = /obj/item/restraints/legcuffs/bola/cult
-			l_pocket = /obj/item/melee/cultblade/dagger
-			glasses =  /obj/item/clothing/glasses/hud/health/night
-			backpack_contents = list(/obj/item/reagent_containers/cup/glass/bottle/unholywater = 1, /obj/item/cult_shift = 1, /obj/item/flashlight/flare = 1, /obj/item/stack/sheet/runed_metal = 15)
 	. = ..()

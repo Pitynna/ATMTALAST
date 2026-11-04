@@ -222,12 +222,12 @@
 					L.forceMove(target)
 					var/limit = 2//For only two trailing shadows.
 					for(var/turf/T in get_line(mobloc, L.loc))
-						new /obj/effect/temp_visual/dir_setting/ninja/shadow(T, L.dir)
+						new /obj/effect/temp_visual/dir_setting/stealth_glow/shadow(T, L.dir)
 						limit--
 						if(limit <= 0)
 							break
 			else
-				new /obj/effect/temp_visual/dir_setting/ninja/shadow(mobloc, L.dir)
+				new /obj/effect/temp_visual/dir_setting/stealth_glow/shadow(mobloc, L.dir)
 				var/T = get_step(L, direct)
 				if(T)
 					L.forceMove(T)

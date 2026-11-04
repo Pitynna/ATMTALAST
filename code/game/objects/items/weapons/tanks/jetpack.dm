@@ -306,23 +306,3 @@
 	if(user_turf && tank_turf && user_turf != tank_turf)
 		turn_off(human_user)
 
-/obj/item/tank/jetpack/suit/ninja
-	name = "ninja jetpack upgrade"
-	desc = "A modular, compact set of thrusters designed to integrate with ninja's suit. It is fueled by a tank inserted into the suit's storage compartment."
-	icon = 'icons/obj/ninjaobjects.dmi'
-	icon_state = "ninja_jetpack"
-	actions_types = list(/datum/action/item_action/toggle_jetpack/ninja, /datum/action/item_action/jetpack_stabilization/ninja)
-
-/obj/item/tank/jetpack/suit/ninja/allow_thrust(num, use_fuel = TRUE)
-	var/mob/living/user = get_owner()
-	if(!user)
-		return FALSE
-
-	var/is_cloaked = HAS_TRAIT(user, TRAIT_NINJA_INVISIBILITY)
-	if(!skip_trails && is_cloaked)
-		configure_jetpack(skip_trails = TRUE)
-	else if(skip_trails && !is_cloaked)
-		configure_jetpack(skip_trails = FALSE)
-
-	return ..()
-

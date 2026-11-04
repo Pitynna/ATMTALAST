@@ -577,8 +577,6 @@ ADMIN_VERB(delay, R_SERVER, "Delay Pre-Game", "Delay the game start.", ADMIN_CAT
 		antag_list += "Head Rev"
 	if(M.mind in SSticker.mode.revolutionaries)
 		antag_list += "Revolutionary"
-	if(M.mind in SSticker.mode.cult)
-		antag_list += "Cultist"
 	if(M.mind.has_antag_datum(/datum/antagonist/nuclear_operative))
 		antag_list += "Nuclear Operative"
 	if(M.mind in SSticker.mode.wizards)

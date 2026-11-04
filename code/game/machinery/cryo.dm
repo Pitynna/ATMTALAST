@@ -512,17 +512,6 @@ GAME_VERB_SRC(/obj/machinery/atmospherics/unary/cryo_cell, move_eject, oview(1),
 		go_out()
 	add_fingerprint(usr)
 
-/obj/machinery/atmospherics/unary/cryo_cell/narsie_act()
-	go_out()
-	new /obj/effect/gibspawner/generic(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	color = "red"//force the icon to red
-	light_color = COLOR_SOFT_RED
-
-/obj/machinery/atmospherics/unary/cryo_cell/ratvar_act()
-	go_out()
-	new /obj/effect/decal/cleanable/blood/gibs/clock(get_turf(src))
-	qdel(src)
-
 /datum/data/function/proc/reset()
 	return
 

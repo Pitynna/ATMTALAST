@@ -818,9 +818,6 @@
 /mob/living/simple_animal/demon/pulse_demon/blob_act(obj/structure/blob/B)
 	return // will likely end up dying if the blob cuts its wires anyway
 
-/mob/living/simple_animal/demon/pulse_demon/narsie_act()
-	return // you can't turn electricity into a harvester
-
 /mob/living/simple_animal/demon/pulse_demon/get_access()
 	return get_all_accesses()
 

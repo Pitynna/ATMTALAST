@@ -73,8 +73,3 @@
 	return
 
 ///////Cult Illusions/////////
-/mob/living/simple_animal/hostile/illusion/cult
-	loot = list(/obj/effect/temp_visual/cult/sparks) // So that they SPARKLE on death
-
-/mob/living/simple_animal/hostile/illusion/escape/cult
-	loot = list(/obj/effect/temp_visual/cult/sparks)

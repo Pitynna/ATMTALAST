@@ -1126,13 +1126,6 @@
 				var/obj/item/storage/backpack/backpack = user.back
 				if(length(backpack.contents) < backpack.storage_slots && I.w_class <= backpack.max_w_class)
 					return TRUE
-			else if(user.back && ismodcontrol(user.back))
-				var/obj/item/mod/control/control = user.back
-				if(!control.bag)
-					return FALSE
-				var/obj/item/storage/backpack/backpack = control.bag
-				if(length(backpack.contents) < backpack.storage_slots && I.w_class <= backpack.max_w_class)
-					return TRUE
 			return FALSE
 
 		// UNIFORM ACCESORIES

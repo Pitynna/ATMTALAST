@@ -240,16 +240,6 @@ GAME_VERB_SRC(/obj/machinery/bodyscanner, eject, oview(1), "Извлечь па�
 		updateUsrDialog()
 		update_icon(UPDATE_ICON_STATE)
 
-/obj/machinery/bodyscanner/narsie_act()
-	go_out()
-	new /obj/effect/gibspawner/generic(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	qdel(src)
-
-/obj/machinery/bodyscanner/ratvar_act()
-	go_out()
-	new /obj/effect/decal/cleanable/blood/gibs/clock(get_turf(src))
-	qdel(src)
-
 /obj/machinery/bodyscanner/ui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)

@@ -60,14 +60,6 @@
 				log_admin("[key_name(usr)] has spawned revolutionaries.")
 				if(!makeRevs())
 					to_chat(usr, span_warning("К сожалению, желающих было слишком мало."), confidential = TRUE)
-			if("4")
-				log_admin("[key_name(usr)] has spawned a cultists.")
-				if(!makeCult())
-					to_chat(usr, span_warning("К сожалению, желающих было слишком мало."), confidential = TRUE)
-			if("5")
-				log_admin("[key_name(usr)] has spawned a clockers.")
-				if(!makeClockwork())
-					to_chat(usr, span_warning("К сожалению, желающих было слишком мало."), confidential = TRUE)
 			if("6")
 				log_admin("[key_name(usr)] has spawned a wizard.")
 				if(!makeWizard())
@@ -83,14 +75,6 @@
 			if("9")
 				log_admin("[key_name(usr)] has spawned an abductor team.")
 				if(!makeAbductorTeam())
-					to_chat(usr, span_warning("К сожалению, желающих было слишком мало."), confidential = TRUE)
-			if("10")
-				log_admin("[key_name(usr)] has spawned a space ninja.")
-				if(!makeSpaceNinja())
-					to_chat(usr, span_warning("К сожалению, желающих было слишком мало."), confidential = TRUE)
-			if("11")
-				log_admin("[key_name(usr)] has spawned a thief.")
-				if(!makeThieves())
 					to_chat(usr, span_warning("К сожалению, желающих было слишком мало."), confidential = TRUE)
 			if("12")
 				log_admin("[key_name(usr)] has spawned a blob.")
@@ -1302,7 +1286,7 @@
 			if(!GLOB.antag_paradise_weights)
 				var/list/antags_list = CONFIG_GET(keyed_list/antag_paradise_single_antags_weights)
 				antags_list = antags_list.Copy()
-				for(var/key in list(ROLE_TRAITOR, ROLE_VAMPIRE, ROLE_CHANGELING, ROLE_THIEF))
+				for(var/key in list(ROLE_TRAITOR, ROLE_VAMPIRE, ROLE_CHANGELING))
 					antags_list[key] = !!(key in antags_list)
 				GLOB.antag_paradise_weights = antags_list
 			var/antag = replacetext(command, "weights_normal_", "")
@@ -1585,76 +1569,6 @@
 		spawn(50)
 			to_chat(M, span_notice("You have been sent to the Thunderdome."))
 		log_and_message_admins("has sent [key_name_admin(M)] to the thunderdome. (Observer.)")
-
-	else if(href_list["contractor_stop"])
-		if(!check_rights(R_ADMIN))
-			return
-
-		var/mob/M = locateUID(href_list["contractor_stop"])
-		if(!istype(M))
-			to_chat(usr, span_warning("This can only be used on instances of type /mob."), confidential = TRUE)
-			return
-
-		var/datum/syndicate_contract/contract = LAZYACCESS(GLOB.prisoner_belongings.prisoners, M)
-		if(!contract)
-			to_chat(usr, span_warning("[M] is currently not imprisoned by the Syndicate."), confidential = TRUE)
-			return
-		if(!contract.prisoner_timer_handle)
-			to_chat(usr, span_warning("[M] is already NOT scheduled to return from the Syndicate Jail."), confidential = TRUE)
-			return
-
-		deltimer(contract.prisoner_timer_handle)
-		contract.prisoner_timer_handle = null
-		to_chat(usr, "Stopped automatic return of [M] from the Syndicate Jail.", confidential = TRUE)
-		message_admins("[key_name_admin(usr)] has stopped the automatic return of [key_name_admin(M)] from the Syndicate Jail")
-		log_admin("[key_name(usr)] has stopped the automatic return of [key_name(M)] from the Syndicate Jail")
-
-	else if(href_list["contractor_start"])
-		if(!check_rights(R_ADMIN))
-			return
-
-		var/mob/M = locateUID(href_list["contractor_start"])
-		if(!istype(M))
-			to_chat(usr, span_warning("This can only be used on instances of type /mob."), confidential = TRUE)
-			return
-
-		var/datum/syndicate_contract/contract = LAZYACCESS(GLOB.prisoner_belongings.prisoners, M)
-		if(!contract)
-			to_chat(usr, span_warning("[M] is currently not imprisoned by the Syndicate."), confidential = TRUE)
-			return
-		if(contract.prisoner_timer_handle)
-			to_chat(usr, span_warning("[M] is already scheduled to return from the Syndicate Jail."), confidential = TRUE)
-			return
-
-		var/time_seconds = tgui_input_number(usr, "Enter the jail time in seconds:", "Start Syndicate Jail Timer")
-		time_seconds = text2num(time_seconds)
-		if(time_seconds < 0)
-			return
-
-		contract.prisoner_timer_handle = addtimer(CALLBACK(contract, TYPE_PROC_REF(/datum/syndicate_contract, handle_target_return), M), time_seconds * 10, TIMER_STOPPABLE)
-		to_chat(usr, "Started automatic return of [M] from the Syndicate Jail in [time_seconds] second\s.", confidential = TRUE)
-		message_admins("[key_name_admin(usr)] has started the automatic return of [key_name_admin(M)] from the Syndicate Jail in [time_seconds] second\s")
-		log_admin("[key_name(usr)] has started the automatic return of [key_name(M)] from the Syndicate Jail in [time_seconds] second\s")
-
-	else if(href_list["contractor_release"])
-		if(!check_rights(R_ADMIN))
-			return
-
-		var/mob/M = locateUID(href_list["contractor_release"])
-		if(!istype(M))
-			to_chat(usr, span_warning("This can only be used on instances of type /mob."), confidential = TRUE)
-			return
-
-		var/datum/syndicate_contract/contract = LAZYACCESS(GLOB.prisoner_belongings.prisoners, M)
-		if(!contract)
-			to_chat(usr, span_warning("[M] is currently not imprisoned by the Syndicate."), confidential = TRUE)
-			return
-
-		deltimer(contract.prisoner_timer_handle)
-		contract.handle_target_return(M)
-		to_chat(usr, "Immediately returned [M] from the Syndicate Jail.", confidential = TRUE)
-		message_admins("[key_name_admin(usr)] has immediately returned [key_name_admin(M)] from the Syndicate Jail")
-		log_admin("[key_name(usr)] has immediately returned [key_name(M)] from the Syndicate Jail")
 
 	else if(href_list["aroomwarp"])
 		if(!check_rights(R_ADMIN))
@@ -2066,130 +1980,6 @@
 			SSmentor_tickets.convert_to_other_ticket(indexNum)
 		else
 			SStickets.convert_to_other_ticket(indexNum)
-
-	else if(href_list["cult_mindspeak"])
-		var/input = tgui_input_text(usr, "Communicate to all the cultists with the voice of [SSticker.cultdat.entity_name]", "Voice of [SSticker.cultdat.entity_name]", encode = FALSE)
-		if(!input)
-			return
-
-		for(var/datum/mind/H in SSticker.mode.cult)
-			if(H.current)
-				to_chat(H.current, "[span_cult("[SSticker.cultdat.entity_name] murmurs,")] \"[span_cultlarge(input)]\"")
-
-		for(var/mob/dead/observer/O in GLOB.player_list)
-			to_chat(O, "[span_cult("[SSticker.cultdat.entity_name] murmurs,")] \"[span_cultlarge(input)]\"")
-
-		message_admins("Admin [key_name_admin(usr)] has talked with the Voice of [SSticker.cultdat.entity_name].")
-		log_admin("[key_name(usr)] Voice of [SSticker.cultdat.entity_name]: [input]")
-
-	else if(href_list["cult_adjustsacnumber"])
-		var/amount = tgui_input_number(usr, "Adjust the amount of sacrifices required before summoning Nar'Sie", "Sacrifice Adjustment", 2)
-		if(amount > 0)
-			var/datum/game_mode/gamemode = SSticker.mode
-			var/old = gamemode.cult_objs.sacrifices_required
-			gamemode.cult_objs.sacrifices_required = amount
-			message_admins("Admin [key_name_admin(usr)] has modified the amount of cult sacrifices required before summoning from [old] to [amount]")
-			log_admin("Admin [key_name_admin(usr)] has modified the amount of cult sacrifices required before summoning from [old] to [amount]")
-
-	else if(href_list["cult_newtarget"])
-		if(tgui_alert(usr, "Reroll the cult's sacrifice target?", "Cult Debug", list("Yes", "No")) != "Yes")
-			return
-
-		var/datum/game_mode/gamemode = SSticker.mode
-		if(!gamemode.cult_objs.find_new_sacrifice_target())
-			gamemode.cult_objs.ready_to_summon()
-
-		message_admins("Admin [key_name_admin(usr)] has rerolled the Cult's sacrifice target.")
-		log_admin("Admin [key_name_admin(usr)] has rerolled the Cult's sacrifice target.")
-
-	else if(href_list["cult_newsummonlocations"])
-		if(tgui_alert(usr, "Reroll the cult's summoning locations?", "Cult Debug", list("Yes", "No")) != "Yes")
-			return
-
-		var/datum/game_mode/gamemode = SSticker.mode
-		gamemode.cult_objs.obj_summon.find_summon_locations(TRUE)
-		if(gamemode.cult_objs.cult_status == NARSIE_NEEDS_SUMMONING) //Only update cultists if they are already have the summon goal since they arent aware of summon spots till then
-			for(var/datum/mind/cult_mind in gamemode.cult)
-				if(cult_mind?.current)
-					to_chat(cult_mind.current, span_cult("The veil has shifted! Our summoning will need to take place elsewhere."))
-					to_chat(cult_mind.current, span_cult("Current goal : [gamemode.cult_objs.obj_summon.explanation_text]"))
-
-		message_admins("Admin [key_name_admin(usr)] has rerolled the Cult's sacrifice target.")
-		log_admin("Admin [key_name_admin(usr)] has rerolled the Cult's sacrifice target.")
-
-	else if(href_list["cult_unlocknarsie"])
-		if(tgui_alert(usr, "Unlock the ability to summon Nar'Sie?", "Cult Debug", list("Yes", "No")) != "Yes")
-			return
-
-		var/datum/game_mode/gamemode = SSticker.mode
-		gamemode.cult_objs.ready_to_summon()
-		message_admins("Admin [key_name_admin(usr)] has unlocked the Cult's ability to summon Nar'Sie.")
-		log_admin("Admin [key_name_admin(usr)] has unlocked the Cult's ability to summon Nar'Sie.")
-
-	else if(href_list["clock_mindspeak"])
-		var/input = tgui_input_text(usr, "Communicate to all the clockers with the voice of Ratvar", "Voice of Ratvar", encode = FALSE)
-		if(!input)
-			return
-
-		for(var/datum/mind/H in SSticker.mode.clockwork_cult)
-			if(H.current)
-				to_chat(H.current, "[span_clock("Ratvar murmurs,")] \"[span_clocklarge(input)]\"")
-
-		for(var/mob/dead/observer/O in GLOB.player_list)
-			to_chat(O, "[span_clock("Ratvar murmurs,")] \"[span_clocklarge(input)]\"")
-
-		message_admins("Admin [key_name_admin(usr)] has talked with the Voice of Ratvar.")
-		log_admin("[key_name(usr)] Voice of Ratvar: [input]")
-
-	else if(href_list["clock_adjustpower"])
-		var/amount = tgui_input_number(usr, "Adjust the amount of power required before summoning Ratvar", "Power Adjustment", 50000)
-		if(amount > 0)
-			var/datum/game_mode/gamemode = SSticker.mode
-			var/old = gamemode.clocker_objs.power_goal
-			gamemode.clocker_objs.power_goal = amount
-			message_admins("Admin [key_name_admin(usr)] has modified the amount of clock cult power required before summoning from [old] to [amount]")
-			log_admin("Admin [key_name_admin(usr)] has modified the amount of clock cult power required before summoning from [old] to [amount]")
-
-	else if(href_list["clock_adjustbeacon"])
-		var/amount = tgui_input_number(usr, "Adjust the amount of beacon required before summoning Ratvar", "Beacon Adjustment", 10)
-		if(amount > 0)
-			var/datum/game_mode/gamemode = SSticker.mode
-			var/old = gamemode.clocker_objs.beacon_goal
-			gamemode.clocker_objs.beacon_goal = amount
-			message_admins("Admin [key_name_admin(usr)] has modified the amount of clock cult beacon required before summoning from [old] to [amount]")
-			log_admin("Admin [key_name_admin(usr)] has modified the amount of clock cult beacon required before summoning from [old] to [amount]")
-
-	else if(href_list["clock_adjustclocker"])
-		var/amount = tgui_input_number(usr, "Adjust the amount of clockers required before summoning Ratvar", "Clockers Adjustment", 10)
-		if(amount > 0)
-			var/datum/game_mode/gamemode = SSticker.mode
-			var/old = gamemode.clocker_objs.clocker_goal
-			gamemode.clocker_objs.clocker_goal = amount
-			message_admins("Admin [key_name_admin(usr)] has modified the amount of clock cult clocker required before summoning from [old] to [amount]")
-			log_admin("Admin [key_name_admin(usr)] has modified the amount of clock cult clocker required before summoning from [old] to [amount]")
-
-	else if(href_list["clock_newsummonlocations"])
-		if(tgui_alert(usr, "Reroll the Clock cult's summoning locations?", "Clock Cult Debug", list("Yes", "No")) != "Yes")
-			return
-
-		var/datum/game_mode/gamemode = SSticker.mode
-		gamemode.clocker_objs.obj_summon.find_summon_locations(TRUE)
-		if(gamemode.clocker_objs.clock_status == RATVAR_NEEDS_SUMMONING) //Only update cultists if they are already have the summon goal since they arent aware of summon spots till then
-			for(var/datum/mind/clock_mind in gamemode.clockwork_cult)
-				if(clock_mind?.current)
-					to_chat(clock_mind.current, span_cult("The veil has shifted! Our summoning will need to take place elsewhere."))
-					to_chat(clock_mind.current, span_cult("Current goal : [gamemode.clocker_objs.obj_summon.explanation_text]"))
-
-		message_admins("Admin [key_name_admin(usr)] has rerolled the Clock Cult's sacrifice target.")
-		log_admin("Admin [key_name_admin(usr)] has rerolled the Clock Cult's sacrifice target.")
-
-	else if(href_list["clock_unlockratvar"])
-		if(tgui_alert(usr, "Unlock the ability to summon Ratvar?", "Clock Cult Debug", list("Yes", "No")) != "Yes")
-			return
-
-		SSticker.mode.clocker_objs.ratvar_is_ready()
-		message_admins("Admin [key_name_admin(usr)] has unlocked the Clock Cult's ability to summon Ratvar.")
-		log_admin("Admin [key_name_admin(usr)] has unlocked the Clock Cult's ability to summon Ratvar.")
 
 	else if(href_list["adminplayerobservecoodjump"])
 		return SSadmin_verbs.dynamic_invoke_verb(
@@ -3301,7 +3091,7 @@
 							volume = 100 * USER_VOLUME(human, CHANNEL_ANNOUNCER),
 							))
 					if(!human.dna.species.nojumpsuit && !isvox(human) && !isplasmaman(human) \
-						&& !isshadowling(human) && !isvoxarmalis(human) && !is_space_or_openspace(get_turf(human)))
+						&& !FALSE && !isvoxarmalis(human) && !is_space_or_openspace(get_turf(human)))
 
 						if(!(human.dna.species.blacklisted_disabilities & DISABILITY_FLAG_CATEARS))
 							human.force_gene_block(GLOB.cat_earsblock, TRUE, TRUE)

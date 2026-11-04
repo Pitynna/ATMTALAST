@@ -586,7 +586,6 @@
 	id = "lavaland";
 	name = "lavaland"
 	},
-/obj/effect/rune,
 /obj/effect/light_emitter{
 	light_color = "#ffffc0";
 	light_power = 2;
@@ -2416,7 +2415,6 @@
 	},
 /area/awaymission/spacehotel)
 "jh" = (
-/obj/effect/rune,
 /obj/item/organ/internal/brain,
 /turf/simulated/floor/indestructible{
 	icon_state = "cult";
@@ -2431,7 +2429,6 @@
 	},
 /area/awaymission/spacehotel)
 "jj" = (
-/obj/item/tome,
 /turf/simulated/floor/indestructible{
 	icon_state = "cult";
 	name = "engraved floor"
@@ -2524,7 +2521,6 @@
 /turf/simulated/floor/indestructible/grass,
 /area/awaymission/spacehotel)
 "jz" = (
-/obj/effect/rune,
 /turf/simulated/floor/indestructible{
 	icon_state = "cult";
 	name = "engraved floor"
@@ -2730,7 +2726,6 @@
 /turf/simulated/floor/indestructible/carpet,
 /area/awaymission/spacehotel)
 "ke" = (
-/obj/item/melee/cultblade,
 /turf/simulated/floor/indestructible{
 	icon_state = "cult";
 	name = "engraved floor"

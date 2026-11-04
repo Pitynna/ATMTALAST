@@ -149,11 +149,6 @@
 	delusion_icon_state = "skeleton"
 	delusion_name = "skeleton"
 
-/datum/hallucination/delusion/preset/zombie
-	delusion_icon_file = 'icons/mob/human.dmi'
-	delusion_icon_state = "zombie_s"
-	delusion_name = "zombie"
-
 /datum/hallucination/delusion/preset/zombie2
 	delusion_icon_file = 'icons/mob/human.dmi'
 	delusion_icon_state = "zombie2_s"

@@ -108,7 +108,6 @@
 	var/last_used_total = 0
 
 	/// Is there a cog siphoning power?
-	var/obj/machinery/integration_cog/cog
 
 	/*** APC Cell Vars ***/
 	/// The cell type stored in this APC
@@ -277,7 +276,6 @@
 			cell.charge = start_charge * cell.maxcharge / 100 // (convert percentage to actual value)
 		make_terminal()
 
-	cog = null // Or you can't put it in
 
 	//if area isn't specified use current
 	area.apc |= src
@@ -309,7 +307,6 @@
 		malfvacate(TRUE)
 	QDEL_NULL(wires)
 	QDEL_NULL(cell)
-	QDEL_NULL(cog)
 	if(terminal)
 		disconnect_terminal()
 	area.apc -= src
@@ -336,8 +333,6 @@
 				. += span_notice("Electronics installed but not wired.")
 			else /* if(!has_electronics && !terminal) */
 				. += span_notice("There are no electronics nor connected wires.")
-			if(user.Adjacent(src) && cog)
-				. += span_warning("[src]'s innards have been replaced by strange brass machinery!")
 		else
 			if(stat & MAINT)
 				. += span_notice("The cover is closed. Something wrong with it: it doesn't work.")
@@ -345,11 +340,6 @@
 				. += span_warning("The cover is broken. It may be hard to force it open.")
 			else
 				. += span_notice("The cover is closed.")
-	if(cog && isclocker(user))
-		. += span_clock("There is an integration cog installed!")
-
-// update the APC icon to show the three base states
-// also add overlays for indicator lights
 /obj/machinery/power/apc/update_icon(force_update = FALSE)
 
 	if(!status_overlays || force_update)
@@ -739,50 +729,6 @@
 		qdel(I)
 		return ATTACK_CHAIN_BLOCKED_ALL
 
-	if(istype(I, /obj/item/clockwork/integration_cog))
-		add_fingerprint(user)
-		if(!isclocker(user))
-			to_chat(user, span_warning("You fiddle around with the APC, to no avail."))
-			return ATTACK_CHAIN_PROCEED
-		if(cog)
-			to_chat(user, span_warning("This APC already has a cog."))
-			return ATTACK_CHAIN_PROCEED
-		if(opened == APC_CLOSED)
-			playsound(loc, 'sound/items/crowbar.ogg', 50, TRUE)
-			user.visible_message(
-				span_warning("[user.name] starts slicing the APC's cover lock."),
-				span_clock("You start slicing the APC's cover lock..."),
-			)
-			if(!do_after(user, 4 SECONDS * I.toolspeed, src, category = DA_CAT_TOOL) || !isclocker(user) || cog || opened != APC_CLOSED)
-				return ATTACK_CHAIN_PROCEED
-			user.visible_message(
-				span_warning("[user.name] has sliced the APC's cover lock, and it swings wide open."),
-				span_clock("You have sliced the APC's cover lock apart, and it swings wide open."),
-			)
-			opened = APC_OPENED
-			update_icon()
-			return ATTACK_CHAIN_PROCEED_SUCCESS
-		playsound(loc, 'sound/machines/click.ogg', 50, TRUE)
-		user.visible_message(
-			span_warning("[user.name] starts pressing [I] into the APC's internals."),
-			span_clock("You hold [I] in place within the APC, and it starts to slowly warm up..."),
-		)
-		if(!do_after(user, 7 SECONDS * I.toolspeed, src, category = DA_CAT_TOOL) || !isclocker(user) || cog)
-			return ATTACK_CHAIN_PROCEED
-		if(!user.drop_transfer_item_to_loc(I, src))
-			return ATTACK_CHAIN_PROCEED
-		playsound(user, 'sound/machines/clockcult/integration_cog_install.ogg', 50, TRUE)
-		user.visible_message(
-			span_warning("[user.name] has installed [I] into the APC's internals."),
-			"[span_clock("Replicant alloy rapidly covers the APC's innards, replacing the machinery.<br>")][span_clockitalic("This APC will now passively provide power to the cult.")]",
-		)
-		cog = new(src)
-		opened = APC_CLOSED
-		locked = FALSE
-		update_icon()
-		qdel(I)
-		return ATTACK_CHAIN_BLOCKED_ALL
-
 	if(istype(I, /obj/item/storage/part_replacer))
 		add_fingerprint(user)
 		if(stat & BROKEN)
@@ -870,15 +816,6 @@
 							span_notice("You remove the power control board."))
 						new /obj/item/apc_electronics(loc)
 						return
-		else if(cog)
-			user.visible_message("[user] starts prying [cog] from [src].", \
-			span_notice("You painstakingly start tearing [cog] out of [src]'s guts..."))
-			if(I.use_tool(src, user, 8 SECONDS, volume = I.tool_volume))
-				user.visible_message("[user] destroys [cog] in [src]!", \
-				span_notice("[cog] comes free with a clank and snaps in two as the machinery returns to normal!"))
-				playsound(src, 'sound/items/deconstruct.ogg', 50, TRUE)
-				QDEL_NULL(cog)
-			return
 		else if(opened != APC_COVER_OFF) //cover isn't removed
 			opened = APC_CLOSED
 			coverlocked = TRUE //closing cover relocks it
@@ -1098,7 +1035,7 @@
 /obj/machinery/power/apc/ui_data(mob/user)
 	var/list/data = list()
 	data["locked"] = is_locked(user)
-	data["normallyLocked"] = cog ? !isclocker(user) : locked
+	data["normallyLocked"] = locked
 	data["isOperating"] = operating
 	data["externalPower"] = main_status
 	data["powerCellStatus"] = cell ? cell.percent() : null
@@ -1222,7 +1159,7 @@
 /obj/machinery/power/apc/proc/is_authenticated(mob/user)
 	if(user.can_admin_interact())
 		return TRUE
-	if(isAI(user) || (isrobot(user) || user.has_unlimited_silicon_privilege) && !iscogscarab(user))
+	if((isAI(user)) || ((isrobot(user)) || (user.has_unlimited_silicon_privilege)))
 		return TRUE
 	else
 		return !locked
@@ -1230,7 +1167,7 @@
 /obj/machinery/power/apc/proc/is_locked(mob/user)
 	if(user.can_admin_interact())
 		return FALSE
-	if(isAI(user) || (isrobot(user) || user.has_unlimited_silicon_privilege) && !iscogscarab(user))
+	if((isAI(user)) || ((isrobot(user)) || (user.has_unlimited_silicon_privilege)))
 		return FALSE
 	else
 		return locked

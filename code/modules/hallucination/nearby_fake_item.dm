@@ -113,15 +113,6 @@
 /datum/hallucination/nearby_fake_item/taser/ebow
 	image_icon_state = "crossbow"
 
-/datum/hallucination/nearby_fake_item/contractor_baton
-	left_hand_file = 'icons/mob/inhands/melee_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/melee_righthand.dmi'
-	image_icon_state = "contractor_baton_extended"
-
-/datum/hallucination/nearby_fake_item/contractor_baton/generate_fake_image(mob/living/carbon/human/holder, file)
-	hallucinator.playsound_local(get_turf(holder), 'sound/weapons/contractorbatonextend.ogg', 75, TRUE)
-	return ..()
-
 /datum/hallucination/nearby_fake_item/ttv
 	left_hand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	right_hand_file = 'icons/mob/inhands/items_righthand.dmi'

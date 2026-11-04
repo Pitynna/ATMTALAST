@@ -187,12 +187,12 @@
 			burn_out()
 		return .|ATTACK_CHAIN_SUCCESS
 
-	if(issilicon(target) || isswarmer(target))
+	if(issilicon(target))
 		add_attack_logs(user, target, "Flashed with [src]")
 		if(!target.flash_eyes(affect_silicon = TRUE))
 			return .|ATTACK_CHAIN_SUCCESS
 
-		var/weaken_time = issilicon(target) ? SILICON_FLASH_ATTACK_STUN : SWARMER_FLASH_ATTACK_STUN
+		var/weaken_time = SILICON_FLASH_ATTACK_STUN
 		target.Weaken(weaken_time)
 		target.visible_message(
 			span_disarm("[user.declent_ru(NOMINATIVE)] перегружа[PLUR_ET_YUT(user)] оптические сенсоры [target.declent_ru(GENITIVE)] [declent_ru(INSTRUMENTAL)]!"),

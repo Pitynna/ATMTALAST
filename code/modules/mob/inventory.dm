@@ -147,11 +147,6 @@ GAME_VERB_HIDDEN(/mob, quick_equip, "quick-equip")
 			if(backpack.can_be_inserted(I, stop_messages = TRUE))
 				backpack.handle_item_insertion(I, prevent_warning = TRUE)
 				return
-		if(ismodcontrol(back))
-			var/obj/item/mod/control/control = back
-			if(control.can_be_inserted(I, stop_messages = TRUE))
-				control.bag.handle_item_insertion(I, prevent_warning = TRUE)
-				return
 		var/turf/T = get_turf(src)
 		if(istype(T))
 			I.forceMove(T)

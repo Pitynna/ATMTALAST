@@ -156,7 +156,6 @@
 	new /obj/item/radio/headset/headset_service(src)
 	new /obj/item/radio/headset/headset_service(src)
 	new /obj/item/storage/bag/books(src)
-	new /obj/item/book/codex_gigas(src)
 	new /obj/item/camera(src)
 	new /obj/item/camera_film(src)
 	new /obj/item/camera_film(src)

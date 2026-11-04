@@ -101,11 +101,3 @@
 	air_contents.set_temperature(T20C)
 
 	air_contents.set_agent_b((50 * ONE_ATMOSPHERE) * (air_contents.volume) / (R_IDEAL_GAS_EQUATION * air_contents.temperature()))
-
-/obj/machinery/atmospherics/unary/tank/air/ninja
-	desc = "Despite looking like CO2 vessel this one definetly contains breathable air. It's even written on it. By something sharp..."
-	icon_state = "co2_map"
-
-/obj/machinery/atmospherics/unary/tank/air/ninja/Initialize(mapload)
-	. = ..()
-	icon_state = "co2"

@@ -30,10 +30,6 @@
 
 /datum/outfit/deathmatch_loadout/post_equip(mob/living/carbon/human/our_human, visualsOnly)
 	..()
-	if(!ismodcontrol(our_human.back))
-		return
-	var/obj/item/mod/control/mod_control = our_human.back
-	mod_control.quick_activation()
 	our_human.mind?.offstation_role = TRUE
 
 /datum/outfit/deathmatch_loadout/naked
@@ -203,7 +199,8 @@
 	desc = "Снаряжение, выдаваемое ядерному оперативнику. Ваша задача проста."
 
 	uniform = /obj/item/clothing/under/syndicate
-	back = /obj/item/mod/control/pre_equipped/traitor_elite
+	suit = /obj/item/clothing/suit/space/hardsuit/syndi/elite
+	back = /obj/item/storage/backpack
 	r_hand = /obj/item/gun/projectile/automatic/shotgun/bulldog
 	belt = /obj/item/gun/projectile/automatic/pistol
 	l_pocket = /obj/item/grenade/syndieminibomb
@@ -272,8 +269,8 @@
 	belt = /obj/item/storage/belt/military/assault/gammaert/full
 	glasses = /obj/item/clothing/glasses/hud/health/night
 	gloves = /obj/item/clothing/gloves/combat/swat
-	back = /obj/item/mod/control/pre_equipped/responsory/security
-
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/security
+	back = /obj/item/storage/backpack
 	l_hand = /obj/item/gun/projectile/automatic/arg
 	r_hand = /obj/item/shield/riot/tele
 
@@ -289,8 +286,8 @@
 	display_name = "Офицер ОБР (Инквизитор с гироджетом)"
 
 	uniform = /obj/item/clothing/under/rank/chaplain
-	back = /obj/item/mod/control/pre_equipped/responsory/inquisitory/chaplain
-
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/paranormal/inquisitor
+	back = /obj/item/storage/backpack
 	l_hand = /obj/item/gun/projectile/automatic/gyropistol
 	r_hand = /obj/item/shield/riot/templar
 
@@ -309,7 +306,8 @@
 	name = "Deathmatch: ERT member (Medic)"
 	display_name = "Офицер ОБР (медик с боевым дефибриллятором)"
 
-	back = /obj/item/mod/control/pre_equipped/responsory/medic
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/medical
+	back = /obj/item/storage/backpack
 	belt = /obj/item/defibrillator/compact/combat/loaded
 	l_pocket = /obj/item/reagent_containers/hypospray/combat/nanites
 	r_pocket = /obj/item/reagent_containers/applicator/abductor/industrial
@@ -327,8 +325,8 @@
 	name = "Deathmatch: ERT member (Leader)"
 	display_name = "Офицер ОБР (Лидер с РШ-12 и гранатами)"
 
-	back = /obj/item/mod/control/pre_equipped/responsory/commander
-
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/commander
+	back = /obj/item/storage/backpack
 	l_hand = /obj/item/gun/projectile/revolver/rsh_12
 
 	backpack_contents = list(

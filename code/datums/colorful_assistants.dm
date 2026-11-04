@@ -133,7 +133,6 @@
 			- /obj/item/clothing/under/color/blue/jersey \
 			- /obj/item/clothing/under/color/random \
 			/*- /obj/item/clothing/under/color/grey/ancient \*/
-			- /obj/item/clothing/under/color/black/ghost \
 	)
 /*
 /// Returns a random, acceptable jumpskirt typepath

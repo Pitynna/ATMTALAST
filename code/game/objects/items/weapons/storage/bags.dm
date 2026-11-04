@@ -662,7 +662,6 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	can_hold = list(
 		/obj/item/book,
 		/obj/item/storage/bible,
-		/obj/item/tome,
 		/obj/item/spellbook,
 	)
 	resistance_flags = FLAMMABLE

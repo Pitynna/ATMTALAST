@@ -45,11 +45,6 @@
 	if(!..())
 		return FALSE
 
-	if(isclocker(robot))
-		if(user)
-			to_chat(user, "[span_danger("UPGRADE ERROR: ")]" + "[span_notice("this unit somehow refuses to reset!")]")
-		return FALSE
-
 	robot.reset_module()
 	return TRUE
 

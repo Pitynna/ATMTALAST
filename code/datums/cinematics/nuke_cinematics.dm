@@ -57,13 +57,6 @@
 	play_cinematic_sound(sound('sound/effects/explosion_distant.ogg'))
 
 /// A blood cult summoned Nar'sie, but central command deployed a nuclear package to stop them.
-/datum/cinematic/nuke/cult
-	after_nuke_summary_state = "summary_cult"
-
-/datum/cinematic/nuke/cult/play_nuke_effect()
-	flick("station_explode_fade_red", screen)
-	play_cinematic_sound(sound('sound/effects/explosion_distant.ogg'))
-
 /// A fake version of the nuclear detonation, where it winds up, but doesn't explode.
 /datum/cinematic/nuke/fake
 	cleanup_time = 10 SECONDS

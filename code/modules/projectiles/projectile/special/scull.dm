@@ -68,6 +68,6 @@
 			c_victim.vomit(50, VOMIT_BLOOD, 0 SECONDS)
 
 		if(prob(10 + vampire.get_trophies(INTERNAL_ORGAN_LIVER) * 3))
-			new /obj/effect/temp_visual/cult/sparks(get_turf(victim))
+			new /obj/effect/temp_visual/blood_magic_sparks(get_turf(victim))
 			var/datum/disease/vampire/D = new
 			D.Contract(victim)	// grave fever

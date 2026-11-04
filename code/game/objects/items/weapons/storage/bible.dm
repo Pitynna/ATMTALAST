@@ -210,14 +210,8 @@
 
 	if(isfloorturf(target))
 		to_chat(user, span_notice("Вы ударяете пол [declent_ru(INSTRUMENTAL)]."))
-		if(user.mind && HAS_MIND_TRAIT(user, TRAIT_HOLY))
-			for(var/obj/O in target)
-				O.cult_reveal()
 	if(is_airlock(target))
 		to_chat(user, span_notice("Вы ударяете шлюз [declent_ru(INSTRUMENTAL)]."))
-		if(user.mind && HAS_MIND_TRAIT(user, TRAIT_HOLY))
-			var/obj/airlock = target
-			airlock.cult_reveal()
 
 	var/obj/item/storage/bible/bible = astype(target, /obj/item/storage/bible/copy)
 

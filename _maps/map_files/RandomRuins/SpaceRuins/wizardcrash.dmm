@@ -163,7 +163,6 @@
 /area/ruin/unpowered)
 "aE" = (
 /obj/structure/bookcase,
-/obj/item/book/codex_gigas,
 /obj/item/book/manual/hydroponics_pod_people,
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)
@@ -190,7 +189,6 @@
 /turf/simulated/floor/carpet,
 /area/ruin/unpowered)
 "aJ" = (
-/obj/structure/cult/pylon,
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)
 "aK" = (

@@ -78,10 +78,6 @@
 
 			if(issilicon(M))
 				M.Weaken(status_duration * 2)
-			if(isswarmer(M))
-				M.Weaken(SWARMER_FLASHBANG_STUN)
-
-		// Bang
 		if(!bang)
 			continue
 

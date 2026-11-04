@@ -594,24 +594,24 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	group = SUPPLY_SECURITY
 	announce_beacons = list("Security" = list("Head of Security's Desk", "Warden", "Security"))
 
-/datum/supply_packs/security/modsuit
-	name = "МЭК службы безопасности"
+/datum/supply_packs/security/hardsuit
+	name = "ИКС службы безопасности"
 	contains = list(
-		/obj/item/mod/control/pre_equipped/security,
-		/obj/item/mod/control/pre_equipped/security,
+		/obj/item/clothing/suit/space/hardsuit/security,
+		/obj/item/clothing/suit/space/hardsuit/security,
 		/obj/item/clothing/mask/gas/sechailer,
 		/obj/item/clothing/mask/gas/sechailer,
 	)
 	cost = 180
-	containername = "ящик МЭК службы безопасности"
 	required_tech = list(RESEARCH_TREE_TOXINS = 6, RESEARCH_TREE_COMBAT = 6)
+	containername = "ящик ИКС службы безопасности"
 	container_ru_names = alist(
-		NOMINATIVE = "ящик МЭК службы безопасности",
-		GENITIVE = "ящика МЭК службы безопасности",
-		DATIVE = "ящику МЭК службы безопасности",
-		ACCUSATIVE = "ящик МЭК службы безопасности",
-		INSTRUMENTAL = "ящиком МЭК службы безопасности",
-		PREPOSITIONAL = "ящике МЭК службы безопасности",
+		NOMINATIVE = "ящик ИКС службы безопасности",
+		GENITIVE = "ящика ИКС службы безопасности",
+		DATIVE = "ящику ИКС службы безопасности",
+		ACCUSATIVE = "ящик ИКС службы безопасности",
+		INSTRUMENTAL = "ящиком ИКС службы безопасности",
+		PREPOSITIONAL = "ящике ИКС службы безопасности",
 	)
 	access = ACCESS_ARMORY
 
@@ -1628,46 +1628,45 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	announce_beacons = list("Engineering" = list("Engineering", "Chief Engineer's Desk"))
 	containertype = /obj/structure/closet/crate/engineering
 
-/datum/supply_packs/engineering/modsuit_eng
-	name = "Инженерные МЭК"
+/datum/supply_packs/engineering/hardsuit
+	name = "Инженерные ИКС"
 	contains = list(
-		/obj/item/mod/control/pre_equipped/engineering,
-		/obj/item/mod/control/pre_equipped/engineering,
+		/obj/item/clothing/suit/space/hardsuit/engine,
+		/obj/item/clothing/suit/space/hardsuit/engine,
 		/obj/item/clothing/mask/breath,
 		/obj/item/clothing/mask/breath,
 	)
 	cost = 130
 	required_tech = list(RESEARCH_TREE_TOXINS = 5, RESEARCH_TREE_ENGINEERING = 4)
-	containername = "ящик инженерных МЭК"
-
+	containername = "ящик инженерных ИКС"
 	container_ru_names = alist(
-		NOMINATIVE = "ящик инженерных МЭК",
-		GENITIVE = "ящика инженерных МЭК",
-		DATIVE = "ящику инженерных МЭК",
-		ACCUSATIVE = "ящик инженерных МЭК",
-		INSTRUMENTAL = "ящиком инженерных МЭК",
-		PREPOSITIONAL = "ящике инженерных МЭК",
+		NOMINATIVE = "ящик инженерных ИКС",
+		GENITIVE = "ящика инженерных ИКС",
+		DATIVE = "ящику инженерных ИКС",
+		ACCUSATIVE = "ящик инженерных ИКС",
+		INSTRUMENTAL = "ящиком инженерных ИКС",
+		PREPOSITIONAL = "ящике инженерных ИКС",
 	)
 	access = ACCESS_ENGINE_EQUIP
 
-/datum/supply_packs/engineering/modsuit_atmos
-	name = "Атмосферные МЭК"
+/datum/supply_packs/engineering/hardsuit/atmospherics
+	name = "Атмосферные ИКС"
 	cost = 130
 	contains = list(
-		/obj/item/mod/control/pre_equipped/atmospheric,
-		/obj/item/mod/control/pre_equipped/atmospheric,
+		/obj/item/clothing/suit/space/hardsuit/engine/atmos,
+		/obj/item/clothing/suit/space/hardsuit/engine/atmos,
 		/obj/item/clothing/mask/breath,
 		/obj/item/clothing/mask/breath,
 	)
 	required_tech = list(RESEARCH_TREE_TOXINS = 6, RESEARCH_TREE_PLASMA = 4)
-	containername = "ящик атмосферных МЭК"
+	containername = "ящик атмосферных ИКС"
 	container_ru_names = alist(
-		NOMINATIVE = "ящик атмосферных МЭК",
-		GENITIVE = "ящика атмосферных МЭК",
-		DATIVE = "ящику атмосферных МЭК",
-		ACCUSATIVE = "ящик атмосферных МЭК",
-		INSTRUMENTAL = "ящиком атмосферных МЭК",
-		PREPOSITIONAL = "ящике атмосферных МЭК",
+		NOMINATIVE = "ящик атмосферных ИКС",
+		GENITIVE = "ящика атмосферных ИКС",
+		DATIVE = "ящику атмосферных ИКС",
+		ACCUSATIVE = "ящик атмосферных ИКС",
+		INSTRUMENTAL = "ящиком атмосферных ИКС",
+		PREPOSITIONAL = "ящике атмосферных ИКС",
 	)
 	access = ACCESS_ATMOSPHERICS
 
@@ -2660,26 +2659,25 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	group = SUPPLY_MEDICAL
 	announce_beacons = list("Medbay" = list("Medbay", "Chief Medical Officer's Desk"), "Security" = list("Brig Medbay"))
 
-
-/datum/supply_packs/medical/modsuit
-	name = "Медицинские МЭК"
+/datum/supply_packs/medical/hardsuit
+	name = "Медицинские ИКС"
 	contains = list(
-		/obj/item/mod/control/pre_equipped/medical,
-		/obj/item/mod/control/pre_equipped/medical,
+		/obj/item/clothing/suit/space/hardsuit/medical,
+		/obj/item/clothing/suit/space/hardsuit/medical,
 		/obj/item/clothing/mask/breath,
 		/obj/item/clothing/mask/breath,
 	)
 	cost = 130
 	containertype = /obj/structure/closet/crate/secure
 	required_tech = list(RESEARCH_TREE_TOXINS = 4, RESEARCH_TREE_BIOTECH = 5)
-	containername = "ящик медицинских МЭК"
+	containername = "ящик медицинских ИКС"
 	container_ru_names = alist(
-		NOMINATIVE = "ящик медицинских МЭК",
-		GENITIVE = "ящика медицинских МЭК",
-		DATIVE = "ящику медицинских МЭК",
-		ACCUSATIVE = "ящик медицинских МЭК",
-		INSTRUMENTAL = "ящиком медицинских МЭК",
-		PREPOSITIONAL = "ящике медицинских МЭК",
+		NOMINATIVE = "ящик медицинских ИКС",
+		GENITIVE = "ящика медицинских ИКС",
+		DATIVE = "ящику медицинских ИКС",
+		ACCUSATIVE = "ящик медицинских ИКС",
+		INSTRUMENTAL = "ящиком медицинских ИКС",
+		PREPOSITIONAL = "ящике медицинских ИКС",
 	)
 	access = ACCESS_MEDICAL
 
@@ -3744,28 +3742,6 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	containertype = /obj/structure/closet/crate/secure/scisec
 	access = ACCESS_RESEARCH
 	required_tech = list(RESEARCH_TREE_MATERIALS = 6, RESEARCH_TREE_COMBAT = 6, RESEARCH_TREE_BIOTECH = 6, RESEARCH_TREE_POWERSTORAGE = 5)
-
-/datum/supply_packs/science/modcore
-	name = "Ящик ядер МЭК"
-	contains = list(
-		/obj/item/mod/core/standard,
-		/obj/item/mod/core/standard,
-		/obj/item/mod/core/standard,
-		/obj/item/mod/core/standard,
-	)
-	cost = 50
-	access = ACCESS_ROBOTICS
-	announce_beacons = list("Research Division" = list("Robotics"))
-	containertype = /obj/structure/closet/crate/secure/scisec
-	containername = "ящик с ядрами МЭК"
-	container_ru_names = alist(
-		NOMINATIVE = "ящик с ядрами МЭК",
-		GENITIVE = "ящика с ядрами МЭК",
-		DATIVE = "ящику с ядрами МЭК",
-		ACCUSATIVE = "ящик с ядрами МЭК",
-		INSTRUMENTAL = "ящиком с ядрами МЭК",
-		PREPOSITIONAL = "ящике с ядрами МЭК",
-	)
 
 /datum/supply_packs/science/txdisk
 	name = "Пустые дискеты технологий"
@@ -5259,7 +5235,6 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 /datum/supply_packs/misc/book_crate
 	name = "Кодекс Гигас"
 	contains = list(
-		/obj/item/book/codex_gigas,
 	)
 	cost = 15
 	containername = "ящик с Кодекс Гигас"
@@ -5841,22 +5816,6 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 		ACCUSATIVE = "ящик деталей крематория",
 		INSTRUMENTAL = "ящиком деталей крематория",
 		PREPOSITIONAL = "ящике деталей крематория",
-	)
-
-/datum/supply_packs/misc/loader
-	name = "Грузовой МЭК"
-	contains = list(
-		/obj/item/mod/control/pre_equipped/loader,
-	)
-	cost = 75
-	containername = "ящик с грузовым МЭК"
-	container_ru_names = alist(
-		NOMINATIVE = "ящик с грузовым МЭК",
-		GENITIVE = "ящика с грузовым МЭК",
-		DATIVE = "ящику с грузовым МЭК",
-		ACCUSATIVE = "ящик с грузовым МЭК",
-		INSTRUMENTAL = "ящиком с грузовым МЭК",
-		PREPOSITIONAL = "ящике с грузовым МЭК",
 	)
 
 /datum/supply_packs/misc/motorcycle

@@ -2,7 +2,8 @@
 	name = "Debug outfit"
 
 	uniform = /obj/item/clothing/under/patriotsuit
-	back = /obj/item/mod/control/pre_equipped/debug
+	suit = /obj/item/clothing/suit/space/hardsuit/singuloth
+	back = /obj/item/storage/backpack
 	backpack_contents = list(
 		/obj/item/melee/energy/axe = 1,
 		/obj/item/storage/part_replacer/bluespace/tier4 = 1,
@@ -427,7 +428,6 @@
 	new /obj/item/stack/sheet/metal/fifty(src)
 	new /obj/item/stack/sheet/plasteel/fifty(src)
 	new /obj/item/stack/sheet/plastic/fifty(src)
-	new /obj/item/stack/sheet/runed_metal/fifty(src)
 	new /obj/item/stack/sheet/glass/fifty(src)
 	new /obj/item/stack/sheet/rglass/fifty(src)
 	new /obj/item/stack/sheet/plasmaglass/fifty(src)

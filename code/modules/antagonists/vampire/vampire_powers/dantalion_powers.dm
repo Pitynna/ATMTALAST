@@ -123,7 +123,7 @@
 		return
 	target.revive()
 	target.update_revive()
-	new /obj/effect/temp_visual/cult/sparks(location)
+	new /obj/effect/temp_visual/blood_magic_sparks(location)
 	// Start the second stage after 0.5 seconds, when the animation is completely finished
 	addtimer(CALLBACK(src, PROC_REF(revive_thrall_step_second), target, target_image, location, user, vampire), 0.5 SECONDS)
 

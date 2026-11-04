@@ -87,16 +87,6 @@
 		updateUsrDialog()
 		update_icon(UPDATE_ICON_STATE)
 
-/obj/machinery/recharge_station/narsie_act()
-	go_out()
-	new /obj/effect/gibspawner/generic(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	qdel(src)
-
-/obj/machinery/recharge_station/ratvar_act()
-	go_out()
-	new /obj/effect/decal/cleanable/blood/gibs/clock(get_turf(loc))
-	qdel(src)
-
 /obj/machinery/recharge_station/Bumped(atom/movable/moving_atom)
 	. = ..()
 	if(!is_operational())
@@ -297,9 +287,8 @@ GAME_VERB_SRC(/obj/machinery/recharge_station, move_eject, oview(1), "Вылез
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
-		if(!H.get_int_organ(/obj/item/organ/internal/cell) && !H.get_int_organ(/obj/item/organ/internal/cyberimp/brain/bci) && !(ismodcontrol(H.back)))
+		if(!H.get_int_organ(/obj/item/organ/internal/cell) && !H.get_int_organ(/obj/item/organ/internal/cyberimp/brain/bci))
 			return
-
 		can_accept_user = TRUE
 
 	if(is_circuit_drone(user))

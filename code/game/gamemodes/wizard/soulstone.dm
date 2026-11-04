@@ -25,10 +25,7 @@
 	var/purified = FALSE
 
 /obj/item/soulstone/proc/can_use(mob/living/user)
-	if(iscultist(user) && purified && !iswizard(user))
-		return FALSE
-
-	if(iscultist(user) || iswizard(user) || usability)
+	if((iswizard(user)) || (usability))
 		return TRUE
 
 	return FALSE
@@ -56,8 +53,6 @@
 
 /obj/item/soulstone/pickup(mob/living/user)
 	. = ..()
-	if(iscultist(user) && purified && !iswizard(user))
-		to_chat(user, span_danger("[src] reeks of holy magic. You will need to cleanse it with a ritual dagger before anything can be done with it."))
 	if(!can_use(user))
 		to_chat(user, span_danger("An overwhelming feeling of dread comes over you as you pick up [src]."))
 
@@ -109,12 +104,8 @@
 		to_chat(user, span_warning("This being is corrupted by an alien intelligence and cannot be soul trapped."))
 		return ..()
 
-	if(jobban_isbanned(M, ROLE_CULTIST) || jobban_isbanned(M, ROLE_SYNDICATE))
+	if(jobban_isbanned(M, ROLE_SYNDICATE))
 		to_chat(user, span_warning("A mysterious force prevents you from trapping this being's soul."))
-		return ..()
-
-	if(iscultist(user) && iscultist(M))
-		to_chat(user, span_cultlarge("\"Come now, do not capture your fellow's soul.\""))
 		return ..()
 
 	. = ATTACK_CHAIN_BLOCKED_ALL
@@ -174,12 +165,6 @@
 	do_capture(user, M)
 
 /obj/item/soulstone/proc/do_capture(mob/living/user, mob/living/carbon/human/M)
-	if(is_sacrifice_target(M.mind))
-		if(iscultist(user))
-			SSticker.mode.cult_objs.succesful_sacrifice()
-		else if(!SSticker.mode.cult_objs.find_new_sacrifice_target())
-			SSticker.mode.cult_objs.ready_to_summon()
-
 	add_attack_logs(user, M, "Stolestone'd with [name]")
 	transfer_soul("VICTIM", M, user)
 
@@ -187,7 +172,7 @@
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 
-	if(istype(I, /obj/item/storage/bible) && !iscultist(user) && HAS_MIND_TRAIT(user, TRAIT_HOLY))
+	if((istype(I, /obj/item/storage/bible)) && (HAS_MIND_TRAIT(user, TRAIT_HOLY)))
 		add_fingerprint(user)
 		if(purified)
 			to_chat(user, span_warning("The [name] is already purified!"))
@@ -202,12 +187,7 @@
 		update_icon(UPDATE_ICON_STATE)
 		for(var/mob/inhabitant in src)
 			if(inhabitant.mind)
-				if(iscultist(inhabitant))
-					SSticker.mode.remove_cultist(inhabitant.mind, FALSE)
-					to_chat(inhabitant, span_userdanger("An unfamiliar white light flashes through your mind, cleansing the taint of [SSticker.cultdat ? SSticker.cultdat.entity_title1 : "Nar'Sie"] and the memories of your time as their servant with it."))
-					to_chat(inhabitant, span_danger("Assist [user], your saviour, and get vengeance on those who enslaved you!"))
-				else
-					to_chat(inhabitant, span_danger("Your soulstone has been exorcised, and you are now bound to obey [user]."))
+				to_chat(inhabitant, span_danger("Your soulstone has been exorcised, and you are now bound to obey [user]."))
 			if(isshade(inhabitant))
 				var/mob/living/simple_animal/shade/shade = inhabitant
 				shade.holy = TRUE
@@ -216,29 +196,6 @@
 			span_notice("[user] purifies [src]!"),
 			span_notice("You purify [src]!"),
 		)
-		return ATTACK_CHAIN_PROCEED_SUCCESS
-
-	if(istype(I, /obj/item/melee/cultblade/dagger) && iscultist(user))
-		add_fingerprint(user)
-		if(!purified)
-			to_chat(user, span_warning("The [name] is already cleansed of holy magic!"))
-			return ATTACK_CHAIN_PROCEED
-		to_chat(user, span_notice("You begin to cleanse [src] of holy magic."))
-		if(!do_after(user, 4 SECONDS, src) || !purified)
-			return ATTACK_CHAIN_PROCEED
-		usability = FALSE
-		purified = FALSE
-		optional = FALSE
-		update_icon(UPDATE_ICON_STATE)
-		for(var/mob/inhabitant in src)
-			if(inhabitant.mind)
-				SSticker.mode.add_cultist(inhabitant.mind)
-				to_chat(inhabitant, span_cult("Your shard has been cleansed of holy magic, and you are now bound to the cult's will. Obey them and assist in their goals."))
-			if(isshade(inhabitant))
-				var/mob/living/simple_animal/shade/shade = inhabitant
-				shade.holy = FALSE
-				shade.update_icon(UPDATE_ICON_STATE)
-		to_chat(user, span_notice("You have cleansed [src] of holy magic."))
 		return ATTACK_CHAIN_PROCEED_SUCCESS
 
 	return ..()
@@ -261,10 +218,7 @@
 		A.forceMove(get_turf(user))
 		A.cancel_camera()
 		update_appearance(UPDATE_ICON_STATE|UPDATE_NAME)
-		if(iscultist(A))
-			to_chat(A, span_userdanger("You have been released from your prison, but you are still bound to the cult's will. Help them succeed in their goals at all costs."))
-		else
-			to_chat(A, span_userdanger("You have been released from your prison, but you are still bound to your [purified ? "saviour" : "creator"]'s will."))
+		to_chat(A, span_userdanger("You have been released from your prison, but you are still bound to your [purified ? "saviour" : "creator"]'s will."))
 		was_used()
 
 ///////////////////////////Transferring to constructs/////////////////////////////////////////////////////
@@ -278,7 +232,7 @@
 
 /obj/structure/constructshell/examine(mob/user)
 	. = ..()
-	if(in_range(user, src) && (iscultist(user) || iswizard(user) || user.stat == DEAD))
+	if((in_range(user, src)) && ((iswizard(user)) || (user.stat == DEAD)))
 		. += span_cult("A construct shell, used to house bound souls from a soulstone.")
 		. += span_cult("Placing a soulstone with a soul into this shell allows you to produce your choice of the following:")
 		. += span_cultitalic("An <b>Artificer</b>, which can produce <b>more shells and soulstones</b>, as well as fortifications.")
@@ -325,7 +279,7 @@
 	if(user.a_intent == INTENT_HARM)
 		return ..()
 
-	if(istype(I, /obj/item/storage/bible) && !iscultist(user) && HAS_MIND_TRAIT(user, TRAIT_HOLY))
+	if((istype(I, /obj/item/storage/bible)) && (HAS_MIND_TRAIT(user, TRAIT_HOLY)))
 		add_fingerprint(user)
 		if(!defiled)
 			to_chat(user, span_warning("The [name] is not defiled!"))
@@ -334,27 +288,12 @@
 		update_appearance(UPDATE_ICON_STATE|UPDATE_NAME|UPDATE_DESC)
 		return ATTACK_CHAIN_PROCEED_SUCCESS
 
-	if(istype(I, /obj/item/melee/cultblade/dagger) && iscultist(user))
-		add_fingerprint(user)
-		if(defiled)
-			to_chat(user, span_warning("The [name] is already defiled!"))
-			return ATTACK_CHAIN_PROCEED
-		if(!do_after(user, 4 SECONDS, src) || defiled)
-			return ATTACK_CHAIN_PROCEED
-		user.visible_message(
-			span_warning("[user] defile [src] with dark magic!"),
-			span_cult("You sanctified [src]. Yes-yes. I need more acolytes!"),
-		)
-		defiled = TRUE
-		update_appearance(UPDATE_ICON_STATE|UPDATE_NAME|UPDATE_DESC)
-		return ATTACK_CHAIN_PROCEED_SUCCESS
-
 	if(istype(I, /obj/item/soulstone))
 		if(defiled)
 			return ..()
 		add_fingerprint(user)
 		var/obj/item/soulstone/soulstone = I
-		if(!soulstone.purified || iscultist(user))
+		if(!soulstone.purified)
 			to_chat(user, span_danger("An overwhelming feeling of dread comes over you as you attempt to place the soulstone into the shell."))
 			user.Confused(30 SECONDS)
 			return ATTACK_CHAIN_BLOCKED_ALL
@@ -373,7 +312,7 @@
 			else
 				to_chat(user, "[span_userdanger("Capture failed!")] The soul has already fled its mortal frame. You attempt to bring it back...")
 				T.Paralyse(40 SECONDS)
-				if(!get_cult_ghost(T, user, TRUE))
+				if(!get_shade_ghost(T, user, TRUE))
 					T.dust() //If we can't get a ghost, kill the sacrifice anyway.
 
 		if("VICTIM")
@@ -386,7 +325,7 @@
 				else
 					if(T.client == null)
 						to_chat(user, "[span_userdanger("Capture failed!")] The soul has already fled its mortal frame. You attempt to bring it back...")
-						get_cult_ghost(T, user, !T.ghost_can_reenter())
+						get_shade_ghost(T, user, !T.ghost_can_reenter())
 					else
 						if(length(contents))
 							to_chat(user, "[span_danger("Capture failed!")] The soul stone is full! Use or free an existing soul to make room.")
@@ -401,7 +340,7 @@
 				return
 			if(T.stat == DEAD)
 				to_chat(user, "[span_danger("Capture failed!")] The shade has already been banished!")
-			if((iscultist(T) && purified) || (T.holy && !purified))
+			if((T.holy) && (!purified))
 				to_chat(user, "[span_danger("Capture failed!")] The shade recoils away from [src]!")
 			else
 				if(length(contents))
@@ -424,9 +363,9 @@
 												"Wraith" = /mob/living/simple_animal/hostile/construct/wraith/holy,
 												"Artificer" = /mob/living/simple_animal/hostile/construct/builder/holy)
 			/// Custom construct icons for different cults
-			var/list/construct_icons = list("Juggernaut" = image(icon = 'icons/mob/mob.dmi', icon_state = SSticker.cultdat.get_icon("juggernaut")),
-											"Wraith" = image(icon = 'icons/mob/mob.dmi', icon_state = SSticker.cultdat.get_icon("wraith")),
-											"Artificer" = image(icon = 'icons/mob/mob.dmi', icon_state = SSticker.cultdat.get_icon("builder")))
+			var/list/construct_icons = list("Juggernaut" = image(icon = 'icons/mob/mob.dmi', icon_state = "behemoth"),
+											"Wraith" = image(icon = 'icons/mob/mob.dmi', icon_state = "floating"),
+											"Artificer" = image(icon = 'icons/mob/mob.dmi', icon_state = "artificer"))
 
 			var/list/holy_construct_icons = list("Juggernaut" = image(icon = 'icons/mob/mob.dmi', icon_state = "holy_juggernaut"),
 											"Wraith" = image(icon = 'icons/mob/mob.dmi', icon_state = "holy_shifter"),
@@ -466,13 +405,6 @@
 		name = "Holy [name]"
 		real_name = "Holy [real_name]"
 
-	else if(iscultist(src)) // Re-grant cult actions, lost in the transfer
-		var/datum/action/innate/cult/comm/CC = new
-		var/datum/action/innate/cult/check_progress/D = new
-		CC.Grant(src)
-		D.Grant(src)
-		SSticker.mode.cult_objs.study(src) // Display objectives again
-		to_chat(src, span_userdanger("You are still bound to serve the cult, follow their orders and help them complete their goals at all costs."))
 	else
 		to_chat(src, span_userdanger("You are still bound to serve your creator, follow their orders and help them complete their goals at all costs."))
 	cancel_camera()
@@ -481,8 +413,6 @@
 	qdel(SS)
 
 /proc/make_new_construct(mob/living/simple_animal/hostile/construct/c_type, mob/target, mob/user, cult_override = FALSE)
-	if(jobban_isbanned(target, "cultist"))
-		return
 	var/mob/living/simple_animal/hostile/construct/C = new c_type(get_turf(target))
 
 	if(istype(c_type, /mob/living/simple_animal/hostile/construct/harvester))
@@ -492,13 +422,7 @@
 
 	C.faction |= PERSONAL_FACTION(user)
 	C.possess_by_player(target.key)
-	if(user && iscultist(user) || cult_override)
-		SSticker.mode.add_cultist(C.mind)
-		SSticker.mode.update_cult_icons_added(C.mind)
-	if(user && iscultist(user))
-		to_chat(C, "<b>You are still bound to serve the cult, follow their orders and help them complete their goals at all costs.</b>")
-	else
-		to_chat(C, "<b>You are still bound to serve your creator, follow their orders and help them complete their goals at all costs.</b>")
+	to_chat(C, "<b>You are still bound to serve your creator, follow their orders and help them complete their goals at all costs.</b>")
 	C.cancel_camera()
 
 /obj/item/soulstone/proc/init_shade(mob/living/M, mob/user, forced = FALSE)
@@ -520,15 +444,8 @@
 				SSticker.mode.update_wiz_icons_added(S.mind)
 				S.mind.special_role = SPECIAL_ROLE_WIZARD_APPRENTICE
 
-			if(iscultist(user))
-				SSticker.mode.add_cultist(S.mind)
-				S.mind.special_role = SPECIAL_ROLE_CULTIST
-				S.mind.store_memory("<b>Serve the cult's will.</b>")
-				to_chat(S, span_userdanger("Your soul has been captured! You are now bound to the cult's will. Help them succeed in their goals at all costs."))
-
-			else
-				S.mind.store_memory("<b>Serve [user.real_name], your creator.</b>")
-				to_chat(S, span_userdanger("Your soul has been captured! You are now bound to [user.real_name]'s will. Help them succeed in their goals at all costs."))
+			S.mind.store_memory("<b>Serve [user.real_name], your creator.</b>")
+			to_chat(S, span_userdanger("Your soul has been captured! You are now bound to [user.real_name]'s will. Help them succeed in their goals at all costs."))
 
 	if(forced && user)
 		to_chat(user, "[span_notice("<b>Capture successful!</b>:")] [M.real_name]'s soul has been ripped from [user.p_their()] body and stored within the soul stone.")
@@ -546,9 +463,9 @@
 	if(purified)
 		return /mob/living/simple_animal/shade/holy
 
-	return /mob/living/simple_animal/shade/cult
+	return /mob/living/simple_animal/shade
 
-/obj/item/soulstone/proc/get_cult_ghost(mob/living/M, mob/user, get_new_player = FALSE)
+/obj/item/soulstone/proc/get_shade_ghost(mob/living/M, mob/user, get_new_player = FALSE)
 	var/mob/dead/observer/chosen_ghost
 
 	if(!get_new_player)

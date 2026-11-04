@@ -162,28 +162,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/awaystart)
 	spawner_list = GLOB.xeno_spawn
 	return ..()
 
-/obj/effect/landmark/spawner/swarmer
-	name = "swarmer_spawn"
-	icon_state = "swarmer_spawn"
-
-/obj/effect/landmark/spawner/swarmer/Initialize(mapload)
-	spawner_list = GLOB.swarmer_spawn
-	return ..()
-
 /obj/effect/landmark/spawner/ninjastart
 	name = "ninjastart"
 	icon_state = "ninjastart"
 
 /obj/effect/landmark/spawner/ninjastart/Initialize(mapload)
 	spawner_list = GLOB.ninjastart
-	return ..()
-
-/obj/effect/landmark/spawner/ninja_teleport
-	name = "ninja_teleport"
-	icon_state = "ninja_teleport"
-
-/obj/effect/landmark/spawner/ninja_teleport/Initialize(mapload)
-	spawner_list = GLOB.ninja_teleport
 	return ..()
 
 /obj/effect/landmark/spawner/carp

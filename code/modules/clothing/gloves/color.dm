@@ -124,9 +124,6 @@
 /obj/item/clothing/gloves/color/black/ce
 	item_color = "chief"			//Exists for washing machines. Is not different from black gloves in any way.
 
-/obj/item/clothing/gloves/color/black/thief
-	pickpocket = TRUE
-
 /obj/item/clothing/gloves/color/black/wirecutter_act(mob/living/user, obj/item/I)
 	. = TRUE
 	if(!can_be_cut || icon_state != initial(icon_state))	// only if not dyed

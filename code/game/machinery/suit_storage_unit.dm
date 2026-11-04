@@ -21,8 +21,6 @@
 	var/mask_type = null
 	var/magboots_type = null
 	var/storage_type = null
-	/// This variable acts for replacing modsuits with hardsuits with station trait
-	var/hardsuit_type = null
 
 	var/controls_inside = FALSE
 	var/locked = FALSE
@@ -44,7 +42,7 @@
 	var/atom/movable/occupant = null
 
 	/// Power contributed by this machine to charge the mod suits cell
-	var/base_charge_rate = SUIT_STORAGE_CHARGE_MOD
+	var/base_charge_rate = 20
 
 /obj/machinery/suit_storage_unit/standard_unit
 	suit_type    = /obj/item/clothing/suit/space/eva
@@ -63,24 +61,23 @@
 	desc = "An industrial \"U-Stor-It Storage\" unit designed to accommodate all types of spacesuits.	\
 			Its onboard equipment also allows the user to decontaminate the contents through a UV-ray purging cycle.	\
 			This one looks kind of fancy."
-	suit_type    = /obj/item/mod/control/pre_equipped/magnate
+	suit_type    = /obj/item/clothing/suit/space/captain
+	helmet_type  = /obj/item/clothing/head/helmet/space/capspace
 	mask_type    = /obj/item/clothing/mask/gas
 	magboots_type = /obj/item/clothing/shoes/magboots/security/captain
-	storage_type = /obj/item/tank/internals/oxygen
+	storage_type = /obj/item/tank/jetpack/oxygen/captain
 	req_access = list(ACCESS_CAPTAIN)
 
 /obj/machinery/suit_storage_unit/engine
 	name = "engineering suit storage unit"
-	suit_type    = /obj/item/mod/control/pre_equipped/engineering
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/engine
+	suit_type    = /obj/item/clothing/suit/space/hardsuit/engine
 	mask_type    = /obj/item/clothing/mask/breath
 	magboots_type = /obj/item/clothing/shoes/magboots
 	req_access = list(ACCESS_ENGINE_EQUIP)
 
 /obj/machinery/suit_storage_unit/ce
 	name = "chief engineer's suit storage unit"
-	suit_type    = /obj/item/mod/control/pre_equipped/advanced
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/engine/elite
+	suit_type    = /obj/item/clothing/suit/space/hardsuit/engine/elite
 	storage_type = /obj/item/tank/internals/oxygen
 	mask_type    = /obj/item/clothing/mask/gas
 	magboots_type = /obj/item/clothing/shoes/magboots/advance
@@ -88,49 +85,42 @@
 
 /obj/machinery/suit_storage_unit/security
 	name = "security suit storage unit"
-	suit_type    = /obj/item/mod/control/pre_equipped/security
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/security
+	suit_type    = /obj/item/clothing/suit/space/hardsuit/security
 	mask_type    = /obj/item/clothing/mask/gas/sechailer
-	storage_type = /obj/item/tank/internals/oxygen
+	storage_type = /obj/item/tank/jetpack/oxygen/security
 	magboots_type = /obj/item/clothing/shoes/magboots/security
 	req_access = list(ACCESS_SECURITY)
 
 /obj/machinery/suit_storage_unit/security/hos
 	name = "head of security suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/safeguard_mk_two
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/security/hos
+	suit_type = /obj/item/clothing/suit/space/hardsuit/security/hos
 	req_access = list(ACCESS_HOS)
 
 /obj/machinery/suit_storage_unit/security/warden
 	name = "warden's suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/safeguard_mk_one
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/security/warden
+	suit_type = /obj/item/clothing/suit/space/hardsuit/security/warden
 	req_access = list(ACCESS_ARMORY)
 
 /obj/machinery/suit_storage_unit/security/pod_pilot
-	name = "pilot's suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/brig_pilot
 	req_access = list(ACCESS_PILOT)
 
 /obj/machinery/suit_storage_unit/brigmed
 	name = "brig physician suit storage unit"
-	suit_type    = /obj/item/mod/control/pre_equipped/brigmed
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/security/brigmed
+	suit_type    = /obj/item/clothing/suit/space/hardsuit/security/brigmed
 	mask_type    = /obj/item/clothing/mask/gas/sechailer
 	storage_type = /obj/item/tank/jetpack/oxygen
 	magboots_type = /obj/item/clothing/shoes/magboots/security
 
 /obj/machinery/suit_storage_unit/atmos
 	name = "atmospherics suit storage unit"
-	suit_type    = /obj/item/mod/control/pre_equipped/atmospheric
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/engine/atmos
+	suit_type    = /obj/item/clothing/suit/space/hardsuit/engine/atmos
 	mask_type    = /obj/item/clothing/mask/gas
 	magboots_type = /obj/item/clothing/shoes/magboots/atmos
 	req_access = list(ACCESS_ATMOSPHERICS)
 
 /obj/machinery/suit_storage_unit/mining
 	name = "mining suit storage unit"
-	suit_type    = /obj/item/mod/control/pre_equipped/mining/asteroid
+	suit_type    = /obj/item/clothing/suit/space/hardsuit/mining
 	mask_type    = /obj/item/clothing/mask/breath
 	req_access = list(ACCESS_MINING_STATION)
 
@@ -150,42 +140,40 @@
 
 /obj/machinery/suit_storage_unit/cmo
 	name = "CMO suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/rescue
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/medical
+	suit_type = /obj/item/clothing/suit/space/hardsuit/medical
 	storage_type = /obj/item/tank/internals/oxygen
 	mask_type = /obj/item/clothing/mask/breath
 	req_access = list(ACCESS_CMO)
 
 /obj/machinery/suit_storage_unit/qm
 	name = "quartermaster suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/loader
+	suit_type = /obj/item/clothing/suit/space/eva
+	helmet_type = /obj/item/clothing/head/helmet/space/eva
 	mask_type    = /obj/item/clothing/mask/breath
 	req_access = list(ACCESS_QM)
 
 /obj/machinery/suit_storage_unit/medical
 	name = "medical suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/medical
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/medical
+	suit_type = /obj/item/clothing/suit/space/hardsuit/medical
 	mask_type = /obj/item/clothing/mask/breath
 	req_access = list(ACCESS_MEDICAL)
 
 /obj/machinery/suit_storage_unit/clown
 	name = "clown suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/cosmohonk
+	suit_type = /obj/item/clothing/suit/space/eva/clown
+	helmet_type  = /obj/item/clothing/head/helmet/space/eva/clown
 	req_access = list(ACCESS_CLOWN)
 
 /obj/machinery/suit_storage_unit/blueshield
 	name = "blueshield suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/praetorian
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/blueshield
+	suit_type = /obj/item/clothing/suit/space/hardsuit/blueshield
 	magboots_type = /obj/item/clothing/shoes/magboots/security
 	storage_type = /obj/item/tank/internals/oxygen
 	req_access = list(ACCESS_BLUESHIELD)
 
 /obj/machinery/suit_storage_unit/rd
 	name = "research director's suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/research
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/rd
+	suit_type = /obj/item/clothing/suit/space/hardsuit/rd
 	mask_type = /obj/item/clothing/mask/gas
 	magboots_type = /obj/item/clothing/shoes/magboots
 	req_access = list(ACCESS_RD)
@@ -198,26 +186,19 @@
 
 /obj/machinery/suit_storage_unit/syndicate
 	name = "syndicate suit storage unit"
-	suit_type  	 = /obj/item/mod/control/pre_equipped/nuclear
-	hardsuit_type = /obj/item/clothing/suit/space/hardsuit/syndi
+	suit_type  	 = /obj/item/clothing/suit/space/hardsuit/syndi
 	mask_type   	= /obj/item/clothing/mask/gas/syndicate
 	storage_type	= /obj/item/tank/jetpack/oxygen/harness
 	req_access = list(ACCESS_SYNDICATE)
 	safeties = FALSE	//in a syndicate base, everything can be used as a murder weapon at a moment's notice.
 
 /obj/machinery/suit_storage_unit/syndicate/comms
-	suit_type = /obj/item/mod/control/pre_equipped/elite
+	suit_type = /obj/item/clothing/suit/space/hardsuit/syndi/elite/comms
 	magboots_type = /obj/item/clothing/shoes/magboots/syndie/advance
 	req_access = list(ACCESS_SYNDICATE)
 
 /obj/machinery/suit_storage_unit/ert
 	req_access = list(ACCESS_CENT_GENERAL)
-
-/obj/machinery/suit_storage_unit/gamma
-	name = "gamma shielded suit storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/safeguard_mk_two/gamma
-	mask_type = /obj/item/clothing/mask/gas/sechailer/swat
-	req_access = list(ACCESS_SECURITY)
 
 /obj/machinery/suit_storage_unit/ert/command
 	suit_type    = /obj/item/clothing/suit/space/hardsuit/ert/commander
@@ -226,7 +207,7 @@
 
 /obj/machinery/suit_storage_unit/centcom/director
 	name = "corporate storage unit"
-	suit_type = /obj/item/mod/control/pre_equipped/corporate
+	suit_type = /obj/item/clothing/suit/space/hardsuit/ert/commander
 	mask_type = /obj/item/clothing/mask/gas/swat
 	storage_type = /obj/item/tank/internals/emergency_oxygen/double
 	magboots_type = /obj/item/clothing/shoes/magboots/syndie/advance
@@ -284,8 +265,6 @@
 /obj/machinery/suit_storage_unit/Initialize(mapload)
 	. = ..()
 	wires = new(src)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_OUTDATED_HARDSUITS) && !isnull(hardsuit_type))
-		suit = new hardsuit_type(src)
 	if(isnull(suit) && suit_type)
 		suit = new suit_type(src)
 	if(helmet_type)
@@ -382,7 +361,7 @@
 	. = FALSE
 	if(panel_open)
 		return .
-	if((istype(I, /obj/item/clothing/suit/space) || istype(I, suit_type)  || ismodcontrol(I))  && !suit)
+	if((istype(I, /obj/item/clothing/suit/space) || istype(I, suit_type)) && !suit)
 		. = user.drop_transfer_item_to_loc(I, src)
 		if(.)
 			suit = I

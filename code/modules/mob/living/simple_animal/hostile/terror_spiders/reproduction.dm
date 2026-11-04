@@ -83,7 +83,7 @@
 			else if(score == 0)
 				new /obj/effect/temp_visual/revenant(T) // purple sparks, this is a neutral area, an acceptable choice
 			else
-				new /obj/effect/temp_visual/cult/sparks(T) // red sparks, this is an unsafe area, I won't go here unless fleeing something worse
+				new /obj/effect/temp_visual/blood_magic_sparks(T) // red sparks, this is an unsafe area, I won't go here unless fleeing something worse
 
 /obj/structure/spider/spiderling/terror_spiderling/process()
 	var/turf/T = get_turf(src)

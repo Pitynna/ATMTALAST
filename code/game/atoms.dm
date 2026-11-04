@@ -1161,12 +1161,6 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 /atom/proc/acid_act(acidpwr, acid_volume)
 	SEND_SIGNAL(src, COMSIG_ATOM_ACID_ACT, acidpwr, acid_volume)
 
-/atom/proc/narsie_act()
-	return
-
-/atom/proc/ratvar_act(convert_mecha = FALSE)
-	return
-
 /*
  * Respond to an electric bolt action on our item
  *

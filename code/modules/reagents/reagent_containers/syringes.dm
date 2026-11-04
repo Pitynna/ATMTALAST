@@ -20,7 +20,7 @@
 	var/busy = FALSE
 	var/mode = SYRINGE_DRAW
 	var/projectile_type = /obj/projectile/bullet/dart/syringe
-	///If this variable is true, the syringe will work through hardsuits / modsuits / biosuits.
+	///If this variable is true, the syringe will work through hardsuits / biosuits.
 	var/penetrates_thick = FALSE
 	///If this variable is true, the syringe will work through unathi skin
 	var/ignores_pierceimmune = FALSE

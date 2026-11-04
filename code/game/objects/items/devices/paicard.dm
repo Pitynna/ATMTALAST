@@ -238,7 +238,6 @@
 
 	pai.reset_software()
 
-	SSticker.mode.update_cult_icons_removed(pai.mind)
 	SSticker.mode.update_rev_icons_removed(pai.mind)
 
 	var/list/welcome_message = list()
@@ -472,9 +471,6 @@
 	return !used
 
 /obj/item/paicard_upgrade/unused
-	used = FALSE
-
-/obj/item/paicard_upgrade/contractor/unused
 	used = FALSE
 
 /obj/item/paicard_upgrade/protolate

@@ -21,7 +21,7 @@
 
 /datum/action/cooldown/spell/pointed/borer_infest/is_valid_target(atom/cast_on)
 	var/mob/living/carbon/human/target = cast_on
-	return istype(target) && target.stat != DEAD && !ismachineperson(target) && !isdevilantag(target)
+	return istype(target) && target.stat != DEAD && !ismachineperson(target) && !FALSE
 
 /datum/action/cooldown/spell/pointed/borer_infest/cast(atom/cast_on)
 	. = ..()

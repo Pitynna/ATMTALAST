@@ -354,8 +354,8 @@
 	background_icon_state = "bg_vampire"
 	button_icon_state = "blood_pool"
 	jaunt_type = /obj/effect/dummy/phased_mob/spell_jaunt/blood_pool
-	jaunt_out_type = /obj/effect/temp_visual/dir_setting/cult/phase/out
-	jaunt_in_type = /obj/effect/temp_visual/dir_setting/cult/phase
+	jaunt_out_type = /obj/effect/temp_visual/dir_setting/blood_phase/out
+	jaunt_in_type = /obj/effect/temp_visual/dir_setting/blood_phase
 	jaunt_in_time = 0
 	sound = 'sound/misc/enter_blood.ogg'
 	exit_jaunt_sound = 'sound/misc/exit_blood.ogg'

@@ -121,13 +121,6 @@
 	cost = 0
 
 /*
-/datum/map_template/ruin/lavaland/ratvar
-	name = "Dead God"
-	id = "ratvar"
-	description = "Ratvars final resting place."
-	suffix = "lavaland_surface_dead_ratvar.dmm"
-	cost = 0
-	allow_duplicates = FALSE
 */
 
 /datum/map_template/ruin/lavaland/hierophant
@@ -190,14 +183,6 @@
 	suffix = "lavaland_surface_pizzaparty.dmm"
 	allow_duplicates = FALSE
 	cost = 5
-
-/datum/map_template/ruin/lavaland/cultaltar
-	name = "Summoning Ritual"
-	id = "cultaltar"
-	description = "A place of vile worship, the scrawling of blood in the middle glowing eerily. A demonic laugh echoes throughout the caverns"
-	suffix = "lavaland_surface_cultaltar.dmm"
-	allow_duplicates = FALSE
-	cost = 10
 
 /datum/map_template/ruin/lavaland/hermit
 	name = "Makeshift Shelter"

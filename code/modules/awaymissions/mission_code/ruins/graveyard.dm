@@ -248,7 +248,6 @@
 	var/gun = pick(/obj/item/gun/projectile/shotgun/lethal/rusted, /obj/item/gun/projectile/revolver/nagant/rusted, /obj/item/gun/projectile/automatic/pistol/stechkin)
 	switch(rand(1,55))
 		if(1 to 2)
-			spawn_mob = /mob/living/simple_animal/hostile/zombie/space_graveyard/noble
 			var/obj/item/stack/spacecash/big_money = new
 			big_money.name = "Fat bundle of money"
 			big_money.icon_state = "cashblue"
@@ -257,16 +256,13 @@
 			new medal(src)
 			new gun(src)
 		if(3 to 6)
-			spawn_mob = /mob/living/simple_animal/hostile/zombie/space_graveyard/noble/fast
 			var/obj/item/stack/spacecash/little_money = new
 			little_money.name = "Small bundle of money"
 			little_money.amount = rand(100, 400)
 			little_money.forceMove(src)
 		if(7 to 8)
-			spawn_mob = /mob/living/simple_animal/hostile/zombie/space_graveyard/dredd
 			new /obj/item/decorations/bouquets/random(src)
 		if(8 to 9)
-			spawn_mob = /mob/living/simple_animal/hostile/zombie/space_graveyard/pirate
 			var/obj/item/stack/spacecash/big_money = new
 			big_money.name = "Fat bundle of money"
 			big_money.icon_state = "cashblue"

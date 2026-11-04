@@ -49,10 +49,6 @@ GLOBAL_ALIST_EMPTY(dice_rolls)
 			messages.Add(user.prepare_announce_objectives(FALSE))
 			to_chat(user.current, custom_boxed_message("red_box center", messages.Join("<br>")))
 			SEND_SOUND(user.current, sound('sound/ambience/misc/alarm4.ogg'))
-	if(is_sacrifice_target(delete_target.mind))
-		if(!SSticker.mode.cult_objs.find_new_sacrifice_target())
-			SSticker.mode.cult_objs.ready_to_summon()
-
 /datum/dice_roll/butcher
 	number = 2
 

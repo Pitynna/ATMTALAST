@@ -15,14 +15,8 @@ import { flow } from 'tgui-core/fp';
 import type { BooleanLike } from 'tgui-core/react';
 import { createSearch, decodeHtmlEntities } from 'tgui-core/string';
 import { useBackend } from '../backend';
-import { Countdown } from '../components';
 import { Window } from '../layouts';
-import {
-  ComplexModal,
-  modalAnswer,
-  modalOpen,
-  modalRegisterBodyOverride,
-} from './common/ComplexModal';
+import { ComplexModal } from './common/ComplexModal';
 
 type PickTabProps = ShowDescProps & SearchTextProps;
 
@@ -48,22 +42,12 @@ const PickTab = (index: number, props: PickTabProps) => {
 
 type UplinkData = {
   cart: Cart[];
-  contractor: Contractor;
   crystals: number;
   cats: Category[];
   cart_price: number;
   lucky_numbers: LuckyNumber[];
   exploitable: ExploitableRecord[];
   objectives_items?: ObjectiveItem[];
-};
-
-type Contractor = {
-  available: BooleanLike;
-  accepted: BooleanLike;
-  affordable: BooleanLike;
-  is_admin_forced: BooleanLike;
-  available_offers: number;
-  time_left: number;
 };
 
 type Category = {
@@ -171,41 +155,6 @@ export const Uplink = (_props: unknown) => {
               >
                 Снаряжение для целей
               </Tabs.Tab>
-              {!!data.contractor && (
-                <Tabs.Tab
-                  key="BecomeContractor"
-                  color={
-                    data.contractor.available && !data.contractor.accepted
-                      ? 'yellow'
-                      : 'transparent'
-                  }
-                  onClick={() => modalOpen('become_contractor')}
-                  icon="suitcase"
-                >
-                  Заключение контракта
-                  {!data.contractor.is_admin_forced &&
-                  !data.contractor.accepted ? (
-                    data.contractor.available_offers > 0 ? (
-                      <i>[Осталось:{data.contractor.available_offers}]</i>
-                    ) : (
-                      <i>[Предложения закончились]</i>
-                    )
-                  ) : (
-                    ''
-                  )}
-                  {data.contractor.accepted ? (
-                    <i>&nbsp;(Заключён)</i>
-                  ) : !data.contractor.is_admin_forced &&
-                    data.contractor.available_offers <= 0 ? (
-                    ''
-                  ) : (
-                    <Countdown
-                      timeEnd={data.contractor.time_left}
-                      format={(v, f) => ` (${f})`}
-                    />
-                  )}
-                </Tabs.Tab>
-              )}
               <Tabs.Tab
                 key="LockUplink"
                 // This cant ever be selected. Its just a close button.
@@ -658,93 +607,6 @@ const ExploitableInfoPage = (_properties) => {
   );
 };
 
-modalRegisterBodyOverride('become_contractor', (modal) => {
-  const { data } = useBackend<UplinkData>();
-  const { time_left } = data.contractor || {};
-  const isAvailable = !!data?.contractor?.available;
-  const isAffordable = !!data?.contractor?.affordable;
-  const isAccepted = !!data?.contractor?.accepted;
-  const { available_offers } = data.contractor || {};
-  const isAdminForced = !!data?.contractor?.is_admin_forced;
-  return (
-    <Section
-      height="65%"
-      m="-1rem"
-      pb="1rem"
-      title={
-        <>
-          <Icon name="suitcase" />
-          &nbsp; Заключение контракта
-        </>
-      }
-    >
-      <Box mx="0.8rem" mb="1rem">
-        <b>
-          Ваши достижения в службе \&quot;Синдикату\&quot; были отмечены, агент!
-          Мы рады предложить вам уникальную возможность стать контрактником.
-        </b>
-        <br />
-        <br />
-        Мы предлагаем вам повышение до уровня контрактника всего за 100
-        телекристаллов. Это позволит вам заключать контракты на похищение людей,
-        получая за свою работу телекристаллы и кредиты.
-        <br />
-        Кроме того, вам будет выдан стандартный набор контрактника, специальный
-        аплинк контрактника, руководство и три случайных недорогих предмета.
-        <br />
-        <br />
-        Более подробные инструкции вы сможете найти в руководстве, которое
-        прилагается к комплекту, если решите воспользоваться нашим предложением.
-        {!isAdminForced ? (
-          <Box>
-            Не упустите возможность! Вы не единственный, кто получил это
-            предложение. Количество доступных предложений ограничено, и если
-            другие агенты примут их раньше вас, то у вас не останется
-            возможности принять участие.
-            <br />
-            <b>Доступные предложения: {available_offers}</b>
-          </Box>
-        ) : (
-          ''
-        )}
-      </Box>
-      <Button.Confirm
-        disabled={!isAvailable || isAccepted}
-        italic={!isAvailable}
-        bold={isAvailable}
-        icon={isAvailable && !isAccepted && 'check'}
-        color="good"
-        position="absolute"
-        right="1rem"
-        bottom="-0.75rem"
-        onClick={() => modalAnswer(modal.id, 1)}
-      >
-        {isAccepted ? (
-          'Заключён'
-        ) : isAvailable ? (
-          [
-            'Принять предложение',
-            <Countdown
-              key="countdown"
-              timeEnd={time_left}
-              format={(_, f) => ` (${f})`}
-            />,
-          ]
-        ) : !isAffordable ? (
-          'Недостаточно ТК'
-        ) : !data.contractor.is_admin_forced ? (
-          data.contractor.available_offers > 0 ? (
-            <i>[Осталось:{data.contractor.available_offers}]</i>
-          ) : (
-            <i>[Предложения закончились]</i>
-          )
-        ) : (
-          'Срок действия предложения истек'
-        )}
-      </Button.Confirm>
-    </Section>
-  );
-});
 
 const ObjectivesPage = () => {
   const { act, data } = useBackend<UplinkData>();

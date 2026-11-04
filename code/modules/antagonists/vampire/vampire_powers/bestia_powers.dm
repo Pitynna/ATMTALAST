@@ -169,7 +169,7 @@
 		return FALSE
 	if(blood_required && ishuman(victim) && (HAS_TRAIT(victim, TRAIT_NO_BLOOD) || HAS_TRAIT(victim, TRAIT_EXOTIC_BLOOD)))
 		return FALSE
-	if(issilicon(victim) || isbot(victim) || isswarmer(victim) || isguardian(victim))
+	if((issilicon(victim)) || (isbot(victim)) || (isguardian(victim)))
 		return FALSE
 	return TRUE
 
@@ -1213,7 +1213,7 @@
 	if(QDELETED(user) || QDELETED(coffin))
 		return
 
-	new /obj/effect/temp_visual/cult/sparks(user_turf)
+	new /obj/effect/temp_visual/blood_magic_sparks(user_turf)
 	user.forceMove(user_turf)
 	qdel(user_image)
 
@@ -1250,7 +1250,7 @@
 	if(QDELETED(src) || QDELETED(coffin) || QDELETED(coffin.human_vampire))
 		return
 
-	new /obj/effect/temp_visual/cult/sparks(get_turf(coffin))
+	new /obj/effect/temp_visual/blood_magic_sparks(get_turf(coffin))
 	coffin.no_manipulation = FALSE
 	coffin.open()
 	coffin.no_manipulation = TRUE
@@ -1383,7 +1383,7 @@
 
 	human_vampire.set_stat(CONSCIOUS)
 
-	new /obj/effect/temp_visual/cult/sparks(source_turf)
+	new /obj/effect/temp_visual/blood_magic_sparks(source_turf)
 	playsound(loc, 'sound/effects/creepyshriek.ogg', 100, TRUE)
 	human_vampire.visible_message(span_danger("[human_vampire] выход[PLUR_IT_YAT(human_vampire)] из разрушенного гроба и изда[PLUR_YOT_YUT(human_vampire)] оглушительный вопль!"), \
 								span_userdanger("Ваш гроб разрушен, и вы кричите в неистовой ярости!"), \
@@ -1613,7 +1613,7 @@
 		to_chat(user, span_warning("Вы чувствуете, что это не очень хорошая идея..."))
 	else
 		LAZYREMOVE(lightheaded, user_UID)
-		new /obj/effect/temp_visual/cult/sparks(get_turf(user))
+		new /obj/effect/temp_visual/blood_magic_sparks(get_turf(user))
 		user.Weaken(10 SECONDS)	// well, you were warned!
 		user.Jitter(20 SECONDS)
 		user.visible_message(span_warning("Как только [user] прикаса[PLUR_ET_YUT(user)]ся к [declent_ru(DATIVE)], [GEND_HIS_HER(user)] тело начнет биться в конвульсиях."), \

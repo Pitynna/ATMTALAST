@@ -3206,7 +3206,6 @@
 /obj/machinery/power/apc/directional/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/carpet/green,
 /area/station/commons/mrchangs)
 "aKg" = (
@@ -3982,7 +3981,6 @@
 	},
 /area/station/engineering/atmos)
 "aTN" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken7"
 	},
@@ -13435,7 +13433,6 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/tourist)
 "cVj" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/starboard)
 "cVu" = (
@@ -16576,7 +16573,6 @@
 /area/station/security/customs)
 "dFO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -22081,7 +22077,6 @@
 /area/station/maintenance/fpmaint)
 "ePu" = (
 /obj/structure/chair/sofa/right,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/asmaint4)
 "ePv" = (
@@ -27566,7 +27561,6 @@
 	},
 /area/station/ai/satellite/maintenance)
 "fWj" = (
-/obj/structure/cult/archives,
 /obj/machinery/newscaster/directional/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -35133,7 +35127,6 @@
 	},
 /area/station/service/kitchen)
 "hAP" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/effect/decal/cleanable/crayon{
 	color = "#cc3300"
 	},
@@ -35827,7 +35820,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
 "hGL" = (
@@ -40282,12 +40274,6 @@
 /area/station/hallway/primary/central/west)
 "iFl" = (
 /obj/structure/safe/floor,
-/obj/item/melee/cultblade,
-/obj/item/restraints/legcuffs/bola/cult,
-/obj/item/whetstone/cult,
-/obj/item/stack/sheet/runed_metal{
-	amount = 50
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -56959,7 +56945,6 @@
 /obj/machinery/light_construct/small{
 	dir = 8
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -64254,7 +64239,6 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/fpmaint)
 "nMt" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/station/maintenance/perma)
@@ -74652,7 +74636,6 @@
 /area/station/science/sm_chamber)
 "pXS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
 "pYa" = (
@@ -81122,7 +81105,6 @@
 /turf/simulated/floor/wood/fancy/light,
 /area/station/command/office/hop)
 "rnm" = (
-/obj/structure/cult/archives,
 /turf/simulated/floor/plating,
 /area/station/maintenance/library)
 "rns" = (
@@ -91164,7 +91146,6 @@
 /turf/simulated/wall,
 /area/station/maintenance/brig)
 "ttn" = (
-/obj/structure/cult/archives,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -110219,7 +110200,6 @@
 	},
 /area/station/hallway/primary/central/west)
 "xni" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -111089,7 +111069,6 @@
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "yellowcorner"
@@ -114908,7 +114887,6 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel,
 /area/station/commons/fitness)
 "ykD" = (

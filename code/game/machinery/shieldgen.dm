@@ -56,51 +56,6 @@
 	if(!QDELETED(src))
 		qdel(src)
 
-/obj/machinery/shield/cult
-	name = "cult barrier"
-	desc = "A shield summoned by cultists to keep heretics away."
-	max_integrity = 100
-	icon_state = "shield-cult"
-
-/obj/machinery/shield/cult/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/empprotection, EMP_PROTECT_ALL)
-
-/obj/machinery/shield/cult/narsie
-	name = "sanguine barrier"
-	desc = "A potent shield summoned by cultists to defend their rites."
-	max_integrity = 60
-
-/obj/machinery/shield/cult/weak
-	name = "Invoker's Shield"
-	desc = "A weak shield summoned by cultists to protect them while they carry out delicate rituals."
-	max_integrity = 20
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	layer = ABOVE_MOB_LAYER
-
-/obj/machinery/shield/cult/barrier
-	density = FALSE
-	/// The rune that created the shield itself. Used to delete the rune when the shield is destroyed.
-	var/obj/effect/rune/parent_rune
-
-/obj/machinery/shield/cult/barrier/Initialize(mapload)
-	. = ..()
-	invisibility = INVISIBILITY_ABSTRACT
-
-/obj/machinery/shield/cult/barrier/Destroy()
-	if(parent_rune && !QDELETED(parent_rune))
-		QDEL_NULL(parent_rune)
-	return ..()
-
-/obj/machinery/shield/cult/barrier/attack_hand(mob/living/user)
-	parent_rune.attack_hand(user)
-
-/obj/machinery/shield/cult/barrier/attack_animal(mob/living/simple_animal/user)
-	if(iscultist(user))
-		parent_rune.attack_animal(user)
-	else
-		..()
-
 /**
 * Turns the shield on and off.
 *
@@ -108,20 +63,6 @@
 * When off, the rune no longer blocks anything and turns invisible.
 * The barrier itself is not intended to interact with the conceal runes cult spell for balance purposes.
 */
-/obj/machinery/shield/cult/barrier/proc/Toggle()
-	var/visible
-	if(!density) // Currently invisible
-		set_density(TRUE) // Turn visible
-		invisibility = initial(invisibility)
-		visible = TRUE
-	else // Currently visible
-		set_density(FALSE) // Turn invisible
-		invisibility = INVISIBILITY_ABSTRACT
-		visible = FALSE
-
-	recalculate_atmos_connectivity()
-	return visible
-
 /obj/machinery/shieldgen
 	name = "Emergency shield projector"
 	desc = "Used to seal minor hull breaches."

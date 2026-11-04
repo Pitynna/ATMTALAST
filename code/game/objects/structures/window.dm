@@ -141,16 +141,6 @@ GLOBAL_LIST_INIT(wcCommon, pick(list("#379963", "#0d8395", "#58b5c3", "#49e46e",
 	if(!anchored && !fulltile)
 		. += span_notice("<b>Alt+ЛКМ</b> для поворота.")
 
-/obj/structure/window/narsie_act()
-	color = NARSIE_WINDOW_COLOUR
-
-/obj/structure/window/ratvar_act()
-	if(!fulltile)
-		new/obj/structure/window/reinforced/clockwork(get_turf(src), dir)
-	else
-		new/obj/structure/window/reinforced/clockwork/fulltile(get_turf(src))
-	qdel(src)
-
 /obj/structure/window/rpd_act(mob/user, obj/item/rpd/our_rpd, mode)
 	return
 
@@ -1048,9 +1038,6 @@ GLOBAL_LIST_INIT(wcCommon, pick(list("#379963", "#0d8395", "#58b5c3", "#49e46e",
 		INSTRUMENTAL = "окном шаттла",
 		PREPOSITIONAL = "окне шаттла",
 	)
-/obj/structure/window/full/shuttle/narsie_act()
-	color = "#3C3434"
-
 /obj/structure/window/full/shuttle/tinted
 	opacity = TRUE
 
@@ -1069,26 +1056,6 @@ GLOBAL_LIST_INIT(wcCommon, pick(list("#379963", "#0d8395", "#58b5c3", "#49e46e",
 		PREPOSITIONAL = "окне шаттла",
 	)
 /obj/structure/window/full/shuttle/gray/tinted
-	opacity = TRUE
-
-/obj/structure/window/full/shuttle/ninja
-	name = "High-Tech shuttle window"
-	desc = "Укреплённое окно шаттла с системой герметизации."
-	icon = 'icons/obj/smooth_structures/shuttle_window_ninja.dmi'
-	icon_state = "shuttle_window_ninja-0"
-	base_icon_state = "shuttle_window_ninja"
-	armor = list(MELEE = 50, BULLET = 30, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
-
-/obj/structure/window/full/shuttle/ninja/get_ru_names()
-	return alist(
-		NOMINATIVE = "высокотехнологичное окно шаттла",
-		GENITIVE = "высокотехнологичного окна шаттла",
-		DATIVE = "высокотехнологичному окну шаттла",
-		ACCUSATIVE = "высокотехнологичное окно шаттла",
-		INSTRUMENTAL = "высокотехнологичным окном шаттла",
-		PREPOSITIONAL = "высокотехнологичном окне шаттла",
-	)
-/obj/structure/window/full/shuttle/ninja/tinted
 	opacity = TRUE
 
 /obj/structure/window/plastitanium
@@ -1123,116 +1090,3 @@ GLOBAL_LIST_INIT(wcCommon, pick(list("#379963", "#0d8395", "#58b5c3", "#49e46e",
 		INSTRUMENTAL = "пластитановым окном",
 		PREPOSITIONAL = "пластитановом окне",
 	)
-
-/obj/structure/window/reinforced/clockwork
-	name = "brass window"
-	desc = "Тонкое, как бумага, но укреплённое полупрозрачное латунное окно."
-	icon = 'icons/obj/smooth_structures/clockwork_window.dmi'
-	icon_state = "clockwork_window_single"
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	max_integrity = 80
-	armor = list(MELEE = 60, BULLET = 25, LASER = 0, ENERGY = 0, BOMB = 25, BIO = 100, FIRE = 80, ACID = 100)
-	explosion_block = 2 //fancy AND hard to destroy. the most useful combination.
-	glass_type = /obj/item/stack/sheet/brass
-	shardtype = /obj/item/stack/sheet/brass
-	reinf = FALSE
-	cancolor = FALSE
-	var/made_glow = FALSE
-
-/obj/structure/window/reinforced/clockwork/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунное окно",
-		GENITIVE = "латунного окна",
-		DATIVE = "латунному окну",
-		ACCUSATIVE = "латунное окно",
-		INSTRUMENTAL = "латунным окном",
-		PREPOSITIONAL = "латунном окне",
-	)
-
-/obj/structure/window/reinforced/clockworkfake
-	name = "brass window"
-	desc = "Тонкое, как бумага, но укреплённое полупрозрачное латунное окно. Выглядит потускневшим."
-	icon = 'icons/obj/smooth_structures/clockwork_window.dmi'
-	icon_state = "clockwork_window_single"
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	max_integrity = 80
-	armor = list(MELEE = 60, BULLET = 25, LASER = 0, ENERGY = 0, BOMB = 25, BIO = 100, FIRE = 80, ACID = 100)
-	explosion_block = 2 //fancy AND hard to destroy. the most useful combination.
-	glass_type = /obj/item/stack/sheet/brass_fake
-	shardtype = /obj/item/stack/sheet/brass_fake
-	reinf = FALSE
-	cancolor = FALSE
-	var/made_glow = FALSE
-
-/obj/structure/window/reinforced/clockworkfake/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунное окно",
-		GENITIVE = "латунного окна",
-		DATIVE = "латунному окну",
-		ACCUSATIVE = "латунное окно",
-		INSTRUMENTAL = "латунным окном",
-		PREPOSITIONAL = "латунном окне",
-	)
-
-/obj/structure/window/reinforced/clockwork/Initialize(mapload, direct)
-	. = ..()
-	if(fulltile)
-		made_glow = TRUE
-		new /obj/effect/temp_visual/ratvar/window(get_turf(src))
-
-/obj/structure/window/reinforced/clockworkfake/Initialize(mapload, direct)
-	. = ..()
-	if(fulltile)
-		made_glow = TRUE
-		new /obj/effect/temp_visual/ratvar/window(get_turf(src))
-
-/obj/structure/window/reinforced/clockwork/setDir(newdir)
-	if(!made_glow)
-		var/obj/effect/E = new /obj/effect/temp_visual/ratvar/window/single(get_turf(src))
-		E.setDir(newdir)
-		made_glow = TRUE
-	return ..()
-
-/obj/structure/window/reinforced/clockworkfake/setDir(newdir)
-	if(!made_glow)
-		var/obj/effect/E = new /obj/effect/temp_visual/ratvar/window/single(get_turf(src))
-		E.setDir(newdir)
-		made_glow = TRUE
-	return ..()
-
-/obj/structure/window/reinforced/clockwork/ratvar_act()
-	update_integrity(max_integrity)
-	update_icon(UPDATE_OVERLAYS)
-
-/obj/structure/window/reinforced/clockwork/narsie_act()
-	take_damage(rand(25, 75), BRUTE)
-	if(src)
-		var/previouscolor = color
-		color = COLOR_CULT_RED
-		animate(src, color = previouscolor, time = 8)
-
-/obj/structure/window/reinforced/clockwork/fulltile
-	icon_state = "clockwork_window"
-	base_icon_state = "clockwork_window"
-	smooth = SMOOTH_BITMASK
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE
-	smoothing_groups = SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE
-	fulltile = TRUE
-	flags = PREVENT_CLICK_UNDER | NO_SCREENTIPS
-	dir = FULLTILE_WINDOW_DIR
-	max_integrity = 120
-	level = 3
-	glass_amount = 2
-
-/obj/structure/window/reinforced/clockworkfake/fulltile
-	icon_state = "clockwork_window"
-	base_icon_state = "clockwork_window"
-	smooth = SMOOTH_BITMASK
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE
-	smoothing_groups = SMOOTH_GROUP_WINDOW_FULLTILE_BRONZE
-	fulltile = TRUE
-	flags = PREVENT_CLICK_UNDER | NO_SCREENTIPS
-	dir = FULLTILE_WINDOW_DIR
-	max_integrity = 120
-	level = 3
-	glass_amount = 2

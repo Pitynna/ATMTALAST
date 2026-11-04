@@ -239,14 +239,6 @@
 
 	qdel(src)
 
-/obj/machinery/door/window/narsie_act()
-	color = NARSIE_WINDOW_COLOUR
-
-/obj/machinery/door/window/ratvar_act()
-	var/obj/machinery/door/window/clockwork/C = new(loc, dir)
-	C.name = name
-	qdel(src)
-
 /obj/machinery/door/window/temperature_expose(exposed_temperature, exposed_volume)
 	..()
 	if(exposed_temperature > T0C + (reinf ? 1600 : 800))
@@ -398,60 +390,6 @@
 	name = "cell door"
 	desc = "For keeping in criminal scum."
 	req_access = list(ACCESS_BRIG)
-
-/obj/machinery/door/window/clockwork
-	name = "brass windoor"
-	desc = "A thin door with translucent brass paneling."
-	icon_state = "clockwork"
-	base_state = "clockwork"
-	shards = 0
-	rods = 0
-	resistance_flags = ACID_PROOF | FIRE_PROOF
-	cancolor = FALSE
-	var/made_glow = FALSE
-
-/obj/machinery/door/window/clockwork_fake
-	name = "brass windoor"
-	desc = "A completely not magical thin door with translucent brass paneling."
-	icon_state = "clockwork"
-	base_state = "clockwork"
-	shards = 0
-	rods = 0
-	resistance_flags = ACID_PROOF | FIRE_PROOF
-	cancolor = FALSE
-
-/obj/machinery/door/window/clockwork/Initialize(mapload, set_dir)
-	. = ..()
-	debris += new/obj/item/stack/sheet/brass(src, 2)
-
-/obj/machinery/door/window/clockwork_fake/Initialize(mapload, set_dir)
-	. = ..()
-	debris += new/obj/item/stack/sheet/brass_fake(src, 2)
-
-/obj/machinery/door/window/clockwork/setDir(newdir)
-	if(!made_glow)
-		var/obj/effect/E = new /obj/effect/temp_visual/ratvar/door/window(get_turf(src))
-		E.setDir(newdir)
-		made_glow = TRUE
-	return ..()
-
-/obj/machinery/door/window/clockwork/emp_act(severity)
-	. = ..()
-	if(prob(80/severity))
-		open()
-
-/obj/machinery/door/window/clockwork/ratvar_act()
-	update_integrity(max_integrity)
-
-/obj/machinery/door/window/clockwork/hasPower()
-	return TRUE //yup that's power all right
-
-/obj/machinery/door/window/clockwork/narsie_act()
-	take_damage(rand(30, 60), BRUTE)
-	if(src)
-		var/previouscolor = color
-		color = COLOR_CULT_RED
-		animate(src, color = previouscolor, time = 8)
 
 /obj/machinery/door/window/northleft
 	dir = NORTH

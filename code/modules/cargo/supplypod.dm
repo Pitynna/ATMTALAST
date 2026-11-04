@@ -96,31 +96,6 @@
 		critter.faction = list("hostile") //No infighting, but also KILL!!
 	return ..()
 
-/obj/structure/closet/supplypod/extractionpod
-	name = "Syndicate Extraction Pod"
-	desc = "Специализированная капсула кроваво-красного цвета для эвакуации ценных целей из зон активных задач. <b>Для правильной доставки цель должна быть помещена в капсулу вручную.</b>"
-	specialised = TRUE
-	style = /datum/pod_style/contractor
-	bluespace = TRUE
-	explosionSize = list(0, 0, 1, 0)
-	effectLimb = TRUE
-	damage = 70
-	delays = list(POD_TRANSIT = 25, POD_FALLING = 4, POD_OPENING = 30, POD_LEAVING = 30)
-	reversing = TRUE
-	stay_after_drop = TRUE
-	leavingSound = 'sound/effects/podwoosh.ogg'
-	reverse_option_list = list(MOB_OPTION = FALSE, UNANCHORED_OPTION = FALSE, ANCHORED_OPTION = FALSE, MECHA_OPTION = FALSE)
-
-/obj/structure/closet/supplypod/extractionpod/get_ru_names()
-	return alist(
-		NOMINATIVE = "капсула эвакуации \"Синдиката\"",
-		GENITIVE = "капсулы эвакуации \"Синдиката\"",
-		DATIVE = "капсуле эвакуации \"Синдиката\"",
-		ACCUSATIVE = "капсулу эвакуации \"Синдиката\"",
-		INSTRUMENTAL = "капсулой эвакуации \"Синдиката\"",
-		PREPOSITIONAL = "капсуле эвакуации \"Синдиката\"",
-	)
-
 /obj/structure/closet/supplypod/centcompod
 	style = /datum/pod_style/centcom
 	bluespace = TRUE
@@ -270,14 +245,6 @@
 	GLOB.enter_allowed = 0
 	SSticker.mode.station_was_nuked = TRUE
 	to_chat(world, span_bold("Станция уничтожена взрывом ядерной ракеты!"))
-
-/obj/structure/closet/supplypod/swarmer
-	style = /datum/pod_style/swarmer
-	bluespace = TRUE
-	explosionSize = list(0, 0, 0, 0)
-	delays = list(POD_TRANSIT = 0 SECONDS, POD_FALLING = 10 SECONDS, POD_OPENING = 3 SECONDS, POD_LEAVING = 0 SECONDS)
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	specialised = TRUE
 
 /obj/structure/closet/supplypod/Initialize(mapload, customStyle = FALSE)
 	. = ..()
@@ -615,12 +582,6 @@
 	animate(holder, pixel_z = 400, time = 10, easing = QUAD_EASING|EASE_IN, flags = ANIMATION_PARALLEL) //Animate our rising pod
 	addtimer(CALLBACK(src, PROC_REF(handleReturnAfterDeparting), holder), 15) //Finish up the pod's duties after a certain amount of time
 
-/obj/structure/closet/supplypod/extractionpod/preReturn(atom/movable/holder)
-	// Double ensure we're loaded, this SHOULD be here by now but you never know
-	var/turf/picked_turf = pick(GLOB.syndieprisonwarp)
-	reverse_dropoff_coords = list(picked_turf.x, picked_turf.y, picked_turf.z)
-	return ..()
-
 /obj/structure/closet/supplypod/mouse_drop_receive(atom/movable/target_movable, mob/living/user, params)
 	if(!(SEND_SIGNAL(src, COMSIG_SUPPLYPOD_CLIMB_CHECK, target_movable, user) & COMPONENT_CLIMB))
 		return ..()
@@ -639,12 +600,6 @@
 /obj/structure/closet/supplypod/set_opened() //Proc exists here, as well as in any atom that can assume the role of a "holder" of a supplypod. Check the open_pod() proc for more details
 	opened = TRUE
 	set_density(FALSE)
-	update_appearance()
-	after_open(null, FALSE)
-
-/obj/structure/closet/supplypod/extractionpod/set_opened()
-	opened = TRUE
-	set_density(TRUE)
 	update_appearance()
 	after_open(null, FALSE)
 

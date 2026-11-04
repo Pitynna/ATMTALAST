@@ -28,10 +28,6 @@
 		user.balloon_alert(user, "в сосуде собрат!")
 		return FALSE
 
-	if(isdevilantag(target))
-		user.balloon_alert(user, "сосуд испорчен!")
-		return FALSE
-
 	if(target.has_brain_worms() || user.has_brain_worms())
 		user.balloon_alert(user, "в разуме паразит!")
 		return FALSE

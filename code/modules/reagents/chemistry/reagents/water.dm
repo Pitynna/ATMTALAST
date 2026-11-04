@@ -346,18 +346,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	if(current_cycle >= 30)		// 12 units, 60 seconds @ metabolism 0.4 units & tick rate 2.0 sec
 		M.AdjustStuttering(8 SECONDS, bound_lower = 0, bound_upper = 40 SECONDS)
 		M.Dizzy(10 SECONDS)
-		if(isclocker(M) && prob(5))
-			M.AdjustClockSlur(10 SECONDS)
-			M.say(pick("Виа Ра'вар!", "П'рес Ни", "Ню'нс те Рен", "Эт Деф'Фре", "РЕЛО'ЙЕ АР СЕЙЖ", "Рик'гуай'ни", "Уй'а Рад кос", "Уо Ром'тис!", "Руп'ру ге"))
-		if(iscultist(M))
-			for(var/datum/action/innate/cult/blood_magic/BM in M.actions)
-				for(var/datum/action/innate/cult/blood_spell/BS in BM.spells)
-					to_chat(M, span_cultlarge("Ваша кровавая магия ослабевает из-за святой воды в вашем организме!"))
-					qdel(BS)
-			if(prob(5))
-				M.AdjustCultSlur(10 SECONDS)//5 seems like a good number...
-				M.say(pick("Ав'те Нар'си","Па'лид Морс","ИНО ИНО ОРА АНА","САТ АНА!","Дайм'ниодиес Арс'иай Ле'ионес","Игкау'хом'нау ен Кеосу","Хо Дьяк'нос ту Ап'айрон","Ар'ж На'си","Диабо ас Во'исцум","Си гн'ам Ко'ну"))
-		else if(HAS_TRAIT(M, TRAIT_EVIL) && prob(25)) //Congratulations, your committment to evil has now made holy water a deadly poison to you!
+		if(HAS_TRAIT(M, TRAIT_EVIL) && prob(25)) //Congratulations, your committment to evil has now made holy water a deadly poison to you!
 			M.emote("scream")
 			update_flags |= M.adjustFireLoss(1.5, updating_health = FALSE)
 
@@ -372,32 +361,8 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 			M.SetConfused(0)
 			return
 
-		if(iscultist(M))
-			SSticker.mode.remove_cultist(M.mind)
-			holder.remove_reagent(id, volume)	// maybe this is a little too perfect and a max() cap on the statuses would be better??
-			M.SetJitter(0)
-			M.SetStuttering(0)
-			M.SetConfused(0)
-			if(ishuman(M)) // Unequip all cult clothing
-				var/mob/living/carbon/human/H = M
-				for(var/I in H.contents - (H.bodyparts | H.internal_organs)) // Satanic liver NYI
-					if(is_type_in_list(I, CULT_CLOTHING))
-						H.drop_item_ground(I)
-			return
-		else if(HAS_TRAIT(M, TRAIT_EVIL)) //At this much holy water, you're probably going to fucking melt. good luck
+		if(HAS_TRAIT(M, TRAIT_EVIL)) //At this much holy water, you're probably going to fucking melt. good luck
 			update_flags |= M.adjustFireLoss(5, updating_health = FALSE)
-
-		if(isclocker(M))
-			SSticker.mode.remove_clocker(M.mind)
-			holder.remove_reagent(id, volume)
-			M.SetJitter(0)
-			M.SetStuttering(0)
-			M.SetConfused(0)
-			if(ishuman(M)) // Unequip all cult clothing
-				var/mob/living/carbon/human/H = M
-				for(var/I in H.contents - (H.bodyparts | H.internal_organs))
-					if(is_type_in_list(I, CLOCK_CLOTHING))
-						H.drop_item_ground(I)
 
 	var/datum/antagonist/vampire/vamp = M.mind?.has_antag_datum(/datum/antagonist/vampire)
 	if(ishuman(M) && vamp && !vamp.get_ability(/datum/vampire_passive/full) && prob(80))
@@ -471,9 +436,6 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 /datum/reagent/holywater/reaction_turf(turf/simulated/T, volume)
 	if(!istype(T))
 		return
-	if(volume>=10)
-		for(var/obj/effect/rune/R in T)
-			qdel(R)
 	T.Bless()
 
 /datum/reagent/fuel/unholywater		//if you somehow managed to extract this from someone, dont splash it on yourself and have a smoke
@@ -485,23 +447,11 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 
 /datum/reagent/fuel/unholywater/on_mob_life(mob/living/M)
 	var/update_flags = STATUS_UPDATE_NONE
-	if(iscultist(M))
-		M.AdjustDrowsy(-10 SECONDS)
-		M.AdjustParalysis(-2 SECONDS)
-		M.AdjustStunned(-4 SECONDS)
-		M.AdjustWeakened(-4 SECONDS)
-		M.AdjustKnockdown(-4 SECONDS)
-		update_flags |= M.adjustToxLoss(-2, FALSE)
-		update_flags |= M.adjustFireLoss(-2, FALSE)
-		update_flags |= M.adjustOxyLoss(-2, FALSE)
-		update_flags |= M.adjustBruteLoss(-2, FALSE)
-	else
-		update_flags |= M.adjustBrainLoss(3, FALSE)
-		update_flags |= M.adjustToxLoss(1, FALSE)
-		update_flags |= M.adjustFireLoss(2, FALSE)
-		update_flags |= M.adjustOxyLoss(2, FALSE)
-		update_flags |= M.adjustBruteLoss(2, FALSE)
-		M.AdjustCultSlur(20 SECONDS) //CUASE WHY THE HELL NOT
+	update_flags |= M.adjustBrainLoss(3, FALSE)
+	update_flags |= M.adjustToxLoss(1, FALSE)
+	update_flags |= M.adjustFireLoss(2, FALSE)
+	update_flags |= M.adjustOxyLoss(2, FALSE)
+	update_flags |= M.adjustBruteLoss(2, FALSE)
 	return ..() | update_flags
 
 /datum/reagent/hellwater

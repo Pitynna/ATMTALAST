@@ -122,13 +122,7 @@
 		span_sinister("Слышишь тихий щелчок.")
 	)
 
-	var/datum/devilinfo/devil = new
-	messages_to_display = list()
-	messages_to_display += "Интересные факты о: [devil.truename]"
-	messages_to_display += devil.bane.law
-	messages_to_display += devil.ban.law
-	messages_to_display += devil.obligation.law
-	messages_to_display += devil.banish.law
+	messages_to_display = list("Fun facts about devils:", "Never sign a contract without reading the fine print.", "Always keep a spare pen handy.", "This toy is not legal advice.")
 
 	playsound(loc, 'sound/machines/click.ogg', 20, TRUE)
 	COOLDOWN_START(src, cooldown, 60 SECONDS)

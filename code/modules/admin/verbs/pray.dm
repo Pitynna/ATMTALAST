@@ -21,11 +21,6 @@ GAME_VERB(/mob/living, pray, VERB_PRAY, VERB_CATEGORY_IC)
 		cross = image('icons/obj/library.dmi',"bible_kingyellow")
 		font_color = "blue"
 		prayer_type = CHAPLAIN_PRAYER
-	else if(iscultist(src))
-		cross = image('icons/obj/cult.dmi',"tome")
-		font_color = "red"
-		prayer_type = CULT_PRAYER
-		deity = SSticker.cultdat.entity_name
 	else if(HAS_TRAIT(src, TRAIT_EVIL))
 		prayer_type = EVIL_PRAYER
 

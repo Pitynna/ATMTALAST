@@ -350,12 +350,6 @@
 /obj/effect/anomaly/zap_act(power, zap_flags)
 	collapse()
 
-/obj/effect/anomaly/ratvar_act()
-	collapse()
-
-/obj/effect/anomaly/narsie_act()
-	collapse()
-
 /obj/effect/anomaly/ex_act(severity, target)
 	return
 

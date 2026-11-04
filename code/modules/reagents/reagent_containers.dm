@@ -73,7 +73,7 @@
 	. = ..()
 	if(has_variable_transfer_amount)
 		if(possible_transfer_amounts.len)
-			. += span_notice("Объём перемещения содержимого — [amount_per_transfer_from_this] единиц[DECL_A_Y_0(amount_per_transfer_from_this)]. Используйте [EXAMINE_HINT("ЛКМ")] или [EXAMINE_HINT("ПКМ")] для изменения.")
+			. += span_notice("Объём перемещения содержимого — [amount_per_transfer_from_this] единиц[DECL_A_Y_0(amount_per_transfer_from_this)]. Используйте [EXAMINE_HINT("ЛКМ")] или [EXAMINE_HINT("Alt+ЛКМ")] для изменения.")
 		else if(possible_transfer_amounts.len)
 			. += span_notice("Объём перемещения содержимого — [amount_per_transfer_from_this] единиц[DECL_A_Y_0(amount_per_transfer_from_this)].")
 
@@ -358,3 +358,9 @@
 	SEND_SIGNAL(src, COMSIG_REAGENTS_CUP_TRANSFER_FROM, target)
 	target.update_appearance()
 	return ITEM_INTERACT_SUCCESS
+
+/obj/item/reagent_containers/click_alt(mob/user)
+	if(!has_variable_transfer_amount)
+		return NONE
+	select_transfer_amount(user)
+	return CLICK_ACTION_SUCCESS

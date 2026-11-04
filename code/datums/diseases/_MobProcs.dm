@@ -26,9 +26,6 @@
 /mob/proc/CanContractDisease(datum/disease/D)
 	return TRUE
 
-/mob/living/carbon/true_devil/CanContractDisease(datum/disease/D)
-	return FALSE
-
 /mob/living/carbon/human/CanContractDisease(datum/disease/D)
 	if(!D.ignore_immunity && HAS_TRAIT(src, TRAIT_VIRUSIMMUNE) || HAS_TRAIT(src, TRAIT_ABSOLUTE_VIRUSIMMUNE))
 		return FALSE

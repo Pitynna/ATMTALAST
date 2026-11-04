@@ -138,9 +138,6 @@
 /mob/living/carbon/human/shadow/Initialize(mapload)
 	. = ..(mapload, /datum/species/shadow)
 
-/mob/living/carbon/human/shadowling/Initialize(mapload)
-	. = ..(mapload, /datum/species/shadow/ling)
-
 /mob/living/carbon/human/golem/Initialize(mapload)
 	. = ..(mapload, /datum/species/golem)
 
@@ -195,9 +192,6 @@
 /mob/living/carbon/human/golem_tranquillite/Initialize(mapload)
 	. = ..(mapload, /datum/species/golem/tranquillite)
 
-/mob/living/carbon/human/golem_clockwork/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/clockwork)
-
 /mob/living/carbon/human/wryn/Initialize(mapload)
 	. = ..(mapload, /datum/species/wryn)
 
@@ -250,14 +244,6 @@
 		if(vamp)
 			status_tab_data[++status_tab_data.len] = list("Всего крови:", "[vamp.bloodtotal]")
 			status_tab_data[++status_tab_data.len] = list("Доступная кровь:", "[vamp.bloodusable]")
-
-		if(isclocker(mind.current))
-			status_tab_data[++status_tab_data.len] = list("Заряд:", "[GLOB.clockwork_power]")
-
-		var/datum/antagonist/ninja/ninja = mind?.has_antag_datum(/datum/antagonist/ninja)
-		if(ninja?.my_suit)
-			status_tab_data[++status_tab_data.len] = list("Заряд костюма:","[ninja.get_cell_charge()]")
-			status_tab_data[++status_tab_data.len] = list("Заряд рывков:","[ninja.get_dash_charge()]")
 
 	if(isspacepod(loc))
 		var/obj/spacepod/S = loc
@@ -1495,18 +1481,6 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 		step_towards(hand_item, src)
 		to_chat(src, span_warning("[singularity.declent_ru(NOMINATIVE)] вырывает [hand_item.declent_ru(ACCUSATIVE)] из вашей хватки!"))
 
-/mob/living/carbon/human/narsie_act(obj/god/narsie)
-	if(iswizard(src) && iscultist(src)) //Wizard cultists are immune to narsie because it would prematurely end the wiz round that's about to end by the automated shuttle call anyway
-		return
-	if(narsie)
-		narsie.soul_devoured++
-	return ..()
-
-/mob/living/carbon/human/ratvar_act(weak, obj/god/ratvar)
-	if(ratvar)
-		ratvar.soul_devoured++
-	return ..()
-
 /mob/living/carbon/human/proc/do_cpr(mob/living/carbon/human/H)
 	if(H == src)
 		balloon_alert(src, "слр на себе невозможна!")
@@ -1664,11 +1638,6 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 		return FALSE
 
 	// ninjas will not use default ranged weapons
-	var/datum/antagonist/ninja/ninja = mind?.has_antag_datum(/datum/antagonist/ninja)
-	if(ninja && !ninja.allow_guns && !check_gun.ninja_weapon)
-		to_chat(src, "[ninja.no_guns_message]")
-		return FALSE
-
 /mob/living/carbon/human/proc/change_icobase(new_icobase, new_deform, owner_sensitive)
 	for(var/obj/item/organ/external/O as anything in bodyparts)
 		O.change_organ_icobase(new_icobase, new_deform, owner_sensitive) //Change the icobase/deform of all our organs. If owner_sensitive is set, that means the proc won't mess with frankenstein limbs.
@@ -2146,7 +2115,4 @@ GAME_VERB_DESC(/mob/living/carbon/human, set_flavor, "Описание внеш�
 			[belt?.icon] [belt?.icon_state]"
 
 /mob/living/carbon/human/proc/get_unarmed_attack()
-	var/datum/antagonist/zombie/zombie = mind?.has_antag_datum(/datum/antagonist/zombie)
-	if(!istype(zombie))
-		return dna.species.unarmed
-	return zombie.claw_attack
+	return dna.species.unarmed

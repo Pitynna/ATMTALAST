@@ -119,13 +119,13 @@ GLOBAL_LIST_EMPTY(closets)
 			if(opened)
 				context[SCREENTIP_CONTEXT_RMB] = "Close"
 			else
-				context[SCREENTIP_CONTEXT_RMB] = !locked ? "Lock" : "Unlock"
+				context[SCREENTIP_CONTEXT_ALT_LMB] = !locked ? "Lock" : "Unlock"
 				if(locked)
 					context[SCREENTIP_CONTEXT_LMB] = "Unlock"
 		screentip_change = TRUE
 	if(secure && !opened && is_id_card(held_item))
 		context[SCREENTIP_CONTEXT_LMB] = !locked ? "Lock" : "Unlock"
-		context[SCREENTIP_CONTEXT_RMB] = !locked ? "Lock" : "Unlock"
+		context[SCREENTIP_CONTEXT_ALT_LMB] = !locked ? "Lock" : "Unlock"
 		screentip_change = TRUE
 
 	if(iswelder(held_item))
@@ -745,11 +745,15 @@ GAME_VERB_SRC(/obj/structure/closet, verb_toggleopen, view(1), "Toggle Open", VE
 	// Its okay to silently teleport mobs out of lockers, since the only thing affected is their contents list.
 	return
 
-/obj/structure/closet/click_alt(mob/living/simple_animal/hostile/gorilla/gorilla)
-	if(istype(gorilla))
+/obj/structure/closet/click_alt(mob/user)
+	if(istype(user, /mob/living/simple_animal/hostile/gorilla))
+		var/mob/living/simple_animal/hostile/gorilla/gorilla = user
 		gorilla.face_atom(src)
 		toggle()
 		gorilla.oogaooga()
+		return CLICK_ACTION_SUCCESS
+	if(secure && !opened && !broken)
+		togglelock(user)
 		return CLICK_ACTION_SUCCESS
 	return ..()
 

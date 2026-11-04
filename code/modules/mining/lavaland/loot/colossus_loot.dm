@@ -151,9 +151,9 @@
 	. = ..()
 	terrain_theme = pick("lavaland","winter","jungle","alien")
 	switch(terrain_theme)
-		if("lavaland")//Depressurizes the place... and free cult metal, I guess.
+		if("lavaland")//Volcanic terrain.
 			NewTerrainFloors = /turf/simulated/floor/plating/asteroid/basalt // Needs to be updated after turf update
-			NewTerrainWalls = /turf/simulated/wall/cult
+			NewTerrainWalls = /turf/simulated/wall/mineral
 			NewFlora = list(/mob/living/simple_animal/hostile/asteroid/goldgrub)
 			florachance = 1
 		if("winter") //Snow terrain is slow to move in and cold! Get the assistants to shovel your driveway.
@@ -244,7 +244,7 @@
 	if(..())
 		for(var/i in range(1, src))
 			if(isturf(i))
-				new /obj/effect/temp_visual/cult/sparks(i)
+				new /obj/effect/temp_visual/blood_magic_sparks(i)
 				continue
 			if(ishuman(i))
 				var/mob/living/carbon/human/H = i
@@ -355,8 +355,7 @@
 	activation_sound = 'sound/magic/timeparadox2.ogg'
 	var/list/banned_items_typecache = list(
 		/obj/item/storage, /obj/item/implant, /obj/item/implanter, /obj/item/disk/nuclear,
-		/obj/projectile, /obj/item/spellbook, /obj/item/clothing/mask/facehugger, /obj/item/contractor_uplink,
-		/obj/item/dice/d20/fate, /obj/item/gem, /obj/item/guardiancreator, /obj/item/dna_upgrader, /obj/item/mod,
+		/obj/item/dice/d20/fate, /obj/item/gem, /obj/item/guardiancreator, /obj/item/dna_upgrader,
 		/obj/item/autoimplanter, /obj/item/card/mining_point_card,
 	)
 

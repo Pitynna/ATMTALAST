@@ -211,23 +211,11 @@ GLOBAL_DATUM_INIT(multispin_words, /regex, regex("like a record baby|как пл
 			power_multiplier *= 0.5
 
 	//Cultists are closer to their gods and are more powerful, but they'll give themselves away
-	if(iscultist(owner))
-		power_multiplier *= 2
-
-	//Try to check if the speaker specified a name or a job to focus on
 	var/list/specific_listeners = list()
 	var/found_string = null
 
 	for(var/V in listeners)
 		var/mob/living/L = V
-		var/datum/antagonist/devil/devilinfo = L.mind?.has_antag_datum(/datum/antagonist/devil)
-
-		if(devilinfo && findtext(message, devilinfo?.info.truename))
-			var/start = findtext(message, devilinfo.info.truename)
-			listeners = list(L) // let's be honest you're never going to find two devils with the same name
-			power_multiplier *= 5 // if you're a devil and god himself addressed you, you fucked up
-			// Cut out the name so it doesn't trigger commands
-			message = copytext(message, 0, start)+copytext(message, start + length(devilinfo.info.truename), LAZYLEN(message) + 1)
 
 		if(findtext(message, L.real_name) == 1)
 			specific_listeners += L //focus on those with the specified name

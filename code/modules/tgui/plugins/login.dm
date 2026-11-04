@@ -151,9 +151,6 @@ GLOBAL_LIST(ui_logins)
 		if(LOGIN_TYPE_ROBOT)
 			if(!isrobot(usr))
 				return
-			if(iscogscarab(usr))
-				to_chat(usr, span_warning("Отказано в доступе."))
-				return
 			var/mob/living/silicon/robot/robot = usr
 			state.name = usr.name
 			state.rank = "[robot.modtype?.name] [robot.braintype]"

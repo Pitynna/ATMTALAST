@@ -27,12 +27,6 @@
 /turf/simulated/wall/indestructible/singularity_pull(atom/singularity, current_size)
 	return
 
-/turf/simulated/wall/indestructible/narsie_act()
-	return
-
-/turf/simulated/wall/indestructible/ratvar_act()
-	return
-
 /turf/simulated/wall/indestructible/burn_down()
 	return
 
@@ -272,14 +266,6 @@
 	smooth = SMOOTH_BITMASK
 	canSmoothWith = SMOOTH_GROUP_BANANIUM_WALLS
 	smoothing_groups = SMOOTH_GROUP_BANANIUM_WALLS
-
-/turf/simulated/wall/indestructible/cult
-	name = "runed metal wall"
-	desc = "A cold metal wall engraved with indecipherable symbols. Studying them causes your head to pound."
-	icon = 'icons/turf/walls/cult_wall.dmi'
-	icon_state = "cult"
-	canSmoothWith = null
-	smoothing_groups = null
 
 /turf/simulated/wall/indestructible/mineral_rock
 	name = "rock"

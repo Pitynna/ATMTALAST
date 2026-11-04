@@ -8,38 +8,38 @@
 "aW" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/magic/wand/fireball,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "be" = (
 /obj/machinery/door/window/westleft,
 /obj/item/twohanded/required/kirbyplants,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "bv" = (
 /turf/simulated/floor/carpet/red,
 /area/deathmatch)
 "cw" = (
 /obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "cJ" = (
 /obj/effect/light_emitter/thunderdome,
 /obj/item/bedsheet/wiz,
 /obj/structure/bed/pod,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "dN" = (
 /obj/machinery/vending/magivend,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "eq" = (
 /obj/effect/light_emitter/thunderdome,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ex" = (
 /obj/structure/table,
 /obj/item/gun/projectile/revolver/capgun,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "fq" = (
 /obj/effect/landmark/deathmatch_player_spawn,
@@ -65,7 +65,7 @@
 	pixel_y = 12;
 	pixel_x = 11
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "iE" = (
 /obj/effect/turf_decal/stripes/line,
@@ -74,7 +74,7 @@
 "jc" = (
 /obj/effect/decal/cleanable/dust,
 /obj/structure/filingcabinet,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ko" = (
 /obj/structure/mystery_box/tdome,
@@ -82,18 +82,18 @@
 /area/deathmatch)
 "ks" = (
 /obj/machinery/arcade/minesweeper,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ky" = (
 /obj/machinery/vending/snack,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "kH" = (
 /obj/effect/light_emitter/thunderdome,
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "kQ" = (
 /obj/structure/window/plasmareinforced{
@@ -111,7 +111,7 @@
 "mN" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "mU" = (
 /turf/simulated/floor/plasteel/freezer,
@@ -120,11 +120,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "nZ" = (
 /obj/structure/filingcabinet,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "oT" = (
 /obj/machinery/gibber/autogibber,
@@ -143,7 +143,7 @@
 "qI" = (
 /obj/structure/closet/crate,
 /obj/effect/decal/cleanable/dust,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "rm" = (
 /obj/structure/table/wood,
@@ -157,7 +157,7 @@
 /area/deathmatch)
 "rI" = (
 /obj/structure/mystery_box/tdome,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "rM" = (
 /obj/structure/railing/corner,
@@ -171,7 +171,7 @@
 	dir = 8
 	},
 /obj/effect/light_emitter/thunderdome,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "sW" = (
 /mob/living/simple_animal/pet/gondola,
@@ -184,7 +184,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "up" = (
 /obj/effect/light_emitter/thunderdome,
@@ -198,13 +198,13 @@
 /obj/structure/mystery_box/tdome,
 /obj/effect/decal/cleanable/dust,
 /obj/effect/decal/cleanable/dust,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "wt" = (
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ww" = (
 /obj/item/twohanded/required/kirbyplants,
@@ -212,12 +212,12 @@
 /area/deathmatch)
 "wK" = (
 /obj/effect/decal/cleanable/dust,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "wO" = (
 /obj/structure/rack,
 /obj/item/gun/magic/staff,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "xf" = (
 /turf/simulated/floor/plasteel{
@@ -232,7 +232,7 @@
 	dir = 8
 	},
 /obj/structure/mystery_box/tdome,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "xR" = (
 /obj/machinery/door/airlock/wood/glass,
@@ -240,7 +240,7 @@
 /area/deathmatch)
 "yg" = (
 /obj/structure/dresser,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "yl" = (
 /turf/simulated/floor/grass,
@@ -250,7 +250,7 @@
 /turf/simulated/floor/carpet/red,
 /area/deathmatch)
 "yV" = (
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "zt" = (
 /turf/simulated/floor/carpet/purple,
@@ -263,18 +263,18 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Do" = (
 /obj/structure/railing,
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Dx" = (
 /obj/machinery/vending/cigarette,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ER" = (
 /obj/effect/light_emitter/thunderdome,
@@ -282,13 +282,13 @@
 /area/deathmatch)
 "EZ" = (
 /obj/machinery/computer,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Fw" = (
 /obj/effect/decal/cleanable/dust,
 /obj/structure/closet/coffin,
 /obj/effect/decal/cleanable/cobweb2,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "FR" = (
 /turf/simulated/floor/plasteel,
@@ -311,7 +311,7 @@
 "JO" = (
 /obj/effect/light_emitter/thunderdome,
 /obj/effect/decal/cleanable/dust,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Km" = (
 /obj/structure/shuttle/engine/heater,
@@ -325,11 +325,11 @@
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "KB" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "KK" = (
 /obj/machinery/cooker/foodgrill,
@@ -346,11 +346,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "LH" = (
 /obj/structure/closet/crate,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "LJ" = (
 /obj/structure/shuttle/engine/heater,
@@ -386,7 +386,7 @@
 /area/deathmatch)
 "NP" = (
 /obj/structure/closet/cabinet,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Oz" = (
 /obj/item/target,
@@ -395,11 +395,11 @@
 /area/deathmatch)
 "OB" = (
 /obj/structure/bookcase/random,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "PW" = (
 /obj/effect/landmark/deathmatch_player_spawn,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Qj" = (
 /obj/structure/toilet,
@@ -407,7 +407,7 @@
 /area/deathmatch)
 "Ra" = (
 /obj/item/twohanded/required/kirbyplants,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Rc" = (
 /turf/simulated/floor/lava,
@@ -415,11 +415,10 @@
 "Rr" = (
 /obj/effect/decal/cleanable/dust,
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "RM" = (
-/obj/structure/cult/archives,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Sr" = (
 /obj/structure/railing{
@@ -428,11 +427,11 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "SX" = (
 /obj/machinery/door/window/westright,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Td" = (
 /obj/machinery/computer,
@@ -444,7 +443,7 @@
 /area/deathmatch)
 "Tn" = (
 /obj/structure/chair/wood,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "TJ" = (
 /obj/structure/table,
@@ -457,13 +456,13 @@
 	pixel_x = 12;
 	pixel_y = -5
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Us" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "UD" = (
 /obj/structure/sink/directional/south,
@@ -496,7 +495,7 @@
 /area/deathmatch)
 "Vm" = (
 /obj/structure/table/wood/poker,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "VK" = (
 /obj/structure/sink/directional/west,
@@ -506,7 +505,7 @@
 /area/deathmatch)
 "VX" = (
 /obj/structure/table/wood,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Wl" = (
 /obj/structure/flora/ausbushes/grassybush,
@@ -518,17 +517,17 @@
 /area/deathmatch)
 "XO" = (
 /obj/machinery/door/airlock/wood/glass,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "YG" = (
 /obj/structure/mirror{
 	pixel_x = 28
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Zl" = (
 /obj/structure/closet/crate/trashcart,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Zm" = (
 /obj/effect/light_emitter/thunderdome,

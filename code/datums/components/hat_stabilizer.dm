@@ -32,7 +32,6 @@
 	RegisterSignal(parent, COMSIG_CLICK_ALT, PROC_REF(on_alt_click))
 
 	// Overlays
-	RegisterSignal(parent, COMSIG_MODULE_GENERATE_WORN_OVERLAY, PROC_REF(get_worn_overlays))
 	RegisterSignal(parent, COMSIG_ITEM_GET_SEPARATE_WORN_OVERLAYS, PROC_REF(get_separate_worn_overlays))
 
 	RegisterSignal(parent, COMSIG_QDELETING, PROC_REF(on_qdel))
@@ -53,7 +52,7 @@
 	if(attached_hat)
 		remove_hat()
 	UnregisterSignal(parent, list(COMSIG_ATOM_EXAMINE, COMSIG_ATOM_ATTACKBY,
-	COMSIG_CLICK_ALT, COMSIG_MODULE_GENERATE_WORN_OVERLAY,
+	COMSIG_CLICK_ALT,
 	COMSIG_ITEM_GET_SEPARATE_WORN_OVERLAYS, COMSIG_ATOM_UPDATE_OVERLAYS, COMSIG_QDELETING,
 	COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED))
 

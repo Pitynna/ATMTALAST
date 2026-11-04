@@ -42,7 +42,7 @@
 
 /obj/machinery/computer/cryopod/Initialize(mapload)
 	. = ..()
-	for(var/T in GLOB.potential_theft_objectives + GLOB.potential_theft_objectives_hard + GLOB.potential_theft_objectives_medium /*+ GLOB.potential_theft_objectives_collect*/)
+	for(var/T in GLOB.potential_theft_objectives)
 		theft_cache += new T
 
 /obj/machinery/computer/cryopod/attack_ai(mob/user)
@@ -245,7 +245,6 @@
 		/obj/item/stamp,
 		/obj/item/sensor_device/advanced,
 		/obj/item/qm_quest_tablet,
-		/obj/item/mod/control,
 		/obj/item/autopsy_scanner,
 		/obj/item/storage/belt/rapier,
 	)
@@ -381,11 +380,6 @@
 			QDEL_NULL(P.id)
 			qdel(P)
 			continue
-		if(ismodstorage(I))
-			var/obj/item/storage/backpack/modstorage/our_storage = I
-			our_storage.forceMove(our_storage.source)
-			continue
-
 		var/preserve = should_preserve_item(I)
 		if(preserve == CRYO_DESTROY)
 			qdel(I)
@@ -399,11 +393,6 @@
 		SSticker.score.save_antag_info(occupant.mind)
 
 	// Find a new sacrifice target if needed, if unable allow summoning
-	if(is_sacrifice_target(occupant.mind))
-		if(!SSticker.mode.cult_objs.find_new_sacrifice_target())
-			SSticker.mode.cult_objs.ready_to_summon()
-
-	// Update any existing objectives involving this mob.
 	if(occupant.mind)
 		for(var/datum/objective/O in GLOB.all_objectives)
 			if(O.target != occupant.mind)

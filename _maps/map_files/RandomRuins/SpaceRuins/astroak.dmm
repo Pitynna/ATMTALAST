@@ -5,17 +5,14 @@
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "aP" = (
-/obj/structure/cult/archives,
-/obj/item/clothing/suit/space/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "bV" = (
 /obj/structure/flora/tree/dead,
 /turf/simulated/floor/grass,
 /area/ruin/unpowered)
 "cb" = (
-/obj/structure/cult/pylon,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "cD" = (
 /obj/effect/turf_decal{
@@ -104,8 +101,7 @@
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "gE" = (
-/obj/machinery/shield/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "gJ" = (
 /obj/effect/turf_decal{
@@ -150,7 +146,7 @@
 /area/ruin/unpowered/no_grav)
 "lX" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "mw" = (
 /turf/simulated/mineral/random/high_chance,
@@ -184,7 +180,7 @@
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "nL" = (
-/turf/simulated/wall/cult_fake,
+/turf/simulated/wall,
 /area/ruin/unpowered)
 "nO" = (
 /mob/living/simple_animal/hostile/carp/mcarp,
@@ -216,12 +212,10 @@
 /turf/simulated/floor/grass,
 /area/ruin/unpowered)
 "qF" = (
-/obj/structure/cult/archives,
-/obj/item/clothing/head/helmet/space/cult,
 /obj/structure/sign/poster/contraband/very_robust{
 	pixel_y = 32
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "qO" = (
 /obj/structure/statue/carp_mini{
@@ -267,7 +261,7 @@
 /area/ruin/unpowered)
 "tR" = (
 /obj/effect/decal/cleanable/blood/tracks,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "uI" = (
 /obj/structure/sign/poster/official/religious{
@@ -312,8 +306,7 @@
 /turf/template_noop,
 /area/template_noop)
 "zb" = (
-/obj/structure/cult/forge,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "zg" = (
 /obj/structure/sign/poster/contraband/wanted{
@@ -350,8 +343,7 @@
 /turf/simulated/floor/grass,
 /area/ruin/unpowered)
 "zR" = (
-/obj/item/melee/cultblade/dagger,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Aa" = (
 /obj/structure/bed,
@@ -360,20 +352,7 @@
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "Af" = (
-/mob/living/simple_animal/hostile/illusion/cult{
-	deathmessage = "disappears into the air with a cry of agony";
-	desc = "The deceived soul";
-	health = 200;
-	maxHealth = 200;
-	name = "The soul of the cultist";
-	icon = 'icons/mob/mob.dmi';
-	icon_living = "shade";
-	icon_state = "shade";
-	icon_dead = "shade_dead";
-	melee_damage_lower = 10;
-	melee_damage_upper = 25
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Av" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -383,9 +362,7 @@
 /turf/simulated/floor/grass,
 /area/ruin/unpowered)
 "Ay" = (
-/obj/structure/cult/altar,
-/obj/item/tome,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Be" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -421,8 +398,7 @@
 /turf/simulated/floor/wood/fancy/birch/airless,
 /area/ruin/unpowered/no_grav)
 "DC" = (
-/obj/item/restraints/legcuffs/bola/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "DN" = (
 /obj/item/fluff/rsik_katana,
@@ -532,10 +508,10 @@
 /area/ruin/unpowered)
 "HE" = (
 /obj/item/flashlight/lantern/on,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "HL" = (
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "HP" = (
 /obj/structure/sacrificealtar,
@@ -596,13 +572,7 @@
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "MC" = (
-/obj/effect/rune{
-	allow_excess_invokers = 1;
-	cultist_desc = "an ancient rune that will absorb the power of believers.";
-	cultist_name = "Sacrifice";
-	scribe_damage = 30
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "MH" = (
 /obj/item/stack/cable_coil{
@@ -697,7 +667,7 @@
 /area/ruin/unpowered)
 "PS" = (
 /obj/structure/closet/crate/trashcart/gibs,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Qw" = (
 /obj/structure/closet,
@@ -732,9 +702,8 @@
 /turf/simulated/floor/plating/asteroid,
 /area/ruin/unpowered)
 "Rm" = (
-/obj/structure/cult/altar,
 /obj/item/book_of_babel,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "RO" = (
 /obj/item/stack/sheet/wood{
@@ -779,16 +748,14 @@
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "Uk" = (
-/obj/item/melee/cultblade,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Uy" = (
 /turf/simulated/floor/grass,
 /area/ruin/unpowered)
 "UE" = (
 /obj/structure/closet,
-/obj/item/stack/sheet/runed_metal_fake/fifty,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Vp" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -822,7 +789,6 @@
 /turf/simulated/floor/grass,
 /area/ruin/unpowered)
 "Wl" = (
-/obj/item/reagent_containers/cup/glass/bottle/unholywater,
 /turf/simulated/floor/wood/fancy/birch,
 /area/ruin/unpowered)
 "Yl" = (

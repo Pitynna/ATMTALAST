@@ -13,12 +13,6 @@
 /turf/simulated/floor/indestructible/singularity_pull(atom/singularity, current_size)
 	return
 
-/turf/simulated/floor/indestructible/narsie_act()
-	return
-
-/turf/simulated/floor/indestructible/ratvar_act()
-	return
-
 /turf/simulated/floor/indestructible/burn_down()
 	return
 

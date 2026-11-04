@@ -1641,9 +1641,6 @@
 /area/derelict/engineer_area)
 "ey" = (
 /obj/structure/cable,
-/obj/machinery/atmospherics/unary/tank/air/ninja{
-	volume = 30000
-	},
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "caution"

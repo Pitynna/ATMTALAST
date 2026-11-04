@@ -353,7 +353,8 @@
 	var/obj/item/clothing/suit/space/hardsuit/syndi/linkedsuit = null
 	actions_types = list(/datum/action/item_action/toggle_helmet_mode)
 	visor_flags_inv = HIDEMASK|HIDEGLASSES|HIDENAME|HIDETAIL
-	visor_flags= STOPSPRESSUREDAMAGE
+	visor_flags = STOPSPRESSUREDAMAGE
+	var/combat_rad = 50
 	var/combat_slow = 0
 	var/eva_slow = 1
 

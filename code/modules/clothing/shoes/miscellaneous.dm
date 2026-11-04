@@ -286,19 +286,6 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 	heat_protection = FEET|LEGS
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
 
-/obj/item/clothing/shoes/cult
-	name = "boots"
-	desc = "A pair of boots usually worn by cultists."
-	icon_state = "cult"
-	item_state = "cult"
-	item_color = "cult"
-
-	cold_protection = FEET
-	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
-	heat_protection = FEET
-	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
-	magical = TRUE
-
 /obj/item/clothing/shoes/cyborg
 	name = "cyborg boots"
 	desc = "Shoes for a cyborg costume"

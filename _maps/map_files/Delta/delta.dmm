@@ -3868,7 +3868,6 @@
 	},
 /area/station/service/chapel)
 "aRa" = (
-/obj/structure/cult/archives,
 /turf/simulated/floor/plating,
 /area/station/maintenance/library)
 "aRf" = (
@@ -27903,12 +27902,6 @@
 /area/station/medical/medbay)
 "fZG" = (
 /obj/structure/safe/floor,
-/obj/item/melee/cultblade,
-/obj/item/restraints/legcuffs/bola/cult,
-/obj/item/whetstone/cult,
-/obj/item/stack/sheet/runed_metal{
-	amount = 50
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -34893,7 +34886,6 @@
 /obj/machinery/light_construct/small{
 	dir = 8
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -37724,7 +37716,6 @@
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "yellowcorner"
@@ -48410,7 +48401,6 @@
 	},
 /area/station/service/theatre)
 "kpy" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/effect/decal/cleanable/crayon{
 	color = "#cc3300"
 	},
@@ -50160,7 +50150,6 @@
 /turf/simulated/floor/plasteel,
 /area/station/cargo/miningdock)
 "kGU" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/starboard)
 "kGV" = (
@@ -52500,7 +52489,6 @@
 	},
 /area/station/cargo/storage)
 "lfN" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel,
 /area/station/commons/fitness)
 "lfW" = (
@@ -55122,7 +55110,6 @@
 	},
 /area/station/engineering/transit_tube)
 "lHw" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/station/maintenance/perma)
@@ -64023,7 +64010,6 @@
 "nyz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random_spawners/rodent,
-/obj/effect/landmark/spawner/swarmer,
 /turf/simulated/floor/plating,
 /area/station/maintenance/bar)
 "nyL" = (
@@ -68179,7 +68165,6 @@
 /area/station/command/vault)
 "osd" = (
 /obj/structure/chair/sofa/right,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/asmaint4)
 "osf" = (
@@ -68958,7 +68943,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
 "oBr" = (
@@ -72762,7 +72746,6 @@
 /obj/structure/window/plasmareinforced{
 	dir = 1
 	},
-/obj/effect/landmark/spawner/swarmer,
 /obj/structure/cable/layer1,
 /turf/simulated/floor/plating,
 /area/station/science/sm_chamber)
@@ -83673,7 +83656,6 @@
 	},
 /area/station/security/customs)
 "rzp" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -85197,7 +85179,6 @@
 	},
 /area/station/medical/virology/lab)
 "rNq" = (
-/obj/structure/cult/archives,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -86346,7 +86327,6 @@
 	},
 /area/station/hallway/primary/fore)
 "rWR" = (
-/obj/structure/cult/archives,
 /obj/machinery/newscaster/directional/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -87440,7 +87420,6 @@
 /area/station/engineering/break_room)
 "sfi" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -93946,7 +93925,6 @@
 	},
 /area/station/maintenance/kitchen)
 "tww" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken7"
 	},
@@ -100180,7 +100158,6 @@
 /obj/effect/decal/cleanable/blood/writing{
 	dir = 8
 	},
-/obj/effect/landmark/spawner/swarmer,
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
@@ -103019,7 +102996,6 @@
 /obj/machinery/power/apc/directional/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/carpet/green,
 /area/station/commons/mrchangs)
 "vrF" = (
@@ -111146,7 +111122,6 @@
 /area/station/hallway/secondary/entry)
 "xbY" = (
 /obj/structure/chair/office/dark,
-/obj/effect/landmark/spawner/swarmer,
 /turf/simulated/floor/plating,
 /area/station/maintenance/library)
 "xbZ" = (
@@ -114132,22 +114107,6 @@
 "xHv" = (
 /obj/item/radio/intercom/directional/south,
 /obj/structure/table/reinforced,
-/obj/item/mod/module/quick_cuff{
-	pixel_x = -8;
-	pixel_y = -6
-	},
-/obj/item/mod/module/quick_cuff{
-	pixel_x = -8;
-	pixel_y = 6
-	},
-/obj/item/mod/module/pepper_shoulders{
-	pixel_x = 9;
-	pixel_y = 6
-	},
-/obj/item/mod/module/hat_stabilizer{
-	pixel_x = 8;
-	pixel_y = -6
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkred"
 	},

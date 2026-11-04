@@ -89,14 +89,6 @@
 	if(flipped)
 		clear_smooth_overlays()
 
-/obj/structure/table/narsie_act()
-	new /obj/structure/table/wood(loc)
-	qdel(src)
-
-/obj/structure/table/ratvar_act()
-	new /obj/structure/table/reinforced/brass(loc)
-	qdel(src)
-
 ///Adds the element used to make the object climbable, and also the one that shift the mob buckled to it up.
 /obj/structure/table/proc/make_climbable()
 	AddElement(/datum/element/climb_walkable)
@@ -555,11 +547,6 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 				debris -= AM
 	qdel(src)
 
-/obj/structure/table/glass/narsie_act()
-	color = NARSIE_WINDOW_COLOUR
-	for(var/obj/item/shard/S in debris)
-		S.color = NARSIE_WINDOW_COLOUR
-
 /*
  * MARK: Wooden tables
  */
@@ -581,10 +568,6 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 /obj/structure/table/wood/add_debris_element()
 	generate_debris_handler(DEBRIS_WOOD, -40, 5)
 
-/obj/structure/table/wood/narsie_act(total_override = TRUE)
-	if(!total_override)
-		..()
-
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
 	name = "gambling table"
 	desc = "A seedy table for seedy dealings in seedy places."
@@ -592,9 +575,6 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 	icon_state = "poker_table"
 	base_icon_state = "poker_table"
 	buildstack = /obj/item/stack/tile/carpet
-
-/obj/structure/table/wood/poker/narsie_act()
-	..(FALSE)
 
 /*
  * MARK: Fancy Tables
@@ -701,39 +681,6 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 		to_chat(user, span_notice("Вы [deconstruction_ready ? "усилили" : "ослабили"] стол."))
 		deconstruction_ready = !deconstruction_ready
 
-/obj/structure/table/reinforced/brass
-	name = "brass table"
-	desc = "A solid, slightly beveled brass table."
-	icon = 'icons/obj/smooth_structures/brass_table.dmi'
-	icon_state = "brass_table-0"
-	base_icon_state = "brass_table"
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	frame = /obj/structure/table_frame/brass
-	framestack = /obj/item/stack/sheet/brass
-	buildstack = /obj/item/stack/sheet/brass
-	framestackamount = 1
-	canSmoothWith = SMOOTH_GROUP_BRONZE_TABLES
-	smoothing_groups = SMOOTH_GROUP_BRONZE_TABLES
-
-/obj/structure/table/reinforced/brass/fake
-	desc = "A solid, slightly beveled and totally not magic brass table."
-	frame = /obj/structure/table_frame/brass/fake
-	framestack = /obj/item/stack/sheet/brass_fake
-	buildstack = /obj/item/stack/sheet/brass_fake
-
-/obj/structure/table/reinforced/brass/narsie_act()
-	take_damage(rand(15, 45), BRUTE)
-	if(src) //do we still exist?
-		var/previouscolor = color
-		color = COLOR_CULT_RED
-		animate(src, color = previouscolor, time = 8)
-
-/obj/structure/table/reinforced/brass/ratvar_act()
-	update_integrity(max_integrity)
-
-/obj/structure/table/reinforced/brass/fake/ratvar_act()
-	return
-
 /obj/structure/table/tray
 	name = "surgical tray"
 	desc = "A small metal tray with wheels."
@@ -803,9 +750,3 @@ GAME_VERB_SRC(/obj/structure/table, do_flip, oview(1), "Flip/Unflip table", VERB
 
 /obj/structure/table/tray/deconstruction_hints(mob/user)
 	return span_notice("Конструкция скреплена <b>винтами</b> и <b>болтами</b>.")
-
-/obj/structure/table/tray/narsie_act()
-	return
-
-/obj/structure/table/tray/ratvar_act()
-	return

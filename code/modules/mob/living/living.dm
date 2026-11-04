@@ -765,12 +765,6 @@
 		QDEL_LIST(reagents.addiction_list)
 		reagents.addiction_threshold_accumulated.Cut()
 
-	if(iscultist(src))
-		if(SSticker.mode.cult_risen)
-			SSticker.mode.rise(src)
-		if(SSticker.mode.cult_ascendant)
-			SSticker.mode.ascend(src)
-
 	QDEL_LIST(processing_patches)
 	..()
 
@@ -1339,42 +1333,6 @@ GAME_VERB(/mob/living, resist, "Сопротивляться", VERB_CATEGORY_IC)
 		throw_at(singularity, 14, 3, src, TRUE)
 	else if(!mob_negates_gravity())
 		step_towards(src, singularity)
-
-/mob/living/narsie_act()
-	if(client)
-		make_new_construct(/mob/living/simple_animal/hostile/construct/harvester, src, cult_override = TRUE)
-	spawn_dust()
-	gib()
-
-/mob/living/ratvar_act(weak = FALSE)
-	if(weak)
-		return //It's too weak to break a flesh!
-	if(client)
-		switch(rand(1,3))
-			if(1)
-				var/mob/living/simple_animal/hostile/clockwork/marauder/cog = new (get_turf(src))
-				if(mind)
-					SSticker.mode.add_clocker(mind)
-					mind.transfer_to(cog)
-				else
-					cog.possess_by_player(client.key)
-			if(2)
-				var/mob/living/silicon/robot/cogscarab/cog = new (get_turf(src))
-				if(mind)
-					SSticker.mode.add_clocker(mind)
-					mind.transfer_to(cog)
-				else
-					cog.possess_by_player(client.key)
-			if(3)
-				var/mob/living/silicon/robot/cog = new (get_turf(src))
-				if(mind)
-					SSticker.mode.add_clocker(mind)
-					mind.transfer_to(cog)
-				else
-					cog.possess_by_player(client.key)
-				cog.ratvar_act()
-	spawn_dust()
-	gib()
 
 /mob/living/do_attack_animation(atom/A, visual_effect_icon, obj/item/used_item, no_effect)
 	if(!used_item)

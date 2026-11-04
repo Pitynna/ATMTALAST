@@ -485,18 +485,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 			custom_emote(EMOTE_VISIBLE, pick("танцу%(ет,ют)% на месте.", "гоня%(ет,ют)%ся за своим хвостом."))
 			spin(20, 1)
 
-/mob/living/simple_animal/pet/dog/corgi/Ian/narsie_act()
-	playsound(src, 'sound/misc/demon_dies.ogg', 75, TRUE)
-	var/mob/living/simple_animal/pet/dog/corgi/narsie/N = new(loc)
-	N.setDir(dir)
-	gib()
-
-/mob/living/simple_animal/pet/dog/corgi/Ian/ratvar_act()
-	playsound(src, 'sound/misc/demon_dies.ogg', 75, TRUE)
-	var/mob/living/simple_animal/pet/dog/corgi/ratvar/N = new(loc)
-	N.setDir(dir)
-	gib()
-
 /mob/living/simple_animal/pet/dog/corgi/narsie
 	name = "Nars-Ian"
 	desc = "Ia! Ia!"
@@ -523,7 +511,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 				span_cult(span_bigbold("DELICIOUS SOULS"))
 			)
 			playsound(src, 'sound/misc/demon_attack1.ogg', 75, TRUE)
-			narsie_act()
 			if(P.mind)
 				if(P.mind.hasSoul)
 					P.mind.hasSoul = FALSE //Nars-Ian ate your soul; you don't have one anymore
@@ -539,9 +526,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	speak_emote = list("рычит", "зловеще лает")
 	emote_hear = list("лает эхом", "одержимо гавкает", "жутко тявкает", "непонятно бормочет")
 	emote_see = list("общается с Безымянным", "пытается учуять души", "трясётся")
-
-/mob/living/simple_animal/pet/dog/corgi/narsie/narsie_act()
-	adjustBruteLoss(-maxHealth)
 
 /mob/living/simple_animal/pet/dog/corgi/ratvar
 	name = "Cli-k"
@@ -563,9 +547,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	speak_emote = list("рычит", "зловеще лает")
 	emote_hear = list("лает эхом", "одержимо гавкает", "авторитетно тявкает", "непонятно бормочет")
 	emote_see = list("общается с Безымянным", "пытается учуять души заблудших", "трясётся")
-
-/mob/living/simple_animal/pet/dog/corgi/ratvar/ratvar_act()
-	adjustBruteLoss(-maxHealth)
 
 /mob/living/simple_animal/pet/dog/corgi/puppy
 	name = "corgi puppy"

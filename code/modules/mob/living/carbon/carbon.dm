@@ -5,7 +5,7 @@
 	ADD_TRAIT(src, TRAIT_CAN_HOLD_ITEMS, INNATE_TRAIT) // Carbons are assumed to be innately capable of having arms, we check their arms count instead
 
 /mob/living/carbon/Destroy()
-	// We need to delete the back slot first, for modsuits. Otherwise, we have issues.
+	// Remove the backpack before the remaining equipment.
 	if(back)
 		var/obj/item = back
 		temporarily_remove_item_from_inventory(item)

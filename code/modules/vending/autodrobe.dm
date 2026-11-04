@@ -171,7 +171,6 @@
 				/obj/item/clothing/suit/tailcoat = 10,
 				/obj/item/clothing/suit/draculacoat = 10,
 				/obj/item/clothing/suit/hooded/ghostfacesuit = 10,
-				/obj/item/clothing/suit/hooded/ghostfacesuit/devil = 10,
 				/obj/item/clothing/suit/red_jacket = 10,
 			),
 		),

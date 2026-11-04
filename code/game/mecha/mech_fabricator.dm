@@ -82,8 +82,6 @@
 		MECH_FAB_CATEGORY_CYBORG_REPAIR,
 		MECH_FAB_CATEGORY_CYBORG_EQUIPMENT,
 		MECH_FAB_CATEGORY_IPC,
-		MECH_FAB_CATEGORY_MODSUIT_CONSTRUCTION,
-		MECH_FAB_CATEGORY_MODSUIT_MODULES,
 		MECH_FAB_CATEGORY_EXOSUIT_EQUIPMENT,
 		MECH_FAB_CATEGORY_EXOSUIT_PAINTKITS,
 		MECH_FAB_CATEGORY_RIPLEY,
@@ -232,7 +230,7 @@
 		var/obj/item/real_item = new_item
 		real_item.materials = final_cost
 		if(D.locked)
-			var/obj/item/storage/lockbox/research/modsuit/lockbox = new(get_step(src, dir))
+			var/obj/item/storage/lockbox/research/large/lockbox = new(get_step(src, dir))
 			real_item.forceMove(lockbox)
 			lockbox.name += " ([real_item.name])"
 			var/real_item_ru_name = DECLENT_RU_CAP(real_item, NOMINATIVE)

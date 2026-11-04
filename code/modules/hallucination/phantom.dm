@@ -145,10 +145,6 @@
 	image_file = 'icons/obj/storage/boxes.dmi'
 	image_state = "toolbox_green_frenzy"
 
-/datum/hallucination/phantom/object/contractor_baton
-	image_file = 'icons/obj/weapons/baton.dmi'
-	image_state = "contractor_baton_on"
-
 /datum/hallucination/phantom/object/syndicate_grenade
 	image_file = 'icons/obj/weapons/grenade.dmi'
 	image_state = "syndicate_active"
@@ -156,7 +152,3 @@
 /datum/hallucination/phantom/object/rsh12
 	image_file = 'icons/obj/weapons/projectile.dmi'
 	image_state = "rsh-12"
-
-/datum/hallucination/phantom/object/pinonmedium_contractor
-	image_file = 'icons/obj/device.dmi'
-	image_state = "pinonmedium_contractor"

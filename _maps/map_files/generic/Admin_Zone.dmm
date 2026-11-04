@@ -567,9 +567,6 @@
 /obj/item/abductor/silencer,
 /obj/item/abductor/mind_device,
 /obj/item/abductor/gizmo,
-/obj/structure/ninjatele{
-	pixel_x = -28
-	},
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "fL" = (
@@ -1162,7 +1159,6 @@
 /area/holodeck/source_knightarena)
 "ne" = (
 /obj/structure/table/wood,
-/obj/item/whetstone/cult,
 /turf/simulated/floor/plasteel{
 	icon_state = "hierophant1"
 	},
@@ -3757,17 +3753,6 @@
 /area/centcom/admin_room)
 "TF" = (
 /obj/structure/table/wood,
-/obj/item/clothing/head/helmet/space/space_ninja,
-/obj/item/clothing/shoes/space_ninja,
-/obj/item/clothing/mask/gas/space_ninja,
-/obj/item/clothing/gloves/space_ninja,
-/obj/item/clothing/suit/space/space_ninja,
-/obj/item/clothing/under/ninja,
-/obj/item/storage/backpack/ninja,
-/obj/item/melee/energy_katana,
-/obj/item/melee/energy_katana/borg{
-	pixel_y = 6
-	},
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "TM" = (

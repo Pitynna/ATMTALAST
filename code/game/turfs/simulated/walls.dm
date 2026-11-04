@@ -409,10 +409,6 @@
 		user.changeNext_move(I.attack_speed)
 		return .|ATTACK_CHAIN_BLOCKED_ALL
 
-	if(try_reform(I, user, params))
-		user.changeNext_move(I.attack_speed)
-		return .|ATTACK_CHAIN_BLOCKED_ALL
-
 /turf/simulated/wall/welder_act(mob/user, obj/item/I)
 	. = TRUE
 	if(reagents?.get_reagent_amount("thermite") && I.use_tool(src, user, volume = I.tool_volume))
@@ -548,15 +544,6 @@
 		return TRUE
 	return FALSE
 
-/turf/simulated/wall/proc/try_reform(obj/item/I, mob/user, params)
-	if(I.enchant_type == REFORM_SPELL && (src.type == /turf/simulated/wall)) //fuck
-		I.deplete_spell()
-		ChangeTurf(/turf/simulated/floor/plating)
-		new /obj/structure/falsewall/clockwork(src) //special falsewalls
-		playsound(src, 'sound/magic/cult_spell.ogg', 100, TRUE)
-		return TRUE
-	return FALSE
-
 /turf/simulated/wall/singularity_pull(atom/singularity, current_size)
 	..()
 	wall_singularity_pull(current_size)
@@ -569,14 +556,6 @@
 	if(current_size == STAGE_FOUR)
 		if(prob(30))
 			dismantle_wall()
-
-/turf/simulated/wall/narsie_act()
-	if(prob(20))
-		ChangeTurf(/turf/simulated/wall/cult)
-
-/turf/simulated/wall/ratvar_act()
-	if(prob(20))
-		ChangeTurf(/turf/simulated/wall/clockwork)
 
 /turf/simulated/wall/acid_act(acidpwr, acid_volume)
 	if(explosion_block >= 2)

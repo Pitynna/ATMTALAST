@@ -32,7 +32,6 @@
 ##MISC
 #_maps/map_files/RandomRuins/LavaRuins/lavaland_surface_animal_hospital.dmm
 #_maps/map_files/RandomRuins/LavaRuins/lavaland_surface_cube.dmm
-#_maps/map_files/RandomRuins/LavaRuins/lavaland_surface_cultaltar.dmm
 #_maps/map_files/RandomRuins/LavaRuins/lavaland_surface_dead_ratvar.dmm
 #_maps/map_files/RandomRuins/LavaRuins/lavaland_surface_fountain_hell.dmm
 #_maps/map_files/RandomRuins/LavaRuins/lavaland_surface_pizza_party.dmm

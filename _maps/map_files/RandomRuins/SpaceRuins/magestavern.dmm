@@ -486,8 +486,6 @@
 /turf/simulated/floor/carpet,
 /area/ruin/unpowered)
 "vM" = (
-/obj/structure/cult/archives,
-/obj/item/book/codex_gigas,
 /obj/item/necromantic_stone,
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)

@@ -2344,7 +2344,6 @@
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors/necropolis)
 "gS" = (
-/obj/structure/clockwork/wall_gear,
 /turf/simulated/wall/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "hg" = (
@@ -2406,7 +2405,7 @@
 	dir = 8
 	},
 /obj/structure/stone_tile,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	move_resist = 45000
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -2500,7 +2499,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/wrench/brass,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
@@ -2548,7 +2547,7 @@
 "ii" = (
 /obj/structure/stone_tile/slab,
 /obj/item/storage/toolbox/brass,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "ij" = (
@@ -2885,7 +2884,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/storage/toolbox/brass,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
@@ -2959,7 +2958,7 @@
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors/necropolis)
 "ki" = (
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 4;
 	move_resist = 45000
 	},
@@ -3010,7 +3009,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 1
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -3230,7 +3229,7 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 8
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -3668,7 +3667,7 @@
 "nm" = (
 /obj/structure/stone_tile/surrounding,
 /obj/structure/stone_tile/center/cracked,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "nz" = (
@@ -3681,7 +3680,7 @@
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 8
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -3808,7 +3807,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/structure/chair/brass,
+/obj/structure/chair,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "ow" = (
@@ -3853,7 +3852,7 @@
 /turf/simulated/wall/mineral/wood,
 /area/lavaland/surface/outdoors)
 "oQ" = (
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 8;
 	move_resist = 45000
 	},
@@ -3913,7 +3912,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 1
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -3956,8 +3955,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/structure/table/reinforced/brass,
-/obj/item/twohanded/ratvarian_spear,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "pP" = (
@@ -3973,7 +3971,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/weldingtool/experimental/brass,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
@@ -4031,7 +4029,7 @@
 	dir = 8
 	},
 /obj/structure/stone_tile/cracked,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	move_resist = 45000
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -4152,7 +4150,6 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "rC" = (
@@ -4169,7 +4166,6 @@
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "rH" = (
@@ -4378,7 +4374,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "sR" = (
@@ -4457,7 +4453,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/wirecutters/brass,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
@@ -4553,7 +4549,6 @@
 /area/mine/laborcamp)
 "uU" = (
 /obj/structure/stone_tile/slab/cracked,
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "uZ" = (
@@ -4744,7 +4739,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile/cracked,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 4;
 	move_resist = 45000
 	},
@@ -4808,7 +4803,7 @@
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "wW" = (
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 8;
 	move_resist = 45000
 	},
@@ -4956,8 +4951,7 @@
 /area/lavaland/surface/outdoors/necropolis)
 "xZ" = (
 /obj/structure/stone_tile/slab,
-/obj/item/clockwork/fallen_armor,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "yf" = (
@@ -5038,7 +5032,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "yK" = (
@@ -5178,7 +5172,7 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 4;
 	move_resist = 45000
 	},
@@ -5242,7 +5236,7 @@
 /obj/structure/stone_tile/block{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "AQ" = (
@@ -5569,7 +5563,6 @@
 /obj/structure/stone_tile/block{
 	dir = 8
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "EG" = (
@@ -5580,12 +5573,6 @@
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "EJ" = (
-/obj/effect/rune{
-	color = "#DAA520";
-	desc = "An odd collection of symbols.";
-	name = "brass rune";
-	rune_blood_color = "#DAA520"
-	},
 /mob/living/simple_animal/hostile/megafauna/dragon{
 	color = "#C2B015";
 	health = 5000;
@@ -5697,7 +5684,6 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/wall/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "Gb" = (
@@ -5756,7 +5742,6 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "Gu" = (
@@ -5815,7 +5800,7 @@
 /obj/structure/stone_tile/cracked{
 	dir = 1
 	},
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 1;
 	move_resist = 45000
 	},
@@ -5848,7 +5833,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "Hi" = (
@@ -5929,7 +5914,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 1
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -6143,7 +6128,6 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "JC" = (
@@ -6442,7 +6426,7 @@
 "Me" = (
 /obj/structure/stone_tile/slab,
 /obj/item/wrench/brass,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "Mi" = (
@@ -6454,8 +6438,8 @@
 	dir = 4
 	},
 /obj/structure/bookcase,
-/obj/structure/window/reinforced/clockwork,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -6678,7 +6662,7 @@
 /area/lavaland/surface/outdoors)
 "OE" = (
 /obj/structure/stone_tile/slab,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 1;
 	move_resist = 45000
 	},
@@ -6838,7 +6822,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/chair/brass,
+/obj/structure/chair,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "PJ" = (
@@ -6873,7 +6857,7 @@
 /area/mine/laborcamp)
 "Qu" = (
 /obj/structure/stone_tile/slab,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	move_resist = 45000
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -6925,7 +6909,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/storage/toolbox/brass,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
@@ -7124,7 +7108,7 @@
 /area/lavaland/surface/outdoors)
 "SM" = (
 /obj/structure/stone_tile/slab/cracked,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "ST" = (
@@ -7206,7 +7190,7 @@
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "TG" = (
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 4;
 	move_resist = 45000
 	},
@@ -7239,7 +7223,6 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "TV" = (
@@ -7276,7 +7259,7 @@
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "Uh" = (
@@ -7309,7 +7292,7 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "UD" = (
@@ -7319,8 +7302,7 @@
 /area/lavaland/surface/outdoors)
 "UH" = (
 /obj/structure/stone_tile/slab,
-/obj/item/clockwork/clockgolem_remains,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "UQ" = (
@@ -7539,7 +7521,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile,
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 4
 	},
 /turf/simulated/floor/indestructible/boss,
@@ -7601,7 +7583,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "Xj" = (
@@ -7612,7 +7594,7 @@
 /obj/structure/stone_tile/cracked{
 	dir = 1
 	},
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 4;
 	move_resist = 45000
 	},
@@ -7672,7 +7654,7 @@
 /obj/structure/stone_tile/block{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/weldingtool/experimental/brass,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
@@ -7684,7 +7666,7 @@
 /obj/structure/stone_tile{
 	dir = 1
 	},
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 1;
 	move_resist = 45000
 	},
@@ -7706,10 +7688,10 @@
 	dir = 8
 	},
 /obj/structure/bookcase,
-/obj/structure/window/reinforced/clockwork{
+/obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/window/reinforced/clockwork,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "YG" = (

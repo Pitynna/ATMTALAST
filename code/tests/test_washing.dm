@@ -1,7 +1,6 @@
 /datum/unit_test/room_test/washing
 	/// Stuff we want to test that isn't cleanables, just to make sure they are getting cleaned when they should
 	var/list/cleanable_bonus_list = list(
-		/obj/effect/rune,
 		/obj/item/clothing/gloves/color/black,
 		///mob/living/carbon/human/dummy/consistent,
 	)

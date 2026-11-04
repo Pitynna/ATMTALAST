@@ -506,21 +506,6 @@
 		swing_sound = SFX_KNIFE_SWING \
 	)
 
-/obj/item/kitchen/knife/ghostface_knife/devil
-	name = "old knife"
-	desc = "Странный нож с, тем не менее, крайне острым лезвием. Судя по характерным потёртостям и засохшей крови, он явно не валялся без дела."
-	icon_state = "devil_ghostface_knife"
-
-/obj/item/kitchen/knife/ghostface_knife/devil/get_ru_names()
-	return alist(
-		NOMINATIVE = "старый ржавый нож",
-		GENITIVE = "старого ржавого ножа",
-		DATIVE = "старому ржавому ножу",
-		ACCUSATIVE = "старый ржавый нож",
-		INSTRUMENTAL = "старым ржавым ножом",
-		PREPOSITIONAL = "старом ржавом ноже",
-	)
-
 /*
  * Rolling Pins
  */

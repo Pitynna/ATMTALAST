@@ -315,7 +315,7 @@
 
 	owner.Slowed(duration)
 	to_chat(owner, span_danger("Вы чувствуете невыносимую тяжесть бытия..."))
-	new /obj/effect/temp_visual/cult/sparks(get_turf(owner))
+	new /obj/effect/temp_visual/blood_magic_sparks(get_turf(owner))
 
 	marked_overlay = mutable_appearance('icons/effects/effects.dmi', "cult_halo1")
 	marked_overlay.pixel_z = 3
@@ -696,12 +696,6 @@
 	return -0.2 SECONDS
 
 // MARK: Cult sluring
-/datum/status_effect/transient/cult_slurring
-	id = "cult_slurring"
-
-/datum/status_effect/transient/clock_cult_slurring
-	id = "clock_cult_slurring"
-
 // MARK: Incapacitating
 /datum/status_effect/incapacitating
 	tick_interval = 0
@@ -721,13 +715,13 @@
 	. = ..()
 	if(traits_to_apply)
 		owner.add_traits(traits_to_apply, TRAIT_STATUS_EFFECT(id))
-	if(needs_update_stat || issilicon(owner) || isswarmer(owner))
+	if((needs_update_stat) || (issilicon(owner)))
 		owner.update_stat()
 
 /datum/status_effect/incapacitating/on_remove()
 	if(traits_to_apply)
 		owner.remove_traits(traits_to_apply, TRAIT_STATUS_EFFECT(id))
-	if(needs_update_stat || issilicon(owner) || isswarmer(owner))
+	if((needs_update_stat) || (issilicon(owner)))
 		owner.update_stat()
 	return ..()
 
@@ -744,7 +738,7 @@
 	traits_to_apply = list(TRAIT_INCAPACITATED, TRAIT_IMMOBILIZED, TRAIT_HANDS_BLOCKED)
 
 /datum/status_effect/incapacitating/stun/on_apply()
-	if(issilicon(owner) || isswarmer(owner))
+	if(issilicon(owner))
 		traits_to_apply |= TRAIT_KNOCKEDOUT
 	return ..()
 
@@ -772,7 +766,7 @@
 	traits_to_apply = list(TRAIT_INCAPACITATED, TRAIT_IMMOBILIZED, TRAIT_HANDS_BLOCKED, TRAIT_FLOORED)
 
 /datum/status_effect/incapacitating/weakened/on_apply()
-	if(issilicon(owner) || isswarmer(owner))
+	if(issilicon(owner))
 		traits_to_apply |= TRAIT_KNOCKEDOUT
 	return ..()
 

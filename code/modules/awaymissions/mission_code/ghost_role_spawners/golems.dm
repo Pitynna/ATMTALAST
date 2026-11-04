@@ -64,7 +64,6 @@
 		/obj/item/stack/sheet/bluespace_crystal		= /datum/species/golem/bluespace,
 		/obj/item/stack/sheet/mineral/adamantine	= /datum/species/golem/adamantine,
 		/obj/item/stack/sheet/plastic				= /datum/species/golem/plastic,
-		/obj/item/stack/sheet/brass					= /datum/species/golem/clockwork,
 	)
 
 	var/obj/item/stack/stack = I
@@ -200,32 +199,3 @@
 		INSTRUMENTAL = "покрытой пылью оболочкой свободного голема",
 		PREPOSITIONAL = "покрытой пылью оболочке свободного голема",
 	)
-
-/obj/effect/mob_spawn/human/golem/clockwork
-	name = "fleshed golem shell"
-	desc = "Это тело когда-то было сделано из плоти, но теперь... это просто оболочка, отлитая в латуни."
-	mob_name = "a clockwork golem"
-	can_transfer = FALSE
-	mob_species = /datum/species/golem/clockwork
-	banType = ROLE_CLOCKER
-	offstation_role = FALSE
-	random = TRUE
-	important_info =  "Вы — антагонист, но вы должны служить другим слугам, чтобы призвать Ратвара!"
-	description = "Вы — голем. Вы двигаетесь медленно. Вы не можете носить одежду, но можете использовать большинство инструментов. Служите Ратвару и завершите ритуал любой ценой."
-	flavour_text = "Вы — часовой голем, созданный для служения Ратвару."
-
-/obj/effect/mob_spawn/human/golem/clockwork/get_ru_names()
-	return alist(
-		NOMINATIVE = "оболочка голема из плоти",
-		GENITIVE = "оболочки голема из плоти",
-		DATIVE = "оболочке голема из плоти",
-		ACCUSATIVE = "оболочку голема из плоти",
-		INSTRUMENTAL = "оболочкой голема из плоти",
-		PREPOSITIONAL = "оболочке голема из плоти",
-	)
-
-/obj/effect/mob_spawn/human/golem/clockwork/special(mob/living/new_spawn, name)
-	var/datum/species/golem/X = mob_species
-	to_chat(new_spawn, "[initial(X.info_text)]")
-	new_spawn.rename_character(null, new_spawn.dna.species.get_random_name())
-	SSticker.mode.add_clocker(new_spawn)

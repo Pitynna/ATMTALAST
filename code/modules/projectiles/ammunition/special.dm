@@ -64,7 +64,7 @@
 
 /obj/item/ammo_casing/magic/arcane_barrage/blood
 	projectile_type = /obj/projectile/magic/arcane_barrage/blood
-	muzzle_flash_effect = /obj/effect/temp_visual/emp/cult
+	muzzle_flash_effect = /obj/effect/temp_visual/emp
 
 // MARK: Chrono Beam
 /obj/item/ammo_casing/energy/chrono_beam
@@ -158,25 +158,6 @@
 	)
 
 // MARK: Contractor Hook
-/obj/item/ammo_casing/magic/contractor_hook
-	name = "Hardlight hook"
-	desc = "Крюк из твёрдого света. Хватит его разглядывать, уворачивайся!"
-	projectile_type = /obj/projectile/contractor_hook
-	caliber = "hardlight_hook"
-	icon_state = "hard_hook"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
-	muzzle_flash_effect = null
-
-/obj/item/ammo_casing/magic/contractor_hook/get_ru_names()
-	return alist(
-		NOMINATIVE = "крюк из твёрдого света",
-		GENITIVE = "крюка из твёрдого света",
-		DATIVE = "крюку из твёрдого света",
-		ACCUSATIVE = "крюк из твёрдого света",
-		INSTRUMENTAL = "крюком из твёрдого света",
-		PREPOSITIONAL = "крюке из твёрдого света",
-	)
-
 // MARK: Syringe Gun
 /obj/item/ammo_casing/syringegun
 	name = "syringe gun spring"

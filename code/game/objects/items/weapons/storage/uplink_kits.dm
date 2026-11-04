@@ -75,18 +75,6 @@
 	new /obj/item/clothing/mask/gas/syndicate(src)
 	new /obj/item/tank/internals/emergency_oxygen/engi/syndi(src)
 
-/obj/item/storage/box/syndie_kit/chameleon_hardsuit
-	name = "oxygen deprivation first aid kit"
-	desc = "A first aid kit that contains four pills of salbutamol, which is able to counter injuries caused by suffocation. Also contains a health analyzer to determine the health of the patient."
-	icon_state = "o2"
-	item_state = "firstaid-o2"
-	can_hold = list(
-		/obj/item/clothing/suit/space/hardsuit/contractor/agent,
-		/obj/item/tank/internals/emergency_oxygen/engi/syndi,
-		/obj/item/clothing/mask/gas/syndicate,
-	)
-	max_w_class = WEIGHT_CLASS_NORMAL
-
 /obj/item/storage/box/syndie_kit/counterfeiter_bundle
 	name = "Counterfeiter Bundle"
 	desc = "A box containing all the neccessary equipment to forge stamps and insignias, making the user capable of faking any Nanotrasen documents."
@@ -94,11 +82,6 @@
 /obj/item/storage/box/syndie_kit/counterfeiter_bundle/populate_contents()
 	new /obj/item/stamp/chameleon(src)
 	new /obj/item/pen/fakesign(src)
-
-/obj/item/storage/box/syndie_kit/chameleon_hardsuit/populate_contents()
-	new /obj/item/clothing/suit/space/hardsuit/contractor/agent(src)
-	new /obj/item/clothing/mask/gas/syndicate(src)
-	new /obj/item/tank/internals/emergency_oxygen/engi/syndi(src)
 
 /obj/item/storage/box/syndie_kit/conversion
 	name = "box (CK)"
@@ -784,25 +767,6 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 	new /obj/item/clothing/suit/hooded/ghostfacesuit/true(src)
 	new /obj/item/clothing/mask/gas/ghostface/true(src)
 	new /obj/item/kitchen/knife/ghostface_knife(src)
-
-/obj/item/storage/box/syndie_kit/devil_ghostface_kit
-	name = "Devil Ghostface kit"
-	desc = "Коробка, содержащая костюм и маску \"Гоустфейс\"."
-
-/obj/item/storage/box/syndie_kit/devil_ghostface_kit/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор \"Дьявольский Гоустфейс\"",
-		GENITIVE = "набора \"Дьявольский Гоустфейс\"",
-		DATIVE = "набору \"Дьявольский Гоустфейс\"",
-		ACCUSATIVE = "набор \"Дьявольский Гоустфейс\"",
-		INSTRUMENTAL = "набором \"Дьявольский Гоустфейс\"",
-		PREPOSITIONAL = "наборе \"Дьявольский Гоустфейс\"",
-	)
-
-/obj/item/storage/box/syndie_kit/devil_ghostface_kit/populate_contents()
-	new /obj/item/clothing/suit/hooded/ghostfacesuit/devil/true(src)
-	new /obj/item/clothing/mask/gas/ghostface/true/devil(src)
-	new /obj/item/kitchen/knife/ghostface_knife/devil(src)
 
 /obj/item/storage/box/syndie_kit/gun_mods
 	name = "gun upgrade kit"

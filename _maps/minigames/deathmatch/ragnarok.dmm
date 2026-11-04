@@ -33,13 +33,12 @@
 /obj/structure/stone_tile/cracked{
 	dir = 8
 	},
-/obj/structure/chair/brass{
+/obj/structure/chair{
 	dir = 8
 	},
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "bU" = (
-/obj/structure/clockwork/wall_gear,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "cc" = (
@@ -102,9 +101,7 @@
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "ef" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/table/reinforced/brass,
-/obj/item/twohanded/ratvarian_spear,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "ep" = (
@@ -122,7 +119,7 @@
 /area/deathmatch)
 "ey" = (
 /obj/item/flag/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "eB" = (
 /turf/simulated/floor/plating/asteroid/basalt,
@@ -146,8 +143,7 @@
 /turf/simulated/floor/wood,
 /area/deathmatch)
 "fj" = (
-/obj/machinery/shield/cult/barrier,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "fL" = (
 /obj/structure/stone_tile/block{
@@ -183,7 +179,6 @@
 	dir = 8
 	},
 /obj/structure/stone_tile,
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "ga" = (
@@ -194,8 +189,8 @@
 /turf/simulated/floor/wood,
 /area/deathmatch)
 "gh" = (
-/obj/structure/girder/cult,
-/turf/simulated/floor/engine/cult,
+/obj/structure/girder,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "gj" = (
 /obj/structure/stone_tile/surrounding_tile/burnt,
@@ -224,7 +219,7 @@
 /area/deathmatch)
 "ho" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ht" = (
 /obj/effect/turf_decal/siding/wood{
@@ -298,7 +293,6 @@
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "ks" = (
-/obj/structure/cult/pylon,
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "kT" = (
@@ -321,7 +315,7 @@
 "lG" = (
 /obj/structure/rack/skeletal_bar,
 /obj/item/shield/riot/templar,
-/turf/simulated/floor/engine/cult/holy,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "mt" = (
 /obj/structure/stone_tile{
@@ -414,7 +408,6 @@
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "rM" = (
-/obj/machinery/shield/cult/barrier,
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "sC" = (
@@ -429,8 +422,7 @@
 /turf/simulated/floor/lava,
 /area/deathmatch)
 "sJ" = (
-/obj/effect/rune/wall,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ta" = (
 /obj/effect/turf_decal/siding/wood{
@@ -449,7 +441,7 @@
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "tu" = (
-/obj/structure/cult/functional/pylon/holy,
+/obj/structure/construct_pylon/holy,
 /turf/simulated/floor/wood,
 /area/deathmatch)
 "tC" = (
@@ -470,7 +462,6 @@
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "uU" = (
-/obj/effect/clockwork/overlay/floor,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "ve" = (
@@ -485,7 +476,6 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "vW" = (
@@ -554,35 +544,30 @@
 /obj/structure/stone_tile/surrounding_tile/burnt{
 	dir = 8
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/wrench/brass,
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "zg" = (
-/turf/simulated/wall/cult,
+/turf/simulated/wall,
 /area/deathmatch)
 "zA" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/clockwork/workshop,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "zH" = (
-/obj/item/twohanded/cult_spear,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "zT" = (
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "Al" = (
-/obj/item/clothing/shoes/cult,
-/obj/item/clothing/suit/hooded/cultrobes,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Aw" = (
 /obj/structure/rack/skeletal_bar,
 /obj/item/reagent_containers/food/snacks/grown/holymelon,
-/turf/simulated/floor/engine/cult/holy,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "AW" = (
 /obj/structure/stone_tile/block,
@@ -596,13 +581,7 @@
 /turf/simulated/floor/wood,
 /area/deathmatch)
 "BM" = (
-/obj/effect/rune/narsie{
-	color = "#ff0000";
-	used = 1
-	},
-/obj/structure/cult/archives,
-/obj/item/twohanded/cult_spear,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "BR" = (
 /obj/effect/turf_decal/siding/wood{
@@ -654,7 +633,7 @@
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "Dx" = (
-/obj/structure/girder/cult,
+/obj/structure/girder,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "DU" = (
@@ -680,25 +659,12 @@
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/storage/toolbox/brass,
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "Go" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/table/reinforced/brass,
-/obj/item/clothing/gloves/clockwork_fake{
-	pixel_y = -4
-	},
-/obj/item/clothing/suit/armor/clockwork_fake{
-	pixel_x = 3;
-	pixel_y = 7
-	},
-/obj/item/clothing/head/helmet/clockwork_fake{
-	pixel_x = -7;
-	pixel_y = 9
-	},
-/obj/item/clothing/shoes/clockwork_fake,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "Gz" = (
@@ -726,8 +692,6 @@
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "HP" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/item/clockwork/fallen_armor,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "Ih" = (
@@ -741,9 +705,8 @@
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "IG" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/window/reinforced/clockwork/fulltile,
-/obj/structure/grille/ratvar,
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/grille,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "Jk" = (
@@ -757,7 +720,7 @@
 "KX" = (
 /obj/structure/rack/skeletal_bar,
 /obj/item/clothing/head/helmet/riot/knight/templar,
-/turf/simulated/floor/engine/cult/holy,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "Lo" = (
 /obj/structure/stone_tile/block,
@@ -769,7 +732,7 @@
 "Lt" = (
 /obj/structure/rack/skeletal_bar,
 /obj/item/clothing/suit/armor/riot/knight/templar,
-/turf/simulated/floor/engine/cult/holy,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "LZ" = (
 /obj/effect/landmark/deathmatch_player_spawn,
@@ -798,7 +761,7 @@
 /area/deathmatch)
 "MJ" = (
 /obj/effect/landmark/deathmatch_player_spawn,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "ML" = (
 /obj/structure/flora/rock/basalt3,
@@ -813,8 +776,6 @@
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "Nu" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/clockwork/wall_gear,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "Nw" = (
@@ -838,15 +799,12 @@
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "Pq" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/grille/ratvar,
-/obj/structure/window/reinforced/clockwork/fulltile,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "PF" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/table/reinforced/brass,
-/obj/item/clockwork/shard,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "Qt" = (
@@ -867,7 +825,6 @@
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "QH" = (
-/obj/effect/rune/wall,
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "Sa" = (
@@ -900,8 +857,6 @@
 /turf/simulated/floor/grass/jungle,
 /area/deathmatch)
 "Tb" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/item/twohanded/ratvarian_spear,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 "Te" = (
@@ -915,15 +870,14 @@
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "Ti" = (
-/turf/simulated/wall/clockwork,
+/turf/simulated/wall,
 /area/deathmatch)
 "Tv" = (
 /obj/structure/flora/ash/rock/style_3,
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "TB" = (
-/obj/structure/cult/pylon,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "TK" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -943,7 +897,7 @@
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "Vt" = (
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/deathmatch)
 "VE" = (
 /obj/effect/turf_decal/siding/wood,
@@ -965,13 +919,11 @@
 /obj/structure/stone_tile/cracked{
 	dir = 8
 	},
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "Wl" = (
 /obj/structure/stone_tile/surrounding,
 /obj/structure/stone_tile/center/cracked,
-/obj/item/clockwork/clockgolem_remains,
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "Ws" = (
@@ -1014,12 +966,10 @@
 /turf/simulated/floor/indestructible/boss/air,
 /area/deathmatch)
 "YQ" = (
-/obj/structure/girder/cult,
+/obj/structure/girder,
 /turf/simulated/floor/indestructible/dirt_floor,
 /area/deathmatch)
 "ZX" = (
-/obj/effect/clockwork/overlay/floor,
-/obj/structure/clockwork/altar,
 /turf/simulated/floor/plating/asteroid/basalt,
 /area/deathmatch)
 

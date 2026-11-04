@@ -91,7 +91,7 @@
 	transformer_bumped(moving_atom)
 
 /obj/machinery/transformer/proc/transformer_bumped(mob/living/carbon/human/victim)
-	if(!ishuman(victim) || (!transform_standing && victim.body_position == STANDING_UP) || isdevilantag(victim))
+	if((!ishuman(victim)) || ((!transform_standing) && (victim.body_position == STANDING_UP)))
 		return
 	victim.forceMove(loc)
 	do_transform(victim)

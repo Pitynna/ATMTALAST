@@ -195,9 +195,6 @@
 	True Devil
 */
 
-/mob/living/carbon/true_devil/UnarmedAttack(atom/A, proximity_flag, list/modifiers)
-	A.attack_hand(src)
-
 /mob/living/carbon/alien/RestrainedClickOn(atom/A)
 	return
 

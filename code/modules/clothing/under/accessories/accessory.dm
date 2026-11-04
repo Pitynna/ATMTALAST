@@ -1222,8 +1222,6 @@
 		announce_channel = ERT_FREQ	// For animals who dare to infiltrate CC.
 	else if(istype(t, /area/centcom/syndicate_base) || istype(t, /area/shuttle/syndicate_elite) || istype(t, /area/shuttle/syndicate_sit))
 		announce_channel = SYNDTEAM_FREQ		// Just to be sure ...
-	else if(istype(t, /area/centcom/ninja))
-		announce_channel = NINJA_FREQ	// Even ninja may have a little pet.
 	else if(istype(t, /area/centcom/ussp))
 		announce_channel = SOV_FREQ			// MISHA, FU!
 	else if((M.z == level_name_to_num(CENTCOMM) || z == level_name_to_num(ADMIN_ZONE)) && SSticker.current_state != GAME_STATE_FINISHED)

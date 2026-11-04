@@ -169,18 +169,3 @@
 /obj/item/clothing/suit/space/syndicate/black/engie
 	name = "Black Engineering Space Suit"
 	icon_state = "syndicate-black-engie"
-
-/obj/item/clothing/head/helmet/space/syndicate/contractor
-	name = "contractor helmet"
-	desc = "A specialised black and gold helmet that's more compact than its standard Syndicate counterpart. Can be ultra-compressed into even the tightest of spaces."
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "syndicate-helm-contractor"
-	item_state = "syndicate-helm-contractor"
-
-/obj/item/clothing/suit/space/syndicate/contractor
-	name = "contractor space suit"
-	desc = "A specialised black and gold space suit that's quicker, and more compact than its standard Syndicate counterpart. Can be ultra-compressed into even the tightest of spaces."
-	slowdown = 0
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "syndicate-contractor"
-	item_state = "syndicate-contractor"

@@ -289,19 +289,12 @@ GLOBAL_LIST_INIT(glass_sheet_types, typecacheof(list(
 #define isthrowingmatart(A) (istype(A, /datum/martial_art/throwing))
 
 // Modsuits
-#define ismodcontrol(A) istype(A, /obj/item/mod/control)
 
-#define ismodstorage(A) istype(A, /obj/item/storage/backpack/modstorage)
 
-#define ismodhelmet(A) istype(A, /obj/item/clothing/head/mod)
 
-#define ismodgloves(A) istype(A, /obj/item/clothing/gloves/mod)
 
-#define ismodshoes(A) istype(A, /obj/item/clothing/shoes/mod)
 
-#define ismodchestplate(A) istype(A, /obj/item/clothing/suit/mod)
 
-#define ismodcore(A) istype(A, /obj/item/mod/core)
 
 GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 	/turf/simulated/floor/beach/water,

@@ -1,7 +1,6 @@
 /proc/makeDatumRefLists()
 
 	init_datum_subtypes(/datum/wryn_building, GLOB.wryn_structures, null, "name")
-	init_datum_subtypes(/datum/zombie_class, GLOB.zombie_classes, null, "name")
 
 	init_datum_subtypes(/datum/robot_skin, GLOB.robot_skins, null, "type")
 
@@ -24,7 +23,6 @@
 	init_datum_subtypes(/datum/language, GLOB.all_languages, null, "name")
 	init_datum_subtypes(/datum/secspear_mode, GLOB.secspear_modes, null, "name")
 
-	init_datum_subtypes(/datum/devil_contract, GLOB.devil_contracts, list(/datum/devil_contract), "contract_type")
 
 	// Setup languages
 	for(var/language_name in GLOB.all_languages)
@@ -301,8 +299,7 @@
 		EQUIPMENT("Jump Boots Implants", /obj/item/storage/box/jumpbootimplant, 7000),
 		EQUIPMENT("Lazarus Capsule", /obj/item/mobcapsule, 300),
 		EQUIPMENT("Lazarus Capsule belt", /obj/item/storage/belt/lazarus, 400),
-		EQUIPMENT("Mining MODsuit", /obj/item/mod/control/pre_equipped/mining/vendor, 2500),
-		EQUIPMENT("Advanced Jetpack Module", /obj/item/mod/module/jetpack/advanced, 2000),
+		EQUIPMENT("Mining Hardsuit", /obj/item/clothing/suit/space/hardsuit/mining, 2500),
 		EQUIPMENT("Tracking Implant Kit", /obj/item/storage/box/minertracker, 800),
 		EQUIPMENT("Industrial Mining Satchel", /obj/item/storage/bag/ore/bigger, 500),
 		EQUIPMENT("Meson Health Scanner HUD", /obj/item/clothing/glasses/hud/health/meson, 1500),

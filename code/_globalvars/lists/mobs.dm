@@ -78,8 +78,6 @@ GLOBAL_LIST_INIT(halo_overlays, list(
 
 /// Callback checks for datum/element/halo_attach
 GLOBAL_LIST_INIT(halo_callbacks, list(
-	"cult" = CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(iscultist_ascended)),
-	"clockwork" = CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(isclocker_ascended)),
 	"his_grace" = CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(is_grace_ascended)),
 ))
 GLOBAL_LIST_EMPTY(wryn_structures)

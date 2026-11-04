@@ -632,23 +632,6 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	sideslist = list("heads")
 	credits = 20
 
-/obj/item/coin/twoheaded/thief
-	name = "монета Гильдии Воров"
-	icon_state = "coin_thief_heads"
-	cmineral = "thief"
-	desc = "Монета Гильдии Воров, которую выдают каждому уважающему себя члену гильдии для взаимной идентификации. Странный сплав с изображением бюстов черной и белой кошки, стоящих спиной к спине. Ценится коллекционерами, и как правило у них же и возвращают."
-	credits = 600
-
-/obj/item/coin/twoheaded/thief/get_ru_names()
-	return alist(
-		NOMINATIVE = "монета Гильдии Воров",
-		GENITIVE = "монеты Гильдии Воров",
-		DATIVE = "монете Гильдии Воров",
-		ACCUSATIVE = "монету Гильдии Воров",
-		INSTRUMENTAL = "монетой Гильдии Воров",
-		PREPOSITIONAL = "монете Гильдии Воров",
-	)
-
 /obj/item/coin/antagtoken
 	name = "antag token"
 	icon_state = "coin_valid_valid"

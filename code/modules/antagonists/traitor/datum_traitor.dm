@@ -21,7 +21,6 @@
 	var/give_uplink = TRUE
 	/// Whether the traitor will receive only hijack objective.
 	var/is_hijacker = FALSE
-	var/datum/contractor_pending/contractor_pending
 	/// The associated traitor's uplink. Only present if `give_uplink` is set to `TRUE`.
 	var/obj/item/uplink/hidden/hidden_uplink = null
 	var/antag_sound = 'sound/ambience/antag/tatoralert.ogg'
@@ -59,14 +58,7 @@
 		component.delete_if_from_source(src)
 
 /datum/antagonist/traitor/Destroy(force)
-	QDEL_NULL(contractor_pending)
 	// Remove contractor if present
-	var/datum/antagonist/contractor/contractor_datum = owner?.has_antag_datum(/datum/antagonist/contractor)
-	if(contractor_datum)
-		contractor_datum.silent = TRUE
-		owner.remove_antag_datum(contractor_datum)
-
-	// Leave the mindslave hud.
 	if(owner.som)
 		var/datum/mindslaves/slaved = owner.som
 		slaved.masters -= owner
@@ -243,13 +235,6 @@
 	messages.Add("<b>Code Response:</b> [span_coderesponses("[responses]")]")
 	messages.Add("Use the codewords during regular conversation to identify other agents. Proceed with caution, however, as everyone is a potential foe.")
 	messages.Add("<b><font color=red>You memorize the codewords, allowing you to recognize them when heard.</font></b>")
-
-	if(!contractor_pending)
-		return messages
-
-	messages.Add("<br><hr color ='red'>")
-	var/list/contractor_messages = contractor_pending.greet()
-	messages.Add(contractor_messages)
 
 	return messages
 

@@ -542,10 +542,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 		jobname = pai.radio_rank
 
 	// --- Cogscarab ---
-	else if(iscogscarab(M))
-		jobname = UNKNOWN_STATUS_RUS
-
-	// --- Unidentifiable mob ---
 	else
 		jobname = UNKNOWN_STATUS_RUS
 

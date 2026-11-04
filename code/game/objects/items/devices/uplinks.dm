@@ -244,21 +244,6 @@ GLOBAL_LIST_EMPTY(world_uplinks)
 	data["cart_price"] = calculate_cart_tc()
 	data["lucky_numbers"] = lucky_numbers
 
-	if(!traitor?.contractor_pending)
-		return data
-
-	var/datum/contractor_pending/pending = traitor.contractor_pending
-	var/list/contractor_data = list(
-		available = uses >= CONTRACTOR_COST && world.time < pending.offer_deadline && \
-		(SSticker?.mode?.contractor_accepted< CONTRACTOR_MAX_ACCEPTED || pending.is_admin_forced),
-		affordable = uses >= CONTRACTOR_COST,
-		accepted = traitor.owner.has_antag_datum(/datum/antagonist/contractor),
-		time_left = pending.offer_deadline - world.time,
-			available_offers = CONTRACTOR_MAX_ACCEPTED - SSticker?.mode?.contractor_accepted,
-		is_admin_forced = pending.is_admin_forced,
-	)
-	data["contractor"] = contractor_data
-
 	return data
 
 /obj/item/uplink/hidden/ui_static_data(mob/user)
@@ -331,9 +316,6 @@ GLOBAL_LIST_EMPTY(world_uplinks)
 		return
 
 	. = TRUE
-	if(tgui_act_modal(action, params))
-		return
-
 	switch(action)
 		if("lock")
 			toggle()
@@ -449,22 +431,6 @@ GLOBAL_LIST_EMPTY(world_uplinks)
  * * action - The action passed by tgui
  * * params - The params passed by tgui
  */
-/obj/item/uplink/hidden/proc/tgui_act_modal(action, list/params)
-	. = TRUE
-	var/id = params["id"]
-	switch(ui_modal_act(src, action, params))
-		if(UI_MODAL_OPEN)
-			if(id == "become_contractor")
-				ui_modal_boolean(src, id, "")
-				return
-		if(UI_MODAL_ANSWER)
-			if(id == "become_contractor")
-				if(text2num(params["answer"]))
-					var/datum/antagonist/traitor/traitor = usr?.mind?.has_antag_datum(/datum/antagonist/traitor)
-					traitor?.contractor_pending?.become_contractor(usr, src)
-				return
-	return FALSE
-
 /**
  * I placed this here because of how relevant it is.
  * You place this in your uplinkable item to check if an uplink is active or not.

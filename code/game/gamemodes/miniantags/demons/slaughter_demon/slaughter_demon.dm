@@ -91,35 +91,6 @@
 	consumed?.forceMove(get_turf(src))
 
 // Cult slaughter demon
-/mob/living/simple_animal/demon/slaughter/cult //Summoned as part of the cult objective "Bring the Slaughter"
-	name = "harbinger of the slaughter"
-	real_name = "harbinger of the Slaughter"
-	desc = "Ужасное существо, обитающее за гранью здравого смысла."
-	maxHealth = 500
-	health = 500
-	melee_damage_upper = 60
-	melee_damage_lower = 60
-	environment_smash = ENVIRONMENT_SMASH_RWALLS //Smashes through EVERYTHING - r-walls included
-	faction = list("cult")
-	playstyle_string = "<b><span class='userdanger'>Вы — Вестник Резни. Призванный слугами Нар'Си, у вас одна цель: уничтожить еретиков, которые не поклоняются вашему господину!</span></b><br> \
-							<b>Вы можете использовать способность \"Кровавый путь\" рядом с лужей крови, чтобы войти в неё и стать неосязаемым. \
-							Использование способности снова рядом с лужей крови позволит вам выйти из неё. Вы быстры, сильны и почти неуязвимы. Если вы тащите мёртвое или без сознания тело \
-							в лужу крови, вы поглотите его через некоторое время и полностью восстановите здоровье. Вы можете использовать способность \"Чувствовать Жертв\" на вкладке Культиста, \
-							чтобы найти случайного живого еретика.</b>"
-
-/mob/living/simple_animal/demon/slaughter/cult/get_ru_names()
-	return alist(
-		NOMINATIVE = "вестник резни",
-		GENITIVE = "вестника резни",
-		DATIVE = "вестнику резни",
-		ACCUSATIVE = "вестника резни",
-		INSTRUMENTAL = "вестником резни",
-		PREPOSITIONAL = "вестнике резни",
-	)
-
-/mob/living/simple_animal/demon/slaughter/cult/attempt_objectives()
-	return
-
 /datum/action/cooldown/spell/sense_victims
 	name = "Охота за душами"
 	desc = "Определите местоположение еретиков."
@@ -142,45 +113,8 @@
 	var/list/possible_targets = GLOB.alive_mob_list
 	shuffle(possible_targets)
 	for(var/mob/living/target in possible_targets)
-		if(target.stat == CONSCIOUS && target.key && !iscultist(target))
+		if((target.stat == CONSCIOUS) && (target.key))
 			return target
-
-/mob/living/simple_animal/demon/slaughter/cult/Initialize(mapload)
-	. = ..()
-	spawn(0.5 SECONDS)
-		var/list/demon_candidates = SSghost_spawns.poll_candidates("Хотите сыграть за демона резни?", ROLE_DEMON, TRUE, 10 SECONDS, source = /mob/living/simple_animal/demon/slaughter/cult)
-
-		if(QDELETED(src))
-			return
-
-		if(!length(demon_candidates))
-			log_game("[src] has failed to spawn, because no one enrolled.")
-			visible_message(span_warning("[DECLENT_RU_CAP(src, NOMINATIVE)] исчезает во вспышке красного света!"))
-			qdel(src)
-			return
-		var/mob/M = pick(demon_candidates)
-		var/mob/living/simple_animal/demon/slaughter/cult/S = src
-		if(!M || !M.client)
-			log_game("[src] has failed to spawn, because enrolled player is missing.")
-			visible_message(span_warning("[DECLENT_RU_CAP(src, NOMINATIVE)] исчезает во вспышке красного света!"))
-			qdel(src)
-			return
-		var/client/C = M.client
-
-		S.possess_by_player(C.key)
-		S.mind.assigned_role = "Harbinger of the Slaughter"
-		S.mind.special_role = "Harbinger of the Slaughter"
-		to_chat(S, playstyle_string)
-		SSticker.mode.add_cultist(S.mind)
-		var/datum/action/cooldown/spell/sense_victims/SV = new
-		SV.Grant(src)
-		var/datum/objective/new_objective = new /datum/objective
-		new_objective.owner = S.mind
-		new_objective.explanation_text = "Устройте Резню неверующим!"
-		S.mind.objectives += new_objective
-		var/list/messages = list(S.mind.prepare_announce_objectives(FALSE))
-		to_chat(S, custom_boxed_message("red_box center", messages.Join("<br>")))
-		log_game("[S.key] has become Slaughter demon.")
 
 /**
  * The loot from killing a slaughter demon - can be consumed to allow the user to blood crawl.

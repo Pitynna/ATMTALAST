@@ -10,9 +10,6 @@
 /proc/robogibs(atom/location)
 	new /obj/effect/gibspawner/robot(get_turf(location))
 
-/proc/clockgibs(atom/location)
-	new /obj/effect/gibspawner/clock(get_turf(location))
-
 /proc/confettigibs(atom/location)
 	new /obj/effect/gibspawner/confetti(get_turf(location))
 
