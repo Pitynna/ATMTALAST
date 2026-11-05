@@ -349,7 +349,7 @@
 "QC" = (
 /obj/effect/mapping_helpers/no_lava,
 /obj/structure/fluff/ash_statue{
-	special_name = "мировая кузня"
+	special_name = "world anvil"
 	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/misc_lavaruin)

@@ -36,7 +36,7 @@
 
 /obj/item/healthanalyzer/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	add_fingerprint(user)
-	scan_title = "Сканирование: [target]"
+	scan_title = "Scan: [target]"
 	scan_data = medical_scan_action(user, target, src, mode, advanced)
 	show_results(user)
 	return ATTACK_CHAIN_PROCEED_SUCCESS

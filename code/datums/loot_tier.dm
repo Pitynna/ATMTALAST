@@ -23,12 +23,12 @@
 	new /obj/item/storage/box/syndie_kit/gun_mods/super(crate)
 
 /datum/loot_tier/first
-	name = "снаряжение зеленого кода"
+	name = "code green equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение зеленого кода",
+		NOMINATIVE = "code green equipment",
 		GENITIVE = "снаряжения зеленого кода",
 		DATIVE = "снаряжению зеленого кода",
-		ACCUSATIVE = "снаряжение зеленого кода",
+		ACCUSATIVE = "code green equipment",
 		INSTRUMENTAL = "снаряжением зеленого кода",
 		PREPOSITIONAL = "снаряжении зеленого кода",
 	)
@@ -89,12 +89,12 @@
 	)
 
 /datum/loot_tier/second
-	name = "снаряжение синего кода"
+	name = "code blue equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение синего кода",
+		NOMINATIVE = "code blue equipment",
 		GENITIVE = "снаряжения синего кода",
 		DATIVE = "снаряжению синего кода",
-		ACCUSATIVE = "снаряжение синего кода",
+		ACCUSATIVE = "code blue equipment",
 		INSTRUMENTAL = "снаряжением синего кода",
 		PREPOSITIONAL = "снаряжении синего кода",
 	)
@@ -238,12 +238,12 @@
 	)
 
 /datum/loot_tier/third
-	name = "снаряжение красного кода"
+	name = "code red equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение красного кода",
+		NOMINATIVE = "code red equipment",
 		GENITIVE = "снаряжения красного кода",
 		DATIVE = "снаряжению красного кода",
-		ACCUSATIVE = "снаряжение красного кода",
+		ACCUSATIVE = "code red equipment",
 		INSTRUMENTAL = "снаряжением красного кода",
 		PREPOSITIONAL = "снаряжении красного кода",
 	)
@@ -440,12 +440,12 @@
 	)
 
 /datum/loot_tier/fourth
-	name = "снаряжение кода ГАММА"
+	name = "code gamma equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение кода ГАММА",
+		NOMINATIVE = "code gamma equipment",
 		GENITIVE = "снаряжения кода ГАММА",
 		DATIVE = "снаряжению кода ГАММА",
-		ACCUSATIVE = "снаряжение кода ГАММА",
+		ACCUSATIVE = "code gamma equipment",
 		INSTRUMENTAL = "снаряжением кода ГАММА",
 		PREPOSITIONAL = "снаряжении кода ГАММА",
 	)
@@ -568,12 +568,12 @@
 	)
 
 /datum/loot_tier/fifth
-	name = "снаряжение кода ЭПСИЛОН"
+	name = "code epsilon equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение кода ЭПСИЛОН",
+		NOMINATIVE = "code epsilon equipment",
 		GENITIVE = "снаряжения кода ЭПСИЛОН",
 		DATIVE = "снаряжению кода ЭПСИЛОН",
-		ACCUSATIVE = "снаряжение кода ЭПСИЛОН",
+		ACCUSATIVE = "code epsilon equipment",
 		INSTRUMENTAL = "снаряжением кода ЭПСИЛОН",
 		PREPOSITIONAL = "снаряжении кода ЭПСИЛОН",
 	)
@@ -621,12 +621,12 @@
 	)
 
 /datum/loot_tier/ammo
-	name = "патроны"
+	name = "ammunition"
 	ru_names = alist(
-		NOMINATIVE = "патроны",
+		NOMINATIVE = "ammunition",
 		GENITIVE = "патронов",
 		DATIVE = "патронам",
-		ACCUSATIVE = "патроны",
+		ACCUSATIVE = "ammunition",
 		INSTRUMENTAL = "патронами",
 		PREPOSITIONAL = "патронах",
 	)
@@ -778,12 +778,12 @@
 	. = ..(user, crate, loot_list[current_loot])
 
 /datum/loot_tier/medical
-	name = "медикаменты"
+	name = "medical supplies"
 	ru_names = alist(
-		NOMINATIVE = "медикаменты",
+		NOMINATIVE = "medical supplies",
 		GENITIVE = "медикаментов",
 		DATIVE = "медикаментам",
-		ACCUSATIVE = "медикаменты",
+		ACCUSATIVE = "medical supplies",
 		INSTRUMENTAL = "медикаментами",
 		PREPOSITIONAL = "медикаментах",
 	)

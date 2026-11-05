@@ -33,7 +33,7 @@
 
 //does massive brute and burn damage, but can only expand manually
 /datum/reagent/blob/networked_fibers
-	name = "Сетевые волокна"
+	name = "Networked Fibers"
 	id = "blob_networked_fibers"
 	taste_description = "эффективности"
 	color = "#4F4441"

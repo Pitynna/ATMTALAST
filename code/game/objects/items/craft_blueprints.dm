@@ -140,7 +140,7 @@
 // MARK: Specific blueprints
 
 /obj/item/craft_blueprints/knife
-	crafting_name = "Нож"
+	crafting_name = "Knife"
 	crafting_item = /obj/item/kitchen/knife
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
 	components = list(

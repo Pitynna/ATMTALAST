@@ -7,17 +7,11 @@
 	icon_state = "deck_tarot"
 
 /obj/item/deck/tarot/build_deck()
-	for(var/tarotname in list("Шут", "Маг", "Верховная Жрица", "Императрица", "Император", "Иерофант", "Влюблённые", "Колесница", "Сила", "Отшельник", "Колесо Фортуны", "Справедливость", "Повешенный", "Смерть", "Умеренность", "Дьявол", "Башня", "Звезда", "Луна", "Солнце", "Суд", "Мир"))
+	for(var/tarotname in list("The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit", "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance", "The Devil", "The Tower", "The Star", "The Moon", "The Sun", "Judgement", "The World"))
 		cards += new /datum/playingcard("[tarotname]", "tarot_major", "card_back_tarot")
-	var/list/ru_suit = list(
-		"wands" = "жезлов",
-		"pentacles" = "пентаклей",
-		"cups" = "кубков",
-		"swords" = "мечей"
-	)
 	for(var/suit in list("wands","pentacles","cups","swords"))
-		for(var/number in list("Туз", "Двойка", "Тройка", "Четвёрка", "Пятёрка", "Шестёрка", "Семёрка", "Восьмёрка", "Девятка", "Десятка", "Паж", "Рыцарь", "Королева", "Король"))
-			cards += new /datum/playingcard("[number] [ru_suit[suit]]", "tarot_[suit]", "card_back_tarot")
+		for(var/number in list("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Page", "Knight", "Queen", "King"))
+			cards += new /datum/playingcard("[number] of [suit]", "tarot_[suit]", "card_back_tarot")
 
 /obj/item/deck/tarot/deckshuffle(mob/user)
 	if(!COOLDOWN_FINISHED(src, shuffle_cooldown) || !iscarbon(user) || user.incapacitated() || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))

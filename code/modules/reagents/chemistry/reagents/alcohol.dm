@@ -1,6 +1,6 @@
 //ALCOHOL WOO
 /datum/reagent/consumable/ethanol
-	name = "Этанол" //Parent class for all alcoholic reagents.
+	name = "Ethanol" //Parent class for all alcoholic reagents.
 	id = "ethanol"
 	description = "Хорошо известный алкоголь, имеющий множество воплощений."
 	reagent_state = LIQUID
@@ -40,7 +40,7 @@
 		M.adjust_fire_stacks(volume / 15)
 
 /datum/reagent/consumable/ethanol/beer
-	name = "Пиво"
+	name = "Beer"
 	id = "beer"
 	description = "Алкогольный напиток, приготовленный из солода, хмеля, дрожжей и воды."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
@@ -52,7 +52,7 @@
 	taste_description = "пива"
 
 /datum/reagent/consumable/ethanol/cider
-	name = "Сидр"
+	name = "Cider"
 	id = "cider"
 	description = "Алкогольный напиток, получаемый из яблок."
 	color = "#174116"
@@ -64,7 +64,7 @@
 	taste_description = "сидра"
 
 /datum/reagent/consumable/ethanol/whiskey
-	name = "Виски"
+	name = "Whiskey"
 	id = "whiskey"
 	description = "Превосходный и отлично выдержанный односолодовый виски. Чёрт возьми."
 	color = "#664300" // rgb: 102, 67, 0
@@ -76,7 +76,7 @@
 	taste_description = "виски"
 
 /datum/reagent/consumable/ethanol/specialwhiskey
-	name = "Виски Особого Смешения"
+	name = "Special Blend Whiskey"
 	id = "specialwhiskey"
 	description = "Как раз в тот момент, когда вы уже думаете, что обычный станционный виски — это хорошо... Это шелковистое, янтарное великолепие приходит и всё портит."
 	color = "#664300" // rgb: 102, 67, 0
@@ -84,7 +84,7 @@
 	taste_description = "отличного виски"
 
 /datum/reagent/consumable/ethanol/gin
-	name = "Джин"
+	name = "Gin"
 	id = "gin"
 	description = "Это джин. Крепкий алкогольный напиток, приготовленный с использованием самых разных пряностей."
 	color = "#664300" // rgb: 102, 67, 0
@@ -95,7 +95,7 @@
 	taste_description = "джина"
 
 /datum/reagent/consumable/ethanol/absinthe
-	name = "Абсент"
+	name = "Absinthe"
 	id = "absinthe"
 	description = "Абсент, очень крепкий напиток для очень крепких парней. Смотрите, чтобы Зелёная Фея не пришла за вами!"
 	color = "#33EE00" // rgb: lots, ??, ??
@@ -119,7 +119,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/consumable/ethanol/hooch
-	name = "Самогон"
+	name = "Hooch"
 	id = "hooch"
 	description = "Либо чья-то неудачная попытка приготовить коктейль, либо попытка приготовить алкоголь. В любом случае, вы действительно хотите это выпить?"
 	color = "#664300" // rgb: 102, 67, 0
@@ -137,7 +137,7 @@
 		return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/rum
-	name = "Ром"
+	name = "Rum"
 	id = "rum"
 	description = "Крик подобен грому — дайте людям рому!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -155,7 +155,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/mojito
-	name = "Мохито"
+	name = "Mojito"
 	id = "mojito"
 	description = "Если он хорош для Космокубы, то он хорош и для вас."
 	color = "#664300" // rgb: 102, 67, 0
@@ -166,7 +166,7 @@
 	taste_description = "мохито"
 
 /datum/reagent/consumable/ethanol/vodka
-	name = "Водка"
+	name = "Vodka"
 	id = "vodka"
 	description = "Алкогольный напиток номер один для славян со всей галактики."
 	color = "#664300" // rgb: 102, 67, 0
@@ -177,7 +177,7 @@
 	taste_description = "водки"
 
 /datum/reagent/consumable/ethanol/sake
-	name = "Сакэ"
+	name = "Sake"
 	id = "sake"
 	description = "Это сакэ. Как водка, только из риса."
 	color = "#664300" // rgb: 102, 67, 0
@@ -188,7 +188,7 @@
 	taste_description = "сакэ"
 
 /datum/reagent/consumable/ethanol/tequila
-	name = "Текила"
+	name = "Tequila"
 	id = "tequila"
 	description = "Крепкий алкогольный напиток с мягким вкусом, производимый по традиционным мексиканским технологиям. Не хочешь промочить горло, омбре?"
 	color = "#A8B0B7" // rgb: 168, 176, 183
@@ -199,7 +199,7 @@
 	taste_description = "текилы"
 
 /datum/reagent/consumable/ethanol/vermouth
-	name = "Вермут"
+	name = "Vermouth"
 	id = "vermouth"
 	description = "Вам вдруг ужасно захотелось мартини..."
 	color = "#664300" // rgb: 102, 67, 0
@@ -210,7 +210,7 @@
 	taste_description = "вермута"
 
 /datum/reagent/consumable/ethanol/wine
-	name = "Вино"
+	name = "Wine"
 	id = "wine"
 	description = "Алкогольный напиток премиум-класса, приготовленный из дистиллированного виноградного сока."
 	color = "#7E4043" // rgb: 126, 64, 67
@@ -222,7 +222,7 @@
 	taste_description = "вина"
 
 /datum/reagent/consumable/ethanol/cognac
-	name = "Коньяк"
+	name = "Cognac"
 	id = "cognac"
 	description = "Сладкий крепкий напиток, приготовленный с помощью многочисленных перегонок и многолетней выдержки. Сама элегантность."
 	color = "#664300" // rgb: 102, 67, 0
@@ -234,7 +234,7 @@
 	taste_description = "коньяка"
 
 /datum/reagent/consumable/ethanol/suicider //otherwise known as "I want to get so smashed my liver gives out and I die from alcohol poisoning".
-	name = "Суисидр"
+	name = "Suicider"
 	id = "suicider"
 	description = "Невероятно крепкий и мощный сорт сидра."
 	color = "#CF3811"
@@ -245,7 +245,7 @@
 	taste_description = "неминуемой смерти"
 
 /datum/reagent/consumable/ethanol/ale
-	name = "Эль"
+	name = "Ale"
 	id = "ale"
 	description = "Тёмный алкогольный напиток, приготовленный из ячменного солода и дрожжей."
 	color = "#664300" // rgb: 102, 67, 0
@@ -256,7 +256,7 @@
 	taste_description = "эля"
 
 /datum/reagent/consumable/ethanol/thirteenloko
-	name = "Тринадцатый Локо"
+	name = "Thirteen Loko"
 	id = "thirteenloko"
 	description = "Крепкая смесь кофеина и алкоголя."
 	color = "#102000" // rgb: 16, 32, 0
@@ -279,7 +279,7 @@
 /////////////////////////////////////////////////////////////////cocktail entities//////////////////////////////////////////////
 
 /datum/reagent/consumable/ethanol/bilk
-	name = "Миво"
+	name = "Bilk"
 	id = "bilk"
 	description = "Это пиво, смешанное с молоком. Ух..."
 	color = "#895C4C" // rgb: 137, 92, 76
@@ -291,7 +291,7 @@
 	taste_description = "мива"
 
 /datum/reagent/consumable/ethanol/atomicbomb
-	name = "Атомная Бомба"
+	name = "Atomic Bomb"
 	id = "atomicbomb"
 	description = "Ядерное оружие никогда не было таким вкусным."
 	color = "#666300" // rgb: 102, 99, 0
@@ -302,7 +302,7 @@
 	taste_description = "длинного, терпкого ожога"
 
 /datum/reagent/consumable/ethanol/threemileisland
-	name = "Чай со льдом Три-Майл-Айленд"
+	name = "Three Mile Island Iced Tea"
 	id = "threemileisland"
 	description = "Создан для женщин, достаточно крепок для мужчин."
 	color = "#666340" // rgb: 102, 99, 64
@@ -313,7 +313,7 @@
 	taste_description = "текучей волны жара"
 
 /datum/reagent/consumable/ethanol/goldschlager
-	name = "Гольдшлягер"
+	name = "Goldschlager"
 	id = "goldschlager"
 	description = "Шнапс с корицей 100%-ой пробы пробы, созданный для алкоголиков-подростков на весенних каникулах."
 	color = "#664300" // rgb: 102, 67, 0
@@ -324,7 +324,7 @@
 	taste_description = "глубокого, пряного тепла"
 
 /datum/reagent/consumable/ethanol/patron
-	name = "Патрон"
+	name = "Patron"
 	id = "patron"
 	description = "Текила с серебром в составе, которую пьют женщины-алкоголики в клубах."
 	color = "#585840" // rgb: 88, 88, 64
@@ -335,7 +335,7 @@
 	taste_description = "подарка"
 
 /datum/reagent/consumable/ethanol/gintonic
-	name = "Джин и тоник"
+	name = "Gin and Tonic"
 	id = "gintonic"
 	description = "Классический мягкий коктейль, нестареющая классика."
 	color = "#664300" // rgb: 102, 67, 0
@@ -346,7 +346,7 @@
 	taste_description = "горького лекарства"
 
 /datum/reagent/consumable/ethanol/cuba_libre
-	name = "Куба Либре"
+	name = "Cuba Libre"
 	id = "cubalibre"
 	description = "Ром, смешанный с колой. Viva la Revolution!"
 	color = "#3E1B00" // rgb: 62, 27, 0
@@ -357,7 +357,7 @@
 	taste_description = "пьянящей свободы"
 
 /datum/reagent/consumable/ethanol/whiskey_cola
-	name = "Виски-кола"
+	name = "Whiskey Cola"
 	id = "whiskeycola"
 	description = "Виски, смешанный с колой. Удивительно освежающий."
 	color = "#3E1B00" // rgb: 62, 27, 0
@@ -368,7 +368,7 @@
 	taste_description = "виски с колой"
 
 /datum/reagent/consumable/ethanol/martini
-	name = "Классический мартини"
+	name = "Classic Martini"
 	id = "martini"
 	description = "Вермут с джином. Не совсем то, что пил 007, но всё равно вкусно."
 	color = "#664300" // rgb: 102, 67, 0
@@ -379,7 +379,7 @@
 	taste_description = "аристократии"
 
 /datum/reagent/consumable/ethanol/vodkamartini
-	name = "Водка мартини"
+	name = "Vodka Martini"
 	id = "vodkamartini"
 	description = "Водка с джином. Не совсем то, что пил 007, но всё равно вкусно."
 	color = "#664300" // rgb: 102, 67, 0
@@ -390,7 +390,7 @@
 	taste_description = "аристократии и картошки"
 
 /datum/reagent/consumable/ethanol/white_russian
-	name = "Белый Русский"
+	name = "White Russian"
 	id = "whiterussian"
 	description = "Но это только твоё мнение, чувак..."
 	color = "#A68340" // rgb: 166, 131, 64
@@ -401,7 +401,7 @@
 	taste_description = "очень кремового алкоголя"
 
 /datum/reagent/consumable/ethanol/screwdrivercocktail
-	name = "Отвёртка"
+	name = "Screwdriver"
 	id = "screwdrivercocktail"
 	description = "Водка, смешанная с апельсиновым соком. Достаточно вкусно."
 	color = "#A68310" // rgb: 166, 131, 16
@@ -425,7 +425,7 @@
 	REMOVE_TRAIT(drinker, TRAIT_HALT_RADIATION_EFFECTS, UNIQUE_TRAIT_SOURCE(src))
 
 /datum/reagent/consumable/ethanol/booger
-	name = "Козявка"
+	name = "Booger"
 	id = "booger"
 	description = "Ууу..."
 	color = "#A68310" // rgb: 166, 131, 16
@@ -436,7 +436,7 @@
 	taste_description = "фруктовой массы"
 
 /datum/reagent/consumable/ethanol/bloody_mary
-	name = "Кровавая Мэри"
+	name = "Bloody Mary"
 	id = "bloodymary"
 	description = "Странная, но приятная смесь из водки, томатов и сока лайма. А томатов ли?"
 	color = "#664300" // rgb: 102, 67, 0
@@ -453,7 +453,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/gargle_blaster
-	name = "Пан-Галактический Грызлодёр"
+	name = "Pan-Galactic Gargle Blaster"
 	id = "gargleblaster"
 	description = "Вау, эта штука выглядит нестабильно!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -464,7 +464,7 @@
 	taste_description = "числа 42"
 
 /datum/reagent/consumable/ethanol/flaming_homer
-	name = "Горящий Мо"
+	name = "Flaming Moe"
 	id = "flamingmoe"
 	description = "Это, по-видимому, смесь различных алкогольных напитков, смешанных с рецептурным лекарством."
 	color = "#58447f" //rgb: 88, 66, 127
@@ -475,7 +475,7 @@
 	taste_description = "карамелизированной выпивки и лекарства"
 
 /datum/reagent/consumable/ethanol/brave_bull
-	name = "Храбрый Бык"
+	name = "Brave Bull"
 	id = "bravebull"
 	description = "Текила с кофейным ликёром. Хех."
 	color = "#664300" // rgb: 102, 67, 0
@@ -486,7 +486,7 @@
 	taste_description = "сладкого алкоголя"
 
 /datum/reagent/consumable/ethanol/tequila_sunrise
-	name = "Текила Санрайз"
+	name = "Tequila Sunrise"
 	id = "tequilasunrise"
 	description = "Текила и апельсиновый сок. Как \"Отвёртка\", только по-мексикански."
 	color = "#664300" // rgb: 102, 67, 0
@@ -497,7 +497,7 @@
 	taste_description = "фруктового алкоголя"
 
 /datum/reagent/consumable/ethanol/toxins_special
-	name = "Особый из Токсикологии"
+	name = "Toxins Special"
 	id = "toxinsspecial"
 	description = "Эта штука горит! ВЫЗОВИТЕ ЧЁРТОВ ШАТТЛ!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -513,7 +513,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/beepsky_smash
-	name = "Удар Бипски"
+	name = "Beepsky Smash"
 	id = "beepskysmash"
 	description = "Перестаньте пить это и приготовьтесь к ПРАВОСУДИЮ."
 	color = "#664300" // rgb: 102, 67, 0
@@ -528,7 +528,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/irish_cream
-	name = "Ирландские Сливки"
+	name = "Irish Cream"
 	description = "Крем с добавлением виски — чего ещё ожидать от ирландцев?"
 	id = "irishcream"
 	color = "#664300" // rgb: 102, 67, 0
@@ -539,7 +539,7 @@
 	taste_description = "сливочного алкоголя"
 
 /datum/reagent/consumable/ethanol/manly_dorf
-	name = "Мужественный Дворф"
+	name = "The Manly Dorf"
 	id = "manlydorf"
 	description = "Крепкая смесь из эля и пива для настоящих трудяг. За Карла!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -550,7 +550,7 @@
 	taste_description = "мужественности"
 
 /datum/reagent/consumable/ethanol/longislandicedtea
-	name = "Чай со льдом Лонг Айленд"
+	name = "Long Island Iced Tea"
 	id = "longislandicedtea"
 	description = "Содержимое ликёрного шкафа, смешанное в восхитительный микс. Предназначен только для женщин-алкоголичек среднего возраста."
 	color = "#664300" // rgb: 102, 67, 0
@@ -561,7 +561,7 @@
 	taste_description = "фруктового алкоголя"
 
 /datum/reagent/consumable/ethanol/moonshine
-	name = "Самогон"
+	name = "Moonshine"
 	id = "moonshine"
 	description = "Вы действительно достигли дна... ваша печень собрала вещи и ушла вчера вечером."
 	color = "#664300" // rgb: 102, 67, 0
@@ -583,7 +583,7 @@
 	taste_description = "уничтожения"
 
 /datum/reagent/consumable/ethanol/irishcoffee
-	name = "Кофе по Ирландски"
+	name = "Irish Coffee"
 	id = "irishcoffee"
 	description = "Кофе и алкоголь. Веселее, чем пить \"Мимозу\" по утрам."
 	color = "#664300" // rgb: 102, 67, 0
@@ -594,7 +594,7 @@
 	taste_description = "кофе с алкоголем"
 
 /datum/reagent/consumable/ethanol/margarita
-	name = "Маргарита"
+	name = "Margarita"
 	id = "margarita"
 	description = "Текила с ликёром и лаймом. Так по-мексикански."
 	color = "#664300" // rgb: 102, 67, 0
@@ -605,7 +605,7 @@
 	taste_description = "маргариток"
 
 /datum/reagent/consumable/ethanol/black_russian
-	name = "Чёрный Русский"
+	name = "Black Russian"
 	id = "blackrussian"
 	description = "Для тех, кто не переносит лактозу. По-прежнему стильный, как и Белый Русский."
 	color = "#360000" // rgb: 54, 0, 0
@@ -616,7 +616,7 @@
 	taste_description = "сладкого алкоголя"
 
 /datum/reagent/consumable/ethanol/manhattan
-	name = "Манхэттен"
+	name = "Manhattan"
 	id = "manhattan"
 	description = "Любимый напиток детектива под прикрытием. Он никогда не переносил джин..."
 	color = "#664300" // rgb: 102, 67, 0
@@ -627,7 +627,7 @@
 	taste_description = "городской суеты"
 
 /datum/reagent/consumable/ethanol/manhattan_proj
-	name = "Манхэттенский проект"
+	name = "Manhattan Project"
 	id = "manhattan_proj"
 	description = "Напиток для учёных, размышляющих о том, как взорвать станцию."
 	color = "#664300" // rgb: 102, 67, 0
@@ -638,7 +638,7 @@
 	taste_description = "апокалипсиса"
 
 /datum/reagent/consumable/ethanol/whiskeysoda
-	name = "Виски-сода"
+	name = "Whiskey Soda"
 	id = "whiskeysoda"
 	description = "Ультимативный способ освежиться."
 	color = "#664300" // rgb: 102, 67, 0
@@ -649,7 +649,7 @@
 	taste_description = "посредственности"
 
 /datum/reagent/consumable/ethanol/antifreeze
-	name = "Анти-фриз"
+	name = "Anti-freeze"
 	id = "antifreeze"
 	description = "Ультимативный способ освежиться."
 	color = "#664300" // rgb: 102, 67, 0
@@ -665,7 +665,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/barefoot
-	name = "Босяк"
+	name = "Barefoot"
 	id = "barefoot"
 	description = "Босоногость и беременность."
 	color = "#664300" // rgb: 102, 67, 0
@@ -676,7 +676,7 @@
 	taste_description = "беременности"
 
 /datum/reagent/consumable/ethanol/snowwhite
-	name = "Белоснежка"
+	name = "Snow White"
 	id = "snowwhite"
 	description = "Холодный напиток. Реально холодный."
 	color = "#664300" // rgb: 102, 67, 0
@@ -687,7 +687,7 @@
 	taste_description = "отравленного яблока"
 
 /datum/reagent/consumable/ethanol/demonsblood
-	name = "Кровь Демона"
+	name = "Demons Blood"
 	id = "demonsblood"
 	description = "ААААА!!!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -699,7 +699,7 @@
 	taste_description = "зла"
 
 /datum/reagent/consumable/ethanol/vodkatonic
-	name = "Водка и тоник"
+	name = "Vodka and Tonic"
 	id = "vodkatonic"
 	description = "Когда \"Джин и тоник\" не достаточно славянский."
 	color = "#664300" // rgb: 102, 67, 0
@@ -711,7 +711,7 @@
 	taste_description = "горького лекарства"
 
 /datum/reagent/consumable/ethanol/ginfizz
-	name = "Джин-физ"
+	name = "Gin Fizz"
 	id = "ginfizz"
 	description = "Освежающе лимонный, восхитительно сухой."
 	color = "#664300" // rgb: 102, 67, 0
@@ -723,7 +723,7 @@
 	taste_description = "шипучего алкоголя"
 
 /datum/reagent/consumable/ethanol/bahama_mama
-	name = "Бахама Мама"
+	name = "Bahama mama"
 	id = "bahama_mama"
 	description = "Тропический коктейль."
 	color = "#664300" // rgb: 102, 67, 0
@@ -734,7 +734,7 @@
 	taste_description = "фруктов и алкоголя"
 
 /datum/reagent/consumable/ethanol/singulo
-	name = "Сингуло"
+	name = "Singulo"
 	id = "singulo"
 	description = "Блю-спейс коктейль, вау!"
 	color = "#2E6671" // rgb: 46, 102, 113
@@ -746,7 +746,7 @@
 	taste_description = "бесконечности"
 
 /datum/reagent/consumable/ethanol/sbiten
-	name = "Сбитень"
+	name = "Sbiten"
 	id = "sbiten"
 	description = "Пряная водка! Горячо!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -762,7 +762,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/devilskiss
-	name = "Поцелуй Дьявола"
+	name = "Devils Kiss"
 	id = "devilskiss"
 	description = "Время страшилок!"
 	color = "#A68310" // rgb: 166, 131, 16
@@ -773,7 +773,7 @@
 	taste_description = "озорства"
 
 /datum/reagent/consumable/ethanol/red_mead
-	name = "Красная медовуха"
+	name = "Red Mead"
 	id = "red_mead"
 	description = "Напиток Настоящих Викингов! Даже несмотря на странный красный цвет."
 	color = "#664300" // rgb: 102, 67, 0
@@ -784,7 +784,7 @@
 	taste_description = "крови и мёда"
 
 /datum/reagent/consumable/ethanol/mead
-	name = "Медовуха"
+	name = "Mead"
 	id = "mead"
 	description = "Напиток Настоящих Викингов!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -796,7 +796,7 @@
 	taste_description = "мёда"
 
 /datum/reagent/consumable/ethanol/iced_beer
-	name = "Пиво со льдом"
+	name = "Iced Beer"
 	id = "iced_beer"
 	description = "Пиво, настолько ледяное, что воздух вокруг него замерзает."
 	color = "#664300" // rgb: 102, 67, 0
@@ -812,7 +812,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/grog
-	name = "Грог"
+	name = "Grog"
 	id = "grog"
 	description = "Разведённый водом ром. Просто, но со вкусом."
 	color = "#664300" // rgb: 102, 67, 0
@@ -823,7 +823,7 @@
 	taste_description = "сильно разбавленного рома"
 
 /datum/reagent/consumable/ethanol/aloe
-	name = "Алоэ"
+	name = "Aloe"
 	id = "aloe"
 	description = "Хорошо, очень хорошо."
 	color = "#664300" // rgb: 102, 67, 0
@@ -834,7 +834,7 @@
 	taste_description = "здоровой кожи"
 
 /datum/reagent/consumable/ethanol/andalusia
-	name = "Андалузия"
+	name = "Andalusia"
 	id = "andalusia"
 	description = "Хороший напиток со странным названием."
 	color = "#664300" // rgb: 102, 67, 0
@@ -845,7 +845,7 @@
 	taste_description = "сладкого алкоголя"
 
 /datum/reagent/consumable/ethanol/alliescocktail
-	name = "Коктейль союзников"
+	name = "Allies Cocktail"
 	id = "alliescocktail"
 	description = "Напиток, приготовленный из ваших союзников."
 	color = "#664300" // rgb: 102, 67, 0
@@ -856,7 +856,7 @@
 	taste_description = "победы"
 
 /datum/reagent/consumable/ethanol/acid_spit
-	name = "Кислотный Плевок"
+	name = "Acid Spit"
 	id = "acidspit"
 	description = "Сделан из живых пришельцев."
 	color = "#365000" // rgb: 54, 80, 0
@@ -872,7 +872,7 @@
 		M.emote("scream")
 
 /datum/reagent/consumable/ethanol/amasec
-	name = "Амасек"
+	name = "Amasec"
 	id = "amasec"
 	description = "Император одобряет."
 	color = "#664300" // rgb: 102, 67, 0
@@ -883,7 +883,7 @@
 	taste_description = "странного алкоголя"
 
 /datum/reagent/consumable/ethanol/neurotoxin
-	name = "Нейротоксин"
+	name = "Neuro-toxin"
 	id = "neurotoxin"
 	description = "Сильный нейротоксин, который вводит выпившего в состояние, подобное смерти."
 	color = "#2E2E61" // rgb: 46, 46, 97
@@ -906,7 +906,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/hippies_delight
-	name = "Радость Хиппи"
+	name = "Hippie's Delight"
 	id = "hippiesdelight"
 	description = "Ты просто не понимаешь, чуваааак."
 	color = "#664300" // rgb: 102, 67, 0
@@ -942,7 +942,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/changelingsting
-	name = "Жало Генокрада"
+	name = "Changeling Sting"
 	id = "changelingsting"
 	description = "Генокрадов не существует, это ведь даже дети знают."
 	color = "#2E6671" // rgb: 46, 102, 113
@@ -954,7 +954,7 @@
 	taste_description = "лёгкого укола"
 
 /datum/reagent/consumable/ethanol/irishcarbomb
-	name = "Ирландская Автомобильная Бомба"
+	name = "Irish Car Bomb"
 	id = "irishcarbomb"
 	description = "Ммм, на вкус как шоколадный торт..."
 	color = "#2E6671" // rgb: 46, 102, 113
@@ -966,7 +966,7 @@
 	taste_description = "проблем"
 
 /datum/reagent/consumable/ethanol/syndicatebomb
-	name = "Бомба \"Синдиката\""
+	name = "Syndicate Bomb"
 	id = "syndicatebomb"
 	description = "Пить аккуратно."
 	color = "#2E6671" // rgb: 46, 102, 113
@@ -977,18 +977,18 @@
 	taste_description = "предложения о работе"
 
 /datum/reagent/consumable/ethanol/erikasurprise
-	name = "Сюрприз Эрики"
+	name = "Erika Surprise"
 	id = "erikasurprise"
 	description = "Сюрприз в том, что он зелёный!"
 	color = "#2E6671" // rgb: 46, 102, 113
 	alcohol_perc = 0.2
 	drink_icon = "erikasurprise"
-	name = "Сюрприз Эрики"
+	name = "Erika Surprise"
 	drink_desc = "The surprise is, it's green!"
 	taste_description = "разочарования"
 
 /datum/reagent/consumable/ethanol/driestmartini
-	name = "Самый сухой мартини"
+	name = "Driest Martini"
 	id = "driestmartini"
 	description = "Только для опытных. Стоп, это песок там в стакане?"
 	nutriment_factor = 1 * REAGENTS_METABOLISM
@@ -1006,7 +1006,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/kahlua
-	name = "Калуа"
+	name = "Kahlua"
 	id = "kahlua"
 	description = "Широко известный мексиканский ликёр со вкусом кофе. Производится с 1936 года!"
 	color = "#664300" // rgb: 102, 67, 0
@@ -1024,7 +1024,7 @@
 	return ..()
 
 /datum/reagent/ginsonic
-	name = "Джин и Соник"
+	name = "Gin and sonic"
 	id = "ginsonic"
 	description = "GOTTA GET CRUNK FAST BUT LIQUOR TOO SLOW"
 	reagent_state = LIQUID
@@ -1051,7 +1051,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/applejack
-	name = "Эпплджек"
+	name = "Applejack"
 	id = "applejack"
 	description = "Высококонцентрированный алкогольный напиток, изготовленный путём многократного замораживания сидра и удаления льда."
 	color = "#997A00"
@@ -1062,7 +1062,7 @@
 	taste_description = "крепкого сидра"
 
 /datum/reagent/consumable/ethanol/jackrose
-	name = "Джек Роуз"
+	name = "Jack Rose"
 	id = "jackrose"
 	description = "Классический коктейль, который вышел из моды, но не из вкуса."
 	color = "#664300"
@@ -1073,7 +1073,7 @@
 	taste_description = "стиля"
 
 /datum/reagent/consumable/ethanol/drunkenblumpkin
-	name = "Пьяный Идиот"
+	name = "Drunken Blumpkin"
 	id = "drunkenblumpkin"
 	description = "Странная смесь виски и тыквенного сока."
 	color = "#1EA0FF" // rgb: 102, 67, 0
@@ -1084,7 +1084,7 @@
 	taste_description = "странности"
 
 /datum/reagent/consumable/ethanol/eggnog
-	name = "Эгг-Ног"
+	name = "Eggnog"
 	id = "eggnog"
 	description = "Для наслаждения самым чудесным временем года."
 	color = "#fcfdc6" // rgb: 252, 253, 198
@@ -1096,7 +1096,7 @@
 	taste_description = "рождества"
 
 /datum/reagent/consumable/ethanol/dragons_breath //inaccessible to players, but here for admin shennanigans
-	name = "Дыхание Дракона"
+	name = "Dragon's Breath"
 	id = "dragonsbreath"
 	description = "Производство этого напитка вероятно, нарушает Женевскую конвенцию."
 	color = "#DC0000"
@@ -1140,7 +1140,7 @@
 // WOOO!
 
 /datum/reagent/consumable/ethanol/synthanol
-	name = "Синтанол"
+	name = "Synthanol"
 	id = "synthanol"
 	description = "Текучая жидкость с токопроводящими свойствами. Её воздействие на синтетику аналогично воздействию спирта на органику."
 	color = "#1BB1FF"
@@ -1167,7 +1167,7 @@
 		to_chat(M, pick(span_danger("Это отвратительно!"), span_danger("Фу!")))
 
 /datum/reagent/consumable/ethanol/synthanol/robottears
-	name = "Слёзы Робота"
+	name = "Robot Tears"
 	id = "robottears"
 	description = "Маслянистая субстанция, которую КПБ технически могут считать \"напитком\"."
 	color = "#363636"
@@ -1178,7 +1178,7 @@
 	taste_description = "экзистенциальных вопросов"
 
 /datum/reagent/consumable/ethanol/synthanol/trinary
-	name = "Тринарный"
+	name = "Trinary"
 	id = "trinary"
 	description = "Фруктовый напиток, предназначенный только для синтетиков, как бы это ни звучало."
 	color = "#adb21f"
@@ -1189,7 +1189,7 @@
 	taste_description = "машинной логики"
 
 /datum/reagent/consumable/ethanol/synthanol/servo
-	name = "Серво"
+	name = "Servo"
 	id = "servo"
 	description = "Напиток, содержащий некоторые органические ингредиенты, но предназначенный только для синтетиков."
 	color = "#5b3210"
@@ -1200,7 +1200,7 @@
 	taste_description = "машинного масла и шоколада"
 
 /datum/reagent/consumable/ethanol/synthanol/uplink
-	name = "Аплинк"
+	name = "Uplink"
 	id = "uplink"
 	description = "Сильнодействующая смесь алкоголя и синтанола. Действует только на синтетиков."
 	color = "#e7ae04"
@@ -1211,7 +1211,7 @@
 	taste_description = "графического интерфейса на Visual Basic"
 
 /datum/reagent/consumable/ethanol/synthanol/synthnsoda
-	name = "Синт и Сода"
+	name = "Synth 'n Soda"
 	id = "synthnsoda"
 	description = "Классический напиток, адаптированный под вкусы синтетиков."
 	color = "#7204e7"
@@ -1222,7 +1222,7 @@
 	taste_description = "шипучего моторного масла"
 
 /datum/reagent/consumable/ethanol/synthanol/synthignon
-	name = "Синтигон"
+	name = "Synthignon"
 	id = "synthignon"
 	description = "Кто-то смешал вино и алкоголь для роботов. Надеюсь, он горд собой."
 	color = "#d004e7"
@@ -1233,7 +1233,7 @@
 	taste_description = "модного моторного масла"
 
 /datum/reagent/consumable/ethanol/fruit_wine
-	name = "Фруктовое вино"
+	name = "Fruit Wine"
 	id = "fruit_wine"
 	description = "Вино, изготовленное из растений."
 	color = "#FFFFFF"
@@ -1336,7 +1336,7 @@
 		holder.my_atom.on_reagent_change()
 
 /datum/reagent/consumable/ethanol/bacchus_blessing //An EXTREMELY powerful drink. Smashed in seconds, dead in minutes.
-	name = "Благословение Бахуса"
+	name = "Bacchus' Blessing"
 	id = "bacchus_blessing"
 	description = "Неидентифицируемая смесь. Неизмеримо высокое содержание алкоголя."
 	color = rgb(51, 19, 3) //Sickly brown
@@ -1348,7 +1348,7 @@
 	taste_description = "стены кирпичей"
 
 /datum/reagent/consumable/ethanol/fernet
-	name = "Фернет"
+	name = "Fernet"
 	id = "fernet"
 	description = "Невероятно горький травяной ликёр, используемый в качестве дижестива."
 	color = "#1B2E24" // rgb: 27, 46, 36
@@ -1377,7 +1377,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/fernet/fernet_cola
-	name = "Фернет-кола"
+	name = "Fernet Cola"
 	id = "fernet_cola"
 	description = "Очень популярный и горьковато-сладкий дижестив, идеальный после плотного обеда. По традиции, его лучше всего подавать в откупоренной бутылке из-под колы."
 	color = "#390600" // rgb: 57, 6, 0
@@ -1389,7 +1389,7 @@
 	remove_nutrition = 1
 
 /datum/reagent/consumable/ethanol/rainbow_sky
-	name = "Радужное Небо"
+	name = "Rainbow Sky"
 	id = "rainbow_sky"
 	description = "Напиток, переливающийся всеми цветами радуги с примесями космоса."
 	color = "#ffffff"
@@ -1411,7 +1411,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/champagne
-	name = "Шампанское"
+	name = "Champagne"
 	id = "champagne"
 	description = "Превосходное игристое шампанское. Для тех, кто хочет выделиться среди винокуров."
 	color = "#d0d312"
@@ -1422,7 +1422,7 @@
 	taste_description = "искрящегося солнечного света"
 
 /datum/reagent/consumable/ethanol/aperol
-	name = "Апероль"
+	name = "Aperol"
 	id = "aperol"
 	description = "О-о-о-о... Похоже, это засада для печени."
 	color = "#b9000a"
@@ -1433,7 +1433,7 @@
 	taste_description = "травянистой сладости"
 
 /datum/reagent/consumable/ethanol/jagermeister
-	name = "Ягермейстер"
+	name = "Jagermeister"
 	id = "jagermeister"
 	description = "Пьяница-охотник прибыл из далёкого космоса, и, похоже, он нашёл свою жертву."
 	color = "#200b0b"
@@ -1444,7 +1444,7 @@
 	taste_description = "охотничьего азарта"
 
 /datum/reagent/consumable/ethanol/schnaps
-	name = "Шнапс"
+	name = "Schnapps"
 	id = "schnaps"
 	description = "От такого шнапса не грех начать петь йодлем."
 	color = "#e0e0e0"
@@ -1456,7 +1456,7 @@
 	taste_description = "пшеничной мяты"
 
 /datum/reagent/consumable/ethanol/sambuka
-	name = "Самбука"
+	name = "Sambuca"
 	id = "sambuka"
 	description = "Улетая в космос, многие думали, что схватили судьбу"
 	color = "#e0e0e0"
@@ -1468,7 +1468,7 @@
 	taste_description = "вертлявого огня"
 
 /datum/reagent/consumable/ethanol/bluecuracao
-	name = "Голубой Кюрасао"
+	name = "Blue Curacao"
 	id = "bluecuracao"
 	description = "Запал готов, синий уже загорелся."
 	color = "#16c9ff"
@@ -1479,7 +1479,7 @@
 	taste_description = "взрывной голубизны"
 
 /datum/reagent/consumable/ethanol/bitter
-	name = "Биттер"
+	name = "Bitters"
 	id = "bitter"
 	description = "Не перепутай размеры этикеток, ведь я ничего менять не буду."
 	color = "#d44071"
@@ -1491,7 +1491,7 @@
 	taste_description = "вакуумной горечи"
 
 /datum/reagent/consumable/ethanol/sheridan
-	name = "Шериданс"
+	name = "Sheridan's"
 	id = "sheridan"
 	description = "Охладите, разлейте под углом 45°, не перемешивайте, наслаждайтесь."
 	color = "#3a3d2e"
@@ -1503,7 +1503,7 @@
 
 ////////////////////////////Cocktails///////////////////////////////
 /datum/reagent/consumable/ethanol/black_blood
-	name = "Чёрная Кровь"
+	name = "Black Blood"
 	id = "black_blood"
 	description = "Пить нужно быстрее, пока оно не начало сворачиваться."
 	color = "#252521"
@@ -1524,7 +1524,7 @@
 		)
 
 /datum/reagent/consumable/ethanol/light_storm
-	name = "Лёгкий Шторм"
+	name = "Light Storm"
 	id = "light_storm"
 	description = "Даже вдали от океана вы можете почувствовать эту дрожь."
 	color = "#4b4b44"
@@ -1535,7 +1535,7 @@
 	taste_description = "морских волнений"
 
 /datum/reagent/consumable/ethanol/cream_heaven
-	name = "Кремовый Рай"
+	name = "Cream Heaven"
 	id = "cream_heaven"
 	description = "Это сочетание сливок и кофе, настоящее небесное творение."
 	color = "#4b4b44"
@@ -1546,7 +1546,7 @@
 	taste_description = "кофейных облачков"
 
 /datum/reagent/consumable/ethanol/negroni
-	name = "Негрони"
+	name = "Negroni"
 	id = "negroni"
 	description = "Горькие напитки очень полезны для печени, а джин плохо влияет на организм. Здесь они уравновешивают друг друга."
 	color = "#ad3948"
@@ -1557,7 +1557,7 @@
 	taste_description = "сладкого шествия"
 
 /datum/reagent/consumable/ethanol/hirosima
-	name = "Хиросима"
+	name = "Hiroshima"
 	id = "hirosima"
 	description = "Мои руки по локоть в крови... О, подождите, это алкоголь."
 	color = "#598317"
@@ -1568,7 +1568,7 @@
 	taste_description = "алкогольного пепла"
 
 /datum/reagent/consumable/ethanol/nagasaki
-	name = "Нагасаки"
+	name = "Nagasaki"
 	id = "nagasaki"
 	description = "Сначала никто не знал, что произойдет дальше. Опьянение было ужасным. Нет сомнений, что это самое сильное опьянение, которое когда-либо испытывал человек."
 	color = "#18c212"
@@ -1579,7 +1579,7 @@
 	taste_description = "радиоактивного пепла"
 
 /datum/reagent/consumable/ethanol/chocolate_sheridan
-	name = "Шоколадный Шериданс"
+	name = "Chocolate Sheridan's"
 	id = "chocolate_sheridan"
 	description = "В ситуациях, когда действительно хочется взбодриться и выпить."
 	color = "#332a1a"
@@ -1590,7 +1590,7 @@
 	taste_description = "алкогольного мокко"
 
 /datum/reagent/consumable/ethanol/panamian
-	name = "Панама"
+	name = "Panama"
 	id = "panamian"
 	description = "Это соединит вашу кровь и алкоголь, прямо как Катунские врата."
 	color = "#3164a7"
@@ -1601,7 +1601,7 @@
 	taste_description = "судоходного канала"
 
 /datum/reagent/consumable/ethanol/pegu_club
-	name = "Клуб Пегу"
+	name = "Pegu Club"
 	id = "pegu_club"
 	description = "Это похоже на группу джентльменов, колонизирующих ваш язык."
 	color = "#a5702b"
@@ -1612,7 +1612,7 @@
 	taste_description = "судоходного канала"
 
 /datum/reagent/consumable/ethanol/jagermachine
-	name = "Ягермашина"
+	name = "Jagermachine"
 	id = "jagermachine"
 	description = "Настоящий охотник за деталями."
 	color = "#6b0b74"
@@ -1623,7 +1623,7 @@
 	taste_description = "воровства деталей"
 
 /datum/reagent/consumable/ethanol/blue_cybesauo
-	name = "Голубой Киберсауо"
+	name = "Blue Cybesauo"
 	id = "blue_cybesauo"
 	description = "Синева, похожая на синий экран смерти."
 	color = "#0b7463"
@@ -1634,7 +1634,7 @@
 	taste_description = "ошибки 0xc000001b"
 
 /datum/reagent/consumable/ethanol/alcomender
-	name = "Алко-мендер"
+	name = "Alco-Mender"
 	id = "alcomender"
 	description = "Кружка в форме авто-мендера, популярен среди докторов."
 	color = "#6b0059"
@@ -1657,7 +1657,7 @@
 	return STATUS_UPDATE_NONE
 
 /datum/reagent/consumable/ethanol/amnesia
-	name = "Звёздная Амнезия"
+	name = "Stellar Amnesia"
 	id = "amnesia"
 	description = "Стоп, это бутылка медицинского спирта?"
 	color = "#6b0059"
@@ -1668,7 +1668,7 @@
 	taste_description = "диско"
 
 /datum/reagent/consumable/ethanol/johnny
-	name = "Сильверхэнд"
+	name = "Silverhand"
 	id = "johnny"
 	description = "Просыпайся, самурай. Нам нужно сжечь одну станцию."
 	color = "#c41414"
@@ -1679,7 +1679,7 @@
 	taste_description = "угасающей суперзвезды"
 
 /datum/reagent/consumable/ethanol/cosmospoliten
-	name = "Космополитен"
+	name = "Cosmopolitan"
 	id = "cosmospoliten"
 	description = "А теперь попробуй доказать, что ты натурал и не женщина, если тебя застукают с ним."
 	color = "#b1483a"
@@ -1690,7 +1690,7 @@
 	taste_description = "изменения ориентации"
 
 /datum/reagent/consumable/ethanol/oldfashion
-	name = "Старая мода"
+	name = "Old Fashioned"
 	id = "oldfashion"
 	description = "Ходят слухи, что этот коктейль является самым старым из всех, но, впрочем, это совсем другая история."
 	color = "#6b4017"
@@ -1701,7 +1701,7 @@
 	taste_description = "старых добрых времён"
 
 /datum/reagent/consumable/ethanol/french_75
-	name = "Французский 75"
+	name = "French 75"
 	id = "french_75"
 	description = "Заряжай печень, целься, стреляй!"
 	color = "#b1953a"
@@ -1712,7 +1712,7 @@
 	taste_description = "артиллерийского обстрела"
 
 /datum/reagent/consumable/ethanol/gydroseridan
-	name = "Гидрориданс"
+	name = "Hydroridan's"
 	id = "gydroseridan"
 	description = "Гидравлическое разделение слоёв поможет нам повысить эффективность."
 	color = "#3a99b1"
@@ -1723,7 +1723,7 @@
 	taste_description = "мощи гидравлики"
 
 /datum/reagent/consumable/ethanol/milk_plus
-	name = "Молоко +"
+	name = "Milk Plus"
 	id = "milk_plus"
 	description = "Когда человек не может выбирать, он перестаёт быть человеком."
 	color = "#DFDFDF"
@@ -1734,7 +1734,7 @@
 	taste_description = "человеческой потери"
 
 /datum/reagent/consumable/ethanol/teslasingylo
-	name = "Бог Энергии"
+	name = "God of Energy"
 	id = "teslasingylo"
 	description = "Настоящий ужас для СКАН'ов и ЛКП. Не перегружайте их."
 	color = "#0300ce"
@@ -1754,7 +1754,7 @@
 		machine.adjust_nutrition(15) //much less than charging from APC (50)
 
 /datum/reagent/consumable/ethanol/light
-	name = "Свет"
+	name = "Light"
 	id = "light"
 	description = "Любимый напиток ниан и дион. Кто-то скажет, что это мини-термоядерная реакция, но только тссс..."
 	color = "#fffb00"
@@ -1773,7 +1773,7 @@
 		M.lighting_alpha = initial(M.lighting_alpha)
 
 /datum/reagent/consumable/ethanol/bees_knees
-	name = "Пчелиные Колени"
+	name = "Bee's Knees"
 	id = "bees_knees"
 	description = "Как будто бы дело в том, что пчела переносит пыльцу в области коленей и... Не берите в голову."
 	color = "#e8f71f"
@@ -1784,7 +1784,7 @@
 	taste_description = "любви к мёду"
 
 /datum/reagent/consumable/ethanol/aviation
-	name = "Авиация"
+	name = "Aviation"
 	id = "aviation"
 	description = "Трудно готовить коктейли, когда над твоим домом пролетает дирижабль."
 	color = "#c48f8f"
@@ -1795,7 +1795,7 @@
 	taste_description = "сильного ветра"
 
 /datum/reagent/consumable/ethanol/fizz
-	name = "Физз"
+	name = "Fizz"
 	id = "fizz"
 	description = "Это всё равно, что жить с дикой кошкой."
 	color = "#b6b6b6"
@@ -1806,7 +1806,7 @@
 	taste_description = "шипучего алкоголя"
 
 /datum/reagent/consumable/ethanol/brandy_crusta
-	name = "Коньячная Корочка"
+	name = "Brandy Crusta"
 	id = "brandy_crusta"
 	description = "Сахарная корочка может быть совсем не сладкой."
 	color = "#754609"
@@ -1817,7 +1817,7 @@
 	taste_description = "солёно-сладкого алкоголя"
 
 /datum/reagent/consumable/ethanol/aperolspritz
-	name = "Апероль Спритц"
+	name = "Aperol Spritz"
 	id = "aperolspritz"
 	description = "Многие считают его отдельным видом алкоголя, но он больше похож на коня в шахматах."
 	color = "#c43d3d"
@@ -1828,7 +1828,7 @@
 	taste_description = "раздельности вкусов"
 
 /datum/reagent/consumable/ethanol/sidecar
-	name = "Коляска"
+	name = "Sidecar"
 	id = "sidecar"
 	description = "Этот коктейль очень популярен. Впервые его представил популярный бармен Этот МакГарри из Клуба Бака."
 	color = "#b15416"
@@ -1839,7 +1839,7 @@
 	taste_description = "апельсинового алкоголя"
 
 /datum/reagent/consumable/ethanol/daiquiri
-	name = "Дайкири"
+	name = "Daiquiri"
 	id = "daiquiri"
 	description = "Просто попробуй, попробуй ещё раз!"
 	color = "#b6b6b6"
@@ -1850,7 +1850,7 @@
 	taste_description = "выстрела в голову"
 
 /datum/reagent/consumable/ethanol/tuxedo
-	name = "Смокинг"
+	name = "Tuxedo"
 	id = "tuxedo"
 	description = "Я могу пообещать вам Колумбийский Галстук."
 	color = "#888686"
@@ -1861,7 +1861,7 @@
 	taste_description = "строгости стиля"
 
 /datum/reagent/consumable/ethanol/telegol
-	name = "Телеголь"
+	name = "Telegol"
 	id = "telegol"
 	description = "Многие до сих пор ломают голову над вопросом существования этого коктейля. Как бы то ни было, он всё ещё существует... Или нет."
 	color = "#4218a3"
@@ -1872,7 +1872,7 @@
 	taste_description = "четырнадцатого измерения"
 
 /datum/reagent/consumable/ethanol/horse_neck
-	name = "Лошадиная Шея"
+	name = "Horse's Neck"
 	id = "horse_neck"
 	description = "Будьте осторожны с подковами вашей лошади."
 	color = "#c45d09"
@@ -1888,7 +1888,7 @@
 		M.say(pick("NEEIIGGGHHHH!", "NEEEIIIIGHH!", "NEIIIGGHH!", "HAAWWWWW!", "HAAAWWW!"))
 
 /datum/reagent/consumable/ethanol/cuban_sunset
-	name = "Кубинский Закат"
+	name = "Cuban Sunset"
 	id = "cuban_sunset"
 	description = "Новый день, новая революция."
 	color = "#d88948"
@@ -1899,7 +1899,7 @@
 	taste_description = "тоталитаризма"
 
 /datum/reagent/consumable/ethanol/sake_bomb
-	name = "Бомба Сакэ"
+	name = "Sake Bomb"
 	id = "sake_bomb"
 	description = "Ковровая бомбардировка вашей бамбуковой печени."
 	color = "#e2df2e"
@@ -1910,7 +1910,7 @@
 	taste_description = "пива и саке"
 
 /datum/reagent/consumable/ethanol/blue_havai
-	name = "Голубые Гавайи"
+	name = "Blue Hawaii"
 	id = "blue_havai"
 	description = "Такой же голубой, как и карие глаза."
 	color = "#296129"
@@ -1921,7 +1921,7 @@
 	taste_description = "неонового рассвета"
 
 /datum/reagent/consumable/ethanol/woo_woo
-	name = "Ву-Ву"
+	name = "Woo Woo"
 	id = "woo_woo"
 	description = "Какой ребёнок придумал это имя? Да, я вижу, вопрос решён."
 	color = "#e22e2e"
@@ -1932,7 +1932,7 @@
 	taste_description = "ву-ву"
 
 /datum/reagent/consumable/ethanol/mulled_wine
-	name = "Глинтвейн"
+	name = "Mulled Wine"
 	id = "mulled_wine"
 	description = "Просто горячее вино со специями, но такое приятное."
 	color = "#fd4b4b"
@@ -1958,7 +1958,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/white_bear
-	name = "Белый Медведь"
+	name = "Polar Bear"
 	id = "white_bear"
 	description = "Два исторических врага в одном кругу."
 	color = "#d8b465"
@@ -1969,7 +1969,7 @@
 	taste_description = "войны идеологий"
 
 /datum/reagent/consumable/ethanol/vampiro
-	name = "Вампиро"
+	name = "Vampiro"
 	id = "vampiro"
 	description = "Не имеет ничего общего с вампирами кроме цвета."
 	color = "#8d0000"
@@ -1986,7 +1986,7 @@
 			M.visible_message(span_warning("Глаза [M] ослепительно вспыхивают!"))
 
 /datum/reagent/consumable/ethanol/queen_mary
-	name = "Королева Мария"
+	name = "Queen Mary"
 	id = "queen_mary"
 	description = "Мария очистилась от крови, и оказалось, что она тоже красная."
 	color = "#bd2f2f"
@@ -1997,7 +1997,7 @@
 	taste_description = "вишнёвого пива"
 
 /datum/reagent/consumable/ethanol/inabox
-	name = "Коробка"
+	name = "In a Box"
 	id = "inabox"
 	description = "Это... Просто коробка?"
 	color = "#5a3e0b"
@@ -2008,7 +2008,7 @@
 	taste_description = "стелса"
 
 /datum/reagent/consumable/ethanol/beer_berry_royal
-	name = "Пиво Королевской Вишни"
+	name = "Royal Cherry Beer"
 	id = "beer_berry_royal"
 	description = "По какой-то причине они продолжают подниматься и опускаться, вверх и вниз."
 	color = "#684b16"
@@ -2019,7 +2019,7 @@
 	taste_description = "ягодного пива"
 
 /datum/reagent/consumable/ethanol/sazerac
-	name = "Сазерак"
+	name = "Sazerac"
 	id = "sazerac"
 	description = "Лучшие фармацевты — бармены."
 	color = "#7c6232"
@@ -2030,7 +2030,7 @@
 	taste_description = "горького виски"
 
 /datum/reagent/consumable/ethanol/monako
-	name = "Монако"
+	name = "Monaco"
 	id = "monako"
 	description = "Вы можете подумать, что на рынке больше фруктов."
 	color = "#7c6232"
@@ -2041,7 +2041,7 @@
 	taste_description = "фруктового джина"
 
 /datum/reagent/consumable/ethanol/irishempbomb
-	name = "Ирландская ЭМИ-бомба"
+	name = "Irish EMP Bomb"
 	id = "irishempbomb"
 	description = "Ммм, на вкус как отключение..."
 	color = "#123eb8"
@@ -2058,7 +2058,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/codelibre
-	name = "Коде Либре"
+	name = "Code Libre"
 	id = "codelibre"
 	description = "За Коде Либре!"
 	color = "#a126b1"
@@ -2075,7 +2075,7 @@
 		M.say("[get_language_prefix(LANGUAGE_TRINARY)] Вива ла Синтетика!")
 
 /datum/reagent/consumable/ethanol/blackicp
-	name = "Чёрный КПБ"
+	name = "Black IPC"
 	id = "blackicp"
 	description = "Извините за игнорирование вопроса, можете повторить запрос?"
 	color = "#a126b1"
@@ -2086,7 +2086,7 @@
 	taste_description = "замены монитора"
 
 /datum/reagent/consumable/ethanol/slime_drink
-	name = "Пьяный Слайм"
+	name = "Drunken Slime"
 	id = "slime_drink"
 	description = "Не волнуйтесь, это просто желе."
 	color = "#dd3e32"
@@ -2097,7 +2097,7 @@
 	taste_description = "желейного алкоголя"
 
 /datum/reagent/consumable/ethanol/innocent_erp
-	name = "Невинное ЕРП"
+	name = "Innocent ERP"
 	id = "innocent_erp"
 	description = "Большой Брат следит за тобой."
 	color = "#746463"
@@ -2108,7 +2108,7 @@
 	taste_description = "запретных желаний"
 
 /datum/reagent/consumable/ethanol/nasty_slush
-	name = "Мерзкая Слякоть"
+	name = "Nasty Slush"
 	id = "nasty_slush"
 	description = "Название не имеет никакого отношения к самому напитку."
 	color = "#462c0a"
@@ -2119,7 +2119,7 @@
 	taste_description = "мерзкой слякоти"
 
 /datum/reagent/consumable/ethanol/blue_lagoon
-	name = "Голубая Лагуна"
+	name = "Blue Lagoon"
 	id = "blue_lagoon"
 	description = "Что может быть лучше, чем отдых на пляже с хорошим напитком?"
 	color = "#1edddd"
@@ -2130,7 +2130,7 @@
 	taste_description = "пляжного отдыха"
 
 /datum/reagent/consumable/ethanol/green_fairy
-	name = "Зелёная Фея"
+	name = "Green Fairy"
 	id = "green_fairy"
 	description = "Какой-то ненормальный зелёный."
 	color = "#54dd1e"
@@ -2145,7 +2145,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/home_lebovsky
-	name = "Домашний Лебовски"
+	name = "Homemade Lebowski"
 	id = "home_lebovsky"
 	description = "Позволь мне кое-что тебе объяснить. Я не Домашний Лебовски. Иы Домашний Лебовски. Я Чувак."
 	color = "#422b00"
@@ -2156,7 +2156,7 @@
 	taste_description = "dressing gown"
 
 /datum/reagent/consumable/ethanol/top_billing
-	name = "Топ Биллинг"
+	name = "Top Billing"
 	id = "top_billing"
 	description = "На видном месте, наша главная заслуга!"
 	color = "#0b573d"
@@ -2167,7 +2167,7 @@
 	taste_description = "рекламного пространства"
 
 /datum/reagent/consumable/ethanol/trans_siberian_express
-	name = "Транссибирский экспресс"
+	name = "Trans-Siberian Express"
 	id = "trans_siberian_express"
 	description = "От Владивостока до белой горячки за один день."
 	color = "#e2a600"
@@ -2197,7 +2197,7 @@
 			M.default_language = null
 
 /datum/reagent/consumable/ethanol/sun
-	name = "Солнце"
+	name = "Sun"
 	id = "sun"
 	description = "Red sun over paradise!"
 	color = "#bd1c1c"
@@ -2208,7 +2208,7 @@
 	taste_description = "солнечной жары"
 
 /datum/reagent/consumable/ethanol/tick_tack
-	name = "Тик-Ток"
+	name = "Tick-Tock"
 	id = "tick_tack"
 	description = "Тик-Ток, Тик-Ток, бззз..."
 	color = "#118020"
@@ -2219,7 +2219,7 @@
 	taste_description = "тиканья часов"
 
 /datum/reagent/consumable/ethanol/uragan_shot
-	name = "Ураганный Выстрел"
+	name = "Hurricane Shot"
 	id = "uragan_shot"
 	description = "Это ураган? Нет, это урагон."
 	color = "#da6631"
@@ -2230,7 +2230,7 @@
 	taste_description = "порывов ветра"
 
 /datum/reagent/consumable/ethanol/new_yorker
-	name = "Нью-Йоркер"
+	name = "New Yorker"
 	id = "new_yorker"
 	description = "Будьте осторожны с биржей, иначе наступит \"чёрный вторник\"."
 	color = "#da3131"
@@ -2241,7 +2241,7 @@
 	taste_description = "катастрофы"
 
 /datum/reagent/consumable/ethanol/blue_moondrin
-	name = "Илукский Синий Мун`дрин"
+	name = "Iluk Blue Moon'drin"
 	id = "blue_moondrin"
 	description = "Редчайший таяранский напиток в галактике! Будьте осторожны с вашим капитаном!"
 	color = "#0026fc"
@@ -2277,7 +2277,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/red_moondrin
-	name = "Красноводный Мун`дрин"
+	name = "Redwater Moon'drin"
 	id = "red_moondrin"
 	description = "Запрещённый на Адомае таяранский напиток, но не здесь! Опасное пойло на основе лун'дрина с тайным ингридиентом. Будьте осторожны!"
 	color = "#960202"
@@ -2354,7 +2354,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/ethanol/synthanol/restart
-	name = "Перезагрузка"
+	name = "Restart"
 	id = "restart"
 	description = "Иногда нужно начать всё сначала."
 	color = "#0026fc"

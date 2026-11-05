@@ -1,5 +1,5 @@
 /datum/reagent/medicine
-	name = "Медицина"
+	name = "Medicine"
 	id = "medicine"
 	taste_description = "горечи"
 	harmless = TRUE
@@ -14,7 +14,7 @@
 	return STATUS_UPDATE_NONE
 
 /datum/reagent/medicine/hydrocodone
-	name = "Гидрокодон"
+	name = "Hydrocodone"
 	id = "hydrocodone"
 	description = "Чрезвычайно эффективное болеутоляющее средство; может иметь долгосрочные последствия злоупотребления."
 	reagent_state = LIQUID
@@ -29,7 +29,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/sterilizine
-	name = "Стерилизин"
+	name = "Sterilizine"
 	id = "sterilizine"
 	description = "Стерилизует раны для подготовки к операции."
 	reagent_state = LIQUID
@@ -41,7 +41,7 @@
 		exposed_mob.add_surgery_speed_mod(type, 0.8, min(volume * 1 MINUTES, 5 MINUTES))
 
 /datum/reagent/medicine/synaptizine
-	name = "Синаптизин"
+	name = "Synaptizine"
 	id = "synaptizine"
 	description = "Синаптизин используется для лечения нейролептического шока. Может использоваться для устранения инвалидизирующих симптомов, таких как паралич."
 	reagent_state = LIQUID
@@ -88,7 +88,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/medicine/mitocholide
-	name = "Митоколид"
+	name = "Mitocholide"
 	id = "mitocholide"
 	description = "Специализированный препарат, стимулирующий митохондрии клеток для заживления внутренних органов."
 	reagent_state = LIQUID
@@ -113,7 +113,7 @@
 
 /datum/reagent/medicine/cryoxadone
 	data = list("diseases" = null)
-	name = "Криоксадон"
+	name = "Cryoxadone"
 	id = "cryoxadone"
 	description = "Плазменная смесь, обладающая почти магической целительной силой. Его главное ограничение — температура тела субъекта должна быть ниже 265 К, чтобы он мог правильно метаболизироваться."
 	reagent_state = LIQUID
@@ -168,7 +168,7 @@
 		new_blood.update_icon()
 
 /datum/reagent/medicine/rezadone
-	name = "Резадон"
+	name = "Rezadone"
 	id = "rezadone"
 	description = "Порошок, полученный из рыбьего токсина. Резадон может эффективно лечить генетические повреждения, а также восстанавливать мелкие раны. Передозировка вызывает сильную тошноту и отравление."
 	color = "#669900" // rgb: 102, 153, 0
@@ -195,7 +195,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/spaceacillin
-	name = "Космоциллин"
+	name = "Spaceacillin"
 	id = "spaceacillin"
 	description = "Универсальный антибиотик, получаемый из космической плесени."
 	reagent_state = LIQUID
@@ -227,7 +227,7 @@
 	return ..()
 
 /datum/reagent/medicine/silver_sulfadiazine
-	name = "Сульфадиазин серебра"
+	name = "Silver Sulfadiazine"
 	id = "silver_sulfadiazine"
 	description = "Это антибактериальное соединение используется для лечения пострадавших от ожогов."
 	reagent_state = LIQUID
@@ -252,7 +252,7 @@
 	..()
 
 /datum/reagent/medicine/styptic_powder
-	name = "Кровоостанавливающая пудра"
+	name = "Styptic Powder"
 	id = "styptic_powder"
 	description = "Кровоостанавливающий порошок (сульфат алюминия), который помогает остановить кровотечение и заживить физические раны."
 	reagent_state = LIQUID
@@ -277,7 +277,7 @@
 	..()
 
 /datum/reagent/medicine/traneksam_acid
-	name = "Транексамовая кислота"
+	name = "Tranexamic Acid"
 	id = "traneksam_acid"
 	description = "лекарственное средство, которое применяют для лечения или предотвращения чрезмерной потери крови от травмы и хирургического вмешательства."
 	reagent_state = LIQUID
@@ -335,7 +335,7 @@
 	..()
 
 /datum/reagent/medicine/neuromatin
-	name = "Нейроматин"
+	name = "Neuromatin"
 	id = "neuromatin"
 	description = "Иммунодепрессант, предназначенный для противодействия последствиям трансплантации мозга. Имеет ряд побочных эффектов."
 	reagent_state = LIQUID
@@ -361,7 +361,7 @@
 	affected_carbon.vomit()
 
 /datum/reagent/medicine/salglu_solution
-	name = "Физиологический раствор"
+	name = "Saline-Glucose Solution"
 	id = "salglu_solution"
 	description = "Этот раствор соли и глюкозы помогает стабилизировать состояние тяжелораненых пациентов и очистить раны."
 	reagent_state = LIQUID
@@ -385,7 +385,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/synthflesh
-	name = "Синт-плоть"
+	name = "Synthflesh"
 	id = "synthflesh"
 	description = "Резорбируемая смесь микрофибриллярного коллагена и белков, способная быстро заживлять повреждения при местном применении."
 	reagent_state = LIQUID
@@ -407,7 +407,7 @@
 		playsound(T, 'sound/effects/splat.ogg', 50, TRUE, -3)
 
 /datum/reagent/medicine/ab_stimulant
-	name = "Анти-ожоговый стимулянт"
+	name = "Anti-Burn Stimulant"
 	id = "antiburn_stimulant"
 	description = "Стимулятор регенеративных способностей клеток, способный излечить обугленную кожу в кратчайшие сроки."
 	reagent_state = LIQUID
@@ -439,7 +439,7 @@
 	return ..()
 
 /datum/reagent/medicine/charcoal
-	name = "Активированный уголь"
+	name = "Charcoal"
 	id = "charcoal"
 	description = "Активированный уголь поглощает токсины."
 	reagent_state = LIQUID
@@ -456,7 +456,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/coaltree_extract
-	name = "Экстракт Угледрева"
+	name = "Coaltree Extract"
 	id = "coaltree_extract"
 	description = "Экстракт, полученный из угледрева. Выводит из организма вредные токсины, но имеет ряд побочных эффектов."
 	reagent_state = LIQUID
@@ -476,7 +476,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/omnizine
-	name = "Омнизин"
+	name = "Omnizine"
 	id = "omnizine"
 	description = "Омнизин — это высокоэффективный лечебный препарат, который можно использовать для лечения широкого спектра травм."
 	reagent_state = LIQUID
@@ -536,7 +536,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/medicine/calomel
-	name = "Каломель"
+	name = "Calomel"
 	id = "calomel"
 	description = "Это мощное чистящее средство избавляет организм от нечистот. Однако он очень токсичен, поэтому необходим тщательный контроль."
 	reagent_state = LIQUID
@@ -557,7 +557,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/potass_iodide
-	name = "Йодид калия"
+	name = "Potassium Iodide"
 	id = "potass_iodide"
 	description = "Йодид калия — лекарственный препарат, используемый для борьбы с последствиями радиационного отравления."
 	reagent_state = LIQUID
@@ -573,7 +573,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/pen_acid
-	name = "Пентетовая кислота"
+	name = "Pentetic Acid"
 	id = "pen_acid"
 	description = "Диэтилентриаминпентаацетат (сокращённо \"ДТПА\") — уменьшает огромное количество токсинов, одновременно выводя из организма другие химические вещества."
 	reagent_state = LIQUID
@@ -589,7 +589,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/sal_acid
-	name = "Салициловая кислота"
+	name = "Acetylsalicylic Acid"
 	id = "sal_acid"
 	description = "Это стандартное обезболивающее и жаропонижающее средство."
 	reagent_state = LIQUID
@@ -609,7 +609,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/menthol
-	name = "Ментол"
+	name = "Menthol"
 	id = "menthol"
 	description = "Ментол снимает ожоги и боль, обеспечивая ощущение прохлады."
 	reagent_state = LIQUID
@@ -626,7 +626,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/salbutamol
-	name = "Сальбутамол"
+	name = "Salbutamol"
 	id = "salbutamol"
 	description = "Сальбутамол — распространенное бронхорасширяющее лекарство для астматиков. Он может помочь и при других проблемах с дыханием."
 	reagent_state = LIQUID
@@ -641,7 +641,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/perfluorodecalin
-	name = "Перфтордекалин"
+	name = "Perfluorodecalin"
 	id = "perfluorodecalin"
 	description = "Этот экспериментальный перфторированный растворитель находит применение в жидкостном дыхании и оксигенации тканей. Использовать с осторожностью."
 	reagent_state = LIQUID
@@ -664,7 +664,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/ephedrine
-	name = "Эфедрин"
+	name = "Ephedrine"
 	id = "ephedrine"
 	description = "Эфедрин — это стимулятор растительного происхождения."
 	reagent_state = LIQUID
@@ -720,7 +720,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/medicine/diphenhydramine
-	name = "Дифенгидрамин"
+	name = "Diphenhydramine"
 	id = "diphenhydramine"
 	description = "Противоаллергические препараты. Может вызывать сонливость, не работайте с тяжелыми механизмами при использовании этого препарата."
 	reagent_state = LIQUID
@@ -743,7 +743,7 @@
 	return ..()
 
 /datum/reagent/medicine/morphine
-	name = "Морфин"
+	name = "Morphine"
 	id = "morphine"
 	description = "Сильное, но вызывающее сильное привыкание опиатное болеутоляющее средство с седативными побочными эффектами."
 	reagent_state = LIQUID
@@ -779,11 +779,11 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/morphine/syntmorphine
-	name = "Синт-морфин"
+	name = "Synth-Morphine"
 	id = "syntmorphine"
 
 /datum/reagent/medicine/oculine
-	name = "Окулин"
+	name = "Oculine"
 	id = "oculine"
 	description = "Окулин — это солевой глазной препарат с мидриатическим и антибиотическим действием."
 	reagent_state = LIQUID
@@ -808,7 +808,7 @@
 	return ..()
 
 /datum/reagent/medicine/atropine
-	name = "Атропин"
+	name = "Atropine"
 	id = "atropine"
 	description = "Атропин — мощный сердечный реаниматор, но он может вызвать спутанность сознания, головокружение и гипертермию."
 	reagent_state = LIQUID
@@ -837,7 +837,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/epinephrine
-	name = "Эпинефрин"
+	name = "Epinephrine"
 	id = "epinephrine"
 	description = "Эпинефрин — мощный нейротрансмиттер, используемый в экстренных медицинских ситуациях для купирования анафилактического шока и предотвращения остановки сердца."
 	reagent_state = LIQUID
@@ -897,7 +897,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/medicine/strange_reagent
-	name = "Странный реагент"
+	name = "Strange Reagent"
 	id = "strange_reagent"
 	description = "Светящаяся зелёная жидкость, очень напоминающая ядерные отходы."
 	reagent_state = LIQUID
@@ -973,7 +973,7 @@
 	human.update_body()
 
 /datum/reagent/medicine/mannitol
-	name = "Маннитол"
+	name = "Mannitol"
 	id = "mannitol"
 	description = "Маннитол — это сахарный спирт, который может восстановить повреждённые ткани мозга."
 	color = "#D1D1F1"
@@ -987,7 +987,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/fomepizole
-	name = "Фомепизол"
+	name = "Fomepizole"
 	id = "fomepizole"
 	description = "Фомепизол является конкурентным ингибитором АДГ. Он используется для блокировки метаболизма этанола до его токсичных метаболитов."
 	color = "#95bb72"
@@ -999,7 +999,7 @@
 	return ..()
 
 /datum/reagent/medicine/mutadone
-	name = "Мутадон"
+	name = "Mutadone"
 	id = "mutadone"
 	description = "Мутадон — это экспериментальный бромид, который может лечить генетические аномалии."
 	color = "#5096C8"
@@ -1023,7 +1023,7 @@
 	return ..()
 
 /datum/reagent/medicine/antihol
-	name = "Антиголь"
+	name = "Antihol"
 	id = "antihol"
 	description = "Препарат, который быстро выводит алкоголь из организма."
 	color = "#009CA8"
@@ -1039,7 +1039,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/stimulants
-	name = "Стимулятор"
+	name = "Stimulants"
 	id = "stimulants"
 	description = "Запрещённое вещество, резко повышающее работоспособность и лечебные возможности организма."
 	color = "#C8A5DC"
@@ -1081,7 +1081,7 @@
 		M.remove_status_effect_absorption(source = id, effect_type = list(STUN, WEAKEN, STAMCRIT, PARALYZE, KNOCKDOWN))
 
 /datum/reagent/medicine/stimulative_agent
-	name = "Стимулирующий агент"
+	name = "Stimulative Agent"
 	id = "stimulative_agent"
 	description = "Увеличивает скорость бега и устраняет оглушение, может исцелять небольшие повреждения. При передозировке отравляет и менее эффективен для восстановления выносливости."
 	color = "#C8A5DC"
@@ -1124,7 +1124,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/insulin
-	name = "Инсулин"
+	name = "Insulin"
 	id = "insulin"
 	description = "Гормон, вырабатываемый поджелудочной железой и отвечающий за метаболизм углеводов и жиров в кровеносной системе.."
 	reagent_state = LIQUID
@@ -1137,7 +1137,7 @@
 	return ..()
 
 /datum/reagent/heparin
-	name = "Гепарин"
+	name = "Heparin"
 	id = "heparin"
 	description = "Антикоагулянт, используемый при операциях на сердце, а также при лечении инфарктов и тромбозов."
 	reagent_state = LIQUID
@@ -1173,7 +1173,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/medicine/teporone
-	name = "Тепорон"
+	name = "Teporone"
 	id = "teporone"
 	description = "Это экспериментальное соединение на основе плазмы крови, которое регулирует температуру тела."
 	reagent_state = LIQUID
@@ -1196,7 +1196,7 @@
 	return ..()
 
 /datum/reagent/medicine/haloperidol
-	name = "Галоперидол"
+	name = "Haloperidol"
 	id = "haloperidol"
 	description = "Галоперидол — мощный антипсихотик и седативное средство. Помогает справиться с психическими проблемами, но может вызвать повреждение мозга."
 	reagent_state = LIQUID
@@ -1224,7 +1224,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/ether
-	name = "Эфир"
+	name = "Ether"
 	id = "ether"
 	description = "Сильное обезболивающее и седативное средство."
 	reagent_state = LIQUID
@@ -1248,7 +1248,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/syndicate_nanites //Used exclusively by Syndicate medical cyborgs
-	name = "Восстановительные наниты"
+	name = "Restorative Nanites"
 	id = "syndicate_nanites"
 	description = "Миниатюрные медицинские роботы, которые быстро восстанавливают повреждения тела. Могут начать атаковать клетки своего хозяина в больших количествах."
 	color = "#555555"
@@ -1273,7 +1273,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/omnizine_diluted
-	name = "Разбавленный омнизин"
+	name = "Diluted Omnizine"
 	id = "weak_omnizine"
 	description = "Медленно исцеляет все типы повреждений. Гораздо более слабая версия настоящего омнизина."
 	reagent_state = LIQUID
@@ -1284,7 +1284,7 @@
 	taste_description = "слабой надежды"
 
 /datum/reagent/medicine/omnizine_diluted/godblood
-	name = "Кровь Бога"
+	name = "Godblood"
 	id = "godblood"
 	description = "Медленно исцеляет все типы повреждений. Имеет довольно высокий порог передозировки. Светится таинственной силой."
 	overdose_threshold = 150
@@ -1311,7 +1311,7 @@
 
 //Degreaser: Mild Purgative / Lube Remover
 /datum/reagent/medicine/degreaser
-	name = "Обезжириватель"
+	name = "Degreaser"
 	id = "degreaser"
 	description = "Промышленный обезжириватель, который можно использовать для удаления остатков налёта с оборудования и поверхностей."
 	reagent_state = LIQUID
@@ -1342,7 +1342,7 @@
 
 //Liquid Solder: Mannitol
 /datum/reagent/medicine/liquid_solder
-	name = "Жидкий припой"
+	name = "Liquid Solder"
 	id = "liquid_solder"
 	description = "Раствор, предназначенный для очистки и восстановления поврежденных соединений в позитронных блоках в процессе эксплуатации."
 	reagent_state = LIQUID
@@ -1357,7 +1357,7 @@
 
 //Coolant: Antihol
 /datum/reagent/medicine/coolant
-	name = "Охлаждающая жидкость"
+	name = "Coolant"
 	id = "coolant"
 	description = "Исправляет ошибки модуля общения."
 	reagent_state = LIQUID
@@ -1374,7 +1374,7 @@
 
 //Trek-Chems. DO NOT USE THES OUTSIDE OF BOTANY OR FOR VERY SPECIFIC PURPOSES. NEVER GIVE A RECIPE UNDER ANY CIRCUMSTANCES//
 /datum/reagent/medicine/bicaridine
-	name = "Бикаридин"
+	name = "Bicaridine"
 	id = "bicaridine"
 	description = "Залечивает травмы. При передозировке вызывает их появление."
 	reagent_state = LIQUID
@@ -1394,7 +1394,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/kelotane
-	name = "Келотан"
+	name = "Kelotane"
 	id = "kelotane"
 	description = "Залечивает ожоги. При передозировке вызывает их появление."
 	reagent_state = LIQUID
@@ -1414,7 +1414,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/earthsblood //Created by ambrosia gaia plants
-	name = "Кровь Земли"
+	name = "Earthsblood"
 	id = "earthsblood"
 	description = "Ихор от чрезвычайно мощного растения. Отлично восстанавливает раны, но немного тяжеловат для мозга."
 	color = "#FFAF00"
@@ -1443,7 +1443,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/syndiezine
-	name = "Синдизин"
+	name = "Syndiezine"
 	id = "syndiezine"
 	description = "Попытка \"Синдиката\" вывести синтетический аналог вещества \"Кровь Земли\". Слабо лечит раны, но быстро избавляет от усталости. Побочный эффект — вызывает галлюцинации."
 	color = "#332300"
@@ -1471,7 +1471,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/corazone
-	name = "Коразон"
+	name = "Corazone"
 	id = "corazone"
 	description = "Лекарство, используемое для лечения боли, лихорадки и воспаления, а также сердечных приступов."
 	color = "#F5F5F5"
@@ -1480,7 +1480,7 @@
 // This reagent's effects are handled in heart attack handling code
 
 /datum/reagent/medicine/nanocalcium
-	name = "Нано-Кальций"
+	name = "Nano-Calcium"
 	id = "nanocalcium"
 	description = "Высокотехнологичные наниты, оснащённые экспериментальной полезной нагрузкой, предназначенной для восстановления тела. Наномашины, сынок."
 	color = "#9b3401"
@@ -1553,7 +1553,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/lavaland_extract
-	name = "Экстракт Лазиса"
+	name = "Lavaland Extract"
 	id = "lavaland_extract"
 	description = "Экстракт атмосферы Лазиса и минеральные элементы в придачу. В небольших дозах исцеляет пользователя, но в остальных случаях крайне токсичен."
 	color = "#C8A5DC" // rgb: 200, 165, 220
@@ -1576,7 +1576,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/zessulblood   //unique chemical for unathi
-	name = "Кровь Зессул"
+	name = "Zessul Blood"
 	id = "zessulblood"
 	description = "Природное химическое вещество, вырабатываемое в кровотоке унатхов."
 	reagent_state = LIQUID
@@ -1592,7 +1592,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/pure_plasma   //unique chemical for plasmaman
-	name = "Чистая плазма"
+	name = "Pure Plasma"
 	id = "pure_plasma"
 	description = "Продукт метаболизма плазмаменов, отвечающий за восстановление тканей и противодействие болевому шоку. Чрезвычайно токсичен."
 	reagent_state = LIQUID
@@ -1616,7 +1616,7 @@
 	return ..() | update_flags
 
 /datum/reagent/medicine/grubjuice
-	name = "Жучиный сок"
+	name = "Grub Juice"
 	id = "grub_juice"
 	description = "Сильнодействующее лекарственное средство, которое при чрезмерном употреблении может вызвать опасные побочные эффекты."
 	color = "#43bf1d"
@@ -1636,7 +1636,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/adrenaline
-	name = "Адреналин"
+	name = "Adrenaline"
 	id = "adrenaline"
 	description = "Мощное обезболивающее."
 	color = "#C8A5DC"
@@ -1653,7 +1653,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/medicine/adv_lava_extract
-	name = "Модифицированный Экстракт Лазиса"
+	name = "Modified Lazis Extract"
 	id = "adv_lava_extract"
 	description = "Очень дорогое лекарство, которое помогает перекачивать кровь по телу и предотвращает замедление работы сердца, исцеляя пациента в процессе. Передозировка приводит к сердечным приступам."
 	reagent_state = LIQUID
@@ -1710,7 +1710,7 @@
 	user.clear_alert("penthrite")
 
 /datum/reagent/medicine/ashiezine
-	name = "Сироп Лазиса"
+	name = "Lazis Syrup"
 	id = "ashiezine"
 	description = "Странный реагент, найденный на Лазис Ардаксе. Судя по всему, он работает только на пеплоходцев."
 	reagent_state = LIQUID
@@ -1726,7 +1726,7 @@
 	return ..()
 
 /datum/reagent/medicine/sanguinius
-	name = "Сангвиний"
+	name = "Sanguinius"
 	id = "sanguinius"
 	description = "Кроваво-красная густая жидкость, предназначенная для использования в случаях острой кровопотери. \
 					Временно повышает способности организма к кроветворению."

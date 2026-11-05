@@ -1,5 +1,5 @@
 /datum/reagent/medicine/adminordrazine //An OP chemical for admins
-	name = "Админордразин"
+	name = "Adminordrazine"
 	id = "adminordrazine"
 	description = "Это магия. Тут нечего объяснять."
 	reagent_state = LIQUID
@@ -65,7 +65,7 @@
 	return STATUS_UPDATE_ALL
 
 /datum/reagent/medicine/adminordrazine/nanites
-	name = "Наниты"
+	name = "Nanites"
 	id = "nanites"
 	description = "Наномашины, способствующие быстрой регенерации клеточной структуры."
 	taste_description = "наномашин, сынок"
@@ -185,7 +185,7 @@
 	rangefire = 5
 
 /datum/reagent/napalm/hellfire
-	name = "Жидкое адское пламя"
+	name = "Liquid Hellfire"
 	id = "hellfire"
 	description = "Адское пламя, превращённое в вещество неизвестными силами."
 	burncolor = "#EE6515"

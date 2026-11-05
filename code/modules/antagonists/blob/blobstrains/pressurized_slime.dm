@@ -37,7 +37,7 @@
 				L.ExtinguishMob()
 
 /datum/reagent/blob/pressurized_slime
-	name = "Сжатая слизь"
+	name = "Pressurized Slime"
 	id = "blob_pressurized_slime"
 	taste_description = "грязной губки для посуды"
 	color = "#AAAABB"

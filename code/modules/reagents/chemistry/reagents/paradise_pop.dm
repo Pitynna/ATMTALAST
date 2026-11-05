@@ -9,7 +9,7 @@
 
 //Райский удар: Без эффекта, aside from maybe messages about how tasty it is or something
 /datum/reagent/consumable/drink/paradise_punch
-	name = "Райский Удар"
+	name = "Paradise Punch"
 	id = "paradise_punch"
 	description = "На вкус именно таков, каким вы себе представляете вкус рая, если бы его можно было разлить по бутылкам."
 	color = "#cc0044"
@@ -17,7 +17,7 @@
 
 //Яблопокалипсис: Low chance to cause a goonchem vortex that pulls things within a very small radius (2 tiles?) towards the drinker
 /datum/reagent/consumable/drink/apple_pocalypse
-	name = "Яблокопокалипсис"
+	name = "Apple-pocalypse"
 	id = "apple-pocalypse"
 	description = "Если бы судный день имел форму фрукта, скорее всего это было бы яблоко."
 	color = "#44FF44"
@@ -32,7 +32,7 @@
 
 //Забаненный плод: This one is tasty and safe to drink, might have a low chance of healing a random damage type?
 /datum/reagent/consumable/drink/berry_banned
-	name = "Забаненный Плод"
+	name = "Berry Banned"
 	id = "berry_banned"
 	description = "Причина бана: исключительный вкус."
 	color = "#FF44FF"
@@ -60,7 +60,7 @@
 
 //Забаненный плод 2: Очень вкусный и токсичный. Наносит урон токсинами и, ВОЗМОЖНО, проигрывает звук "Бьёньк!", убивая кого-то?
 /datum/reagent/consumable/drink/berry_banned2
-	name = "Забаненный Плод"
+	name = "Berry Banned"
 	id = "berry_banned2"
 	description = "Причина бана: исключительный вкус."
 	color = "#FF44FF"
@@ -81,7 +81,7 @@
 
 //Blackeye Brew: Chance to make the drinker say greytider-themed things like "ГРЕЙТАЙД ВПЕРЁД!"
 /datum/reagent/consumable/drink/blackeye_brew
-	name = "Черноглазое Варево"
+	name = "Blackeye Brew"
 	id = "blackeye_brew"
 	description = "Сливочный, мягкий вкус, прямо как у лысины ассистента. Предположительно, выдерживался около 30 лет. При употреблении вызывает помутнение в сознании употребившего, заставляя его выкрикивать странные фразы."
 	color = "#4d2600"
@@ -103,7 +103,7 @@
 
 //Grape Granade: causes the drinker to sometimes burp, has a low chance to cause a goonchem vortex that pushes things within a very small radius (1-2 tiles) away from the drinker
 /datum/reagent/consumable/drink/grape_granade
-	name = "Гранатовый Взрыв"
+	name = "Grape Granade"
 	id = "grape_granade"
 	description = "Взрывной гранатовый вкус, любимый сотрудниками ОБР по всей системе."
 	color = "#9933ff"
@@ -121,7 +121,7 @@
 
 //Meteor Malt: Sometimes causes screen shakes for the drinker like a meteor impact, low chance to add 1-5 units of a random mineral reagent to the drinker's blood (iron, copper, silver, gold, uranium, carbon, etc)
 /datum/reagent/consumable/drink/meteor_malt
-	name = "Метеорный Солод"
+	name = "Meteor Malt"
 	id = "meteor_malt"
 	description = "Зафиксировано движение безалкогольных напитков на встречном с вашими вкусовыми рецепторами курсе."
 	color = "#cc9900"
@@ -138,7 +138,7 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/moonlight_skuma
-	name = "Мун'дрин"
+	name = "Moon'drin"
 	id = "moonlight_skuma"
 	description = "Мун'лин двойной дистилляции. Мягкий мятный вкус, который любят все таяры. Используется в коктейлях."
 	color = "#6734df"

@@ -1,5 +1,5 @@
 /datum/reagent
-	var/name = "Реагент"
+	var/name = "Reagent"
 	var/id = "reagent"
 	var/tags = 0
 	var/description = ""

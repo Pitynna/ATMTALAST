@@ -1,9 +1,9 @@
 /datum/reagent/consumable/drink/cold
-	name = "Прохладительный напиток"
+	name = "Cold drink"
 	adj_temp_cool = 5
 
 /datum/reagent/consumable/drink/cold/tonic
-	name = "Тоник"
+	name = "Tonic Water"
 	id = "tonic"
 	description = "Вкус странный, но, по крайней мере, хинин держит Космическую Малярию на расстоянии."
 	color = "#664300" // rgb: 102, 67, 0
@@ -16,7 +16,7 @@
 	taste_description = "горечи"
 
 /datum/reagent/consumable/drink/cold/sodawater
-	name = "Содовая вода"
+	name = "Soda Water"
 	id = "sodawater"
 	description = "Содовая, потрясно."
 	color = "#619494" // rgb: 97, 148, 148
@@ -28,7 +28,7 @@
 	taste_description = "шипучей газировки"
 
 /datum/reagent/consumable/drink/cold/ice
-	name = "Лёд"
+	name = "Ice"
 	id = "ice"
 	description = "Замороженная вода. Не стоит жевать, если не хочешь повредить свои зубы."
 	reagent_state = SOLID
@@ -44,7 +44,7 @@
 	return ..()
 
 /datum/reagent/consumable/drink/cold/space_cola
-	name = "Кола"
+	name = "Cola"
 	id = "cola"
 	description = "Освежающий напиток."
 	color = "#100800" // rgb: 16, 8, 0
@@ -55,7 +55,7 @@
 	taste_description = "колы"
 
 /datum/reagent/consumable/drink/cold/energy
-	name = "Энергетический напиток"
+	name = "Energy Drink"
 	id = "energetik"
 	description = "Освежающий напиток."
 	color = "#a9c725"
@@ -98,23 +98,23 @@
 	return list(0, STATUS_UPDATE_NONE)
 
 /datum/reagent/consumable/drink/cold/energy/trop
-	name = "Тропикал Энерджи"
+	name = "Tropical Energy"
 	id = "trop_eng"
 	taste_description = "манго и кокоса"
 
 /datum/reagent/consumable/drink/cold/energy/milk
-	name = "Милк Энерджи"
+	name = "Milk Energy"
 	id = "milk_eng"
 	taste_description = "молока и таурина"
 
 /datum/reagent/consumable/drink/cold/energy/grey
-	name = "ГрейПауэр Энерджи"
+	name = "GreyPower Energy"
 	id = "grey_eng"
 	color = "#9dc2d1"
 	taste_description = "робаста"
 
 /datum/reagent/consumable/drink/cold/nuka_cola
-	name = "Нюка-кола"
+	name = "Nuka Cola"
 	id = "nuka_cola"
 	description = "Кола, кола никогда не меняется."
 	color = "#100800" // rgb: 16, 8, 0
@@ -145,7 +145,7 @@
 	user.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/nuka_cola)
 
 /datum/reagent/consumable/drink/cold/spacemountainwind
-	name = "Космический Маунтин Винд"
+	name = "Space Mountain Wind"
 	id = "spacemountainwind"
 	description = "Проходит насквозь, словно космический ветер."
 	color = "#102000" // rgb: 16, 32, 0
@@ -157,7 +157,7 @@
 	taste_description = "лаймовой газировки"
 
 /datum/reagent/consumable/drink/cold/dr_gibb
-	name = "Доктор Гибб"
+	name = "Dr. Gibb"
 	id = "dr_gibb"
 	description = "Освежающая смесь из 42 различных вкусов!"
 	color = "#102000" // rgb: 16, 32, 0
@@ -168,7 +168,7 @@
 	taste_description = "вишнёвой газировки"
 
 /datum/reagent/consumable/drink/cold/space_up
-	name = "Спейс-Ап"
+	name = "Space-Up"
 	id = "space_up"
 	description = "На вкус как дыра в обшивке у вас во рту. Да, звучит странно."
 	color = "#202800" // rgb: 32, 40, 0
@@ -179,7 +179,7 @@
 	taste_description = "лимонной газировки"
 
 /datum/reagent/consumable/drink/cold/lemon_lime
-	name = "Лимон-Лайм"
+	name = "Lemon Lime"
 	description = "Терпкая газировка, состоящяя на 0,5% из натуральных цитрусовых!"
 	id = "lemon_lime"
 	color = "#878F00" // rgb: 135, 40, 0
@@ -187,7 +187,7 @@
 	taste_description = "цитрусовой газировки"
 
 /datum/reagent/consumable/drink/cold/lemonade
-	name = "Лимонад"
+	name = "Lemonade"
 	description = "Если жизнь даёт вам лимоны..."
 	id = "lemonade"
 	color = "#FFFF00" // rgb: 255, 255, 0
@@ -197,7 +197,7 @@
 	taste_description = "лимонада"
 
 /datum/reagent/consumable/drink/cold/kiraspecial
-	name = "Кира Спешл"
+	name = "Kira Special"
 	description = "Да здравствует парень, которого все принимали за девушку. Бака!"
 	id = "kiraspecial"
 	color = "#CCCC99" // rgb: 204, 204, 153
@@ -207,7 +207,7 @@
 	taste_description = "цитрусовой газировки"
 
 /datum/reagent/consumable/drink/cold/brownstar
-	name = "Браун Стар"
+	name = "Brown Star"
 	description = "Это не то, чем кажется..."
 	id = "brownstar"
 	color = "#9F3400" // rgb: 159, 052, 000
@@ -218,7 +218,7 @@
 	taste_description = "апельсиновой газировки"
 
 /datum/reagent/consumable/drink/cold/milkshake
-	name = "Молочный коктейль"
+	name = "Milkshake"
 	description = "Великолепная леденящая мозг смесь."
 	id = "milkshake"
 	color = "#AEE5E4" // rgb" 174, 229, 228
@@ -229,7 +229,7 @@
 	taste_description = "молочного коктейля"
 
 /datum/reagent/consumable/drink/cold/rewriter
-	name = "Переписчик"
+	name = "Rewriter"
 	description = "Тайна святилища Библиотекаря..."
 	id = "rewriter"
 	color = "#485000" // rgb:72, 080, 0
@@ -243,7 +243,7 @@
 	return ..()
 
 /datum/reagent/consumable/drink/cold/zaza
-	name = "Заза"
+	name = "Zaza"
 	description = "От напитка исходит стойкий запах вишни. Изумительно."
 	id = "zaza"
 	color = "#b10023" // rgb:177, 0, 35
@@ -268,7 +268,7 @@
 	.[taste_desc] = taste_amount
 
 /datum/reagent/consumable/drink/cold/zaza/fizzy
-	name = "Шипучая Заза"
+	name = "Fizzy Zaza"
 	description = "От пузырящегося напитка исходит стойкий запах вишни. Изумительно."
 	color = "#f30028" // rgb:243, 0, 40
 	id = "zazafizzy"

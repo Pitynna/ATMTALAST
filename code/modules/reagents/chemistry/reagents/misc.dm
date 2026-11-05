@@ -32,7 +32,7 @@
 				O:silicateIcon = I */
 
 /datum/reagent/oxygen
-	name = "Кислород"
+	name = "Oxygen"
 	id = "oxygen"
 	description = "Бесцветный газ без запаха."
 	reagent_state = GAS
@@ -40,7 +40,7 @@
 	taste_mult = 0
 
 /datum/reagent/nitrogen
-	name = "Азот"
+	name = "Nitrogen"
 	id = "nitrogen"
 	description = "Бесцветный газ без запаха и вкуса."
 	reagent_state = GAS
@@ -48,7 +48,7 @@
 	taste_mult = 0
 
 /datum/reagent/hydrogen
-	name = "Водород"
+	name = "Hydrogen"
 	id = "hydrogen"
 	description = "Бесцветный, без запаха, неметаллический, безвкусный, сильно горючий двухатомный газ."
 	reagent_state = GAS
@@ -56,35 +56,35 @@
 	taste_mult = 0
 
 /datum/reagent/potassium
-	name = "Калий"
+	name = "Potassium"
 	id = "potassium"
 	description = "Мягкий, легко плавящийся твердый материал, который легко режется ножом. Бурно реагирует с водой."
 	color = "#A0A0A0" // rgb: 160, 160, 160
 	taste_description = "плохих мыслей"
 
 /datum/reagent/sulfur
-	name = "Сера"
+	name = "Sulfur"
 	id = "sulfur"
 	description = "Химический элемент."
 	color = "#BF8C00" // rgb: 191, 140, 0
 	taste_description = "импульсивных решений"
 
 /datum/reagent/sodium
-	name = "Натрий"
+	name = "Sodium"
 	id = "sodium"
 	description = "Химический элемент."
 	color = "#808080" // rgb: 128, 128, 128
 	taste_description = "ужасных суждений"
 
 /datum/reagent/phosphorus
-	name = "Фосфор"
+	name = "Phosphorus"
 	id = "phosphorus"
 	description = "Химический элемент."
 	color = "#832828" // rgb: 131, 40, 40
 	taste_description = "неправильных выборов"
 
 /datum/reagent/carbon
-	name = "Углерод"
+	name = "Carbon"
 	id = "carbon"
 	description = "Химический элемент."
 	color = "#1C1300" // rgb: 30, 20, 0
@@ -95,48 +95,48 @@
 		new /obj/effect/decal/cleanable/dirt(target_turf)
 
 /datum/reagent/gold
-	name = "Золото"
+	name = "Gold"
 	id = "gold"
 	description = "Золото — плотный, мягкий, блестящий металл, самый податливый и вязкий из всех известных металлов."
 	color = "#F7C430" // rgb: 247, 196, 48
 
 /datum/reagent/silver
-	name = "Серебро"
+	name = "Silver"
 	id = "silver"
 	description = "Блестящий металлический элемент, считающийся одним из драгоценных металлов."
 	color = "#D0D0D0" // rgb: 208, 208, 208
 	taste_description = "серебра"
 
 /datum/reagent/aluminum
-	name = "Алюминий"
+	name = "Aluminum"
 	id = "aluminum"
 	description = "Серебристо-белый и ковкий представитель группы химических элементов бора."
 	color = "#A8A8A8" // rgb: 168, 168, 168
 	taste_description = "алюминия"
 
 /datum/reagent/silicon
-	name = "Кремний"
+	name = "Silicon"
 	id = "silicon"
 	description = "Являясь четырёхвалентным металлоидом, кремний менее реакционноспособен, чем его химический аналог углерод."
 	color = "#A8A8A8" // rgb: 168, 168, 168
 	taste_description = "микросхем"
 
 /datum/reagent/copper
-	name = "Медь"
+	name = "Copper"
 	id = "copper"
 	description = "Высокопластичный металл."
 	color = "#6E3B08" // rgb: 110, 59, 8
 	taste_description = "меди"
 
 /datum/reagent/chromium
-	name = "Хром"
+	name = "Chromium"
 	id = "chromium"
 	description = "Каталитический химический элемент."
 	color = "#DCDCDC"
 	taste_description = "горечи"
 
 /datum/reagent/iron
-	name = "Железо"
+	name = "Iron"
 	id = "iron"
 	description = "Чистое железо — это металл."
 	color = "#C8A5DC" // rgb: 200, 165, 220
@@ -144,7 +144,7 @@
 
 //foam
 /datum/reagent/fluorosurfactant
-	name = "Фтортензид"
+	name = "Fluorosurfactant"
 	id = "fluorosurfactant"
 	description = "Перфторированная сульфоновая кислота, образующая пену при смешивании с водой."
 	reagent_state = LIQUID
@@ -154,7 +154,7 @@
 // metal foaming agent
 // this is lithium hydride. Add other recipies (e.g. LiH + H2O -> LiOH + H2) eventually
 /datum/reagent/ammonia
-	name = "Аммиак"
+	name = "Ammonia"
 	id = "ammonia"
 	description = "Едкое вещество, обычно используемое в удобрениях или бытовых чистящих средствах."
 	reagent_state = GAS
@@ -162,7 +162,7 @@
 	taste_description = "средства для мытья полов"
 
 /datum/reagent/diethylamine
-	name = "Диэтиламин"
+	name = "Diethylamine"
 	id = "diethylamine"
 	description = "Вторичный амин, полезный в качестве питательного вещества для растений и строительного блока для других соединений."
 	reagent_state = LIQUID
@@ -170,7 +170,7 @@
 	taste_description = "железа"
 
 /datum/reagent/oil
-	name = "Масло"
+	name = "Oil"
 	id = "oil"
 	description = "Достойная смазка для машин. С высоким содержанием бензола, нафты и других углеводородов."
 	reagent_state = LIQUID
@@ -199,7 +199,7 @@
 		new /obj/effect/decal/cleanable/blood/oil(target_turf)
 
 /datum/reagent/iodine
-	name = "Йод"
+	name = "Iodine"
 	id = "iodine"
 	description = "Газообразный элемент фиолетового цвета."
 	reagent_state = GAS
@@ -207,7 +207,7 @@
 	taste_description = "сопротивления химтрейлам"
 
 /datum/reagent/carpet
-	name = "Ковёр"
+	name = "Carpet"
 	id = "carpet"
 	description = "Покрытие из плотной ткани, используемое для полов. Этот тип выглядит особенно отвратительно."
 	reagent_state = LIQUID
@@ -221,7 +221,7 @@
 	..()
 
 /datum/reagent/bromine
-	name = "Бром"
+	name = "Bromine"
 	id = "bromine"
 	description = "Красно-коричневый жидкий элемент."
 	reagent_state = LIQUID
@@ -229,7 +229,7 @@
 	taste_description = "химикатов"
 
 /datum/reagent/phenol
-	name = "Фенол"
+	name = "Phenol"
 	id = "phenol"
 	description = "Известная также как карболовая кислота, она является полезным строительным блоком в органической химии."
 	reagent_state = LIQUID
@@ -237,7 +237,7 @@
 	taste_description = "кислоты"
 
 /datum/reagent/ash
-	name = "Пепел"
+	name = "Ash"
 	id = "ash"
 	description = "Пепел к пеплу, прах к праху."
 	reagent_state = LIQUID
@@ -245,7 +245,7 @@
 	taste_description = "пепла"
 
 /datum/reagent/acetone
-	name = "Ацетон"
+	name = "Acetone"
 	id = "acetone"
 	description = "Чистая 100% жидкость для снятия лака с ногтей, также работает как промышленный растворитель."
 	reagent_state = LIQUID
@@ -258,7 +258,7 @@
 	return ..() | update_flags
 
 /datum/reagent/saltpetre
-	name = "Селитра"
+	name = "Saltpetre"
 	id = "saltpetre"
 	description = "Летучий химический элемент."
 	reagent_state = LIQUID
@@ -266,7 +266,7 @@
 	taste_description = "одной трети взрыва"
 
 /datum/reagent/colorful_reagent
-	name = "Цветной реагент"
+	name = "Colorful Reagent"
 	id = "colorful_reagent"
 	description = "Это чистые жидкие краски. Сейчас это в порядке вещей."
 	reagent_state = LIQUID
@@ -296,7 +296,7 @@
 	target_turf.color = pick(GLOB.random_color_list)
 
 /datum/reagent/hair_dye
-	name = "Квантовая краска для волос"
+	name = "Quantum Hair Dye"
 	id = "hair_dye"
 	description = "Довольно громоздкий и нелепый способ окрашивания волос. Чуваааааак."
 	reagent_state = LIQUID
@@ -316,7 +316,7 @@
 	..()
 
 /datum/reagent/hairgrownium
-	name = "Власорост"
+	name = "Hairgrownium"
 	id = "hairgrownium"
 	description = "Таинственное химическое вещество, якобы помогающее отрастить волосы. Часто встречается в рекламных роликах на телевидении."
 	reagent_state = LIQUID
@@ -335,7 +335,7 @@
 	..()
 
 /datum/reagent/super_hairgrownium
-	name = "Супер власорост"
+	name = "Super Hairgrownium"
 	id = "super_hairgrownium"
 	description = "Загадочное и мощное химическое вещество, якобы вызывающее быстрый рост волос."
 	reagent_state = LIQUID
@@ -371,7 +371,7 @@
 	..()
 
 /datum/reagent/hugs
-	name = "Чистые объятия"
+	name = "Pure hugs"
 	id = "hugs"
 	description = "Объятия в жидком виде. Да, концепция объятий. В жидком виде. Это имеет смысл в будущем."
 	reagent_state = LIQUID
@@ -379,7 +379,7 @@
 	taste_description = "<font color='pink'><b>обнимашек</b></font>"
 
 /datum/reagent/love
-	name = "Чистая любовь"
+	name = "Pure love"
 	id = "love"
 	description = "Что это за чувство, которое вы, люди, называете \"любовью\"? О, это оно? Это оно? Ха, ну тогда ладно, спасибо."
 	reagent_state = LIQUID
@@ -416,7 +416,7 @@
 	to_chat(target_mob, span_notice("Вы чувствуете, что вас любят!"))
 
 /datum/reagent/jestosterone //Formerly known as Nitrogen tungstide hypochlorite before NT fired the chemists for trying to be funny
-	name = "Шутостерон"
+	name = "Jestosterone"
 	id = "jestosterone"
 	description = "Джестостерон — странное химическое соединение, вызывающее у обычного человека целый ряд раздражающих побочных эффектов. Он также вызывает лёгкое опьянение и токсичен для мимов."
 	color = "#ff00ff" //Fuchsia, pity we can't do rainbow here
@@ -476,7 +476,7 @@
 	QDEL_NULL(squeak)
 
 /datum/reagent/royal_bee_jelly
-	name = "Маточное молочко"
+	name = "Royal bee jelly"
 	id = "royal_bee_jelly"
 	description = "Королевское маточное молочко. Если его ввести королеве космических пчёл, она размножится."
 	color = "#00ff80"
@@ -488,7 +488,7 @@
 	return ..()
 
 /datum/reagent/growthserum
-	name = "Сыворотка роста"
+	name = "Growth serum"
 	id = "growthserum"
 	description = "Коммерческое химическое средство, призванное помочь пожилым мужчинам в спальне." //not really it just makes you a giant
 	color = "#ff0000"//strong red. rgb 255, 0, 0
@@ -519,7 +519,7 @@
 	..()
 
 /datum/reagent/pax
-	name = "Пакс"
+	name = "Pax"
 	id = "pax"
 	description = "Бесцветная жидкость, подавляющая тягу к насилию у гуманоидов."
 	color = "#AAAAAA55"
@@ -535,7 +535,7 @@
 	..()
 
 /datum/reagent/toxin/coffeepowder
-	name = "Кофейная гуща"
+	name = "Coffee Grounds"
 	id = "coffeepowder"
 	description = "Кофейные зерна мелкого помола, используемые для приготовления кофе."
 	reagent_state = SOLID
@@ -543,7 +543,7 @@
 	taste_description = "горькой кофейной массы"
 
 /datum/reagent/toxin/teapowder
-	name = "Молотые чайные листья"
+	name = "Ground Tea Leaves"
 	id = "teapowder"
 	description = "Мелко измельчённые чайные листья, используемые для приготовления чая."
 	reagent_state = SOLID
@@ -553,7 +553,7 @@
 //////////////////////////////////Hydroponics stuff///////////////////////////////
 
 /datum/reagent/plantnutriment
-	name = "Растительные питательные вещества"
+	name = "Generic nutriment"
 	id = "plantnutriment"
 	description = "Какое-то питательное вещество. Невозможно определить, что это такое. Возможно, вам следует сообщить о нём и о том, как вы его получили, в соответствующие органы."
 	var/tox_prob = 0
@@ -566,7 +566,7 @@
 	return ..() | update_flags
 
 /datum/reagent/plantnutriment/eznutriment
-	name = "И-ЗИ-Нутриент"
+	name = "E-Z-Nutrient"
 	id = "eznutriment"
 	description = "Дешёвый и чрезвычайно распространенный вид растительных питательных веществ."
 	color = "#376400" // RBG: 50, 100, 0
@@ -574,7 +574,7 @@
 	taste_description = "безвестности и забытья"
 
 /datum/reagent/plantnutriment/left4zednutriment
-	name = "Лефт-Фо-Зед"
+	name = "Left 4 Zed"
 	id = "left4zednutriment"
 	description = "Нестабильное соединение, заставляющее растения мутировать чаще, чем обычно."
 	color = "#2A1680" // RBG: 42, 128, 22
@@ -582,7 +582,7 @@
 	taste_description = "эволюции"
 
 /datum/reagent/plantnutriment/robustharvestnutriment
-	name = "Робаст-Харвест"
+	name = "Robust Harvest"
 	id = "robustharvestnutriment"
 	description = "Очень мощное питательное вещество, предотвращающее мутацию растений."
 	color = "#9D9D00" // RBG: 157, 157, 0
@@ -592,7 +592,7 @@
 ///Alchemical Reagents
 
 /datum/reagent/eyenewt
-	name = "Глаз тритона"
+	name = "Eye of newt"
 	id = "eyenewt"
 	description = "Сильнодействующий алхимический ингредиент."
 	reagent_state = LIQUID
@@ -600,7 +600,7 @@
 	taste_description = "алхимии"
 
 /datum/reagent/toefrog
-	name = "Палец лягушки"
+	name = "Toe of frog"
 	id = "toefrog"
 	description = "Сильнодействующий алхимический ингредиент."
 	reagent_state = LIQUID
@@ -608,7 +608,7 @@
 	taste_description = "алхимии"
 
 /datum/reagent/woolbat
-	name = "Шерсть летучей мыши"
+	name = "Wool of bat"
 	id = "woolbat"
 	description = "Сильнодействующий алхимический ингредиент."
 	reagent_state = LIQUID
@@ -616,7 +616,7 @@
 	taste_description = "алхимии"
 
 /datum/reagent/tonguedog
-	name = "Язык собаки"
+	name = "Tongue of dog"
 	id = "tonguedog"
 	description = "Сильнодействующий алхимический ингредиент."
 	reagent_state = LIQUID
@@ -624,7 +624,7 @@
 	taste_description = "алхимии"
 
 /datum/reagent/triplepiss
-	name = "Тройная моча"
+	name = "Triple Piss"
 	id = "triplepiss"
 	description = "Уууууу."
 	reagent_state = LIQUID
@@ -632,7 +632,7 @@
 	taste_description = "алхимии"
 
 /datum/reagent/spraytan
-	name = "Спрей-загар"
+	name = "Spray Tan"
 	id = "spraytan"
 	description = "Вещество, наносимое на кожу для ее потемнения и имитации загара."
 	color = "#FFC080" // rgb: 255, 196, 128  Bright orange
@@ -686,7 +686,7 @@
 		target_human.change_skin_color("#9B7653")
 
 /datum/reagent/monkeylanguage
-	name = "Обезьяний язык"
+	name = "Monkey Language"
 	id = "monkeylanguage"
 	description = "Эээ..."
 	color = "#f0d18f" // rgb: 128, 128, 128
@@ -698,7 +698,7 @@
 	return ..()
 
 /datum/reagent/bugmilk
-	name = "Пепельное молоко"
+	name = "Ash Milk"
 	id = "bugmilk"
 	description = "Молочная субстанция, вырабатываемая некоторыми видами на Лазис Ардакс. Весьма вкусное."
 	reagent_state = LIQUID

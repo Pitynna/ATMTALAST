@@ -27,7 +27,7 @@
 	return TRUE
 
 /datum/reagent/blob/replicating_foam
-	name = "Репликационная пена"
+	name = "Replicating Foam"
 	id = "blob_replicating_foam"
 	taste_description = "дублирования"
 	color = "#7B5A57"

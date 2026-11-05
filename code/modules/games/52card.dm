@@ -11,25 +11,6 @@
 	card_style = "nanotrasen"
 
 /obj/item/deck/cards/build_deck()
-	var/list/ru_name = list(
-		"Spades" = "Пики",
-		"Clubs" = "Трефы",
-		"Diamonds" = "Бубны",
-		"Hearts" = "Червы",
-		"Ace" = "Туз",
-		"Jack" = "Валет",
-		"Queen" = "Дама",
-		"King" = "Король",
-		"2" = "2",
-		"3" = "3",
-		"4" = "4",
-		"5" = "5",
-		"6" = "6",
-		"7" = "7",
-		"8" = "8",
-		"9" = "9",
-		"10" = "10",
-	)
 	for(var/suit in list("Spades","Clubs","Diamonds","Hearts"))
 		var/card_appearance
 		var/colour
@@ -48,10 +29,10 @@
 				card_appearance = "sc_[colour]_[rank]_[card_style]"
 			else
 				card_appearance = "sc_[number] of [suit]_[card_style]"
-			cards += new /datum/playingcard("[ru_name[number]] [ru_name[suit]]", card_appearance, "singlecard_down_[card_style]")
+			cards += new /datum/playingcard("[number] of [suit]", card_appearance, "singlecard_down_[card_style]")
 
 	for(var/jokers in 1 to 2)
-		cards += new /datum/playingcard("Джокер", "sc_Joker_[card_style]", "singlecard_down_[card_style]")
+		cards += new /datum/playingcard("Joker", "sc_Joker_[card_style]", "singlecard_down_[card_style]")
 
 /obj/item/deck/cards/update_icon_state()
 	if(!LAZYLEN(cards))

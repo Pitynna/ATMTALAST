@@ -258,8 +258,8 @@
 //////////////////////////////////////////
 /datum/design/pod_basic_locator
 	construction_time = 100
-	name = "Модуль поиска астероидов"
-	desc = "Сканирующее устройство позволяющее определять координаты астероидов в секторе."
+	name = "Asteroid Locator Module"
+	desc = "A scanning device that determines the coordinates of asteroids in the sector."
 	id = "pod_locator_basic"
 	req_tech = list(RESEARCH_TREE_ENGINEERING = 6, RESEARCH_TREE_MAGNETS= 5) //Materials 2: easy to get, no trackers with 0 science progress
 	build_type = PODFAB

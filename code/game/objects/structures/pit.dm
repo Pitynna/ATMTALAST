@@ -229,7 +229,7 @@
 	var/born = cur_year - rand(5,150)
 	var/died = max(cur_year - rand(0,70),born)
 
-	message = "Здесь упокоен [nam], [born] - [died]."
+	message = "Here lies [nam], [born] - [died]."
 	update_appearance(UPDATE_DESC)
 
 /obj/structure/gravemarker/attackby(obj/item/I, mob/user, params)

@@ -61,11 +61,11 @@ GLOBAL_LIST_INIT(gun_module_slot_ru_name, list(
 
 // Pistol cartridges
 /// Used in Soviet type pistols and SMG (TT, PPSh)
-#define CALIBER_7_DOT_62X25MM "7,62x25 мм"
+#define CALIBER_7_DOT_62X25MM "7.62x25 mm"
 /// Used in most standart SMG and pistols
-#define CALIBER_9MM "9x19 мм"
+#define CALIBER_9MM "9x19 mm"
 /// Used in Stechkin pistol
-#define CALIBER_10MM "10x25 мм"
+#define CALIBER_10MM "10x25 mm"
 /// Used in SP-8 pistol
 #define CALIBER_40NR ".40 N&R"
 /// Used in M1911 pistol, C-20r SMG
@@ -85,23 +85,23 @@ GLOBAL_LIST_INIT(gun_module_slot_ru_name, list(
 /// Used in improvised revolver
 #define CALIBER_DOT_257 ".257"
 /// Used in Nagant revolver
-#define CALIBER_7_DOT_62X38MM "7,62x38 мм"
+#define CALIBER_7_DOT_62X38MM "7.62x38 mm"
 /// Used in RSh-12 revolver
-#define CALIBER_12_DOT_7X55MM "12.7x55 мм"
+#define CALIBER_12_DOT_7X55MM "12.7x55 mm"
 
 // Intermediate cartridges
 /// Used in AR-15 type rifles (TSF)
-#define CALIBER_5_DOT_56X45MM "5,56x45 мм"
+#define CALIBER_5_DOT_56X45MM "5.56x45 mm"
 /// Used in AK-74 type rifles (USSP)
-#define CALIBER_5_DOT_45X39MM "5,45x39 мм"
+#define CALIBER_5_DOT_45X39MM "5.45x39 mm"
 /// Used in PDWs like WT-550
-#define CALIBER_4_DOT_6X30MM "4,6x30 мм"
+#define CALIBER_4_DOT_6X30MM "4.6x30 mm"
 
 // Heavy cartridges
 /// Used in Soviet type heavy guns like Mosin rifle
-#define CALIBER_7_DOT_62X54MM "7,62x54 мм"
+#define CALIBER_7_DOT_62X54MM "7.62x54 mm"
 /// Used in NATO type heavy guns like 'L6 SAW' lmg
-#define CALIBER_7_DOT_62X51MM "7,62x51 мм"
+#define CALIBER_7_DOT_62X51MM "7.62x51 mm"
 /// Used in Syndicate sniper rifle
 #define CALIBER_DOT_50 ".50"
 /// Used in Compact Syndicate sniper rifle
@@ -115,13 +115,13 @@ GLOBAL_LIST_INIT(gun_module_slot_ru_name, list(
 
 // Grenade launcher cartridges
 /// Used in underbarrel grenade launchers and Bombarda
-#define CALIBER_40MM "40 мм"
+#define CALIBER_40MM "40 mm"
 /// Used in heavy grenade launchers like PML-9
-#define CALIBER_84MM "84 мм"
+#define CALIBER_84MM "84 mm"
 
 // Rocket systems
 /// Used in light rocket launcher like RPG-232
-#define CALIBER_ROCKET_70MM "ракета 70 мм"
+#define CALIBER_ROCKET_70MM "rocket 70 mm"
 
 // Special ammunition
 /// Used in speargun
@@ -133,27 +133,27 @@ GLOBAL_LIST_INIT(gun_module_slot_ru_name, list(
 
 // Energy weapons
 /// Used in laser weapons
-#define CALIBER_LASER "\"лазер\""
+#define CALIBER_LASER "\"laser\""
 
 /// The caliber used by the (gatfruit) peashooter
 #define CALIBER_PEA "pea"
 
 // Foam force weapons
 /// Used in foam guns
-#define CALIBER_FOAM_FORCE "\"пенопластовый\""
+#define CALIBER_FOAM_FORCE "\"foam\""
 /// Used in sniper foam gun
-#define CALIBER_FOAM_FORCE_SNIPER "\"пенопластовый снайперский\""
+#define CALIBER_FOAM_FORCE_SNIPER "\"sniper foam\""
 
 // Blank cartridges
 /// Used in toy cap guns
-#define CALIBER_CAP "\"холостой\""
+#define CALIBER_CAP "\"blank\""
 
 // Heavy weapons
 /// Used in high-caliber rocket launchers
 #define CALIBER_DOT_75 ".75"
 
-#define FAKE_CALIBER_40MM_IMP "импровизированный 40 мм"
-#define FAKE_CALIBER_80MM_MORTAR "80 мм миномётный"
+#define FAKE_CALIBER_40MM_IMP "improvised 40 mm"
+#define FAKE_CALIBER_80MM_MORTAR "80 mm mortar"
 
 /// Minimal recoil
 #define GUN_RECOIL_MIN new /datum/gun_recoil/minimal()

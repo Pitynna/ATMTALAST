@@ -137,7 +137,7 @@
 		icon_state = "potionflask_empty"
 
 /datum/reagent/flightpotion
-	name = "Зелье полёта"
+	name = "Flight Potion"
 	id = "flightpotion"
 	description = "Странный мутагенный состав неизвестного происхождения."
 	reagent_state = LIQUID

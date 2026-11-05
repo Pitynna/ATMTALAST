@@ -18,7 +18,7 @@
 	return ..()
 
 /datum/reagent/blob/distributed_neurons
-	name = "Распределенные нейроны"
+	name = "Distributed Neurons"
 	id = "blob_distributed_neurons"
 	color = "#E88D5D"
 	taste_description = "шипучей жидкости"

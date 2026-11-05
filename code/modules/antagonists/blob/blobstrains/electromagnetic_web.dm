@@ -23,7 +23,7 @@
 		empulse(B.loc, 1, 3) //less than screen range, so you can stand out of range to avoid it
 
 /datum/reagent/blob/electromagnetic_web
-	name = "Электромагнитная паутина"
+	name = "Electromagnetic Web"
 	id = "blob_electromagnetic_web"
 	taste_description = "поп-рока"
 	color = "#83ECEC"

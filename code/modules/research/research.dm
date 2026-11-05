@@ -244,70 +244,70 @@ research holder datum.
 
 /datum/tech/materials
 	name = RESEARCH_TREE_MATERIALS_NAME
-	desc = "Исследование и разработка новых материалов с улучшенными характеристиками."
+	desc = "Development of new and improved materials."
 	id = RESEARCH_TREE_MATERIALS
 	max_level = 8
 
 /datum/tech/engineering
 	name = RESEARCH_TREE_ENGINEERING_NAME
-	desc = "Совершенствование конструкций, узлов и методов сборки промышленного оборудования."
+	desc = "Development of new and improved engineering parts and methods."
 	id = RESEARCH_TREE_ENGINEERING
 	max_level = 8
 
 /datum/tech/plasmatech
 	name = RESEARCH_TREE_PLASMA_NAME
-	desc = "Изучение свойств и применение вещества под названием \"Плазма\" в различных сферах."
+	desc = "Research into the mysterious substance colloqually known as 'plasma'."
 	id = RESEARCH_TREE_PLASMA
 	max_level = 8
 	rare = 3
 
 /datum/tech/powerstorage
 	name = RESEARCH_TREE_POWERSTORAGE_NAME
-	desc = "Разработка технологий генерации, накопления и распределения электрической энергии."
+	desc = "The various technologies behind the storage and generation of electicity."
 	id = RESEARCH_TREE_POWERSTORAGE
 	max_level = 8
 
 /datum/tech/bluespace
 	name = RESEARCH_TREE_BLUESPACE_NAME
-	desc = "Изучение подпространственного слоя реальности, известного как \"Блюспейс\", и его применение в различных сферах."
+	desc = "Research into the sub-reality known as 'bluespace'."
 	id = RESEARCH_TREE_BLUESPACE
 	max_level = 8
 	rare = 2
 
 /datum/tech/biotech
 	name = RESEARCH_TREE_BIOTECH_NAME
-	desc = "Исследование живых организмов, генной инженерии и органических соединений."
+	desc = "Research into the deeper mysteries of life and organic substances."
 	id = RESEARCH_TREE_BIOTECH
 	max_level = 8
 
 /datum/tech/combat
 	name = RESEARCH_TREE_COMBAT_NAME
-	desc = "Разработка наступательных и оборонительных технологий."
+	desc = "The development of offensive and defensive systems."
 	id = RESEARCH_TREE_COMBAT
 	max_level = 8
 
 /datum/tech/magnets
 	name = RESEARCH_TREE_MAGNETS_NAME
-	desc = "Исследование электромагнитного спектра и его применение на практике."
+	desc = "Research into the electromagnetic spectrum. No clue how they actually work, though."
 	id = RESEARCH_TREE_MAGNETS
 	max_level = 8
 
 /datum/tech/programming
 	name = RESEARCH_TREE_PROGRAMMING_NAME
-	desc = "Развитие архитектур искусственного интеллекта, систем хранения информации и вычислительных протоколов."
+	desc = "The development of new computer and artificial intelligence and data storage systems."
 	id = RESEARCH_TREE_PROGRAMMING
 	max_level = 8
 
 /datum/tech/toxins //not meant to be raised by deconstruction, do not give objects toxins as an origin_tech
 	name = RESEARCH_TREE_TOXINS_NAME
-	desc = "Исследование плазменных взрывчатых веществ и реактивных химических соединений."
+	desc = "Research into plasma based explosive devices. Upgrade through testing explosives in the toxins lab."
 	id = RESEARCH_TREE_TOXINS
 	max_level = 8
 	rare = 2
 
 /datum/tech/syndicate
 	name = RESEARCH_TREE_ILLEGAL_NAME
-	desc = "Изучение систем и устройств, нарушающих регламенты безопасности \"Нанотрейзен\"."
+	desc = "The study of technologies that violate standard Nanotrasen regulations."
 	id = RESEARCH_TREE_ILLEGAL
 	level = 0 // Illegal tech level dont need to show in roundstart on console
 	max_level = 8 // Used for admin button so need max level like other tech
@@ -315,7 +315,7 @@ research holder datum.
 
 /datum/tech/abductor
 	name = RESEARCH_TREE_ALIEN_NAME
-	desc = "Анализ и адаптация технологий, используемых высокоразвитой цивилизацией, известной как \"Абдукторы\"."
+	desc = "The development of advanced automated, autonomous machines."
 	id = RESEARCH_TREE_ALIEN
 	level = 0 // Alien tech level hide roundstart like illegal
 	max_level = 8
@@ -349,7 +349,7 @@ research holder datum.
 	materials = list(MAT_METAL=30, MAT_GLASS=10)
 	var/datum/tech/stored
 	var/default_name = "technology disk"
-	var/default_desc = "Переносной носитель данных, специализированный для хранения научной информации."
+	var/default_desc = "A portable storage medium designed to hold scientific data."
 	var/default_ru_names = alist(
 		NOMINATIVE = "дискета технологий",
 		GENITIVE = "дискеты технологий",
@@ -442,7 +442,7 @@ research holder datum.
 	// I'm doing this so that disk paths with pre-loaded designs don't get weird names
 	// Otherwise, I'd use "initial()"
 	var/default_name = "Component Design Disk"
-	var/default_desc = "Переносной носитель данных, специализированный для хранения шаблонов печати."
+	var/default_desc = "A portable storage medium designed to hold component blueprints."
 	var/default_ru_names = alist(
 		NOMINATIVE = "дискета шаблона печати",
 		GENITIVE = "дискеты шаблона печати",

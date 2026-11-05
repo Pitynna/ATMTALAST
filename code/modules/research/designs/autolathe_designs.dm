@@ -244,7 +244,7 @@
 	maxstack = 50
 
 /datum/design/rglass
-	desc = "Сталь + Стекло" // because this design is used in ore redemption
+	desc = "Metal + Glass"
 	id = "rglass"
 	build_type = AUTOLATHE | SMELTER
 	materials = list(MAT_METAL = 1000, MAT_GLASS = MINERAL_MATERIAL_AMOUNT)

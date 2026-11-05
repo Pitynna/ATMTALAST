@@ -1,5 +1,5 @@
 /datum/reagent/consumable/drink/orangejuice
-	name = "Апельсиновый сок"
+	name = "Orange Juice"
 	id = "orangejuice"
 	description = "И вкусно, и богато витамином С — что ещё нужно?"
 	drink_icon = "glass_orange"
@@ -14,7 +14,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/tomatojuice
-	name = "Томатный сок"
+	name = "Tomato Juice"
 	id = "tomatojuice"
 	description = "Почему томатный, а не помидорный сок?"
 	color = "#731008" // rgb: 115, 16, 8
@@ -24,7 +24,7 @@
 	taste_description = "томатного сока"
 
 /datum/reagent/consumable/drink/pineapplejuice
-	name = "Ананасовый сок"
+	name = "Pineapple Juice"
 	id = "pineapplejuice"
 	description = "Ананасы, выжатые до жидкого состояния. Сладко и приторно."
 	color = "#e5b437"
@@ -40,7 +40,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/limejuice
-	name = "Лаймовый сок"
+	name = "Lime Juice"
 	id = "limejuice"
 	description = "Кисло-сладкий сок лайма."
 	color = "#365E30" // rgb: 54, 94, 48
@@ -56,7 +56,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/carrotjuice
-	name = "Морковный сок"
+	name = "Carrot Juice"
 	id = "carrotjuice"
 	description = "Это как морковь, только без хруста. Полезно для глаз!"
 	color = "#973800" // rgb: 151, 56, 0
@@ -74,7 +74,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/doctor_delight
-	name = "Радость Доктора"
+	name = "The Doctor's Delight"
 	id = "doctorsdelight"
 	description = "Полезная смесь соков, которая поможет вам восстановиться перед следующей зарубой на тулбоксах."
 	color = "#FF8CFF" // rgb: 255, 140, 255
@@ -90,7 +90,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/triple_citrus
-	name = "Тройной Цитрус"
+	name = "Triple Citrus"
 	id = "triple_citrus"
 	description = "Освежающий микс из сока различных цитрусовых. Замечательно."
 	color = "#23A046"
@@ -104,7 +104,7 @@
 		M.adjustToxLoss(-rand(1,2))
 
 /datum/reagent/consumable/drink/berryjuice
-	name = "Ягодный сок"
+	name = "Berry Juice"
 	id = "berryjuice"
 	description = "Вкусная смесь из нескольких видов ягод."
 	color = "#863333" // rgb: 134, 51, 51
@@ -114,7 +114,7 @@
 	taste_description = "ягодного сока"
 
 /datum/reagent/consumable/drink/poisonberryjuice
-	name = "Сок из ядовитых ягод"
+	name = "Poison Berry Juice"
 	id = "poisonberryjuice"
 	description = "Вкусная смесь из нескольких видов ядовитых и опасных ягод."
 	color = "#863353" // rgb: 134, 51, 83
@@ -129,21 +129,21 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/applejuice
-	name = "Яблочный сок"
+	name = "Apple Juice"
 	id = "applejuice"
 	description = "Сладкой сок, полученный из выжатых яблок. Подходит для всех возрастов."
 	color = "#ECFF56" // rgb: 236, 255, 86
 	taste_description = "яблочного сока"
 
 /datum/reagent/consumable/drink/watermelonjuice
-	name = "Арбузный сок"
+	name = "Watermelon Juice"
 	id = "watermelonjuice"
 	description = "Вкусный сок из арбуза."
 	color = "#863333" // rgb: 134, 51, 51
 	taste_description = "арбузного сока"
 
 /datum/reagent/consumable/drink/lemonjuice
-	name = "Лимонный сок"
+	name = "Lemon Juice"
 	id = "lemonjuice"
 	description = "Этот сок ОЧЕНЬ кислый."
 	color = "#863333" // rgb: 175, 175, 0
@@ -153,14 +153,14 @@
 	taste_description = "лимонного сока"
 
 /datum/reagent/consumable/drink/grapejuice
-	name = "Виноградный сок"
+	name = "Grape Juice"
 	id = "grapejuice"
 	description = "Не запачкайте рубашку."
 	color = "#993399" // rgb: 153, 51, 153
 	taste_description = "виноградного сока"
 
 /datum/reagent/consumable/drink/banana
-	name = "Банановый сок"
+	name = "Banana Juice"
 	id = "banana"
 	description = "Сырая сущность банана."
 	color = "#863333" // rgb: 175, 175, 0
@@ -177,7 +177,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/strawwberry
-	name = "Клубничный сок"
+	name = "Strawberry Juice"
 	id = "strawwberry"
 	description = "Сырая сущность клубники."
 	color = "#fc2525"
@@ -186,7 +186,7 @@
 	taste_description = "клубники"
 
 /datum/reagent/consumable/drink/nothing
-	name = "Ничего"
+	name = "Nothing"
 	id = "nothing"
 	description = "Абсолютно ничего."
 	drink_icon = "nothing"
@@ -202,7 +202,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/potato_juice
-	name = "Картофельный сок"
+	name = "Potato Juice"
 	id = "potato"
 	description = "Сок картофеля. Ух."
 	nutriment_factor = 2 * REAGENTS_METABOLISM
@@ -213,7 +213,7 @@
 	taste_description = "рвоты или ещё чего похуже"
 
 /datum/reagent/consumable/drink/milk
-	name = "Молоко"
+	name = "Milk"
 	id = "milk"
 	description = "Непрозрачная белая жидкость, вырабатываемая молочными железами млекопитающих."
 	color = "#DFDFDF" // rgb: 223, 223, 223
@@ -231,7 +231,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/milk/soymilk
-	name = "Соевое молоко"
+	name = "Soy Milk"
 	id = "soymilk"
 	description = "Непрозрачная белая жидкость, изготовленная из соевых бобов."
 	color = "#DFDFC7" // rgb: 223, 223, 199
@@ -240,7 +240,7 @@
 	taste_description = "фальшивого молока"
 
 /datum/reagent/consumable/drink/milk/cream
-	name = "Сливки"
+	name = "Cream"
 	id = "cream"
 	description = "Жирная, но всё ещё жидкая часть молока. Почему бы вам не смешать это с виски, а?"
 	color = "#DFD7AF" // rgb: 223, 215, 175
@@ -249,7 +249,7 @@
 	taste_description = "сливок"
 
 /datum/reagent/consumable/drink/milk/chocolate_milk
-	name = "Шоколадное молоко"
+	name = "Chocolate milk"
 	id ="chocolate_milk"
 	description = "Молоко с шоколадом. Прямо как в детстве."
 	color = "#85432C"
@@ -257,7 +257,7 @@
 	taste_description = "шоколадного сока"
 
 /datum/reagent/consumable/drink/hot_coco
-	name = "Горячий шоколад"
+	name = "Hot Chocolate"
 	id = "hot_coco"
 	description = "Сделано с любовью! И какао-бобами."
 	color = "#403010" // rgb: 64, 48, 16
@@ -268,7 +268,7 @@
 	taste_description = "горячего шоколада"
 
 /datum/reagent/consumable/drink/coffee
-	name = "Кофе"
+	name = "Coffee"
 	id = "coffee"
 	description = "Кофе — это напиток, приготовленный из обжаренных семян кофейного растения, которые обычно называют какао-бобами."
 	color = "#482000" // rgb: 72, 32, 0
@@ -307,7 +307,7 @@
 	return list(0, STATUS_UPDATE_NONE)
 
 /datum/reagent/consumable/drink/coffee/icecoffee
-	name = "Кофе со льдом"
+	name = "Iced Coffee"
 	id = "icecoffee"
 	description = "Кофе со льдом, освежающе-бодрящий."
 	color = "#102838" // rgb: 16, 40, 56
@@ -319,7 +319,7 @@
 	taste_description = "освежающе-холодного кофе"
 
 /datum/reagent/consumable/drink/coffee/soy_latte
-	name = "Соевый латте"
+	name = "Soy Latte"
 	id = "soy_latte"
 	description = "Вкусный и бодрящий напиток. Самое то для чтения всех этих ваших левацких книжек."
 	color = "#664300" // rgb: 102, 67, 0
@@ -338,7 +338,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/coffee/cafe_latte
-	name = "Латте"
+	name = "Cafe Latte"
 	id = "cafe_latte"
 	description = "Вкусный и бодрящий напиток. Самое то для чтения книг."
 	color = "#664300" // rgb: 102, 67, 0
@@ -357,7 +357,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/coffee/cafe_latte/cafe_mocha
-	name = "Моккачино"
+	name = "Cafe Mocha"
 	id = "cafe_mocha"
 	description = "Идеальное сочетание кофе, молока и шоколада."
 	color = "#673629"
@@ -366,7 +366,7 @@
 	taste_description = "шоколадного кофе"
 
 /datum/reagent/consumable/drink/tea
-	name = "Чай"
+	name = "Tea"
 	id = "tea"
 	description = "Вкусный чёрный чай. Содержит полезные антиоксиданты!"
 	color = "#101000" // rgb: 16, 16, 0
@@ -395,7 +395,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/tea/icetea
-	name = "Чай со льдом"
+	name = "Iced Tea"
 	id = "icetea"
 	description = "Освежает и бодрит. Самое то в жаркий денёк."
 	color = "#104038" // rgb: 16, 64, 56
@@ -407,7 +407,7 @@
 	taste_description = "холодного чая"
 
 /datum/reagent/consumable/drink/bananahonk
-	name = "Банана-Хонк"
+	name = "Banana Honk"
 	id = "bananahonk"
 	description = "Напиток из клоунского рая."
 	color = "#664300" // rgb: 102, 67, 0
@@ -424,7 +424,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/silencer
-	name = "Глушитель"
+	name = "Silencer"
 	id = "silencer"
 	description = "Напиток из мимского рая."
 	color = "#664300" // rgb: 102, 67, 0
@@ -441,7 +441,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/drink/chocolatepudding
-	name = "Шоколадный пудинг"
+	name = "Chocolate Pudding"
 	id = "chocolatepudding"
 	description = "Отличный десерт для любителей шоколада."
 	color = "#800000"
@@ -452,7 +452,7 @@
 	taste_description = "шоколадной массы"
 
 /datum/reagent/consumable/drink/vanillapudding
-	name = "Ванильный пудинг"
+	name = "Vanilla Pudding"
 	id = "vanillapudding"
 	description = "Отличный десерт для любителей ванили."
 	color = "#FAFAD2"
@@ -463,7 +463,7 @@
 	taste_description = "ванильной массы"
 
 /datum/reagent/consumable/drink/cherryshake
-	name = "Ягодный шейк"
+	name = "Cherry Shake"
 	id = "cherryshake"
 	description = "Молочный коктейль со вкусом вишни."
 	color = "#FFB6C1"
@@ -474,7 +474,7 @@
 	taste_description = "ягодного милк-шейка"
 
 /datum/reagent/consumable/drink/bluecherryshake
-	name = "Голубой ягодный шейк"
+	name = "Blue Cherry Shake"
 	id = "bluecherryshake"
 	description = "Экзотичный ягодный молочный коктейль."
 	color = "#00F1FF"
@@ -485,7 +485,7 @@
 	taste_description = "голубики"
 
 /datum/reagent/consumable/drink/pumpkin_latte
-	name = "Тыквенный латте"
+	name = "Pumpkin Latte"
 	id = "pumpkin_latte"
 	description = "Смесь тыквенного сока и кофе. Скорее всего, по неадекватно завышенной цене."
 	color = "#F4A460"
@@ -496,7 +496,7 @@
 	taste_description = "дорогущего кофе для леваков"
 
 /datum/reagent/consumable/drink/gibbfloats
-	name = "Всплывший Гибб"
+	name = "Gibb Floats"
 	id = "gibbfloats"
 	description = "Мороженое, смешанное с Доктором Гиббом."
 	color = "#B22222"
@@ -514,21 +514,21 @@
 	taste_description = "осени"
 
 /datum/reagent/consumable/drink/blumpkinjuice
-	name = "Нетыквенный сок"
+	name = "Blumpkin Juice"
 	id = "blumpkinjuice"
 	description = "Не выжат из настоящей тыквы."
 	color = "#00BFFF"
 	taste_description = "едкой рвоты"
 
 /datum/reagent/consumable/drink/grape_soda
-	name = "Виноградная газировка"
+	name = "Grape soda"
 	id = "grapesoda"
 	description = "Любим детьми и трезвенниками."
 	color = "#E6CDFF"
 	taste_description = "виноградной газировки"
 
 /datum/reagent/consumable/drink/coco/icecoco
-	name = "Холодный какао"
+	name = "Iced Cocoa"
 	id = "icecoco"
 	description = "Горячее какао со льдом, освежающий и прохладный."
 	color = "#102838" // rgb: 16, 40, 56
@@ -539,7 +539,7 @@
 	taste_description = "освежающе-холодного какао"
 
 /datum/reagent/consumable/drink/non_alcoholic_beer
-	name = "Безалкогольное пиво"
+	name = "Non-Alcoholic Beer"
 	id = "noalco_beer"
 	description = "Что может быть ещё более бессмысленным?"
 	drink_icon = "alcohol_free_beer"
@@ -549,7 +549,7 @@
 	taste_description = "пива"
 
 /datum/reagent/consumable/drink/laughsyrup
-	name = "Смехо-сироп"
+	name = "Laugh Syrup"
 	description = "Сок, выжатый из смеющихся бобов. Шипучий и меняет вкус в зависимости от того, с чем его употребляют!"
 	id = "laughsyrup"
 	color = "#803280"

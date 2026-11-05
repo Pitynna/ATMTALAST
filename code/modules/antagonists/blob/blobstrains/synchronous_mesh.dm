@@ -26,7 +26,7 @@
 		return damage * 1.25
 
 /datum/reagent/blob/synchronous_mesh
-	name = "Синхронная сетка"
+	name = "Synchronous Mesh"
 	id = "blob_synchronous_mesh"
 	taste_description = "токсичной плесени"
 	color = "#65ADA2"

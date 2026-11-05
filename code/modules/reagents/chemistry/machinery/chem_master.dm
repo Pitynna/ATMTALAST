@@ -570,7 +570,7 @@
 	return get_base_placeholder_name(reagents, clamp(reagents.total_volume / set_items_amount, 0, max_units_per_item))
 
 /datum/chemical_production_mode/proc/get_base_placeholder_name(datum/reagents/reagents, amount_per_item)
-	return "[reagents.get_master_reagent_name()] ([amount_per_item] ед.)"
+	return "[reagents.get_master_reagent_name()] ([amount_per_item] u)"
 
 /**
 	public

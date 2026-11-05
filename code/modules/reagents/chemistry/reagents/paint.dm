@@ -1,5 +1,5 @@
 /datum/reagent/paint
-	name = "Краска"
+	name = "Paint"
 	id = "paint_"
 	description = "Краска, используемая для покраски объектов."
 	reagent_state = LIQUID
@@ -24,42 +24,42 @@
 	..()
 
 /datum/reagent/paint/red
-	name = "Красная краска"
+	name = "Red Paint"
 	id = "paint_red"
 	color = "#FF0000"
 
 /datum/reagent/paint/green
-	name = "Зелёная краска"
+	name = "Green Paint"
 	id = "paint_green"
 	color = "#00FF00"
 
 /datum/reagent/paint/blue
-	name = "Синяя краска"
+	name = "Blue Paint"
 	id = "paint_blue"
 	color = "#0000FF"
 
 /datum/reagent/paint/yellow
-	name = "Жёлтая краска"
+	name = "Yellow Paint"
 	id = "paint_yellow"
 	color = "#FFFF00"
 
 /datum/reagent/paint/violet
-	name = "Фиолетовая краска"
+	name = "Violet Paint"
 	id = "paint_violet"
 	color = "#FF00FF"
 
 /datum/reagent/paint/black
-	name = "Чёрная краска"
+	name = "Black Paint"
 	id = "paint_black"
 	color = "#333333"
 
 /datum/reagent/paint/white
-	name = "Белая краска"
+	name = "White Paint"
 	id = "paint_white"
 	color = "#FFFFFF"
 
 /datum/reagent/paint_remover
-	name = "Средство для удаления краски"
+	name = "Paint Remover"
 	id = "paint_remover"
 	description = "Вещество, используемое для удаления краски с объектов."
 	reagent_state = LIQUID

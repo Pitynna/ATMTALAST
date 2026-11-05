@@ -14,7 +14,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		))
 
 /datum/reagent/water
-	name = "Вода"
+	name = "Water"
 	id = "water"
 	description = "Повсеместно распространённое химическое вещество, состоящее из водорода и кислорода."
 	reagent_state = LIQUID
@@ -76,7 +76,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	cooling_temperature = 3
 
 /datum/reagent/lube
-	name = "Космическая смазка"
+	name = "Space Lube"
 	id = "lube"
 	description = "Вещество, используемое для уменьшения трения между двумя движущимися поверхностями."
 	reagent_state = LIQUID
@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		T.MakeSlippery(TURF_WET_LUBE, 120 SECONDS)
 
 /datum/reagent/space_cleaner
-	name = "Космочист"
+	name = "Space cleaner"
 	id = "cleaner"
 	description = "Состав, используемый для очистки поверхностей. Теперь на 50% больше гипохлорита натрия!"
 	reagent_state = LIQUID
@@ -119,7 +119,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 
 /datum/reagent/blood
 	data = list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=null,"blood_species"=null,"blood_colour"=BLOOD_COLOR_RED,"resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null, "dna" = null)
-	name = "Кровь"
+	name = "Blood"
 	id = "blood"
 	reagent_state = LIQUID
 	color = "#770000" // rgb: 40, 0, 0
@@ -242,7 +242,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 				V.Contract(M, need_protection_check = FALSE)
 
 /datum/reagent/blood/synthetic/vox
-	name = "Синтетическая кровь (Азот)"
+	name = "Synthetic Blood (Nitrogen)"
 	id = "sbloodvox"
 	data = list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=null,"blood_species"=null,"blood_colour"="#6093dc","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null, "dna" = null)
 	color = "#6093dc"
@@ -261,7 +261,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 				C.blood_volume = min(C.blood_volume + round(volume, 0.1), BLOOD_VOLUME_NORMAL)
 
 /datum/reagent/blood/synthetic/oxy
-	name = "Синтетическая кровь (Кислород)"
+	name = "Synthetic Blood (Oxygen)"
 	id = "sbloodoxy"
 	data = list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=null,"blood_species"=null,"blood_colour"="#e8479d","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null, "dna" = null)
 	color = "#e8479d"
@@ -281,7 +281,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 
 /datum/reagent/vaccine
 	//data must contain virus type
-	name = "Вакцина"
+	name = "Vaccine"
 	id = "vaccine"
 	color = "#C81040" // rgb: 200, 16, 64
 	taste_description = "антител"
@@ -299,7 +299,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		data |= data.Copy()
 
 /datum/reagent/fishwater
-	name = "Аквариумная вода"
+	name = "Fish Water"
 	id = "fishwater"
 	description = "Вонючая вода из аквариума. Мерзость!"
 	reagent_state = LIQUID
@@ -319,7 +319,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return ..()
 
 /datum/reagent/fishwater/toiletwater
-	name = "Вода из унитаза"
+	name = "Toilet Water"
 	id = "toiletwater"
 	description = "Грязная вода, которую взяли из унитаза. Абсолютно отвратительно."
 	taste_description = "жидкого дерьма"
@@ -328,7 +328,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return
 
 /datum/reagent/holywater
-	name = "Вода"
+	name = "Water"
 	id = "holywater"
 	description = "Повсеместно распространённое химическое вещество, состоящее из водорода и кислорода."
 	reagent_state = LIQUID
@@ -439,7 +439,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	T.Bless()
 
 /datum/reagent/fuel/unholywater		//if you somehow managed to extract this from someone, dont splash it on yourself and have a smoke
-	name = "Нечестивая вода"
+	name = "Unholy Water"
 	id = "unholywater"
 	description = "Что-то, что не должно существовать в этой реальности."
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
@@ -455,7 +455,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return ..() | update_flags
 
 /datum/reagent/hellwater
-	name = "Адская вода"
+	name = "Hell Water"
 	id = "hell_water"
 	description = "ЖЖЁТСЯ, КАК ЖЖЁТСЯ!"
 	process_flags = ORGANIC | SYNTHETIC		//Admin-bus has no brakes! KILL THEM ALL.
@@ -473,7 +473,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return ..() | update_flags
 
 /datum/reagent/liquidgibs
-	name = "Жидкие ошмётки"
+	name = "Liquid gibs"
 	id = "liquidgibs"
 	color = "#FF9966"
 	description = "Вы даже думать не хотите, что это такое."
@@ -486,7 +486,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		playsound(T, 'sound/effects/splat.ogg', 50, TRUE, -3)
 
 /datum/reagent/lye
-	name = "Щёлочь"
+	name = "Lye"
 	id = "lye"
 	description = "Также известна как гидроксид натрия."
 	reagent_state = LIQUID
@@ -494,7 +494,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	taste_description = "едкой кислоты"//don't drink lye, kids
 
 /datum/reagent/drying_agent
-	name = "Сушильный агент"
+	name = "Drying agent"
 	id = "drying_agent"
 	description = "Используется для осушения различных поверхностей."
 	reagent_state = LIQUID
@@ -526,7 +526,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	user.remove_status_effect(status_effect_type)
 
 /datum/reagent/status_effect/creatine
-	name = "Креатин"
+	name = "Creatine"
 	id = "creatine"
 	description = "Вещество участвующее в энергетическом обмене в мышечных и нервных клетках."
 	color = "#dcbf00"
@@ -534,14 +534,14 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	status_effect_type = /datum/status_effect/sport_reagents/creatine
 
 /datum/reagent/status_effect/creatine/liquid
-	name = "Разбавленный креатин"
+	name = "Diluted Creatine"
 	id = "creatine_liquid"
 	description = "Смесь воды и креатина."
 	reagent_state = LIQUID
 	status_effect_type = /datum/status_effect/sport_reagents/creatine/liquid
 
 /datum/reagent/status_effect/guarana
-	name = "Экстракт гуараны"
+	name = "Guarana Extract"
 	id = "guarana"
 	description = "Вещество временно стимулирующее мышечную активность."
 	color = "#dc3b00"
@@ -549,7 +549,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	status_effect_type = /datum/status_effect/sport_reagents/guarana
 
 /datum/reagent/status_effect/steroids
-	name = "Стероиды"
+	name = "Steroids"
 	id = "steroids"
 	description = "Используется для ускоренного развития мышц. \
 					Не рекомендуется употреблять обладающим хвостом, беременным, перенесшим тяжелую травму, переболевшим ветрянкой, состоящим из слизи и бесхвостым."

@@ -18,7 +18,7 @@
 	return ..()
 
 /datum/reagent/blob/b_sorium
-	name = "Сорий"
+	name = "Sorium"
 	id = "blob_sorium"
 	taste_description = "толчков"
 	color = "#B68D00"

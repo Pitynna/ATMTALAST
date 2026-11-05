@@ -32,7 +32,7 @@
 	return ..()
 
 /datum/reagent/blob/blazing_oil
-	name = "Пылающее масло"
+	name = "Blazing Oil"
 	id = "blob_blazing_oil"
 	taste_description = "горящее масло"
 	color = "#B68D00"

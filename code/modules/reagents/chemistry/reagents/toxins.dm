@@ -1,5 +1,5 @@
 /datum/reagent/toxin
-	name = "Токсин"
+	name = "Toxin"
 	id = "toxin"
 	description = "Ядовитый."
 	reagent_state = LIQUID
@@ -14,7 +14,7 @@
 	return ..() | update_flags
 
 /datum/reagent/spider_venom
-	name = "Паучий яд"
+	name = "Spider venom"
 	id = "spidertoxin"
 	description = "Яд, впрыскиваемый космическими арахнидами."
 	reagent_state = LIQUID
@@ -27,7 +27,7 @@
 	return ..() | update_flags
 
 /datum/reagent/bee_venom
-	name = "Пчелиный яд"
+	name = "Bee Venom"
 	id = "beetoxin"
 	description = "Яд, впрыскиваемый космическими пчелами."
 	reagent_state = LIQUID
@@ -41,7 +41,7 @@
 
 //bee venom specially for Beesease bees
 /datum/reagent/bee_venom_beesease
-	name = "Пчелиный яд"
+	name = "Bee Venom"
 	id = "beetoxinbeesease"
 	description = "Яд, впрыскиваемый космическими пчелами."
 	reagent_state = LIQUID
@@ -82,7 +82,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/minttoxin
-	name = "Мятный токсин"
+	name = "Mint Toxin"
 	id = "minttoxin"
 	description = "Пригодится для работы с нежелательными клиентами."
 	reagent_state = LIQUID
@@ -96,7 +96,7 @@
 
 /datum/reagent/slimejelly
 	data = list("diseases" = null)
-	name = "Слаймовое желе"
+	name = "Slime Jelly"
 	id = "slimejelly"
 	description = "Липкая полужидкость, полученная из одной из самых смертоносных форм жизни в галактике."
 	reagent_state = LIQUID
@@ -139,7 +139,7 @@
 		B.update_icon()
 
 /datum/reagent/slimetoxin
-	name = "Мутационный токсин"
+	name = "Mutation Toxin"
 	id = "mutationtoxin"
 	description = "Мутационный токсин, производимый слаймами."
 	reagent_state = LIQUID
@@ -159,7 +159,7 @@
 	return ..()
 
 /datum/reagent/aslimetoxin
-	name = "Продвинутый мутационный токсин"
+	name = "Advanced Mutation Toxin"
 	id = "amutationtoxin"
 	description = "Продвинутый мутационный токсин, производимый слаймами."
 	reagent_state = LIQUID
@@ -173,7 +173,7 @@
 		D.Contract(M)
 
 /datum/reagent/mercury
-	name = "Ртуть"
+	name = "Mercury"
 	id = "mercury"
 	description = "Химический элемент."
 	reagent_state = LIQUID
@@ -189,7 +189,7 @@
 	return ..() | update_flags
 
 /datum/reagent/chlorine
-	name = "Хлор"
+	name = "Chlorine"
 	id = "chlorine"
 	description = "Химический элемент."
 	reagent_state = GAS
@@ -204,7 +204,7 @@
 	return ..() | update_flags
 
 /datum/reagent/fluorine
-	name = "Фтор"
+	name = "Fluorine"
 	id = "fluorine"
 	description = "Высокореактивный химический элемент."
 	reagent_state = GAS
@@ -220,7 +220,7 @@
 	return ..() | update_flags
 
 /datum/reagent/radium
-	name = "Радий"
+	name = "Radium"
 	id = "radium"
 	description = "Радий — щелочноземельный металл. Он чрезвычайно радиоактивен."
 	color = "#C7C7C7"
@@ -259,7 +259,7 @@
 		)
 
 /datum/reagent/polonium
-	name = "Полоний"
+	name = "Polonium"
 	id = "polonium"
 	description = "Чрезвычайно радиоактивный материал в жидкой форме. Попадание внутрь приводит к смертельному облучению."
 	reagent_state = LIQUID
@@ -298,7 +298,7 @@
 		)
 
 /datum/reagent/mutagen
-	name = "Нестабильный мутаген"
+	name = "Unstable mutagen"
 	id = "mutagen"
 	description = "Может вызывать непредсказуемые мутации. Держите подальше от детей."
 	reagent_state = LIQUID
@@ -326,7 +326,7 @@
 	return ..()
 
 /datum/reagent/stable_mutagen
-	name = "Стабильный мутаген"
+	name = "Stable mutagen"
 	id = "stable_mutagen"
 	description = "Обычное, скучное мутагенное соединение. Действует совершенно предсказуемо."
 	reagent_state = LIQUID
@@ -362,7 +362,7 @@
 		data = blood.data.Copy()
 
 /datum/reagent/uranium
-	name = "Уран"
+	name = "Uranium"
 	id = "uranium"
 	description = "Нефритово-зеленый металлический химический элемент из ряда актинидов, слабо радиоактивный."
 	color = "#5E9964"
@@ -402,7 +402,7 @@
 #undef RADIOACTIVE_HEAL
 
 /datum/reagent/lexorin
-	name = "Лексорин"
+	name = "Lexorin"
 	id = "lexorin"
 	description = "Лексорин временно останавливает дыхание. Вызывает повреждение тканей."
 	reagent_state = LIQUID
@@ -416,7 +416,7 @@
 	return ..() | update_flags
 
 /datum/reagent/acid
-	name = "Серная кислота"
+	name = "Sulphuric acid"
 	id = "sacid"
 	description = "Сильная минеральная кислота с молекулярной формулой H2SO4."
 	reagent_state = LIQUID
@@ -493,7 +493,7 @@
 	T.acid_act(acidpwr, volume)
 
 /datum/reagent/acid/facid
-	name = "Фторсерная кислота"
+	name = "Fluorosulfuric Acid"
 	id = "facid"
 	description = "Фторсерная кислота это чрезвычайно агрессивная суперкислота."
 	color = "#5050FF"
@@ -552,7 +552,7 @@
 	to_chat(H, span_warning("Синеватое кислотное вещество жжёт вашу кожу[volume < 5 ? ", но оно недостаточно концентрированное, чтобы нанести вам вред" : null]!"))
 
 /datum/reagent/acetic_acid
-	name = "Уксусная кислота"
+	name = "Acetic acid"
 	id = "acetic_acid"
 	description = "Слабая кислота, которая является основным компонентом уксуса и плохого похмелья."
 	color = "#0080ff"
@@ -598,7 +598,7 @@
 	return FALSE
 
 /datum/reagent/carpotoxin
-	name = "Карпотоксин"
+	name = "Carpotoxin"
 	id = "carpotoxin"
 	description = "Смертельный нейротоксин, вырабатываемый железами космического карпа."
 	reagent_state = LIQUID
@@ -611,7 +611,7 @@
 	return ..() | update_flags
 
 /datum/reagent/staminatoxin
-	name = "Тиризин"
+	name = "Tirizene"
 	id = "tirizene"
 	description = "Токсин, который ухудшает снабжение тканей кислородом, постепенно выматывая организм субъекта."
 	reagent_state = LIQUID
@@ -626,7 +626,7 @@
 	return ..() | update_flags
 
 /datum/reagent/toxin/spore
-	name = "Споровый токсин"
+	name = "Spore Toxin"
 	description = "Природный токсин, вырабатываемый спорами блоба, который при попадании в организм подавляет зрение."
 	color = "#9ACD32"
 	id = "spore"
@@ -641,7 +641,7 @@
 	return ..() | update_flags
 
 /datum/reagent/toxin/spore_burning
-	name = "Огненый споровый токсин"
+	name = "Burning Spore Toxin"
 	description = "Природный токсин, вырабатываемый спорами блоба, который вызывает возгорание тканей жертвы."
 	color = "#9ACD32"
 	id = "spore_burn"
@@ -656,7 +656,7 @@
 	return ..() | update_flags
 
 /datum/reagent/beer2	//disguised as normal beer for use by emagged service borgs
-	name = "Пиво"
+	name = "Beer"
 	id = "beer2"
 	description = "Алкогольный напиток, приготовленный из солода, хмеля, дрожжей и воды."
 	color = "#664300" // rgb: 102, 67, 0
@@ -678,7 +678,7 @@
 	return ..() | update_flags
 
 /datum/reagent/histamine
-	name = "Гистамин"
+	name = "Histamine"
 	id = "histamine"
 	description = "Нейротрансмиттер иммунной системы. Если он обнаружен в крови, то, скорее всего, у человека наблюдается аллергическая реакция."
 	reagent_state = LIQUID
@@ -756,7 +756,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/formaldehyde
-	name = "Формальдегид"
+	name = "Formaldehyde"
 	id = "formaldehyde"
 	description = "Формальдегид — распространенный промышленный химикат, который используется для консервации трупов и медицинских препа. Он очень токсичен и вызывает аллергию."
 	reagent_state = LIQUID
@@ -773,7 +773,7 @@
 	return ..() | update_flags
 
 /datum/reagent/acetaldehyde
-	name = "Ацетальдегид"
+	name = "Acetaldehyde"
 	id = "acetaldehyde"
 	description = "Ацетальдегид — распространенный промышленный химикат. Он является сильным раздражителем."
 	reagent_state = LIQUID
@@ -787,7 +787,7 @@
 	return ..() | update_flags
 
 /datum/reagent/venom
-	name = "Яд"
+	name = "Venom"
 	id = "venom"
 	description = "Невероятно сильный яд. Происхождение неизвестно."
 	reagent_state = LIQUID
@@ -815,7 +815,7 @@
 	return ..() | update_flags
 
 /datum/reagent/neurotoxin2
-	name = "Нейротоксин"
+	name = "Neurotoxin"
 	id = "neurotoxin2"
 	description = "Опасный токсин, поражающий нервную систему."
 	reagent_state = LIQUID
@@ -854,7 +854,7 @@
 	return ..() | update_flags
 
 /datum/reagent/cyanide
-	name = "Цианид"
+	name = "Cyanide"
 	id = "cyanide"
 	description = "Высокотоксичное химическое вещество, используемое в качестве строительного блока для других веществ."
 	reagent_state = LIQUID
@@ -879,7 +879,7 @@
 	return ..() | update_flags
 
 /datum/reagent/itching_powder
-	name = "Зудящий порошок"
+	name = "Itching Powder"
 	id = "itching_powder"
 	description = "Абразивный порошок, любимый жестокими шутниками."
 	reagent_state = LIQUID
@@ -915,7 +915,7 @@
 	return ..() | update_flags
 
 /datum/reagent/initropidril
-	name = "Инитропидрил"
+	name = "Initropidril"
 	id = "initropidril"
 	description = "Сильнодействующий сердечный яд — может убить за несколько минут."
 	reagent_state = LIQUID
@@ -946,7 +946,7 @@
 	return ..() | update_flags
 
 /datum/reagent/pancuronium
-	name = "Панкуроний"
+	name = "Pancuronium"
 	id = "pancuronium"
 	description = "Бромид панкурония — мощный релаксант скелетных мышц."
 	reagent_state = LIQUID
@@ -979,7 +979,7 @@
 	return ..() | update_flags
 
 /datum/reagent/sodium_thiopental
-	name = "Тиопентал натрия"
+	name = "Sodium Thiopental"
 	id = "sodium_thiopental"
 	description = "Быстродействующий транквилизатор барбитуратного ряда."
 	reagent_state = LIQUID
@@ -1008,7 +1008,7 @@
 	return ..() | update_flags
 
 /datum/reagent/ketamine
-	name = "Кетамин"
+	name = "Ketamine"
 	id = "ketamine"
 	description = "Сильнодействующий ветеринарный транквилизатор."
 	reagent_state = LIQUID
@@ -1036,7 +1036,7 @@
 	return ..() | update_flags
 
 /datum/reagent/sulfonal
-	name = "Сульфонал"
+	name = "Sulfonal"
 	id = "sulfonal"
 	description = "Отравляет организм субьекта и погружает его в сон."
 	reagent_state = LIQUID
@@ -1064,7 +1064,7 @@
 	return ..() | update_flags
 
 /datum/reagent/amanitin
-	name = "Аманитин"
+	name = "Amanitin"
 	id = "amanitin"
 	description = "Токсин, вырабатываемый некоторыми грибами. Очень опасен."
 	reagent_state = LIQUID
@@ -1076,7 +1076,7 @@
 	..()
 
 /datum/reagent/lipolicide
-	name = "Липолицид"
+	name = "Lipolicide"
 	id = "lipolicide"
 	description = "Соединение, которое можно найти во многих магазинах в виде тоника для похудения."
 	color = "#D1DED1"
@@ -1102,7 +1102,7 @@
 	return ..() | update_flags
 
 /datum/reagent/coniine
-	name = "Кониин"
+	name = "Coniine"
 	id = "coniine"
 	description = "Нейротоксин, быстро вызывающий остановку дыхания."
 	reagent_state = LIQUID
@@ -1118,7 +1118,7 @@
 	return ..() | update_flags
 
 /datum/reagent/curare
-	name = "Кураре"
+	name = "Curare"
 	id = "curare"
 	description = "Очень опасный паралитический яд."
 	reagent_state = LIQUID
@@ -1154,7 +1154,7 @@
 	return ..() | update_flags
 
 /datum/reagent/sarin
-	name = "Зарин"
+	name = "Sarin"
 	id = "sarin"
 	description = "Чрезвычайно смертоносный нейротоксин."
 	reagent_state = LIQUID
@@ -1212,7 +1212,7 @@
 	return ..() | update_flags
 
 /datum/reagent/glyphosate
-	name = "Глифосат"
+	name = "Glyphosate"
 	id = "glyphosate"
 	description = "Гербицид широкого спектра применения, эффективно уничтожающий вредителей."
 	reagent_state = LIQUID
@@ -1255,14 +1255,14 @@
 		..()
 
 /datum/reagent/glyphosate/atrazine
-	name = "Атразин"
+	name = "Atrazine"
 	id = "atrazine"
 	description = "Гербицидное соединение, используемое для уничтожения нежелательных растений."
 	color = "#773E73" //RGB: 47 24 45
 	lethality = 2 //Atrazine, however, is definitely toxic
 
 /datum/reagent/pestkiller // To-Do; make this more realistic.
-	name = "Пестицид"
+	name = "Pest Killer"
 	id = "pestkiller"
 	description = "Вредная токсичная смесь для уничтожения вредителей. Не проглатывать!"
 	color = "#4B004B" // rgb: 75, 0, 75
@@ -1289,7 +1289,7 @@
 				H.adjustToxLoss(20)
 
 /datum/reagent/capulettium
-	name = "Капулеттий"
+	name = "Capulettium"
 	id = "capulettium"
 	description = "Редкий препарат, используемый для симуляции смерти организма употребившего."
 	reagent_state = LIQUID
@@ -1317,7 +1317,7 @@
 	..()
 
 /datum/reagent/capulettium_plus
-	name = "Капулеттий+"
+	name = "Capulettium Plus"
 	id = "capulettium_plus"
 	description = "Редкий препарат, используемый для симуляции смерти организма употребившего. Пока находится в кровотоке, не позволяет субъекту говорить."
 	reagent_state = LIQUID
@@ -1340,7 +1340,7 @@
 	..()
 
 /datum/reagent/toxic_slurry
-	name = "Токсичная жижа"
+	name = "Toxic Slurry"
 	id = "toxic_slurry"
 	description = "Токсичный канцерогенный осадок, образующийся на заводе \"Сларрипод\"."
 	reagent_state = LIQUID
@@ -1359,7 +1359,7 @@
 	return ..() | update_flags
 
 /datum/reagent/glowing_slurry
-	name = "Светящаяся жижа"
+	name = "Glowing Slurry"
 	id = "glowing_slurry"
 	description = "Это, вероятно, не очень хорошо для вас."
 	reagent_state = LIQUID
@@ -1391,7 +1391,7 @@
 	return ..()
 
 /datum/reagent/ants
-	name = "Муравьи"
+	name = "Ants"
 	id = "ants"
 	description = "Образец потерянной породы космических муравьёв (Formicidae bastardium tyrannus). Они известны тем, что способны поглотить практически всё."
 	color = "#993333"
@@ -1411,7 +1411,7 @@
 			M.adjustBruteLoss(4)
 
 /datum/reagent/teslium //Teslium. Causes periodic shocks, and makes shocks against the target much more effective.
-	name = "Теслий"
+	name = "Teslium"
 	id = "teslium"
 	description = "Нестабильная, электрически заряженная металлическая суспензия. Увеличивает проводимость живых организмов."
 	reagent_state = LIQUID
@@ -1442,7 +1442,7 @@
 	affected_mob.physiology.siemens_coeff *= 0.5
 
 /datum/reagent/gluttonytoxin
-	name = "Благословение Чревоугодия"
+	name = "Gluttony's Blessing"
 	id = "gluttonytoxin"
 	description = "Продвинутый токсин, вызывающий разложение, производимый чем-то ужасным."
 	reagent_state = LIQUID
@@ -1455,7 +1455,7 @@
 	D.Contract(L)
 
 /datum/reagent/bungotoxin
-	name = "Бунготоксин"
+	name = "Bungotoxin"
 	id = "bungotoxin"
 	description = "Ужасный кардиотоксин."
 	reagent_state = LIQUID
@@ -1489,7 +1489,7 @@
 	return ..() | update_flags
 
 /datum/reagent/coca_extract
-	name = "Экстракт коки"
+	name = "Coca Extract"
 	id = "cocaextract"
 	description = "Необработанный экстракт коки. Не стоит пробовать его в таком виде."
 	reagent_state = LIQUID
@@ -1505,7 +1505,7 @@
 	return ..() | update_flags
 
 /datum/reagent/metalic_dust
-	name = "Металлическая пыль"
+	name = "Metal Dust"
 	id = "metalicdust"
 	description = "Металлическая пыль с крупными кусками различных металлов и техническими жидкостями."
 	color = "#353434"
