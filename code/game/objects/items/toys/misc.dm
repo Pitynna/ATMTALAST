@@ -239,12 +239,12 @@
 
 /obj/item/toy/desk/officetoy
 	name = "office toy"
-	desc = "Обычная офисная игрушка, работающая на энергии микротермоядерного синтеза. Генерирует только магнетизм и скуку."
+	desc = "An ordinary office toy powered by microfusion. Generates nothing but magnetism and boredom."
 	icon_state= "desktoy"
 
 /obj/item/toy/desk/dippingbird
 	name = "dipping bird toy"
-	desc = "Древний человекоподобный идол птицы, которому поклонялись клерки и офисные работники."
+	desc = "An ancient anthropomorphic bird idol worshipped by clerks and office workers."
 	icon_state= "dippybird"
 
 /obj/item/toy/desk/newtoncradle
@@ -267,7 +267,7 @@
 
 /obj/item/toy/desk/fan
 	name = "office fan"
-	desc = "Обычный офисный вентилятор."
+	desc = "An ordinary office fan."
 	icon_state = "fan"
 	var/datum/looping_sound/fanblow/soundloop
 

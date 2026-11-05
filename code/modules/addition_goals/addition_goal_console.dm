@@ -10,7 +10,7 @@
 
 /obj/machinery/computer/addition_goals
 	name = "addition goals console"
-	desc = "Используется для управления дополнительными целями смены."
+	desc = "Used to manage additional shift objectives."
 	icon_screen = "addition_goal"
 	icon_keyboard = "addition_goal_key"
 	req_access = list(ACCESS_CAPTAIN)

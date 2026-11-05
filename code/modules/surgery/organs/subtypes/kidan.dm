@@ -1,7 +1,7 @@
 /obj/item/organ/internal/liver/kidan
 	species_type = /datum/species/kidan
 	name = "kidan liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала кидану."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a kidan."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_liver"
 	alcohol_intensity = 0.5
@@ -122,26 +122,26 @@
 /obj/item/organ/internal/eyes/kidan
 	species_type = /datum/species/kidan
 	name = "kidan eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали кидану."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a kidan."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_eyes"
 
 /obj/item/organ/internal/ears/kidan
 	species_type = /datum/species/kidan
 	name = "kidan ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали кидану."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a kidan."
 
 /obj/item/organ/internal/heart/kidan
 	species_type = /datum/species/kidan
 	name = "kidan heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало кидану."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to a kidan."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_heart-on"
 	item_base = "kidan_heart"
 
 /obj/item/organ/internal/brain/kidan
 	species_type = /datum/species/kidan
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал кидану."
+	desc = "The primary organ of a humanoid's central nervous system. The mind itself resides here. This belonged to a kidan."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_brain"
 	mmi_icon = 'icons/obj/species_organs/kidan.dmi'
@@ -161,14 +161,14 @@
 /obj/item/organ/internal/lungs/kidan
 	species_type = /datum/species/kidan
 	name = "kidan lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали кидану."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a kidan."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_lungs"
 
 /obj/item/organ/internal/kidneys/kidan
 	species_type = /datum/species/kidan
 	name = "kidan kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали кидану."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to a kidan."
 	icon = 'icons/obj/species_organs/kidan.dmi'
 	item_state = "kidan_kidneys"
 

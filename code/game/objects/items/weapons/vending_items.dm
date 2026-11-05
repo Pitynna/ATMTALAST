@@ -12,7 +12,7 @@
 	throw_speed = 1
 	w_class = WEIGHT_CLASS_BULKY
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 70, ACID = 30)
-	var/machine_name = "Шаблонное название"
+	var/machine_name = "Generic"
 
 	// Built automatically from the corresponding vending machine.
 	// If null, considered to be full. Otherwise, is list(/typepath = amount).
@@ -212,7 +212,7 @@
 	icon_state = "refill_plasma"
 
 /obj/item/vending_refill/protein
-	machine_name = "Автомат спортивного питания"
+	machine_name = "Sports Nutrition Vendor"
 
 /obj/item/vending_refill/ammo
 	machine_name = "Liberty"

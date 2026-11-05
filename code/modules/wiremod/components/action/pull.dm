@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/pull
 	display_name = "Захват"
-	desc = "Компонент, который может заставить оболочку тащить объект. \
-			Работает только для оболочек дронов."
+	desc = "A component that allows a shell to pull an object. Works only with drone shells."
 	category = "Action"
 
 	/// Frequency input

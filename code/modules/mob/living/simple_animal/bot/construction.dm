@@ -1042,7 +1042,7 @@
 /obj/item/bot_assembly/honkbot_arm_assembly/update_desc(updates = ALL)
 	. = ..()
 	if(build_step == 2)
-		desc = "Клоунская коробка с прикреплённой роботизированной рукой и велосипедным гудком. Ему не хватает лишь тромбона."
+		desc = "A clown box with a robotic arm and bike horn attached. All it needs is a trombone."
 		return .
 	desc = initial(desc)
 

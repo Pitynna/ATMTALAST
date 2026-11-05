@@ -1,6 +1,6 @@
 /obj/item/radio/spy_spider
 	name = "bug"
-	desc = "Кажется, ты видел такого в фильмах про шпионов."
+	desc = "You think you have seen one of these in spy movies."
 	icon_state = "spider_clan"
 	freqlock = SPY_SPIDER_FREQ
 	gender = MALE
@@ -32,7 +32,7 @@
 
 /obj/item/storage/lockbox/spy_kit
 	name = "bug kit"
-	desc = "Не самый легальный из способов достать информацию, но какая разница, если никто не узнает?"
+	desc = "Not the most legal way to obtain information, but what does it matter if nobody finds out?"
 	storage_slots = 5
 	req_access = list(ACCESS_FORENSICS_LOCKERS)
 

@@ -16,8 +16,7 @@
 
 /obj/item/grenade/frag/contact
 	name = "contact frag grenade"
-	desc = "Контактная осколочная граната. Взрывается по таймеру или при приземлении. При детонации \
-			создаёт взрывную волну и выпускает множественные осколки."
+	desc = "An impact fragmentation grenade. Detonates on its timer or upon landing, producing a blast wave and numerous fragments."
 	det_time = 5 SECONDS
 
 /obj/item/grenade/frag/contact/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)

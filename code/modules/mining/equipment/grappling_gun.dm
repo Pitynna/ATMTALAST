@@ -5,7 +5,7 @@
 
 /obj/item/grapple_gun
 	name = "grapple gun"
-	desc = "Небольшое устройство, стреляющее крюком-кошкой и позволяющее пользователю подтянуться к намеченной цели. Значительно облегчает путешествие по труднопроходимой местности."
+	desc = "A small device that fires a grappling hook and pulls its user toward the target. Makes difficult terrain much easier to traverse."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "grapple_gun"
 	lefthand_file = 'icons/mob/inhands/guns_lefthand.dmi'

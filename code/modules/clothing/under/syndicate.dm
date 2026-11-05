@@ -32,7 +32,7 @@
 
 /obj/item/clothing/under/syndicate/sniper_civ
 	name = "Executive tacticool suit"
-	desc = "Модель тактической водолазки предназначена для ведения переговоров, а не для участия в боевых действиях."
+	desc = "This tactical turtleneck model is intended for negotiations rather than combat."
 	icon_state = "black_suit"
 	item_color = "black_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
@@ -54,7 +54,7 @@
 
 /obj/item/clothing/under/plasmaman/syndie
 	name = "tacticool envirosuit"
-	desc = "Зловещий на вид защитный костюм для самых костлявых оперативников."
+	desc = "An ominous protective suit for the boniest operatives."
 	icon_state = "syndie_envirosuit"
 	item_color = "syndie_envirosuit"
 	has_sensor = 0

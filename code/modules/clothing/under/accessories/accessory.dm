@@ -310,8 +310,7 @@
 
 /obj/item/clothing/accessory/medal/gold/cargo
 	name = "Medal of Supply"
-	desc = "Награда, учреждённая Квартирмейстером для отличившихся сотрудников Отдела снабжения. \
-	Вручается за выдающиеся заслуги в области логистики и бесперебойного обеспечения станции всем необходимым для её функционирования."
+	desc = "An award established by the quartermaster for distinguished Supply Department staff. Presented for outstanding logistics work and keeping the station continuously supplied with everything it needs."
 	icon_state = "cargomedal"
 
 /obj/item/clothing/accessory/medal/silver
@@ -430,7 +429,7 @@
 
 /obj/item/clothing/accessory/medal/gold/nothing_award
 	name = "Nothing Happened Award"
-	desc = "Всегда ставьте на то, что ничего не случится."
+	desc = "Always bet on nothing happening."
 
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
@@ -966,7 +965,7 @@
 
 /obj/item/clothing/accessory/medal/smile
 	name = "smiling pin"
-	desc = "Позолоченный значок с улыбающейся рожецей. Символ невиданной гордости самим собой!"
+	desc = "A gold-plated smiling badge. A symbol of unprecedented pride in yourself!"
 	icon_state = "smile"
 	materials = list(MAT_METAL = 300, MAT_GOLD = 200)
 	w_class = WEIGHT_CLASS_TINY
@@ -984,7 +983,7 @@
 
 /obj/item/clothing/accessory/wristwatch
 	name = "wrist watch"
-	desc = "Недорогие наручные часы. Показывают текущее время."
+	desc = "An inexpensive wristwatch. Shows the current time."
 	icon_state = "wristwatch"
 	actions_types = list(/datum/action/item_action/watch_time)
 	COOLDOWN_DECLARE(watch_time_cooldown)

@@ -1,8 +1,6 @@
 /obj/item/anomaly_analyzer
 	name = "anomaly scanner"
-	desc = "Продвинутое устройство предназначенное для сканирования аномалий. \
-			Выводит достаточно полную информацию о сканируемой аномалии. \
-			Может сканировать аномалии на расстоянии."
+	desc = "An advanced anomaly scanner that provides comprehensive information about its target. Can scan anomalies from a distance."
 	icon = 'icons/obj/anomaly/anomaly_stuff.dmi'
 	icon_state = "scanner_item"
 	item_state = "anom_scanner"

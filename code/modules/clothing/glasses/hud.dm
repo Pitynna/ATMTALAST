@@ -121,7 +121,7 @@
 
 /obj/item/clothing/glasses/hud/health/heart
 	name = "Heart Medical Glasses"
-	desc = "Модные очки в виде сердечек. Оснащены медицинским ИЛС-дисплеем, сканирующим живых существ в поле зрения и визуализирующим данные об их состоянии здоровья."
+	desc = "Fashionable heart-shaped glasses with a medical HUD that scans visible living creatures and displays their health information."
 	icon_state = "heart_med"
 	item_state = "heart_med"
 
@@ -171,7 +171,7 @@
 
 /obj/item/clothing/glasses/hud/health/visor
 	name = "Medical optical visor"
-	desc = "Технологичный визор для глаз. Оснащён медицинским ИЛС-дисплеем, сканирующим живых существ в поле зрения и визуализирующим данные об их состоянии здоровья."
+	desc = "An advanced eye visor with a medical HUD that scans visible living creatures and displays their health information."
 	gender = MALE
 	icon_state = "medicalvisor"
 	item_state = "medicalvisor"
@@ -185,8 +185,7 @@
 
 /obj/item/clothing/glasses/hud/health/monocle
 	name = "Medical HUD Monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён медицинским ИЛС-дисплеем, сканирующим живых существ в поле зрения и визуализирующим данные об их состоянии здоровья."
+	desc = "An optical instrument held in place by the muscles of the face. Includes a medical HUD that scans visible living creatures and displays their health information."
 	gender = MALE
 	icon_state = "monohudmed"
 	item_state = "monohud"
@@ -224,7 +223,7 @@
 
 /obj/item/clothing/glasses/hud/diagnostic/heart
 	name = "Heart Diagnostic Glasses"
-	desc = "Модные очки в виде сердечек. Оснащены диагностическим ИЛС-дисплеем, анализирующим целостность и состояние роботизированных систем."
+	desc = "Fashionable heart-shaped glasses with a diagnostic HUD that analyzes the integrity and condition of robotic systems."
 	icon_state = "heart_diagnostic"
 	item_state = "heart_diagnostic"
 
@@ -265,15 +264,14 @@
 
 /obj/item/clothing/glasses/hud/diagnostic/visor
 	name = "Optical Diagnostic Visor"
-	desc = "Технологичный визор для глаз. Оснащён диагностическим ИЛС-дисплеем, анализирующим целостность и состояние роботизированных систем."
+	desc = "An advanced eye visor with a diagnostic HUD that analyzes the integrity and condition of robotic systems."
 	gender = MALE
 	icon_state = "diagvisor"
 	item_state = "diagvisor"
 
 /obj/item/clothing/glasses/hud/diagnostic/monocle
 	name = "Diagnostic HUD Monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён диагностическим ИЛС-дисплеем, анализирующим целостность и состояние роботизированных систем."
+	desc = "An optical instrument held in place by the muscles of the face. Includes a diagnostic HUD that analyzes the integrity and condition of robotic systems."
 	gender = MALE
 	icon_state = "monohuddiag"
 	item_state = "monohud"
@@ -348,7 +346,7 @@
 
 /obj/item/clothing/glasses/hud/security/sunglasses/heart
 	name = "Heart Security Glasses"
-	desc = "Модные очки в виде сердечек. Оснащены охранным ИЛС-дисплеем, сканирующим гуманоидов в поле зрения и визуализирующим данные об их охранном статусе."
+	desc = "Fashionable heart-shaped glasses with a security HUD that scans visible humanoids and displays their security status."
 	icon_state = "heart_sec"
 	item_state = "heart_sec"
 
@@ -425,16 +423,14 @@
 
 /obj/item/clothing/glasses/hud/security/sunglasses/visor
 	name = "Security visor"
-	desc = "Технологичный визор для глаз. Оснащён охранным ИЛС-дисплеем, сканирующим гуманоидов в поле зрения и визуализирующим данные об их охранном статусе. \
-			Также защищает глаза носителя от яркого света."
+	desc = "An advanced eye visor with a security HUD that scans visible humanoids and displays their security status. Also protects the wearer's eyes from bright light."
 	gender = MALE
 	icon_state = "securityvisor"
 	item_state = "securityvisor"
 
 /obj/item/clothing/glasses/hud/security/monocle
 	name = "Security HUD Monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён охранным ИЛС-дисплеем, сканирующим гуманоидов в поле зрения и визуализирующим данные об их охранном статусе."
+	desc = "An optical instrument held in place by the muscles of the face. Includes a security HUD that scans visible humanoids and displays their security status."
 	gender = MALE
 	icon_state = "monohudsec"
 	item_state = "monohud"
@@ -471,7 +467,7 @@
 
 /obj/item/clothing/glasses/hud/heart
 	name = "Heart Hydroponic Glasses"
-	desc = "Модные очки в виде сердечек. Оснащены ботаническим ИЛС-дисплеем, анализирующим состояние растений, растущих в гидропонных лотках и почве."
+	desc = "Fashionable heart-shaped glasses with a botanical HUD that analyzes plants growing in hydroponic trays and soil."
 	icon_state = "heart_hydro"
 	item_state = "heart_hydro"
 
@@ -512,15 +508,14 @@
 
 /obj/item/clothing/glasses/hud/hydroponic/visor
 	name = "Hydroponic Optical Visor"
-	desc = "Технологичный визор для глаз. Оснащён ботаническим ИЛС-дисплеем, анализирующим состояние растений, растущих в гидропонных лотках и почве."
+	desc = "An advanced eye visor with a botanical HUD that analyzes plants growing in hydroponic trays and soil."
 	gender = MALE
 	icon_state = "hydroponicvisor"
 	item_state = "hydroponicvisor"
 
 /obj/item/clothing/glasses/hud/hydroponic/monocle
 	name = "Hydroponic HUD Monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён ботаническим ИЛС-дисплеем, анализирующим состояние растений, растущих в гидропонных лотках и почве."
+	desc = "An optical instrument held in place by the muscles of the face. Includes a botanical HUD that analyzes plants growing in hydroponic trays and soil."
 	gender = MALE
 	icon_state = "monohudhydro"
 	item_state = "monohud"
@@ -558,7 +553,7 @@
 
 /obj/item/clothing/glasses/hud/skills/heart
 	name = "Heart Skills Glasses"
-	desc = "Модные очки в виде сердечек. Оснащены кадровым ИЛС-дисплеем, отображающим записи о трудовой деятельности сотрудников \"Нанотрейзен\"."
+	desc = "Fashionable heart-shaped glasses with a personnel HUD displaying Nanotrasen employees' work records."
 	icon_state = "heart_skill"
 	item_state = "heart_skill"
 
@@ -599,7 +594,7 @@
 
 /obj/item/clothing/glasses/hud/skills/visor
 	name = "Skill Optical Visor"
-	desc = "Технологичный визор для глаз. Оснащён кадровым ИЛС-дисплеем, отображающим записи о трудовой деятельности сотрудников \"Нанотрейзен\"."
+	desc = "An advanced eye visor with a personnel HUD displaying Nanotrasen employees' work records."
 	gender = MALE
 	icon_state = "skillvisor"
 	item_state = "skillvisor"
@@ -607,8 +602,7 @@
 
 /obj/item/clothing/glasses/hud/skills/monocle
 	name = "Skills HUD Monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён кадровым ИЛС-дисплеем, отображающим записи о трудовой деятельности сотрудников \"Нанотрейзен\"."
+	desc = "An optical instrument held in place by the muscles of the face. Includes a personnel HUD displaying Nanotrasen employees' work records."
 	gender = MALE
 	icon_state = "monohudskill"
 	item_state = "monohud"
@@ -620,8 +614,7 @@
 
 /obj/item/clothing/glasses/hud/multimode
 	name = "multi-mode HUD glasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			Оснащены многорежимным ИЛС-дисплеем, позволяющим переключаться между медицинским и охранным режимами."
+	desc = "UV-shielded glasses that protect the wearer's eyes from bright flashes. Includes a multimode HUD that switches between medical and security modes."
 	actions_types = list(/datum/action/item_action/switch_hud)
 	icon_state = "sunhudmed"
 	origin_tech = "magnets=4;combat=4;engineering=4;biotech=4"
@@ -649,8 +642,7 @@
 
 /obj/item/clothing/glasses/hud/multimode/captain
 	name = "Gold multi-mod HUD glasses"
-	desc = "Очки с экранированием от ультрафиолетовых лучей, защищающие глаза носителя от ярких вспышек света. \
-			Оснащены многорежимным ИЛС-дисплеем, позволяющим переключаться между медицинским и охранным режимами. Выполнены в золотом цвете."
+	desc = "UV-shielded glasses that protect the wearer's eyes from bright flashes. Includes a multimode HUD that switches between medical and security modes. Finished in gold."
 	icon_state = "sunhudcap"
 	item_state = "sunhudcap"
 	sprite_sheets = list(

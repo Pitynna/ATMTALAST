@@ -437,7 +437,7 @@
 				INSTRUMENTAL = "игровым автоматом The Orion Trail",
 				PREPOSITIONAL = "игровом автомате The Orion Trail",
 			)
-			desc = "Узнайте, как наши предки добрались до Ориона, и повеселитесь в процессе!"
+			desc = "Learn how our ancestors reached Orion, and have fun along the way!"
 
 	else if(event)
 		dat = eventdat
@@ -1023,7 +1023,7 @@
 			INSTRUMENTAL = "игровым автоматом The Orion Trail: Realism Edition",
 			PREPOSITIONAL = "игровом автомате The Orion Trail: Realism Edition",
 		)
-		desc = "Узнайте, как наши предки добрались до Ориона, и постарайтесь не сдохнуть в процессе!"
+		desc = "Learn how our ancestors reached Orion, and try not to die along the way!"
 		newgame()
 		emagged = 1
 

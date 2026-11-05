@@ -1,6 +1,6 @@
 /obj/item/lavaland_dye
 	name = "generic dye"
-	desc = "Если вы это видите, то Зюзя дебил конечно."
+	desc = "If you can see this, Zyuzya has really messed up."
 	gender = FEMALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "cinnabar_spleen"
@@ -17,12 +17,12 @@
 
 /obj/item/lavaland_dye/cinnabar
 	name = "cinnabar-colored spleen"
-	desc = "Селезёнка, добытая из тела лавовой рыбы. Содержит в себе частицы киновари и обладает характерным коричневато-красным цветом."
+	desc = "A spleen harvested from a lava fish. Contains cinnabar particles and has a distinctive brownish-red color."
 	totem_dye = "cinnabar"
 
 /obj/item/lavaland_dye/crimson
 	name = "crimson-colored spleen"
-	desc = "Селезёнка, добытая из тела лавовой рыбы. Содержит в себе частицы неизвестной жидкости, похожей на кровь, и обладает характерным кроваво-красным цветом."
+	desc = "A spleen harvested from a lava fish. Contains an unknown blood-like liquid and has a distinctive blood-red color."
 	icon_state = "crimson_spleen"
 	picked_dye = "Crimson Dyes"
 	totem_dye = "crimson"
@@ -30,7 +30,7 @@
 
 /obj/item/lavaland_dye/indigo
 	name = "indigo-colored spleen"
-	desc = "Селезёнка, добытая из тела лавовой рыбы. Содержит в себе вещество, похожее на чернила, и обладает характерным тёмно-синим цветом."
+	desc = "A spleen harvested from a lava fish. Contains an ink-like substance and has a distinctive dark-blue color."
 	icon_state = "indigo_spleen"
 	picked_dye = "Indigo Dyes"
 	totem_dye = "indigo"
@@ -38,7 +38,7 @@
 
 /obj/item/lavaland_dye/mint
 	name = "mint-colored spleen"
-	desc = "Селезёнка, добытая из тела лавовой рыбы. Содержит в себе частицы минералов и обладает характерным мятно-зелёным цветом."
+	desc = "A spleen harvested from a lava fish. Contains mineral particles and has a distinctive mint-green color."
 	icon_state = "mint_spleen"
 	picked_dye = "Mint Dyes"
 	totem_dye = "mint"
@@ -46,7 +46,7 @@
 
 /obj/item/lavaland_dye/amber
 	name = "amber-colored spleen"
-	desc = "Селезёнка, добытая из тела лавовой рыбы. Содержит в себе частицы природного янтаря и обладает характерным янтарно-желтым цветом."
+	desc = "A spleen harvested from a lava fish. Contains natural amber particles and has a distinctive amber-yellow color."
 	icon_state = "amber_spleen"
 	picked_dye = "Amber Dyes"
 	totem_dye = "amber"
@@ -54,7 +54,7 @@
 
 /obj/item/lavaland_mortar
 	name = "wooden mortar"
-	desc = "Небольшая ступка с находящейся в ней растолочённой селезёнкой. Используется для нанесения красок на тело."
+	desc = "A small mortar containing a crushed spleen. Used to apply body paint."
 	gender = FEMALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "amber_dyes"

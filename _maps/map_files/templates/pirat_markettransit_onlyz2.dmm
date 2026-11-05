@@ -469,7 +469,7 @@
 	},
 /obj/structure/closet/crate/syndicate{
 	anchored = 1;
-	name = "Ящик для доставки целей."
+	name = "Target Delivery Crate"
 	},
 /turf/simulated/floor/indestructible/plating{
 	icon_state = "dark";

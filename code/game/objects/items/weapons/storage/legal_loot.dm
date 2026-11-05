@@ -1,6 +1,6 @@
 /obj/item/storage/box/legal_loot
 	name = "box of odds and ends"
-	desc = "Коробка с легальными вещами или фальшивками. В любом случае, здесь ничего опасного и режущего! Безопасно для детей!"
+	desc = "A box of legal items or fakes. Either way, nothing dangerous or sharp here! Safe for children!"
 	icon_state = "box_thief"
 	var/loot_amount = 1
 	var/static/list/possible_type_loot = list(

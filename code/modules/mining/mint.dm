@@ -2,9 +2,7 @@
 
 /obj/machinery/mineral/mint
 	name = "coin press"
-	desc = "Массивная, слегка шумящая машина с  тяжелыми стальными прессами. \
-	Она используется для чеканки монет из различных матриалов. \
-	На корпусе расположена панель управления с настройками для выбора металла и нанесения уникальных штампов."
+	desc = "A massive, softly humming machine with heavy steel presses, used to mint coins from assorted materials. Its control panel lets you select metals and apply unique stamps."
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "coin_press"
 	density = TRUE

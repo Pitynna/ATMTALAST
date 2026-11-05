@@ -514,7 +514,7 @@
 	pixel_y = 18;
 	layer = 3.3;
 	name = "Oversight console";
-	desc = "Интерфейс управления системой контроля корабля.";
+	desc = "An interface for the ship's control system.";
 	use_power = 0
 	},
 /obj/item/storage/toolbox/syndicate{
@@ -919,7 +919,7 @@
 /area/station/maintenance/apmaint)
 "iM" = (
 /obj/structure/sign/cargo{
-	name = "Ангар Снабжения"
+	name = "Cargo Hangar"
 	},
 /turf/simulated/wall,
 /area/station/maintenance/abandonedhangar)
@@ -3772,8 +3772,8 @@
 /area/station/maintenance/apmaint)
 "NP" = (
 /obj/structure/sign/med{
-	name = "МОРГ";
-	desc = "Знак, обозначающий область морга."
+	name = "MORGUE";
+	desc = "A sign marking the morgue."
 	},
 /turf/simulated/wall,
 /area/station/maintenance/medroom)

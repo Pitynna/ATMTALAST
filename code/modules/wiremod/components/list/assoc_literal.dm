@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/assoc_literal
 	display_name = "Ассоциативный список — элемент"
-	desc = "Компонент, который возвращает ассоциативный список, состоящий из входных данных."
+	desc = "A component that returns an associative list constructed from its inputs."
 	category = "List"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

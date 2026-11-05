@@ -207,7 +207,7 @@
 
 /obj/structure/weightmachine/horizontalbar
 	name = "pull-up bar"
-	desc = "Простенький турник. На большинстве планет с развитой разумной жизнью его аналоги используются в качестве вешалки."
+	desc = "A simple pull-up bar. On most planets with advanced sapient life, similar devices are used as clothes racks."
 	icon = 'icons/goonstation/objects/fitness.dmi'
 	icon_state = "horizontalbar"
 	icon_state_inuse = "horizontalbar"

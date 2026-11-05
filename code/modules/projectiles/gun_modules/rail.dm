@@ -53,7 +53,7 @@
 
 /obj/item/gun_module/rail/scope/collimator
 	name = "collimator scope"
-	desc = "Коллиматорный прицел, предназначенный для установки на прицельную планку стрелкового оружия. Несовместим с пистолетами. Повышает удобство и точность стрельбы."
+	desc = "A collimator sight for firearm mounting rails. Incompatible with pistols. Improves aiming comfort and accuracy."
 	icon_state = "coll"
 	item_state = "coll"
 	overlay_state = "coll_o"
@@ -67,7 +67,7 @@
 
 /obj/item/gun_module/rail/scope/collimator/pistol
 	name = "pistol collimator scope"
-	desc = "Коллиматорный прицел, предназначенный для установки на прицельную планку пистолета. Повышает удобство и точность стрельбы."
+	desc = "A collimator sight for pistol mounting rails. Improves aiming comfort and accuracy."
 	icon_state = "coll_p"
 	item_state = "coll_p"
 	overlay_state = "coll_p_o"
@@ -80,7 +80,7 @@
 
 /obj/item/gun_module/rail/scope/x4
 	name = "optical scope x4"
-	desc = "Оптический прицел с 4-кратным увеличением, предназначенный для установки на прицельную планку стрелкового оружия. Повышает точность при стрельбе на дальние дистанции."
+	desc = "A 4x telescopic sight for firearm mounting rails. Improves accuracy at long range."
 	icon_state = "x4"
 	item_state = "x4"
 	overlay_state = "x4_o"
@@ -94,7 +94,7 @@
 
 /obj/item/gun_module/rail/scope/x8
 	name = "optical scope x8"
-	desc = "Оптический прицел с 8-кратным увеличением, предназначенный для установки на прицельную планку стрелкового оружия. Повышает точность при стрельбе на дальние дистанции."
+	desc = "An 8x telescopic sight for firearm mounting rails. Improves accuracy at long range."
 	icon_state = "x8"
 	item_state = "x8"
 	overlay_state = "x8_o"
@@ -107,7 +107,7 @@
 
 /obj/item/gun_module/rail/scope/x16
 	name = "optical scope x16"
-	desc = "Оптический прицел с 16-кратным увеличением, предназначенный для установки на прицельную планку стрелкового оружия. Повышает точность при стрельбе на дальние дистанции."
+	desc = "A 16x telescopic sight for firearm mounting rails. Improves accuracy at long range."
 	icon_state = "x16"
 	item_state = "x16"
 	overlay_state = "x16_o"
@@ -173,7 +173,7 @@
 
 /obj/item/gun_module/rail/hud/medical
 	name = "med hud scope"
-	desc = "Коллиматорный прицел с медицинским ИЛС, предназначенный для установки на прицельную планку стрелкового оружия."
+	desc = "A collimator sight with a medical HUD, designed for firearm mounting rails."
 	icon_state = "coll_med"
 	item_state = "coll_med"
 	overlay_state = "coll_med_o"
@@ -185,7 +185,7 @@
 
 /obj/item/gun_module/rail/hud/security
 	name = "security hud scope"
-	desc = "Коллиматорный прицел с охранным ИЛС, предназначенный для установки на прицельную планку стрелкового оружия."
+	desc = "A collimator sight with a security HUD, designed for firearm mounting rails."
 	icon_state = "coll_sec"
 	item_state = "coll_sec"
 	overlay_state = "coll_sec_o"

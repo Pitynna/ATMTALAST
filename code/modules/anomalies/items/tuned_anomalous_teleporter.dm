@@ -1,7 +1,6 @@
 /obj/item/assembly/tuned_anomalous_teleporter
 	name = "tuned anomalous teleporter"
-	desc = "Портативный настраиваемый телепортер использующий ядро блюспейс аномалии для телепортации пользователя в \
-			выбранном направлении."
+	desc = "A portable adjustable teleporter that uses a bluespace anomaly core to teleport its user in a chosen direction."
 	icon = 'icons/obj/weapons/techrelic.dmi'
 	icon_state = "teleport"
 	lefthand_file = 'icons/mob/inhands/relics_production/inhandl.dmi'

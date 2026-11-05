@@ -153,7 +153,7 @@
 
 /obj/item/soulscythe
 	name = "soulscythe"
-	desc = "Старый пережиток ада, созданный дьяволами, чтобы утвердить себя в качестве лидера над демонами. Он становится сильнее, пока в нем заточена мощная душа."
+	desc = "An ancient relic of hell, created by devils to establish their dominion over demons. It grows stronger while a powerful soul is imprisoned within."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "soulscythe"
 	item_state = "soulscythe"

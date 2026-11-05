@@ -1,6 +1,6 @@
 /obj/structure/chair/plastic
 	name = "folding plastic chair"
-	desc = "Как бы вы ни ёрзали, все равно будет неудобно."
+	desc = "No amount of shifting around will make it comfortable."
 	icon_state = "plastic_chair"
 	resistance_flags = FLAMMABLE
 	max_integrity = 50
@@ -39,7 +39,7 @@
 
 /obj/item/chair/plastic
 	name = "folding plastic chair"
-	desc = "Почему-то, всегда можно найти под рингом."
+	desc = "For some reason, you can always find one under the wrestling ring."
 	icon_state = "folded_chair"
 	item_state = "folded_chair"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -50,7 +50,7 @@
 
 /obj/effect/decal/cleanable/plastic
 	name = "plastic shards"
-	desc = "Куски рваного, сломанного, никчёмного пластика."
+	desc = "Pieces of torn, broken, worthless plastic."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
 	color = "#c6f4ff"

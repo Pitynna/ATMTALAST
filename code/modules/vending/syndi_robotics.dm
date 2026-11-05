@@ -1,6 +1,6 @@
 /obj/machinery/vending/syndierobotics
 	name = "Syndie Robo-Deluxe"
-	desc = "Всё что нужно, чтобы сделать личного железного друга из ваших врагов!"
+	desc = "Everything you need to turn your enemies into your own personal metal friends!"
 	slogan_list = list(
 		"Заст+авьте их п+ищать и гуд+еть, как и подоб+ает р+оботу!",
 		"Роботиз+ация — +это НЕ преступл+ение!",

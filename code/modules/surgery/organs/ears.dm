@@ -1,6 +1,6 @@
 /obj/item/organ/internal/ears
 	name = "ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали человеку."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a human."
 	gender = PLURAL
 	icon_state = "ears"
 	parent_organ_zone = BODY_ZONE_HEAD

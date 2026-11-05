@@ -27,8 +27,7 @@
 // MARK: R45 Taurus
 /obj/item/gun/projectile/revolver/taurus
 	name = "R45 \"Taurus\" revolver"
-	desc = "Тяжёлый шестизарядный револьвер калибра .45 Colt производства \"Mars Special\". Отличается высокой убойной силой, \
-			модульностью и надёжностью. Закупается \"Нанотрейзен\" для снабжения сотрудников корпоративной службы безопасности."
+	desc = "A heavy six-shot .45 Colt revolver manufactured by Mars Special. Powerful, modular and reliable. Purchased by Nanotrasen for corporate security personnel."
 	icon_state = "taurus"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/taurus
 	fire_sound = 'sound/weapons/gunshots/1rev38.ogg'
@@ -299,8 +298,7 @@
 //MARK: Rsh-12
 /obj/item/gun/projectile/revolver/rsh_12
 	name = "RSh-12"
-	desc = "Крупнокалиберный револьвер под калибр 12.7х55 мм. \
-			Отличается высокой убойностью и страшной отдачей."
+	desc = "A large-caliber 12.7x55mm revolver with formidable stopping power and terrifying recoil."
 	icon_state = "rsh-12"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rsh_12
 	fire_sound = 'sound/weapons/gunshots/bulldog.ogg'
@@ -503,7 +501,7 @@
 
 /obj/item/gun/projectile/revolver/peashooter
 	name = "peashooter"
-	desc = "Дикая мутация растительности, стреляющая затвердевшим горохом. Невероятно."
+	desc = "A wild plant mutation that fires hardened peas. Incredible."
 	icon_state = "peashooter"
 	w_class = WEIGHT_CLASS_BULKY
 	origin_tech = "combat=3;biotech=5"

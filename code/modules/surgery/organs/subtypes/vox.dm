@@ -1,7 +1,7 @@
 /obj/item/organ/internal/liver/vox
 	species_type = /datum/species/vox
 	name = "vox liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала воксу."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a vox."
 	icon = 'icons/obj/species_organs/vox.dmi'
 	item_state = "vox_liver"
 	alcohol_intensity = 1.6
@@ -10,7 +10,7 @@
 /obj/item/organ/internal/eyes/vox
 	species_type = /datum/species/vox
 	name = "vox eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали воксу."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a vox."
 	icon = 'icons/obj/species_organs/vox.dmi'
 	item_state = "vox_eyes"
 	sterile = TRUE
@@ -18,12 +18,12 @@
 /obj/item/organ/internal/ears/vox
 	species_type = /datum/species/vox
 	name = "vox ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали воксу."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a vox."
 
 /obj/item/organ/internal/heart/vox
 	species_type = /datum/species/vox
 	name = "vox heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало воксу."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to a vox."
 	icon = 'icons/obj/species_organs/vox.dmi'
 	item_state = "vox_heart-on"
 	item_base = "vox_heart"
@@ -42,7 +42,7 @@
 /obj/item/organ/internal/kidneys/vox
 	species_type = /datum/species/vox
 	name = "vox kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали воксу."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to a vox."
 	icon = 'icons/obj/species_organs/vox.dmi'
 	item_state = "vox_kidneys"
 	sterile = TRUE
@@ -61,7 +61,7 @@
 /obj/item/organ/external/tail/vox
 	species_type = /datum/species/vox
 	name = "vox tail"
-	desc = "Хвост. Этот принадлежал воксу."
+	desc = "A tail. This belonged to a vox."
 	icon_name = "voxtail_s"
 	max_damage = 25
 	min_broken_damage = 20

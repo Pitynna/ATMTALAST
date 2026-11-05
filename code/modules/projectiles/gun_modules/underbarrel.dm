@@ -58,7 +58,7 @@
 
 /obj/item/gun_module/under/flashlight/pistol
 	name = "pistol underbarrel light"
-	desc = "Фонарь, предназначенный для установки на цевьё пистолета. Несовместим с другими классами оружия."
+	desc = "A flashlight designed for pistol mounting rails. Incompatible with other weapon classes."
 	icon_state = "light"
 	item_state = "light"
 	overlay_state = "light_o"
@@ -68,7 +68,7 @@
 
 /obj/item/gun_module/under/flashlight/rifle
 	name = "rifle underbarrel light"
-	desc = "Фонарь, предназначенный для установки на цевьё. Несовместим с пистолетами."
+	desc = "A rail-mounted flashlight. Incompatible with pistols."
 	icon_state = "light_s"
 	item_state = "light_s"
 	overlay_state = "light_s_o"
@@ -99,7 +99,7 @@
 
 /obj/item/gun_module/under/hand/simple
 	name = "rifle hand"
-	desc = "Прямая рукоятка, предназначенная для установки на нижнюю планку цевья. Повышает удобство стрельбы."
+	desc = "A vertical grip for a weapon's lower mounting rail. Improves handling while firing."
 	gender = FEMALE
 	icon_state = "hand"
 	item_state = "hand"
@@ -112,7 +112,7 @@
 
 /obj/item/gun_module/under/hand/angle
 	name = "rifle angle hand"
-	desc = "Угловая рукоятка, предназначенная для установки на нижнюю планку цевья. Повышает удобство стрельбы."
+	desc = "An angled grip for a weapon's lower mounting rail. Improves handling while firing."
 	gender = FEMALE
 	icon_state = "hand_a"
 	item_state = "hand_a"
@@ -127,7 +127,7 @@
 
 /obj/item/gun_module/under/laser
 	name = "laser sight"
-	desc = "Лазерный целеуказатель, предназначенный для установки на цевьё. Повышает точность стрельбы и понижает разброс при стрельбе."
+	desc = "A rail-mounted laser sight. Improves accuracy and reduces shot dispersion."
 	icon_state = "laser"
 	item_state = "laser"
 	overlay_state = "laser_o"
@@ -201,7 +201,7 @@
 
 /obj/item/gun_module/under/bayonet
 	name = "bayonet"
-	desc = "Универсальный короткий клинок, оснащенный специальным креплением для монтажа на ствол винтовки. Основное предназначение — нанесение колющего удара в ближнем бою. Компактный дизайн и надежность конструкции делают его эффективным вспомогательным оружием."
+	desc = "A universal short blade with a specialized rifle barrel mount, intended primarily for close-range thrusting attacks. Its compact, reliable design makes it an effective auxiliary weapon."
 	icon_state = "bayonet_short"
 	item_state = "knife"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
@@ -229,7 +229,7 @@
 
 /obj/item/gun_module/under/bayonet/long
 	name = "long bayonet"
-	desc = "Крупногабаритный клинок с удлиненным острием, предназначенный для крепления к оружию. Благодаря длине и прочности лезвия, обеспечивает дополнительную убойную силу при рукопашной атаке. Незаменим в ситуациях, когда стрельба невозможна или затруднительна."
+	desc = "A large blade with an extended point, designed to mount on a weapon. Its length and strength provide additional force in melee, making it useful when firing is impossible or impractical."
 	icon_state = "bayonet_long"
 	overlay_state = "bayonet_long_o"
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 6, ATTACHMENT_OFFSET_Y = 4)
@@ -255,7 +255,7 @@
 // MARK: Underbarrel gun
 /obj/item/gun_module/under/gun
 	name = "underbarrel gun"
-	desc = "Модуль подствольного оружия. Вы не должны видеть это описание."
+	desc = "An underbarrel weapon module. You should not be seeing this description."
 	overlay_offset = list(ATTACHMENT_OFFSET_X = -2, ATTACHMENT_OFFSET_Y = 2)
 	class = GUN_MODULE_CLASS_RIFLE_UNDER
 	/// Attached internal gun instance
@@ -307,7 +307,7 @@
 // MARK: Grenade launcher
 /obj/item/gun_module/under/gun/grenade_launcher
 	name = "underbarrel grenade launcher"
-	desc = "Модуль подствольного 40 мм гранатомета."
+	desc = "An underbarrel 40mm grenade launcher module."
 	icon_state = "grenade"
 	overlay_state = "grenade_o"
 	internal_gun_type = /obj/item/gun/projectile/revolver/grenadelauncher
@@ -329,7 +329,7 @@
 // MARK: Shotgun
 /obj/item/gun_module/under/gun/shotgun
 	name = "underbarrel shotgun"
-	desc = "Модуль подствольного дробовика 12 калибра на 3+1 патронов."
+	desc = "An underbarrel 12-gauge shotgun module holding 3+1 shells."
 	icon_state = "shotgun"
 	overlay_state = "shotgun_o"
 	internal_gun_type = /obj/item/gun/projectile/shotgun/riot/short
@@ -343,7 +343,7 @@
 // MARK: Taser
 /obj/item/gun_module/under/gun/taser
 	name = "underbarrel taser"
-	desc = "Модуль подствольного тазера. Устройство позвоялет совершить 15 выстрелов, но к сожалению не имеет возможности зарядки."
+	desc = "An underbarrel taser module. Holds fifteen shots but unfortunately cannot be recharged."
 	icon_state = "shotgun"
 	overlay_state = "shotgun_o"
 	internal_gun_type = /obj/item/gun/energy/taser

@@ -1,4 +1,4 @@
 /obj/item/flag/vox_raider
 	name = "vox raider flag"
-	desc = "Флаг одной из небезызвестных организаций, вершащие кражи и грабежи в космосе для наживы."
+	desc = "The flag of a notorious organization that steals and plunders across space for profit."
 	icon_state = "flag_vox_raider"

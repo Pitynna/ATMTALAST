@@ -1,7 +1,7 @@
 // MARK: Gun stand
 /obj/structure/closet/gun_stand
 	name = "gun stand"
-	desc = "Стойка, предназначенная для хранения определенного оружия. Вы не должны видеть это описание."
+	desc = "A stand for storing a specific weapon. You should not be seeing this description."
 	anchored = TRUE
 	anchorable = FALSE
 	density = FALSE
@@ -71,12 +71,12 @@
 
 /obj/structure/closet/gun_stand/sechammer
 	name = "tactical sledgehammer cabinet"
-	desc = "Стойка, предназначенная для хранения тактической кувалды. Надпись гласит: \"Для особых случаев\"."
+	desc = "A stand for a tactical sledgehammer. Its inscription reads: For special occasions."
 	icon_state = "sechammer"
 	stored_item_type = /obj/item/twohanded/sechammer
 
 /obj/structure/closet/gun_stand/cargo_defender
 	name = "cargo defender shotgun cabinet"
-	desc = "Стойка, предназначенная для хранения дробовика \"Защитник карго\"."
+	desc = "A stand for the Cargo Defender shotgun."
 	icon_state = "cargo_defender"
 	stored_item_type = /obj/item/gun/projectile/shotgun/winchester/cargo

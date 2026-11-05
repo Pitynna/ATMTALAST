@@ -33,12 +33,12 @@
 /obj/item/organ/internal/ears/grey
 	species_type = /datum/species/grey
 	name = "grey ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали серому."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a grey."
 
 /obj/item/organ/internal/heart/grey
 	species_type = /datum/species/grey
 	name = "grey heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало серому."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to a grey."
 	icon = 'icons/obj/species_organs/grey.dmi'
 	item_state = "grey_heart-on"
 	item_base = "grey_heart"
@@ -46,13 +46,13 @@
 /obj/item/organ/internal/lungs/grey
 	species_type = /datum/species/grey
 	name = "grey lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали серому."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a grey."
 	icon = 'icons/obj/species_organs/grey.dmi'
 	item_state = "grey_lungs"
 
 /obj/item/organ/internal/kidneys/grey
 	species_type = /datum/species/grey
 	name = "grey kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали серому."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to a grey."
 	icon = 'icons/obj/species_organs/grey.dmi'
 	item_state = "grey_kidneys"

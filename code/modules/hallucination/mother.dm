@@ -69,4 +69,4 @@
 	image_icon = 'icons/mob/human.dmi'
 	image_state = "mother"
 	name = "Your Mother"
-	desc = "Она недовольна."
+	desc = "She is not pleased."

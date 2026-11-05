@@ -128,7 +128,7 @@
 
 /obj/item/reagent_containers/food/snacks/watermelonslice/self_control_slice
 	name = "self control"
-	desc = "Показатель невероятного самоконтроля Божественной сущности."
+	desc = "A testament to a divine entity's incredible self-control."
 
 /obj/item/reagent_containers/food/snacks/pineappleslice
 	name = "pineapple slices"

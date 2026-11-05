@@ -734,8 +734,8 @@
 	nutriment_factor = 5 * REAGENTS_METABOLISM		//same as pure cocoa powder, because it makes no sense that chocolate won't fill you up and make you fat
 	color = "#2E2418"
 	drink_icon = "chocolateglass"
-	drink_name = "стакан шоколада"
-	drink_desc = "Вкуснятина!"
+	drink_name = "Glass of chocolate"
+	drink_desc = "Tasty!"
 	taste_description = "шоколада"
 
 /datum/reagent/consumable/chocolate/on_mob_life(mob/living/M)

@@ -279,7 +279,7 @@
 
 /obj/item/storage/belt/medical/surgery/abductor
 	name = "agent surgical belt"
-	desc = "Хирургический пояс инопланетного происхождения."
+	desc = "A surgical belt of alien origin."
 	icon = 'icons/obj/abductor.dmi'
 	item_state = "surgical_alien"
 	max_combined_w_class = 19
@@ -482,7 +482,7 @@
 
 /obj/item/storage/belt/security/webbing/pouch
 	name = "pouch"
-	desc = "Подсумок на два магазина."
+	desc = "A pouch for two magazines."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "pouch"
 	item_state = "pouch"
@@ -495,7 +495,7 @@
 
 /obj/item/storage/belt/security/webbing/pouch/fast
 	name = "fast pouch"
-	desc = "Подсумок на два магазина, модифицированный для быстрой перезарядки."
+	desc = "A two-magazine pouch modified for quick reloading."
 	icon_state = "pouch_fast"
 	item_state = "pouch_fast"
 	custom_price = 4 * PAYCHECK_MAX
@@ -953,7 +953,7 @@
 
 /obj/item/storage/belt/rapier/centcomm
 	name = "centcomm rapier sheath"
-	desc = "Украшенные ножны, корпоративный кич в комплекте."
+	desc = "An ornate scabbard. Corporate kitsch included."
 	icon_state = "centcomm_sheath"
 	item_state = "centcomm_sheath"
 	can_hold = list(/obj/item/melee/rapier/centcomm)

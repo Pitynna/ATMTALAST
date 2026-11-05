@@ -207,34 +207,22 @@
 
 /obj/item/radio/intercom/interrogation
 	name = "station intercom (Interrogation)"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование поддерживает \
-			широкий диапазон приёма и передачи сигналов, обеспечивая двустороннюю связь по радиочастотам объекта. \
-			По умолчанию преднастроен на специализированную частоту для проведения допроса подозреваемых."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Built-in telecommunications equipment supports a broad range of transmission and reception frequencies for two-way facility communication. Preset to a dedicated suspect-interrogation frequency."
 	default_frequency = AIRLOCK_FREQ
 
 /obj/item/radio/intercom/private
 	name = "station intercom (Private)"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование поддерживает \
-			широкий диапазон приёма и передачи сигналов, обеспечивая двустороннюю связь по радиочастотам объекта. \
-			По умолчанию преднастроен на частоту Искусственного Интеллекта объекта."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Built-in telecommunications equipment supports a broad range of transmission and reception frequencies for two-way facility communication. Preset to the facility AI's frequency."
 	default_frequency = AI_FREQ
 
 /obj/item/radio/intercom/command
 	name = "station intercom (Command)"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование поддерживает \
-			широкий диапазон приёма и передачи сигналов, обеспечивая двустороннюю связь по радиочастотам объекта. \
-			По умолчанию преднастроен на частоту командного состава объекта."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Built-in telecommunications equipment supports a broad range of transmission and reception frequencies for two-way facility communication. Preset to the facility command frequency."
 	default_frequency = COMM_FREQ
 
 /obj/item/radio/intercom/specops
 	name = "Special Operations intercom"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование поддерживает \
-			широкий диапазон приёма и передачи сигналов, обеспечивая двустороннюю связь по радиочастотам объекта. \
-			По умолчанию преднастроен на частоту Отряда Быстрого Реагирования."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Built-in telecommunications equipment supports a broad range of transmission and reception frequencies for two-way facility communication. Preset to the Emergency Response Team frequency."
 	default_frequency = ERT_FREQ
 
 /obj/item/radio/intercom/department
@@ -243,18 +231,12 @@
 // MARK: Medbay
 /obj/item/radio/intercom/department/medbay
 	name = "station intercom (Medbay)"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование поддерживает \
-			широкий диапазон приёма и передачи сигналов, обеспечивая двустороннюю связь по радиочастотам объекта. \
-			По умолчанию преднастроен на внутреннюю частоту медицинского отдела объекта."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Built-in telecommunications equipment supports a broad range of transmission and reception frequencies for two-way facility communication. Preset to the internal medical department frequency."
 	default_frequency = MED_I_FREQ
 
 /obj/item/radio/intercom/department/security
 	name = "station intercom (Security)"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование поддерживает \
-			широкий диапазон приёма и передачи сигналов, обеспечивая двустороннюю связь по радиочастотам объекта. \
-			По умолчанию преднастроен на внутреннюю частоту службы безопасности объекта."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Built-in telecommunications equipment supports a broad range of transmission and reception frequencies for two-way facility communication. Preset to the internal security department frequency."
 	default_frequency = SEC_I_FREQ
 
 /obj/item/radio/intercom/department/medbay/get_internal_channels()
@@ -298,18 +280,12 @@
 // MARK: AI private
 /obj/item/radio/intercom/locked/ai_private
 	name = "AI intercom"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование преднастроено \
-			на закрытый канал Искусственного Интеллекта, обеспечивая приватную коммуникацию. \
-			Возможность смены частоты заблокирована на программном уровне."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Its telecommunications equipment is preset to a restricted AI channel for private communication. Frequency changes are disabled in software."
 	default_frequency = AI_FREQ
 
 /obj/item/radio/intercom/locked/confessional
 	name = "confessional intercom"
-	desc = "Специализированный станционный интерком. Представляет собой устройство из прочного полимерно-металлического корпуса \
-			с передней панелью, оснащённой микрофоном, динамиком и дисплеем. Встроенное телекоммуникационное оборудование преднастроено \
-			на закрытый канал, предназначенный для приватной коммуникации со священнослужителями в исповедальных комнатах. \
-			Возможность смены частоты заблокирована на программном уровне."
+	desc = "A specialized station intercom in a durable polymer-metal casing, with a microphone, speaker and display on its front panel. Its telecommunications equipment is preset to a restricted channel for private communication with clergy in confession booths. Frequency changes are disabled in software."
 	default_frequency = 1480
 
 /obj/item/radio/intercom/locked/prison

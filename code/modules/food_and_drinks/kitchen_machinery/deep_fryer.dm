@@ -3,7 +3,7 @@
 	desc = "Deep fried <i>everything</i>."
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "fryer_off"
-	thiscooktype = "обжарено во фритюре"
+	thiscooktype = "deep-fried"
 	burns = 1
 	firechance = 100
 	cooktime = 200

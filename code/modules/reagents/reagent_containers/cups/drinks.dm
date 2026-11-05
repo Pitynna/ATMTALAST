@@ -255,8 +255,7 @@
 // MARK: Sport Food
 /obj/item/reagent_containers/cup/glass/protein
 	name = "protein tub"
-	desc = "Банка наполненная протеиновым порошком. Этот вид протеина был снят с производства. \
-			Если вы встретили его, обратитесь к техподдержке."
+	desc = "A tub of protein powder. This variety has been discontinued. If you find one, contact technical support."
 	icon_state = "protein_zaza"
 	item_state = "protein_zaza"
 	volume = 80
@@ -266,22 +265,19 @@
 
 /obj/item/reagent_containers/cup/glass/protein/zaza
 	name = "protein tub (Zaza)"
-	desc = "Банка наполненная протеиновым порошком. \
-			На самом деле не отличается от банки протеина со вкусом вишни ничем кроме изображения на этикетке."
+	desc = "A tub of protein powder. Identical to the cherry variety except for the picture on the label."
 	list_reagents = list("protein" = 70, "zaza" = 10)
 
 /obj/item/reagent_containers/cup/glass/protein/cherry
 	name = "protein tub (Cherry)"
-	desc = "Банка наполненная протеиновым порошком со вкусом вишни. \
-			На самом деле не отличается от банки протеина со вкусом Зазы ничем кроме изображения на этикетке."
+	desc = "A tub of cherry-flavored protein powder. Identical to the Zaza variety except for the picture on the label."
 	icon_state = "protein_cherry"
 	item_state = "protein_cherry"
 	list_reagents = list("protein" = 70, "cherryshake" = 10)
 
 /obj/item/reagent_containers/cup/glass/protein/chocolate
 	name = "protein tub (Chocolate)"
-	desc = "Банка наполненная протеиновым порошком со вкусом шоколада. \
-			Единственный вкус протеинового порошка не вызывающий отвращения при потреблении в неразбавленном виде."
+	desc = "A tub of chocolate-flavored protein powder. The only flavor that is not disgusting when eaten undiluted."
 	icon_state = "protein_chocolate"
 	item_state = "protein_chocolate"
 	list_reagents = list("protein" = 70, "chocolate" = 10)
@@ -289,16 +285,14 @@
 
 /obj/item/reagent_containers/cup/glass/protein/bananastrawberry
 	name = "protein tub (Banana and Strawberry)"
-	desc = "Банка наполненная протеиновым порошком со вкусом банана и клубники. \
-			До ребрендинга вместо банана и клубники была просто клубника."
+	desc = "A tub of banana-and-strawberry protein powder. Before the rebrand, it was just strawberry."
 	icon_state = "protein_bananastrawberry"
 	item_state = "protein_bananastrawberry"
 	list_reagents = list("protein" = 70, "banana" = 5, "strawwberry" = 5)
 
 /obj/item/reagent_containers/cup/glass/guarana
 	name = "guarana extract ampoule"
-	desc = "Ампула содержащая экстракт гуараны — вещество стимулирующее мышечную активность. \
-			На этикетке нарисована малина, не смотря на то, что в составе нет ничего связанного с ней."
+	desc = "An ampoule of guarana extract, a substance that stimulates muscle activity. Its label depicts raspberries despite containing nothing related to them."
 	icon_state = "guarana_raspberry"
 	item_state = "guarana_raspberry"
 	list_reagents = list("guarana" = 10)
@@ -306,8 +300,7 @@
 
 /obj/item/reagent_containers/cup/glass/creatine
 	name = "creatine bottle"
-	desc = "Бутылочка содержащая креатин — вещество повышающее скорость развития мышц. \
-			На этикетке нарисована малина, не смотря на то, что в составе нет ничего связанного с ней."
+	desc = "A bottle of creatine, a substance that accelerates muscle development. Its label depicts raspberries despite containing nothing related to them."
 	icon_state = "creatine"
 	item_state = "creatine"
 	list_reagents = list("creatine" = 10)

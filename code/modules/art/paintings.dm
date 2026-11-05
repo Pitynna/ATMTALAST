@@ -13,7 +13,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/structure/easel
 	name = "easel"
-	desc = "Только для лучших произведений искусства!"
+	desc = "For only the finest works of art!"
 	icon = 'icons/obj/art/artstuff.dmi'
 	icon_state = "easel"
 	density = TRUE
@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/canvas
 	name = "canvas"
-	desc = "Нарисуйте свою душу на этом холсте!"
+	desc = "Paint your soul onto this canvas!"
 	icon = 'icons/obj/art/artstuff.dmi'
 	icon_state = "11x11"
 	flags = UNPAINTABLE
@@ -549,7 +549,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/canvas/thirtysix_twentyfour
 	name = "canvas (36x24)"
-	desc = "Очень большой холст, чтобы выплеснуть свою душу. Для рамы понадобится стена побольше."
+	desc = "A very large canvas for pouring out your soul. You will need a bigger wall for its frame."
 	icon_state = "24x24" //The vending spritesheet needs the icons to be 32x32. We'll set the actual icon on Initialize.
 	width = 36
 	height = 24
@@ -569,7 +569,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/canvas/fortyfive_twentyseven
 	name = "canvas (45x27)"
-	desc = "Самый большой холст на космическом рынке. Для рамы понадобится стена побольше."
+	desc = "The largest canvas on the space market. You will need a bigger wall for its frame."
 	icon_state = "24x24" //Ditto
 	width = 45
 	height = 27
@@ -589,7 +589,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/wallframe/painting
 	name = "painting frame"
-	desc = "Идеальная витрина для ваших любимых воспоминаний."
+	desc = "The perfect display for your favorite memories."
 	icon = 'icons/obj/decals.dmi'
 	//custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
 	resistance_flags = FLAMMABLE
@@ -606,7 +606,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/structure/sign/painting
 	name = "Painting"
-	desc = "Искусство или \"Исскуство\"? Зависит только от вас."
+	desc = "Art or ART? That is entirely up to you."
 	icon_state = "frame-empty"
 	base_icon_state = "frame"
 	//custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)

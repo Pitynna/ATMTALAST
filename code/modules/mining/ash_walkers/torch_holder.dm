@@ -7,7 +7,7 @@
 
 /obj/item/mounted/frame/torch_holder
 	name = "torch holder"
-	desc = "Один из самых популярных способов осветить пространство в средневековых замках."
+	desc = "One of the most popular ways to light a medieval castle."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "torch_holder_item"
 	mount_requirements = MOUNTED_FRAME_SIMFLOOR | MOUNTED_FRAME_NOSPACE
@@ -33,7 +33,7 @@
 
 /obj/structure/torch_holder
 	name = "torch holder"
-	desc = "Красиво выглядящее крепление для факела."
+	desc = "An attractive torch bracket."
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "torch_holder"
 	/// Our torch, that stored in holder
@@ -231,7 +231,7 @@
 
 /obj/structure/torch_holder/mapping //infinite mapping version
 	name = "ancient torch holder"
-	desc = "Красиво выглядящее крепление для факела. Поверхность проржавела от времени, а сам факел практически прирос к креплению."
+	desc = "An attractive torch bracket. Age has rusted its surface, and the torch has almost fused to the mounting."
 	icon_state = "torch_holder_complete"
 	ancient = TRUE
 

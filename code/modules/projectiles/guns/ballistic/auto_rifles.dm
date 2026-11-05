@@ -1,8 +1,7 @@
 // MARK: AR-30 "Regula"
 /obj/item/gun/projectile/automatic/arg
 	name = "AR-30 \"Regula\" assault rifle"
-	desc = "Штурмовая винтовка калибра 5,56x45 мм производства \"Mars Special\" — штатное вооружение вооружённых сил Транс-солнечной Федерации. \
-			Высокая точность и управляемая отдача."
+	desc = "A 5.56x45mm assault rifle manufactured by Mars Special, standard issue for the Trans-Solar Federation's armed forces. Highly accurate with manageable recoil."
 	gender = FEMALE
 	icon_state = "arg"
 	item_state = "arg"
@@ -95,7 +94,7 @@
 	recoil = GUN_RECOIL_MEDIUM
 
 /obj/item/gun/projectile/automatic/ak814/weakened
-	desc = "Импортная версия штурмовой винтовки AГ-814, использующая уменьшенные магазины."
+	desc = "An export version of the AG-814 assault rifle using smaller magazines."
 	mag_type = /obj/item/ammo_box/magazine/ak814/fusty
 	fire_delay = 0.25 SECONDS
 
@@ -133,9 +132,7 @@
 // MARK: SGM-BR52
 /obj/item/gun/projectile/automatic/m52
 	name = "SGM-BR52 battle rifle"
-	desc = "Боевая винтовка калибра 7,62x51 мм производства \"Shellguard Munitions\". \
-			Высокая точность и впечатляющая огневая мощь делают её эффективной против живой силы в тяжёлом снаряжении. \
-			Состоит на вооружении подразделений быстрого реагирования \"Нанотрейзен\"."
+	desc = "A 7.62x51mm battle rifle manufactured by Shellguard Munitions. Its accuracy and impressive firepower are effective against heavily equipped personnel. Used by Nanotrasen emergency response units."
 	gender = FEMALE
 	icon_state = "M52"
 	item_state = "arg"

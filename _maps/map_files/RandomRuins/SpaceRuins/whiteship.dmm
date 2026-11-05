@@ -539,9 +539,9 @@
 /area/shuttle/abandoned)
 "mi" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/computer/crew,
 /turf/simulated/floor/plasteel{
@@ -1526,9 +1526,9 @@
 	name = "Medical Ship Inner Shutters"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/abandoned)
@@ -1940,7 +1940,7 @@
 /obj/item/crowbar/red{
 	desc = "...";
 	force = 20;
-	name = "Легендарная монтировка"
+	name = "Legendary Crowbar"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "whitebluefull"

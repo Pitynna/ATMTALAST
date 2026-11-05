@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable/getter
 	display_name = "Геттер переменной"
-	desc = "Компонент, который получает глобальную переменную в схеме."
+	desc = "A component that gets a circuit-wide variable."
 
 	/// The value of the variable
 	var/datum/port/output/value

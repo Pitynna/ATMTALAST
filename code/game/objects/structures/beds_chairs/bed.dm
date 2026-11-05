@@ -60,7 +60,7 @@
 
 /obj/structure/bed/wicker
 	name = "wicker bed"
-	desc = "Большая кровать, сотканная из чего-то, напоминающего ткань. Выглядит достаточно удобно."
+	desc = "A large bed woven from something resembling cloth. It looks comfortable enough."
 	icon_state = "wicker_bed"
 	comfort = 1.5
 	buildstacktype = /obj/item/stack/sheet/cloth
@@ -68,14 +68,14 @@
 
 /obj/structure/bed/leather
 	name = "leather bed"
-	desc = "Куски кожи, грубо сшитые друг с другом и прикреплённые к деревянной раме. Не самое удобное место для лежания."
+	desc = "Pieces of leather crudely stitched together and fastened to a wooden frame. Not the most comfortable place to lie down."
 	icon_state = "leather_bed"
 	comfort = 1.2
 	buildstacktype = /obj/item/stack/sheet/leather
 
 /obj/structure/bed/wooden
 	name = "wooden bed"
-	desc = "Кровать, сделанная из качественной древесины. Выглядит очень мило и уютно."
+	desc = "A bed made from quality timber. It looks cozy and inviting."
 	icon_state = "wooden_bed"
 	comfort = 2.5
 	buildstacktype = /obj/item/stack/sheet/wood
@@ -83,7 +83,7 @@
 
 /obj/structure/bed/cardboard
 	name = "cardboard bed"
-	desc = "Лежанка, сделанная из картона. Ты что, бомж?"
+	desc = "A cardboard bed. Are you homeless?"
 	icon_state = "cardboard_bed"
 	comfort = 0.1
 	buildstacktype = /obj/item/stack/sheet/cardboard
@@ -139,7 +139,7 @@
 
 /obj/structure/bed/roller
 	name = "roller stretcher"
-	desc = "Используется для транспортировки пациентов."
+	desc = "Used to transport patients."
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "down"
 	resistance_flags = NONE
@@ -329,5 +329,5 @@
 
 /obj/structure/bed/dogbed/pet
 	name = "cozy pet bed"
-	desc = "Комфортная лежанка для любимейшего питомца отдела."
+	desc = "A comfortable bed for the department's favorite pet."
 	anchored = TRUE

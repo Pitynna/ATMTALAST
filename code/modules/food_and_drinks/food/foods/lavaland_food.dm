@@ -9,7 +9,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/soft_meat
 	name = "soft meat cut"
-	desc = "Нежное филе лавовой рыбы. Сырое в текущем виде, однако с помощью правильных ингридиентов её можно будет превратить в прекрасное блюдо."
+	desc = "A tender lava fish fillet. Currently raw, but the right ingredients could turn it into a wonderful dish."
 	gender = FEMALE
 	icon_state = "soft_meat_cut"
 	item_state = "soft_meat_cut"
@@ -20,7 +20,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/eel_filet
 	name = "eel filet"
-	desc = "Сырое филе донного угря. Хоть оно съедобно и в сыром виде, однако с помощью правильных ингридиентов её можно будет превратить в прекрасное блюдо."
+	desc = "A raw bottom-dwelling eel fillet. Edible as it is, but the right ingredients could turn it into a wonderful dish."
 	gender = NEUTER
 	icon_state = "eel_filet"
 	item_state = "eel_filet"
@@ -31,7 +31,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/predator_meat
 	name = "predatory fish slice"
-	desc = "Достаточно большой кусок мяса, добытый из хищной рыбы. Не рекомендуется к употреблению в сыром виде."
+	desc = "A fairly large cut of predatory fish meat. Not recommended raw."
 	icon_state = "predatory_fish_slice"
 	item_state = "predatory_fish_slice"
 	list_reagents = list("nutriment" = 2, "toxin" = 2, "protein" = 4)
@@ -42,7 +42,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/soft_meat_cubes
 	name = "soft meat cubes"
-	desc = "Филе рыбы, порезанное на маленькие кубики и обжаренное в печи. Выглядит аппетитно."
+	desc = "Fish fillet cut into small cubes and oven-roasted. Looks appetizing."
 	gender = PLURAL
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "soft_meat_cubes"
@@ -54,7 +54,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/predatory_fish_slab
 	name = "cooked predatory fish slab"
-	desc = "Кусок мяса хищной рыбы, обжаренный в печи. Пригоден к употреблению."
+	desc = "A cut of predatory fish meat roasted in an oven. Ready to eat."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "predatory_fish_slab"
 	list_reagents = list("nutriment" = 4, "protein" = 6)
@@ -65,7 +65,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/eel_ringlets
 	name = "eel ringlets"
-	desc = "Обжаренное в печи филе донного угря. Невероятно вкусное."
+	desc = "Oven-roasted bottom-dwelling eel fillet. Incredibly tasty."
 	gender = PLURAL
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "eel_ringlets"
@@ -77,7 +77,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/thali_lazis_bacon
 	name = "thali lazis bacon part"
-	desc = "Небольшая порция бекона, взятая из тарелки Тали Лазис."
+	desc = "A small serving of bacon from a Thali Lazis platter."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_bacon"
 	overlay_sprite = "thali_lazis_bacon_overlay"
@@ -85,7 +85,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/thali_lazis_cacti
 	name = "thali lazis cacti part"
-	desc = "Небольшой кактус, взятый из тарелки Тали Лазис."
+	desc = "A small cactus from a Thali Lazis platter."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_cacti"
 	overlay_sprite = "thali_lazis_cacti_overlay"
@@ -93,7 +93,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/thali_lazis_wing
 	name = "thali lazis wing part"
-	desc = "Небольшое крыло, взятое из тарелки Тали Лазис."
+	desc = "A small wing from a Thali Lazis platter."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_wing"
 	overlay_sprite = "thali_lazis_wing_overlay"
@@ -101,7 +101,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/thali_lazis_fish
 	name = "thali lazis fish part"
-	desc = "Небольшая порция рыбы, взятая из тарелки Тали Лазис."
+	desc = "A small serving of fish from a Thali Lazis platter."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_fish"
 	overlay_sprite = "thali_lazis_fish_overlay"
@@ -109,7 +109,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/thali_lazis_crunchie
 	name = "thali lazis crunchie part"
-	desc = "Небольшая хрустящая порция, взятая из тарелки Тали Лазис."
+	desc = "A small crunchy portion from a Thali Lazis platter."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_crunchie"
 	overlay_sprite = "thali_lazis_crunchie_overlay"
@@ -117,7 +117,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland/thali_lazis_bungus
 	name = "thali lazis bungus part"
-	desc = "Небольшая порция грибов, взятая из тарелки Тали Лазис."
+	desc = "A small serving of mushrooms from a Thali Lazis platter."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_bungus"
 	overlay_sprite = "thali_lazis_bungus_overlay"
@@ -125,7 +125,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food
 	name = "generic lavaland food"
-	desc = "самое обычное блюдо. Если вы это видите, то Зюзя напортачил"
+	desc = "An entirely ordinary dish. If you can see this, Zyuzya messed up."
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "fine_meal"
 	lefthand_file = 'icons/mob/inhands/lavaland/food_lefthand.dmi'
@@ -139,7 +139,7 @@
 	foodtype = MEAT
 /obj/item/reagent_containers/food/snacks/lavaland_food/fine_meal
 	name = "fine meal"
-	desc = "Мясо Голиафа, обжаренное в соку кактусового фрукта. Невероятно вкусное и питательное."
+	desc = "Goliath meat roasted in cactus fruit juice. Incredibly tasty and nutritious."
 	gender = FEMALE
 	list_reagents = list("vitfro" = 6, "protein" = 7, "vitamin" = 3)
 	tastes = list("сбалансированной еды" = 1)
@@ -152,7 +152,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/freaky_leg
 	name = "freaky leg"
-	desc = "Многие народы галактики расценивают поедание себе подобных как ужасающее преступление. Однако эти стопы вышли уж слишком питательными..."
+	desc = "Many peoples of the galaxy consider eating their own kind a terrible crime. These feet are awfully nutritious, though..."
 	icon_state = "freaky_leg"
 	tastes = list("тяжёлых времён" = 1)
 
@@ -163,7 +163,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/veggie_meal
 	name = "veggie meal"
-	desc = "Обычно пеплоходцы питаются мясом местной фауны, однако, если правильно смешать нужные вещества, то получится крайне полезное растительное блюдо. Хотя на вкус оно так себе."
+	desc = "Ash walkers usually eat local wildlife, but mixing the right ingredients produces a very healthy vegetable dish. It does not taste particularly good."
 	icon_state = "veggie_meal"
 	list_reagents = list("spaceacillin" = 10, "lavaland_extract" = 2, "vitfro" = 20, "sal_acid" = 15)
 	tastes = list("трав" = 1)
@@ -176,7 +176,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/hunters_treat
 	name = "hunter's treat"
-	desc = "Человеческое сердце, обжаренное в соку мяса Голиафа. Легенды говорят, что если сьесть сердце поверженного врага, то обретёшь невероятную силу."
+	desc = "A human heart roasted in Goliath meat juices. Legend says eating a defeated enemy's heart grants incredible strength."
 	icon_state = "hunters_treat"
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/hunters_treat/on_mob_eating_effect(mob/user)
@@ -186,12 +186,12 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/yum_grub
 	name = "yum-grub"
-	desc = "Мясо златожора, обжаренное вместе с грибами. Говорят, что оно благотворно воздействует на здоровье нервной системы и сенсорных органов."
+	desc = "Goldgrub meat roasted with mushrooms. Said to benefit the nervous system and sensory organs."
 	icon_state = "yum_grub"
 	list_reagents = list("oculine" = 12, "mannitol" = 12, "vitamin" = 3)
 /obj/item/reagent_containers/food/snacks/lavaland_food/ashie_kebab
 	name = "ashie-kebab"
-	desc = "Несколько жизненно-важных органов, грубо удаленных из тела и насаженных на железный стержень. Настолько же первобытно, насколько и вкусно!"
+	desc = "Several vital organs crudely removed and skewered on an iron rod. As primitive as it is delicious!"
 	icon_state = "ashie_kebab"
 	item_state = "ashie_kebab"
 	list_reagents = list("nutriment" = 6, "protein" = 6, "ephedrine" = 10)
@@ -203,7 +203,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/tail_o_dead
 	name = "tail'o'dead"
-	desc = "Массивный хвост унатха, запечённый в соку фруктовых кактусов. Выглядит аппетитно!"
+	desc = "A massive unathi tail baked in cactus fruit juice. Looks appetizing!"
 	icon_state = "tail_o_dead"
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/tail_o_dead/on_mob_eating_effect(mob/user)
@@ -213,7 +213,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/cure_curse
 	name = "cure curse"
-	desc = "Два проткнутых сердца, одно из которых проклято. Что может пойти не так?"
+	desc = "Two pierced hearts, one of them cursed. What could go wrong?"
 	icon_state = "cure_curse"
 	var/active = FALSE
 
@@ -251,7 +251,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/wings_n_fangs_n_tentacles
 	name = "wings'n'fangs'n'tentacles"
-	desc = "Одно из щупалец Голиафа, крыло наблюдателя и жвало ткача, запеченные вместе. На вкус оно так же ужасно, как и на вид."
+	desc = "A Goliath tentacle, a watcher wing and a weaver mandible baked together. Tastes just as awful as it looks."
 	icon_state = "wings_n_fangs_n_tentacles"
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/wings_n_fangs_n_tentacles/on_mob_eating_effect(mob/user)
@@ -265,7 +265,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/goli_kernels
 	name = "goli-kernels"
-	desc = "небольшой мясной шарик на \"подносе\" из грибной шляпки. Вкуснятина!"
+	desc = "A small meatball served on a mushroom-cap platter. Delicious!"
 	icon_state = "goli_kernels"
 	list_reagents = list("nutriment" = 2, "protein" = 2)
 	eat_time = 0 SECONDS
@@ -282,7 +282,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/grace_of_lazis
 	name = "grace of lazis portion"
-	desc = "Кусок мяса, срезанный с массивного постамента в честь славной охоты. Невероятно вкусно."
+	desc = "A cut of meat carved from a massive monument to a glorious hunt. Incredibly tasty."
 	gender = FEMALE
 	icon_state = "grace_of_lazis"
 	list_reagents = list("protein" = 4, "vitamin" = 2)
@@ -290,7 +290,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/beer_grub_stew
 	name = "beer grub stew"
-	desc = "Алкогольное рагу, приготовленное с использованием мяса златожора. Питательно!"
+	desc = "An alcoholic stew made with goldgrub meat. Nutritious!"
 	icon_state = "beer_grub_stew"
 	list_reagents = list("nutriment" = 4, "protein" = 6, "beer" = 7)
 
@@ -301,7 +301,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/thick_red_paste
 	name = "thick red paste"
-	desc = "Отвратительно выглядящая на вид вязкая красная паста, сделанная из ошмётков тел. На вкус невероятно омерзительно."
+	desc = "A disgusting, viscous red paste made from scraps of bodies. Tastes utterly revolting."
 	gender = FEMALE
 	icon_state = "thick_red_paste"
 	list_reagents = list("protein" = 2)
@@ -313,7 +313,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/black_blood_sausage
 	name = "black blood sausage"
-	desc = "Небольшая кровяная колбаска, сделанная из мяса Голиафа и... настоящей крови. Крайне полезно, если вы в критическом состоянии."
+	desc = "A small blood sausage made from Goliath meat and... actual blood. Extremely useful when you are in critical condition."
 	gender = FEMALE
 	icon_state = "black_blood_sausage"
 	item_state = "black_blood_sausage"
@@ -321,7 +321,7 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/xeno_sticks
 	name = "xeno sticks"
-	desc = "Мясо ксеноморфа на палочках, украшенное грибами рейши. На удивление довольно вкусное!"
+	desc = "Xenomorph meat on sticks, garnished with reishi mushrooms. Surprisingly tasty!"
 	gender = PLURAL
 	icon_state = "xeno_sticks"
 	item_state = "xeno_sticks"
@@ -333,25 +333,25 @@
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/filet_madras
 	name = "filet madras"
-	desc = "Нежное филе рыбы, обжаренное вместе с грибами. Невероятно вкусно."
+	desc = "Tender fish fillet roasted with mushrooms. Incredibly tasty."
 	icon_state = "filet_madras"
 	list_reagents = list("nutriment" = 3, "protein" = 2, "pen_acid" = 4)
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/eel_katigo
 	name = "eel katigo"
-	desc = "Филе донного угря с травяными приправами и \"соусом\" в виде собранных кусков мяса. Питательно!"
+	desc = "Bottom-dwelling eel fillet with herbal seasoning and a sauce made from assorted meat scraps. Nutritious!"
 	icon_state = "eel_katigo"
 	list_reagents = list("nutriment" = 3, "protein" = 2, "nicotine" = 6, "menthol" = 15)
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/predatory_chowder
 	name = "predatory chowder"
-	desc = "Суп, приготовленный с использованием рыбного мяса, приправ и человеческих органов. Вкусно!"
+	desc = "A soup made with fish, seasonings and human organs. Tasty!"
 	icon_state = "predatory_chowder"
 	list_reagents = list("nutriment" = 3, "protein" = 2, "godblood" = 20)
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/abu_ghosh
 	name = "abu ghosh"
-	desc = "Суп, приготовленный с использованием молока гатланчей и местных ингридиентов. Вкуснятина!"
+	desc = "A soup made with gathlatch milk and local ingredients. Delicious!"
 	icon_state = "abu_ghosh"
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/abu_ghosh/on_mob_eating_effect(mob/user)
@@ -361,7 +361,7 @@
 
 /obj/item/storage/lava_tray
 	name = "thali lazis plate"
-	desc = "Большой поднос, сделанный из дерева. Предназначен для хранения огромного количества съестного."
+	desc = "A large wooden tray for holding enormous quantities of food."
 	gender = MALE
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "thali_lazis_plate"

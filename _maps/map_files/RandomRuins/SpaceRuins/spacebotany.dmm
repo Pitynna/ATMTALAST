@@ -3290,8 +3290,8 @@
 /area/ruin/space/spacebotany/Hydro)
 "Tz" = (
 /obj/structure/chair{
-	desc = "Этот красивый стул был отлит из двух трофейных боргов \"Синдиката\".";
-	name = "Дизайнерский стул"
+	desc = "This beautiful chair was cast from two captured Syndicate cyborgs.";
+	name = "Designer Chair"
 	},
 /obj/effect/decal/cleanable/blood/gibs,
 /mob/living/simple_animal/hostile/venus_human_trap,

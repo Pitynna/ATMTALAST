@@ -96,7 +96,7 @@
 
 /obj/item/reagent_containers/food/snacks/soup/sawdustsoup
 	name = "sawdust soup"
-	desc = "ЧТООО как этот суп попал в мои опилки!?"
+	desc = "WHAT? How did this soup get into my sawdust?!"
 	icon_state = "sawdustsoup"
 	filling_color = "#D3C28D"
 	list_reagents = list("nutriment" = 15)
@@ -175,7 +175,7 @@
 
 /obj/item/reagent_containers/food/snacks/soup/stew/batya
 	name = "great soup"
-	desc = "Этот великий суп был приготовлен самим Bat'Ya, ценящийся всеми сословиями. Но даже от одного только взгляда на него — у вас уже слезятся глаза. Ты его не сможешь доесть, даже не пытайся."
+	desc = "This magnificent soup was prepared by Bat'Ya himself and is treasured by every social class. Merely looking at it makes your eyes water. You will never finish it, so don't even try."
 	antable = FALSE
 	bitesize = 0.01
 	randomize_position = FALSE

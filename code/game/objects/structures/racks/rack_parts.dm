@@ -63,7 +63,7 @@
 // MARK: Gun Rack Parts
 /obj/item/rack_parts/gunrack_parts
 	name = "gun rack parts"
-	desc = "Части стойки для оружия."
+	desc = "Parts for a gun rack."
 	icon_state = "gunrack_parts"
 	item_state = "gunrack_parts"
 	materials = list(MAT_METAL = 2000)
@@ -71,7 +71,7 @@
 
 /obj/item/rack_parts/cargo_shelf
 	name = "crate shelf parts"
-	desc = "Детали стеллажа, предназначенного для хранения ящиков."
+	desc = "Parts for a shelf designed to store crates."
 	icon_state = "shelf_parts"
 	item_state = "shelf_parts"
 	materials = list(MAT_METAL = 2000)

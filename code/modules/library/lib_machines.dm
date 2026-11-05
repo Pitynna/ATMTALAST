@@ -138,7 +138,7 @@ GLOBAL_LIST_INIT(library_section_names, list("Any", "Fiction", "Non-Fiction", "A
 /** Scanner **/
 /obj/machinery/libraryscanner
 	name = "scanner"
-	desc = "Крупная машина для сканирования печатной литературы."
+	desc = "A large machine for scanning printed literature."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "bigscanner"
 	anchored = TRUE

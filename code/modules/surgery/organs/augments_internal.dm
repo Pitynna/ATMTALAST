@@ -438,7 +438,7 @@
 
 /obj/item/organ/internal/cyberimp/chest/exoframe
 	name = "Exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Стандартная модель, не отличающаяся выдающимися характеристиками."
+	desc = "A structural support serving as the skeleton of a humanoid robot. A standard model with unremarkable specifications."
 	implant_color = "#3a3a3aff"
 	implant_overlay = null
 	origin_tech = "materials=3;engineering=4"
@@ -523,7 +523,7 @@
 
 /obj/item/organ/internal/cyberimp/chest/exoframe/reinforced
 	name = "Reinforced exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Укреплённая модель, способная выдержать больше повреждений."
+	desc = "A structural support serving as the skeleton of a humanoid robot. A reinforced model that can withstand more damage."
 	id = "EXO_REINFORCED"
 	icon_state = "exoframe_reinforced"
 	given_health = 20
@@ -533,7 +533,7 @@
 
 /obj/item/organ/internal/cyberimp/chest/exoframe/industrial
 	name = "Industrial exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Промышленная модель, созданная специально для работ в открытом космосе."
+	desc = "A structural support serving as the skeleton of a humanoid robot. An industrial model designed specifically for work in open space."
 	id = "EXO_INDUSTRIAL"
 	icon_state = "exoframe_industrial"
 	traits_added = list(TRAIT_SHOCKIMMUNE)
@@ -545,7 +545,7 @@
 
 /obj/item/organ/internal/cyberimp/chest/exoframe/combat
 	name = "Combat exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Облегченная модель из пластитанового сплава с повышенной прочностью конструкции."
+	desc = "A structural support serving as the skeleton of a humanoid robot. A lightweight plastitanium-alloy model with increased structural strength."
 	id = "EXO_COMBAT"
 	icon_state = "exoframe_combat"
 	origin_tech = "materials=4;engineering=4;syndicate=3;combat=4"

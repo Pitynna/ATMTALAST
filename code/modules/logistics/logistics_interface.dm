@@ -1,6 +1,6 @@
 /obj/item/logistics_interface
 	name = "logistics interface board"
-	desc = "Плата логистического интерфейса. Вставляется в совместимую машинерию с открытой панелью."
+	desc = "A logistics interface board. Insert it into compatible machinery with an open panel."
 	icon = 'icons/obj/module.dmi'
 	icon_state = "circuit_map"
 	item_state = "electronic"
@@ -20,7 +20,7 @@
 /obj/item/logistics_interface/update_desc(updates = ALL)
 	. = ..()
 	desc = initial(desc)
-	desc += (mode == LOGISTICS_MODE_SEND) ? " Сейчас настроена на отправку ресурсов." : " Сейчас настроена на приём ресурсов."
+	desc += (mode == LOGISTICS_MODE_SEND) ? " Currently configured to send resources." : " Currently configured to receive resources."
 
 /obj/item/logistics_interface/examine(mob/user)
 	. = ..()

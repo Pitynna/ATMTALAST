@@ -183,9 +183,9 @@
 		return
 
 	if(BB)
-		desc = "Заряженный и готовый к использованию патрон [get_ammo_marking()].[extra_info ? " " + extra_info : ""]"
+		desc = "A loaded [get_ammo_marking()] cartridge, ready to fire.[extra_info ? " " + extra_info : ""]"
 	else
-		desc = "Пустая гильза от пули калибра [caliber]." // no extra info because no bullet
+		desc = "An empty [caliber] casing." // no extra info because no bullet
 
 /obj/item/ammo_casing/proc/newshot(params) //For energy weapons, shotgun shells and wands (!).
 	if(!BB)

@@ -1,6 +1,6 @@
 /obj/item/hardsuit_taser_proof
 	name = "TPRG-1 upgrade kit"
-	desc = "Данное улучшение позволяет хардсьюту поглащать слабые энергетические снаряды."
+	desc = "This upgrade allows a hardsuit to absorb weak energy projectiles."
 	icon = 'icons/obj/hardsuits_modules.dmi'
 	icon_state = "powersink"
 	var/obj/item/clothing/suit/space/hardsuit/hardsuit = null
@@ -12,7 +12,7 @@
 	return ..()
 
 /obj/item/hardsuit_taser_proof/ert_locked
-	desc = "Данное улучшение позволяет хардсьюту поглащать слабые энергетические снаряды. Для использования хардсьюта необходим ЕРТ МЩ имплант."
+	desc = "This upgrade allows a hardsuit to absorb weak energy projectiles. An ERT mindshield implant is required to use the hardsuit."
 	ert_mindshield_locked = TRUE
 
 /obj/item/storage/box/ert_taser_proof

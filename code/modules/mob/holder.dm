@@ -369,7 +369,7 @@
 
 /obj/item/holder/mouse_rep
 	name = "Mr. Myshkin"
-	desc = "Самый уважаемый грызун во вселенной."
+	desc = "The most respected rodent in the universe."
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "mouse_rep"
 

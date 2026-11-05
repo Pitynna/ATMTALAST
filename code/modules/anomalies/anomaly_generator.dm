@@ -1,7 +1,6 @@
 /obj/machinery/power/anomaly_generator
 	name = "anomaly generator"
-	desc = "Необычного вида машина, разработанная на основе эксперементальной технологии, предназначенная для \
-			генерации аномалий."
+	desc = "An unusual machine based on experimental technology, designed to generate anomalies."
 	density = TRUE
 	icon = 'icons/obj/anomaly/anomaly_stuff.dmi'
 	icon_state = "generator_on"
@@ -362,8 +361,7 @@
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE, -1) // A rare call, let it be without CD.
 
 /obj/machinery/power/anomaly_generator/upgraded/admin
-	desc = "Необычного вида машина, разработанная на основе эксперементальной технологии, предназначенная для \
-			генерации аномалий. В данной модели были использованы секретные разработки Nanotrasen."
+	desc = "An unusual machine based on experimental technology, designed to generate anomalies. This model incorporates classified Nanotrasen developments."
 
 /obj/machinery/power/anomaly_generator/wrench_act(mob/living/user, obj/item/item)
 	default_unfasten_wrench(user, item)

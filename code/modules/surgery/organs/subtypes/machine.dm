@@ -153,7 +153,7 @@
 /obj/item/organ/internal/eyes/optical_sensor
 	species_type = /datum/species/machine
 	name = "optical sensor"
-	desc = "Сенсор, оснащённый светочувствительной матрицей, выполняет зрительную функцию. Такие устанавливаются в КПБ."
+	desc = "A sensor with a light-sensitive array that provides vision. These are installed in IPCs."
 	gender = MALE
 	icon = 'icons/obj/robot_component.dmi'
 	icon_state = "camera"
@@ -199,7 +199,7 @@
 /obj/item/organ/internal/ears/microphone
 	species_type = /datum/species/machine
 	name = "microphone"
-	desc = "Пара микрофонов. Используются для получения аудиальной информации об окружающей среде. Такие устанавливаются в КПБ."
+	desc = "A pair of microphones used to collect audio information about the surroundings. These are installed in IPCs."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "taperecorder_idle"
 	status = ORGAN_ROBOT

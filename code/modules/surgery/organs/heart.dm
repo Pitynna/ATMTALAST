@@ -1,6 +1,6 @@
 /obj/item/organ/internal/heart
 	name = "heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало человеку."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to a human."
 	gender = NEUTER
 	icon_state = "heart-on"
 	slot = INTERNAL_ORGAN_HEART

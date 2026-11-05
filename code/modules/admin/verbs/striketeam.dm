@@ -141,7 +141,7 @@ GLOBAL_VAR_INIT(sent_strike_team, FALSE)
 			Теперь, прежде чем удалить диск, если нужно переместить бомбу, можешь: открепить её, переместить и снова закрепить.</p><p>\
 			Код ядерной аутентификации: <b>[nuke_code ? nuke_code : "Не предоставлен"]</b></p>\
 			<p><b>Удачи, солдат!</b></p>"
-			P.name = "Руководство по Специальным Операциям"
+			P.name = "Special Operations Manual"
 			P.stamp(/obj/item/stamp/centcom)
 
 	for(var/obj/effect/landmark/L in GLOB.landmarks_list)

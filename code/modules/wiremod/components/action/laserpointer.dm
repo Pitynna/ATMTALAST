@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/laserpointer
 	display_name = "Лазерный указатель"
-	desc = "Компонент, который направляет лазерный луч на цель."
+	desc = "A component that points a laser beam at a target."
 	category = "Action"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

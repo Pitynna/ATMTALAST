@@ -183,7 +183,7 @@
 // MARK: Wooden Rack
 /obj/structure/rack/wooden
 	name = "wooden rack"
-	desc = "Небольшой стеллаж, сделанный из дерева. Вы можете хранить на нём вещи!"
+	desc = "A small wooden rack. You can store things on it!"
 	icon_state = "wooden_rack"
 	wooden_version = TRUE
 	obj_flags = NODECONSTRUCT

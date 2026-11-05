@@ -511,7 +511,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 	if(!QDELETED(src))
 		var/turf/T = get_turf(src)
 		var/obj/effect/decal/cleanable/ash/A = new(T)
-		A.desc += "\nПохоже, когда-то это было [declent_ru(INSTRUMENTAL)]."
+		A.desc += "\nIt looks as though this used to be \a [src]."
 		..()
 
 /obj/item/acid_melt()
@@ -520,7 +520,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 		var/obj/effect/decal/cleanable/molten_object/MO = new(T)
 		MO.pixel_x = rand(-16,16)
 		MO.pixel_y = rand(-16,16)
-		MO.desc = "Похоже, когда-то это было [declent_ru(INSTRUMENTAL)]."
+		MO.desc = "It looks as though this used to be \a [src]."
 		..()
 
 /obj/item/proc/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)

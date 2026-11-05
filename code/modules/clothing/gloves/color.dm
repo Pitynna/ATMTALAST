@@ -265,9 +265,7 @@
 
 /obj/item/clothing/gloves/color/latex/inugami
 	name = "medical gloves Inugami"
-	desc = "Перчатки медицинского назначения серии Inugami — прототип, разработанный для использования хирургами. \
-			Изготовлены из полимерного материала, обеспечивающего защиту от биологических загрязнений и практически не пропускающего вредные вещества. \
-			Оснащены встроенными наночипами, существенно повышающими скорость выполнения хирургических операций."
+	desc = "Prototype Inugami-series medical gloves developed for surgeons. Made from a polymer that protects against biological contamination and is highly resistant to harmful substances. Built-in nanochips greatly increase surgical operating speed."
 	icon_state = "inugami_gl"
 	item_state = "inugami_gl"
 	item_color = null

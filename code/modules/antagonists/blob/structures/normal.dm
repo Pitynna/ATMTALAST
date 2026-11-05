@@ -21,11 +21,11 @@
 /obj/structure/blob/normal/update_desc()
 	. = ..()
 	if(compromised_integrity)
-		desc = "Тонкая решетка слегка подергивающихся щупалец."
+		desc = "A thin lattice of gently twitching tendrils."
 	else if(overmind)
-		desc = "Толстая стена извивающихся щупалец."
+		desc = "A thick wall of writhing tendrils."
 	else
-		desc = "Толстая стена извивающихся щупалец."
+		desc = "A thick wall of writhing tendrils."
 
 /obj/structure/blob/normal/update_icon_state()
 	icon_state = "blob[(compromised_integrity) ? "_damaged" : null]"

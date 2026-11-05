@@ -152,7 +152,7 @@
 
 /obj/item/circuit_component/digital_valve
 	display_name = "Цифровой клапан"
-	desc = "Интерфейс для связи с цифровым клапаном."
+	desc = "An interface for communicating with a digital valve."
 
 	var/obj/machinery/atmospherics/binary/valve/digital/attached_valve
 

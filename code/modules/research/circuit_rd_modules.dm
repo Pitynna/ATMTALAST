@@ -1,6 +1,6 @@
 /obj/item/circuit_component/rd_search
 	display_name = "Интерфейс Поиска НИО"
-	desc = "Модуль для удаленного поиска чертежей на консоли НИО через USB-соединение."
+	desc = "A module for remotely searching designs on an R&D console through a USB connection."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL | CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 	var/datum/port/input/input_id
@@ -73,7 +73,7 @@
 
 /obj/item/circuit_component/rd_lathe
 	display_name = "Интерфейс Печати НИО"
-	desc = "Модуль автоматической печати чертежей на подключенном оборудовании НИО."
+	desc = "A module for automatically printing designs on connected R&D equipment."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL | CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 	var/datum/port/input/input_design
@@ -189,13 +189,13 @@
 	output_item.set_output(held_item)
 
 	if(held_item)
-		desc = "Модуль печати. Хранящийся предмет: [held_item.name]"
+		desc = "Printing module. Stored item: [held_item.name]"
 
 	output_printed.set_output(TRUE)
 
 /obj/item/circuit_component/rd_destructor
 	display_name = "Интерфейс Деконструктора НИО"
-	desc = "Модуль автоматической разборки предметов, повышающий уровень технологий НИО."
+	desc = "A module for automatically dismantling items to advance R&D technology levels."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL | CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 	var/datum/port/input/input_item

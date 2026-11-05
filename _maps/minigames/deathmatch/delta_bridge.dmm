@@ -806,8 +806,8 @@
 /area/deathmatch)
 "Ax" = (
 /obj/structure/statue/gold/hop{
-	desc = "Золотая литая статуя, посвящённая великому ХоПу — Михаилу Калинину, который продолжал исполнять свой долг даже в самых критических ситуациях";
-	name = "Статуя Михаила Калинина"
+	desc = "A solid gold statue honoring the great Head of Personnel, Mikhail Kalinin, who kept doing his duty even in the most critical situations.";
+	name = "Statue of Mikhail Kalinin"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1297,8 +1297,8 @@
 /area/deathmatch)
 "TV" = (
 /obj/structure/statue/gold/ce{
-	desc = "Золотая литая статуя, посвящённая великому СЕ — Гарри Оппенгеймеру, который продолжал исполнять свой долг даже в самых тяжелых условиях";
-	name = "Статуя Гарри Оппенгеймера"
+	desc = "A solid gold statue honoring the great Chief Engineer, Harry Oppenheimer, who kept doing his duty even under the harshest conditions.";
+	name = "Statue of Harry Oppenheimer"
 	},
 /obj/structure/window/reinforced{
 	dir = 4

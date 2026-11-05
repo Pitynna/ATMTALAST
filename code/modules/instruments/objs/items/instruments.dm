@@ -15,7 +15,7 @@
 
 /obj/item/instrument/violin/golden/rock
 	name = "rock violin"
-	desc = "Золотая виолончель великого рок-виолончель музыканта. Говорят её до сих пор ищут целыми системами!"
+	desc = "The golden cello of a great rock cellist. Entire star systems are said to still be searching for it!"
 
 /obj/item/instrument/banjo
 	name = "banjo"

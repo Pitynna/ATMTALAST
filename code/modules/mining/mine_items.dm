@@ -25,7 +25,7 @@
 
 /obj/structure/closet/wardrobe/miner
 	name = "mining wardrobe"
-	desc = "Стандартный шкаф, в котором хранится сменная шахтёрская одежда."
+	desc = "A standard closet containing spare mining clothes."
 	icon_state = "mine_ward"
 
 /obj/structure/closet/wardrobe/miner/populate_contents()
@@ -47,7 +47,7 @@
 
 /obj/structure/closet/secure_closet/miner
 	name = "miner's equipment"
-	desc = "Шкаф с электронным замком, в котором хранится всё необходимое для работы шахтёра."
+	desc = "An electronically locked closet containing everything a miner needs for work."
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
@@ -66,7 +66,7 @@
 
 /obj/structure/closet/secure_closet/mining_medic
 	name = "mining medic's equipment"
-	desc = "Шкаф с электронным замком, в котором хранятся личные вещи шахтёрского врача."
+	desc = "An electronically locked closet containing a mining medic's personal belongings."
 	icon_state = "mining_medic"
 	req_access = list(ACCESS_MEDICAL)
 

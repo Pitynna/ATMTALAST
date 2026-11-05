@@ -4,7 +4,7 @@
 
 /obj/structure/tripwire_bridge
 	name = "tripwire"
-	desc = "Тонкий провод. Похоже, он соединен с чем-то опасным."
+	desc = "A thin wire. It seems to be connected to something dangerous."
 	icon = 'icons/obj/tripwire.dmi'
 	icon_state = "tripwire_wire"
 	anchored = TRUE
@@ -67,7 +67,7 @@
 
 /obj/item/tripwire
 	name = "tripwire base"
-	desc = "Металлическое основание для растяжки. Не забудьте про кабель!"
+	desc = "A metal tripwire anchor. Don't forget the cable!"
 	icon = 'icons/obj/tripwire.dmi'
 	icon_state = "tripwire_base"
 	var/obj/item/tripwire/linked_to = null

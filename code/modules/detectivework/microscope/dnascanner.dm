@@ -62,7 +62,7 @@
 
 	if(swab)
 		var/obj/item/forensics/swab/bloodswab = swab
-		report.name = ("Отчет ДНК сканера №[++report_num]: [bloodswab.name]")
+		report.name = ("DNA Scanner Report #[++report_num]: [bloodswab.name]")
 		//dna data itself
 		var/data = "Нет доступных данных по анализу."
 		if(bloodswab.dna != null)

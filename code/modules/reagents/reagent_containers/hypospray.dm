@@ -338,13 +338,13 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/traneksam
 	name = "traneksam acid autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу транексамовой кислота. Экстренный способ остановки кровотечений."
+	desc = "A small pen-shaped injector containing a dose of tranexamic acid for emergency bleeding control."
 	icon_state = "orangeinjector"
 	list_reagents = list("traneksam_acid" = 5)
 
 /obj/item/reagent_containers/hypospray/autoinjector/neuromatin
 	name = "neuromatin autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу нейроматина. Мощный иммунодепрессант."
+	desc = "A small pen-shaped injector containing a dose of neuromatin, a powerful immunosuppressant."
 	icon_state = "violetinjector"
 	volume = 15
 	amount_per_transfer_from_this = 15
@@ -410,7 +410,7 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/selfmade
 	name = "autoinjector"
-	desc = "Кустарно произведённая копия автоинъектора. Из-за особенностей конструкции его невозможно использовать на ком-то, кроме себя."
+	desc = "A homemade copy of an auto-injector. Its design prevents using it on anyone except yourself."
 	volume = 15
 	amount_per_transfer_from_this = 15
 	list_reagents = list()
@@ -447,7 +447,7 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/sanguinius
 	name = "Sanguinius autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу \"Сангвиния\" для экстренной помощи при кровопотерях."
+	desc = "A small pen-shaped injector containing Sanguinius for emergency treatment of blood loss."
 	icon_state = "redinjector"
 	amount_per_transfer_from_this = 15
 	volume = 15

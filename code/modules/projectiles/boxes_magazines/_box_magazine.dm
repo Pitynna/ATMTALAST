@@ -124,7 +124,7 @@
 /// What corresponding ammo should be called in examine procs.
 /// Should be set in genitive case like `"патронов"` or `"выстрелов"`.
 /obj/item/ammo_box/proc/get_ammo_descriptor()
-	return "патронов"
+	return "cartridges"
 
 /// Getter for cartridge marking
 /obj/item/ammo_box/proc/get_cartridge_marking()
@@ -139,8 +139,7 @@
 
 /obj/item/ammo_box/update_desc(updates = ALL)
 	. = ..()
-	desc = "Коробка для хранения боеприпасов. Предназначена для [get_ammo_descriptor()] [get_cartridge_marking()], \
-			вмещает вплоть до [max_ammo].[extra_info ? " " + extra_info : ""]"
+	desc = "An ammunition box for [get_cartridge_marking()] [get_ammo_descriptor()]. Holds up to [max_ammo] rounds.[extra_info ? " " + extra_info : ""]"
 
 /obj/item/ammo_box/examine(mob/user)
 	. = ..()
@@ -317,7 +316,7 @@
 // MARK: Мagazine
 /obj/item/ammo_box/magazine
 	name = "magazine (generic)"
-	desc = "Магазин для огнестрельного оружия."
+	desc = "A magazine for a firearm."
 	gender = MALE
 	materials = list(MAT_METAL = 2000)
 	can_fast_load = FALSE
@@ -327,8 +326,7 @@
 
 /obj/item/ammo_box/magazine/update_desc(updates = ALL)
 	. = ..()
-	desc = "Съёмный магазин для [gun_name ? gun_name : "огнестрельного оружия"]. \
-			Предназначен для [get_ammo_descriptor()] [get_cartridge_marking()], вмещает вплоть до [max_ammo].[extra_info ? " " + extra_info : ""]"
+	desc = "A detachable magazine for [gun_name ? gun_name : "firearms"]. Designed for [get_cartridge_marking()] [get_ammo_descriptor()], holding up to [max_ammo] rounds.[extra_info ? " " + extra_info : ""]"
 
 /obj/item/ammo_box/magazine/proc/ammo_count(countempties = TRUE)
 	return length(stored_ammo)

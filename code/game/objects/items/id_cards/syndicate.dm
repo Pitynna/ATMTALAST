@@ -140,19 +140,13 @@
 			icon_state = choice
 			switch(choice)
 				if("silver")
-					desc = "Идентификационная карта персонала \"Нанотрейзен\". Служит для подтверждения личности, \
-							определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника. \
-							Уникальная серебряная отделка подчёркивает высокий статус владельца."
+					desc = "A Nanotrasen personnel ID card. Confirms the employee's identity, system access and biometric data. Its distinctive silver trim emphasizes the owner's high status."
 				if("gold")
-					desc = "Идентификационная карта персонала \"Нанотрейзен\". Служит для подтверждения личности, \
-							определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника. \
-							Уникальная золотая отделка подчёркивает власть и могущество владельца."
+					desc = "A Nanotrasen personnel ID card. Confirms the employee's identity, system access and biometric data. Its distinctive gold trim emphasizes the owner's power and authority."
 				if("prisoner")
-					desc = "Идентификационная карта для заключённых \"Нанотрейзен\". Служит для подтверждения личности, \
-							определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника."
+					desc = "A Nanotrasen prisoner ID card. Confirms the holder's identity, system access and biometric data."
 				if("centcom")
-					desc = "Стандартная идентификационная карта персонала Центрального Командования \"Нанотрейзен\" в секторе \"Эпсилон Лукусты\". \
-							Служит для подтверждения личности, определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника."
+					desc = "A standard ID card for Nanotrasen Central Command personnel in the Epsilon Lucusta sector. Confirms the employee's identity, system access and biometric data."
 				else
 					desc = initial(desc)
 			to_chat(usr, span_notice("Внешний вид изменён на \"[choice]\"."))

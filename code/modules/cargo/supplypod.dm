@@ -78,7 +78,7 @@
 	explosionSize = list(0,0,0,0)
 
 /obj/structure/closet/supplypod/podspawn/deathmatch
-	desc = "Десантная капсула в кроваво-красном стиле."
+	desc = "A drop pod in a blood-red style."
 	specialised = TRUE
 
 /obj/structure/closet/supplypod/podspawn/deathmatch/preOpen()
@@ -158,7 +158,7 @@
 
 /obj/structure/closet/supplypod/back_to_station
 	name = "blood-red supply pod"
-	desc = "Устрашающая капсула снабжения, покрытая кроваво-красными отметинами."
+	desc = "An intimidating supply pod covered in blood-red markings."
 	bluespace = TRUE
 	explosionSize = list(0, 0, 1, 0)
 	effectGib = TRUE
@@ -168,7 +168,7 @@
 
 /obj/structure/closet/supplypod/deadmatch_missile
 	name = "cruise missile"
-	desc = "Огромная ракета, вероятно, запущенная из какой-то далёкой ракетной шахты в дальнем космосе."
+	desc = "An enormous missile, probably launched from a distant silo in deep space."
 	style = /datum/pod_style/missile/syndicate
 	explosionSize = list(0, 1, 2, 2)
 	effectShrapnel = TRUE
@@ -669,7 +669,7 @@
 
 /obj/effect/supplypod_rubble
 	name = "debris"
-	desc = "Небольшой кратер из обломков. При ближайшем рассмотрении выясняется, что обломки состоят в основном из фрагментов металла. Вы почти уверены, что они скоро рассеется."
+	desc = "A small crater filled with debris, mostly metal fragments on closer inspection. You are fairly sure it will disperse soon."
 	icon = 'icons/obj/supplypods.dmi'
 	layer = PROJECTILE_HIT_THRESHOLD_LAYER // We want this to go right below the layer of supplypods and supplypod_rubble's forground.
 	icon_state = "rubble_bg"

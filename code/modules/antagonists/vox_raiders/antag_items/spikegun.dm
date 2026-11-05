@@ -1,7 +1,7 @@
 /// Шипомет перезаряжаемый через "вокс батарейки"
 /obj/item/gun/energy/spike
 	name = "Vox spike gun"
-	desc = "Оружие причудливой формы с яркими пурпурными энергетическими светочами. Рукоять предназначена для когтистой руки. Выстреливает энергетическими кристаллами."
+	desc = "An oddly shaped weapon with bright purple energy lights. Its grip is designed for a clawed hand. Fires energy crystals."
 	icon = 'icons/obj/weapons/vox_guns.dmi'
 	icon_state = "spike"
 	item_state = "spike"
@@ -40,7 +40,7 @@
 
 /obj/item/gun/energy/spike/long
 	name = "Vox spike longgun"
-	desc = "Оружие причудливой формы с яркими пурпурными энергетическими светочами. Рукоять предназначена для когтистой руки. Выстреливает длинными энергетическими самовосстановимыми кристаллами с увеличенной проникающей способностью."
+	desc = "An oddly shaped weapon with bright purple energy lights. Its grip is designed for a clawed hand. Fires long, self-regenerating energy crystals with improved penetration."
 	icon_state = "spike_long"
 	item_state = "spike_long"
 	charge_sections = 6
@@ -56,7 +56,7 @@
 
 /obj/item/gun/energy/spike/bio
 	name = "Vox spike biogun"
-	desc = "Оружие причудливой формы с шипами-трубками для нанизывания на руку. Рукоять предназначена для когтистой руки и имеет заостренные полые шипы. Выстреливает большими энергетическими распадающимися заостренными кристаллами, выматывающие цель и рикошетящую о поверхность."
+	desc = "An oddly shaped weapon with tubular spikes for mounting on an arm. Its grip fits a clawed hand and bears sharp hollow spikes. Fires large, sharp, fragmenting energy crystals that exhaust targets and ricochet off surfaces."
 	icon_state = "spike_bio"
 	item_state = "spike_bio"
 	w_class = WEIGHT_CLASS_HUGE

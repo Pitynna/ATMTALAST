@@ -242,7 +242,7 @@
 /obj/item/rod_of_asclepius/proc/activated()
 	item_flags |= DROPDEL
 	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT(type))
-	desc = "Короткий деревянный посох с мистической змеёй, намертво приросшей к вашему предплечью. Он излучает целительную энергию, распространяющуюся на вас и окружающих."
+	desc = "A short wooden staff with a mystical snake firmly attached to your forearm. It radiates healing energy to you and those around you."
 	icon_state = "asclepius_active"
 	item_state = "asclepius_active"
 	activated = TRUE

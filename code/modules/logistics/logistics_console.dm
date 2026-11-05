@@ -1,6 +1,6 @@
 /obj/machinery/computer/logistics_core
 	name = "logistics core console"
-	desc = "Центральная консоль логистики. Позволяет управлять всеми логистическими сетями в секторе."
+	desc = "A central logistics console for managing every logistics network in the sector."
 	icon_keyboard = "logistics_key"
 	icon_screen = "logistics_core"
 	light_color = LIGHT_COLOR_BLUE

@@ -559,7 +559,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 
 	name = target_obj.name
 	ru_names = target_obj.get_ru_names_cached()
-	desc = "[target_type.desc] Цвет выглядит блеклым."
+	desc = "[target_type.desc] The color looks faded."
 	qdel(target_obj)
 	return target_type
 

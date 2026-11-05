@@ -66,7 +66,7 @@
 
 /obj/item/clothing/gloves/ring/gold/omnipotence
 	name = "omnipotence ring"
-	desc = "Кольцо отобранное у группы карликов на Лаваленде. История не важна. Главное — что оно было для них важно и оно блестит!"
+	desc = "A ring taken from a group of dwarves on Lavaland. The story doesn't matter. What matters is that it was important to them, and it shines!"
 
 /obj/item/clothing/gloves/ring/plastic
 	name =  "white plastic ring"

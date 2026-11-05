@@ -281,7 +281,7 @@
 
 /obj/item/clothing/suit/hooded/explorer/mining
 	name = "white explorer suit"
-	desc = "Ярко-белый бронированный костюм, созданный для экстренного спасения людей в суровых условиях. У вас не получится сохранять его чистым долгое время."
+	desc = "A bright-white armored suit designed for emergency rescues in harsh conditions. You will not keep it clean for long."
 	icon_state = "mining_explorer"
 	item_state = "mining_explorer"
 	item_color = "mining_explorer"
@@ -289,6 +289,6 @@
 
 /obj/item/clothing/head/hooded/explorer/mining
 	name = "white explorer hood"
-	desc = "Ярко-белый бронированный капюшон, созданный для экстренного спасения людей в суровых условиях. У вас не получится сохранять его чистым долгое время."
+	desc = "A bright-white armored hood designed for emergency rescues in harsh conditions. You will not keep it clean for long."
 	icon_state = "mining_explorer"
 	item_state = "mining_explorer"

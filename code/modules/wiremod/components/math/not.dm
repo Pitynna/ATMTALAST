@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/not
 	display_name = "Отрицание"
-	desc = "Компонент, который инвертирует значение входящего объекта."
+	desc = "A component that inverts the value of its input."
 	category = "Math"
 
 	/// The input port

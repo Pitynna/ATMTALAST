@@ -302,7 +302,7 @@
 
 /obj/machinery/mineral/equipment_vendor/golem/Initialize(mapload)
 	. = ..()
-	desc += "\nПохоже, добавлены новые позиции."
+	desc += "\nSome new items seem to have been added."
 
 /**********************Mining Equiment Vendor (Gulag)**************************/
 

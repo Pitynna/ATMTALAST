@@ -10,7 +10,7 @@
 
 /obj/item/hivelordstabilizer/molten_mass
 	name = "gooey molten mass"
-	desc = "Странноватые сгустки, снятые с головы магмового рыбы-молота. Являются природным аналогом стабилизатора регенеративных ядер."
+	desc = "Strange growths harvested from a magma hammerhead's head. A natural equivalent of a regenerative core stabilizer."
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "gooey_molten_mass"
 	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
@@ -65,7 +65,7 @@
 /obj/item/organ/internal/regenerative_core/proc/preserved(implanted = 0)
 	preserved = TRUE
 	update_icon()
-	desc = "Все, что осталось от легиона. Оно стабилизированно, и можно не бояться, что оно сгниёт."
+	desc = "All that remains of a legion. It has been stabilized, so there is no risk of it rotting."
 	if(implanted)
 		SSblackbox.record_feedback("nested tally", "hivelord_core", 1, list("[type]", "implanted"))
 	else
@@ -74,7 +74,7 @@
 /obj/item/organ/internal/regenerative_core/proc/go_inert()
 	inert = TRUE
 	name = "decayed regenerative core"
-	desc = "Всё, что осталось от легиона. Оно сгнило и совершенно бесполезно."
+	desc = "All that remains of a legion. It has rotted away and is completely useless."
 	ru_names = alist(
 		NOMINATIVE = "сгнившее регенеративное ядро",
 		GENITIVE = "сгнившего регенеративного ядра",
@@ -199,11 +199,11 @@
 
 /obj/item/organ/internal/regenerative_core/legion/go_inert()
 	..()
-	desc = "[DECLENT_RU_CAP(src, NOMINATIVE)] утратило силу. Оно сгнило и совершенно бесполезно."
+	desc = "[capitalize(name)] has lost its power. It has rotted away and is completely useless."
 
 /obj/item/organ/internal/regenerative_core/legion/preserved(implanted = 0)
 	..()
-	desc = "[DECLENT_RU_CAP(src, NOMINATIVE)] стабилизированно. Теперь его можно безопасно использовать для полного исцеления."
+	desc = "[capitalize(name)] has been stabilized. It can now be safely used for a full recovery."
 
 /************************Legion tumor********************/
 

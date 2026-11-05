@@ -109,7 +109,7 @@
 		force = 0
 		throwforce = 0
 		set_ru_names_suffix(" (разорван[GEND_A_O_Y(to_mimic)])")
-		desc = "Картонная упаковка с разорванным дном. Можно порезаться."
+		desc = "A carton with its bottom torn open. Watch out for paper cuts."
 	else
 		if(prob(33))
 			var/obj/item/shard/stab_with = new(to_mimic.drop_location())
@@ -352,7 +352,7 @@
 	. = ..()
 	desc = initial(desc)
 	if(!is_glass)
-		desc += " Вы не уверены, что сделать это из коробки было самой удачной идеей."
+		desc += " You're not sure making this out of a carton was the best idea."
 
 /obj/item/reagent_containers/cup/glass/bottle/molotov/update_icon_state()
 	var/obj/item/reagent_containers/cup/glass/bottle/bottle = locate() in contents

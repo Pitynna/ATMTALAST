@@ -161,8 +161,8 @@
 	reagent_state = LIQUID
 	color = "#5ec3cc" // rgb: 96, 165, 132
 	drink_icon = "moonlight_d"
-	drink_name = "Мунлин"
-	drink_desc = "Странный напиток с белыми кристаллами! Будьте внимательны, если вы таяран!"
+	drink_name = "Moonlin"
+	drink_desc = "A strange drink with white crystals! Be careful if you're Tajaran!"
 	overdose_threshold = 20
 	addiction_chance = 20
 	addiction_threshold = 15
@@ -1153,8 +1153,8 @@
 	shock_reduction = 50
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	drink_icon = "matedecoca"
-	drink_name = "кружка Мате де Кока"
-	drink_desc = "Чай из кокаина. Особенно интересный напиток."
+	drink_name = "mug of mate de coca"
+	drink_desc = "Coca-leaf tea. A particularly interesting drink."
 
 /datum/reagent/matedecoca/on_mob_life(mob/living/M)
 	var/update_flags = STATUS_UPDATE_NONE

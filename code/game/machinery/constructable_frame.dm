@@ -722,7 +722,7 @@ to destroy them and players will be able to make replacements.
 	)
 
 /obj/item/circuitboard/dnaforensics
-	board_name = "Анализатор ДНК"
+	board_name = "\improper DNA analyzer"
 	build_path = /obj/machinery/dnaforensics
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
@@ -733,7 +733,7 @@ to destroy them and players will be able to make replacements.
 	)
 
 /obj/item/circuitboard/microscope
-	board_name = "Электронный микроскоп"
+	board_name = "microscope"
 	build_path = /obj/machinery/microscope
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
@@ -1302,7 +1302,7 @@ to destroy them and players will be able to make replacements.
 	)
 
 /obj/item/circuitboard/minesweeper
-	board_name = "Сапер"
+	board_name = "Minesweeper"
 	build_path = /obj/machinery/arcade/minesweeper
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_SERVICE
@@ -1346,7 +1346,7 @@ to destroy them and players will be able to make replacements.
 	set_type("PlasmaMate")
 
 /obj/item/circuitboard/anomaly_generator
-	board_name = "генератор аномалий"
+	board_name = "anomaly generator"
 	build_path = /obj/machinery/power/anomaly_generator
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_SCIENCE
@@ -1370,7 +1370,7 @@ to destroy them and players will be able to make replacements.
 	)
 
 /obj/item/circuitboard/portagrav
-	board_name = "Портативный гравигенератор"
+	board_name = "Portable Gravity Generator"
 	build_path = /obj/machinery/power/portagrav
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
@@ -1382,7 +1382,7 @@ to destroy them and players will be able to make replacements.
 	)
 
 /obj/item/circuitboard/coffeemaker/standard
-	board_name = "Кофемашина \"Моделло 3\""
+	board_name = "Modello 3 Coffeemaker"
 	build_path = /obj/machinery/coffeemaker/standard
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_SERVICE
@@ -1395,7 +1395,7 @@ to destroy them and players will be able to make replacements.
 	)
 
 /obj/item/circuitboard/coffeemaker/impressa
-	board_name = "Кофемашина \"Импресса Моделло 5\""
+	board_name = "Impressa Modello 5 Coffeemaker"
 	build_path = /obj/machinery/coffeemaker/impressa
 	board_type = "machine"
 	greyscale_colors = CIRCUIT_COLOR_SERVICE

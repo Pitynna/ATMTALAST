@@ -414,7 +414,7 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio/portal
 	name = "office radio"
-	desc = "Офисное радио для лабораторий в соляных шахтах."
+	desc = "An office radio for laboratories in the salt mines."
 	icon_state = "radio_portal"
 	item_state = "radio_portal"
 	default_frequency = AI_FREQ
@@ -764,7 +764,7 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio/borg
 	name = "Cyborg Radio"
-	desc = "Радио-компонент, предназначенный для использования в роботизированных системах."
+	desc = "A radio component designed for robotic systems."
 	icon = 'icons/obj/robot_component.dmi' // Cyborgs radio icons should look like the component.
 	icon_state = "radio"
 	has_loudspeaker = TRUE
@@ -891,7 +891,7 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio/phone
 	name = "phone"
-	desc = "Телефон, подключённый к внутренней системе связи станции. Несколько старомодно для 26 века."
+	desc = "A telephone connected to the station's internal communications system. Rather old-fashioned for the 26th century."
 	gender = MALE
 	icon = 'icons/obj/items.dmi'
 	icon_state = "red_phone"
@@ -901,7 +901,7 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 
 /obj/item/radio/phone/medbay
 	name = "medbay phone"
-	desc = "Телефон, настроенный на медицинскую частоту системы связи станции. Дзинь."
+	desc = "A telephone tuned to the station's medical communications frequency. Ring ring."
 	default_frequency = MED_I_FREQ
 
 /obj/item/radio/phone/medbay/get_internal_channels()

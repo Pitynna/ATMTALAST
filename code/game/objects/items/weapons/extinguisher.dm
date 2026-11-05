@@ -126,7 +126,7 @@
 
 /obj/item/extinguisher/update_desc(updates = ALL)
 	. = ..()
-	desc = "Предохранитель [safety ? "включён" : "выключен"]."
+	desc = "The safety is [safety ? "on" : "off"]."
 
 /obj/item/extinguisher/attack_self(mob/user)
 	if(blowing_up)

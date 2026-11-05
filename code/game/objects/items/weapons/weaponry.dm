@@ -411,7 +411,7 @@
 
 /obj/item/melee/baseball_bat/homerun/central_command/srt
 	name = "SRT tactical baseball bat"
-	desc = "Выдвижная тактическая бита Центрального командования \"Нанотрейзен\". Скорее всего, к этому моменту командование станции уже осознало, что их коленные чашечки не переживут эту встречу."
+	desc = "A telescopic tactical bat used by Nanotrasen Central Command. By now, station command has probably realized that their kneecaps will not survive this meeting."
 	item_state = "srt_bat_0"
 	item_state_on = "srt_bat_1"
 	icon_state = "srt_bat_0"
@@ -480,7 +480,7 @@
 
 /obj/item/melee/nutcracker
 	name = "nutcracker"
-	desc = "Простейшая дубина из кости. Воплощение силы первобытного разума и природной мощи. Настоящая классика."
+	desc = "A simple bone club. The embodiment of primitive ingenuity and natural strength. A true classic."
 	icon_state = "nutcracker"
 	item_state = "nutcracker"
 	gender = FEMALE

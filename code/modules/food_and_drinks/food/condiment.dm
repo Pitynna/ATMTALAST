@@ -327,7 +327,7 @@
 
 /obj/item/reagent_containers/condiment/animalfeed
 	name = "pet food package"
-	desc = "Корм для домашних животных. Вы же точно не хотите это пробовать?.."
+	desc = "Pet food. You aren't seriously going to taste it, are you?.."
 	icon = 'icons/obj/pet_bowl.dmi'
 	icon_state = "pet_food"
 	volume = 80

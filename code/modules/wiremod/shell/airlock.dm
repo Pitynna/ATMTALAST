@@ -39,7 +39,7 @@
 
 /obj/item/circuit_component/airlock
 	display_name = "Программируемый шлюз"
-	desc = "Интерфейс шлюза. Включает в себя общие параметры шлюза."
+	desc = "An airlock interface. Provides access to the airlock's common parameters."
 
 	/// The shell, if it is an airlock.
 	var/obj/machinery/door/airlock/attached_airlock
@@ -154,8 +154,7 @@
 
 /obj/item/circuit_component/airlock_access_event
 	display_name = "Событие доступа к шлюзу"
-	desc = "Событие, которое можно обработать с помощью компонентов схемы, чтобы определить, \
-			следует ли открыть шлюз при попытке получения доступа объектом."
+	desc = "An event that circuit components can handle to decide whether the airlock should open when an object attempts to access it."
 	circuit_flags = CIRCUIT_FLAG_INSTANT
 
 	/// The shell, if it is an airlock.

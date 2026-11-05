@@ -161,7 +161,7 @@
 
 /obj/item/shovel/spade/wooden
 	name = "wooden spade"
-	desc = "Маленький инструмент для вскапывания и перемещения земли. Эта модель сделана из древесины."
+	desc = "A small tool for digging and moving soil. This model is made from wood."
 	icon_state = "wooden_spade"
 	lefthand_file = 'icons/mob/inhands/lavaland/misc_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/lavaland/misc_righthand.dmi'

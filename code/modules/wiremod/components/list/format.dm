@@ -6,8 +6,7 @@
  */
 /obj/item/circuit_component/format
 	display_name = "Формат списка"
-	desc = "Компонент, который форматирует списки, заменяя \"n\" в строке формата \
-			соответствующим n-ным элементом списка."
+	desc = "A component that formats lists, replacing n in the format string with the corresponding nth list entry."
 	category = "List"
 
 	var/static/regex/format_component/list_param_regex = new(@"%([0-9]+)", "g")
@@ -75,8 +74,7 @@
  */
 /obj/item/circuit_component/format/assoc
 	display_name = "Формат ассоциативного списка"
-	desc = "Компонент, который форматирует ассоциативные списки, \
-			заменяя key в строке формата соответствующим элементом списка\[key]."
+	desc = "A component that formats associative lists, replacing key in the format string with the corresponding list\[key] entry."
 
 	var/static/regex/format_component/assoc_param_regex = new(@"%([a-zA-Z0-9_]+)", "g")
 

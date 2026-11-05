@@ -1,7 +1,7 @@
 // Upgrade for ore satchels that make it collect ore in 3x3 area
 /obj/item/mining_satchel_upgrade
 	name = "mining satchel upgrade"
-	desc = "Магнитное улучшение сумок для руды, позволяющее собирать руду в области 3 на 3 вокруг пользователя."
+	desc = "A magnetic ore satchel upgrade that collects ore in a 3-by-3 area around its user."
 	icon = 'icons/obj/mining_satchel_upgrade.dmi'
 	icon_state = "mining_upgrade0"
 	origin_tech = "materials=3;engineering=2"

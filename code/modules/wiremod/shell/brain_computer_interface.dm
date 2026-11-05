@@ -1,7 +1,6 @@
 /obj/item/organ/internal/cyberimp/brain/bci
 	name = "brain-computer interface"
-	desc = "Имплант, предназначенный для управления интегральными схемами напрямую. \
-			Устанавливается в головной мозге, подключаясь к нейронной системе пользователя."
+	desc = "An implant for directly controlling integrated circuits. Installed in the brain, it connects to the user's nervous system."
 	icon = 'icons/obj/circuits.dmi'
 	icon_state = "bci"
 	slot = INTERNAL_ORGAN_BRAIN_COMPUTER_INTERFACE
@@ -76,7 +75,7 @@
 
 /obj/item/circuit_component/bci_core
 	display_name = "Ядро ИМК"
-	desc = "Контролирует основные операции ИМК."
+	desc = "Controls the BCI's basic operations."
 
 	/// A reference to the action button to look at charge/get info
 	var/datum/action/innate/bci_charge_action/charge_action
@@ -279,8 +278,7 @@
 
 /obj/machinery/bci_implanter
 	name = "brain-computer interface manipulation chamber"
-	desc = "Машина, которая при наличии интерфейса \"Мозг-Компьютер\" имплантирует его в тело гуманоида. \
-			В противном случае она удалит все имеющиеся ИМК."
+	desc = "A machine that implants an available brain-computer interface into a humanoid. If none is available, it removes any existing BCIs instead."
 	icon = 'icons/obj/machines/bci_implanter.dmi'
 	icon_state = "bci_implanter"
 	base_icon_state = "bci_implanter"

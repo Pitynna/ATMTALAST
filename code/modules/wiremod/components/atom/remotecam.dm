@@ -11,7 +11,7 @@
  */
 /obj/item/circuit_component/remotecam
 	display_name = "Абстрактная камера"
-	desc = "Это абстрактный родительский тип — не используйте его напрямую!"
+	desc = "This is an abstract parent type. Do not use it directly!"
 	category = "Entity"
 	circuit_flags = CIRCUIT_NO_DUPLICATES
 
@@ -118,7 +118,7 @@
  * Initializes the camera
  */
 /obj/item/circuit_component/remotecam/proc/init_camera()
-	shell_camera.desc = "Эта камера — часть схемы. Если вы видите это описание, сообщите о баге!"
+	shell_camera.desc = "This camera is part of a circuit. If you can see this description, please report a bug!"
 	shell_camera.use_power = NO_POWER_USE
 	shell_camera.start_active = TRUE
 	shell_camera.internal_light = FALSE
@@ -323,9 +323,7 @@
 
 /obj/item/circuit_component/remotecam/bci
 	display_name = "ИМК камера"
-	desc = "Оцифровывает зрение пользователя для мобильного видеонаблюдения. \
-			Для работы оцифровщика необходимо наличие полностью работоспособного зрения. \
-			Диапазон действия камеры может быть ближним или дальним. Поле \"Сеть\" используется для настройки сети камер."
+	desc = "Digitizes the user's vision for mobile video surveillance. Requires fully functional eyesight. The camera can use a short or long range. The Network field configures the camera network."
 	category = "BCI"
 	camera_prefix = "ИМК"
 	required_shells = list(/obj/item/organ/internal/cyberimp/brain/bci)
@@ -338,14 +336,12 @@
 
 /obj/item/circuit_component/remotecam/drone
 	display_name = "Удаленная камера"
-	desc = "Снимает окружающую обстановку для мобильного видеонаблюдения. \
-			Диапазон действия камеры может быть ближним или дальним. Поле \"Сеть\" используется для настройки сети камеры."
+	desc = "Records the surroundings for mobile video surveillance. The camera can use a short or long range. The Network field configures the camera network."
 	camera_prefix = "Drone"
 
 /obj/item/circuit_component/remotecam/airlock
 	display_name = "Камера-глазок"
-	desc = "Камера-глазок, которая снимает происходящее с обеих сторон шлюза. \
-			Сетевое поле используется для организации сети камер."
+	desc = "A peephole camera that records both sides of an airlock. The Network field configures the camera network."
 	camera_prefix = "Airlock"
 
 	/// Hardcode camera to near range
@@ -353,9 +349,7 @@
 
 /obj/item/circuit_component/remotecam/polaroid
 	display_name = "Дополнение к потоковой передачи камеры"
-	desc = "Передаёт изображение с камеры-полароида в виде цифрового потока для мобильного видеонаблюдения. \
-			Видеопоток с камеры не будет работать, если она хранится в контейнере, например, в рюкзаке или коробке. \
-			Поле \"Сеть\" используется для настройки сети камеры."
+	desc = "Streams the Polaroid camera's image for mobile video surveillance. The stream is unavailable while the camera is stored in a container, such as a backpack or box. The Network field configures the camera network."
 	camera_prefix = "Polaroid"
 
 	/// Hardcode camera to near range

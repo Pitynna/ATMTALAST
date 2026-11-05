@@ -159,8 +159,8 @@
 /area/ruin/unpowered)
 "nr" = (
 /obj/structure/wooden_sign{
-	desc = "Астроак открыт для посещения";
-	name = "Астроак"
+	desc = "Astroak is open to visitors.";
+	name = "Astroak"
 	},
 /obj/structure/sign/holy{
 	pixel_y = 32

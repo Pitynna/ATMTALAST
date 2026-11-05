@@ -11,7 +11,7 @@
 
 /obj/item/organ/internal/liver
 	name = "liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала человеку."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a human."
 	gender = FEMALE
 	icon_state = "liver"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN

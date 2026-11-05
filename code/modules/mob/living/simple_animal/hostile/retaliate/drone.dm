@@ -196,7 +196,7 @@
 
 /obj/item/inactive_drone
 	name = "Inactive drone"
-	desc = "Большой дрон. Кажется, неактивен."
+	desc = "A large drone. It appears inactive."
 	w_class = WEIGHT_CLASS_GIGANTIC
 	item_flags = NOPICKUP
 	icon_state = "inactive_drone"
@@ -236,7 +236,7 @@
 
 /obj/item/drone_manual
 	name = "Strange looking Manual"
-	desc = "На обложке этой книги вы можете увидеть изображение боевого дрона. Это руководство по его эксплуатации."
+	desc = "The cover depicts a combat drone. This is its operating manual."
 	gender = MALE
 	icon = 'icons/obj/library.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/library_lefthand.dmi'
@@ -256,7 +256,7 @@
 
 /obj/item/drone_modules
 	name = "Drone module"
-	desc = "Если вы это видите — сообщите в баг-репорты."
+	desc = "If you can see this, please file a bug report."
 	icon_state = "drone_BCM"
 	var/explanation = "Вы не должны были этого видеть."
 
@@ -268,17 +268,17 @@
 
 /obj/item/drone_modules/drone_BCM
 	name = "Drone BCM"
-	desc = "Неплохо сделанная плата."
+	desc = "A reasonably well-made circuit board."
 	explanation = "Это базовая версия платы стандартного модуля для боевых дронов, сделанная по схеме из книги. Она позволит управлять роботом как обычным дроном без интеллекта."
 
 /obj/item/drone_modules/drone_IFF
 	name = "Drone IFFM"
-	desc = "Неплохо сделанная плата."
+	desc = "A reasonably well-made circuit board."
 	icon_state = "drone_IFF"
 	explanation = "Это плата модуля Свой-Чужой для боевых дронов. Сделанная по схеме из книги, она не допускает изменений — а значит, дроны с подобным модулем всегда будут участвовать в бою на стороне \"Синдиката\"."
 
 /obj/item/drone_modules/drone_AI
 	name = "Drone AICM"
-	desc = "Неплохо сделанная плата."
+	desc = "A reasonably well-made circuit board."
 	icon_state = "drone_AI"
 	explanation = "Это продвинутый модуль контроля для боевых дронов. Позволит дрону получить более продвинутый интеллект. Но первоначальное подключение все ещё зависит от внутренней сети, которая может и не быть активной."

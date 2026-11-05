@@ -2,7 +2,7 @@
 
 /obj/item/radio/headset/vox
 	name = "vox headset"
-	desc = "Наушник дальней связи для поддержания связи со стаей."
+	desc = "A long-range headset for staying in touch with the flock."
 	origin_tech = "syndicate=3"
 	ks1type = /obj/item/encryptionkey/vox
 	requires_tcomms = FALSE
@@ -12,7 +12,7 @@
 
 /obj/item/radio/headset/vox/alt
 	name = "vox protect headset"
-	desc = "Наушник дальней связи для поддержания связи со стаей. Защищает ушные раковины от громких звуков"
+	desc = "A long-range headset for staying in touch with the flock. Protects the ears from loud sounds."
 	icon_state = "com_headset_alt"
 	item_state = "com_headset_alt"
 	item_flags = BANGPROTECT_MINOR

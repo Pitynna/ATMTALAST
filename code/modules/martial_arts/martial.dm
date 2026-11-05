@@ -394,7 +394,7 @@ GAME_VERB_PROC_DESC(/mob/living/carbon/human, dirslash_enabling, "Атака п�
 
 /obj/item/storage/belt/champion/wrestling/true
 	name = "True Champion's belt"
-	desc = "Вы — лучший! и Вы это знаете!"
+	desc = "You are the best, and you know it!"
 
 /obj/item/storage/belt/champion/wrestling/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
@@ -706,7 +706,7 @@ GAME_VERB_PROC_DESC(/mob/living/carbon/human, dirslash_enabling, "Атака п�
 
 /obj/item/midichlorian_injector
 	name = "midichlorian injector"
-	desc = "Странный автоинъектор, наполненный странной светящейся жидкостью. Да прибудет с тобой сила."
+	desc = "A strange auto-injector filled with a strange glowing liquid. May the Force be with you."
 	icon = 'icons/obj/ninjaobjects.dmi'
 	icon_state = "injector"
 	var/used = FALSE
@@ -716,7 +716,7 @@ GAME_VERB_PROC_DESC(/mob/living/carbon/human, dirslash_enabling, "Атака п�
 
 /obj/item/midichlorian_injector/update_desc(updates = ALL)
 	. = ..()
-	desc = used ? "Пустой автоинъектор." : initial(desc)
+	desc = used ? "An empty autoinjector." : initial(desc)
 
 /obj/item/midichlorian_injector/attack_self(mob/living/carbon/human/user)
 	if(!istype(user))

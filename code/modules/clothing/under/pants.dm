@@ -40,7 +40,7 @@
 
 /obj/item/clothing/under/pants/lowjeans
 	name = "low-rise jeans"
-	desc = "Джинсы с низкой посадкой. Для бунтарей и желающих показать своё исподнее окружающим."
+	desc = "Low-rise jeans for rebels and people who want to show everyone their underwear."
 	icon_state = "lowjeans"
 	item_color = "lowjeans"
 	species_restricted = list(SPECIES_HUMAN)
@@ -105,7 +105,7 @@
 
 /obj/item/clothing/under/pants/galifepants
 	name = "check breeches"
-	desc = "Штаны широкого фасона в бёдрах."
+	desc = "Trousers cut wide around the hips."
 	icon_state = "galifepants"
 	item_state = "galifepants"
 	item_color = "galifepants"
@@ -127,7 +127,7 @@
 
 /obj/item/clothing/under/pants/sandpants
 	name = "long sand pants"
-	desc = "Брюки песочного цвета, расклешённые от колена."
+	desc = "Sand-colored trousers flared below the knee."
 	icon_state = "sandpants"
 	item_state = "sandpants"
 	item_color = "sandpants"

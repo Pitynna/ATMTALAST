@@ -164,7 +164,7 @@
 // MARK: Rubber Toolbox
 /obj/item/toy/toolbox
 	name = "Rubber Toolbox"
-	desc = "Практикуйте свой робаст!"
+	desc = "Practice your robust skills!"
 	icon_state = "rubber_toolbox"
 	damtype = STAMINA
 	force = 10

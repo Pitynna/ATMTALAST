@@ -62,7 +62,7 @@
 // Base bench types by geometry
 /obj/structure/chair/sofa/bench
 	name = "bench"
-	desc = "Спроектирована таким образом, чтобы на ней было удобно сидеть, но невозможно спать."
+	desc = "Designed to be comfortable for sitting but impossible to sleep on."
 	gender = FEMALE
 	icon = 'icons/map_icons/objects.dmi'
 	icon_state = "/obj/structure/chair/sofa/bench"

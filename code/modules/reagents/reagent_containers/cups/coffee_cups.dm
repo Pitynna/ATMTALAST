@@ -19,7 +19,7 @@
 // MARK: Coffee cup
 /obj/item/reagent_containers/cup/glass/coffee_cup/normal
 	name = "coffee cup"
-	desc = "Удобный бумажный стакан со снимающейся крышкой. Предназначен для питья кофе."
+	desc = "A convenient paper cup with a removable lid, intended for coffee."
 	icon_state = "coffeecup"
 	base_icon_state = "coffeecup"
 	possible_transfer_amounts = list(10,25,50)
@@ -28,7 +28,7 @@
 
 /obj/item/reagent_containers/cup/glass/coffee_cup/small
 	name = "small coffee cup"
-	desc = "Небольшой бумажный стакан. Обычно в таких подают кофе. Далеко не самый удобный."
+	desc = "A small paper cup commonly used to serve coffee. Not especially convenient."
 	icon_state = "coffeecup_small"
 	base_icon_state = "coffeecup_small"
 	possible_transfer_amounts = list(10,30)
@@ -40,7 +40,7 @@
 
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor
 	name = "cup of suspicious liquid"
-	desc = "На боковой стороне крупными, едва заметными, чернилами напечатан символ химической опасности."
+	desc = "A large, barely visible chemical hazard symbol is printed on its side."
 	var/selected_reagent
 
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor/Initialize(mapload)

@@ -129,24 +129,24 @@
 
 /obj/item/autoimplanter/oneuse/sec_hud
 	name = "autoimplanter (sechud)"
-	desc = "Одноразовый автоимплантер, содержащий в себе охранный ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing a security HUD. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/hud/security
 	icon_state = "autoimplanter"
 
 /obj/item/autoimplanter/oneuse/med_hud
 	name = "autoimplanter (medhud)"
-	desc = "Одноразовый автоимплантер, содержащий в себе медицинский ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing a medical HUD. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/hud/medical
 	icon_state = "autoimplanter"
 
 /obj/item/autoimplanter/oneuse/diagnostic_hud
 	name = "autoimplanter (diagnostic hud)"
-	desc = "Одноразовый автоимплантер, содержащий в себе диагностический ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing a diagnostic HUD. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/hud/diagnostic
 	icon_state = "autoimplanter"
 
 /obj/item/autoimplanter/oneuse/meson_eyes
 	name = "autoimplanter (meson)"
-	desc = "Одноразовый автоимплантер, содержащий в себе мезонный ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing meson vision. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/meson
 	icon_state = "autoimplanter"

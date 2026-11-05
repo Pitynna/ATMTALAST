@@ -71,7 +71,7 @@
 	if(prob(firechance))
 		var/obj/effect/decal/cleanable/liquid_fuel/oil = new(drop_turf)
 		oil.name = "fat"
-		oil.desc = "Ой-ой, похоже это жир из [declent_ru(GENITIVE)]."
+		oil.desc = "Uh-oh, this looks like grease from [name]."
 		oil.ru_names = alist(
 			NOMINATIVE = "жир",
 			GENITIVE = "жира",

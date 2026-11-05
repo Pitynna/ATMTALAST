@@ -715,17 +715,17 @@
 	icon_state = pick("pod_civ", "pod_black", "pod_mil", "pod_synd", "pod_gold", "pod_industrial")
 	switch(icon_state)
 		if("pod_civ")
-			desc = "Элегантный гражданский челнок."
+			desc = "An elegant civilian pod."
 		if("pod_black")
-			desc = "Чёрный челнок без опознавательных знаков."
+			desc = "An unmarked black pod."
 		if("pod_mil")
-			desc = "Тёмно-серый челнок с эмблемой военного подразделения \"Нанотрейзен\"."
+			desc = "A dark gray pod bearing the emblem of a Nanotrasen military unit."
 		if("pod_synd")
-			desc = "Грозный военный челнок с надписью \"Нахуй НТ\" на борту."
+			desc = "An intimidating military pod with \"Fuck NT\" written on its side."
 		if("pod_gold")
-			desc = "Позолоченный челнок — явно стоил кому-то целого состояния."
+			desc = "A gold-plated pod. It must have cost someone a fortune."
 		if("pod_industrial")
-			desc = "Промышленный челнок с усиленной конструкцией."
+			desc = "An industrial pod with a reinforced frame."
 	update_icons()
 
 /obj/spacepod/proc/toggle_internal_tank(mob/user)

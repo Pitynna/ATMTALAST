@@ -75,8 +75,7 @@
 // MARK: P-40 Acer
 /obj/item/gun/projectile/automatic/pistol/sp8
 	name = "P-40 \"Acer\" pistol"
-	desc = "Штурмовой пистолет под патрон .40 N&R производства \"Mars Special\". Высокая точность, низкая отдача и усиленный ствол \
-			для стрельбы боеприпасами повышенной мощности. Используется элитными подразделениями сил защиты активов \"Нанотрейзен\"."
+	desc = "A .40 N&R assault pistol manufactured by Mars Special. Highly accurate, with low recoil and a reinforced barrel for high-power ammunition. Used by elite Nanotrasen Asset Protection units."
 	greyscale_config = /datum/greyscale_config/sp8
 	greyscale_colors = COLOR_ALMOST_BLACK
 	icon_state = "/obj/item/gun/projectile/automatic/pistol/sp8"
@@ -153,9 +152,7 @@
 
 /obj/item/gun/projectile/automatic/pistol/aps/scarecrow
 	name = "\"Scarecrow\" pistol"
-	desc = "Автоматический пистолет калибра 10x25 мм. Прозван \"Пугалом\" за способность разгонять толпу громкой стрельбой и высокой скорострельностью. \
-			На деле — дешёвая поделка из низкокачественных компонентов: кучность падает с каждым выстрелом, а убойность оставляет желать лучшего. \
-			Для питания использует магазины для пистолета \"Стечкин\"."
+	desc = "A 10x25mm automatic pistol nicknamed Scarecrow for its loud, rapid crowd-dispersing gunfire. In reality, a cheap product made from poor components: grouping worsens with every shot, and stopping power is unimpressive. Uses Stechkin pistol magazines."
 	icon_state = "scarecrow"
 	fire_sound = 'sound/weapons/gunshots/1scarecrow.ogg'
 	magin_sound = 'sound/weapons/gun_interactions/scarecrowmagin.ogg'

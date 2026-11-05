@@ -9,8 +9,7 @@ Almost every mining medic related stuff
 
 /obj/item/clothing/accessory/camera
 	name = "mining camera"
-	desc = "Небольшая нагрудная видеокамера, обладающая массивным датчиком, позволяющим считывать датчики костюма с основной станции. \
-			Данный тип камер позволяет вести трансляцию как на планшет шахтёрского врача, так и в развлекательную сеть станции."
+	desc = "A small body camera with a large sensor that reads suit sensor data from the main station. Can stream to a mining medic's tablet and the station entertainment network."
 	gender = FEMALE
 	lefthand_file = 'icons/mob/inhands/lavaland/misc_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/lavaland/misc_righthand.dmi'
@@ -120,7 +119,7 @@ Almost every mining medic related stuff
 
 /obj/item/storage/box/mining_cameras
 	name = "mining camera box"
-	desc = "Небольшая коробка, предназначенная для хранения шахтёрских видеокамер."
+	desc = "A small box for storing mining cameras."
 	icon_state = "mining_camera_box"
 	storage_slots =  12
 	max_combined_w_class = INFINITY
@@ -134,7 +133,7 @@ Almost every mining medic related stuff
 
 /obj/item/storage/box/sec_cameras
 	name = "mining camera box"
-	desc = "Небольшая коробка, предназначенная для хранения нагрудных видеокамер службы безопасности."
+	desc = "A small box for storing security body cameras."
 	icon_state = "security_camera_box"
 
 /obj/item/storage/box/sec_cameras/populate_contents()
@@ -143,7 +142,7 @@ Almost every mining medic related stuff
 
 /obj/item/camera_bug/mining
 	name = "mining camera monitor"
-	desc = "Небольшое устройство, считывающее данные с шахтёрских видеокамер. Позволяет следить за тем, как шахтёры борятся за жизнь на просторах Лазиса."
+	desc = "A small device receiving data from mining cameras. Lets you watch miners struggle for survival across Lazis."
 	icon_state = "mining_monitor"
 	lefthand_file = 'icons/mob/inhands/lavaland/misc_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/lavaland/misc_righthand.dmi'

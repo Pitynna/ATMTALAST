@@ -61,7 +61,7 @@
 
 /obj/item/cultivator/rake
 	name = "rake"
-	desc = "Их используют, чтобы удалить сорняки или почесать спину."
+	desc = "Used to remove weeds or scratch your back."
 	icon_state = "rake"
 	toolspeed = 1
 	belt_icon = null
@@ -302,7 +302,7 @@
 
 /obj/item/conductive_organ
 	name = "conductive organ"
-	desc = "небольшой желтоватый мешочек, добываемый из лавового панцирника. Является мощным удобрением, значительно повышающим урожай и уровень нутриментов растения."
+	desc = "A small yellowish sac harvested from a lava shellback. A powerful fertilizer that greatly increases a plant's yield and nutriment content."
 	gender = MALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "conductive_organ"

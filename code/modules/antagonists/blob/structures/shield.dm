@@ -2,7 +2,7 @@
 	name = "strong blob"
 	icon_state = "blob_shield"
 	desc = "Some blob creature thingy"
-	var/damaged_desc = "Стена дергающихся щупалец."
+	var/damaged_desc = "A wall of twitching tendrils."
 	max_integrity = BLOB_STRONG_MAX_HP
 	health_regen = BLOB_STRONG_HP_REGEN
 	brute_resist = BLOB_STRONG_BRUTE_RESIST

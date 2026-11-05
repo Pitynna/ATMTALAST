@@ -92,7 +92,7 @@
 "C" = (
 /obj/structure/table/reinforced,
 /obj/item/phone{
-	name = "НЕконспиративнный телефон"
+	name = "NOT a Covert Phone"
 	},
 /obj/item/reagent_containers/food/snacks/baguette,
 /obj/item/lipstick/random{

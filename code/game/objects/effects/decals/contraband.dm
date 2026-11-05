@@ -128,7 +128,7 @@
 	if(!ruined)
 		original_name = name
 		name = "poster — [original_name]"
-		desc = "Большой лист устойчивой к космическим условиям печатной бумаги.\n[desc]"
+		desc = "A large sheet of space-resistant printed paper.\n[desc]"
 		ru_names = build_poster_ru_names()
 
 /obj/structure/sign/poster/proc/build_poster_ru_names()
@@ -273,7 +273,7 @@
 // MARK: Contraband posters
 /obj/structure/sign/poster/contraband
 	poster_item_name = "contraband poster"
-	poster_item_desc = "Этот постер оснащён собственной автоматической клеевой системой для удобного крепления на любую вертикальную поверхность. Его вульгарные темы сделали его контрабандой на объектах \"Нанотрейзен\"."
+	poster_item_desc = "This poster comes with its own automatic adhesive mechanism, for easy pinning to any vertical surface. Its vulgar themes have marked it as contraband aboard Nanotrasen space facilities."
 
 /obj/structure/sign/poster/contraband/random
 	name = "random contraband poster"
@@ -657,7 +657,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/lusty_xenomorp
 //MARK: Official posters
 /obj/structure/sign/poster/official
 	poster_item_name = "motivational poster"
-	poster_item_desc = "Официальный постер от \"Нанотрейзен\", призванный воспитывать покорную и послушную рабочую силу. Оснащён передовой клеевой основой для удобного крепления на любую вертикальную поверхность."
+	poster_item_desc = "An official Nanotrasen-issued poster to foster a compliant and obedient workforce. It comes with state-of-the-art adhesive backing, for easy pinning to any vertical surface."
 	poster_item_icon_state = "rolled_poster_legit"
 
 /obj/structure/sign/poster/official/random
@@ -1057,7 +1057,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/fruit_bowl, 32, 
 
 /obj/structure/sign/poster/secret
 	poster_item_name = "Secret poster"
-	poster_item_desc = "Крайне Секретный постер."
+	poster_item_desc = "A Top Secret poster."
 
 /obj/structure/sign/poster/secret/lady
 	name = "Scientist lady"

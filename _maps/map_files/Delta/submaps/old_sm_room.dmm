@@ -1311,7 +1311,7 @@
 /obj/item/crowbar/red{
 	desc = "...";
 	force = 3;
-	name = "Монтировка легендарная";
+	name = "Legendary Crowbar";
 	toolspeed = 0.35
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{

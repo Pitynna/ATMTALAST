@@ -4,7 +4,7 @@
 
 /obj/item/organ/external/chest
 	name = "upper body"
-	desc = "Верхняя часть туловища."
+	desc = "The upper torso."
 	gender = FEMALE
 	limb_zone = BODY_ZONE_CHEST
 	icon_name = "torso"
@@ -35,7 +35,7 @@
 
 /obj/item/organ/external/groin
 	name = "lower body"
-	desc = "Нижняя часть туловища."
+	desc = "The lower torso."
 	limb_zone = BODY_ZONE_PRECISE_GROIN
 	icon_name = "groin"
 	max_damage = 100
@@ -198,7 +198,7 @@
 
 /obj/item/organ/external/foot
 	name = "left foot"
-	desc = "Левая ступня."
+	desc = "A left foot."
 	gender = FEMALE
 	icon_name = "l_foot"
 	limb_zone = BODY_ZONE_PRECISE_L_FOOT
@@ -312,7 +312,7 @@
 
 /obj/item/organ/external/foot/right
 	name = "right foot"
-	desc = "Правая ступня."
+	desc = "A right foot."
 	icon_name = "r_foot"
 	limb_zone = BODY_ZONE_PRECISE_R_FOOT
 	limb_body_flag = FOOT_RIGHT
@@ -322,7 +322,7 @@
 
 /obj/item/organ/external/hand
 	name = "left hand"
-	desc = "Левая кисть."
+	desc = "A left hand."
 	gender = FEMALE
 	icon_name = "l_hand"
 	limb_zone = BODY_ZONE_PRECISE_L_HAND
@@ -428,7 +428,7 @@
 
 /obj/item/organ/external/hand/right
 	name = "right hand"
-	desc = "Правая кисть."
+	desc = "A right hand."
 	icon_name = "r_hand"
 	limb_zone = BODY_ZONE_PRECISE_R_HAND
 	limb_body_flag = HAND_RIGHT
@@ -560,7 +560,7 @@
 
 /obj/item/organ/external/tail
 	name = "tail"
-	desc = "Хвост."
+	desc = "A tail."
 	force_icon = "icons/effects/species.dmi"
 	limb_zone = BODY_ZONE_TAIL
 	icon_name = "tail"
@@ -605,7 +605,7 @@
 
 /obj/item/organ/external/tail/monkey
 	name = "monkey tail"
-	desc = "Хвост обезьяны."
+	desc = "A monkey's tail."
 	icon_name = "chimptail_s"
 	species_type = /datum/species/monkey
 	max_damage = 15
@@ -613,25 +613,25 @@
 
 /obj/item/organ/external/tail/monkey/tajaran
 	name = "farwa tail"
-	desc = "Хвост фарвы."
+	desc = "A farwa's tail."
 	icon_name = "farwatail_s"
 	species_type = /datum/species/monkey/tajaran
 
 /obj/item/organ/external/tail/monkey/vulpkanin
 	name = "wolpin tail"
-	desc = "Хвост вульпина."
+	desc = "A wolpin's tail."
 	icon_name = "wolpintail_s"
 	species_type = /datum/species/monkey/vulpkanin
 
 /obj/item/organ/external/tail/monkey/unathi
 	name = "stok tail"
-	desc = "Хвост стока."
+	desc = "A stok's tail."
 	icon_name = "stoktail_s"
 	species_type = /datum/species/monkey/unathi
 
 /obj/item/organ/external/wing
 	name = "wings"
-	desc = "Крылья."
+	desc = "Wings."
 	gender = PLURAL
 	icon_name = "wing"
 	limb_zone = BODY_ZONE_WING

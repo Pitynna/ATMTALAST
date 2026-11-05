@@ -1,7 +1,7 @@
 //********** Acid Bladder **********//
 /obj/item/acid_bladder
 	name = "acid bladder"
-	desc = "Небольшой кислотный мешочек, добытый с тела сернистого странника. Оболочка данного пузыря достаточно слабая и вероятнее всего разорвётся при броске во что-то. Или в кого-то."
+	desc = "A small acid sac harvested from a sulfuric tramp. Its fragile membrane will probably rupture if thrown at something. Or someone."
 	gender = MALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "acid_bladder"
@@ -32,7 +32,7 @@
 //********** Saw Blade **********//
 /obj/item/circular_saw_blade
 	name = "circular saw blade"
-	desc = "Костный нарост, похожий на лезвие циркулярной пилы, вырванный из черепа ослеплённого жнеца. Может быть использован для улучшения костяного топора."
+	desc = "A bony growth resembling a circular saw blade, torn from a blind reaper's skull. Can be used to upgrade a bone axe."
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "circular_saw_blade"
 	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
@@ -42,7 +42,7 @@
 
 /obj/structure/grace_of_lazis
 	name = "grace of lazis"
-	desc = "Огромное количество мяса, насаженного на костяное копье. Символ невероятно удачного сезона охоты."
+	desc = "An enormous quantity of meat impaled on a bone spear. A symbol of an extraordinarily successful hunting season."
 	gender = FEMALE
 	icon = 'icons/obj/lavaland/grace_of_lazis.dmi'
 	icon_state = "grace_of_lazis4"
@@ -86,7 +86,7 @@
 //**********Food Scroll**********//
 /obj/item/book/manual/lavaland_scroll
 	name = "cooking scroll"
-	desc = "Пергамент, изготовленный из человеческой кожи. На нём нанесена информация о том, как прокормить голодное племя."
+	desc = "Parchment made from human skin. Contains information on feeding a hungry tribe."
 	gender = MALE
 	icon_state = "food_scroll"
 	item_state = "food_scroll"
@@ -96,16 +96,16 @@
 
 /obj/structure/fluff/ash_statue //used to mark point of interest
 	name = "totem"
-	desc = "Массивный каменный столб с прикреплённым к нему черепом убитого зверя. Кажется, вы зашли в охотничьи угодья пеплоходцев."
+	desc = "A massive stone pillar bearing the skull of a slain beast. You appear to have entered the ash walkers' hunting grounds."
 	icon = 'icons/obj/lavaland/grace_of_lazis.dmi'
 	icon_state = "totem_stone"
 	density = TRUE
 	deconstructible = FALSE
 	/// Used in shaman spell. Perfect for finding stuff ic
-	var/special_name = "точка интереса"
+	var/special_name = "point of interest"
 
 /obj/structure/fluff/ash_statue/Initialize(mapload)
-	name = "тотем — [special_name]"
+	name = "totem - [special_name]"
 	GLOB.lavaland_points_of_interest += src
 	. = ..()
 
@@ -115,7 +115,7 @@
 
 /obj/structure/ash_totem
 	name = "totem"
-	desc = "Совершенно обычный тотем! Выглядит прикольно. Вы не должны видеть это."
+	desc = "An entirely ordinary totem! Looks cool. You should not be seeing this."
 	gender = MALE
 	icon = 'icons/obj/lavaland/grace_of_lazis.dmi'
 	icon_state = "totem_wooden"
@@ -139,28 +139,28 @@
 
 /obj/structure/ash_totem/wooden
 	name = "wooden totem"
-	desc = "Массивная статуя, сделанная из цельного куска древесины. Рисунок на статуе отдалённо напоминает человеческое лицо, искаженное в гримасе ужаса."
+	desc = "A massive statue carved from a single piece of wood. Its design vaguely resembles a human face contorted in terror."
 
 /obj/structure/ash_totem/stone
 	name = "stone totem"
-	desc = "Массивная каменная статуя с прикреплённым к ней черепом убитого животного. Сухожилия, держащие череп на месте, медленно покачиваются на ветру."
+	desc = "A massive stone statue bearing a slain animal's skull. The sinews holding the skull in place sway gently in the wind."
 	icon_state = "totem_stone"
 
 /obj/structure/ash_totem/bone
 	name = "bone totem"
-	desc = "Массивная статуя, сделанная из огромной кости. Вы не знаете, какому именно животному принадлежит эта кость, и вы явно не хотите это узнавать."
+	desc = "A massive statue carved from an enormous bone. You do not know what animal it came from, and you clearly do not want to find out."
 	icon_state = "totem_bone"
 
 /obj/structure/chair/stool/wooden
 	name = "wooden stool"
-	desc = "Деревянная табуретка. Достаточно удобная, чтобы на ней сидеть."
+	desc = "A wooden stool, comfortable enough to sit on."
 	gender = FEMALE
 	icon_state = "wooden_stool"
 	item_chair = /obj/item/chair/stool/wooden
 
 /obj/item/chair/stool/wooden
 	name = "wooden stool"
-	desc = "Деревянная табуретка. Достаточно удобная, чтобы держать её в руках."
+	desc = "A wooden stool, comfortable enough to hold in your hands."
 	gender = FEMALE
 	icon_state = "wooden_stool_toppled"
 	lefthand_file = 'icons/mob/inhands/lavaland/misc_lefthand.dmi'

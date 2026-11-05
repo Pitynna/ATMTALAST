@@ -1,7 +1,6 @@
 /obj/item/multitool/circuit
 	name = "circuit multitool"
-	desc = "Мультиметр для схем. Используется для маркировки объектов, которые затем можно загрузить \
-			в компоненты нажатием кнопки загрузки на порту. В остальном действует как обычный мультиметр."
+	desc = "A circuit multitool. Use it to mark objects, then load them into components by pressing a port's load button. Otherwise, it works like a regular multitool."
 	icon = 'icons/obj/circuits.dmi'
 	icon_state = "multitool_circuit"
 

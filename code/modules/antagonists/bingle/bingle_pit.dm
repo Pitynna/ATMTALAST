@@ -1,6 +1,6 @@
 /obj/structure/bingle_hole
 	name = "bingle pit"
-	desc = "Всепоглощающая бездна бесконечных ужасов... и Бинглов."
+	desc = "An all-consuming abyss of endless horrors... and Bingles."
 	gender = FEMALE
 	armor = list(MELEE = 20, BULLET = 20, LASER = 75, ENERGY = 75, BOMB = 75, BIO = 100, FIRE = 50, ACID = 80)
 	max_integrity = 500
@@ -426,7 +426,7 @@
 
 /obj/structure/bingle_pit_overlay
 	name = "bingle pit"
-	desc = "Что-то словно манит вас прыгнуть туда..."
+	desc = "Something seems to be tempting you to jump in..."
 	icon = 'icons/mob/bingle/binglepit.dmi'
 	icon_state = "floor"
 	base_icon_state = "bingle_pit"

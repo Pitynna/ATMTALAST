@@ -6,8 +6,7 @@
 
 /obj/item/circuit_component/view_sensor
 	display_name = "Датчик наблюдения"
-	desc = "Выводит список всех подвижных объектов в поле зрения. \
-			Требуется оболочка. Максимальная дальность — 5 тайлов."
+	desc = "Outputs a list of all movable objects in view. Requires a shell. Maximum range: 5 tiles."
 	category = "Sensor"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL

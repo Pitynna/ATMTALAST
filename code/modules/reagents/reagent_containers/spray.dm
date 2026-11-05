@@ -102,7 +102,7 @@
 
 /obj/item/reagent_containers/spray/cleaner/brig
 	name = "brig cleaner"
-	desc = "Распылитель, заполненный непенящимся средством для очистки поверхностей. Идеально подойдёт для уборки брига после очередного допроса клоуна."
+	desc = "A spray bottle filled with nonfoaming surface cleaner. Perfect for cleaning the brig after another clown interrogation."
 	icon_state = "cleaner_brig"
 	item_state = "cleaner_brig"
 
@@ -111,7 +111,7 @@
 
 /obj/item/reagent_containers/spray/cleaner/chemical
 	name = "chemical cleaner"
-	desc = "Нет ничего безопаснее, чем смывать пролитый калий водой."
+	desc = "Nothing is safer than washing spilled potassium away with water."
 	icon_state = "cleaner_chemical"
 	item_state = "cleaner_medchem"
 
@@ -120,7 +120,7 @@
 
 /obj/item/reagent_containers/spray/cleaner/janitor
 	name = "janitorial cleaner"
-	desc = "Распылитель, заполненный непенящимся средством для очистки поверхностей. Стильный дизайн, специально для самого продуктивного работника станции!"
+	desc = "A spray bottle filled with nonfoaming surface cleaner. A stylish design for the station's most productive worker!"
 	icon_state = "cleaner_janitor"
 	item_state = "cleaner_jan"
 	spray_maxrange = 6
@@ -131,7 +131,7 @@
 
 /obj/item/reagent_containers/spray/cleaner/medical
 	name = "medical cleaner"
-	desc = "Распылитель, заполненный непенящимся средством для очистки поверхностей. Дезинфицирующее средство для рук, пола и халата Главного Врача."
+	desc = "A spray bottle filled with nonfoaming surface cleaner. Disinfectant for hands, floors and the chief medical officer's lab coat."
 	icon_state = "cleaner_medical"
 	item_state = "cleaner_med"
 
@@ -140,7 +140,7 @@
 
 /obj/item/reagent_containers/spray/cleaner/tactical
 	name = "Tactical cleaner"
-	desc = "Бутылочка из прочнейшего тёмно-синего пластика, наверху которой прикреплён распылитель, оборудованный коллиматорным прицелом и глушителем. Разработано Уборочно-Силовыми Структурами \"Нанотрейзен\" для ЗАЧИСТКИ и контроля грязи в помещениях. Порадуйте своего внутреннего тактикульщика!"
+	desc = "A bottle made from exceptionally tough dark-blue plastic, fitted with a sprayer equipped with a collimator sight and suppressor. Developed by Nanotrasen Tactical Janitorial Forces for room CLEARING and dirt control. Indulge your inner tacticool enthusiast!"
 	icon_state = "cleaner_tactical"
 	item_state = "cleaner_tactical"
 	spray_maxrange = 5
@@ -148,7 +148,7 @@
 
 /obj/item/reagent_containers/spray/blue_cleaner
 	name = "bluespace cleaner"
-	desc = "Распылитель с увеличенным объёмом, изготовленный с использованием блюспейс-технологий. Оно точно того стоило?"
+	desc = "A high-capacity sprayer made with bluespace technology. Was it really worth it?"
 	icon_state = "cleaner_bluespace"
 	item_state = "cleaner_bs"
 	spray_maxrange = 4

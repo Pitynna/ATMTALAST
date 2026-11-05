@@ -360,7 +360,7 @@
 /obj/item/clothing/mask/gas/mime/old
 
 	name = "classic mime mask"
-	desc = "Маска мима прямиком из 2568."
+	desc = "A mime mask straight out of 2568."
 	icon_state = "mime_old"
 	item_state = "mime_old"
 
@@ -464,7 +464,7 @@
 
 /obj/item/clothing/mask/gas/sechailer/tactical
 	name = "Security gas mask FCO-26"
-	desc = "Тактический противогаз чёрного цвета с красными обзорными стёклами. Разработан компанией \"Стальная Гвардия\" специально для сотрудников станционной службы безопасности \"Нанотрейзен\". Обеспечивает защиту лица, глаз и органов дыхания от неблагоприятных условий внешней среды."
+	desc = "A black tactical gas mask with red lenses. Developed by Steel Guard specifically for Nanotrasen station security. Protects the face, eyes and respiratory system from environmental hazards."
 	icon_state = "tactical_mask"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 50, FIRE = 10, ACID = 30)
 	flags_cover = MASKCOVERSMOUTH|MASKCOVERSEYES
@@ -644,7 +644,7 @@
 // MARK: Ghostface mask
 /obj/item/clothing/mask/gas/ghostface
 	name = "Ghostface mask"
-	desc = "Вытянутая белая маска, рот которой открыт в немом крике. Но вот в чём вопрос — ужаса, или ярости?"
+	desc = "An elongated white mask with its mouth open in a silent scream. But is it a scream of terror or rage?"
 	icon_state = "ghostface_mask"
 	item_state = "ghostface_mask"
 	flags_inv = HIDEGLASSES
@@ -680,7 +680,7 @@
 
 /obj/item/clothing/mask/gas/mining_medic
 	name = "mining respirator"
-	desc = "Небольшой респиратор без защитного стекла и с несъёмными фильтрами, который можно подключить к системе подачи воздуха. Защищает лёгкие от попадания пепла."
+	desc = "A small respirator without a visor, fitted with permanent filters and a connection for an air supply. Keeps ash out of the lungs."
 	flags_inv = HIDENAME
 	flags_cover = MASKCOVERSMOUTH
 	icon_state = "mining_gas"

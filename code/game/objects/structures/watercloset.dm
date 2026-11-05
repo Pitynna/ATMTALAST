@@ -911,7 +911,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (SHIFTING_SINK), (SHIFTING_SINK
 		if(balloon.reagents.total_volume < 10)
 			balloon.reagents.add_reagent(/datum/reagent/water, min(10 - balloon.reagents.total_volume, 10))
 			to_chat(user, span_notice("Вы наполняете шарик из [src.declent_ru(GENITIVE)]."))
-			balloon.desc = "Полупрозрачный воздушный шарик, внутри которого плещется какая-то жидкость."
+			balloon.desc = "A translucent balloon with some liquid sloshing inside."
 			balloon.update_icon(UPDATE_ICON_STATE)
 		return ATTACK_CHAIN_PROCEED_SUCCESS
 

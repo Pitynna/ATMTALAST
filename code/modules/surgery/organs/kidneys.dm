@@ -1,6 +1,6 @@
 /obj/item/organ/internal/kidneys
 	name = "kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали человеку."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to a human."
 	icon_state = "kidneys"
 	gender = PLURAL
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN

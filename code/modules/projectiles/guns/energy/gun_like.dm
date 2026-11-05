@@ -26,7 +26,7 @@
 
 /obj/item/gun/energy/sniperrifle/pod_pilot
 	name = "LSR-39 Queen blade"
-	desc = "Прототип компактной лазерной снайперской винтовки с парализующим и летальным режимом стрельбы, оснащена большим оптическим прицелом для эффективной работы в открытом космосе."
+	desc = "A prototype compact laser sniper rifle with lethal and paralyzing modes. Its large telescopic sight supports effective use in open space."
 	icon_state = "LSR-39"
 	ammo_type = list(
 		/obj/item/ammo_casing/energy/podsniper/disabler,
@@ -50,7 +50,7 @@
 // MARK: Dominator
 /obj/item/gun/energy/dominator
 	name = "Dominator"
-	desc = "Проприетарное высокотехнологичное оружие правоохранительной организации Sibyl System, произведённое специально для борьбы с преступностью."
+	desc = "An advanced proprietary weapon of the Sibyl System law-enforcement organization, manufactured specifically to fight crime."
 	icon = 'icons/obj/weapons/dominator.dmi'
 	icon_state = "dominator"
 	base_icon_state = "dominator"
@@ -118,7 +118,7 @@
 // MARK: Specter pistol
 /obj/item/gun/energy/specter
 	name = "Specter"
-	desc = "Современный пистолет \"Спектр\", работающий на съёмных аккумуляторах, имеет магнитные приводы для быстрой перезарядки. Поставляется только силовым структурам \"Нанотрейзен\"."
+	desc = "A modern Specter pistol powered by removable batteries, with magnetic mechanisms for quick reloading. Supplied exclusively to Nanotrasen security forces."
 	icon_state = "specter"
 	item_state = "specter"
 	force = 10

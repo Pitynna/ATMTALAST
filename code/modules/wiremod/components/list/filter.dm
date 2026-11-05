@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/filter_list
 	display_name = "Фильтр"
-	desc = "Компонент, который просматривает элементы списка и фильтрует их."
+	desc = "A component that examines and filters list entries."
 	category = "List"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_INSTANT
 

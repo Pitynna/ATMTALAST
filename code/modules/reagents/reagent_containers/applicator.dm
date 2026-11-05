@@ -160,21 +160,21 @@
 
 /obj/item/reagent_containers/applicator/brute
 	name = "brute auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов. Эта версия — для заживления механических повреждений."
+	desc = "A small electronic device for applying medication topically. This version treats physical injuries."
 	icon_state = "/obj/item/reagent_containers/applicator/brute"
 	greyscale_colors = COLOR_MENDER_BRUTE
 	list_reagents = list("styptic_powder" = 200)
 
 /obj/item/reagent_containers/applicator/burn
 	name = "burn auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов. Эта версия — для заживления термических повреждений."
+	desc = "A small electronic device for applying medication topically. This version treats burns."
 	greyscale_colors = COLOR_MENDER_BURN
 	icon_state = "/obj/item/reagent_containers/applicator/burn"
 	list_reagents = list("silver_sulfadiazine" = 200)
 
 /obj/item/reagent_containers/applicator/dual
 	name = "dual auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов. Эта версия — для заживления как механических, так и термических повреждений."
+	desc = "A small electronic device for applying medication topically. This version treats both physical injuries and burns."
 	greyscale_colors = COLOR_MENDER_DUAL
 	icon_state = "/obj/item/reagent_containers/applicator/dual"
 	list_reagents = list("synthflesh" = 200)

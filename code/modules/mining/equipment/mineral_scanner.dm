@@ -124,7 +124,7 @@
 
 /obj/item/t_scanner/adv_mining_scanner/bleary_eye
 	name = "bleary eye"
-	desc = "Глаз, вырванный из тела массивного сернистого странника. Даже спустя долгое время, он всё ещё движется и внимательно осматривает местность в поисках руды."
+	desc = "An eye torn from a massive sulfuric tramp. Even after a long time, it still moves and carefully surveys the area for ore."
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "bleary_eye"
 	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'

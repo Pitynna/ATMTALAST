@@ -120,7 +120,7 @@
 
 /obj/item/gun/syringe/dart_gun/extended
 	name = "extended dart gun"
-	desc = "Расширенный метатель дротиков и шприцов для доставки химических коктейлей."
+	desc = "An extended dart and syringe launcher for delivering chemical cocktails."
 	icon_state = "dartgun_ext"
 	valid_cartridge_types = list(
 		/obj/item/storage/dart_cartridge,
@@ -133,7 +133,7 @@
 
 /obj/item/gun/syringe/dart_gun/big
 	name = "capacious dart gun"
-	desc = "Вместительный метатель дротиков для доставки химических коктейлей."
+	desc = "A high-capacity dart launcher for delivering chemical cocktails."
 	icon_state = "dartgun_big"
 	max_syringes = 10
 	valid_cartridge_types = list(

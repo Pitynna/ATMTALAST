@@ -226,7 +226,7 @@
 
 /obj/item/clothing/glasses/sunglasses_fake/holo
 	name = "holographic sunglasses"
-	desc = "Защищают от голографических УФ-лучей голографического солнца."
+	desc = "Protects against holographic UV rays from a holographic sun."
 
 /obj/item/clothing/glasses/sunglasses/prescription
 	prescription = TRUE
@@ -311,7 +311,7 @@
 
 /obj/item/clothing/glasses/sunglasses/blindfold_fake
 	name = "thin blindfold"
-	desc = "Закрывает глаза, но недостаточно плотная, чтобы мешать обзору. Предназначение в первую очередь эстетическое."
+	desc = "Covers the eyes, but is not thick enough to obstruct vision. Intended primarily for appearance."
 	gender = FEMALE
 	icon_state = "blindfold_white"
 	item_state = "blindfold_white"
@@ -325,7 +325,7 @@
 
 /obj/item/clothing/glasses/sunglasses/blindfold/cucumbermask
 	name = "cucumber mask"
-	desc = "Пара обычных ломтиков огурца. Медицински доказано: они благотворно влияют на глаза."
+	desc = "A pair of ordinary cucumber slices. Medically proven to benefit the eyes."
 	heal_bodypart = INTERNAL_ORGAN_EYES
 	icon_state = "cucumbermask"
 	item_state = "cucumbermask"
@@ -374,8 +374,7 @@
 
 /obj/item/clothing/glasses/meson/heart
 	name = "heart meson glasses"
-	desc = "Специальные очки, используемые для визуального обнаружения брешей и полостей в окружающем пространстве. \
-			Выполнены в форме сердечек."
+	desc = "Special glasses for visually detecting gaps and cavities in the surroundings. Shaped like hearts."
 	gender = PLURAL
 	icon_state = "heart_meson"
 	item_state = "heart_meson"
@@ -421,14 +420,13 @@
 
 /obj/item/clothing/glasses/meson/visor
 	name = "meson optical visor"
-	desc = "Технологичный визор для глаз. Оснащён системой мезонного зрения, предназначенной для визуального обнаружения брешей и полостей в окружающем пространстве."
+	desc = "An advanced eye visor with meson vision for detecting gaps and cavities in the surroundings."
 	icon_state = "mesonvisor"
 	item_state = "mesonvisor"
 
 /obj/item/clothing/glasses/meson/monocle
 	name = "meson monocle scanner"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён системой мезонного зрения, предназначенной для визуального обнаружения брешей и полостей в окружающем пространстве."
+	desc = "An optical instrument held in place by the muscles of the face. Includes meson vision for detecting gaps and cavities in the surroundings."
 	icon_state = "monomeson"
 	item_state = "monohud"
 	sprite_sheets = list(
@@ -480,21 +478,20 @@
 
 /obj/item/clothing/glasses/science/heart
 	name = "heart science glasses"
-	desc = "Специальные очки, защищающие глаза от химикатов. Оснащены научным сканером. Выполнены в форме сердечек."
+	desc = "Heart-shaped glasses that protect the eyes from chemicals. Includes a scientific scanner."
 	icon_state = "heart_science"
 	item_state = "heart_science"
 
 /obj/item/clothing/glasses/science/visor
 	name = "science optical visor"
-	desc = "Технологичный визор для глаз. Оснащён научным сканером, а также защищает глаза от воздействия химикатов."
+	desc = "An advanced eye visor with a scientific scanner and protection against chemicals."
 	gender = MALE
 	icon_state = "sciencevisor"
 	item_state = "sciencevisor"
 
 /obj/item/clothing/glasses/science/monocle
 	name = "science hud monocle"
-	desc = "Оптический прибор, носимый путём зажатия мышцами лица. \
-			Оснащён научным сканером."
+	desc = "An optical instrument held in place by the muscles of the face. Includes a scientific scanner."
 	gender = MALE
 	icon_state = "monohudsci"
 	item_state = "monohud"
@@ -614,7 +611,7 @@
 
 /obj/item/clothing/glasses/thermal_fake
 	name = "phirmel soonglesas"
-	desc = "Дишёвые пластмассовые очки. Нащи их, если ты крутой."
+	desc = "Cheap plastic glasses. Wear them if you are cool."
 	icon_state = "sunthermal"
 	item_state = "sunthermal"
 
@@ -694,7 +691,7 @@
 	if(!double_eye)
 		desc = initial(desc)
 		return
-	desc = "Пара странных глаз, которые, как говорят, вырвали у всевидящего существа, некогда бродившего по пустошам."
+	desc = "A pair of strange eyes, said to have been torn from an all-seeing creature that once roamed the wastes."
 
 /obj/item/clothing/glasses/hud/godeye/attackby(obj/item/I, mob/user, params)
 	if(istype(I, type) && I != src && I.loc == user)
@@ -804,7 +801,7 @@
 
 /obj/item/clothing/glasses/goldblue
 	name = "round gold-rimmed glasses"
-	desc = "Круглые очки в золотистой оправе с тёмно-синими линзами."
+	desc = "Round glasses with gold frames and dark-blue lenses."
 	icon_state = "goldblue"
 	item_state = "goldblue"
 

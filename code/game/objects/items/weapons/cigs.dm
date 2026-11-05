@@ -614,7 +614,7 @@ LIGHTERS ARE IN LIGHTERS.DM
 			target.reagents.trans_to(R, R.chem_volume)
 			user.put_in_active_hand(R)
 			user.balloon_alert(user, "закручено в самокрутку")
-			R.desc = "Высушенн[GEND_YI_AYA_OE_YE(target)] [target.declent_ru(NOMINATIVE)], закрученн[GEND_YI_AYA_OE_YE(target)] в папиросную бумагу."
+			R.desc = "Dried [target.name], wrapped in rolling paper."
 			qdel(target)
 			qdel(src)
 		else

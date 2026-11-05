@@ -94,7 +94,7 @@
 
 /obj/item/reagent_containers/food/pill/pervitin
 	name = "Pervitin pill"
-	desc = "Увеличивает концентрацию и ускоряет работу руками. Вызывает сильное привыкание."
+	desc = "Improves concentration and manual working speed. Highly addictive."
 	icon_state = "pill8"
 	list_reagents = list("pervitin" = 5)
 
@@ -184,12 +184,12 @@
 
 /obj/item/reagent_containers/food/pill/bicaridine
 	name = "bicaridine pill"
-	desc = "Используется для лечения травм."
+	desc = "Used to treat physical injuries."
 	icon_state = "pill5"
 	list_reagents = list("bicaridine" = 10)
 
 /obj/item/reagent_containers/food/pill/kelotane
 	name = "kelotane pill"
-	desc = "Используется для лечения ожогов."
+	desc = "Used to treat burns."
 	icon_state = "pill6"
 	list_reagents = list("kelotane" = 10)

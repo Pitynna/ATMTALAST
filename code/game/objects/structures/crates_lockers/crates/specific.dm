@@ -94,13 +94,13 @@
 	new /obj/item/clothing/head/radiation(src)
 
 /obj/structure/closet/crate/vault
-	desc = "Ящик с ценностями."
+	desc = "A crate of valuables."
 	name = "vault crate"
 	icon_state = "vaultcrate"
 
 /obj/structure/closet/crate/wooden //i'm sure hope this won't be used as cheese strat to obtain cargo points
 	name = "wooden crate"
-	desc = "Ящик, сделанный из дерева."
+	desc = "A crate made from wood."
 	icon_state = "wooden_crate"
 
 /obj/structure/closet/crate/hydroponics

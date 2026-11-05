@@ -109,7 +109,7 @@
 
 	var/obj/item/wrench/medical/wrench = new /obj/item/wrench/medical(loc)
 	wrench.add_fingerprint(user)
-	wrench.desc += " По какой-то причине он напоминает вам [user.declent_ru(ACCUSATIVE)]."
+	wrench.desc += " For some reason, it reminds you of [user.name]."
 
 	if(!user)
 		return
@@ -119,8 +119,7 @@
 
 /obj/item/wrench/industrial
 	name = "industrial wrench"
-	desc = "Инструмент, используемый для закручивания и откручивания гаек и болтов. \
-			Использует храповой механизм \"трещотку\", что повышает скорость работы."
+	desc = "A tool for tightening and loosening nuts and bolts. A ratchet mechanism improves its operating speed."
 	icon_state = "wrench_industrial"
 	toolspeed = 0.6
 	resistance_flags = FIRE_PROOF | ACID_PROOF

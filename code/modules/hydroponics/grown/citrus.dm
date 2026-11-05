@@ -199,7 +199,7 @@
 
 /obj/item/reagent_containers/food/snacks/grown/citrus/tangerine
 	name = "tangerine"
-	desc = "Очень ароматный, вкусный и полезный фрукт. Жаль, что достать его можно только в новогодние праздники."
+	desc = "A fragrant, delicious and healthy fruit. A shame you can only get it around New Year's."
 	icon_state = "tangerine"
 	filling_color = "#FFA500"
 	tastes = list("нового года" = 1)

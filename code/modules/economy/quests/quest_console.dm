@@ -217,10 +217,10 @@
 	paper.info += "</ul><br><span class=\"large-text\"> Ориентировочная награда: [quest.reward]</span><br>"
 	paper.info += "<br><hr><br><span class=\"small-text\">Этот документ имеет автоматическую печать [station_name()] </span><br></div>"
 	paper.stamp(/obj/item/stamp/navcom)
-	var/request_desc = "запроса о поставке"
-	paper.name = "форма [request_desc]"
+	var/request_desc = "supply request"
+	paper.name = "[request_desc] form"
 	paper.ru_names = alist(
-		NOMINATIVE = "форма [request_desc]",
+		NOMINATIVE = "[request_desc] form",
 		GENITIVE = "формы [request_desc]",
 		DATIVE = "форме [request_desc]",
 		ACCUSATIVE = "форму [request_desc]",
@@ -298,13 +298,13 @@
 	paper.info += "<hr><br><span class=\"small-text\">[pick(phrases)] </span><br>"
 	paper.info += "<br><hr><br><span class=\"small-text\">Этот документ имеет автоматическую печать [station_name()] </span><br></div>"
 	paper.stamp(/obj/item/stamp/navcom)
-	var/report_desc = "о поставке"
-	paper.name = "отчёт [report_desc]"
+	var/report_desc = "supply"
+	paper.name = "[report_desc] report"
 	paper.ru_names = alist(
-		NOMINATIVE = "отчёт [report_desc]",
+		NOMINATIVE = "[report_desc] report",
 		GENITIVE = "отчёта [report_desc]",
 		DATIVE = "отчёту [report_desc]",
-		ACCUSATIVE = "отчёт [report_desc]",
+		ACCUSATIVE = "[report_desc] report",
 		INSTRUMENTAL = "отчётом [report_desc]",
 		PREPOSITIONAL = "отчёте [report_desc]",
 	)
@@ -353,7 +353,7 @@
 
 /obj/item/qm_quest_tablet/cargotech
 	name = "Portable Quest Monitor"
-	desc = "Небольшое устройство для просмотра запросов на поставку. Портативно и удобно."
+	desc = "A small device for viewing supply requests. Portable and convenient."
 	icon_state	= "cargo_tablet"
 	item_state	= "cargo_tablet"
 	origin_tech = "programming=2;engineering=2"

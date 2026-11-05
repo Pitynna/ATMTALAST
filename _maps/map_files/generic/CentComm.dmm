@@ -2277,8 +2277,8 @@
 "biD" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/reagent_containers/food/snacks/soup/beetsoup{
-	desc = "Со вкусом политических убийств";
-	name = "Борщ";
+	desc = "Tastes like political assassination.";
+	name = "Borscht";
 	pixel_y = 16
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -2404,7 +2404,7 @@
 "blt" = (
 /obj/item/paper/djstation{
 	info = "Блять, сука. Блятьблять. Я знал, что эта миссия была ошибкой, этот идиот Томас самоубился о какого-то разъяренного русского робота-охранника в оружейной. А лейтенант вбежал на станцию, как идиот, и попал в ловушку. Теперь я просто просиживаю штаны взаперти, потому что этот шаттл, черт возьми, не двигается. Этот тупой кусок дерьма, стыковочный рычаг СССП, должно быть, заклинило, а у меня нет скафандра, чтобы выйти и починить его.<br><br>Кто, черт возьми, атакует космическую станцию ​​без скафандров!? В любом случае, без ригов выходить в открытый космос? Нельзя же, черт возьми, начинать кровавую заварушку в космосе лишь с горячим кофе и забить на всё болт.";
-	name = "неизвестный отчет"
+	name = "unknown report"
 	},
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"
@@ -3048,7 +3048,7 @@
 /area/centcom/central_command_areas/evacuation)
 "bGz" = (
 /obj/machinery/door/airlock/syndicate/public{
-	name = "Скромный зал славы";
+	name = "Modest Hall of Fame";
 	req_access = list(150)
 	},
 /turf/simulated/floor/wood{
@@ -3092,7 +3092,7 @@
 "bGZ" = (
 /obj/machinery/power/smes/magical{
 	color = "#444455";
-	desc = "Может показаться, что он сломан и не работает, но на самом деле он специально настроен для подзарядки костюма посредством использования на нём перчаток";
+	desc = "It may look broken, but it is deliberately configured to recharge a suit by using its gloves on it.";
 	name = "SpiderClan power storage unit";
 	resistance_flags = 371
 	},
@@ -3347,8 +3347,8 @@
 "bRe" = (
 /obj/structure/table/glass,
 /obj/item/toy/plushie/cat/tabby{
-	desc = "Любимая игрушка-антистресс одной из представительниц вида таяран, когда-то работавшей главой персонала. Она была настолько занята выполнением своих обязанностей, что умерла голодной смертью прямо на своем рабочем месте. Не будьте как эта таяра. Кушайте регулярно.";
-	name = "Любимая игрушка бюрократов"
+	desc = "The favorite stress toy of a Tajaran who once worked as Head of Personnel. She was so busy with her duties that she starved to death at her desk. Don't be like her. Eat regularly.";
+	name = "Bureaucrat's Favorite Toy"
 	},
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee,
 /turf/simulated/floor/carpet/black,
@@ -3445,11 +3445,11 @@
 "bSL" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту";
+	desc = "He's definitely not sleeping on duty.";
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -3554,7 +3554,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -4685,8 +4685,8 @@
 	dir = 4
 	},
 /obj/item/stock_parts/cell/infinite{
-	desc = "Интересная батарейка золотого цвета, главный вопрос который вас терзает — а что она делает в космосе? \n Жаль что контакты окислились.";
-	name = "Батарейка в космосе?"
+	desc = "An intriguing golden battery. One question troubles you: what is it doing in space?\nIt's a shame the contacts have corroded.";
+	name = "A Battery in Space?"
 	},
 /turf/simulated/floor/beach/water{
 	icon_state = "seadeep"
@@ -4905,12 +4905,12 @@
 /obj/item/radio/intercom/syndicate/directional/south,
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно спит на посту";
+	desc = "He's definitely sleeping on duty.";
 	dir = 1;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Боба";
+	name = "Boba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -5149,7 +5149,7 @@
 "cKt" = (
 /obj/machinery/door/airlock/syndicate/security{
 	id_tag = "SyndFB_prison_stroll";
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -6216,7 +6216,7 @@
 /area/centcom/vox_station)
 "dkg" = (
 /obj/structure/reagent_dispensers/beerkeg{
-	desc = "Собственность Шерлока Субботина"
+	desc = "Property of Sherlock Subbotin."
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkyellowfull"
@@ -6888,7 +6888,7 @@
 /obj/structure/table,
 /obj/item/paper{
 	info = "<h1>Особенности отправки оборудования с помощью шаттла отдела снабжения</h1><br>С целью минимизации рисков провоза опасных грузов и/или контрабанды сотрудники департамента защиты активов Nanotrasen регулярно осуществляют проверки шаттла снабжения. Эти проверки включают в себя снятие внешней упаковки с контейнеров для проверки манифестов, а также уничтожение любых объектов, не находящихся в контейнерах. Контроль груза осуществляется: <ol><li>Непосредственно после отлета шаттла с АКН Трурль на объект Nanotrasen;</li><li>После отлета шаттла с объекта Nanotrasen до прибытия на АКН Трурль;</li><li>Непосредственно после стыковки шаттла с АКН Трурль.</li></ol><br> Для отправки оборудования на объект Nanotrasen с помощью шаттла снабжения необходимо обернуть контейнер упаковочной бумагой или поместить его еще в один контейнер.";
-	name = "Особенности отправки оборудования с помощью шаттла отдела снабжения"
+	name = "Shipping Equipment Aboard the Supply Shuttle"
 	},
 /obj/item/hand_labeler,
 /obj/item/hand_labeler,
@@ -8451,7 +8451,7 @@
 	},
 /obj/item/toy/plushie/fox{
 	layer = 5;
-	name = "Лиса золотистого оттенка"
+	name = "Golden Fox"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
@@ -9192,8 +9192,8 @@
 "eFk" = (
 /obj/structure/rack,
 /obj/item/oar{
-	desc = "Редко можно увидеть весло с именем. В чём его тайна? Почему его зовут так? Может это связано с некой древней легендой? Или лодочник, что владел им раньше просто оставил на нём свою подпись? Эта информация сокрыта за туманом времени...";
-	name = "Миямото Мусаси"
+	desc = "It's rare to see an oar with a name. What is its secret? Why is it called that? Does it have something to do with an ancient legend? Or did its former boatman simply leave his signature on it? The answer is lost in the mists of time...";
+	name = "Miyamoto Musashi"
 	},
 /obj/effect/turf_decal/siding/wood,
 /turf/simulated/floor/wood{
@@ -10884,11 +10884,11 @@
 	},
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту";
+	desc = "He's definitely not sleeping on duty.";
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -10947,7 +10947,7 @@
 	},
 /obj/item/paper/central_command/archive/memes{
 	info = "<center><img src=\"https://cdn.discordapp.com/attachments/961279768249118750/1079288344657277008/NVNcWzVwAHs.png?width=736&height=736\"></center>";
-	name = "Коллективное решение"
+	name = "Collective Decision"
 	},
 /turf/simulated/floor/plating,
 /area/centcom/central_command_areas/zone/two)
@@ -13322,7 +13322,7 @@
 	},
 /obj/item/paper/central_command/archive/memes{
 	info = "<center><img src=\"https://cdn.discordapp.com/attachments/961279768249118750/1046826506741104830/unknown.png?width=604&height=604\"></center>";
-	name = "Супъективное мнение"
+	name = "Subjective Opinion"
 	},
 /obj/item/book/random,
 /turf/simulated/floor/plating,
@@ -13916,7 +13916,7 @@
 /area/centcom/syndicate_base)
 "gSB" = (
 /obj/item/toy/plushie/cat/orange{
-	desc = "Этот котик и его подруга однажды спасли станцию.";
+	desc = "This cat and his companion once saved the station.";
 	name = "savior cat plushie"
 	},
 /turf/simulated/floor/holofloor/space,
@@ -15950,7 +15950,7 @@
 /area/centcom/central_command_areas/zone/two)
 "hUD" = (
 /obj/item/gun/energy/clown/security{
-	desc = "Поговаривают что это оружие сделано концерном Клоун-Варденов, может поэтому оно и спрятано?."
+	desc = "They say this weapon was made by a consortium of clown wardens. Perhaps that's why it's hidden away?"
 	},
 /obj/item/gun/energy/clown/security,
 /obj/item/gun/energy/clown/security{
@@ -16964,7 +16964,7 @@
 /area/centcom/syndicate_base/outside)
 "ivz" = (
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -17702,8 +17702,8 @@
 /obj/structure/rack,
 /obj/machinery/light,
 /obj/item/toy/katana{
-	desc = "Говорят тому, кто будет орудовать этой катаной в настоящей битве — не светит победы даже в бою с пьяницей вооружённым веслом";
-	name = "Сасаки Кадзиро"
+	desc = "They say whoever brings this katana to a real battle won't stand a chance even against a drunk armed with an oar.";
+	name = "Sasaki Kojiro"
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -21038,7 +21038,7 @@
 /area/centcom/central_command_areas/special_operations)
 "kfv" = (
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -22187,7 +22187,7 @@
 "kBd" = (
 /obj/machinery/door/airlock/syndicate/security{
 	id_tag = "SyndFB_prison_stroll";
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -22834,7 +22834,7 @@
 /area/shuttle/addition_goals)
 "kSw" = (
 /obj/structure/reagent_dispensers/beerkeg/nuke{
-	desc = "Однажды незадачливый отряд внедрения \"Синдиката\" вместо настоящей бомбы, украл у НТ эту стилизованную кегу с пивом. Эти ребята более не ходят по миру, но кега всё ещё украшает один из местных баров. На ней виднеется зачёркнутое слово \"Нанотрейзен\" и приписанное рядом, кровью, слово \"Синдикат\"";
+	desc = "An unfortunate Syndicate strike team once stole this novelty beer keg from Nanotrasen instead of a real bomb. Those operatives are long gone, but the keg still decorates a local bar. The word Nanotrasen has been crossed out, with Syndicate written beside it in blood.";
 	name = "Syndicate-brand nuclear fission explosive";
 	pixel_y = 12
 	},
@@ -22860,11 +22860,11 @@
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
 	density = 0;
-	desc = "Он пытался сбежать...";
+	desc = "He tried to escape...";
 	icon = 'icons/mob/mob.dmi';
 	icon_state = "ghost2";
 	invisibility = 40;
-	name = "Закованное привидение"
+	name = "Chained Ghost"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkfull"
@@ -24071,8 +24071,8 @@
 /area/centcom/central_command_areas/special_operations)
 "lsF" = (
 /obj/item/fish/shark{
-	desc = "Совсем не навязчивая акула. От слова совсем.";
-	name = "Акула?";
+	desc = "Not an intrusive shark at all. Not in the slightest.";
+	name = "A Shark?";
 	pixel_y = 4
 	},
 /obj/structure/table/wood/fancy/black,
@@ -25315,7 +25315,7 @@
 /area/centcom/central_command_areas/special_operations)
 "lWx" = (
 /obj/machinery/door/airlock/syndicate/medical{
-	name = "Медзона";
+	name = "Medbay";
 	req_access = list(150)
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -26802,8 +26802,8 @@
 /area/centcom/wizard_station)
 "mBV" = (
 /obj/item/gun/projectile/automatic/sniper_rifle{
-	desc = "Оружие с потёртой надписью 'Коатс' и нечитаемыми каракулями возле неё.";
-	name = "Потрёпанная Снайперская Винтовка"
+	desc = "A weapon bearing the faded inscription 'Coates' and some illegible scrawls beside it.";
+	name = "Battered Sniper Rifle"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkfull"
@@ -27450,7 +27450,7 @@
 /area/centcom/central_command_areas/zone/three)
 "mPS" = (
 /obj/item/toy/plushie/fox/orange{
-	desc = "Эта лиса и её друг однажды спасли станцию.";
+	desc = "This fox and her friend once saved the station.";
 	name = "savior grumpy fox"
 	},
 /turf/simulated/floor/holofloor/space,
@@ -28629,7 +28629,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/syndicate/public{
-	name = "Скромный зал славы";
+	name = "Modest Hall of Fame";
 	req_access = list(150)
 	},
 /turf/simulated/floor/wood{
@@ -28837,7 +28837,7 @@
 	},
 /obj/machinery/door/airlock/syndicate/security{
 	id_tag = "SyndFB_prison_stroll";
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -33018,12 +33018,12 @@
 "pph" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно спит на посту!";
+	desc = "He's definitely sleeping on duty!";
 	dir = 4;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Боба";
+	name = "Boba";
 	obj_integrity = 9999
 	},
 /obj/machinery/light/small{
@@ -33193,7 +33193,7 @@
 	color = "#996633"
 	},
 /obj/structure/reagent_dispensers/beerkeg/nuke{
-	desc = "Данная ядерная кега пива принадлежит Артёму Вишневскому за проявленную к пиву верность!"
+	desc = "This nuclear beer keg belongs to Artyom Vishnevsky, in recognition of his loyalty to beer!"
 	},
 /turf/simulated/floor/carpet/red,
 /area/centcom/central_command_areas/zone/three)
@@ -33213,7 +33213,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/machinery/door/airlock/syndicate/security{
 	id_tag = "SyndFB_prison_stroll";
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -33485,7 +33485,7 @@
 /area/centcom/central_command_areas/supply)
 "pzQ" = (
 /obj/item/pizzabox/meat{
-	desc = "Любимая пицца Шерлока Субботина"
+	desc = "Sherlock Subbotin's favorite pizza."
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkyellowfull"
@@ -34080,12 +34080,12 @@
 "pQD" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно спит на посту";
+	desc = "He's definitely sleeping on duty.";
 	dir = 1;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Боба";
+	name = "Boba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -34096,12 +34096,12 @@
 "pQR" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту!";
+	desc = "He's definitely not sleeping on duty!";
 	dir = 8;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -34637,7 +34637,7 @@
 /area/centcom/syndicate_base/infiltrators)
 "qcl" = (
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Ангар";
+	name = "Hangar";
 	req_access = list(150)
 	},
 /obj/machinery/door/poddoor{
@@ -34731,7 +34731,7 @@
 /area/shuttle/escape)
 "qfD" = (
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Ангар";
+	name = "Hangar";
 	req_access = list(150)
 	},
 /obj/machinery/door/poddoor{
@@ -35285,11 +35285,11 @@
 "qqi" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту";
+	desc = "He's definitely not sleeping on duty.";
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -35864,12 +35864,12 @@
 "qBO" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно спит на посту!";
+	desc = "He's definitely sleeping on duty!";
 	dir = 8;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Боба";
+	name = "Boba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -36320,12 +36320,12 @@
 "qMv" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту!";
+	desc = "He's definitely not sleeping on duty!";
 	dir = 4;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /obj/machinery/light/small{
@@ -36955,12 +36955,12 @@
 	},
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту!";
+	desc = "He's definitely not sleeping on duty!";
 	dir = 8;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -39232,7 +39232,7 @@
 /area/centcom/central_command_areas/zone/two)
 "rVN" = (
 /obj/machinery/door/airlock/syndicate/engineering{
-	name = "Оборудование";
+	name = "Equipment";
 	req_access = list(150)
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -39518,7 +39518,7 @@
 /area/centcom/central_command_areas/special_operations)
 "scm" = (
 /obj/machinery/photocopier/faxmachine/longrange/syndie{
-	name = "Фокс машина"
+	name = "Fox Machine"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkyellowfull"
@@ -40912,9 +40912,9 @@
 	},
 /obj/structure/flora/tree/pine{
 	color = "#336633";
-	desc = "Напоминает о былых, более холодных временах...";
+	desc = "A reminder of older, colder times...";
 	layer = 2.9;
-	name = "Ель"
+	name = "Spruce"
 	},
 /turf/simulated/floor/indestructible/grass,
 /area/centcom/syndicate_base/outside)
@@ -41771,7 +41771,7 @@
 "tek" = (
 /obj/machinery/door/airlock/syndicate/security{
 	id_tag = "SyndFB_prison_stroll";
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -42154,8 +42154,8 @@
 /area/shuttle/syndicate)
 "tmU" = (
 /obj/item/robot_parts/robot_component{
-	desc = "Некая блюспейс сущность, обещала когда нибудь его доделать...";
-	name = "Недоделанный бот"
+	desc = "Some bluespace entity promised to finish it someday...";
+	name = "Unfinished Bot"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkfull"
@@ -42687,7 +42687,7 @@
 /area/centcom/central_command_areas/supply)
 "tzq" = (
 /obj/item/handheld_defibrillator/syndie{
-	desc = "Подпись: Принадлежит Монике Картер"
+	desc = "Inscription: Property of Monica Carter."
 	},
 /turf/simulated/floor/indestructible/grass,
 /area/centcom/syndicate_base/outside)
@@ -43272,8 +43272,8 @@
 "tJM" = (
 /obj/structure/lattice,
 /obj/item/card/emag{
-	desc = "Это полностью функционирующий емаг. Его даже можно взять в руки, но он находится будто не здесь...";
-	name = "странный емаг";
+	desc = "A fully functional emag. You can even pick it up, yet it somehow seems to be elsewhere...";
+	name = "strange emag";
 	pixel_x = 31;
 	pixel_y = -54
 	},
@@ -43325,12 +43325,12 @@
 	},
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно не спит на посту!";
+	desc = "He's definitely not sleeping on duty!";
 	dir = 4;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Биба";
+	name = "Biba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -43876,7 +43876,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /turf/simulated/floor/plasteel{
@@ -48139,7 +48139,7 @@
 /area/shuttle/escape)
 "vSX" = (
 /obj/structure/statue/diamond/ai2{
-	desc = "Этот злой ИИ чуть не уничтожил всю станцию, его имя говорило что-то про таяров .";
+	desc = "This evil AI nearly destroyed the entire station. Its name said something about Tajaran.";
 	name = "statue of the malfuction AI core"
 	},
 /turf/simulated/floor/plating,
@@ -48935,7 +48935,7 @@
 /area/shuttle/assault_pod)
 "wrf" = (
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Погрузка";
+	name = "Loading";
 	req_access = list(150)
 	},
 /obj/machinery/door/poddoor{
@@ -48975,7 +48975,7 @@
 	icon_state = "siding8"
 	},
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Ангар";
+	name = "Hangar";
 	req_access = list(150)
 	},
 /obj/machinery/door/poddoor{
@@ -49658,12 +49658,12 @@
 "wNd" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Главный по не твоим собачьим делам!";
+	desc = "Head of None of Your Damn Business!";
 	dir = 4;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_stormtrooper";
 	max_integrity = 9999;
-	name = "Плуто";
+	name = "Pluto";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -49988,7 +49988,7 @@
 "wUJ" = (
 /obj/machinery/door/airlock/syndicate/security{
 	id_tag = "SyndFB_prison_stroll";
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /obj/machinery/door/poddoor/impassable{
@@ -50035,7 +50035,7 @@
 /area/centcom/central_command_areas/zone/two)
 "wVt" = (
 /obj/machinery/door/airlock/syndicate/security{
-	name = "Тюрьма";
+	name = "Prison";
 	req_access = list(153)
 	},
 /turf/simulated/floor/plasteel{
@@ -50508,7 +50508,7 @@
 /obj/structure/table,
 /obj/item/paper/syndimemo{
 	info = "Пришлось срочно вылететь на задание. Печенье доделаете сами. - Джордж";
-	name = "Записка'";
+	name = "Note";
 	pixel_x = 3
 	},
 /turf/simulated/floor/wood{
@@ -50895,12 +50895,12 @@
 "xlF" = (
 /obj/structure/statue/sandstone/assistant{
 	anchored = 1;
-	desc = "Он точно спит на посту";
+	desc = "He's definitely sleeping on duty.";
 	dir = 1;
 	icon = 'icons/mob/simple_human.dmi';
 	icon_state = "syndicate_smg";
 	max_integrity = 9999;
-	name = "Боба";
+	name = "Boba";
 	obj_integrity = 9999
 	},
 /turf/simulated/floor/plasteel{
@@ -50993,7 +50993,7 @@
 	},
 /obj/item/toy/plushie/fox/crimson{
 	layer = 5;
-	name = "Алая лиса"
+	name = "Scarlet Fox"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
@@ -51682,7 +51682,7 @@
 /obj/structure/bookcase,
 /obj/item/paper{
 	info = "<center><img src=\"https://cdn.discordapp.com/attachments/961279768249118750/1168235730171080704/image.png?width=1919&height=824\"></center>";
-	name = "Главный строить мужик репорт"
+	name = "Chief Building Guy Report"
 	},
 /turf/simulated/floor/plating,
 /area/centcom/central_command_areas/zone/two)
@@ -52189,8 +52189,8 @@
 /area/centcom/syndicate_base/outside)
 "xOo" = (
 /obj/item/syndicatedetonator{
-	desc = "Радиус взрыва: 255x255x255";
-	name = "Слишком опасная кнопка";
+	desc = "Blast radius: 255x255x255";
+	name = "Far Too Dangerous Button";
 	pixel_x = 4
 	},
 /turf/simulated/floor/plasteel{

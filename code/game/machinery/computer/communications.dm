@@ -396,7 +396,7 @@ GLOBAL_VAR_INIT(captain_auth_access, ACCESS_CAPTAIN)
 /obj/machinery/computer/communications/proc/print_nuke_codes()
 	playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, TRUE)
 	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
-	P.name = "'КОНФИДЕНЦИАЛЬНО' - [station_name()] Коды от ядерной боеголовки"
+	P.name = "'CONFIDENTIAL' - [station_name()] Nuclear Authentication Codes"
 	P.info = "<center>&ZeroWidthSpace;<img src='ntlogo.png'><br><b>КОНФИДЕНЦИАЛЬНО</b></center><br><hr>"
 
 	P.info += "Коды от ядерной боеголовки станции [station_name()] - [get_nuke_code()].<br>"

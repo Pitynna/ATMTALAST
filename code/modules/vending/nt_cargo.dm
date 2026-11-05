@@ -168,7 +168,7 @@
 
 /obj/machinery/vending/ntc/ert
 	name = "NT Response Team Base Gear"
-	desc = "Автомат с базовым снаряжением ОБР."
+	desc = "A dispenser for basic ERT equipment."
 	base_icon_state = "nta-blue"
 	deny_overlay = "nta-blue_deny"
 
@@ -246,7 +246,7 @@
 
 /obj/machinery/vending/mech/ntc/exousuit
 	name = "NT Exosuit Bluespace Transporter"
-	desc = "Фабрикатор с передовой технологией блюспейс-транспортировки ресурсов."
+	desc = "A fabricator using advanced bluespace resource transportation technology."
 	icon = 'icons/obj/machines/robotics.dmi'
 	icon_state = "fabricator"
 
@@ -262,7 +262,7 @@
 
 /obj/machinery/vending/mech/ntc/equipment
 	name = "NT Exosuit Bluespace Transporter"
-	desc = "Фабрикатор с передовой технологией блюспейс-транспортировки ресурсов."
+	desc = "A fabricator using advanced bluespace resource transportation technology."
 	icon_state = "engivend_off"
 	panel_overlay = "engivend_panel"
 	screen_overlay = "engivend"
@@ -280,7 +280,7 @@
 
 /obj/machinery/vending/mech/ntc/weapon
 	name = "NT Exosuit Bluespace Transporter"
-	desc = "Фабрикатор с передовой технологией блюспейс-транспортировки ресурсов."
+	desc = "A fabricator using advanced bluespace resource transportation technology."
 	icon_state = "liberationstation_off"
 	panel_overlay = "liberationstation_panel"
 	screen_overlay = "liberationstation"
@@ -304,7 +304,7 @@
 
 /obj/machinery/vending/mech/ntc/tools
 	name = "NT Exosuit Bluespace Transporter"
-	desc = "Фабрикатор с передовой технологией блюспейс-транспортировки ресурсов."
+	desc = "A fabricator using advanced bluespace resource transportation technology."
 	icon_state = "tool_off"
 	panel_overlay = "tool_panel"
 	screen_overlay = "tool"

@@ -71,7 +71,7 @@
 	return PROCESS_KILL
 
 /obj/item/circuitboard/computer/sat_control
-	board_name = "Контроллер сети спутников"
+	board_name = "Satellite Network Control"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
 	build_path = /obj/machinery/computer/sat_control
 	origin_tech = "engineering=3"

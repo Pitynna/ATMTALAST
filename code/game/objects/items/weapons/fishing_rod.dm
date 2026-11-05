@@ -4,7 +4,7 @@
 
 /obj/item/twohanded/fishing_rod
 	name = "ol' reliable"
-	desc = "Старая, видавшая виды удочка. Если она прослужила так долго и ещё не развалилась — вам точно не следует волноваться о её надёжности."
+	desc = "An old, well-used fishing rod. If it has lasted this long without falling apart, you certainly need not worry about its reliability."
 	gender = FEMALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	lefthand_file = 'icons/mob/inhands/lavaland/lava_items_lefthand.dmi'
@@ -30,7 +30,7 @@
 
 /obj/item/twohanded/fishing_rod/tribal
 	name = "fishing rod"
-	desc = "Примитивная костяная удочка, использующая сухожилия наблюдателя в качестве высокопрочной лески. Не совсем понятно, почему эта \"леска\" не плавится в лаве."
+	desc = "A primitive bone fishing rod using watcher sinew as high-strength line. It is unclear why this line does not melt in lava."
 	icon_state = "tribal_rod"
 	item_state = "tribal_rod"
 

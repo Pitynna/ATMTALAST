@@ -15,7 +15,7 @@
 
 /obj/item/circuit_component/keyboard_shell
 	display_name = "Оболочка клавиатуры"
-	desc = "Ручная клавиатура, позволяющая пользователю вводить текст."
+	desc = "A handheld keyboard that allows the user to enter text."
 
 	/// Called when the input window is closed
 	var/datum/port/output/signal

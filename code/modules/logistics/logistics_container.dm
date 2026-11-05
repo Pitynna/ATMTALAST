@@ -3,7 +3,7 @@
  */
 /obj/machinery/smartfridge/smart_container
 	name = "Smart Container"
-	desc = "Умный контейнер для хранения любых предметов. Вместимость масштабируется с качеством matter bin."
+	desc = "A smart container for storing any items. Capacity scales with matter bin quality."
 	icon_state = "smart_container"
 	status_overlay = "smartfridge"
 	max_n_of_items = 63

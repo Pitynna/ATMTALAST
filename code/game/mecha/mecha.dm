@@ -63,7 +63,7 @@
 
 	/// emag
 	var/emaggable = FALSE
-	var/emag_desc = span_danger_alt("</br>Слоты оборудования меха опасно искрят!")
+	var/emag_desc = span_danger_alt("</br>The mech's equipment slots spark dangerously!")
 
 	//inner atmos
 	var/use_internal_tank = FALSE

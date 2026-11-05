@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/vox
 	name = "vox gauntlets"
-	desc = "Плотные рукавицы причудливой формы с когтями."
+	desc = "Thick, oddly shaped clawed gloves."
 	icon_state = "gloves-vox"
 	item_state = "gloves-vox"
 	item_color = "gloves-vox"

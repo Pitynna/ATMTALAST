@@ -1,7 +1,7 @@
 /obj/structure/blob/special/resource
 	name = "resource blob"
 	icon_state = "blob_resource"
-	desc = "Тонкий шпиль слегка покачивающихся щупалец."
+	desc = "A thin spire of gently swaying tentacles."
 	max_integrity = BLOB_RESOURCE_MAX_HP
 	point_return = BLOB_REFUND_RESOURCE_COST
 	resistance_flags = LAVA_PROOF

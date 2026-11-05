@@ -41,8 +41,7 @@
 
 /obj/item/circuit_component/money_dispenser
 	display_name = "Бот-банкомат"
-	desc = "Используется для выдачи денег из денежного бота. \
-			Деньги берутся из внутреннего хранилища."
+	desc = "Dispenses money from a money bot's internal storage."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 	/// The amount of money to dispense
@@ -88,8 +87,7 @@
 
 /obj/item/circuit_component/money_bot
 	display_name = "Денежный бот"
-	desc = "Используется для получения входных сигналов при вставке денег в оболочку денежного бота, \
-			а также для отслеживания общего количества денег в оболочке."
+	desc = "Receives input when money is inserted into a money bot shell and tracks the total amount stored in it."
 
 	/// Total money in the shell
 	var/datum/port/output/total_money

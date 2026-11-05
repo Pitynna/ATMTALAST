@@ -359,7 +359,7 @@
 
 /obj/item/clothing/head/shapka_pepega
 	name = "frog hat"
-	desc = "Милая шапочка в виде головы лягушки, окутывающая голову. Мило, мягко и приятно!"
+	desc = "An adorable frog-head hat that wraps around your head. Cute, soft and comfortable!"
 	icon_state = "shapka_pepega"
 	item_state = "shapka_pepega"
 	sprite_sheets = list(
@@ -376,7 +376,7 @@
 
 /obj/item/clothing/head/carp_hat
 	name = "carp hat"
-	desc = "Шапочка в виде устрашающего хищника космоса. Мило!"
+	desc = "A hat shaped like a fearsome space predator. Cute!"
 	icon_state = "carp_hat"
 	item_state = "carp_hat"
 	sprite_sheets = list(

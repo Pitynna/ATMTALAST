@@ -86,7 +86,7 @@
 	var/datum/addition_goal_prisoner_data/data = prisoners_data[prisoner.real_name]
 	var/obj/item/paper/paper = new (location)
 	var/number = "[request_number]-[rand(1000, 9999)]"
-	paper.name = "Приказ о заключении под стражу №[number]"
+	paper.name = "Detention Order #[number]"
 	paper.info = {"<center><b>Приказ о заключении [number]</b></center><br>
 		Настоящим подтверждается, что гражданин [prisoner.real_name] подлежит тюремному заключению сроком в [data.duration] минут в камере брига.<br>
 		<b>Вменяемые статьи:</b> [data.crimes]."}

@@ -1,7 +1,7 @@
 /obj/structure/blob/special/core
 	name = "blob core"
 	icon_state = "blank_blob"
-	desc = "Огромная пульсирующая желтая масса."
+	desc = "An enormous pulsating yellow mass."
 	max_integrity = BLOB_CORE_MAX_HP
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 80, ACID = 90)
 	explosion_block = 6

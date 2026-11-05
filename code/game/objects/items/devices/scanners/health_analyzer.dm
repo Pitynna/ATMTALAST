@@ -834,7 +834,7 @@
 
 /obj/item/healthanalyzer/gem_analyzer
 	name = "eye of health"
-	desc = "Необычный самоцвет в форме сердца. Позволяет пользователю ощущать раны и болезни других существ на метафизическом уровне. Магия, не иначе."
+	desc = "An unusual heart-shaped gemstone. Allows its user to sense other creatures' wounds and illnesses on a metaphysical level. Definitely magic."
 	icon_state = "gem_analyzer"
 	item_state = "gem_analyzer"
 	origin_tech = null

@@ -116,7 +116,7 @@
 
 /obj/structure/closet/secure_closet/security_grenade_launcher
 	name = "security grenade launcher cabinet"
-	desc = "Защищённый шкаф для хранения гранатомета GL-06 и боеприпасов к нему. Шкаф прикручен к полу."
+	desc = "A secure cabinet for a GL-06 grenade launcher and its ammunition. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 	icon = 'icons/obj/guncabinet.dmi'
 	icon_state = "guncabinet"
@@ -154,7 +154,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/wt550
 	name = "security WT-550 PDW gun cabinet"
-	desc = "Защищённый шкаф для хранения пистолетов пулемётов WT-550. Шкаф прикручен к полу."
+	desc = "A secure cabinet for WT-550 submachine guns. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/wt550/populate_contents()
@@ -164,7 +164,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/sp91
 	name = "security SP-91-RC gun cabinet"
-	desc = "Защищённый шкаф для хранения пистолетов пулемётов SP-91-RC. Шкаф прикручен к полу."
+	desc = "A secure cabinet for SP-91-RC submachine guns. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/sp91/populate_contents()
@@ -174,7 +174,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/sparkle_a12
 	name = "security Sparkle-A12 gun cabinet"
-	desc = "Защищённый шкаф для хранения пистолетов пулемётов А9 \"Искра\". Шкаф прикручен к полу."
+	desc = "A secure cabinet for A9 Spark submachine guns. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/sparkle_a12/populate_contents()
@@ -184,7 +184,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/sfg
 	name = "security SFG-5 SMG gun cabinet"
-	desc = "Защищённый шкаф для хранения пистолетов-пулемётов SFG-5. Внутри хранится дизайн диск для печати магазинов."
+	desc = "A secure cabinet for SFG-5 submachine guns. Contains a design disk for printing magazines."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/sfg/populate_contents()
@@ -195,7 +195,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/saber
 	name = "Nanotrasen Saber SMG gun cabinet"
-	desc = "Защищённый шкаф для хранения пистолетов-пулемётов Saber. Внутри хранится дизайн диск для печати магазинов."
+	desc = "A secure cabinet for Saber submachine guns. Contains a design disk for printing magazines."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/saber/populate_contents()
@@ -206,7 +206,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/ak814
 	name = "Soviet AK-814 gun cabinet"
-	desc = "Защищённый шкаф для хранения штурмовых винтовок АК-814. В отсеке для хранения дискет заметна большая вмятина."
+	desc = "A secure cabinet for AK-814 assault rifles. The disk storage compartment has a large dent."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/ak814/populate_contents()
@@ -218,7 +218,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/secspear
 	name = "security telescopic energy spear cabinet"
-	desc = "Защищённый шкаф для хранения энергетических копий. Шкаф прикручен к полу."
+	desc = "A secure cabinet for energy spears. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/secspear/populate_contents()
@@ -228,7 +228,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/lasergun
 	name = "security laser gun cabinet"
-	desc = "Защищённый шкаф для хранения лазерных винтовок. Шкаф прикручен к полу."
+	desc = "A secure cabinet for laser rifles. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/lasergun/populate_contents()
@@ -238,7 +238,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/energygun
 	name = "security energy gun cabinet"
-	desc = "Защищённый шкаф для хранения энергетических карабинов. Шкаф прикручен к полу."
+	desc = "A secure cabinet for energy carbines. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/energygun/populate_contents()
@@ -248,7 +248,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/lr30
 	name = "security LR-30 gun cabinet"
-	desc = "Защищённый шкаф для хранения лазерных винтовок LR-30. Шкаф прикручен к полу."
+	desc = "A secure cabinet for LR-30 laser rifles. Bolted to the floor."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/lr30/populate_contents()
@@ -258,7 +258,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/lasercarbine
 	name = "security IK-60 gun cabinet"
-	desc = "Защищённый шкаф для хранения лазерных карабинов IK-60. Внутри хранится диск для печати магазинов и боеприпасов."
+	desc = "A secure cabinet for IK-60 laser carbines. Contains a disk for printing magazines and ammunition."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/lasercarbine/populate_contents()
@@ -269,7 +269,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/plasma_pistols
 	name = "plasma pistol gun cabinet"
-	desc = "Защищённый шкаф для хранения плазменных пистолетов модели \"Щитобой\" Шкаф прикручен к полу."
+	desc = "A secure cabinet for Shieldbreaker plasma pistols. Bolted to the floor."
 
 /obj/structure/closet/secure_closet/guncabinet/plasma_pistols/populate_contents()
 	var/gun_count = HAS_TRAIT(SSstation, STATION_TRAIT_LOOTED_ARMORY) ? rand(1, 2) : 4
@@ -278,7 +278,7 @@
 
 /obj/item/disk/design_disk/security
 	name = "security design disk"
-	desc = "Дискета, на которой находится шаблон печати оружейной технологии, недоступной для получения обычными способами."
+	desc = "A disk containing a design for weapon technology unavailable through ordinary means."
 	icon_state = "holodisk"
 	var/design_type
 
@@ -291,32 +291,32 @@
 
 /obj/item/disk/design_disk/security/sfg5_mag
 	name = "SFG-5 SMG magazine design"
-	desc = "Дискета, на которой находится шаблон печати магазинов для ПП SFG-5."
+	desc = "A disk containing a design for printing SFG-5 submachine gun magazines."
 	design_type = /datum/design/sfg9mm
 
 /obj/item/disk/design_disk/security/saber_mag
 	name = "Saber SMG magazine design"
-	desc = "Дискета, на которой находится шаблон печати магазинов для ПП Saber"
+	desc = "A disk containing a design for printing Saber submachine gun magazines."
 	design_type = /datum/design/smgm9mm
 
 /obj/item/disk/design_disk/security/ak814_mag
 	name = "AK-814 magazine design"
-	desc = "Дискета, на которой находится шаблон печати магазинов для штурмовой винтовки АК-814"
+	desc = "A disk containing a design for printing AK-814 assault rifle magazines."
 	design_type = /datum/design/ak814_mag
 
 /obj/item/disk/design_disk/security/aksu_ammo
 	name = "AK-814 ammo box design"
-	desc = "Дискета, на которой находится шаблон печати патронов для штурмовой винтовки АК-814. Судя по всему, диск повреждён."
+	desc = "A disk containing a design for printing AK-814 assault rifle ammunition. It appears to be damaged."
 	design_type = /datum/design/aksu_ammo_box
 
 /obj/item/disk/design_disk/security/laser_carbine_mag
 	name = "IK-60 magazine design"
-	desc = "Дискета, на которой находится шаблон печати магазинов для лазерного карабина IK-60."
+	desc = "A disk containing a design for printing IK-60 laser carbine magazines."
 	design_type = /datum/design/laser_carbine_mag
 
 /obj/structure/closet/secure_closet/guncabinet/riot_shotgun
 	name = "security riot shotgun cabinet"
-	desc = "Защищённый шкаф для хранения помповых дробовиков."
+	desc = "A secure cabinet for pump-action shotguns."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/riot_shotgun/populate_contents()
@@ -326,7 +326,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/winchester
 	name = "security lever action shotgun cabinet"
-	desc = "Защищённый шкаф для хранения рычажных дробовиков."
+	desc = "A secure cabinet for lever-action shotguns."
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/guncabinet/winchester/populate_contents()

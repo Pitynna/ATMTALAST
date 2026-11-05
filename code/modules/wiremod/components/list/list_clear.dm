@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable/list/listclear
 	display_name = "Список — очистить"
-	desc = "Очищает переменную списка."
+	desc = "Clears a list variable."
 	category = "List"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL

@@ -8,7 +8,7 @@
 
 /obj/machinery/vending/nta
 	name = "NT Ammunition"
-	desc = "Автомат-помощник по выдаче боеприпасов."
+	desc = "An ammunition dispenser."
 	slogan_list = list(
 		"Возьм+и поб+ольше патр+онов!",
 		"Не забыв+ай, снаряж+аться — пол+езно!",
@@ -165,7 +165,7 @@
 
 /obj/machinery/vending/nta/ertarmory/green
 	name = "NT ERT Light Gear & Ammunition"
-	desc = "Автомат-помощник по выдаче снаряжения лёгкого класса."
+	desc = "A dispenser for light equipment."
 	slogan_list = list(
 		"Круш+и череп+а враг+ов Нанотр+ейзен!",
 		"Не забыв+ай, спас+ать — пол+езно!",
@@ -203,7 +203,7 @@
 
 /obj/machinery/vending/nta/ertarmory/green/cc_jail
 	name = "NT CentComm prison guards' Gear & Ammunition"
-	desc = "Автомат с оборудованием для надзирателей тюрьмы Центрального Командования."
+	desc = "An equipment dispenser for Central Command prison wardens."
 
 	products = list(
 		/obj/item/restraints/handcuffs = 5,
@@ -229,7 +229,7 @@
 
 /obj/machinery/vending/nta/ertarmory/yellow
 	name = "NT ERT Death Wish Gear & Ammunition"
-	desc = "Автомат с оборудованием для ОБР — помогает людям осуществить их желание УМЕРЕТЬ."
+	desc = "An ERT equipment dispenser that helps people fulfill their desire to DIE."
 	slogan_list = list(
 		"Круш+и череп+а ВСЕХ!",
 		"Не забыв+ай, УБИВ+АТЬ — пол+езно!",

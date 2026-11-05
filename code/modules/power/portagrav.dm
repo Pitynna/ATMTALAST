@@ -4,7 +4,7 @@
 
 /obj/machinery/power/portagrav
 	name = "Portable Gravity Unit"
-	desc = "Компактный гравитационный генератор на переносной платформе. Создаёт поле искусственной гравитации вокруг себя, питаясь от батареи или от силового кабеля. Работает только закреплённым."
+	desc = "A compact gravity generator on a portable platform. Creates a local artificial gravity field using a battery or power cable. Only operates while anchored."
 	icon = 'icons/obj/machines/gravity_generator.dmi'
 	icon_state = "portagrav"
 	base_icon_state = "portagrav"

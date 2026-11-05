@@ -197,7 +197,7 @@
 
 /obj/item/book/philosophy_of_death
 	name = "The Philosophy of Death"
-	desc = "Эта книга переплетена вручную и украшена по краям позолотой. Видно, что ее создатель не сомневался в ее важности."
+	desc = "This book is hand-bound with gilded edges. Its creator clearly had no doubts about its importance."
 	icon_state = "demonomicon"
 	item_state = "demonomicon"
 	author = "Немрис Мудрый"

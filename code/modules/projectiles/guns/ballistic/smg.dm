@@ -105,8 +105,7 @@
 // MARK: "Reaper"
 /obj/item/gun/projectile/automatic/smg/c20r/auto
 	name = "\"Reaper\" submachine gun"
-	desc = "Модифицированный вариант пистолета-пулемёта DCA S45 под патрон .45. Перенастроенная автоматика обеспечивает значительно более высокий темп \
-			огня за счёт снижения точности. Предназначен для ближнего боя, где плотность огня превалирует над точностью. Официально на рынке не представлен."
+	desc = "A modified .45-caliber DCA S45 submachine gun. Retuned internals greatly increase its rate of fire at the cost of accuracy. Intended for close combat where volume of fire matters more than precision. Not officially available on the market."
 	accuracy = GUN_ACCURACY_PISTOL
 	recoil = GUN_RECOIL_LOW
 	fire_delay = 0.2 SECONDS
@@ -183,9 +182,7 @@
 
 /obj/item/gun/projectile/automatic/smg/sparkle_a12
 	name = "A-12 \"Sparkle\" submachine gun"
-	desc = "Пистолет-пулемёт под калибр 9x19 мм, произведённый \"Aegis Ordinance\". \
-			Штатно используется силовыми структурами \"Нанотрейзен\". Отличается надёжностью, высокой точностью и малыми габаритами. \
-			Предназначен для ближнего боя в условиях ограниченного пространства."
+	desc = "A compact, reliable and accurate 9x19mm submachine gun manufactured by Aegis Ordinance. Standard issue for Nanotrasen security forces, intended for close combat in confined spaces."
 	icon_state = "sparkle-a12"
 	item_state = "sparkle-a12"
 	mag_type = /obj/item/ammo_box/magazine/sparkle_a12
@@ -238,7 +235,7 @@
 
 /obj/item/gun/projectile/automatic/smg/sfg
 	name = "SFG-5"
-	desc = "Современный пистолет-пулемёт калибра 9x19 мм."
+	desc = "A modern 9x19mm submachine gun."
 	icon_state = "sfg-5"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/sfg9mm
@@ -284,7 +281,7 @@
 // MARK: SMG K-45 Kedr
 /obj/item/gun/projectile/automatic/smg/kedr
 	name = "SMG K-45"
-	desc = "Компактный пистолет-пулемет под калибр 9x19 мм. Оснащён интегрированным глушителем. Пользуется спросом среди наёмников."
+	desc = "A compact 9x19mm submachine gun with an integrated suppressor. Popular among mercenaries."
 	icon_state = "kedr"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/kedr

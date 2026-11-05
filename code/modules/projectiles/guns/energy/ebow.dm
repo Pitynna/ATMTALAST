@@ -45,7 +45,7 @@
 // MARK: Toy
 /obj/item/gun/energy/kinetic_accelerator/crossbow/toy
 	name = "toy energy crossbow"
-	desc = "Игрушечное оружие, сделанное из тагерного пистолета со стильным дизайном контрабандного арбалета."
+	desc = "A toy weapon made from a laser tag pistol, styled after a contraband crossbow."
 	icon_state = "crossbowtoy"
 	materials = list(MAT_METAL=4000)
 	origin_tech = "combat=4;magnets=4"

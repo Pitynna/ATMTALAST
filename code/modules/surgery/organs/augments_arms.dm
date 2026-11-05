@@ -404,7 +404,7 @@
 	action_icon_state = list(/datum/action/item_action/organ_action/toggle = "duffel-med")
 
 /obj/item/organ/internal/cyberimp/arm/surgery/adv
-	desc = "Набор лазерных хирургических инструментов, спрятанный за потайной панелью на руке пользователя. Новейшая разработка Inugami!"
+	desc = "A set of laser surgical instruments concealed behind a hidden panel in the user's arm. Inugami's latest development!"
 	icon_state = "/obj/item/organ/internal/cyberimp/arm/surgery/adv"
 	greyscale_colors = "#ffffff#89d640#89d640#89d640"
 	contents = newlist(
@@ -422,7 +422,7 @@
 
 /obj/item/organ/internal/cyberimp/arm/surgery/adv/ert
 	name = "NT-Med toolset implant"
-	desc = "Набор хирургических инструментов для военных нужд, спрятанный за потайной панелью на руке пользователя. Крайне редкая модель, используется военными врачами корпорации Nanotrasen."
+	desc = "A set of military surgical instruments concealed behind a hidden panel in the user's arm. An extremely rare model used by Nanotrasen military physicians."
 	icon_state = "/obj/item/organ/internal/cyberimp/arm/surgery/adv/ert"
 	greyscale_colors = "#8f8a8a#89d640#89d640#89d640"
 	contents = newlist(

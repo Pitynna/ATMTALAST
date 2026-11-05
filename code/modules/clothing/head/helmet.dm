@@ -348,7 +348,7 @@
 
 /obj/item/clothing/head/helmet/skull/Yorick
 	name = "Yorick"
-	desc = "Бедный Йорик..."
+	desc = "Alas, poor Yorick..."
 	sprite_sheets = list(
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/helmet.dmi',
@@ -488,7 +488,7 @@
 
 /obj/item/clothing/head/helmet/biker
 	name = "Motorcycle helmet"
-	desc = "Самый обычный мотоциклетный шлем."
+	desc = "An entirely ordinary motorcycle helmet."
 	armor = list(MELEE = 35, BULLET = 10, LASER = 10, ENERGY = 30, BOMB = 10, BIO = 0, FIRE = 30, ACID = 0)
 	icon_state = "biker"
 	item_state = "biker"

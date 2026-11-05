@@ -584,10 +584,10 @@
 /obj/item/cardhand/update_desc(updates = ALL)
 	. = ..()
 	if(LAZYLEN(cards) > 1)
-		desc = "Какие-то игральные карты."
+		desc = "Some playing cards."
 	else
 		if(concealed)
-			desc = "Игральная карта. Видна только её рубашка."
+			desc = "A playing card. Only its back is visible."
 		else
 			var/datum/playingcard/card = cards[1]
 			desc = "\A [card.name]."

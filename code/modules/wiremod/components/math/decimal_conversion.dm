@@ -5,9 +5,7 @@
  */
 /obj/item/circuit_component/decimal_conversion
 	display_name = "Десятичное преобразование"
-	desc = "Объединяет массив двоичных цифр или битов, \
-			представленных как 1 или 0 и часто используемых в логических или двоичных операциях, \
-			в десятичное число."
+	desc = "Combines an array of binary digits, or bits, represented as 1 or 0, into a decimal number."
 	category = "Math"
 
 	/// One number

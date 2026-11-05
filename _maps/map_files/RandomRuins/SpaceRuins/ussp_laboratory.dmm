@@ -1505,8 +1505,8 @@
 "xp" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/cup/glass/bottle/vodka{
-	desc = "Кто это тут к нам колёса катит?";
-	name = "Старая бутылка водки";
+	desc = "Who's trying to push us around?";
+	name = "Old Vodka Bottle";
 	pixel_x = -5
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -2802,7 +2802,7 @@
 /area/ruin/ussp_xeno/engi)
 "OW" = (
 /obj/structure/closet/crate{
-	name = "Базовый набор экипировки для выхода в космос"
+	name = "Basic EVA Equipment Kit"
 	},
 /obj/effect/spawner/lootdrop/maintenance/tripple,
 /obj/item/flashlight{

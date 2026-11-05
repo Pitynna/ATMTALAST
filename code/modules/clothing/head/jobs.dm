@@ -28,14 +28,14 @@
 
 /obj/item/clothing/head/caphat/blue
 	name = "captain's white parade cap"
-	desc = "Белая капитанская фуражка с синими полосами. Такие фуражки носят исключительно важные персоны."
+	desc = "A white captain's cap with blue stripes. Worn exclusively by very important people."
 	icon_state = "cap_parade_alt"
 	item_state = "cap_parade_alt"
 	dog_fashion = null
 
 /obj/item/clothing/head/caphat/office
 	name = "captain's blue parade cap"
-	desc = "Синяя капитанская фуражка с белыми полосами. Такие фуражки носят исключительно важные персоны."
+	desc = "A blue captain's cap with white stripes. Worn exclusively by very important people."
 	icon_state = "cap_office"
 	item_state = "cap_office"
 	dog_fashion = null
@@ -212,7 +212,7 @@
 
 /obj/item/clothing/head/beret/brigphys
 	name = "brigphys's beret"
-	desc = "Берет, принадлежащий медику службы безопасности. Не обладает какой либо защитой."
+	desc = "A security medic's beret. Offers no protection."
 	icon_state = "brigphysberet"
 
 /obj/item/clothing/head/beret/eng
@@ -308,17 +308,17 @@
 
 /obj/item/clothing/head/surgery/brown
 	name = "brown surgical cap"
-	desc = "Коричневая шапочка, которую носят хирурги во время операций. Защищает внутренние органы пациента от попадания на них волос."
+	desc = "A brown cap worn by surgeons during operations. Keeps hair away from the patient's internal organs."
 	icon_state = "surgcap_brown"
 
 /obj/item/clothing/head/prison
 	name = "prison hat"
-	desc = "Тюремная шапка, которая должна предотвращать распространение космо вшей... По крайней мере так задумывалось."
+	desc = "A prison cap intended to prevent the spread of space lice... At least, that was the idea."
 	item_state = "prison_hat"
 	icon_state = "prison_hat"
 
 /obj/item/clothing/head/beret/mining_medic
 	name = "mining medic's beret"
-	desc = "Коричневый берет с вышитым на нём белым крестом. Такой обычно носит шахтёрский врач."
+	desc = "A brown beret embroidered with a white cross. Usually worn by a mining medic."
 	icon_state = "beret_minmed"
 

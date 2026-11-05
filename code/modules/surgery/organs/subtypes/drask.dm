@@ -10,7 +10,7 @@
 /obj/item/organ/internal/heart/drask
 	species_type = /datum/species/drask
 	name = "drask heart"
-	desc = "Орган, качающий криоксадон по организму драска."
+	desc = "An organ that pumps cryoxadone through a drask's body."
 	icon = 'icons/obj/species_organs/drask.dmi'
 	item_state = "drask_heart-on"
 	item_base = "drask_heart"
@@ -19,7 +19,7 @@
 /obj/item/organ/internal/liver/drask
 	species_type = /datum/species/drask
 	name = "metabolic strainer"
-	desc = "Орган выделительной системы организма драска. Выделяет особый фермент, очищающий кровоток от токсинов и стимулирующий процесс клеточного деления."
+	desc = "An organ of a drask's excretory system. Secretes a specialized enzyme that removes toxins from the bloodstream and stimulates cell division."
 	gender = MALE
 	icon = 'icons/obj/species_organs/drask.dmi'
 	icon_state = "kidneys"
@@ -28,7 +28,7 @@
 
 /obj/item/organ/internal/brain/drask
 	species_type = /datum/species/drask
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал драску."
+	desc = "The primary organ of a humanoid's central nervous system. The mind itself resides here. This belonged to a drask."
 	icon = 'icons/obj/species_organs/drask.dmi'
 	item_state = "drask_brain"
 	mmi_icon = 'icons/obj/species_organs/drask.dmi'
@@ -44,11 +44,11 @@
 /obj/item/organ/internal/ears/drask
 	species_type = /datum/species/drask
 	name = "drask ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали драску."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a drask."
 
 /obj/item/organ/internal/lungs/drask
 	name = "drask lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма драска."
+	desc = "Paired organs responsible for gas exchange between the environment and a drask's bloodstream."
 	icon = 'icons/obj/species_organs/drask.dmi'
 	item_state = "drask_lungs"
 	cold_message = " освежающий холод"

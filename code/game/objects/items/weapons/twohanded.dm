@@ -463,7 +463,7 @@
 
 /obj/item/twohanded/spear/bonespear/her_biting_embrace
 	name = "her biting embrace"
-	desc = "Качественно созданное копьё, украшенное церемониальными узорами и использующее хвост донного угря в качестве наконечника. Настоящее произведение первобытного оружейного искусства."
+	desc = "An expertly crafted spear decorated with ceremonial patterns and tipped with the tail of a bottom-dwelling eel. A true masterpiece of primitive weaponsmithing."
 	icon_state = "her_biting_embrace0"
 	icon_prefix = "her_biting_embrace"
 	lefthand_file = 'icons/mob/inhands/lavaland/lava_items_lefthand.dmi'
@@ -1090,7 +1090,7 @@
 
 /obj/item/twohanded/sechammer
 	name = "tactical sledgehammer"
-	desc = "Тяжёлая кувалда, используемая силовыми структурами \"Нанотрейзен\". Удобная эргономичная рукоятка обеспечивает надёжный хват, а боёк кувалды увеличенной массы позволяет наносить мощные и точные удары, что делает её отличным инструментом для разрушения препятствий и создания брешей в стенах. Хотя конструкция и является слишком неудобной для эффективного использования в качестве оружия, силы удара достаточно, чтобы раздробить любую кость в теле гуманоида."
+	desc = "A heavy sledgehammer used by Nanotrasen security forces. Its ergonomic handle provides a secure grip, while the oversized head delivers powerful, accurate blows for breaching obstacles and walls. Although too unwieldy to serve as an effective weapon, it can shatter any bone in a humanoid body."
 	gender = FEMALE
 	icon_state = "sechammer0"
 	throwforce = 20

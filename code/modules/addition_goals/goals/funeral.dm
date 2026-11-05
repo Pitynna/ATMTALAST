@@ -66,7 +66,7 @@
 
 /datum/addition_goal/funeral/proc/create_paper_about_corpse(turf/location, mob/living/carbon/human/corpse, datum/addition_goal_corpse_data/data)
 	var/obj/item/paper/paper = new (location)
-	paper.name = "Документ о проведении погребения №[data.request_number]"
+	paper.name = "Burial Document #[data.request_number]"
 	paper.info = {"<center><b>Документ о проведении погребения [data.request_number]</b></center><br>
 		Настоящим подтверждается, что гражданин [data.name] подлежит захоронению в соответствии с указанным способом.<br>
 		<b>Форма погребения:</b> [data.preffered_method]."}

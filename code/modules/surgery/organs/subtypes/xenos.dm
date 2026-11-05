@@ -38,7 +38,7 @@
 
 /obj/item/organ/internal/xenos/plasmavessel
 	name = "xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. "
+	desc = "An organ responsible for secreting plasma inside a xenomorph."
 	gender = FEMALE
 	icon_state = "plasma"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -60,7 +60,7 @@
 
 /obj/item/organ/internal/xenos/plasmavessel/queen
 	name = "bloated xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала королеве."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph queen."
 	icon_state = "plasma_large"
 	origin_tech = "biotech=6;plasmatech=4"
 	max_plasma = 750
@@ -70,7 +70,7 @@
 
 /obj/item/organ/internal/xenos/plasmavessel/praetorian
 	name = "huge xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала преторианцу."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph praetorian."
 	icon_state = "plasma_large"
 	max_plasma = 750
 	stored_plasma = 100
@@ -78,7 +78,7 @@
 
 /obj/item/organ/internal/xenos/plasmavessel/drone
 	name = "large xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала рабочему."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph drone."
 	icon_state = "plasma_large"
 	max_plasma = 300
 	stored_plasma = 200
@@ -86,21 +86,21 @@
 
 /obj/item/organ/internal/xenos/plasmavessel/sentinel
 	name = "medium xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала часовому."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph sentinel."
 	max_plasma = 200
 	stored_plasma = 100
 	plasma_rate = 25
 
 /obj/item/organ/internal/xenos/plasmavessel/hunter
 	name = "small xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала охотнику."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph hunter."
 	icon_state = "plasma_tiny"
 	max_plasma = 150
 	stored_plasma = 100
 
 /obj/item/organ/internal/xenos/plasmavessel/larva
 	name = "tiny xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала лярве."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph larva."
 	icon_state = "plasma_tiny"
 	max_plasma = 100
 	alien_powers = list()
@@ -149,7 +149,7 @@
 
 /obj/item/organ/internal/xenos/acidgland
 	name = "xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа."
+	desc = "An organ responsible for secreting acid inside a xenomorph."
 	gender = FEMALE
 	icon_state = "acid"
 	parent_organ_zone = BODY_ZONE_HEAD
@@ -159,22 +159,22 @@
 
 /obj/item/organ/internal/xenos/acidgland/sentinel
 	name = "medium xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа. Эта принадлежала часовому."
+	desc = "An organ responsible for secreting acid inside a xenomorph. This belonged to a xenomorph sentinel."
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit/sentinel)
 
 /obj/item/organ/internal/xenos/acidgland/praetorian
 	name = "massive xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа. Эта принадлежала преторианцу."
+	desc = "An organ responsible for secreting acid inside a xenomorph. This belonged to a xenomorph praetorian."
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit/praetorian)
 
 /obj/item/organ/internal/xenos/acidgland/queen
 	name = "royal xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа. Эта принадлежала королеве ксеноморфов."
+	desc = "An organ responsible for secreting acid inside a xenomorph. This belonged to a xenomorph queen."
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit/queen)
 
 /obj/item/organ/internal/xenos/hivenode
 	name = "xeno hive node"
-	desc = "Орган, ответственный за телепатическую связь с ульем ксеноморфов."
+	desc = "An organ responsible for telepathic communication with the xenomorph hive."
 	icon_state = "hivenode"
 	parent_organ_zone = BODY_ZONE_HEAD
 	slot = INTERNAL_ORGAN_HIVENODE
@@ -196,7 +196,7 @@
 
 /obj/item/organ/internal/xenos/neurotoxin
 	name = "large xeno neurotoxin gland"
-	desc = "Орган, ответственный за секрецию нейротоксина в организме ксеноморфа."
+	desc = "An organ responsible for secreting neurotoxin inside a xenomorph."
 	gender = FEMALE
 	icon_state = "neurotox"
 	parent_organ_zone = BODY_ZONE_HEAD
@@ -206,12 +206,12 @@
 
 /obj/item/organ/internal/xenos/neurotoxin/sentinel
 	name = "medium xeno neurotoxin gland"
-	desc = "Орган, ответственный за секрецию нейротоксина в организме ксеноморфа. Эта принадлежала стражу"
+	desc = "An organ responsible for secreting neurotoxin inside a xenomorph. This belonged to a sentinel."
 	alien_powers = list(/datum/action/cooldown/spell/pointed/projectile/neurotoxin_spit/sentinel)
 
 /obj/item/organ/internal/xenos/resinspinner
 	name = "xeno resin organ"//...there tiger....
-	desc = "Орган, ответственный за секрецию смолы в организме ксеноморфа."
+	desc = "An organ responsible for secreting resin inside a xenomorph."
 	gender = FEMALE
 	icon_state = "liver-x"
 	parent_organ_zone = BODY_ZONE_PRECISE_MOUTH
@@ -221,7 +221,7 @@
 
 /obj/item/organ/internal/xenos/eggsac
 	name = "xeno egg sac"
-	desc = "Орган, ответственный за секрецию смолы в организме ксеноморфа."
+	desc = "An organ responsible for secreting resin inside a xenomorph."
 	icon_state = "eggsac"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
 	slot = INTERNAL_ORGAN_EGGSAC

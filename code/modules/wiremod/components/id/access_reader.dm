@@ -1,6 +1,6 @@
 /obj/item/circuit_component/id_access_reader
 	display_name = "Чтение доступа"
-	desc = "Компонент, который считывает доступ по идентификатору."
+	desc = "A component that reads access from an ID card."
 	category = "ID"
 
 	/// The input port

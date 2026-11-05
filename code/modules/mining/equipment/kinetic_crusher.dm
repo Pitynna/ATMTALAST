@@ -416,7 +416,7 @@
 /// Massive eyed tentacle
 /obj/item/crusher_trophy/eyed_tentacle
 	name = "Massive eyed tentacle"
-	desc = "Большое и глазастое щупальце древнего голиафа. Может быть установлено на крушитель в качестве трофея."
+	desc = "A large, many-eyed tentacle from an ancient Goliath. Can be mounted on a crusher as a trophy."
 	icon_state = "ancient_goliath_tentacle"
 	denied_type = /obj/item/crusher_trophy/eyed_tentacle
 	bonus_value = 1
@@ -438,7 +438,7 @@
 /// Poison fang
 /obj/item/crusher_trophy/fang
 	name = "Poison fang"
-	desc = "Уродливый и ядовитый клык костномозгового ткача. Может быть установлен на крушитель в качестве трофея."
+	desc = "An ugly, venomous marrow weaver fang. Can be mounted on a crusher as a trophy."
 	gender = MALE
 	icon_state = "ob_gniga"
 	denied_type = /obj/item/crusher_trophy/fang
@@ -453,7 +453,7 @@
 /// Frost gland
 /obj/item/crusher_trophy/gland
 	name = "Frost gland"
-	desc = "Железа морозноно костномозгового ткача. Может быть установлена на крушитель в качестве трофея."
+	desc = "A frost marrow weaver gland. Can be mounted on a crusher as a trophy."
 	gender = FEMALE
 	icon_state = "ice_gniga"
 	denied_type = /obj/item/crusher_trophy/gland

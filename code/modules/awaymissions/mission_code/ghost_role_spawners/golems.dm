@@ -80,7 +80,7 @@
 
 /obj/effect/mob_spawn/human/golem/Initialize(mapload, datum/species/golem/species = null, mob/creator = null)
 	if(species) //spawners list uses object name to register so this goes before ..()
-		name += " ([initial(species.prefix)]ая)"
+		name += " ([initial(species.name)])"
 		mob_species = species
 	. = ..()
 	var/area/A = get_area(src)

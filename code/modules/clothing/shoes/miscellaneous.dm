@@ -164,7 +164,7 @@
 
 /obj/item/clothing/shoes/jackboots/high
 	name = "high jackboots"
-	desc = "Защитные высокие берцы, предназначенные для боевых действий."
+	desc = "Protective high combat boots."
 	icon_state = "highjacks"
 	item_state = "highjacks"
 
@@ -594,7 +594,7 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/leather_boots
 	name = "high leather boots"
-	desc = "Стройные сапоги сделанные из кожи."
+	desc = "Sleek leather boots."
 	icon_state = "leather_boots"
 	item_state = "leather_boots"
 	sprite_sheets = list(
@@ -613,14 +613,14 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/chad
 	name = "Chad shoes"
-	desc = "Сапоги с сильной аурой."
+	desc = "Boots with a powerful aura."
 	icon_state = "chadboots"
 	item_state = "chadboots"
 	species_restricted = list(SPECIES_HUMAN)
 
 /obj/item/clothing/shoes/crocks
 	name = "crocks shoes"
-	desc = "Пара резиновых сабо. Выглядят как сплавленная воедино дешевая пластмасса."
+	desc = "A pair of rubber clogs. They look like cheap plastic fused together."
 	icon_state = "crocks"
 	item_state = "crocks"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI)

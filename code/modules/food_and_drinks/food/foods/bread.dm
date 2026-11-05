@@ -134,7 +134,7 @@
 
 /obj/item/reagent_containers/food/snacks/breadslice/stale
 	name = "stale bread"
-	desc = "Похоже, ваши похитители позаботились о вашем питании."
+	desc = "It seems your captors have taken care of your meals."
 	gender = MALE
 	trash = null
 	list_reagents = list("nutriment" = 7, "bread" = 5)

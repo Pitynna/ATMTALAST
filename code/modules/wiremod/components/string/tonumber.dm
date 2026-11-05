@@ -5,9 +5,7 @@
  */
 /obj/item/circuit_component/tonumber
 	display_name = "В число"
-	desc = "Компонент, преобразующий входные данные в число. \
-			Если входные данные содержат текст, он учитывает его только в том случае, если он начинается с цифры. \
-			Компонент принимает это число и игнорирует всё остальное."
+	desc = "A component that converts its input to a number. Text is considered only if it begins with a digit. The component reads that number and ignores the rest."
 	category = "String"
 
 	/// The input port

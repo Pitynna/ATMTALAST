@@ -1,11 +1,11 @@
 /obj/item/ammo_box/magazine/toy
-	gun_name = "игрушечного оружия"
+	gun_name = "toy guns"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart
 	caliber = CALIBER_FOAM_FORCE
 
 // MARK: SMG
 /obj/item/ammo_box/magazine/toy/smg
-	gun_name = "игрушечного пистолета-пулемёта \"Saber SMG\""
+	gun_name = "toy Saber submachine guns"
 	icon_state = "smg9mm-20"
 	max_ammo = 20
 
@@ -17,7 +17,7 @@
 
 // MARK: Pistol
 /obj/item/ammo_box/magazine/toy/pistol
-	gun_name = "игрушечного пистолета FK-69 \"Стечкин\""
+	gun_name = "toy FK-69 Stechkin pistols"
 	icon_state = "9x19p"
 	max_ammo = 8
 	multiple_sprites = 2
@@ -30,7 +30,7 @@
 
 // MARK: Enforcer
 /obj/item/ammo_box/magazine/toy/enforcer
-	gun_name = "игрушечного пистолета \"Блюститель\""
+	gun_name = "toy Enforcer pistols"
 	icon_state = "enforcer"
 	max_ammo = 8
 	multiple_sprites = 1
@@ -56,7 +56,7 @@
 
 // MARK: C-20r
 /obj/item/ammo_box/magazine/toy/smgm45
-	gun_name = "игрушечного пистолета-пулемёта C-20r"
+	gun_name = "toy C-20r submachine guns"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	max_ammo = 20
 
@@ -67,7 +67,7 @@
 
 // MARK: L6 SAW
 /obj/item/ammo_box/magazine/toy/m762
-	gun_name = "игрушечного пулемёта L6 SAW"
+	gun_name = "toy L6 SAW machine guns"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	max_ammo = 100
 
@@ -78,7 +78,7 @@
 
 // MARK: Sniper rifle
 /obj/item/ammo_box/magazine/toy/sniper_rounds
-	gun_name = "игрушечной снайперской винтовки Bubz FX1000"
+	gun_name = "toy Bubz FX1000 sniper rifles"
 	icon_state = ".50mag"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/sniper/riot
 	max_ammo = 6

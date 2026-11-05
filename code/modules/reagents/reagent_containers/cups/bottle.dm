@@ -71,14 +71,14 @@
 
 /obj/item/reagent_containers/cup/bottle/ammonia
 	name = "ammonia bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится аммиак."
+	desc = "A small glass bottle containing ammonia."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("ammonia" = 30)
 
 /obj/item/reagent_containers/cup/bottle/diethylamine
 	name = "diethylamine bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится диэтиламин."
+	desc = "A small glass bottle containing diethylamine."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("diethylamine" = 30)
@@ -119,7 +119,7 @@
 
 /obj/item/reagent_containers/cup/bottle/morphine
 	name = "Morphine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится морфин."
+	desc = "A small glass bottle containing morphine."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("morphine" = 30)
@@ -228,13 +228,13 @@
 
 /obj/item/reagent_containers/cup/bottle/reagent/ammonia
 	name = "Ammonia Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится аммиак."
+	desc = "A small glass bottle containing ammonia."
 	list_reagents = list("ammonia" = 50)
 	pixel_x = 6
 
 /obj/item/reagent_containers/cup/bottle/reagent/diethylamine
 	name = "Diethylamine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится диэтиламин."
+	desc = "A small glass bottle containing diethylamine."
 	list_reagents = list("diethylamine" = 50)
 	pixel_x = -4
 	pixel_y = -6
@@ -258,7 +258,7 @@
 
 /obj/item/reagent_containers/cup/bottle/reagent/morphine
 	name = "Morphine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится морфин."
+	desc = "A small glass bottle containing morphine."
 	list_reagents = list("morphine" = 50)
 
 /obj/item/reagent_containers/cup/bottle/reagent/insulin
@@ -588,7 +588,7 @@
 
 /obj/item/reagent_containers/cup/bottle/syrup_bottle
 	name = "syrup bottle"
-	desc = "Стеклянная бутылка для сиропа, предназначенного для добавления в кофе. Оснащена удобным дозатором."
+	desc = "A glass bottle of syrup for adding to coffee, fitted with a convenient dispenser."
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "syrup"
 	base_icon_state = "syrup"
@@ -651,12 +651,10 @@
 
 /obj/item/reagent_containers/cup/bottle/syrup_bottle/caramel
 	name = "bottle of caramel syrup"
-	desc = "Стеклянная бутылка для сиропа, предназначенного для добавления в кофе. Оснащена удобным дозатором. \
-			Содержит карамелизированный сахар, также известный как карамель. Очень липкий."
+	desc = "A glass bottle of syrup for adding to coffee, fitted with a convenient dispenser. Contains caramelized sugar, also known as caramel. Very sticky."
 	list_reagents = list("caramel" = 50)
 
 /obj/item/reagent_containers/cup/bottle/syrup_bottle/liqueur
 	name = "bottle of coffee liqueur syrup"
-	desc = "Стеклянная бутылка для сиропа, предназначенного для добавления в кофе. Оснащена удобным дозатором. \
-			Содержит мексиканский ликёр \"Калуа\". В производстве с 1936 года!"
+	desc = "A glass bottle of syrup for adding to coffee, fitted with a convenient dispenser. Contains Mexican Kahlua liqueur. In production since 1936!"
 	list_reagents = list("kahlua" = 50)

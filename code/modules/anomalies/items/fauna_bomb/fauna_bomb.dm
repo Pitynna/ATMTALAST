@@ -3,8 +3,7 @@
 
 /obj/item/fauna_bomb
 	name = "fauna bomb"
-	desc = "Эксперементальный прибор, способный создавать и поддерживать плотные копии отсканированных существ, \
-			сделанные из окружающих газов. Для работы требует ядро атмосферной аномалии."
+	desc = "An experimental device that creates and maintains solid copies of scanned creatures from surrounding gases. Requires an atmospheric anomaly core."
 	gender = FEMALE
 	w_class = WEIGHT_CLASS_SMALL
 	icon = 'icons/obj/weapons/techrelic.dmi'

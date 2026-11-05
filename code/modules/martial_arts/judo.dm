@@ -19,9 +19,7 @@
 
 /obj/item/storage/belt/security/judobelt
 	name = "Corporate Judo belt"
-	desc = "Позволяет вам использовать Корпоративное Дзюдо. \
-			По статистике собранной независимым исследователем, \
-			владеющие этим поясом на 40% чаще покупают продукцию Мистера Чанга."
+	desc = "Allows you to use Corporate Judo. According to an independent researcher, owners of this belt buy Mr. Chang's products 40% more often."
 	icon_state = "judobelt"
 	item_state = "judo"
 	w_class = WEIGHT_CLASS_BULKY

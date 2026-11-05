@@ -353,7 +353,7 @@
 
 /obj/item/kitchen/knife/combat/survival/bone/eel
 	name = "eel sharpened tail"
-	desc = "Бритвенно-острый хвост донного угля, аккуратно отделённый от основного тела рыбы. Из такого выйдет отличный нож или наконечник для копья."
+	desc = "The razor-sharp tail of a bottom-dwelling eel, carefully separated from the fish. It would make an excellent knife or spearhead."
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "eel_sharpened_tail"
 	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
@@ -423,7 +423,7 @@
 
 /obj/item/kitchen/knife/ghostface_knife
 	name = "knife"
-	desc = "Очень острый нож. Судя по потёртостям и засохшей крови, он совсем не валялся без дела."
+	desc = "A very sharp knife. The wear and dried blood suggest that it has seen plenty of use."
 	icon = 'icons/obj/items.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'

@@ -208,9 +208,7 @@
 // MARK: Frontier level action
 /obj/item/gun/projectile/shotgun/winchester
 	name = "\"Frontier\" lever-action shotgun"
-	desc = "Рычажный дробовик калибра 12x70 мм, собранный по схеме из открытой библиотеки \"Canon de Frontira\". \
-			Фурнитура из полимера, имитирующего дерево, классический рычажный механизм перезарядки. \
-			Популярен у оружейных энтузиастов и охотников на далёких мирах."
+	desc = "A 12x70mm lever-action shotgun built from a design in the open Canon de Frontira library. Features wood-effect polymer furniture and a classic lever mechanism. Popular among gun enthusiasts and hunters on distant worlds."
 	icon_state = "winchester"
 	item_state = "winchester"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/winchester
@@ -252,9 +250,7 @@
 // MARK: Cargo defender
 /obj/item/gun/projectile/shotgun/winchester/cargo
 	name = "\"Cargo Defender\" lever-action shotgun"
-	desc = "Рычажный дробовик калибра 12x70 мм с позолоченным покрытием и именной гравировкой. Механика идентична базовой схеме рычажного дробовика \"Фронтир\", \
-			однако отделка и исполнение явно указывают на штучную работу. Судя по надписи, оружие было изготовлено или вручено в знак особых \
-			заслуг перед отделом Снабжения."
+	desc = "A gold-plated 12x70mm lever-action shotgun with personalized engraving. Mechanically identical to the basic Frontier pattern, but its finish clearly marks it as a custom piece. The inscription suggests it was made or presented in recognition of exceptional service to the Supply Department."
 	icon_state = "winchester_cargo"
 	item_state = "winchester_cargo"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/winchester/cargo
@@ -413,8 +409,7 @@
 
 /obj/item/gun/projectile/automatic/shotgun/bulldog/mastiff
 	name = "\"Mastiff\" mag-fed shotgun"
-	desc = "Компактный самозарядный дробовик 12-го калибра с магазинным питанием, являющийся дешёвой копией дробовика \"Бульдог\".\
-			В отличие от оригинала, не совместим с расширенными магазинами."
+	desc = "A compact, magazine-fed 12-gauge semiautomatic shotgun, a cheap copy of the Bulldog. Unlike the original, it cannot use extended magazines."
 	mag_type = /obj/item/ammo_box/magazine/cheap_m12g
 	color = COLOR_ASSEMBLY_BROWN
 
@@ -450,9 +445,7 @@
 // MARK: SG40 Vastus
 /obj/item/gun/projectile/automatic/cats
 	name = "SG40 \"Vastus\" shotgun"
-	desc = "Автоматический дробовик 12-го калибра производства \"Mars Special\", принятый на вооружение пехотных подразделений Транс-солнечной Федерации. \
-			Поддерживает одиночный режим огня и очередь по 2 патрона. Высокая отдача и плотность огня делают его разрушительным инструментом \
-			ближнего боя. Оснащён двумя слотами под тактические модули."
+	desc = "A 12-gauge automatic shotgun manufactured by Mars Special and used by Trans-Solar Federation infantry. Supports single shots and two-round bursts. Heavy recoil and dense fire make it devastating at close range. Includes two tactical module slots."
 	icon_state = "tla_cats"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/cats12g

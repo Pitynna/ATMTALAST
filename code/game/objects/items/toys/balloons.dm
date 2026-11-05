@@ -29,7 +29,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	target.reagents.trans_to(src, 10)
 	to_chat(user, span_notice("Вы наполняете шарик из [target.declent_ru(GENITIVE)]."))
-	desc = "Полупрозрачный воздушный шарик, внутри которого плещется какая-то жидкость."
+	desc = "A translucent balloon with some liquid sloshing inside."
 	update_icon(UPDATE_ICON_STATE)
 
 /obj/item/toy/waterballoon/attackby(obj/item/item, mob/user, params)
@@ -48,7 +48,7 @@
 		qdel(src)
 		return ATTACK_CHAIN_BLOCKED_ALL
 
-	desc = "Полупрозрачный воздушный шарик, внутри которого плещется какая-то жидкость."
+	desc = "A translucent balloon with some liquid sloshing inside."
 	to_chat(user, span_notice("Вы наполняете шарик из [item.declent_ru(GENITIVE)]."))
 	item.reagents.trans_to(src, 10)
 	update_icon(UPDATE_ICON_STATE)
@@ -102,7 +102,7 @@
 
 /obj/item/toy/balloon/long
 	name = "long balloon"
-	desc = "Воздушный шарик, идеальный для скручивания в различные формы. Использованные блюспейс технологии позволили ему парить при любых условиях."
+	desc = "A balloon ideal for twisting into different shapes. Bluespace technology lets it float under any conditions."
 	icon_state = "balloon_long"
 	w_class = WEIGHT_CLASS_NORMAL
 	/// Combinations of balloon colours to make specific animals.
@@ -210,14 +210,14 @@
 
 /obj/item/toy/balloon/corgi
 	name = "corgi balloon"
-	desc = "Воздушный шарик в форме головы корги. Для хороших мальчиков круглый год."
+	desc = "A balloon shaped like a corgi's head. For good boys all year round."
 	icon_state = "corgi"
 	item_state = "corgi"
 	random_color = FALSE
 
 /obj/item/toy/balloon/heart
 	name = "heart balloon"
-	desc = "Воздушный шарик в форме сердца. Как мило!"
+	desc = "A heart-shaped balloon. How sweet!"
 	icon_state = "heart"
 	item_state = "heart"
 	random_color = FALSE
@@ -239,7 +239,7 @@
 
 /obj/item/toy/balloon/arrest
 	name = "arreyst balloon"
-	desc = "Полунадутый воздушный шар с изображением бойз-бэнда \"Арестанты\", популярного около десяти лет назад и прославившегося тем, что высмеивал красные комбинезоны как немодные."
+	desc = "A half-inflated balloon featuring the boy band The Inmates, popular about a decade ago for mocking red jumpsuits as unfashionable."
 	icon_state = "arrestballoon"
 	item_state = "arrestballoon"
 	random_color = FALSE
@@ -258,75 +258,75 @@
 
 /obj/item/toy/balloon_animal/guy
 	name = "balloon guy"
-	desc = "Фигурка из воздушных шариков, изображающая обычного парня. Интересно, платит ли он налоги на воздушные шары? Вероятно, уклоняется от них."
+	desc = "A balloon figure of an ordinary guy. Does he pay balloon taxes? Probably evades them."
 	icon_state = "balloon_guy"
 
 /obj/item/toy/balloon_animal/nukie
 	name = "balloon nukie"
-	desc = "Фигурка из воздушных шариков, изображающая ядерного оперативника \"Синдиката\". Возможно, она сделана чтобы умиротворить их и попросить о пощаде, ну, или подшутить над ними."
+	desc = "A balloon figure of a Syndicate nuclear operative. Perhaps it was made to appease them and beg for mercy, or simply to mock them."
 	icon_state = "balloon_nukie"
 
 /obj/item/toy/balloon_animal/clown
 	name = "balloon clown"
-	desc = "Клоун из воздушных шариков, улыбающийся во весь рот."
+	desc = "A balloon clown with a wide grin."
 	icon_state = "balloon_clown"
 
 /obj/item/toy/balloon_animal/cat
 	name = "balloon cat"
-	desc = "Фигурка из воздушных шариков, изображающая кошку. Возможно она милее своих живых собратьев, но не располагает добротой и не такая пушистая."
+	desc = "A balloon cat. Perhaps cuter than its living counterparts, but neither as kind nor as fluffy."
 	icon_state = "balloon_cat"
 
 /obj/item/toy/balloon_animal/fly
 	name = "balloon fly"
-	desc = "Фигурка из воздушных шариков в форме мухи, жужжание не входит в комплект."
+	desc = "A balloon fly. Buzzing not included."
 	icon_state = "balloon_fly"
 
 /obj/item/toy/balloon_animal/podguy
 	name = "balloon podguy"
-	desc = "Фигурка из воздушных шариков, изображающая человека-растение, отдаленно напоминающего диону."
+	desc = "A balloon figure of a plant person, vaguely resembling a diona."
 	icon_state = "balloon_podguy"
 
 /obj/item/toy/balloon_animal/ai
 	name = "balloon ai core"
-	desc = "Несколько нереалистичное изображение ядра искусственного интеллекта станции, сделанное из воздушных шариков. Настоящий ИИ, вероятно, так бы не улыбался."
+	desc = "A somewhat unrealistic balloon model of a station AI core. A real AI probably would not smile like that."
 	icon_state = "balloon_ai"
 
 /obj/item/toy/balloon_animal/dog
 	name = "balloon dog"
-	desc = "Фигурка из воздушных шариков, изображающая хорошего мальчика. Конечно, она не может сравниться с оригиналом, но попытка хорошая."
+	desc = "A balloon figure of a good boy. It cannot compete with the original, but it is a good effort."
 	icon_state = "balloon_dog"
 
 /obj/item/toy/balloon_animal/xeno
 	name = "balloon xeno"
-	desc = "Фигурка жуткого ксеноморфа из воздушных шариков! Слишком мягкая, чтобы напугать кого-либо сама по себе!"
+	desc = "A terrifying balloon xenomorph! Too soft to frighten anyone on its own!"
 	icon_state = "balloon_xeno"
 
 /obj/item/toy/balloon_animal/banana
 	name = "balloon banana"
-	desc = "Банан из воздушных шариков, на нём не подскользнуться. Зато он хорошо подходит для психологической войны."
+	desc = "A balloon banana. You cannot slip on it, but it works well for psychological warfare."
 	icon_state = "balloon_banana"
 
 /obj/item/toy/balloon_animal/lizard
 	name = "balloon lizard"
-	desc = "Фигурка из воздушных шариков, изображающая ящерку. Один из первых видов, адаптировавшихся к культуре планеты клоунов. Возможно, потому что они от природы смешные?"
+	desc = "A balloon lizard. One of the first species to adapt to clown-planet culture. Perhaps because they are naturally funny?"
 	icon_state = "balloon_lizard"
 
 /obj/item/toy/balloon_animal/slime
 	name = "balloon slime"
-	desc = "Фигурка из воздушных шариков, изображающая единственного представителя слаймов в галактике, фиолетового цвета. Однажды слаймы пытались вторгнуться на планету клоунов, однако их быстро смыло плюющимися водой цветами."
+	desc = "A balloon figure of the galaxy's only slime species, in purple. Slimes once tried to invade the clown planet, but squirting flowers quickly washed them away."
 	icon_state = "balloon_slime"
 
 /obj/item/toy/balloon_animal/moth
 	name = "balloon moth"
-	desc = "Фигурка из воздушных шариков, изображающая распространенного представителя расы Ниан. Очень немногие из них решают поселиться на планете клоунов, но те, кто это делает, демонстрируют лучшие трюки с \"исчезновением трусов\"."
+	desc = "A balloon figure of a typical nian. Few choose to settle on the clown planet, but those who do perform the finest disappearing-underwear tricks."
 	icon_state = "balloon_moth"
 
 /obj/item/toy/balloon_animal/lamp
 	name = "balloon lamp"
-	desc = "Фигурка лампочки, выполненная из воздушных шариков. Отдаленно напоминает эфириальную сущность с других планов бытия, но на самом деле это просто лампочка."
+	desc = "A balloon light bulb. It vaguely resembles an ethereal entity from another plane of existence, but it is really just a light bulb."
 	icon_state = "balloon_lamp"
 
 /obj/item/toy/balloon_animal/plasmaman
 	name = "balloon plasmaman"
-	desc = "Фигурка плазмамена, выполненная из воздушных шариков. Самый редкий представитель на планете клоунов, они появились совсем недавно благодаря активной торговле между клоунами и НТ."
+	desc = "A balloon plasmaman. The rarest residents of the clown planet, they arrived only recently thanks to active trade between the clowns and Nanotrasen."
 	icon_state = "balloon_plasmaman"

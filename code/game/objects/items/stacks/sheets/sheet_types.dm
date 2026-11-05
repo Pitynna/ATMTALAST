@@ -610,7 +610,7 @@ GLOBAL_LIST_INIT(cardboard_recipes, list(
 
 /obj/item/stack/sheet/razor_sharp_teeth
 	name = "razor sharp teeth"
-	desc = "Бритвенно-острые зубы, добытые из пасти лавового хищника. Прекрасно подходят для стрел."
+	desc = "Razor-sharp teeth taken from a lava predator's jaws. Perfect for arrows."
 	gender = PLURAL
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "razor_sharp_teeth"

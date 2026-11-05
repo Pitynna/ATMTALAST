@@ -470,7 +470,7 @@
 
 /obj/item/clothing/mask/gas/clown_hat/sweettooth
 	name = "Sweet Tooth Mask"
-	desc = "Брутальная маска клоуна. Она до сих пор пахнет цирком. И керосином."
+	desc = "A brutal clown mask. It still smells of the circus. And kerosene."
 	icon_state = "sweettooth_mask"
 	item_state = "sweettooth_mask"
 	sprite_sheets = list(
@@ -709,7 +709,7 @@
 
 /obj/item/clothing/head/paper_bag
 	name = "paper bag"
-	desc = "Надетый на голову бумажный пакет. Очень хлипкий!"
+	desc = "A paper bag worn over the head. Very flimsy!"
 	icon_state = "paper_bag"
 	item_state = "paper_bag"
 	w_class = WEIGHT_CLASS_TINY

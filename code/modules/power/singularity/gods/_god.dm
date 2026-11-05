@@ -4,7 +4,7 @@
 /obj/god
 	abstract_type = /obj/god
 	name = "God"
-	desc = "Ваш разум пульсирует и плывёт в безуспешных попытках осознать ЭТО."
+	desc = "Your mind throbs and swims as it struggles in vain to comprehend THIS."
 	anchored = TRUE
 	appearance_flags = LONG_GLIDE
 	move_resist = INFINITY

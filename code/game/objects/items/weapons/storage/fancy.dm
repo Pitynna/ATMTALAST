@@ -242,16 +242,16 @@
 	icon_type = "cigarette"
 	var/cigarette_type = /obj/item/clothing/mask/cigarette
 	var/static/list/cigpack_diseases = list(
-		"недоношенность", "онкозаболевания", "пародонтоз",
-		"преждевременное старение", "ампутация", "зависимость",
-		"импотенция", "мертворождение", "смерть в агонии",
-		"туберкулёз", "отмирание органов",
+		"premature birth", "cancer", "periodontal disease",
+		"premature aging", "amputation", "addiction",
+		"impotence", "stillbirth", "an agonizing death",
+		"tuberculosis", "organ failure",
 	)
 
 /obj/item/storage/fancy/cigarettes/Initialize(mapload)
 	. = ..()
 	var/cigpack_disease = pick(cigpack_diseases)
-	desc += "\n На упаковке написано: \"[capitalize(cigpack_disease)]\"."
+	desc += "\nThe package reads: \"[capitalize(cigpack_disease)]\"."
 
 /obj/item/storage/fancy/cigarettes/populate_contents()
 	for(var/i = 1 to storage_slots)
@@ -349,7 +349,7 @@
 
 /obj/item/storage/fancy/cigarettes/cigpack_richard
 	name = "Richard & Co cigarettes"
-	desc = "Упаковка 20 сигарет \"Ричард и Компания\". Курево для самых отчаяных."
+	desc = "A pack of twenty Richard and Company cigarettes. A smoke for the truly desperate."
 	cigarette_type = /obj/item/clothing/mask/cigarette/richard
 
 /obj/item/storage/fancy/cigarettes/cigpack_robust
@@ -424,7 +424,7 @@
 
 /obj/item/storage/fancy/cigcase
 	name = "Cigar Case"
-	desc = "Делового вида футляр, в котором держат дорогие сигары."
+	desc = "A businesslike case for expensive cigars."
 	icon = 'icons/obj/cigarettes.dmi'
 	gender = MALE
 	icon_state = "cigarcase"
@@ -505,7 +505,7 @@
  */
 /obj/item/storage/fancy/coffee_condi_display
 	name = "coffee condiments display"
-	desc = "Небольшая деревянная коробка, предназначенная для хранения и демонстрации добавок к кофе."
+	desc = "A small wooden box for storing and displaying coffee condiments."
 	gender = MALE
 	icon_state = "coffee_condi_display"
 	icon_type = "condiment pack"
@@ -556,7 +556,7 @@
  */
 /obj/item/storage/fancy/coffee_cart_rack
 	name = "coffeemaker cartridge rack"
-	desc = "Небольшая стойка для хранения кофе-картриджей, совместимых с кофемашиной \"Моделло 3\"."
+	desc = "A small rack for coffee cartridges compatible with the Modello 3 coffee machine."
 	gender = FEMALE
 	icon_state = "coffee_cartrack0"
 	icon_type = "coffee cartridge"

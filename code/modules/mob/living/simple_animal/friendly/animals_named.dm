@@ -278,7 +278,7 @@
 
 /obj/effect/decal/remains/mouse/Pinkie
 	name = "Pinkie"
-	desc = "Когда-то это был напарник самой сообразительной крысы в мире. К сожалению он таковым не являлся..."
+	desc = "Once the partner of the world's cleverest rat. Unfortunately, he was not quite as clever..."
 	gender = MALE
 	anchored = TRUE
 

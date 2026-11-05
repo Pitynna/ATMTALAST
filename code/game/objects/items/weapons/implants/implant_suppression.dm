@@ -1,6 +1,6 @@
 /obj/item/implant/suppression
 	name = "suppression bio-chip"
-	desc = "Подавляет навыки боевых искусств, сохраняя при этом их ограничения."
+	desc = "Suppresses martial arts abilities while retaining their restrictions."
 	activated = BIOCHIP_ACTIVATED_PASSIVE
 	implant_state = "implant-nanotrasen"
 	implant_data = /datum/implant_fluff/suppression
@@ -33,5 +33,5 @@
 
 /obj/item/implantcase/suppression
 	name = "bio-chip case - 'Suppression'"
-	desc = "Стеклянный кейс, содержащий био-чип \"Подавление\"."
+	desc = "A glass case containing a Suppression bio-chip."
 	imp = /obj/item/implant/suppression

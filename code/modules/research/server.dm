@@ -4,8 +4,7 @@
 #define RD_SERVER_SCREEN_LOGS 3
 /obj/machinery/r_n_d/server
 	name = "R&D Server"
-	desc = "Центральный сервер отдела НИО. Предназначен для хранения и управления базой данных шаблонов печати. \
-			Обеспечивает синхронизацию данных между подключёнными консолями и научным оборудованием."
+	desc = "The R&D department's central server. Stores and manages the design database and synchronizes data between connected consoles and scientific equipment."
 	icon_state = "server"
 	base_icon_state = "server"
 	var/datum/research/files
@@ -280,7 +279,7 @@
 
 /obj/machinery/computer/rdservercontrol
 	name = "R&D server controller"
-	desc = "Комьютер, предназначенный для администрирования системы серверов НИО."
+	desc = "A computer for administering the R&D server system."
 	icon_screen = "rdcomp"
 	icon_keyboard = "rd_key"
 	light_color = LIGHT_COLOR_LAVENDER

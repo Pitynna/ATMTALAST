@@ -168,8 +168,7 @@
 
 /obj/item/screwdriver/industrial
 	name = "industrial screwdriver"
-	desc = "Инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой. \
-			Нескользящие накладки улучшают хват, облегчая работу."
+	desc = "A tool for tightening and loosening threaded fasteners. Nonslip grip pads make it easier to use."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver_industrial"
 	post_init_icon_state = null

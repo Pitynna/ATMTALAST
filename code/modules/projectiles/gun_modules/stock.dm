@@ -3,7 +3,7 @@
  */
 /obj/item/gun_module/stock
 	name = "telescopic stock"
-	desc = "Телескопический приклад. Позволяет лучше контролировать отдачу, повышая кучность при стрельбе."
+	desc = "A telescopic stock that improves recoil control and shot grouping."
 	icon_state = "stock"
 	item_state = "stock"
 	overlay_state = "stock_o"

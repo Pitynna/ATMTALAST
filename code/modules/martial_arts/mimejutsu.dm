@@ -65,7 +65,7 @@
 		F.teach(H)
 		to_chat(H, span_boldannounceic("..."))
 		used = TRUE
-		desc = "Старое пособие по боевому искусству мимов, но страницы его пусты."
+		desc = "An old mime martial arts manual, but its pages are blank."
 	else
 		to_chat(user, span_warning("Сначала вы должны принять обет молчания!"))
 

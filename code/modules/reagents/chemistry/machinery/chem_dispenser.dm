@@ -498,7 +498,7 @@
 
 /obj/item/handheld_chem_dispenser
 	name = "handheld chem dispenser"
-	desc = "Компактная версия химического раздатчика. Удобно!"
+	desc = "A compact chemical dispenser. Convenient!"
 	icon = 'icons/obj/chemical.dmi'
 	item_state = "handheld_chem"
 	icon_state = "handheld_chem"
@@ -684,7 +684,7 @@
 
 /obj/item/handheld_chem_dispenser/booze
 	name = "handheld bar tap"
-	desc = "Компактная версия алкогольного раздатчика. Удобно!"
+	desc = "A compact alcohol dispenser. Convenient!"
 	item_state = "handheld_booze"
 	icon_state = "handheld_booze"
 	is_drink = TRUE
@@ -695,7 +695,7 @@
 
 /obj/item/handheld_chem_dispenser/soda
 	name = "handheld soda fountain"
-	desc = "Компактная версия раздатчика напитков. Удобно!"
+	desc = "A compact soft drink dispenser. Convenient!"
 	item_state = "handheld_soda"
 	icon_state = "handheld_soda"
 	is_drink = TRUE
@@ -706,7 +706,7 @@
 
 /obj/item/handheld_chem_dispenser/botanical
 	name = "handheld botanical chemical dispenser"
-	desc = "Компактная версия ботанического раздатчика. Удобно!"
+	desc = "A compact botanical dispenser. Convenient!"
 	dispensable_reagents = list(
 		"mutagen",
 		"saltpetre",
@@ -724,7 +724,7 @@
 
 /obj/item/handheld_chem_dispenser/cooking
 	name = "handheld cooking chemical dispenser"
-	desc = "Компактный кухонный раздатчик. Удобно!"
+	desc = "A compact kitchen dispenser. Convenient!"
 	dispensable_reagents = list(
 		"sodiumchloride",
 		"blackpepper",

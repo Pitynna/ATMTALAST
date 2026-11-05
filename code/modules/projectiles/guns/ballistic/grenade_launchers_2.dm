@@ -142,7 +142,7 @@
 // MARK: RPG-232
 /obj/item/gun/projectile/revolver/rocketlauncher/rpg232
 	name = "RPG-232"
-	desc = "Разработанный в ТСФ многоразовый гранатомет, так и не поступивший на вооружение Федерации. Модель стала популярна среди тяжеловооруженных отрядов ОЗА \"Нанотрейзен\"."
+	desc = "A reusable launcher developed in the TSF but never adopted by the Federation. Popular among heavily armed Nanotrasen Asset Protection units."
 	icon_state = "rpg232"
 	item_state = "rpg232"
 	mag_type = /obj/item/ammo_box/magazine/internal/rpg232

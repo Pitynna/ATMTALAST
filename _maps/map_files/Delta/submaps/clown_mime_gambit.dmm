@@ -43,7 +43,7 @@
 /area/station/service/clown)
 "h" = (
 /obj/structure/statue/bananium/clown/unique{
-	name = "Статуя Великого Кекеги"
+	name = "Statue of the Great Kekega"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"

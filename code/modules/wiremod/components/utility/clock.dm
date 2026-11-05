@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/clock
 	display_name = "Часы"
-	desc = "Компонент, который срабатывает неоднократно."
+	desc = "A component that triggers repeatedly."
 	category = "Utility"
 
 	/// Whether the clock is on or not

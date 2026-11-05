@@ -132,15 +132,14 @@
 // MARK: Double bombarda
 /obj/item/gun/projectile/bombarda/bombplet
 	name = "bombplet"
-	desc = "Собранный из подручных материалов гранатомёт с двумя стволами, использующий боеприпасы калибра 40 мм."
+	desc = "An improvised double-barreled grenade launcher using 40mm ammunition."
 	icon_state = "bombplet"
 	item_state = "bombplet"
 	mag_type = /obj/item/ammo_box/magazine/internal/bombarda/x2
 
 /obj/item/gun/projectile/bombarda/secgl
 	name = "grenade launcher GL-06"
-	desc = "Однозарядный ручной гранатомёт калибра 40 мм производства \"Mars Special\". Предназначен для подавления беспорядков, \
-			однако может быть использован для других задач благодаря широкому спектру доступных боеприпасов. Входит в стандартное оснащение арсеналов службы безопасности \"Нанотрейзен\"."
+	desc = "A single-shot handheld 40mm grenade launcher manufactured by Mars Special. Intended for riot control, but its wide ammunition selection supports other tasks. Standard equipment in Nanotrasen security armories."
 	icon_state = "secgl"
 	item_state = "secgl"
 	mag_type = /obj/item/ammo_box/magazine/internal/bombarda/secgl
@@ -149,8 +148,7 @@
 
 /obj/item/gun/projectile/bombarda/secgl/x4
 	name = "grenade launcher GL-08-4"
-	desc = "Ручной гранатомёт калибра 40 мм производства \"Mars Special\", расчитанный на 4 гранаты. Предназначен для подавления беспорядков, \
-			однако может быть использован для других задач благодаря широкому спектру доступных боеприпасов. Входит в стандартное оснащение арсеналов службы безопасности \"Нанотрейзен\"."
+	desc = "A handheld four-shot 40mm grenade launcher manufactured by Mars Special. Intended for riot control, but its wide ammunition selection supports other tasks. Standard equipment in Nanotrasen security armories."
 	icon_state = "secgl_4"
 	item_state = "secgl_4"
 	mag_type = /obj/item/ammo_box/magazine/internal/bombarda/secgl/x4
@@ -172,7 +170,7 @@
 // MARK: M79
 /obj/item/gun/projectile/bombarda/secgl/m79
 	name = "grenade launcher M79"
-	desc = "Классический однозарядный ручной гранатомёт. Использует 40 мм гранаты."
+	desc = "A classic single-shot handheld grenade launcher using 40mm grenades."
 	icon_state = "m79"
 	item_state = "m79"
 
@@ -275,8 +273,8 @@
 /obj/effect/decal/cleanable/blood/paint
 	name = "paint"
 	dryname = "dried paint"
-	desc = "Она густая и липкая. Возможно, кто то разлил тут краску?"
-	drydesc = "Она сухая и засохшая. Кто-то явно халтурит."
+	desc = "Thick and sticky. Did someone spill paint here?"
+	drydesc = "It is dry and crusty. Someone is clearly slacking off."
 	gender = FEMALE
 	blood_state = BLOOD_STATE_NOT_BLOODY
 	//drying_time = 1
@@ -295,7 +293,7 @@
 /obj/effect/decal/cleanable/blood/drip/paint
 	name = "paint"
 	dryname = "dried paint"
-	desc = "Оно густое и липкое. Возможно, кто то разлил тут краску?"
+	desc = "Thick and sticky. Did someone spill paint here?"
 	blood_state = BLOOD_STATE_NOT_BLOODY
 	//drying_time = 1
 

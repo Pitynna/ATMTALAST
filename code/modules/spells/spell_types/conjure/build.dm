@@ -92,7 +92,7 @@
 	summon_type = list(/obj/effect/forcefield/holy)
 
 /obj/effect/forcefield/holy
-	desc = "Этот щит так и светится! Не похоже что его можно будет убрать так просто."
+	desc = "This shield positively glows! It does not look easy to remove."
 	name = "holy field"
 	icon = 'icons/effects/cult_effects.dmi'
 	icon_state = "holy_field"

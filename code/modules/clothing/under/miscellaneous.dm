@@ -75,27 +75,27 @@
 	displays_id = 0
 
 /obj/item/clothing/under/solgov/forest
-	desc = "Комфортный и удобный лесной камуфляж Транс-Солнечной Федерации."
+	desc = "Comfortable Trans-Solar Federation woodland camouflage."
 	icon_state = "solgov_forest"
 	item_state = "solgov_forest"
 	item_color = "solgov_forest"
 
 /obj/item/clothing/under/solgov/urban
-	desc = "Комфортный и удобный городской камуфляж Транс-Солнечной Федерации."
+	desc = "Comfortable Trans-Solar Federation urban camouflage."
 	icon_state = "solgov_urban"
 	item_state = "solgov_urban"
 	item_color = "solgov_urban"
 
 /obj/item/clothing/under/solgov/civ
-	desc = "Комфортная, воссоздающая военную униформу, одежда. Не похоже, чтобы она защищала."
+	desc = "Comfortable clothing patterned after a military uniform. It does not appear protective."
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/solgov/forest/civ
-	desc = "Комфортная, воссоздающая лесной камуфляж, одежда. Не похоже, чтобы она защищала."
+	desc = "Comfortable clothing patterned after woodland camouflage. It does not appear protective."
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/solgov/urban/civ
-	desc = "Комфортная, воссоздающая городской камуфляж, одежда. Не похоже, чтобы она защищала."
+	desc = "Comfortable clothing patterned after urban camouflage. It does not appear protective."
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/solgov/elite
@@ -204,7 +204,7 @@
 
 /obj/item/clothing/under/rank/centcom/representative/update_desc(updates = ALL)
 	. = ..()
-	desc = "Золотая отделка на чёрной, как космос, ткани. Эта униформа имеет обозначение \"[station_name()]\" на левом плече."
+	desc = "Gold trim on fabric as black as space. This uniform has \"[station_name()]\" on its left shoulder."
 
 /obj/item/clothing/under/rank/centcom/magistrate
 	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Magistrate\" and bears \"N.S.S. Cyberiad\" on the left shoulder."
@@ -220,7 +220,7 @@
 
 /obj/item/clothing/under/rank/centcom/magistrate/update_desc(updates = ALL)
 	. = ..()
-	desc = "Золотая отделка на чёрной, как космос, ткани. Эта униформа имеет нашивку \"Магистрат\" и имеет обозначение \"[station_name()]\" на левом плече."
+	desc = "Gold trim on fabric as black as space. This uniform has a \"Magistrate\" patch and \"[station_name()]\" on its left shoulder."
 
 /obj/item/clothing/under/rank/centcom/diplomatic
 	desc = "A very gaudy and official looking uniform of the Nanotrasen Diplomatic Corps."
@@ -795,7 +795,7 @@
 
 /obj/item/clothing/under/sweettooth
 	name = "Sweet Tooth Costume"
-	desc = "Брутально выглядящий костюм, отдалённо смахивающий на клоунский. Такой отлично подошёл бы какому-нибудь серийному убийце."
+	desc = "A brutal-looking outfit vaguely resembling a clown costume. It would suit a serial killer perfectly."
 	icon_state = "sweettooth_uniform"
 	item_color = "sweettooth_uniform"
 	body_parts_covered = UPPER_TORSO | LOWER_TORSO
@@ -1139,7 +1139,7 @@
 
 /obj/item/clothing/under/steampunkdress
 	name = "victorian blue-white dress"
-	desc = "Изящное бело-кремовое платье с синим жакетом. Платье повторяет одежду викторианской эпохи, но с небольшими современными идеями. На лацкане жакета нацеплена брош символизирующая превосходство."
+	desc = "An elegant white-and-cream dress with a blue jacket, combining Victorian fashion with a few modern ideas. A brooch symbolizing superiority adorns the jacket's lapel."
 	over_shoes = TRUE
 	icon_state = "steampunkdress"
 	item_state = "steampunkdress"
@@ -1161,7 +1161,7 @@
 
 /obj/item/clothing/under/dress50s
 	name = "old Soviet dress"
-	desc = "Платье в горошек на манер старой моды. Кажется, такое носят женщины из СССП."
+	desc = "An old-fashioned polka-dot dress. Women from the USSP seem to wear these."
 	over_shoes = TRUE
 	icon_state = "dress50s"
 	item_state = "dress50s"
@@ -1180,7 +1180,7 @@
 
 /obj/item/clothing/under/maid/short
 	name = "short maid costume"
-	desc = "Костюм для косплея горничной."
+	desc = "A maid cosplay costume."
 	over_shoes = TRUE
 	icon_state = "maid"
 	item_state = "maid"
@@ -1198,7 +1198,7 @@
 
 /obj/item/clothing/under/satan
 	name = "satanic clothes"
-	desc = "Костюм, который обычно носят сатанисты."
+	desc = "An outfit commonly worn by Satanists."
 	over_shoes = TRUE
 	icon_state = "satan"
 	item_state = "satan"
@@ -1217,7 +1217,7 @@
 
 /obj/item/clothing/under/martialsuit/masterli
 	name = "Master Li clothes"
-	desc = "Одеяние великого воина — жаль, что это всего лишь копия. Оригинал хранится в одном из дворцов династии Чанг."
+	desc = "The garb of a great warrior. A shame it is only a replica; the original is kept in one of the Chang dynasty's palaces."
 	can_adjust = FALSE
 	icon_state = "masterli"
 	item_state = "masterli"
@@ -1225,7 +1225,7 @@
 
 /obj/item/clothing/under/martialsuit/masterdragon
 	name = "Gold dragon master clothes"
-	desc = "Надевая этот костюм, вы чувствуете прилив социальных кредитов, вкус риса и родство с таярой."
+	desc = "Wearing this outfit fills you with social credit, the taste of rice and a sense of kinship with tajara."
 	over_shoes = TRUE
 	can_adjust = FALSE
 	icon_state = "masterdragon"
@@ -1234,7 +1234,7 @@
 
 /obj/item/clothing/under/martialsuit/redkunoichi
 	name = "Red Kunoichi clothes"
-	desc = "Раньше этот костюм был синим, но теперь он приобрёл злодейский вид. Курьер прошёл долгий и кровавый путь, чтобы доставить его."
+	desc = "This outfit used to be blue, but now it has taken on a villainous appearance. The courier traveled a long, bloody road to deliver it."
 	over_shoes = TRUE
 	can_adjust = FALSE
 	icon_state = "redkunoichi"
@@ -1243,7 +1243,7 @@
 
 /obj/item/clothing/under/martialsuit/bluekunoichi
 	name = "Blue Kunoichi clothes"
-	desc = "Костюм сделан из высококачественных нитей для лучшего контроля чакры! На бирке указано: \"Made in Chang\""
+	desc = "An outfit made from high-quality thread for superior chakra control! The label reads: Made in Chang."
 	over_shoes = TRUE
 	can_adjust = FALSE
 	icon_state = "bluekunoichi"
@@ -1265,32 +1265,32 @@
 
 /obj/item/clothing/under/tchaikowsky/sechighwaist
 	name = "security high waist female uniform"
-	desc = "Женская униформа Службы Безопасности с завышенной талией."
+	desc = "A women's high-waisted security uniform."
 	icon_state = "high_waist_sec"
 	item_state = "high_waist_sec"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 30, ACID = 30)
 
 /obj/item/clothing/under/tchaikowsky/dress
 	name = "formal blue dress"
-	desc = "Синее платье, которое обычно носят секретарши важных представителей корпораций."
+	desc = "A blue dress commonly worn by secretaries to important corporate representatives."
 	icon_state = "formal_dress_blue"
 	item_state = "formal_dress_blue"
 
 /obj/item/clothing/under/tchaikowsky/dress/black
 	name = "formal black dress"
-	desc = "Чёрное платье, которое обычно носят секретарши важных представителей корпораций."
+	desc = "A black dress commonly worn by secretaries to important corporate representatives."
 	icon_state = "formal_dress_black"
 	item_state = "formal_dress_black"
 
 /obj/item/clothing/under/tchaikowsky/highwaistpants
 	name = "hight waist pants"
-	desc = "Женские штаны с завышенной талией. Идут в комплекте с чёрной рубашкой!"
+	desc = "Women's high-waisted trousers. Comes with a black shirt!"
 	icon_state = "high_waist_pants"
 	item_state = "high_waist_pants"
 
 /obj/item/clothing/under/tchaikowsky/evening_dress
 	name = "evening dress (black)"
-	desc = "Платье для официальных мероприятий."
+	desc = "A dress for formal occasions."
 	icon_state = "evening_dress_black"
 	item_state = "evening_dress_black"
 
@@ -1301,19 +1301,19 @@
 
 /obj/item/clothing/under/tchaikowsky/baseball
 	name = "baseball uniform (blue)"
-	desc = "Бейсбольная униформа синего цвета. Мерч бейсбольной команды \"Нанотрейзен Лейкерс\"."
+	desc = "A blue baseball uniform. Merchandise for the Nanotrasen Lakers baseball team."
 	icon_state = "baseball_uniform_blue"
 	item_state = "baseball_uniform_blue"
 
 /obj/item/clothing/under/tchaikowsky/baseball/brown
 	name = "baseball uniform (brown)"
-	desc = "Бейсбольная униформа коричневого цвета. Мерч бейсбольной команды \"Киберсан Индастриз\"."
+	desc = "A brown baseball uniform. Merchandise for the Cybersun Industries baseball team."
 	icon_state = "baseball_uniform_brown"
 	item_state = "baseball_uniform_brown"
 
 /obj/item/clothing/under/chad
 	name = "Chad suit"
-	desc = "Должно быть абсолютно очевидным — перед вами настоящая легенда."
+	desc = "It should be perfectly obvious: you are looking at a true legend."
 	over_shoes = TRUE
 	can_adjust = FALSE
 	icon_state = "chadsuit"
@@ -1322,42 +1322,42 @@
 
 /obj/item/clothing/under/bandit
 	name = "bandit suit"
-	desc = "Грубая полосатая ткань и потёртые брюки. Наряд человека, который не боится показать своё прошлое."
+	desc = "Rough striped fabric and worn trousers. An outfit for someone unafraid to show their past."
 	icon_state = "bandit"
 	item_state = "bandit"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/goon
 	name = "goon suit"
-	desc = "Минималистичный тёмный наряд. Одежда для тех, кто предпочитает решать вопросы кулаками, а не словами."
+	desc = "A minimalist dark outfit for those who prefer settling matters with their fists rather than words."
 	icon_state = "goon"
 	item_state = "goon"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/gopnik
 	name = "gopnik suit"
-	desc = "Легкая куртка с объёмным меховым воротником. Одежда, которая одновременно согревает и запугивает."
+	desc = "A light jacket with a large fur collar. Clothing that keeps you warm while looking intimidating."
 	icon_state = "gopnik"
 	item_state = "gopnik"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/chainsmoker
 	name = "chainsmoker suit"
-	desc = "Простая выцветшая футболка и штаны. Наряд человека, которому плевать на мнение окружающих — главное, чтобы было комфортно."
+	desc = "A plain faded T-shirt and trousers. An outfit for someone who doesn't care what others think, as long as it is comfortable."
 	icon_state = "chainsmoker"
 	item_state = "chainsmoker"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/maleclub
 	name = "male club suit"
-	desc = "Потёртый синий клубный костюм с жёлтой рубашкой и тёмным галстуком. Пахнет джазом, сигаретным дымом и плохими решениями."
+	desc = "A worn blue club suit with a yellow shirt and dark tie. Smells of jazz, cigarette smoke and bad decisions."
 	icon_state = "male_club_outfit"
 	item_state = "male_club_outfit"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/girlclub
 	name = "girl club suit"
-	desc = "Жёлтый топ и короткие шорты."
+	desc = "A yellow top and short shorts."
 	icon_state = "girl_club_outfit"
 	item_state = "girl_club_outfit"
 	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")

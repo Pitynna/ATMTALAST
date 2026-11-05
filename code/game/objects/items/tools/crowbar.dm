@@ -119,8 +119,7 @@
 
 /obj/item/crowbar/industrial
 	name = "industrial crowbar"
-	desc = "Инструмент, предназначенный для использования в качестве рычага. \
-			Дополнительные прорезиненные накладки на рукояти облегчают хват."
+	desc = "A tool designed for use as a lever. Additional rubber grip pads make it easier to hold."
 	icon_state = "crowbar_industrial"
 	toolspeed = 0.6
 	resistance_flags = FIRE_PROOF | ACID_PROOF

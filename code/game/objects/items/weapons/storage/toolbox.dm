@@ -341,7 +341,7 @@
 
 /obj/item/storage/toolbox/surgery/advanced
 	name = "Advanced Laser Surgery Kit"
-	desc = "Контейнер, предназначенный для хранения и транспортировки хирургических инструментов. Имеет зелёные неоновые накладки."
+	desc = "A container for storing and transporting surgical instruments. Features green neon trim."
 	icon_state = "surgerykit_advanced"
 	item_state = "surgerykit_advanced"
 
@@ -360,7 +360,7 @@
 
 /obj/item/storage/toolbox/surgery/alien
 	name = "Alien Surgery Kit"
-	desc = "Контейнер, предназначенный для хранения и транспортировки хирургических инструментов. Выглядит очень необычно."
+	desc = "A container for storing and transporting surgical instruments. It looks very unusual."
 	icon_state = "surgerykit_alien"
 	item_state = "surgerykit_alien"
 
@@ -380,7 +380,7 @@
 
 /obj/item/storage/toolbox/surgery/ashwalker
 	name = "surgery bag"
-	desc = "Небольшой кожанный футляр, предназначенный для хранения и транспортировки хирургических инструментов. От него исходит едва заметный запах пепла."
+	desc = "A small leather case for storing and transporting surgical instruments. It smells faintly of ash."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "surgery_bag"
 	pickup_sound = 'sound/items/handling/pickup/backpack_pickup.ogg'

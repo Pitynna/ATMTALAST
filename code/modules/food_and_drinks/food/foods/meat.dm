@@ -65,7 +65,7 @@
 
 /obj/item/reagent_containers/food/snacks/roasted_meat
 	name = "roasted meat"
-	desc = "Хорошо прожаренный стейк. Отличный источник белков и жиров."
+	desc = "A well-done steak. An excellent source of protein and fat."
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	icon_state = "roasted_meat"
@@ -283,7 +283,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/dog
 	name = "dog meat"
-	desc = "Не слишком питательно. Но говорят деликатес космокорейцев."
+	desc = "Not especially nutritious, but said to be a delicacy among space Koreans."
 	list_reagents = list("protein" = 2, "epinephrine" = 2)
 
 /obj/item/reagent_containers/food/snacks/meat/pug
@@ -293,7 +293,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/security
 	name = "security meat"
-	desc = "Мясо наполненное чувством мужества и долга."
+	desc = "Meat infused with courage and a sense of duty."
 	list_reagents = list("protein" = 3, "epinephrine" = 5)
 
 /obj/item/reagent_containers/food/snacks/meat/ham
@@ -303,12 +303,12 @@
 
 /obj/item/reagent_containers/food/snacks/meat/ham/old
 	name = "tough ham"
-	desc = "Мясо почтенного хряка."
+	desc = "Meat from a venerable boar."
 	list_reagents = list("protein" = 2, "porktonium" = 10)
 
 /obj/item/reagent_containers/food/snacks/meat/mouse
 	name = "mouse meat"
-	desc = "На безрыбье и мышь мясо. Кто знает чем питался этот грызун до его подачи к столу."
+	desc = "When there are no fish, even a mouse counts as meat. Who knows what this rodent ate before reaching the table?"
 	icon_state = "meat_clear"
 	list_reagents = list("nutriment" = 2, "blood" = 3, "toxin" = 1)
 
@@ -734,7 +734,7 @@
 
 /obj/item/reagent_containers/food/snacks/roasted_spiderleg
 	name = "roasted spider leg"
-	desc = "Жаренная паучья лапка, теперь оно точно мертво."
+	desc = "A roasted spider leg. It is definitely dead now."
 	gender = FEMALE
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	icon_state = "roasted_spiderleg"

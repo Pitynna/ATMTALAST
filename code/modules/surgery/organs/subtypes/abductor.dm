@@ -1,7 +1,7 @@
 /obj/item/organ/internal/heart/grey/abductor
 	species_type = /datum/species/abductor
 	name = "abductor heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало абдуктору."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to an abductor."
 
 /obj/item/organ/internal/liver/grey/abductor
 	species_type = /datum/species/abductor
@@ -11,11 +11,11 @@
 /obj/item/organ/internal/kidneys/grey/abductor
 	species_type = /datum/species/abductor
 	name = "abductor kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали абдуктору."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to an abductor."
 
 /obj/item/organ/internal/brain/abductor
 	species_type = /datum/species/abductor
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал абдуктору."
+	desc = "The primary organ of a humanoid's central nervous system. The mind itself resides here. This belonged to an abductor."
 	icon_state = "brain-x"
 	item_state = "grey_brain"
 	mmi_icon_state = "mmi_alien"
@@ -27,4 +27,4 @@
 /obj/item/organ/internal/ears/grey/abductor
 	species_type = /datum/species/abductor
 	name = "abductor ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали абдуктору."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to an abductor."

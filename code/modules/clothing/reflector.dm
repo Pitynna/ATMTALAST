@@ -2,7 +2,7 @@
 
 /obj/item/clothing/gloves/reflector
 	name = "reflector gloves"
-	desc = "Высокотехнологичные перчатки, изготовленные из светоотражающего материала, предназначены для отражения энергетических лучей. Носить их — настоящее испытание для рук!"
+	desc = "Advanced gloves made from reflective material to deflect energy beams. Wearing them is a real workout for your hands!"
 	icon_state = "reflector"
 	item_state = "reflector"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 50, ENERGY = 50, BOMB = 0, BIO = 0, FIRE = 50, ACID = 100)
@@ -28,7 +28,7 @@
 
 /obj/item/clothing/head/helmet/reflector
 	name = "reflector hat"
-	desc = "Высокотехнологичная шляпа, изготовленная из светоотражающего материала, предназначена для отражения энергетических лучей. В неё встроен защитный визор, который обладает повышенной устойчивостью к кислотам."
+	desc = "An advanced hat made from reflective material to deflect energy beams. Includes a protective visor with improved acid resistance."
 	icon_state = "reflector"
 	item_state = "reflectorhat"
 	flags_inv = HIDEHEADSETS
@@ -63,7 +63,7 @@
 
 /obj/item/clothing/shoes/reflector
 	name = "reflector boots"
-	desc = "Высокотехнологичные ботинки, изготовленные из светоотражающего материала, предназначены для отражения энергетических лучей. Довольно лёгкая, но не очень удобная обувь."
+	desc = "Advanced boots made from reflective material to deflect energy beams. Fairly lightweight, but not very comfortable."
 	icon_state = "reflector"
 	item_state = "reflectorboots"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 50, ENERGY = 50, BOMB = 0, BIO = 0, FIRE = 50, ACID = 100)
@@ -92,7 +92,7 @@
 
 /obj/item/clothing/suit/armor/reflector
 	name = "reflector coat"
-	desc = "Высокотехнологичное инновационное пальто, изготовленное из светоотражающего материала, предназначенное для отражения энергетических лучей. Сочетает в себе стиль и самые передовые технологии."
+	desc = "An innovative advanced coat made from reflective material to deflect energy beams. Combines style with cutting-edge technology."
 	icon_state = "reflector"
 	item_state = "reflector"
 	blood_overlay_type = "armor"

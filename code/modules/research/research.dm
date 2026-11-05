@@ -366,7 +366,7 @@ research holder datum.
 
 /obj/item/disk/tech_disk/proc/load_tech(datum/tech/tech_tree)
 	name = "[default_name] \[[tech_tree]\]"
-	desc = tech_tree.desc + " <b>Уровень: \"[tech_tree.level]\"</b>."
+	desc = tech_tree.desc + " <b>Level: \"[tech_tree.level]\"</b>."
 
 	set_ru_names_suffix(" \[[tech_tree]\]")
 
@@ -500,17 +500,17 @@ research holder datum.
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_server
 	name = "Bluespace rift scan server design"
-	desc = "Экспериментальный проект сервера сканирования блюспейс-разломов."
+	desc = "An experimental design for a bluespace rift scanning server."
 	design_type = /datum/design/brs_server
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_portable_scanner
 	name = "Bluespace rift portable scanner design"
-	desc = "Экспериментальный проект портативного сканера блюспейс-разломов."
+	desc = "An experimental design for a portable bluespace rift scanner."
 	design_type = /datum/design/brs_portable_scanner
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_stationary_scanner
 	name = "Bluespace rift stationary scanner design"
-	desc = "Экспериментальный проект стационарного сканера блюспейс-разломов."
+	desc = "An experimental design for a stationary bluespace rift scanner."
 	design_type = /datum/design/brs_stationary_scanner
 
 /obj/item/disk/design_disk/tailblade/blade_nt

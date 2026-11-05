@@ -744,7 +744,7 @@
 
 /obj/item/clothing/suit/storage/leather_trenchcoat/runner
 	name = "leather trenchcoat"
-	desc = "Длинное кожаное пальто-тренч с натуральным мехом. Вы чувствуете себя одиноко, когда носите его..."
+	desc = "A long leather trench coat with natural fur. Wearing it makes you feel lonely..."
 	icon_state = "bladerunner_coat"
 	item_state = "bladerunner_coat"
 
@@ -1249,7 +1249,7 @@
 
 /obj/item/clothing/head/hooded/hijab
 	name = "hijab hood"
-	desc = "Тёмное одеяние скрывающее лицо."
+	desc = "A dark garment concealing the face."
 	icon_state = "hijab_head"
 	flags_inv = HIDEHEADSETS|HIDENAME|HIDEHAIR
 	sprite_sheets = list(
@@ -1605,7 +1605,7 @@
 
 /obj/item/clothing/suit/hooded/ghostfacesuit
 	name = "Ghostface suit"
-	desc = "Чёрный, просторный балахон, что может навеивать смутные напоминания о чём-то."
+	desc = "A loose black robe that vaguely reminds you of something."
 	icon_state = "ghostface_suit"
 	item_state = "ghostface_suit"
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS|FEET
@@ -1622,7 +1622,7 @@
 
 /obj/item/clothing/head/hooded/ghostface
 	name = "Ghostface hood"
-	desc = "Чёрный капюшон. Он вам что-то точно напоминает..."
+	desc = "A black hood. It definitely reminds you of something..."
 	icon_state = "ghostface_hood"
 	item_state = "ghostface"
 	flags_inv = HIDEHEADSETS|HIDEHAIR
@@ -1641,7 +1641,7 @@
 
 /obj/item/clothing/suit/hooded/penguin_costume
 	name = "penguin suit"
-	desc = "Глупый и забавный полноразмерный костюм пингвина."
+	desc = "A silly, amusing full-body penguin costume."
 	icon_state = "penguin"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|TAIL
 	hide_tail_by_species = list(
@@ -1665,7 +1665,7 @@
 
 /obj/item/clothing/head/hooded/penguin_hood
 	name = "penguin hood"
-	desc = "Капюшон от костюма пингвина."
+	desc = "The hood of a penguin costume."
 	icon_state = "penguin"
 	flags_inv = HIDEHEADSETS|HIDEHAIR
 	sprite_sheets = list(
@@ -1679,7 +1679,7 @@
 
 /obj/item/clothing/suit/storage/bomber
 	name = "bomber"
-	desc = "Тёплая толстовка."
+	desc = "A warm hoodie."
 	icon_state = "hoody_undershirt"
 	item_state = "hoody_undershirt"
 	color = "#ffffffff"
@@ -1694,7 +1694,7 @@
 
 /obj/item/clothing/suit/storage/zazalord
 	name = "zaza-lord swag bomber"
-	desc = "Бомбер, выпущенный ограниченным тиражом корпорацией \"Robust Softdrinks\" в рамках рекламной компании нового напитка \"Заза\". Выдавался за собранные крышки от бутылок."
+	desc = "A limited-edition bomber jacket released by Robust Softdrinks to promote its new Zaza beverage. Redeemable with collected bottle caps."
 	icon_state = "hoody_zaza"
 	item_state = "hoody_zaza"
 

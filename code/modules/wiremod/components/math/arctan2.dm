@@ -4,7 +4,7 @@
  */
 /obj/item/circuit_component/arctan2
 	display_name = "Арктангенс двух компонентов"
-	desc = "Компонент арктангенса с двумя параметрами для расчёта любого нужного угла."
+	desc = "A two-argument arctangent component for calculating any angle you need."
 	category = "Math"
 
 	/// The input port for the x-offset

@@ -25,7 +25,7 @@
 
 /obj/item/circuit_component/wiremod_manipulator
 	display_name = "Манипулятор"
-	desc = "Используется для перемещения объектов."
+	desc = "Used to move objects."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 	/// End point coordinates

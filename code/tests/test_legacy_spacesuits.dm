@@ -15,12 +15,6 @@
 		/obj/item/clothing/suit/space/hardsuit/ert/medical,
 		/obj/item/clothing/suit/space/hardsuit/ert/janitor,
 		/obj/item/clothing/suit/space/hardsuit/ert/paranormal,
-		/obj/item/clothing/suit/space/hardsuit/ert/commander,
-		/obj/item/clothing/suit/space/hardsuit/ert/security,
-		/obj/item/clothing/suit/space/hardsuit/ert/engineer,
-		/obj/item/clothing/suit/space/hardsuit/ert/medical,
-		/obj/item/clothing/suit/space/hardsuit/ert/janitor,
-		/obj/item/clothing/suit/space/hardsuit/ert/paranormal,
 	)
 	for(var/suit_type in suit_types)
 		var/mob/living/carbon/human/wearer = allocate(/mob/living/carbon/human, test_turf)

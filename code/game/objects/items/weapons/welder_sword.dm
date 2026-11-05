@@ -1,6 +1,6 @@
 /obj/item/weldingtool/sword
 	name = "welding sword"
-	desc = "Сварочный аппарат, кустарно модифицированный каким-то умельцем. Судя по всему, автор этого творения черпал вдохновение от энергетических мечей."
+	desc = "A welding tool modified by an inventive tinkerer, apparently inspired by energy swords."
 	icon = 'icons/obj/items.dmi'
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
@@ -76,7 +76,7 @@
 
 /obj/item/weldingtool/sword/double
 	name = "double-bladed welding sword"
-	desc = "Два кустарно модифицированных сварочных аппарата, скреплённых вместе, образуя некое подобие двойного энергетического меча. Настоящее чудо ассистентской мысли."
+	desc = "Two modified welding tools fastened together to resemble a double-bladed energy sword. A true marvel of assistant ingenuity."
 	icon_state = "fuelsworddouble"
 	item_state = "fuelsworddouble"
 	lefthand_file = 'icons/mob/inhands/twohanded_lefthand.dmi'

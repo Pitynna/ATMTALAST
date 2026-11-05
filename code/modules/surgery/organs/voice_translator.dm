@@ -9,7 +9,7 @@
 
 /obj/item/organ/internal/cyberimp/mouth/translator // Lets make it some easier to make a new one. Write this if you want to make non-species translator.
 	name = "Just An Empty Translator"  // You cant get it in-game. At least now
-	desc = "Может быть, учёные Nanotrasen заставят работать его позже..."
+	desc = "Perhaps Nanotrasen's scientists will get it working later..."
 	//icon =
 	//icon_state =
 	//origin_tech =
@@ -41,7 +41,7 @@
 
 /obj/item/organ/internal/cyberimp/mouth/translator/grey_retraslator
 	name = "Psionic Voice Retranslator"
-	desc = "Необычный инопланетный имплант с маленьким экранчиком. Судя по всему, создан специально для греев."
+	desc = "An unusual alien implant with a small display. It appears to have been made specifically for Greys."
 	icon = 'icons/obj/voice_translator.dmi'
 	icon_state = "pvr_implant"
 	given_languages = list(LANGUAGE_GALACTIC_COMMON)
@@ -118,7 +118,7 @@
 	. = ..()
 
 	if(stored_upgrade)
-		desc += " Имеет установленный расширитель слотов."
+		desc += " It has a slot expansion installed."
 	else
 		desc = initial(desc)
 
@@ -370,13 +370,13 @@
 
 /obj/item/translator_upgrade // just adminspawn now
 	name = "translator upgrade"
-	desc = "Учёные Nanotrasen ещё не поняли, как он работает. Может быть, позже..."
+	desc = "Nanotrasen's scientists have yet to understand how it works. Perhaps later..."
 	w_class = WEIGHT_CLASS_TINY
 	var/extra_slots = 1
 
 /obj/item/translator_upgrade/grey_retraslator
 	name = "PVR storage upgrade"
-	desc = "Маленькое инопланетное устройство с мелким экраном, показывающим только помехи. Видимо, что-то из технологий греев."
+	desc = "A small alien device with a tiny screen showing nothing but static. It appears to use Grey technology."
 	icon = 'icons/obj/voice_translator.dmi'
 	icon_state = "pvr_upgrade"
 	origin_tech = "materials=2;programming=3;abductor=1"
@@ -384,7 +384,7 @@
 
 /obj/item/translator_chip
 	name = "language chip"
-	desc = "Крошечный чип с мигающим индикатором."
+	desc = "A tiny chip with a blinking indicator."
 	icon = 'icons/obj/voice_translator.dmi'
 	icon_state = "chip_empty"
 	w_class = WEIGHT_CLASS_TINY

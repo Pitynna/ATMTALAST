@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable/setter
 	display_name = "Сеттер переменной"
-	desc = "Компонент, который задаёт переменную глобально в схеме."
+	desc = "A component that sets a circuit-wide variable."
 
 	/// The input to store
 	var/datum/port/input/input_port
@@ -16,8 +16,7 @@
 
 /obj/item/circuit_component/variable/setter/trigger
 	display_name = "Установщик переменной вызова"
-	desc = "Компонент, который задаёт переменную глобально в схеме. \
-			Требует входные сигналы и обеспечивает выходной сигнал."
+	desc = "A component that sets a circuit-wide variable. Requires input signals and provides an output signal."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 /obj/item/circuit_component/variable/setter/get_variable_list(obj/item/integrated_circuit/integrated_circuit)

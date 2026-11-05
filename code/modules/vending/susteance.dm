@@ -39,7 +39,7 @@
 	)
 
 /obj/machinery/vending/sustenance/additional
-	desc = "Какого чёрта этот автомат тут оказался?!"
+	desc = "How the hell did this vending machine get here?!"
 	products = list(
 		/obj/item/reagent_containers/food/snacks/tofu = 12,
 		/obj/item/reagent_containers/cup/glass/ice = 6,

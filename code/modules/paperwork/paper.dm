@@ -5,7 +5,7 @@
 
 /obj/item/paper
 	name = "paper"
-	desc = "Пустой листок бумаги."
+	desc = "A blank sheet of paper."
 	gender = FEMALE
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "paper"

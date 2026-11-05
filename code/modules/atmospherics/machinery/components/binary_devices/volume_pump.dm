@@ -203,7 +203,7 @@ Thus, the two variables affect pump operation are set in New():
 
 /obj/item/circuit_component/atmos_volume_pump
 	display_name = "Объёмный атмосферный насос"
-	desc = "Интерфейс для связи с объемным насосом."
+	desc = "An interface for communicating with a volume pump."
 
 	///Set the transfer rate of the pump
 	var/datum/port/input/transfer_rate

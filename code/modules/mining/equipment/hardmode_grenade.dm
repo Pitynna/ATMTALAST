@@ -73,5 +73,5 @@
 
 /obj/item/disk/fauna_research/bubblegum
 	name = "Bubblegum HRD-MDE project disk"
-	desc = "Диск, используемый проектом HRD-MDE. Содержит данные о ████████████ и \[ЗАСЕКРЕЧЕНО\] Бубльгума."
+	desc = "A disk used by project HRD-MDE. Contains data on Bubblegum's ████████████ and \[CLASSIFIED]."
 	output = /obj/item/clothing/accessory/medal/gold/bubblegum

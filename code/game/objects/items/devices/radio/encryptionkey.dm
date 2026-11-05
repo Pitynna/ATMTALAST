@@ -18,7 +18,7 @@
 
 /obj/item/encryptionkey/syndicate
 	name = "syndicate encryption key"
-	desc = "Ключ шифрования, устанавливаемый в гарнитуру. Содержит в себе лучшее хакерское ПО, доступное на чёрном рынке и позволяющее получить доступ ко всем частотам \"Нанотрейзен\"."
+	desc = "A headset encryption key containing the best hacking software available on the black market, allowing access to all Nanotrasen frequencies."
 	icon_state = "/obj/item/encryptionkey/syndicate"
 	greyscale_config = /datum/greyscale_config/encryptionkey_syndie
 	greyscale_colors = "#3c3c3c#ff0000#ff0000"
@@ -42,7 +42,7 @@
 
 /obj/item/encryptionkey/syndteam
 	name = "syndicate encryption key"
-	desc = "Ключ шифрования, устанавливаемый в гарнитуру. Содержит в себе лучшее хакерское ПО, доступное на чёрном рынке и позволяющее получить доступ ко всем частотам \"Нанотрейзен\"."
+	desc = "A headset encryption key containing the best hacking software available on the black market, allowing access to all Nanotrasen frequencies."
 	icon_state = "/obj/item/encryptionkey/syndicate"
 	greyscale_config = null
 	channels = list(SYNDTEAM_FREQ_NAME = 1, SYND_FREQ_NAME = 1)

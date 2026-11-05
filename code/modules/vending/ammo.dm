@@ -1,6 +1,6 @@
 /obj/machinery/vending/ammo
 	name = "Liberty"
-	desc = "Боеприпасы для тех, кто стреляет первым."
+	desc = "Ammunition for those who shoot first."
 	slogan_list = list(
 		"Я не встр+ечал ник+ого умн+ее пул+и!",
 		"К+огда я ск+ажу 3, то б+уду стр+елять! 3!",

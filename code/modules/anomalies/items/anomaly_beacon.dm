@@ -1,7 +1,6 @@
 /obj/item/assembly/anomaly_beacon
 	name = "anomaly beacon"
-	desc = "Небольшое устройство, способное единоразово дестабилизировать вставленное в него ядро. \
-			Из-за несовершенства технологии, часть энергии теряется в процессе."
+	desc = "A small device that can destabilize an inserted anomaly core once. Imperfect technology causes some energy to be lost in the process."
 	icon = 'icons/obj/weapons/techrelic.dmi'
 	icon_state = "beacon"
 	item_state = "beacon"

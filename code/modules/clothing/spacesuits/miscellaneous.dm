@@ -120,7 +120,7 @@
 
 /obj/item/clothing/head/helmet/space/deathsquad/beret/captain
 	name = "Nanotrasen Fleet Captain's Cap"
-	desc = "Парадная фуражка, спроектированная и изготовленная под индивидуальную мерку действующего капитана флота \"Нанотрейзен\" в секторе Эпсилон Лукусты. Если вы когда-нибудь увидите её носителя, вам стоит надеяться, что он прибыл для награждения вас за ваши заслуги, а не разрешения вызванного вами кризиса."
+	desc = "A ceremonial cap tailored for the serving Nanotrasen fleet captain in Epsilon Lucustae. If you ever see its wearer, hope they have come to reward your achievements rather than resolve a crisis you caused."
 	icon_state = "ntsc_cap"
 	item_state = "ntsc_cap"
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 100, BOMB = 100, BIO = 100, FIRE = 100, ACID = 100)
@@ -144,21 +144,21 @@
 
 /obj/item/clothing/suit/space/deathsquad/officer/centcom
 	name = "CCO Jacket"
-	desc = "Куртка из дорогостоящих материалов с золотой отделкой."
+	desc = "A jacket made from expensive materials with gold trim."
 	icon_state = "dress_capjacket_black_open"
 	item_state = "dress_capjacket_black_open"
 	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 15, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)
 
 /obj/item/clothing/suit/space/deathsquad/officer/captain
 	name = "Nanotreisen Fleet Captain's Cloak"
-	desc = "Парадный плащ, спроектированный и сшитый под индивидуальную мерку действующего капитана флота \"Нанотрейзен\" в секторе Эпсилон Лукусты. Внутренний слой формы представляет из себя защитную оболочку, состоящую из миллионов нанитов; кластеры этих миниатюрных роботов способны эффективно рассеивать кинетическую и термальную энергию, обеспечивая превосходный уровень защиты для носителя."
+	desc = "A ceremonial cloak tailored for the serving Nanotrasen fleet captain in Epsilon Lucustae. Its inner protective layer consists of millions of nanites, whose clusters efficiently disperse kinetic and thermal energy to provide exceptional protection."
 	icon_state = "ntsc_uniform"
 	item_state = "ntsc_uniform"
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 100, BOMB = 100, BIO = 100, FIRE = 100, ACID = 100)
 
 /obj/item/clothing/suit/space/deathsquad/officer/field
 	name = "Nanotrasen Fleet Officer's Field Cloak"
-	desc = "Парадный плащ, разработанный в качестве массового варианта формы Верховного Главнокомандующего. У этой униформы нет тех же защитных свойств, что и у оригинала, но она все ещё является довольно удобным и стильным предметом гардероба."
+	desc = "A ceremonial cloak developed as a mass-produced version of the supreme commander's uniform. It lacks the original's protection, but remains comfortable and stylish."
 	icon_state = "ntsc_uniform"
 	item_state = "ntsc_uniform"
 	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 15, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)

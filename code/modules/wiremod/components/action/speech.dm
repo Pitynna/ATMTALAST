@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/speech
 	display_name = "Речь"
-	desc = "Компонент, отправляющий сообщение. Требуется оболочка."
+	desc = "A component that sends a message. Requires a shell."
 	category = "Action"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

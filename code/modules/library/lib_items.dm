@@ -39,9 +39,9 @@
 
 /obj/structure/bookcase/examine(mob/user)
 	if(length(contents) > 0)
-		desc = "Большой книжный шкаф. На его полках стоят книги."
+		desc = "A large bookcase with books on its shelves."
 	else
-		desc = "Большой книжный шкаф. Его полки давно не протирали..."
+		desc = "A large bookcase. Its shelves haven't been dusted in a long time..."
 
 	. = ..()
 
@@ -207,7 +207,7 @@
  */
 /obj/item/book
 	name = "book"
-	desc = "Напечатанная книга в твёрдом переплёте."
+	desc = "A printed hardcover book."
 	gender = FEMALE
 	icon = 'icons/obj/library.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/library_lefthand.dmi'

@@ -97,7 +97,7 @@
 
 /obj/item/case_with_bipki
 	name = "bipki case"
-	desc = "Легендарный чемодан с бипками! Стоп, а что такое бипки?"
+	desc = "The legendary briefcase of bipki! Wait, what are bipki?"
 	icon = 'icons/obj/beebki.dmi'
 	icon_state = "briefcase_bipki"
 	item_state = "briefcase"

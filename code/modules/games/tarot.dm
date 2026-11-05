@@ -27,9 +27,9 @@
 	var/list/newcards = list()
 	while(length(cards))
 		var/datum/playingcard/card = pick_n_take(cards)
-		card.name = replacetext(card.name," перевёрнутая", "")
+		card.name = replacetext(card.name," reversed", "")
 		if(prob(50))
-			card.name += " перевёрнутая"
+			card.name += " reversed"
 		newcards += card
 	cards = newcards
 	playsound(user, 'sound/items/cardshuffle.ogg', 50, TRUE)

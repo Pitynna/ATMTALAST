@@ -120,7 +120,7 @@
 //Ash walker shaman eggs: Spawns in ash walker dens in lavaland. Only one can exist at a time, they are squishier than regular ashwalkers, and have the sole purpose of keeping other ashwalkers alive.
 /obj/effect/mob_spawn/human/ash_walker/shaman
 	name = "Ash walker shaman egg"
-	desc = "Янтарное яйцо размером с человека, порождённое каким-то непостижимым существом. Внутри проглядывает гуманоидный силуэт."
+	desc = "A human-sized amber egg spawned by some incomprehensible creature. A humanoid silhouette is visible inside."
 	icon_state = "shaman_egg"
 	mob_name = "an ash walker shaman"
 	mob_species = /datum/species/unathi/ashwalker/shaman

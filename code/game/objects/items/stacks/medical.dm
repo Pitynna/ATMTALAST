@@ -514,9 +514,7 @@
 /obj/item/stack/medical/bruise_pack/synthflesh_kit
 	name = "synthflesh trauma kit"
 	singular_name = "synthflesh trauma kit"
-	desc = "Набор первой помощи, предназначенный для заживления \
-			механических и термических повреждений. Включает в себя комплект \
-			гелей, антисептиков, заживляющих мембран и лечебных пластырей на основе синтплоти."
+	desc = "A first-aid kit for treating physical injuries and burns. Contains gels, antiseptics, healing membranes and synthflesh-based medical patches."
 	icon_state = "synthkit_4"
 	item_state = "traumakit"
 	belt_icon = "advanced_trauma_kit"
@@ -579,8 +577,7 @@
 /obj/item/stack/medical/splint
 	name = "medical splints"
 	singular_name = "medical splint"
-	desc = "Стандартная медицинская шина, предназначенная для \
-			иммобилизации сломанных конечностей до получения полноценной медицинской помощи."
+	desc = "A standard medical splint for immobilizing broken limbs until proper medical care is available."
 	gender = FEMALE
 	icon_state = "splint"
 	item_state = "splint"
@@ -652,9 +649,7 @@
 
 /obj/item/stack/medical/splint/tribal
 	name = "tribal splints"
-	desc = "Примитивная медицинская шина, созданная из пары костей, перевязанных связками Наблюдателя. \
-			Предназначена для иммобилизации сломанных конечностей до получения полноценной медицинской помощи, \
-			если таковая вообще возможна в суровых условиях Лазиса."
+	desc = "A primitive medical splint made from two bones bound with watcher sinew. Used to immobilize broken limbs until proper care becomes available, if such care is even possible in the harsh conditions of Lazis."
 	icon_state = "tribal_splint"
 	self_delay = 10 SECONDS
 	use_duration = 5 SECONDS
@@ -672,8 +667,7 @@
 /obj/item/stack/medical/suture
 	name = "suture kit"
 	singular_name = "suture thread"
-	desc = "Набор с хирургической иглой и специальной нитью для сшивания ран \
-			в полевых условиях. Использование без обезболивающего не рекомендуется."
+	desc = "A kit containing a surgical needle and specialized thread for stitching wounds in the field. Use without anesthetic is not recommended."
 	icon_state = "suture_3"
 	item_state = "suture"
 	origin_tech = "biotech=3"
@@ -741,8 +735,7 @@
 /obj/item/stack/medical/suture/advanced
 	name = "advanced suture kit"
 	singular_name = "advanced suture thread"
-	desc = "Набор с хирургической иглой и специальной нитью для сшивания ран. \
-			Позволяет эффективно устранять открытые кровотечения и механические повреждения."
+	desc = "A kit containing a surgical needle and specialized thread for stitching wounds. Effectively treats open bleeding wounds and physical injuries."
 	icon_state = "advanced_suture"
 	item_state = "advanced_suture"
 	origin_tech = "biotech=5"
@@ -760,9 +753,7 @@
 // MARK: Tourniquet
 /obj/item/tourniquet
 	name = "tourniquet"
-	desc = "Медицинский турникет для экстренной остановки артериального и венозного кровотечения на конечностях. \
-			Не предназначен для наложения на другие части тела. \
-			Длительное использование без последующей медицинской помощи ведёт к некрозу тканей."
+	desc = "A medical tourniquet for emergency control of arterial and venous bleeding in limbs. Not intended for other body parts. Prolonged use without follow-up medical care causes tissue necrosis."
 	icon = 'icons/obj/medicine/packs.dmi'
 	icon_state = "tourniquet"
 	item_state = "tourniquet"
@@ -969,8 +960,7 @@
 
 /obj/item/tourniquet/makeshift
 	name = "makeshift tourniquet"
-	desc = "Импровизированный турникет для временной остановки кровотечения на конечностях. \
-			Жутко неудобный, но со своей задачей справится. Не предназначен для длительного использования."
+	desc = "An improvised tourniquet for temporarily stopping bleeding in a limb. Extremely uncomfortable, but it gets the job done. Not intended for prolonged use."
 	icon_state = "makeshift_tourniquet"
 	item_state = "makeshift_tourniquet"
 	self_duration = 5 SECONDS
@@ -982,9 +972,7 @@
 
 /obj/item/tourniquet/advanced
 	name = "advanced tourniquet"
-	desc = "Медицинский турникет нового поколения для экстренной остановки артериального и венозного кровотечения на конечностях. \
-			Оснащён механизмом контроля давления, что повышает удобство применения и его эффективность по сравнению с аналогами. \
-			Длительное использование без последующей медицинской помощи ведёт к некрозу тканей."
+	desc = "A next-generation medical tourniquet for emergency control of arterial and venous bleeding in limbs. A pressure-control mechanism improves comfort and effectiveness over conventional models. Prolonged use without follow-up medical care causes tissue necrosis."
 	icon_state = "advanced_tourniquet"
 	item_state = "advanced_tourniquet"
 	tourniquet_duration = 5 MINUTES

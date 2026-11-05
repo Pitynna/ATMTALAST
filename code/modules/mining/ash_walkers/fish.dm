@@ -47,7 +47,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish
 	name = "generic lavaland fish"
-	desc = "Вау, она такая... невпечатляющая!"
+	desc = "Wow, it is so... unimpressive!"
 	gender = MALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'
 	icon_state = "ash_crab"
@@ -152,7 +152,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/shoreline/ash_crab
 	name = "ash crab"
-	desc = "Небольшое всеядное ракообразное, обладающее на удивление крепким панцирем. Данный вид имеет интересную привычку поедать мелкие предметы, которые они находят. Лавовые крабы наиболее часто являются объектом охоты как для другой \"морской\" фауны, так и для местных племён в связи с крепким панцирем, используемым в качестве заточки, съедобным мясом и интересными находками в его желудке."
+	desc = "A small omnivorous crustacean with a surprisingly strong shell and a habit of eating little objects it finds. Lava crabs are hunted by local tribes and other aquatic creatures for their edible meat, shells useful as whetstones, and interesting stomach contents."
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/ash_eater
 	butcher_loot = list(
 		/obj/item/whetstone/crab_shell = 1,
@@ -162,7 +162,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/shoreline/dead_horseman
 	name = "dead horseman"
-	desc = "Небольших размеров рыба, питающаяся преимущественно кровавыми пиявками, зарытыми в пепле. Получила своё название из-за своего характерного внешнего вида — голова всадника внешне напоминает гуманоидный череп. Ценится местными племенами в первую очередь из-за селезёнки, содержащей в себе частицы киновари и используемой для создания коричневого красителя."
+	desc = "A small fish that mainly eats blood leeches buried in ash. Named for its humanoid skull-like head. Local tribes prize its spleen, which contains cinnabar particles used to make brown dye."
 	icon_state = "dead_horseman"
 	item_state = "dead_horseman"
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/bloody_leach
@@ -174,7 +174,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/shoreline/shellfish
 	name = "shellfish"
-	desc = "Одна из самых больших рыб, встречающихся у берегов Лазис Ардакса. Практически всё её тело, включая голову, покрыто багряными хрящевыми пластинами, достаточно крепкими, чтобы защищаться от большинства хищников. Внутри самой рыбы, рядом с сердцем, находится специализированный орган, собираемый местными племенами для ведения сельского хозяйства."
+	desc = "One of the largest fish found near the shores of Lazis Ardax. Crimson cartilage plates cover almost its entire body, including the head, protecting it from most predators. A specialized organ near its heart is harvested by local tribes for agriculture."
 	icon_state = "shellfish"
 	item_state = "shellfish"
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/goldgrub_larva
@@ -186,7 +186,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/deep_water/bottom_eel
 	name = "bottom eel"
-	desc = "Эта длинная склизская рыба обитает на огромной глубине, питаясь преимущественно личинками и другой мелкой рыбой. Для защиты от других хищников, эта рыба имеет бритвенно-острый хвост, который местные племена приспосабливают в качестве наконечника для копья."
+	desc = "A long, slimy fish living at great depths and feeding mainly on larvae and smaller fish. Its razor-sharp defensive tail is adapted into spearheads by local tribes."
 	icon_state = "bottom_eel"
 	item_state = "bottom_eel"
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/ash_eater
@@ -198,7 +198,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/deep_water/red_devourer
 	name = "red devourer"
-	desc = "Массивная рыба кроваво-красного окраса со множеством острых зубов внутри её пасти. Данная рыба печально известна среди племён своей агрессивностью, от чего погибло множество молодых охотников. В желудках этих рыб можно частенько найти останки менее удачливых рыбаков."
+	desc = "A massive blood-red fish with a mouth full of sharp teeth. Infamous among local tribes for the aggression that has killed many young hunters. Its stomach often contains the remains of less fortunate fishers."
 	icon_state = "red_devourer"
 	item_state = "red_devourer"
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/bloody_leach
@@ -212,7 +212,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/deep_water/magma_hammerhead
 	name = "magma hammerhead"
-	desc = "Огромная глубоководная рыба тёмного окраса с характерной головой, отдалённо напоминающей молот. Несмотря на угрожающий внешний вид, данный тип рыб преимущественно охотится на мелких ракообразных, придавливая их своем \"молотом\" ко дну и раздавливая их панцирь. По краям их головы находятся странноватые сгустки, синергирующие с регенеративными ядрами."
+	desc = "An enormous dark deep-water fish with a distinctive hammer-shaped head. Despite its threatening appearance, it mainly hunts small crustaceans, pinning them to the bottom with its head and crushing their shells. Strange growths along the head's edges interact with regenerative cores."
 	gender = FEMALE
 	icon_state = "magma_hammerhead"
 	item_state = "magma_hammerhead"
@@ -224,7 +224,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/deep_water/blind_reaper
 	name = "blind reaper"
-	desc = "Самая маленькая представительница глубоководных рыб Лазис Ардакса, она привлекает к себе внимание не только небольшим размером, но и огромным костным наростом на голове, напоминающем лезвие циркулярной пилы. Данный вид, будучи лишённым зрения, использует своё лезвие в качестве биологического сонара, что помогает ей ориентироваться на огромных лавовых глубинах."
+	desc = "The smallest deep-water fish of Lazis Ardax, distinguished by an enormous circular-saw-like bony growth on its head. Blind, it uses this blade as a biological sonar to navigate the lava depths."
 	icon_state = "blind_reaper"
 	item_state = "blind_reaper"
 	throwforce = 20
@@ -238,7 +238,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/deep_water/herald_of_carnage
 	name = "herald of carnage"
-	desc = "Эта массивная рыба, имеющая в своей пасти сотни бритвенно острых зубов, признана высшим хищником среди всего подводного мира Лазис Ардакса. Её массивные зелёные глаза используются в качестве украшения для самых прославленных охотников среди местных племён. В её желудке достаточно часто находят останки других рыб. И не только рыб."
+	desc = "This massive fish has hundreds of razor-sharp teeth and is recognized as the apex predator of Lazis Ardax's underwater world. Its large green eyes adorn the tribes' most celebrated hunters. Its stomach often contains the remains of other fish. And more than just fish."
 	icon_state = "herald_of_carnage"
 	item_state = "herald_of_carnage"
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/bloody_leach
@@ -252,7 +252,7 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 
 /obj/item/lavaland_fish/deep_water/sulfuric_tramp
 	name = "sulfuric tramp"
-	desc = "Данный вид рыб никогда не был зафиксирован ни в одной исследовательской работе по изучению фауны Лазис Ардакса — это инвазивный вид, попавший в лавовые реки в результате крушения контрабандистского судна, перевозившего фауну с неизвестной кислотной планеты. Судя по всему, эти рыбы нашли свою нишу в пищевой цепи."
+	desc = "Absent from every research survey of Lazis Ardax's fauna, this invasive species entered the lava rivers after a smuggling ship carrying wildlife from an unknown acidic planet crashed. The fish seem to have found their place in the food chain."
 	icon_state = "sulfuric_tramp"
 	item_state = "sulfuric_tramp"
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/goldgrub_larva

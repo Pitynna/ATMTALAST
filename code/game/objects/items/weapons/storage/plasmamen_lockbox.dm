@@ -1,6 +1,6 @@
 /obj/item/storage/lockbox/plasma
 	name = "Plasmamen equipment lockbox"
-	desc = "Ящик с замком, что содержит набор снаряжения для плазмаменов. Сомнительно, что любое разумное существо будет способно уложить содержимое столь же плотно."
+	desc = "A locked case containing plasmaman equipment. It is doubtful that any sapient being could pack it this tightly again."
 	w_class = WEIGHT_CLASS_NORMAL
 	max_w_class = WEIGHT_CLASS_SMALL
 

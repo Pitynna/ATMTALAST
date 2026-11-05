@@ -1,6 +1,6 @@
 /obj/item/pda_case
 	name = "silicone PDA case"
-	desc = "Прозрачный силиконовый чехол."
+	desc = "A transparent silicone case."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda_case"
 	/// New icon state for the PDA
@@ -37,18 +37,18 @@
 
 /obj/item/pda_case/beer
 	name = "PDA case \"BEER\""
-	desc = "Роскошный чехол, олицетворяющий собой кружку пива. Позволяет выбрать уникальный звук для входящих сообщений (\"beer\")."
+	desc = "A luxurious case shaped like a beer mug. Unlocks a unique incoming message sound: beer."
 	icon_state = "pda_case_beer"
-	new_desc = "На обратной стороне чехла можно заметить глубокомысленную цитату: \"На станции только и разговоров, что о пиве...\" Использовать PDA как кружку всё ещё не рекомендуется."
+	new_desc = "A profound quote on the back of the case reads: \"All anyone on the station talks about is beer...\" Using the PDA as a mug is still not recommended."
 	new_icon_state = "pda-beer"
 	new_item_state = "pda-beer"
 	new_ttone = list("beer" = 'sound/items/PDA/beer.ogg')
 
 /obj/item/pda_case/rat
 	name = "PDA case \"RAT\""
-	desc = "Чехол, выполненный в виде серой крысы. Позволяет выбрать уникальный звук для входящих сообщений (\"squeak\")."
+	desc = "A case shaped like a grey rat. Unlocks a unique incoming message sound: squeak."
 	icon_state = "pda_case_rat"
-	new_desc = "На обратной стороне чехла выцарапана надпись: \"Кто-то на этой станции определённо крыса...\""
+	new_desc = "An inscription scratched into the back of the case reads: \"Someone on this station is definitely a rat...\""
 	new_icon_state = "pda-rat"
 	new_item_state = "pda-rat"
 	new_ttone = list("squeak" = 'sound/items/PDA/mouse_squeak.ogg')
@@ -56,9 +56,9 @@
 
 /obj/item/pda_case/swaga
 	name = "PDA case \"SWAGA\""
-	desc = "Строгий чёрный чехол с золотыми кнопками. Позволяет выбрать уникальный звук для входящих сообщений (\"levelup\")."
+	desc = "A formal black case with gold buttons. Unlocks a unique incoming message sound: levelup."
 	icon_state = "pda_case_swaga"
-	new_desc = "На обратной стороне чехла можно заметить глубокомысленную цитату: \"Настоящие робасты двигаются бесшумно, как грейтайд по техам.\" Проверять золотые кнопки на зуб всё ещё не рекомендуется."
+	new_desc = "A profound quote on the back of the case reads: \"True robusts move silently, like a greytider through maintenance.\" Biting the gold buttons to test them is still not recommended."
 	new_icon_state = "pda-swaga"
 	new_item_state = "pda-swaga"
 	new_ttone = list("levelup" = 'sound/items/PDA/mario_1up.ogg')

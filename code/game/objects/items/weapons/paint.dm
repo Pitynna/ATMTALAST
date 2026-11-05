@@ -80,7 +80,7 @@
 
 /obj/item/random_paint_box
 	name = "paint box"
-	desc = "Коробка, которая содержит случайное ведро с краской."
+	desc = "A box containing a random bucket of paint."
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "giftcrate3"
 

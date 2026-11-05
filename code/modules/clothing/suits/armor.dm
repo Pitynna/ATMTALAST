@@ -751,7 +751,7 @@
 
 /obj/item/clothing/suit/armor/cartilage //parent type, used in order not to copy-paste same lines in 3 same armors
 	name = "cartilage armor"
-	desc = "Полностью завершённая броня, сделанная из хрящевых пластин лавовой рыбы. Крепче своих костяных аналогов."
+	desc = "A complete suit of armor made from lava fish cartilage plates. Stronger than its bone counterparts."
 	gender = FEMALE
 	icon_state = "cartilage_set"
 	item_state = "cartilage_set"
@@ -775,7 +775,7 @@
 
 /obj/item/clothing/suit/armor/cartilage/cartilage_pads
 	name = "cartilage shoulder pads"
-	desc = "Достаточно крепкие наплечники, сделанные из хрящевых пластин. Защищают тело, но не предоставляют защиты для ног. Могут быть улучшены до полноценной брони в случае, если будут соединены с поножами, сделанными из того же материала."
+	desc = "Sturdy pauldrons made from cartilage plates. Protects the body but not the legs. Can be combined with greaves of the same material to make a complete suit of armor."
 	gender = PLURAL
 	icon_state = "cartilage_shoulder_pads"
 	item_state = "cartilage_shoulder_pads"
@@ -797,7 +797,7 @@
 
 /obj/item/clothing/suit/armor/cartilage/cartilage_greaves
 	name = "cartilage greaves"
-	desc = "Достаточно крепкие поножи, сделанные из хрящевых пластин. Защищают ноги, но не предоставляют защиты для торса. Могут быть улучшены до полноценной брони в случае, если будут соединены с наплечниками, сделанными из того же материала."
+	desc = "Sturdy greaves made from cartilage plates. Protects the legs but not the torso. Can be combined with pauldrons of the same material to make a complete suit of armor."
 	gender = PLURAL
 	icon_state = "cartilage_greaves"
 	item_state = "cartilage_greaves"

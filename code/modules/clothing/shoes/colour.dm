@@ -215,18 +215,18 @@
 
 /obj/item/clothing/shoes/prison
 	name = "prison boots"
-	desc = "Твердая и неудобная обувь, сделанная другими заключенными."
+	desc = "Hard, uncomfortable shoes made by other prisoners."
 	icon_state = "prison_boots"
 	item_state = "prison_boots"
 
 /obj/item/clothing/shoes/convers
 	name = "black convers"
-	desc = "Пара высоких чёрных кед, сделанных по последнему писку моды. Выглядят просто отпадно."
+	desc = "A pair of fashionable black high-top sneakers. They look fantastic."
 	icon_state = "blackconvers"
 	item_state = "blackconvers"
 
 /obj/item/clothing/shoes/convers/red
 	name = "red convers"
-	desc = "Пара высоких красных кед, сделанных по последнему писку моды. Выглядят просто отпадно."
+	desc = "A pair of fashionable red high-top sneakers. They look fantastic."
 	icon_state = "redconvers"
 	item_state = "redconvers"

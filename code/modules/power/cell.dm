@@ -413,25 +413,11 @@
 	maxcharge = 750
 	chargerate = 25
 
-/obj/item/stock_parts/cell/clock
-	name = "brass power cell"
-	desc = "Элемент, вырабатывающий энергию для оружия культистов Ратвара, однако бесполезен в других целях. Предназначен для дробовика."
-
-/obj/item/stock_parts/cell/clock/shotgun
-	maxcharge = 10
-
-/obj/item/stock_parts/cell/clock/sniper
-	maxcharge = 5
-
-/obj/item/stock_parts/cell/clock/minigun
-	maxcharge = 175
-
-
 // MARK: Energy weapon cell
 // Basic weapon cell (not as stock parts)
 /obj/item/weapon_cell
 	name = "energy weapon cell magazine"
-	desc = "Магазин к энергооружию."
+	desc = "An energy weapon magazine."
 	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "Specter_accumulator"
 	gender = MALE
@@ -468,13 +454,13 @@
 
 /obj/item/stock_parts/cell/specter
 	name = "specter cell"
-	desc = "Аккумулятор, используемый в качестве магазина для пистолета Спектр."
+	desc = "A battery used as a magazine for the Specter pistol."
 	maxcharge = 7200
 	chargerate = 480
 
 /obj/item/weapon_cell/specter
 	name = "specter pistol cell"
-	desc = "Аккумулятор, используемый в качестве магазина для пистолета Спектр."
+	desc = "A battery used as a magazine for the Specter pistol."
 	internal_cell = new /obj/item/stock_parts/cell/specter()
 	materials = list(MAT_METAL = 35000)
 

@@ -10,8 +10,7 @@ GLOBAL_LIST_EMPTY_TYPED(integrated_circuits, /obj/item/integrated_circuit)
  */
 /obj/item/integrated_circuit
 	name = "integrated circuit"
-	desc = "Плата для сборки функциональных модулей на основе комьютерной логики. \
-			Поддерживает установку различных компонентов."
+	desc = "A board for assembling functional modules using computer logic. Supports the installation of various components."
 	gender = FEMALE
 	icon = 'icons/obj/module.dmi'
 	icon_state = "integrated_circuit"
@@ -867,5 +866,5 @@ GLOBAL_LIST_EMPTY_TYPED(integrated_circuits, /obj/item/integrated_circuit)
 
 /obj/item/integrated_circuit/admin
 	name = "administrative circuit"
-	desc = "Компоненты, установленные здесь, находятся далеко за пределами вашего понимания."
+	desc = "The components installed here are far beyond your understanding."
 	admin_only = TRUE

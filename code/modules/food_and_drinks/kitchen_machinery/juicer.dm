@@ -1,7 +1,7 @@
 
 /obj/machinery/juicer
 	name = "Juicer"
-	desc = "Машина для переработки твёрдых пищевых продуктов в форму сока. Принимает практически любой выращенный плод."
+	desc = "A machine for processing solid food into juice. Accepts almost any cultivated fruit."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "juicer1"
 	density = TRUE

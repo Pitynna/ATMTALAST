@@ -77,7 +77,7 @@
 
 /obj/item/clothing/under/plasmaman/mining_medic
 	name = "mining medic plasma envirosuit"
-	desc = "Защитный костюм плазмолюда, созданный специально для шахтёрских врачей."
+	desc = "A plasmaman protective suit designed specifically for mining medics."
 	icon_state = "mining_medic_envirosuit"
 	item_state = "mining_medic_envirosuit"
 	item_color = "mining_medic_envirosuit"

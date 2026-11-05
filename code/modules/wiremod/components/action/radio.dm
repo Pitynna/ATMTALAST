@@ -8,9 +8,7 @@
  */
 /obj/item/circuit_component/radio
 	display_name = "Сигнал"
-	desc = "Компонент, который может принимать и передавать частоты. \
-			Если выбран режим \"Частный\", компонент будет принимать сигналы только от других компонентов, \
-			подключённых к печатным платам с тем же идентификатором владельца."
+	desc = "A component that can receive and transmit radio signals. In Private mode, it only receives signals from components on circuits with the same owner ID."
 	category = "Action"
 
 	/// The publicity options. Controls whether it's public or private.

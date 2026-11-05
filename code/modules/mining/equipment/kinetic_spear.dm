@@ -4,7 +4,7 @@ Kinetic spear - alternative mining weapon, used as... spear.
 */
 /obj/item/twohanded/mining_spear
 	name = "kinetic spear"
-	desc = "Экспериментальный прототип кинетического энергокопья, используемый шахтерами для охоты на фауну и уничтожения породы."
+	desc = "An experimental kinetic energy spear prototype used by miners to hunt wildlife and break rock."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "mining_spear"
 	item_state = "mining_spear"
@@ -245,7 +245,7 @@ Kinetic spear - alternative mining weapon, used as... spear.
 
 /obj/item/embedded/spear
 	name = "spear tip"
-	desc = "наконечник копья, сделанный из чистой энергии. Очень острый."
+	desc = "A spearhead made from pure energy. Very sharp."
 	icon_state = "spear_tip"
 	icon = 'icons/obj/mining.dmi'
 	item_state = "flare-on"
@@ -264,7 +264,7 @@ Spear cores. Gives spear special abilities and quirks
 
 /obj/item/mining_spear_core
 	name = "spear core"
-	desc = "базовое ядро копья. Вы не должны это видеть."
+	desc = "A basic spear core. You should not be seeing this."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "standart_core"
 	/// Spear overlay, that we use
@@ -316,7 +316,7 @@ Spear cores. Gives spear special abilities and quirks
 
 /obj/item/mining_spear_core/standart
 	name = "standart spear core"
-	desc = "Стандартное ядро кинетического копья. Не имеет явных особенностей по сравнению с другими ядрами."
+	desc = "A standard kinetic spear core with no distinguishing features compared with other cores."
 
 /obj/item/mining_spear_core/standart/get_effect_description()
 	return "Вызывает кровотечение у фауны, нанося ей массивные повреждения."
@@ -333,7 +333,7 @@ Spear cores. Gives spear special abilities and quirks
 /obj/item/mining_spear_core/recall
 	name = "advanced spear core"
 	icon_state = "recall_core"
-	desc = "Улучшенное ядро кинетического копья, позволяющее пользователю вернуть копье в руки даже в случае промаха по цели."
+	desc = "An upgraded kinetic spear core that lets its user recall the spear to their hands even after missing a target."
 	spear_recall_after_miss = TRUE
 	spear_overlay = "overlay_yellow"
 	charged_glow_color = "#F0B541"
@@ -344,7 +344,7 @@ Spear cores. Gives spear special abilities and quirks
 /obj/item/mining_spear_core/hunting //stats exactly like chitin spear
 	name = "hunting spear core"
 	icon_state = "hunt_core"
-	desc = "Модифицированное ядро кинетического копья, предназначенное для охоты на более опасную добычу."
+	desc = "A modified kinetic spear core designed for hunting more dangerous prey."
 	spear_overlay = "overlay_orange"
 	charged_glow_color = "#FF8933"
 	spear_force = 15
@@ -362,7 +362,7 @@ Spear cores. Gives spear special abilities and quirks
 /obj/item/mining_spear_core/healing
 	name = "healing spear core"
 	icon_state = "heal_core"
-	desc = "Модифицированное ядро кинетического копья, выбрасывающее рой лечебных нанитов при полной зарядке ядра. Эффективность нанитов не слишком высока.."
+	desc = "A modified kinetic spear core that releases a swarm of healing nanites when fully charged. The nanites are not especially effective."
 	spear_overlay = "overlay_green"
 	charged_glow_color = "#63AB3F"
 	/// How much do we heal in our charged effect?
@@ -377,7 +377,7 @@ Spear cores. Gives spear special abilities and quirks
 /obj/item/mining_spear_core/aoe_effect
 	name = "explosive spear core"
 	icon_state = "explosive_core"
-	desc = "Модифицированное ядро кинетического копья, наносящее ущерб всей фауне поблизости. Безопасно для использования рядом с гуманоидами."
+	desc = "A modified kinetic spear core that damages all nearby wildlife. Safe to use around humanoids."
 	spear_overlay = "overlay_purple"
 	charged_glow_color = "#CC2F7B"
 
@@ -396,7 +396,7 @@ Spear cores. Gives spear special abilities and quirks
 
 /obj/item/mining_spear_core/syndie
 	name = "syndicate spear core"
-	desc = "Сильно модифицированное ядро, позволяющее пользователю вести охоту на самую опасную добычу — на человека."
+	desc = "A heavily modified core that lets its user hunt the most dangerous prey: people."
 	icon_state = "syndie_core"
 	spear_overlay = "overlay_red"
 	charged_glow_color = "#B22C20"

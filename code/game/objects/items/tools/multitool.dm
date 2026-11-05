@@ -73,8 +73,7 @@
 
 /obj/item/multitool_broken
 	name = "broken multimeter"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Похоже, что он полностью сгорел."
+	desc = "An electrical instrument for measuring current characteristics and testing circuit continuity. It appears to be completely burned out."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "multitool_broken"
 	item_state = "multitool"
@@ -186,8 +185,7 @@
 
 /obj/item/multitool/old
 	name = "old multimeter"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Выглядит весьма устаревшим."
+	desc = "An electrical instrument for measuring current characteristics and testing circuit continuity. It looks rather outdated."
 	icon_state = "multitool_old_wire"
 	belt_icon = "multitool_old_wire"
 
@@ -197,8 +195,7 @@
 
 /obj/item/multitool/industrial
 	name = "industrial multitool"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Оснащён более производительным процессором, по сравнению со стандартными моделями, что значительно увеличивает скорость работы."
+	desc = "An electrical instrument for measuring current characteristics and testing circuit continuity. A more powerful processor greatly improves its operating speed compared with standard models."
 	icon_state = "multitool_industrial"
 	usesound = 'sound/items/multitool2.ogg'
 	toolspeed = 0.6

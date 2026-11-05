@@ -1,6 +1,6 @@
 // MARK: Foam dart
 /obj/item/ammo_casing/caseless/foam_dart
-	ammo_marking = "\"пенопластовый\""
+	ammo_marking = "\"foam\""
 	icon = 'icons/obj/weapons/toy.dmi'
 	icon_state = "foamdart"
 	materials = list(MAT_METAL = 10)
@@ -12,7 +12,7 @@
 
 /obj/item/ammo_casing/caseless/foam_dart/update_desc(updates = ALL)
 	. = ..()
-	desc = "Имитация огнестрельного боеприпаса из пены и пластмассы для стрельбы из игрушечного оружия. [extra_info]"
+	desc = "A foam and plastic imitation cartridge for toy guns. [extra_info]"
 
 /obj/item/ammo_casing/caseless/foam_dart/examine(mob/user)
 	. = ..()
@@ -85,15 +85,15 @@
 		FD.pen = null
 
 /obj/item/ammo_casing/caseless/foam_dart/riot
-	ammo_marking = "\"пенопластовый+\""
-	extra_info = "Усиленная версия, по силе удара сравнимая с полноценными резиновыми пулями."
+	ammo_marking = "\"foam+\""
+	extra_info = "An enhanced version with an impact comparable to full-size rubber bullets."
 	icon_state = "foamdart_riot"
 	materials = list(MAT_METAL = 650)
 	projectile_type = /obj/projectile/bullet/reusable/foam_dart/riot
 
 /obj/item/ammo_casing/caseless/foam_dart/sniper
-	ammo_marking = "\"пенопластовый снайперский\""
-	extra_info = "Вариант большего размера для использования в игрушечных снайперских винтовках."
+	ammo_marking = "\"sniper foam\""
+	extra_info = "A larger version for toy sniper rifles."
 	icon_state = "foamdartsniper"
 	materials = list(MAT_METAL = 20)
 	caliber = CALIBER_FOAM_FORCE_SNIPER
@@ -110,15 +110,15 @@
 			BB.icon_state = initial(BB.icon_state)
 
 /obj/item/ammo_casing/caseless/foam_dart/sniper/riot
-	ammo_marking = "\"пенопластовый снайперский+\""
-	extra_info = "Усиленная версия для игрушечных снайперских винтовок, по силе удара сравнимая с полноценными резиновыми пулями."
+	ammo_marking = "\"sniper foam+\""
+	extra_info = "An enhanced version for toy sniper rifles with an impact comparable to full-size rubber bullets."
 	icon_state = "foamdartsniper_riot"
 	materials = list(MAT_METAL = 1800)
 	projectile_type = /obj/projectile/bullet/reusable/foam_dart/sniper/riot
 
 // MARK: Cap
 /obj/item/ammo_casing/cap
-	extra_info = "Холостой вариант для игрушечного оружия. Пуля отсутствует."
+	extra_info = "A blank round for toy guns. Contains no projectile."
 	materials = list(MAT_METAL = 10)
 	caliber = CALIBER_CAP
 	projectile_type = /obj/projectile/bullet/cap

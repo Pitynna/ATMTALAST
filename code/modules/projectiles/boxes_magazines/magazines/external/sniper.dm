@@ -1,6 +1,6 @@
 // MARK: .50 - SGM-HSR15
 /obj/item/ammo_box/magazine/sniper_rounds
-	gun_name = "снайперской винтовки SGM-HSR15"
+	gun_name = "SGM-HSR15 sniper rifles"
 	icon_state = ".50mag"
 	origin_tech = "combat=6"
 	ammo_type = /obj/item/ammo_casing/point50
@@ -32,7 +32,7 @@
 
 // MARK: .50L - "Hornisse"
 /obj/item/ammo_box/magazine/sniper_rounds/compact
-	gun_name = "снайперской винтовки \"Шершень\""
+	gun_name = "Hornet sniper rifles"
 	ammo_type = /obj/item/ammo_casing/compact
 	max_ammo = 4
 	caliber = CALIBER_DOT_50L
@@ -49,7 +49,7 @@
 
 // MARK: .338 - AXMC
 /obj/item/ammo_box/magazine/a338
-	gun_name = "снайперской винтовки AXMC"
+	gun_name = "AXMC sniper rifles"
 	icon_state = ".338mag"
 	origin_tech = "combat=6"
 	ammo_type = /obj/item/ammo_casing/a338

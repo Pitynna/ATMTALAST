@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/index_table
 	display_name = "Таблица — индекс"
-	desc = "Получает строку таблицы в виде ассоциативного списка, используя указанный индекс. \
-			Не возвращает значение, если индекс недействителен или не возвращена правильная таблица."
+	desc = "Gets the table row at the specified index as an associative list. Returns no value if the index is invalid or a valid table is not supplied."
 	category = "List"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

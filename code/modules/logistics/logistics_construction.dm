@@ -1,6 +1,6 @@
 /obj/structure/logistics_construct
 	name = "logistics pipe segment"
-	desc = "Сегмент трубы для сборки логистической сети."
+	desc = "A pipe segment for assembling a logistics network."
 	icon = 'icons/obj/pipes_and_stuff/not_atmos/logistics.dmi'
 	icon_state = "conlogi-s"
 	pressure_resistance = 5 * ONE_ATMOSPHERE

@@ -1,6 +1,6 @@
 /obj/machinery/vending/protein
 	name = "sports nutrition vendor"
-	desc = "Автомат самообслуживания, любезно предоставленный корпорацией Donk Co. Исключительная польза!"
+	desc = "A self-service vending machine generously provided by Donk Co. Nothing but benefits!"
 	slogan_list = list(
 		"Попр+обуйте н+аш н+овый проте+иновый бат+ончик!",
 		"Накач+аться никогд+а не п+оздно!",

@@ -43,7 +43,7 @@
 
 // MARK: Improvised revolvers
 /obj/item/ammo_box/magazine/internal/cylinder/improvised
-	gun_name = "импровизированного револьвера"
+	gun_name = "improvised revolvers"
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "rev_cylinder"
 	ammo_type = null
@@ -60,7 +60,7 @@
 	return jointext(caliber, "/")
 
 /obj/item/ammo_box/magazine/internal/cylinder/improvised/steel
-	extra_info = "Совместим с патронами обоих калибров."
+	extra_info = "Compatible with cartridges of both calibers."
 	icon_state = "s_rev_cylinder"
 	caliber = list(CALIBER_DOT_257, CALIBER_DOT_38)
 	max_ammo = 6

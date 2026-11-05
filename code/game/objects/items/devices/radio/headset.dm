@@ -231,20 +231,12 @@
 
 /obj/item/radio/headset/syndicate/alt/lavaland
 	name = "syndicate lavaland headset"
-	desc = "Тактическая гарнитура, разработанная по технологиям \"Синдиката\". \
-			Система активного шумоподавления защищает органы слуха пользователя от громких звуков. \
-			Использует особые протоколы связи для доступа к зашифрованным каналам \"Синдиката\" и прослушивания закрытых каналов \"Нанотрейзен\". \
-			Работает автономно без необходимости прямого подключения к местным телекоммуникационным системам. \
-			Специальная модель для сотрудников \"Синдиката\", оперирующих на поверхности Лазиса."
+	desc = "A tactical headset built with Syndicate technology. Active noise cancellation protects the user's hearing. Special communication protocols provide access to encrypted Syndicate channels and allow monitoring of restricted Nanotrasen channels. Operates independently of local telecommunications systems. This model is intended for Syndicate personnel on the surface of Lazis."
 	default_frequency = SYND_FREQ
 
 /obj/item/radio/headset/syndicate/admin_officer
 	name = "syndicate officer's headset"
-	desc = "Тактическая гарнитура, разработанная по технологиям \"Синдиката\". \
-			Система активного шумоподавления защищает органы слуха пользователя от громких звуков. \
-			Использует особые протоколы связи для доступа к зашифрованным каналам \"Синдиката\" и прослушивания закрытых каналов \"Нанотрейзен\". \
-			Работает автономно без необходимости прямого подключения к местным телекоммуникационным системам. \
-			Элитная модель, созданная для командного состава \"Синдиката\"."
+	desc = "A tactical headset built with Syndicate technology. Active noise cancellation protects the user's hearing. Special communication protocols provide access to encrypted Syndicate channels and allow monitoring of restricted Nanotrasen channels. Operates independently of local telecommunications systems. An elite model for Syndicate command personnel."
 	icon_state = "syndie_headset"
 	item_state = "syndie_headset"
 	ks1type = /obj/item/encryptionkey/syndteam
@@ -290,9 +282,7 @@
 
 /obj/item/radio/headset/prisoner
 	name = "prisoner radio headset"
-	desc = "Радиочастотная гарнитура, выполненная из ударопрочного полимера. \
-			Поддерживает двустороннюю связь по зашифрованным частотам объекта. \
-			Используется заключенными."
+	desc = "A radio headset made from impact-resistant polymer. Supports two-way communication on encrypted facility frequencies. Used by prisoners."
 	icon_state = "prisoner_headset"
 	item_state = "prisoner_headset"
 	ks2type = /obj/item/encryptionkey/prisoner
@@ -301,9 +291,7 @@
 
 /obj/item/radio/headset/green
 	name = "green radio headset"
-	desc = "Радиочастотная гарнитура, выполненная из ударопрочного полимера. \
-			Поддерживает двустороннюю связь по зашифрованным частотам объекта. \
-			Используется зелеными."
+	desc = "A radio headset made from impact-resistant polymer. Supports two-way communication on encrypted facility frequencies. Used by the green team."
 	icon_state = "syndie_headset"
 	item_state = "syndie_headset"
 	ks2type = /obj/item/encryptionkey/green
@@ -312,9 +300,7 @@
 
 /obj/item/radio/headset/blue
 	name = "blue radio headset"
-	desc = "Радиочастотная гарнитура, выполненная из ударопрочного полимера. \
-			Поддерживает двустороннюю связь по зашифрованным частотам объекта. \
-			Используется синими."
+	desc = "A radio headset made from impact-resistant polymer. Supports two-way communication on encrypted facility frequencies. Used by the blue team."
 	icon_state = "syndie_headset"
 	item_state = "syndie_headset"
 	ks2type = /obj/item/encryptionkey/blue
@@ -323,9 +309,7 @@
 
 /obj/item/radio/headset/red
 	name = "red radio headset"
-	desc = "Радиочастотная гарнитура, выполненная из ударопрочного полимера. \
-			Поддерживает двустороннюю связь по зашифрованным частотам объекта. \
-			Используется красными."
+	desc = "A radio headset made from impact-resistant polymer. Supports two-way communication on encrypted facility frequencies. Used by the red team."
 	icon_state = "syndie_headset"
 	item_state = "syndie_headset"
 	ks2type = /obj/item/encryptionkey/red
@@ -527,14 +511,7 @@
 
 /obj/item/radio/headset/centcom/solgov
 	name = "Trans-Solar Federation General's bowman headset"
-	desc = "Элитная тактическая гарнитура, выполненная из передовых титано-алюминиевых сплавов с каркасом из композитных полимеров. \
-			Система активного шумоподавления поддерживает громкость окружения на комфортном уровне, \
-			защищая органы слуха пользователя от громких звуков и обеспечивая отличную слышимость в условиях интенсивного боя. \
-			Встроенное телекоммуникационное оборудование позволяет поддерживать \
-			устойчивую двустороннюю связь высокого качества по всем частотам объекта, \
-			а также по закрытым частотам КМП и элитных подразделений ТСФ, обеспечивая контроль над ситуацией в реальном времени. \
-			Работает автономно без необходимости прямого подключения к местным телекоммуникационным системам. \
-			Используется Генералами ТСФ."
+	desc = "An elite tactical headset made from advanced titanium-aluminum alloys around a composite-polymer frame. Active noise cancellation keeps surrounding sound comfortable, protects hearing and ensures clear audio during intense combat. Built-in telecommunications equipment supports reliable, high-quality two-way communication on every facility frequency, as well as restricted Marine Corps and elite TSF unit channels, providing real-time situational awareness. Operates independently of local telecommunications systems. Used by TSF generals."
 
 /obj/item/radio/headset/heads/ai_integrated //No need to care about icons, it should be hidden inside the AI anyway.
 	name = "AI subspace transceiver"
@@ -547,10 +524,7 @@
 
 /obj/item/radio/headset/headset_mining_medic
 	name = "mining medic's radio headset"
-	desc = "Высокопрочная радиочастотная гарнитура, изготовленная из антисептического пластика с термоустойчивым покрытием. \
-			Поддерживает двустороннюю связь по зашифрованным частотам медицинского отдела и отдела снабжения. \
-			Оснащена системой защиты от пылевого засорения. \
-			Используется местным медицинском персоналом, работающим на поверхности Лазиса."
+	desc = "A rugged radio headset made from antiseptic plastic with a heat-resistant coating. Supports encrypted medical and supply frequencies and includes dust protection. Used by medical personnel working on the surface of Lazis."
 	icon_state = "minmed_headset"
 	ks2type = /obj/item/encryptionkey/headset_mining_medic
 

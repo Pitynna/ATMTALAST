@@ -17,8 +17,7 @@
 
 /obj/item/t_scanner/extended_range
 	name = "extended-range T-ray scanner"
-	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
-	\nДанная модель обладает расширенным радиусом действия."
+	desc = "A terahertz emitter and scanner for detecting concealed and underfloor objects, such as cables and pipes.\nThis model has an extended operating range."
 	icon_state = "t-ray-range0"
 	base_icon_state = "t-ray-range"
 	scan_range = 3
@@ -27,8 +26,7 @@
 
 /obj/item/t_scanner/longer_pulse
 	name = "long-pulse T-ray scanner"
-	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
-	\nДанная модель способна генерировать более продолжительные импульсы."
+	desc = "A terahertz emitter and scanner for detecting concealed and underfloor objects, such as cables and pipes.\nThis model generates longer pulses."
 	icon_state = "t-ray-pulse0"
 	base_icon_state = "t-ray-pulse"
 	pulse_duration = 5 SECONDS
@@ -37,8 +35,7 @@
 
 /obj/item/t_scanner/advanced
 	name = "advanced T-ray scanner"
-	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
-	\nДанная модель способна генерировать более продолжительные импульсы и обладает расширенным радиусом действия."
+	desc = "A terahertz emitter and scanner for detecting concealed and underfloor objects, such as cables and pipes.\nThis model generates longer pulses and has an extended operating range."
 	icon_state = "t-ray-advanced0"
 	base_icon_state = "t-ray-advanced"
 	scan_range = 3
@@ -48,8 +45,7 @@
 
 /obj/item/t_scanner/science
 	name = "scientific T-ray scanner"
-	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
-	\nВысокотехнологичная модель, способная генерировать очень продолжительные импульсы в пределах большого радиуса."
+	desc = "A terahertz emitter and scanner for detecting concealed and underfloor objects, such as cables and pipes.\nAn advanced model that generates very long pulses over a wide area."
 	icon_state = "t-ray-science0"
 	base_icon_state = "t-ray-science"
 	scan_range = 5
@@ -59,9 +55,7 @@
 
 /obj/item/t_scanner/experimental	//a high-risk that cannot be disassembled, since this garbage was invented by, well, you know who.
 	name = "experimental T-ray scanner"
-	desc = "Излучатель и сканер терагерцевого излучения, используемый для обнаружения скрытых объектов и объектов под полом, таких как кабели и трубы. \
-	\nЭкспериментальный образец, обладающий расширенным радиусом действия и более продолжительным импульсом. \
-	\nСудя по его виду, эта вещь была собрана безумными учеными в ходе спонтанных экспериментов."
+	desc = "A terahertz emitter and scanner for detecting concealed and underfloor objects, such as cables and pipes.\nAn experimental model with an extended range and longer pulses.\nIt looks as if mad scientists assembled it during spontaneous experiments."
 	icon_state = "t-ray-experimental0"
 	base_icon_state = "t-ray-experimental"
 	scan_range = 3
@@ -137,7 +131,7 @@
 
 /obj/item/t_scanner/security
 	name = "anti-cloaking THz device"
-	desc = "Излучатель терагерцевого типа используемый для сканирования области на наличие замаскированных биоорганизмов. Устройство уязвимо для ЭМИ излучения."
+	desc = "A terahertz emitter used to scan an area for cloaked biological organisms. Vulnerable to electromagnetic pulses."
 	item_state = "sb_t-ray"
 	icon_state = "sb_t-ray0"
 	base_icon_state = "sb_t-ray"
@@ -169,7 +163,7 @@
 	if(!burnt)
 		desc = initial(desc)
 		return
-	desc = "Излучатель терагерцевого типа используемый для сканирования области на наличие замаскированных биоорганизмов. Устройство сгорело, теперь можно обнаружить разве что крошки от пончика оставшиеся на нём..."
+	desc = "A terahertz emitter used to scan for cloaked organisms. The device has burned out. Now it can detect little more than the donut crumbs left on it..."
 
 /obj/item/t_scanner/security/attack_self(mob/user)
 	if(!burnt)

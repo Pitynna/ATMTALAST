@@ -283,16 +283,16 @@
 			bottle.pixel_y = rand(-3, 3)
 			replicator_cooldown(5 SECONDS)
 			var/list/data = list("diseases"=list(copy))
-			bottle.name = "культура [capitalize(name)]"
+			bottle.name = "[capitalize(name)] culture"
 			bottle.ru_names = alist(
-				NOMINATIVE = "культура [capitalize(name)]",
+				NOMINATIVE = "[capitalize(name)] culture",
 				GENITIVE = "культуры [capitalize(name)]",
 				DATIVE = "культуре [capitalize(name)]",
 				ACCUSATIVE = "культуру [capitalize(name)]",
 				INSTRUMENTAL = "культурой [capitalize(name)]",
 				PREPOSITIONAL = "культуре [capitalize(name)]",
 			)
-			bottle.desc = "Небольшая бутылка. Содержит синтетическую кровь, заражённую культурой [capitalize(copy.agent)]."
+			bottle.desc = "A small bottle containing synthetic blood infected with a culture of [capitalize(copy.agent)]."
 			bottle.reagents.add_reagent("blood", 20, data)
 
 		if("addSympthom")
@@ -327,9 +327,9 @@
 					vaccine_name = disease.name
 
 			if(vaccine_type)
-				bottle.name = "вакцина [capitalize(vaccine_name)]"
+				bottle.name = "[capitalize(vaccine_name)] vaccine"
 				bottle.ru_names = alist(
-					NOMINATIVE = "вакцина [capitalize(vaccine_name)]",
+					NOMINATIVE = "[capitalize(vaccine_name)] vaccine",
 					GENITIVE = "вакцины [capitalize(vaccine_name)]",
 					DATIVE = "вакцине [capitalize(vaccine_name)]",
 					ACCUSATIVE = "вакцину [capitalize(vaccine_name)]",
@@ -386,7 +386,7 @@
 		form.info += "Печать ответственного лица, разрешившего выпуск вируса:"
 		form.populatefields()
 		form.updateinfolinks()
-		form.name = "Выпуск вируса «[disease.name]»"
+		form.name = "Release of Virus '[disease.name]'"
 		form.update_icon()
 		printing = null
 

@@ -75,7 +75,7 @@
  */
 /obj/item/implant/fake_mindshield
 	name = "fake mindshield bio-chip"
-	desc = "Имитирует имплант защиты разума, управляя его отображением на ИЛС службы безопасности. Может быть включён и выключен владельцем."
+	desc = "Imitates a mindshield implant by controlling its appearance on security HUDs. Can be toggled by its owner."
 	origin_tech = "materials=3;biotech=5;syndicate=2"
 	implant_state = "implant-syndicate"
 	implant_data = /datum/implant_fluff/fake_mindshield
@@ -122,5 +122,5 @@
 
 /obj/item/implantcase/fake_mindshield
 	name = "bio-chip case - 'fake mindshield'"
-	desc = "Стеклянный контейнер, содержащий фальшивый имплант защиты разума."
+	desc = "A glass case containing a fake mindshield implant."
 	imp = /obj/item/implant/fake_mindshield

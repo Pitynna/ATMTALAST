@@ -305,7 +305,7 @@
 
 /obj/item/storage/bag/kaboom // bag that can hold plastic explosions(used only for emagged mining borg)
 	name = "Charge Deployment System"
-	desc = "Система Размещения Зарядов. Способна автоматически устанавливать выбранную взрывчатку."
+	desc = "A charge deployment system capable of automatically placing the selected explosives."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "bomb_satchel"
 	origin_tech = "engineering=2"
@@ -845,7 +845,7 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 
 /obj/item/storage/bag/medpouch/fishing
 	name = "fishing pouch"
-	desc = "Небольшой мешочек для хранения различной наживки и частей рыб."
+	desc = "A small pouch for assorted bait and fish parts."
 	icon_state = "fishpouch_ash"
 	can_hold = list(
 		/obj/item/reagent_containers/food/snacks/bait,

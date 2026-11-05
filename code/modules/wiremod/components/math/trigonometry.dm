@@ -14,7 +14,7 @@
  */
 /obj/item/circuit_component/trigonometry
 	display_name = "Тригонометрия"
-	desc = "Компонент общей тригонометрии с основными и обратными тригонометрическими функциями."
+	desc = "A general trigonometry component with standard and inverse trigonometric functions."
 	category = "Math"
 
 	var/datum/port/input/option/trigonometric_function

@@ -1,6 +1,6 @@
 // MARK: 12 ammo - Standart
 /obj/item/ammo_box/magazine/m12g
-	gun_name = "дробовиков с магазинным питанием"
+	gun_name = "magazine-fed shotguns"
 	icon_state = "m12gbc"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/magnum
 	caliber = CALIBER_12G
@@ -59,7 +59,7 @@
 
 // MARK: 8 ammo - SG40 Vastus
 /obj/item/ammo_box/magazine/cats12g
-	gun_name = "дробовика SG40 \"Вастус\""
+	gun_name = "SG40 \"Vastus\" shotguns"
 	icon_state = "cats_mag_slug"
 	ammo_type = /obj/item/ammo_casing/shotgun
 	multiple_sprites = 2

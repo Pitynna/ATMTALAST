@@ -2,7 +2,7 @@
 
 /obj/item/turret_integration_module
 	name = "turret integration module"
-	desc = "Модуль, занимающий в корпусе турели место сенсора движения. Передаёт управление огнём интегральной схеме."
+	desc = "A module that replaces a turret's proximity sensor, handing fire control over to an integrated circuit."
 	icon = 'icons/obj/circuits.dmi'
 	icon_state = "setup_device"
 	item_state = "electronic"
@@ -11,7 +11,7 @@
 
 /obj/machinery/porta_turret/integrated
 	name = "integrated turret"
-	desc = "Турель без собственной системы опознавания целей. Стреляет только по указанию интегральной схемы."
+	desc = "A turret without its own target identification system. It fires only when instructed by an integrated circuit."
 	targetting_is_configurable = FALSE
 	check_access = FALSE
 	check_arrest = FALSE
@@ -105,9 +105,7 @@
 
 /obj/item/circuit_component/turret
 	display_name = "Турель"
-	desc = "Ведёт огонь по цели, поданной на вход \"Цель\", когда на \"Вызов\" приходит сигнал. \
-			Об объектах, вошедших в зону обнаружения турели, сообщают выходы \"Обнаруженный объект\" и \"Обнаружение\". \
-			Состоявшийся выстрел подтверждается выходами \"Обстрелянная цель\" и \"Выстрел\"."
+	desc = "Fires at the Target input when Trigger receives a signal. The Detected Object and Detection outputs report objects entering the turret's detection range. The Fired Target and Fired outputs confirm a shot."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 	required_shells = list(/obj/machinery/porta_turret/integrated)
 

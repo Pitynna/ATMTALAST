@@ -140,19 +140,19 @@
 
 /obj/item/toy/plushie/cat/kotrazumist
 	name = "Razumist Cat"
-	desc = "Кот с конусом на макушке. Интересно, что же сделало его таким умным?"
+	desc = "A cat with a cone on its head. What could have made it so smart?"
 	icon_state = "razymist_cat"
 	cuddle_verb = list("Я знаю всё обо всём, спроси меня о чём-нибудь!", "Сегодня я особенно мудр!", "Мяу!", "Мурр!")
 
 /obj/item/toy/plushie/cat/ricehat
 	name = "Rice Cat"
-	desc = "Белая плюшевая кошка в соломенной шляпе, полученной за тяжелый труд на рисовом поле."
+	desc = "A white plush cat in a straw hat earned through hard work in the rice fields."
 	icon_state = "ricehat_cat"
 	cuddle_verb = list("Добро пожаловать на рисовые поля!", "Где мой рис?!", "Мяу!", "Мурр!")
 
 /obj/item/toy/plushie/manulplushie
 	name = "manul plushie"
-	desc = "Чёрный котик с красными ушами, в халатике. На халате бирка \"Манул\". Эту игрушку оставили здесь в память о ком-то..."
+	desc = "A little black cat with red ears, wearing a robe labeled Manul. This toy was left here in someone's memory..."
 	icon_state = "kotik_plushie"
 	item_state = "kotik_hand"
 	gender = FEMALE
@@ -173,12 +173,12 @@
 
 /obj/item/toy/plushie/voxplushie/brick
 	name = "vox brick toy"
-	desc = "Мини-прималис. Главное в воксе — держать клюв Кирпичом. Игрушка сшитая основателем камневидного базирования в перерыве между рейдами."
+	desc = "A miniature primalis. The key to being a vox is keeping your beak as solid as Brick. Sewn by the founder of rock-solid composure between raids."
 	color = "#ff78f4"
 
 /obj/item/toy/plushie/shardplushie
 	name = "Shard plushie"
-	desc = "Мягкая игрушка в виде осколка кристалла суперматерии. 100% безопасность."
+	desc = "A soft toy shaped like a supermatter crystal shard. 100% safe."
 	icon_state = "plushie_shard"
 	item_state = "plushie_shard"
 	attack_verb = list("аннигилировал", "поцарапал")
@@ -212,7 +212,7 @@
 	icon_state = "grey_singed"
 	item_state = "grey_singed" //If the plushie gets wet the sprite changes to a singed version.
 	update_icon(UPDATE_ICON_STATE)
-	desc = "Испорченная плюшевая игрушка грея. Похоже, что кто-то прогнал его под водой."
+	desc = "A ruined Grey plushie. It looks like someone ran it under water."
 
 /obj/item/toy/plushie/ipcplushie
 	name = "IPC plushie"
@@ -267,7 +267,7 @@
 
 /obj/item/toy/plushie/ashwalkerplushie
 	name = "ash walker plushie"
-	desc = "Супер крутая плюшевая игрушка в виде пеплоходца."
+	desc = "A super-cool ash walker plushie."
 	icon_state = "plushie_ashwalker1"
 	attack_verb = list("порезал", "шлёпнул", "протаранил")
 	gender = MALE
@@ -323,7 +323,7 @@
 
 /obj/item/toy/plushie/nianplushie/beeplushie
 	name = "bee plushie"
-	desc = "Милая игрушка, похожая на пчёлку."
+	desc = "A cute toy resembling a little bee."
 	icon_state = "plushie_h"
 	item_state = "plushie_h"
 	attack_verb = list("ужалил", "жужанул", "опылил")
@@ -331,7 +331,7 @@
 
 /obj/item/toy/plushie/rdplushie
 	name = "RD doll"
-	desc = "Это обычная кукла РД."
+	desc = "An ordinary research director doll."
 	icon_state = "RD_doll"
 	item_state = "RD_doll"
 	poof_sound = 'sound/items/greetings-emote.ogg'
@@ -352,7 +352,7 @@
 
 	icon_state = "RD_doll_tired"
 	item_state = "RD_doll_tired"
-	desc = "Это уставшая кукла РД."
+	desc = "A tired Research Director plushie."
 	poof_sound = 'sound/items/shyness-emote.ogg'
 	cuddle_verb = list(
 		"Твой мозг стоило бы поместить в машину...",
@@ -368,9 +368,7 @@
 
 /obj/item/toy/plushie/gsbplushie
 	name = "GSBussy doll"
-	desc = "Глуповатого вида кукла, что держит в руках книгу Космического закона и имитацию револьвера Unica-6. \
-			На задней части имеется следующая надпись: \
-			\"Кукла-аниматроник GSBussy, лимитированная серия. Произведено ######\" - часть текста невозможно разобрать."
+	desc = "A silly-looking doll holding a Space Law book and a replica Unica-6 revolver. Its back reads: GSBussy animatronic doll, limited edition. Manufactured by ######. Part of the text is illegible."
 	icon_state = "GSBussy_doll"
 	item_state = "GSBussy_doll"
 	poof_sound = 'sound/items/GSBussy.ogg'
@@ -388,7 +386,7 @@
 
 /obj/item/toy/plushie/cmoplushie
 	name = "CMO doll"
-	desc = "Миниатюрная плюшевая копия главного врача в синем халате. Её карманы забиты таблетницами, а от неё самой немного пахнет антисептиком и формальдегидом."
+	desc = "A miniature plush chief medical officer in a blue lab coat. Its pockets are stuffed with pill bottles, and it smells faintly of antiseptic and formaldehyde."
 	icon_state = "CMO_doll"
 	item_state = "CMO_doll"
 	poof_sound = 'sound/items/greetings-emote.ogg'
@@ -430,7 +428,7 @@
 
 /obj/item/toy/plushie/hopplushie
 	name = "HoPussy doll"
-	desc = "Миниатюрная плюшевая копия главы персонала в форменной фуражке и синем пиджаке с красным галстуком. В ручках она крепко прижимает плюшевого Иана, а от неё самой немного пахнет чернилами, бумагой и собачьей шерстью."
+	desc = "A miniature plush head of personnel in a uniform cap and blue jacket with a red tie. It clutches a plush Ian and smells faintly of ink, paper and dog hair."
 	icon_state = "HoPussy_doll"
 	item_state = "HoPussy_doll"
 	poof_sound = 'sound/items/greetings-emote.ogg'
@@ -463,7 +461,7 @@
 
 /obj/item/toy/plushie/blahaj/twohanded
 	name = "akula plushie"
-	desc = "Старшая и более милая сестричка акулёнка. Она может издавать забавные звуки при нажатии кнопки на животе. Бейби шарк ту ту туру туру!"
+	desc = "The baby shark's bigger, cuter sister. Press the button on her belly for funny sounds. Baby shark, doo doo doo doo!"
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "plushie_akula"
 	item_state = "plushie_akula"
@@ -594,40 +592,40 @@
 // MARK: Hampters
 /obj/item/toy/plushie/hampter
 	name = "Hampter"
-	desc = "Народ требует хомяков!"
+	desc = "The people demand hamsters!"
 	icon_state = "hampter"
 	gender = MALE
 
 /obj/item/toy/plushie/hampter/asisstant
 	name = "Hampter the Assitant"
-	desc = "Более или менее полезный."
+	desc = "More or less useful."
 	icon_state = "hampter_ass"
 
 /obj/item/toy/plushie/hampter/security
 	name = "The anti-honk Hampter"
-	desc = "ПОДЧИНИСЬ!"
+	desc = "COMPLY!"
 	icon_state = "hampter_sec"
 
 /obj/item/toy/plushie/hampter/medic
 	name = "Hampter the Doctor"
-	desc = "Не принимайте его таблетки."
+	desc = "Do not take his pills."
 	icon_state = "hampter_med"
 
 /obj/item/toy/plushie/hampter/janitor
 	name = "Hampter the Janitor"
-	desc = "Я буду называть тебя Деном."
+	desc = "I shall call you Dan."
 	icon_state = "hampter_jan"
 
 // MARK: Beavers
 /obj/item/toy/plushie/beaver
 	name = "beaver plushie"
-	desc = "Милая мягкая игрушка бобра. Держа его в руках, вы едва можете сдержаться от криков счастья."
+	desc = "An adorable soft beaver toy. Holding it, you can barely resist shouting with joy."
 	icon_state = "beaver_plushie"
 	item_state = "beaver_plushie"
 	gender = MALE
 
 /obj/item/toy/plushie/beaver/sounded //only adminspawn
-	desc = "Милая мягкая игрушка бобра. Держа его в руках, вы едва можете сдержаться от криков счастья. Эта выглядит ещё лучше, чем обычно!"
+	desc = "An adorable soft beaver toy. Holding it, you can barely resist shouting with joy. This one looks even better than usual!"
 	poof_sound = 'sound/items/beaver_plushie.ogg'
 	cuddle_verb = "BOBR KURWA!"
 
@@ -649,7 +647,7 @@
 
 /obj/item/toy/plushie/snail
 	name = "'snail' plushie"
-	desc = "Плюшевая улитка. Выглядит довольно знакомо, не правда ли?"
+	desc = "A plush snail. Looks rather familiar, doesn't it?"
 	icon_state = "snailplushie"
 	item_state = "snailplushie"
 	gender = FEMALE
@@ -691,19 +689,19 @@
 
 /obj/item/toy/plushie/fennecplushie
 	name = "fennec plushie"
-	desc = "Очаровательная плюшевая игрушка, похожая на милого фенека."
+	desc = "An adorable plush toy resembling a cute fennec fox."
 	icon_state = "fox"
 	item_state = "fox"
 	gender = MALE
 
 /obj/item/toy/plushie/beepsky
 	name = "plush Officer Sweepsky"
-	desc = "Плюшевая игрушка в виде популярного и трудолюбивого робота-уборщика! Он бы полюбил вас, будь у него эмоции."
+	desc = "A plush version of a popular, hardworking cleaning robot! It would love you if it had emotions."
 	icon_state = "beepskyplushie"
 
 /obj/item/toy/plushie/axolotlplushie
 	name = "axolotl plushie"
-	desc = "Плюшевый аксолотль. Он такой милый!"
+	desc = "A plush axolotl. So cute!"
 	icon_state = "plushie_axolotl"
 	item_state = "axolotl"
 	attack_verb = list("ущипнул", "чмокнул")
@@ -713,7 +711,7 @@
 
 /obj/item/toy/plushie/realgoat
 	name = "goat plushie"
-	desc = "Несмотря на то, что это милая мягкая игрушка, он вас изобьет, или, по крайней мере, избил бы, если бы мог."
+	desc = "Despite being a cute soft toy, it will beat you up. Or at least it would if it could."
 	icon_state = "realgoat"
 	attack_verb = list("жеванул", "ударил", "ткнул")
 	poof_sound = 'sound/items/goatsound.ogg'
@@ -722,7 +720,7 @@
 
 /obj/item/toy/plushie/rouny
 	name = "runner plushie"
-	desc = "Плюшевая игрушка ксеноморфа-бегуна, созданная в ознаменование столетия после победы на LV-426. В разы приятнее на ощупь чем настоящий."
+	desc = "A plush runner xenomorph commemorating the centenary of the victory on LV-426. Much nicer to touch than the real thing."
 	icon_state = "rouny"
 	attack_verb = list("порезал", "укусил", "протаранил")
 	poof_sound = 'sound/items/Help.ogg'
@@ -745,7 +743,7 @@
 
 /obj/item/toy/plushie/pig
 	name = "rubber piggy"
-	desc = "Люди требуют свиней!"
+	desc = "The people demand pigs!"
 	icon_state = "pig1"
 	gender = FEMALE
 	COOLDOWN_DECLARE(oink_cooldown)
@@ -787,7 +785,7 @@
 		if(100)
 			icon_state = "pig4"
 			name = "green rubber piggy"
-			desc = "Остерегайся злых воксов!"
+			desc = "Beware of evil Vox!"
 
 /obj/item/toy/plushie/pig/mouse_drop_dragged(atom/over_object, mob/user, src_location, over_location, params)
 	if(over_object != user || user.incapacitated() || !ishuman(user))
@@ -801,7 +799,7 @@
 
 /obj/item/toy/plushie/bubblegumplushie
 	name = "bubblegum plushie"
-	desc = "В иерархии плюшевых игрушек-демонов, эта игрушка — король."
+	desc = "In the hierarchy of plush demon toys, this one is king."
 	icon_state = "plushie_bubblegum"
 	item_state = "plushie_bubblegum"
 	attack_verb = list("атаковал", "протаранил")
@@ -815,7 +813,7 @@
 
 /obj/item/toy/plushie/chikaboomchik
 	name = "plushie chikaboomchik"
-	desc = "Милая плюшевая игрушка птички чикабумчика. Маленькая, круглая и очень пушистая."
+	desc = "An adorable plush chikaboom bird. Small, round and very fluffy."
 	icon_state = "plushie_chikaboom"
 	item_state = "chikaboom"
 	attack_verb = list("цапнул", "клюнул")
@@ -826,7 +824,7 @@
 
 /obj/item/toy/plushie/wet_owl
 	name = "wet owl plushie"
-	desc = "Плюшевая игрушка поникшей мокрой совы. Она явно видела некоторое дерьмо."
+	desc = "A plush drooping wet owl. It has clearly seen some shit."
 	icon_state = "wet_owl"
 	item_state = "wet_owl"
 	attack_verb = list("ухнул", "клюнул", "цапнул")
@@ -867,7 +865,7 @@
 	is_evil = TRUE
 	icon_state = "evil_wet_owl"
 	item_state = "evil_wet_owl"
-	desc = "Злобная плюшевая игрушка мокрой совы. Она явно видела некоторое дерьмо — это легко можно понять по её взгляду."
+	desc = "An evil wet owl plushie. It has clearly seen some shit. You can tell from its eyes."
 	poof_sound = 'sound/effects/wet_owl_horror.ogg'
 	update_appearance()
 	addtimer(CALLBACK(src, PROC_REF(become_normal)), evil_mode_duration)
@@ -894,7 +892,7 @@
 
 /obj/item/toy/plushie/ninja
 	name = "space ninja plushie"
-	desc = "Главный герой одного из самых популярных мультиков в этой части галактики. \"運命の忍者矢\""
+	desc = "The hero of one of this region's most popular cartoons: 運命の忍者矢."
 	icon_state = "ninja_plushie_green"
 	item_state = "ninja_plushie_green"
 	cuddle_verb = list(
@@ -927,7 +925,7 @@
 
 /obj/item/toy/plushie/glorp
 	name = "plushie glorp"
-	desc = "Плюшевая игрушка глорпа. Да, это он украл ваших коров. Да, круги на полях тоже оставил он."
+	desc = "A glorp plushie. Yes, it stole your cows. Yes, it made the crop circles too."
 	icon_state = "glorp"
 	item_state = "glorp"
 	poof_sound = 'sound/misc/alien-giggle.ogg'
@@ -935,7 +933,7 @@
 
 /obj/item/toy/plushie/pizdosik
 	name = "plushie pizdosik"
-	desc = "Плюшевый работяга. Он устал... Дайте ему отдохнуть..."
+	desc = "A plush working stiff. He's tired... Let him rest..."
 	icon_state = "pizdosik"
 	item_state = "pizdosik"
 	poof_sound = 'sound/misc/pizdosik.ogg'

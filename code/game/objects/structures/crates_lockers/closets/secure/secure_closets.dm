@@ -88,7 +88,7 @@
 		if(I.use_tool(src, user, 160, volume = I.tool_volume))
 			if(prob(95)) // EZ
 				to_chat(user, span_notice("Вы успешно открутили и сняли панель с замка [src]!"))
-				desc += " Панель управления снята."
+				desc += " The control panel has been removed."
 				broken = 3
 				update_icon()
 			else // Bad day)
@@ -106,7 +106,7 @@
 		if(I.use_tool(src, user, 160, volume = I.tool_volume))
 			if(prob(80)) // Good hacker!
 				to_chat(user, span_notice("Вы успешно подготовили провода панели замка [src]!"))
-				desc += " Провода отключены и торчат наружу."
+				desc += " The wires have been disconnected and are sticking out."
 				broken = 2
 			else // woopsy
 				to_chat(user, span_warning("Черт! Не тот провод!"))
@@ -120,7 +120,7 @@
 		to_chat(user, span_notice("Вы начинаете подключать провода панели замка [src] к [I]..."))
 		if(I.use_tool(src, user, 160, volume = I.tool_volume))
 			if(prob(80)) // Good hacker!
-				desc += " Замок отключен."
+				desc += " The lock has been disabled."
 				broken = 0 // Can be emagged
 				emag_act(user)
 			else // woopsy

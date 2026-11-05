@@ -580,7 +580,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			var/list/lockbox_access
 			for(var/access_id in lockbox.req_access)
 				lockbox_access += "[get_access_desc(access_id)] "
-			lockbox.desc = "Металлический контейнер с электронным замком. Требуемый уровень доступа — \[[lockbox_access]\]."
+			lockbox.desc = "A metal container with an electronic lock. Required access: \[[lockbox_access]\]."
 
 			if(!user)
 				SEND_SIGNAL(src, COMSIG_CIRCUIT_RND_PRINT_COMPLETE, lockbox)
@@ -683,7 +683,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 					INSTRUMENTAL = "дискетой технологий ([new_known])",
 					PREPOSITIONAL = "дискете технологий ([new_known])"
 				)
-				t_disk.desc = new_known.desc + " <b>Уровень: \"[new_known.level]\"</b>."
+				t_disk.desc = new_known.desc + " <b>Level: \"[new_known.level]\"</b>."
 				t_disk.stored = new_known
 			menu = MENU_DISK
 			submenu = SUBMENU_MAIN
@@ -1183,7 +1183,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/cargo
 	name = "cargo R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий. Специализированная версия, используемая в отделе Снабжения."
+	desc = "A computer providing access to the technology database. A specialized model used by the Supply Department."
 	id = 6
 	req_access = list(ACCESS_CARGO)
 	circuit = /obj/item/circuitboard/rdconsole/cargo

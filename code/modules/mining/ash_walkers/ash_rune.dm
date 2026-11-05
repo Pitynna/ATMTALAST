@@ -1,6 +1,6 @@
 /obj/effect/decal/ash_rune_centre
 	name = "ash sigil"
-	desc = "Незаконченная руна, нарисованная на пепле."
+	desc = "An unfinished rune drawn in ash."
 	gender = MALE
 	icon = 'icons/effects/ash_runes.dmi'
 	icon_state = "runaash_1"
@@ -38,7 +38,7 @@
 		return
 	activated = TRUE
 	name = "ash rune"
-	desc = "Полностью функционирующая руна, готовая для ритуальных действий."
+	desc = "A fully functional rune, ready for rituals."
 	ru_names = alist(
 		NOMINATIVE = "пепельная руна",
 		GENITIVE = "пепельной руны",

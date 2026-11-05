@@ -372,8 +372,8 @@
 	user.visible_message(span_danger("[user] исчеза[PLUR_ET_YUT(user)] из реальности, оставляя после себя дыру в пространстве!"))
 
 	var/obj/effect/immortality_talisman/effect = new(source_turf)
-	effect.name = "дыра в пространстве"
-	effect.desc = "Подозрительно походит на силуэт [user.name]."
+	effect.name = "hole in space"
+	effect.desc = "It looks suspiciously like [user.name]'s silhouette."
 	effect.setDir(user.dir)
 	user.forceMove(effect)
 	user.add_traits(list(TRAIT_NO_TRANSFORM, TRAIT_GODMODE), UNIQUE_TRAIT_SOURCE(src))

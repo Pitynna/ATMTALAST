@@ -146,7 +146,7 @@
 
 /obj/item/pen/fountain
 	name = "fountain pen"
-	desc = "Дорого выглядящая ручка. Для самых богатых."
+	desc = "An expensive-looking pen for the wealthiest writers."
 	icon_state = "pen-fountain"
 
 /obj/item/pen/fountain/ComponentInitialize()
@@ -411,7 +411,7 @@
 /// Assassin pen's gun stuff
 /obj/item/gun/projectile/revolver/assassin_pen_gun
 	name = "assassin pen's gun"
-	desc = "Кодовая затычка для работы ручки ассасина. Если вы её увидели — пишите багрепорт с описанием получения."
+	desc = "An internal placeholder for the assassin's pen. If you see this, file a bug report explaining how you obtained it."
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/assassin_pen_mag
 	fire_sound = 'sound/weapons/gunshots/1stechkin.ogg'
 	accuracy = GUN_ACCURACY_PISTOL_STECHKIN

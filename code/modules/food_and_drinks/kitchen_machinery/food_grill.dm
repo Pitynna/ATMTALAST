@@ -3,7 +3,7 @@
 	desc = "Backyard grilling, IN SPACE."
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "grill_off"
-	thiscooktype = "обжарено в гриле"
+	thiscooktype = "grilled"
 	burns = 1
 	firechance = 20
 	cooktime = 50

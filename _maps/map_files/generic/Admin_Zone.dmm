@@ -2914,7 +2914,7 @@
 	armor = list("melee" = 1000, "bullet" = 1000, "laser" = 1000, "energy" = 1000, "bomb" = 1000, "bio" = 1000, "fire" = 500, "acid" = 500)
 	},
 /obj/item/reagent_containers/food/snacks/charred_krill{
-	name = "ТАНДЕРДРОМНЫЙ КРИИЛ"
+	name = "THUNDERDROME KRILL"
 	},
 /turf/simulated/floor/indestructible/asteroid,
 /area/centcom/tdome/new_arena/cqc)

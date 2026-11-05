@@ -851,9 +851,9 @@
 /area/ruin/unpowered/safe_cave)
 "dh" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	desc = "Отправляет дыхательную смесь из трубы распространяться по аванпосту через вентиляцию.";
+	desc = "Sends breathable air from the pipe into the outpost's ventilation system.";
 	dir = 8;
-	name = "Дыхательная смесь на аванпост";
+	name = "Breathable Air to Outpost";
 	target_pressure = 303.325
 	},
 /obj/structure/disposalpipe/segment{

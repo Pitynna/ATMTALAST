@@ -1,6 +1,6 @@
 /obj/machinery/vending/plasmamate
 	name = "PlasmaMate"
-	desc = "Автомат, выдающий снаряжение для плазмолюдов. Бесплатно!"
+	desc = "A vending machine dispensing plasmaman equipment. For free!"
 	icon_state = "plasmavendor_off"
 	panel_overlay = "plasmavendor_panel"
 	screen_overlay = "plasmavendor_screen"

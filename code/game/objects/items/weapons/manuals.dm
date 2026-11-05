@@ -45,7 +45,7 @@
 /obj/item/book/manual/engineering_construction
 	manual_title = "Maintenance and construction"
 	manual_title_ru = "Ремонт и строительство"
-	desc = "Руководство по строительсву, сборке и ремонту оборудования."
+	desc = "A guide to constructing, assembling and repairing equipment."
 	icon_state = "bookEngineering"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -72,7 +72,7 @@
 /obj/item/book/manual/engineering_hacking
 	manual_title = "Hacking"
 	manual_title_ru = "Взлом"
-	desc = "Руководство по взлому различных устройств."
+	desc = "A guide to hacking various devices."
 	icon_state = "bookHacking"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -282,7 +282,7 @@
 /obj/item/book/manual/experimentor
 	manual_title = "E.X.P.E.R.I-MENTOR for Dummies"
 	manual_title_ru = "Э.К.С.П.Е.Р.И-МЕНТОР для чайников"
-	desc = "Руководство по работе с Э.К.С.П.Е.Р.И-МЕНТОРом для самых маленьких сотрудников научного отдела."
+	desc = "An EXPERIMENTOR operating manual for the science department's youngest employees."
 	icon_state = "rdbook"
 	item_state = "rdbook"
 	author = "Доктор Кой-Карпов"
@@ -470,7 +470,7 @@
 /obj/item/book/manual/robotics_cyborgs
 	manual_title = "Robotics for Dummies"
 	manual_title_ru = "Робототехника для чайников"
-	desc = "Руководство по работе роботами и прочими синтетиками для самых маленьких сотрудников научного отдела."
+	desc = "A guide to working with robots and other synthetics for the science department's youngest employees."
 	icon_state = "borgbook"
 	item_state = "borgbook"
 	author = "NanoChat™"
@@ -690,7 +690,7 @@
 /obj/item/book/manual/engineering_guide
 	manual_title = "General Engineering"
 	manual_title_ru = "Основы инженерии"
-	desc = "Классическое издание руководства по инженерии, широко используемое в образовательных учреждениях."
+	desc = "A classic engineering manual widely used in educational institutions."
 	icon_state ="bookEngineering2"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -699,7 +699,7 @@
 /obj/item/book/manual/chef_recipes
 	manual_title = "The Flavor Bible: Introduction"
 	manual_title_ru = "Азбука вкуса: Введение"
-	desc = "Одна из частей сборника рецептов шеф-повара."
+	desc = "One volume of the chef's recipe collection."
 	icon_state = "cooked_book"
 	item_state = "cooked_book"
 	author = "\"Нанотрейзен\""

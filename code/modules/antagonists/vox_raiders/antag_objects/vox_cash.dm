@@ -1,6 +1,6 @@
 /obj/item/stack/vox_cash
 	name = "vox cash"
-	desc = "Криптографический чип доступа к адресам транзакций рассчетных средств воксов."
+	desc = "A cryptographic chip granting access to vox currency transaction addresses."
 	icon = 'icons/obj/machines/trader_machine.dmi'
 	icon_state = "vox_key"
 	hitsound = "swing_hit"

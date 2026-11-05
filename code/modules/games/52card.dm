@@ -68,7 +68,7 @@
 
 /obj/item/deck/cards/doublecards
 	name = "double deck of cards"
-	desc = "Простая колода игральных карт. Удвоенная. Может быть, играть с такой будет в два раза интереснее?"
+	desc = "A simple deck of playing cards. Doubled. Perhaps it makes the game twice as interesting?"
 	icon_state = "deck_double_nanotrasen_full"
 	deck_size = 2
 	deck_style = "double"

@@ -1,7 +1,7 @@
 /obj/item/ammo_casing/caseless/arrow
 	name = "arrow"
 	desc = "Stab, stab, stab."
-	ammo_marking = "\"деревянная стрела\""
+	ammo_marking = "\"wooden arrow\""
 	icon_state = "arrow"
 	item_state = "arrow"
 	force = 10
@@ -15,7 +15,7 @@
 /obj/item/ammo_casing/caseless/arrow/bone_tipped
 	name = "bone-tipped arrow"
 	desc = "An arrow made from bone, wood, and sinew. Sturdy and sharp."
-	ammo_marking = "\"костяная стрела\""
+	ammo_marking = "\"bone arrow\""
 	icon_state = "bone_arrow"
 	item_state = "bone_arrow"
 	force = 12
@@ -23,16 +23,16 @@
 
 /obj/item/ammo_casing/caseless/arrow/jagged
 	name = "jagged-tipped arrow"
-	desc = "Используется для стрельбы из лука. Выполнена из зубов хищной рыбы. Невероятно острая и крепкая."
-	ammo_marking = "\"зазубренная стрела\""
+	desc = "An arrow made from a predatory fish's teeth. Incredibly sharp and strong."
+	ammo_marking = "\"barbed arrow\""
 	icon_state = "jagged_arrow"
 	force = 16
 	projectile_type = /obj/projectile/bullet/reusable/arrow/jagged
 
 /obj/item/ammo_casing/caseless/arrow/modern
 	name = "modern arrow"
-	desc = "Используется для стрельбы из лука. Стрела из высококачественных композитных материалов."
-	ammo_marking = "\"композитная стрела\""
+	desc = "An arrow made from high-quality composite materials."
+	ammo_marking = "\"composite arrow\""
 	icon_state = "arrow_modern"
 	item_state = "arrow_modern"
 	force = 16
@@ -40,8 +40,8 @@
 
 /obj/item/ammo_casing/caseless/arrow/homemade
 	name = "homemade arrow"
-	desc = "Используется для стрельбы из лука. Подобие стрелы из куска арматуры с ближайшей кучи мусора. Как этим вообще можно стрелять?"
-	ammo_marking = "\"самодельная стрела\""
+	desc = "A crude arrow made from rebar scavenged from the nearest rubbish heap. How do you even shoot this?"
+	ammo_marking = "\"improvised arrow\""
 	icon_state = "arrow_homemade"
 	item_state = "arrow_homemade"
 	projectile_type = /obj/projectile/bullet/reusable/arrow/homemade

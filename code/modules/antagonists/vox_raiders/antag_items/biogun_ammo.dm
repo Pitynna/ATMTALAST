@@ -1,6 +1,6 @@
 /obj/item/biocore
 	name = "biocore"
-	desc = "Острое биоядро с живым организмом внутри. Оно пульсирует и ответно реагирует толчками на каждые взаимодействия."
+	desc = "A sharp biocore containing a living organism. It pulsates and responds to interaction with little jolts."
 	icon = 'icons/obj/weapons/vox_guns.dmi'
 	icon_state = "biocore"
 	item_state = "cottoncandy_purple"

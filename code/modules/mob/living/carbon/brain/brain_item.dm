@@ -1,6 +1,6 @@
 /obj/item/organ/internal/brain
 	name = "brain"
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал человеку."
+	desc = "The primary organ of a humanoid's central nervous system. The mind itself resides here. This one belonged to a human."
 	icon_state = "brain2"
 	max_damage = 120
 	throwforce = 1.0

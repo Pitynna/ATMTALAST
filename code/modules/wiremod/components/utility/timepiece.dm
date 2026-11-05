@@ -11,8 +11,7 @@
  */
 /obj/item/circuit_component/timepiece
 	display_name = "Часы"
-	desc = "Компонент, выводящий текущее время объекта. \
-			Порт вывода текста используется для форматов времени, а порт вывода чисел — для единиц времени."
+	desc = "A component that outputs the current time. The text output port uses time formats, while the numeric output port uses time units."
 	category = "Utility"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

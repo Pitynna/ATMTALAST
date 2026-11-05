@@ -382,7 +382,7 @@
 	var/obj/item/paper/P = new /obj/item/paper(loc)
 	P.info = "<center></b>Медицинская запись</b></center><br>"
 	if(istype(active1, /datum/data/record) && GLOB.data_core.general.Find(active1))
-		P.name = "Медицинская запись: [active1.fields["name"]]"
+		P.name = "Medical Record: [active1.fields["name"]]"
 		P.info += {"Имя: [active1.fields["name"]] ID: [active1.fields["id"]]
 		<br>\nПол: [active1.fields["sex"]]
 		<br>\nВозраст: [active1.fields["age"]]

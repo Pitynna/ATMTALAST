@@ -269,7 +269,7 @@
 		p.forceMove(src)
 	else if(folder)
 		p.forceMove(folder)
-	p.desc = "На фото вы видите задницу [copymob.declent_ru(GENITIVE)]."
+	p.desc = "The photo shows [copymob.name]'s butt."
 	p.pixel_x = rand(-10, 10)
 	p.pixel_y = rand(-10, 10)
 	p.img = temp_img
@@ -627,9 +627,9 @@
 	var/obj/item/photo/p = new /obj/item/photo(loc)
 	p.construct(selection)
 	if(p.desc == "")
-		p.desc += "Ксерокопия была сделана [tempAI.name]"
+		p.desc += "This copy was made by [tempAI.name]."
 	else
-		p.desc += " – Ксерокопия была сделана [tempAI.name]"
+		p.desc += " - This copy was made by [tempAI.name]."
 	use_toner(1)
 	use_power(active_power_usage)
 	COOLDOWN_START(src, copying_cooldown, time_to_print)

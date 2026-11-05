@@ -426,7 +426,7 @@
 
 /obj/structure/chair/comfy/mouse
 	name = "Mr. Myshkin's armchair"
-	desc = "Очень дорогое красное кресло из натуральной кожи. Сделано специально по заказу Господина Мышкина."
+	desc = "A very expensive red armchair made from genuine leather. Specially commissioned by Mr. Myshkin."
 	icon_state = "mouse_chair"
 	anchored = TRUE
 	max_integrity = 375

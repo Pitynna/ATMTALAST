@@ -317,7 +317,7 @@
 // Disk croutons
 /obj/item/reagent_containers/food/snacks/disk
 	name = "disk snack"
-	desc = "Вкуснейшие сухарики с запахом дымка!"
+	desc = "Delicious smoky croutons!"
 	icon_state = "disk"
 	item_state = "chips"
 	bitesize = 3

@@ -29,7 +29,7 @@
 
 /obj/item/magmite_parts/update_desc(updates = ALL)
 	. = ..()
-	desc = inert ? "Похоже, он потерял своё магматическое свечение." : initial(desc)
+	desc = inert ? "It seems to have lost its magmatic glow." : initial(desc)
 
 /obj/item/magmite_parts/proc/go_inert()
 	if(inert)

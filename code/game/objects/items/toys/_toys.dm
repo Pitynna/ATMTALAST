@@ -150,7 +150,7 @@
 
 /obj/item/toy/pet_rock/naughty_coal
 	name = "Naughty coal"
-	desc = "Ты очень плохо себя вёл в этом году! И единственное, что ты заслуживаешь в подарок, — это этот кусок угля!"
+	desc = "You have been very naughty this year! The only present you deserve is this lump of coal!"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "naughty_coal"
 	resistance_flags = FLAMMABLE

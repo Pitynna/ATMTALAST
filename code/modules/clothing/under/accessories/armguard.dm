@@ -4,7 +4,7 @@
 
 /obj/item/clothing/accessory/armguard
 	name = "armguard"
-	desc = "Красивые наручи, только для красоты."
+	desc = "Attractive armguards. Purely decorative."
 	icon_state = "armguard"
 	slot = ACCESSORY_SLOT_ARMBAND
 
@@ -109,7 +109,7 @@
 
 /obj/item/kitchen/knife/hidden_blade
 	name = "hidden blade"
-	desc = "Короткий клинок спрятанный в наручах, профессиональное устройство убийц. Выглядит острым и опасным."
+	desc = "A short blade concealed in armguards, a professional assassin's tool. Looks sharp and dangerous."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "armguard_hidden_blade"
 	item_state = "knife"

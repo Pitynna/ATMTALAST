@@ -510,7 +510,7 @@
 
 /obj/item/clothing/head/lordadmiralhat/admiral
 	name = "admiral hat"
-	desc = "Шляпа снятая с головы самого адмирала флота НТ. Или ССП? ТСФ? Не важно. Она снята с головы о-о-очень важной шишки."
+	desc = "A hat taken from the head of the Nanotrasen fleet's admiral. Or was it the SSP? The TSF? Whatever. It came from a very, very important head."
 
 /obj/item/clothing/head/human_head
 	name = "bloated human head"
@@ -521,7 +521,7 @@
 
 /obj/item/clothing/head/oldhuman_head
 	name = "old human head"
-	desc = "Дешевая силиконовая маска в виде человеческой головы."
+	desc = "A cheap silicone mask resembling a human head."
 	icon_state = "oldhumanhelmet"
 	item_state = "oldhumanhelmet"
 	flags_inv = HIDENAME|HIDEHEADSETS|HIDE_ALL_HAIR
@@ -589,7 +589,7 @@
 
 /obj/item/clothing/head/scorched_skull
 	name = "scorched skull"
-	desc = "Голова мёртвого всадника, очищенная от чешуи, крови и внутренних органов во время разделки. Вселяет страх в ваших врагов."
+	desc = "A dead rider's head, stripped of scales, blood and internal organs during butchering. Strikes fear into your enemies."
 	icon_state = "scorched_skull"
 	item_state = "scorched_skull"
 	armor = list(MELEE = 50, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 60, ACID = 60)
@@ -697,7 +697,7 @@
 
 /obj/item/clothing/head/colour/headband
 	name = "headband"
-	desc = "Кусок ткани, оборачиваемый вокруг головы."
+	desc = "A piece of cloth wrapped around the head."
 	gender = FEMALE
 	icon_state = "headband"
 	item_state = "headband"
@@ -715,7 +715,7 @@
 
 /obj/item/clothing/head/jew_hat
 	name = "Jew hat"
-	desc = "Плоская синяя кипа. Вы чувствуете внезапное желание изучать древние тексты и спорить о природе вселенной. Мазл тов!"
+	desc = "A flat blue kippah. You feel a sudden desire to study ancient texts and debate the nature of the universe. Mazel tov!"
 	icon_state = "jew_hat"
 	item_state = "jew_hat"
 	w_class = WEIGHT_CLASS_TINY

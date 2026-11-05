@@ -1,6 +1,6 @@
 /obj/machinery/vending/gun_mods
 	name = "ModTech"
-	desc = "Торговый автомат с модулями для оружия, предназначенный для сотрудников службы безопасности."
+	desc = "A weapon upgrade vending machine for security personnel."
 	slogan_list = list(
 		"Улу+чши сво+ё ору+жие!",
 		"Купи+ глуши+тель, будь на сти+ле!",
@@ -41,7 +41,7 @@
 	)
 
 /obj/machinery/vending/gun_mods/advanced
-	desc = "Раздатчик с модулями для оружия."
+	desc = "A weapon upgrade dispenser."
 	req_access = list()
 
 	products = list(

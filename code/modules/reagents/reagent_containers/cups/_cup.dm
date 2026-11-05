@@ -503,7 +503,7 @@ GAME_VERB_SRC(/obj/item/reagent_containers/cup/beaker, remove_assembly, usr, "О
 
 /obj/item/reagent_containers/cup/bucket/wooden
 	name = "wooden bucket"
-	desc = "Деревянное ведро. Можете налить туда что-то или надеть себе на голову, никто не запрещает."
+	desc = "A wooden bucket. You can put something in it or wear it on your head; nobody is stopping you."
 	icon_state = "woodbucket"
 	item_state = "woodbucket"
 	materials = null
@@ -516,11 +516,11 @@ GAME_VERB_SRC(/obj/item/reagent_containers/cup/beaker, remove_assembly, usr, "О
 
 /obj/item/reagent_containers/cup/bucket/wooden/shit
 	name = "shit bucket"
-	desc = "Омерзительно. Им кто-то недавно пользовался?!"
+	desc = "Disgusting. Has someone used this recently?!"
 
 /obj/item/reagent_containers/cup/pet_bowl
 	name = "pet bowl"
-	desc = "Миска под еду для любимых домашних животных!"
+	desc = "A food bowl for beloved pets!"
 	gender = FEMALE
 	icon = 'icons/obj/pet_bowl.dmi'
 	icon_state = "petbowl"
@@ -585,8 +585,7 @@ GAME_VERB_SRC(/obj/item/reagent_containers/cup/beaker, remove_assembly, usr, "О
 //Coffeepot: for reference, a standard cup is 30u, to allow 20u for sugar/sweetener/milk/creamer
 /obj/item/reagent_containers/cup/coffeepot
 	name = "coffeepot"
-	desc = "Термостойкий контейнер, предназначенный для приготовления и разлива кофе. \
-			Такие поставляются в комплекте с кофемашинами. Достаточно хрупкий."
+	desc = "A heat-resistant container for brewing and pouring coffee, supplied with coffee machines. Fairly fragile."
 	gender = MALE
 	w_class = WEIGHT_CLASS_NORMAL
 	volume = 120

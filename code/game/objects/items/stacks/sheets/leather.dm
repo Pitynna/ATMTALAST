@@ -256,7 +256,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 
 /obj/item/stack/sheet/armour_plate
 	name = "reinforced armor plate"
-	desc = "Сделанный на коленке из плит брони для мехов, этот кусок металла можно налепить на сам мех, усиливая его защитные характеристики. К сожалению, выемки под такую броню есть только у мехов рабочего класса."
+	desc = "An improvised piece of mech armor plating that can be attached to a mech to improve its protection. Unfortunately, only working-class mechs have suitable mounting points."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "armour_plate"
 	singular_name = "armour plate"
@@ -282,7 +282,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 
 /obj/item/stack/sheet/cartilage_plate
 	name = "thick cartilage plate"
-	desc = "Хрящевая пластина, снятая с тела лавового панцирника. Судя по всему, пластина начала терять свой характерный кроваво-красный цвет, однако она остаётся такой же крепкой, как и до этого."
+	desc = "A cartilage plate removed from a lava shellback. It has begun losing its distinctive blood-red color, but remains just as strong."
 
 	gender = FEMALE
 	icon = 'icons/obj/lavaland/lava_fishing.dmi'

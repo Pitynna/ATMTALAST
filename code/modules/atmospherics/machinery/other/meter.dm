@@ -147,7 +147,7 @@
 
 /obj/item/circuit_component/atmos_meter
 	display_name = "Атмосферный измеритель"
-	desc = "Позволяет считывать давление и температуру в трубопроводе."
+	desc = "Reads pipeline pressure and temperature."
 
 	///Signals the circuit to retrieve the pipenet's current pressure and temperature
 	var/datum/port/input/request_data

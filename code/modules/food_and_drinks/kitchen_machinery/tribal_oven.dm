@@ -1,6 +1,6 @@
 /obj/machinery/kitchen_machine/tribal_oven
 	name = "stone oven"
-	desc = "Огромная примитивная каменная печь, используемая для приготовления пищи."
+	desc = "An enormous primitive stone oven used for cooking."
 	gender = FEMALE
 	icon = 'icons/obj/lavaland/lavaland_food.dmi'
 	icon_state = "oven_off"

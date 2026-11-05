@@ -13,7 +13,7 @@
 
 /obj/item/tripod
 	name = "folded tripod"
-	desc = "Складной штатив для фиксации трансляционной камеры. Не требует инструментов для установки."
+	desc = "A folding tripod for mounting a broadcast camera. No tools required to set it up."
 	icon = 'icons/obj/tripod_camera.dmi'
 	icon_state = "broadcast_camera_tripod"
 	item_state = "tripod"
@@ -239,7 +239,7 @@
 /obj/item/tripod/update_desc(updates = ALL)
 	. = ..()
 	if(camera)
-		desc = "[initial(desc)] На нём установлен[GEND_A_O_Y(camera)] [camera.declent_ru(NOMINATIVE)], котор[GEND_YI_AYA_OE_YE(camera)] сейчас [camera.active ? "включен[GEND_A_O_Y(camera)]" : "отключен[GEND_A_O_Y(camera)]"]."
+		desc = "[initial(desc)] It has \a [camera] mounted on it, which is currently [camera.active ? "on" : "off"]."
 	else
 		desc = initial(desc)
 
@@ -274,7 +274,7 @@
 
 /obj/structure/tripod
 	name = "tripod"
-	desc = "Складной штатив для фиксации трансляционной камеры. Не требует инструментов для складывания."
+	desc = "A folding tripod for mounting a broadcast camera. No tools required to fold it up."
 	icon = 'icons/obj/tripod_camera.dmi'
 	icon_state = "tripod_onground"
 	max_integrity = 150

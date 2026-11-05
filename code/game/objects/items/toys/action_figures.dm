@@ -473,6 +473,6 @@
 
 /obj/item/toy/figure/magistrate
 	name = "Magistrate action figure"
-	desc = "Справедливый магистрат из коллекции фигурок SS12 от \"Space life\"."
+	desc = "A fair-minded magistrate from Space Life's SS12 figurine collection."
 	icon_state = "magistrate"
 	toysay = "Казнить или не казнить — вот в чём вопрос."

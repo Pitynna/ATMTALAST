@@ -1,6 +1,6 @@
 /obj/item/circuit_component/id_info_reader
 	display_name = "Чтение ID"
-	desc = "Компонент, который считывает имя, должность и возраст с ID-карты субъекта."
+	desc = "A component that reads the name, job and age on the subject's ID card."
 	category = "ID"
 
 	/// The input port

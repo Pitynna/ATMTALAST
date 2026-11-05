@@ -23,7 +23,7 @@
 	var/max_shone_bloodiness = MAX_SHOE_BLOODINESS
 	var/drying_time = DRYING_TIME
 	var/dryname = "dried blood"
-	var/drydesc = "Оно сухое и засохшее. Кто-то явно халтурит."
+	var/drydesc = "It's dry and crusty. Someone is not doing their job."
 
 #undef DRYING_TIME
 

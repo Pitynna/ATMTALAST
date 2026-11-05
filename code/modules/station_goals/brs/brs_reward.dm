@@ -9,7 +9,7 @@
 
 /obj/structure/toilet/bluespace
 	name = "bluespace toilet"
-	desc = "It is high technological utilization system. We don't need 'выгребная яма' anymore, all the stuff goes directly to the black hole."
+	desc = "An advanced waste disposal system. No more cesspits: everything goes directly into a black hole."
 	icon_state = "bluespace_toilet00"
 	var/teleport_sound = 'sound/magic/lightning_chargeup.ogg'
 	var/teleport_sound_cooldown = FALSE

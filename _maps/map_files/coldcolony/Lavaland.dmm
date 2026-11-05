@@ -76,7 +76,7 @@
 	density = 0;
 	icon = 'icons/obj/stationobjs.dmi';
 	icon_state = "acad_portal";
-	name = "Межпространственный Разрыв";
+	name = "Interdimensional Rift";
 	invisibility = 0;
 	pixel_y = -32
 	},
@@ -3098,8 +3098,8 @@
 "AI" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/binary/pump/on{
-	desc = "Отправляет дыхательную смесь из трубы распространяться по аванпосту через вентиляцию.";
-	name = "Дыхательная смесь на аванпост";
+	desc = "Sends breathable air from the pipe into the outpost's ventilation system.";
+	name = "Breathable Air to Outpost";
 	target_pressure = 303.325
 	},
 /obj/structure/cable,
@@ -3840,7 +3840,7 @@
 	density = 0;
 	icon = 'icons/obj/stationobjs.dmi';
 	icon_state = "acad_portal";
-	name = "Межпространственный Разрыв";
+	name = "Interdimensional Rift";
 	invisibility = 0;
 	pixel_y = 32
 	},

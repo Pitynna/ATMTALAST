@@ -5,9 +5,7 @@
  */
 /obj/item/circuit_component/select
 	display_name = "Таблица — запрос"
-	desc = "Компонент, используемый с USB-кабелями, который может выполнять \
-			выборочные запросы по списку на основе имени выбранного столбца. \
-			Затем значения сравниваются с входными данными сравнения."
+	desc = "A component used with USB cables to query a list by a selected column name. The values are then compared with the comparison input."
 	category = "List"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

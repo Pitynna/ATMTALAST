@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/listin
 	display_name = "Список — поиск элемента"
-	desc = "Проверяет наличие элемента в списке и возвращает его индекс. \
-			В случае возникновения ошибки индексу присваивается значение 0."
+	desc = "Checks for an entry in a list and returns its index. Returns an index of 0 on failure."
 	category = "List"
 
 	/// The list type we're checking

@@ -29,7 +29,7 @@
 
 /obj/item/retractor/primitive_retractor
 	name = "primitive bone retractor"
-	desc = "Примитивный инструмент, сделанный из кости. Используется для расширения полостей при операциях."
+	desc = "A primitive bone instrument for holding surgical cavities open."
 	icon_state = "primitive_retractor"
 	item_state = "primitive_retractor"
 
@@ -64,7 +64,7 @@
 
 /obj/item/hemostat/primitive_hemostat
 	name = "primitive hemostat"
-	desc = "Примитивный инструмент, сделанный из кости. Используется для зажима кровоточащих сосудов во время операций."
+	desc = "A primitive bone instrument for clamping bleeding vessels during surgery."
 	icon_state = "primitive_hemostat"
 	item_state = "primitive_hemostat"
 
@@ -93,7 +93,7 @@
 
 /obj/item/cautery/primitive_cautery
 	name = "primitive cautery"
-	desc = "Примитивный инструмент, сделанный из кости. Используется для прижигания ран."
+	desc = "A primitive bone instrument for cauterizing wounds."
 	icon_state = "primitive_cautery"
 	item_state = "primitive_cautery"
 
@@ -194,7 +194,7 @@
 
 /obj/item/scalpel/primitive_scalpel
 	name = "primitive scalpel"
-	desc = "Примитивный скальпель, сделанный из кости. Несмотря на материал, из которого сделан, всё ещё крайне эффективен."
+	desc = "A primitive scalpel made from bone. Still highly effective despite its material."
 	icon_state = "primitive_scalpel"
 	item_state = "primitive_scalpel"
 
@@ -285,7 +285,7 @@
 
 /obj/item/primitive_saw
 	name = "primitive circular saw"
-	desc = "Примитивная хирургическая пила, сделанная из крепкой кости."
+	desc = "A primitive surgical saw made from sturdy bone."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "primitive_saw"
 	item_state = "primitive_saw"
@@ -327,7 +327,7 @@
 
 /obj/item/bonegel/primitive_bonegel
 	name = "primitive bone gel"
-	desc = "Примитивная смесь, используется для заживления костей."
+	desc = "A primitive mixture used to heal bones."
 	icon_state = "primitive_bonegel"
 	item_state = "primitive_bonegel"
 
@@ -352,7 +352,7 @@
 
 /obj/item/FixOVein/primitive_FixOVein
 	name = "primitive FixOVein"
-	desc = "Примитивное средство для сращивания сосудов."
+	desc = "A primitive tool for repairing blood vessels."
 	gender = FEMALE
 	icon_state = "primitive_fixovein"
 	item_state = "primitive_fixovein"
@@ -389,7 +389,7 @@
 
 /obj/item/bonesetter/primitive_bonesetter
 	name = "primitive bone setter"
-	desc = "Примитивный инструмент, сделанный из кости. Используется для правки костей."
+	desc = "A primitive bone instrument for setting bones."
 	icon_state = "primitive_bonesetter"
 	item_state = "primitive_bonesetter"
 

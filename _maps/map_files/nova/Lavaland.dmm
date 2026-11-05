@@ -1041,9 +1041,9 @@
 /area/mine/laborcamp/security)
 "ho" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	desc = "Отправляет дыхательную смесь из трубы распространяться по аванпосту через вентиляцию.";
+	desc = "Sends breathable air from the pipe into the outpost's ventilation system.";
 	dir = 8;
-	name = "Дыхательная смесь на аванпост";
+	name = "Breathable Air to Outpost";
 	target_pressure = 303.325
 	},
 /obj/structure/disposalpipe/segment{
@@ -1716,9 +1716,9 @@
 /area/mine/laborcamp)
 "ko" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 10;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel,
@@ -4431,8 +4431,8 @@
 	dir = 1
 	},
 /obj/item/toy/plushie/ashwalkerplushie{
-	desc = "Мило выглядящая плюшевая игрушка пеплоходца с странным именем.";
-	name = "Зюзя"
+	desc = "A cute ashwalker plushie with a strange name.";
+	name = "Zyuzya"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 10;

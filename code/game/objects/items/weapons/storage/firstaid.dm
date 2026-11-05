@@ -166,7 +166,7 @@
 
 /obj/item/storage/firstaid/premium
 	name = "premium first-aid kit"
-	desc = "Это аптечка для экстренной первой помощи, премиальная версия."
+	desc = "A premium emergency first-aid kit."
 	icon_state = "advfirstaid"
 	item_state = "medkit_advanced"
 	med_bot_skin = "adv"
@@ -233,7 +233,7 @@
 	med_bot_skin = "bezerk"
 
 /obj/item/storage/firstaid/tactical/sst
-	desc = "Тактическая аптечка, содержащая в себе всё самое необходимое для лечения в пылу боя. Узкоспециализированная версия для бойцов элитных сил."
+	desc = "A tactical first-aid kit containing the essentials for treatment in the heat of battle. A specialized version for elite troops."
 	syndicate_aligned = TRUE
 
 /obj/item/storage/firstaid/tactical/populate_contents()
@@ -367,7 +367,7 @@
 
 /obj/item/storage/firstaid/crew/unathi
 	name = "unathi first aid kit"
-	desc = "Небольшого размера подсумок, содержащий в себе минимальный набор медикаментов для экстренных ситуаций. Специализированная версия для сотрудников НТ, чья кожа слишком толстая для использования патчей."
+	desc = "A small pouch containing basic emergency medical supplies. A specialized version for Nanotrasen employees whose skin is too thick for patches."
 
 /obj/item/storage/firstaid/crew/unathi/populate_contents()
 	new /obj/item/reagent_containers/hypospray/autoinjector(src)
@@ -380,7 +380,7 @@
 
 /obj/item/storage/firstaid/doctor/mining_medic
 	name = "mining first-aid kit"
-	desc = "Это аптечка для экстренной первой помощи, используемая шахтёрским врачом."
+	desc = "An emergency first-aid kit used by mining medics."
 	icon_state = "mining_medic_firstaid"
 	item_state = "medkit_mining"
 
@@ -518,7 +518,7 @@
 
 /obj/item/storage/pill_bottle/bluespace
 	name = "advanced drug storage"
-	desc = "Технологичное устройство на основе блюспейс-технологий, предназначенное для хранения пластырей и таблеток."
+	desc = "An advanced bluespace device for storing patches and pills."
 	gender = NEUTER
 	storage_slots = 100
 	max_combined_w_class = 100

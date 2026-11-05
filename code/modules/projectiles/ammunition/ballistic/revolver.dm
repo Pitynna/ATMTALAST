@@ -19,7 +19,7 @@
 
 /obj/item/ammo_casing/c38/hp
 	ammo_marking = ".38 HP"
-	extra_info = "Экспансивная пуля обладает повышенным травмирующим действием в ущерб проникающей способности."
+	extra_info = "A hollow-point bullet with increased wounding potential at the expense of penetration."
 	icon_state = "rhp-casing"
 	materials = list(MAT_METAL = 5000)
 	projectile_type = /obj/projectile/bullet/hp38
@@ -34,7 +34,7 @@
 
 // MARK: 7.62x38mm
 /obj/item/ammo_casing/n762
-	ammo_marking = "7.62x38 мм"
+	ammo_marking = "7.62x38 mm"
 	materials = list(MAT_METAL = 4000)
 	caliber = CALIBER_7_DOT_62X38MM
 	projectile_type = /obj/projectile/bullet
@@ -58,13 +58,13 @@
 
 /obj/item/ammo_casing/revolver/improvised/phosphorus
 	desc = "Full metal shell leaking oil and phosphorous. This is clearly an unreliable bullet."
-	ammo_marking = ".257 \"Фосфор\""
+	ammo_marking = ".257 \"Phosphorus\""
 	icon_state = "rev-phosphor-casing"
 	projectile_type = /obj/projectile/bullet/weakbullet3/c257/phosphorus
 
 /obj/item/ammo_casing/pea
 	name = "pea bullet casing"
-	desc = "Причудливая гороховая пуля."
+	desc = "A peculiar pea bullet."
 	projectile_type = /obj/projectile/bullet/midbullet3/pea
 	icon_state = "pea"
 	/// Damage we achieve at 100 potency

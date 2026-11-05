@@ -7,8 +7,8 @@
 	name = "large mushrooms"
 	desc = "A number of large mushrooms, covered in a faint layer of ash and what can only be spores."
 	anchored = TRUE
-	var/harvested_name = "укороченные грибы"
-	var/harvested_desc = "Быстро отрастающие грибы, ранее известные своими крупными размерами."
+	var/harvested_name = "shortened mushrooms"
+	var/harvested_desc = "Some quickly regrowing mushrooms, formerly known to be quite large."
 	var/needs_sharp_harvest = TRUE
 	var/harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/shavings
 	var/harvest_amount_low = 1
@@ -97,8 +97,8 @@
 	desc = "A number of mushrooms, each of which surrounds a greenish sporangium with a number of leaf-like structures."
 	icon_state = "s_mushroom1"
 	base_icon_state = "s_mushroom"
-	harvested_name = "безлистные грибы"
-	harvested_desc = "Группа ранее покрытых листьями грибов с обнажёнными спорангиями. Неприлично, не правда ли?"
+	harvested_name = "leafless mushrooms"
+	harvested_desc = "A bunch of formerly-leafed mushrooms, with their sporangiums exposed. Scandalous?"
 	harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf
 	needs_sharp_harvest = FALSE
 	harvest_amount_high = 4
@@ -114,8 +114,8 @@
 	desc = "Several mushrooms, the larger of which have a ring of conks at the midpoint of their stems."
 	icon_state = "r_mushroom1"
 	base_icon_state = "r_mushroom"
-	harvested_name = "малые грибы"
-	harvested_desc = "Несколько небольших грибов рядом с остатками более крупных грибов, которые, вероятно, были когда-то здесь."
+	harvested_name = "small mushrooms"
+	harvested_desc = "Several small mushrooms near the stumps of what likely were larger mushrooms."
 	harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_cap
 	harvest_amount_high = 4
 	harvest_time = 50
@@ -133,8 +133,8 @@
 	base_icon_state = "t_mushroom"
 	light_range = 1.5
 	light_power = 2.1
-	harvested_name = "мелкие грибы"
-	harvested_desc = "Несколько крошечных грибов вокруг крупных пеньков. Уже заметно, как они отрастают вновь."
+	harvested_name = "tiny mushrooms"
+	harvested_desc = "A few tiny mushrooms around larger stumps. You can already see them growing back."
 	harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_stem
 	harvest_amount_high = 4
 	harvest_time = 40
@@ -149,8 +149,8 @@
 	desc = "Several prickly cacti, brimming with ripe fruit and covered in a thin layer of ash."
 	icon_state = "cactus1"
 	base_icon_state = "cactus"
-	harvested_name = "кактусы"
-	harvested_desc = "Группа колючих кактусов. Сквозь пепельный покров уже виднеются растущие новые плоды."
+	harvested_name = "cacti"
+	harvested_desc = "A bunch of prickly cacti. You can see fruits slowly growing beneath the covering of ash."
 	harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit
 	needs_sharp_harvest = FALSE
 	harvest_amount_high = 2
@@ -170,8 +170,8 @@
 	desc = "An odd flower that grows commonly near bodies of lava."
 	icon_state = "fireblossom"
 	base_icon_state = "fireblossom"
-	harvested_name = "стебли огнецвета"
-	harvested_desc = "Несколько стеблей огнецвета без соцветий."
+	harvested_name = "fireblossom stems"
+	harvested_desc = "Several fireblossom stems with their flowers removed."
 	harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/fireblossom
 	needs_sharp_harvest = FALSE
 	light_range = 1.5
@@ -188,10 +188,10 @@
 	icon_state = "coaltree1"
 	base_icon_state = "coaltree"
 	name = "coaltree"
-	desc = "Небольшое мрачное дерево, растущее на просторах такой же мрачной планеты."
+	desc = "A small, gloomy tree growing across an equally gloomy planet."
 	gender = NEUTER
-	harvested_name = "пень угледрева"
-	harvested_desc = "Голый ствол дерева, оставшийся без своей уродливой кроны."
+	harvested_name = "coaltree stump"
+	harvested_desc = "A bare tree trunk, stripped of its grotesque crown."
 	harvest = /obj/item/reagent_containers/food/snacks/grown/ash_flora/coaltree_log
 	harvest_amount_high = 5
 	harvest_time = 40
@@ -255,7 +255,7 @@
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/coaltree_log
 	name = "coaltree log"
-	desc = "Бревно угледрева, на ощупь мягкое."
+	desc = "A coaltree log. Soft to the touch."
 	icon_state = "coaltree_log"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
@@ -369,7 +369,7 @@
 
 /obj/item/seeds/lavaland/coaltree
 	name = "pack of coaltree seeds"
-	desc = "Эти семена вырастут в угледрево."
+	desc = "These seeds grow into a coaltree."
 	gender = FEMALE
 	icon_state = "seed-coaltree"
 	species = "coaltree"

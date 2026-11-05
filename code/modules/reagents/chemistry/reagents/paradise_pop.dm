@@ -144,8 +144,8 @@
 	color = "#6734df"
 	taste_description = "алкоголя и мяты"
 	drink_icon = "moonlight_skuma"
-	drink_name = "Мун'дрин"
-	drink_desc = "Мун'лин двойной дистилляции. Мягкий мятный вкус, который любят все таяры. Используется в коктейлях."
+	drink_name = "Moon'drin"
+	drink_desc = "Double-distilled Moonlin. A smooth mint flavor loved by all Tajaran. Used in cocktails."
 	addiction_chance = 2
 	alcohol_perc = 0.5
 

@@ -117,7 +117,7 @@
 
 /obj/item/clothing/head/helmet/space/plasmaman/security/dec
 	name = "detective plasma envirosuit helmet"
-	desc = "Шлем защитного костюма плазмолюда, созданный специально для детектива."
+	desc = "A plasmaman protective suit helmet designed specifically for a detective."
 	icon_state = "white_envirohelm"
 	item_state = "white_envirohelm"
 	armor = list(MELEE = 25, BULLET = 5, LASER = 25, ENERGY = 10, BOMB = 0, BIO = 100, FIRE = 100, ACID = 50)
@@ -411,7 +411,7 @@
 
 /obj/item/clothing/head/helmet/space/plasmaman/mining_medic
 	name = "mining medic envirosuit helmet"
-	desc = "Шлем защитного костюма плазмолюда, созданный специально для шахтёрских врачей."
+	desc = "A plasmaman protective suit helmet designed specifically for mining medics."
 	icon_state = "mining_medic_envirohelm"
 	item_state = "mining_medic_envirohelm"
 	HUDType = DATA_HUD_MEDICAL_ADVANCED
@@ -419,7 +419,6 @@
 
 /obj/item/clothing/head/helmet/space/plasmaman/syndie
 	name = "tacticool envirosuit helmet"
-	desc = "Нет никаких сомнений, этот шлем ставит тебя выше ВСЕХ других плазмаменов. Если ты видишь другого плазмамена в таком шлеме, это либо потому, что он такой же крутой парень, \
-		либо он убил одного из твоих крутых друзей и забрал его у него как трофей. В любом случае, любой, кто носит это, заслуживает уважения."
+	desc = "There is no question: this helmet places you above EVERY other plasmaman. If another plasmaman wears one, they are either just as cool as you or killed one of your cool friends and took it as a trophy. Either way, anyone wearing it deserves respect."
 	icon_state = "syndie_envirohelm"
 	item_color = "syndie_envirohelm"

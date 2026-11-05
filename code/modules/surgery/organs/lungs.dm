@@ -1,6 +1,6 @@
 /obj/item/organ/internal/lungs
 	name = "lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали человеку."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a human."
 	gender = PLURAL
 	icon_state = "lungs"
 	slot = INTERNAL_ORGAN_LUNGS

@@ -1,6 +1,6 @@
 // MARK: 9mm - Enforcer
 /obj/item/ammo_box/magazine/enforcer
-	gun_name = "пистолета DCA-P9 \"Блюститель\""
+	gun_name = "DCA-P9 \"Enforcer\" pistols"
 	icon_state = "enforcer"
 	ammo_type = /obj/item/ammo_casing/rubber9mm
 	max_ammo = 8
@@ -33,7 +33,7 @@
 
 // MARK: 9mm - APS
 /obj/item/ammo_box/magazine/pistolm9mm
-	gun_name = "АПС"
+	gun_name = "APS pistols"
 	icon_state = "9x19p-15"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
@@ -44,7 +44,7 @@
 
 // MARK: 10mm - Stechkin
 /obj/item/ammo_box/magazine/m10mm
-	gun_name = "пистолета \"Стечкин\""
+	gun_name = "Stechkin pistols"
 	icon_state = "9x19p"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	caliber = CALIBER_10MM
@@ -68,7 +68,7 @@
 
 // MARK: .45 - M1911
 /obj/item/ammo_box/magazine/m45
-	gun_name = "пистолета M1911"
+	gun_name = "M1911 pistols"
 	icon_state = "45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = CALIBER_DOT_45
@@ -77,7 +77,7 @@
 
 // MARK: .40 S&W - SP-8
 /obj/item/ammo_box/magazine/sp8
-	gun_name = "пистолета P-40 \"Эйсер\""
+	gun_name = "P-40 \"Acer\" pistols"
 	icon_state = "sp8mag"
 	ammo_type = /obj/item/ammo_casing/fortynr
 	max_ammo = 10
@@ -92,7 +92,7 @@
 
 // MARK: .50 AE - Desert Eagle
 /obj/item/ammo_box/magazine/m50
-	gun_name = "пистолета SGM-P50 \"Колосс\""
+	gun_name = "SGM-P50 \"Colossus\" pistols"
 	icon_state = "50ae"
 	ammo_type = /obj/item/ammo_casing/a50
 	caliber = CALIBER_DOT_50AE

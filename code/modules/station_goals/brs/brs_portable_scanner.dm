@@ -8,8 +8,8 @@
 #define SCAN_CRITICAL 3 //! The scanner is within critical range of a rift
 
 /obj/item/circuitboard/brs_portable_scanner
-	board_name = "Портативный сканер разлома"
-	desc = "Плата портативного сканера блюспейс разлома."
+	board_name = "Portable Rift Scanner"
+	desc = "A portable bluespace rift scanner circuit board."
 	build_path = /obj/machinery/brs_portable_scanner
 	icon_state = "scannerplat"
 	greyscale_config = null

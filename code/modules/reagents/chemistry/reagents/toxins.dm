@@ -662,8 +662,8 @@
 	color = "#664300" // rgb: 102, 67, 0
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 	drink_icon ="beerglass"
-	drink_name = "стакан пива"
-	drink_desc = "Освежающая пинта пива."
+	drink_name = "Beer glass"
+	drink_desc = "A freezing pint of beer."
 	taste_description = "мочи"
 	can_synth = FALSE
 

@@ -1,6 +1,6 @@
 /obj/machinery/vending/assist
 	name = "assistomate"
-	desc = "Торговый автомат, предлагающий ассортимент различных деталей и компонентов."
+	desc = "A vending machine offering assorted parts and components."
 	panel_overlay = "generic_panel"
 	screen_overlay = "generic"
 	lightmask_overlay = "generic_lightmask"

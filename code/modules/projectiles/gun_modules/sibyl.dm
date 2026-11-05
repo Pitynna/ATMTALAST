@@ -6,7 +6,7 @@ GLOBAL_VAR_INIT(sibsys_automode, TRUE)
 
 /obj/item/gun_module/sibyl
 	name = "Sibyl System module"
-	desc = "Проприетарный модуль от правоохранительной организации для энергетического оружия, подключающий его к системе Sibyl System"
+	desc = "A proprietary law-enforcement module that connects an energy weapon to the Sibyl System."
 	icon = 'icons/obj/weapons/sibyl.dmi'
 	icon_state = "sibyl_chip"
 	item_state = "sibyl_chip"
@@ -305,7 +305,7 @@ GLOBAL_VAR_INIT(sibsys_automode, TRUE)
 
 /obj/item/gun_module/gategun
 	name = "gate gun module"
-	desc = "Проприетарный модуль от правоохранительной организации для энергетического оружия, подключающий его к системе Sibyl System"
+	desc = "A proprietary law-enforcement module that connects an energy weapon to the Sibyl System."
 	icon_state = "supp"
 	item_state = "supp"
 	slot = ATTACHMENT_SLOT_LOCKING_PIN
@@ -316,7 +316,7 @@ GLOBAL_VAR_INIT(sibsys_automode, TRUE)
 /obj/item/gun_module/gategun/on_attach(obj/item/gun/target_gun, mob/user)
 	RegisterSignal(target_gun, COMSIG_ATOM_EMAG_ACT, PROC_REF(on_emag_act))
 	RegisterSignal(target_gun, COMSIG_GUN_CHECK_CAN_SHOOT, PROC_REF(on_check_can_shoot))
-	target_gun.desc = initial(target_gun.desc) + "\n" + span_notice("Установлена блокировка работы в секторе станции.")
+	target_gun.desc = initial(target_gun.desc) + "\n" + span_notice("A station-sector operation lock has been installed.")
 
 /obj/item/gun_module/gategun/on_detach(obj/item/gun/target_gun, mob/user)
 	UnregisterSignal(target_gun, COMSIG_ATOM_EMAG_ACT)

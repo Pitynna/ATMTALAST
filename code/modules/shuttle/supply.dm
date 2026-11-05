@@ -296,13 +296,13 @@
 
 	var/obj/item/paper/reqform = new /obj/item/paper(_loc)
 	playsound(_loc, 'sound/goonstation/machines/printer_thermal.ogg', 50, TRUE)
-	var/request_desc = "на поставку — [crates] \"[object.name]\" для [orderedby]"
-	reqform.name = "запрос [request_desc]"
+	var/request_desc = "[crates] \"[object.name]\" for [orderedby]"
+	reqform.name = "Supply Request - [request_desc]"
 	reqform.ru_names = alist(
-		NOMINATIVE = "запрос [request_desc]",
+		NOMINATIVE = "Supply Request - [request_desc]",
 		GENITIVE = "запроса [request_desc]",
 		DATIVE = "запросу [request_desc]",
-		ACCUSATIVE = "запрос [request_desc]",
+		ACCUSATIVE = "Supply Request - [request_desc]",
 		INSTRUMENTAL = "запросом [request_desc]",
 		PREPOSITIONAL = "запросе [request_desc]",
 	)
@@ -348,8 +348,8 @@
 	var/stationName = (errors & MANIFEST_ERROR_NAME) ? new_station_name() : station_name()
 	var/packagesAmt = length(SSshuttle.shoppinglist) + ((errors & MANIFEST_ERROR_COUNT) ? rand(1,2) : 0)
 
-	var/order_desc = "поставки – \"[object.name]\" для [orderedby]"
-	slip.name = "Манифест [order_desc]"
+	var/order_desc = "\"[object.name]\" for [orderedby]"
+	slip.name = "Supply Manifest - [order_desc]"
 	slip.ru_names = alist(
 		NOMINATIVE = "манифест [order_desc]",
 		GENITIVE = "манифеста [order_desc]",

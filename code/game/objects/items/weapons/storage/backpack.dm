@@ -126,7 +126,7 @@
 
 /obj/item/storage/backpack/holding/satchel/duffelbag
 	name = "Duffelbag of holding"
-	desc = "Очень большая и технологичная спортивная сумка, вмещает невероятное количество предметов благодаря подпространственной компрессии. Этикетка предупреждает \"Не совмещать с технологиями телепортации\"."
+	desc = "An enormous, advanced duffel bag that holds an incredible number of items through subspace compression. Its label warns: Do not combine with teleportation technology."
 	icon_state = "holdingduffelba"
 	item_state = "holdingduffelba"
 	max_combined_w_class = 40
@@ -273,7 +273,7 @@
 
 /obj/item/storage/backpack/justice
 	name = "backpack of justice"
-	desc = "Крепкий рюкзак выданный специально для самых крепких офицеров."
+	desc = "A tough backpack issued specially to the toughest officers."
 	icon_state = "backpack_justice0"
 	item_state = "backpack_justice0"
 	actions_types = list(/datum/action/item_action/toggle_backpack_light)
@@ -317,13 +317,13 @@
 */
 /obj/item/storage/backpack/syndicate
 	name = "Syndicate backpack"
-	desc = "Крайне подозрительный рюкзак, для подозрительных вещей. Не собственность НТ!"
+	desc = "An extremely suspicious backpack for suspicious things. Not Nanotrasen property!"
 	icon_state = "syndi_backpack"
 	item_state = "syndi_backpack"
 
 /obj/item/storage/backpack/syndicate/science
 	name = "Syndicate science backpack"
-	desc = "Крайне подозрительный рюкзак, для подозрительных колбочек. Не собственность НТ!"
+	desc = "An extremely suspicious backpack for suspicious flasks. Not Nanotrasen property!"
 	icon_state = "syndi_sci_backpack"
 	item_state = "syndi_sci_backpack"
 
@@ -334,19 +334,19 @@
 
 /obj/item/storage/backpack/syndicate/cargo
 	name = "Syndicate cargo backpack"
-	desc = "Крайне подозрительный рюкзак, для подозрительных грузов. Не собственность НТ!"
+	desc = "An extremely suspicious backpack for suspicious cargo. Not Nanotrasen property!"
 	icon_state = "syndi_cargo_backpack"
 	item_state = "syndi_cargo_backpack"
 
 /obj/item/storage/backpack/syndicate/med
 	name = "Syndicate medical backpack"
-	desc = "Крайне подозрительный рюкзак, для подозрительных лекарств. Не собственность НТ!"
+	desc = "An extremely suspicious backpack for suspicious medicine. Not Nanotrasen property!"
 	icon_state = "syndi_med_backpack"
 	item_state = "syndi_med_backpack"
 
 /obj/item/storage/backpack/syndicate/command
 	name = "Syndicate command backpack"
-	desc = "Крайне подозрительный рюкзак, для крайне подозрительных личностей. Не собственность НТ!"
+	desc = "An extremely suspicious backpack for extremely suspicious people. Not Nanotrasen property!"
 	icon_state = "syndi_com_backpack"
 	item_state = "syndi_com_backpack"
 

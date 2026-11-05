@@ -422,7 +422,7 @@
 
 /obj/item/circuitboard/machine/station_map/security
 	name = "Security Station Map"
-	desc = "Виртуальная карта станции. Показывает сотрудников с имплантом защиты разума."
+	desc = "A virtual station map showing personnel with mindshield implants."
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
 	build_path = /obj/machinery/station_map/security/directional/north
 	origin_tech = "programming=4;engineering=4"

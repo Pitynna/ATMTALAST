@@ -295,7 +295,7 @@
 
 /obj/item/storage/box/warmdonkpockets
 	name = "box of warm donk-pockets"
-	desc = "Коробка с уже разогретыми Донк-покетами. Ням-ням!"
+	desc = "A box of already-heated donk-pockets. Yum!"
 	icon_state = "donkpocket_box"
 	item_state = "donks"
 
@@ -316,7 +316,7 @@
 
 /obj/item/storage/box/coffeepack
 	name = "arabica beans"
-	desc = "Пакет, содержащий высушенные зёрна кофе арабика. Произведено \"Waffle Corp\"."
+	desc = "A packet of dried arabica coffee beans. Manufactured by Waffle Corp."
 	gender = PLURAL
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "arabica_beans"
@@ -344,7 +344,7 @@
 
 /obj/item/storage/box/coffeepack/robusta
 	name = "robusta beans"
-	desc = "Пакет, содержащий высушенные зёрна кофе робуста. Произведено \"Waffle Corp\"."
+	desc = "A packet of dried robusta coffee beans. Manufactured by Waffle Corp."
 	icon_state = "robusta_beans"
 	beantype = /obj/item/reagent_containers/food/snacks/grown/coffee/robusta
 
@@ -779,15 +779,15 @@
 	. = ..()
 	switch(design)
 		if(NODESIGN)
-			desc = "Пакет, сложенный из бумаги. Идеально подходит, чтобы надеть на голову недруга."
+			desc = "A folded paper bag. Perfect for putting over an enemy's head."
 		if(NANOTRASEN)
-			desc = "Стандартный пакет НТ для завтраков для самых верных работников"
+			desc = "A standard Nanotrasen lunch bag for its most loyal employees."
 		if(SYNDI)
-			desc = "Дизайн этого бумажного пакета — секретнейшая разработка Синдиката"
+			desc = "This paper bag's design is a top-secret Syndicate development."
 		if(HEART)
-			desc = "Бумажный пакет с нарисованным сердечком. Как мило!"
+			desc = "A paper bag with a heart drawn on it. How sweet!"
 		if(SMILE)
-			desc = "Бумажный пакет с улыбкой. Чутка жуткий."
+			desc = "A paper bag with a smile. A little creepy."
 
 /obj/item/storage/box/papersack/update_icon_state()
 	item_state = "paperbag_[design]"
@@ -944,7 +944,7 @@
 
 /obj/item/storage/box/bola
 	name = "Energy bola box"
-	desc = "Бола для самых быстрых из быстрых"
+	desc = "Bolas for the fastest of the fast."
 	icon_state = "box_security"
 	item_state = "sec"
 
@@ -993,7 +993,7 @@
 
 /obj/item/storage/box/wizard/kit_spell_book
 	name = "magic book kit"
-	desc = "Набор волшебных книг, купленных в волшебной книге, для волшебников, чтобы делать волшебство! ЗВУЧИТ ПРОСТО ВОЛШЕБНО!"
+	desc = "A set of magic books bought from a magic book, for wizards to do magic! SOUNDS ABSOLUTELY MAGICAL!"
 
 /obj/item/storage/box/wizard/kit_spell_book/populate_contents()
 	for(var/i in 1 to 4)
@@ -1046,7 +1046,7 @@
 
 /obj/item/storage/box/candythief
 	name = "rainbow candy kit"
-	desc = "Набор для самых маленьких и не уверенных в себе работников, обожающих простые пути, смешивая всевозможные в один. Поставляется с сосательной конфетой. Удобный набор если нужно где-то засесть и не выходить. Производитель не отвечает за возникающие акне и галлюцинации от вашего времяпровождения."
+	desc = "A kit for the youngest, least confident employees who love combining every shortcut into one. Comes with a lollipop. Handy when you need to hide somewhere and stay put. The manufacturer accepts no responsibility for resulting acne or hallucinations."
 	icon_state = "box_clown"
 	item_state = "clown"
 
@@ -1059,7 +1059,7 @@
 
 /obj/item/storage/box/sec
 	name = "officer starter kit"
-	desc = "Коробка, что вмещает в себе все нужное дабы стать офицером! Мелким шрифтом вы можете разобрать: Не включает действительно все."
+	desc = "A box containing everything you need to become an officer! The fine print reads: Does not actually include everything."
 	icon_state = "box_security"
 	item_state = "sec"
 
@@ -1098,7 +1098,7 @@
 
 /obj/item/storage/box/specter_kit
 	name = "Specter energy pistol kit"
-	desc = "Коробка, содержащая пистолет \"Спектр\", кобуру и 2 аккумулятора."
+	desc = "A box containing a Specter pistol, a holster and two batteries."
 	icon_state = "box_specter"
 	item_state = "sec"
 
@@ -1110,7 +1110,7 @@
 
 /obj/item/storage/box/taurus_kit
 	name = "taurus revolver kit (rubber)"
-	desc = "Коробка с изображением револьвера \"Таурус\", двух патронных обойм и надписью \"Нелетальное оружие\"."
+	desc = "A box depicting a Taurus revolver and two speedloaders, labeled Nonlethal Weapon."
 	icon_state = "box_colt"
 	item_state = "sec"
 

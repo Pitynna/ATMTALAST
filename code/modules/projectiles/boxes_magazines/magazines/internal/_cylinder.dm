@@ -5,8 +5,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/update_desc(updates = ALL)
 	. = ..()
-	desc = "Барабан с каморами для [gun_name ? gun_name : "огнестрельного оружия"]. \
-			Предназначен для [get_ammo_descriptor()] [get_cartridge_marking()], вмещает вплоть до [max_ammo].[extra_info ? " " + extra_info : ""]"
+	desc = "A cylinder for [gun_name ? gun_name : "firearms"]. Designed for [get_cartridge_marking()] [get_ammo_descriptor()], holding up to [max_ammo] rounds.[extra_info ? " " + extra_info : ""]"
 
 /obj/item/ammo_box/magazine/internal/cylinder/Initialize(mapload)
 	. = ..()

@@ -204,7 +204,7 @@
 
 /obj/effect/energy_ball
 	name = "energy ball"
-	desc = "Миниатюрная, относительно стабильная шаровая молния. Обычно появляется вместе с энергетическими аномалиями."
+	desc = "A miniature, relatively stable ball of lightning. Usually appears alongside energetic anomalies."
 	icon = 'icons/effects/anomalies.dmi'
 	icon_state = "energetic1"
 	gender = MALE

@@ -1,6 +1,6 @@
 /obj/structure/logistics_pipe
 	name = "logistics pipe"
-	desc = "Подпольная труба логистической сети."
+	desc = "An underfloor logistics network pipe."
 	icon = 'icons/obj/pipes_and_stuff/not_atmos/logistics.dmi'
 	icon_state = "logi-s"
 	base_icon_state = "logi-s"

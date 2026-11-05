@@ -160,8 +160,7 @@
 
 /obj/item/wirecutters/industrial
 	name = "industrial wirecutters"
-	desc = "Инструмент, предназначенный для перекусывания различных материалов. \
-			Челюсти способны сжиматься сильнее, чем у аналогов, что облегчает работу."
+	desc = "A tool for cutting through various materials. Its jaws exert more force than conventional models, making the work easier."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "cutters_industrial"
 	post_init_icon_state = null

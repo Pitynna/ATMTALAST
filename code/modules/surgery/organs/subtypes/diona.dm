@@ -1,7 +1,7 @@
 /obj/item/organ/external/chest/diona
 	species_type = /datum/species/diona
 	name = "core trunk"
-	desc = "Основной ствол — ядро."
+	desc = "The main trunk: the core."
 	gender = MALE
 	max_damage = 200
 	min_broken_damage = 50
@@ -24,7 +24,7 @@
 /obj/item/organ/external/arm/diona
 	species_type = /datum/species/diona
 	name = "left upper tendril"
-	desc = "Верхнее левое ответвление ствола."
+	desc = "The upper-left branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
@@ -34,7 +34,7 @@
 /obj/item/organ/external/arm/right/diona
 	species_type = /datum/species/diona
 	name = "right upper tendril"
-	desc = "Верхнее правое ответвление ствола."
+	desc = "The upper-right branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
@@ -44,7 +44,7 @@
 /obj/item/organ/external/leg/diona
 	species_type = /datum/species/diona
 	name = "left lower tendril"
-	desc = "Нижнее левое ответвление ствола."
+	desc = "The lower-left branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
@@ -54,7 +54,7 @@
 /obj/item/organ/external/leg/right/diona
 	species_type = /datum/species/diona
 	name = "right lower tendril"
-	desc = "Нижнее правое ответвление ствола."
+	desc = "The lower-right branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
@@ -76,21 +76,21 @@
 /obj/item/organ/external/hand/diona
 	species_type = /datum/species/diona
 	name = "left grasper"
-	desc = "Левый верхняя ветка, выполняющая хватательную функцию."
+	desc = "The upper-left grasping branch."
 	gender = MALE
 	amputation_point = "левую верхнюю ветку"
 
 /obj/item/organ/external/hand/right/diona
 	species_type = /datum/species/diona
 	name = "right grasper"
-	desc = "Правая верхняя ветка, выполняющая хватательную функцию."
+	desc = "The upper-right grasping branch."
 	gender = MALE
 	amputation_point = "правую верхнюю ветку"
 
 /obj/item/organ/external/head/diona
 	species_type = /datum/species/diona
 	name = "upper trunk"
-	desc = "Верхнее ответвление ствола."
+	desc = "The upper branch of the trunk."
 	gender = NEUTER
 	max_damage = 50
 	min_broken_damage = 25
@@ -106,7 +106,7 @@
 /obj/item/organ/internal/brain/diona
 	species_type = /datum/species/diona
 	name = "neural strata"
-	desc = "Прослойка из нейронной ткани, центральный орган нервной системы гештальта. Эта принадлежала дионе."
+	desc = "A layer of neural tissue, the central organ of a gestalt's nervous system. This belonged to a diona."
 	gender = FEMALE
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
@@ -152,7 +152,7 @@
 /obj/item/organ/internal/kidneys/diona
 	species_type = /datum/species/diona
 	name = "filtrating vacuoles"
-	desc = "Парный орган, отвечающий за выведение токсинов и вредных веществ из биомассы гештальта. Эти принадлежали дионе."
+	desc = "Paired organs that remove toxins and harmful substances from a gestalt's biomass. These belonged to a diona."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
 
@@ -163,7 +163,7 @@
 /obj/item/organ/internal/lungs/diona
 	species_type = /datum/species/diona
 	name = "gas bladder"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и биомассой гештальта. Эти принадлежали дионе."
+	desc = "Paired organs responsible for gas exchange between the environment and a gestalt's biomass. These belonged to a diona."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
 
@@ -174,7 +174,7 @@
 /obj/item/organ/internal/appendix/diona
 	species_type = /datum/species/diona
 	name = "polyp segment"
-	desc = "Наслоение биомассы. Является рудиментарным органом и не несёт полезной функции для гештальта. Этот принадлежал дионе."
+	desc = "A layer of biomass. A vestigial organ with no useful function for the gestalt. This belonged to a diona."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
 
@@ -185,7 +185,7 @@
 /obj/item/organ/internal/heart/diona
 	species_type = /datum/species/diona
 	name = "anchoring ligament"
-	desc = "Орган, связывающий части гештальта воедино. Этот принадлежал дионе."
+	desc = "An organ binding the parts of a gestalt together. This belonged to a diona."
 	gender = FEMALE
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
@@ -201,7 +201,7 @@
 /obj/item/organ/internal/eyes/diona
 	species_type = /datum/species/diona
 	name = "receptor node"
-	desc = "Светочувстительные мембраны, выполняющие зрительную функцию. Этот принадлежал дионе."
+	desc = "Light-sensitive membranes responsible for vision. This belonged to a diona."
 	gender = MALE
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "claw"
@@ -214,7 +214,7 @@
 /obj/item/organ/internal/liver/diona
 	species_type = /datum/species/diona
 	name = "nutrient vessel"
-	desc = "Железа, отвечающая за метаболизацию поступающих в гештальт веществ. Эта принадлежала дионе."
+	desc = "A gland responsible for metabolizing substances absorbed by the gestalt. This belonged to a diona."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "claw"
 	alcohol_intensity = 0.5

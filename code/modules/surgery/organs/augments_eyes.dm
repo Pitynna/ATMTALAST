@@ -203,13 +203,13 @@
 
 /obj/item/organ/internal/cyberimp/eyes/hud/universal
 	name = "universal HUD implant"
-	desc = "Устанавливает подходящий вашей должности ИЛС имплант. Менее приоритетный, чем выбранные вручную импланты."
+	desc = "Installs a HUD implant appropriate to your job. Lower priority than manually selected implants."
 	icon_state = "universal_implant"
 	aug_message = "Этот имплант не имеет смысла..."
 
 /obj/item/organ/internal/cyberimp/eyes/map
 	name = "citizen map implant"
-	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности."
+	desc = "An augmented-reality implant that continuously displays a minimap in the upper-right corner of the user's vision."
 	icon_state = "citizen_map_implant"
 	eye_colour = "#4255e6"
 	slot = INTERNAL_ORGAN_EYE_HUD_DEVICE
@@ -486,7 +486,7 @@
 
 /obj/item/organ/internal/cyberimp/eyes/map/security
 	name = "security map implant "
-	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности. Показывает владельцев импланта защиты разума."
+	desc = "An augmented-reality implant that continuously displays a minimap in the upper-right corner of the user's vision. Shows mindshield implant users."
 	icon_state = "security_map_implant"
 	eye_colour = "#e41618"
 
@@ -510,7 +510,7 @@
 
 /obj/item/organ/internal/cyberimp/eyes/map/ert
 	name = "special reaction team map implant "
-	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности. Показывает членов ОБР."
+	desc = "An augmented-reality implant that continuously displays a minimap in the upper-right corner of the user's vision. Shows ERT members."
 	icon_state = "security_map_implant"
 	eye_colour = "#e41618"
 
@@ -536,7 +536,7 @@
 
 /obj/item/organ/internal/cyberimp/eyes/map/medical
 	name = "medical map implant "
-	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности. Показывает медицинские датчики и критическе состояния."
+	desc = "An augmented-reality implant that continuously displays a minimap in the upper-right corner of the user's vision. Shows medical sensors and critical conditions."
 	icon_state = "medical_map_implant"
 	eye_colour = "#00e3e3"
 
@@ -567,7 +567,7 @@
 
 /obj/item/organ/internal/cyberimp/eyes/map/fire
 	name = "fire map implant "
-	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности. Показывает отсеки с активной пожарной сигнализацией."
+	desc = "An augmented-reality implant that continuously displays a minimap in the upper-right corner of the user's vision. Shows areas with active fire alarms."
 	icon_state = "fire_map_implant"
 	eye_colour = "#0abd33"
 
@@ -598,7 +598,7 @@
 
 /obj/item/organ/internal/cyberimp/eyes/map/nuke
 	name = "nuke ops map implant "
-	desc = "Имплант для постоянного отображения мини-карты в правом верхнем углу поля зрения пользователя с помощью технологии дополненной реальности. Показывает членов вашего отряда и остальных живых целей. Также показывает где находится диск."
+	desc = "An augmented-reality implant that continuously displays a minimap in the upper-right corner of the user's vision. Shows squad members, other living targets and the disk's location."
 	icon_state = "nuke_map_implant"
 	eye_colour = "#292929"
 

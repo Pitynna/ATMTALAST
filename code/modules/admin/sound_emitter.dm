@@ -8,7 +8,7 @@
 //Admin sound emitters with highly customizable functions!
 /obj/effect/sound_emitter
 	name = "sound emitter"
-	desc = "Издаёт звуки, наверное."
+	desc = "Makes sounds, probably."
 	icon_state = "shield2"
 	invisibility = INVISIBILITY_OBSERVER
 	alpha = 175

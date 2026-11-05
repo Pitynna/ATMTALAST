@@ -5,7 +5,7 @@
  */
 /obj/machinery/smartfridge
 	name = "SmartFridge"
-	desc = "Это холодильник. Он умный. Просто удивительно, да?"
+	desc = "It's a fridge. It's smart. Amazing, isn't it?"
 	icon = 'icons/obj/machines/vending.dmi'
 	icon_state = "smartfridge"
 	density = TRUE
@@ -507,7 +507,7 @@
  */
 /obj/machinery/smartfridge/syndie
 	name = "Suspicious SmartFridge"
-	desc = "Это холодильник. Он умный. Подозрительно умный."
+	desc = "It's a fridge. It's smart. Suspiciously smart."
 	icon_state = "smartfridge-syndie"
 	contents_overlay = "smartfridge-syndie"
 
@@ -1014,7 +1014,7 @@
 
 /obj/machinery/smartfridge/drying_rack/ash
 	name = "primitive drying rack"
-	desc = "Примитивная самодельная сушилка, предназначенная для просушки растительных продуктов, еды и кожи."
+	desc = "A primitive homemade drying rack for plant products, food and leather."
 	gender = FEMALE
 	icon_state = "primitive-drying-rack"
 	use_power = NO_POWER_USE

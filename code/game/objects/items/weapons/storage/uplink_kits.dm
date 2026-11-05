@@ -20,7 +20,7 @@
 
 /obj/item/storage/box/syndie_kit/mantisblade
 	name = "mantis blade kit"
-	desc = "Коробка, содержащая 2 клинка богомола."
+	desc = "A box containing two mantis blades."
 	max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/box/syndie_kit/mantisblade/populate_contents()
@@ -119,7 +119,7 @@
 
 /obj/item/storage/box/syndie_kit/sarin
 	name = "sarin gas grenades"
-	desc = "Коробка, содержащая гранаты с зарином."
+	desc = "A box containing sarin grenades."
 
 /obj/item/storage/box/syndie_kit/sarin/populate_contents()
 	for(var/I in 1 to 4)
@@ -127,7 +127,7 @@
 
 /obj/item/storage/box/syndie_kit/bioterror
 	name = "bioterror syringe kit"
-	desc = "Коробка, содержащая семь шприцов \"Биотеррор\"."
+	desc = "A box containing seven Bioterror syringes."
 
 /obj/item/storage/box/syndie_kit/bioterror/populate_contents()
 	for(var/I in 1 to 7)
@@ -135,7 +135,7 @@
 
 /obj/item/storage/box/syndie_kit/caneshotgun
 	name = "cane gun kit"
-	desc = "Коробка, содержащая дробовик-трость и патроны к нему."
+	desc = "A box containing a cane shotgun and ammunition."
 
 /obj/item/storage/box/syndie_kit/caneshotgun/populate_contents()
 	for(var/I in 1 to 6)
@@ -144,14 +144,14 @@
 
 /obj/item/storage/box/syndie_kit/fake_revolver
 	name = "trick revolver kit"
-	desc = "Коробка с револьвером для розыгрышей."
+	desc = "A box containing a prank revolver."
 
 /obj/item/storage/box/syndie_kit/fake_revolver/populate_contents()
 	new /obj/item/toy/russian_revolver/trick_revolver(src)
 
 /obj/item/storage/box/syndie_kit/mimery
 	name = "advanced mimery kit"
-	desc = "Коробка, содержащая 2 книги по продвинутыми пантомимами."
+	desc = "A box containing two advanced mimery books."
 
 /obj/item/storage/box/syndie_kit/mimery/populate_contents()
 	new /obj/item/spellbook/oneuse/mime/greaterwall(src)
@@ -159,7 +159,7 @@
 
 /obj/item/storage/box/syndie_kit/atmosn2ogrenades
 	name = "atmos N2O grenades kit"
-	desc = "Коробка, содержащая 2 кластерные гранаты наполненные газом N2O."
+	desc = "A box containing two cluster grenades filled with nitrous oxide."
 
 /obj/item/storage/box/syndie_kit/atmosn2ogrenades/populate_contents()
 	new /obj/item/grenade/clusterbuster/n2o(src)
@@ -167,7 +167,7 @@
 
 /obj/item/storage/box/syndie_kit/atmosfiregrenades
 	name = "plasma fire grenades kit"
-	desc = "Коробка, содержащая 2 кластерные гранаты наполненные газообразной плазмой."
+	desc = "A box containing two cluster grenades filled with gaseous plasma."
 
 /obj/item/storage/box/syndie_kit/atmosfiregrenades/populate_contents()
 	new /obj/item/grenade/clusterbuster/plasma(src)
@@ -175,7 +175,7 @@
 
 /obj/item/storage/box/syndie_kit/missionary_set
 	name = "missionary starter kit"
-	desc = "Коробка, содержащая Библию, комплект одежды и посох."
+	desc = "A box containing a Bible, a set of clothes and a staff."
 
 /obj/item/storage/box/syndie_kit/missionary_set/populate_contents()
 	new /obj/item/nullrod/missionary_staff(src)
@@ -188,7 +188,7 @@
 
 /obj/item/storage/box/syndie_kit/cutouts
 	name = "adaptive cardboard figure kit"
-	desc = "Коробка, содерржащая адаптивные картонные фигуры и баллончик с краской."
+	desc = "A box containing adaptive cardboard cutouts and a spray can."
 
 /obj/item/storage/box/syndie_kit/cutouts/populate_contents()
 	for(var/i in 1 to 3)
@@ -216,7 +216,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/chameleon
 	name = "chameleon kit"
-	desc = "Коробка, содержащая комплект одежды, оснащённый технологией \"Хамелеон\"."
+	desc = "A box containing a set of chameleon clothing."
 
 /obj/item/storage/box/syndie_kit/chameleon/populate_contents()
 	new /obj/item/clothing/under/chameleon(src)
@@ -235,7 +235,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/plasma_chameleon
 	name = "plasmaman chameleon kit"
-	desc = "Коробка, содержащая комплект одежды для плазмолюдов, оснащённый технологией \"Хамелеон\"."
+	desc = "A box containing a set of plasmaman chameleon clothing."
 
 /obj/item/storage/box/syndie_kit/plasma_chameleon/populate_contents()
 	new /obj/item/clothing/under/plasmaman/chameleon(src)
@@ -253,7 +253,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/dart_gun
 	name = "dart gun kit"
-	desc = "Коробка, содержащая миниатюрную версию обычного шприцемёта."
+	desc = "A box containing a miniature version of a standard syringe gun."
 
 /obj/item/storage/box/syndie_kit/dart_gun/populate_contents()
 	new /obj/item/gun/syringe/syndicate(src)
@@ -293,7 +293,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/stungloves
 	name = "stungloves kit"
-	desc = "Коробка, содержащая оглушающие перчатки и аккумулятор."
+	desc = "A box containing stun gloves and a battery."
 
 /obj/item/storage/box/syndie_kit/stungloves/populate_contents()
 	new /obj/item/clothing/gloves/color/yellow/stun(src)
@@ -339,7 +339,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/chameleon_counter
 	name = "chameleon counterfeiter kit"
-	desc = "Коробка, содержащая 3 фальсификатора \"Хамелеон\"."
+	desc = "A box containing three chameleon projectors."
 
 /obj/item/storage/box/syndie_kit/chameleon_counter/populate_contents()
 	new /obj/item/chameleon_counterfeiter(src)
@@ -348,7 +348,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/midichlorian
 	name = "midichlorian kit"
-	desc = "Коробка, содержащая инъектор мидихлориан и энергетический меч."
+	desc = "A box containing a midichlorian injector and an energy sword."
 
 /obj/item/storage/box/syndie_kit/midichlorian/populate_contents()
 	new /obj/item/melee/energy/sword/saber(src)
@@ -356,7 +356,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/pistol_ammo
 	name = "10mm ammunition kit"
-	desc = "Коробка, содержащая 2 магазина патронов калибра 10 мм."
+	desc = "A box containing two 10mm magazines."
 
 /obj/item/storage/box/syndie_kit/pistol_ammo/populate_contents()
 	new /obj/item/ammo_box/magazine/m10mm(src)
@@ -364,7 +364,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/revolver_ammo
 	name = ".357 ammunition kit"
-	desc = "Коробка, содержащая 2 сменных барабана патронов .357 калибра."
+	desc = "A box containing two .357 speedloaders."
 
 /obj/item/storage/box/syndie_kit/revolver_ammo/populate_contents()
 	new /obj/item/ammo_box/speedloader/a357(src)
@@ -420,7 +420,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/knives_kit
 	name = "throwing knives kit"
-	desc = "Коробка, содержащая 7 метательных ножей."
+	desc = "A box containing seven throwing knives."
 
 /obj/item/storage/box/syndie_kit/knives_kit/populate_contents()
 	for(var/i in 1 to 7)
@@ -428,7 +428,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/blackops_kit
 	name = "black ops kit"
-	desc = "Коробка, содержащая одежду, предназначенную для проведения опасных секретных операций."
+	desc = "A box containing clothing for dangerous covert operations."
 
 /obj/item/storage/box/syndie_kit/blackops_kit/populate_contents()
 	new /obj/item/clothing/under/syndicate/blackops(src)
@@ -442,7 +442,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/combat_baking
 	name = "combat bakery kit"
-	desc = "Коробка, содержащая оружие, изготовленное из выпечки!"
+	desc = "A box containing weapons made from baked goods!"
 
 /obj/item/storage/box/syndie_kit/combat_baking/populate_contents()
 	new /obj/item/reagent_containers/food/snacks/baguette/combat(src)
@@ -452,7 +452,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/ghostface_kit
 	name = "Ghostface kit"
-	desc = "Коробка, содержащая костюм и маску \"Гоустфейс\"."
+	desc = "A box containing a Ghostface costume and mask."
 
 /obj/item/storage/box/syndie_kit/ghostface_kit/populate_contents()
 	new /obj/item/clothing/suit/hooded/ghostfacesuit/true(src)
@@ -461,7 +461,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/gun_mods
 	name = "gun upgrade kit"
-	desc = "Коробка, содержащая различные модуля для улучшения оружия."
+	desc = "A box containing assorted weapon upgrade modules."
 	icon_state = "box_attachments"
 	item_state = "box_gun_mods"
 
@@ -487,7 +487,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/compact_sniper
 	name = "compact sniper rifle kit"
-	desc = "Коробка, содержащая компактную снайперскую винтовку \"Bubz Mini\", дополнительный магазин, и коробку патронов."
+	desc = "A box containing a Bubz Mini compact sniper rifle, a spare magazine and a box of ammunition."
 
 /obj/item/storage/box/syndie_kit/compact_sniper/populate_contents()
 	new /obj/item/gun/projectile/automatic/sniper_rifle/compact(src)
@@ -496,7 +496,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/revolver
 	name = "revolver ocelot kit"
-	desc = "Коробка, содержащая револьвер и три сменных барабана .357 калибра."
+	desc = "A box containing a revolver and three .357 speedloaders."
 
 /obj/item/storage/box/syndie_kit/revolver/populate_contents()
 	new /obj/item/gun/projectile/revolver(src)
@@ -506,7 +506,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/desert_eagle
 	name = "desert eagle kit"
-	desc = "Коробка, содержащая \"Пустынный Орёл\", три дополнительных магазина, и две коробки с патронами калибра .50AE."
+	desc = "A box containing a Desert Eagle, three spare magazines and two boxes of .50 AE ammunition."
 
 /obj/item/storage/box/syndie_kit/desert_eagle/populate_contents()
 	new	/obj/item/gun/projectile/automatic/pistol/deagle(src)
@@ -518,7 +518,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/stechkin_pistol
 	name = "stechkin pistol kit"
-	desc = "Коробка, содержащая пистолет \"FK-69 Стечкин\", и три дополнительных магазина."
+	desc = "A box containing an FK-69 Stechkin pistol and three spare magazines."
 
 /obj/item/storage/box/syndie_kit/stechkin_pistol/populate_contents()
 	new	/obj/item/gun/projectile/automatic/pistol/stechkin(src)
@@ -528,7 +528,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/kedr_kit
 	name = "smg K-45 kit"
-	desc = "Коробка, содержащая пистолет-пулемет K-45, глушитель и четыре дополнительных магазина."
+	desc = "A box containing a K-45 submachine gun, a suppressor and four spare magazines."
 
 /obj/item/storage/box/syndie_kit/kedr_kit/populate_contents()
 	new	/obj/item/gun/projectile/automatic/smg/kedr(src)
@@ -540,7 +540,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/kedr_ammo
 	name = "ammunition for smg K-45"
-	desc = "Коробка, содержащая четыре заряженных магазина для пистолет-пулемет K-45."
+	desc = "A box containing four loaded K-45 submachine gun magazines."
 
 /obj/item/storage/box/syndie_kit/kedr_ammo/populate_contents()
 	new /obj/item/ammo_box/magazine/kedr(src)
@@ -550,7 +550,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/rsh12_revolver
 	name = "RSh-12 revolver kit"
-	desc = "Коробка, содержащая револьвер \"РШ-12\", и три пачки патронов калибра 12.7х55."
+	desc = "A box containing an RSh-12 revolver and three boxes of 12.7x55 ammunition."
 
 /obj/item/storage/box/syndie_kit/rsh12_revolver/populate_contents()
 	new	/obj/item/gun/projectile/revolver/rsh_12(src)
@@ -561,7 +561,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/combat_exoframe
 	name = "combat exoframe kit"
-	desc = "Коробка, содержащая боевой модуль экзоскелета и автоимплантер."
+	desc = "A box containing a combat exoskeleton module and an auto-implanter."
 	max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/box/syndie_kit/combat_exoframe/populate_contents()
@@ -570,7 +570,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/agent_base_kit
 	name = "agent base kit"
-	desc = "Набор, содержащий минимальный комплект снаряжения для выполнения задач."
+	desc = "A kit containing the minimum equipment needed to carry out an assignment."
 	var/static/list/possible_kits = list(
 		/obj/item/storage/box/syndie_kit/scarecrow,
 		/obj/item/storage/box/syndie_kit/chameleon_base,
@@ -594,7 +594,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/scarecrow
 	name = "scarecrow kit"
-	desc = "Компактный набор с пистолетом «Пугало» и снаряжением."
+	desc = "A compact kit containing a Scarecrow pistol and equipment."
 
 /obj/item/storage/box/syndie_kit/scarecrow/populate_contents()
 	new /obj/item/gun/projectile/automatic/pistol/aps/scarecrow(src)
@@ -606,7 +606,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/chameleon_base
 	name = "chameleon kit"
-	desc = "Набор маскировочной одежды и средств связи для оперативной работы."
+	desc = "A set of disguise clothing and communications equipment for field operations."
 
 /obj/item/storage/box/syndie_kit/chameleon_base/populate_contents()
 	new /obj/item/clothing/under/chameleon(src)
@@ -621,7 +621,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/belt/grenade/grenadier
 	name = "grenadier's belt"
-	desc = "Пояс, набитый разнообразными гранатами для создания хаоса."
+	desc = "A belt packed with assorted grenades for creating chaos."
 
 /obj/item/storage/belt/grenade/grenadier/populate_contents()
 	for(var/i in 1 to 8)
@@ -635,7 +635,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/knife
 	name = "knife kit"
-	desc = "Набор для ближнего боя и стильной экипировки."
+	desc = "A kit for close combat and stylish equipment."
 
 /obj/item/storage/box/syndie_kit/knife/populate_contents()
 	new /obj/item/kitchen/knife/combat(src)
@@ -648,7 +648,7 @@ To apply, hold the injector a short distance away from the outer thigh before ap
 
 /obj/item/storage/box/syndie_kit/slip
 	name = "slip kit"
-	desc = "Набор для создания максимально скользких ситуаций."
+	desc = "A kit for creating the slipperiest possible situations."
 
 /obj/item/storage/box/syndie_kit/slip/populate_contents()
 	new /obj/item/clothing/shoes/chameleon/noslip(src)

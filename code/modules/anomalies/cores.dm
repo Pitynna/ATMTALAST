@@ -54,8 +54,7 @@
 // ============================ Tier 1 ===================================
 /obj/item/assembly/signaler/core/tier1
 	name = "empty minor anomaly core"
-	desc = "Не похоже, что силы аномалии на момент стабилизации хватило, чтобы придать этому ядру какие-то свойства. \
-			Вероятно, его можно как-то зарядить."
+	desc = "The anomaly apparently lacked enough power during stabilization to give this core any special properties. Perhaps it can be charged somehow."
 	icon_state = "core_empty_t1"
 	anomaly_type = null
 	origin_tech = "materials=3"
@@ -63,7 +62,7 @@
 
 /obj/item/assembly/signaler/core/atmospheric/tier1
 	name = "minor atmospheric anomaly core"
-	desc = "Стабилизированное ядро ​малой атмосферной аномалии. На ощупь прохладное. Вероятно, оно пригодится для исследований."
+	desc = "The stabilized core of a minor atmospheric anomaly. Cool to the touch. Probably useful for research."
 	icon_state = "core_atmos_t1"
 	anomaly_type = /obj/effect/anomaly/atmospheric/tier1
 	origin_tech = "plasmatech=5"
@@ -71,7 +70,7 @@
 
 /obj/item/assembly/signaler/core/gravitational/tier1
 	name = "minor gravitational anomaly core"
-	desc = "Нейтрализованное ядро малой ​​гравитационной аномалии. Слегка легче, чем выглядит. Вероятно, оно пригодится для исследований."
+	desc = "The neutralized core of a minor gravitational anomaly. Slightly lighter than it looks. Probably useful for research."
 	icon_state = "core_grav_t1"
 	anomaly_type = /obj/effect/anomaly/gravitational/tier1
 	origin_tech = "magnets=5"
@@ -79,7 +78,7 @@
 
 /obj/item/assembly/signaler/core/energetic/tier1
 	name = "minor energetic anomaly core"
-	desc = "Стабилизированное ядро малой ​​энергетической аномалии. Прикосновение к нему вызывает лёгкое покалывание. Вероятно, оно пригодится для исследований."
+	desc = "The stabilized core of a minor energetic anomaly. Touching it causes a slight tingling sensation. Probably useful for research."
 	icon_state = "core_energ_t1"
 	anomaly_type = /obj/effect/anomaly/energetic/tier1
 	origin_tech = "powerstorage=5"
@@ -87,7 +86,7 @@
 
 /obj/item/assembly/signaler/core/bluespace/tier1
 	name = "minor bluespace anomaly core"
-	desc = "Стабилизированное ядро ​малой ​блюспейс аномалии. Оно изредка, на долю секунды, исчезает из виду. Вероятно, оно пригодится для исследований."
+	desc = "The stabilized core of a minor bluespace anomaly. Occasionally disappears from sight for a split second. Probably useful for research."
 	icon_state = "core_bluespace_t1"
 	anomaly_type = /obj/effect/anomaly/bluespace/tier1
 	origin_tech = "bluespace=5"
@@ -95,7 +94,7 @@
 
 /obj/item/assembly/signaler/core/vortex/tier1
 	name = "minor vortex anomaly core"
-	desc = "Стабилизированное ядро малой ​​вихревой аномалии. Оно изредка подёргивается. Вероятно, оно пригодится для исследований."
+	desc = "The stabilized core of a minor vortex anomaly. It twitches occasionally. Probably useful for research."
 	icon_state = "core_vortex_t1"
 	anomaly_type = /obj/effect/anomaly/vortex/tier1
 	origin_tech = "engineering=5"
@@ -103,8 +102,7 @@
 
 /obj/item/assembly/signaler/core/tier2
 	name = "empty anomaly core"
-	desc = "Не похоже, что силы аномалии на момент стабилизации хватило, чтобы придать ядру какие-то свойства. \
-			Вероятно, его можно как-то зарядить."
+	desc = "The anomaly apparently lacked enough power during stabilization to give the core any special properties. Perhaps it can be charged somehow."
 	icon_state = "core_empty_t2"
 	anomaly_type = null
 	origin_tech = "materials=5" // not clonable by experimentor
@@ -151,8 +149,7 @@
 
 /obj/item/assembly/signaler/core/tier3
 	name = "empty major anomaly core"
-	desc = "Не похоже, что силы аномалии на момент стабилизации хватило, чтобы придать ядру какие-то свойства. \
-			Вероятно, его можно как-то зарядить."
+	desc = "The anomaly apparently lacked enough power during stabilization to give the core any special properties. Perhaps it can be charged somehow."
 	icon_state = "core_empty_t3"
 	anomaly_type = null
 	origin_tech = "materials=7" // Sorry, not clonable by experimentor
@@ -160,7 +157,7 @@
 
 /obj/item/assembly/signaler/core/atmospheric/tier3
 	name = "major atmospheric anomaly core"
-	desc = "Стабилизированное ядро большой атмосферной аномалии. От одного его вида вас бросает то в жар, то в холод, причём буквально."
+	desc = "The stabilized core of a major atmospheric anomaly. Just looking at it makes you feel hot and cold, quite literally."
 	icon_state = "core_atmos_t3"
 	anomaly_type = /obj/effect/anomaly/atmospheric/tier3
 	origin_tech = "plasmatech=8"
@@ -210,7 +207,7 @@
 
 /obj/item/assembly/signaler/core/gravitational/tier3
 	name = "major gravitational anomaly core"
-	desc = "Нейтрализованное ядро большой ​​гравитационной аномалии. Вы чувствуете сильное несоответствие веса многих окружающих предметов с их внешним видом."
+	desc = "The neutralized core of a major gravitational anomaly. The weights of many nearby objects feel strangely at odds with their appearance."
 	icon_state = "core_grav_t3"
 	anomaly_type = /obj/effect/anomaly/gravitational/tier3
 	origin_tech = "magnets=8"
@@ -262,7 +259,7 @@
 
 /obj/item/assembly/signaler/core/energetic/tier3
 	name = "major energetic anomaly core"
-	desc = "Стабилизированное ядро большой ​​энергетической аномалии. Вокруг ядра периодически возникают электрические разряды. Окружающая электроника напряженно гудит."
+	desc = "The stabilized core of a major energetic anomaly. Electrical discharges periodically surround it, and nearby electronics hum tensely."
 	icon_state = "core_energ_t3"
 	anomaly_type = /obj/effect/anomaly/energetic/tier3
 	origin_tech = "powerstorage=8"
@@ -333,7 +330,7 @@
 
 /obj/item/assembly/signaler/core/vortex/tier3
 	name = "major vortex anomaly core"
-	desc = "Стабилизированное ядро большой ​​вихревой аномалии. Предметы вокруг ядра опасно подрагивают."
+	desc = "The stabilized core of a major vortex anomaly. Nearby objects tremble alarmingly."
 	icon_state = "core_vortex_t3"
 	anomaly_type = /obj/effect/anomaly/vortex/tier3
 	origin_tech = "engineering=8"
@@ -341,43 +338,42 @@
 
 /obj/item/assembly/signaler/core/tier3/tier4
 	name = "empty colossal anomaly core"
-	desc = "Не похоже что силы аномалии на момент стабилизации хватило, чтобы придать ядру какие-то свойства. \
-			Вероятно, его можно как-то зарядить. У вас стойкое чувство, что его не должно здесь находиться."
+	desc = "The anomaly apparently lacked enough power during stabilization to give the core any special properties. Perhaps it can be charged somehow. You have a persistent feeling that it should not be here."
 	anomaly_type = null
 	origin_tech = "materials=10" // Sorry, not clonable by experimentor
 	tier = 4
 
 /obj/item/assembly/signaler/core/atmospheric/tier3/tier4
 	name = "colossal atmospheric anomaly core"
-	desc = "Стабилизированное ядро колоссальной атмосферной аномалии. У вас стойкое чувство, что его не должно здесь находиться."
+	desc = "The stabilized core of a colossal atmospheric anomaly. You have a persistent feeling that it should not be here."
 	anomaly_type = /obj/effect/anomaly/atmospheric/tier4
 	origin_tech = "plasmatech=11"
 	tier = 4
 
 /obj/item/assembly/signaler/core/gravitational/tier3/tier4
 	name = "colossal gravitational anomaly core"
-	desc = "Нейтрализованное ядро колоссальной ​​гравитационной аномалии. У вас стойкое чувство, что его не должно здесь находиться."
+	desc = "The neutralized core of a colossal gravitational anomaly. You have a persistent feeling that it should not be here."
 	anomaly_type = /obj/effect/anomaly/gravitational/tier4
 	origin_tech = "magnets=11"
 	tier = 4
 
 /obj/item/assembly/signaler/core/energetic/tier3/tier4
 	name = "colossal energetic anomaly core"
-	desc = "Стабилизированное ядро колоссальной ​​энергетической аномалии. У вас стойкое чувство, что его не должно здесь находиться."
+	desc = "The stabilized core of a colossal energetic anomaly. You have a persistent feeling that it should not be here."
 	anomaly_type = /obj/effect/anomaly/energetic/tier4
 	origin_tech = "powerstorage=11"
 	tier = 4
 
 /obj/item/assembly/signaler/core/bluespace/tier3/tier4
 	name = "colossal bluespace anomaly core"
-	desc = "Стабилизированное ядро ​большой ​блюспейс аномалии. У вас стойкое чувство, что его не должно здесь находиться."
+	desc = "The stabilized core of a major bluespace anomaly. You have a persistent feeling that it should not be here."
 	anomaly_type = /obj/effect/anomaly/bluespace/tier4
 	origin_tech = "bluespace=11"
 	tier = 4
 
 /obj/item/assembly/signaler/core/vortex/tier3/tier4
 	name = "colossal vortex anomaly core"
-	desc = "Стабилизированное ядро колоссальной ​​вихревой аномалии. У вас стойкое чувство, что его не должно здесь находиться."
+	desc = "The stabilized core of a colossal vortex anomaly. You have a persistent feeling that it should not be here."
 	anomaly_type = /obj/effect/anomaly/vortex/tier4
 	origin_tech = "engineering=11"
 	tier = 4

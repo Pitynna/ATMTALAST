@@ -416,8 +416,8 @@
 	owner.equip_or_collect(new /obj/item/storage/belt/soulstone/full(owner), ITEM_SLOT_BELT)
 
 	var/obj/item/melee/chainofcommand/chain = new
-	chain.name = "Жертвенная Цепь"
-	chain.desc = "Цепь последователя школы крови для нанесения увечий и пускания крови."
+	chain.name = "Sacrificial Chain"
+	chain.desc = "A chain used by a follower of the school of blood to maim and draw blood."
 	chain.force = 15
 	owner.equip_or_collect(chain, ITEM_SLOT_HAND_RIGHT)
 	owner.equip_or_collect(new /obj/item/clothing/suit/wizrobe/sacrificial_robe, ITEM_SLOT_CLOTH_OUTER)
@@ -487,16 +487,16 @@
 	suit.magical = TRUE
 	suit.icon_state = "hardsuit-singuloth"
 	suit.item_state = "singuloth_hardsuit"
-	suit.name = "Роба межпространства"
-	suit.desc = "Древняя броня последователя школы сингулярности."
+	suit.name = "Interdimensional Robe"
+	suit.desc = "Ancient armor worn by a follower of the school of singularity."
 	owner.equip_or_collect(suit, ITEM_SLOT_CLOTH_OUTER)
 
 	var/obj/item/clothing/head/wizard/magus/head = new
 	head.magical = TRUE
 	head.icon_state = "hardsuit0-singuloth"
 	head.item_state = "singuloth_helm"
-	head.name = "Капюшон межпространства"
-	head.desc = "Древний шлем последователя школы сингулярности."
+	head.name = "Interdimensional Hood"
+	head.desc = "An ancient helmet worn by a follower of the school of singularity."
 	owner.equip_or_collect(head, ITEM_SLOT_HEAD)
 
 // --- SCHOOL OF REPLACE ---

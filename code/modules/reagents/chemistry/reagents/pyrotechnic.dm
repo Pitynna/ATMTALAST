@@ -90,8 +90,8 @@
 	reagent_state = LIQUID
 	color = "#060606"
 	drink_icon = "dr_gibb_glass"
-	drink_name = "стакан сварочного топлива"
-	drink_desc = "Если вы не являетесь промышленным инструментом, это, вероятно, небезопасно для употребления. Хотя ассистенты любят такое пить."
+	drink_name = "Glass of welder fuel"
+	drink_desc = "Unless you are an industrial tool, this is probably not safe for consumption."
 	taste_description = "mistakes"
 	process_flags = ORGANIC | SYNTHETIC
 	var/max_radius = 7

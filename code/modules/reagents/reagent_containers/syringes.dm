@@ -241,7 +241,7 @@
 
 /obj/item/reagent_containers/syringe/steroids
 	name = "steroid syringe"
-	desc = "Шприц с опасным для здоровья веществом, которое способствует быстрому увеличению мышечной массы."
+	desc = "A syringe containing a substance that rapidly increases muscle mass at a cost to health."
 	list_reagents = list("steroids" = 15)
 
 #undef SYRINGE_DRAW

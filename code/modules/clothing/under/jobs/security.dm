@@ -321,7 +321,7 @@
 	)
 
 /obj/item/clothing/under/rank/security/brigmedical
-	desc = "Комбинезон медика СБ синего цвета 26-го века. Является компромиссом между санитарными нормами и стандартами защиты."
+	desc = "A blue 26th-century security medic's jumpsuit. A compromise between hygiene standards and protective requirements."
 	name = "brig medical's jumpsuit"
 	icon_state = "brig_medical"
 	item_state = "brig_medical"

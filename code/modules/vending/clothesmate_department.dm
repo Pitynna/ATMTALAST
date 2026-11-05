@@ -1,6 +1,6 @@
 /obj/machinery/vending/department_clothesmate
 	name = "Broken Departament ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды отдела."
+	desc = "A vending machine dispensing departmental clothing."
 	icon_state = "clothes_off"
 	panel_overlay = "clothes_panel"
 	screen_overlay = "clothes"
@@ -40,7 +40,7 @@
 
 /obj/machinery/vending/department_clothesmate/security
 	name = "Departament Security ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Службы безопасности."
+	desc = "A vending machine dispensing security clothing."
 	icon_state = "clothes-dep-sec_off"
 	screen_overlay = "clothes-dep-sec"
 	broken_overlay = "clothes-dep-sec_broken"
@@ -143,7 +143,7 @@
 
 /obj/machinery/vending/department_clothesmate/medical
 	name = "Departament Medical ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Медицинского отдела."
+	desc = "A vending machine dispensing medical clothing."
 	icon_state = "clothes-dep-med_off"
 	screen_overlay = "clothes-dep-med"
 	broken_overlay = "clothes-dep-med_broken"
@@ -266,7 +266,7 @@
 
 /obj/machinery/vending/department_clothesmate/engineering
 	name = "Departament Engineering ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Инженерного отдела."
+	desc = "A vending machine dispensing engineering clothing."
 	icon_state = "clothes-dep-eng_off"
 	screen_overlay = "clothes-dep-eng"
 	broken_overlay = "clothes-dep-eng_broken"
@@ -352,7 +352,7 @@
 
 /obj/machinery/vending/department_clothesmate/science
 	name = "Departament Science ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Научного отдела."
+	desc = "A vending machine dispensing science clothing."
 	icon_state = "clothes-dep-sci_off"
 	screen_overlay = "clothes-dep-sci"
 	broken_overlay = "clothes-dep-sci_broken"
@@ -430,7 +430,7 @@
 
 /obj/machinery/vending/department_clothesmate/cargo
 	name = "Departament Cargo ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Отд+ела снабжения."
+	desc = "A vending machine dispensing supply department clothing."
 	icon_state = "clothes-dep-car_off"
 	screen_overlay = "clothes-dep-car"
 	broken_overlay = "clothes-dep-car_broken"
@@ -512,7 +512,7 @@
 
 /obj/machinery/vending/department_clothesmate/law
 	name = "Departament Law ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Юридического отдела."
+	desc = "A vending machine dispensing legal department clothing."
 	icon_state = "clothes-dep-sec_off"
 	screen_overlay = "clothes-dep-sec"
 	broken_overlay = "clothes-dep-sec_broken"
@@ -587,14 +587,14 @@
 
 /obj/machinery/vending/department_clothesmate/service
 	name = "Departament Service ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Отдела обслуживания."
+	desc = "A vending machine dispensing service department clothing."
 	req_access = list()
 	products = list()
 	refill_canister = /obj/item/vending_refill/clothing/service
 
 /obj/machinery/vending/department_clothesmate/service/chaplain
 	name = "Departament Service ClothesMate Chaplain"
-	desc = "Автомат-помощник по выдаче одежды для священнослужителей."
+	desc = "A vending machine dispensing clergy clothing."
 	icon_state = "clothes-dep-car_off"
 	screen_overlay = "clothes-dep-car"
 	broken_overlay = "clothes-dep-car_broken"
@@ -662,7 +662,7 @@
 
 /obj/machinery/vending/department_clothesmate/service/botanical
 	name = "Departament Service ClothesMate Botanical"
-	desc = "Автомат-помощник по выдаче ботанической одежды."
+	desc = "A vending machine dispensing botanical clothing."
 	req_access = list(ACCESS_HYDROPONICS)
 	refill_canister = /obj/item/vending_refill/clothing/service/botanical
 

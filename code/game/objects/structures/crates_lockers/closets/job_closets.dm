@@ -166,7 +166,7 @@
 /obj/structure/closet/burial
 	icon_state = "chaplain"
 	name = "burial clothes"
-	desc = "В данном ящике хранится траурная одежда."
+	desc = "This closet contains mourning clothes."
 
 /obj/structure/closet/burial/populate_contents()
 	for(var/i = 1 to 7)

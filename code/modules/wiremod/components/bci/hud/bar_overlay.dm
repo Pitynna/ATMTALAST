@@ -10,8 +10,7 @@
 
 /obj/item/circuit_component/object_overlay/bar
 	display_name = "Отображение графического столбца"
-	desc = "Требуется ИМК-оболочка. \
-			Компонент, отображающий графический столбец поверх объекта со значениями от 0 до 100."
+	desc = "Requires a BCI shell. Displays a bar over an object, with values from 0 to 100."
 
 	var/datum/port/input/bar_number
 

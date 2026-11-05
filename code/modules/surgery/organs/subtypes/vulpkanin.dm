@@ -7,7 +7,7 @@
 /obj/item/organ/internal/liver/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала вульпканину."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a vulpkanin."
 	icon = 'icons/obj/species_organs/vulpkanin.dmi'
 	item_state = "vulpkanin_liver"
 	alcohol_intensity = 1.4
@@ -15,7 +15,7 @@
 /obj/item/organ/internal/eyes/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали вульпканину."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a vulpkanin."
 	icon = 'icons/obj/species_organs/vulpkanin.dmi'
 	item_state = "vulpkanin_eyes"
 	colourblind_matrix = MATRIX_VULP_CBLIND //The colour matrix parameter that the mob will receive when they get the disability.
@@ -25,19 +25,19 @@
 /obj/item/organ/internal/ears/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали вульпканину."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a vulpkanin."
 
 /obj/item/organ/internal/heart/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало вульпканину."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to a vulpkanin."
 	icon = 'icons/obj/species_organs/vulpkanin.dmi'
 	item_state = "vulpkanin_heart-on"
 	item_base = "vulpkanin_heart"
 
 /obj/item/organ/internal/brain/vulpkanin
 	species_type = /datum/species/vulpkanin
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал вульпканину."
+	desc = "The primary organ of a humanoid's central nervous system. The mind itself resides here. This belonged to a vulpkanin."
 	icon = 'icons/obj/species_organs/vulpkanin.dmi'
 	item_state = "vulpkanin_brain"
 	mmi_icon = 'icons/obj/species_organs/vulpkanin.dmi'
@@ -45,20 +45,20 @@
 /obj/item/organ/internal/lungs/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали вульпканину."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a vulpkanin."
 	icon = 'icons/obj/species_organs/vulpkanin.dmi'
 	item_state = "vulpkanin_lungs"
 
 /obj/item/organ/internal/kidneys/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали вульпканину."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to a vulpkanin."
 	icon = 'icons/obj/species_organs/vulpkanin.dmi'
 	item_state = "vulpkanin_kidneys"
 
 /obj/item/organ/external/tail/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin tail"
-	desc = "Хвост. Этот принадлежал вульпканину."
+	desc = "A tail. This belonged to a vulpkanin."
 	icon_name = "vulptail_s"
 	max_damage = 25

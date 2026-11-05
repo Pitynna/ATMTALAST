@@ -1,7 +1,6 @@
 /obj/item/gun/energy/anomaly_stabilizer
 	name = "anomaly stabilizer"
-	desc = "Продвинутое устройство, предназначенное для стабилизации аномалий. \
-			Имеет две ячейки для ядер аномалий."
+	desc = "An advanced device for stabilizing anomalies. Includes two anomaly core slots."
 	icon = 'icons/obj/anomaly/anomaly_stuff.dmi'
 	icon_state = "pistol_base_item"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'

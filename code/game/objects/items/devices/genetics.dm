@@ -68,7 +68,7 @@
 
 /obj/item/dna_notepad/proc/create_report_paper()
 	var/obj/item/paper/paper = new(drop_location())
-	paper.name = "Блоки генов"
+	paper.name = "Gene Blocks"
 	paper.header += "<center><b>Блоки генов</b></center><br>"
 	paper.header += "<b>Время печати:</b> [station_time_timestamp()]<br><br>"
 	paper.header += "<hr>"

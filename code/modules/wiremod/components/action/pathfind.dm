@@ -5,9 +5,7 @@
  */
 /obj/item/circuit_component/pathfind
 	display_name = "Следопыт"
-	desc = "При срабатывании делает шаг к местоположению цели. \
-			Входной порт для удостоверения личности предназначен для учёта доступа к идентификатору при определении маршрута, \
-			но не предоставляет оболочке фактический доступ."
+	desc = "Takes a step toward the target's location when triggered. The ID input accounts for the card's access when calculating a route, but does not grant the shell that access."
 	category = "Action"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

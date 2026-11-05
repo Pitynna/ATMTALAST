@@ -20,19 +20,19 @@
 //spooky foods (you can't actually make these when it's not halloween)
 /obj/item/reagent_containers/food/snacks/cookie/spookyskull
 	name = "skull cookie"
-	desc = "Жутко! Со вкусом вкуснейшего кальция!"
+	desc = "Spooky! With the flavor of delicious calcium!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "skeletoncookie"
 
 /obj/item/reagent_containers/food/snacks/cookie/spookycoffin
 	name = "coffin cookie"
-	desc = "Жутко! Со вкусом вкуснейшего кофе!!"
+	desc = "Spooky! With the flavor of delicious coffee!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "coffincookie"
 
 /obj/item/storage/spooky
 	name = "trick-o-treat bag"
-	desc = "Тыквообразная сумка, в которой полно всяких вкусностей!"
+	desc = "A pumpkin-shaped bag full of treats!"
 	icon = 'icons/obj/holiday/halloween_items.dmi'
 	icon_state = "treatbag"
 

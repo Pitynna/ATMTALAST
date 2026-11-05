@@ -147,7 +147,7 @@
 		INSTRUMENTAL = "упавшей трубой",
 		PREPOSITIONAL = "упавшей трубе",
 	)
-	fallen_pipe.desc = "Участок трубопровода, проложенного над головой. Похоже, в нём есть довольно крупное пулевое отверстие..."
+	fallen_pipe.desc = "A section of overhead piping. It seems to have a rather large bullet hole..."
 	playsound(landing_turf, 'sound/misc/metal_pipe_falling.ogg', 100, FALSE)
 
 	var/has_victims = FALSE

@@ -8,7 +8,7 @@
  */
 /obj/item/circuit_component/textcase
 	display_name = "Регистр"
-	desc = "Компонент, который преобразует входные данные в заглавные или строчные буквы."
+	desc = "A component that converts its input to uppercase or lowercase."
 	category = "String"
 
 	var/datum/port/input/option/textcase_options

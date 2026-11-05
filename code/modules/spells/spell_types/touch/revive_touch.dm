@@ -14,7 +14,7 @@
 
 /obj/item/melee/touch_attack/revive_touch
 	name = "resurrecting touch"
-	desc = "Воскрешает тело умершего на определенное время."
+	desc = "Temporarily resurrects a dead body."
 	icon_state = "disintegrate"
 	color = "#acb78e"
 

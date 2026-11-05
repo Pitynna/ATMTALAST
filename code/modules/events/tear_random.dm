@@ -21,7 +21,7 @@
 
 /obj/effect/tear/random
 	name = "randomensional tear"
-	desc = "Мощный пространственно-временной разрыв."
+	desc = "A powerful spacetime rift."
 	leader = null
 	possible_mobs = list()
 	var/static/list/hostile_mobs

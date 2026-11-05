@@ -36,7 +36,7 @@
 
 /obj/item/gun_module/muzzle/suppressor/shotgun
 	name = "shotgun suppressor"
-	desc = "Тяжёлый квадратный глушитель, предназначенный для дробовиков и ружей, позволяет значительно снизить шум от выстрелов и интенсивность вспышки."
+	desc = "A heavy square suppressor designed for shotguns. Greatly reduces firing noise and muzzle flash."
 	icon_state = "suppshotgun"
 	overlay_state = "suppshotgun_o"
 	class = GUN_MODULE_CLASS_SHOTGUN_MUZZLE
@@ -44,7 +44,7 @@
 
 /obj/item/gun_module/muzzle/suppressor/heavy
 	name = "heavy suppressor"
-	desc = "Массивный глушитель, предназначенный для крупнокалиберных винтовок, снижает шум выстрелов и интенсивность вспышки."
+	desc = "A massive suppressor for high-caliber rifles. Reduces firing noise and muzzle flash."
 	icon_state = "suppheavy"
 	overlay_state = "suppheavy_o"
 	class = GUN_MODULE_CLASS_SNIPER_MUZZLE
@@ -52,7 +52,7 @@
 
 /obj/item/gun_module/muzzle/suppressor/handmade
 	name = "handmade suppressor"
-	desc = "Сделан из банки, скотча и куска металла. Неплохо глушит звук выстрела, но может в любой момент развалиться на части."
+	desc = "Made from a can, tape and scrap metal. Suppresses gunfire reasonably well, but may fall apart at any moment."
 	icon_state = null
 	base_icon_state = "handmade_supp_"
 	overlay_state = "handmade_supp_1_o"
@@ -96,7 +96,7 @@
 
 /obj/item/gun_module/muzzle/compensator
 	name = "compensator"
-	desc = "Глушитель, совместимый с широким диапазоном огнестрельного оружия. Уменьшает дульную вспышку и отдачу, производимую при выстреле, тем самым немного повышая точность стрельбы."
+	desc = "A muzzle attachment compatible with a wide range of firearms. Reduces muzzle flash and recoil, slightly improving accuracy."
 	icon_state = "comp"
 	item_state = "comp"
 	overlay_state = "comp_o"

@@ -3,7 +3,7 @@
 
 /obj/machinery/icemachine
 	name = "Cream-Master Deluxe"
-	desc = "Современный комплекс для синтеза замороженных молочных десертов. Гарантирует идеальную консистенцию и температуру готового продукта. Ром со вкусом детства."
+	desc = "A modern system for producing frozen dairy desserts. Guarantees ideal consistency and serving temperature. Rum with a taste of childhood."
 	density = TRUE
 	anchored = TRUE
 	icon = 'icons/obj/machines/cooking_machines.dmi'
@@ -14,8 +14,8 @@
 	var/useramount = 15	//Last used amount
 
 /obj/machinery/icemachine/proc/generate_name(reagent_name)
-	var/name_prefix = pick("Капитан", "Доктор", "Мега", "Весёлый", "Генерал", "Профессор")
-	var/name_suffix = pick(" Кремберос", " Взбивайс", " Сладкоежка", " Муссон", " Пломбир", " Эскимо", " Зефирко")
+	var/name_prefix = pick("Captain", "Doctor", "Mega", "Jolly", "General", "Professor")
+	var/name_suffix = pick(" Creamberus", " Whippy", " Sweet Tooth", " Monsoon", " Sundae", " Ice Pop", " Marshmallow")
 	var/cone_name = null	//Heart failure prevention.
 	cone_name += name_prefix
 	cone_name += name_suffix
@@ -133,7 +133,7 @@
 			var/name = generate_name(reagents.get_master_reagent_name())
 			var/obj/item/reagent_containers/food/snacks/icecream/icecreamcup/C
 			C = new/obj/item/reagent_containers/food/snacks/icecream/icecreamcup(loc)
-			C.name = "мороженное в стаканчике [name]"
+			C.name = "[name] ice cream in a cup"
 			C.ru_names = alist(
 				NOMINATIVE = "мороженое в стаканчике \"[name]\"",
 				GENITIVE = "мороженого в стаканчике \"[name]\"",
@@ -154,7 +154,7 @@
 			var/name = generate_name(reagents.get_master_reagent_name())
 			var/obj/item/reagent_containers/food/snacks/icecream/icecreamcone/C
 			C = new/obj/item/reagent_containers/food/snacks/icecream/icecreamcone(loc)
-			C.name = "мороженное в рожке [name]"
+			C.name = "[name] ice cream cone"
 			C.ru_names = alist(
 				NOMINATIVE = "мороженое в рожке \"[name]\"",
 				GENITIVE = "мороженого в рожке \"[name]\"",
@@ -195,8 +195,8 @@
 		if(I.reagents.total_volume > 29)
 			I.reagents.remove_any(1)
 		I.reagents.add_reagent("sprinkles", 1)
-		I.name += " c посыпкой"
-		I.desc += " С ароматной посыпкой."
+		I.name += " with sprinkles"
+		I.desc += " With flavorful sprinkles."
 		return ATTACK_CHAIN_PROCEED_SUCCESS
 
 	return ..()

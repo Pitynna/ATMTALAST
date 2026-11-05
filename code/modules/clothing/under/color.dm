@@ -136,7 +136,7 @@
 
 /obj/item/clothing/under/prison
 	name = "prison jumpsuit"
-	desc = "Cтандартная одежда заключенных из \"Нанотрейзен\". Датчики костюма заблокированы в максимальном режиме отслеживания."
+	desc = "Standard Nanotrasen prisoner clothing. Its suit sensors are locked at the maximum tracking setting."
 	icon_state = "prison"
 	item_state = "prison"
 	item_color = "prison"
@@ -152,7 +152,7 @@
 
 /obj/item/clothing/under/color/red
 	name = "red jumpsuit"
-	desc = "А-а-а! Это что, кровь?! Аа... нет... показалось..."
+	desc = "Aah! Is that blood?! Oh... no... Just my imagination..."
 	icon_state = "/obj/item/clothing/under/color/red"
 	greyscale_colors = "#eb0c07"
 

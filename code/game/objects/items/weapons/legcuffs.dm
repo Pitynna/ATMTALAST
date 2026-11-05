@@ -109,10 +109,10 @@
 	. = ..()
 	desc = initial(desc)
 	if(IED)
-		desc += "\n[span_warning("К н[GEND_HIM_HER(src)] подсоединен[GEND_A_O_Y(IED)] [IED.declent_ru(NOMINATIVE)]!")]"
+		desc += "\n[span_warning("It has \a [IED] attached!")]"
 
 	if(sig)
-		desc += "\n[span_warning("К н[GEND_HIM_HER(src)] подсоединен[GEND_A_O_Y(sig)] [sig.declent_ru(NOMINATIVE)].")]"
+		desc += "\n[span_warning("It has \a [sig] attached.")]"
 
 /obj/item/restraints/legcuffs/beartrap/proc/on_entered(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER

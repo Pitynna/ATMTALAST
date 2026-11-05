@@ -7,8 +7,7 @@
 
 /obj/item/circuit_component/target_intercept
 	display_name = "Перехват цели"
-	desc = "Требуется ИМК-оболочка. \
-			При активации этот компонент позволит пользователю нацеливаться на объект выводить ссылку на него."
+	desc = "Requires a BCI shell. When activated, lets the user target an object and outputs a reference to it."
 	category = "BCI"
 
 	required_shells = list(/obj/item/organ/internal/cyberimp/brain/bci)

@@ -299,7 +299,7 @@
 
 /obj/item/lighter/zippo/detective
 	name = "Detective zippo"
-	desc = "Лимитированная версия зажигалки Зиппо для детектива. Кажется, что её доставили прямиком из нуарных фильмов."
+	desc = "A limited-edition detective's Zippo lighter. It looks as if it came straight out of a film noir."
 	icon_state = "zippo_dec"
 	item_state = "deczippo"
 	icon_on = "zippo_dec_on"
@@ -331,7 +331,7 @@
 
 /obj/item/lighter/zippo/gold
 	name = "gold lighter"
-	desc = "Зажигалка Zippo из настоящего золота с замысловатой гравировкой."
+	desc = "An intricately engraved Zippo lighter made from real gold."
 	icon_state = "gold_zippo"
 	item_state = "goldzippo"
 	icon_on = "gold_zippo_on"
@@ -339,7 +339,7 @@
 
 /obj/item/lighter/zippo/grenade
 	name = "grenade lighter"
-	desc = "Зажигалка в виде гранаты."
+	desc = "A grenade-shaped lighter."
 	icon_state = "grenade_lighter"
 	item_state = "zippo_grenade"
 	icon_on = "grenade_lighter_on"
@@ -407,7 +407,7 @@
 
 /obj/item/match/update_desc(updates = ALL)
 	. = ..()
-	desc = lit ? "[DECLENT_RU_CAP(src, NOMINATIVE)], охваченная пламенем." : burnt ? "[DECLENT_RU_CAP(src, NOMINATIVE)]. Повидала всякое." : initial(desc)
+	desc = lit ? "[capitalize(name)], engulfed in flame." : burnt ? "[capitalize(name)]. It has seen better days." : initial(desc)
 
 /obj/item/match/get_temperature()
 	return lit * heat

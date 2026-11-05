@@ -3,7 +3,7 @@
 	desc = "Now with Dann O's available!"
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "cereal_off"
-	thiscooktype = "хлопья"
+	thiscooktype = "cereal"
 	cooktime = 200
 	onicon = "cereal_on"
 	officon = "cereal_off"
@@ -15,8 +15,8 @@
 	copyto.copy_overlays(copyme)
 
 /obj/machinery/cooker/cerealmaker/changename(obj/item/name, obj/item/setme)
-	setme.name = "коробка хлопьев из [name.declent_ru(GENITIVE)]"
-	setme.desc = "[name.desc] Оно было переработано в [thiscooktype]."
+	setme.name = "[name.name] cereal box"
+	setme.desc = "[name.desc] It has been processed into [thiscooktype]."
 
 /obj/machinery/cooker/cerealmaker/gettype()
 	var/obj/item/reagent_containers/food/snacks/cereal/type = new(get_turf(src))

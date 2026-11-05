@@ -146,7 +146,7 @@
 
 /obj/item/gun/projectile/bow/compound
 	name = "compound bow"
-	desc = "Композитный лук, предназначенный для любительской охоты и соревнований."
+	desc = "A composite bow for recreational hunting and competitions."
 	icon_state = "modernbow"
 	base_icon_state = "modernbow"
 	item_state = "modernbow"
@@ -161,7 +161,7 @@
 
 /obj/item/gun/projectile/bow/tactical
 	name = "tactical bow"
-	desc = "Тактический лук \"Синдиката\", предназначенный для особых операций, для которых не подходит любое другое оружие. Для удобства прицеливания установлен прицел малой кратности."
+	desc = "A Syndicate tactical bow for special operations where other weapons are unsuitable. Includes a low-magnification sight for easier aiming."
 	icon_state = "assaultbow"
 	base_icon_state = "assaultbow"
 	item_state = "assaultbow"
@@ -182,7 +182,7 @@
 // MARK: Handmade
 /obj/item/gun/projectile/bow/handmade
 	name = "handmade bow"
-	desc = "Самодельный лук, сделанный из того, что нашлось под рукой."
+	desc = "A homemade bow assembled from whatever was available."
 	icon_state = "homemade"
 	base_icon_state = "homemade"
 	item_state = "homemade"
@@ -232,7 +232,7 @@
 
 /obj/item/storage/backpack/quiver/modern
 	name = "modern quiver"
-	desc = "Качественный колчан из синтетической кожи."
+	desc = "A well-made synthetic leather quiver."
 	icon_state = "quivermodern"
 	item_state = "quivermodern"
 	storage_slots = 30
@@ -252,7 +252,7 @@
 
 /obj/item/storage/backpack/quiver/homemade
 	name = "homemade quiver"
-	desc = "Колчан из того, что можно найти в ближайшей куче мусора. Лучше чем ничего."
+	desc = "A quiver made from things found in the nearest rubbish heap. Better than nothing."
 	icon_state = "homemade"
 	storage_slots = 10
 

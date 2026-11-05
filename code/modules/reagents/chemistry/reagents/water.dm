@@ -23,8 +23,8 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	var/cooling_temperature = 2
 	process_flags = ORGANIC | SYNTHETIC
 	drink_icon = "glass_clear"
-	drink_name = "Стакан воды"
-	drink_desc = "Обычный стакан обычной воды."
+	drink_name = "Glass of Water"
+	drink_desc = "The father of all refreshments."
 	var/water_temperature = COLD_WATER_TEMPERATURE	// As reagents don't have a temperature value, we'll just use 10 celsius.
 
 /// How many wet stacks you get per units of water when it's applied by touch.
@@ -125,8 +125,8 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	color = "#770000" // rgb: 40, 0, 0
 	metabolization_rate = 12.5 * REAGENTS_METABOLISM //fast rate so it disappears fast.
 	drink_icon = "glass_red"
-	drink_name = "Стакан томатного сока"
-	drink_desc = "Стоп, а это точно томатный сок?"
+	drink_name = "Glass of Tomato juice"
+	drink_desc = "Are you sure this is tomato juice?"
 	taste_description = "крови"
 	taste_mult = 1.3
 
@@ -335,8 +335,8 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	color = "#0064C8" // rgb: 0, 100, 200
 	process_flags = ORGANIC | SYNTHETIC
 	drink_icon = "glass_clear"
-	drink_name = "Стакан воды"
-	drink_desc = "Обычный стакан обычной воды."
+	drink_name = "Glass of Water"
+	drink_desc = "The father of all refreshments."
 	taste_description = "воды"
 	devil_regen_ignored = TRUE
 

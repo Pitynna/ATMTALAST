@@ -126,7 +126,7 @@
 
 /obj/item/clothing/neck/poncho/security
 	name = "corporate poncho"
-	desc = "Пончо в корпоративных цветах, при его виде пропадает желание нелегально пересекать сектор"
+	desc = "A poncho in corporate colors. Looking at it makes you lose any desire to cross the sector illegally."
 	icon_state = "secponcho"
 	item_color = "sec"
 

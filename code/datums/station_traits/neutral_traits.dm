@@ -195,7 +195,7 @@
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/birthday_invite/proc/setup_card(birthday_name)
-	desc = "Небольшая карточка с надписью: \"[birthday_name] сегодня празднует/ют свой день рождения!\""
+	desc = "A small card that reads: \"It's [birthday_name]'s birthday today!\""
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "slip"
 

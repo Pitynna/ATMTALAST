@@ -74,7 +74,7 @@
 // MARK: 70mm HE
 /obj/projectile/bullet/a70mm_he
 	name = "70mm HE missile"
-	desc = "Небольшой взрыв."
+	desc = "A small explosion."
 	icon_state = "70mm-he"
 	icon = 'icons/obj/weapons/ammo.dmi'
 	damage = 25

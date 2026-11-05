@@ -20,7 +20,7 @@
 
 /obj/item/circuit_component/wiremod_scanner
 	display_name = "Сканер"
-	desc = "Используется для получения отсканированных объектов со сканера."
+	desc = "Returns objects scanned by the scanner."
 
 	/// Called when afterattack is called on the shell.
 	var/datum/port/output/signal

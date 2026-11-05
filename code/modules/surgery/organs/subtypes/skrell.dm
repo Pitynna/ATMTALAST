@@ -1,7 +1,7 @@
 /obj/item/organ/internal/liver/skrell
 	species_type = /datum/species/skrell
 	name = "skrell liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала скреллу."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a skrell."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_liver"
 	alcohol_intensity = 4
@@ -99,7 +99,7 @@
 /obj/item/organ/internal/lungs/skrell
 	species_type = /datum/species/skrell
 	name = "skrell lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали скреллу."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a skrell."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_lungs"
 
@@ -113,7 +113,7 @@
 /obj/item/organ/internal/eyes/skrell
 	species_type = /datum/species/skrell
 	name = "skrell eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали скреллу."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a skrell."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_eyes"
 	see_in_dark = 5
@@ -122,4 +122,4 @@
 /obj/item/organ/internal/ears/skrell
 	species_type = /datum/species/skrell
 	name = "skrell ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали скреллу."
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a skrell."

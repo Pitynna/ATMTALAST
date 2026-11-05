@@ -157,11 +157,7 @@
 
 /obj/item/gun/energy/gun/nuclear/gate
 	name = "ntsl energy gun"
-	desc = "Энергетический карабин, который будто создан для пустоты: \
-			в открытом космосе и внутри врат ловит рассеянное излучение, \
-			сам набирает заряд и позволяет стрелять. Но стоит вернуться на \
-			станцию — что-то в её энергосети глушит контур: выстрел блокируется, \
-			индикатор гаснет, оружие становится бесполезным куском металла."
+	desc = "An energy carbine seemingly made for the void. In open space and inside gateways, it gathers ambient radiation to recharge and fire. Back on the station, something in the power grid suppresses its circuitry: firing locks out, the indicator goes dark, and the weapon becomes a useless piece of metal."
 	icon_state = "ntsl"
 	item_state = "ntsl"
 	charge_sections = 3
@@ -238,8 +234,7 @@
 	name = "Pulse gatling gun"
 	icon_state = "gatling_pulse"
 	item_state = "gatling_pulse"
-	desc = "Огромное пульсовое орудие, обладающее выдающейся скорострельностью и разрушительной силой. \
-	Является модификацией Гатлинг-лазера. Имеет самую совершенную батарею в мире, самозаряд которой полностью компенсирует энергозатраты при стрельбе."
+	desc = "An enormous pulse weapon with exceptional fire rate and destructive power, modified from a Gatling laser. Its extraordinarily advanced battery recharges fast enough to fully offset its firing costs."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse)
 	cell_type = /obj/item/stock_parts/cell/infinite
 

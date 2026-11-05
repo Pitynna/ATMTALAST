@@ -25,26 +25,26 @@
 
 /obj/item/clothing/under/rank/scientist/student
 	name = "scientist student jumpsuit"
-	desc = "Этот комбинезон обладает специальными знаками, которые обозначают то, что его владелец — учёный-практикант. Он сделан из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This jumpsuit bears special markings identifying its wearer as a student scientist. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "student"
 	item_color = "student"
 
 /obj/item/clothing/under/rank/scientist/student/skirt
 	name = "scientist student jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — учёный-практикант. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a student scientist. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "studentf"
 	item_color = "studentf"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/rank/scientist/student/assistant
 	name = "scientist assistant jumpsuit"
-	desc = "Этот комбинезон обладает специальными знаками, которые обозначают то, что его владелец — научный ассистент. Он сделан из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This jumpsuit bears special markings identifying its wearer as a research assistant. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "sci_ass"
 	item_color = "sci_ass"
 
 /obj/item/clothing/under/rank/scientist/student/assistant/skirt
 	name = "scientist assistant jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — научный ассистент. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a research assistant. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "sci_ass_f"
 	item_color = "sci_ass_f"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
@@ -59,7 +59,7 @@
 
 /obj/item/clothing/under/rank/chemist/skirt
 	name = "chemist's jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — химик. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a chemist. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "chemistryf"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -104,7 +104,7 @@
 
 /obj/item/clothing/under/rank/virologist/skirt
 	name = "virologist's jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — вирусолог. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a virologist. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "virologyf"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -148,31 +148,31 @@
 
 /obj/item/clothing/under/rank/medical/intern
 	name = "intern jumpsuit"
-	desc = "Этот комбинезон обладает специальными знаками, которые обозначают то, что его владелец — интерн. Он сделан из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This jumpsuit bears special markings identifying its wearer as a medical intern. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "intern"
 	item_state = "intern"
 
 /obj/item/clothing/under/rank/medical/intern/skirt
 	name = "intern jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — интерн. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a medical intern. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "internf"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/rank/medical/intern/assistant
 	name = "medical assistant jumpsuit"
-	desc = "Этот комбинезон обладает специальными знаками, которые обозначают то, что его владелец — ассистирующий врач. Он сделан из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This jumpsuit bears special markings identifying its wearer as a medical assistant. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "med_ass"
 	item_state = "med_ass"
 
 /obj/item/clothing/under/rank/medical/intern/assistant/skirt
 	name = "medical assistant jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — ассистирующий врач. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a medical assistant. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "med_ass_f"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/rank/medical/skirt
 	name = "medical doctor's jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — врач. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a doctor. Its specialized fabric offers some protection against biological contamination."
 	icon_state = "medicalf"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -279,21 +279,21 @@
 
 /obj/item/clothing/under/rank/medical/mining_medic
 	name = "mining medic's jumpsuit"
-	desc = "Этот комбинезон обладает специальными знаками, которые обозначают то, что его владелец — шахтёрский врач. Он сделан из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This jumpsuit bears special markings identifying its wearer as a mining medic. Its specialized fabric offers some protection against biological contamination."
 	species_restricted = list("exclude", "lesser form")
 	icon_state = "mining_medic"
 	item_state = "mining_medic"
 
 /obj/item/clothing/under/rank/medical/mining_medic/skirt
 	name = "mining medic's jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — шахтёрский врач. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a mining medic. Its specialized fabric offers some protection against biological contamination."
 	species_restricted = list("exclude", "lesser form")
 	icon_state = "mining_medic_f"
 	item_state = "mining_medic_f"
 
 /obj/item/clothing/under/rank/medical/brown
 	name = "brown medical scrubs"
-	desc = "Специализированная врачебная одежда, которую носят во время операций. Эта окрашена в коричневый цвет. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "Specialized medical clothing worn during surgery, colored brown. Its specialized fabric offers some protection against biological contamination."
 	gender = FEMALE
 	species_restricted = list("exclude", "lesser form")
 	icon_state = "scrubs_brown"
@@ -301,14 +301,14 @@
 
 /obj/item/clothing/under/rank/medical/mining_paramedic
 	name = "mining paramedic's jumpsuit"
-	desc = "Этот комбинезон обладает специальными знаками, которые обозначают то, что его владелец — шахтёрский врач. Он сделан из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This jumpsuit bears special markings identifying its wearer as a mining medic. Its specialized fabric offers some protection against biological contamination."
 	species_restricted = list("exclude", "lesser form")
 	icon_state = "mining_paramedic"
 	item_state = "mining_paramedic"
 
 /obj/item/clothing/under/rank/medical/mining_paramedic/skirt
 	name = "mining paramedic's jumpskirt"
-	desc = "Эта юбка обладает специальными знаками, которые обозначают то, что её владелец — шахтёрский врач. Она сделана из специальной ткани, предоставляющей некоторую защиту от биологического загрязнения."
+	desc = "This skirt bears special markings identifying its wearer as a mining medic. Its specialized fabric offers some protection against biological contamination."
 	species_restricted = list("exclude", "lesser form")
 	icon_state = "mining_paramedic_f"
 	item_state = "mining_paramedic_f"

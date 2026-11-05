@@ -1,7 +1,6 @@
 /obj/item/reagent_containers/food/snacks/proteinbar_banana
 	name = "Banana Paradise protein bar"
-	desc = "Специализированный пищевой продукт с высоким содержанием белка. \
-			Разработан филиалом Donk Co расположенным на планете клоунов."
+	desc = "A specialized high-protein food developed by Donk Co.'s branch on the clown planet."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "proteinbar_bananza"
 	filling_color = "#d1a62f"
@@ -13,8 +12,7 @@
 
 /obj/item/reagent_containers/food/snacks/proteinbar_cherry
 	name = "Cherry Slimegirl protein bar"
-	desc = "Специализированный пищевой продукт с высоким содержанием белка. \
-			Долгое время существовал миф, будто в его состав входит слизь одной известной слаймолюдки."
+	desc = "A specialized high-protein food. For years, a myth claimed that it contained slime from a certain famous slimegirl."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "proteinbar_cherry"
 	filling_color = "#d1a62f"
@@ -26,8 +24,7 @@
 
 /obj/item/reagent_containers/food/snacks/proteinbar_beef
 	name = "Bessie's Legacy protein bar"
-	desc = "Специализированный пищевой продукт с высоким содержанием белка. \
-			Во время производства ни одна корова не пострадала."
+	desc = "A specialized high-protein food. No cows were harmed during its production."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "proteinbar_beef"
 	filling_color = "#d1a62f"

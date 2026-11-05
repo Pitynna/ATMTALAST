@@ -101,7 +101,7 @@
 // MARK: AXMC
 /obj/item/gun/projectile/automatic/sniper_rifle/axmc
 	name = "AXMC sniper rifle"
-	desc = "Тяжёлая снайперская винтовка калибра .338."
+	desc = "A heavy .338-caliber sniper rifle."
 	icon_state = "axmc"
 	item_state = "AXMC"
 	mag_type = /obj/item/ammo_box/magazine/a338

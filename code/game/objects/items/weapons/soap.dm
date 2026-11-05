@@ -210,7 +210,7 @@
 	cleanspeed = 40 //slightly better because deluxe -- captain gets one of these
 
 /obj/item/soap/ert
-	desc = "Мыло высокого качества, с запахом морской волны, специально для очистки полов от въевшейся крови неудачливого экипажа."
+	desc = "High-quality sea-breeze-scented soap, specially made for scrubbing unfortunate crew members' dried blood from the floors."
 	icon_state = "soapert"
 	item_state = "soapert"
 	cleanspeed = 10

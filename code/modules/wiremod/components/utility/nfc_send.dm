@@ -7,8 +7,7 @@
 
 /obj/item/circuit_component/nfc_send
 	display_name = "NFC передатчик"
-	desc = "Отправляет пакет данных через NFC. \
-			Если установлен ключ шифрования, переданные данные будут приняты только получателями с таким же ключом шифрования."
+	desc = "Sends a data packet over NFC. If an encryption key is set, only receivers with the same key will accept it."
 	category = "Utility"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL

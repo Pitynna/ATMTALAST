@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 
 /obj/item/stack/rods/fireproof
 	name = "fireproof rods"
-	desc = "Жаропрочные стержни, способные выдержать жар в несколько тысяч градусов. Могут использоваться для строительства мостов над лавой."
+	desc = "Heat-resistant rods capable of withstanding several thousand degrees. Can be used to build bridges over lava."
 	singular_name = "fireproof rod"
 	icon_state = "f_rods"
 	item_state = "f_rods"

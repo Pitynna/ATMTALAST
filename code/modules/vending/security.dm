@@ -179,7 +179,7 @@
 
 /obj/item/security_voucher/detective
 	name = "detective's security voucher"
-	desc = "Жетон, позволяющий получить детективский набор оружия из торгового автомата \"SecTech\". Выдаётся детективам в штатном порядке."
+	desc = "A token redeemable for a detective's weapon kit from a SecTech vending machine. Standard issue for detectives."
 	icon_state = "detectives_voucher"
 
 /obj/item/security_voucher/detective/redeem_kits_list()

@@ -106,6 +106,6 @@
 
 /obj/item/clothing/suit/storage/labcoat/mining_medic
 	name = "mining medic's labcoat"
-	desc = "Стерильный белый халат с коричневыми нашивками на плечах. От него исходит тонкий запах пепла."
+	desc = "A sterile white lab coat with brown shoulder patches. It smells faintly of ash."
 	icon_state = "mining_labcoat_open"
 	item_state = "mining_labcoat_open"

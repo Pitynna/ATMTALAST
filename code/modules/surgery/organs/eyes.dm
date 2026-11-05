@@ -15,7 +15,7 @@
 
 /obj/item/organ/internal/eyes
 	name = "eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали человеку."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a human."
 	gender = PLURAL
 	icon_state = "eyes"
 	parent_organ_zone = BODY_ZONE_HEAD

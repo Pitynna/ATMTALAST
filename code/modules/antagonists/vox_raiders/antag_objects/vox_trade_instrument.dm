@@ -1,6 +1,6 @@
 /obj/item/hand_valuer
 	name = "handheld appraiser"
-	desc = "Приспособление воксов для оценки стоимости объекта."
+	desc = "A vox device for appraising an object's value."
 	icon = 'icons/obj/machines/trader_machine.dmi'
 	icon_state = "valuer"
 	base_icon_state = "valuer"

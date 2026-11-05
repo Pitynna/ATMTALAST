@@ -20,8 +20,7 @@
 
 /obj/item/circuit_component/compact_remote
 	display_name = "Компактный пульт"
-	desc = "Используется для получения входных сигналов от компактного пульта дистанционного управления.\
-			Используйте пульт в руке для активации выходного сигнала."
+	desc = "Receives input from a compact remote control. Use the remote in your hand to activate the output signal."
 
 	/// Called when attack_self is called on the shell.
 	var/datum/port/output/signal

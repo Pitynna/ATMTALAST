@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/space/hardsuit/vox
 	name = "vox raider hardsuit"
-	desc = "Специализированный космический защитный костюм воксов-рейдеров. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными. За счет иной структуры, костюм рейдеров уступает в защитных свойствах костюму наемников."
+	desc = "A specialized protective spacesuit for vox raiders. Its synthetic material allows operation in hostile environments, making it highly versatile. Its different construction offers less protection than mercenary armor."
 	icon_state = "vox-raider"
 	item_color = "vox-raider"
 	item_state = "rig_suit"
@@ -35,7 +35,7 @@
 
 /obj/item/clothing/head/helmet/space/hardsuit/vox
 	name = "vox raider helmet"
-	desc = "Специализированный космический шлем воксов-рейдеров."
+	desc = "A specialized vox raider space helmet."
 	icon_state = "vox-raider"
 	item_color = "vox-raider"
 	species_restricted = list(SPECIES_VOX)
@@ -56,8 +56,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/vox/trooper
 	name = "vox raider trooper hardsuit"
-	desc = "Специализированный космический защитный костюм воксов-рейдеров. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными. За счет иной структуры, костюм рейдеров уступает в защитных свойствах костюму наемников. \
-			\nКостюм космического штурмовика рейдеров с защитой от огнестрела и колюще-режущего."
+	desc = "A specialized protective spacesuit for vox raiders. Its synthetic material allows operation in hostile environments, making it highly versatile. Its different construction offers less protection than mercenary armor.\nA raider assault spacesuit offering protection against firearms, piercing and slashing attacks."
 	icon_state = "vox-raider-trooper"
 	item_color = "vox-raider-trooper"
 	armor = list(MELEE = 75, BULLET = 50, LASER = 30, ENERGY = 20, BOMB = 25, FIRE = 80, ACID = 200)
@@ -74,8 +73,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/vox/scout
 	name = "vox raider scout hardsuit"
-	desc = "Специализированный космический защитный костюм воксов-рейдеров. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными. За счет иной структуры, костюм рейдеров уступает в защитных свойствах костюму наемников. \
-			\nКостюм разведчика не сковывает движение и помогает владельцу удобней двигаться в условиях невесомости."
+	desc = "A specialized protective spacesuit for vox raiders. Its synthetic material allows operation in hostile environments, making it highly versatile. Its different construction offers less protection than mercenary armor.\nThis scout suit leaves movement unrestricted and helps its wearer maneuver comfortably in zero gravity."
 	icon_state = "vox-raider-scout"
 	item_color = "vox-raider-scout"
 	armor = list(MELEE = 10, BULLET = 20, LASER = 30, ENERGY = 30, BOMB = 15, FIRE = 80, ACID = 200)
@@ -92,8 +90,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/vox/medic
 	name = "vox raider medic hardsuit"
-	desc = "Специализированный космический защитный костюм воксов-рейдеров. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными. За счет иной структуры, костюм рейдеров уступает в защитных свойствах костюму наемников. \
-			\nКостюм для работы в условиях отдаленности от опасностей. Более подвижен и обладает приемлимыми свойствами защиты от воздействий различного рода снарядов, но из-за своей структуры способен нанести вред носителю при взрывных воздействиях или колющих атак. Костюм отлично выдерживает радиационный фон и кислотное воздействие и биологическими угрозами. Имеет хранилище для ношения аптечек контейнеров с химикатами."
+	desc = "A specialized protective spacesuit for vox raiders. Its synthetic material allows operation in hostile environments, making it highly versatile. Its different construction offers less protection than mercenary armor.\nA mobile suit for working away from direct danger, with reasonable protection against various projectiles. Its construction can injure the wearer during explosions or piercing attacks. Highly resistant to radiation, acids and biological hazards. Includes storage for medical kits and chemical containers."
 	icon_state = "vox-raider-medic"
 	item_color = "vox-raider-medic"
 	armor = list(MELEE = -30, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = -30, FIRE = 120, ACID = INFINITY)
@@ -134,8 +131,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/vox/mechanic
 	name = "vox raider mechanic hardsuit"
-	desc = "Специализированный космический защитный костюм воксов-рейдеров. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными. За счет иной структуры, костюм рейдеров уступает в защитных свойствах костюму наемников. \
-			\nКостюм для работы в условиях крайне опасных и недружелюбных атмосфер. За счет своей структуры и технологии рассеивания тепла, костюм обладает хорошей защитой от энергетического оружия."
+	desc = "A specialized protective spacesuit for vox raiders. Its synthetic material allows operation in hostile environments, making it highly versatile. Its different construction offers less protection than mercenary armor.\nDesigned for extremely dangerous atmospheres. Its construction and heat-dissipation technology provide good protection against energy weapons."
 	icon_state = "vox-raider-mechanic"
 	item_color = "vox-raider-mechanic"
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
@@ -167,8 +163,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/vox/heavy
 	name = "vox raider heavy hardsuit"
-	desc = "Специализированный космический защитный костюм воксов-рейдеров. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными. За счет иной структуры, костюм рейдеров уступает в защитных свойствах костюму наемников. \
-			\nТяжелый огнеупорный и взрывостойкий костюм рейдеров с превосходной защитой от энергетического оружия и колюще-режущих и приемлимой от огнестрела. Костюм был разработан для противостояния механизированным силам в условиях космического пространства. К сожалению, его вес и ресиверы не настолько совершены, из-за чего он уступает в скорости."
+	desc = "A specialized protective spacesuit for vox raiders. Its synthetic material allows operation in hostile environments, making it highly versatile. Its different construction offers less protection than mercenary armor.\nHeavy, fireproof and blast-resistant armor with excellent protection against energy weapons, piercing and slashing attacks, and reasonable protection against firearms. Designed to confront mechanized forces in space. Its weight and imperfect actuators reduce movement speed."
 	icon_state = "vox-raider-heavy"
 	item_color = "vox-raider-heavy"
 	w_class = WEIGHT_CLASS_HUGE
