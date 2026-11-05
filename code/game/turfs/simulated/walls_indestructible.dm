@@ -292,23 +292,6 @@
 /turf/simulated/wall/indestructible/invisible/view_portal
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/turf/simulated/wall/indestructible/bingle
-	name = "Bingle Pit wall"
-	desc = "Оно... синее. Это всё, что приходит вам в голову. Вы не уверены, что это вообще можно разрушить."
-	icon = 'icons/turf/walls/bingle.dmi'
-	icon_state = "wall-0"
-	smooth = SMOOTH_BITMASK
-
-/turf/simulated/wall/indestructible/bingle/get_ru_names()
-	return alist(
-		NOMINATIVE = "яма Бинглов",
-		GENITIVE = "ямы Бинглов",
-		DATIVE = "яме Бинглов",
-		ACCUSATIVE = "яму Бинглов",
-		INSTRUMENTAL = "ямой Бинглов",
-		PREPOSITIONAL = "яме Бинглов",
-	)
-
 /turf/simulated/wall/indestructible/opsglass
 	name = "window"
 	icon = 'icons/obj/smooth_structures/plastitanium_window.dmi'

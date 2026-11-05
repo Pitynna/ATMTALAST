@@ -78,13 +78,10 @@ GLOBAL_VAR_INIT(refid_filter, TYPEID(filter(type="angular_blur")))
 
 #define isslime(A) (istype(A, /mob/living/simple_animal/slime))
 
-#define ispulsedemon(A) (istype(A, /mob/living/simple_animal/demon/pulse_demon))
 
 #define isvampireanimal(A) (istype(A, /mob/living/simple_animal/hostile/vampire))
 
-#define isbingle(A) (istype(A, /mob/living/simple_animal/hostile/bingle))
 
-#define is_binglelord(A) (istype(A, /mob/living/simple_animal/hostile/bingle/lord))
 
 // Objects
 #define isobj(A) (istype(A, /obj)) //override the byond proc because it returns true on children of /atom/movable that aren't objs
@@ -339,8 +336,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isnymph(A) (istype(A, /mob/living/simple_animal/diona))
 #define ishostile(A) (istype(A, /mob/living/simple_animal/hostile))
 #define isterrorspider(A) (istype(A, /mob/living/simple_animal/hostile/poison/terror_spider))
-#define isslaughterdemon(A) (istype(A, /mob/living/simple_animal/demon/slaughter))
-#define isdemon(A) (istype(A, /mob/living/simple_animal/demon))
 #define ismorph(A) (istype(A, /mob/living/simple_animal/hostile/morph))
 #define isborer(A) (istype(A, /mob/living/simple_animal/borer))
 #define isairmob(A) (istype(A, /mob/living/simple_animal/hostile/airmob))
@@ -390,7 +385,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isshadowling(A) (is_species(A, /datum/species/shadow/ling))
 #define isshadowlinglesser(A) (is_species(A, /datum/species/shadow/ling/lesser))
 #define isabductor(A) (is_species(A, /datum/species/abductor))
-#define isgolem(A) (is_species(A, /datum/species/golem))
 #define ismonkey(A) (is_species(A, /datum/species/monkey))
 #define isfarwa(A) (is_species(A, /datum/species/monkey/tajaran))
 #define iswolpin(A) (is_species(A, /datum/species/monkey/vulpkanin))
@@ -401,8 +395,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isskeleton(A) (is_species(A, /datum/species/skeleton))
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
 #define isunathi(A) (is_species(A, /datum/species/unathi))
-#define isashwalker(A) (is_species(A, /datum/species/unathi/ashwalker))
-#define isashwalkershaman(A) (is_species(A, /datum/species/unathi/ashwalker/shaman))
 #define isdraconid(A) (is_species(A, /datum/species/unathi/draconid))
 #define istajaran(A) (is_species(A, /datum/species/tajaran))
 #define isvulpkanin(A) (is_species(A, /datum/species/vulpkanin))

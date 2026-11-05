@@ -836,7 +836,6 @@
 /area/derelict/security)
 "cn" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/innards,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "darkred"

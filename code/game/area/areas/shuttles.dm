@@ -316,11 +316,6 @@
 /area/shuttle/trade/sol
 	name = "Sol Freighter"
 
-/area/shuttle/freegolem
-	name = "Free Golem Ship"
-	icon_state = "purple"
-	xenobiology_compatible = TRUE
-
 /area/shuttle/pirate_corvette
 	name = "Pirate Corvette"
 	requires_power = TRUE

@@ -640,32 +640,9 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	id_access_list = list(ACCESS_BAR)
 	outfit = /datum/outfit/spacebartender
 
-/obj/effect/mob_spawn/human/bartender/alive
-	death = FALSE
-	roundstart = FALSE
-	allow_species_pick = TRUE
-	allow_prefs_prompt = TRUE
-	allow_gender_pick = TRUE
-	allow_name_pick = TRUE
-	name = "bartender sleeper"
-	icon = 'icons/obj/machines/cryogenic2.dmi'
-	icon_state = "sleeper"
-	description = "Застряв на Лаваленде, вы можете попытаться вернуться к цивилизации... или подавать напитки тем, кто забредёт к вам."
-	flavour_text = "Вы космический бармен!\nВремя смешивать напитки и менять жизни. Погодите, куда это ваш бар только что переместился?"
-	assignedrole = "Space Bartender"
-
 /obj/effect/mob_spawn/human/bartender/special(mob/living/carbon/human/H)
 	GLOB.human_names_list += H.real_name
 	return ..()
-
-/obj/effect/mob_spawn/human/beach/alive/lifeguard
-	flavour_text = "Вы бодрый спасатель!\nВаша задача — следить, чтобы никто не утонул и не стал обедом для акул.\nНо внезапно весь ваш пляж перенёсся в этот странный ад. Вы не готовы к такому, но всё равно будете защищать своих гостей!"
-	description = "Попытайтесь выжить на Лаваленде с жалким снаряжением спасателя. Или спрячьтесь в своём биодоме."
-	mob_gender = FEMALE
-	name = "lifeguard sleeper"
-	id_job = "Lifeguard"
-	allow_gender_pick = FALSE
-	outfit = /datum/outfit/beachbum/female
 
 /datum/outfit/spacebartender
 	name = "Space Bartender"
@@ -675,37 +652,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	shoes = /obj/item/clothing/shoes/color/black
 	glasses = /obj/item/clothing/glasses/science/sunglasses
 	id = /obj/item/card/id
-
-/obj/effect/mob_spawn/human/beach
-	outfit = /datum/outfit/beachbum
-
-/obj/effect/mob_spawn/human/beach/alive
-	death = FALSE
-	roundstart = FALSE
-	allow_species_pick = TRUE
-	allow_prefs_prompt = TRUE
-	allow_gender_pick = TRUE
-	allow_name_pick = TRUE
-	mob_name = "Beach Bum"
-	name = "beach bum sleeper"
-	icon = 'icons/obj/machines/cryogenic2.dmi'
-	icon_state = "sleeper"
-	flavour_text = "Вы просто обожаете пляж!\nСлучилось что-то странное, но вы слишком расслаблены, чтобы беспокоиться."
-	description = "Попытайтесь выжить на Лаваленде или просто наслаждайтесь пляжем, ожидая посетителей."
-	assignedrole = "Beach Bum"
-
-/obj/effect/mob_spawn/human/beach/alive/special(mob/living/carbon/human/H)
-	GLOB.human_names_list += H.real_name
-	return ..()
-
-/datum/outfit/beachbum
-	name = "Beach Bum"
-	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/shorts/red
-
-/datum/outfit/beachbum/female
-	name = "Beach Bum (female)"
-	uniform = /obj/item/clothing/under/swimsuit/red
 
 /////////////////Spooky Undead//////////////////////
 

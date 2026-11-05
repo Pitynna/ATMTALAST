@@ -260,7 +260,7 @@ GAME_VERB_SRC(/obj/machinery/gibber, eject, oview(1), "Опустошить мя
 		var/skinned = H.dna.species.skinned_type
 		if(ismachineperson(H))
 			new /obj/effect/gibspawner/robot(src)
-		else if(!isplasmaman(H) && !isnucleation(H) && !isgolem(H))
+		else if(!isplasmaman(H) && !isnucleation(H))
 			new /obj/effect/gibspawner(src, H.dna)
 		if(skinned)
 			new skinned(src)

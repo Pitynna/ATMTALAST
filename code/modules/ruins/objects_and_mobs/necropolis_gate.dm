@@ -150,16 +150,6 @@
 	changing_openness = FALSE
 	return TRUE
 
-/obj/structure/necropolis_gate/ashwalker
-	desc = "Massive stone gates. They appear permanently sealed."
-	locked = TRUE
-
-/obj/structure/necropolis_gate/ashwalker/attack_hand(mob/user)
-	if(locked)
-		if("ashwalker" in user.faction)
-			locked = FALSE
-	return ..()
-
 /obj/structure/necropolis_gate/locked
 	locked = TRUE
 

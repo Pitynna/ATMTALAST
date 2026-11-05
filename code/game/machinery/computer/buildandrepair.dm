@@ -539,10 +539,6 @@
 	board_name = "Nanotrasen Drop Pod"
 	build_path = /obj/machinery/computer/shuttle/nt/drop_pod
 
-/obj/item/circuitboard/shuttle/golem_ship
-	board_name = "Golem Ship"
-	build_path = /obj/machinery/computer/shuttle/golem_ship
-
 /obj/item/circuitboard/HolodeckControl
 	board_name = "Holodeck Control"
 	build_path = /obj/machinery/computer/HolodeckControl

@@ -175,9 +175,6 @@
 		if(length(SSticker.mode.vampire_enthralled))
 			dat += check_role_table("Vampire Thralls", SSticker.mode.vampire_enthralled)
 
-		if(length(SSticker.mode.demons))
-			dat += check_role_table("Demons", SSticker.mode.demons)
-
 		if(length(SSticker.mode.superheroes))
 			dat += check_role_table("Superheroes", SSticker.mode.superheroes)
 

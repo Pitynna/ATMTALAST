@@ -358,7 +358,6 @@
 /turf/simulated/floor/indestructible/beach/water/deep,
 /area/ruin/ussp_space_banya)
 "pY" = (
-/obj/effect/decal/cleanable/blood/innards,
 /obj/structure/sign/poster/contraband/communist_state{
 	pixel_y = -34
 	},

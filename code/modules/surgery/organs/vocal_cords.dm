@@ -58,26 +58,6 @@ GLOBAL_DATUM_INIT(multispin_words, /regex, regex("like a record baby|как пл
 	slot = INTERNAL_ORGAN_RESONATOR
 	icon_state = "adamantine_resonator"
 
-/obj/item/organ/internal/vocal_cords/adamantine
-	name = "adamantine vocal cords"
-	desc = "When adamantine resonates, it causes all nearby pieces of adamantine to resonate as well. Adamantine golems use this to broadcast messages to nearby golems."
-	actions_types = list(/datum/action/item_action/organ_action/use/adamantine_vocal_cords)
-	icon_state = "adamantine_cords"
-
-/datum/action/item_action/organ_action/use/adamantine_vocal_cords/do_effect(trigger_flags)
-	var/message = tgui_input_text(owner, "Отправить резонирующее сообщение всем ближайшим големам.", "Резонанс")
-	if(QDELETED(src) || QDELETED(owner) || !message)
-		return
-	owner.say(".~[message]")
-
-/obj/item/organ/internal/vocal_cords/adamantine/handle_speech(list/message_pieces)
-	var/msg = span_resonate(span_name(owner.real_name) + span_message(" резонирует: \"[capitalize(multilingual_to_message(message_pieces))]\""))
-	for(var/m in GLOB.player_list)
-		if(iscarbon(m))
-			var/mob/living/carbon/C = m
-			if(C.get_organ_slot(INTERNAL_ORGAN_RESONATOR))
-				to_chat(C, msg)
-
 //Colossus drop, forces the listeners to obey certain commands
 /obj/item/organ/internal/vocal_cords/colossus
 	name = "divine vocal cords"

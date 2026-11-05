@@ -54,9 +54,6 @@
 		name = initial(name)
 
 /obj/item/mmi/robotic_brain/attack_self(mob/user)
-	if(isgolem(user))
-		to_chat(user, span_warning("Your golem fingers are too large to press the switch on [src]."))
-		return
 	if(requires_master && !imprinted_master)
 		to_chat(user, span_notice("You press your thumb on [src] and imprint your user information."))
 		imprinted_master = user

@@ -1261,10 +1261,6 @@ to destroy them and players will be able to make replacements.
 		/obj/item/assembly/igniter = 1,
 	)
 
-/obj/item/circuitboard/ore_redemption/golem
-	board_name = "Ore Redemption - Golem"
-	build_path = /obj/machinery/mineral/ore_redemption/golem
-
 /obj/item/circuitboard/ore_redemption/labor
 	board_name = "Ore Redemption - Labour"
 	build_path = /obj/machinery/mineral/ore_redemption/labor
@@ -1279,10 +1275,6 @@ to destroy them and players will be able to make replacements.
 		/obj/item/stack/sheet/glass = 1,
 		/obj/item/stock_parts/matter_bin = 3,
 	)
-
-/obj/item/circuitboard/mining_equipment_vendor/golem
-	board_name = "Golem Equipment Vendor"
-	build_path = /obj/machinery/mineral/equipment_vendor/golem
 
 /obj/item/circuitboard/mining_equipment_vendor/labor
 	board_name = "Labour Equipment Vendor"

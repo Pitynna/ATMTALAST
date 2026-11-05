@@ -174,9 +174,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 		if(current_location && !is_level_reachable(current_location.z))
 			return TARGET_INVALID_UNREACHABLE
 
-	if(isgolem(possible_target.current))
-		return TARGET_INVALID_GOLEM
-
 	if(possible_target.offstation_role)
 		return TARGET_INVALID_EVENT
 
@@ -1464,24 +1461,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 	if(!resolved_overmind)
 		return FALSE
 	return resolved_overmind.stat != DEAD
-
-// MARK: Bingle
-/datum/objective/bingle_lord
-	needs_target = FALSE
-	antag_menu_name = "Создать яму"
-	explanation_text = "Найдите на станции укромное место, где вы сможете быстро напитать вашу яму."
-
-/datum/objective/bingle
-	needs_target = FALSE
-	antag_menu_name = "Защищайте и наращивайте вашу яму."
-	explanation_text = "Тащите в яму всё, что попадётся под ноги."
-
-// If there is any hole with max-size, then the goal is completed
-/datum/objective/bingle/check_completion()
-	if(!team)
-		return FALSE
-	var/datum/team/bingles/bingle_team = team
-	return bingle_team.goal_size_achieved
 
 // MARK: Serve
 /datum/objective/serve

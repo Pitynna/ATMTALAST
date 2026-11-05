@@ -105,8 +105,3 @@
 	SEND_SIGNAL(src, COMSIG_LAZY_TEMPLATE_LOADED, loaded_atom_movables, loaded_turfs, loaded_areas)
 	reservations += reservation
 	return reservation
-
-
-/datum/lazy_template/bingle_pit
-	key = LAZY_TEMPLATE_KEY_BINGLE_PIT
-	map_name = "bingle_pit"

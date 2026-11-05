@@ -509,7 +509,7 @@
 	item_state = "shamanrags"
 	item_color = "shamanrags"
 	has_sensor = FALSE
-	species_restricted = list(SPECIES_UNATHI, SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_DRACONOID)
+	species_restricted = list(SPECIES_UNATHI, SPECIES_DRACONOID)
 
 /obj/item/clothing/under/dress/dress_fire
 	name = "flame dress"
@@ -1149,8 +1149,6 @@
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/uniform.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/uniform.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/uniform.dmi',
 		SPECIES_FARWA = 'icons/mob/clothing/species/monkey/uniform.dmi',
@@ -1325,39 +1323,39 @@
 	desc = "Rough striped fabric and worn trousers. An outfit for someone unafraid to show their past."
 	icon_state = "bandit"
 	item_state = "bandit"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
+	species_restricted = list("exclude", SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/goon
 	name = "goon suit"
 	desc = "A minimalist dark outfit for those who prefer settling matters with their fists rather than words."
 	icon_state = "goon"
 	item_state = "goon"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
+	species_restricted = list("exclude", SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/gopnik
 	name = "gopnik suit"
 	desc = "A light jacket with a large fur collar. Clothing that keeps you warm while looking intimidating."
 	icon_state = "gopnik"
 	item_state = "gopnik"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
+	species_restricted = list("exclude", SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/chainsmoker
 	name = "chainsmoker suit"
 	desc = "A plain faded T-shirt and trousers. An outfit for someone who doesn't care what others think, as long as it is comfortable."
 	icon_state = "chainsmoker"
 	item_state = "chainsmoker"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
+	species_restricted = list("exclude", SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/maleclub
 	name = "male club suit"
 	desc = "A worn blue club suit with a yellow shirt and dark tie. Smells of jazz, cigarette smoke and bad decisions."
 	icon_state = "male_club_outfit"
 	item_state = "male_club_outfit"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
+	species_restricted = list("exclude", SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
 
 /obj/item/clothing/under/girlclub
 	name = "girl club suit"
 	desc = "A yellow top and short shorts."
 	icon_state = "girl_club_outfit"
 	item_state = "girl_club_outfit"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")
+	species_restricted = list("exclude", SPECIES_UNATHI, SPECIES_VOX, SPECIES_VOX_ARMALIS, "lesser form")

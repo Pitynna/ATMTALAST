@@ -421,7 +421,7 @@
 	H.force_gene_block(GLOB.smallsizeblock, TRUE)
 
 /obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize(mapload)
-	var/type = pickweight(list("Miner" = 66, "Ashwalker" = 10, "Golem" = 10,"Clown" = 10, pick(list("Shadow", "YeOlde","Operative")) = 4))
+	var/type = pickweight(list("Miner" = 86, "Clown" = 10, pick(list("Shadow", "YeOlde","Operative")) = 4))
 	switch(type)
 		if("Miner")
 			mob_species = pickweight(list(/datum/species/human = 72, /datum/species/unathi = 28))
@@ -442,23 +442,6 @@
 				r_pocket = pickweight(list(/obj/item/stack/marker_beacon = 20, /obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/autoinjector/survival = 2, /obj/item/borg/upgrade/modkit/damage = 1 ))
 			if(prob(10))
 				l_pocket = pickweight(list(/obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/autoinjector/survival = 2, /obj/item/borg/upgrade/modkit/cooldown/haste = 1 ))
-		if("Ashwalker")
-			mob_species = /datum/species/unathi/ashwalker
-			uniform = /obj/item/clothing/under/ash_walker
-			if(prob(95))
-				head = /obj/item/clothing/head/helmet/gladiator
-			else
-				head = /obj/item/clothing/head/helmet/skull
-				suit = /obj/item/clothing/suit/armor/bone
-				gloves = /obj/item/clothing/gloves/bracer
-			if(prob(5))
-				back = pickweight(list(/obj/item/twohanded/spear/bonespear = 3, /obj/item/twohanded/fireaxe/boneaxe = 2))
-			if(prob(10))
-				belt = /obj/item/storage/belt/mining/primitive
-			if(prob(30))
-				r_pocket = /obj/item/kitchen/knife/combat/survival/bone
-			if(prob(30))
-				l_pocket = /obj/item/kitchen/knife/combat/survival/bone
 		if("Clown")
 			name = pick(GLOB.clown_names)
 			outfit = /datum/outfit/job/clown
@@ -472,16 +455,6 @@
 				l_pocket = pickweight(list(/obj/item/bikehorn/golden = 3, /obj/item/bikehorn/airhorn= 1 ))
 			if(prob(10))
 				r_pocket = /obj/item/implanter/sad_trombone
-		if("Golem")
-			mob_species = pick(list(/datum/species/golem/adamantine, /datum/species/golem/plasma, /datum/species/golem/diamond, /datum/species/golem/gold, /datum/species/golem/silver, /datum/species/golem/plasteel, /datum/species/golem/titanium, /datum/species/golem/plastitanium))
-			if(prob(30))
-				glasses = pickweight(list(/obj/item/clothing/glasses/meson = 2, /obj/item/clothing/glasses/hud/health = 2, /obj/item/clothing/glasses/hud/diagnostic =2, /obj/item/clothing/glasses/science = 2, /obj/item/clothing/glasses/welding = 2, /obj/item/clothing/glasses/night = 1))
-			if(prob(10))
-				belt = pick(list(/obj/item/storage/belt/mining/vendor, /obj/item/storage/belt/utility/full))
-			if(prob(50))
-				back = /obj/item/bedsheet/rd/royal_cape
-			if(prob(10))
-				l_pocket = pick(list(/obj/item/crowbar/power, /obj/item/wrench/power, /obj/item/weldingtool/experimental))
 		if("YeOlde")
 			mob_gender = FEMALE
 			uniform = /obj/item/clothing/under/maid

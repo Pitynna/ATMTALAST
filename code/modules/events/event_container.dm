@@ -264,8 +264,6 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_ABDUCTORS, /datum/event/abductor/one_crew, 40, list(ASSIGNMENT_SECURITY = 3), TRUE),
 		new /datum/event_meta(
-			EVENT_LEVEL_MODERATE, EVENT_PULSE_DEMON, /datum/event/spawn_pulsedemon, 0),
-		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_DISEASE_OUTBREAK, /datum/event/disease_outbreak, 0, list(ASSIGNMENT_MEDICAL = 150), TRUE),
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_HEADCRABS, /datum/event/headcrabs, 0, list(ASSIGNMENT_SECURITY = 20)),
@@ -297,12 +295,6 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 			EVENT_LEVEL_MAJOR, EVENT_XENOMORPH_INFESTATION, /datum/event/alien_infestation, 20, list(ASSIGNMENT_SECURITY = 4), TRUE),
 		new /datum/event_meta(
 			EVENT_LEVEL_MAJOR, EVENT_TERROR_SPIDER, /datum/event/spider_terror, 20, list(ASSIGNMENT_SECURITY = 4), TRUE), // 7.1% on high pop, 5.3% on low pop
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_SLAUGHTER_DEMON, /datum/event/spawn_slaughter, 20, is_one_shot = TRUE), // 3% on high pop, 2.1% on low pop
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_LAUGHTER_DEMON, /datum/event/spawn_slaughter/laughter,	20, is_one_shot = TRUE),
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_SHADOW_DEMON, /datum/event/spawn_slaughter/shadow,	20, is_one_shot = TRUE),
 	)
 
 #undef ASSIGNMENT_ANY

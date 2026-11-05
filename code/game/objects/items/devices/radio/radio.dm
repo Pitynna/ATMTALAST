@@ -393,9 +393,6 @@ GLOBAL_LIST_INIT(default_pirate_channels, list(
 /mob/living/silicon/has_internal_radio_channel_access(mob/user, list/req_accesses)
 	return has_access(req_accesses, TRUE, get_all_accesses())
 
-/mob/living/simple_animal/demon/pulse_demon/has_internal_radio_channel_access(mob/user, list/req_accesses)
-	return has_access(req_accesses, TRUE, get_all_accesses())
-
 /mob/dead/observer/has_internal_radio_channel_access(mob/user, list/req_accesses)
 	return can_admin_interact()
 

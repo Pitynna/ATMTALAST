@@ -3,7 +3,7 @@
 	desc = "Используйте адское пламя, чтобы выйти за границу материального мира."
 
 	cooldown_time = 20 SECONDS
-	jaunt_type = /obj/effect/dummy/phased_mob/blood
+	jaunt_type = /obj/effect/dummy/phased_mob/infernal
 	button_icon_state = "jaunt"
 	background_icon_state = "bg_demon"
 
@@ -32,7 +32,7 @@
 	jaunter.fakefire()
 	if(do_after(jaunter, 10 SECONDS, jaunter, NONE))
 		jaunter.infernalphaseout()
-		var/obj/effect/dummy/phased_mob/blood/jaunt = ..()
+		var/obj/effect/dummy/phased_mob/infernal/jaunt = ..()
 		jaunter.forceMove(jaunt)
 	else
 		to_chat(jaunter, span_warning("Вы должны оставаться неподвижным во время возвращения."))
@@ -57,3 +57,6 @@
 	visible_message(span_warning("<b>[DECLENT_RU_CAP(src, NOMINATIVE)] появляется в огненной вспышке!</b>"))
 	playsound(get_turf(src), 'sound/misc/exit_blood.ogg', 100, TRUE, -1)
 	addtimer(CALLBACK(src, PROC_REF(fakefireextinguish), TRUE), 1.5 SECONDS)
+
+/obj/effect/dummy/phased_mob/infernal
+	phased_mob_icon_state = "blood_bolt"

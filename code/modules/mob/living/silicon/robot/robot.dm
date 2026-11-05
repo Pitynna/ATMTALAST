@@ -843,17 +843,6 @@ GAME_VERB(/mob/living/silicon/robot, cmd_robot_alerts, "Список трево�
 		cell_component.brute_damage = 0
 		cell_component.electronics_damage = 0
 
-		var/been_hijacked = FALSE
-		for(var/mob/living/simple_animal/demon/pulse_demon/demon in cell)
-			if(!been_hijacked)
-				demon.do_hijack_robot(src)
-				been_hijacked = TRUE
-			else
-				demon.exit_to_turf()
-
-		if(been_hijacked)
-			cell.rigged = FALSE
-
 		module?.update_cells()
 		diag_hud_set_borgcell()
 		return ATTACK_CHAIN_BLOCKED_ALL

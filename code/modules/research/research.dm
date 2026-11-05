@@ -474,15 +474,6 @@ research holder datum.
 	ru_names = default_ru_names
 	blueprint = null
 
-/obj/item/disk/design_disk/golem_shell
-	name = "golem creation disk"
-	icon_state = "datadisk1"
-
-/obj/item/disk/design_disk/golem_shell/Initialize(mapload)
-	. = ..()
-	var/datum/design/golem_shell/G = new
-	blueprint = G
-
 /* Station goals design disks */
 /** Base */
 /obj/item/disk/design_disk/station_goal_machinery

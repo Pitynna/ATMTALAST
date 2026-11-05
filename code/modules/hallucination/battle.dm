@@ -306,29 +306,4 @@
 	addtimer(CALLBACK(src, PROC_REF(stab_loop), hits_done + 1), CLICK_CD_MELEE)
 
 /// A hallucination of a slaughter demon revving nearby.
-/datum/hallucination/battle/slaughter_demon
-
-/datum/hallucination/battle/slaughter_demon/start()
-	. = ..()
-	if(!.)
-		return
-
-	hallucinator.playsound_local(source_turf, 'sound/misc/exit_blood.ogg', 50, TRUE)
-	addtimer(CALLBACK(src, PROC_REF(stab_loop), 0, rand(4, 8)), CLICK_CD_MELEE)
-	return TRUE
-
 /// The main sound loop of someone being terror spider attack
-/datum/hallucination/battle/slaughter_demon/proc/stab_loop(hits_done = 0, stabs_total = 6)
-	if(QDELETED(src) || QDELETED(hallucinator))
-		return
-
-	if(hits_done >= stabs_total)
-		qdel(src)
-		return
-
-	hallucinator.playsound_local(source_turf, 'sound/misc/demon_attack1.ogg', 55, TRUE)
-
-	if(prob(20))
-		hallucinator.playsound_local(source_turf, SFX_BONEBREAK, 40, TRUE)
-
-	addtimer(CALLBACK(src, PROC_REF(stab_loop), hits_done + 1), CLICK_CD_MELEE)

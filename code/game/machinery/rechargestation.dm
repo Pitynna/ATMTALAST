@@ -71,7 +71,7 @@
 	process_occupant()
 
 	for(var/mob/mob_inside in src)
-		if(mob_inside == occupant || ispulsedemon(mob_inside))
+		if(mob_inside == occupant)
 			continue
 		mob_inside.forceMove(loc)
 
@@ -102,8 +102,6 @@
 	return FALSE
 
 /obj/machinery/recharge_station/relaymove(mob/user as mob)
-	if(ispulsedemon(user))
-		return
 	go_out()
 
 /obj/machinery/recharge_station/emp_act(severity)

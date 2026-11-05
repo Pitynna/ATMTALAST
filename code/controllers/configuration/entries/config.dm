@@ -473,7 +473,6 @@
 		"malfai" = 10,
 		"prisoner" = 10,
 		"nothing" = 20,
-		"devil" = 10,
 	)
 
 /datum/config_entry/keyed_list/antag_paradise_mode_subtypes

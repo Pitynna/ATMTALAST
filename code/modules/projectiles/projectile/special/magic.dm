@@ -544,34 +544,6 @@
 	..()
 
 // MARK: Shadow Hand
-/obj/projectile/magic/shadow_hand
-	name = "shadow hand"
-	icon_state = "shadow_hand"
-	plane = FLOOR_PLANE
-	speed = 1
-	hitsound = 'sound/shadowdemon/shadowattack1.ogg' // Plays when hitting something living or a light
-	var/hit = FALSE
-
-/obj/projectile/magic/shadow_hand/fire(setAngle)
-	if(firer)
-		firer.Beam(src, icon_state = "grabber_beam", time = INFINITY, maxdistance = INFINITY, beam_type = /obj/effect/ebeam/floor, layer = BELOW_MOB_LAYER)
-	return ..()
-
-/obj/projectile/magic/shadow_hand/on_hit(atom/target, blocked, hit_zone)
-	if(hit)
-		return
-	hit = TRUE // to prevent double hits from the pull
-	. = ..()
-	for(var/atom/extinguish_target in range(2, src))
-		extinguish_target.extinguish_light(TRUE)
-	if(isliving(target))
-		var/mob/living/l_target = target
-		l_target.Immobilize(4 SECONDS)
-		l_target.apply_damage(40, BRUTE, BODY_ZONE_CHEST)
-		l_target.throw_at(get_step(firer, get_dir(firer, target)), 50, 10)
-	else
-		firer.throw_at(get_step(target, get_dir(target, firer)), 50, 10)
-
 // MARK: Demonic Grasp
 /obj/projectile/magic/demonic_grasp
 	name = "demonic grasp"

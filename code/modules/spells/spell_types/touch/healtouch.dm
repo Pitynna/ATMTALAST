@@ -42,12 +42,3 @@
 		if(D.curable)
 			D.cure(need_immunity = FALSE)
 	return TRUE
-
-/datum/action/cooldown/spell/touch/healtouch/shaman
-	name = "Прикосновение шамана"
-	desc = "Это заклинание заряжает вашу руку энергией Некрополя, позволяя вам лечить некоторые повреждения и взаимодействовать с некоторыми предметами."
-	school = SCHOOL_LAVALAND
-	can_cast_on_self = FALSE
-	hand_path = /obj/item/melee/touch_attack/healtouch/shaman
-
-/obj/item/melee/touch_attack/healtouch/shaman

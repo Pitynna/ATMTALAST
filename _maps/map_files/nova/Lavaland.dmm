@@ -3689,9 +3689,6 @@
 /area/lavaland/surface/outdoors/necropolis)
 "wO" = (
 /obj/effect/mapping_helpers/no_lava,
-/obj/structure/fluff/ash_statue{
-	special_name = "lava lake"
-	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "wP" = (
@@ -4057,7 +4054,6 @@
 /turf/simulated/floor/indestructible/boss,
 /area/lavaland/surface/outdoors/necropolis)
 "za" = (
-/obj/ash_walker_landmark,
 /turf/template_noop,
 /area/lavaland/surface/outdoors/necropolis)
 "zb" = (

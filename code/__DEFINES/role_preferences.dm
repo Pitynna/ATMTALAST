@@ -64,10 +64,8 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_BLOB = /datum/game_mode/blob, // Blob
 	ROLE_CHANGELING = /datum/game_mode/changeling, // Changeling
 	ROLE_BORER, // Cortical borer
-	ROLE_DEMON, // Demons (Slaughter/Laughter/Shadow)
 	ROLE_GSPIDER, // Giant spider
 	ROLE_GUARDIAN, // Guardian
-	ROLE_ELITE, // Lavaland Elite
 	ROLE_MALF_AI = /datum/game_mode/traitor, // Malf AI
 	ROLE_ESCAPING_PRISONER = /datum/game_mode/traitor, // Escaping Prisoner
 	ROLE_MORPH, // Morph
@@ -85,7 +83,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_VOX_RAIDER, // Vox raider
 	ROLE_WIZARD = /datum/game_mode/wizard, // Wizard
 	ROLE_ALIEN, // Xenomorph
-	ROLE_BINGLE, // Bingle
 ))
 
 #define ROLE_PRISONERS_MAX_COUNT 4

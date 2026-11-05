@@ -143,16 +143,6 @@
 		new /obj/item/bikehorn/rubberducky(src)
 
 //crates of gear in the free golem ship
-/obj/structure/closet/crate/golemgear/populate_contents()
-	new /obj/item/storage/backpack/industrial(src)
-	new /obj/item/shovel(src)
-	new /obj/item/pickaxe(src)
-	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
-	new /obj/item/storage/bag/ore(src)
-	new /obj/item/clothing/glasses/meson(src)
-	new /obj/item/card/id/golem(src)
-	new /obj/item/flashlight/lantern(src)
-
 //syndie crates by Furukai
 /obj/structure/closet/crate/syndicate
 	desc = "Definitely a property of an evil corporation!"

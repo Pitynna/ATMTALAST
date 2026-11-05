@@ -3081,9 +3081,6 @@
 /area/lavaland/surface/outdoors)
 "Ax" = (
 /obj/effect/mapping_helpers/no_lava,
-/obj/structure/fluff/ash_statue{
-	special_name = "lava lake"
-	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "AC" = (
@@ -3374,7 +3371,6 @@
 /turf/simulated/floor/plating,
 /area/mine/production)
 "Ea" = (
-/obj/ash_walker_landmark,
 /turf/template_noop,
 /area/lavaland/surface/outdoors/necropolis)
 "Eh" = (

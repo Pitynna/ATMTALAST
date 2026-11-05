@@ -225,101 +225,6 @@
 					ADD_TRAIT(H, TRAIT_NO_CLONE, ANOMALOUS_CRYSTAL_TRAIT)
 					H.grab_ghost(force = TRUE)
 
-/obj/machinery/anomalous_crystal/helpers //Lets ghost spawn as helpful creatures that can only heal people slightly. Incredibly fragile and they can't converse with humans
-	var/ready_to_deploy = 0
-
-/obj/machinery/anomalous_crystal/helpers/ActivationReaction(mob/user, method)
-	if(..() && !ready_to_deploy)
-		ready_to_deploy = 1
-		notify_ghosts("Аномальный кристалл активирован в [get_area(src)]! Теперь призраки могут использовать его в любое время.", enter_link = "<a href='byond://?src=[UID()];ghostjoin=1'>(Нажмите для входа)</a>", source = src, action = NOTIFY_ATTACK)
-
-/obj/machinery/anomalous_crystal/helpers/attack_ghost(mob/dead/observer/user)
-	..()
-	if(ready_to_deploy)
-		var/be_helper = tgui_alert(user, "Стать духом света? (Внимание: после этого вас нельзя будет клонировать!)", "Возрождение", list("Да","Нет"))
-		if(be_helper != "Да")
-			return
-		var/mob/living/simple_animal/hostile/lightgeist/W = new /mob/living/simple_animal/hostile/lightgeist(get_turf(loc))
-		W.possess_by_player(user.key)
-
-/obj/machinery/anomalous_crystal/helpers/Topic(href, href_list)
-	if(href_list["ghostjoin"])
-		var/mob/dead/observer/ghost = usr
-		if(istype(ghost))
-			attack_ghost(ghost)
-
-/mob/living/simple_animal/hostile/lightgeist
-	name = "lightgeist"
-	desc = "Это маленькое парящее создание — абсолютно неизвестная форма жизни... Его присутствие наполняет вас чувством умиротворения."
-	icon_state = "lightgeist"
-	icon_living = "lightgeist"
-	icon_dead = "butterfly_dead"
-	response_help = "отмахивается"
-	response_disarm = "отталкивает"
-	response_harm = "разрушает"
-	speak_emote = list("пульсирует")
-	maxHealth = 2
-	health = 2
-	harm_intent_damage = 1
-	friendly = "восстанавливает"
-	density = FALSE
-	obj_damage = 0
-	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
-	ventcrawler_trait = TRAIT_VENTCRAWLER_ALWAYS
-	mob_size = MOB_SIZE_TINY
-	gold_core_spawnable = HOSTILE_SPAWN
-	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
-	luminosity = 4
-	faction = list("neutral")
-	del_on_death = 1
-	unsuitable_atmos_damage = 0
-	environment_smash = 0
-	AIStatus = AI_OFF
-	stop_automated_movement = 1
-	var/heal_power = 5
-
-/mob/living/simple_animal/hostile/lightgeist/get_ru_names()
-	return alist(
-		NOMINATIVE = "дух света",
-		GENITIVE = "духа света",
-		DATIVE = "духу света",
-		ACCUSATIVE = "духа света",
-		INSTRUMENTAL = "духом света",
-		PREPOSITIONAL = "духе света",
-	)
-
-/mob/living/simple_animal/hostile/lightgeist/Initialize(mapload)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NO_FLOATING_ANIM, INNATE_TRAIT)
-	AddElement(/datum/element/simple_flying)
-	UNASSIGN_GAME_VERB(src, /mob, me_verb)
-	var/datum/atom_hud/med_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	med_hud.show_to(src)
-
-/mob/living/simple_animal/hostile/lightgeist/Destroy()
-	var/datum/atom_hud/med_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	med_hud.hide_from(src)
-	return ..()
-
-/mob/living/simple_animal/hostile/lightgeist/ComponentInitialize()
-	AddComponent( \
-		/datum/component/animal_temperature, \
-		maxbodytemp = 1500, \
-		minbodytemp = 0, \
-	)
-
-/mob/living/simple_animal/hostile/lightgeist/AttackingTarget()
-	. = ..()
-	if(isliving(target) && target != src)
-		var/mob/living/L = target
-		if(L.stat < DEAD)
-			L.heal_overall_damage(heal_power, heal_power)
-			new /obj/effect/temp_visual/heal(get_turf(target), "#80F5FF")
-
-/mob/living/simple_animal/hostile/lightgeist/ghostize()
-	if(..())
-		death()
-
 /obj/machinery/anomalous_crystal/refresher //Deletes and recreates a copy of the item, "refreshing" it.
 	cooldown_add = 50
 	activation_sound = 'sound/magic/timeparadox2.ogg'
@@ -432,4 +337,3 @@
 	current.gib()
 	Remove(owner)
 	qdel(src)
-

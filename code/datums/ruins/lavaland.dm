@@ -43,38 +43,12 @@
 	cost = 10
 	allow_duplicates = FALSE
 
-/datum/map_template/ruin/lavaland/ash_walker
-	name = "Ash Walker Nest"
-	id = "ash-walker"
-	description = "A race of unbreathing lizards live here, that run faster than a human can, worship a broken dead city, and are capable of reproducing by something involving tentacles? \
-	Probably best to stay clear."
-	suffix = "lavaland_surface_ash_walker1.dmm"
-	allow_duplicates = FALSE
-	unpickable = TRUE
-
-/datum/map_template/ruin/lavaland/ash_walker_updated
-	name = "Ash Walker Village"
-	id = "ash-walker_updated"
-	description = "A race of unbreathing lizards live here, that run faster than a human can, worship a broken dead city, and are capable of reproducing by something involving tentacles? \
-	Probably best to stay clear."
-	suffix = "lavaland_surface_ash_walker_new.dmm"
-	unpickable = TRUE
-
 /datum/map_template/ruin/lavaland/syndicate_base
 	name = "Syndicate Lava Base"
 	id = "lava-base"
 	description = "A secret base researching illegal bioweapons, it is closely guarded by an elite team of syndicate agents."
 	suffix = "lavaland_surface_syndicate_base1.dmm"
 	cost = 20
-	allow_duplicates = FALSE
-
-/datum/map_template/ruin/lavaland/free_golem
-	name = "Free Golem Ship"
-	id = "golem-ship"
-	description = "Lumbering humanoids, made out of precious metals, move inside this ship. They frequently leave to mine more minerals, which they somehow turn into more of them. \
-	Seem very intent on research and individual liberty, and also geology based naming?"
-	cost = 20
-	suffix = "lavaland_surface_golem_ship.dmm"
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/lavaland/animal_hospital
@@ -214,14 +188,6 @@
 	suffix = "lavaland_surface_bfl_crack.dmm"
 	always_place = TRUE
 	allow_duplicates = FALSE
-
-/datum/map_template/ruin/lavaland/tumor
-	name = "Elite Tumor"
-	id = "tumor"
-	description = "The victor freed, the loser the next fighter. The ghosts, the endless spectators. And thus the cycle loops..."
-	suffix = "lavaland_surface_elite_tumor.dmm"
-	cost = 5
-	always_place = TRUE
 
 /datum/map_template/ruin/lavaland/monster_nest
 	name = "Monster Nest"

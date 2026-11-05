@@ -111,9 +111,6 @@
 	src.attack_hand(user)
 
 /obj/machinery/computer/telescience/attack_hand(mob/user)
-	if(isgolem(user)) //this is why we can't have nice things free golems
-		to_chat(user, span_warning("Вы не можете разобраться, как использовать эту консоль."))
-		return
 	if(..())
 		return
 	interact(user)

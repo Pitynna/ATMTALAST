@@ -613,43 +613,6 @@
 	limit = 3
 	cost = 1
 
-/datum/spellbook_entry/item/hugbottle
-	name = "Bottle of Tickles"
-	desc = "A bottle of magically infused fun, the smell of which will \
-		attract adorable extradimensional beings when broken. These beings \
-		are similar to slaughter demons, but are a little weaker and they do not permamently \
-		kill their victims, instead putting them in an extradimensional hugspace, \
-		to be released on the demon's death. Chaotic, but not ultimately \
-		damaging. The crew's reaction to the other hand could be very \
-		destructive."
-	item_path = /obj/item/antag_spawner/slaughter_demon/laughter
-	category = "Summons"
-	limit = 3
-	cost = 1 // Non-destructive; it's just a jape, sibling!
-
-/datum/spellbook_entry/item/bloodbottle
-	name = "Bottle of Blood"
-	desc = "A bottle of magically infused blood, the smell of which will attract extradimensional beings when broken. Be careful though, the kinds of creatures summoned by blood magic are indiscriminate in their killing, and you yourself may become a victim."
-	item_path = /obj/item/antag_spawner/slaughter_demon
-	category = "Summons"
-	limit = 3
-
-/datum/spellbook_entry/item/shadowbottle
-	name = "Bottle of Shadows"
-	desc = "A bottle of pure darkness, the smell of which will attract extradimensional beings when broken. Be careful though, the kinds of creatures summoned from the shadows are indiscriminate in their killing, and you yourself may become a victim."
-	item_path = /obj/item/antag_spawner/slaughter_demon/shadow
-	category = "Summons"
-	limit = 3
-	cost = 1 //Unless you blackout the station this ain't going to do much, wizard doesn't get NV, still dies easily to a group of 2 and it doesn't eat bodies.
-
-/datum/spellbook_entry/item/pulsedemonbottle
-	name = "Living Lightbulb"
-	desc = "A magically sealed lightbulb confining some manner of electricity based creature. Beware, these creatures are indiscriminate in their shocking antics, and you yourself may become a victim."
-	item_path = /obj/item/antag_spawner/pulse_demon
-	category = "Summons"
-	limit = 3
-	cost = 1 //Needs station power to live. Also can kill the wizard trivially in maints (get shock protection).
-
 /datum/spellbook_entry/item/mayhembottle
 	name = "Mayhem in a Bottle"
 	desc = "A magically infused bottle of blood, the scent of which will drive anyone nearby into a murderous frenzy."
@@ -803,28 +766,6 @@
 		for(var/datum/spellbook_entry/item/tarotdeck/deck in entries)
 			if(!isnull(deck.limit))
 				deck.limit++
-		qdel(I)
-		return ATTACK_CHAIN_BLOCKED_ALL
-
-	if(istype(I, /obj/item/antag_spawner/slaughter_demon))
-		add_fingerprint(user)
-		to_chat(user, span_notice("On second thought, maybe summoning a demon is a bad idea. You refund your points."))
-		switch(I.type)
-			if(/obj/item/antag_spawner/slaughter_demon/laughter)
-				uses += 1
-				for(var/datum/spellbook_entry/item/hugbottle/bottle in entries)
-					if(!isnull(bottle.limit))
-						bottle.limit++
-			if(/obj/item/antag_spawner/slaughter_demon/shadow)
-				uses += 1
-				for(var/datum/spellbook_entry/item/shadowbottle/bottle in entries)
-					if(!isnull(bottle.limit))
-						bottle.limit++
-			else
-				uses += 2
-				for(var/datum/spellbook_entry/item/bloodbottle/bottle in entries)
-					if(!isnull(bottle.limit))
-						bottle.limit++
 		qdel(I)
 		return ATTACK_CHAIN_BLOCKED_ALL
 

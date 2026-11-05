@@ -683,13 +683,6 @@
 			return TRUE
 	return FALSE
 
-/datum/language/abductor/golem
-	name = LANGUAGE_HIVE_GOLEM
-	desc = "Големы могут общаться с себе подобными при помощи псионической связи."
-
-/datum/language/abductor/golem/check_special_condition(mob/living/carbon/human/other, mob/living/carbon/human/speaker)
-	return TRUE
-
 /datum/language/borer
 	name = LANGUAGE_HIVE_BORER
 	desc = "Бореры обладают псионической связью между своими крошечными разумами."

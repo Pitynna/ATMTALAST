@@ -1191,7 +1191,6 @@
 		/obj/item/reagent_containers/food/snacks/charred_krill,
 		/obj/item/reagent_containers/food/snacks/lavaland,
 		/obj/item/whetstone,
-		/obj/item/lavaland_dye,
 		/obj/item/conductive_organ,
 		/obj/item/stack/sheet/cartilage_plate,
 		/obj/item/stack/sheet/razor_sharp_teeth,
@@ -1305,4 +1304,3 @@
 	playsound(src, unsheath_sound, 20)
 
 #undef ALLOWED_TOOL_BELT_ITEMS
-

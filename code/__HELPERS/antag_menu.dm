@@ -73,7 +73,6 @@
 	prepare_antag_list(mode.superheroes, cached_data, "Супергерой", antagonist_cache)
 	prepare_antag_list(mode.supervillains, cached_data, "Суперзлодей", antagonist_cache)
 	prepare_antag_list(mode.greyshirts, cached_data, "Грейтайд", antagonist_cache)
-	prepare_antag_list(mode.demons, cached_data, "Демон", antagonist_cache)
 	prepare_antag_list(mode.eventmiscs, cached_data, "Ивентроль", antagonist_cache)
 	prepare_antag_list(mode.traders, cached_data, "Торговец", antagonist_cache)
 	prepare_antag_list(mode.morphs, cached_data, "Морф", antagonist_cache)

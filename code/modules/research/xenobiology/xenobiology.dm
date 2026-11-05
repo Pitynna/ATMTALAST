@@ -416,10 +416,6 @@
 	to_chat(SM, span_notice("Вы моментально чувствуете как ваше сознание перетекло в [SM.declent_ru(ACCUSATIVE)]!"))
 	to_chat(SM, span_warning("Отныне вы [SM.declent_ru(NOMINATIVE)]. Ваши роли, союзники и те, кому вы подчиняетесь, остались такими же, как были до переноса сознания."))
 	SM.name = "[SM.name] как [user.real_name]"
-	if(istype(SM, /mob/living/simple_animal/hostile/lightgeist))
-		if(!GLOB.med_hud_users.Find(SM))
-			var/datum/atom_hud/medsensor = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-			medsensor.show_to(SM)
 	qdel(src)
 
 /obj/item/slimepotion/slime/steroid

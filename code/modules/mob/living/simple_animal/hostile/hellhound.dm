@@ -28,7 +28,7 @@
 	var/life_regen_amount = -10 // negative, because negative = healing
 	var/smoke_lastuse = 0
 	var/smoke_freq = 300 // 30 seconds
-	var/datum/action/innate/demon/whisper/whisper_action
+	var/datum/action/innate/telepathic_whisper/whisper_action
 
 /mob/living/simple_animal/hostile/hellhound/get_ru_names()
 	return alist(
@@ -182,3 +182,36 @@
 		INSTRUMENTAL = "бешеным адским псом",
 		PREPOSITIONAL = "бешеном адском псе",
 	)
+
+/datum/action/innate/telepathic_whisper
+	name = "Демонический шёпот"
+	button_icon_state = "cult_comms"
+	background_icon_state = "bg_demon"
+
+/datum/action/innate/telepathic_whisper/proc/choose_targets(mob/user = usr)//yes i am copying from telepathy..hush...
+	var/list/validtargets = list()
+	for(var/mob/living/target in (view(user.client.view, get_turf(user)) - user))
+		if(target?.mind && target.stat != DEAD)
+			validtargets += target
+
+	if(!length(validtargets))
+		user.balloon_alert(usr, "нет подходящих целей!")
+		return
+
+	var/mob/living/target = tgui_input_list(user, "Выберите цель для разговора", "Выбор цели", validtargets)
+	return target
+
+/datum/action/innate/telepathic_whisper/Activate()
+	var/mob/living/choice = choose_targets()
+	if(!choice)
+		return
+
+	var/msg = tgui_input_text(usr, "Что вы хотите сказать [choice]?", null, "")
+	if(!msg)
+		return
+
+	add_say_logs(usr, msg, choice, "TELEPATHY")
+	to_chat(usr, span_notice("<b>Вы шепчете [choice]: </b>[msg]"))
+	to_chat(choice, "[span_deadsay("<b>Внезапно странный демонический голос звучит у вас в голове... </b>")][span_danger("<i> [msg]</i>")]")
+	for(var/mob/dead/observer/G in GLOB.player_list)
+		G.show_message("<i>Демоническое сообщение от ([ghost_follow_link(usr, ghost = G)]) <b>[usr]</b> к ([ghost_follow_link(choice, ghost = G)]) <b>[choice]</b>: [msg]</i>")

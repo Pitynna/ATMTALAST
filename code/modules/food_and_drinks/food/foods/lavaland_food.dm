@@ -224,19 +224,6 @@
 	else
 		. += span_danger("Проклятое сердце неподвижно.")
 
-/obj/item/reagent_containers/food/snacks/lavaland_food/cure_curse/attackby(obj/item/I, mob/user, params)
-	. = ..()
-	if(!istype(I, /obj/item/melee/touch_attack/healtouch/shaman))
-		return ..()
-	if(active)
-		balloon_alert(user, "уже активно!")
-		return ..()
-	user.say("NWOC EGEVNER")
-	active = TRUE
-	qdel(I)
-	update_icon(UPDATE_ICON_STATE)
-	return ATTACK_CHAIN_PROCEED
-
 /obj/item/reagent_containers/food/snacks/lavaland_food/cure_curse/update_icon_state()
 	. = ..()
 	icon_state = "[initial(icon_state)][active ? "_active" : ""]"
@@ -317,7 +304,7 @@
 	gender = FEMALE
 	icon_state = "black_blood_sausage"
 	item_state = "black_blood_sausage"
-	list_reagents = list("nutriment" = 4, "protein" = 3, "ashiezine" = 6)
+	list_reagents = list("nutriment" = 10, "protein" = 3)
 
 /obj/item/reagent_containers/food/snacks/lavaland_food/xeno_sticks
 	name = "xeno sticks"

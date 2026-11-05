@@ -17,9 +17,6 @@
 	outdoors = TRUE
 	ambience_index = AMBIENCE_MINING
 
-/area/mine/dangerous/explored/golem
-	name = "Small Asteroid"
-
 /area/mine/unexplored
 	name = "Mine"
 	icon_state = "unexplored"

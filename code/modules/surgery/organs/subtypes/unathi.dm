@@ -67,19 +67,3 @@
 	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to an ash walker."
 	vision_flags = SEE_TURFS
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
-
-/obj/item/organ/internal/eyes/unathi/ash_walker_shaman
-	name = "ash walker shaman eyes"
-	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to an ash walker shaman."
-	vision_flags = SEE_TURFS
-	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
-
-/obj/item/organ/internal/eyes/unathi/ash_walker_shaman/insert(mob/living/carbon/human/target, special = ORGAN_MANIPULATION_DEFAULT)
-	. = ..()
-	var/datum/atom_hud/H = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	H.show_to(target)
-
-/obj/item/organ/internal/eyes/unathi/ash_walker_shaman/remove(mob/living/carbon/human/target, special = ORGAN_MANIPULATION_DEFAULT)
-	. = ..()
-	var/datum/atom_hud/H = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	H.hide_from(target)

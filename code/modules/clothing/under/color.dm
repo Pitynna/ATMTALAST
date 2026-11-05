@@ -15,8 +15,6 @@
 	greyscale_config_worn_species = list(
 		SPECIES_VOX = /datum/greyscale_config/jumpsuit_worn/vox,
 		SPECIES_UNATHI = /datum/greyscale_config/jumpsuit_worn/unathi,
-		SPECIES_ASHWALKER_BASIC = /datum/greyscale_config/jumpsuit_worn/unathi,
-		SPECIES_ASHWALKER_SHAMAN = /datum/greyscale_config/jumpsuit_worn/unathi,
 		SPECIES_DRACONOID = /datum/greyscale_config/jumpsuit_worn/unathi,
 		SPECIES_DRASK = /datum/greyscale_config/jumpsuit_worn/drask,
 		SPECIES_GREY = /datum/greyscale_config/jumpsuit_worn/grey,
@@ -123,8 +121,6 @@
 		SPECIES_VOX = /datum/greyscale_config/jumpsuit_prison_worn/vox,
 		SPECIES_DRASK = /datum/greyscale_config/jumpsuit_prison_worn/drask,
 		SPECIES_UNATHI = /datum/greyscale_config/jumpsuit_prison_worn/unathi,
-		SPECIES_ASHWALKER_BASIC = /datum/greyscale_config/jumpsuit_prison_worn/unathi,
-		SPECIES_ASHWALKER_SHAMAN = /datum/greyscale_config/jumpsuit_prison_worn/unathi,
 		SPECIES_DRACONOID = /datum/greyscale_config/jumpsuit_prison_worn/unathi,
 		SPECIES_GREY = /datum/greyscale_config/jumpsuit_prison_worn/grey,
 		SPECIES_MONKEY = /datum/greyscale_config/jumpsuit_prison_worn/monkey,

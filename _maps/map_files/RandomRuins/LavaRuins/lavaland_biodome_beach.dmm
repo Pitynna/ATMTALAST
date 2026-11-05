@@ -49,7 +49,6 @@
 /turf/simulated/floor/beach/sand,
 /area/ruin/powered/beach)
 "aV" = (
-/obj/effect/mob_spawn/human/beach/alive,
 /turf/simulated/floor/beach/sand,
 /area/ruin/powered/beach)
 "aZ" = (
@@ -161,7 +160,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/effect/mob_spawn/human/beach/alive/lifeguard,
 /turf/simulated/floor/wood,
 /area/ruin/powered/beach)
 "bJ" = (
@@ -556,7 +554,6 @@
 /turf/simulated/floor/wood,
 /area/ruin/powered/beach)
 "KF" = (
-/obj/effect/mob_spawn/human/bartender/alive,
 /turf/simulated/floor/plating,
 /area/ruin/powered/beach)
 "Lm" = (

@@ -171,7 +171,6 @@
 						other_antags += list(
 							"Жертвы абдукторов — ([length(SSticker.mode.abductees)])" = (mind in SSticker.mode.abductees),
 							"Абдукторы — ([length(SSticker.mode.abductors)])" = (mind in SSticker.mode.abductors),
-							"Демоны — ([length(SSticker.mode.demons)])" = (mind in SSticker.mode.demons),
 							"Ивент роли — ([length(SSticker.mode.eventmiscs)])" = (mind in SSticker.mode.eventmiscs),
 							"Революционеры — ([length(SSticker.mode.revolutionaries)])" = (mind in SSticker.mode.revolutionaries),
 							"Главы революции — ([length(SSticker.mode.head_revolutionaries)])" = (mind in SSticker.mode.head_revolutionaries),

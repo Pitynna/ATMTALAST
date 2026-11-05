@@ -953,14 +953,6 @@
 	build_path = /obj/item/safe_internals
 	category = list(PRINTER_CATEGORY_INITIAL, AUTOLATHE_CATEGORY_CONSTRUCTION)
 
-/datum/design/golem_shell
-	id = "golem"
-	req_tech = null	// Unreachable by tech researching.
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 40000)
-	build_path = /obj/item/golem_shell
-	category = list(AUTOLATHE_CATEGORY_IMPORTED)
-
 /datum/design/tts
 	id = "tts"
 	build_type = AUTOLATHE

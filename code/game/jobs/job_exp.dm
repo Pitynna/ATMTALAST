@@ -24,8 +24,6 @@ GLOBAL_LIST_INIT(role_playtime_requirements, list(
 	ROLE_REVENANT = 30,
 	ROLE_BORER = 30,
 	ROLE_MORPH = 30,
-	ROLE_DEMON = 30,
-	ROLE_ELITE = 100,
 
 	// DUO ANTAGS
 	ROLE_GUARDIAN = 40,
@@ -211,4 +209,3 @@ ADMIN_VERB(check_player_exp, R_ADMIN|R_MOD|R_MENTOR, "Check Player Playtime", "R
 		return num2text(expnum) + "м"
 	else
 		return "нет"
-

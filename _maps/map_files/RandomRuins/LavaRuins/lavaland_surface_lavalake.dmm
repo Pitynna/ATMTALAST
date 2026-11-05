@@ -199,9 +199,6 @@
 /area/ruin/unpowered/safe_cave)
 "rO" = (
 /obj/effect/mapping_helpers/no_lava,
-/obj/structure/fluff/ash_statue{
-	special_name = "lava lake"
-	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "tZ" = (

@@ -115,9 +115,6 @@
 	var/datum/mind/exchange_red
 	var/datum/mind/exchange_blue
 
-	/// A list of all demon minds spawned via event or wizard artefact.
-	var/list/datum/mind/demons = list()
-
 	/// List of of blobs, their offsprings and blobburnouts spawned by them
 	var/list/blobs = list(
 		BLOB_GROUP_INFECTED = list(),
@@ -492,8 +489,6 @@
 	if(!is_level_reachable(player_turf.z) && !is_away_level(player_turf.z))
 		return FALSE
 	if(is_monkeybasic(player))	// no monkas
-		return FALSE
-	if(isgolem(player))	// get out of here
 		return FALSE
 	if(is_evolvedslime(player))	// no evolved slimes please
 		return FALSE

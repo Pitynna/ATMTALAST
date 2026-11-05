@@ -18,14 +18,11 @@ GLOBAL_LIST_INIT(special_role_times, list(//minimum age (in days) for accounts t
 	ROLE_OPERATIVE = 21,
 	ROLE_RAIDER = 21,
 	ROLE_ALIEN = 21,
-	ROLE_DEMON = 21,
 	ROLE_SENTIENT = 21,
-	ROLE_ELITE = 21,
 //	ROLE_GANG = 21,
 	ROLE_BORER = 21,
 	ROLE_GSPIDER = 21,
 	ROLE_ABDUCTOR = 30,
-	ROLE_BINGLE = 14,
 ))
 
 GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближайшего соседа", SCALING_METHOD_BLUR = "Билейная интерполяция", SCALING_METHOD_NORMAL = "Поточечная выборка"))

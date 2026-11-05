@@ -168,8 +168,6 @@
 	/// Settings variable for having the APC auto use certain power channel settings
 	var/autoflag = APC_AUTOFLAG_ALL_OFF
 
-	/// Being hijacked by a pulse demon?
-	var/being_hijacked = FALSE
 
 	/*** APC Malf AI Vars ****/
 	var/malfhack = FALSE
@@ -481,7 +479,7 @@
 			update_state |= UPSTATE_OPENED1
 		if(opened == APC_COVER_OFF)
 			update_state |= UPSTATE_OPENED2
-	else if(emagged || malfai || being_hijacked)
+	else if(emagged || malfai)
 		update_state |= UPSTATE_BLUESCREEN
 	else if(panel_open)
 		update_state |= UPSTATE_WIREEXP
@@ -583,13 +581,6 @@
 		if(!user.drop_transfer_item_to_loc(I, src))
 			return ..()
 		cell = I
-		for(var/mob/living/simple_animal/demon/pulse_demon/demon in cell)
-			demon.forceMove(src)
-			demon.current_power = src
-			if(!being_hijacked) // first come first serve
-				demon.try_hijack_apc(src)
-		if(being_hijacked)
-			cell.rigged = FALSE // don't blow the demon up
 		user.visible_message(
 			span_notice("[user.name] has inserted the power cell to [src]!"),
 			span_notice("You have inserted the power cell."),

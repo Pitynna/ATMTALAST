@@ -169,7 +169,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	butcher_loot = list(
 		/obj/effect/spawner/random_spawners/forty_pc_skull = 1,
 		/obj/item/reagent_containers/food/snacks/lavaland/soft_meat = 1,
-		/obj/item/lavaland_dye/cinnabar = 1,
 	)
 
 /obj/item/lavaland_fish/shoreline/shellfish
@@ -181,7 +180,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	butcher_loot = list(
 		/obj/item/stack/sheet/cartilage_plate = 2,
 		/obj/item/conductive_organ = 1,
-		/obj/item/lavaland_dye/crimson = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/bottom_eel
@@ -193,7 +191,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	butcher_loot = list(
 		/obj/item/reagent_containers/food/snacks/lavaland/eel_filet = 1,
 		/obj/item/kitchen/knife/combat/survival/bone/eel = 1,
-		/obj/item/lavaland_dye/indigo = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/red_devourer
@@ -207,7 +204,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/stack/sheet/bone = 1,
 		/obj/item/reagent_containers/food/snacks/bait/random = 2,
 		/obj/effect/spawner/random_spawners/lavaland_random_loot = 2,
-		/obj/item/lavaland_dye/crimson = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/magma_hammerhead
@@ -219,7 +215,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	favorite_bait = /obj/item/reagent_containers/food/snacks/bait/goldgrub_larva
 	butcher_loot = list(
 		/obj/item/hivelordstabilizer/molten_mass = 2,
-		/obj/item/lavaland_dye/cinnabar = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/blind_reaper
@@ -233,7 +228,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	butcher_loot = list(
 		/obj/item/circular_saw_blade = 1,
 		/obj/item/reagent_containers/food/snacks/lavaland/predator_meat = 1,
-		/obj/item/lavaland_dye/indigo = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/herald_of_carnage
@@ -247,7 +241,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 		/obj/item/stack/sheet/bone = 2,
 		/obj/item/reagent_containers/food/snacks/lavaland/predator_meat = 1,
 		/obj/effect/spawner/random_spawners/lavaland_random_loot = 3,
-		/obj/item/lavaland_dye/mint = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/sulfuric_tramp
@@ -259,7 +252,6 @@ GLOBAL_LIST_INIT(shore_fish, subtypesof(/obj/item/lavaland_fish/shoreline))
 	butcher_loot = list(
 		/obj/item/t_scanner/adv_mining_scanner/bleary_eye = 1,
 		/obj/item/acid_bladder = 1,
-		/obj/item/lavaland_dye/amber = 1,
 	)
 
 /obj/item/lavaland_fish/deep_water/sulfuric_tramp/check_special_harvest()

@@ -277,33 +277,6 @@
 
 /**********************Mining Equiment Vendor (Golem)**************************/
 
-/obj/machinery/mineral/equipment_vendor/golem
-	name = "golem ship equipment vendor"
-	categories = list(
-		"Gear",
-		"Consumables",
-		"Kinetic Accelerator",
-		"Kinetic Spear",
-		"Digging Tools",
-		"Minebot",
-		"Miscellaneous",
-		"Extra",
-	)
-
-/obj/machinery/mineral/equipment_vendor/golem/Initialize(mapload)
-	. = ..()
-	component_parts = list()
-	component_parts += new /obj/item/circuitboard/mining_equipment_vendor/golem(null)
-	component_parts += new /obj/item/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/stack/sheet/glass(null)
-	RefreshParts()
-
-/obj/machinery/mineral/equipment_vendor/golem/Initialize(mapload)
-	. = ..()
-	desc += "\nSome new items seem to have been added."
-
 /**********************Mining Equiment Vendor (Gulag)**************************/
 
 /obj/machinery/mineral/equipment_vendor/labor
@@ -420,4 +393,3 @@
 #undef VENDOR_SPEAR_KIT
 #undef VENDOR_CONSCRIPTION_KIT
 #undef VENDOR_KA_UPGRADE_KIT
-

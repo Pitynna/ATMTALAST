@@ -12,9 +12,6 @@
 /mob/living/simple_animal/borer/can_be_blob()
 	return FALSE
 
-/mob/living/simple_animal/demon/can_be_blob()
-	return FALSE
-
 /mob/living/simple_animal/revenant/can_be_blob()
 	return FALSE
 

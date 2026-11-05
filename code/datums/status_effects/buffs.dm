@@ -609,54 +609,6 @@
 /datum/status_effect/terror/food_regen/tick(seconds_between_ticks)
 	owner.adjustBruteLoss(-(owner.maxHealth/20))
 
-/datum/status_effect/hope
-	id = "hope"
-	tick_interval = 2 SECONDS
-	alert_type = /atom/movable/screen/alert/status_effect/hope
-
-/atom/movable/screen/alert/status_effect/hope
-	name = "Надежда"
-	desc = "Луч надежды сквозь отчаяние."
-	icon_state = "hope"
-
-/datum/status_effect/hope/tick(seconds_between_ticks)
-	if(owner.stat == DEAD || owner.health <= HEALTH_THRESHOLD_DEAD) // No dead healing, or healing in dead crit
-		return
-	if(owner.health > 50)
-		if(prob(0.5))
-			hope_message()
-		return
-	var/heal_multiplier = min(3, ((50 - owner.health) / 50 + 1)) // 1 hp at 50 health, 2 at 0, 3 at -50
-	var/update = NONE
-	update |= owner.heal_overall_damage(heal_multiplier * 0.5, heal_multiplier * 0.5, updating_health = FALSE)
-	update |= owner.heal_damage_type(heal_multiplier, OXY, FALSE)
-	if(update)
-		owner.updatehealth("hope")
-	if(prob(heal_multiplier * 2))
-		hope_message()
-
-/datum/status_effect/hope/proc/hope_message()
-	var/list/hope_messages = list(
-		"Вы чувствуете, как вас переполняет [pick("надежда", "решимость", "сила", "ярость", "адреналин", "робаст")]!",
-		"Не вздумайте сдаваться!",
-		"Вы видишьте как [pick("друзья", "семья", "коллеги")] [pick("болеют за вас", "поддерживают вас", "переживают за вас")].",
-		"Вы не можете сдаться, продолжайте жить!",
-		"Вы пережили и не такое — соберите свою волю в кулак!",
-		"Люди нуждаются в вас, не [pick("сдавайтесь", "останавливайтесь", "уходите", "колеблитесь", "теряйте надежду")]!",
-		"Этот человек не такой робастный, как вы!",
-		"Вы РОБАСТ, не позволяйте никому говорить обратное!",
-		"[owner], не теряйте надежду, будущее станции зависит от вас!",
-		"Не идите за светом, пока что!"
-	)
-	var/list/un_hopeful_messages = list("НЕ СМЕЙ СДОХНУТЬ, ТРУС!",
-							"Git Gud, [owner]",
-							"Держу пари, [pick("вокс", "вульпа", "ниан", "таяра", "лысый")] справился бы лучше, чем ты!",
-							"Ты слышишь, как люди смеются над тобой за то, что тебя заробастили.")
-	if(prob(99))
-		to_chat(owner, span_notice("[pick(hope_messages)]"))
-	else
-		to_chat(owner, span_cultitalic("[pick(un_hopeful_messages)]"))
-
 /datum/status_effect/thrall_net
 	id = "thrall_net"
 	tick_interval = 2 SECONDS

@@ -36,10 +36,6 @@
 		var/selected_zone = get_priority_targeting(target, user, def_zone)
 		var/obj/item/organ/external/affecting = human_target.get_organ(selected_zone)
 
-		if(isgolem(human_target))
-			target.balloon_alert(user, "неподходящая цель!")
-			return .
-
 		if(human_target.covered_with_thick_material(selected_zone))
 			target.balloon_alert(user, "часть тела чем-то перекрыта!")
 			return .

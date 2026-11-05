@@ -167,7 +167,6 @@
 		/obj/item/organ/internal/lantern = 500,
 		/obj/item/organ/internal/wryn/glands = 700,
 		/obj/item/organ/internal/heart/plasmaman = 750,
-		/obj/item/organ/internal/eyes/unathi/ash_walker_shaman = 500,
 		/obj/item/organ/internal/xenos/plasmavessel/hunter = 550,
 		/obj/item/organ/internal/xenos/plasmavessel/drone = 550,
 		/obj/item/organ/internal/xenos/neurotoxin/sentinel = 650,
@@ -302,7 +301,6 @@
 		/obj/item/gem/data = 450,
 		/obj/item/gem/void = 500,
 		/obj/item/gem/bloodstone = 650,
-		/obj/effect/mob_spawn/human/ash_walker = 1000,
 	)
 	difficultly_flags = (QUEST_DIFFICULTY_EASY|QUEST_DIFFICULTY_NORMAL|QUEST_DIFFICULTY_HARD|QUEST_DIFFICULTY_VERY_HARD)
 

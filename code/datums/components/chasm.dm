@@ -8,7 +8,6 @@
 	/// List of refs to falling objects -> how many levels deep we've fallen
 	var/static/list/falling_atoms = list()
 	var/static/list/forbidden_types = typecacheof(list(
-		/mob/living/simple_animal/hostile/asteroid/elite,
 		/mob/living/simple_animal/hostile/megafauna,
 		/obj/bfl_crack,
 		/obj/docking_port,
@@ -314,4 +313,3 @@
 	REMOVE_TRAIT(escapee, TRAIT_MOVE_FLYING, CHASM_TRAIT)
 	escapee.Sleeping(20 SECONDS)
 	UnregisterSignal(escapee, COMSIG_LIVING_REVIVE)
-

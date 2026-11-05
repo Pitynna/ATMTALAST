@@ -80,12 +80,6 @@
 /mob/living/carbon/human/unathi_draconid/Initialize(mapload)
 	. = ..(mapload, /datum/species/unathi/draconid)
 
-/mob/living/carbon/human/unathi_ashwalker/Initialize(mapload)
-	. = ..(mapload, /datum/species/unathi/ashwalker)
-
-/mob/living/carbon/human/unathi_ashwalker_shaman/Initialize(mapload)
-	. = ..(mapload, /datum/species/unathi/ashwalker/shaman)
-
 /mob/living/carbon/human/vox/Initialize(mapload)
 	. = ..(mapload, /datum/species/vox)
 
@@ -112,8 +106,6 @@
 
 /mob/living/carbon/human/diona/Initialize(mapload)
 	. = ..(mapload, /datum/species/diona)
-/mob/living/carbon/human/pod_diona/Initialize(mapload)
-	. = ..(mapload, /datum/species/diona/pod)
 /mob/living/carbon/human/machine/Initialize(mapload)
 	. = ..(mapload, /datum/species/machine)
 
@@ -137,60 +129,6 @@
 
 /mob/living/carbon/human/shadow/Initialize(mapload)
 	. = ..(mapload, /datum/species/shadow)
-
-/mob/living/carbon/human/golem/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem)
-
-/mob/living/carbon/human/golem_random/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/random)
-
-/mob/living/carbon/human/golem_adamantine/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/adamantine)
-
-/mob/living/carbon/human/golem_plasma/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plasma)
-
-/mob/living/carbon/human/golem_diamond/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/diamond)
-
-/mob/living/carbon/human/golem_gold/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/gold)
-
-/mob/living/carbon/human/golem_silver/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/silver)
-
-/mob/living/carbon/human/golem_plasteel/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plasteel)
-
-/mob/living/carbon/human/golem_titanium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/titanium)
-
-/mob/living/carbon/human/golem_plastitanium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plastitanium)
-
-/mob/living/carbon/human/golem_alien_alloy/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/alloy)
-
-/mob/living/carbon/human/golem_uranium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/uranium)
-
-/mob/living/carbon/human/golem_plastic/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plastic)
-
-/mob/living/carbon/human/golem_sand/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/sand)
-
-/mob/living/carbon/human/golem_glass/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/glass)
-
-/mob/living/carbon/human/golem_bluespace/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/bluespace)
-
-/mob/living/carbon/human/golem_bananium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/bananium)
-
-/mob/living/carbon/human/golem_tranquillite/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/tranquillite)
 
 /mob/living/carbon/human/wryn/Initialize(mapload)
 	. = ..(mapload, /datum/species/wryn)
@@ -2116,3 +2054,6 @@ GAME_VERB_DESC(/mob/living/carbon/human, set_flavor, "Описание внеш�
 
 /mob/living/carbon/human/proc/get_unarmed_attack()
 	return dna.species.unarmed
+
+/mob/living/carbon/human/pod_diona/Initialize(mapload)
+	. = ..(mapload, /datum/species/diona/pod)
