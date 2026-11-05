@@ -127,7 +127,7 @@
 
 /obj/item/clothing/neck/cloak/civil_cape
 	name = "standard cape cloak"
-	desc = "Тёмная, почти чёрная накидка из плотной ткани. По краям — глубокие синие вставки. Застёгивается на два металлические заклепки. Известна тем, что при намокании начинает источать слабый запах формальдегида — производственный брак, который так и не исправили.."
+	desc = "A dark, almost black cape made from heavy fabric with deep-blue edging and two metal clasps. Known for smelling faintly of formaldehyde when wet, a manufacturing defect that was never fixed."
 	icon_state = "civil_cape"
 	sprite_sheets = list(
 		SPECIES_MONKEY = 'icons/mob/clothing/neck.dmi',
@@ -138,19 +138,9 @@
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/neck.dmi',
 	)
 
-/obj/item/clothing/neck/cloak/civil_cape/get_ru_names()
-	return alist(
-		NOMINATIVE = "стандартная накидка",
-		GENITIVE = "стандартной накидки",
-		DATIVE = "стандартной накидке",
-		ACCUSATIVE = "стандартную накидку",
-		INSTRUMENTAL = "стандартной накидкой",
-		PREPOSITIONAL = "стандартной накидке",
-	)
-
 /obj/item/clothing/neck/cloak/commander_cape
 	name = "commander cape cloak"
-	desc = "Тёмно-антрацитовая накидка с крупными синими вставками. По синему фону идёт аккуратная золотая вышивка. Застёжки титановые, с чернёным золотом. Изнутри подкладка темно-синего цвета с вышитой золотом надписью \"Per aspera ad astra\"."
+	desc = "A dark anthracite cape with broad blue panels and neat gold embroidery. Its titanium clasps are finished in blackened gold. The dark-blue lining bears the gold-embroidered words Per aspera ad astra."
 	icon_state = "commander_cape"
 	sprite_sheets = list(
 		SPECIES_MONKEY = 'icons/mob/clothing/neck.dmi',
@@ -162,19 +152,9 @@
 	)
 
 
-/obj/item/clothing/neck/cloak/commander_cape/get_ru_names()
-	return alist(
-		NOMINATIVE = "командная накидка",
-		GENITIVE = "командной накидки",
-		DATIVE = "командной накидке",
-		ACCUSATIVE = "командную накидку",
-		INSTRUMENTAL = "командной накидкой",
-		PREPOSITIONAL = "командной накидке"
-	)
-
 /obj/item/clothing/neck/cloak/sec_cape
 	name = "security officer cape cloak"
-	desc = "Тёмная вытянутая накидка из армированной ткани с красной окантовкой. На заклёпке виднеется логотип НТ. Красная окантовка выполнена из материала, что темнеет при контакте с кровью...правда вы всё равно этого не заметите покуда будете ходить в крови с ног до головы."
+	desc = "A long, dark cape made from reinforced fabric with red trim. An NT logo marks its clasp. The trim darkens on contact with blood, though you probably won't notice while covered in blood from head to toe."
 	icon_state = "sec_cape"
 	sprite_sheets = list(
 		SPECIES_MONKEY = 'icons/mob/clothing/neck.dmi',
@@ -185,19 +165,9 @@
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/neck.dmi',
 	)
 
-/obj/item/clothing/neck/cloak/sec_cape/get_ru_names()
-	return alist(
-		NOMINATIVE = "офицерская накидка",
-		GENITIVE = "офицерской накидки",
-		DATIVE = "офицерской накидке",
-		ACCUSATIVE = "офицерскую накидку",
-		INSTRUMENTAL = "офицерской накидкой",
-		PREPOSITIONAL = "офицерской накидке"
-	)
-
 /obj/item/clothing/neck/cloak/hos_cape
 	name = "marine cape cloak"
-	desc = "Накидка из матовой ткани, почти не отражающая свет. Заклёпка выглядит как медаль за проявленный героизм. Края накидки у ног выглядят так будто их выжигали кислотой. Пахнет напалмом. Изнутри накидки золотыми нитями вышито \"Gloria dei T.S.F.\"."
+	desc = "A cape made from matte, almost nonreflective fabric. Its clasp resembles a medal for heroism. The lower edges look acid-scorched, and it smells of napalm. Gold embroidery inside reads Gloria dei T.S.F."
 	icon_state = "hos_cape"
 	sprite_sheets = list(
 		SPECIES_MONKEY = 'icons/mob/clothing/neck.dmi',
@@ -206,14 +176,4 @@
 		SPECIES_NEARA = 'icons/mob/clothing/neck.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/neck.dmi',
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/neck.dmi',
-	)
-
-/obj/item/clothing/neck/cloak/hos_cape/get_ru_names()
-	return alist(
-		NOMINATIVE = "накидка морпехов",
-		GENITIVE = "накидки морпехов",
-		DATIVE = "накидке морпехов",
-		ACCUSATIVE = "накидку морпехов",
-		INSTRUMENTAL = "накидкой морпехов",
-		PREPOSITIONAL = "накидке морпехов"
 	)

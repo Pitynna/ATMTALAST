@@ -185,21 +185,10 @@
 
 /obj/item/reagent_containers/condiment/syndisauce
 	name = "Chef Excellence's Special Sauce"
-	desc = "Этот ароматный соус, приготовленный из мухоморов, просто восхитителен! Смерть никогда не была такой приятной на вкус."
+	desc = "A potent sauce extracted from the potent amanita mushrooms. Death never tasted quite so delicious."
 	list_reagents = list("amanitin" = 50)
 	possible_states = list()
 
-/obj/item/reagent_containers/condiment/syndisauce/get_ru_names()
-	return alist(
-		NOMINATIVE = "элитарный соус шефа",
-		GENITIVE = "элитарного соуса шефа",
-		DATIVE = "элитарному соусу шефа",
-		ACCUSATIVE = "элитарный соус шефа",
-		INSTRUMENTAL = "элитарным соусом шефа",
-		PREPOSITIONAL = "элитарном соусе шефа",
-	)
-
-//Tomato sauce
 /obj/item/reagent_containers/condiment/tomatosauce
 	name = "tomato sauce"
 	desc = "The father of all sauces. Tomatoes, a little spice and nothing extra."
@@ -331,35 +320,14 @@
 	originalname = "ketchup"
 	list_reagents = list("ketchup" = 10)
 
-/obj/item/reagent_containers/condiment/pack/ketchup/get_ru_names()
-	return alist(
-		NOMINATIVE = "пакетик кетчупа",
-		GENITIVE = "пакетика кетчупа",
-		DATIVE = "пакетику кетчупа",
-		ACCUSATIVE = "пакетик кетчупа",
-		INSTRUMENTAL = "пакетиком кетчупа",
-		PREPOSITIONAL = "пакетике кетчупа"
-	)
-
 /obj/item/reagent_containers/condiment/pack/hotsauce
 	name = "hotsauce pack"
 	originalname = "hotsauce"
 	list_reagents = list("capsaicin" = 10)
 
-/obj/item/reagent_containers/condiment/pack/hotsauce/get_ru_names()
-	return alist(
-		NOMINATIVE = "пакетик острого соуса",
-		GENITIVE = "пакетика острого соуса",
-		DATIVE = "пакетику острого соуса",
-		ACCUSATIVE = "пакетик острого соуса",
-		INSTRUMENTAL = "пакетиком острого соуса",
-		PREPOSITIONAL = "пакетике острого соуса"
-	)
-
-// Animal feed
 /obj/item/reagent_containers/condiment/animalfeed
 	name = "pet food package"
-	desc = "Корм для домашних животных. Вы же точно не хотите это пробовать?.."
+	desc = "Pet food. You aren't seriously going to taste it, are you?.."
 	icon = 'icons/obj/pet_bowl.dmi'
 	icon_state = "pet_food"
 	volume = 80
@@ -373,16 +341,6 @@
 	originalname = "creamer"
 	list_reagents = list("cream" = 10)
 
-/obj/item/reagent_containers/condiment/pack/creamer/get_ru_names()
-	return alist(
-		NOMINATIVE = "пакетик сливок",
-		GENITIVE = "пакетика сливок",
-		DATIVE = "пакетику сливок",
-		ACCUSATIVE = "пакетик сливок",
-		INSTRUMENTAL = "пакетиком сливок",
-		PREPOSITIONAL = "пакетике сливок"
-	)
-
 /obj/item/reagent_containers/condiment/pack/creamer/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/coffeemaker_item_loader, "creamer")
@@ -391,16 +349,6 @@
 	name = "sugar pack"
 	originalname = "sugar"
 	list_reagents = list("sugar" = 10)
-
-/obj/item/reagent_containers/condiment/pack/sugar/get_ru_names()
-	return alist(
-		NOMINATIVE = "пакетик сахара",
-		GENITIVE = "пакетика сахара",
-		DATIVE = "пакетику сахара",
-		ACCUSATIVE = "пакетик сахара",
-		INSTRUMENTAL = "пакетиком сахара",
-		PREPOSITIONAL = "пакетике сахара"
-	)
 
 /obj/item/reagent_containers/condiment/pack/sugar/ComponentInitialize()
 	. = ..()
@@ -411,16 +359,6 @@
 	originalname = "aspartame"
 	list_reagents = list("aspartame" = 10)
 
-/obj/item/reagent_containers/condiment/pack/aspartame/get_ru_names()
-	return alist(
-		NOMINATIVE = "пакетик аспартама",
-		GENITIVE = "пакетика аспартама",
-		DATIVE = "пакетику аспартама",
-		ACCUSATIVE = "пакетик аспартама",
-		INSTRUMENTAL = "пакетиком аспартама",
-		PREPOSITIONAL = "пакетике аспартама"
-	)
-
 /obj/item/reagent_containers/condiment/pack/aspartame/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/coffeemaker_item_loader, "aspartame")
@@ -429,15 +367,5 @@
 	name = "chocolate sprinkle pack"
 	originalname = "chocolate sprikle"
 	list_reagents = list("chocolate_sprinkle" = 10)
-
-/obj/item/reagent_containers/condiment/pack/chocolate/get_ru_names()
-	return alist(
-		NOMINATIVE = "пакетик шоколадной посыпки",
-		GENITIVE = "пакетика шоколадной посыпки",
-		DATIVE = "пакетику шоколадной посыпки",
-		ACCUSATIVE = "пакетик шоколадной посыпки",
-		INSTRUMENTAL = "пакетиком шоколадной посыпки",
-		PREPOSITIONAL = "пакетике шоколадной посыпки"
-	)
 
 #undef CONSUME_AMOUNT

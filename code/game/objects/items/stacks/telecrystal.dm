@@ -1,6 +1,6 @@
 /obj/item/stack/telecrystal
 	name = "telecrystal"
-	desc = "Кажется, что он переполнен загадочной и притягательной энергией."
+	desc = "It seems to be pulsing with suspiciously enticing energies."
 	gender = MALE
 	singular_name = "telecrystal"
 	icon = 'icons/obj/telescience.dmi'
@@ -10,16 +10,6 @@
 	logistics_count_amount = TRUE
 	item_flags = NOBLUDGEON
 	origin_tech = "materials=6"
-
-/obj/item/stack/telecrystal/get_ru_names()
-	return alist(
-		NOMINATIVE = "телекристалл",
-		GENITIVE = "телекристалла",
-		DATIVE = "телекристаллу",
-		ACCUSATIVE = "телекристалл",
-		INSTRUMENTAL = "телекристаллом",
-		PREPOSITIONAL = "телекристалле",
-	)
 
 /obj/item/stack/telecrystal/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	. = ATTACK_CHAIN_PROCEED

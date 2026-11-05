@@ -141,7 +141,6 @@
 ///from base of /datum/element/after_attack/Detach(): (proc_ref)
 #define COMSIG_ITEM_UNREGISTER_AFTERATTACK "unregister_item_afterattack"
 
-#define COMSIG_MASKFILTER_UPDATE_STATE "ttsfilter_update_state"
 
 /// Sent after addind a camera to the cameranet datum (/datum/cameranet/proc/addCamera(obj/machinery/camera/c))
 #define COMSIG_CAMERANET_CAMERA_ADDED "cameranet_camera_added"

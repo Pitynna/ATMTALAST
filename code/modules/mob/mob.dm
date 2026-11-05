@@ -52,7 +52,6 @@
 
 	key = null
 	ckey = null
-	tts_effect_override_source = null
 	return ..()
 
 /mob/Initialize(mapload)
@@ -1061,11 +1060,6 @@ GAME_VERB(/mob/dead/observer, respawn, "Стать животным", VERB_CATEG
 	for(var/obj/item/access_location in get_access_locations())
 		. |= access_location.GetAccess()
 
-/mob/update_tts_seed(new_tts_seed)
-	. = ..()
-	if(. && dna)
-		dna.tts_seed_dna = new_tts_seed
-
 /*
  * * Creates Log Record for Log Viewer
  * log_type - look __DEFINES/logs.dm (example: ATTACK_LOG, SAY_LOG, MISC_LOGS)
@@ -1264,13 +1258,7 @@ GLOBAL_LIST_INIT(holy_areas, typecacheof(list(
 	if(!mind)
 		return FALSE
 
-	//Allows cult to bypass holy areas once they summon
-	var/datum/game_mode/gamemode = SSticker.mode
-	if(iscultist(src) && gamemode.cult_objs.cult_status == NARSIE_HAS_RISEN)
-		return FALSE
-
-	//Execption for Holy Constructs
-	if(isconstruct(src) && !iscultist(src))
+	if(isconstruct(src))
 		return FALSE
 
 	to_chat(src, span_warning("Your powers are useless on this holy ground."))

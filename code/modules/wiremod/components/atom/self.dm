@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/self
 	display_name = "Текущая оболочка"
-	desc = "Компонент, возвращающий значение текущей оболочки. \
-			Отправляет сигнал при обновлении оболочки."
+	desc = "A component that returns the current shell. Sends a signal when the shell is updated."
 	category = "Entity"
 
 	/// The shell this component is attached to.

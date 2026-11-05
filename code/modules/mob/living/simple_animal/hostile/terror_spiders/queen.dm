@@ -59,7 +59,6 @@
 	var/datum/action/innate/terrorspider/queen/queennest/queennest_action
 	var/datum/action/innate/terrorspider/queen/queensense/queensense_action
 	var/datum/action/innate/terrorspider/queen/queeneggs/queeneggs_action
-	tts_seed = "Anivia"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/queen/get_ru_names()
 	return alist(
@@ -371,18 +370,8 @@
 
 /obj/structure/spider/terrorweb/queen
 	name = "airtight web"
-	desc = "Эта многослойная паутина, кажется, способна противостоять давлению воздуха."
+	desc = "This multi-layered web seems to be able to resist air pressure."
 	max_integrity = 30
-
-/obj/structure/spider/terrorweb/queen/get_ru_names()
-	return alist(
-		NOMINATIVE = "воздухонепроницаемая паутина",
-		GENITIVE = "воздухонепроницаемой паутины",
-		DATIVE = "воздухонепроницаемой паутине",
-		ACCUSATIVE = "воздухонепроницаемую паутину",
-		INSTRUMENTAL = "воздухонепроницаемой паутиной",
-		PREPOSITIONAL = "воздухонепроницаемой паутине",
-	)
 
 /obj/structure/spider/terrorweb/queen/Initialize(mapload)
 	. = ..()

@@ -8,7 +8,6 @@
 	VV_DROPDOWN_OPTION(VV_HK_ADD_VERB, "Add Verb")
 	VV_DROPDOWN_OPTION(VV_HK_REMOVE_VERB, "Remove Verb")
 	VV_DROPDOWN_OPTION(VV_HK_BUILDMODE, "Toggle Buildmode")
-	VV_DROPDOWN_OPTION(VV_HK_CHANGE_VOICE, "Change Voice")
 	VV_DROPDOWN_OPTION(VV_HK_DIRECT_CONTROL, "Assume Direct Control")
 	VV_DROPDOWN_OPTION(VV_HK_OFFER_GHOSTS, "Offer Control to Ghosts")
 	VV_DROPDOWN_OPTION(VV_HK_DROP_ALL, "Drop Everything")
@@ -73,19 +72,6 @@
 		grant_all_languages()
 		to_chat(usr, "Added all languages to [src].", confidential = TRUE)
 		log_and_message_admins("has given [key_name(src)] all languages.")
-
-	if(href_list[VV_HK_CHANGE_VOICE])
-		if(!check_rights(R_SPAWN))
-			return
-
-		var/old_tts_seed = tts_seed
-		var/new_tts_seed = change_voice(usr)
-		if(!new_tts_seed)
-			return
-
-		to_chat(usr, "Changed voice from [old_tts_seed] to [new_tts_seed] for [src].", confidential = TRUE)
-		to_chat(src, span_notice("Your voice has been changed from [old_tts_seed] to [new_tts_seed]."), confidential = TRUE)
-		log_and_message_admins("has changed [key_name(src)]'s voice from [old_tts_seed] to [new_tts_seed]")
 
 	if(href_list[VV_HK_ADD_VERB])
 		if(!check_rights(R_DEBUG))

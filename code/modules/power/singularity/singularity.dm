@@ -352,12 +352,6 @@
 		consume_boh(thing)
 		return
 
-	if(istype(thing, /obj/god/narsie))
-		consume_god(thing, "[SSticker.cultdat?.entity_name]", "Nar'Sie")
-	else if(istype(thing, /obj/god/ratvar))
-		consume_god(thing, "Rat'var", "Ratvar")
-
-	// consume_god may have qdel'd either side; bail before touching them.
 	if(QDELETED(src) || QDELETED(thing))
 		return
 

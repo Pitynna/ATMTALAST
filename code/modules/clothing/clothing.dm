@@ -762,8 +762,6 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/shoes.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/shoes.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/shoes.dmi',
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/shoes.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/shoes.dmi',
@@ -995,8 +993,6 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 	. = ..()
 
 	if(ishuman(user) && hide_tail_by_species && slot == ITEM_SLOT_CLOTH_OUTER)
-		if("modsuit" in hide_tail_by_species)
-			return
 		if(user.dna.species.name in hide_tail_by_species)
 			if(!(flags_inv & HIDETAIL)) //Hide the tail if the user's species is in the hide_tail_by_species list and the tail isn't already hidden.
 				flags_inv |= HIDETAIL
@@ -1073,8 +1069,6 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 	undyeable = TRUE
 	var/obj/item/tank/jetpack/suit/jetpack = null
 	var/jetpack_upgradable = FALSE
-	/// Original slowdown with modifiers
-	var/original_slowdown
 
 /obj/item/clothing/suit/space/Initialize(mapload)
 	. = ..()
@@ -1104,17 +1098,9 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 
 /obj/item/clothing/suit/space/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
-	if(slot == ITEM_SLOT_CLOTH_OUTER)
-		if(isnull(original_slowdown))
-			original_slowdown = slowdown
-		CALCULATE_SKILL_MOD(user, SPACESUIT_SLOWDOWN_MOD, skill_factor)
-		slowdown = original_slowdown * skill_factor
-		if(jetpack)
-			for(var/datum/action/action as anything in jetpack.actions)
-				action.Grant(user)
-	else if(!isnull(original_slowdown))
-		slowdown = original_slowdown
-		original_slowdown = null
+	if(jetpack && slot == ITEM_SLOT_CLOTH_OUTER)
+		for(var/datum/action/action as anything in jetpack.actions)
+			action.Grant(user)
 
 /obj/item/clothing/suit/space/dropped(mob/user, slot, silent = FALSE)
 	. = ..()
@@ -1122,8 +1108,6 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 		for(var/datum/action/action as anything in jetpack.actions)
 			action.Remove(user)
 		jetpack.turn_off(user)
-	if(!isnull(original_slowdown))
-		slowdown = original_slowdown
 
 /obj/item/clothing/suit/space/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/tank/jetpack/suit))
@@ -1163,8 +1147,6 @@ GAME_VERB_SRC(/obj/item/clothing/under, toggle, usr, "Датчики костю�
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/uniform.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/uniform.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/uniform.dmi',

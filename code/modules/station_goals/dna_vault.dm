@@ -68,7 +68,7 @@ GLOBAL_LIST_EMPTY(dna_vaults)
 
 /obj/item/dna_probe
 	name = "DNA Sampler"
-	desc = "Может использоваться для взятия химических и генетических образцов практически любого объекта."
+	desc = "Can be used to take chemical and genetic samples of pretty much anything."
 	icon = 'icons/obj/hypo.dmi'
 	item_state = "sampler_hypo"
 	icon_state = "sampler_hypo"
@@ -76,16 +76,6 @@ GLOBAL_LIST_EMPTY(dna_vaults)
 	var/list/animals = list()
 	var/list/plants = list()
 	var/list/dna = list()
-
-/obj/item/dna_probe/get_ru_names()
-	return alist(
-		NOMINATIVE = "ДНК-семплер",
-		GENITIVE = "ДНК-семплера",
-		DATIVE = "ДНК-семплеру",
-		ACCUSATIVE = "ДНК-семплер",
-		INSTRUMENTAL = "ДНК-семплером",
-		PREPOSITIONAL = "ДНК-семплере",
-	)
 
 /obj/item/dna_probe/proc/clear_data()
 	animals = list()
@@ -165,7 +155,7 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 
 /obj/machinery/dna_vault
 	name = "DNA Vault"
-	desc = "Разбейте стекло в случае апокалипсиса."
+	desc = "Break glass in case of apocalypse."
 	icon = 'icons/obj/machines/dna_vault.dmi'
 	icon_state = "vault"
 	density = TRUE
@@ -187,16 +177,6 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 	var/static/list/power_lottery = list()
 
 	var/list/obj/structure/fillers = list()
-
-/obj/machinery/dna_vault/get_ru_names()
-	return alist(
-		NOMINATIVE = "ДНК хранилище",
-		GENITIVE = "ДНК хранилища",
-		DATIVE = "ДНК хранилищу",
-		ACCUSATIVE = "ДНК хранилище",
-		INSTRUMENTAL = "ДНК хранилищем",
-		PREPOSITIONAL = "ДНК хранилище",
-	)
 
 /obj/machinery/dna_vault/Initialize(mapload)
 	. = ..()

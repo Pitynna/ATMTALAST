@@ -1,22 +1,12 @@
 /obj/machinery/computer/arcade
 	name = "random arcade"
-	desc = "Случайный аркадный автомат."
+	desc = "random arcade machine."
 	icon_state = "arcade"
 	icon_keyboard = null
 	icon_screen = "invaders"
 	light_color = "#00FF00"
 	var/prize = /obj/item/stack/tickets
 	var/list/prize_storage
-
-/obj/machinery/computer/arcade/get_ru_names()
-	return alist(
-		NOMINATIVE = "игровой автомат",
-		GENITIVE = "игрового автомата",
-		DATIVE = "игровому автомату",
-		ACCUSATIVE = "игровой автомат",
-		INSTRUMENTAL = "игровым автоматом",
-		PREPOSITIONAL = "игровом автомате",
-	)
 
 /obj/machinery/computer/arcade/proc/Reset()
 	return
@@ -67,7 +57,7 @@
 
 /obj/machinery/computer/arcade/battle
 	name = "arcade machine"
-	desc = "Не поддерживает пинбол."
+	desc = "Does not support Pinball."
 	circuit = /obj/item/circuitboard/arcade/battle
 	var/enemy_name = "Space Villian"
 	var/temp = "Победители не употребляют Космодурь" //Temporary message, for attack messages, etc
@@ -296,7 +286,7 @@
 
 /obj/machinery/computer/arcade/orion_trail
 	name = "The Orion Trail"
-	desc = "Узнайте, как наши предки добрались до Ориона, и повеселитесь в процессе!"
+	desc = "Learn how our ancestors got to Orion, and have fun in the process!"
 	circuit = /obj/item/circuitboard/arcade/orion_trail
 	var/busy = 0 //prevent clickspam that allowed people to ~speedrun~ the game.
 	var/engine = 0
@@ -330,16 +320,6 @@
 
 	var/list/gamers = list()
 	var/killed_crew = 0
-
-/obj/machinery/computer/arcade/orion_trail/get_ru_names()
-	return alist(
-		NOMINATIVE = "игровой автомат The Orion Trail",
-		GENITIVE = "игрового автомата The Orion Trail",
-		DATIVE = "игровому автомату The Orion Trail",
-		ACCUSATIVE = "игровой автомат The Orion Trail",
-		INSTRUMENTAL = "игровым автоматом The Orion Trail",
-		PREPOSITIONAL = "игровом автомате The Orion Trail",
-	)
 
 /obj/machinery/computer/arcade/orion_trail/Reset()
 	// Sets up the main trail
@@ -457,7 +437,7 @@
 				INSTRUMENTAL = "игровым автоматом The Orion Trail",
 				PREPOSITIONAL = "игровом автомате The Orion Trail",
 			)
-			desc = "Узнайте, как наши предки добрались до Ориона, и повеселитесь в процессе!"
+			desc = "Learn how our ancestors reached Orion, and have fun along the way!"
 
 	else if(event)
 		dat = eventdat
@@ -1043,7 +1023,7 @@
 			INSTRUMENTAL = "игровым автоматом The Orion Trail: Realism Edition",
 			PREPOSITIONAL = "игровом автомате The Orion Trail: Realism Edition",
 		)
-		desc = "Узнайте, как наши предки добрались до Ориона, и постарайтесь не сдохнуть в процессе!"
+		desc = "Learn how our ancestors reached Orion, and try not to die along the way!"
 		newgame()
 		emagged = 1
 
@@ -1065,21 +1045,11 @@
 
 /obj/item/orion_ship
 	name = "model settler ship"
-	desc = "Модель космического корабля, похожая на те, что использовались в прежние времена при полетах на Орион! В ней даже есть миниатюрный реактор FX-293, который славился своей нестабильностью и склонностью к взрывам..."
+	desc = "A model spaceship, it looks like those used back in the day when travelling to Orion! It even has a miniature FX-293 reactor, which was renowned for its instability and tendency to explode..."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ship"
 	w_class = WEIGHT_CLASS_SMALL
 	var/active = 0 //if the ship is on
-
-/obj/item/orion_ship/get_ru_names()
-	return alist(
-		NOMINATIVE = "модель корабля колонистов",
-		GENITIVE = "модели корабля колонистов",
-		DATIVE = "модели корабля колонистов",
-		ACCUSATIVE = "модель корабля колонистов",
-		INSTRUMENTAL = "моделью корабля колонистов",
-		PREPOSITIONAL = "модели корабля колонистов",
-	)
 
 /obj/item/orion_ship/examine(mob/user)
 	. = ..()
@@ -1114,7 +1084,7 @@
 
 /obj/machinery/computer/arcade/orion_trail/pc_frame
 	name = "special purpose computer"
-	desc = "Выполнять вычисления на этом компьютере будет сложно..."
+	desc = "It will be difficult to perform calculations on this computer..."
 	icon_state = "aimainframe"
 
 /obj/machinery/computer/arcade/orion_trail/pc_frame/macintosh
@@ -1124,7 +1094,7 @@
 
 /obj/machinery/computer/arcade/battle/pc_frame
 	name = "special purpose computer"
-	desc = "Выполнять вычисления на этом компьютере будет сложно..."
+	desc = "It will be difficult to perform calculations on this computer..."
 	icon_state = "aimainframe"
 
 /obj/machinery/computer/arcade/battle/pc_frame/macintosh

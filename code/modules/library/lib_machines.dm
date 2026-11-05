@@ -138,23 +138,13 @@ GLOBAL_LIST_INIT(library_section_names, list("Any", "Fiction", "Non-Fiction", "A
 /** Scanner **/
 /obj/machinery/libraryscanner
 	name = "scanner"
-	desc = "Крупная машина для сканирования печатной литературы."
+	desc = "A large machine for scanning printed literature."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "bigscanner"
 	anchored = TRUE
 	density = TRUE
 	/// Last scanned book
 	var/obj/item/book/cache
-
-/obj/machinery/libraryscanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "сканер",
-		GENITIVE = "сканера",
-		DATIVE = "сканеру",
-		ACCUSATIVE = "сканер",
-		INSTRUMENTAL = "сканером",
-		PREPOSITIONAL = "сканере",
-	)
 
 /obj/machinery/libraryscanner/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
@@ -221,21 +211,11 @@ GLOBAL_LIST_INIT(library_section_names, list("Any", "Fiction", "Non-Fiction", "A
  */
 /obj/machinery/bookbinder
 	name = "Book Binder"
-	desc = "Крупное устройство для скрепления листов бумаги в книжный переплёт."
+	desc = "Used by authors, poets, and librarians to scan papers and print copies of their fanfics."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "binder"
 	anchored = TRUE
 	density = TRUE
-
-/obj/machinery/bookbinder/get_ru_names()
-	return alist(
-		NOMINATIVE = "брошюратор",
-		GENITIVE = "брошюратора",
-		DATIVE = "брошюратору",
-		ACCUSATIVE = "брошюратор",
-		INSTRUMENTAL = "брошюратором",
-		PREPOSITIONAL = "брошюраторе",
-	)
 
 /obj/machinery/bookbinder/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)

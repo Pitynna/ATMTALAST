@@ -1,6 +1,6 @@
 /obj/machinery/vending/syndierobotics
 	name = "Syndie Robo-Deluxe"
-	desc = "Всё что нужно, чтобы сделать личного железного друга из ваших врагов!"
+	desc = "Everything you need to turn your enemies into your own personal metal friends!"
 	slogan_list = list(
 		"Заст+авьте их п+ищать и гуд+еть, как и подоб+ает р+оботу!",
 		"Роботиз+ация — +это НЕ преступл+ение!",
@@ -30,14 +30,4 @@
 		/obj/item/stack/cable_coil = 4,
 		/obj/item/mmi/syndie = 2,
 		/obj/item/robotanalyzer = 2,
-	)
-
-/obj/machinery/vending/syndierobotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Syndie Robo-Deluxe",
-		GENITIVE = "торгового автомата Syndie Robo-Deluxe",
-		DATIVE = "торговому автомату Syndie Robo-Deluxe",
-		ACCUSATIVE = "торговый автомат Syndie Robo-Deluxe",
-		INSTRUMENTAL = "торговым автоматом Syndie Robo-Deluxe",
-		PREPOSITIONAL = "торговом автомате Syndie Robo-Deluxe",
 	)

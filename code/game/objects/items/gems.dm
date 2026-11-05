@@ -2,7 +2,7 @@
 
 /obj/item/gem
 	name = "gem"
-	desc = "Ооо! Блестяшка!"
+	desc = "Oooh! Shiny!"
 	gender = MALE
 	icon = 'icons/obj/lavaland/gems.dmi'
 	icon_state = "rupee"
@@ -36,16 +36,6 @@
 	pixel_y = rand(-8,8)
 	base_pixel_x = pixel_x
 	base_pixel_y = pixel_y
-
-/obj/item/gem/get_ru_names()
-	return alist(
-		NOMINATIVE = "самоцвет",
-		GENITIVE = "самоцвета",
-		DATIVE = "самоцвету",
-		ACCUSATIVE = "самоцвет",
-		INSTRUMENTAL = "самоцветом",
-		PREPOSITIONAL = "самоцвете",
-	)
 
 /obj/item/gem/Destroy()
 	cut_overlay(shine_overlay)
@@ -96,7 +86,7 @@
 //goldgrub gem
 /obj/item/gem/rupee
 	name = "ruperium crystal"
-	desc = "Крайне радиоактивное кристаллическое соединение, которое можно найти во внутренностях златожора. Хоть вы и можете преобразовать кристалл в урановую руду, его истинная ценность заключается в его резонирующих свойствах."
+	desc = "A radioactive, crystalline compound rarely found in the goldgrubs. While able to be cut into sheets of uranium, the mineral's true value is in its resonating, humming properties."
 	light_color = "#5ECC38"
 	materials = list(MAT_URANIUM = 60000)
 	sheet_type = /obj/item/stack/sheet/mineral/uranium{amount = 30}
@@ -106,16 +96,6 @@
 	var/shielded = TRUE
 	/// Cooldown between radiation pulses
 	COOLDOWN_DECLARE(radiation_cooldown)
-
-/obj/item/gem/rupee/get_ru_names()
-	return alist(
-		NOMINATIVE = "кристалл рупериума",
-		GENITIVE = "кристалла рупериума",
-		DATIVE = "кристаллу рупериума",
-		ACCUSATIVE = "кристалл рупериума",
-		INSTRUMENTAL = "кристаллом рупериума",
-		PREPOSITIONAL = "кристалле рупериума",
-	)
 
 /obj/item/gem/rupee/Initialize(mapload)
 	. = ..()
@@ -165,7 +145,7 @@
 //magmawing watcher gem
 /obj/item/gem/magma
 	name = "calcified auric"
-	desc = "Горячий на ощупь, слегка святящийся минерал, получаемый из потрохов магменных наблюдателей. Может быть переплавлен в чистое золото."
+	desc = "A hot, lightly glowing mineral born from the inner workings of magmawing watchers. It is most commonly smelted down into deposits of pure gold."
 	icon_state = "magma"
 	materials = list(MAT_GOLD = 100000)
 	sheet_type = /obj/item/stack/sheet/mineral/gold{amount = 50}
@@ -176,16 +156,6 @@
 	light_color = "#ff7b00"
 	light_system = OVERLAY_LIGHT
 	var/hot = TRUE
-
-/obj/item/gem/magma/get_ru_names()
-	return alist(
-		NOMINATIVE = "окаменелый аурит",
-		GENITIVE = "окаменелого аурита",
-		DATIVE = "окаменелому ауриту",
-		ACCUSATIVE = "окаменелый аурит",
-		INSTRUMENTAL = "окаменелым ауритом",
-		PREPOSITIONAL = "окаменелом аурите",
-	)
 
 /obj/item/gem/magma/examine(mob/user)
 	. = ..()
@@ -214,7 +184,7 @@
 //icewing watcher gem
 /obj/item/gem/fdiamond
 	name = "frost diamond"
-	desc = "Уникальный алмаз, получаемый из морозных наблюдателей. Кажется его можно разрезать на маленькие алмазы."
+	desc = "A unique diamond that is produced within icewing watchers. It looks like it can be cut into smaller sheets of diamond ore."
 	icon_state = "diamond"
 	materials = list(MAT_DIAMOND = 60000)
 	sheet_type = /obj/item/stack/sheet/mineral/diamond{amount = 30}
@@ -225,16 +195,6 @@
 	light_system = OVERLAY_LIGHT
 	var/cold = TRUE
 	sell_multiplier = 2
-
-/obj/item/gem/fdiamond/get_ru_names()
-	return alist(
-		NOMINATIVE = "морозный бриллиант",
-		GENITIVE = "морозного бриллианта",
-		DATIVE = "морозному бриллианту",
-		ACCUSATIVE = "морозный бриллиант",
-		INSTRUMENTAL = "морозным бриллиантом",
-		PREPOSITIONAL = "морозном бриллианте",
-	)
 
 /obj/item/gem/fdiamond/examine(mob/user)
 	. = ..()
@@ -263,7 +223,7 @@
 //blood-drunk miner gem
 /obj/item/gem/phoron
 	name = "stabilized baroxuldium"
-	desc = "Мягкий на ощупь кристалл, который можно найти исключительно в самых глубоких жилах плазмы. Судя по всему, ученые им явно заинтересуются."
+	desc = "A soft, glowing crystal only found in the deepest veins of plasma. It looks like it could be destructively analyzed to extract the condensed materials within."
 	icon_state = "phoron"
 	materials = list(MAT_PLASMA = 80000)
 	sheet_type = /obj/item/stack/sheet/mineral/plasma{amount = 40}
@@ -275,20 +235,9 @@
 	light_color = "#62326a"
 	light_system = OVERLAY_LIGHT
 
-/obj/item/gem/phoron/get_ru_names()
-	return alist(
-		NOMINATIVE = "стабилизированный бароксильдиум",
-		GENITIVE = "стабилизированного бароксильдиума",
-		DATIVE = "стабилизированному бароксильдиуму",
-		ACCUSATIVE = "стабилизированный бароксильдиум",
-		INSTRUMENTAL = "стабилизированным бароксильдиумом",
-		PREPOSITIONAL = "стабилизированном бароксильдиуме",
-	)
-
-//hierophant gem
 /obj/item/gem/purple
 	name = "densified dilithium"
-	desc = "Крайне необычная форма дилитиума, пульсирующая в устойчивом ритме. Этот ритм достаточно легко улавливается большинством систем GPS."
+	desc = "A strange mass of dilithium which pulses to a steady rhythm. Its strange surface exudes a unique radio signal detectable by GPS."
 	icon_state = "purple"
 	point_value = 1200
 	sell_multiplier = 4
@@ -299,16 +248,6 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 	var/obj/item/gps/internal
-
-/obj/item/gem/purple/get_ru_names()
-	return alist(
-		NOMINATIVE = "уплотненный дилитиум",
-		GENITIVE = "уплотненного дилитиума",
-		DATIVE = "уплотненному дилитиуму",
-		ACCUSATIVE = "уплотненный дилитиум",
-		INSTRUMENTAL = "уплотненным дилитиумом",
-		PREPOSITIONAL = "уплотненном дилитиуме",
-	)
 
 /obj/item/gem/purple/Initialize(mapload)
 	. = ..()
@@ -330,7 +269,7 @@
 //drake gem
 /obj/item/gem/amber //all cool effects in the necklace, not here. Also this works as fuel for Anvil
 	name = "draconic amber"
-	desc = "Крайне хрупкий минерал, формирующийся из загустевшей крови пепельного дракона. Крайне популярен среди браконьеров из-за его необычной формы и свечения. Среди охотников ходят истории о невероятной силе, даруемой носителю украшений из этого жемчуга."
+	desc = "A brittle, strange mineral that forms when an ash drake's blood hardens after death. Cherished by gemcutters for its faint glow and unique, soft warmth. Poacher tales whisper of the dragon's strength being bestowed to one that wears a necklace of this amber."
 	icon_state = "amber"
 	point_value = 1400
 	sell_multiplier = 5
@@ -339,20 +278,9 @@
 	light_color = "#FFBF00"
 	light_system = OVERLAY_LIGHT
 
-/obj/item/gem/amber/get_ru_names()
-	return alist(
-		NOMINATIVE = "Драконий жемчуг",
-		GENITIVE = "драконего жемчуга",
-		DATIVE = "драконьему жемчугу",
-		ACCUSATIVE = "драконий жемчуг",
-		INSTRUMENTAL = "драконим жемчугом",
-		PREPOSITIONAL = "драконем жемчуге",
-	)
-
-//colossus gem
 /obj/item/gem/void
 	name = "null crystal"
-	desc = "Осколок чистой, кристаллизированной энергии. Эти странные объекты изредка формируются там, где покров реальности крайне неустойчив. Он слегка бьётся током при прикосновении."
+	desc = "A shard of stellar, crystallized energy. These strange objects occasionally appear spontaneously in areas where the bluespace fabric is largely unstable. Its surface gives a light jolt to those who touch it."
 	icon_state ="void"
 	point_value = 1600
 	sell_multiplier = 6
@@ -363,16 +291,6 @@
 	var/blink_range = 6
 	var/cooldown = FALSE
 	var/cooldown_time = 40 SECONDS
-
-/obj/item/gem/void/get_ru_names()
-	return alist(
-		NOMINATIVE = "пустотный кристалл",
-		GENITIVE = "пустотного кристалла",
-		DATIVE = "пустотному кристаллу",
-		ACCUSATIVE = "пустотный кристалл",
-		INSTRUMENTAL = "пустотным кристаллом",
-		PREPOSITIONAL = "пустотном кристалле",
-	)
 
 /obj/item/gem/void/attack_self_tk(mob/user)
 	return
@@ -404,7 +322,7 @@
 //bubblegum gem. Can be used for antags to get some active blood or TK.
 /obj/item/gem/bloodstone
 	name = "ichorium"
-	desc = "Странная, липкая субстанция, срастающаяся в единое целое в присутствии чего-то ужасающего и потустороннего. В то время, как большинство спиритических групп избегает использования этого кристалла, некоторые наиболее опасные секты высоко его ценят."
+	desc = "A weird, sticky substance, known to coalesce in the presence of otherwordly phenomena. While shunned by most spiritual groups, this gemstone has unique ties to the occult which find it handsomely valued by mysterious patrons."
 	icon_state = "red"
 	point_value = 1800
 	sell_multiplier = 7
@@ -415,16 +333,6 @@
 	var/used = FALSE
 	var/blood = 50
 	var/charges = 10
-
-/obj/item/gem/bloodstone/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровавый ихор",
-		GENITIVE = "кровавого ихора",
-		DATIVE = "кровавому ихору",
-		ACCUSATIVE = "кровавый ихор",
-		INSTRUMENTAL = "кровавым ихором",
-		PREPOSITIONAL = "кровавом ихоре",
-	)
 
 /obj/item/gem/bloodstone/examine(mob/user)
 	. = ..()
@@ -458,7 +366,7 @@
 //vetus gem
 /obj/item/gem/data
 	name = "bluespace data crystal"
-	desc = "Массивный блюспейс кристалл, на котором выгравированы наносхемы. Кажется, он черпает энергию из воздуха."
+	desc = "A large bluespace crystal, etched internally with nano-circuits, it seemingly draws power from nowhere."
 	icon_state = "data"
 	materials = list(MAT_BLUESPACE = 48000)
 	sheet_type = /obj/item/stack/sheet/bluespace_crystal{amount = 24}
@@ -471,17 +379,6 @@
 	insertable = FALSE
 	sell_multiplier = 10
 
-/obj/item/gem/data/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс кристалл данных",
-		GENITIVE = "блюспейс кристалла данных",
-		DATIVE = "блюспейс кристаллу данных",
-		ACCUSATIVE = "блюспейс кристалл данных",
-		INSTRUMENTAL = "блюспейс кристаллом данных",
-		PREPOSITIONAL = "блюспейс кристалле данных",
-	)
-
-//mining gems
 /obj/item/gem/random
 	name = "random gem"
 	icon_state = "ruby"
@@ -502,32 +399,12 @@
 	light_color = "#C72414"
 	sell_multiplier = 0.5
 
-/obj/item/gem/ruby/get_ru_names()
-	return alist(
-		NOMINATIVE = "рубин",
-		GENITIVE = "рубина",
-		DATIVE = "рубину",
-		ACCUSATIVE = "рубин",
-		INSTRUMENTAL = "рубином",
-		PREPOSITIONAL = "рубине",
-	)
-
 /obj/item/gem/sapphire
 	name = "sapphire"
 	icon_state = "sapphire"
 	simple = TRUE
 	light_color = "#1726BF"
 	sell_multiplier = 0.5
-
-/obj/item/gem/sapphire/get_ru_names()
-	return alist(
-		NOMINATIVE = "сапфир",
-		GENITIVE = "сапфира",
-		DATIVE = "сапфиру",
-		ACCUSATIVE = "сапфир",
-		INSTRUMENTAL = "сапфиром",
-		PREPOSITIONAL = "сапфире",
-	)
 
 /obj/item/gem/emerald
 	name = "emerald"
@@ -536,29 +413,9 @@
 	light_color = "#14A73C"
 	sell_multiplier = 0.5
 
-/obj/item/gem/emerald/get_ru_names()
-	return alist(
-		NOMINATIVE = "изумруд",
-		GENITIVE = "изумруда",
-		DATIVE = "изумруду",
-		ACCUSATIVE = "изумруд",
-		INSTRUMENTAL = "изумрудом",
-		PREPOSITIONAL = "изумруд",
-	)
-
 /obj/item/gem/topaz
 	name = "topaz"
 	icon_state = "topaz"
 	simple = TRUE
 	light_color = "#C73914"
 	sell_multiplier = 0.5
-
-/obj/item/gem/topaz/get_ru_names()
-	return alist(
-		NOMINATIVE = "топаз",
-		GENITIVE = "топаза",
-		DATIVE = "топазу",
-		ACCUSATIVE = "топаз",
-		INSTRUMENTAL = "топазом",
-		PREPOSITIONAL = "топазе",
-	)

@@ -25,7 +25,6 @@
 /area/ae13/medbay)
 "aE" = (
 /obj/structure/alien/weeds,
-/obj/effect/contractor_flare,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/ae13/asteroid)
 "aU" = (
@@ -357,7 +356,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/contractor_flare,
 /turf/simulated/floor/plating,
 /area/ae13/command)
 "jT" = (
@@ -854,7 +852,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/turfs/damage,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/contractor_flare,
 /turf/simulated/floor/indestructible/plating,
 /area/ae13/epicenter)
 "vc" = (
@@ -1106,7 +1103,6 @@
 /area/ae13/epicenter)
 "Aw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/contractor_flare,
 /turf/simulated/floor/plating,
 /area/ae13/miner)
 "Az" = (
@@ -1168,7 +1164,6 @@
 /turf/simulated/wall/shuttle/nodiagonal,
 /area/ae13/energy)
 "BT" = (
-/obj/effect/contractor_flare,
 /obj/structure/spider/stickyweb,
 /turf/simulated/floor/plating,
 /area/ae13/medbay)
@@ -1192,7 +1187,6 @@
 /obj/effect/decal/cleanable/blood/writing{
 	dir = 8
 	},
-/obj/effect/contractor_flare,
 /turf/simulated/floor/plating,
 /area/ae13/hall)
 "CH" = (
@@ -1260,7 +1254,6 @@
 /area/ae13/asteroid)
 "Ec" = (
 /obj/structure/alien/weeds,
-/obj/effect/contractor_flare,
 /mob/living/simple_animal/hostile/alien/sentinel,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/ae13/asteroid)

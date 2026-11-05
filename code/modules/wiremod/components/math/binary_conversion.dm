@@ -5,9 +5,7 @@
  */
 /obj/item/circuit_component/binary_conversion
 	display_name = "Двоичное преобразование"
-	desc = "Разбивает десятичное число на массив двоичных цифр или битов, \
-			представленных как 1 или 0 и часто используемых в логических или двоичных операциях, \
-			таких как \"И\", \"ИЛИ\" и \"ИСКЛ. ИЛИ\"."
+	desc = "Splits a decimal number into an array of binary digits, or bits. These are represented as 1 or 0 and are commonly used in logical or bitwise operations such as AND, OR and XOR."
 	category = "Math"
 
 	/// One number

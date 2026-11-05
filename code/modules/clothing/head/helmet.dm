@@ -123,8 +123,6 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/head.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/head.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 	)
 
@@ -335,7 +333,7 @@
 
 /obj/item/clothing/head/helmet/skull
 	name = "skull helmet"
-	desc = "Этот шлем, который выглядит устрашающе и походит на племенной, кажется не очень удобным."
+	desc = "An intimidating tribal helmet, it looks sick as hell."
 	flags_inv = parent_type::flags_inv|HIDEMASK|HIDENAME
 	armor = list(MELEE = 25, BULLET = 15, LASER = 15, ENERGY = 10, BOMB = 20, BIO = 0, FIRE = 25, ACID = 25)
 	icon_state = "skull"
@@ -346,19 +344,9 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/helmet.dmi',
 	)
 
-/obj/item/clothing/head/helmet/skull/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяной шлем",
-		GENITIVE = "костяного шлема",
-		DATIVE = "костяному шлему",
-		ACCUSATIVE = "костяной шлем",
-		INSTRUMENTAL = "костяным шлемом",
-		PREPOSITIONAL = "костяном шлеме",
-	)
-
 /obj/item/clothing/head/helmet/skull/Yorick
-	name = "Йорик"
-	desc = "Бедный Йорик..."
+	name = "Yorick"
+	desc = "Alas, poor Yorick..."
 	sprite_sheets = list(
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/helmet.dmi',
@@ -443,8 +431,6 @@
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/helmet.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/helmet.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
@@ -498,7 +484,7 @@
 
 /obj/item/clothing/head/helmet/biker
 	name = "Motorcycle helmet"
-	desc = "Самый обычный мотоциклетный шлем."
+	desc = "An entirely ordinary motorcycle helmet."
 	armor = list(MELEE = 35, BULLET = 10, LASER = 10, ENERGY = 30, BOMB = 10, BIO = 0, FIRE = 30, ACID = 0)
 	icon_state = "biker"
 	item_state = "biker"
@@ -523,13 +509,3 @@
 	. = ..()
 	var/mutable_appearance/biker_overlay = mutable_appearance(icon='icons/obj/clothing/hats.dmi', icon_state = "biker_overlay")
 	. += biker_overlay
-
-/obj/item/clothing/head/helmet/biker/get_ru_names()
-	return alist(
-		NOMINATIVE = "мотоциклетный шлем",
-		GENITIVE = "мотоциклетного шлема",
-		DATIVE = "мотоциклетному шлему",
-		ACCUSATIVE = "мотоциклетный шлем",
-		INSTRUMENTAL = "мотоциклетным шлемом",
-		PREPOSITIONAL = "мотоциклетном шлеме",
-	)

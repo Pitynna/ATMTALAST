@@ -53,7 +53,7 @@
 
 /obj/item/gun_module/rail/scope/collimator
 	name = "collimator scope"
-	desc = "Коллиматорный прицел, предназначенный для установки на прицельную планку стрелкового оружия. Несовместим с пистолетами. Повышает удобство и точность стрельбы."
+	desc = "A collimator sight for firearm mounting rails. Incompatible with pistols. Improves aiming comfort and accuracy."
 	icon_state = "coll"
 	item_state = "coll"
 	overlay_state = "coll_o"
@@ -65,34 +65,14 @@
 	movespeed_slowdown = 1.15
 	custom_price = 1.5 * PAYCHECK_LOWER
 
-/obj/item/gun_module/rail/scope/collimator/get_ru_names()
-	return alist(
-		NOMINATIVE = "коллиматорный прицел",
-		GENITIVE = "коллиматорного прицела",
-		DATIVE = "коллиматорному прицелу",
-		ACCUSATIVE = "коллиматорный прицел",
-		INSTRUMENTAL = "коллиматорным прицелом",
-		PREPOSITIONAL = "коллиматорном прицеле",
-	)
-
 /obj/item/gun_module/rail/scope/collimator/pistol
 	name = "pistol collimator scope"
-	desc = "Коллиматорный прицел, предназначенный для установки на прицельную планку пистолета. Повышает удобство и точность стрельбы."
+	desc = "A collimator sight for pistol mounting rails. Improves aiming comfort and accuracy."
 	icon_state = "coll_p"
 	item_state = "coll_p"
 	overlay_state = "coll_p_o"
 	class = GUN_MODULE_CLASS_PISTOL_RAIL
 	custom_price = PAYCHECK_LOWER
-
-/obj/item/gun_module/rail/scope/collimator/pistol/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолетный коллиматорный прицел",
-		GENITIVE = "пистолетного коллиматорного прицела",
-		DATIVE = "пистолетному коллиматорному прицелу",
-		ACCUSATIVE = "пистолетный коллиматорный прицел",
-		INSTRUMENTAL = "пистолетным коллиматорным прицелом",
-		PREPOSITIONAL = "пистолетном коллиматорном прицеле",
-	)
 
 /**
  * MARK: Optical Sight
@@ -100,7 +80,7 @@
 
 /obj/item/gun_module/rail/scope/x4
 	name = "optical scope x4"
-	desc = "Оптический прицел с 4-кратным увеличением, предназначенный для установки на прицельную планку стрелкового оружия. Повышает точность при стрельбе на дальние дистанции."
+	desc = "A 4x telescopic sight for firearm mounting rails. Improves accuracy at long range."
 	icon_state = "x4"
 	item_state = "x4"
 	overlay_state = "x4_o"
@@ -112,19 +92,9 @@
 	movespeed_slowdown = 1.3
 	custom_price = 3 * PAYCHECK_MAX
 
-/obj/item/gun_module/rail/scope/x4/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптический прицел х4",
-		GENITIVE = "оптического прицела х4",
-		DATIVE = "оптическому прицелу х4",
-		ACCUSATIVE = "оптический прицел х4",
-		INSTRUMENTAL = "оптическим прицелом х4",
-		PREPOSITIONAL = "оптическом прицеле х4",
-	)
-
 /obj/item/gun_module/rail/scope/x8
 	name = "optical scope x8"
-	desc = "Оптический прицел с 8-кратным увеличением, предназначенный для установки на прицельную планку стрелкового оружия. Повышает точность при стрельбе на дальние дистанции."
+	desc = "An 8x telescopic sight for firearm mounting rails. Improves accuracy at long range."
 	icon_state = "x8"
 	item_state = "x8"
 	overlay_state = "x8_o"
@@ -135,19 +105,9 @@
 	movespeed_slowdown = 1.75
 	custom_price = 5 * PAYCHECK_MAX
 
-/obj/item/gun_module/rail/scope/x8/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптический прицел х8",
-		GENITIVE = "оптического прицела х8",
-		DATIVE = "оптическому прицелу х8",
-		ACCUSATIVE = "оптический прицел х8",
-		INSTRUMENTAL = "оптическим прицелом х8",
-		PREPOSITIONAL = "оптическом прицеле х8",
-	)
-
 /obj/item/gun_module/rail/scope/x16
 	name = "optical scope x16"
-	desc = "Оптический прицел с 16-кратным увеличением, предназначенный для установки на прицельную планку стрелкового оружия. Повышает точность при стрельбе на дальние дистанции."
+	desc = "A 16x telescopic sight for firearm mounting rails. Improves accuracy at long range."
 	icon_state = "x16"
 	item_state = "x16"
 	overlay_state = "x16_o"
@@ -158,16 +118,6 @@
 	spread_decrease_mod = 0.4
 	movespeed_slowdown = 2
 	custom_price = 10 * PAYCHECK_MAX
-
-/obj/item/gun_module/rail/scope/x16/get_ru_names()
-	return alist(
-		NOMINATIVE = "оптический прицел х16",
-		GENITIVE = "оптического прицела х16",
-		DATIVE = "оптическому прицелу х16",
-		ACCUSATIVE = "оптический прицел х16",
-		INSTRUMENTAL = "оптическим прицелом х16",
-		PREPOSITIONAL = "оптическом прицеле х16",
-	)
 
 /**
  * MARK: HUD Sight
@@ -223,7 +173,7 @@
 
 /obj/item/gun_module/rail/hud/medical
 	name = "med hud scope"
-	desc = "Коллиматорный прицел с медицинским ИЛС, предназначенный для установки на прицельную планку стрелкового оружия."
+	desc = "A collimator sight with a medical HUD, designed for firearm mounting rails."
 	icon_state = "coll_med"
 	item_state = "coll_med"
 	overlay_state = "coll_med_o"
@@ -233,19 +183,9 @@
 	origin_tech = "biotech=2;magnets=3;combat=1;programming=1"
 	custom_price = PAYCHECK_LOWER
 
-/obj/item/gun_module/rail/hud/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "коллиматор с медицинским ИЛС",
-		GENITIVE = "коллиматора с медицинским ИЛС",
-		DATIVE = "коллиматору с медицинским ИЛС",
-		ACCUSATIVE = "коллиматор с медицинским ИЛС",
-		INSTRUMENTAL = "коллиматором с медицинским ИЛС",
-		PREPOSITIONAL = "коллиматоре с медицинским ИЛС",
-	)
-
 /obj/item/gun_module/rail/hud/security
 	name = "security hud scope"
-	desc = "Коллиматорный прицел с охранным ИЛС, предназначенный для установки на прицельную планку стрелкового оружия."
+	desc = "A collimator sight with a security HUD, designed for firearm mounting rails."
 	icon_state = "coll_sec"
 	item_state = "coll_sec"
 	overlay_state = "coll_sec_o"
@@ -254,13 +194,3 @@
 	class = GUN_MODULE_CLASS_PISTOL_RAIL | GUN_MODULE_CLASS_SHOTGUN_RAIL | GUN_MODULE_CLASS_RIFLE_RAIL | GUN_MODULE_CLASS_SNIPER_RAIL
 	origin_tech = "combat=2;magnets=3;programming=1;materials=1"
 	custom_price = 1.5 * PAYCHECK_LOWER
-
-/obj/item/gun_module/rail/hud/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "коллиматор с охранным ИЛС",
-		GENITIVE = "коллиматора с охранным ИЛС",
-		DATIVE = "коллиматору с охранным ИЛС",
-		ACCUSATIVE = "коллиматор с охранным ИЛС",
-		INSTRUMENTAL = "коллиматором с охранным ИЛС",
-		PREPOSITIONAL = "коллиматоре с охранным ИЛС",
-	)

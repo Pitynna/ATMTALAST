@@ -78,10 +78,6 @@
 	I.melee_attack_chain(user, loc, modifiers)	// hand this off to the turf instead (for building plating, catwalks, etc)
 	return ATTACK_CHAIN_BLOCKED_ALL
 
-/obj/structure/lattice/ratvar_act()
-	new /obj/structure/lattice/clockwork(loc)
-	qdel(src)
-
 /obj/structure/lattice/blob_act(obj/structure/blob/B)
 	return
 
@@ -104,27 +100,6 @@
 	playsound(get_turf(our_rcd), 'sound/machines/click.ogg', 50, TRUE)
 	return RCD_ACT_FAILED
 
-/obj/structure/lattice/clockwork
-	name = "cog lattice"
-	desc = "A lightweight support lattice. These hold the Justicar's station together."
-	icon = 'icons/obj/smooth_structures/lattice_clockwork.dmi'
-	icon_state = "lattice-0"
-
-/obj/structure/lattice/clockwork/Initialize(mapload)
-	. = ..()
-	ratvar_act()
-
-/obj/structure/lattice/clockwork/ratvar_act()
-	if((x + y) % 2 != 0)
-		icon = 'icons/obj/smooth_structures/lattice_clockwork_large.dmi'
-		pixel_x = -9
-		pixel_y = -9
-	else
-		icon = 'icons/obj/smooth_structures/lattice_clockwork.dmi'
-		pixel_x = 0
-		pixel_y = 0
-	return TRUE
-
 /obj/structure/lattice/catwalk
 	name = "catwalk"
 	desc = "A catwalk for easier EVA maneuvering and cable placement."
@@ -145,34 +120,6 @@
 		C.deconstruct()
 	. = ..()
 
-/obj/structure/lattice/catwalk/ratvar_act()
-	new /obj/structure/lattice/catwalk/clockwork(loc)
-	qdel(src)
-
-/obj/structure/lattice/catwalk/clockwork
-	name = "clockwork catwalk"
-	icon = 'icons/obj/smooth_structures/catwalk_clockwork.dmi'
-	base_icon_state = "catwalk_clockwork"
-	icon_state = "catwalk_clockwork-0"
-
-/obj/structure/lattice/catwalk/clockwork/Initialize(mapload)
-	. = ..()
-	ratvar_act()
-	if(!mapload)
-		new /obj/effect/temp_visual/ratvar/floor/catwalk(loc)
-		new /obj/effect/temp_visual/ratvar/beam/catwalk(loc)
-
-/obj/structure/lattice/catwalk/clockwork/ratvar_act()
-	if((x + y) % 2 != 0)
-		icon = 'icons/obj/smooth_structures/catwalk_clockwork_large.dmi'
-		pixel_x = -9
-		pixel_y = -9
-	else
-		icon = 'icons/obj/smooth_structures/catwalk_clockwork.dmi'
-		pixel_x = 0
-		pixel_y = 0
-	return TRUE
-
 /obj/structure/lattice/fireproof
 	name = "fireproof lattice"
 	desc = "A lightweight support lattice made of heat-resistance alloy."
@@ -192,7 +139,7 @@
 
 /obj/structure/lattice/catwalk/fireproof
 	name = "strong catwalk"
-	desc = "Усиленный мостик, способный выдерживать высокие температуры и сильные нагрузки."
+	desc = "A reinforced catwalk capable of withstanding high temperatures and heavy loads."
 	armor = list(MELEE = 70, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, FIRE = 100, ACID = 80)
 	max_integrity = 150
 	icon = 'icons/obj/smooth_structures/strong_catwalk.dmi'
@@ -208,13 +155,6 @@
 	to_chat(user, span_notice("Вы срезали усиленный мостик!"))
 	new /obj/item/stack/rods/fireproof(get_turf(src), 3)
 	deconstruct()
-
-/obj/structure/lattice/catwalk/fireproof/swarmer_catwalk
-	name = "swarmer catwalk"
-	desc = "Сетчатая конструкция, напоминающая мостик, создаваемая \"Свармерами\" для перемещения по опасной местности."
-	icon = 'icons/obj/smooth_structures/swarmer_catwalk.dmi'
-	base_icon_state = "swarmer_catwalk"
-	icon_state = "swarmer_catwalk-0"
 
 /obj/structure/lattice/catwalk/mapping
 	name = "reinforced catwalk"

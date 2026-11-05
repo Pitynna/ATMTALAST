@@ -1,5 +1,5 @@
 /datum/reagent/lithium
-	name = "Литий"
+	name = "Lithium"
 	id = "lithium"
 	description = "Химический элемент."
 	color = "#808080" // rgb: 128, 128, 128
@@ -14,7 +14,7 @@
 	return ..()
 
 /datum/reagent/lsd
-	name = "Диэтиламид лизергиновой кислоты"
+	name = "Lysergic acid diethylamide"
 	id = "lsd"
 	description = "Сильнодействующее галлюциногенное вещество, также известное как \"ЛСД\". Чуваааак."
 	reagent_state = LIQUID
@@ -29,7 +29,7 @@
 	return ..() | update_flags
 
 /datum/reagent/space_drugs
-	name = "Космо-дурь"
+	name = "Space drugs"
 	id = "space_drugs"
 	description = "Запрещенное химическое соединение, используемое в качестве наркотика."
 	reagent_state = LIQUID
@@ -51,7 +51,7 @@
 	return ..() | update_flags
 
 /datum/reagent/psilocybin
-	name = "Псилоцибин"
+	name = "Psilocybin"
 	id = "psilocybin"
 	description = "Сильный психотропный препарат, получаемый из некоторых видов грибов."
 	color = "#E700E7" // rgb: 231, 0, 231
@@ -83,7 +83,7 @@
 	return ..() | update_flags
 
 /datum/reagent/nicotine
-	name = "Никотин"
+	name = "Nicotine"
 	id = "nicotine"
 	description = "Немного уменьшает время оглушения. При передозировке отравляет и сбивает дыхание."
 	reagent_state = LIQUID
@@ -155,14 +155,14 @@
 	return ..()
 
 /datum/reagent/moonlin
-	name = "Мунлин"
+	name = "Moonlin"
 	id = "moonlin"
 	description = "Гранулированный порошок, состоящий из мелких белых кристаллов, который добывают из растения \"Мунлайт\", растущего на побережьях и в дельтах рек Адомая."
 	reagent_state = LIQUID
 	color = "#5ec3cc" // rgb: 96, 165, 132
 	drink_icon = "moonlight_d"
-	drink_name = "Мунлин"
-	drink_desc = "Странный напиток с белыми кристаллами! Будьте внимательны, если вы таяран!"
+	drink_name = "Moonlin"
+	drink_desc = "A strange drink with white crystals! Be careful if you're Tajaran!"
 	overdose_threshold = 20
 	addiction_chance = 20
 	addiction_threshold = 15
@@ -229,7 +229,7 @@
 			update_flags |= M.adjustToxLoss(4, FALSE)
 	return list(effect, update_flags)
 /datum/reagent/crank
-	name = "Крэнк"
+	name = "Crank"
 	id = "crank"
 	description = "Reduces stun times by about 200%. If overdosed or addicted it will deal significant Toxin, Brute and Brain damage."
 	reagent_state = LIQUID
@@ -304,7 +304,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/krokodil
-	name = "Дезоморфин"
+	name = "Krokodil"
 	id = "krokodil"
 	description = "Кустарно произведённый наркотик, популярный в бедных секторах СССП."
 	reagent_state = LIQUID
@@ -376,7 +376,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/methamphetamine
-	name = "Метамфетамин"
+	name = "Methamphetamine"
 	id = "methamphetamine"
 	description = "Метамфетамин — психоактивное вещество, стимулирующее работу головного мозга и всей нервной системы. Это синтетический препарат, представленный в виде белого кристаллического порошка."
 	reagent_state = LIQUID
@@ -448,7 +448,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/bath_salts
-	name = "Соль для ванн"
+	name = "Bath Salts"
 	id = "bath_salts"
 	description = "На самом деле это не соли для купания в ванной, а синтетические наркотики, которые часто маскируют под соли для ванн и прочие бытовые вещества, чтобы упроситить распространение."
 	color = "#FAFAFA"
@@ -522,7 +522,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/jenkem
-	name = "Дженкем"
+	name = "Jenkem"
 	id = "jenkem"
 	description = "Дженкем — это тюремный наркотик, изготовленный путем брожения фекалий в растворе мочи. Крайне отвратительно."
 	reagent_state = LIQUID
@@ -540,7 +540,7 @@
 	return ..() | update_flags
 
 /datum/reagent/aranesp
-	name = "Аранесп"
+	name = "Aranesp"
 	id = "aranesp"
 	description = "Запрещенный препарат, повышающий работоспособность. Побочные эффекты могут включать боль в груди, судороги, отеки, головную боль, лихорадку и так далее..."
 	reagent_state = LIQUID
@@ -565,7 +565,7 @@
 	return ..() | update_flags
 
 /datum/reagent/thc
-	name = "Тетрагидроканнабинол"
+	name = "Tetrahydrocannabinol"
 	id = "thc"
 	description = "Мягкое психоактивное вещество, добываемое из растения конопли."
 	reagent_state = LIQUID
@@ -586,7 +586,7 @@
 	return ..()
 
 /datum/reagent/cbd
-	name = "Каннабидиол"
+	name = "Cannabidiol"
 	id = "cbd"
 	description = "Непсихоактивный фитоканнабиноид, добываемый из растения конопли."
 	reagent_state = LIQUID
@@ -612,7 +612,7 @@
 	return ..() | update_flags
 
 /datum/reagent/fliptonium
-	name = "Крутений"
+	name = "Fliptonium"
 	id = "fliptonium"
 	description = "Туда-сюда, влево-вправо, вперёд-назад!"
 	reagent_state = LIQUID
@@ -692,7 +692,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/rotatium //Rotatium. Fucks up your rotation and is hilarious
-	name = "Ротатий"
+	name = "Rotatium"
 	id = "rotatium"
 	description = "Крутящаяся туда-сюда странного цвета жидкость. Нарушает чувство координации употребившего."
 	reagent_state = LIQUID
@@ -722,7 +722,7 @@
 //////////////////////////////
 
 /datum/reagent/consumable/laughter
-	name = "Смехотвор"
+	name = "Laughter"
 	description = "Некоторые говорят, что это лучшее лекарство, но последние исследования доказали, что это не так."
 	id = "laughter"
 	metabolization_rate = 0.8 * REAGENTS_METABOLISM
@@ -852,7 +852,7 @@
 
 //Ultra-Lube: Meth
 /datum/reagent/lube/ultra
-	name = "Ультра-смазка"
+	name = "Ultra-Lube"
 	id = "ultralube"
 	description = "Ультра-смазка — это улучшенная смазка, которая вызывает у синтетиков эффект, подобный метамфетамину, за счет резкого снижения внутреннего трения и повышения охлаждающей способности."
 	color = "#1BB1FF"
@@ -910,7 +910,7 @@
 
 //Surge: Krokodil
 /datum/reagent/surge
-	name = "Всплеск"
+	name = "Surge"
 	id = "surge"
 	description = "Сверхпроводящий гель, который перегружает процессоры синтетиков, вызывая эффект, схожий с действием опиатов на органиков."
 	reagent_state = LIQUID
@@ -954,7 +954,7 @@
 
 //surge+, used in supercharge implants
 /datum/reagent/surge_plus
-	name = "Всплеск+"
+	name = "Surge+"
 	id = "surge_plus"
 	description = "Сверхпроводящий гель, который перегружает процессоры синтетиков, вызывая эффект, схожий с действием бензодиазепинамов на органиков."
 	reagent_state = LIQUID
@@ -1006,7 +1006,7 @@
 
 	//Servo Lube, supercharge
 /datum/reagent/lube/combat
-	name = "Боевая смазка"
+	name = "Combat Lubricant"
 	id = "combatlube"
 	description = "Боевая смазка — это улучшенная смазка, которая вызывает у синтетиков эффекты, многократно превосходящие аналогичные у \"Ультра-смазки\" за счёт резкого снижения внутреннего трения и повышения охлаждающей способности."
 	process_flags = SYNTHETIC
@@ -1052,7 +1052,7 @@
 	return list(effect, update_flags)
 
 /datum/reagent/crack
-	name = "Крэк"
+	name = "Crack"
 	id = "crack"
 	description = "Кристаллизованная версия кокаина, потребляемая путем курения."
 	reagent_state = LIQUID
@@ -1093,7 +1093,7 @@
 			holder.del_reagent(id)
 
 /datum/reagent/cocaine
-	name = "Кокаин"
+	name = "Cocaine"
 	id = "cocaine"
 	description = "Всемирно известный препарат, оказывающий сильное воздействие на нервную систему употребившего."
 	reagent_state = LIQUID
@@ -1141,7 +1141,7 @@
 			holder.del_reagent(id)
 
 /datum/reagent/matedecoca
-	name = "Мате де Кока"
+	name = "Mate de Coca"
 	id = "matedecoca"
 	description = "Чай из кокаина. Особенно интересный напиток."
 	reagent_state = LIQUID
@@ -1153,8 +1153,8 @@
 	shock_reduction = 50
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	drink_icon = "matedecoca"
-	drink_name = "кружка Мате де Кока"
-	drink_desc = "Чай из кокаина. Особенно интересный напиток."
+	drink_name = "mug of mate de coca"
+	drink_desc = "Coca-leaf tea. A particularly interesting drink."
 
 /datum/reagent/matedecoca/on_mob_life(mob/living/M)
 	var/update_flags = STATUS_UPDATE_NONE
@@ -1176,7 +1176,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/pervitin
-	name = "Первитин"
+	name = "Pervitin"
 	id = "pervitin"
 	description = "Первитин — мощный стимулятор, синтезируемый из метамфетамина. Вызывает эйфорию и прилив сил, но чрезвычайно быстро формирует зависимость и разрушает мозг."
 	reagent_state = LIQUID

@@ -1,5 +1,5 @@
 /obj/item/caution
-	desc = "Осторожно! Мокрый пол!"
+	desc = "Caution! Wet Floor!"
 	name = "wet floor sign"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "caution"
@@ -9,16 +9,6 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("предупредил", "насторожил")
-
-/obj/item/caution/get_ru_names()
-	return alist(
-		NOMINATIVE = "знак мокрого пола",
-		GENITIVE = "знака мокрого пола",
-		DATIVE = "знаку мокрого пола",
-		ACCUSATIVE = "знак мокрого пола",
-		INSTRUMENTAL = "знаком мокрого пола",
-		PREPOSITIONAL = "знаке мокрого пола",
-	)
 
 /obj/item/caution/proximity_sign
 	var/timing = FALSE

@@ -17,16 +17,6 @@
 	var/list/obj/item/stored_items = list()
 	var/locked = FALSE
 
-/obj/structure/dispenser_bot/get_ru_names()
-	return alist(
-		NOMINATIVE = "бот-раздатчик",
-		GENITIVE = "бота-раздатчика",
-		DATIVE = "боту-раздатчику",
-		ACCUSATIVE = "бота-раздатчика",
-		INSTRUMENTAL = "ботом-раздатчиком",
-		PREPOSITIONAL = "боте-раздатчике"
-	)
-
 /obj/structure/dispenser_bot/deconstruct(disassembled)
 	for(var/obj/item/stored_item as anything in stored_items)
 		remove_item(stored_item)
@@ -113,7 +103,7 @@
 
 /obj/item/circuit_component/dispenser_bot
 	display_name = "Раздатчик"
-	desc = "Бот-раздатчик, который может выдавать предметы."
+	desc = "A dispenser bot that can dispense items."
 
 	/// The list of items
 	var/datum/port/output/item_list
@@ -198,7 +188,7 @@
 
 /obj/item/circuit_component/vendor_component
 	display_name = "Выдать"
-	desc = "Компонент, используемый для выдачи определенных предметов из бота-раздатчика."
+	desc = "A component used to dispense specific items from a dispenser bot."
 
 	circuit_flags = CIRCUIT_FLAG_OUTPUT_SIGNAL
 

@@ -1,7 +1,7 @@
 // MARK: 5.56x45mm - AR-30
 /obj/item/ammo_box/magazine/m556
-	gun_name = "винтовок AR-30"
-	extra_info = "Используется для широкого спектра оружия системы AR-30."
+	gun_name = "AR-30 rifles"
+	extra_info = "Compatible with a wide range of AR-30 platform weapons."
 	icon_state = "5.56m"
 	origin_tech = "combat=5"
 	ammo_type = /obj/item/ammo_casing/a556
@@ -11,7 +11,7 @@
 
 // MARK: 5.45x39mm - AK-814
 /obj/item/ammo_box/magazine/ak814
-	gun_name = "автомата АГ-814"
+	gun_name = "AG-814 assault rifles"
 	icon_state = "ak814"
 	origin_tech = "combat=5;syndicate=1"
 	ammo_type = /obj/item/ammo_casing/a545
@@ -27,7 +27,7 @@
 
 // MARK: 5.45x39mm - AGS-74U
 /obj/item/ammo_box/magazine/aks74u
-	gun_name = "автомата АГС-74У"
+	gun_name = "AGS-74U assault rifles"
 	icon_state = "ak47mag"
 	origin_tech = "combat=4;syndicate=1"
 	ammo_type = /obj/item/ammo_casing/a545/fusty
@@ -40,7 +40,7 @@
 
 // MARK: 7.62x51mm - SGM-BR52
 /obj/item/ammo_box/magazine/m52mag
-	gun_name = "боевой винтовки SGM-BR52"
+	gun_name = "SGM-BR52 battle rifles"
 	icon_state = "m52_ammo"
 	ammo_type = /obj/item/ammo_casing/a762x51
 	caliber = CALIBER_7_DOT_62X51MM
@@ -49,7 +49,7 @@
 
 // MARK: Laser - IK-60
 /obj/item/ammo_box/magazine/ik60mag
-	gun_name = "лазерной винтовки IK-60"
+	gun_name = "IK-60 laser rifles"
 	icon_state = "laser"
 	ammo_type = /obj/item/ammo_casing/laser
 	caliber = CALIBER_LASER
@@ -63,7 +63,7 @@
 
 // MARK: Laser - LR-30
 /obj/item/ammo_box/magazine/lr30mag
-	gun_name = "лазерной винтовки LR-30"
+	gun_name = "LR-30 laser rifles"
 	icon_state = "lmag"
 	ammo_type = /obj/item/ammo_casing/laser
 	caliber = CALIBER_LASER

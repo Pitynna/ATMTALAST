@@ -1,6 +1,6 @@
 /obj/machinery/vending/plasmamate
 	name = "PlasmaMate"
-	desc = "Автомат, выдающий снаряжение для плазмолюдов. Бесплатно!"
+	desc = "A vending machine dispensing plasmaman equipment. For free!"
 	icon_state = "plasmavendor_off"
 	panel_overlay = "plasmavendor_panel"
 	screen_overlay = "plasmavendor_screen"
@@ -44,14 +44,4 @@
 		/obj/item/storage/lockbox/plasma/mime = 5,
 		/obj/item/storage/lockbox/plasma/clown = 5,
 		/obj/item/storage/lockbox/plasma/blueshield = 1,
-	)
-
-/obj/machinery/vending/plasmamate/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат PlasmaMate",
-		GENITIVE = "торгового автомата PlasmaMate",
-		DATIVE = "торговому автомату PlasmaMate",
-		ACCUSATIVE = "торговый автомат PlasmaMate",
-		INSTRUMENTAL = "торговым автоматом PlasmaMate",
-		PREPOSITIONAL = "торговом автомате PlasmaMate",
 	)

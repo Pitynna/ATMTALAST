@@ -4,22 +4,12 @@
 
 /obj/structure/tripwire_bridge
 	name = "tripwire"
-	desc = "Тонкий провод. Похоже, он соединен с чем-то опасным."
+	desc = "A thin wire. It seems to be connected to something dangerous."
 	icon = 'icons/obj/tripwire.dmi'
 	icon_state = "tripwire_wire"
 	anchored = TRUE
 	layer = LOW_OBJ_LAYER
 	var/obj/item/tripwire/master_base
-
-/obj/structure/tripwire_bridge/get_ru_names()
-	return alist(
-		NOMINATIVE = "провод растяжки",
-		GENITIVE = "провода растяжки",
-		DATIVE = "проводу растяжки",
-		ACCUSATIVE = "провод растяжки",
-		INSTRUMENTAL = "проводом растяжки",
-		PREPOSITIONAL = "проводе растяжки",
-	)
 
 /obj/structure/tripwire_bridge/Initialize(mapload)
 	. = ..()
@@ -77,7 +67,7 @@
 
 /obj/item/tripwire
 	name = "tripwire base"
-	desc = "Металлическое основание для растяжки. Не забудьте про кабель!"
+	desc = "A metal tripwire anchor. Don't forget the cable!"
 	icon = 'icons/obj/tripwire.dmi'
 	icon_state = "tripwire_base"
 	var/obj/item/tripwire/linked_to = null
@@ -90,16 +80,6 @@
 
 	var/datum/weakref/creator_mind = null
 	var/datum/weakref/payload_mind = null
-
-/obj/item/tripwire/get_ru_names()
-	return alist(
-		NOMINATIVE = "растяжка",
-		GENITIVE = "растяжки",
-		DATIVE = "растяжке",
-		ACCUSATIVE = "растяжку",
-		INSTRUMENTAL = "растяжкой",
-		PREPOSITIONAL = "растяжке",
-	)
 
 /obj/item/tripwire/Destroy()
 	if(is_active)

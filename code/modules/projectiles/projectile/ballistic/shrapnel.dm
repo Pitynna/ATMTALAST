@@ -12,16 +12,6 @@
 	ricochet_chance = 70
 	var/embedded_type = /obj/item/embedded/shrapnel
 
-/obj/projectile/shrapnel/get_ru_names()
-	return alist(
-		NOMINATIVE = "шрапнель",
-		GENITIVE = "шрапнели",
-		DATIVE = "шрапнели",
-		ACCUSATIVE = "шрапнель",
-		INSTRUMENTAL = "шрапнелью",
-		PREPOSITIONAL = "шрапнели",
-	)
-
 /obj/projectile/shrapnel/Initialize(mapload)
 	. = ..()
 	icon_state = pick("shrapnel1", "shrapnel2", "shrapnel3")
@@ -57,16 +47,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	sharp = TRUE
 	hitsound = 'sound/weapons/pierce.ogg'
-
-/obj/item/embedded/shrapnel/get_ru_names()
-	return alist(
-		NOMINATIVE = "шрапнель",
-		GENITIVE = "шрапнели",
-		DATIVE = "шрапнели",
-		ACCUSATIVE = "шрапнель",
-		INSTRUMENTAL = "шрапнелью",
-		PREPOSITIONAL = "шрапнели",
-	)
 
 /obj/item/embedded/shrapnel/Initialize(mapload)
 	. = ..()

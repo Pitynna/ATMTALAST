@@ -1,7 +1,6 @@
 /obj/item/restraints/handcuffs
 	name = "handcuffs"
-	desc = "Устройство из металла, представляющее собой пару соединённых цепью браслетов. \
-			Используются для ограничения подвижности гуманоидов посредством сковывания кистей рук."
+	desc = "Use this to keep prisoners in line."
 	gender = PLURAL
 	icon_state = "handcuff"
 	item_state = "handcuff"
@@ -20,16 +19,6 @@
 	/// If TRUE, these cuffs are disposable
 	var/trashtype = null
 	var/ignoresClumsy = FALSE
-
-/obj/item/restraints/handcuffs/get_ru_names()
-	return alist(
-		NOMINATIVE = "наручники",
-		GENITIVE = "наручников",
-		DATIVE = "наручникам",
-		ACCUSATIVE = "наручники",
-		INSTRUMENTAL = "наручниками",
-		PREPOSITIONAL = "наручниках"
-	)
 
 /obj/item/restraints/handcuffs/attack(mob/living/carbon/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	. = ATTACK_CHAIN_PROCEED
@@ -121,8 +110,7 @@
 
 /obj/item/restraints/handcuffs/sinew
 	name = "sinew restraints"
-	desc = "Сплетены из плотных сухожилий Наблюдателя. \
-			Используются для ограничения подвижности гуманоидов посредством сковывания кистей рук."
+	desc = "A pair of restraints fashioned from long strands of flesh."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "sinewcuff"
 	item_state = "sinewcuff"
@@ -130,20 +118,9 @@
 	cuffsound = 'sound/weapons/cablecuff.ogg'
 	breakout_flags = DA_IGNORE_USER_LOC_CHANGE|DEFAULT_DOAFTER_IGNORE|DA_IGNORE_HELD_ITEM
 
-/obj/item/restraints/handcuffs/sinew/get_ru_names()
-	return alist(
-		NOMINATIVE = "стяжки из сухожилий",
-		GENITIVE = "стяжек из сухожилий",
-		DATIVE = "стяжкам из сухожилий",
-		ACCUSATIVE = "стяжки из сухожилий",
-		INSTRUMENTAL = "стяжками из сухожилий",
-		PREPOSITIONAL = "стяжках из сухожилий"
-	)
-
 /obj/item/restraints/handcuffs/cable
 	name = "cable restraints"
-	desc = "Сплетены из электрических проводов. \
-			Используются для ограничения подвижности гуманоидов посредством сковывания кистей рук."
+	desc = "Looks like some cables tied together. Could be used to tie something up."
 	icon_state = "cuff_white"
 	origin_tech = "engineering=2"
 	materials = list(MAT_METAL=150, MAT_GLASS=75)
@@ -151,16 +128,6 @@
 	cuffsound = 'sound/weapons/cablecuff.ogg'
 	custom_price = PAYCHECK_MIN
 	breakout_flags = DA_IGNORE_USER_LOC_CHANGE|DEFAULT_DOAFTER_IGNORE|DA_IGNORE_HELD_ITEM
-
-/obj/item/restraints/handcuffs/cable/get_ru_names()
-	return alist(
-		NOMINATIVE = "стяжки из проводов",
-		GENITIVE = "стяжек из проводов",
-		DATIVE = "стяжкам из проводов",
-		ACCUSATIVE = "стяжки из проводов",
-		INSTRUMENTAL = "стяжками из проводов",
-		PREPOSITIONAL = "стяжках из проводов"
-	)
 
 /obj/item/restraints/handcuffs/cable/red
 	color = COLOR_RED
@@ -244,25 +211,13 @@
 
 /obj/item/restraints/handcuffs/cable/zipties
 	name = "zipties"
-	desc = "Устройство из пластика, представляющее собой пару соединённых браслетов. \
-			Используются для ограничения подвижности гуманоидов посредством сковывания кистей рук. \
-			Не предназначены для многократного использования."
+	desc = "Plastic, disposable zipties that can be used to restrain temporarily but are destroyed after use."
 	breakout_time = 90 SECONDS
 	materials = list()
 	trashtype = /obj/item/restraints/handcuffs/cable/zipties/used
 
-/obj/item/restraints/handcuffs/cable/zipties/get_ru_names()
-	return alist(
-		NOMINATIVE = "стяжки",
-		GENITIVE = "стяжек",
-		DATIVE = "стяжкам",
-		ACCUSATIVE = "стяжки",
-		INSTRUMENTAL = "стяжками",
-		PREPOSITIONAL = "стяжках"
-	)
-
 /obj/item/restraints/handcuffs/cable/zipties/used
-	desc = "Сломанные и уже ни на что не годятся."
+	desc = "A pair of broken zipties."
 	icon_state = "cuff_white_used"
 
 /obj/item/restraints/handcuffs/cable/zipties/used/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
@@ -273,26 +228,13 @@
 
 /obj/item/restraints/handcuffs/pinkcuffs
 	name = "fluffy pink handcuffs"
-	desc = "Устройство из металла, представляющее собой пару соединённых цепью браслетов. \
-			Используются для ограничения подвижности заключённых посредством сковывания кистей рук. \
-			Для чего данная модель отделана розовым мехом — вопрос."
+	desc = "Use this to keep prisoners in line, they are really itchy."
 	item_state = "pinkcuff"
 	icon_state = "pinkcuffs"
 
-/obj/item/restraints/handcuffs/pinkcuffs/get_ru_names()
-	return alist(
-		NOMINATIVE = "розовые наручники",
-		GENITIVE = "розовых наручников",
-		DATIVE = "розовым наручникам",
-		ACCUSATIVE = "розовые наручники",
-		INSTRUMENTAL = "розовыми наручниками",
-		PREPOSITIONAL = "розовых наручниках"
-	)
-
 /obj/item/restraints/handcuffs/manacles
 	name = "manacles"
-	desc = "Тяжёлые деревянные оковы, предназначенные для ограничения подвижности гуманоидов \
-			посредством сковывания кистей рук."
+	desc = "Wooden handcuffs analogue. Use this to keep prisoners in line."
 	icon = 'icons/obj/ninjaobjects.dmi'
 	lefthand_file = 'icons/mob/inhands/antag/ninja_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/antag/ninja_righthand.dmi'
@@ -305,18 +247,8 @@
 	materials = list()
 	trashtype = /obj/item/restraints/handcuffs/manacles/used
 
-/obj/item/restraints/handcuffs/manacles/get_ru_names()
-	return alist(
-		NOMINATIVE = "кандалы",
-		GENITIVE = "кандалов",
-		DATIVE = "кандалам",
-		ACCUSATIVE = "кандалы",
-		INSTRUMENTAL = "кандалами",
-		PREPOSITIONAL = "кандалах"
-	)
-
 /obj/item/restraints/handcuffs/manacles/used
-	desc = "Сломанные и уже ни на что не годятся."
+	desc = "A pair of broken manacles."
 	icon_state = "manacle_unlock"
 
 /obj/item/restraints/handcuffs/manacles/used/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)

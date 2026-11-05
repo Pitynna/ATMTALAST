@@ -1,6 +1,6 @@
 /obj/item/gun/throw/biogun
 	name = "biogun"
-	desc = "Метатель живых био-ядер."
+	desc = "A launcher for living biocores."
 	icon = 'icons/obj/weapons/vox_guns.dmi'
 	icon_state = "biogun"
 	item_state = "spike_long"

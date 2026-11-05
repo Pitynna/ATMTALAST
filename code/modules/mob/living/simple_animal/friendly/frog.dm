@@ -18,7 +18,6 @@
 	talk_sound = list('sound/creatures/frog_talk1.ogg', 'sound/creatures/frog_talk2.ogg')
 	damaged_sound = list('sound/creatures/frog_damaged.ogg')
 	death_sound = 'sound/creatures/frog_death.ogg'
-	tts_seed = "pantheon"
 	speak_chance = 1
 	turns_per_move = 5
 	nightvision = 10

@@ -38,7 +38,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	var/allow_species_pick = FALSE
 	var/allow_gender_pick = FALSE
 	var/allow_name_pick = FALSE
-	var/allow_tts_pick = TRUE // defaulted to TRUE because some "simple mob" mob_spawns may require custom voice
 	var/mob_species = null
 
 	var/assignedrole
@@ -159,17 +158,12 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 /obj/effect/mob_spawn/proc/equip(mob/M, use_prefs = FALSE, _mob_name = FALSE, _mob_gender = FALSE, _mob_species = FALSE)
 	return
 
-/obj/effect/mob_spawn/proc/after_possess(mob/M)
-	return
-
 /obj/effect/mob_spawn/proc/create(mob/plr, flavour = TRUE, name, prefs = FALSE, _mob_name = FALSE, _mob_gender = FALSE, _mob_species = FALSE)
 	var/mob/living/mob = new mob_type(get_turf(src)) // Living mobs only
 	if(!random)
 		mob.real_name = mob_name ? mob_name : mob.name
-		mob.tts_seed = SStts.get_random_seed(mob)
 		if(mob.dna)
 			mob.dna.real_name = mob_name
-			mob.dna.tts_seed_dna = mob.tts_seed
 
 		if(mob.mind)
 			mob.mind.name = mob_name
@@ -214,12 +208,8 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 			mob.mind.assigned_role = assignedrole
 
 		mob.mind.offstation_role = offstation_role
-		after_possess(mob)
 		special(mob, name)
 		MM.name = mob.real_name
-		if(allow_tts_pick)
-			mob.change_voice()
-
 	if(uses > 0)
 		uses--
 
@@ -270,9 +260,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	var/skin_tone
 
 	var/list/del_types = list(/obj/item/pda, /obj/item/radio/headset)
-	var/use_antag_skills = FALSE
-	var/skills_ref_job
-	var/alist/skills
 
 /obj/effect/mob_spawn/human/Initialize(mapload)
 	if(ispath(outfit))
@@ -427,12 +414,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 		W.registered_name = H.real_name
 		W.update_label()
 
-/obj/effect/mob_spawn/human/after_possess(mob/living/carbon/human/H)
-	H.mind.job_alt_skills = skills?.Copy()
-	if(use_antag_skills)
-		ADD_TRAIT(H.mind, TRAIT_HAS_ANTAG_SKILLS, UNIQUE_TRAIT_SOURCE(src))
-	H.mind.refresh_skills(ref_job = skills_ref_job)
-
 /obj/effect/mob_spawn/human/special(mob/living/carbon/human/H)
 	if(!HAS_TRAIT(H, TRAIT_NO_DNA))
 		H.dna.blood_type = pick("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-") //Чтобы им всем подряд не требовалась кровь одного типа
@@ -548,7 +529,8 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 /datum/outfit/job/engineer/suit
 	toggle_helmet = TRUE
 	belt = /obj/item/storage/belt/utility/full
-	back = /obj/item/mod/control/pre_equipped/engineering
+	suit = /obj/item/clothing/suit/space/hardsuit/engine
+	back = /obj/item/storage/backpack
 	mask = /obj/item/clothing/mask/breath
 
 /obj/effect/mob_spawn/human/clown
@@ -640,7 +622,8 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	outfit = /datum/outfit/job/mining/suit
 
 /datum/outfit/job/mining/suit
-	back = /obj/item/mod/control/pre_equipped/mining/asteroid
+	suit = /obj/item/clothing/suit/space/hardsuit/mining
+	back = /obj/item/storage/backpack
 	uniform = /obj/item/clothing/under/rank/miner
 	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/workboots
@@ -657,32 +640,9 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	id_access_list = list(ACCESS_BAR)
 	outfit = /datum/outfit/spacebartender
 
-/obj/effect/mob_spawn/human/bartender/alive
-	death = FALSE
-	roundstart = FALSE
-	allow_species_pick = TRUE
-	allow_prefs_prompt = TRUE
-	allow_gender_pick = TRUE
-	allow_name_pick = TRUE
-	name = "bartender sleeper"
-	icon = 'icons/obj/machines/cryogenic2.dmi'
-	icon_state = "sleeper"
-	description = "Застряв на Лаваленде, вы можете попытаться вернуться к цивилизации... или подавать напитки тем, кто забредёт к вам."
-	flavour_text = "Вы космический бармен!\nВремя смешивать напитки и менять жизни. Погодите, куда это ваш бар только что переместился?"
-	assignedrole = "Space Bartender"
-
 /obj/effect/mob_spawn/human/bartender/special(mob/living/carbon/human/H)
 	GLOB.human_names_list += H.real_name
 	return ..()
-
-/obj/effect/mob_spawn/human/beach/alive/lifeguard
-	flavour_text = "Вы бодрый спасатель!\nВаша задача — следить, чтобы никто не утонул и не стал обедом для акул.\nНо внезапно весь ваш пляж перенёсся в этот странный ад. Вы не готовы к такому, но всё равно будете защищать своих гостей!"
-	description = "Попытайтесь выжить на Лаваленде с жалким снаряжением спасателя. Или спрячьтесь в своём биодоме."
-	mob_gender = FEMALE
-	name = "lifeguard sleeper"
-	id_job = "Lifeguard"
-	allow_gender_pick = FALSE
-	outfit = /datum/outfit/beachbum/female
 
 /datum/outfit/spacebartender
 	name = "Space Bartender"
@@ -692,37 +652,6 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	shoes = /obj/item/clothing/shoes/color/black
 	glasses = /obj/item/clothing/glasses/science/sunglasses
 	id = /obj/item/card/id
-
-/obj/effect/mob_spawn/human/beach
-	outfit = /datum/outfit/beachbum
-
-/obj/effect/mob_spawn/human/beach/alive
-	death = FALSE
-	roundstart = FALSE
-	allow_species_pick = TRUE
-	allow_prefs_prompt = TRUE
-	allow_gender_pick = TRUE
-	allow_name_pick = TRUE
-	mob_name = "Beach Bum"
-	name = "beach bum sleeper"
-	icon = 'icons/obj/machines/cryogenic2.dmi'
-	icon_state = "sleeper"
-	flavour_text = "Вы просто обожаете пляж!\nСлучилось что-то странное, но вы слишком расслаблены, чтобы беспокоиться."
-	description = "Попытайтесь выжить на Лаваленде или просто наслаждайтесь пляжем, ожидая посетителей."
-	assignedrole = "Beach Bum"
-
-/obj/effect/mob_spawn/human/beach/alive/special(mob/living/carbon/human/H)
-	GLOB.human_names_list += H.real_name
-	return ..()
-
-/datum/outfit/beachbum
-	name = "Beach Bum"
-	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/shorts/red
-
-/datum/outfit/beachbum/female
-	name = "Beach Bum (female)"
-	uniform = /obj/item/clothing/under/swimsuit/red
 
 /////////////////Spooky Undead//////////////////////
 

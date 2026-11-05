@@ -11,16 +11,6 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/compact_remote/get_ru_names()
-	return alist(
-		NOMINATIVE = "компактный пульт дистанционного управления",
-		GENITIVE = "компактного пульта дистанционного управления",
-		DATIVE = "компактному пульту дистанционного управления",
-		ACCUSATIVE = "компактный пульт дистанционного управления",
-		INSTRUMENTAL = "компактным пультом дистанционного управления",
-		PREPOSITIONAL = "компактном пульте дистанционного управления"
-	)
-
 /obj/item/compact_remote/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)
@@ -30,8 +20,7 @@
 
 /obj/item/circuit_component/compact_remote
 	display_name = "Компактный пульт"
-	desc = "Используется для получения входных сигналов от компактного пульта дистанционного управления.\
-			Используйте пульт в руке для активации выходного сигнала."
+	desc = "Receives input from a compact remote control. Use the remote in your hand to activate the output signal."
 
 	/// Called when attack_self is called on the shell.
 	var/datum/port/output/signal

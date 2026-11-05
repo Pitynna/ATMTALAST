@@ -1,8 +1,7 @@
 // MARK: R38 Simplex
 /obj/item/gun/projectile/revolver/detective
 	name = "R38 \"Simplex\" revolver"
-	desc = "Бюджетный револьвер производства \"Mars Special\" калибра .38. Простая конструкция из композитных материалов, шестизарядный барабан, \
-			отсутствие направляющих для тактических модулей. Популярен на гражданском рынке за счёт своей доступности."
+	desc = "A cheap Martian knock-off of a classic law enforcement firearm. Uses .38-special rounds."
 	icon_state = "detective"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	fire_sound = 'sound/weapons/gunshots/1rev38.ogg'
@@ -13,16 +12,6 @@
 /obj/item/gun/projectile/revolver/detective/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/item_skins)
-
-/obj/item/gun/projectile/revolver/detective/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер R38 \"Симплекс\"",
-		GENITIVE = "револьвера R38 \"Симплекс\"",
-		DATIVE = "револьверу R38 \"Симплекс\"",
-		ACCUSATIVE = "револьвер R38 \"Симплекс\"",
-		INSTRUMENTAL = "револьвером R38 \"Симплекс\"",
-		PREPOSITIONAL = "револьвере R38 \"Симплекс\"",
-	)
 
 /obj/item/gun/projectile/revolver/detective/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
@@ -38,8 +27,7 @@
 // MARK: R45 Taurus
 /obj/item/gun/projectile/revolver/taurus
 	name = "R45 \"Taurus\" revolver"
-	desc = "Тяжёлый шестизарядный револьвер калибра .45 Colt производства \"Mars Special\". Отличается высокой убойной силой, \
-			модульностью и надёжностью. Закупается \"Нанотрейзен\" для снабжения сотрудников корпоративной службы безопасности."
+	desc = "A heavy six-shot .45 Colt revolver manufactured by Mars Special. Powerful, modular and reliable. Purchased by Nanotrasen for corporate security personnel."
 	icon_state = "taurus"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/taurus
 	fire_sound = 'sound/weapons/gunshots/1rev38.ogg'
@@ -56,16 +44,6 @@
 /obj/item/gun/projectile/revolver/taurus/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/item_skins)
-
-/obj/item/gun/projectile/revolver/taurus/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер R45 \"Таурус\"",
-		GENITIVE = "револьвера R45 \"Таурус\"",
-		DATIVE = "револьверу R45 \"Таурус\"",
-		ACCUSATIVE = "револьверу R45 \"Таурус\"",
-		INSTRUMENTAL = "револьвером R45 \"Таурус\"",
-		PREPOSITIONAL = "револьвере R45 \"Таурус\"",
-	)
 
 /obj/item/gun/projectile/revolver/taurus/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
@@ -85,7 +63,7 @@
 // Summoned by the Finger Gun spell, from advanced mimery traitor item
 /obj/item/gun/projectile/revolver/fingergun
 	name = "finger gun"
-	desc = "Ваши пальцы, превращённые в оружие."
+	desc = "Bang bang bang!"
 	gender = PLURAL
 	icon_state = "fingergun"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38/invisible
@@ -103,21 +81,12 @@
 	attachable_allowed = GUN_MODULE_CLASS_NONE
 	can_spin_cylinder = FALSE
 
-/obj/item/gun/projectile/revolver/fingergun/get_ru_names()
-	return alist(
-		NOMINATIVE = "пальцы-пистолеты",
-		GENITIVE = "пальцев-пистолетов",
-		DATIVE = "пальцам-пистолетам",
-		ACCUSATIVE = "пальцы-пистолеты",
-		INSTRUMENTAL = "пальцами-пистолетами",
-		PREPOSITIONAL = "пальцах-пистолетах",	)
-
 /obj/item/gun/projectile/revolver/fingergun/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, ABSTRACT_ITEM_TRAIT)
 
 /obj/item/gun/projectile/revolver/fingergun/fake
-	desc = "Ваши пальцы, превращённые в оружие. Безвредное оружие."
+	desc = "Pew pew pew!"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38/invisible/fake
 
 /obj/item/gun/projectile/revolver/fingergun/shoot_with_empty_chamber(mob/living/user)
@@ -146,7 +115,7 @@
 // MARK: Unica-6
 /obj/item/gun/projectile/revolver/mateba
 	name = "Unica 6 revolver"
-	desc = "Тяжёлый револьвер калибра .357. Классическая конструкция, барабан на 6 патронов, высокая убойная сила."
+	desc = "A retro high-powered autorevolver typically used by officers of several unrelated militaries. Uses .357 ammo."	//>10mm hole >.357
 	icon_state = "mateba"
 	accuracy = GUN_ACCURACY_PISTOL
 	recoil = GUN_RECOIL_HIGH
@@ -154,21 +123,9 @@
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 18, ATTACHMENT_OFFSET_Y = 2),
 	)
 
-/obj/item/gun/projectile/revolver/mateba/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер Уника-6",
-		GENITIVE = "револьвера Уника-6",
-		DATIVE = "револьверу Уника-6",
-		ACCUSATIVE = "револьвер Уника-6",
-		INSTRUMENTAL = "револьвером Уника-6",
-		PREPOSITIONAL = "револьвере Уника-6",
-	)
-
-// MARK: UC-12 Dragon
 /obj/item/gun/projectile/revolver/ga12
 	name = "UC-12 \"Dragon\" revolver"
-	desc = "Массивный револьвер 12-го калибра производства \"Дядя Чанг\". Колоссальная огневая мощь компенсируется \
-			экстремальной отдачей, низкой скорострельностью и барабаном на 3 патрона. Популярен среди наёмников и бандитов пограничных секторов."
+	desc = "An outdated sidearm rarely seen in use by certain PMCs that operate throughout the frontier systems, featuring a three-shell cylinder. Thats right, shell, this one shoots twelve gauge."
 	icon_state = "12garevolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/ga12
 	fire_sound = 'sound/weapons/gunshots/1rev12.ogg'
@@ -177,16 +134,6 @@
 	recoil = GUN_RECOIL_HIGH
 	attachable_offset = list(
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 16, ATTACHMENT_OFFSET_Y = 2),
-	)
-
-/obj/item/gun/projectile/revolver/ga12/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер UC-12 \"Дракон\"",
-		GENITIVE = "револьвера UC-12 \"Дракон\"",
-		DATIVE = "револьверу UC-12 \"Дракон\"",
-		ACCUSATIVE = "револьвер UC-12 \"Дракон\"",
-		INSTRUMENTAL = "револьвером UC-12 \"Дракон\"",
-		PREPOSITIONAL = "револьвере UC-12 \"Дракон\"",
 	)
 
 /obj/item/gun/projectile/revolver/ga12/add_deep_lore()
@@ -207,27 +154,16 @@
 // MARK: Golden revolver
 /obj/item/gun/projectile/revolver/golden
 	name = "golden revolver"
-	desc = "Золотой револьвер калибра .357."
+	desc = "This ain't no game, ain't never been no show, And I'll gladly gun down the oldest lady you know. Uses .357 ammo."
 	icon_state = "goldrevolver"
 	fire_sound = 'sound/weapons/resonator_blast.ogg'
 	accuracy = GUN_ACCURACY_PISTOL_UPLINK
 	recoil = GUN_RECOIL_MEGA
 	attachable_allowed = GUN_MODULE_CLASS_NONE
 
-/obj/item/gun/projectile/revolver/golden/get_ru_names()
-	return alist(
-		NOMINATIVE = "золотой револьвер",
-		GENITIVE = "золотого револьвера",
-		DATIVE = "золотому револьверу",
-		ACCUSATIVE = "золотой револьвер",
-		INSTRUMENTAL = "золотым револьвером",
-		PREPOSITIONAL = "золотом револьвере",
-	)
-
-// MARK: Capgun
 /obj/item/gun/projectile/revolver/capgun
 	name = "cap gun"
-	desc = "Игрушка, имитирующая револьвер калибра .357. Стреляет холостыми."
+	desc = "Looks almost like the real thing! Ages 8 and up."
 	origin_tech = null
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/cap
 	accuracy = GUN_ACCURACY_PISTOL
@@ -236,21 +172,9 @@
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 19, ATTACHMENT_OFFSET_Y = 3),
 	)
 
-/obj/item/gun/projectile/revolver/capgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "игрушечный револьвер",
-		GENITIVE = "игрушечного револьвера",
-		DATIVE = "игрушечному револьверу",
-		ACCUSATIVE = "игрушечный револьвер",
-		INSTRUMENTAL = "игрушечным револьвером",
-		PREPOSITIONAL = "игрушечном револьвере",
-	)
-
-// MARK: Improvised .257
 /obj/item/gun/projectile/revolver/improvised
 	name = "improvised revolver"
-	desc = "Собранный из подручных материалов револьвер калибра .257. Экстремальная отдача, минимальная точность и \
-			нулевое удобство использования."
+	desc = "Weapon for crazy fun with friends."
 	icon_state = "irevolver"
 	item_state = "revolver"
 	mag_type = null
@@ -260,16 +184,6 @@
 	accuracy = GUN_ACCURACY_MINIMAL
 	recoil = GUN_RECOIL_MEGA
 	attachable_allowed = GUN_MODULE_CLASS_NONE
-
-/obj/item/gun/projectile/revolver/improvised/get_ru_names()
-	return alist(
-		NOMINATIVE = "кустарный револьвер",
-		GENITIVE = "кустарного револьвера",
-		DATIVE = "кустарному револьверу",
-		ACCUSATIVE = "кустарный револьвер",
-		INSTRUMENTAL = "кустарным револьвером",
-		PREPOSITIONAL = "кустарном револьвере",
-	)
 
 /obj/item/gun/projectile/revolver/improvised/Initialize(mapload)
 	. = ..()
@@ -384,8 +298,7 @@
 //MARK: Rsh-12
 /obj/item/gun/projectile/revolver/rsh_12
 	name = "RSh-12"
-	desc = "Крупнокалиберный револьвер под калибр 12.7х55 мм. \
-			Отличается высокой убойностью и страшной отдачей."
+	desc = "A large-caliber 12.7x55mm revolver with formidable stopping power and terrifying recoil."
 	icon_state = "rsh-12"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rsh_12
 	fire_sound = 'sound/weapons/gunshots/bulldog.ogg'
@@ -399,16 +312,6 @@
 	)
 	/// Opened state flag
 	var/opened = FALSE
-
-/obj/item/gun/projectile/revolver/rsh_12/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер РШ-12",
-		GENITIVE = "револьвера РШ-12",
-		DATIVE = "револьверу РШ-12",
-		ACCUSATIVE = "револьвер РШ-12",
-		INSTRUMENTAL = "револьвером РШ-12",
-		PREPOSITIONAL = "револьвере РШ-12",
-	)
 
 /obj/item/gun/projectile/revolver/rsh_12/attack_self(mob/living/user)
 	playsound(loc, 'sound/weapons/bombarda/pump.ogg', 60, TRUE)
@@ -446,7 +349,7 @@
 // MARK: Nagant
 /obj/item/gun/projectile/revolver/nagant
 	name = "nagant revolver"
-	desc = "Старинный револьвер калибра 7,62x38."
+	desc = "An old model of revolver that originated in Russia, now used by the USSP. Able to be suppressed. Uses 7.62x38mmR ammo."
 	icon_state = "nagant"
 	origin_tech = "combat=3"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
@@ -454,16 +357,6 @@
 	recoil = GUN_RECOIL_MEDIUM
 	attachable_offset = list(
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 17, ATTACHMENT_OFFSET_Y = 3),
-	)
-
-/obj/item/gun/projectile/revolver/nagant/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер Нагана",
-		GENITIVE = "револьвера Нагана",
-		DATIVE = "револьверу Нагана",
-		ACCUSATIVE = "револьвер Нагана",
-		INSTRUMENTAL = "револьвером Нагана",
-		PREPOSITIONAL = "револьвере Нагана",
 	)
 
 /obj/item/gun/projectile/revolver/nagant/rusted
@@ -476,7 +369,7 @@
 // MARK: Russian Roulette gun
 /obj/item/gun/projectile/revolver/russian
 	name = "Russian revolver"
-	desc = "Револьвер калибра .357, предназначенный для игры в русскую рулетку. Автоматически вращает барабан после каждого выстрела."
+	desc = "A Russian-made revolver for drinking games. Uses .357 ammo, and has a mechanism that spins the chamber before each trigger pull."
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/rus357
 	var/spun = FALSE
@@ -485,16 +378,6 @@
 	can_air_shoot = FALSE
 	attachable_offset = list(
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 19, ATTACHMENT_OFFSET_Y = 3),
-	)
-
-/obj/item/gun/projectile/revolver/russian/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер для русской рулетки",
-		GENITIVE = "револьвера для русской рулетки",
-		DATIVE = "револьверу для русской рулетки",
-		ACCUSATIVE = "револьвер для русской рулетки",
-		INSTRUMENTAL = "револьвером для русской рулетки",
-		PREPOSITIONAL = "револьвере для русской рулетки",
 	)
 
 /obj/item/gun/projectile/revolver/russian/Initialize(mapload)
@@ -603,8 +486,7 @@
 	)
 
 /obj/item/gun/projectile/revolver/russian/soul
-	desc = "Револьвер калибра .357, предназначенный для игры в русскую рулетку. Автоматически вращает барабан после каждого выстрела. \
-			Проклят и обладает способностью захватывать души своих жертв."
+	desc = "To play with this revolver requires wagering your very soul."
 
 /obj/item/gun/projectile/revolver/russian/soul/shoot_self(mob/living/user)
 	..()
@@ -619,22 +501,12 @@
 
 /obj/item/gun/projectile/revolver/peashooter
 	name = "peashooter"
-	desc = "Дикая мутация растительности, стреляющая затвердевшим горохом. Невероятно."
+	desc = "A wild plant mutation that fires hardened peas. Incredible."
 	icon_state = "peashooter"
 	w_class = WEIGHT_CLASS_BULKY
 	origin_tech = "combat=3;biotech=5"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/peashooter
 	fire_sound = 'sound/weapons/peashoot.ogg'
-
-/obj/item/gun/ballistic/revolver/peashooter/get_ru_names()
-	return alist(
-		NOMINATIVE = "горохострел",
-		GENITIVE = "горохострела",
-		DATIVE = "горохострелу",
-		ACCUSATIVE = "горохострел",
-		INSTRUMENTAL = "горохострелом",
-		PREPOSITIONAL = "горохостреле",
-	)
 
 /obj/item/gun/projectile/revolver/peashooter/meme
 	icon_state = "peashooter_meme"

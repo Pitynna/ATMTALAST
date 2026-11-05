@@ -8,7 +8,6 @@
 	icon_dead = "guard_dead"
 	speak_emote = list("щебечет")
 	emote_hear = list("щебечет")
-	tts_seed = "Anubarak"
 	speak_chance = 5
 	turns_per_move = 5
 	nightvision = 8

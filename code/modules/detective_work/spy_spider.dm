@@ -1,19 +1,9 @@
 /obj/item/radio/spy_spider
-	name = "жучок"
-	desc = "Кажется, ты видел такого в фильмах про шпионов."
+	name = "bug"
+	desc = "You think you have seen one of these in spy movies."
 	icon_state = "spider_clan"
 	freqlock = SPY_SPIDER_FREQ
 	gender = MALE
-
-/obj/item/radio/spy_spider/get_ru_names()
-	return alist(
-			NOMINATIVE = "жучок",
-			GENITIVE = "жучка",
-			DATIVE = "жучку",
-			ACCUSATIVE = "жучок",
-			INSTRUMENTAL = "жучком",
-			PREPOSITIONAL = "жучке",
-		)
 
 /obj/item/radio/spy_spider/Initialize(mapload)
 	. = ..()
@@ -41,8 +31,8 @@
 	channels = list(SPY_SPIDER_FREQ_NAME = 1)
 
 /obj/item/storage/lockbox/spy_kit
-	name = "набор жучков"
-	desc = "Не самый легальный из способов достать информацию, но какая разница, если никто не узнает?"
+	name = "bug kit"
+	desc = "Not the most legal way to obtain information, but what does it matter if nobody finds out?"
 	storage_slots = 5
 	req_access = list(ACCESS_FORENSICS_LOCKERS)
 

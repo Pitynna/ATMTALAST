@@ -41,7 +41,6 @@
 	datum_type = /datum/antagonist/terror_spider/main_spider/prince
 	gender = MALE
 	move_resist = MOVE_FORCE_STRONG // no more pushing a several hundred if not thousand pound spider
-	tts_seed = "Alduin"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/prince/get_ru_names()
 	return alist(

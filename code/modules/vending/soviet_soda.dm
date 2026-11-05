@@ -1,6 +1,6 @@
 /obj/machinery/vending/sovietsoda
 	name = "BODA"
-	desc = "Старый автомат по продаже сладкой газировки."
+	desc = "Old sweet water vending machine."
 	icon_state = "sovietsoda_off"
 	panel_overlay = "sovietsoda_panel"
 	screen_overlay = "sovietsoda"
@@ -25,14 +25,4 @@
 	)
 	contraband = list(
 		/obj/item/reagent_containers/cup/glass/drinkingglass/cola = 20,
-	)
-
-/obj/machinery/vending/sovietsoda/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат BODA",
-		GENITIVE = "торгового автомата BODA",
-		DATIVE = "торговому автомату BODA",
-		ACCUSATIVE = "торговый автомат BODA",
-		INSTRUMENTAL = "торговым автоматом BODA",
-		PREPOSITIONAL = "торговом автомате BODA",
 	)

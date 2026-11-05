@@ -1,6 +1,6 @@
 /obj/machinery/vox_shop
-	name = "Киконсоль Закиказов"
-	desc = "Технология связывающая воксов на дальних рубежах."
+	name = "Order Kikonsole"
+	desc = "Technology that connects vox across distant frontiers."
 	icon = 'icons/obj/machines/trader_machine.dmi'
 	icon_state = "shop"
 	max_integrity = 5000

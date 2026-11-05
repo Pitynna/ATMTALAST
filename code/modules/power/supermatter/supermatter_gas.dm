@@ -98,26 +98,8 @@ GLOBAL_LIST_INIT(sm_gas_behavior, init_sm_gas())
 	heat_modifier = 1
 	heat_power_generation = 1
 	powerloss_inhibition = 1
-	desc = "При поглощении суперматерией в присутствии кислорода образует плюоксий."
 
 /// Can be on Oxygen or CO2, but better lump it here since CO2 is rarer.
-/datum/sm_gas/carbon_dioxide/extra_effects(obj/machinery/power/supermatter_crystal/sm)
-	if(!sm.gas_percentage[TLV_CO2] || !sm.gas_percentage[TLV_O2])
-		return
-	var/co2_pp = sm.absorbed_gasmix.return_pressure() * sm.gas_percentage[TLV_CO2]
-	var/co2_ratio = clamp((0.5 * (co2_pp - CO2_CONSUMPTION_PP) / (co2_pp + CO2_PRESSURE_SCALING)), 0, 1)
-	var/consumed_co2 = sm.absorbed_gasmix.private_carbon_dioxide * co2_ratio
-	consumed_co2 = min(
-		consumed_co2,
-		sm.absorbed_gasmix.private_carbon_dioxide,
-		sm.absorbed_gasmix.private_oxygen
-	)
-	if(!consumed_co2)
-		return
-	sm.absorbed_gasmix.private_carbon_dioxide -= consumed_co2
-	sm.absorbed_gasmix.private_oxygen -= consumed_co2
-	sm.absorbed_gasmix.private_pluoxium += consumed_co2
-
 /datum/sm_gas/plasma
 	gas_id = TLV_PL
 	heat_modifier = 14
@@ -130,109 +112,17 @@ GLOBAL_LIST_INIT(sm_gas_behavior, init_sm_gas())
 	power_transmission = -0.25
 	heat_power_generation = 1
 
-/datum/sm_gas/hypernoblium
-	gas_id = TLV_HYPERNOBLIUM
-	heat_modifier = -14
-	power_transmission = 0.3
-	heat_power_generation = -1
-
 /datum/sm_gas/nitrous_oxide
 	gas_id = TLV_N2O
 	heat_resistance = 5
 
-/datum/sm_gas/tritium
-	gas_id = TLV_TRITIUM
-	heat_modifier = 9
-	power_transmission = 3
-	heat_power_generation = 1
-
-/datum/sm_gas/bz
-	gas_id = TLV_BZ
-	heat_modifier = 4
-	power_transmission = -0.2
-	heat_power_generation = 1
-	desc = "При концентрации выше 40% испускает ядерные частицы."
-
 /// Start to emit radballs at a maximum of 30% chance per tick
-/datum/sm_gas/bz/extra_effects(obj/machinery/power/supermatter_crystal/sm)
-	if(sm.gas_percentage[TLV_BZ] > 0.4 && prob(30 * sm.gas_percentage[TLV_BZ]))
-		sm.fire_nuclear_particle()
-
-/datum/sm_gas/pluoxium
-	gas_id = TLV_PLUOXIUM
-	heat_modifier = -1.5
-	power_transmission = -0.5
-	heat_power_generation = -1
-
-/datum/sm_gas/miasma
-	gas_id = TLV_MIASMA
-	heat_power_generation = 0.5
-	desc = "Поглощается суперматерией для выработки энергии."
-
 ///Miasma is really just microscopic particulate. It gets consumed like anything else that touches the crystal.
-/datum/sm_gas/miasma/extra_effects(obj/machinery/power/supermatter_crystal/sm)
-	if(!sm.gas_percentage[TLV_MIASMA])
-		return
-	var/miasma_pp = sm.absorbed_gasmix.return_pressure() * sm.gas_percentage[TLV_MIASMA]
-	var/miasma_ratio = clamp(((miasma_pp - MIASMA_CONSUMPTION_PP) / (miasma_pp + MIASMA_PRESSURE_SCALING)) * (1 + (sm.gas_heat_power_generation * MIASMA_GASMIX_SCALING)), 0, 1)
-	var/consumed_miasma = sm.absorbed_gasmix.private_miasma * miasma_ratio
-	if(!consumed_miasma)
-		return
-	sm.absorbed_gasmix.private_miasma -= consumed_miasma
-	sm.external_power_trickle += consumed_miasma * MIASMA_POWER_GAIN
-	sm.log_activation("miasma absorption")
-
-/datum/sm_gas/freon
-	gas_id = TLV_FREON
-	heat_modifier = -9
-	power_transmission = -3
-	heat_power_generation = -1
-
 /datum/sm_gas/hydrogen
 	gas_id = TLV_H2
 	heat_modifier = 9
 	power_transmission = 2.5
 	heat_resistance = 1
-	heat_power_generation = 1
-
-/datum/sm_gas/healium
-	gas_id = TLV_HEALIUM
-	heat_modifier = 3
-	power_transmission = 0.24
-	heat_power_generation = 1
-
-/datum/sm_gas/proto_nitrate
-	gas_id = TLV_PROTO_NITRATE
-	heat_modifier = -4
-	power_transmission = 1.5
-	heat_resistance = 4
-	heat_power_generation = 1
-
-/datum/sm_gas/zauker
-	gas_id = TLV_ZAUKER
-	heat_modifier = 7
-	power_transmission = 2
-	heat_power_generation = 1
-	desc = "Генерирует электрические разряды."
-
-/datum/sm_gas/zauker/extra_effects(obj/machinery/power/supermatter_crystal/sm)
-	if(!prob(sm.gas_percentage[TLV_ZAUKER] * 100))
-		return
-	playsound(sm.loc, 'sound/weapons/emitter2.ogg', 100, TRUE, extrarange = 10)
-	sm.supermatter_zap(
-		sm,
-		range = 6,
-		zap_str = clamp(sm.internal_energy * 1.6 KILO JOULES, 3.2 MEGA JOULES, 16 MEGA JOULES),
-		zap_flags = ZAP_MOB_STUN,
-		zap_cutoff = sm.zap_cutoff,
-		power_level = sm.internal_energy,
-		zap_icon = sm.zap_icon
-	)
-
-/datum/sm_gas/antinoblium
-	gas_id = TLV_ANTINOBLIUM
-	heat_modifier = 14
-	power_transmission = -0.5
 	heat_power_generation = 1
 
 /datum/sm_gas/agent_b

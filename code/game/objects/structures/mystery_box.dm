@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(mystery_box_extended, list(
 
 /obj/structure/mystery_box
 	name = "mystery box"
-	desc = "Мистическая коробка, позволяющая пользователю получить случайное оружие или предмет."
+	desc = "A mysterious box that grants its user a random weapon or item."
 	icon = 'icons/obj/crates.dmi'
 	icon_state = "wooden_crate"
 	anchored = TRUE
@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(mystery_box_extended, list(
 		return
 
 /obj/structure/mystery_box/tdome
-	desc = "Мистическая коробка, позволяющая пользователю получить оружие для убийства других. Чего вы ждёте?"
+	desc = "A mysterious box that grants its user a weapon for killing others. What are you waiting for?"
 
 /obj/structure/mystery_box/tdome/lavaland
 	icon_state = "necrocrate"
@@ -204,7 +204,7 @@ GLOBAL_LIST_INIT(mystery_box_extended, list(
 /// This represents the item that comes out of the box and is constantly changing before the box finishes deciding. Can probably be just an /atom or /movable.
 /obj/effect/abstract/mystery_box_item
 	name = "???"
-	desc = "Что же выпадет??"
+	desc = "It stares back. There's no reason to remain. Run."
 	icon = 'icons/obj/weapons/projectile.dmi'
 	icon_state = "revolver"
 

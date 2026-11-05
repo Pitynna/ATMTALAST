@@ -214,7 +214,7 @@
 	},
 /obj/item/paper/crumpled{
 	info = "Пойди туда — не знаю куда, найди то — не знаю что и поможет оно тебе в твоих приключениях.";
-	name = "Совет от пряника"
+	name = "Gingerbread Advice"
 	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/mine/labyrinth_l)
@@ -466,7 +466,7 @@
 	},
 /obj/item/paper/crumpled{
 	info = "Пойди туда — не знаю куда, найди то — не знаю что и поможет оно тебе в твоих приключениях.";
-	name = "Совет от пряника"
+	name = "Gingerbread Advice"
 	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/mine/labyrinth_r)
@@ -766,7 +766,7 @@
 /obj/structure/decorative_structures/garland,
 /obj/item/paper/crumpled{
 	info = "Пойди туда — не знаю куда, найди то — не знаю что и поможет оно тебе в твоих приключениях.";
-	name = "Совет от пряника"
+	name = "Gingerbread Advice"
 	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/mine/labyrinth_m)
@@ -1231,7 +1231,7 @@
 "kD" = (
 /obj/effect/decal/remains/mouse,
 /obj/item/paper/crumpled/bloody{
-	desc = "Зря я решил скинуть оружие, в этих пещерах полно всякой живности... И где же я его закопал? Вроде я все время шел по правой стороне...";
+	desc = "I shouldn't have ditched my gun. These caves are crawling with creatures... Where did I bury it? I think I kept to the right the whole time...";
 	layer = 2.9
 	},
 /obj/structure/decorative_structures/corpse,
@@ -1691,15 +1691,6 @@
 /turf/simulated/floor/carpet,
 /area/vision_change_area/awaymission/evil_santa/hut_e)
 "oi" = (
-/mob/living/simple_animal/hostile/zombie{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerbominationman";
-	icon_state = "gingerbominationman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie);
-	name = "Ginger zombie"
-	},
 /obj/structure/decorative_structures/garland,
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/end/hall)
@@ -1733,14 +1724,6 @@
 /turf/simulated/floor/plating/asteroid,
 /area/vision_change_area/awaymission/evil_santa/mine)
 "on" = (
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerknightman";
-	icon_state = "gingerknightman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie)
-	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/end/hall)
 "oo" = (
@@ -1806,7 +1789,7 @@
 	dir = 1
 	},
 /obj/structure/wooden_sign{
-	desc = "Ответь себе и входи: Вёл ли ты себя хорошо весь этот год? Если нет — уходи, Санта не любит плохишей!";
+	desc = "Answer honestly before entering: have you been good all year? If not, leave. Santa doesn't like naughty people!";
 	name = "Warning sign"
 	},
 /turf/simulated/floor/wood/oak,
@@ -2321,14 +2304,6 @@
 /turf/simulated/floor/carpet,
 /area/vision_change_area/awaymission/evil_santa/hut_e)
 "tE" = (
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerknightman";
-	icon_state = "gingerknightman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie)
-	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/mine/labyrinth_m)
 "tH" = (
@@ -3666,14 +3641,6 @@
 /turf/simulated/floor/wood/fancy,
 /area/vision_change_area/awaymission/evil_santa/end/lounge)
 "Gl" = (
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerknightman";
-	icon_state = "gingerknightman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie)
-	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/mine/labyrinth_l)
 "Gn" = (
@@ -3931,7 +3898,7 @@
 /area/vision_change_area/awaymission/evil_santa/end/exit)
 "Il" = (
 /obj/item/paper/crumpled{
-	desc = "Они смогли меня найти и здесь, надо бы успеть спрятать риг пока они не поняли кто я. Хотя без него я далеко не уйду, но бурю можно переждать и в этой лачуге. Прямо в центре \" мертвого леса\" не забудь, пустая ты башка.";
+	desc = "They found me even here. I'd better hide the hardsuit before they realize who I am. I won't get far without it, but I can wait out the storm in this shack. Right in the middle of the dead forest. Don't forget, you empty-headed fool.";
 	layer = 2.9
 	},
 /obj/item/stack/sheet/wood,
@@ -4254,14 +4221,6 @@
 /turf/simulated/floor/carpet/red,
 /area/vision_change_area/awaymission/evil_santa/end/santa)
 "KV" = (
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerknightman";
-	icon_state = "gingerknightman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie)
-	},
 /turf/simulated/floor/plating/asteroid,
 /area/vision_change_area/awaymission/evil_santa/mine)
 "KW" = (
@@ -5174,14 +5133,6 @@
 	},
 /area/vision_change_area/awaymission/evil_santa/spawn_nw)
 "ST" = (
-/mob/living/simple_animal/hostile/zombie/whiteship{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerknightman";
-	icon_state = "gingerknightman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie)
-	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/mine/labyrinth_r)
 "SZ" = (
@@ -5254,15 +5205,6 @@
 /turf/simulated/wall/shuttle,
 /area/vision_change_area/awaymission/evil_santa/end/hall)
 "TA" = (
-/mob/living/simple_animal/hostile/zombie{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerbominationman";
-	icon_state = "gingerbominationman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie);
-	name = "Ginger zombie"
-	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/end/hall)
 "TC" = (
@@ -5396,15 +5338,6 @@
 	},
 /area/vision_change_area/awaymission/evil_santa/spawn_s)
 "UM" = (
-/mob/living/simple_animal/hostile/zombie/whiteship/fast{
-	faction = list("hostile","syndicate","winter");
-	icon = 'icons/mob/simple_human.dmi';
-	icon_dead = null;
-	icon_living = "gingerchefman";
-	icon_state = "gingerchefman";
-	loot = list(/obj/item/reagent_containers/food/snacks/gingercookie);
-	name = "fast ginger zombie"
-	},
 /turf/simulated/floor/wood/oak,
 /area/vision_change_area/awaymission/evil_santa/end/hall)
 "UN" = (
@@ -5529,7 +5462,7 @@
 "VH" = (
 /obj/item/paper{
 	info = "Кто теперь займет место Санты и раздаст подарки всме достойным? \n И помни главное — открывать подарки раньше времени не стоит!";
-	name = "Записка"
+	name = "Note"
 	},
 /turf/simulated/floor/wood,
 /area/vision_change_area/awaymission/evil_santa/end/exit)
@@ -5808,8 +5741,8 @@
 "XV" = (
 /obj/structure/spider/stickyweb,
 /obj/item/paper/crumpled{
-	desc = "Полезть прятаться в шахте — самая тупая идея за последние пару дней. Ладно, надо затесаться среди этих макак, отпинаю одну и заберу ее форму, авось прокатит. Вот только где скинуть ствол...";
-	name = "Бумажка"
+	desc = "Hiding in the mine was the dumbest idea I've had in days. Fine, I'll blend in with these monkeys. I'll beat one up and take its uniform. It might work. But where can I ditch the gun...";
+	name = "Scrap of Paper"
 	},
 /turf/simulated/floor/plating/asteroid,
 /area/vision_change_area/awaymission/evil_santa/mine)

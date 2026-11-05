@@ -962,55 +962,6 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_MISC2
 
-/datum/crafting_recipe/grace_of_lazis
-	name = "Grace Of Lazis"
-	time = 6 SECONDS
-	reqs = list(
-		/obj/item/twohanded/spear/bonespear = 1,
-		/obj/item/reagent_containers/food/snacks/monstermeat/goliath = 18,
-	)
-	blacklist = list(
-		/obj/item/twohanded/spear/bonespear/chitinspear,
-		/obj/item/twohanded/spear/bonespear/her_biting_embrace,
-	)
-	result = /obj/structure/grace_of_lazis
-	category = CAT_PRIMAL
-	subcategory = CAT_MISC2
-
-/datum/crafting_recipe/wooden_totem
-	name = "Wooden Totem"
-	time = 15 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/wood = 30,
-		/obj/item/stack/sheet/animalhide/goliath_hide = 1,
-	)
-	result = /obj/structure/ash_totem/wooden
-	category = CAT_PRIMAL
-	subcategory = CAT_MISC2
-
-/datum/crafting_recipe/stone_totem
-	name = "Stone Totem"
-	time = 15 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/mineral/sandstone = 30,
-		/obj/item/stack/sheet/sinew = 2,
-	)
-	result = /obj/structure/ash_totem/stone
-	category = CAT_PRIMAL
-	subcategory = CAT_MISC2
-
-/datum/crafting_recipe/bone_totem
-	name = "Bone Totem"
-	time = 15 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/wood = 15,
-		/obj/item/stack/sheet/mineral/sandstone = 15,
-		/obj/item/stack/sheet/bone = 3,
-	)
-	result = /obj/structure/ash_totem/bone
-	category = CAT_PRIMAL
-	subcategory = CAT_MISC2
-
 /datum/crafting_recipe/primitive_surgical_kit
 	name = "Primitive surgical kit"
 	reqs = list(
@@ -2164,14 +2115,3 @@
 		/obj/item/stack/sheet/cloth = 2,
 	)
 	category = CAT_MISC
-
-/datum/crafting_recipe/elder_atmosian_statue
-	name = "Elder Atmosian Statue"
-	result = /obj/structure/statue/elder_atmosian
-	time = 6 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/mineral/metal_hydrogen = 20,
-		/obj/item/stack/sheet/mineral/zaukerite = 15,
-		/obj/item/stack/sheet/metal = 30,
-	)
-	category = CAT_DECORATIONS

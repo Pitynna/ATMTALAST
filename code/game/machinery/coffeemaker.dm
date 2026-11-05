@@ -13,7 +13,7 @@
 /obj/machinery/coffeemaker
 	abstract_type = /obj/machinery/coffeemaker
 	name = "coffeemaker"
-	desc = "Нет, эту кофемашину вы ТОЧНО не должны были увидеть. Пожалуйста, сообщите о баге."
+	desc = "You definitely should NOT be seeing this coffee machine. Please report this bug."
 	gender = FEMALE
 	icon = 'icons/obj/machines/coffee_maker.dmi'
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -271,23 +271,11 @@
 // MARK: Standard coffeemaker
 /obj/machinery/coffeemaker/standard
 	name = "coffeemaker \"Modello 3\""
-	desc = "Кофемашина модели \"Моделло 3\" — устройство для приготовления кофе при температуре в 80°C. \
-			Кофейные зёрна загружаются в виде специальных картриджей. Машина оборудована слотами для сахара, аспартама и сливок, \
-			а также стойкой для бумажных стаканов. Произведено компанией \"Бытовая Техника Пиччонайя\"."
+	desc = "A Modello 3 coffee machine that brews coffee at 80 degrees Celsius. Coffee beans are supplied in special cartridges. It includes slots for sugar, aspartame and creamer, as well as a paper cup rack. Manufactured by Piccionaia Home Appliances."
 	icon_state = "coffeemaker_nopot_nocart"
 	base_icon_state = "coffeemaker"
 	coffee = null
 	uses_cartridges = TRUE
-
-/obj/machinery/coffeemaker/standard/get_ru_names()
-	return alist(
-		NOMINATIVE = "кофемашина \"Моделло 3\"",
-		GENITIVE = "кофемашины \"Моделло 3\"",
-		DATIVE = "кофемашине \"Моделло 3\"",
-		ACCUSATIVE = "кофемашину \"Моделло 3\"",
-		INSTRUMENTAL = "кофемашиной \"Моделло 3\"",
-		PREPOSITIONAL = "кофемашине \"Моделло 3\""
-	)
 
 /obj/machinery/coffeemaker/standard/Initialize(mapload)
 	. = ..()
@@ -349,22 +337,10 @@
 // MARK: Impressa coffeemaker
 /obj/machinery/coffeemaker/impressa
 	name = "coffeemaker \"Impressa Modello 5\""
-	desc = "Кофемашина промышленного класса модели \"Импресса Моделло 5\" — устройство для приготовления кофе при температуре в 80°C. \
-			В отличие от стандартных моделей, не использует предварительно упакованные картриджи, а работает непосредственно с цельными зёрнами кофе. \
-			Такие пользуются спросом в кофейнях по всей Галактике. Произведено компанией \"Бытовая Техника Пиччонайя\"."
+	desc = "An industrial-grade Impressa Modello 5 coffee machine that brews coffee at 80 degrees Celsius. Unlike standard models, it uses whole coffee beans instead of prepackaged cartridges. Popular in coffee shops across the galaxy. Manufactured by Piccionaia Home Appliances."
 	icon_state = "coffeemaker_impressa"
 	pixel_x = 2 //needed to make it sit nicely on tables
 	brew_time = 15 SECONDS //industrial grade, its faster than the regular one
-
-/obj/machinery/coffeemaker/impressa/get_ru_names()
-	return alist(
-		NOMINATIVE = "кофемашина \"Импресса Моделло 5\"",
-		GENITIVE = "кофемашины \"Импресса Моделло 5\"",
-		DATIVE = "кофемашине \"Импресса Моделло 5\"",
-		ACCUSATIVE = "кофемашину \"Импресса Моделло 5\"",
-		INSTRUMENTAL = "кофемашиной \"Импресса Моделло 5\"",
-		PREPOSITIONAL = "кофемашине \"Импресса Моделло 5\""
-	)
 
 /obj/machinery/coffeemaker/impressa/Initialize(mapload)
 	. = ..()

@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/light
 	display_name = "Лампочка"
-	desc = "Компонент, излучающий свет определенной яркости и цвета."
+	desc = "A component that emits light with a specified brightness and color."
 	category = "Action"
 
 	/// The colours of the light

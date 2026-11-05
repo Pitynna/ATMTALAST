@@ -51,10 +51,9 @@ GLOBAL_DATUM_INIT(mob_hit_recoil, /datum/gun_recoil, GUN_RECOIL_LOW)
 	if(recoil.knockback_dwrfs && HAS_TRAIT(user, TRAIT_DWARF))
 		do_knockback_dworfs(user, target)
 		return
-	CALCULATE_SKILL_MOD(user, RECOIL_MOD, recoil_modifier)
 	var/shot_angle = get_angle(target, user)
 	var/rand_angle = (rand() - 0.5) * recoil.angle + shot_angle
-	recoil_camera(user, recoil.strength * recoil_modifier, recoil.in_duration * recoil_modifier, recoil.back_duration * recoil_modifier, rand_angle)
+	recoil_camera(user, recoil.strength, recoil.in_duration, recoil.back_duration, rand_angle)
 
 /obj/item/gun/proc/do_knockback_dworfs(mob/living/user, atom/target)
 	var/knockback_dir = get_dir(target, user)

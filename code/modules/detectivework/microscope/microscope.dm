@@ -3,8 +3,8 @@
 
 //microscope code itself
 /obj/machinery/microscope
-	name = "Электронный микроскоп"
-	desc = "Высокотехнологичный микроскоп, способный увеличивать изображение до 3000 раз."
+	name = "microscope"
+	desc = "A microscope capable of magnifying images up to 3000 times. Used in analyzing fibers, fingerprints, and gunpower residue samples."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "microscope"
 	anchored = TRUE
@@ -60,7 +60,7 @@
 	if(istype(sample, /obj/item/forensics/swab))
 		var/obj/item/forensics/swab/swab = sample
 
-		report.name = ("Криминалистический отчет №[++report_num]: [swab.name]")
+		report.name = ("Forensic Report #[++report_num]: [swab.name]")
 		report.info = "<b>Анализируемый объект:</b><br>[swab.name]<br><br>"
 
 		if(swab.gsr)
@@ -70,7 +70,7 @@
 
 	else if(istype(sample, /obj/item/sample/fibers))
 		var/obj/item/sample/fibers/fibers = sample
-		report.name = ("Отчет по фрагменту ткани №[++report_num]: [fibers.name]")
+		report.name = ("Fiber Report #[++report_num]: [fibers.name]")
 		report.info = "<b>Анализируемый объект:</b><br>[fibers.name]<br><br>"
 		if(fibers.evidence)
 			report.info = "Молекулярный анализ на предоставленном образце определил наличие уникальных волоконных струн.<br><br>"
@@ -79,7 +79,7 @@
 		else
 			report.info += "Волокна не найдены."
 	else if(istype(sample, /obj/item/sample/print))
-		report.name = ("Отчет по анализу отпечатков пальцев №[report_num]: [sample.name]")
+		report.name = ("Fingerprint Report #[report_num]: [sample.name]")
 		report.info = "<b>Отчет об анализе отпечатков пальцев №[report_num]</b>: [sample.name]<br>"
 		var/obj/item/sample/print/card = sample
 		if(card.evidence && length(card.evidence))

@@ -10,7 +10,6 @@
 	speak_emote = list("блеет")
 	emote_hear = list("блеет")
 	emote_see = list("трясёт головой", "бьёт копытом", "грозно зыркает вокруг")
-	tts_seed = "Muradin"
 	speak_chance = 1
 	turns_per_move = 5
 	nightvision = 6
@@ -137,7 +136,6 @@
 	speak_emote = list("мычит","протяжно мычит")
 	emote_hear = list("ревёт")
 	emote_see = list("трясёт головой")
-	tts_seed = "Cairne"
 	speak_chance = 1
 	turns_per_move = 5
 	nightvision = 6
@@ -271,7 +269,6 @@
 	speak_emote = list("чирикает")
 	emote_hear = list("чирикает")
 	emote_see = list("клюёт землю","хлопает крылышками")
-	tts_seed = "Meepo"
 	density = FALSE
 	speak_chance = 2
 	turns_per_move = 2
@@ -338,7 +335,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	speak_emote = list("кудахчет","квохчет")
 	emote_hear = list("кудахчет")
 	emote_see = list("клюёт землю", "резко встряхивает крыльями")
-	tts_seed = "Windranger"
 	density = FALSE
 	speak_chance = 2
 	turns_per_move = 3
@@ -458,7 +454,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	speak_emote = list("кудахчет","квохчет")
 	emote_hear = list("кудахчет")
 	emote_see = list("клюёт землю", "резко встряхивает крыльями")
-	tts_seed = "pantheon"
 	density = FALSE
 	speak_chance = 2
 	turns_per_move = 3
@@ -505,7 +500,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	icon_dead = "pig_dead"
 	speak = list("Хрю?", "Хрю", "ХРЮ!")
 	speak_emote = list("хрюкает")
-	tts_seed = "Anubarak"
 //	emote_hear = list("ревёт")
 	emote_see = list("перекатывается по земле")
 	speak_chance = 1
@@ -582,7 +576,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	icon_resting = "goose_rest"
 	speak = list("Га-га-га?", "Га-га.", "ГА-ГА-ГА-ГА!")
 	speak_emote = list("гогочет")
-	tts_seed = "pantheon" //Жи есть брат да, я гусь, до тебя доебусь.
 //	emote_hear = list("ревёт")
 	emote_see = list("хлопает крыльями")
 	speak_chance = 1
@@ -647,7 +640,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	icon_dead = "seal_dead"
 	speak = list("Барф?","Барф.","БАРФ!")
 	speak_emote = list("гавкает", "стонет")
-	tts_seed = "Narrator"
 	death_sound = 'sound/creatures/seal_death.ogg'
 //	emote_hear = list("ревёт")
 	emote_see = list("хлопает ластами")
@@ -684,7 +676,6 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	icon_dead = "walrus_dead"
 	speak = list("Урррфф?","Урррфф.","Урррфф!")
 	speak_emote = list("рычит","гудит")
-	tts_seed = "Tychus"
 	death_sound = 'sound/creatures/seal_death.ogg'
 //	emote_hear = list("ревёт")
 	emote_see = list("хлопает ластами")

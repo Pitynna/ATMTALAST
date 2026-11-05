@@ -178,8 +178,6 @@
 
 #define DEVIL_RITUAL_TRAIT "devil_ritual"
 
-/// Trait applied by MODsuits.
-#define MODSUIT_TRAIT "modsuit_trait"
 
 #define TASER_TRAIT "taser"
 

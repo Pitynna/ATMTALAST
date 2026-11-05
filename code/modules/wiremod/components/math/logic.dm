@@ -9,7 +9,7 @@
  */
 /obj/item/circuit_component/compare/logic
 	display_name = "Логика"
-	desc = "Компонент с возможностями \"и\" и \"или\"."
+	desc = "A component that performs AND and OR operations."
 	category = "Math"
 
 	var/datum/port/input/option/logic_options

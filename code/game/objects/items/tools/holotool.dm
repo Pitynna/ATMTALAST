@@ -1,6 +1,6 @@
 /obj/item/holotool
 	name = "experimental holotool"
-	desc = "Экспериментальный прибор, использующий технологии твёрдого света для проецирования голограмм инженерных инструментов. Произведено \"Нанотрейзен\"."
+	desc = "A highly experimental holographic tool projector."
 	icon = 'icons/obj/holotool.dmi'
 	icon_state = "holotool"
 	righthand_file = 'icons/mob/inhands/tools_righthand.dmi'
@@ -20,16 +20,6 @@
 	/// Data for radial menu display of modes
 	var/list/radial_modes
 	item_state_color = "#48D1CC" // mediumturquoise
-
-/obj/item/holotool/get_ru_names()
-	return alist(
-		NOMINATIVE = "экспериментальный голотул",
-		GENITIVE = "экспериментального голотула",
-		DATIVE = "экспериментальному голотулу",
-		ACCUSATIVE = "экспериментальный голотул",
-		INSTRUMENTAL = "экспериментальным голотулом",
-		PREPOSITIONAL = "экспериментальном голотуле"
-	)
 
 /obj/item/holotool/examine(mob/user)
 	. = ..()

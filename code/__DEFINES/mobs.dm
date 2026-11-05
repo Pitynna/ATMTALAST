@@ -310,8 +310,6 @@ GLOBAL_LIST_INIT(ru_species, list(
 	SPECIES_SLIMEPERSON = "слаймолюд",
 	SPECIES_TAJARAN = "таяран",
 	SPECIES_UNATHI = "унати",
-	SPECIES_ASHWALKER_BASIC = "пеплоходец",
-	SPECIES_ASHWALKER_SHAMAN = "шаман пеплоходец",
 	SPECIES_DRACONOID = "драконид",
 	SPECIES_VOX = "вокс",
 	SPECIES_VOX_ARMALIS = "вокс армалис",

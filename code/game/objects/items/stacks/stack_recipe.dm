@@ -26,8 +26,6 @@
 	var/check_direction = FALSE
 	/// Resulting atom is a cult structure
 	var/cult_structure = FALSE
-	/// Modifier signal, use this signal (if not null) for calculate modifiers
-	var/modifier_name = null
 
 /datum/stack_recipe/New(
 		title,
@@ -41,8 +39,7 @@
 		is_fulltile = FALSE,
 		on_lattice = FALSE,
 		check_direction = FALSE,
-		cult_structure = FALSE,
-		modifier_name = null
+		cult_structure = FALSE
 	)
 	src.title = title
 	src.result_type = result_type
@@ -56,7 +53,6 @@
 	src.on_lattice = on_lattice
 	src.check_direction = check_direction || is_fulltile
 	src.cult_structure = cult_structure
-	src.modifier_name = modifier_name
 
 	// We create base64 image only if item have color. Otherwise use icon_ref for TGUI
 	var/obj/item/result = result_type
@@ -98,42 +94,6 @@
 			to_chat(usr, span_warning("\The [title] must be constructed on the floor or lattice!"))
 			return FALSE
 
-	if(cult_structure)
-		if(!is_level_reachable(usr.z))
-			to_chat(usr, span_warning("The energies of this place interfere with the metal shaping!"))
-			return FALSE
-		if(locate(/obj/structure/cult) in usr.drop_location())
-			to_chat(usr, span_warning("There is a structure here!"))
-			return FALSE
-		if(locate(/obj/structure/clockwork) in usr.drop_location())
-			to_chat(usr, span_warning("There is a structure here!"))
-			return FALSE
-		if(locate(/obj/structure/falsewall) in usr.drop_location())
-			to_chat(usr, span_warning("There is a structure here!"))
-			return FALSE
-
-	var/area/A = get_area(usr)
-	if(result_type == /obj/structure/clockwork/functional/beacon)
-		if(!is_station_level(usr.z))
-			to_chat(usr, span_warning("The beacon cannot guide from this place! It must be on station!"))
-			return FALSE
-		if(isspacearea(A))
-			to_chat(usr, span_warning("The beacon must be inside the station itself to properly work."))
-			return FALSE
-		if(!A.type == /area) //The only one that is made by blueprints
-			to_chat(usr, span_warning("This area is too fresh for the beacon!"))
-			return FALSE
-		if(locate(/obj/structure/clockwork/functional/beacon) in A)
-			to_chat(usr, span_warning("This area already has beacon!"))
-			return FALSE
-	if(result_type == /obj/structure/clockwork/functional/cogscarab_fabricator)
-		if(length(GLOB.clockwork_fabricators) >= MAX_COG_FABRICATORS)
-			to_chat(usr, span_warning("You can't build more than [MAX_COG_FABRICATORS] fabricators!"))
-			return FALSE
-		if(usr.type == /mob/living/silicon/robot/cogscarab)
-			to_chat(usr, span_warning("You're too small to build this machinery."))
-			return FALSE
-
 	if(locate(/obj/machinery/atmospherics/reactor_chamber) in get_turf(material))
 		to_chat(user, span_warning("Building something here would get in the way of the reactor!"))
 		return FALSE
@@ -144,20 +104,8 @@
 /datum/stack_recipe/proc/do_build(mob/user, obj/item/stack/material, multiplier, atom/result)
 	if(time)
 		to_chat(user, span_notice("Building [title]..."))
-		var/calculated_time = time
-		if(modifier_name)
-			CALCULATE_SKILL_MOD(user, modifier_name, mod)
-			calculated_time = calculated_time * mod
-		if(!do_after(user, calculated_time, target = material.loc))
+		if(!do_after(user, time, target = material.loc))
 			return FALSE
-
-	if(cult_structure && locate(/obj/structure/cult) in get_turf(src)) //Check again after do_after to prevent queuing construction exploit.
-		to_chat(usr, span_warning("There is a structure here!"))
-		return FALSE
-
-	if(cult_structure && locate(/obj/structure/clockwork) in get_turf(src))
-		to_chat(usr, span_warning("There is a structure here!"))
-		return FALSE
 
 	if(material.get_amount() < req_amount * multiplier) // Check they still have enough.
 		return FALSE

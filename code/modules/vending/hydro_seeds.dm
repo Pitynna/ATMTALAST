@@ -1,6 +1,6 @@
 /obj/machinery/vending/hydroseeds
 	name = "MegaSeed Servitor"
-	desc = "Когда вам срочно нужны семена!"
+	desc = "When you need seeds fast!"
 	slogan_list = list(
 		"ВОТ ГДЕ ЖИВ+УТ СЕМЕН+А! ВОЗЬМ+И СЕБ+Е НЕМН+ОГО!",
 		"Без сомн+ений, л+учший в+ыбор здесь!",
@@ -90,14 +90,4 @@
 	)
 	premium = list(
 		/obj/item/reagent_containers/spray/waterflower = 1,
-	)
-
-/obj/machinery/vending/hydroseeds/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат MegaSeed Servitor",
-		GENITIVE = "торгового автомата MegaSeed Servitor",
-		DATIVE = "торговому автомату MegaSeed Servitor",
-		ACCUSATIVE = "торговый автомат MegaSeed Servitor",
-		INSTRUMENTAL = "торговым автоматом MegaSeed Servitor",
-		PREPOSITIONAL = "торговом автомате MegaSeed Servitor",
 	)

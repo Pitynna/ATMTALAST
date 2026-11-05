@@ -9,8 +9,6 @@
 #define CHANNEL_WEATHER 1017 // Weather ambience (rain, storms). Separated so zone ambience doesn't cut off weather sounds.
 #define CHANNEL_GENERAL 1016 //Sound channel for playsound(), most of the sounds
 #define CHANNEL_JUSTICAR_ARK 1015
-#define CHANNEL_TTS_LOCAL 1014
-#define CHANNEL_TTS_RADIO 1013
 #define CHANNEL_RADIO_NOISE 1012 // radio headset noise
 #define CHANNEL_BOSS_MUSIC 1011
 #define CHANNEL_INTERACTION_SOUNDS 1010	// item pickup/equip/drop sounds
@@ -110,15 +108,6 @@
 #define SOUND_AREA_WOODFLOOR SOUND_ENVIRONMENT_CITY
 
 // TTS sound defines
-#define SOUND_EFFECT_NONE 0
-#define SOUND_EFFECT_RADIO 1
-#define SOUND_EFFECT_ROBOT 2
-#define SOUND_EFFECT_RADIO_ROBOT 3
-#define SOUND_EFFECT_MEGAPHONE 4
-#define SOUND_EFFECT_MEGAPHONE_ROBOT 5
-#define SOUND_EFFECT_MASKFILTER 6
-#define SOUND_EFFECT_RADIO_MASKFILTER 7
-#define SOUND_EFFECT_OLD_VOCODER 8
 
 /**
  * Calculates the volume of a sound based on distance
@@ -230,8 +219,6 @@ GLOBAL_LIST_EMPTY(sfx_datum_by_key)
 #define SFX_HONKBOT_E "honkbot_e"
 #define SFX_GOOSE "goose"
 #define SFX_HULL_CREAKING "hull_creaking"
-#define SFX_HYPERTORUS_CALM "hypertorus_calm"
-#define SFX_HYPERTORUS_MELTING "hypertorus_melting"
 #define SFX_LAW "law"
 #define SFX_PAGE_TURN "page_turn"
 #define SFX_PUNCH "punch"

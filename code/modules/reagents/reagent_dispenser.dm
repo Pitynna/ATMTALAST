@@ -75,20 +75,10 @@
 
 /obj/structure/reagent_dispensers/holywatertank
 	name = "holy water tank"
-	desc = "Бак, заполненный святой водой."
+	desc = "A tank filled with holy water."
 	tank_volume = 3000
 	reagent_id = "holywater"
 	icon_state = "holywater_tank"
-
-/obj/structure/reagent_dispensers/holywatertank/get_ru_names()
-	return alist(
-		NOMINATIVE = "бак святой воды",
-		GENITIVE = "бака святой воды",
-		DATIVE = "баку святой воды",
-		ACCUSATIVE = "бак святой воды",
-		INSTRUMENTAL = "баком святой воды",
-		PREPOSITIONAL = "баке святой воды",
-	)
 
 /obj/structure/reagent_dispensers/oil
 	name = "oil tank"

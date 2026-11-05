@@ -19,16 +19,6 @@
 	var/sound_file = 'sound/misc/briefcase_bees.ogg'
 	var/next_sound = 0
 
-/obj/item/bee_briefcase/get_ru_names()
-	return alist(
-		NOMINATIVE = "портфель",
-		GENITIVE = "портфеля",
-		DATIVE = "портфелю",
-		ACCUSATIVE = "портфель",
-		INSTRUMENTAL = "портфелем",
-		PREPOSITIONAL = "портфеле",
-	)
-
 /obj/item/bee_briefcase/Destroy()
 	LAZYCLEARLIST(blood_list)
 	return ..()

@@ -125,7 +125,6 @@
 	loot = list(
 		/obj/item/seeds/random/labelled = 50,
 		/obj/item/guardiancreator/biological = 5,
-		/obj/item/organ/internal/vocal_cords/adamantine = 15,
 		/obj/item/storage/pill_bottle/random_meds/labelled = 25,
 		/obj/item/reagent_containers/cup/bottle/reagent/omnizine = 15,
 		/obj/item/dnainjector/telemut = 5,
@@ -242,16 +241,6 @@
 	var/base_points = 4
 	/// How high the machine can be run before it starts having a chance for dimension breaches.
 	var/safe_levels = 10
-
-/obj/machinery/power/bluespace_tap/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс сборщик",
-		GENITIVE = "блюспейс сборщика",
-		DATIVE = "блюспейс сборщику",
-		ACCUSATIVE = "блюспейс сборщик",
-		INSTRUMENTAL = "блюспейс сборщиком",
-		PREPOSITIONAL = "блюспейс сборщике",
-	)
 
 /obj/machinery/power/bluespace_tap/Initialize(mapload)
 	. = ..()

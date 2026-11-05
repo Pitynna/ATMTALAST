@@ -30,7 +30,7 @@
 	return ..()
 
 /datum/reagent/blob/shifting_fragments
-	name = "Смещающиеся фрагменты"
+	name = "Shifting Fragments"
 	id = "blob_shifting_fragments"
 	color = "#C8963C"
 

@@ -146,21 +146,12 @@
 
 /// Proc used to check if we swap intents based on click location
 /atom/movable/screen/act_intent/proc/is_advanced_user(mob/user)
-	if(ishuman(usr) || isdevil(usr)) // someone should probably draw separate intents for devils
+	if(ishuman(usr)) // someone should probably draw separate intents for devils
 		return TRUE
 	return FALSE
 
 /// Separate act_intent for swarmers
-/atom/movable/screen/act_intent/swarmer
-	icon = 'icons/mob/screen_swarmer.dmi'
-	screen_loc = ui_zonesel
-
 /// Swarmers have the same kind of intents humans do
-/atom/movable/screen/act_intent/swarmer/is_advanced_user(mob/user)
-	if(isswarmer(user))
-		return TRUE
-	return FALSE
-
 /atom/movable/screen/act_intent/alien
 	icon = 'icons/mob/screen_alien.dmi'
 
@@ -681,7 +672,7 @@
 	if(iscarbon(user))
 		var/mob/living/carbon/carbon_user = user
 		var/obj/item/organ/external/limb = user.get_organ(left_hand ? BODY_ZONE_PRECISE_L_HAND : BODY_ZONE_PRECISE_R_HAND)
-		if(!isalien(carbon_user) && !isdevil(carbon_user) && (!limb || !limb.is_usable()))
+		if((!isalien(carbon_user)) && ((!limb) || (!limb.is_usable())))
 			hand_blocked = TRUE
 			. += hand_overlays[HAND_OVERLAY_BLOCKED]
 

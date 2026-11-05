@@ -4,7 +4,7 @@
 
 /obj/effect/decal/cleanable/blood
 	name = "blood"
-	desc = "Оно густое и липкое. Возможно, это шедевр местного повара?"
+	desc = "It's thick and gooey. Perhaps it's the chef's cooking?"
 	gender = PLURAL
 	plane = GAME_PLANE
 	icon = 'icons/effects/blood.dmi'
@@ -23,7 +23,7 @@
 	var/max_shone_bloodiness = MAX_SHOE_BLOODINESS
 	var/drying_time = DRYING_TIME
 	var/dryname = "dried blood"
-	var/drydesc = "Оно сухое и засохшее. Кто-то явно халтурит."
+	var/drydesc = "It's dry and crusty. Someone is not doing their job."
 
 #undef DRYING_TIME
 
@@ -175,7 +175,7 @@
 
 /obj/effect/decal/cleanable/blood/drip
 	name = "drips of blood"
-	desc = "Оно красное."
+	desc = "A drop of blood in an ocean of mess."
 	icon = 'icons/effects/drip.dmi'
 	icon_state = "1"
 	random_icon_states = list("1", "2", "3", "4", "5")
@@ -183,45 +183,25 @@
 	bloodiness = 0
 	var/drips = 1
 
-/obj/effect/decal/cleanable/blood/drip/get_ru_names()
-	return alist(
-		NOMINATIVE = "капли крови",
-		GENITIVE = "капель крови",
-		DATIVE = "каплям крови",
-		ACCUSATIVE = "капли крови",
-		INSTRUMENTAL = "каплями крови",
-		PREPOSITIONAL = "каплях крови",
-	)
-
 /obj/effect/decal/cleanable/blood/drip/can_bloodcrawl_in()
 	return TRUE
 
 /obj/effect/decal/cleanable/trail_holder //not a child of blood on purpose
 	name = "blood"
 	icon_state = "nothing"
-	desc = "Ваши инстинкты подсказывают, что не стоит идти этим путём."
+	desc = "Your instincts say you shouldn't be following these."
 	gender = PLURAL
 	layer = TURF_LAYER
 	random_icon_states = null
 	blood_DNA = list()
 	var/list/existing_dirs = list()
 
-/obj/effect/decal/cleanable/trail_holder/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровь",
-		GENITIVE = "крови",
-		DATIVE = "крови",
-		ACCUSATIVE = "кровь",
-		INSTRUMENTAL = "кровью",
-		PREPOSITIONAL = "крови",
-	)
-
 /obj/effect/decal/cleanable/trail_holder/can_bloodcrawl_in()
 	return TRUE
 
 /obj/effect/decal/cleanable/blood/writing
 	icon_state = "tracks"
-	desc = "Это похоже на надпись кровью."
+	desc = "It looks like a writing in blood."
 	gender = NEUTER
 	random_icon_states = list("writing1", "writing2", "writing3", "writing4", "writing5")
 	amount = 0
@@ -242,7 +222,7 @@
 
 /obj/effect/decal/cleanable/blood/gibs
 	name = "gibs"
-	desc = "Кто-то или что-то явно было разорвано на части."
+	desc = "They look bloody and gruesome."
 	layer = TURF_LAYER
 	icon_state = "gib2"
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6")
@@ -253,16 +233,6 @@
 	var/fleshcolor = "#FFFFFF"
 	/// Do these gibs produce squishy sounds?
 	var/squishy = TRUE
-
-/obj/effect/decal/cleanable/blood/gibs/get_ru_names()
-	return alist(
-		NOMINATIVE = "кровавое месиво",
-		GENITIVE = "кровавого месива",
-		DATIVE = "кровавому месиву",
-		ACCUSATIVE = "кровавое месиво",
-		INSTRUMENTAL = "кровавым месивом",
-		PREPOSITIONAL = "кровавом месиве",
-	)
 
 /obj/effect/decal/cleanable/blood/gibs/Initialize(mapload)
 	. = ..()

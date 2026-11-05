@@ -1,6 +1,6 @@
 /obj/machinery/vending/liberationstation
 	name = "Liberation Station"
-	desc = "При одном взгляде на эту машину вас охватывает непреодолимое чувство <b>древнего патриотизма</b>."
+	desc = "An overwhelming amount of <b>ancient patriotism</b> washes over you just by looking at the machine."
 	icon_state = "liberationstation_off"
 	panel_overlay = "liberationstation_panel"
 	screen_overlay = "liberationstation"
@@ -46,19 +46,9 @@
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
 
-/obj/machinery/vending/liberationstation/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Liberation Station",
-		GENITIVE = "торгового автомата Liberation Station",
-		DATIVE = "торговому автомату Liberation Station",
-		ACCUSATIVE = "торговый автомат Liberation Station",
-		INSTRUMENTAL = "торговым автоматом Liberation Station",
-		PREPOSITIONAL = "торговом автомате Liberation Station",
-	)
-
 /obj/machinery/vending/toyliberationstation
 	name = "Syndicate Donksoft Toy Vendor"
-	desc = "Одобренный автомат игрушек для детей от 8 лет и старше."
+	desc = "An ages 8 and up approved vendor that dispenses toys. If you were to find the right wires, you can unlock the adult mode setting!"
 	icon_state = "syndi_off"
 	panel_overlay = "syndi_panel"
 	screen_overlay = "syndi"
@@ -100,13 +90,3 @@
 
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
-
-/obj/machinery/vending/toyliberationstation/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Syndicate Donksoft Toy Vendor",
-		GENITIVE = "торгового автомата Syndicate Donksoft Toy Vendor",
-		DATIVE = "торговому автомату Syndicate Donksoft Toy Vendor",
-		ACCUSATIVE = "торговый автомат Syndicate Donksoft Toy Vendor",
-		INSTRUMENTAL = "торговым автоматом Syndicate Donksoft Toy Vendor",
-		PREPOSITIONAL = "торговом автомате Syndicate Donksoft Toy Vendor",
-	)

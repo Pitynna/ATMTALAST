@@ -10,21 +10,11 @@
 
 /obj/machinery/computer/addition_goals
 	name = "addition goals console"
-	desc = "Используется для управления дополнительными целями смены."
+	desc = "Used to manage additional shift objectives."
 	icon_screen = "addition_goal"
 	icon_keyboard = "addition_goal_key"
 	req_access = list(ACCESS_CAPTAIN)
 	circuit = /obj/item/circuitboard/computer/addition_goals
-
-/obj/machinery/computer/addition_goals/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления дополнительными целями смены",
-		GENITIVE = "консоли управления дополнительными целями смены",
-		DATIVE = "консоли управления дополнительными целями смены",
-		ACCUSATIVE = "консоль управления дополнительными целями смены",
-		INSTRUMENTAL = "консолью управления дополнительными целями смены",
-		PREPOSITIONAL = "консоли управления дополнительными целями смены",
-	)
 
 /obj/machinery/computer/addition_goals/Initialize(mapload, obj/structure/computerframe/frame)
 	. = ..()

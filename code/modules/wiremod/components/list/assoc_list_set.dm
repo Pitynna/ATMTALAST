@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable/assoc_list/list_set
 	display_name = "Ассоциативный список — задать"
-	desc = "Задает строковый ключ в ассоциативном списке на определенное значение."
+	desc = "Sets a string key in an associative list to a specified value."
 	category = "List"
 
 	/// Key to set

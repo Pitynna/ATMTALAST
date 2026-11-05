@@ -78,8 +78,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/mask.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/mask.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/mask.dmi',
@@ -122,8 +120,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/mask.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/mask.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/mask.dmi',
@@ -216,9 +212,7 @@
 
 /obj/item/clothing/mask/surgical
 	name = "sterile mask"
-	desc = "Одноразовая маска, изготовленная из стерильного материала. \
-			Обеспечивает защиту от биологического загрязнения и воздушно-капельных инфекций. \
-			Обладает высокой степенью проницаемости газов и практически не пропускает вредные вещества."
+	desc = "A sterile mask designed to help prevent the spread of diseases."
 	icon_state = "sterile"
 	item_state = "sterile"
 	w_class = WEIGHT_CLASS_TINY
@@ -231,8 +225,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/mask.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/mask.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/mask.dmi',
@@ -244,16 +236,6 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/mask.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/mask.dmi',
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/mask.dmi',
-	)
-
-/obj/item/clothing/mask/surgical/get_ru_names()
-	return alist(
-		NOMINATIVE = "стерильная маска",
-		GENITIVE = "стерильной маски",
-		DATIVE = "стерильной маске",
-		ACCUSATIVE = "стерильную маску",
-		INSTRUMENTAL = "стерильной маской",
-		PREPOSITIONAL = "стерильной маске",
 	)
 
 /obj/item/clothing/mask/surgical/ComponentInitialize()
@@ -273,8 +255,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/mask.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/mask.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/mask.dmi',
@@ -482,7 +462,7 @@
 
 /obj/item/clothing/mask/gas/clown_hat/sweettooth
 	name = "Sweet Tooth Mask"
-	desc = "Брутальная маска клоуна. Она до сих пор пахнет цирком. И керосином."
+	desc = "A brutal clown mask. It still smells of the circus. And kerosene."
 	icon_state = "sweettooth_mask"
 	item_state = "sweettooth_mask"
 	sprite_sheets = list(
@@ -495,16 +475,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/mask.dmi',
 		SPECIES_KIDAN = 'icons/mob/clothing/species/kidan/mask.dmi',
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/mask.dmi',
-	)
-
-/obj/item/clothing/mask/gas/clown_hat/sweettooth/get_ru_names()
-	return alist(
-		NOMINATIVE = "Маска Сладкоежки",
-		GENITIVE = "Маски Сладкоежки",
-		DATIVE = "Маске Сладкоежки",
-		ACCUSATIVE = "Маску Сладкоежки",
-		INSTRUMENTAL = "Маской Сладкоежки",
-		PREPOSITIONAL = "Маске Сладкоежки",
 	)
 
 /obj/item/clothing/mask/gas/clown_hat/rockso
@@ -538,8 +508,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/mask.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/mask.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/mask.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/mask.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/mask.dmi',
@@ -682,7 +650,6 @@
 
 /obj/item/clothing/mask/gas/voice_modulator/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/tts_modifier, SOUND_EFFECT_MASKFILTER)
 	voice_modulator = new(src)
 
 /obj/item/clothing/mask/gas/voice_modulator/Destroy()
@@ -732,7 +699,7 @@
 
 /obj/item/clothing/head/paper_bag
 	name = "paper bag"
-	desc = "Надетый на голову бумажный пакет. Очень хлипкий!"
+	desc = "A paper bag worn over the head. Very flimsy!"
 	icon_state = "paper_bag"
 	item_state = "paper_bag"
 	w_class = WEIGHT_CLASS_TINY
@@ -748,16 +715,6 @@
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/head.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/head.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/head.dmi',
-	)
-
-/obj/item/clothing/head/paper_bag/get_ru_names()
-	return alist(
-		NOMINATIVE = "бумажный пакет",
-		GENITIVE = "бумажного пакета",
-		DATIVE = "бумажному пакету",
-		ACCUSATIVE = "бумажный пакет",
-		INSTRUMENTAL = "бумажным пакетом",
-		PREPOSITIONAL = "бумажном пакете",
 	)
 
 /obj/item/clothing/head/paper_bag/dropped(mob/user, slot, silent = FALSE)
@@ -780,7 +737,7 @@
 // MARK: Whistle
 /obj/item/clothing/mask/whistle
 	name = "whistle"
-	desc = "Компактное сигнальное устройство, издающее громкий и четкий звук, используемое для подачи сигналов, привлечения внимания и координации действий в различных ситуациях, от спортивных мероприятий до чрезвычайных происшествий."
+	desc = "A metal pea-whistle. Can be blown while held, or worn in the mouth."
 	icon_state = "whistle"
 	item_state = "whistle"
 	gender = MALE
@@ -790,16 +747,6 @@
 	/// Sound use for activate whistle
 	var/activate_sound = 'sound/items/whistle.ogg'
 	COOLDOWN_DECLARE(use_cd)
-
-/obj/item/clothing/mask/whistle/get_ru_names()
-	return alist(
-		NOMINATIVE = "свисток",
-		GENITIVE = "свистка",
-		DATIVE = "свистку",
-		ACCUSATIVE = "свисток",
-		INSTRUMENTAL = "свистком",
-		PREPOSITIONAL = "свистке",
-	)
 
 /obj/item/clothing/mask/whistle/ComponentInitialize()
 	. = ..()

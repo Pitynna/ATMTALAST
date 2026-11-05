@@ -30,7 +30,6 @@ Difficulty: Medium
 	icon = 'icons/mob/lavaland/blood_drunk.dmi'
 	light_color = "#E4C7C5"
 	speak_emote = list("ревёт")
-	tts_seed = "Chen"
 	speed = 3
 	projectiletype = /obj/projectile/kinetic/miner
 	projectilesound = 'sound/weapons/kenetic_accel.ogg'
@@ -87,34 +86,14 @@ Difficulty: Medium
 
 /obj/item/clothing/suit/hooded/explorer/blood
 	name = "empowered explorer suit"
-	desc = "Бронированный костюм, созданный для исследования и работы в суровых условиях. Сладкая кровь, ох-х, как она поёт для тебя."
+	desc = "An armoured hood for exploring harsh environments. The sweet blood, oh, it sings to you."
 	armor = list(MELEE = 55, BULLET = 35, LASER = 25, ENERGY = 25, BOMB = 75, BIO = 100, FIRE = 100, ACID = 100)
 	hoodtype = /obj/item/clothing/head/hooded/explorer/blood
 
-/obj/item/clothing/suit/hooded/explorer/blood/get_ru_names()
-	return alist(
-		NOMINATIVE = "усиленный костюм исследователя",
-		GENITIVE = "усиленного костюма исследователя",
-		DATIVE = "усиленному костюму исследователя",
-		ACCUSATIVE = "усиленный костюм исследователя",
-		INSTRUMENTAL = "усиленным костюмом исследователя",
-		PREPOSITIONAL = "усиленном костюме исследователя",
-	)
-
 /obj/item/clothing/head/hooded/explorer/blood
 	name = "empowered explorer hood"
-	desc = "Бронированный капюшон, созданный для исследования и работы в суровых условиях. Сладкая кровь, ох-х, как она поёт для тебя."
+	desc = "An armoured hood for exploring harsh environments. The sweet blood, oh, it sings to you."
 	armor = list(MELEE = 55, BULLET = 35, LASER = 25, ENERGY = 25, BOMB = 75, BIO = 100, FIRE = 100, ACID = 100)
-
-/obj/item/clothing/head/hooded/explorer/blood/get_ru_names()
-	return alist(
-		NOMINATIVE = "усиленный капюшон исследователя",
-		GENITIVE = "усиленного капюшона исследователя",
-		DATIVE = "усиленному капюшону исследователя",
-		ACCUSATIVE = "усиленный капюшон исследователя",
-		INSTRUMENTAL = "усиленным капюшоном исследователя",
-		PREPOSITIONAL = "усиленном капюшоне исследователя",
-	)
 
 /datum/action/cooldown/spell/blood_suit
 	name = "Жажда крови"

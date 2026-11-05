@@ -8,7 +8,7 @@
  * GAMEMODES (by Rastaf0)
  *
  * In the new mode system all special roles are fully supported.
- * You can have proper wizards/traitors/changelings/cultists during any mode.
+ * You can have proper wizards/traitors/changelings during any mode.
  * Only two things really depends on gamemode:
  * 1. Starting roles, equipment and preparations
  * 2. Conditions of finishing the round.
@@ -86,10 +86,6 @@
 	var/list/datum/mind/wizards = list()
 	/// A list of all minds that are wizard apprentices
 	var/list/datum/mind/apprentices = list()
-	/// A list of all minds that are zombies
-	var/list/datum/mind/zombies = list()
-	/// A list of all minds that are infected with the zombie virus, but aren't zombies yet
-	var/list/datum/mind/zombie_infected = list()
 
 	/// How many abductor teams do we have
 	var/abductor_teams = 0
@@ -116,48 +112,8 @@
 	/// A list of all the minds that have the ERT special role
 	var/list/datum/mind/ert = list()
 
-	/// The Contractor Support Units
-	var/list/datum/mind/support = list()
 	var/datum/mind/exchange_red
 	var/datum/mind/exchange_blue
-	/// The number of contractors who accepted the offer.
-	var/contractor_accepted = 0
-
-	/// A list of all demon minds spawned via event or wizard artefact.
-	var/list/datum/mind/demons = list()
-
-	var/list/datum/mind/sintouched = list()
-	var/list/datum/mind/devils = list()
-
-	/// A list of all minds currently in the cult
-	var/list/datum/mind/cult = list()
-	var/datum/cult_objectives/cult_objs = new
-	/// Does the cult have glowing eyes
-	var/cult_risen = FALSE
-	/// Does the cult have halos
-	var/cult_ascendant = FALSE
-	/// How many crew need to be converted to rise
-	var/rise_number
-	/// How many crew need to be converted to ascend
-	var/ascend_number
-	/// Used for the CentComm announcement at ascension
-	var/ascend_percent
-	/// The number of ghost summons available to the cult.
-	var/ghost_summons = null
-
-	/// A list of all minds currently in the cult
-	var/list/datum/mind/clockwork_cult = list()
-	var/datum/clockwork_objectives/clocker_objs = new
-	/// Does the clockers have significant power stored
-	var/power_reveal = FALSE
-	/// Does the cult have halos
-	var/crew_reveal = FALSE
-	/// How many power need to be in supply to reveal
-	var/power_reveal_number
-	/// How many crew need to be converted to reveal
-	var/crew_reveal_number
-	/// Used for CentCom announcement when reached crew limit conversion
-	var/reveal_percent
 
 	/// List of of blobs, their offsprings and blobburnouts spawned by them
 	var/list/blobs = list(
@@ -185,22 +141,6 @@
 	/// Total blobs objective
 	var/datum/objective/blob_critical_mass/blob_objective
 
-	// LEGACY SHIT!
-	var/list/datum/mind/shadows = list()
-	var/list/datum/mind/shadowling_thralls = list()
-	var/list/shadow_objectives = list()
-	var/required_thralls = 15 //How many thralls are needed (hardcoded for now)
-	var/shadowling_ascended = 0 //If at least one shadowling has ascended
-	var/shadowling_dead = 0 //is shadowling kill
-	var/objective_explanation
-	var/warning_threshold
-	var/victory_warning_announced = FALSE
-	var/thrall_ratio = 1
-
-	var/list/datum/mind/thieves = list()
-
-	var/list/datum/mind/space_ninjas = list()
-
 	var/list/datum/mind/goon_vampires = list()
 	var/list/datum/mind/goon_vampire_enthralled = list()
 
@@ -209,11 +149,6 @@
 
 	var/list/datum/mind/raiders = list() //Antags.
 	var/list/raid_objectives = list() //Raid objectives
-
-	/// Personal skill bonuses granted by the game mode to specific minds (mind -> (skill_type -> level)); applied as max()
-	var/list/mode_skill_bonuses = list()
-	/// Additive skill bonuses granted by the game mode to specific minds (mind -> (skill_type -> bonus)); applied as level + bonus
-	var/list/mode_skill_additive_bonuses = list()
 
 /datum/game_mode/proc/announce() //to be calles when round starts
 	to_chat(world, "<b>Notice</b>: [src] did not define announce()")
@@ -551,11 +486,9 @@
 	var/turf/player_turf = get_turf(player)
 	if(!player_turf)	// nullspace, eh?
 		return FALSE
-	if(!is_level_reachable(player_turf.z) && !is_away_level(player_turf.z))	// taipan is not available, mkay?
+	if(!is_level_reachable(player_turf.z) && !is_away_level(player_turf.z))
 		return FALSE
 	if(is_monkeybasic(player))	// no monkas
-		return FALSE
-	if(isgolem(player))	// get out of here
 		return FALSE
 	if(is_evolvedslime(player))	// no evolved slimes please
 		return FALSE
@@ -885,21 +818,11 @@
 	. += auto_declare_completion_sst()
 	. += auto_declare_completion_sit()
 	. += auto_declare_completion_blob()
-	. += auto_declare_completion_ninja()
-	. += auto_declare_completion_thief()
 	. += auto_declare_completion_goon_vampire()
 	. += auto_declare_completion_goon_enthralled()
-	. += auto_declare_completion_devil()
-	. += auto_declare_completion_sintouched()
 	list_clear_nulls(.)
 
 /datum/game_mode/proc/apocalypse_cinema(obj/god/god, inevitable = FALSE)
-	if(istype(god, /obj/god/narsie))
-		return SSticker.cultdat.apocalypse_cinema
-
-	if(istype(god, /obj/god/ratvar))
-		return /datum/cinematic/cult_arm_ratvar
-
 	return FALSE
 
 /datum/game_mode/proc/apocalypse(god_name)
@@ -984,12 +907,6 @@
 	else
 		message_text += "<hr><b>Аномальных особенностей текущей смены не обнаружено.</b><br>"
 	print_command_report(message_text, "Информация о состоянии станции", FALSE)
-
-/datum/game_mode/proc/get_mode_skill_bonuses_for(datum/mind/target_mind)
-	return mode_skill_bonuses[target_mind]
-
-/datum/game_mode/proc/get_mode_additive_skill_bonuses_for(datum/mind/target_mind)
-	return mode_skill_additive_bonuses[target_mind]
 
 #undef ROUNDSTART_LOGOUT_REPORT_TIME
 #undef STATION_GOAL_BUDGET

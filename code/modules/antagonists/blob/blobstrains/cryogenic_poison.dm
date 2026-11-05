@@ -11,7 +11,7 @@
 	reagent = /datum/reagent/blob/cryogenic_poison
 
 /datum/reagent/blob/cryogenic_poison
-	name = "Криогенный яд"
+	name = "Cryogenic Poison"
 	id = "blob_cryogenic_poison"
 	description = "впрыскивает в цель замораживающий яд, который со временем наносит большой урон."
 	color = "#8BA6E9"

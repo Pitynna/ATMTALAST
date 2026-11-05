@@ -1,21 +1,11 @@
 // Upgrade for ore satchels that make it collect ore in 3x3 area
 /obj/item/mining_satchel_upgrade
 	name = "mining satchel upgrade"
-	desc = "Магнитное улучшение сумок для руды, позволяющее собирать руду в области 3 на 3 вокруг пользователя."
+	desc = "A magnetic ore satchel upgrade that collects ore in a 3-by-3 area around its user."
 	icon = 'icons/obj/mining_satchel_upgrade.dmi'
 	icon_state = "mining_upgrade0"
 	origin_tech = "materials=3;engineering=2"
 	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/mining_satchel_upgrade/get_ru_names()
-	return alist(
-		NOMINATIVE = "магнитное улучшение сумок для руды",
-		GENITIVE = "магнитного улучшения сумок для руды",
-		DATIVE = "магнитному улучшению сумок для руды",
-		ACCUSATIVE = "магнитное улучшение сумок для руды",
-		INSTRUMENTAL = "магнитным улучшением сумок для руды",
-		PREPOSITIONAL = "магнитном улучшении сумок для руды",
-	)
 
 /obj/item/mining_satchel_upgrade/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()

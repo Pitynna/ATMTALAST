@@ -1,7 +1,6 @@
 /obj/machinery/power/anomaly_generator
-	name = "генератор аномалий"
-	desc = "Необычного вида машина, разработанная на основе эксперементальной технологии, предназначенная для \
-			генерации аномалий."
+	name = "anomaly generator"
+	desc = "An unusual machine based on experimental technology, designed to generate anomalies."
 	density = TRUE
 	icon = 'icons/obj/anomaly/anomaly_stuff.dmi'
 	icon_state = "generator_on"
@@ -49,16 +48,6 @@
 
 	/// Sound cooldown
 	COOLDOWN_DECLARE(sound_cooldown)
-
-/obj/machinery/power/anomaly_generator/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор аномалий", \
-		GENITIVE = "генератора аномалий", \
-		DATIVE = "генератору аномалий", \
-		ACCUSATIVE = "генератор аномалий", \
-		INSTRUMENTAL = "генератором аномалий", \
-		PREPOSITIONAL = "генераторе аномалий",
-	)
 
 /obj/machinery/power/anomaly_generator/Initialize(mapload)
 	. = ..()
@@ -372,8 +361,7 @@
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE, -1) // A rare call, let it be without CD.
 
 /obj/machinery/power/anomaly_generator/upgraded/admin
-	desc = "Необычного вида машина, разработанная на основе эксперементальной технологии, предназначенная для \
-			генерации аномалий. В данной модели были использованы секретные разработки Nanotrasen."
+	desc = "An unusual machine based on experimental technology, designed to generate anomalies. This model incorporates classified Nanotrasen developments."
 
 /obj/machinery/power/anomaly_generator/wrench_act(mob/living/user, obj/item/item)
 	default_unfasten_wrench(user, item)

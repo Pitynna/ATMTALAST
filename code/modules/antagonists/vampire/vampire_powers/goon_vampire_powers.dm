@@ -194,14 +194,6 @@
 /datum/action/cooldown/spell/aoe/goon_vamp_glare/cast_on_thing_in_aoe(atom/victim, atom/caster)
 	var/mob/living/carbon/human/target = victim
 
-	if(isninja(target))
-		var/mob/living/carbon/human/target_human = target
-		var/obj/item/clothing/glasses/ninja/ninja_visor = target_human.glasses
-
-		if(istype(ninja_visor) && ninja_visor.vamp_protection_active && ninja_visor.current_mode == "flashprotection")
-			to_chat(target, span_warning("Глаза [owner] засветились, но ваш визор защитил вас."))
-			return
-
 	target.Weaken(4 SECONDS)
 	target.AdjustStuttering(40 SECONDS)
 	target.adjustStaminaLoss(20)
@@ -266,16 +258,6 @@
 
 /datum/action/cooldown/spell/aoe/goon_vamp_screech/cast_on_thing_in_aoe(atom/victim, atom/caster)
 	var/mob/living/carbon/target = victim
-
-	if(isninja(target))
-		var/mob/living/carbon/human/h_target = target
-		var/obj/item/clothing/suit/space/space_ninja/ninja_suit = h_target.wear_suit
-		if(istype(ninja_suit) && ninja_suit.vamp_protection_active && ninja_suit.s_initialized)
-			to_chat(target, span_warning("<b>Вы начали слышать жуткий визг!</b> Но ваш костюм отреагировал на него и временно прикрыл вам уши, минимизируя урон"))
-			target.Deaf(20 SECONDS)
-			target.Jitter(100 SECONDS)
-			target.adjustStaminaLoss(20)
-			return
 
 	to_chat(target, span_warning("<font size='3'><b>Вы слышите ушераздирающий визг и ваши чувства притупляются!</font></b>"))
 	target.Weaken(4 SECONDS)
@@ -358,16 +340,6 @@
 			span_notice("Вера в [SSticker.Bible_deity_name] защищает ваш разум от всякого зла."),
 		)
 		return
-
-	if(isninja(target))
-		var/obj/item/clothing/suit/space/space_ninja/ninja_suit = target.wear_suit
-		if(istype(ninja_suit) && ninja_suit.vamp_protection_active && ninja_suit.s_initialized)
-			target.visible_message(
-				span_warning("Похоже что [target] сопротивляется захвату!"),
-				span_notice("Вы ощутили сильную боль, а затем слабый укол в шею. Кажется костюм только, что защитил ваш разум..."),
-			)
-			target.setBrainLoss(20)
-			return
 
 	if(!ishuman(target))
 		to_chat(user, span_warning("Вы можете порабощать только гуманоидов!"))

@@ -2,7 +2,7 @@
 /obj/item/gun/projectile/automatic/sniper_rifle
 	abstract_type = /obj/item/gun/projectile/automatic/sniper_rifle
 	name = "sniper rifle"
-	desc = "Крупнокалиберная снайперская винтовка."
+	desc = "A powerful anti-materiel rifle produced by Aussec Armory, chambered in devastating .50 BMG."
 	gender = FEMALE
 	icon_state = "sniper"
 	item_state = "sniper"
@@ -42,19 +42,8 @@
 // MARK: SGM-HSR15
 /obj/item/gun/projectile/automatic/sniper_rifle/syndicate
 	name = "SGM-HSR15 sniper rifle"
-	desc = "Тяжёлая снайперская винтовка калибра .50 производства \"Shellguard Munitions\". Высокая точность, низкая скорострельность \
-			и огромная убойная сила. Предназначена для поражения целей на больших дистанциях. Совместима с широким спектром боеприпасов."
+	desc = "A powerful anti-materiel rifle by Aussec Armory, chambered in devastating .50 BMG. This model is engraved with superficial Syndicate iconography."
 	origin_tech = "combat=7;syndicate=6"
-
-/obj/item/gun/projectile/automatic/sniper_rifle/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "снайперская винтовка SGM-HSR15",
-		GENITIVE = "снайперской винтовки SGM-HSR15",
-		DATIVE = "снайперской винтовке SGM-HSR15",
-		ACCUSATIVE = "снайперскую винтовку SGM-HSR15",
-		INSTRUMENTAL = "снайперской винтовкой SGM-HSR15",
-		PREPOSITIONAL = "снайперской винтовке SGM-HSR15",
-	)
 
 /obj/item/gun/projectile/automatic/sniper_rifle/syndicate/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
@@ -82,9 +71,7 @@
 // MARK: "Hornisse"
 /obj/item/gun/projectile/automatic/sniper_rifle/compact
 	name = "\"Hornisse\" sniper rifle"
-	desc = "Буллпап-конфигурация снайперской винтовки SGM-HSR15. Использует патроны калибра .50L. Автоматика, \
-			оптимизированная под патрон уменьшенной мощности и перенос магазина за пистолетную рукоять делают \
-			эту винтовку пригодной для боя на коротких дистанциях."
+	desc = "A compact, unscoped version of the standard issue syndicate sniper rifle. Still capable of sending people crying."
 	icon_state = "snipercompact"
 	fire_delay = 2 SECONDS
 	mag_type = /obj/item/ammo_box/magazine/sniper_rounds/compact
@@ -94,16 +81,6 @@
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 21, ATTACHMENT_OFFSET_Y = 1),
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 6, ATTACHMENT_OFFSET_Y = 5),
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 8, ATTACHMENT_OFFSET_Y = -4),
-	)
-
-/obj/item/gun/projectile/automatic/sniper_rifle/compact/get_ru_names()
-	return alist(
-		NOMINATIVE = "снайперская винтовка \"Шершень\"",
-		GENITIVE = "снайперской винтовки \"Шершень\"",
-		DATIVE = "снайперской винтовке \"Шершень\"",
-		ACCUSATIVE = "снайперскую винтовку \"Шершень\"",
-		INSTRUMENTAL = "снайперской винтовкой \"Шершень\"",
-		PREPOSITIONAL = "снайперской винтовке \"Шершень\"",
 	)
 
 /obj/item/gun/projectile/automatic/sniper_rifle/compact/add_deep_lore()
@@ -124,7 +101,7 @@
 // MARK: AXMC
 /obj/item/gun/projectile/automatic/sniper_rifle/axmc
 	name = "AXMC sniper rifle"
-	desc = "Тяжёлая снайперская винтовка калибра .338."
+	desc = "A heavy .338-caliber sniper rifle."
 	icon_state = "axmc"
 	item_state = "AXMC"
 	mag_type = /obj/item/ammo_box/magazine/a338
@@ -133,14 +110,4 @@
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 36, ATTACHMENT_OFFSET_Y = 2),
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 10, ATTACHMENT_OFFSET_Y = 6),
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 17, ATTACHMENT_OFFSET_Y = -4),
-	)
-
-/obj/item/gun/projectile/automatic/sniper_rifle/axmc/get_ru_names()
-	return alist(
-		NOMINATIVE = "снайперская винтовка AXMC",
-		GENITIVE = "снайперской винтовки AXMC",
-		DATIVE = "снайперской винтовке AXMC",
-		ACCUSATIVE = "снайперскую винтовку AXMC",
-		INSTRUMENTAL = "снайперской винтовкой AXMC",
-		PREPOSITIONAL = "снайперской винтовке AXMC",
 	)

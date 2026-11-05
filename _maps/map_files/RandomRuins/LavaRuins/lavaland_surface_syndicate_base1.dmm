@@ -3171,9 +3171,6 @@
 /turf/simulated/floor/plasteel,
 /area/ruin/unpowered/syndicate_lava_base/main)
 "ib" = (
-/obj/effect/mob_spawn/human/lavaland_syndicate{
-	dir = 4
-	},
 /turf/simulated/floor/plasteel/grimy,
 /area/ruin/unpowered/syndicate_lava_base/dormitories)
 "ic" = (
@@ -3205,9 +3202,6 @@
 /turf/simulated/floor/plasteel/dark,
 /area/ruin/unpowered/syndicate_lava_base/dormitories)
 "ie" = (
-/obj/effect/mob_spawn/human/lavaland_syndicate/comms{
-	dir = 8
-	},
 /turf/simulated/floor/plasteel/grimy,
 /area/ruin/unpowered/syndicate_lava_base/dormitories)
 "if" = (
@@ -3727,9 +3721,6 @@
 /turf/simulated/floor/plasteel,
 /area/ruin/unpowered/syndicate_lava_base/main)
 "jn" = (
-/obj/effect/mob_spawn/human/lavaland_syndicate{
-	dir = 4
-	},
 /obj/machinery/alarm/syndicate/directional/north,
 /turf/simulated/floor/plasteel/grimy,
 /area/ruin/unpowered/syndicate_lava_base/dormitories)
@@ -3748,9 +3739,6 @@
 /turf/simulated/floor/plating,
 /area/ruin/unpowered/syndicate_lava_base/main)
 "jq" = (
-/obj/effect/mob_spawn/human/lavaland_syndicate{
-	dir = 8
-	},
 /obj/machinery/alarm/syndicate/directional/north,
 /turf/simulated/floor/plasteel/grimy,
 /area/ruin/unpowered/syndicate_lava_base/dormitories)

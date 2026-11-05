@@ -39,11 +39,7 @@
 
 	aiCamera = new/obj/item/camera/siliconcam/robot_camera(src)
 
-	if(is_taipan(z))
-		radio = new /obj/item/radio/borg/syndicate/taipan(src)
-
-	else
-		radio = new /obj/item/radio/borg/syndicate(src)
+	radio = new /obj/item/radio/borg/syndicate(src)
 
 	radio.recalculate_channels()
 

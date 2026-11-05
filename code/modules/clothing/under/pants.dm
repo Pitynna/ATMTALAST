@@ -40,21 +40,11 @@
 
 /obj/item/clothing/under/pants/lowjeans
 	name = "low-rise jeans"
-	desc = "Джинсы с низкой посадкой. Для бунтарей и желающих показать своё исподнее окружающим."
+	desc = "Low-rise jeans for rebels and people who want to show everyone their underwear."
 	icon_state = "lowjeans"
 	item_color = "lowjeans"
 	species_restricted = list(SPECIES_HUMAN)
 	over_shoes = TRUE
-
-/obj/item/clothing/under/pants/lowjeans/get_ru_names()
-	return alist(
-		NOMINATIVE = "заниженные джинсы",
-		GENITIVE = "заниженных джинсов",
-		DATIVE = "заниженным джинсам",
-		ACCUSATIVE = "заниженные джинсы",
-		INSTRUMENTAL = "заниженными джинсами",
-		PREPOSITIONAL = "заниженных джинсах",
-	)
 
 /obj/item/clothing/under/pants/white
 	name = "white pants"
@@ -115,7 +105,7 @@
 
 /obj/item/clothing/under/pants/galifepants
 	name = "check breeches"
-	desc = "Штаны широкого фасона в бёдрах."
+	desc = "Trousers cut wide around the hips."
 	icon_state = "galifepants"
 	item_state = "galifepants"
 	item_color = "galifepants"
@@ -125,8 +115,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/uniform.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/uniform.dmi',
 		SPECIES_FARWA = 'icons/mob/clothing/species/monkey/uniform.dmi',
@@ -137,7 +125,7 @@
 
 /obj/item/clothing/under/pants/sandpants
 	name = "long sand pants"
-	desc = "Брюки песочного цвета, расклешённые от колена."
+	desc = "Sand-colored trousers flared below the knee."
 	icon_state = "sandpants"
 	item_state = "sandpants"
 	item_color = "sandpants"
@@ -147,8 +135,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/uniform.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/uniform.dmi',
 		SPECIES_FARWA = 'icons/mob/clothing/species/monkey/uniform.dmi',
@@ -159,7 +145,7 @@
 
 /obj/item/clothing/under/pants/combat
 	name = "combat pants"
-	desc = "Тактические штаны для бойцов, следящих за модой."
+	desc = "Medium style tactical pants, for the fashion aware combat units out there."
 	icon_state = "combat_pants"
 	item_color = "combat_pants"
 	sprite_sheets = list(

@@ -547,8 +547,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/underwear.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/underwear.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/underwear.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/underwear.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/underwear.dmi',
 	)
 

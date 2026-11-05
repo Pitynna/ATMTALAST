@@ -21,12 +21,7 @@
 		add_game_logs("EMP with size ([heavy_range], [light_range]) in area [epicenter.loc.name] [cause ? "(Cause: [cause])" : ""] [COORD(epicenter)]")
 
 	if(heavy_range > 1)
-		if(cause == "cult")
-			new /obj/effect/temp_visual/emp/pulse/cult(epicenter)
-		else if(cause == "clock")
-			new /obj/effect/temp_visual/emp/pulse/clock(epicenter)
-		else
-			new /obj/effect/temp_visual/emp/pulse(epicenter)
+		new /obj/effect/temp_visual/emp/pulse(epicenter)
 
 	if(heavy_range > light_range)
 		light_range = heavy_range
@@ -36,11 +31,6 @@
 		SEND_SOUND(M, emp_sound)
 
 	for(var/atom/T in range(light_range, epicenter))
-		if(cause == "cult" && iscultist(T))
-			continue
-		if(cause == "clock" && isclocker(T))
-			continue
-
 		var/distance = max(0, get_dist(epicenter, T))
 		var/will_affect = FALSE
 		if(distance < heavy_range)
@@ -56,11 +46,6 @@
 			will_affect = T.emp_act(EMP_LIGHT)
 
 		if(will_affect)
-			if(cause == "cult")
-				new /obj/effect/temp_visual/emp/cult(T.loc)
-			else if(cause == "clock")
-				new /obj/effect/temp_visual/emp/clock(T.loc)
-			else
-				new /obj/effect/temp_visual/emp(T.loc)
+			new /obj/effect/temp_visual/emp(T.loc)
 
 	return TRUE

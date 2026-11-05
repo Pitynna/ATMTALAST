@@ -64,7 +64,7 @@
 
 /obj/item/ammo_casing/magic/arcane_barrage/blood
 	projectile_type = /obj/projectile/magic/arcane_barrage/blood
-	muzzle_flash_effect = /obj/effect/temp_visual/emp/cult
+	muzzle_flash_effect = /obj/effect/temp_visual/emp
 
 // MARK: Chrono Beam
 /obj/item/ammo_casing/energy/chrono_beam
@@ -97,42 +97,21 @@
 // MARK: Jōhyō
 /obj/item/ammo_casing/magic/johyo
 	name = "Jōhyō"
-	desc = "Кинжал, прикреплённый к верёвке. Просто и эффективно."
+	desc = "In other words - Kunai on a rope."
 	projectile_type = /obj/projectile/johyo
 	muzzle_flash_effect = null
 	caliber = "kunai"
 	icon = 'icons/obj/ninjaobjects.dmi'
 	icon_state = "kunai"
 
-/obj/item/ammo_casing/magic/johyo/get_ru_names()
-	return alist(
-		NOMINATIVE = "джохё",
-		GENITIVE = "джохё",
-		DATIVE = "джохё",
-		ACCUSATIVE = "джохё",
-		INSTRUMENTAL = "джохё",
-		PREPOSITIONAL = "джохё",
-	)
-
-// MARK: Skull Gun
 /obj/item/ammo_casing/magic/skull_gun_casing
 	name = "skull gun casing"
-	desc = "Что это за..."
+	desc = "WTF is this..."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "ashen_skull"
 	projectile_type = /obj/projectile/skull_projectile
 	muzzle_flash_effect = null
 	caliber = "skulls"
-
-/obj/item/ammo_casing/magic/skull_gun_casing/get_ru_names()
-	return alist(
-		NOMINATIVE = "гильза для черепного пистолета",
-		GENITIVE = "гильзы для черепного пистолета",
-		DATIVE = "гильзе для черепного пистолета",
-		ACCUSATIVE = "гильзу для черепного пистолета",
-		INSTRUMENTAL = "гильзой для черепного пистолета",
-		PREPOSITIONAL = "гильзе для черепного пистолета",
-	)
 
 /obj/item/ammo_casing/magic/frost
 	projectile_type = /obj/projectile/magic/frost
@@ -140,44 +119,13 @@
 // MARK: Hook
 /obj/item/ammo_casing/magic/hook
 	name = "hook"
-	desc = "Это крюк."
+	desc = "a hook."
 	projectile_type = /obj/projectile/hook
 	caliber = "hook"
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "hook"
 	muzzle_flash_effect = null
 
-/obj/item/ammo_casing/magic/hook/get_ru_names()
-	return alist(
-		NOMINATIVE = "крюк",
-		GENITIVE = "крюка",
-		DATIVE = "крюку",
-		ACCUSATIVE = "крюк",
-		INSTRUMENTAL = "крюком",
-		PREPOSITIONAL = "крюке",
-	)
-
-// MARK: Contractor Hook
-/obj/item/ammo_casing/magic/contractor_hook
-	name = "Hardlight hook"
-	desc = "Крюк из твёрдого света. Хватит его разглядывать, уворачивайся!"
-	projectile_type = /obj/projectile/contractor_hook
-	caliber = "hardlight_hook"
-	icon_state = "hard_hook"
-	icon = 'icons/obj/weapons/guns/projectiles.dmi'
-	muzzle_flash_effect = null
-
-/obj/item/ammo_casing/magic/contractor_hook/get_ru_names()
-	return alist(
-		NOMINATIVE = "крюк из твёрдого света",
-		GENITIVE = "крюка из твёрдого света",
-		DATIVE = "крюку из твёрдого света",
-		ACCUSATIVE = "крюк из твёрдого света",
-		INSTRUMENTAL = "крюком из твёрдого света",
-		PREPOSITIONAL = "крюке из твёрдого света",
-	)
-
-// MARK: Syringe Gun
 /obj/item/ammo_casing/syringegun
 	name = "syringe gun spring"
 	desc = "A high-power spring that throws syringes."

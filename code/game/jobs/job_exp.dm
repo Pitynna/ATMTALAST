@@ -23,11 +23,7 @@ GLOBAL_LIST_INIT(role_playtime_requirements, list(
 	ROLE_BLOB = 30,
 	ROLE_REVENANT = 30,
 	ROLE_BORER = 30,
-	ROLE_NINJA = 50,
 	ROLE_MORPH = 30,
-	ROLE_DEMON = 30,
-	ROLE_THIEF = 30,
-	ROLE_ELITE = 100,
 
 	// DUO ANTAGS
 	ROLE_GUARDIAN = 40,
@@ -35,11 +31,8 @@ GLOBAL_LIST_INIT(role_playtime_requirements, list(
 
 	// TEAM ANTAGS
 	// Higher numbers here, because they require more experience to be played correctly
-	ROLE_SHADOWLING = 50,
 	ROLE_REV = 50,
 	ROLE_OPERATIVE = 50,
-	ROLE_CULTIST = 50,
-	ROLE_CLOCKER = 50,
 	ROLE_RAIDER = 50,
 	ROLE_ALIEN = 50,
 	ROLE_ABDUCTOR = 50,
@@ -216,4 +209,3 @@ ADMIN_VERB(check_player_exp, R_ADMIN|R_MOD|R_MENTOR, "Check Player Playtime", "R
 		return num2text(expnum) + "м"
 	else
 		return "нет"
-

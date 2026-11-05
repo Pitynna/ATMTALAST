@@ -1,38 +1,18 @@
 //plasma magmite is exclusively used to upgrade mining equipment, by using it on a heated world anvil to make upgradeparts.
 /obj/item/magmite
 	name = "plasma magmite"
-	desc = "Образец плазменного магмита, кристаллизовавшегося в глубинах Лазиса. Похоже, он слабеет по мере удаления от места рождения."
+	desc = "A chunk of plasma magmite, crystallized deep under the planet's surface. It seems to lose strength as it gets further from the planet!"
 	gender = MALE
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "Magmite ore"
 
-/obj/item/magmite/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменный магмит",
-		GENITIVE = "плазменного магмита",
-		DATIVE = "плазменному магмиту",
-		ACCUSATIVE = "плазменный магмит",
-		INSTRUMENTAL = "плазменным магмитом",
-		PREPOSITIONAL = "плазменном магмите"
-	)
-
 /obj/item/magmite_parts
 	name = "plasma magmite upgrade parts"
-	desc = "Детали, выкованные на легендарной Мировой Кузне. Позволяют улучшить почти любое шахтёрское оборудование."
+	desc = "Forged on the legendary World Anvil, these parts can be used to upgrade many kinds of mining equipment."
 	gender = PLURAL
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "upgrade_parts"
 	var/inert = FALSE
-
-/obj/item/magmite_parts/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменно-магмитовые детали улучшения",
-		GENITIVE = "плазменно-магмитовых деталей улучшения",
-		DATIVE = "плазменно-магмитовым деталям улучшения",
-		ACCUSATIVE = "плазменно-магмитовые детали улучшения",
-		INSTRUMENTAL = "плазменно-магмитовыми деталями улучшения",
-		PREPOSITIONAL = "плазменно-магмитовых деталях улучшения"
-	)
 
 /obj/item/magmite_parts/Initialize(mapload)
 	. = ..()
@@ -49,7 +29,7 @@
 
 /obj/item/magmite_parts/update_desc(updates = ALL)
 	. = ..()
-	desc = inert ? "Похоже, он потерял своё магматическое свечение." : initial(desc)
+	desc = inert ? "It seems to have lost its magmatic glow." : initial(desc)
 
 /obj/item/magmite_parts/proc/go_inert()
 	if(inert)

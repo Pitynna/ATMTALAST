@@ -24,8 +24,8 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 	new /obj/effect/immovablerod(startT, endT)
 
 /obj/effect/immovablerod
-	name = "\proper незыблемый стержень"
-	desc = "Что это за херня?"
+	name = "\improper Immovable Rod"
+	desc = "What the fuck is that?"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "immrod"
 	throwforce = 100
@@ -99,17 +99,17 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		return .
 	switch(num_sentient_mobs_hit)
 		if(0)
-			name = "молодой [initial(name)]"
+			name = "rookie [initial(name)]"
 		if(1 to 2)
-			name = "[initial(name)] дебютант"
+			name = "debutant [initial(name)]"
 		if(3)
-			name = "трёхочковый [initial(name)]"
+			name = "three-pointer [initial(name)]"
 		if(4 to 10)
-			name = "сокрушающий [initial(name)]"
+			name = "crushing [initial(name)]"
 		if(10 to 15)
-			name = "неостановимый [initial(name)]"
+			name = "unstoppable [initial(name)]"
 		if(20 to INFINITY)
-			name = "[initial(name)] бич Божий"
+			name = "[initial(name)], scourge of God"
 
 /obj/effect/immovablerod/Topic(href, href_list)
 	if(href_list["follow"])

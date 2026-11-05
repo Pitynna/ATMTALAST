@@ -1,6 +1,6 @@
 /obj/item/storage/toolbox
 	name = "toolbox"
-	desc = "Металлический контейнер, предназначенный для хранения инструментов. Выглядит мощно."
+	desc = "Danger. Very robust."
 	gender = MALE
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "toolbox_red"
@@ -24,16 +24,6 @@
 	var/blurry_chance = 5
 	/// How many interactions are we currently performing
 	var/current_interactions = 0
-
-/obj/item/storage/toolbox/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик для инструментов",
-		GENITIVE = "ящика для инструментов",
-		DATIVE = "ящику для инструментов",
-		ACCUSATIVE = "ящик для инструментов",
-		INSTRUMENTAL = "ящиком для инструментов",
-		PREPOSITIONAL = "ящике для инструментов",
-	)
 
 /obj/item/storage/toolbox/Initialize(mapload)
 	. = ..()
@@ -170,16 +160,6 @@
 /obj/item/storage/toolbox/emergency
 	name = "emergency toolbox"
 
-/obj/item/storage/toolbox/emergency/get_ru_names()
-	return alist(
-		NOMINATIVE = "экстренный ящик для инструментов",
-		GENITIVE = "экстренного ящика для инструментов",
-		DATIVE = "экстренному ящику для инструментов",
-		ACCUSATIVE = "экстренный ящик для инструментов",
-		INSTRUMENTAL = "экстренным ящиком для инструментов",
-		PREPOSITIONAL = "экстренном ящике для инструментов",
-	)
-
 /obj/item/storage/toolbox/emergency/populate_contents()
 	new /obj/item/crowbar/red(src)
 	new /obj/item/weldingtool/mini(src)
@@ -195,30 +175,10 @@
 	icon_state = "toolbox_red_rusted"
 	item_state = "toolbox_red_rusted"
 
-/obj/item/storage/toolbox/emergency/old/get_ru_names()
-	return alist(
-		NOMINATIVE = "ржавый ящик для инструментов",
-		GENITIVE = "ржавого ящика для инструментов",
-		DATIVE = "ржавому ящику для инструментов",
-		ACCUSATIVE = "ржавый ящик для инструментов",
-		INSTRUMENTAL = "ржавым ящиком для инструментов",
-		PREPOSITIONAL = "ржавом ящике для инструментов",
-	)
-
 /obj/item/storage/toolbox/mechanical
 	name = "mechanical toolbox"
 	icon_state = "toolbox_blue"
 	item_state = "toolbox_blue"
-
-/obj/item/storage/toolbox/mechanical/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик для механических инструментов",
-		GENITIVE = "ящика для механических инструментов",
-		DATIVE = "ящику для механических инструментов",
-		ACCUSATIVE = "ящик для механических инструментов",
-		INSTRUMENTAL = "ящиком для механических инструментов",
-		PREPOSITIONAL = "ящике для механических инструментов",
-	)
 
 /obj/item/storage/toolbox/mechanical/populate_contents()
 	new /obj/item/screwdriver(src)
@@ -239,30 +199,10 @@
 	icon_state = "toolbox_blue_rusted"
 	item_state = "toolbox_blue_rusted"
 
-/obj/item/storage/toolbox/mechanical/old/get_ru_names()
-	return alist(
-		NOMINATIVE = "ржавый ящик для инструментов",
-		GENITIVE = "ржавого ящика для инструментов",
-		DATIVE = "ржавому ящику для инструментов",
-		ACCUSATIVE = "ржавый ящик для инструментов",
-		INSTRUMENTAL = "ржавым ящиком для инструментов",
-		PREPOSITIONAL = "ржавом ящике для инструментов",
-	)
-
 /obj/item/storage/toolbox/electrical
 	name = "electrical toolbox"
 	icon_state = "toolbox_yellow"
 	item_state = "toolbox_yellow"
-
-/obj/item/storage/toolbox/electrical/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик для электромонтажных инструментов",
-		GENITIVE = "ящика для электромонтажных инструментов",
-		DATIVE = "ящику для электромонтажных инструментов",
-		ACCUSATIVE = "ящик для электромонтажных инструментов",
-		INSTRUMENTAL = "ящиком для электромонтажных инструментов",
-		PREPOSITIONAL = "ящике для электромонтажных инструментов",
-	)
 
 /obj/item/storage/toolbox/electrical/populate_contents()
 	var/pickedcolor = pick(COLOR_RED, COLOR_YELLOW, COLOR_GREEN, COLOR_BLUE, COLOR_PINK, COLOR_ORANGE, COLOR_CYAN, COLOR_WHITE)
@@ -279,7 +219,7 @@
 
 /obj/item/storage/toolbox/syndicate
 	name = "suspicious looking toolbox"
-	desc = "Металлический контейнер, предназначенный для хранения инструментов. Выглядит подозрительно."
+	desc = "An extremely robust-looking black and red toolbox."
 	icon_state = "toolbox_syndicate"
 	item_state = "toolbox_syndie"
 	origin_tech = "combat=2;syndicate=1;engineering=2"
@@ -287,16 +227,6 @@
 	force = 15
 	throwforce = 18
 	blurry_chance = 8
-
-/obj/item/storage/toolbox/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "подозрительный ящик для инструментов",
-		GENITIVE = "подозрительного ящика для инструментов",
-		DATIVE = "подозрительному ящику для инструментов",
-		ACCUSATIVE = "подозрительный ящик для инструментов",
-		INSTRUMENTAL = "подозрительным ящиком для инструментов",
-		PREPOSITIONAL = "подозрительном ящике для инструментов",
-	)
 
 /obj/item/storage/toolbox/syndicate/populate_contents()
 	new /obj/item/screwdriver(src, "red")
@@ -309,7 +239,7 @@
 
 /obj/item/storage/toolbox/syndisuper
 	name = "exteremely suspicious looking toolbox"
-	desc = "Металлический контейнер, предназначенный для хранения инструментов. Выглядит чрезвычайно подозрительно."
+	desc = "Danger. Robust - his second name."
 	icon_state = "toolbox_syndicate"
 	item_state = "toolbox_syndie"
 	origin_tech = "combat=5;syndicate=1;engineering=5"
@@ -317,16 +247,6 @@
 	force = 18 //robuster because of rarity
 	throwforce = 20
 	blurry_chance = 12
-
-/obj/item/storage/toolbox/syndisuper/get_ru_names()
-	return alist(
-		NOMINATIVE = "очень подозрительный ящик для инструментов",
-		GENITIVE = "очень подозрительного ящика для инструментов",
-		DATIVE = "очень подозрительному ящику для инструментов",
-		ACCUSATIVE = "очень подозрительный ящик для инструментов",
-		INSTRUMENTAL = "очень подозрительным ящиком для инструментов",
-		PREPOSITIONAL = "очень подозрительном ящике для инструментов",
-	)
 
 /obj/item/storage/toolbox/syndisuper/populate_contents()
 	new /obj/item/screwdriver/power(src)
@@ -339,19 +259,9 @@
 
 /obj/item/storage/toolbox/fakesyndi
 	name = "suspicous looking toolbox"
-	desc = "Металлический контейнер, предназначенный для хранения инструментов. Выглядит подозрительно. Краска ещё не засохла."
+	desc = "An extremely robust-looking black and red toolbox. The paint is still wet."
 	icon_state = "toolbox_syndicate"
 	item_state = "toolbox_syndie"
-
-/obj/item/storage/toolbox/fakesyndi/get_ru_names()
-	return alist(
-		NOMINATIVE = "подозрительный ящик для инструментов",
-		GENITIVE = "подозрительного ящика для инструментов",
-		DATIVE = "подозрительному ящику для инструментов",
-		ACCUSATIVE = "подозрительный ящик для инструментов",
-		INSTRUMENTAL = "подозрительным ящиком для инструментов",
-		PREPOSITIONAL = "подозрительном ящике для инструментов",
-	)
 
 /obj/item/storage/toolbox/drone
 	name = "mechanical toolbox"
@@ -370,7 +280,7 @@
 
 /obj/item/storage/toolbox/brass
 	name = "brass box"
-	desc = "Большой латунный контейнер, имеющий несколько углублений на поверхности. От него исходит странная энергия."
+	desc = "A huge brass box with several indentations in its surface."
 	icon_state = "brassbox"
 	item_state = null
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -381,16 +291,6 @@
 	/// Way more than standart version
 	storage_slots = 28
 
-/obj/item/storage/toolbox/brass/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунный ящик",
-		GENITIVE = "латунного ящика",
-		DATIVE = "латунному ящику",
-		ACCUSATIVE = "латунный ящик",
-		INSTRUMENTAL = "латунным ящиком",
-		PREPOSITIONAL = "латунном ящике",
-	)
-
 /obj/item/storage/toolbox/brass/prefilled/populate_contents()
 	new /obj/item/screwdriver/brass(src)
 	new /obj/item/wirecutters/brass(src)
@@ -400,7 +300,7 @@
 
 /obj/item/storage/toolbox/surgery
 	name = "surgery kit"
-	desc = "Контейнер, предназначенный для хранения и транспортировки хирургических инструментов."
+	desc = "Contains tools for surgery. Has precise foam fitting for safe transport."
 	icon_state = "surgerykit"
 	item_state = "surgerykit"
 	origin_tech = "combat=1;biotech=1"
@@ -424,16 +324,6 @@
 		/obj/item/robotanalyzer,
 	)
 
-/obj/item/storage/toolbox/surgery/get_ru_names()
-	return alist(
-		NOMINATIVE = "хирургический набор",
-		GENITIVE = "хирургического набора",
-		DATIVE = "хирургическому набору",
-		ACCUSATIVE = "хирургический набор",
-		INSTRUMENTAL = "хирургическим набором",
-		PREPOSITIONAL = "хирургическом наборе",
-	)
-
 /obj/item/storage/toolbox/surgery/populate_contents()
 	new /obj/item/stack/medical/bruise_pack/advanced(src)
 	new /obj/item/bonesetter(src)
@@ -451,7 +341,7 @@
 
 /obj/item/storage/toolbox/surgery/advanced
 	name = "Advanced Laser Surgery Kit"
-	desc = "Контейнер, предназначенный для хранения и транспортировки хирургических инструментов. Имеет зелёные неоновые накладки."
+	desc = "A container for storing and transporting surgical instruments. Features green neon trim."
 	icon_state = "surgerykit_advanced"
 	item_state = "surgerykit_advanced"
 
@@ -465,34 +355,14 @@
 	new /obj/item/bonegel(src)
 	new /obj/item/FixOVein(src)
 
-/obj/item/storage/toolbox/surgery/advanced/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый хирургический набор",
-		GENITIVE = "продвинутого хирургического набора",
-		DATIVE = "продвинутому хирургическому набору",
-		ACCUSATIVE = "продвинутый хирургический набор",
-		INSTRUMENTAL = "продвинутым хирургическим набором",
-		PREPOSITIONAL = "продвинутом хирургическом наборе",
-	)
-
 /obj/item/storage/toolbox/surgery/advanced/empty/populate_contents()
 	return
 
 /obj/item/storage/toolbox/surgery/alien
 	name = "Alien Surgery Kit"
-	desc = "Контейнер, предназначенный для хранения и транспортировки хирургических инструментов. Выглядит очень необычно."
+	desc = "A container for storing and transporting surgical instruments. It looks very unusual."
 	icon_state = "surgerykit_alien"
 	item_state = "surgerykit_alien"
-
-/obj/item/storage/toolbox/surgery/alien/get_ru_names()
-	return alist(
-		NOMINATIVE = "инородный хирургический набор",
-		GENITIVE = "инородного хирургического набора",
-		DATIVE = "инородному хирургическому набору",
-		ACCUSATIVE = "инородный хирургический набор",
-		INSTRUMENTAL = "инородным хирургическим набором",
-		PREPOSITIONAL = "инородном хирургическом наборе",
-	)
 
 /obj/item/storage/toolbox/surgery/alien/populate_contents()
 	new /obj/item/scalpel/alien(src)
@@ -510,7 +380,7 @@
 
 /obj/item/storage/toolbox/surgery/ashwalker
 	name = "surgery bag"
-	desc = "Небольшой кожанный футляр, предназначенный для хранения и транспортировки хирургических инструментов. От него исходит едва заметный запах пепла."
+	desc = "A small leather case for storing and transporting surgical instruments. It smells faintly of ash."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "surgery_bag"
 	pickup_sound = 'sound/items/handling/pickup/backpack_pickup.ogg'
@@ -518,16 +388,6 @@
 	flags = NONE
 	force = 2
 	throwforce = 4
-
-/obj/item/storage/toolbox/surgery/ashwalker/get_ru_names()
-	return alist(
-		NOMINATIVE = "хирургический саквояж",
-		GENITIVE = "хирургического саквояжа",
-		DATIVE = "хирургическому саквояжу",
-		ACCUSATIVE = "хирургический саквояж",
-		INSTRUMENTAL = "хирургическим саквояжем",
-		PREPOSITIONAL = "хирургическом саквояже",
-	)
 
 /obj/item/storage/toolbox/surgery/ashwalker/populate_contents()
 	new /obj/item/scalpel/primitive_scalpel(src)
@@ -544,16 +404,6 @@
 
 /obj/item/storage/toolbox/green
 	name = "artistic toolbox"
-	desc = "Металлический контейнер, предназначенный для хранения различных инструментов, в том числе художественных принадлежностей."
+	desc = "A metal container designed to hold various tools. This variety holds art supplies."
 	icon_state = "toolbox_green"
 	item_state = "toolbox_green"
-
-/obj/item/storage/toolbox/green/get_ru_names()
-	return alist(
-		NOMINATIVE = "артистический ящик для инструментов",
-		GENITIVE = "артистического ящика для инструментов",
-		DATIVE = "артистическому ящику для инструментов",
-		ACCUSATIVE = "артистический ящик для инструментов",
-		INSTRUMENTAL = "артистическим ящиком для инструментов",
-		PREPOSITIONAL = "артистическом ящике для инструментов",
-	)

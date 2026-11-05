@@ -1,7 +1,7 @@
 /obj/structure/blob/special/captured_nuke //alternative to blob just straight up destroying nukes
 	name = "blob captured nuke"
 	icon_state = "blob"
-	desc = "Ядерная боеголовка спуталась в щупальцах блоба, пульсирующих ужасающим зеленым свечением."
+	desc = "A Nuclear Warhead tangled in blob tendrils pulsating with a horrific green glow."
 	max_integrity = BLOB_CAP_NUKE_MAX_HP
 
 /obj/structure/blob/special/captured_nuke/Initialize(mapload, owner_overmind, obj/machinery/nuclearbomb/N)

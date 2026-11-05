@@ -86,9 +86,3 @@
 	icon_state = "shuttle_window_gray"
 	window_to_spawn_regular = null
 	window_to_spawn_full = /obj/structure/window/full/shuttle/gray
-
-/obj/effect/spawner/window/shuttle/ninja
-	icon = 'icons/obj/smooth_structures/shuttle_window_ninja.dmi'
-	icon_state = "shuttle_window_ninja"
-	window_to_spawn_regular = null
-	window_to_spawn_full = /obj/structure/window/full/shuttle/ninja

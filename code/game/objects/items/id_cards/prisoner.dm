@@ -1,7 +1,6 @@
 /obj/item/card/id/prisoner
 	name = "prisoner ID card"
-	desc = "Идентификационная карта для заключённых \"Нанотрейзен\". Служит для подтверждения личности, \
-			определения уровня допуска к системам рабочего объекта и регистрации биометрических данных сотрудника."
+	desc = "You are a number, you are not a free man."
 	icon_state = "prisoner"
 	item_state = "orange-id"
 	registered_name = "Заключёный"
@@ -12,16 +11,6 @@
 	var/points = 0
 	/// Used for setting name and assignment
 	var/prisoner_number = "000"
-
-/obj/item/card/id/prisoner/get_ru_names()
-	return alist(
-		NOMINATIVE = "ID-карта заключённого",
-		GENITIVE = "ID-карты заключённого",
-		DATIVE = "ID-карте заключённого",
-		ACCUSATIVE = "ID-карту заключённого",
-		INSTRUMENTAL = "ID-картой заключённого",
-		PREPOSITIONAL = "ID-карте заключённого",
-	)
 
 /obj/item/card/id/prisoner/Initialize(mapload)
 	. = ..()

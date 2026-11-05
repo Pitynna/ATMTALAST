@@ -1,21 +1,10 @@
 /obj/item/organ/internal/cyberimp/brain/bci
 	name = "brain-computer interface"
-	desc = "Имплант, предназначенный для управления интегральными схемами напрямую. \
-			Устанавливается в головной мозге, подключаясь к нейронной системе пользователя."
+	desc = "An implant for directly controlling integrated circuits. Installed in the brain, it connects to the user's nervous system."
 	icon = 'icons/obj/circuits.dmi'
 	icon_state = "bci"
 	slot = INTERNAL_ORGAN_BRAIN_COMPUTER_INTERFACE
 	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/organ/internal/cyberimp/brain/bci/get_ru_names()
-	return alist(
-		NOMINATIVE = "интерфейс \"Мозг-Компьютер\"",
-		GENITIVE = "интерфейса \"Мозг-Компьютер\"",
-		DATIVE = "интерфейсу \"Мозг-Компьютер\"",
-		ACCUSATIVE = "интерфейс \"Мозг-Компьютер\"",
-		INSTRUMENTAL = "интерфейсом \"Мозг-Компьютер\"",
-		PREPOSITIONAL = "интерфейсе \"Мозг-Компьютер\""
-	)
 
 /obj/item/organ/internal/cyberimp/brain/bci/Initialize(mapload)
 	. = ..()
@@ -86,7 +75,7 @@
 
 /obj/item/circuit_component/bci_core
 	display_name = "Ядро ИМК"
-	desc = "Контролирует основные операции ИМК."
+	desc = "Controls the BCI's basic operations."
 
 	/// A reference to the action button to look at charge/get info
 	var/datum/action/innate/bci_charge_action/charge_action
@@ -289,8 +278,7 @@
 
 /obj/machinery/bci_implanter
 	name = "brain-computer interface manipulation chamber"
-	desc = "Машина, которая при наличии интерфейса \"Мозг-Компьютер\" имплантирует его в тело гуманоида. \
-			В противном случае она удалит все имеющиеся ИМК."
+	desc = "A machine that implants an available brain-computer interface into a humanoid. If none is available, it removes any existing BCIs instead."
 	icon = 'icons/obj/machines/bci_implanter.dmi'
 	icon_state = "bci_implanter"
 	base_icon_state = "bci_implanter"
@@ -306,16 +294,6 @@
 	var/obj/item/organ/internal/cyberimp/brain/bci/bci_to_implant
 
 	COOLDOWN_DECLARE(message_cooldown)
-
-/obj/machinery/bci_implanter/get_ru_names()
-	return alist(
-		NOMINATIVE = "камера манипуляций интерфейсом \"Мозг-компьютер\"",
-		GENITIVE = "камеры манипуляций интерфейсом \"Мозг-компьютер\"",
-		DATIVE = "камере манипуляций интерфейсом \"Мозг-компьютер\"",
-		ACCUSATIVE = "камеру манипуляций интерфейсом \"Мозг-компьютер\"",
-		INSTRUMENTAL = "камерой манипуляций интерфейсом \"Мозг-компьютер\"",
-		PREPOSITIONAL = "камере манипуляций интерфейсом \"Мозг-компьютер\""
-	)
 
 /obj/machinery/bci_implanter/examine(mob/user)
 	. = ..()

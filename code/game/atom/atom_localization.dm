@@ -14,6 +14,9 @@
 /atom/proc/declent_ru(case_id)
 	SHOULD_BE_PURE(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
+	// Objects use their canonical English name, including dynamic and player-given names.
+	if(isobj(src))
+		return name
 	if(case_id < NOMINATIVE || case_id > PREPOSITIONAL)
 		stack_trace("declent_ru() called with invalid case_id '[case_id]'")
 		return name
@@ -42,6 +45,8 @@
  */
 /atom/proc/get_ru_names_cached()
 	RETURN_TYPE(/alist)
+	if(isobj(src))
+		return alist()
 	var/alist/names = GLOB.cached_ru_names[type]
 	if(names)
 		return names

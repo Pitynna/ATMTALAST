@@ -9,29 +9,20 @@ GLOBAL_LIST_INIT(special_role_times, list(//minimum age (in days) for accounts t
 	ROLE_TRAITOR = 7,
 	ROLE_MALF_AI = 7,
 	ROLE_ESCAPING_PRISONER = 7,
-	ROLE_THIEF = 7,
 	ROLE_CHANGELING = 14,
-	ROLE_SHADOWLING = 14,
 	ROLE_WIZARD = 14,
 	ROLE_REV = 14,
 	ROLE_VAMPIRE = 14,
 	ROLE_BLOB = 14,
 	ROLE_REVENANT = 14,
 	ROLE_OPERATIVE = 21,
-	ROLE_CULTIST = 21,
-	ROLE_CLOCKER = 21,
 	ROLE_RAIDER = 21,
 	ROLE_ALIEN = 21,
-	ROLE_DEMON = 21,
 	ROLE_SENTIENT = 21,
-	ROLE_ELITE = 21,
 //	ROLE_GANG = 21,
 	ROLE_BORER = 21,
-	ROLE_NINJA = 21,
 	ROLE_GSPIDER = 21,
 	ROLE_ABDUCTOR = 30,
-	ROLE_DEVIL = 14,
-	ROLE_BINGLE = 14,
 ))
 
 GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближайшего соседа", SCALING_METHOD_BLUR = "Билейная интерполяция", SCALING_METHOD_NORMAL = "Поточечная выборка"))
@@ -167,7 +158,6 @@ GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближ�
 	var/language = LANGUAGE_NONE		//Secondary language for choise.
 	var/autohiss_mode = AUTOHISS_FULL	//Species autohiss level. OFF, BASIC, FULL.
 
-	var/tts_seed = null
 
 	var/custom_emotes_tmp = null
 
@@ -248,8 +238,6 @@ GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближ�
 		"1019" = 100, // CHANNEL_BUZZ
 		"1018" = 100, // CHANNEL_AMBIENCE
 		"1017" = 100, // CHANNEL_WEATHER
-		"1014" = 50, // CHANNEL_TTS_LOCAL
-		"1013" = 20, // CHANNEL_TTS_RADIO
 		"1012" = 50, // CHANNEL_RADIO_NOISE
 		"1011" = 100, // CHANNEL_BOSS_MUSIC
 		"1010" = 100, // CHANNEL_INTERACTION_SOUNDS
@@ -489,10 +477,6 @@ GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближ�
 
 			dat += "<h2>Специальные роли</h2>"
 			dat += "<b>Местоположение аплинка:</b> <a href='byond://?_src_=prefs;preference=uplink_pref;task=input'>[uplink_pref]</a><br>"
-
-			if(CONFIG_GET(flag/tts_enabled))
-				dat += "<h2>Text-to-Speech</h2>"
-				dat += "<b>Выбор голоса:</b> <a href='byond://?_src_=prefs;preference=tts_seed;task=input'>Эксплорер TTS голосов</a><br>"
 
 			dat += "<h2>Конечности</h2>"
 			if(S.bodyflags & HAS_ALT_HEADS) //Species with alt heads.
@@ -2226,15 +2210,6 @@ GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближ�
 					can_be_antagonist = tgui_alert(user, "Выберите, может ли текущий персонаж быть антагонистом. Если у выбранного в начале игры персонажа эта опция отключена, при выпадении антагониста будет выбран случайный ваш персонаж, у которого она включена. Если она отключена у всех, выбранный персонаж останется.", \
 																"Может ли быть антагонистом", list("Да", "Нет")) == "Да"
 
-				if("tts_seed")
-					var/static/list/explorer_users = list()
-					var/datum/ui_module/tts_seeds_explorer/explorer = explorer_users[user]
-					if(!explorer)
-						explorer = new()
-						explorer_users[user] = explorer
-					explorer.ui_interact(user)
-					return
-
 				if("limbs")
 					var/valid_limbs = list(PREF_ORGANNAME_L_LEG, PREF_ORGANNAME_R_LEG, PREF_ORGANNAME_L_ARM, PREF_ORGANNAME_R_ARM, PREF_ORGANNAME_L_FOOT, PREF_ORGANNAME_R_FOOT, PREF_ORGANNAME_L_HAND, PREF_ORGANNAME_R_HAND)
 					if(S.bodyflags & ALL_RPARTS)
@@ -2916,8 +2891,6 @@ GLOBAL_LIST_INIT(zoom_modes, list(SCALING_METHOD_DISTORT = "Метод ближ�
 	character.change_gender(gender)
 	character.age = age
 
-	character.tts_seed = tts_seed
-	character.dna.tts_seed_dna = tts_seed
 
 	//Head-specific
 	var/obj/item/organ/external/head/H = character.get_organ(BODY_ZONE_HEAD)

@@ -123,7 +123,6 @@
 	gold_core_spawnable = NO_SPAWN
 	resting = TRUE
 	gender = FEMALE
-	tts_seed = "Widowmaker"
 
 /mob/living/simple_animal/pet/cat/white/Penny/get_ru_names()
 	return alist(
@@ -204,7 +203,6 @@
 	speak_emote = list("угукает", "ухает")
 	emote_hear = list("угукает!", "ухает!", "размахивает своими крыльями!")
 	emote_see = list("встряхивает свои перья.", "машет крылышками.", "дрожит.")
-	tts_seed = "Priest"
 	faction = list("neutral")
 	maxHealth = 50
 	health = 50
@@ -280,19 +278,9 @@
 
 /obj/effect/decal/remains/mouse/Pinkie
 	name = "Pinkie"
-	desc = "Когда-то это был напарник самой сообразительной крысы в мире. К сожалению он таковым не являлся..."
+	desc = "Once the partner of the world's cleverest rat. Unfortunately, he was not quite as clever..."
 	gender = MALE
 	anchored = TRUE
-
-/obj/effect/decal/remains/mouse/Pinkie/get_ru_names()
-	return alist(
-		NOMINATIVE = "Пинки",
-		GENITIVE = "Пинки",
-		DATIVE = "Пинки",
-		ACCUSATIVE = "Пинки",
-		INSTRUMENTAL = "Пинки",
-		PREPOSITIONAL = "Пинки",
-	)
 
 /mob/living/simple_animal/mouse/rat/Ratatui
 	name = "Ratatui"

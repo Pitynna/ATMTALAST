@@ -1,5 +1,5 @@
 /datum/reagent
-	var/name = "Реагент"
+	var/name = "Reagent"
 	var/id = "reagent"
 	var/tags = 0
 	var/description = ""
@@ -31,8 +31,8 @@
 	var/overdosed = FALSE // You fucked up and this is now triggering it's overdose effects, purge that shit quick.
 	var/current_cycle = 1
 	var/drink_icon = null
-	var/drink_name = "стакан... чего?"
-	var/drink_desc = "Вы понятия не имеете, чем это может быть."
+	var/drink_name = "Glass of ..what?"
+	var/drink_desc = "You can't really tell what this is."
 	var/taste_mult = 1 //how easy it is to taste - the more the easier
 	var/taste_description = "метафорической соли"
 	var/addict_supertype = /datum/reagent

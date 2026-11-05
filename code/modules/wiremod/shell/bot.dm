@@ -12,16 +12,6 @@
 	light_system = OVERLAY_LIGHT
 	light_on = FALSE
 
-/obj/structure/bot/get_ru_names()
-	return alist(
-		NOMINATIVE = "бот",
-		GENITIVE = "бота",
-		DATIVE = "боту",
-		ACCUSATIVE = "бота",
-		INSTRUMENTAL = "ботом",
-		PREPOSITIONAL = "боте"
-	)
-
 /obj/structure/bot/Initialize(mapload)
 	. = ..()
 	AddComponent( \
@@ -33,7 +23,7 @@
 
 /obj/item/circuit_component/bot
 	display_name = "Бот"
-	desc = "Срабатывает, когда кто-то взаимодействует с ботом."
+	desc = "Triggers when someone interacts with the bot."
 
 	/// Called when attack_hand is called on the shell.
 	var/datum/port/output/signal

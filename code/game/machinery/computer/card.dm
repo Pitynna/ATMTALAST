@@ -10,9 +10,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 /obj/machinery/computer/card
 	name = "identification computer"
-	desc = "Компьютерный терминал. Предназначен для изменения уровней доступа и служебных полномочий ID-карт персонала. \
-			Также позволяет проводить манипуляции с кадровым составом объекта, вплоть до управления списком вакансий \
-			и изменения должностей сотрудников."
+	desc = "Terminal for programming Nanotrasen employee ID cards to access parts of the station."
 	icon_keyboard = "id_key"
 	icon_screen = "id"
 	req_access = list(ACCESS_CHANGE_IDS)
@@ -82,16 +80,6 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	/// This is used to keep track of opened positions for jobs to allow instant closing
 	/// Assoc array: "JobName" = (int)<Opened Positions>
 	var/list/opened_positions = list()
-
-/obj/machinery/computer/card/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления",
-		GENITIVE = "консоли кадрового управления",
-		DATIVE = "консоли кадрового управления",
-		ACCUSATIVE = "консоль кадрового управления",
-		INSTRUMENTAL = "консолью кадрового управления",
-		PREPOSITIONAL = "консоли кадрового управления",
-	)
 
 /obj/machinery/computer/card/proc/is_centcom()
 	return FALSE
@@ -807,36 +795,15 @@ GAME_VERB_SRC(/obj/machinery/computer/card, eject_id, oview(1), "Извлечь 
 	blacklisted_partial = list()
 	max_law_level = LAW_LEVEL_CENTCOMM
 
-/obj/machinery/computer/card/centcom/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления ЦК",
-		GENITIVE = "консоли кадрового управления ЦК",
-		DATIVE = "консоли кадрового управления ЦК",
-		ACCUSATIVE = "консоль кадрового управления ЦК",
-		INSTRUMENTAL = "консолью кадрового управления ЦК",
-		PREPOSITIONAL = "консоли кадрового управления ЦК",
-	)
-
 /obj/machinery/computer/card/centcom/is_centcom()
 	return TRUE
 
 /obj/machinery/computer/card/minor
 	name = "department management console"
-	desc = "Компьютерный терминал. Предназначен для кадровых манипуляций в пределах определённого отдела рабочего объекта. \
-			Функционал существенно ограничен по сравнению с полноценной консолью."
+	desc = "You can use this to change ID's for specific departments."
 	target_dept = TARGET_DEPT_GENERIC
 	icon_screen = "idminor"
 	circuit = /obj/item/circuitboard/card/minor
-
-/obj/machinery/computer/card/minor/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления отдела",
-		GENITIVE = "консоли кадрового управления отдела",
-		DATIVE = "консоли кадрового управления отдела",
-		ACCUSATIVE = "консоль кадрового управления отдела",
-		INSTRUMENTAL = "консолью кадрового управления отдела",
-		PREPOSITIONAL = "консоли кадрового управления отдела",
-	)
 
 /obj/machinery/computer/card/minor/hos
 	name = "security management console"
@@ -846,16 +813,6 @@ GAME_VERB_SRC(/obj/machinery/computer/card, eject_id, oview(1), "Извлечь 
 	req_access = list(ACCESS_HOS)
 	circuit = /obj/item/circuitboard/card/minor/hos
 
-/obj/machinery/computer/card/minor/hos/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления — СБ",
-		GENITIVE = "консоли кадрового управления — СБ",
-		DATIVE = "консоли кадрового управления — СБ",
-		ACCUSATIVE = "консоль кадрового управления — СБ",
-		INSTRUMENTAL = "консолью кадрового управления — СБ",
-		PREPOSITIONAL = "консоли кадрового управления — СБ",
-	)
-
 /obj/machinery/computer/card/minor/qm
 	name = "supply management console"
 	target_dept = TARGET_DEPT_SUP
@@ -864,32 +821,12 @@ GAME_VERB_SRC(/obj/machinery/computer/card, eject_id, oview(1), "Извлечь 
 	req_access = list(ACCESS_QM)
 	circuit = /obj/item/circuitboard/card/minor/qm
 
-/obj/machinery/computer/card/minor/qm/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления — Снабжение",
-		GENITIVE = "консоли кадрового управления — Снабжение",
-		DATIVE = "консоли кадрового управления — Снабжение",
-		ACCUSATIVE = "консоль кадрового управления — Снабжение",
-		INSTRUMENTAL = "консолью кадрового управления — Снабжение",
-		PREPOSITIONAL = "консоли кадрового управления — Снабжение",
-	)
-
 /obj/machinery/computer/card/minor/cmo
 	name = "medical management console"
 	target_dept = TARGET_DEPT_MED
 	icon_screen = "idcmo"
 	req_access = list(ACCESS_CMO)
 	circuit = /obj/item/circuitboard/card/minor/cmo
-
-/obj/machinery/computer/card/minor/cmo/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления — Медицина",
-		GENITIVE = "консоли кадрового управления — Медицина",
-		DATIVE = "консоли кадрового управления — Медицина",
-		ACCUSATIVE = "консоль кадрового управления — Медицина",
-		INSTRUMENTAL = "консолью кадрового управления — Медицина",
-		PREPOSITIONAL = "консоли кадрового управления — Медицина",
-	)
 
 /obj/machinery/computer/card/minor/rd
 	name = "science management console"
@@ -899,16 +836,6 @@ GAME_VERB_SRC(/obj/machinery/computer/card, eject_id, oview(1), "Извлечь 
 	req_access = list(ACCESS_RD)
 	circuit = /obj/item/circuitboard/card/minor/rd
 
-/obj/machinery/computer/card/minor/rd/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления — Наука",
-		GENITIVE = "консоли кадрового управления — Наука",
-		DATIVE = "консоли кадрового управления — Наука",
-		ACCUSATIVE = "консоль кадрового управления — Наука",
-		INSTRUMENTAL = "консолью кадрового управления — Наука",
-		PREPOSITIONAL = "консоли кадрового управления — Наука",
-	)
-
 /obj/machinery/computer/card/minor/ce
 	name = "engineering management console"
 	target_dept = TARGET_DEPT_ENG
@@ -916,16 +843,6 @@ GAME_VERB_SRC(/obj/machinery/computer/card, eject_id, oview(1), "Извлечь 
 	light_color = COLOR_YELLOW
 	req_access = list(ACCESS_CE)
 	circuit = /obj/item/circuitboard/card/minor/ce
-
-/obj/machinery/computer/card/minor/ce/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль кадрового управления — Инженерия",
-		GENITIVE = "консоли кадрового управления — Инженерия",
-		DATIVE = "консоли кадрового управления — Инженерия",
-		ACCUSATIVE = "консоль кадрового управления — Инженерия",
-		INSTRUMENTAL = "консолью кадрового управления — Инженерия",
-		PREPOSITIONAL = "консоли кадрового управления — Инженерия",
-	)
 
 #undef IDCOMPUTER_SCREEN_TRANSFER
 #undef IDCOMPUTER_SCREEN_SLOTS

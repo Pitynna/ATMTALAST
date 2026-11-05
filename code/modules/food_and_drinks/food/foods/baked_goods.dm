@@ -211,12 +211,12 @@
 	foodtype = SUGAR | GRAIN
 
 /obj/item/reagent_containers/food/snacks/sliceable/chocolatecake/liarscake
-	desc = "Торт — это ложь."
+	desc = "The cake is a lie."
 	icon_state = "liars_cake"
 	slice_path = /obj/item/reagent_containers/food/snacks/chocolatecakeslice/liarsslice
 
 /obj/item/reagent_containers/food/snacks/chocolatecakeslice/liarsslice
-	desc = "Торт — это ложь."
+	desc = "The cake is a lie."
 	icon_state = "liars_slice"
 
 /obj/item/reagent_containers/food/snacks/sliceable/birthdaycake
@@ -874,23 +874,13 @@
 
 /obj/item/reagent_containers/food/snacks/croissant
 	name = "croissant"
-	desc = "Когда-то эта изысканная слоёная выпечка была доступна только состоятельным людям, но теперь она стала частью вашего повседневного меню."
+	desc = "Once a pastry reserved for the bourgeois, this flaky goodness is now on your table."
 	icon_state = "croissant"
 	bitesize = 4
 	filling_color = "#ecb54f"
 	list_reagents = list("nutriment" = 4, "sugar" = 2)
 	tastes = list("croissant" = 1)
 	foodtype = GRAIN
-
-/obj/item/reagent_containers/food/snacks/croissant/get_ru_names()
-	return alist(
-		NOMINATIVE = "круассан",
-		GENITIVE = "круассана",
-		DATIVE = "круассану",
-		ACCUSATIVE = "круассан",
-		INSTRUMENTAL = "круассаном",
-		PREPOSITIONAL = "круассане",
-	)
 
 /obj/item/reagent_containers/food/snacks/croissant/throwing
 	throwforce = 20

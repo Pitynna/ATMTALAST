@@ -1,16 +1,6 @@
 /obj/structure/closet/crate/necropolis/dragon
 	name = "dragon chest"
 
-/obj/structure/closet/crate/necropolis/dragon/get_ru_names()
-	return alist(
-		NOMINATIVE = "драконий сундук",
-		GENITIVE = "драконьего сундука",
-		DATIVE = "драконьему сундуку",
-		ACCUSATIVE = "драконий сундук",
-		INSTRUMENTAL = "драконьим сундуком",
-		PREPOSITIONAL = "драконьем сундуке",
-	)
-
 /obj/structure/closet/crate/necropolis/dragon/populate_contents()
 	new /obj/item/gem/amber(src)
 	var/loot = rand(1,5)
@@ -30,16 +20,6 @@
 /obj/structure/closet/crate/necropolis/dragon/crusher
 	name = "firey dragon chest"
 
-/obj/structure/closet/crate/necropolis/dragon/crusher/get_ru_names()
-	return alist(
-		NOMINATIVE = "огненный драконий сундук",
-		GENITIVE = "огненного драконьего сундука",
-		DATIVE = "огненному драконьему сундуку",
-		ACCUSATIVE = "огненный драконий сундук",
-		INSTRUMENTAL = "огненным драконьим сундуком",
-		PREPOSITIONAL = "огненном драконьем сундуке",
-	)
-
 /obj/structure/closet/crate/necropolis/dragon/crusher/populate_contents()
 	. = ..()
 	new /obj/item/crusher_trophy/tail_spike(src)
@@ -48,7 +28,7 @@
 
 /obj/item/melee/ghost_sword
 	name = "spectral blade"
-	desc = "Ржавый затупленный клинок. Выглядит так, будто не нанесёт много урона. Слабо светится."
+	desc = "A rusted and dulled blade. It doesn't look like it'd do much damage."
 	icon_state = "spectral"
 	item_state = "spectral"
 	flags = CONDUCT
@@ -62,16 +42,6 @@
 	attack_verb = list("атаковал", "полоснул", "уколол", "поранил")
 	var/summon_cooldown = 0
 	var/list/mob/dead/observer/spirits
-
-/obj/item/melee/ghost_sword/get_ru_names()
-	return alist(
-		NOMINATIVE = "спектральный клинок",
-		GENITIVE = "спектрального клинка",
-		DATIVE = "спектральному клинку",
-		ACCUSATIVE = "спектральный клинок",
-		INSTRUMENTAL = "спектральным клинком",
-		PREPOSITIONAL = "спектральном клинке",
-	)
 
 /obj/item/melee/ghost_sword/Initialize(mapload)
 	. = ..()
@@ -152,19 +122,9 @@
 
 /obj/item/dragons_blood
 	name = "bottle of dragons blood"
-	desc = "Вы же не собираетесь это на самом деле пить, да?"
+	desc = "You're not actually going to drink this, are you?"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "vial"
-
-/obj/item/dragons_blood/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка драконьей крови",
-		GENITIVE = "бутылки драконьей крови",
-		DATIVE = "бутылке драконьей крови",
-		ACCUSATIVE = "бутылку драконьей крови",
-		INSTRUMENTAL = "бутылкой драконьей крови",
-		PREPOSITIONAL = "бутылке драконьей крови",
-	)
 
 /obj/item/dragons_blood/attack_self(mob/living/carbon/human/user)
 	if(!ishuman(user))
@@ -192,17 +152,7 @@
 
 /obj/item/dragons_blood/refined
 	name = "bottle of refined dragons blood"
-	desc = "Вы ведь точно собираетесь это выпить, не так ли?"
-
-/obj/item/dragons_blood/refined/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка очищенной драконьей крови",
-		GENITIVE = "бутылки очищенной драконьей крови",
-		DATIVE = "бутылке очищенной драконьей крови",
-		ACCUSATIVE = "бутылку очищенной драконьей крови",
-		INSTRUMENTAL = "бутылкой очищенной драконьей крови",
-		PREPOSITIONAL = "бутылке очищенной драконьей крови",
-	)
+	desc = "You're totally going to drink this, aren't you?"
 
 /obj/item/dragons_blood/refined/attack_self(mob/living/carbon/human/user)
 	if(!istype(user))
@@ -234,7 +184,7 @@
 
 /obj/item/lava_staff
 	name = "staff of lava"
-	desc = "Сила огня и камней в ваших руках!"
+	desc = "The power of fire and rocks in your hands!"
 	icon_state = "lavastaff"
 	lefthand_file = 'icons/mob/inhands/staff_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/staff_righthand.dmi'
@@ -256,16 +206,6 @@
 	var/reset_cooldown = 50
 	var/timer = 0
 	var/banned_turfs
-
-/obj/item/lava_staff/get_ru_names()
-	return alist(
-		NOMINATIVE = "лавовый посох",
-		GENITIVE = "лавового посоха",
-		DATIVE = "лавовому посоху",
-		ACCUSATIVE = "лавовый посох",
-		INSTRUMENTAL = "лавовым посохом",
-		PREPOSITIONAL = "лавовом посохе",
-	)
 
 /obj/item/lava_staff/Initialize(mapload)
 	. = ..()

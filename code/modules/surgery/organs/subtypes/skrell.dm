@@ -1,20 +1,10 @@
 /obj/item/organ/internal/liver/skrell
 	species_type = /datum/species/skrell
 	name = "skrell liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала скреллу."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a skrell."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_liver"
 	alcohol_intensity = 4
-
-/obj/item/organ/internal/liver/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "печень скрелла",
-		GENITIVE = "печени скрелла",
-		DATIVE = "печени скрелла",
-		ACCUSATIVE = "печень скрелла",
-		INSTRUMENTAL = "печенью скрелла",
-		PREPOSITIONAL = "печени скрелла",
-	)
 
 /obj/item/organ/internal/liver/skrell/on_life()
 	. = ..()
@@ -29,7 +19,7 @@
 /obj/item/organ/internal/headpocket
 	species_type = /datum/species/skrell
 	name = "headpocket"
-	desc = "Мышечное образование на голове скреллов, которое можно использовать как место хранения небольших предметов."
+	desc = "Allows Skrell to hide tiny objects within their head tentacles."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	icon_state = "skrell_headpocket"
 	item_state = "skrell_headpocket"
@@ -39,16 +29,6 @@
 	slot = INTERNAL_ORGAN_HEADPOCKET
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
 	var/obj/item/storage/internal/pocket
-
-/obj/item/organ/internal/headpocket/get_ru_names()
-	return alist(
-		NOMINATIVE = "головной карман",
-		GENITIVE = "головного кармана",
-		DATIVE = "головному карману",
-		ACCUSATIVE = "головной карман",
-		INSTRUMENTAL = "головным карманом",
-		PREPOSITIONAL = "головном кармане",
-	)
 
 /obj/item/organ/internal/headpocket/Initialize(mapload)
 	. = ..()
@@ -104,102 +84,42 @@
 /obj/item/organ/internal/heart/skrell
 	species_type = /datum/species/skrell
 	name = "skrell heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало скреллу."
+	desc = "A stream lined heart."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_heart-on"
 	item_base = "skrell_heart"
 
-/obj/item/organ/internal/heart/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "сердце скрелла",
-		GENITIVE = "сердца скрелла",
-		DATIVE = "сердцу скрелла",
-		ACCUSATIVE = "сердце скрелла",
-		INSTRUMENTAL = "сердцем скрелла",
-		PREPOSITIONAL = "сердце скрелла",
-	)
-
 /obj/item/organ/internal/brain/skrell
 	species_type = /datum/species/skrell
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал скреллу."
+	desc = "A brain with a odd division in the middle."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_brain"
 	mmi_icon = 'icons/obj/species_organs/skrell.dmi'
 
-/obj/item/organ/internal/brain/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозг скрелла",
-		GENITIVE = "мозга скрелла",
-		DATIVE = "мозгу скрелла",
-		ACCUSATIVE = "мозг скрелла",
-		INSTRUMENTAL = "мозгом скрелла",
-		PREPOSITIONAL = "мозге скрелла",
-	)
-
 /obj/item/organ/internal/lungs/skrell
 	species_type = /datum/species/skrell
 	name = "skrell lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали скреллу."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a skrell."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_lungs"
-
-/obj/item/organ/internal/lungs/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "лёгкие скрелла",
-		GENITIVE = "лёгких скрелла",
-		DATIVE = "лёгким скрелла",
-		ACCUSATIVE = "лёгкие скрелла",
-		INSTRUMENTAL = "лёгкими скрелла",
-		PREPOSITIONAL = "лёгких скрелла",
-	)
 
 /obj/item/organ/internal/kidneys/skrell
 	species_type = /datum/species/skrell
 	name = "skrell kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали скреллу."
+	desc = "The smallest kidneys you have ever seen, it probably doesn't even work."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_kidneys"
-
-/obj/item/organ/internal/kidneys/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "почки скрелла",
-		GENITIVE = "почек скрелла",
-		DATIVE = "почкам скрелла",
-		ACCUSATIVE = "почки скрелла",
-		INSTRUMENTAL = "почками скрелла",
-		PREPOSITIONAL = "почках скрелла",
-	)
 
 /obj/item/organ/internal/eyes/skrell
 	species_type = /datum/species/skrell
 	name = "skrell eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали скреллу."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a skrell."
 	icon = 'icons/obj/species_organs/skrell.dmi'
 	item_state = "skrell_eyes"
 	see_in_dark = 5
 	can_see_food = TRUE
 
-/obj/item/organ/internal/eyes/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаза скрелла",
-		GENITIVE = "глаз скрелла",
-		DATIVE = "глазам скрелла",
-		ACCUSATIVE = "глаза скрелла",
-		INSTRUMENTAL = "глазами скрелла",
-		PREPOSITIONAL = "глазах скрелла",
-	)
-
 /obj/item/organ/internal/ears/skrell
 	species_type = /datum/species/skrell
 	name = "skrell ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали скреллу."
-
-/obj/item/organ/internal/ears/skrell/get_ru_names()
-	return alist(
-		NOMINATIVE = "уши скрелла",
-		GENITIVE = "ушей скрелла",
-		DATIVE = "ушам скрелла",
-		ACCUSATIVE = "уши скрелла",
-		INSTRUMENTAL = "ушами скрелла",
-		PREPOSITIONAL = "ушах скрелла",
-	)
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a skrell."

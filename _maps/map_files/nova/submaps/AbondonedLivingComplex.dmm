@@ -1394,7 +1394,6 @@
 /turf/simulated/floor/pod,
 /area/station/maintenance/abandonedwarehouse)
 "VP" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/carpet/royalblue,
 /area/station/maintenance/livingcomplex)
 "Wd" = (
@@ -1424,7 +1423,6 @@
 /area/station/maintenance/fsmaint3)
 "XV" = (
 /obj/effect/decal/cleanable/glass,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/pod,
 /area/station/maintenance/abandonedwarehouse)
 "Yg" = (

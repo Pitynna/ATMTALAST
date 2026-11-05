@@ -244,7 +244,7 @@
 	maxstack = 50
 
 /datum/design/rglass
-	desc = "Сталь + Стекло" // because this design is used in ore redemption
+	desc = "Metal + Glass"
 	id = "rglass"
 	build_type = AUTOLATHE | SMELTER
 	materials = list(MAT_METAL = 1000, MAT_GLASS = MINERAL_MATERIAL_AMOUNT)
@@ -953,14 +953,6 @@
 	build_path = /obj/item/safe_internals
 	category = list(PRINTER_CATEGORY_INITIAL, AUTOLATHE_CATEGORY_CONSTRUCTION)
 
-/datum/design/golem_shell
-	id = "golem"
-	req_tech = null	// Unreachable by tech researching.
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 40000)
-	build_path = /obj/item/golem_shell
-	category = list(AUTOLATHE_CATEGORY_IMPORTED)
-
 /datum/design/tts
 	id = "tts"
 	build_type = AUTOLATHE
@@ -1021,10 +1013,3 @@
 	materials = list(MAT_METAL = 3000)
 	build_path = /obj/item/ammo_box/magazine/ik60mag/empty
 	category = list(AUTOLATHE_CATEGORY_IMPORTED)
-
-/datum/design/energy_accumulator
-	id = "weapon_energy_cell"
-	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 40000) //20 metal
-	build_path = /obj/item/weapon_cell/energy_gun
-	category = list(PRINTER_CATEGORY_HACKED, AUTOLATHE_CATEGORY_SECURITY)

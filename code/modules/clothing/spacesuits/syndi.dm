@@ -10,8 +10,6 @@
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/helmet.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/helmet.dmi')
@@ -27,8 +25,6 @@
 	sprite_sheets = list(
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/suit.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi')
@@ -169,18 +165,3 @@
 /obj/item/clothing/suit/space/syndicate/black/engie
 	name = "Black Engineering Space Suit"
 	icon_state = "syndicate-black-engie"
-
-/obj/item/clothing/head/helmet/space/syndicate/contractor
-	name = "contractor helmet"
-	desc = "A specialised black and gold helmet that's more compact than its standard Syndicate counterpart. Can be ultra-compressed into even the tightest of spaces."
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "syndicate-helm-contractor"
-	item_state = "syndicate-helm-contractor"
-
-/obj/item/clothing/suit/space/syndicate/contractor
-	name = "contractor space suit"
-	desc = "A specialised black and gold space suit that's quicker, and more compact than its standard Syndicate counterpart. Can be ultra-compressed into even the tightest of spaces."
-	slowdown = 0
-	w_class = WEIGHT_CLASS_SMALL
-	icon_state = "syndicate-contractor"
-	item_state = "syndicate-contractor"

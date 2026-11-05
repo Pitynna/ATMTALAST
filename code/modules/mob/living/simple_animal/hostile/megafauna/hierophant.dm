@@ -64,7 +64,6 @@ Difficulty: Hard
 	del_on_death = TRUE
 	death_sound = 'sound/magic/repulse.ogg'
 	enraged_loot = /obj/item/disk/fauna_research/hierophant
-	enraged_unique_loot = /obj/item/clothing/accessory/necklace/hierophant_talisman
 	attack_action_types = list(
 		/datum/action/innate/megafauna_attack/blink,
 		/datum/action/innate/megafauna_attack/chaser_swarm,
@@ -569,16 +568,6 @@ Difficulty: Hard
 	layer = BELOW_MOB_LAYER
 	var/mob/living/caster //who made this, anyway
 
-/obj/effect/temp_visual/hierophant/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергия вортекса",
-		GENITIVE = "энергии вортекса",
-		DATIVE = "энергии вортекса",
-		ACCUSATIVE = "энергию вортекса",
-		INSTRUMENTAL = "энергией вортекса",
-		PREPOSITIONAL = "энергии вортекса",
-	)
-
 /obj/effect/temp_visual/hierophant/Initialize(mapload, new_caster)
 	. = ..()
 	if(new_caster)
@@ -610,16 +599,6 @@ Difficulty: Hard
 	icon_state = "wall"
 	light_range = MINIMUM_USEFUL_LIGHT_RANGE
 	duration = 100
-
-/obj/effect/temp_visual/hierophant/wall/get_ru_names()
-	return alist(
-		NOMINATIVE = "стена вортекса",
-		GENITIVE = "стены вортекса",
-		DATIVE = "стене вортекса",
-		ACCUSATIVE = "стену вортекса",
-		INSTRUMENTAL = "стеной вортекса",
-		PREPOSITIONAL = "стене вортекса",
-	)
 
 /obj/effect/temp_visual/hierophant/wall/Initialize(mapload, new_caster)
 	. = ..()
@@ -737,7 +716,7 @@ Difficulty: Hard
 
 /obj/effect/temp_visual/hierophant/blast
 	name = "vortex blast"
-	desc = "Уйдите с пути!"
+	desc = "Get out of the way!"
 	light_range = 2
 	light_power = 2
 	duration = 9
@@ -747,16 +726,6 @@ Difficulty: Hard
 	var/list/hit_things = list() //we hit these already, ignore them
 	var/friendly_fire_check = FALSE
 	var/bursting = FALSE //if we're bursting and need to hit anyone crossing us
-
-/obj/effect/temp_visual/hierophant/blast/get_ru_names()
-	return alist(
-		NOMINATIVE = "вихревой взрыв",
-		GENITIVE = "вихревого взрыва",
-		DATIVE = "вихревому взрыву",
-		ACCUSATIVE = "вихревой взрыв",
-		INSTRUMENTAL = "вихревым взрывом",
-		PREPOSITIONAL = "вихревом взрыве",
-	)
 
 /obj/effect/temp_visual/hierophant/blast/Initialize(mapload, new_caster, friendly_fire)
 	. = ..()
@@ -830,22 +799,12 @@ Difficulty: Hard
 
 /obj/effect/hierophant
 	name = "hierophant beacon"
-	desc = "Странный маяк, позволяющий массовую телепортацию тем, кто умеет им пользоваться."
+	desc = "A strange beacon, allowing mass teleportation for those able to use it."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "hierophant_tele_off"
 	light_range = 2
 	layer = LOW_OBJ_LAYER
 	var/teleporting = FALSE
-
-/obj/effect/hierophant/get_ru_names()
-	return alist(
-		NOMINATIVE = "маяк иерофанта",
-		GENITIVE = "маяка иерофанта",
-		DATIVE = "маяку иерофанта",
-		ACCUSATIVE = "маяк иерофанта",
-		INSTRUMENTAL = "маяком иерофанта",
-		PREPOSITIONAL = "маяке иерофанта",
-	)
 
 /obj/effect/hierophant/update_icon_state()
 	icon_state = "hierophant_tele_[teleporting ? "on" : "off"]"

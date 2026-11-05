@@ -51,7 +51,7 @@
 
 /obj/machinery/atmospherics/fission_reactor
 	name = "Nuclear Fission Reactor"
-	desc = "Древняя, но надёжная технология выработки энергии, использующая делящиеся материалы для получения тепла."
+	desc = "An ancient yet reliable form of power generation utilizing fissile materials to generate heat."
 	icon = 'icons/goonstation/objects/reactor.dmi'
 	icon_state = "reactor_off"
 	density = TRUE
@@ -150,16 +150,6 @@
 	/// Pressure damage per tick
 	var/pressure_damage_rate = 2
 	var/active_meltdown = FALSE
-
-/obj/machinery/atmospherics/fission_reactor/get_ru_names()
-	return alist(
-		NOMINATIVE = "ядерный реактор деления",
-		GENITIVE = "ядерного реактора деления",
-		DATIVE = "ядерному реактору деления",
-		ACCUSATIVE = "ядерный реактор деления",
-		INSTRUMENTAL = "ядерным реактором деления",
-		PREPOSITIONAL = "ядерном реакторе деления",
-	)
 
 /obj/machinery/atmospherics/fission_reactor/roundstart
 	primary_engine = TRUE
@@ -331,8 +321,7 @@
 		if(!do_after(user, 2 SECONDS * coil.toolspeed, src, category = DA_CAT_TOOL) || panel_open || !host_turf.can_have_cabling() || host_turf.underfloor_accessibility != UNDERFLOOR_INTERACTABLE || QDELETED(coil))
 			return ATTACK_CHAIN_PROCEED
 		var/obj/structure/cable/node = host_turf.get_cable_node()
-		CALCULATE_SKILL_MOD(user, ELECTRICITY_NEGATIVE_CHANCE_MOD, prob_mod)
-		if(prob(50 * prob_mod) && electrocute_mob(user, node, node, 1, TRUE))
+		if(prob(50) && electrocute_mob(user, node, node, 1, TRUE))
 			do_sparks(5, TRUE, src)
 			return ATTACK_CHAIN_BLOCKED_ALL
 		if(!coil.use(10))
@@ -1276,22 +1265,12 @@
 
 /obj/effect/decal/nuclear_waste
 	name = "Plutonium sludge"
-	desc = "Бурлящая масса сильно облученного отработавшего ядерного топлива. Пожалуй, не стоит в это ступать..."
+	desc = "A writhing pool of heavily irradiated, spent reactor fuel. You probably shouldn't step through this..."
 	icon = 'icons/obj/fission/waste.dmi'
 	icon_state = "nuclearwaste"
 	alpha = 150
 	light_color = LIGHT_COLOR_CYAN
 	color = "#ff9eff"
-
-/obj/effect/decal/nuclear_waste/get_ru_names()
-	return alist(
-		NOMINATIVE = "плутониевая жижа",
-		GENITIVE = "плутониевой жижи",
-		DATIVE = "плутониевой жиже",
-		ACCUSATIVE = "плутониевую жижу",
-		INSTRUMENTAL = "плутониевой жижей",
-		PREPOSITIONAL = "плутониевой жиже",
-	)
 
 /obj/effect/decal/nuclear_waste/Initialize(mapload)
 	. = ..()
@@ -1307,16 +1286,6 @@
 
 /obj/effect/decal/nuclear_waste/epicenter
 	name = "Dense nuclear sludge"
-
-/obj/effect/decal/nuclear_waste/epicenter/get_ru_names()
-	return alist(
-		NOMINATIVE = "концентрированная ядерная жижа",
-		GENITIVE = "концентрированной ядерной жижи",
-		DATIVE = "концентрированной ядерной жиже",
-		ACCUSATIVE = "концентрированную ядерную жижу",
-		INSTRUMENTAL = "концентрированной ядерной жижей",
-		PREPOSITIONAL = "концентрированной ядерной жиже",
-	)
 
 /obj/effect/landmark/nuclear_waste_spawner
 	name = "Nuclear waste spawner"

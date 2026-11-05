@@ -1,7 +1,7 @@
 //NEVER USE THIS IT SUX	-PETETHEGOAT
 
 /obj/item/reagent_containers/cup/paint
-	desc = "Это ведро краски."
+	desc = "It's a paint bucket."
 	name = "paint bucket"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "paint_neutral"
@@ -30,16 +30,6 @@
 			reagents.remove_any(5)
 	else
 		return ..()
-
-/obj/item/reagent_containers/cup/paint/get_ru_names()
-	return alist(
-		NOMINATIVE = "ведро [paint_title_ru]",
-		GENITIVE = "ведра [paint_title_ru]",
-		DATIVE = "ведру [paint_title_ru]",
-		ACCUSATIVE = "ведро [paint_title_ru]",
-		INSTRUMENTAL = "ведром [paint_title_ru]",
-		PREPOSITIONAL = "ведре [paint_title_ru]",
-	)
 
 /obj/item/reagent_containers/cup/paint/red
 	name = "red paint bucket"
@@ -90,7 +80,7 @@
 
 /obj/item/random_paint_box
 	name = "paint box"
-	desc = "Коробка, которая содержит случайное ведро с краской."
+	desc = "A box containing a random bucket of paint."
 	icon = 'icons/obj/storage/boxes.dmi'
 	icon_state = "giftcrate3"
 
@@ -102,13 +92,3 @@
 	var/obj/item/thing = new chosen(user.drop_location())
 	user.put_in_hands(thing)
 	qdel(src)
-
-/obj/item/random_paint_box/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка красок",
-		GENITIVE = "коробки красок",
-		DATIVE = "коробке красок",
-		ACCUSATIVE = "коробку красок",
-		INSTRUMENTAL = "коробкой красок",
-		PREPOSITIONAL = "коробке красок",
-	)

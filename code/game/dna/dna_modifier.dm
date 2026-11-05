@@ -55,7 +55,7 @@
 /////////////////////////// DNA MACHINES
 /obj/machinery/dna_scannernew
 	name = "DNA modifier"
-	desc = "Высокотехнологичное устройство, предназначенное для сканирования и изменения структуры ДНК гуманоидов. Здесь и происходит всё волшебство."
+	desc = "It scans DNA structures."
 	icon = 'icons/obj/machines/cryogenic2.dmi'
 	icon_state = "scanner_open"
 	density = TRUE
@@ -71,16 +71,6 @@
 	var/damage_coeff
 	var/scan_level
 	var/precision_coeff
-
-/obj/machinery/dna_scannernew/get_ru_names()
-	return alist(
-		NOMINATIVE = "ДНК-модификатор",
-		GENITIVE = "ДНК-модификатора",
-		DATIVE = "ДНК-модификатору",
-		ACCUSATIVE = "ДНК-модификатор",
-		INSTRUMENTAL = "ДНК-модификатором",
-		PREPOSITIONAL = "ДНК-модификаторе",
-	)
 
 /obj/machinery/dna_scannernew/Initialize(mapload)
 	. = ..()
@@ -308,7 +298,7 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 
 /obj/machinery/computer/scan_consolenew
 	name = "DNA Modifier access console"
-	desc = "Консоль для работы с ДНК-модификатором."
+	desc = "Allows you to scan and modify DNA."
 	icon_screen = "dna"
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/scan_consolenew
@@ -329,16 +319,6 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 	var/obj/machinery/dna_scannernew/connected = null
 	var/obj/item/disk/data/disk = null
 	var/selected_menu_key = PAGE_UI
-
-/obj/machinery/computer/scan_consolenew/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления ДНК-модификатором",
-		GENITIVE = "консоли управления ДНК-модификатором",
-		DATIVE = "консоли управления ДНК-модификатором",
-		ACCUSATIVE = "консоль управления ДНК-модификатором",
-		INSTRUMENTAL = "консолью управления ДНК-модификатором",
-		PREPOSITIONAL = "консоли управления ДНК-модификатором",
-	)
 
 /obj/machinery/computer/scan_consolenew/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/disk/data)) //INSERT SOME diskS
@@ -535,8 +515,7 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 			connected.locked = TRUE //lock it
 
 			SStgui.update_uis(src)
-			CALCULATE_SKILL_MOD(usr, IRRADIATION_DURATION_MOD, skill_mod)
-			sleep(10 * radiation_duration * skill_mod) // sleep for radiation_duration seconds
+			sleep(10 * radiation_duration) // sleep for radiation_duration seconds
 
 			irradiating = 0
 			connected.locked = lock_state
@@ -580,8 +559,7 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 			connected.locked = TRUE //lock it
 
 			SStgui.update_uis(src)
-			CALCULATE_SKILL_MOD(usr, IRRADIATION_DURATION_MOD, skill_mod)
-			sleep(10 * radiation_duration * skill_mod) // sleep for radiation_duration seconds
+			sleep(10 * radiation_duration) // sleep for radiation_duration seconds
 
 			irradiating = 0
 			connected.locked = lock_state
@@ -632,8 +610,7 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 			connected.locked = TRUE //lock it
 
 			SStgui.update_uis(src)
-			CALCULATE_SKILL_MOD(usr, IRRADIATION_DURATION_MOD, skill_mod)
-			sleep(10 * radiation_duration * skill_mod) // sleep for radiation_duration seconds
+			sleep(10 * radiation_duration) // sleep for radiation_duration seconds
 
 			irradiating = 0
 			connected.locked = lock_state
@@ -724,8 +701,7 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 					connected.locked = TRUE //lock it
 
 					SStgui.update_uis(src)
-					CALCULATE_SKILL_MOD(usr, IRRADIATION_DURATION_MOD, skill_mod)
-					sleep(2 SECONDS * skill_mod)
+					sleep(2 SECONDS)
 
 					irradiating = 0
 					connected.locked = lock_state
@@ -784,8 +760,7 @@ GAME_VERB_SRC(/obj/machinery/dna_scannernew, eject, oview(1), "Извлечь с
 
 	// Cooldown
 	injector_ready = FALSE
-	CALCULATE_SKILL_MOD(usr, IRRADIATION_DURATION_MOD, skill_mod)
-	addtimer(CALLBACK(src, PROC_REF(injector_cooldown_finish)), (30 / connected.precision_coeff * skill_mod) SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(injector_cooldown_finish)), (30 / connected.precision_coeff) SECONDS)
 
 	// Create it
 	var/datum/dna2/record/buf = buffers[buffer_id]

@@ -13,8 +13,6 @@
 	var/restraining = FALSE //used in cqc's disarm_act to check if the disarmed is being restrained and so whether they should be put in a chokehold or not
 	var/static/list/areas_under_siege = typecacheof(list(/area/station/service/kitchen,
 														/area/station/service/bar,
-														/area/syndicate/unpowered/syndicate_space_base/bar,
-														/area/syndicate/unpowered/syndicate_space_base/kitchen,
 														/area/coldcolony/malta/resid_serv/kitchen,
 														/area/coldcolony/malta/resid_serv/bar/atrium,
 														/area/coldcolony/malta/resid_serv/bar

@@ -1,6 +1,6 @@
 /obj/structure/logistics_pipe
 	name = "logistics pipe"
-	desc = "Подпольная труба логистической сети."
+	desc = "An underfloor logistics network pipe."
 	icon = 'icons/obj/pipes_and_stuff/not_atmos/logistics.dmi'
 	icon_state = "logi-s"
 	base_icon_state = "logi-s"
@@ -19,16 +19,6 @@
 	var/datum/logistics_net/logistics_net
 	var/datum/component/logistics_interface/linked_interface
 	COOLDOWN_DECLARE(eject_effects_cd)
-
-/obj/structure/logistics_pipe/get_ru_names()
-	return alist(
-		NOMINATIVE = "логистическая труба",
-		GENITIVE = "логистической трубы",
-		DATIVE = "логистической трубе",
-		ACCUSATIVE = "логистическую трубу",
-		INSTRUMENTAL = "логистической трубой",
-		PREPOSITIONAL = "логистической трубе",
-	)
 
 /obj/structure/logistics_pipe/Initialize(mapload, obj/structure/logistics_construct/made_from)
 	. = ..()

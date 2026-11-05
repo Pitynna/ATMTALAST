@@ -1,6 +1,6 @@
 /obj/item/stack/vox_cash
 	name = "vox cash"
-	desc = "Криптографический чип доступа к адресам транзакций рассчетных средств воксов."
+	desc = "A cryptographic chip granting access to vox currency transaction addresses."
 	icon = 'icons/obj/machines/trader_machine.dmi'
 	icon_state = "vox_key"
 	hitsound = "swing_hit"
@@ -10,17 +10,6 @@
 	w_class = WEIGHT_CLASS_TINY
 	max_amount = /obj/item/stack/spacecash::max_amount
 	merge_type = /obj/item/stack/vox_cash
-
-/obj/item/stack/vox_cash/get_ru_names()
-	return alist(
-		NOMINATIVE = "кикиридиты",
-		GENITIVE = "кикиридитов",
-		DATIVE = "кикиридитам",
-		ACCUSATIVE = "кикиридиты",
-		INSTRUMENTAL = "кикиридитами",
-		PREPOSITIONAL = "кикиридитах",
-	)
-
 
 /obj/item/stack/vox_cash/update_name(updates)
 	. = ..()

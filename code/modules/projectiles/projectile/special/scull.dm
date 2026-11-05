@@ -9,16 +9,6 @@
 	armour_penetration = 100
 	hitsound = null
 
-/obj/projectile/skull_projectile/get_ru_names()
-	return alist(
-		NOMINATIVE = "заражённый череп",
-		GENITIVE = "заражённого черепа",
-		DATIVE = "заражённому черепу",
-		ACCUSATIVE = "заражённый череп",
-		INSTRUMENTAL = "заражённым черепом",
-		PREPOSITIONAL = "заражённом черепе",
-	)
-
 /obj/projectile/skull_projectile/Destroy()
 	var/obj/item/gun/magic/skull_gun/skull_gun = locate() in firer
 	if(skull_gun)
@@ -68,6 +58,6 @@
 			c_victim.vomit(50, VOMIT_BLOOD, 0 SECONDS)
 
 		if(prob(10 + vampire.get_trophies(INTERNAL_ORGAN_LIVER) * 3))
-			new /obj/effect/temp_visual/cult/sparks(get_turf(victim))
+			new /obj/effect/temp_visual/blood_magic_sparks(get_turf(victim))
 			var/datum/disease/vampire/D = new
 			D.Contract(victim)	// grave fever

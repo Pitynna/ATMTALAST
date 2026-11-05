@@ -1,8 +1,8 @@
 /obj/structure/blob/shield
 	name = "strong blob"
 	icon_state = "blob_shield"
-	desc = "Сплошная стена слегка подергивающихся щупалец."
-	var/damaged_desc = "Стена дергающихся щупалец."
+	desc = "Some blob creature thingy"
+	var/damaged_desc = "A wall of twitching tendrils."
 	max_integrity = BLOB_STRONG_MAX_HP
 	health_regen = BLOB_STRONG_HP_REGEN
 	brute_resist = BLOB_STRONG_BRUTE_RESIST
@@ -54,7 +54,7 @@
 	desc = "A solid wall of slightly twitching tendrils with a reflective glow."
 	damaged_desc = "A wall of twitching tendrils with a reflective glow."
 	icon_state = "blob_glow"
-	flags_ricochet = RICOCHET_SHINY | RICOCHET_SPECIAL
+	flags_ricochet = RICOCHET_SHINY
 	explosion_block = 2
 	explosion_vertical_block = 1
 	brute_resist = BLOB_BRUTE_RESIST

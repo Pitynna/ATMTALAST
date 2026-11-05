@@ -123,10 +123,6 @@
 				msg += "[GEND_HE_SHE_CAP(src)] нос[PLUR_IT_YAT(src)] [icon2html(gloves, user)] <b>[gloves.declent_ru(NOMINATIVE)]</b> на руках.\n"
 		else if(blood_DNA)
 			msg += "[GEND_HIS_HER_CAP(src)] руки [hand_blood_color != "#030303" ? "измазаны кровью":"измазаны маслом"].\n"
-		else if(isclocker(src) && HAS_TRAIT(src, TRAIT_CLOCK_HANDS))
-			msg += span_clockitalic("[GEND_HIS_HER_CAP(src)] руки сверкают янтарём.\n")
-
-	//handcuffed?
 	if(handcuffed)
 		msg += span_warning("[GEND_HE_SHE_CAP(src)] [icon2html(handcuffed, user)] скован[GEND_A_O_Y(src)] <b>[handcuffed.declent_ru(INSTRUMENTAL)]</b>.\n")
 
@@ -361,44 +357,6 @@
 		else
 			msg += span_warning(span_bold("[GEND_HIS_HER_CAP(src)] [bodypart.declent_ru_base(NOMINATIVE)] кровоточ[PLUR_IT_AT(bodypart)]!\n"))
 
-	// Heal skill: 5 - fractures, 6 - blood and internal bleeding, 7 - damages
-	if(in_range(user, src))
-		GET_SKILL_LEVEL(user, /datum/skill/medical/heal, examine_heal_skill_level)
-		if(examine_heal_skill_level >= SKILL_LEVEL_PROFESSIONAL)
-			for(var/obj/item/organ/external/bodypart as anything in bodyparts)
-				if(!bodypart.has_fracture())
-					continue
-				if(bodypart.fracture == FRACTURE_TYPE_CRACK)
-					msg += span_warning(span_bold("У н[GEND_HIS_HER(src)] трещина в [bodypart.declent_ru_base(PREPOSITIONAL)].\n"))
-				else
-					msg += span_warning(span_bold("У н[GEND_HIS_HER(src)] сломан[GEND_A_O_Y(bodypart)] [bodypart.declent_ru_base(NOMINATIVE)].\n"))
-
-			if(examine_heal_skill_level >= SKILL_LEVEL_EXPERT)
-				if(!HAS_TRAIT(src, TRAIT_NO_BLOOD))
-					var/heal_blood_percent = round((blood_volume / BLOOD_VOLUME_NORMAL) * 100)
-					var/heal_blood_text = "Уровень крови: [heal_blood_percent]%"
-					if(blood_volume <= BLOOD_VOLUME_OKAY)
-						heal_blood_text = span_danger("Уровень крови: [heal_blood_percent]% (критический)")
-					else if(blood_volume <= BLOOD_VOLUME_SAFE)
-						heal_blood_text = span_warning("Уровень крови: [heal_blood_percent]% (низкий)")
-					msg += "[heal_blood_text]\n"
-
-				var/list/internal_bleedings = list()
-				for(var/obj/item/organ/external/bodypart as anything in bodyparts)
-					if(bodypart.has_internal_bleeding())
-						internal_bleedings += "в [bodypart.declent_ru_base(PREPOSITIONAL)]"
-				if(length(internal_bleedings))
-					var/internal_bleeding_title = length(internal_bleedings) > 1 ? "Внутренние кровотечения" : "Внутреннее кровотечение"
-					var/internal_bleeding_list = internal_bleedings.Join(", ")
-					msg += span_warning(span_bold("[internal_bleeding_title]: [internal_bleeding_list].\n"))
-
-				if(examine_heal_skill_level >= SKILL_LEVEL_LEGEND)
-					msg += "Уровень повреждений: "
-					msg += "[span_color("удушье [getOxyLoss()]", "#0080ff")], "
-					msg += "[span_color("отравление [getToxLoss()]", "green")], "
-					msg += "[span_color("терм. [getFireLoss()]", "#FF8000")], "
-					msg += "[span_color("мех. [getBruteLoss()]", "red")].\n"
-
 	if(hasHUD(user, EXAMINE_HUD_MEDICAL) && !HAS_TRAIT(src, TRAIT_NO_BLOOD) && blood_volume < max_blood)
 		var/blood_volume_text
 		if(blood_volume >= BLOOD_VOLUME_PALE)
@@ -430,9 +388,6 @@
 
 		if(HAS_TRAIT_FROM(src, TRAIT_AI_UNTRACKABLE, CHANGELING_TRAIT))
 			msg += span_italics("[GEND_HE_SHE_CAP(src)] двигает своё тело неестественно и откровенно нечеловеческим образом.\n")
-
-	if(!(skipface || (wear_mask && (wear_mask.flags_inv & HIDENAME || wear_mask.flags_cover & MASKCOVERSMOUTH))) && is_thrall(src) && in_range(user,src))
-		msg += span_italics("[GEND_HIS_HER_CAP(src)] черты лица выглядят неестественно напряжёнными и застывшими.\n")
 
 	var/obj/item/organ/internal/cyberimp/tail/blade/implant = get_organ_slot(INTERNAL_ORGAN_TAIL_DEVICE)
 	if(istype(implant) && implant.activated)
@@ -548,11 +503,6 @@
 			var/obj/item/clothing/head/helmet/space/helmet = H.head
 			if(helmet?.examine_extensions)
 				have_hud_exam |= helmet.examine_extensions
-
-		if(ismodhelmet(H.head))
-			var/obj/item/clothing/head/mod/our_shitcode = H.head
-			if(our_shitcode?.examine_extensions)
-				have_hud_exam |= our_shitcode.examine_extensions
 
 		var/obj/item/organ/internal/cyberimp/eyes/hud/CIH = H.get_int_organ(/obj/item/organ/internal/cyberimp/eyes/hud)
 		if(CIH?.examine_extensions)

@@ -6,7 +6,7 @@ GLOBAL_VAR(current_date_string)
 
 /obj/machinery/computer/account_database
 	name = "Accounts Uplink Terminal"
-	desc = "Получите доступ к журналам транзакций, данным учетной записи и всем видам других финансовых записей."
+	desc = "Access transaction logs, account data and all kinds of other financial records."
 	icon_screen = "accounts"
 	req_access = list(ACCESS_HOP, ACCESS_CAPTAIN, ACCESS_CENT_COMMANDER)
 	light_color = LIGHT_COLOR_GREEN

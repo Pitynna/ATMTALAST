@@ -1,6 +1,6 @@
 /obj/structure/fermenting_barrel
 	name = "wooden barrel"
-	desc = "Большая дубовая бочка. Можно использовать для брожения фруктов или просто хранения жидкостей."
+	desc = "A large wooden barrel. You can ferment fruits and such inside it, or just use it to hold liquid."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "barrel"
 	density = TRUE
@@ -9,16 +9,6 @@
 	pressure_resistance = 2 * ONE_ATMOSPHERE
 	var/open = FALSE
 	var/speed_multiplier = 1 //How fast it distills. Defaults to 100% (1.0). Lower is better.
-
-/obj/structure/fermenting_barrel/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянная бочка",
-		GENITIVE = "деревянной бочки",
-		DATIVE = "деревянной бочке",
-		ACCUSATIVE = "деревянную бочку",
-		INSTRUMENTAL = "деревянной бочкой",
-		PREPOSITIONAL = "деревянной бочке",
-	)
 
 /obj/structure/fermenting_barrel/Initialize(mapload)
 	. = ..()

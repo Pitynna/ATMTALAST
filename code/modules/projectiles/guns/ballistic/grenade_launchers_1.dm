@@ -1,7 +1,7 @@
 // MARK: Bombarda
 /obj/item/gun/projectile/bombarda
 	name = "Bombarda"
-	desc = "Собранный из подручных материалов гранатомёт, использующий боеприпасы калибра 40 мм."
+	desc = "Hand made analog of grenade launcher. Can fire improvised shells."
 	icon = 'icons/obj/weapons/bombarda.dmi'
 	icon_state = "bombarda"
 	item_state = "bombarda"
@@ -16,16 +16,6 @@
 	accuracy = GUN_ACCURACY_MINIMAL
 	recoil = GUN_RECOIL_MEGA
 	var/opened = FALSE
-
-/obj/item/gun/projectile/bombarda/get_ru_names()
-	return alist(
-		NOMINATIVE = "кустарный гранатомет",
-		GENITIVE = "кустарного гранатомета",
-		DATIVE = "кустарному гранатомету",
-		ACCUSATIVE = "кустарный гранатомет",
-		INSTRUMENTAL = "кустарным гранатометом",
-		PREPOSITIONAL = "кустарном гранатомете",
-	)
 
 /obj/item/gun/projectile/bombarda/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
@@ -142,47 +132,23 @@
 // MARK: Double bombarda
 /obj/item/gun/projectile/bombarda/bombplet
 	name = "bombplet"
-	desc = "Собранный из подручных материалов гранатомёт с двумя стволами, использующий боеприпасы калибра 40 мм."
+	desc = "An improvised double-barreled grenade launcher using 40mm ammunition."
 	icon_state = "bombplet"
 	item_state = "bombplet"
 	mag_type = /obj/item/ammo_box/magazine/internal/bombarda/x2
 
-/obj/item/gun/projectile/bombarda/bombplet/get_ru_names()
-	return alist(
-		NOMINATIVE = "кустарный двуствольный гранатомет 40 мм",
-		GENITIVE = "кустарного двуствольного гранатомета 40 мм",
-		DATIVE = "кустарному двуствольному гранатомету 40 мм",
-		ACCUSATIVE = "кустарный двуствольный гранатомет 40 мм",
-		INSTRUMENTAL = "кустарным двуствольным гранатометом 40 мм",
-		PREPOSITIONAL = "кустарном двуствольном гранатомете 40 мм",
-	)
-
-// MARK: GL-06
 /obj/item/gun/projectile/bombarda/secgl
 	name = "grenade launcher GL-06"
-	desc = "Однозарядный ручной гранатомёт калибра 40 мм производства \"Mars Special\". Предназначен для подавления беспорядков, \
-			однако может быть использован для других задач благодаря широкому спектру доступных боеприпасов. Входит в стандартное оснащение арсеналов службы безопасности \"Нанотрейзен\"."
+	desc = "A single-shot handheld 40mm grenade launcher manufactured by Mars Special. Intended for riot control, but its wide ammunition selection supports other tasks. Standard equipment in Nanotrasen security armories."
 	icon_state = "secgl"
 	item_state = "secgl"
 	mag_type = /obj/item/ammo_box/magazine/internal/bombarda/secgl
 	accuracy = GUN_ACCURACY_PISTOL
 	recoil = GUN_RECOIL_HIGH
 
-/obj/item/gun/projectile/bombarda/secgl/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручной гранатомет GL-06",
-		GENITIVE = "ручного гранатомета GL-06",
-		DATIVE = "ручному гранатомету GL-06",
-		ACCUSATIVE = "ручной гранатомет GL-06",
-		INSTRUMENTAL = "ручным гранатометом GL-06",
-		PREPOSITIONAL = "ручном гранатомете GL-06",
-	)
-
-// MARK: GL-08-04
 /obj/item/gun/projectile/bombarda/secgl/x4
 	name = "grenade launcher GL-08-4"
-	desc = "Ручной гранатомёт калибра 40 мм производства \"Mars Special\", расчитанный на 4 гранаты. Предназначен для подавления беспорядков, \
-			однако может быть использован для других задач благодаря широкому спектру доступных боеприпасов. Входит в стандартное оснащение арсеналов службы безопасности \"Нанотрейзен\"."
+	desc = "A handheld four-shot 40mm grenade launcher manufactured by Mars Special. Intended for riot control, but its wide ammunition selection supports other tasks. Standard equipment in Nanotrasen security armories."
 	icon_state = "secgl_4"
 	item_state = "secgl_4"
 	mag_type = /obj/item/ammo_box/magazine/internal/bombarda/secgl/x4
@@ -191,16 +157,6 @@
 	slot_flags = FALSE
 	var/high_risk = TRUE
 	fire_delay = 1.5 SECONDS
-
-/obj/item/gun/projectile/bombarda/secgl/x4/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручной гранатомет GL-08-4",
-		GENITIVE = "ручного гранатомета GL-08-4",
-		DATIVE = "ручному гранатомету GL-08-4",
-		ACCUSATIVE = "ручной гранатомет GL-08-4",
-		INSTRUMENTAL = "ручным гранатометом GL-08-4",
-		PREPOSITIONAL = "ручном гранатомете GL-08-4",
-	)
 
 /obj/item/gun/projectile/bombarda/secgl/x4/Initialize(mapload, ...)
 	. = ..()
@@ -214,22 +170,10 @@
 // MARK: M79
 /obj/item/gun/projectile/bombarda/secgl/m79
 	name = "grenade launcher M79"
-	desc = "Классический однозарядный ручной гранатомёт. Использует 40 мм гранаты."
+	desc = "A classic single-shot handheld grenade launcher using 40mm grenades."
 	icon_state = "m79"
 	item_state = "m79"
 
-/obj/item/gun/projectile/bombarda/secgl/m79/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручной гранатомет M79",
-		GENITIVE = "ручного гранатомета M79",
-		DATIVE = "ручному гранатомету M79",
-		ACCUSATIVE = "ручной гранатомет M79",
-		INSTRUMENTAL = "ручным гранатометом M79",
-		PREPOSITIONAL = "ручном гранатомете M79",
-	)
-
-// MARK: Crafts and other shit
-// TODO: move the stuff below into it's own files
 /datum/crafting_recipe/bombarda
 	name = "Bombarda"
 	result = /obj/item/gun/projectile/bombarda
@@ -329,21 +273,11 @@
 /obj/effect/decal/cleanable/blood/paint
 	name = "paint"
 	dryname = "dried paint"
-	desc = "Она густая и липкая. Возможно, кто то разлил тут краску?"
-	drydesc = "Она сухая и засохшая. Кто-то явно халтурит."
+	desc = "Thick and sticky. Did someone spill paint here?"
+	drydesc = "It is dry and crusty. Someone is clearly slacking off."
 	gender = FEMALE
 	blood_state = BLOOD_STATE_NOT_BLOODY
 	//drying_time = 1
-
-/obj/effect/decal/cleanable/blood/paint/get_ru_names()
-	return alist(
-		NOMINATIVE = "краска",
-		GENITIVE = "краски",
-		DATIVE = "краске",
-		ACCUSATIVE = "краску",
-		INSTRUMENTAL = "краской",
-		PREPOSITIONAL = "краске",
-	)
 
 /obj/effect/decal/cleanable/blood/paint/dry()
 	. = ..()
@@ -359,19 +293,9 @@
 /obj/effect/decal/cleanable/blood/drip/paint
 	name = "paint"
 	dryname = "dried paint"
-	desc = "Оно густое и липкое. Возможно, кто то разлил тут краску?"
+	desc = "Thick and sticky. Did someone spill paint here?"
 	blood_state = BLOOD_STATE_NOT_BLOODY
 	//drying_time = 1
-
-/obj/effect/decal/cleanable/blood/drip/paint/get_ru_names()
-	return alist(
-		NOMINATIVE = "капли краска",
-		GENITIVE = "капель краски",
-		DATIVE = "каплям краски",
-		ACCUSATIVE = "капли краски",
-		INSTRUMENTAL = "каплями краски",
-		PREPOSITIONAL = "каплях краски",
-	)
 
 /obj/effect/decal/cleanable/blood/drip/paint/dry()
 	. = ..()

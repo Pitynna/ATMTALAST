@@ -110,11 +110,6 @@
 	name = "Клоунский ТКН «Ферри»"
 	description = "Клоунская делегация! МЫ ИДЕМ К ВАМ, ХОНК!"
 
-/datum/map_template/shuttle/ferry/cult
-	suffix = "cult"
-	name = "ТКН «Ферри-666»"
-	description = "Малый шаттл делегации неизвестного культа."
-
 /datum/map_template/shuttle/ferry/deepdarkdungeon
 	suffix = "deepdarkdungeon"
 	name = "ТКН «Ферри» ГАЧИ версия"

@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/router
 	display_name = "Маршрутизатор"
-	desc = "Копирует вход, выбранный с помощью параметра \"Селектор выходных данных\",\
-			на выход, выбранный с помощью параметра \"Селектор выходных данных\"."
+	desc = "Copies the selected input to the selected output."
 	category = "Utility"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 
@@ -72,8 +71,7 @@
 
 /obj/item/circuit_component/router/multiplexer
 	display_name = "Мультиплексор"
-	desc = "Копирует входные данные, выбранные с помощью параметра \"Выбор выходных данных\", \
-			на выходные данные."
+	desc = "Copies the selected input to the output."
 	output_port_amount = 1
 
 #undef WRAPACCESS

@@ -14,7 +14,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		))
 
 /datum/reagent/water
-	name = "Вода"
+	name = "Water"
 	id = "water"
 	description = "Повсеместно распространённое химическое вещество, состоящее из водорода и кислорода."
 	reagent_state = LIQUID
@@ -23,8 +23,8 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	var/cooling_temperature = 2
 	process_flags = ORGANIC | SYNTHETIC
 	drink_icon = "glass_clear"
-	drink_name = "Стакан воды"
-	drink_desc = "Обычный стакан обычной воды."
+	drink_name = "Glass of Water"
+	drink_desc = "The father of all refreshments."
 	var/water_temperature = COLD_WATER_TEMPERATURE	// As reagents don't have a temperature value, we'll just use 10 celsius.
 
 /// How many wet stacks you get per units of water when it's applied by touch.
@@ -76,7 +76,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	cooling_temperature = 3
 
 /datum/reagent/lube
-	name = "Космическая смазка"
+	name = "Space Lube"
 	id = "lube"
 	description = "Вещество, используемое для уменьшения трения между двумя движущимися поверхностями."
 	reagent_state = LIQUID
@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		T.MakeSlippery(TURF_WET_LUBE, 120 SECONDS)
 
 /datum/reagent/space_cleaner
-	name = "Космочист"
+	name = "Space cleaner"
 	id = "cleaner"
 	description = "Состав, используемый для очистки поверхностей. Теперь на 50% больше гипохлорита натрия!"
 	reagent_state = LIQUID
@@ -119,14 +119,14 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 
 /datum/reagent/blood
 	data = list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=null,"blood_species"=null,"blood_colour"=BLOOD_COLOR_RED,"resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null, "dna" = null)
-	name = "Кровь"
+	name = "Blood"
 	id = "blood"
 	reagent_state = LIQUID
 	color = "#770000" // rgb: 40, 0, 0
 	metabolization_rate = 12.5 * REAGENTS_METABOLISM //fast rate so it disappears fast.
 	drink_icon = "glass_red"
-	drink_name = "Стакан томатного сока"
-	drink_desc = "Стоп, а это точно томатный сок?"
+	drink_name = "Glass of Tomato juice"
+	drink_desc = "Are you sure this is tomato juice?"
 	taste_description = "крови"
 	taste_mult = 1.3
 
@@ -242,7 +242,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 				V.Contract(M, need_protection_check = FALSE)
 
 /datum/reagent/blood/synthetic/vox
-	name = "Синтетическая кровь (Азот)"
+	name = "Synthetic Blood (Nitrogen)"
 	id = "sbloodvox"
 	data = list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=null,"blood_species"=null,"blood_colour"="#6093dc","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null, "dna" = null)
 	color = "#6093dc"
@@ -261,7 +261,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 				C.blood_volume = min(C.blood_volume + round(volume, 0.1), BLOOD_VOLUME_NORMAL)
 
 /datum/reagent/blood/synthetic/oxy
-	name = "Синтетическая кровь (Кислород)"
+	name = "Synthetic Blood (Oxygen)"
 	id = "sbloodoxy"
 	data = list("donor"=null,"diseases"=null,"blood_DNA"=null,"blood_type"=null,"blood_species"=null,"blood_colour"="#e8479d","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null, "dna" = null)
 	color = "#e8479d"
@@ -281,7 +281,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 
 /datum/reagent/vaccine
 	//data must contain virus type
-	name = "Вакцина"
+	name = "Vaccine"
 	id = "vaccine"
 	color = "#C81040" // rgb: 200, 16, 64
 	taste_description = "антител"
@@ -299,7 +299,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		data |= data.Copy()
 
 /datum/reagent/fishwater
-	name = "Аквариумная вода"
+	name = "Fish Water"
 	id = "fishwater"
 	description = "Вонючая вода из аквариума. Мерзость!"
 	reagent_state = LIQUID
@@ -319,7 +319,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return ..()
 
 /datum/reagent/fishwater/toiletwater
-	name = "Вода из унитаза"
+	name = "Toilet Water"
 	id = "toiletwater"
 	description = "Грязная вода, которую взяли из унитаза. Абсолютно отвратительно."
 	taste_description = "жидкого дерьма"
@@ -328,15 +328,15 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return
 
 /datum/reagent/holywater
-	name = "Вода"
+	name = "Water"
 	id = "holywater"
 	description = "Повсеместно распространённое химическое вещество, состоящее из водорода и кислорода."
 	reagent_state = LIQUID
 	color = "#0064C8" // rgb: 0, 100, 200
 	process_flags = ORGANIC | SYNTHETIC
 	drink_icon = "glass_clear"
-	drink_name = "Стакан воды"
-	drink_desc = "Обычный стакан обычной воды."
+	drink_name = "Glass of Water"
+	drink_desc = "The father of all refreshments."
 	taste_description = "воды"
 	devil_regen_ignored = TRUE
 
@@ -346,18 +346,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	if(current_cycle >= 30)		// 12 units, 60 seconds @ metabolism 0.4 units & tick rate 2.0 sec
 		M.AdjustStuttering(8 SECONDS, bound_lower = 0, bound_upper = 40 SECONDS)
 		M.Dizzy(10 SECONDS)
-		if(isclocker(M) && prob(5))
-			M.AdjustClockSlur(10 SECONDS)
-			M.say(pick("Виа Ра'вар!", "П'рес Ни", "Ню'нс те Рен", "Эт Деф'Фре", "РЕЛО'ЙЕ АР СЕЙЖ", "Рик'гуай'ни", "Уй'а Рад кос", "Уо Ром'тис!", "Руп'ру ге"))
-		if(iscultist(M))
-			for(var/datum/action/innate/cult/blood_magic/BM in M.actions)
-				for(var/datum/action/innate/cult/blood_spell/BS in BM.spells)
-					to_chat(M, span_cultlarge("Ваша кровавая магия ослабевает из-за святой воды в вашем организме!"))
-					qdel(BS)
-			if(prob(5))
-				M.AdjustCultSlur(10 SECONDS)//5 seems like a good number...
-				M.say(pick("Ав'те Нар'си","Па'лид Морс","ИНО ИНО ОРА АНА","САТ АНА!","Дайм'ниодиес Арс'иай Ле'ионес","Игкау'хом'нау ен Кеосу","Хо Дьяк'нос ту Ап'айрон","Ар'ж На'си","Диабо ас Во'исцум","Си гн'ам Ко'ну"))
-		else if(HAS_TRAIT(M, TRAIT_EVIL) && prob(25)) //Congratulations, your committment to evil has now made holy water a deadly poison to you!
+		if(HAS_TRAIT(M, TRAIT_EVIL) && prob(25)) //Congratulations, your committment to evil has now made holy water a deadly poison to you!
 			M.emote("scream")
 			update_flags |= M.adjustFireLoss(1.5, updating_health = FALSE)
 
@@ -372,32 +361,8 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 			M.SetConfused(0)
 			return
 
-		if(iscultist(M))
-			SSticker.mode.remove_cultist(M.mind)
-			holder.remove_reagent(id, volume)	// maybe this is a little too perfect and a max() cap on the statuses would be better??
-			M.SetJitter(0)
-			M.SetStuttering(0)
-			M.SetConfused(0)
-			if(ishuman(M)) // Unequip all cult clothing
-				var/mob/living/carbon/human/H = M
-				for(var/I in H.contents - (H.bodyparts | H.internal_organs)) // Satanic liver NYI
-					if(is_type_in_list(I, CULT_CLOTHING))
-						H.drop_item_ground(I)
-			return
-		else if(HAS_TRAIT(M, TRAIT_EVIL)) //At this much holy water, you're probably going to fucking melt. good luck
+		if(HAS_TRAIT(M, TRAIT_EVIL)) //At this much holy water, you're probably going to fucking melt. good luck
 			update_flags |= M.adjustFireLoss(5, updating_health = FALSE)
-
-		if(isclocker(M))
-			SSticker.mode.remove_clocker(M.mind)
-			holder.remove_reagent(id, volume)
-			M.SetJitter(0)
-			M.SetStuttering(0)
-			M.SetConfused(0)
-			if(ishuman(M)) // Unequip all cult clothing
-				var/mob/living/carbon/human/H = M
-				for(var/I in H.contents - (H.bodyparts | H.internal_organs))
-					if(is_type_in_list(I, CLOCK_CLOTHING))
-						H.drop_item_ground(I)
 
 	var/datum/antagonist/vampire/vamp = M.mind?.has_antag_datum(/datum/antagonist/vampire)
 	if(ishuman(M) && vamp && !vamp.get_ability(/datum/vampire_passive/full) && prob(80))
@@ -471,13 +436,10 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 /datum/reagent/holywater/reaction_turf(turf/simulated/T, volume)
 	if(!istype(T))
 		return
-	if(volume>=10)
-		for(var/obj/effect/rune/R in T)
-			qdel(R)
 	T.Bless()
 
 /datum/reagent/fuel/unholywater		//if you somehow managed to extract this from someone, dont splash it on yourself and have a smoke
-	name = "Нечестивая вода"
+	name = "Unholy Water"
 	id = "unholywater"
 	description = "Что-то, что не должно существовать в этой реальности."
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
@@ -485,27 +447,15 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 
 /datum/reagent/fuel/unholywater/on_mob_life(mob/living/M)
 	var/update_flags = STATUS_UPDATE_NONE
-	if(iscultist(M))
-		M.AdjustDrowsy(-10 SECONDS)
-		M.AdjustParalysis(-2 SECONDS)
-		M.AdjustStunned(-4 SECONDS)
-		M.AdjustWeakened(-4 SECONDS)
-		M.AdjustKnockdown(-4 SECONDS)
-		update_flags |= M.adjustToxLoss(-2, FALSE)
-		update_flags |= M.adjustFireLoss(-2, FALSE)
-		update_flags |= M.adjustOxyLoss(-2, FALSE)
-		update_flags |= M.adjustBruteLoss(-2, FALSE)
-	else
-		update_flags |= M.adjustBrainLoss(3, FALSE)
-		update_flags |= M.adjustToxLoss(1, FALSE)
-		update_flags |= M.adjustFireLoss(2, FALSE)
-		update_flags |= M.adjustOxyLoss(2, FALSE)
-		update_flags |= M.adjustBruteLoss(2, FALSE)
-		M.AdjustCultSlur(20 SECONDS) //CUASE WHY THE HELL NOT
+	update_flags |= M.adjustBrainLoss(3, FALSE)
+	update_flags |= M.adjustToxLoss(1, FALSE)
+	update_flags |= M.adjustFireLoss(2, FALSE)
+	update_flags |= M.adjustOxyLoss(2, FALSE)
+	update_flags |= M.adjustBruteLoss(2, FALSE)
 	return ..() | update_flags
 
 /datum/reagent/hellwater
-	name = "Адская вода"
+	name = "Hell Water"
 	id = "hell_water"
 	description = "ЖЖЁТСЯ, КАК ЖЖЁТСЯ!"
 	process_flags = ORGANIC | SYNTHETIC		//Admin-bus has no brakes! KILL THEM ALL.
@@ -523,7 +473,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	return ..() | update_flags
 
 /datum/reagent/liquidgibs
-	name = "Жидкие ошмётки"
+	name = "Liquid gibs"
 	id = "liquidgibs"
 	color = "#FF9966"
 	description = "Вы даже думать не хотите, что это такое."
@@ -536,7 +486,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 		playsound(T, 'sound/effects/splat.ogg', 50, TRUE, -3)
 
 /datum/reagent/lye
-	name = "Щёлочь"
+	name = "Lye"
 	id = "lye"
 	description = "Также известна как гидроксид натрия."
 	reagent_state = LIQUID
@@ -544,7 +494,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	taste_description = "едкой кислоты"//don't drink lye, kids
 
 /datum/reagent/drying_agent
-	name = "Сушильный агент"
+	name = "Drying agent"
 	id = "drying_agent"
 	description = "Используется для осушения различных поверхностей."
 	reagent_state = LIQUID
@@ -576,7 +526,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	user.remove_status_effect(status_effect_type)
 
 /datum/reagent/status_effect/creatine
-	name = "Креатин"
+	name = "Creatine"
 	id = "creatine"
 	description = "Вещество участвующее в энергетическом обмене в мышечных и нервных клетках."
 	color = "#dcbf00"
@@ -584,14 +534,14 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	status_effect_type = /datum/status_effect/sport_reagents/creatine
 
 /datum/reagent/status_effect/creatine/liquid
-	name = "Разбавленный креатин"
+	name = "Diluted Creatine"
 	id = "creatine_liquid"
 	description = "Смесь воды и креатина."
 	reagent_state = LIQUID
 	status_effect_type = /datum/status_effect/sport_reagents/creatine/liquid
 
 /datum/reagent/status_effect/guarana
-	name = "Экстракт гуараны"
+	name = "Guarana Extract"
 	id = "guarana"
 	description = "Вещество временно стимулирующее мышечную активность."
 	color = "#dc3b00"
@@ -599,7 +549,7 @@ GLOBAL_LIST_INIT(diseases_carrier_reagents, list(
 	status_effect_type = /datum/status_effect/sport_reagents/guarana
 
 /datum/reagent/status_effect/steroids
-	name = "Стероиды"
+	name = "Steroids"
 	id = "steroids"
 	description = "Используется для ускоренного развития мышц. \
 					Не рекомендуется употреблять обладающим хвостом, беременным, перенесшим тяжелую травму, переболевшим ветрянкой, состоящим из слизи и бесхвостым."

@@ -12,7 +12,7 @@
  */
 /obj/structure/cargo_shelf
 	name = "crate shelf"
-	desc = "Это стеллаж! Для хранения ящиков!"
+	desc = "It's a shelf! For storing crates!"
 	icon = 'icons/obj/structures/rack.dmi'
 	icon_state = "shelf_base"
 	density = TRUE
@@ -25,16 +25,6 @@
 	var/use_delay = DEFAULT_SHELF_USE_DELAY
 	/// List of which crates are stored where, to keep track of occupied slots
 	var/list/crates_stored
-
-/obj/structure/cargo_shelf/get_ru_names()
-	return alist(
-		NOMINATIVE = "стеллаж для ящиков",
-		GENITIVE = "стеллажа для ящиков",
-		DATIVE = "стеллажу для ящиков",
-		ACCUSATIVE = "стеллаж для ящиков",
-		INSTRUMENTAL = "стеллажом для ящиков",
-		PREPOSITIONAL = "стеллаже для ящиков",
-	)
 
 /obj/structure/cargo_shelf/Initialize(mapload)
 	. = ..()

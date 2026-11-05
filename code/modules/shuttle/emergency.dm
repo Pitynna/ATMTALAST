@@ -1,6 +1,6 @@
 /obj/machinery/computer/emergency_shuttle
 	name = "emergency shuttle console"
-	desc = "Для управления шаттлом."
+	desc = "For shuttle control."
 	icon_screen = "shuttle"
 	icon_keyboard = "tech_key"
 	var/auth_need = 3
@@ -182,9 +182,6 @@
 		if(issilicon(player)) //Borgs are technically dead anyways
 			continue
 		if(isanimal(player)) //Poly does not own the shuttle
-			continue
-		if(isascendeddevil(player))
-			devil_on_shuttle = TRUE
 			continue
 		if(isbrain(player))
 			continue

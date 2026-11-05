@@ -97,8 +97,7 @@
 	},
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dust,
-/obj/effect/landmark/spawner/ninja_teleport,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "cm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -206,7 +205,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/structure/cable,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "eq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -332,7 +331,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dust,
 /obj/effect/spawner/random_spawners/rat,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "hN" = (
 /obj/structure/closet/cabinet,
@@ -856,7 +855,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "tP" = (
 /obj/structure/chair/stool,
@@ -868,7 +867,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/light/small,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "uc" = (
 /obj/effect/decal/cleanable/dust,
@@ -1255,7 +1254,7 @@
 "Gu" = (
 /obj/structure/sink/directional/south,
 /obj/effect/decal/cleanable/dust,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "GC" = (
 /obj/structure/chair/wood{
@@ -1312,7 +1311,7 @@
 /obj/item/crowbar/red{
 	desc = "...";
 	force = 3;
-	name = "Монтировка легендарная";
+	name = "Legendary Crowbar";
 	toolspeed = 0.35
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -1427,7 +1426,7 @@
 	dir = 6
 	},
 /obj/effect/spawner/lootdrop/maintenance,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "Ma" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1611,7 +1610,7 @@
 /area/template_noop)
 "TE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 "TP" = (
 /obj/structure/closet/crate,
@@ -1858,7 +1857,7 @@
 "ZZ" = (
 /obj/structure/table/tray,
 /obj/item/clothing/gloves/color/black/razorgloves,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/template_noop)
 
 (1,1,1) = {"

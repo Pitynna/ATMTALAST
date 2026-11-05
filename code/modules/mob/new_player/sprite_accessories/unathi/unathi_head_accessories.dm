@@ -3,7 +3,7 @@
 /datum/sprite_accessory/head_accessory/unathi
 	abstract_type = /datum/sprite_accessory/head_accessory/unathi
 	icon = 'icons/mob/sprite_accessories/unathi/unathi_hair.dmi'
-	species_allowed = list(SPECIES_UNATHI, SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_DRACONOID)
+	species_allowed = list(SPECIES_UNATHI, SPECIES_DRACONOID)
 	over_hair = 1
 
 /datum/sprite_accessory/head_accessory/unathi/knight

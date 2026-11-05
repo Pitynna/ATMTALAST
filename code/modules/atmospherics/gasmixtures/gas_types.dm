@@ -2,7 +2,7 @@ GLOBAL_LIST_INIT(gas_meta, meta_gas_list())
 /proc/meta_gas_list()
 	. = list()
 	for(var/gas_path in subtypesof(/datum/gas))
-		var/list/gas_info = new(8)
+		var/list/gas_info = new(7)
 		var/datum/gas/gas = gas_path
 
 		gas_info[META_GAS_ID] = gas.id
@@ -12,7 +12,6 @@ GLOBAL_LIST_INIT(gas_meta, meta_gas_list())
 		gas_info[META_GAS_SCRUB_FLAG] = gas.scrub_flag
 		gas_info[META_GAS_SENSOR_FLAG] = gas.sensor_flag
 		gas_info[META_BASE_VALUE] = gas.base_value
-		gas_info[META_GAS_FUSION_POWER] = gas.fusion_power
 		.[gas.id] = gas_info
 
 
@@ -34,8 +33,6 @@ GLOBAL_LIST_INIT(gas_meta, meta_gas_list())
 	var/scrub_flag
 	var/sensor_flag
 	var/base_value = 0
-	///How much the gas accelerates a fusion reaction
-	var/fusion_power = 0
 
 /datum/gas/oxygen
 	id = TLV_O2
@@ -81,17 +78,6 @@ GLOBAL_LIST_INIT(gas_meta, meta_gas_list())
 	scrub_flag = SCRUB_H2O
 	sensor_flag = SENSOR_COMPOSITION_H2O
 	base_value = 0.5
-	fusion_power = 8
-
-/datum/gas/hypernoblium
-	id = TLV_HYPERNOBLIUM
-	name = "Hyper-noblium"
-	desc = "The most noble gas of them all. High quantities of hyper-noblium actively prevents reactions from occurring."
-	primary_color = COLOR_TEAL
-	scrub_flag = SCRUB_HYPERNOBLIUM
-	sensor_flag = SENSOR_COMPOSITION_HYPERNOBLIUM
-	base_value = 2.5
-	fusion_power = 10
 
 /datum/gas/nitrous_oxide
 	id = TLV_N2O
@@ -101,66 +87,6 @@ GLOBAL_LIST_INIT(gas_meta, meta_gas_list())
 	scrub_flag = SCRUB_N2O
 	sensor_flag = SENSOR_COMPOSITION_N2O
 	base_value = 1.5
-	fusion_power = 10
-
-/datum/gas/nitrium
-	id = TLV_NITRIUM
-	name = "Nitrium"
-	desc = "An experimental performance enhancing gas. Nitrium can have amplified effects as more of it gets into your bloodstream."
-	primary_color = "#a52a2a"
-	scrub_flag = SCRUB_NITRIUM
-	sensor_flag = SENSOR_COMPOSITION_NITRIUM
-	base_value = 6
-	fusion_power = 7
-
-/datum/gas/tritium
-	id = TLV_TRITIUM
-	name = "Tritium"
-	desc = "A highly flammable and radioactive gas."
-	primary_color = "#32cd32"
-	scrub_flag = SCRUB_TRITIUM
-	sensor_flag = SENSOR_COMPOSITION_TRITIUM
-	base_value = 2.5
-	fusion_power = 5
-
-/datum/gas/bz
-	id = TLV_BZ
-	name = "BZ"
-	desc = "A powerful hallucinogenic nerve agent able to induce cognitive damage."
-	primary_color = "#9370db"
-	scrub_flag = SCRUB_BZ
-	sensor_flag = SENSOR_COMPOSITION_BZ
-	base_value = 1.5
-	fusion_power = 8
-
-/datum/gas/pluoxium
-	id = TLV_PLUOXIUM
-	name = "Pluoxium"
-	desc = "A gas that could supply even more oxygen to the bloodstream when inhaled, without being an oxidizer."
-	primary_color = "#7b68ee"
-	scrub_flag = SCRUB_PLUOXIUM
-	sensor_flag = SENSOR_COMPOSITION_PLUOXIUM
-	base_value = 2.5
-	fusion_power = -10
-
-/datum/gas/miasma
-	id = TLV_MIASMA
-	name = "Miasma"
-	desc = "Not necessarily a gas, miasma refers to biological pollutants found in the atmosphere."
-	primary_color = COLOR_OLIVE
-	scrub_flag = SCRUB_MIASMA
-	sensor_flag = SENSOR_COMPOSITION_MIASMA
-	base_value = 1
-
-/datum/gas/freon
-	id = TLV_FREON
-	name = "Freon"
-	desc = "A coolant gas. Mainly used for its endothermic reaction with oxygen."
-	primary_color = "#afeeee"
-	scrub_flag = SCRUB_FREON
-	sensor_flag = SENSOR_COMPOSITION_FREON
-	base_value = 5
-	fusion_power = -5
 
 /datum/gas/hydrogen
 	id = TLV_H2
@@ -170,63 +96,6 @@ GLOBAL_LIST_INIT(gas_meta, meta_gas_list())
 	scrub_flag = SCRUB_H2
 	sensor_flag = SENSOR_COMPOSITION_H2
 	base_value = 1
-	fusion_power = 2
-
-/datum/gas/healium
-	id = TLV_HEALIUM
-	name = "Healium"
-	desc = "Causes deep, regenerative sleep."
-	primary_color = "#fa8072"
-	scrub_flag = SCRUB_HEALIUM
-	sensor_flag = SENSOR_COMPOSITION_HEALIUM
-	base_value = 5.5
-
-/datum/gas/proto_nitrate
-	id = TLV_PROTO_NITRATE
-	name = "Proto Nitrate"
-	desc = "A very volatile gas that reacts differently with various gases."
-	primary_color = "#adff2f"
-	scrub_flag = SCRUB_PROTO_NITRATE
-	sensor_flag = SENSOR_COMPOSITION_PROTO_NITRATE
-	base_value = 2.5
-
-/datum/gas/zauker
-	id = TLV_ZAUKER
-	name = "Zauker"
-	desc = "A highly toxic gas, its production is highly regulated on top of being difficult. It also breaks down when in contact with nitrogen."
-	primary_color = "#006400"
-	scrub_flag = SCRUB_ZAUKER
-	sensor_flag = SENSOR_COMPOSITION_ZAUKER
-	base_value = 7
-
-/datum/gas/halon
-	id = TLV_HALON
-	name = "Halon"
-	desc = "A potent fire suppressant. Removes oxygen from high temperature fires and cools down the area."
-	primary_color = COLOR_PURPLE
-	scrub_flag = SCRUB_HALON
-	sensor_flag = SENSOR_COMPOSITION_HALON
-	base_value = 4
-
-/datum/gas/helium
-	id = TLV_HELIUM
-	name = "Helium"
-	desc = "A very inert gas produced by the fusion of hydrogen and its derivatives."
-	primary_color = "#f0f8ff"
-	scrub_flag = SCRUB_HELIUM
-	sensor_flag = SENSOR_COMPOSITION_HELIUM
-	base_value = 3.5
-	fusion_power = 7
-
-/datum/gas/antinoblium
-	id = TLV_ANTINOBLIUM
-	name = "Antinoblium"
-	desc = "We still don't know what it does, but it sells for a lot."
-	primary_color = COLOR_MAROON
-	scrub_flag = SCRUB_ANTINOBLIUM
-	sensor_flag = SENSOR_COMPOSITION_ANTINOBLIUM
-	base_value = 10
-	fusion_power = 20
 
 /datum/gas/agent_b
 	id = TLV_AGENT_B

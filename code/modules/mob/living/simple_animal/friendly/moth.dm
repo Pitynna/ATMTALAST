@@ -20,7 +20,6 @@
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/monstermeat/xenomeat = 1)
 	gold_core_spawnable = FRIENDLY_SPAWN
 	holder_type = /obj/item/holder/moth
-	tts_seed = "Tychus"
 
 /mob/living/simple_animal/moth/Initialize(mapload)
 	. = ..()

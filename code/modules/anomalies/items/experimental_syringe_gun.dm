@@ -1,8 +1,6 @@
 /obj/item/gun/syringe/rapidsyringe/experimental
 	name = "experimental syringe gun"
-	desc = "Экспериментальный шприцемёт с 6 слотами для шприцев, со встроенным, самовосполняющимся хранилищем \
-			химикатов и новейшей системой автозаправки шприцев. Для смены синтезируемых химикатов залейте новую \
-			смесь внутрь. Не может синтезировать некоторые, особенно сложные вещества."
+	desc = "An experimental syringe gun with six syringe slots, a built-in self-replenishing chemical reservoir and a state-of-the-art automatic refill system. Pour in a new mixture to change the chemicals being synthesized. Cannot synthesize certain especially complex substances."
 	gender = MALE
 	origin_tech = "combat=3;biotech=4;bluespace=5"
 	icon = 'icons/obj/weapons/techrelic.dmi'
@@ -22,16 +20,6 @@
 	var/bank_size = 100
 	/// Inserted vortex anomaly core.
 	var/obj/item/assembly/signaler/core/vortex/core = null
-
-/obj/item/gun/syringe/rapidsyringe/experimental/get_ru_names()
-	return alist(
-		NOMINATIVE = "экспериментальный шприцемёт", \
-		GENITIVE = "экспериментального шприцемёта", \
-		DATIVE = "экспериментальному шприцемёту", \
-		ACCUSATIVE = "экспериментальный шприцемёт", \
-		INSTRUMENTAL = "экспериментальным шприцемётом", \
-		PREPOSITIONAL = "экспериментальном шприцемёте",
-	)
 
 /obj/item/gun/syringe/rapidsyringe/experimental/Initialize(mapload)
 	. = ..()

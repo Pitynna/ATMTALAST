@@ -14,16 +14,6 @@
 	/// We keep the KA here to use the properties of its modkits when projectile hit the target.
 	var/obj/item/gun/energy/kinetic_accelerator/kinetic_gun
 
-/obj/projectile/kinetic/get_ru_names()
-	return alist(
-		NOMINATIVE = "кинетическая сила",
-		GENITIVE = "кинетической силы",
-		DATIVE = "кинетической силе",
-		ACCUSATIVE = "кинетическую силу",
-		INSTRUMENTAL = "кинетической силой",
-		PREPOSITIONAL = "кинетической силе"
-	)
-
 /obj/projectile/kinetic/Destroy()
 	kinetic_gun = null
 	return ..()
@@ -60,9 +50,6 @@
 	if(ismineralturf(target_turf))
 		var/turf/simulated/mineral/mineral = target_turf
 		mineral.attempt_drill(firer, FALSE, power)
-		// If there is a mind, check for skill modifier to allow them to reload faster.
-		CALCULATE_SKILL_MOD(firer, MINING_SPEED_MOD, skill_modifier)
-		kinetic_gun.attempt_reload(kinetic_gun.overheat_time * skill_modifier) //If you hit a mineral, you might get a quicker reload. epic gamer style.
 	var/obj/effect/temp_visual/kinetic_blast/K = new /obj/effect/temp_visual/kinetic_blast(target_turf)
 	K.color = color
 

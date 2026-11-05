@@ -1,6 +1,6 @@
 /obj/item/clothing/under/vox/jumpsuit
 	name = "vox jumpsuit"
-	desc = "Рабочая одежда вокса."
+	desc = "These loose clothes are optimized for the labors of the lower castes onboard the arkships. Large openings in the top allow for breathability while the pants are durable yet flexible enough to not restrict movement."
 	icon_state = "vox-jumpsuit"
 	item_color = "vox-jumpsuit"
 	item_state = "syndicate-black"

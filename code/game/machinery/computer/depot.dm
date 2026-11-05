@@ -376,7 +376,7 @@
 
 /obj/machinery/computer/syndicate_depot/teleporter
 	name = "Syndicate Redspace Teleporter Console"
-	desc = "Эта подозрительная высокотехнологичная машина создает двунаправленный телепорт, способный игнорировать любые BlueSpace-помехи!"
+	desc = "This suspicious high-tech machine creates a Bi-Directional teleporter that is capable to ignore any bluespace interference!"
 	icon_screen = "telesci"
 	icon_keyboard = "teleport_key"
 	window_height = 320
@@ -392,11 +392,6 @@
 	var/is_cooldown = FALSE		//На кулдауне ли мы?
 	var/wait_time = 0			//Сколько осталось до конца кулдауна.
 	var/lifespan = 300			//Сколько будут жить созданные порталы прежде чем удалиться
-
-/obj/machinery/computer/syndicate_depot/teleporter/taipan
-	req_access = list(154)
-	circuit = /obj/item/circuitboard/syndicate_teleporter
-	armor = list(MELEE = 0, BULLET = 100, LASER = 40, ENERGY = 0, BOMB = 20, BIO = 0, FIRE = 40, ACID = 20)
 
 /obj/machinery/computer/syndicate_depot/teleporter/Initialize(mapload)
 	..()

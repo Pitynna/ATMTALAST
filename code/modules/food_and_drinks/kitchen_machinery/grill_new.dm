@@ -1,7 +1,7 @@
 
 /obj/machinery/kitchen_machine/grill
 	name = "grill"
-	desc = "Настоящий гриль. Аромат шашлыка в космосе — вот что по-настоящему сближает экипаж."
+	desc = "Backyard grilling, IN SPACE."
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "grill_off"
 	cook_verbs = list("Жарится", "Обжигается", "Готовится")
@@ -11,18 +11,6 @@
 	broken_icon = "grill_broke"
 	dirty_icon = "grill_dirty"
 	open_icon = "grill_open"
-
-/obj/machinery/kitchen_machine/grill/get_ru_names()
-	return alist(
-		NOMINATIVE = "гриль",
-		GENITIVE = "гриля",
-		DATIVE = "грилю",
-		ACCUSATIVE = "гриль",
-		INSTRUMENTAL = "грилем",
-		PREPOSITIONAL = "гриле"
-	)
-
-// see code/modules/food/recipes_grill.dm for recipes
 
 /*******************
 *   Initialising

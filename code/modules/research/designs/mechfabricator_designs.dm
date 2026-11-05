@@ -1589,33 +1589,6 @@
 	build_path = /obj/item/mmi/robotic_brain/syndicate
 	category = list(MECH_FAB_CATEGORY_SYNDICATE)
 
-/datum/design/syndicate_quantumpad
-	id = "syndicate_quantumpad"
-	req_tech = list(RESEARCH_TREE_PROGRAMMING = 3, RESEARCH_TREE_ENGINEERING = 3, RESEARCH_TREE_PLASMA = 3,RESEARCH_TREE_ILLEGAL = 6)
-	build_type = MECHFAB
-	materials = list(MAT_GLASS = 1000, MAT_BLUESPACE = 2000)
-	construction_time = 5 SECONDS
-	build_path = /obj/item/circuitboard/quantumpad/syndiepad
-	category = list(MECH_FAB_CATEGORY_SYNDICATE)
-
-/datum/design/syndicate_cargo_console
-	id = "syndicate_supply_pad"
-	req_tech = list(RESEARCH_TREE_PROGRAMMING = 3, RESEARCH_TREE_ILLEGAL = 3)
-	build_type = MECHFAB
-	materials = list(MAT_GLASS = 1000)
-	construction_time = 5 SECONDS
-	build_path = /obj/item/circuitboard/syndicatesupplycomp
-	category = list(MECH_FAB_CATEGORY_SYNDICATE)
-
-/datum/design/syndicate_public_cargo_console
-	id = "syndicate_public_supply_pad"
-	req_tech = list(RESEARCH_TREE_PROGRAMMING = 3, RESEARCH_TREE_ILLEGAL = 3)
-	build_type = MECHFAB
-	materials = list(MAT_GLASS = 1000)
-	construction_time = 5 SECONDS
-	build_path = /obj/item/circuitboard/syndicatesupplycomp/public
-	category = list(MECH_FAB_CATEGORY_SYNDICATE)
-
 /datum/design/syndicate_borg_RCD_upgrade
 	id = "syndicate_cyborg_RCD_upgrade"
 	req_tech = list(RESEARCH_TREE_ENGINEERING = 6, RESEARCH_TREE_MATERIALS = 6, RESEARCH_TREE_ILLEGAL = 5)

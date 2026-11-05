@@ -1,6 +1,6 @@
 /obj/machinery/computer/robotics
 	name = "robotics control console"
-	desc = "Используется для дистанционной блокировки или подрыва привязанных киборгов."
+	desc = "Used to remotely lockdown or detonate linked Cyborgs."
 	icon_keyboard = "tech_key"
 	icon_screen = "robot"
 	req_access = list(ACCESS_ROBOTICS)
@@ -43,8 +43,6 @@
 		return FALSE
 	if(isdrone(R))
 		return FALSE
-	if(iscogscarab(R))
-		return FALSE
 	if(R.scrambledcodes)
 		return FALSE
 	if(!are_zs_connected(src, R))
@@ -79,10 +77,6 @@
 	return TRUE
 
 /obj/machinery/computer/robotics/proc/can_detonate_any(mob/user, telluserwhy = FALSE)
-	if(ispulsedemon(user))
-		if(telluserwhy)
-			to_chat(user, span_warning("The console's authentication circuits reject your control!"))
-		return FALSE
 	return TRUE
 
 /// Checks if a user can detonate a specific cyborg, does a can_control check first.

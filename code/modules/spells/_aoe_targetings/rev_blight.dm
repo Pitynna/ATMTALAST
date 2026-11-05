@@ -4,9 +4,6 @@
 		if(!target.mind)
 			continue
 
-		if(target.mind in SSticker.mode.sintouched)
-			continue
-
 		if(locate(/datum/disease/ectoplasmic) in target.diseases)
 			continue
 		targets += target

@@ -6,7 +6,7 @@
 	/// Name that is displayed to admins in pod config panel
 	var/ui_name = "Стандартная"
 	/// Description assigned to droppods of this style
-	var/desc = "Капсула снабжения «Nanotrasen»."
+	var/desc = "A Nanotrasen supply pod."
 	/// Determines if this pod can use animations/masking/overlays
 	var/shape = POD_SHAPE_NORMAL
 	/// Base icon state assigned to this pod
@@ -34,7 +34,7 @@
 /datum/pod_style/advanced
 	name = "bluespace supply pod"
 	ui_name = "Продвинутая"
-	desc = "Блюспейс капсула снабжения Nanotrasen. После доставки телепортируется обратно."
+	desc = "A Nanotrasen bluespace supply pod. Teleports back after delivery."
 	decal_icon = "bluespace"
 	glow_color = "blue"
 	id = "bluespace"
@@ -50,7 +50,7 @@
 /datum/pod_style/centcom
 	name = "CentCom supply pod"
 	ui_name = "Nanotrasen"
-	desc = "Капсула снабжения «Nanotrasen», отмеченный обозначениями Центрального командования. После доставки телепортируется обратно."
+	desc = "A Nanotrasen supply pod bearing Central Command markings. Teleports back after delivery."
 	decal_icon = "centcom"
 	glow_color = "blue"
 	id = "centcom"
@@ -63,26 +63,10 @@
 		PREPOSITIONAL = "капсуле снабжения Центрального командования",
 	)
 
-/datum/pod_style/contractor
-	name = "contractor supply pod"
-	ui_name = "Контрактника"
-	desc = "Устрашающая капсула снабжения, покрытая золотыми знаками \"Синдиката\". Наверное, лучше держаться подальше."
-	icon_state = "darkpod"
-	decal_icon = "contractor"
-	id = "contractor"
-	ru_names = alist(
-		NOMINATIVE = "капсула снабжения контрактника",
-		GENITIVE = "капсулы снабжения контрактника",
-		DATIVE = "капсуле снабжения контрактника",
-		ACCUSATIVE = "капсулу снабжения контрактника",
-		INSTRUMENTAL = "капсулой снабжения контрактника",
-		PREPOSITIONAL = "капсуле снабжения контрактника",
-	)
-
 /datum/pod_style/syndicate
 	name = "blood-red supply pod"
 	ui_name = "\"Синдиката\""
-	desc = "Устрашающая капсула снабжения, покрытая кроваво-красными знаками \"Синдиката\". Наверное, лучше держаться подальше."
+	desc = "An intimidating supply pod covered in blood-red Syndicate markings. It's probably best to keep your distance."
 	icon_state = "darkpod"
 	decal_icon = "syndicate"
 	glow_color = "red"
@@ -99,7 +83,7 @@
 /datum/pod_style/deathsquad
 	name = "Deathsquad drop pod"
 	ui_name = "Отряда Смерти"
-	desc = "Капсула Nanotrasen. На ней отмечена маркировка элитной ударной группы Nanotrasen."
+	desc = "A Nanotrasen pod bearing the markings of its elite strike team."
 	icon_state = "darkpod"
 	decal_icon = "deathsquad"
 	glow_color = "blue"
@@ -116,7 +100,7 @@
 /datum/pod_style/cultist
 	name = "bloody supply pod"
 	ui_name = "Культистская"
-	desc = "Капсула снабжения Nanotrasen, вся в царапинах, крови и странных рунах."
+	desc = "A Nanotrasen supply pod covered in scratches, blood and strange runes."
 	decal_icon = "cultist"
 	glow_color = "red"
 	id = "cultist"
@@ -132,7 +116,7 @@
 /datum/pod_style/missile
 	name = "cruise missile"
 	ui_name = "Ракета"
-	desc = "Огромная ракета, которая, похоже, не взорвалась полностью. Вероятно, она была запущена из какой-то далекой ракетной шахты в дальнем космосе. Судя по всему, сбоку имеется люк для вспомогательной полезной нагрузки, хотя открыть его вручную, скорее всего, невозможно."
+	desc = "A huge missile that appears not to have fully detonated. It was probably launched from a distant silo in deep space. There is an auxiliary payload hatch on the side, though opening it manually is probably impossible."
 	shape = POD_SHAPE_OTHER
 	icon_state = "missile"
 	has_door = FALSE
@@ -152,7 +136,7 @@
 /datum/pod_style/missile/syndicate
 	name = "Syndicate cruise missile"
 	ui_name = "Ракета \"Синдиката\""
-	desc = "Огромная кроваво-красная ракета, которая, похоже, не взорвалась полностью. Вероятно, она была запущена из какой-то ракетной шахты \"Синдиката\" в дальнем космосе. Судя по всему, сбоку имеется люк для вспомогательной полезной нагрузки, хотя открыть его вручную, скорее всего, невозможно."
+	desc = "A huge blood-red missile that appears not to have fully detonated. It was probably launched from a Syndicate silo in deep space. There is an auxiliary payload hatch on the side, though opening it manually is probably impossible."
 	icon_state = "smissile"
 	id = "syndie_missile"
 	ru_names = alist(
@@ -167,7 +151,7 @@
 /datum/pod_style/box
 	name = "Aussec supply crate"
 	ui_name = "Ящик припасов"
-	desc = "Невероятно прочный ящик с припасами, рассчитанный на то, чтобы выдержать возвращение на орбиту. Сбоку выгравирована надпись «Aussec Armory — 2532»."
+	desc = "An incredibly sturdy supply box designed to survive orbital reentry. The side is engraved with \"Aussec Armory - 2532\"."
 	shape = POD_SHAPE_OTHER
 	icon_state = "box"
 	decal_icon = null
@@ -186,7 +170,7 @@
 /datum/pod_style/clown
 	name = "HONK pod"
 	ui_name = "Капсула Клоунов"
-	desc = "Яркая капсула снабжения. Вероятно, она отправлена Федерацией клоунов."
+	desc = "A brightly colored supply pod. It probably came from the Clown Federation."
 	icon_state = "clownpod"
 	decal_icon = "clown"
 	glow_color = "green"
@@ -203,7 +187,7 @@
 /datum/pod_style/orange
 	name = "Orange"
 	ui_name = "Фрукт"
-	desc = "Злой апельсин."
+	desc = "An angry orange."
 	shape = POD_SHAPE_OTHER
 	icon_state = "orange"
 	decal_icon = null
@@ -222,7 +206,7 @@
 /datum/pod_style/invisible
 	name =  "S.T.E.A.L.T.H. pod MKVII"
 	ui_name = "Невидимый"
-	desc = "Капсула снабжения, которая при нормальных обстоятельствах совершенно невидима для обычных методов обнаружения. Как ты вообще её видишь?"
+	desc = "A supply pod that is normally completely invisible to conventional detection methods. How can you even see it?"
 	shape = POD_SHAPE_OTHER
 	has_door = FALSE
 	icon_state = null
@@ -242,7 +226,7 @@
 /datum/pod_style/gondola
 	name = "gondola"
 	ui_name = "Гандола"
-	desc = "Бесшумный ходок. Кажется, это сотрудник агентства доставки."
+	desc = "The silent walker. It seems to work for a delivery agency."
 	shape = POD_SHAPE_OTHER
 	icon_state = "gondola"
 	has_door = FALSE
@@ -270,21 +254,3 @@
 	glow_color = null
 	rubble_type = RUBBLE_NONE
 	id = "seethrough"
-
-/datum/pod_style/swarmer
-	name = "Swarmer deploy pod"
-	ui_name = "Свармер"
-	desc = "Капсула \"Свармеров\", используемая для массовых высадок на объекты, подлежащие захвату."
-	has_door = FALSE
-	icon_state = "swarmer"
-	decal_icon = null
-	glow_color = "blue"
-	id = "swarmer"
-	ru_names = alist(
-		NOMINATIVE = "капсула высадки Свармеров",
-		GENITIVE = "капсулы высадки Свармеров",
-		DATIVE = "капсуле высадки Свармеров",
-		ACCUSATIVE = "капсулу высадки Свармеров",
-		INSTRUMENTAL = "капсулой высадки Свармеров",
-		PREPOSITIONAL = "капсуле высадки Свармеров",
-	)

@@ -6,7 +6,6 @@ GLOBAL_LIST_EMPTY(parasites)
 	real_name = "Guardian Spirit"
 	desc = "Таинственное существо, которое всегда настороже, охраняет своего подопечного."
 	speak_emote = list("распевает", "поёт", "произносит нараспев", "интонирует")
-	tts_seed = "Earth"
 	bubble_icon = "guardian"
 	response_help  = "gently pets"
 	response_disarm = "flails at"
@@ -256,8 +255,8 @@ GLOBAL_LIST_EMPTY(parasites)
 ////////Creation
 
 /obj/item/guardiancreator
-	name = "колода карт Таро"
-	desc = "Зачарованная колода карт, по слухам — источник невероятной силы. "
+	name = "deck of tarot cards"
+	desc = "An enchanted deck of tarot cards, rumored to be a source of unimaginable power. "
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "deck_syndicate_full"
 	var/used = FALSE
@@ -278,16 +277,6 @@ GLOBAL_LIST_EMPTY(parasites)
 		"Green" = "#008000",
 		"Blue" = "#0000FF")
 	var/name_list = list("Aries", "Leo", "Sagittarius", "Taurus", "Virgo", "Capricorn", "Gemini", "Libra", "Aquarius", "Cancer", "Scorpio", "Pisces")
-
-/obj/item/guardiancreator/get_ru_names()
-	return alist(
-		NOMINATIVE = "колода карт Таро",
-		GENITIVE = "колоды карт Таро",
-		DATIVE = "колоде карт Таро",
-		ACCUSATIVE = "колоду карт Таро",
-		INSTRUMENTAL = "колодой карт Таро",
-		PREPOSITIONAL = "колоде карт Таро",
-	)
 
 /obj/item/guardiancreator/attack_self(mob/living/user)
 	if(has_guardian(user))
@@ -409,8 +398,8 @@ GLOBAL_LIST_EMPTY(parasites)
 /obj/item/guardiancreator/choose
 
 /obj/item/guardiancreator/tech
-	name = "инъектор голопаразитов"
-	desc = "Содержит нанороботов неизвестного производства. Хотя он способен на почти колдовские подвиги с помощью голограмм жесткого света и наномашин, ему требуется органический носитель в качестве домашней базы и источника топлива."
+	name = "holoparasite injector"
+	desc = "It contains alien nanoswarm of unknown origin. Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, it requires an organic host as a home base and source of fuel."
 	icon = 'icons/obj/hypo.dmi'
 	icon_state = "combat_hypo"
 	theme = "tech"
@@ -433,16 +422,6 @@ GLOBAL_LIST_EMPTY(parasites)
 		"Orchid" = "#F62CF5")
 	name_list = list("Gallium", "Indium", "Thallium", "Bismuth", "Aluminium", "Mercury", "Iron", "Silver", "Zinc", "Titanium", "Chromium", "Nickel", "Platinum", "Tellurium", "Palladium", "Rhodium", "Cobalt", "Osmium", "Tungsten", "Iridium")
 
-/obj/item/guardiancreator/tech/get_ru_names()
-	return alist(
-		NOMINATIVE = "инъектор голопаразитов",
-		GENITIVE = "инъектора голопаразитов",
-		DATIVE = "инъектору голопаразитов",
-		ACCUSATIVE = "инъектор голопаразитов",
-		INSTRUMENTAL = "инъектором голопаразитов",
-		PREPOSITIONAL = "инъекторе голопаразитов",
-	)
-
 /obj/item/guardiancreator/tech/create_theme(mob/living/simple_animal/hostile/guardian/G, mob/living/user, picked_name, color)
 	G.name = "[picked_name] [color]"
 	G.real_name = "[picked_name] [color]"
@@ -458,8 +437,8 @@ GLOBAL_LIST_EMPTY(parasites)
 /obj/item/guardiancreator/tech/choose
 
 /obj/item/guardiancreator/biological
-	name = "скопление яиц скарабеев"
-	desc = "Паразитический вид, который при рождении будет гнездиться в ближайшем живом существе. Хотя это и не очень полезно для вашего здоровья, они будут защищать свой новый улей насмерть."
+	name = "scarab egg cluster"
+	desc = "A parasitic species that will nest in the closest living creature upon birth. While not great for your health, they'll defend their new 'hive' to the death."
 	icon = 'icons/obj/fish_items.dmi'
 	icon_state = "eggs"
 	theme = "bio"
@@ -481,16 +460,6 @@ GLOBAL_LIST_EMPTY(parasites)
 		"Orchid" = "#F62CF5")
 	name_list = list("brood", "hive", "nest")
 
-/obj/item/guardiancreator/biological/get_ru_names()
-	return alist(
-		NOMINATIVE = "скопление яиц скарабеев",
-		GENITIVE = "скопления яиц скарабеев",
-		DATIVE = "скоплению яиц скарабеев",
-		ACCUSATIVE = "скопление яиц скарабеев",
-		INSTRUMENTAL = "скоплением яиц скарабеев",
-		PREPOSITIONAL = "скоплении яиц скарабеев",
-	)
-
 /obj/item/guardiancreator/biological/create_theme(mob/living/simple_animal/hostile/guardian/G, mob/living/user, picked_name, color)
 	G.name = "[color] [picked_name]"
 	G.real_name = "[color] [picked_name]"
@@ -504,7 +473,7 @@ GLOBAL_LIST_EMPTY(parasites)
 /obj/item/guardiancreator/biological/choose
 
 /obj/item/paper/guardian
-	name = "Справочник по голопаразитам"
+	name = "Holoparasite Guide"
 	icon_state = "paper_words"
 	info = {"<b>Cписок видов голопаразитов</b><br>
 
@@ -532,7 +501,7 @@ GLOBAL_LIST_EMPTY(parasites)
 	return
 
 /obj/item/storage/box/syndie_kit/guardian
-	name = "Набор инжектора голопаразита"
+	name = "holoparasite injector kit"
 
 /obj/item/storage/box/syndie_kit/guardian/populate_contents()
 	new /obj/item/guardiancreator/tech/choose(src)

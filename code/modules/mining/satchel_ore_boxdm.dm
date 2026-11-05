@@ -5,19 +5,9 @@
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "orebox0"
 	name = "ore box"
-	desc = "Прочный деревянный ящик для хранения больших объёмов руды."
+	desc = "A heavy wooden box, which can be filled with a lot of ores."
 	density = TRUE
 	pressure_resistance = 5 * ONE_ATMOSPHERE
-
-/obj/structure/ore_box/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик для руды",
-		GENITIVE = "ящика для руды",
-		DATIVE = "ящику для руды",
-		ACCUSATIVE = "ящик для руды",
-		INSTRUMENTAL = "ящиком для руды",
-		PREPOSITIONAL = "ящике для руды",
-	)
 
 /obj/structure/ore_box/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)

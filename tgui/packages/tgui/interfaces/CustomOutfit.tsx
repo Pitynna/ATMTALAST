@@ -21,7 +21,6 @@ type OutfitItem = {
   icon?: string;
   icon_state?: string;
   id_card?: BooleanLike;
-  is_mod?: BooleanLike;
 };
 
 type ItemStack = {
@@ -536,16 +535,6 @@ const OutfitSlot = (props: SlotDef) => {
             {currItem?.name || '—'}
           </Box>
         </Stack.Item>
-        {slot === 'back' && !!currItem?.is_mod && (
-          <Stack.Item>
-            <Button
-              fluid
-              icon="cog"
-              content="Модули"
-              onClick={() => act('edit_mod')}
-            />
-          </Stack.Item>
-        )}
       </Stack>
     </Stack.Item>
   );

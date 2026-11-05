@@ -4,7 +4,7 @@
 // --------------------------------------------------------------------------------
 
 /obj/structure/spider/spiderling/terror_spiderling
-	desc = "Быстро движущийся крошечный паук, склонный издавать агрессивные шипящие звуки. Надеюсь, оно не вырастет."
+	desc = "A fast-moving tiny spider, prone to making aggressive hissing sounds. Hope it doesn't grow up."
 	var/stillborn = FALSE
 	var/mob/living/simple_animal/hostile/poison/terror_spider/queen/spider_myqueen = null
 	var/mob/living/simple_animal/hostile/poison/terror_spider/spider_mymother = null
@@ -17,16 +17,6 @@
 	var/debug_ai_choices = FALSE
 	var/movement_disabled = FALSE
 	var/mob/asigned_ghost
-
-/obj/structure/spider/spiderling/terror_spiderling/get_ru_names()
-	return alist(
-		NOMINATIVE = "паучок",
-		GENITIVE = "паучка",
-		DATIVE = "паучку",
-		ACCUSATIVE = "паучка",
-		INSTRUMENTAL = "паучком",
-		PREPOSITIONAL = "паучке",
-	)
 
 /obj/structure/spider/spiderling/terror_spiderling/Initialize(mapload)
 	. = ..()
@@ -83,7 +73,7 @@
 			else if(score == 0)
 				new /obj/effect/temp_visual/revenant(T) // purple sparks, this is a neutral area, an acceptable choice
 			else
-				new /obj/effect/temp_visual/cult/sparks(T) // red sparks, this is an unsafe area, I won't go here unless fleeing something worse
+				new /obj/effect/temp_visual/blood_magic_sparks(T) // red sparks, this is an unsafe area, I won't go here unless fleeing something worse
 
 /obj/structure/spider/spiderling/terror_spiderling/process()
 	var/turf/T = get_turf(src)
@@ -218,7 +208,7 @@
 
 /obj/structure/spider/eggcluster/terror_eggcluster
 	name = "terror egg cluster"
-	desc = "Скопление крошечных паучьих яиц. Они активно пульсируют и имеют острые шипы по бокам."
+	desc = "A cluster of tiny spider eggs. They pulse with a strong inner life, and appear to have sharp thorns on the sides."
 	gender = PLURAL
 	icon_state = "egg"
 	max_integrity = 40
@@ -342,16 +332,6 @@
 	explosion_vertical_block = 100
 	var/save_burst = FALSE
 
-/obj/structure/spider/eggcluster/terror_eggcluster/empress/get_ru_names()
-	return alist(
-		NOMINATIVE = "яйца Императрицы Ужаса",
-		GENITIVE = "яиц Императрицы Ужаса",
-		DATIVE = "яйцам Императрицы Ужаса",
-		ACCUSATIVE = "яйца Императрицы Ужаса",
-		INSTRUMENTAL = "яйцами Императрицы Ужаса",
-		PREPOSITIONAL = "яйцах Императрицы Ужаса",
-	)
-
 /obj/structure/spider/eggcluster/terror_eggcluster/empress/Initialize(mapload, lay_type)
 	. = ..(mapload, spiderling_type)
 
@@ -372,16 +352,6 @@
 
 /obj/structure/spider/royaljelly
 	name = "royal jelly"
-	desc = "Пульсирующая масса слизи, желе, крови или сжиженных органов гуманоидов, которую Пауки Ужаса считают вкусной и очень питательной."
+	desc = "A pulsating mass of slime, jelly, blood, and or liquified human organs considered delicious and highly nutritious by terror spiders."
 	gender = NEUTER
 	icon_state = "spiderjelly"
-
-/obj/structure/spider/royaljelly/get_ru_names()
-	return alist(
-		NOMINATIVE = "королевское желе",
-		GENITIVE = "королевского желе",
-		DATIVE = "королевскому желе",
-		ACCUSATIVE = "королевское желе",
-		INSTRUMENTAL = "королевским желе",
-		PREPOSITIONAL = "королевском желе",
-	)

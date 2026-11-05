@@ -37,12 +37,13 @@
 	gloves = /obj/item/clothing/gloves/combat
 	l_ear = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/syndicate
-	back = /obj/item/mod/control/pre_equipped/traitor
+	suit = /obj/item/clothing/suit/space/hardsuit/syndi
+	back = /obj/item/storage/backpack
 	r_pocket = /obj/item/tank/internals/emergency_oxygen
 	id = /obj/item/card/id
 
 /obj/effect/mob_spawn/human/corpse/syndicatehazmat
-	name = "Неизвестный"
+	name = "Unknown"
 	hair_style = "bald"
 	facial_hair_style = "shaved"
 	id_job = "Карта доступа 03-c"

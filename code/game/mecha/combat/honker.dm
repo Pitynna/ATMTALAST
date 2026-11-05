@@ -20,7 +20,7 @@
 	allowed_equipment = MECH_EQUIPMENT_CLOWN
 	mech_type = MECH_TYPE_HONKER
 	emaggable = TRUE
-	emag_desc = span_danger_alt("</br>Слоты оборудования меха выглядят КРАЙНЕ забавно!")
+	emag_desc = span_danger_alt("</br>The mech's equipment slots look EXTREMELY funny!")
 
 /obj/mecha/combat/honker/loaded/Initialize(mapload)
 	. = ..()

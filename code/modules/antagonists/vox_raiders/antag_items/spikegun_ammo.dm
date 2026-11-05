@@ -1,12 +1,12 @@
 /obj/item/stock_parts/cell/vox_spike
 	name = "vox spike power cell"
-	desc = "Зарядная пурпурная светящаяся стандартная ячейка для шипометов."
+	desc = "A standard glowing purple power cell for spike launchers."
 	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "spike_cell"
 
 /obj/item/ammo_casing/energy/vox_spike
 	name = "spike"
-	desc = "Маленький самозаряжающийся кристаллический шип испускающий энергетический вайб."
+	desc = "A small self-charging crystalline spike radiating energy."
 	muzzle_flash_effect = null
 	e_cost = 100
 	delay = 3
@@ -17,7 +17,7 @@
 
 /obj/projectile/bullet/vox_spike
 	name = "spike"
-	desc = "Маленький самозаряжающийся кристаллический шип испускающий энергетический вайб."
+	desc = "A small self-charging crystalline spike radiating energy."
 	icon_state = "magspear"
 	armour_penetration = 20
 	damage = 7

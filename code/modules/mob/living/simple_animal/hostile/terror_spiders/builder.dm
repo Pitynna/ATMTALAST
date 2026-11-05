@@ -32,7 +32,6 @@
 	projectiletype = /obj/projectile/terrorspider/builder
 	web_type = /obj/structure/spider/terrorweb/queen/builder
 	can_wrap = FALSE
-	tts_seed = "F_darkelf"
 	spider_intro_text = "Будучи Дроном Ужаса, ваша задача — постройка и защита гнезда. Плетите паутину, используйте свои замедляющие плевки и замораживающие укусы для защиты яиц и гнезда. Помните, вы не регенерируете и двигаетесь медленно вне паутины!."
 
 /mob/living/simple_animal/hostile/poison/terror_spider/builder/get_ru_names()
@@ -80,14 +79,4 @@
 	max_integrity = 35
 	opacity = TRUE
 	name = "drone web"
-	desc = "Очень толстая паутина."
-
-/obj/structure/spider/terrorweb/queen/builder/get_ru_names()
-	return alist(
-		NOMINATIVE = "паутина Дрона Ужаса",
-		GENITIVE = "паутиы Дрона Ужаса",
-		DATIVE = "паутине Дрона Ужаса",
-		ACCUSATIVE = "паутину Дрона Ужаса",
-		INSTRUMENTAL = "паутиной Дрона Ужаса",
-		PREPOSITIONAL = "паутине Дрона Ужаса",
-	)
+	desc = "Extremely thick web."

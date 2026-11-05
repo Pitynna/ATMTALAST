@@ -1,6 +1,6 @@
 /obj/item/enginepicker
 	name = "bluespace engine delivery device"
-	desc = "Система доставки двигателя, основанная на блюспейс-технологиях. Есть возможность выбрать только один вариант. Устройство самоуничтожается после использования."
+	desc = "A per-station bluespace-based delivery system for a unique engine Engineering Department's choice. Only one option can be chosen. Device self-destructs on use."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "enginepicker"
 
@@ -8,16 +8,6 @@
 	var/list/list_engine_beacons
 	/// Whether a pick is already in progress. Blocks self-attack spam from spawning multiple engines.
 	var/is_active = FALSE
-
-/obj/item/enginepicker/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс устройство доставки двигателя",
-		GENITIVE = "блюспейс устройства доставки двигателя",
-		DATIVE = "блюспейс устройству доставки двигателя",
-		ACCUSATIVE = "блюспейс устройство доставки двигателя",
-		INSTRUMENTAL = "блюспейс устройством доставки двигателя",
-		PREPOSITIONAL = "блюспейс устройстве доставки двигателя",
-	)
 
 /obj/item/enginepicker/Destroy()
 	LAZYCLEARLIST(list_engine_beacons)

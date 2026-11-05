@@ -35,15 +35,6 @@
 	dead_icon = "sofia_blank"
 	origin_tech = "biotech=3;programming=3;plasmatech=2;syndicate=5"
 
-/obj/item/mmi/robotic_brain/ninja
-	name = "technological robotic brain"
-	ninja = 1
-	icon_state = "wanter_blank"
-	blank_icon = "wanter_blank"
-	searching_icon = "wanter_recharging"
-	occupied_icon = "wanter"
-	dead_icon = "wanter_blank"
-
 /obj/item/mmi/robotic_brain/Destroy()
 	imprinted_master = null
 	LAZYCLEARLIST(ghost_volunteers)
@@ -63,9 +54,6 @@
 		name = initial(name)
 
 /obj/item/mmi/robotic_brain/attack_self(mob/user)
-	if(isgolem(user))
-		to_chat(user, span_warning("Your golem fingers are too large to press the switch on [src]."))
-		return
 	if(requires_master && !imprinted_master)
 		to_chat(user, span_notice("You press your thumb on [src] and imprint your user information."))
 		imprinted_master = user

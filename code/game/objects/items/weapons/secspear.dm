@@ -3,9 +3,7 @@
 
 /obj/item/twohanded/spear/secspear
 	name = "telescopic energy spear"
-	desc = "Телескопическое энергокопье, разработанное для офицеров службы безопасности. \
-			При активации создает стабильное лезвие из чистой плазмы, обладающее различными свойствами, в зависимости от выбранного режима. \
-			Применяется в тех случаях, когда энергетическое и огнестрельное оружие дальнего боя не подходит для выполнения задачи."
+	desc = "A telescopic energy spear developed for security officers. When activated, it creates a stable blade of pure plasma with properties determined by the selected mode. Used when ranged energy weapons and firearms are unsuitable for the task."
 	throwforce = 10
 	embed_chance = 0
 	item_flags = NOSHARPENING
@@ -30,16 +28,6 @@
 	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/super
 	// Stores the current charge overlay state to avoid unnecessary icon updates.
 	var/charge_overlay_state = ""
-
-/obj/item/twohanded/spear/secspear/get_ru_names()
-	return alist(
-		NOMINATIVE = "телескопическое энергетическое копьё",
-		GENITIVE = "телескопического энергетического копья",
-		DATIVE = "телескопическому энергетическому копью",
-		ACCUSATIVE = "телескопическое энергетическое копьё",
-		INSTRUMENTAL = "телескопическим энергетическим копьём",
-		PREPOSITIONAL = "телескопическом энергетическом копье",
-	)
 
 /obj/item/twohanded/spear/secspear/Initialize(mapload)
 	cell = new cell(src)

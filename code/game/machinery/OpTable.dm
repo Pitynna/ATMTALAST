@@ -1,8 +1,6 @@
 /obj/machinery/optable
 	name = "operating table"
-	desc = "Многофункциональный операционный стол, предназначенный для выполнения хирургических операций. \
-			Оснащён системой датчиков, подключаемых к хирургическому компьютеру для отслеживания жизненных показателей пациента в реальном времени. \
-			Встроенные анатомические фиксаторы исключают непроизвольные движения пациента и обеспечивают удобство для оперирующего хирурга."
+	desc = "Used for advanced medical procedures."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "table2-idle"
 	density = TRUE
@@ -15,16 +13,6 @@
 	var/list/injected_reagents
 	var/reagent_target_amount = 1
 	var/inject_amount = 1
-
-/obj/machinery/optable/get_ru_names()
-	return alist(
-		NOMINATIVE = "операционный стол",
-		GENITIVE = "операционного стола",
-		DATIVE = "операционному столу",
-		ACCUSATIVE = "операционный стол",
-		INSTRUMENTAL = "операционным столом",
-		PREPOSITIONAL = "операционном столе",
-	)
 
 /obj/machinery/optable/ComponentInitialize()
 	. = ..()
@@ -115,8 +103,7 @@
 	. = TRUE
 	if(!I.tool_start_check(src, user, 0))
 		return
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(I.use_tool(src, user, 2 SECONDS * construction_mod, volume = I.tool_volume))
+	if(I.use_tool(src, user, 20, volume = I.tool_volume))
 		user.balloon_alert(user, "разобрано")
 		new /obj/item/stack/sheet/plasteel(loc, 5)
 		qdel(src)

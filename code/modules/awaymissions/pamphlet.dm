@@ -38,6 +38,6 @@
 	return
 
 /obj/item/paper/pamphlet/violent_video_games
-	name = "буклет — \"Вы и жестокие видеоигры\""
-	desc = "Буклет, призывающий читателя вести сбалансированный образ жизни и заботиться о своём психическом здоровье, не отказываясь при этом от видеоигр в умеренных количествах. Вам-то уж это наверняка не нужно..."
+	name = "You and Violent Video Games pamphlet"
+	desc = "A pamphlet encouraging a balanced lifestyle and good mental health without giving up video games in moderation. Surely you don't need this..."
 	info = "Они не заставляют вас убивать людей. Вот, мы это сказали. А теперь возвращайтесь к работе!"

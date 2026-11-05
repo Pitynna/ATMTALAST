@@ -82,97 +82,6 @@ impl GasSet {
         self.values[GAS_WATER_VAPOR] = value;
         self.dirty.store(true, Relaxed);
     }
-    pub(crate) fn tritium(&self) -> f32 {
-        self.values[GAS_TRITIUM]
-    }
-    pub(crate) fn set_tritium(&mut self, value: f32) {
-        self.values[GAS_TRITIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn bz(&self) -> f32 {
-        self.values[GAS_BZ]
-    }
-    pub(crate) fn set_bz(&mut self, value: f32) {
-        self.values[GAS_BZ] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn pluoxium(&self) -> f32 {
-        self.values[GAS_PLUOXIUM]
-    }
-    pub(crate) fn set_pluoxium(&mut self, value: f32) {
-        self.values[GAS_PLUOXIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn miasma(&self) -> f32 {
-        self.values[GAS_MIASMA]
-    }
-    pub(crate) fn set_miasma(&mut self, value: f32) {
-        self.values[GAS_MIASMA] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn freon(&self) -> f32 {
-        self.values[GAS_FREON]
-    }
-    pub(crate) fn set_freon(&mut self, value: f32) {
-        self.values[GAS_FREON] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn nitrium(&self) -> f32 {
-        self.values[GAS_NITRIUM]
-    }
-    pub(crate) fn set_nitrium(&mut self, value: f32) {
-        self.values[GAS_NITRIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn healium(&self) -> f32 {
-        self.values[GAS_HEALIUM]
-    }
-    pub(crate) fn set_healium(&mut self, value: f32) {
-        self.values[GAS_HEALIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn proto_nitrate(&self) -> f32 {
-        self.values[GAS_PROTO_NITRATE]
-    }
-    pub(crate) fn set_proto_nitrate(&mut self, value: f32) {
-        self.values[GAS_PROTO_NITRATE] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn zauker(&self) -> f32 {
-        self.values[GAS_ZAUKER]
-    }
-    pub(crate) fn set_zauker(&mut self, value: f32) {
-        self.values[GAS_ZAUKER] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn halon(&self) -> f32 {
-        self.values[GAS_HALON]
-    }
-    pub(crate) fn set_halon(&mut self, value: f32) {
-        self.values[GAS_HALON] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn helium(&self) -> f32 {
-        self.values[GAS_HELIUM]
-    }
-    pub(crate) fn set_helium(&mut self, value: f32) {
-        self.values[GAS_HELIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn antinoblium(&self) -> f32 {
-        self.values[GAS_ANTINOBLIUM]
-    }
-    pub(crate) fn set_antinoblium(&mut self, value: f32) {
-        self.values[GAS_ANTINOBLIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
-    pub(crate) fn hypernoblium(&self) -> f32 {
-        self.values[GAS_HYPER_NOBLIUM]
-    }
-    pub(crate) fn set_hypernoblium(&mut self, value: f32) {
-        self.values[GAS_HYPER_NOBLIUM] = value;
-        self.dirty.store(true, Relaxed);
-    }
     pub(crate) fn set_dirty(&mut self) {
         self.dirty.store(true, Relaxed);
     }
@@ -336,10 +245,7 @@ pub(crate) struct Tile {
     pub(crate) airtight_directions: AirtightDirections,
     /// Is there a wall in this direction?
     pub(crate) wall: [bool; AXES.len()],
-    pub(crate) updates: ReasonFlags,
-    pub(crate) radiation_energy: f32,
-    pub(crate) hallucination_strength: f32,
-    pub(crate) nuclear_particles: f32,
+    pub(crate) last_gas_update: i32,
 }
 
 impl Tile {
@@ -356,10 +262,7 @@ impl Tile {
             wind: [0.0, 0.0],
             wall: [false, false],
             fuel_burnt: 0.0,
-            updates: ReasonFlags::NONE,
-            radiation_energy: 0.0,
-            hallucination_strength: 0.0,
-            nuclear_particles: 0.0,
+            last_gas_update: 0,
         }
     }
     /// The total heat capacity of this tile and its gases, in joules per kelvin.
@@ -443,19 +346,6 @@ impl TryFrom<&Tile> for Vec<ByondValue> {
             value.gases.agent_b().to_byond()?,
             value.gases.hydrogen().to_byond()?,
             value.gases.water_vapor().to_byond()?,
-            value.gases.tritium().to_byond()?,
-            value.gases.bz().to_byond()?,
-            value.gases.pluoxium().to_byond()?,
-            value.gases.miasma().to_byond()?,
-            value.gases.freon().to_byond()?,
-            value.gases.nitrium().to_byond()?,
-            value.gases.healium().to_byond()?,
-            value.gases.proto_nitrate().to_byond()?,
-            value.gases.zauker().to_byond()?,
-            value.gases.halon().to_byond()?,
-            value.gases.helium().to_byond()?,
-            value.gases.antinoblium().to_byond()?,
-            value.gases.hypernoblium().to_byond()?,
             value.mode.try_into()?,
             environment_id.to_byond()?,
             value.superconductivity.north.to_byond()?,
@@ -475,17 +365,11 @@ impl TryFrom<&Tile> for Vec<ByondValue> {
 
 bitflags! {
     #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
-    pub(crate) struct ReasonFlags: u16 {
-        const NONE = 0;
+    pub(crate) struct ReasonFlags: u8 {
         const DISPLAY = 1 << 0;
         const HOT = 1 << 1;
         const WIND = 1 << 2;
         const CONDENSATION = 1 << 3;
-        const RADIATION_PULSE = 1 << 4;
-        const CREATE_HOT_ICE = 1 << 5;
-        const CREATE_RESIN = 1 << 6;
-        const HALLUCINATION = 1 << 7;
-        const NUCLEAR_PARTICLES = 1 << 8;
     }
 }
 
@@ -522,9 +406,6 @@ impl TryFrom<&InterestingTile> for Vec<ByondValue> {
             value.reasons.bits().to_byond()?,
             value.wind_x.to_byond()?,
             value.wind_y.to_byond()?,
-            value.tile.radiation_energy.to_byond()?,
-            value.tile.hallucination_strength.to_byond()?,
-            value.tile.nuclear_particles.to_byond()?,
         ]);
 
         Ok(ret)

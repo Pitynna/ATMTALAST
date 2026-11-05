@@ -1,6 +1,6 @@
 /obj/item/ammo_casing
 	name = "bullet casing"
-	desc = "Иногда гильза от пули — это просто гильза, и ничего более."
+	desc = "A bullet casing."
 	gender = FEMALE
 	icon = 'icons/obj/weapons/ammo.dmi'
 	icon_state = "s-casing"
@@ -60,10 +60,6 @@
 	var/no_update_names = FALSE
 	/// `desc` won't be dynamically updated if set to `TRUE`
 	var/no_update_desc = FALSE
-	///Is our bullet have homing capabilities?
-	var/smart_bullet = FALSE
-	/// How many tiles away should we check for smart auto-locking
-	var/auto_lock_range = 1
 
 /obj/item/ammo_casing/Initialize(mapload)
 	. = ..()
@@ -187,9 +183,9 @@
 		return
 
 	if(BB)
-		desc = "Заряженный и готовый к использованию патрон [get_ammo_marking()].[extra_info ? " " + extra_info : ""]"
+		desc = "A loaded [get_ammo_marking()] cartridge, ready to fire.[extra_info ? " " + extra_info : ""]"
 	else
-		desc = "Пустая гильза от пули калибра [caliber]." // no extra info because no bullet
+		desc = "An empty [caliber] casing." // no extra info because no bullet
 
 /obj/item/ammo_casing/proc/newshot(params) //For energy weapons, shotgun shells and wands (!).
 	if(!BB)
@@ -280,7 +276,7 @@
 // MARK: Caseless
 // TODO: port caseless element from TG — https://github.com/tgstation/tgstation/pull/76335
 /obj/item/ammo_casing/caseless
-	desc = "Безгильзовый патрон."
+	desc = "A caseless bullet casing."
 
 /obj/item/ammo_casing/caseless/after_fire()
 	qdel(src)

@@ -92,12 +92,6 @@
 /obj/effect/abstract/has_gravity(turf/gravity_turf)
 	return FALSE
 
-/obj/effect/abstract/narsie_act()
-	return
-
-/obj/effect/abstract/ratvar_act()
-	return
-
 /obj/effect/abstract/ex_act(severity, target)
 	return
 

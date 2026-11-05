@@ -5,16 +5,6 @@
 	nodamage = TRUE
 	damage = 0
 
-/obj/projectile/clown/get_ru_names()
-	return alist(
-		NOMINATIVE = "щёлк-хлоп",
-		GENITIVE = "щёлк-хлопа",
-		DATIVE = "щёлк-хлопу",
-		ACCUSATIVE = "щёлк-хлоп",
-		INSTRUMENTAL = "щёлк-хлопом",
-		PREPOSITIONAL = "щёлк-хлопе",
-	)
-
 /obj/projectile/clown/on_hit(atom/target, blocked, hit_zone)
 	. = ..()
 	if(blocked >= 100)

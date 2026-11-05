@@ -354,7 +354,7 @@
 /obj/item/paintkit/ashed
 	name = "Ashed customisation kit"
 	icon_state = "paintkit_ash"
-	desc = "Набор, позволяющий вам переделать многие экзокостюмы в их более шахтёрский аналог! По крайней мере, расцветкой."
+	desc = "A kit that converts many exosuits into their mining counterparts! In color, at least."
 
 	new_name = "Ashed Mech"
 	name_prefix = "Ashed"
@@ -370,7 +370,7 @@
 /obj/item/paintkit/lockermech_ashed
 	name = "Ashed customisation kit"
 	icon_state = "paintkit_ash"
-	desc = "Набор, позволяющий вам переделать шкафомех в его более шахтёрский аналог! По крайней мере, расцветкой."
+	desc = "A kit that converts a locker mech into its mining counterpart! In color, at least."
 
 	name_prefix = "Ashed"
 	new_icon = "ashedlockermech"

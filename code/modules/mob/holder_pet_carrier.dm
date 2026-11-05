@@ -1,6 +1,6 @@
 /obj/item/pet_carrier
-	name = "маленькая переноска"
-	desc = "Переноска для маленьких животных."
+	name = "small pet carrier"
+	desc = "A carrier for small animals."
 	icon_state = "pet_carrier"
 	item_state = "pet_carrier"
 	max_integrity = 100
@@ -17,8 +17,8 @@
 	var/contains_pet_color_close = "#949494ff"
 
 /obj/item/pet_carrier/normal
-	name = "переноска"
-	desc = "Переноска для небольших животных."
+	name = "pet carrier"
+	desc = "A carrier for smaller animals."
 	icon_state = "pet_carrier_normal"
 	item_state = "pet_carrier_normal"
 	max_integrity = 200
@@ -119,7 +119,7 @@
 	desc = initial(desc)
 	var/mob/living/animal = locate() in src
 	if(animal)
-		desc += "\n\nВнутри [animal.name]\n"
+		desc += "\n\n[animal.name] is inside.\n"
 		desc += animal.desc
 
 /obj/item/pet_carrier/update_overlays()

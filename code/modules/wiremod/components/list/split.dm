@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/split
 	display_name = "Разделить"
-	desc = "Разделяет строку по разделителю, превращая её в список"
+	desc = "Splits a string at a separator, turning it into a list."
 	category = "List"
 
 	/// The input port

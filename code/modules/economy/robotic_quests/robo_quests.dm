@@ -244,7 +244,7 @@
 
 /obj/item/disk/design_disk/roboquest
 	name = "roboquests design disk"
-	desc = "Вы этого не должны видеть. Напишите в баг-репорты."
+	desc = "You should not be seeing this. Please file a bug report."
 	icon_state = "holodisk"
 	///used in examine hints
 	var/hint_name = "items"

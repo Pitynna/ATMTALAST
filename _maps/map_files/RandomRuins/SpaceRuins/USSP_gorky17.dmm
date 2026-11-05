@@ -1158,9 +1158,9 @@
 /area/ruin/space/USSP_gorky17/common)
 "fn" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/solmaintnorth)
@@ -1373,9 +1373,6 @@
 /area/ruin/space/USSP_gorky17/check1)
 "gn" = (
 /obj/structure/table,
-/obj/machinery/ninja_bloodscan_machine{
-	desc = "A very complex machine designed to scan blood samples on the smallest level."
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkpurplefull"
 	},
@@ -2099,8 +2096,8 @@
 "jJ" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /turf/space,
 /area/template_noop)
@@ -2812,10 +2809,6 @@
 	},
 /area/ruin/space/USSP_gorky17/engineering)
 "mJ" = (
-/obj/machinery/atmospherics/unary/tank/air/ninja{
-	dir = 8;
-	volume = 20000
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -5564,9 +5557,9 @@
 "yF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 6;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/solmaintnorth)
@@ -6141,8 +6134,8 @@
 	name = "Gorky17 exterior lockdown"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/solmaintnorth)
@@ -6327,7 +6320,6 @@
 	},
 /area/ruin/space/USSP_gorky17/common)
 "BA" = (
-/obj/machinery/atmospherics/unary/tank/air/ninja,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/gate)
 "BC" = (
@@ -6775,12 +6767,10 @@
 /obj/structure/closet/crate/secure/biohazard{
 	req_access = list(122)
 	},
-/obj/item/melee/cultblade,
 /obj/item/paper/poisonedtalisman,
 /obj/item/circuitboard/HONKputer,
 /obj/item/soulstone,
 /obj/effect/turf_decal/delivery/red/partial,
-/obj/item/whetstone/cult,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/gate)
 "DK" = (

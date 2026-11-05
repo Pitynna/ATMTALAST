@@ -307,7 +307,7 @@
 	result = list(
 		/datum/nothing = 27,
 		/obj/item/storage/box/syndie_kit/space = 1,
-		/obj/item/mod/control/pre_equipped/traitor = 1,
+		/obj/item/storage/box/syndie_kit/hardsuit = 1,
 		/obj/item/clothing/shoes/magboots/syndie = 1,
 		/obj/item/clothing/suit/armor/vest/combat = 1,
 		/obj/item/ammo_box/magazine/m10mm = 1,
@@ -332,8 +332,6 @@
 		/obj/item/stack/sheet/mineral/plasma{amount = 20} = 1,
 		/obj/item/stack/sheet/mineral/silver{amount = 20} = 1,
 		/obj/item/stack/sheet/mineral/gold{amount = 20} = 1,
-		/obj/item/mod/module/magboot/advanced = 1,
-		/obj/item/mod/module/visor/night = 1,
 	)
 
 /obj/effect/spawner/random_spawners/syndicate/loot/level3
@@ -367,9 +365,6 @@
 		/obj/item/batterer = 1,
 		/obj/item/toy/plushie/carp/dehy_carp = 1,
 		/obj/item/clothing/glasses/hud/security/chameleon = 1,
-		/obj/item/mod/module/visor/thermal = 1,
-		/obj/item/mod/module/stealth = 1,
-		/obj/item/mod/module/power_kick = 1,
 	)
 
 /obj/effect/spawner/random_spawners/syndicate/loot/level4
@@ -440,32 +435,14 @@
 		/obj/item/clothing/head/scorched_skull = 40,
 	)
 
-/obj/effect/spawner/random_spawners/mod
-	name = "MOD module spawner"
-	icon_state = "circuit"
-
-/obj/effect/spawner/random_spawners/mod/maint
-	name = "maint MOD module spawner"
-	result = list(
-		/obj/item/mod/module/springlock = 2,
-		/obj/item/mod/module/balloon = 1,
-		/obj/item/mod/module/stamp = 1,
-		/obj/item/mod/module/paper_dispenser = 1,
-		/obj/item/mod/module/hat_stabilizer = 2,
-		/obj/item/mod/module/bikehorn = 1,
-		/obj/item/mod/module/dispenser = 1,
-	)
-
 // Security armory random guns
 /obj/effect/spawner/random_spawners/security_lasers
 	name = "lasers closet spawner"
 	icon_state = "guncabinet_laser"
 	result = list(
 		/obj/structure/closet/secure_closet/guncabinet/lasergun = 50,
-		//obj/structure/closet/secure_closet/guncabinet/lr30 = 50,
-		//obj/structure/closet/secure_closet/guncabinet/energygun = 50,
-		/obj/structure/closet/secure_closet/guncabinet/automatic_carbine = 50,
-		/obj/structure/closet/secure_closet/guncabinet/accumulator_gun = 50,
+		/obj/structure/closet/secure_closet/guncabinet/lr30 = 50,
+		/obj/structure/closet/secure_closet/guncabinet/energygun = 50,
 	)
 
 /obj/effect/spawner/random_spawners/security_lasers/Initialize(mapload)
@@ -473,21 +450,6 @@
 		result = list(
 			/obj/structure/closet/secure_closet/guncabinet/lasercarbine = 50,
 			/obj/structure/closet/secure_closet/guncabinet/plasma_pistols = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_HITSCAN_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/lasergun = 50,
-			/obj/structure/closet/secure_closet/guncabinet/lasergun/pistols = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ACCUMULATOR_RIFLE_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/accumulator_gun = 50,
-			/obj/structure/closet/secure_closet/guncabinet/accumulator_gun/pistols = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_AUTOMATIC_LASER_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/automatic_carbine = 50,
-			/obj/structure/closet/secure_closet/guncabinet/automatic_carbine/pistols = 50,
 		)
 	return ..()
 
@@ -507,18 +469,6 @@
 			/obj/structure/closet/secure_closet/guncabinet/saber = 33,
 			/obj/structure/closet/secure_closet/guncabinet/ak814 = 34,
 		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_HITSCAN_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/lasergun/smg = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ACCUMULATOR_RIFLE_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/accumulator_gun/smg = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_AUTOMATIC_LASER_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/automatic_carbine/smg = 50,
-		)
 	return ..()
 
 
@@ -529,18 +479,3 @@
 		/obj/structure/closet/secure_closet/guncabinet/riot_shotgun = 50,
 		/obj/structure/closet/secure_closet/guncabinet/winchester = 50,
 	)
-
-/obj/effect/spawner/random_spawners/security_shotguns/Initialize(mapload)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_HITSCAN_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/lasergun/shotguns = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ACCUMULATOR_RIFLE_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/accumulator_gun/shotguns = 50,
-		)
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_AUTOMATIC_LASER_ARMORY))
-		result = list(
-			/obj/structure/closet/secure_closet/guncabinet/automatic_carbine/shotguns = 50,
-		)
-	return ..()

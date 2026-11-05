@@ -5,7 +5,6 @@
 	window_x = 340
 	window_y = 106
 	proper_name = "Cyborg"
-	skill_type = /datum/skill/research/robotics
 
 /datum/wires/robot/New(atom/_holder)
 	wires = list(WIRE_AI_CONTROL, WIRE_BORG_CAMERA, WIRE_BORG_LAWCHECK, WIRE_BORG_LOCKED)
@@ -31,7 +30,7 @@
 					if(R.connected_ai?.laws)
 						SSticker?.score?.save_silicon_laws(R, usr, "laws sync with AI", log_all_laws = TRUE)
 			else
-				if(!R.lawupdate && !R.emagged && !isclocker(R))
+				if((!R.lawupdate) && (!R.emagged))
 					R.lawupdate = TRUE
 
 		if(WIRE_AI_CONTROL) //Cut the AI wire to reset AI control
@@ -52,7 +51,7 @@
 	var/mob/living/silicon/robot/R = holder
 	switch(wire)
 		if(WIRE_AI_CONTROL) //pulse the AI wire to make the borg reselect an AI
-			if(!R.emagged && !isclocker(R))
+			if(!R.emagged)
 				R.connect_to_ai(select_active_ai())
 				R.show_laws()
 

@@ -1,7 +1,7 @@
 /// The light switch. Can have multiple per area.
 /obj/machinery/light_switch
 	name = "light switch"
-	desc = "Выключатель для управления светом во всей комнате."
+	desc = "A switch for turning the lights on and off for an entire room."
 	icon = 'icons/obj/engines_and_power/power.dmi'
 	icon_state = "light-nopower"
 	base_icon_state = "light"
@@ -18,16 +18,6 @@
 	var/sound_on = 'sound/items/magin.ogg'
 	/// The sound the light makes when it's turned off
 	var/sound_off = 'sound/items/magout.ogg'
-
-/obj/machinery/light_switch/get_ru_names()
-	return alist(
-		NOMINATIVE = "выключатель света",
-		GENITIVE = "выключателя света",
-		DATIVE = "выключателю света",
-		ACCUSATIVE = "выключатель света",
-		INSTRUMENTAL = "выключателем света",
-		PREPOSITIONAL = "выключателе света"
-	)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26, 26)
 
@@ -140,8 +130,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26, 26)
 		span_notice("You are unwrenching [src] from the wall..."),
 		span_warning("You hear ratcheting.")
 	)
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(!tool.use_tool(src, user, 3 SECONDS * construction_mod, volume = tool.tool_volume))
+	if(!tool.use_tool(src, user, 30, volume = tool.tool_volume))
 		return
 	WRENCH_UNANCHOR_WALL_MESSAGE
 	new/obj/item/mounted/frame/light_switch(get_turf(src))
@@ -150,7 +139,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26, 26)
 
 /obj/item/circuit_component/light_switch
 	display_name = "выключатель света"
-	desc = "Позволяет управлять освещением."
+	desc = "Allows control of the lighting."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL
 
 	///If the lights should be turned on or off when the trigger is triggered.

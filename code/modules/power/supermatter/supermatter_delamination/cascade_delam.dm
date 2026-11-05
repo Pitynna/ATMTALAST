@@ -9,19 +9,6 @@
 	delam_rift = null
 	return ..()
 
-/datum/sm_delam/cascade/can_select(obj/machinery/power/supermatter_crystal/sm)
-	if(!sm.is_main_engine)
-		return FALSE
-	var/total_moles = sm.absorbed_gasmix.total_moles()
-	if(total_moles < MOLE_PENALTY_THRESHOLD * sm.absorption_ratio)
-		return FALSE
-	var/cached_gas_percentage = sm.gas_percentage
-	for(var/gas_id in list(TLV_ANTINOBLIUM, TLV_HYPERNOBLIUM))
-		var/percent = cached_gas_percentage[gas_id]
-		if(!percent || percent < 0.4)
-			return FALSE
-	return TRUE
-
 /datum/sm_delam/cascade/delam_progress(obj/machinery/power/supermatter_crystal/sm)
 	if(!..())
 		return FALSE

@@ -6,9 +6,7 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 */
 /obj/machinery/r_n_d/circuit_imprinter
 	name = "circuit imprinter"
-	desc = "Оборудование, предназначенное для создания печатных плат \
-			на основе шаблонов для печати для последующей установки в различное оборудование. \
-			Управление происходит с помощью подключаемой консоли."
+	desc = "Manufactures circuit boards for the construction of machines."
 	icon_state = "circuit_imprinter"
 	base_icon_state = "circuit_imprinter"
 	container_type = OPENCONTAINER
@@ -36,26 +34,12 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 
 	reagents = new()
 
-/obj/machinery/r_n_d/circuit_imprinter/get_ru_names()
-	return alist(
-		NOMINATIVE = "принтер плат",
-		GENITIVE = "принтера плат",
-		DATIVE = "принтеру плат",
-		ACCUSATIVE = "принтер плат",
-		INSTRUMENTAL = "принтером плат",
-		PREPOSITIONAL = "принтере плат",
-	)
-
 /obj/machinery/r_n_d/circuit_imprinter/Initialize(mapload)
 	. = ..()
 	init_parts()
 	create_reagents()
 	RefreshParts()
 	ADD_TRAIT(src, TRAIT_LOGISTICS_COMPATIBLE, INNATE_TRAIT)
-	if(is_taipan(z))
-		icon_state = "syndie_circuit_imprinter"
-		base_icon_state = "syndie_circuit_imprinter"
-
 /obj/machinery/r_n_d/circuit_imprinter/Destroy(force)
 	if(linked_console)
 		linked_console.linked_imprinter = null
@@ -402,8 +386,8 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/print_module(list/design)
 	flick("[base_icon_state]_ani", src)
-	CALCULATE_SKILL_MOD(usr, PROTOLATHE_DURATION_MOD, skill_duration_mod)
-	addtimer(CALLBACK(src, PROC_REF(finish_module_print), design), 1.6 SECONDS * skill_duration_mod)
+
+	addtimer(CALLBACK(src, PROC_REF(finish_module_print), design), 1.6 SECONDS)
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/finish_module_print(list/design)
 	var/atom/movable/created_atom
@@ -437,8 +421,7 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 	return new design.build_path(drop_location())
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/try_use_materials(list/design_materials)
-	CALCULATE_SKILL_MOD(usr, PROTOLATHE_RESOURCE_MOD, skill_mod)
-	return materials.use_amount(design_materials, efficiency_coeff * skill_mod)
+	return materials.use_amount(design_materials, efficiency_coeff)
 
 /// Maximum number of characters in the name of the circuit
 #define MAX_CHAR_IN_NAME 30

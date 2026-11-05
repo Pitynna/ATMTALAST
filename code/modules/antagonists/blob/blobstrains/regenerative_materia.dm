@@ -11,7 +11,7 @@
 	point_rate_bonus = 2
 
 /datum/reagent/blob/regenerative_materia
-	name = "Регенеративная Материя"
+	name = "Regenerative Materia"
 	id = "blob_regenerative_materia"
 	taste_description = "небес"
 	color = "#A88FB7"

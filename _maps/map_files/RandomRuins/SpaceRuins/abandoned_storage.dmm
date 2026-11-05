@@ -3186,7 +3186,6 @@
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 "ZW" = (
-/obj/machinery/atmospherics/unary/tank/air/ninja,
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 

@@ -13,16 +13,6 @@
 	light_on = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/controller/get_ru_names()
-	return alist(
-		NOMINATIVE = "контроллер",
-		GENITIVE = "контроллера",
-		DATIVE = "контроллеру",
-		ACCUSATIVE = "контроллер",
-		INSTRUMENTAL = "контроллером",
-		PREPOSITIONAL = "контроллере"
-	)
-
 /obj/item/controller/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NO_CLONE_IN_EXPERIMENTATOR, INNATE_TRAIT)
@@ -32,8 +22,7 @@
 
 /obj/item/circuit_component/controller
 	display_name = "Контроллер"
-	desc = "Используется для получения входных сигналов от корпуса контроллера. \
-			Используйте корпус в руке для активации выходного сигнала."
+	desc = "Receives input from a controller shell. Use the shell in your hand to activate the output signal."
 	/// The three separate buttons that are called in attack_hand on the shell.
 	var/datum/port/output/signal
 	var/datum/port/output/alt

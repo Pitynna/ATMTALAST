@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/pinpointer
 	display_name = "Указатель координат"
-	desc = "Компонент, который возвращает GPS-координаты наблюдаемого объекта, пока он находится в поле зрения."
+	desc = "A component that returns the tracked object's GPS coordinates while it is in view."
 	category = "Entity"
 
 	var/datum/port/input/target

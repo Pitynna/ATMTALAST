@@ -8,7 +8,7 @@
 
 /obj/machinery/computer/shuttle/addition_goals
 	name = "Addition Goal Shuttle Console"
-	desc = "Используется для вызова и отправки шаттла дополнительных целей смены."
+	desc = "Used to call and dispatch the additional shift objectives shuttle."
 	shuttleId = "addition_goal"
 	possible_destinations = "graveyard_church;addition_goal_dock"
 

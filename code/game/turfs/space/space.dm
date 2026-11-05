@@ -180,7 +180,6 @@ GLOBAL_LIST_EMPTY(starlight)
 		return ..()
 
 	if(destination_z && destination_x && destination_y)
-		destination_z = check_taipan_availability(arrived, destination_z)
 		if(!arrived.zMove(null, locate(destination_x, destination_y, destination_z), ZMOVE_ALLOW_BUCKLED|ZMOVE_WITH_DELAY))
 			arrived.loc = old_loc
 			return ..()
@@ -195,42 +194,6 @@ GLOBAL_LIST_EMPTY(starlight)
 		return ..()
 
 	. = ..()
-
-/turf/space/proc/check_taipan_availability(atom/movable/arrived, destination_z)
-	if(!is_taipan(destination_z))
-		return destination_z
-	var/arrived_is_mob = isliving(arrived)
-	var/mob/living/arrived_mob = arrived
-	if(arrived_is_mob && (arrived_mob.mind in GLOB.taipan_players_active))
-		to_chat(arrived_mob, span_notice("Вы вернулись в ваш родной скрытый от чужих глаз сектор..."))
-		return destination_z
-	// if we are not from taipan's crew, then we cannot get there until there is enought players on Taipan
-	if(length(GLOB.taipan_players_active) < TAIPAN_PLAYER_LIMIT)
-		var/datum/space_level/taipan_zlvl
-		var/datum/space_level/direct
-		for(var/list_parser in GLOB.space_manager.z_list)
-			var/datum/space_level/lvl = GLOB.space_manager.z_list[list_parser]
-			if(TAIPAN in lvl.flags)
-				taipan_zlvl = lvl
-		if(!arrived.dir)
-			arrived.dir = SOUTH
-		switch(arrived.dir)
-			if(NORTH)
-				direct = taipan_zlvl.get_connection(Z_LEVEL_NORTH)
-			if(SOUTH)
-				direct = taipan_zlvl.get_connection(Z_LEVEL_SOUTH)
-			if(EAST)
-				direct = taipan_zlvl.get_connection(Z_LEVEL_EAST)
-			if(WEST)
-				direct = taipan_zlvl.get_connection(Z_LEVEL_WEST)
-		destination_z = direct?.zpos
-		// if we are still going to get to taipan after all the checks... Then get random available z_lvl instead
-		if(!destination_z || is_taipan(destination_z))
-			destination_z = pick(get_all_linked_levels_zpos())
-		return destination_z
-	if(arrived_is_mob)
-		to_chat(arrived_mob, span_warning("Вы попадаете в загадочный сектор полный астероидов... Тут стоит быть осторожнее..."))
-	return destination_z
 
 /turf/space/singularity_act()
 	return

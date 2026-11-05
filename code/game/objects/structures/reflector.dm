@@ -260,7 +260,7 @@
 
 /obj/item/circuit_component/reflector
 	display_name = "Отражатель"
-	desc = "Позволяет регулировать угол отражателя."
+	desc = "Allows the reflector's angle to be adjusted."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL
 
 	/// Angle the reflector will be set to at trigger unless locked

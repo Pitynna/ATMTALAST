@@ -5,41 +5,12 @@
 
 /obj/item/deck/cards
 	name = "deck of cards"
-	desc = "Простая колода игральных карт."
+	desc = "A simple deck of playing cards."
 	gender = FEMALE
 	icon_state = "deck_nanotrasen_full"
 	card_style = "nanotrasen"
 
-/obj/item/deck/cards/get_ru_names()
-	return alist(
-		NOMINATIVE = "колода карт",
-		GENITIVE = "колоды карт",
-		DATIVE = "колоде карт",
-		ACCUSATIVE = "колоду карт",
-		INSTRUMENTAL = "колодой карт",
-		PREPOSITIONAL = "колоде карт",
-	)
-
 /obj/item/deck/cards/build_deck()
-	var/list/ru_name = list(
-		"Spades" = "Пики",
-		"Clubs" = "Трефы",
-		"Diamonds" = "Бубны",
-		"Hearts" = "Червы",
-		"Ace" = "Туз",
-		"Jack" = "Валет",
-		"Queen" = "Дама",
-		"King" = "Король",
-		"2" = "2",
-		"3" = "3",
-		"4" = "4",
-		"5" = "5",
-		"6" = "6",
-		"7" = "7",
-		"8" = "8",
-		"9" = "9",
-		"10" = "10",
-	)
 	for(var/suit in list("Spades","Clubs","Diamonds","Hearts"))
 		var/card_appearance
 		var/colour
@@ -58,10 +29,10 @@
 				card_appearance = "sc_[colour]_[rank]_[card_style]"
 			else
 				card_appearance = "sc_[number] of [suit]_[card_style]"
-			cards += new /datum/playingcard("[ru_name[number]] [ru_name[suit]]", card_appearance, "singlecard_down_[card_style]")
+			cards += new /datum/playingcard("[number] of [suit]", card_appearance, "singlecard_down_[card_style]")
 
 	for(var/jokers in 1 to 2)
-		cards += new /datum/playingcard("Джокер", "sc_Joker_[card_style]", "singlecard_down_[card_style]")
+		cards += new /datum/playingcard("Joker", "sc_Joker_[card_style]", "singlecard_down_[card_style]")
 
 /obj/item/deck/cards/update_icon_state()
 	if(!LAZYLEN(cards))
@@ -78,24 +49,14 @@
 
 /obj/item/deck/cards/doublecards
 	name = "double deck of cards"
-	desc = "Простая колода игральных карт. Удвоенная. Может быть, играть с такой будет в два раза интереснее?"
+	desc = "A simple deck of playing cards. Doubled. Perhaps it makes the game twice as interesting?"
 	icon_state = "deck_double_nanotrasen_full"
 	deck_size = 2
 	deck_style = "double"
 
-/obj/item/deck/cards/doublecards/get_ru_names()
-	return alist(
-		NOMINATIVE = "двойная колода карт",
-		GENITIVE = "двойной колоды карт",
-		DATIVE = "двойной колоде карт",
-		ACCUSATIVE = "двойную колоду карт",
-		INSTRUMENTAL = "двойной колодой карт",
-		PREPOSITIONAL = "двойной колоде карт",
-	)
-
 /obj/item/deck/cards/syndicate
 	name = "suspicious looking deck of cards"
-	desc = "Колода тёмно-красных игральных карт. Они кажутся необычно жёсткими."
+	desc = "A deck of space-grade playing cards. They seem unusually rigid."
 	icon_state = "deck_syndicate_full"
 	card_style = "syndicate"
 	card_hitsound = 'sound/weapons/bladeslice.ogg'
@@ -105,16 +66,6 @@
 	card_attack_verb = list("атаковал", "полоснул", "порезал")
 	card_resistance_flags = NONE
 	sharp = TRUE
-
-/obj/item/deck/cards/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "подозрительная колода карт",
-		GENITIVE = "подозрительной колоды карт",
-		DATIVE = "подозрительной колоде карт",
-		ACCUSATIVE = "подозрительную колоду карт",
-		INSTRUMENTAL = "подозрительной колодой карт",
-		PREPOSITIONAL = "подозрительной колоде карт",
-	)
 
 /obj/item/deck/cards/syndicate/sharpen_act(obj/item/whetstone/whetstone, mob/user)
 	desc = "[initial(desc)] [span_boldnotice("[whetstone.prefix]!")]"
@@ -132,36 +83,16 @@
 
 /obj/item/deck/cards/tiny
 	name = "deck of tiny cards"
-	desc = "Простая колода миниатюрных игральных карт."
+	desc = "A simple deck of tiny playing cards."
 	icon_state = "deck"
 	card_style = "simple"
 	simple_deck = TRUE
-
-/obj/item/deck/cards/tiny/get_ru_names()
-	return alist(
-		NOMINATIVE = "колода миниатюрных карт",
-		GENITIVE = "колоды миниатюрных карт",
-		DATIVE = "колоде миниатюрных карт",
-		ACCUSATIVE = "колоду миниатюрных карт",
-		INSTRUMENTAL = "колодой миниатюрных карт",
-		PREPOSITIONAL = "колоде миниатюрных карт",
-	)
 
 /obj/item/deck/cards/tiny/update_icon_state()
 	return
 
 /obj/item/deck/cards/tiny/doublecards
 	name = "double deck of tiny cards"
-	desc = "Простая колода миниатюрных игральных карт. Удвоенная. Может быть, играть с такой будет в два раза интереснее?"
+	desc = "A simple deck of tiny playing cards. Multiplied by two. Does not necessarily come with twice the fun."
 	icon_state = "doubledeck"
 	deck_size = 2
-
-/obj/item/deck/cards/tiny/doublecards/get_ru_names()
-	return alist(
-		NOMINATIVE = "двойная колода миниатюрных карт",
-		GENITIVE = "двойной колоды миниатюрных карт",
-		DATIVE = "двойной колоде миниатюрных карт",
-		ACCUSATIVE = "двойную колоду миниатюрных карт",
-		INSTRUMENTAL = "двойной колодой миниатюрных карт",
-		PREPOSITIONAL = "двойной колоде миниатюрных карт",
-	)

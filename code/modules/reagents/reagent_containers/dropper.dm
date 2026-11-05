@@ -4,7 +4,7 @@
 
 /obj/item/reagent_containers/dropper
 	name = "dropper"
-	desc = "Пипетка, используемая для точного вливания небольших объёмов вещества в виде капель."
+	desc = "A dropper. Transfers up to 5 units."
 	gender = FEMALE
 	icon_state = "dropper"
 	item_state = "dropper"
@@ -14,16 +14,6 @@
 	container_type = TRANSPARENT
 	custom_price = PAYCHECK_MIN * 0.2
 	fill_icon_thresholds = list(10, 25, 50, 75, 100)
-
-/obj/item/reagent_containers/dropper/get_ru_names()
-	return alist(
-		NOMINATIVE = "пипетка",
-		GENITIVE = "пипетки",
-		DATIVE = "пипетке",
-		ACCUSATIVE = "пипетку",
-		INSTRUMENTAL = "пипеткой",
-		PREPOSITIONAL = "пипетке",
-	)
 
 /obj/item/reagent_containers/dropper/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	return ATTACK_CHAIN_PROCEED
@@ -110,24 +100,14 @@
 
 /obj/item/reagent_containers/dropper/cyborg
 	name = "Industrial Dropper"
-	desc = "Пипетка увеличенного объёма, используемая для точного вливания небольших объёмов вещества в виде капель."
+	desc = "A larger dropper. Transfers up to 10 units."
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 	volume = 10
 
-/obj/item/reagent_containers/dropper/cyborg/get_ru_names()
-	return alist(
-		NOMINATIVE = "промышленная пипетка",
-		GENITIVE = "промышленной пипетки",
-		DATIVE = "промышленной пипетке",
-		ACCUSATIVE = "промышленную пипетку",
-		INSTRUMENTAL = "промышленной пипеткой",
-		PREPOSITIONAL = "промышленной пипетке",
-	)
-
 /obj/item/reagent_containers/dropper/precision
 	name = "pipette"
-	desc = "Высокоточная пипетка уменьшенного объёма, используемая для работы с малыми объёмами вещества. Обычно применяются в биологии и химии."
+	desc = "A high precision pipette. Transfers up to 1 unit."
 	icon_state = "pipette"
 	amount_per_transfer_from_this = 1
 	possible_transfer_amounts = list(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1)
@@ -139,17 +119,6 @@
 /obj/item/reagent_containers/dropper/precision/update_icon_state()
 	icon_state = "[initial(icon_state)][reagents.total_volume ? "1" : ""]"
 
-/obj/item/reagent_containers/dropper/precision/get_ru_names()
-	return alist(
-		NOMINATIVE = "микропипетка",
-		GENITIVE = "микропипетки",
-		DATIVE = "микропипетке",
-		ACCUSATIVE = "микропипетку",
-		INSTRUMENTAL = "микропипеткой",
-		PREPOSITIONAL = "микропипетке",
-	)
-
-//Syndicate item. Virus transmitting mini hypospray
 /obj/item/reagent_containers/dropper/precision/viral_injector
 
 /obj/item/reagent_containers/dropper/precision/viral_injector/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)

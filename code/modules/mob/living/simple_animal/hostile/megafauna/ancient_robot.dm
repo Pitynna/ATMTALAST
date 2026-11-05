@@ -780,20 +780,10 @@ Difficulty: Very Hard
 
 /obj/effect/temp_visual/rock
 	name = "floating rock"
-	desc = "Лучше сосредоточьтесь на уклонении, чем разглядывать его."
+	desc = "Might want to focus on dodging, rather than looking at it."
 	icon = 'icons/obj/meteor.dmi'
 	icon_state = "small1"
 	duration = 20
-
-/obj/effect/temp_visual/rock/get_ru_names()
-	return alist(
-		NOMINATIVE = "парящий камень",
-		GENITIVE = "парящего камня",
-		DATIVE = "парящему камню",
-		ACCUSATIVE = "парящий камень",
-		INSTRUMENTAL = "парящим камнем",
-		PREPOSITIONAL = "парящем камне",
-	)
 
 /obj/effect/temp_visual/dragon_swoop/bubblegum/ancient_robot //this is the worst path I have ever made
 	icon_state = "target"

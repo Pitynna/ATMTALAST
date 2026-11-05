@@ -1,6 +1,6 @@
 /obj/machinery/computer/pandemic
 	name = "PanD.E.M.I.C 220"
-	desc = "Высокотехнологичная машина, предназначенная для исследования и работы с вирусными культурами. Лучший друг вирусолога!"
+	desc = "Used to work with viruses."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "mixer0"
 	circuit = /obj/item/circuitboard/pandemic
@@ -9,16 +9,6 @@
 	var/obj/item/reagent_containers/beaker = null
 	var/wait = null
 	var/printing = null
-
-/obj/machinery/computer/pandemic/get_ru_names()
-	return alist(
-		NOMINATIVE = "Панд.Е.М.И.К 220",
-		GENITIVE = "Панд.Е.М.И.К 220",
-		DATIVE = "Панд.Е.М.И.К 220",
-		ACCUSATIVE = "Панд.Е.М.И.К 220",
-		INSTRUMENTAL = "Панд.Е.М.И.К 220",
-		PREPOSITIONAL = "Панд.Е.М.И.К 220",
-	)
 
 /obj/machinery/computer/pandemic/examine(mob/user)
 	. = ..()
@@ -293,16 +283,16 @@
 			bottle.pixel_y = rand(-3, 3)
 			replicator_cooldown(5 SECONDS)
 			var/list/data = list("diseases"=list(copy))
-			bottle.name = "культура [capitalize(name)]"
+			bottle.name = "[capitalize(name)] culture"
 			bottle.ru_names = alist(
-				NOMINATIVE = "культура [capitalize(name)]",
+				NOMINATIVE = "[capitalize(name)] culture",
 				GENITIVE = "культуры [capitalize(name)]",
 				DATIVE = "культуре [capitalize(name)]",
 				ACCUSATIVE = "культуру [capitalize(name)]",
 				INSTRUMENTAL = "культурой [capitalize(name)]",
 				PREPOSITIONAL = "культуре [capitalize(name)]",
 			)
-			bottle.desc = "Небольшая бутылка. Содержит синтетическую кровь, заражённую культурой [capitalize(copy.agent)]."
+			bottle.desc = "A small bottle containing synthetic blood infected with a culture of [capitalize(copy.agent)]."
 			bottle.reagents.add_reagent("blood", 20, data)
 
 		if("addSympthom")
@@ -337,9 +327,9 @@
 					vaccine_name = disease.name
 
 			if(vaccine_type)
-				bottle.name = "вакцина [capitalize(vaccine_name)]"
+				bottle.name = "[capitalize(vaccine_name)] vaccine"
 				bottle.ru_names = alist(
-					NOMINATIVE = "вакцина [capitalize(vaccine_name)]",
+					NOMINATIVE = "[capitalize(vaccine_name)] vaccine",
 					GENITIVE = "вакцины [capitalize(vaccine_name)]",
 					DATIVE = "вакцине [capitalize(vaccine_name)]",
 					ACCUSATIVE = "вакцину [capitalize(vaccine_name)]",
@@ -396,7 +386,7 @@
 		form.info += "Печать ответственного лица, разрешившего выпуск вируса:"
 		form.populatefields()
 		form.updateinfolinks()
-		form.name = "Выпуск вируса «[disease.name]»"
+		form.name = "Release of Virus '[disease.name]'"
 		form.update_icon()
 		printing = null
 
@@ -436,13 +426,7 @@
 		return
 
 	var/datum/disease/virus/advance/advance_virus = disease
-	GET_SKILL_LEVEL(usr, /datum/skill/medical/virusology, virusology_skill_level)
-	var/random_symptom = null
-	if(virusology_skill_level > SKILL_LEVEL_BASIC)
-		var/list/random_symptoms = advance_virus.GenerateSymptoms(level_max = virusology_skill_level, count_of_symptoms = (2 + (virusology_skill_level-SKILL_LEVEL_BASIC)))
-		random_symptom = tgui_input_list(usr, "Выберите симптом для добавления", "Добавление симптома", random_symptoms)
-	else
-		random_symptom = safepick(advance_virus.GenerateSymptoms(level_max = virusology_skill_level))
+	var/random_symptom = safepick(advance_virus.GenerateSymptoms(level_max = 3))
 
 	if(random_symptom)
 		advance_virus.AddSymptom(random_symptom)
@@ -456,12 +440,7 @@
 		return
 
 	var/datum/disease/virus/advance/advance_virus = disease
-	GET_SKILL_LEVEL(usr, /datum/skill/medical/virusology, virusology_skill_level)
-	var/random_symptom = null
-	if(virusology_skill_level > SKILL_LEVEL_BASIC)
-		random_symptom = tgui_input_list(usr, "Выберите симптом для удаления", "Удаление симптома", advance_virus.symptoms)
-	else
-		random_symptom = safepick(advance_virus.symptoms)
+	var/random_symptom = safepick(advance_virus.symptoms)
 
 	if(random_symptom)
 		advance_virus.RemoveSymptom(random_symptom)

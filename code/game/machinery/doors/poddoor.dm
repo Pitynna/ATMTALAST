@@ -65,10 +65,11 @@
 		return
 	if(!hasPower())
 		to_chat(user, span_notice("You start forcing [src] open..."))
-		if(!hasPower())
-			open()
-		else
-			to_chat(user, span_warning("[src] resists your efforts to force it!"))
+		if(do_after(user, 5 SECONDS * I.toolspeed, src, category = DA_CAT_TOOL))
+			if(!hasPower())
+				open()
+			else
+				to_chat(user, span_warning("[src] resists your efforts to force it!"))
 	else
 		to_chat(user, span_warning("[src] resists your efforts to force it!"))
 

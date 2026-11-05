@@ -11,7 +11,7 @@
 
 /obj/item/organ/internal/liver
 	name = "liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала человеку."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a human."
 	gender = FEMALE
 	icon_state = "liver"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
@@ -24,16 +24,6 @@
 	var/failure_time = 0
 	/// Can the liver regenerate itself
 	var/regeneration = FALSE
-
-/obj/item/organ/internal/liver/get_ru_names()
-	return alist(
-		NOMINATIVE = "печень человека",
-		GENITIVE = "печени человека",
-		DATIVE = "печени человека",
-		ACCUSATIVE = "печень человека",
-		INSTRUMENTAL = "печенью человека",
-		PREPOSITIONAL = "печени человека",
-	)
 
 /obj/item/organ/internal/liver/insert(mob/living/carbon/human/target)
 	. = ..()
@@ -175,26 +165,16 @@
 
 /obj/item/organ/internal/liver/cybernetic
 	name = "cybernetic liver"
-	desc = "Электронное устройство, имитирующее работу органической печени. Функционально не имеет никаких отличий от органического аналога, кроме производственных затрат."
+	desc = "An electronic device designed to mimic the functions of a human liver. It has no benefits over an organic liver, but is easy to produce."
 	icon_state = "liver-c"
 	origin_tech = "biotech=4"
 	status = ORGAN_ROBOT
 	pickup_sound = 'sound/items/handling/pickup/component_pickup.ogg'
 	drop_sound = 'sound/items/handling/drop/component_drop.ogg'
 
-/obj/item/organ/internal/liver/cybernetic/get_ru_names()
-	return alist(
-		NOMINATIVE = "кибернетическая печень",
-		GENITIVE = "кибернетической печени",
-		DATIVE = "кибернетической печени",
-		ACCUSATIVE = "кибернетическую печень",
-		INSTRUMENTAL = "кибернетической печенью",
-		PREPOSITIONAL = "кибернетической печени",
-	)
-
 /obj/item/organ/internal/liver/cybernetic/upgraded
 	name = "upgraded cybernetic liver"
-	desc = "Продвинутая версия кибернетической печени. Имеет большую прочность по сравнению с аналогами, лучше перерабатывает токсины и самовосстанавливается во время бездействия."
+	desc = "An electronic device designed to mimic the functions of a human liver. It works better than a normal liver."
 	icon_state = "liver-c-u"
 	origin_tech = "biotech=4, materials=4, engineering=4"
 	max_damage = 120
@@ -202,16 +182,6 @@
 	min_broken_damage = 90
 	toxin_healing = 2 * LIVER_DEFAULT_TOX_HEALING
 	regeneration = TRUE
-
-/obj/item/organ/internal/liver/cybernetic/upgraded/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенная кибернетическая печень",
-		GENITIVE = "улучшенной кибернетической печени",
-		DATIVE = "улучшенной кибернетической печени",
-		ACCUSATIVE = "улучшенную кибернетическую печень",
-		INSTRUMENTAL = "улучшенной кибернетической печенью",
-		PREPOSITIONAL = "улучшенной кибернетической печени",
-	)
 
 /obj/item/organ/internal/liver/cybernetic/upgraded/insert(mob/living/carbon/target, special)
 	. = ..()

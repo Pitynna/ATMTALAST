@@ -32,17 +32,13 @@
 /turf/simulated/floor/indestructible/beach/water/deep/wood_floor,
 /area/awaymission/undersea)
 "ai" = (
-/obj/structure/cult/pylon,
 /turf/simulated/floor/indestructible/beach/water/deep/wood_floor,
 /area/awaymission/undersea)
 "aj" = (
-/obj/structure/cult/altar,
 /obj/item/veilrender/crabrender,
 /turf/simulated/floor/indestructible/beach/water/deep/wood_floor,
 /area/awaymission/undersea)
 "ak" = (
-/obj/structure/cult/altar,
-/obj/item/tome,
 /turf/simulated/floor/indestructible/beach/water/deep/wood_floor,
 /area/awaymission/undersea)
 "al" = (
@@ -50,7 +46,6 @@
 /turf/simulated/floor/indestructible/beach/water/deep/wood_floor,
 /area/awaymission/undersea)
 "am" = (
-/obj/structure/cult/forge,
 /turf/simulated/floor/indestructible/beach/water/deep/wood_floor,
 /area/awaymission/undersea)
 "an" = (

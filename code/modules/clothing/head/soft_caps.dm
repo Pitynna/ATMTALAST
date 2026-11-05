@@ -178,31 +178,12 @@
 
 /obj/item/clothing/head/tchaikowsky/baseballcap
 	name = "baseball cap (blue)"
-	desc = "Бейсболка синего цвета. Мерч команды \"Нанотрейзен Лейкерс\"."
+	desc = "A blue baseball cap. Nanotrasen Lakers merchandise."
 	icon_state = "baseball_blue"
 	item_state = "baseball_blue"
 
-/obj/item/clothing/head/tchaikowsky/baseballcap/get_ru_names()
-	return alist(
-		NOMINATIVE = "синяя бейсболка",
-		GENITIVE = "синей бейсболки",
-		DATIVE = "синей бейсболке",
-		ACCUSATIVE = "синюю бейсболку",
-		INSTRUMENTAL = "синей бейсболкой",
-		PREPOSITIONAL = "синей бейсболке",
-	)
 /obj/item/clothing/head/tchaikowsky/baseballcap/brown
 	name = "baseball cap (brown)"
-	desc = "Бейсболка коричневого цвета. Мерч команды \"Киберсан Индастриз\"."
+	desc = "A brown baseball cap. Cybersun Industries merchandise."
 	icon_state = "baseball_brown"
 	item_state = "baseball_brown"
-
-/obj/item/clothing/head/tchaikowsky/baseballcap/brown/get_ru_names()
-	return alist(
-		NOMINATIVE = "коричневая бейсболка",
-		GENITIVE = "коричневой бейсболки",
-		DATIVE = "коричневой бейсболке",
-		ACCUSATIVE = "коричневую бейсболку",
-		INSTRUMENTAL = "коричневой бейсболкой",
-		PREPOSITIONAL = "коричневой бейсболке",
-	)

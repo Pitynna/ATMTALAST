@@ -484,8 +484,8 @@
 						if(ME2.Uses <= 0) // give the notification that the slime core is dead
 							for(var/mob/living/M in seen)
 								to_chat(M, span_notice("[icon2html(my_atom, M)] Мощность [my_atom.declent_ru(GENITIVE)] расходуется в реакции."))
-								ME2.name = "использованный экстракт слайма"
-								ME2.desc = "Этот экстракт уже был использован."
+								ME2.name = "used slime extract"
+								ME2.desc = "This extract has already been used."
 
 					if(C.mix_sound)
 						playsound(get_turf(my_atom), C.mix_sound, 80, TRUE)

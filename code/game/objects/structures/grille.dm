@@ -39,13 +39,6 @@
 	if(!anchored)
 		. += span_notice("The anchoring screws are <i>unscrewed</i>. The rods look like they could be <b>cut</b> through.")
 
-/obj/structure/grille/ratvar_act()
-	if(broken)
-		new /obj/structure/grille/ratvar/broken(loc)
-	else
-		new /obj/structure/grille/ratvar(loc)
-	qdel(src)
-
 /obj/structure/grille/rcd_deconstruct_act(mob/user, obj/item/rcd/our_rcd)
 	. = ..()
 	if(!our_rcd.checkResource(RCD_COST_WINDOW * 2, user))
@@ -54,8 +47,7 @@
 		return RCD_ACT_FAILED
 	to_chat(user, "Деконструкция окна...")
 	playsound(get_turf(our_rcd), 'sound/machines/click.ogg', 50, TRUE)
-	CALCULATE_SKILL_MOD(user, BUILDING_SPEED_MOD, building_mod)
-	if(!do_after(user, 2 SECONDS * our_rcd.toolspeed * building_mod, src, category = DA_CAT_TOOL))
+	if(!do_after(user, 2 SECONDS * our_rcd.toolspeed, src, category = DA_CAT_TOOL))
 		to_chat(user, span_warning("ОШИБКА! Деконструкция прервана!"))
 		return RCD_ACT_FAILED
 	if(!our_rcd.useResource(RCD_COST_WINDOW * 2, user))
@@ -184,8 +176,7 @@
 	. = TRUE
 	if(shock(user, 100))
 		return
-	CALCULATE_SKILL_MOD(user, BUILDING_SPEED_MOD, building_mod)
-	if(!I.use_tool(src, user, 1 SECONDS * building_mod, volume = I.tool_volume))
+	if(!I.use_tool(src, user, 0, volume = I.tool_volume))
 		return
 	deconstruct()
 
@@ -195,8 +186,7 @@
 	. = TRUE
 	if(shock(user, 90))
 		return
-	CALCULATE_SKILL_MOD(user, BUILDING_SPEED_MOD, building_mod)
-	if(!I.use_tool(src, user, 1 SECONDS * building_mod, volume = I.tool_volume))
+	if(!I.use_tool(src, user, 0, volume = I.tool_volume))
 		return
 	set_anchored(!anchored)
 	user.visible_message(span_notice("[user] [anchored ? "fastens" : "unfastens"] [src]."), \
@@ -236,8 +226,7 @@
 			to_chat(user, span_notice("There is already a window facing this way there."))
 			return
 	to_chat(user, span_notice("You start placing the window..."))
-	CALCULATE_SKILL_MOD(user, BUILDING_SPEED_MOD, building_mod)
-	if(do_after(user, 2 SECONDS * building_mod, src))
+	if(do_after(user, 2 SECONDS, src))
 		if(!loc || !anchored) //Grille destroyed or unanchored while waiting
 			return
 		for(var/obj/structure/window/WINDOW in loc)
@@ -286,8 +275,7 @@
 /obj/structure/grille/proc/shock(mob/user, prb)
 	if(!anchored || broken)		// unanchored/broken grilles are never connected
 		return FALSE
-	CALCULATE_SKILL_MOD(user, ELECTRICITY_NEGATIVE_CHANCE_MOD, prob_mod)
-	if(!prob(prb * prob_mod))
+	if(!prob(prb))
 		return FALSE
 	if(!in_range(src, user))//To prevent TK and mech users from getting shocked
 		return FALSE
@@ -334,38 +322,4 @@
 	rods_amount = 1
 	rods_broken = 0
 	grille_type = /obj/structure/grille
-	broken_type = null
-
-/obj/structure/grille/ratvar
-	icon_state = "ratvargrille"
-	name = "cog grille"
-	desc = "A strangely-shaped grille."
-	broken_type = /obj/structure/grille/ratvar/broken
-
-/obj/structure/grille/ratvar/Initialize(mapload)
-	. = ..()
-	if(broken)
-		new /obj/effect/temp_visual/ratvar/grille/broken(get_turf(src))
-	else
-		new /obj/effect/temp_visual/ratvar/grille(get_turf(src))
-		new /obj/effect/temp_visual/ratvar/beam/grille(get_turf(src))
-
-/obj/structure/grille/ratvar/narsie_act()
-	take_damage(rand(1, 3), BRUTE)
-	if(src)
-		var/previouscolor = color
-		color = COLOR_CULT_RED
-		animate(src, color = previouscolor, time = 8)
-
-/obj/structure/grille/ratvar/ratvar_act()
-	return
-
-/obj/structure/grille/ratvar/broken
-	icon_state = "brokenratvargrille"
-	density = FALSE
-	obj_integrity = 20
-	broken = TRUE
-	rods_amount = 1
-	rods_broken = 0
-	grille_type = /obj/structure/grille/ratvar
 	broken_type = null

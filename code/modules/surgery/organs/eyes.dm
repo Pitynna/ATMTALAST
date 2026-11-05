@@ -15,7 +15,7 @@
 
 /obj/item/organ/internal/eyes
 	name = "eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали человеку."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a human."
 	gender = PLURAL
 	icon_state = "eyes"
 	parent_organ_zone = BODY_ZONE_HEAD
@@ -35,16 +35,6 @@
 	var/lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	/// Modifies examine time for living mobs. Uses in /mob/living/run_examinate(atom/target)
 	var/examine_mod = 1
-
-/obj/item/organ/internal/eyes/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаза человека",
-		GENITIVE = "глаз человека",
-		DATIVE = "глазам человека",
-		ACCUSATIVE = "глаза человека",
-		INSTRUMENTAL = "глазами человека",
-		PREPOSITIONAL = "глазах человека",
-	)
 
 /obj/item/organ/internal/eyes/proc/update_colour()
 	dna.write_eyes_attributes(src)
@@ -122,22 +112,12 @@
 
 /obj/item/organ/internal/eyes/cybernetic
 	name = "cybernetic eyes"
-	desc = "Электронное устройство, имитирующее работу органических глаз. Функционально не имеет никаких отличий от органического аналога, кроме производственных затрат."
+	desc = "An electronic device designed to mimic the functions of a pair of human eyes. It has no benefits over organic eyes, but is easy to produce."
 	icon_state = "eyes-c"
 	origin_tech = "biotech=4"
 	status = ORGAN_ROBOT
 	pickup_sound = 'sound/items/handling/pickup/component_pickup.ogg'
 	drop_sound = 'sound/items/handling/drop/component_drop.ogg'
-
-/obj/item/organ/internal/eyes/cybernetic/get_ru_names()
-	return alist(
-		NOMINATIVE = "кибернетические глаза",
-		GENITIVE = "кибернетических глаз",
-		DATIVE = "кибернетическим глазам",
-		ACCUSATIVE = "кибернетические глаза",
-		INSTRUMENTAL = "кибернетическими глазами",
-		PREPOSITIONAL = "кибернетических глазах",
-	)
 
 /obj/item/organ/internal/eyes/on_life()
 	var/update_flags = STATUS_UPDATE_NONE

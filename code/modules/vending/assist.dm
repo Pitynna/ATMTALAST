@@ -1,6 +1,6 @@
 /obj/machinery/vending/assist
 	name = "assistomate"
-	desc = "Торговый автомат, предлагающий ассортимент различных деталей и компонентов."
+	desc = "A vending machine offering assorted parts and components."
 	panel_overlay = "generic_panel"
 	screen_overlay = "generic"
 	lightmask_overlay = "generic_lightmask"
@@ -28,14 +28,4 @@
 		/obj/item/assembly/timer = 2,
 		/obj/item/assembly/voice = 2,
 		/obj/item/assembly/health = 2,
-	)
-
-/obj/machinery/vending/assist/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Assistomate",
-		GENITIVE = "торгового автомата Assistomate",
-		DATIVE = "торговому автомату Assistomate",
-		ACCUSATIVE = "торговый автомат Assistomate",
-		INSTRUMENTAL = "торговым автоматом Assistomate",
-		PREPOSITIONAL = "торговом автомате Assistomate",
 	)

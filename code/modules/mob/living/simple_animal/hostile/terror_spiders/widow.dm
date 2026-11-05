@@ -31,7 +31,6 @@
 	)
 	stat_attack = UNCONSCIOUS // ensures they will target people in crit, too!
 	spider_tier = TS_TIER_2
-	tts_seed = "Karastamper"
 	spider_intro_text = "Будучи Вдовой Ужаса, ваша цель — внести хаос на поле боя при помощи своих плевков, вы также смертоносны вблизи и с каждым укусом вводите в противников опасный яд. Несмотря на скорость и смертоносность, вы довольно хрупки, поэтому не стоит атаковать тяжело вооружённых противников!"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/widow/get_ru_names()
@@ -64,17 +63,7 @@
 
 /obj/structure/spider/terrorweb/widow
 	name = "sinister web"
-	desc = "На нитях этой паутины сверкают капли тёмной жидкости."
-
-/obj/structure/spider/terrorweb/widow/get_ru_names()
-	return alist(
-		NOMINATIVE = "зловещая паутина",
-		GENITIVE = "зловещей паутины",
-		DATIVE = "зловещей паутине",
-		ACCUSATIVE = "зловещую паутину",
-		INSTRUMENTAL = "зловещей паутиной",
-		PREPOSITIONAL = "зловещей паутине",
-	)
+	desc = "This web has beads of a dark fluid on its strands."
 
 /obj/structure/spider/terrorweb/widow/web_special_ability(mob/living/carbon/C)
 	if(istype(C))

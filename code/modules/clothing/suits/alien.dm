@@ -12,24 +12,14 @@
 
 /obj/item/clothing/suit/unathi/robe
 	name = "roughspun robes"
-	desc = "Традиционный гардеробный элемент унати."
+	desc = "A traditional Unathi garment."
 	icon_state = "robe-unathi"
 	item_state = "robe-unathi"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 
-/obj/item/clothing/suit/unathi/robe/get_ru_names()
-	return alist(
-		NOMINATIVE = "грубошерстные одеяния",
-		GENITIVE = "грубошерстных одеяний",
-		DATIVE = "грубошерстным одеяниям",
-		ACCUSATIVE = "грубошерстные одеяния",
-		INSTRUMENTAL = "грубошерстными одеяниями",
-		PREPOSITIONAL = "грубошерстных одеяниях",
-	)
-
 /obj/item/clothing/neck/mantle/unathi
 	name = "hide mantle"
-	desc = "Довольно жуткая подборка выделанных шкур, сшитых вместе, чтобы получилась рваная накидка."
+	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
 	icon_state = "mantle-unathi"
 	body_parts_covered = UPPER_TORSO
 	sprite_sheets = list(
@@ -39,14 +29,4 @@
 		SPECIES_WOLPIN = 'icons/mob/clothing/species/monkey/neck.dmi',
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/neck.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/neck.dmi',
-	)
-
-/obj/item/clothing/neck/mantle/unathi/get_ru_names()
-	return alist(
-		NOMINATIVE = "накидка из шкур",
-		GENITIVE = "накидки из шкур",
-		DATIVE = "накидке из шкур",
-		ACCUSATIVE = "накидку из шкур",
-		INSTRUMENTAL = "накидкой из шкур",
-		PREPOSITIONAL = "накидке из шкур",
 	)

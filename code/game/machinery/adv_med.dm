@@ -1,6 +1,6 @@
 /obj/machinery/bodyscanner
 	name = "body scanner"
-	desc = "Сложное медицинское устройство, используется для сканирования физического состояния гуманоидов."
+	desc = "A sophisticated device which reports most internal and external injuries."
 	icon = 'icons/obj/machines/cryogenic2.dmi'
 	icon_state = "bodyscanner-open"
 	density = TRUE
@@ -14,16 +14,6 @@
 	var/static/list/known_implants = list(/obj/item/implant/chem, /obj/item/implant/death_alarm, /obj/item/implant/mindshield, /obj/item/implant/tracking, /obj/item/implant/health)
 	var/isPrinting = FALSE
 	var/obj/item/card/id/inserted_id = null
-
-/obj/machinery/bodyscanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский сканер",
-		GENITIVE = "медицинского сканера",
-		DATIVE = "медицинскому сканеру",
-		ACCUSATIVE = "медицинский сканер",
-		INSTRUMENTAL = "медицинским сканером",
-		PREPOSITIONAL = "медицинском сканере",
-	)
 
 /obj/machinery/bodyscanner/Destroy()
 	go_out()
@@ -240,16 +230,6 @@ GAME_VERB_SRC(/obj/machinery/bodyscanner, eject, oview(1), "Извлечь па�
 		updateUsrDialog()
 		update_icon(UPDATE_ICON_STATE)
 
-/obj/machinery/bodyscanner/narsie_act()
-	go_out()
-	new /obj/effect/gibspawner/generic(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	qdel(src)
-
-/obj/machinery/bodyscanner/ratvar_act()
-	go_out()
-	new /obj/effect/decal/cleanable/blood/gibs/clock(get_turf(src))
-	qdel(src)
-
 /obj/machinery/bodyscanner/ui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -417,7 +397,7 @@ GAME_VERB_SRC(/obj/machinery/bodyscanner, eject, oview(1), "Извлечь па�
 			P.info += "<b>Время сканирования</b> [station_time_timestamp()]<br><br>"
 			P.info += "[generate_printing_text()]"
 			P.info += "<br><br><b>Заметки:</b><br>"
-			P.name = "Отчёт по сканированию пациента — [name]"
+			P.name = "Patient Scan Report - [name]"
 			isPrinting = FALSE
 		if("insurance")
 			do_insurance_collection(usr, occupant, inserted_id ? inserted_id.associated_account_number : null)

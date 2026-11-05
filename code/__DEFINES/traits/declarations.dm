@@ -257,8 +257,6 @@
 #define TRAIT_COMBAT_EXOFRAME_EMP_SHIELD "combat_exoframe_emp_shield"
 /// Item still allows you to examine items while blind and actively held.
 #define TRAIT_BLIND_TOOL "blind_tool"
-/// A melee weapon, for this items work combat/melee skill damage mod
-#define TRAIT_MELEE_WEAPON "melee_weapon"
 
 #define TRAIT_SHRAPNEL "shrapnel"
 /// Trait for items that can be attached to tripwire. Dont forget about on_tripwire_trigger(obj/item/tripwire/base, mob/user) proc for each item
@@ -494,9 +492,6 @@
 #define STATION_TRAIT_POST_WAR_TRASH "station_trait_post_war_trash"
 #define STATION_TRAIT_CRAMPED_INTERNALS "station_trait_cramped_internals"
 #define STATION_TRAIT_LOOTED_ARMORY "station_trait_looted_armory"
-#define STATION_TRAIT_HITSCAN_ARMORY "station_trait_hitscan_armory"
-#define STATION_TRAIT_ACCUMULATOR_RIFLE_ARMORY "station_trait_accumulator_rifle_armory"
-#define STATION_TRAIT_AUTOMATIC_LASER_ARMORY "station_trait_automatic_laser_armory"
 #define STATION_TRAIT_SPIKED_DRINKS "station_trait_spiked_drinks"
 #define STATION_TRAIT_BANANIUM_SHIPMENTS "station_trait_bananium_shipments"
 #define STATION_TRAIT_MIMANIUM_SHIPMENTS "station_trait_mimanium_shipments"
@@ -510,7 +505,6 @@
 #define STATION_TRAIT_MEDBOT_MANIA "station_trait_medbot_mania"
 #define STATION_TRAIT_UPGRADED_ARMORY "station_trait_upgraded_armory"
 #define STATION_TRAIT_GREEN_ENERGY "station_trait_green_energy"
-#define STATION_TRAIT_OUTDATED_HARDSUITS "station_trait_outdated_hardsuits"
 
 // MARK: Radiation
 /// Marks that this object is irradiated
@@ -676,7 +670,6 @@
 /// Makes an item active, this is generally used by energy based weapons or toggle based items.
 #define TRAIT_ITEM_ACTIVE "item_active"
 
-#define TRAIT_HAS_ANTAG_SKILLS "has_antag_skills"
 
 /// A general trait for tracking whether a zombie owned the organ or limb
 #define TRAIT_I_WANT_BRAINS_ORGAN "zombie_organ"

@@ -21,19 +21,9 @@
 	desc = "Pimp your ride"
 	icon_state = "paint_red"
 
-/obj/item/pod_paint_bucket/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор для покраски челнока",
-		GENITIVE = "набора для покраски челнока",
-		DATIVE = "набору для покраски челнока",
-		ACCUSATIVE = "набор для покраски челнока",
-		INSTRUMENTAL = "набором для покраски челнока",
-		PREPOSITIONAL = "наборе для покраски челнока",
-	)
-
 /obj/spacepod
 	name = "space pod"
-	desc = "Космический челнок, предназначенный для путешествий в открытом космосе."
+	desc = "A space pod meant for space travel."
 	icon = 'icons/goonstation/48x48/pods.dmi'
 	density = TRUE //Dense. To raise the heat.
 
@@ -96,16 +86,6 @@
 	var/datum/action/innate/pod/pod_toggle_lights/lights_action = new
 	var/datum/action/innate/pod/pod_fire/fire_action = new
 	var/datum/action/innate/pod/pod_misc/misc_action = new
-
-/obj/spacepod/get_ru_names()
-	return alist(
-		NOMINATIVE = "космический челнок",
-		GENITIVE = "космического челнока",
-		DATIVE = "космическому челноку",
-		ACCUSATIVE = "космический челнок",
-		INSTRUMENTAL = "космическим челноком",
-		PREPOSITIONAL = "космическом челноке",
-	)
 
 /obj/spacepod/return_obj_air()
 	RETURN_TYPE(/datum/gas_mixture)
@@ -672,7 +652,7 @@
 
 /obj/spacepod/civilian
 	icon_state = "pod_civ"
-	desc = "Стильный гражданский космический челнок."
+	desc = "A sleek civilian space pod."
 
 /obj/spacepod/civilian/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
@@ -690,36 +670,16 @@
 
 /obj/spacepod/sec
 	name = "security spacepod"
-	desc = "Бронированный челнок службы безопасности с усиленной бронёй."
+	desc = "An armed security spacepod with reinforced armor plating."
 	icon_state = "pod_dece"
 	health = 600
 
-/obj/spacepod/sec/get_ru_names()
-	return alist(
-		NOMINATIVE = "космический челнок охраны",
-		GENITIVE = "космического челнока охраны",
-		DATIVE = "космическому челноку охраны",
-		ACCUSATIVE = "космический челнок охраны",
-		INSTRUMENTAL = "космическим челноком охраны",
-		PREPOSITIONAL = "космическом челноке охраны",
-	)
-
 /obj/spacepod/syndi
 	name = "syndicate spacepod"
-	desc = "Челнок, окрашенный в цвета \"Синдиката\"."
+	desc = "A spacepod painted in syndicate colors."
 	icon_state = "pod_synd"
 	health = 400
 	unlocked = FALSE
-
-/obj/spacepod/syndi/get_ru_names()
-	return alist(
-		NOMINATIVE = "космический челнок \"Синдиката\"",
-		GENITIVE = "космического челнока \"Синдиката\"",
-		DATIVE = "космическому челноку \"Синдиката\"",
-		ACCUSATIVE = "космический челнок \"Синдиката\"",
-		INSTRUMENTAL = "космическим челноком \"Синдиката\"",
-		PREPOSITIONAL = "космическом челноке \"Синдиката\"",
-	)
 
 /obj/spacepod/syndi/unlocked
 	unlocked = TRUE
@@ -755,17 +715,17 @@
 	icon_state = pick("pod_civ", "pod_black", "pod_mil", "pod_synd", "pod_gold", "pod_industrial")
 	switch(icon_state)
 		if("pod_civ")
-			desc = "Элегантный гражданский челнок."
+			desc = "An elegant civilian pod."
 		if("pod_black")
-			desc = "Чёрный челнок без опознавательных знаков."
+			desc = "An unmarked black pod."
 		if("pod_mil")
-			desc = "Тёмно-серый челнок с эмблемой военного подразделения \"Нанотрейзен\"."
+			desc = "A dark gray pod bearing the emblem of a Nanotrasen military unit."
 		if("pod_synd")
-			desc = "Грозный военный челнок с надписью \"Нахуй НТ\" на борту."
+			desc = "An intimidating military pod with \"Fuck NT\" written on its side."
 		if("pod_gold")
-			desc = "Позолоченный челнок — явно стоил кому-то целого состояния."
+			desc = "A gold-plated pod. It must have cost someone a fortune."
 		if("pod_industrial")
-			desc = "Промышленный челнок с усиленной конструкцией."
+			desc = "An industrial pod with a reinforced frame."
 	update_icons()
 
 /obj/spacepod/proc/toggle_internal_tank(mob/user)
@@ -1214,10 +1174,6 @@
 
 	. = TRUE
 
-	var/skill_factor
-	if(pilot)
-		CALCULATE_SKILL_MOD(pilot, SPACEPOD_BATTERY_USAGE_MOD, skill_mod)
-		skill_factor = skill_mod
 	if(health <= 0)
 		to_chat(user, span_warning("Она мертва, Джим."))
 		. = FALSE
@@ -1227,7 +1183,7 @@
 	else if(!COOLDOWN_FINISHED(src, cooldown_emp))
 		to_chat(user, span_warning("Интерфейс не отвечает. Перезагрузка через [COOLDOWN_TIMELEFT(src, cooldown_emp)] [DECL_U_Y_0(COOLDOWN_TIMELEFT(src, cooldown_emp))]."))
 		. = FALSE
-	else if(!battery.use(1 / skill_factor))
+	else if(!battery.use(1))
 		to_chat(user, span_warning("Недостаточно энергии."))
 		. = FALSE
 	if(!.)
@@ -1258,7 +1214,7 @@
 
 //// Damaged spacepod
 /obj/spacepod/civilian/damaged
-	desc = "Сильно поврежденный челнок."
+	desc = "Heavy damaged spacepod"
 
 /obj/spacepod/civilian/damaged/Initialize(mapload)
 	. = ..()

@@ -236,8 +236,7 @@
 		return
 	var/time = max(50 * (1 - obj_integrity / max_integrity), 5)
 	WELDER_ATTEMPT_REPAIR_MESSAGE
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(I.use_tool(src, user, time * construction_mod, volume = I.tool_volume))
+	if(I.use_tool(src, user, time, volume = I.tool_volume))
 		WELDER_REPAIR_SUCCESS_MESSAGE
 		update_integrity(max_integrity)
 		update_icon()
@@ -256,9 +255,8 @@
 	if(!I.tool_use_check(user, 0))
 		return FALSE
 
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
 	to_chat(user, span_notice("Now [anchored ? "un" : ""]securing [name]."))
-	if(!I.use_tool(src, user, time * construction_mod, volume = I.tool_volume))
+	if(!I.use_tool(src, user, time, volume = I.tool_volume))
 		return FALSE
 
 	to_chat(user, span_notice("You've [anchored ? "un" : ""]secured [name]."))
@@ -296,22 +294,6 @@
 
 /obj/proc/check_uplink_validity()
 	return TRUE
-
-/obj/proc/cult_conceal() //Called by cult conceal spell
-	return
-
-/obj/proc/cult_reveal() //Called by cult reveal spell and chaplain's bible
-	return
-
-/obj/proc/set_cult_veil(veiled)
-	if(veiled)
-		ADD_TRAIT(src, TRAIT_CULT_CONCEALED, CULT_TRAIT)
-		SET_PLANE_IMPLICIT(src, CULT_VEIL_PLANE)
-		mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-		return
-	REMOVE_TRAIT(src, TRAIT_CULT_CONCEALED, CULT_TRAIT)
-	SET_PLANE_IMPLICIT(src, initial(plane))
-	mouse_opacity = initial(mouse_opacity)
 
 /obj/proc/is_mob_spawnable() //Called by spawners_menu methods to determine if you can use an object through spawn-menu
 	//just override it to return TRUE in your object if you want to use it through spawn menu

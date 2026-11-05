@@ -7,7 +7,7 @@
 
 /obj/machinery/station_map
 	name = "station holomap"
-	desc = "Карта окрестностей станции, только виртуальная."
+	desc = "A virtual map of the surrounding station."
 	icon = 'icons/obj/stationmap.dmi'
 	icon_state = "station_map"
 	layer = ABOVE_WINDOW_LAYER
@@ -36,16 +36,6 @@
 
 	/// The various images and icons for the map are stored in here, as well as the actual big map itself.
 	var/datum/station_holomap/holomap_datum
-
-/obj/machinery/station_map/get_ru_names()
-	return alist(
-		NOMINATIVE = "голокарта станции",
-		GENITIVE = "голокарты станции",
-		DATIVE = "голокарте станции",
-		ACCUSATIVE = "голокарту станции",
-		INSTRUMENTAL = "голокартой станции",
-		PREPOSITIONAL = "голокарте станции",
-	)
 
 /obj/machinery/station_map/Initialize(mapload)
 	if(!current_z_level)
@@ -432,7 +422,7 @@
 
 /obj/item/circuitboard/machine/station_map/security
 	name = "Security Station Map"
-	desc = "Виртуальная карта станции. Показывает сотрудников с имплантом защиты разума."
+	desc = "A virtual station map showing personnel with mindshield implants."
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
 	build_path = /obj/machinery/station_map/security/directional/north
 	origin_tech = "programming=4;engineering=4"
@@ -486,68 +476,6 @@
 /obj/machinery/station_map/security/directional/east
 	dir = EAST
 	pixel_x = 32
-
-/obj/item/circuitboard/machine/HFR_fuel_input
-	name = "HFR Fuel Input"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/atmospherics/unary/hypertorus/fuel_input
-	req_components = list(
-		/obj/item/stack/sheet/plasteel = 5,
-	)
-
-/obj/item/circuitboard/machine/HFR_waste_output
-	name = "HFR Waste Output"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/atmospherics/unary/hypertorus/waste_output
-	req_components = list(
-		/obj/item/stack/sheet/plasteel = 5,
-	)
-
-/obj/item/circuitboard/machine/HFR_moderator_input
-	name = "HFR Moderator Input"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/atmospherics/unary/hypertorus/moderator_input
-	req_components = list(
-		/obj/item/stack/sheet/plasteel = 5,
-	)
-
-/obj/item/circuitboard/machine/HFR_core
-	name = "HFR core"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/atmospherics/unary/hypertorus/core
-	req_components = list(
-		/obj/item/stack/cable_coil = 10,
-		/obj/item/stack/sheet/glass = 10,
-		/obj/item/stack/sheet/plasteel = 10,
-	)
-
-/obj/item/circuitboard/machine/HFR_corner
-	name = "HFR Corner"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/hypertorus/corner
-	req_components = list(
-		/obj/item/stack/sheet/plasteel = 5,
-	)
-
-/obj/item/circuitboard/machine/HFR_interface
-	name = "HFR Interface"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/hypertorus/interface
-	req_components = list(
-		/obj/item/stack/cable_coil = 10,
-		/obj/item/stack/sheet/glass = 10,
-		/obj/item/stack/sheet/plasteel = 5,
-	)
-
-/obj/item/circuitboard/machine/crystallizer
-	name = "Crystallizer"
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/atmospherics/binary/crystallizer
-	req_components = list(
-		/obj/item/stack/cable_coil = 10,
-		/obj/item/stack/sheet/glass = 10,
-		/obj/item/stack/sheet/plasteel = 5,
-	)
 
 #undef HOLOMAP_LOW_LIGHT
 #undef HOLOMAP_HIGH_LIGHT

@@ -123,7 +123,7 @@
 		atom.random_throw(tier * 2, tier * 3, 5)
 
 /obj/effect/anomaly/vortex/tier1
-	name = "малая вихревая аномалия"
+	name = "minor vortex anomaly"
 	core_type = /obj/item/assembly/signaler/core/vortex/tier1
 	stronger_anomaly_type = /obj/effect/anomaly/vortex/tier2
 	tier = 1
@@ -136,18 +136,8 @@
 	grav_pull_range_high = 2
 	grav_pull_strength = STAGE_THREE
 
-/obj/effect/anomaly/vortex/tier1/get_ru_names()
-	return alist(
-		NOMINATIVE = "малая вихревая аномалия", \
-		GENITIVE = "малой вихревой аномалии", \
-		DATIVE = "малой вихревой аномалии", \
-		ACCUSATIVE = "малую вихревую аномалию", \
-		INSTRUMENTAL = "малой вихревой аномалией", \
-		PREPOSITIONAL = "малой вихревой аномалии",
-	)
-
 /obj/effect/anomaly/vortex/tier2
-	name = "вихревая аномалия"
+	name = "vortex anomaly"
 	core_type = /obj/item/assembly/signaler/core/vortex/tier2
 	weaker_anomaly_type = /obj/effect/anomaly/vortex/tier1
 	stronger_anomaly_type = /obj/effect/anomaly/vortex/tier3
@@ -162,18 +152,8 @@
 	grav_pull_strength = STAGE_FOUR
 	collapse_range = 1
 
-/obj/effect/anomaly/vortex/tier2/get_ru_names()
-	return alist(
-		NOMINATIVE = "вихревая аномалия", \
-		GENITIVE = "вихревой аномалии", \
-		DATIVE = "вихревой аномалии", \
-		ACCUSATIVE = "вихревую аномалию", \
-		INSTRUMENTAL = "вихревой аномалией", \
-		PREPOSITIONAL = "вихревой аномалии",
-	)
-
 /obj/effect/anomaly/vortex/tier3
-	name = "большая вихревая аномалия"
+	name = "major vortex anomaly"
 	core_type = /obj/item/assembly/signaler/core/vortex/tier3
 	weaker_anomaly_type = /obj/effect/anomaly/vortex/tier2
 	tier = 3
@@ -187,16 +167,6 @@
 	grav_pull_strength = STAGE_FIVE
 	collapse_range = 3
 	has_warp = TRUE
-
-/obj/effect/anomaly/vortex/tier3/get_ru_names()
-	return alist(
-		NOMINATIVE = "большая вихревая аномалия", \
-		GENITIVE = "большой вихревой аномалии", \
-		DATIVE = "большой вихревой аномалии", \
-		ACCUSATIVE = "большую вихревую аномалию", \
-		INSTRUMENTAL = "большой вихревой аномалией", \
-		PREPOSITIONAL = "большой вихревой аномалии",
-	)
 
 /obj/effect/anomaly/vortex/tier3/Initialize(mapload, spawn_strength, spawn_stability)
 	. = ..()
@@ -213,7 +183,7 @@
 //			 TIER 4 ADMIN SPAWN ONLY
 
 /obj/effect/anomaly/vortex/tier4
-	name = "колоссальная вихревая аномалия"
+	name = "colossal vortex anomaly"
 	core_type = /obj/item/assembly/signaler/core/vortex/tier3/tier4
 	weaker_anomaly_type = /obj/effect/anomaly/vortex/tier3
 	tier = 4
@@ -228,16 +198,6 @@
 	grav_pull_strength = STAGE_SIX
 	collapse_range = 15
 	has_warp = TRUE
-
-/obj/effect/anomaly/vortex/tier4/get_ru_names()
-	return alist(
-		NOMINATIVE = "колоссальная вихревая аномалия", \
-		GENITIVE = "колоссальной вихревой аномалии", \
-		DATIVE = "колоссальной вихревой аномалии", \
-		ACCUSATIVE = "колоссальную вихревую аномалию", \
-		INSTRUMENTAL = "колоссальной вихревой аномалией", \
-		PREPOSITIONAL = "колоссальной вихревой аномалии",
-	)
 
 /obj/effect/anomaly/vortex/tier4/Initialize(mapload, spawn_strength, spawn_stability)
 	. = ..()

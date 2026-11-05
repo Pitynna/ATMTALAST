@@ -1,6 +1,6 @@
 /obj/machinery/vending/hatdispenser
 	name = "Hatlord 9000"
-	desc = "Торговый автомат по продаже головных уборов."
+	desc = "It doesn't seem the slightest bit unusual. This frustrates you immensely."
 	icon_state = "hats_off"
 	panel_overlay = "hats_panel"
 	screen_overlay = "hats"
@@ -30,16 +30,6 @@
 	)
 	premium = list(
 		/obj/item/clothing/head/soft/rainbow = 1,
-	)
-
-/obj/machinery/vending/hatdispenser/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Hatlord 9000",
-		GENITIVE = "торгового автомата Hatlord 9000",
-		DATIVE = "торговому автомату Hatlord 9000",
-		ACCUSATIVE = "торговый автомат Hatlord 9000",
-		INSTRUMENTAL = "торговым автоматом Hatlord 9000",
-		PREPOSITIONAL = "торговом автомате Hatlord 9000",
 	)
 
 /obj/machinery/vending/hatdispenser/free

@@ -10,16 +10,6 @@
 	usesound = 'sound/weapons/circsawhit.ogg'
 	var/obj/item/organ/internal/cyberimp/storedorgan
 
-/obj/item/autoimplanter/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоимплантер",
-		GENITIVE = "автоимплантера",
-		DATIVE = "автоимплантеру",
-		ACCUSATIVE = "автоимплантер",
-		INSTRUMENTAL = "автоимплантером",
-		PREPOSITIONAL = "автоимплантере",
-	)
-
 /obj/item/autoimplanter/old
 	icon_state = "autoimplanter"
 
@@ -89,7 +79,7 @@
 	to_chat(user, span_notice("Вы извлекли [storedorgan.name] из устройства."))
 
 /obj/item/autoimplanter/oneuse
-	desc = "Одноразовое устройство, которое автоматически вводит киберимплант пользователю без необходимости сложной хирургической операции."
+	desc = "A device that automatically injects a cyber-implant into the user without the hassle of extensive surgery. At once."
 
 /obj/item/autoimplanter/oneuse/autoimplant(mob/living/carbon/human/user)
 	. = ..()
@@ -137,76 +127,26 @@
 	name ="autoimplanter (scope)"
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/scope/hardened
 
-/obj/item/autoimplanter/oneuse/scope_eyes/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоимплантер с глазным имплантом \"Калейдо Оптикс\"",
-		GENITIVE = "автоимплантера с глазным имплантом \"Калейдо Оптикс\"",
-		DATIVE = "автоимплантеру с глазным имплантом \"Калейдо Оптикс\"",
-		ACCUSATIVE = "автоимплантер с глазным имплантом \"Калейдо Оптикс\"",
-		INSTRUMENTAL = "автоимплантером с глазным имплантом \"Калейдо Оптикс\"",
-		PREPOSITIONAL = "автоимплантере с глазным имплантом \"Калейдо Оптикс\"",
-	)
-
 /obj/item/autoimplanter/oneuse/sec_hud
 	name = "autoimplanter (sechud)"
-	desc = "Одноразовый автоимплантер, содержащий в себе охранный ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing a security HUD. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/hud/security
 	icon_state = "autoimplanter"
 
-/obj/item/autoimplanter/oneuse/sec_hud/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоимплантер с охранным ИЛС",
-		GENITIVE = "автоимплантера с охранным ИЛС",
-		DATIVE = "автоимплантеру с охранным ИЛС",
-		ACCUSATIVE = "автоимплантер с охранным ИЛС",
-		INSTRUMENTAL = "автоимплантером с охранным ИЛС",
-		PREPOSITIONAL = "автоимплантере с охранным ИЛС",
-	)
-
 /obj/item/autoimplanter/oneuse/med_hud
 	name = "autoimplanter (medhud)"
-	desc = "Одноразовый автоимплантер, содержащий в себе медицинский ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing a medical HUD. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/hud/medical
 	icon_state = "autoimplanter"
 
-/obj/item/autoimplanter/oneuse/med_hud/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоимплантер с медицинским ИЛС",
-		GENITIVE = "автоимплантера с медицинским ИЛС",
-		DATIVE = "автоимплантеру с медицинским ИЛС",
-		ACCUSATIVE = "автоимплантер с медицинским ИЛС",
-		INSTRUMENTAL = "автоимплантером с медицинским ИЛС",
-		PREPOSITIONAL = "автоимплантере с медицинским ИЛС",
-	)
-
 /obj/item/autoimplanter/oneuse/diagnostic_hud
 	name = "autoimplanter (diagnostic hud)"
-	desc = "Одноразовый автоимплантер, содержащий в себе диагностический ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing a diagnostic HUD. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/hud/diagnostic
 	icon_state = "autoimplanter"
 
-/obj/item/autoimplanter/oneuse/diagnostic_hud/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоимплантер с диагностическим ИЛС",
-		GENITIVE = "автоимплантера с диагностическим ИЛС",
-		DATIVE = "автоимплантеру с диагностическим ИЛС",
-		ACCUSATIVE = "автоимплантер с диагностическим ИЛС",
-		INSTRUMENTAL = "автоимплантером с диагностическим ИЛС",
-		PREPOSITIONAL = "автоимплантере с диагностическим ИЛС",
-	)
-
 /obj/item/autoimplanter/oneuse/meson_eyes
 	name = "autoimplanter (meson)"
-	desc = "Одноразовый автоимплантер, содержащий в себе мезонный ИЛС. Имплант можно достать отверткой, но вставить назад уже нельзя."
+	desc = "A single-use auto-implanter containing meson vision. The implant can be removed with a screwdriver, but cannot be put back."
 	storedorgan = new /obj/item/organ/internal/cyberimp/eyes/meson
 	icon_state = "autoimplanter"
-
-/obj/item/autoimplanter/oneuse/meson_eyes/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоимплантер с мезонным ИЛС",
-		GENITIVE = "автоимплантера с мезонным ИЛС",
-		DATIVE = "автоимплантеру с мезонным ИЛС",
-		ACCUSATIVE = "автоимплантер с мезонным ИЛС",
-		INSTRUMENTAL = "автоимплантером с мезонным ИЛС",
-		PREPOSITIONAL = "автоимплантере с мезонным ИЛС",
-	)

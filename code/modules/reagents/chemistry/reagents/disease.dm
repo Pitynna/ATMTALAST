@@ -1,5 +1,5 @@
 /datum/reagent/spider_eggs
-	name = "Паучьи яйца"
+	name = "Spider eggs"
 	id = "spidereggs"
 	description = "Мелкая пыль, содержащая паучьи яйца. О боже."
 	color = "#FFFFFF"
@@ -14,7 +14,7 @@
 	return ..()
 
 /datum/reagent/nanomachines
-	name = "Наномашины"
+	name = "Nanomachines"
 	id = "nanomachines"
 	description = "Микроскопические строительные роботы."
 	color = "#535E66" // rgb: 83, 94, 102
@@ -28,7 +28,7 @@
 	return ..()
 
 /datum/reagent/xenomicrobes
-	name = "Ксеномикробы"
+	name = "Xenomicrobes"
 	id = "xenomicrobes"
 	description = "Микробы с совершенно чужеродной клеточной структурой."
 	color = "#535E66" // rgb: 83, 94, 102
@@ -42,7 +42,7 @@
 	return ..()
 
 /datum/reagent/fungalspores
-	name = "Микробы Космического Туберкулёза"
+	name = "Tubercle bacillus Cosmosis microbes"
 	id = "fungalspores"
 	description = "Активные споры грибов."
 	color = "#92D17D" // rgb: 146, 209, 125
@@ -56,7 +56,7 @@
 	return ..()
 
 /datum/reagent/jagged_crystals
-	name = "Зазубренные кристаллы"
+	name = "Jagged Crystals"
 	id = "jagged_crystals"
 	description = "В результате быстрого химического разложения эти кристаллы превратились в витые шипы."
 	color = "#FA0000" // rgb: 250, 0, 0
@@ -69,7 +69,7 @@
 	return ..()
 
 /datum/reagent/salmonella
-	name = "Сальмонелла"
+	name = "Salmonella"
 	id = "salmonella"
 	description = "Отвратительная бактерия, встречающаяся в испорченных продуктах."
 	reagent_state = LIQUID
@@ -83,7 +83,7 @@
 	return ..()
 
 /datum/reagent/gibbis
-	name = "Гиббис"
+	name = "Gibbis"
 	id = "gibbis"
 	description = "Гиббис в жидкой форме."
 	reagent_state = LIQUID
@@ -98,7 +98,7 @@
 	return ..()
 
 /datum/reagent/prions
-	name = "Прионы"
+	name = "Prions"
 	id = "prions"
 	description = "Возбудитель болезни, который не является ни бактериальным, ни грибковым, ни вирусным агентом и не содержит генетического материала."
 	reagent_state = LIQUID
@@ -113,7 +113,7 @@
 	return ..()
 
 /datum/reagent/grave_dust
-	name = "Могильная пыль"
+	name = "Grave Dust"
 	id = "grave_dust"
 	description = "Заплесневелая пыль, взятая кладбища."
 	reagent_state = LIQUID
@@ -128,7 +128,7 @@
 	return ..()
 
 /datum/reagent/bacon_grease
-	name = "Чистый сальный жир"
+	name = "Pure bacon grease"
 	id = "bacon_grease"
 	description = "Принесите мне капельницу этого сладкого, сладкого жира!"
 	reagent_state = LIQUID
@@ -143,7 +143,7 @@
 	return ..()
 
 /datum/reagent/heartworms
-	name = "Сердечные черви"
+	name = "Space heartworms"
 	id = "heartworms"
 	description = "Какая гадость! Эти черви будут не против полакомиться твоим сердечком!"
 	color = "#925D6C"
@@ -161,7 +161,7 @@
 	return ..()
 
 /datum/reagent/concentrated_initro
-	name = "Сгущённый инитропидрил"
+	name = "Concentrated Initropidril"
 	id = "concentrated_initro"
 	description = "Остановка сердца в жидкой форме!"
 	reagent_state = LIQUID
@@ -180,7 +180,7 @@
 //virus foods
 
 /datum/reagent/consumable/virus_food
-	name = "Питательная среда"
+	name = "Virus Food"
 	id = "virusfood"
 	description = "Смесь воды, молока и кислорода. Вирусные клетки могут использовать эту смесь для размножения."
 	reagent_state = LIQUID
@@ -189,30 +189,30 @@
 	taste_description = "водянистого молока"
 
 /datum/reagent/mutagen/mutagenvirusfood
-	name = "Мутагенный агар"
+	name = "Mutagenic agar"
 	id = "mutagenvirusfood"
 	description = "Вещество, способствующее ускоренной мутации вирусных форм жизни."
 	color = "#A3C00F" // rgb: 163,192,15
 
 /datum/reagent/mutagen/mutagenvirusfood/sugar
-	name = "Сахарный агар"
+	name = "Sucrose agar"
 	id = "sugarvirusfood"
 	color = "#41B0C0" // rgb: 65,176,192
 	taste_mult = 1.5
 
 /datum/reagent/medicine/diphenhydramine/diphenhydraminevirusfood
-	name = "Вирусный пайки"
+	name = "Virus rations"
 	id = "diphenhydraminevirusfood"
 	description = "Вещество, способствующее ускоренной мутации вирусных форм жизни."
 	color = "#D18AA5" // rgb: 209,138,165
 
 /datum/reagent/plasma_dust/plasmavirusfood
-	name = "Вирусная плазма"
+	name = "Virus plasma"
 	id = "plasmavirusfood"
 	description = "Вещество, способствующее ускоренной мутации вирусных форм жизни."
 	color = "#A69DA9" // rgb: 166,157,169
 
 /datum/reagent/plasma_dust/plasmavirusfood/weak
-	name = "Ослабленная вирусная плазма"
+	name = "Weakened virus plasma"
 	id = "weakplasmavirusfood"
 	color = "#CEC3C6" // rgb: 206,195,198

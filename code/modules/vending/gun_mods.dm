@@ -1,6 +1,6 @@
 /obj/machinery/vending/gun_mods
 	name = "ModTech"
-	desc = "Торговый автомат с модулями для оружия, предназначенный для сотрудников службы безопасности."
+	desc = "A weapon upgrade vending machine for security personnel."
 	slogan_list = list(
 		"Улу+чши сво+ё ору+жие!",
 		"Купи+ глуши+тель, будь на сти+ле!",
@@ -40,19 +40,8 @@
 		/obj/item/gun_module/rail/scope/x4 = 1,
 	)
 
-/obj/machinery/vending/gun_mods/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат ModTech",
-		GENITIVE = "торгового автомата ModTech",
-		DATIVE = "торговому автомату ModTech",
-		ACCUSATIVE = "торговый автомат ModTech",
-		INSTRUMENTAL = "торговым автоматом ModTech",
-		PREPOSITIONAL = "торговом автомате ModTech",
-	)
-
-// all items free, this vending is for Central command and Syndicate
 /obj/machinery/vending/gun_mods/advanced
-	desc = "Раздатчик с модулями для оружия."
+	desc = "A weapon upgrade dispenser."
 	req_access = list()
 
 	products = list(

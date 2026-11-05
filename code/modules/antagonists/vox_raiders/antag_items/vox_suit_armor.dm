@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/armor/vox_merc
 	name = "vox mercenary vest"
-	desc = "Специализированный бронекостюм воксов-наемников. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными для большинства атмосфер с приемлимым давлением."
+	desc = "Specialized vox mercenary armor. Its synthetic material allows vox to operate in hostile environments, making the suit suitable for most atmospheres with acceptable pressure."
 	icon_state = "vox-merc"
 	item_color = "vox-merc"
 	item_state = "armor"
@@ -34,7 +34,7 @@
 
 /obj/item/clothing/head/helmet/vox_merc
 	name = "vox mercenary helmet"
-	desc = "Специализированный шлем воксов-наемников."
+	desc = "A specialized vox mercenary helmet."
 	icon_state = "vox-merc"
 	item_color = "vox-merc"
 	species_restricted = list(SPECIES_VOX)
@@ -55,8 +55,7 @@
 
 /obj/item/clothing/suit/armor/vox_merc/stormtrooper
 	name = "vox mercenary storm vest"
-	desc = "Специализированный бронекостюм воксов-наемников. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными для большинства атмосфер с приемлимым давлением. \
-			\nШтурмовой бронекостюм воксов разработан под их структуру тела и прикрывает наиболее уязвимые места, превосходно защищает носителя от огнестрельного вооружения и ближних атак."
+	desc = "Specialized vox mercenary armor. Its synthetic material allows operation in hostile environments and most atmospheres with acceptable pressure.\nThis assault armor is tailored to vox anatomy and covers vulnerable areas, providing excellent protection against firearms and melee attacks."
 	icon_state = "vox-merc-stormtrooper"
 	item_color = "vox-merc-stormtrooper"
 	w_class = WEIGHT_CLASS_BULKY
@@ -74,8 +73,7 @@
 
 /obj/item/clothing/suit/armor/vox_merc/fieldmedic
 	name = "vox mercenary field medic vest"
-	desc = "Специализированный бронекостюм воксов-наемников. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными для большинства атмосфер с приемлимым давлением. \
-			\nМедицинский полевой костюм предназначен для защиты владельца от биологических угроз, радиации и кислотной атмосферы. Дает слабую защиту от внешне поступаемых энергетических снарядов, равномерно рассеивая остаточную энергию. Костюм абсолютно не предназначен для защиты в ближнем бою или от взрывчатых веществ за счет свое внутреннего строения, повреждающий носителя от осколков костюма при нарушении целостности. Имеет хранилище для ношения аптечек и контейнеров с химикатами."
+	desc = "Specialized vox mercenary armor. Its synthetic material allows operation in hostile environments and most atmospheres with acceptable pressure.\nThis field medic suit protects against biological hazards, radiation and acidic atmospheres. It offers limited protection against energy projectiles by dispersing residual energy. Its internal construction makes it unsuitable for melee combat or explosives, as broken suit fragments can injure its wearer. Includes storage for medical kits and chemical containers."
 	icon_state = "vox-merc-fieldmedic"
 	item_color = "vox-merc-fieldmedic"
 	armor = list(MELEE = -15, BULLET = 20, LASER = 50, ENERGY = 40, BOMB = -15, FIRE = 80, ACID = INFINITY)
@@ -120,8 +118,7 @@
 
 /obj/item/clothing/suit/armor/vox_merc/bomber
 	name = "vox mercenary bomber vest"
-	desc = "Специализированный бронекостюм воксов-наемников. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными для большинства атмосфер с приемлимым давлением. \
-			\nОсобый разработанный штурмовой тяжелый костюм для действий в условиях крайне взрывоопасной атмосферы. Абсолютная жаростойкость, повышенная стойкость к кислотным жидкостям и лазерному воздействию делают эту броню основной для воксов действующих внутри активно разрушающихся комплексов и кораблей."
+	desc = "Specialized vox mercenary armor. Its synthetic material allows operation in hostile environments and most atmospheres with acceptable pressure.\nA heavy assault suit designed for highly explosive environments. Complete heat resistance and improved resistance to acids and lasers make it standard equipment for vox operating inside collapsing facilities and ships."
 	icon_state = "vox-merc-bomber"
 	item_color = "vox-merc-bomber"
 	armor = list(MELEE = 80, BULLET = 20, LASER = 115, ENERGY = 75, BOMB = 200, FIRE = INFINITY, ACID = 150)
@@ -141,8 +138,7 @@
 
 /obj/item/clothing/suit/armor/vox_merc/laminar
 	name = "vox mercenary laminar vest"
-	desc = "Специализированный бронекостюм воксов-наемников. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными для большинства атмосфер с приемлимым давлением. \
-			\nКомпактный и мобильный костюм отлично помещается в рюкзаке, сформирован из легких пластин позволяющий получить хорошие защитные свойства в совокупности с удобством для носителя, не мешающий его передвижению. Но, в отличии от других моделей, не дает приемлимых защитных параметров от воздействий внешней агрессивной среды и не защищает руки."
+	desc = "Specialized vox mercenary armor. Its synthetic material allows operation in hostile environments and most atmospheres with acceptable pressure.\nCompact, mobile armor made from lightweight plates. Fits in a backpack and combines good protection with comfort and unrestricted movement. Unlike other models, it offers inadequate protection against hostile environments and leaves the arms unprotected."
 	icon_state = "vox-merc-laminar"
 	item_color = "vox-merc-laminar"
 	w_class = WEIGHT_CLASS_SMALL
@@ -163,7 +159,7 @@
 
 /obj/item/clothing/suit/armor/vox_merc/laminar/scout
 	name = "vox mercenary laminar scout vest"
-	desc = "Компактный и мобильный костюм сформированный из лёгких пластин и за счет их особого размещения, увеличивает погашение импульсов перенаправляя их в ускорение носителя, но взамен теряя значимые защитные свойства. "
+	desc = "Compact, mobile armor made from lightweight plates. Their special arrangement redirects absorbed impacts into additional speed for the wearer, at the cost of significant protective capability."
 	armor = list(MELEE = 20, BULLET = 20, LASER = 10, ENERGY = 40, BOMB = 40, FIRE = 20, ACID = 20)
 	slowdown = -0.35
 
@@ -172,8 +168,7 @@
 // Crew Steath Suit
 /obj/item/clothing/suit/armor/vox_merc/stealth
 	name = "vox mercenary stealth suit"
-	desc = "Специализированный маскировочный костюм воксов-наемников. Синтетический материал используемый в костюмах воксов позволяет тем действовать в неблагоприятных для них окружающих условиях, делая их костюмы универсальными для большинства атмосфер с приемлимым давлением. \
-			Костюм с маскировочной системой, напрямую связанная с телом носителя. При снимании костюма возможно ощущение легкого недомогания."
+	desc = "Specialized vox mercenary camouflage armor. Its synthetic material allows operation in hostile environments and most atmospheres with acceptable pressure. Its cloaking system connects directly to the wearer's body. Removing the suit may cause mild nausea."
 	icon_state = "vox-merc-stealth"
 	item_color = "vox-merc-stealth"
 	blood_overlay_type = "suit"
@@ -221,7 +216,7 @@
 // Smoke Helmet
 /obj/item/clothing/head/helmet/vox_merc/stealth
 	name = "vox mercenary stealth helmet"
-	desc = "Специализированный шлем воксов-наемников со встроенной системой дымогенератора."
+	desc = "A specialized vox mercenary helmet with a built-in smoke generator."
 	icon_state = "vox-merc-stealth"
 	item_color = "vox-merc-stealth"
 	armor = list(MELEE = 20, BULLET = 20, LASER = 20, ENERGY = 20, BOMB = 15, FIRE = INFINITY, ACID = 80)

@@ -10,8 +10,7 @@ GLOBAL_LIST_EMPTY_TYPED(integrated_circuits, /obj/item/integrated_circuit)
  */
 /obj/item/integrated_circuit
 	name = "integrated circuit"
-	desc = "Плата для сборки функциональных модулей на основе комьютерной логики. \
-			Поддерживает установку различных компонентов."
+	desc = "A board for assembling functional modules using computer logic. Supports the installation of various components."
 	gender = FEMALE
 	icon = 'icons/obj/module.dmi'
 	icon_state = "integrated_circuit"
@@ -88,16 +87,6 @@ GLOBAL_LIST_EMPTY_TYPED(integrated_circuits, /obj/item/integrated_circuit)
 
 	/// The current linked circuit imprinter. Lets you remotely print off circuit components and places them in the integrated circuit.
 	var/datum/weakref/linked_circuit_imprinter
-
-/obj/item/integrated_circuit/get_ru_names()
-	return alist(
-		NOMINATIVE = "интегральная схема",
-		GENITIVE = "интегральной схемы",
-		DATIVE = "интегральной схеме",
-		ACCUSATIVE = "интегральную схему",
-		INSTRUMENTAL = "интегральной схемой",
-		PREPOSITIONAL = "интегральной схеме"
-	)
 
 /obj/item/integrated_circuit/Initialize(mapload)
 	. = ..()
@@ -877,15 +866,5 @@ GLOBAL_LIST_EMPTY_TYPED(integrated_circuits, /obj/item/integrated_circuit)
 
 /obj/item/integrated_circuit/admin
 	name = "administrative circuit"
-	desc = "Компоненты, установленные здесь, находятся далеко за пределами вашего понимания."
+	desc = "The components installed here are far beyond your understanding."
 	admin_only = TRUE
-
-/obj/item/integrated_circuit/admin/get_ru_names()
-	return alist(
-		NOMINATIVE = "интегральная схема администрации",
-		GENITIVE = "интегральной схемы администрации",
-		DATIVE = "интегральной схеме администрации",
-		ACCUSATIVE = "интегральную схему администрации",
-		INSTRUMENTAL = "интегральной схемой администрации",
-		PREPOSITIONAL = "интегральной схеме администрации"
-	)

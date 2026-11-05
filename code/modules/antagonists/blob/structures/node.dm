@@ -1,7 +1,7 @@
 /obj/structure/blob/special/node
 	name = "blob node"
 	icon_state = "blank_blob"
-	desc = "Большая пульсирующая желтая масса."
+	desc = "A large pulsating yellow mass."
 	max_integrity = BLOB_NODE_MAX_HP
 	health_regen = BLOB_NODE_HP_REGEN
 	armor = list(MELEE = 0, BULLET = 0, LASER = 25, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 65, ACID = 90)

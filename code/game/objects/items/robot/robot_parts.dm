@@ -163,15 +163,6 @@
 		aisync = FALSE
 		lawsync = FALSE
 		return new /datum/ai_laws/syndicate_override
-	if(new_mmi.ninja)
-		aisync = FALSE
-		lawsync = FALSE
-		return new /datum/ai_laws/ninja_override
-	if(new_mmi.clock)
-		aisync = FALSE
-		lawsync = FALSE
-		return new /datum/ai_laws/ratvar
-
 /obj/item/robot_parts/robot_suit/proc/apply_debug_stats(mob/living/silicon/robot/target)
 		target.custom_name = created_name
 		target.rename_character(target.real_name, target.get_default_name())
@@ -192,12 +183,6 @@
 	target.mind.store_memory("As a cyborg, you must obey your silicon laws and master AI above all else. Your objectives will consider you to be dead.")
 	to_chat(target, span_userdanger("You have been robotized!"))
 	to_chat(target, span_danger("You must obey your silicon laws and master AI above all else. Your objectives will consider you to be dead."))
-
-/obj/item/robot_parts/robot_suit/proc/process_clocker_cyborg(mob/living/silicon/robot/target)
-	if(!target.mmi.clock) // so robots created from vessel have magic
-		return
-	target.UnlinkSelf()
-	SSticker.mode.add_clock_actions(target.mind)
 
 /obj/item/robot_parts/robot_suit/proc/process_job_task(mob/living/target)
 	var/datum/job_objective/make_cyborg/task = target.mind.findJobTask(/datum/job_objective/make_cyborg)
@@ -351,12 +336,6 @@
 			to_chat(user, span_warning("The MMI must go in after everything else!"))
 			return .
 
-		if(new_mmi.clock && !isclocker(user))
-			to_chat(user, span_danger("An overwhelming feeling of dread comes over you as you attempt to put the soul vessel into the frame."))
-			user.Confused(20 SECONDS)
-			user.Jitter(12 SECONDS)
-			return ATTACK_CHAIN_BLOCKED_ALL
-
 		if(!isturf(loc))
 			to_chat(user, span_warning("You can't put [new_mmi] in, the frame has to be standing on the ground to be perfectly precise."))
 			return .
@@ -427,7 +406,7 @@
 		forceMove(new_borg)
 		new_borg.robot_suit = src
 		new_borg.mmi.apply_effects(new_borg)
-		process_clocker_cyborg(new_borg)
+
 		check_locomotion(new_borg)
 		return .
 

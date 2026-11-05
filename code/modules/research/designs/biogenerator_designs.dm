@@ -3,7 +3,7 @@
 ///////////////////////////////////
 
 /datum/design/milk
-	name = "10 ед. молока"
+	name = "10u milk"
 	id = "milk"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 25)
@@ -11,7 +11,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/cream
-	name = "10 ед. сливок"
+	name = "10u cream"
 	id = "cream"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 25)
@@ -19,7 +19,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/sodiumchloride
-	name = "10 ед. соли"
+	name = "10 units of salt"
 	id = "sodiumchloride"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 25)
@@ -27,7 +27,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/black_pepper
-	name = "10 ед. чёрного перца"
+	name = "10u black pepper"
 	id = "black_pepper"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 25)
@@ -35,7 +35,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/milk_carton
-	name = "Упаковка молока"
+	name = "Milk carton"
 	id = "milk_carton"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -43,7 +43,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/cream_carton
-	name = "Упаковка сливок"
+	name = "Cream carton"
 	id = "cream_carton"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -51,7 +51,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/salt_shaker
-	name = "Солонка"
+	name = "Salt Shaker"
 	id = "salt_shaker"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -60,7 +60,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 
 /datum/design/pepper_mill
-	name = "Перечница"
+	name = "Pepper mill"
 	id = "pepper_mill"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -68,7 +68,7 @@
 	make_reagents = list()
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_FOOD)
 /datum/design/monkey_cube
-	name = "Куб шимпанзе"
+	name = "Monkey cube"
 	id = "mcube"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 500)
@@ -76,7 +76,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_CUBES)
 
 /datum/design/farwa_cube
-	name = "Куб фарвы"
+	name = "Farwa cube"
 	id = "fcube"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 500)
@@ -84,7 +84,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_CUBES)
 
 /datum/design/wolpin_cube
-	name = "Куб вульпина"
+	name = "Wolpin cube"
 	id = "wcube"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 500)
@@ -92,7 +92,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_CUBES)
 
 /datum/design/stok_cube
-	name = "Куб стока"
+	name = "Stok cube"
 	id = "scube"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 500)
@@ -100,7 +100,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_CUBES)
 
 /datum/design/neaera_cube
-	name = "Куб неары"
+	name = "Neaera cube"
 	id = "ncube"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 500)
@@ -148,7 +148,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_CHEMICALS)
 
 /datum/design/botany_bottle
-	name = "Пустая канистра"
+	name = "Empty Jug"
 	id = "botany_jug"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 5)
@@ -156,7 +156,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_CHEMICALS)
 
 /datum/design/cloth
-	name = "Ткань"
+	name = "Roll of cloth"
 	id = "cloth"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -164,7 +164,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_ORGANIC)
 
 /datum/design/cardboard
-	name = "Картон"
+	name = "Sheet of cardboard"
 	id = "cardboard"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -172,7 +172,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_ORGANIC)
 
 /datum/design/leather
-	name = "Кожа"
+	name = "Sheet of Leather"
 	id = "leather"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -180,7 +180,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_ORGANIC)
 
 /datum/design/wrapper
-	name = "Обёрточная бумага"
+	name = "Wrapping Paper"
 	id = "wrapper"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -188,7 +188,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_ORGANIC)
 
 /datum/design/rollingpapers
-	name = "Бумага для самокруток"
+	name = "Rolling Paper"
 	id = "rolling_paper_pack"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 50)
@@ -196,7 +196,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_ORGANIC)
 
 /datum/design/rice_hat
-	name = "Рисовая шляпа"
+	name = "Rice hat"
 	id = "rice_hat"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 300)
@@ -204,7 +204,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/hydrobelt
-	name = "Пояс ботаника"
+	name = "Botanist belt"
 	id = "hydrobelt"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 300)
@@ -212,7 +212,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/secbelt
-	name = "Пояс охраны"
+	name = "Security belt"
 	id = "secbelt"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 300)
@@ -220,7 +220,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/medbelt
-	name = "Пояс медика"
+	name = "Medical belt"
 	id = "medbel"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 300)
@@ -228,7 +228,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/surbelt
-	name = "Пояс хирурга"
+	name = "Surgical Belt"
 	id = "surbel"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 300)
@@ -236,7 +236,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/janibelt
-	name = "Пояс уборщика"
+	name = "Janitorial belt"
 	id = "janibelt"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 300)
@@ -244,7 +244,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/s_holster
-	name = "Наплечная кобура"
+	name = "Shoulder holster"
 	id = "s_holster"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 400)
@@ -252,7 +252,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/k_holster
-	name = "Кобура для ножа"
+	name = "Knife Holster"
 	id = "k_holster"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 400)
@@ -260,7 +260,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/webbing
-	name = "Разгрузка"
+	name = "Webbing"
 	id = "webbing"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 500)
@@ -268,7 +268,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/brown_vest
-	name = "Коричневая разгрузка"
+	name = "Brown Webbing Vest"
 	id = "brown_vest"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 800)
@@ -276,7 +276,7 @@
 	category = list(PRINTER_CATEGORY_INITIAL, BIOGEN_LEATHER_CLOTH)
 
 /datum/design/black_vest
-	name = "Чёрная разгрузка"
+	name = "Black Webbing Vest"
 	id = "black_vest"
 	build_type = BIOGENERATOR
 	materials = list(MAT_BIOMASS = 800)

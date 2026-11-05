@@ -154,52 +154,11 @@ GLOBAL_VAR_INIT(sc_safecode5, "[rand(0,9)]")
 /obj/item/storage/secure/safe/sc_ssafe/populate_contents()
 	new /obj/item/gun/energy/mindflayer(src)
 	new /obj/item/soulstone(src)
-	new /obj/item/clothing/head/helmet/space/cult(src)
-	new /obj/item/clothing/suit/space/cult(src)
+	new /obj/item/clothing/head/helmet/space(src)
+	new /obj/item/clothing/suit/space(src)
 	//new /obj/item/teleportation_scroll(src)
 	new /obj/item/stack/ore/diamond(src)
 
 /*
  * Modified Nar-Sie
  */
-/obj/god/narsie/sc_Narsie
-	desc = "Your body becomes weak and your feel your mind slipping away as you try to comprehend what you know can't be possible."
-	var/uneatable = list(/turf/space, /obj/effect/overlay, /mob/living/simple_animal/hostile/construct)
-
-/obj/god/narsie/sc_Narsie/Initialize(mapload)
-	. = ..()
-	// Contained narsie does not move and does not pull stuff in.
-	var/datum/component/singularity/singularity_component = singularity?.resolve()
-	if(!isnull(singularity_component))
-		singularity_component.roaming = FALSE
-		singularity_component.grav_pull = 0
-		singularity_component.consume_range = 0
-
-/obj/god/narsie/sc_Narsie/consume(atom/A)
-	if(!A.simulated)
-		return FALSE
-	if(is_type_in_list(A, uneatable))
-		return FALSE
-
-	if(isliving(A))
-		var/mob/living/L = A
-		L.gib()
-
-	else if(isobj(A))
-		var/obj/O = A
-		O.ex_act(EXPLODE_DEVASTATE)
-		if(O)
-			qdel(O)
-
-	else if(isturf(A))
-		var/turf/T = A
-
-		if(T.underfloor_accessibility != UNDERFLOOR_INTERACTABLE) // this code only cares about pipes and stuff under floor
-			for(var/obj/O in T.contents)
-				if(O.level != 1)
-					continue
-				if(O.invisibility == INVISIBILITY_MAXIMUM || O.invisibility == INVISIBILITY_ABSTRACT)
-					src.consume(O)
-
-		T.ChangeTurf(T.baseturf)
-	return

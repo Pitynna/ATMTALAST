@@ -19,7 +19,7 @@
 
 /obj/structure/morgue
 	name = "morgue"
-	desc = "Холодильная камера, предназначенная для хранения мертвецов. Предотвращает процессы разложения."
+	desc = "Used to keep bodies in until someone fetches them."
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "morgue"
 	density = TRUE
@@ -37,16 +37,6 @@
 	)
 	var/toggle_sound = 'sound/items/deconstruct.ogg'
 	var/status
-
-/obj/structure/morgue/get_ru_names()
-	return alist(
-		NOMINATIVE = "холодильник для трупов",
-		GENITIVE = "холодильника для трупов",
-		DATIVE = "холодильнику для трупов",
-		ACCUSATIVE = "холодильник для трупов",
-		INSTRUMENTAL = "холодильником для трупов",
-		PREPOSITIONAL = "холодильнике для трупов",
-	)
 
 /obj/structure/morgue/Initialize(mapload)
 	. = ..()
@@ -245,7 +235,7 @@
  */
 /obj/structure/m_tray
 	name = "morgue tray"
-	desc = "Поместить тело, задвинуть, закрыть крышку. Всё просто."
+	desc = "Apply corpse before closing."
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "morgue_tray"
 	density = TRUE
@@ -253,16 +243,6 @@
 	pass_flags_self = PASSTABLE|LETPASSTHROW
 	max_integrity = 350
 	var/obj/structure/morgue/morgue
-
-/obj/structure/m_tray/get_ru_names()
-	return alist(
-		NOMINATIVE = "поддон холодильника для трупов",
-		GENITIVE = "поддона холодильника для трупов",
-		DATIVE = "поддону холодильника для трупов",
-		ACCUSATIVE = "поддон холодильника для трупов",
-		INSTRUMENTAL = "поддоном холодильника для трупов",
-		PREPOSITIONAL = "поддоне холодильника для трупов",
-	)
 
 /obj/structure/m_tray/Destroy()
 	if(morgue && morgue.connected == src)
@@ -343,7 +323,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 
 /obj/machinery/crematorium
 	name = "crematorium"
-	desc = "Печь, предназначенная для кремации тел. Интересно, шашлык в таком можно приготовить?"
+	desc = "A human incinerator. Works well on barbeque nights."
 	icon_state = "crema"
 	max_integrity = 1000
 	anchored = TRUE
@@ -354,16 +334,6 @@ GLOBAL_LIST_EMPTY(crematoriums)
 	var/cremating = FALSE
 	var/id = 1
 	var/toggle_sound = 'sound/items/deconstruct.ogg'
-
-/obj/machinery/crematorium/get_ru_names()
-	return alist(
-		NOMINATIVE = "крематорий",
-		GENITIVE = "крематория",
-		DATIVE = "крематорию",
-		ACCUSATIVE = "крематорий",
-		INSTRUMENTAL = "крематорием",
-		PREPOSITIONAL = "крематории",
-	)
 
 /obj/machinery/crematorium/Initialize(mapload)
 	. = ..()
@@ -653,7 +623,7 @@ GAME_VERB_SRC(/obj/machinery/crematorium, cremate_verb, oview(1), "Кремир�
  */
 /obj/structure/c_tray
 	name = "crematorium tray"
-	desc = "Поместить тело, задвинуть, закрыть крышку. Всё просто."
+	desc = "Apply body before burning."
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "crema_tray"
 	density = TRUE
@@ -661,16 +631,6 @@ GAME_VERB_SRC(/obj/machinery/crematorium, cremate_verb, oview(1), "Кремир�
 	pass_flags_self = PASSTABLE|LETPASSTHROW
 	max_integrity = 350
 	var/obj/machinery/crematorium/crematorium
-
-/obj/structure/c_tray/get_ru_names()
-	return alist(
-		NOMINATIVE = "поддон крематория",
-		GENITIVE = "поддона крематория",
-		DATIVE = "поддону крематория",
-		ACCUSATIVE = "поддон крематория",
-		INSTRUMENTAL = "поддоном крематория",
-		PREPOSITIONAL = "поддоне крематория",
-	)
 
 /obj/structure/c_tray/Destroy()
 	if(crematorium && crematorium.connected == src)
@@ -727,23 +687,13 @@ GAME_VERB_SRC(/obj/machinery/crematorium, cremate_verb, oview(1), "Кремир�
 // Crematorium switch
 /obj/machinery/crema_switch
 	name = "crematorium igniter"
-	desc = "Жги, детка!"
+	desc = "Burn baby burn!"
 	icon = 'icons/obj/engines_and_power/power.dmi'
 	icon_state = "crema_switch"
 	anchored = TRUE
 	req_access = list(ACCESS_CREMATORIUM)
 	/// ID of the crematorium to hook into
 	var/id = 1
-
-/obj/machinery/crema_switch/get_ru_names()
-	return alist(
-		NOMINATIVE = "активатор крематория",
-		GENITIVE = "активатора крематория",
-		DATIVE = "активатору крематория",
-		ACCUSATIVE = "активатор крематория",
-		INSTRUMENTAL = "активатором крематория",
-		PREPOSITIONAL = "активаторе крематория",
-	)
 
 /obj/machinery/crema_switch/attack_ghost(mob/user)
 	if(user.can_advanced_admin_interact())

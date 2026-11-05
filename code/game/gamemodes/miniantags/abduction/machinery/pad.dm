@@ -16,13 +16,13 @@
 	flick("alien-pad", src)
 	for(var/mob/living/target in loc)
 		target.forceMove(teleport_target)
-		new /obj/effect/temp_visual/dir_setting/ninja(get_turf(target), target.dir)
+		new /obj/effect/temp_visual/dir_setting/stealth_glow(get_turf(target), target.dir)
 		to_chat(target, span_warning("The instability of the warp leaves you disoriented!"))
 		target.Stun(6 SECONDS)
 
 /obj/machinery/abductor/pad/proc/Retrieve(mob/living/target)
 	flick("alien-pad", src)
-	new /obj/effect/temp_visual/dir_setting/ninja(get_turf(target), target.dir)
+	new /obj/effect/temp_visual/dir_setting/stealth_glow(get_turf(target), target.dir)
 	Warp(target)
 
 /obj/machinery/abductor/pad/proc/MobToLoc(place,mob/living/target)
@@ -30,7 +30,7 @@
 	sleep(80)
 	flick("alien-pad", src)
 	target.forceMove(place)
-	new /obj/effect/temp_visual/dir_setting/ninja(get_turf(target), target.dir)
+	new /obj/effect/temp_visual/dir_setting/stealth_glow(get_turf(target), target.dir)
 
 /obj/machinery/abductor/pad/proc/PadToLoc(place)
 	new/obj/effect/temp_visual/teleport_abductor(place)
@@ -38,7 +38,7 @@
 	flick("alien-pad", src)
 	for(var/mob/living/target in src.loc)
 		target.forceMove(place)
-		new /obj/effect/temp_visual/dir_setting/ninja(get_turf(target), target.dir)
+		new /obj/effect/temp_visual/dir_setting/stealth_glow(get_turf(target), target.dir)
 
 /obj/effect/temp_visual/teleport_abductor
 	name = "Huh"

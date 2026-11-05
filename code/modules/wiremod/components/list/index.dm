@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/index
 	display_name = "Индекс списка"
-	desc = "Компонент, который возвращает значение списка по заданному индексу."
+	desc = "A component that returns a list entry at the specified index."
 	category = "List"
 
 	/// The list type
@@ -64,8 +64,7 @@
 
 /obj/item/circuit_component/index/assoc_string
 	display_name = "Индекс ассоциативного списка"
-	desc = "Компонент, который обычно используется для доступа к строке таблицы. \
-			Обеспечивает доступ к данным из списка ключей и значений."
+	desc = "A component commonly used to access a table row. Provides access to data from a list of keys and values."
 
 	index_type = PORT_TYPE_STRING
 

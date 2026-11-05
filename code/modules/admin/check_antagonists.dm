@@ -151,82 +151,11 @@
 		if(length(SSticker.mode.raiders))
 			dat += check_role_table("Raiders", SSticker.mode.raiders)
 
-		if(length(SSticker.mode.space_ninjas))
-			dat += check_role_table("Ninjas", SSticker.mode.space_ninjas)
-
-		if(length(SSticker.mode.cult))
-			var/datum/game_mode/gamemode = SSticker.mode
-			var/datum/objective/current_sac_obj = gamemode.cult_objs.current_sac_objective()
-			dat += check_role_table("Cultists", SSticker.mode.cult)
-			if(current_sac_obj)
-				dat += "<br>Current cult objective: <br>[current_sac_obj.explanation_text]"
-			else if(gamemode.cult_objs.cult_status == NARSIE_NEEDS_SUMMONING)
-				dat += "<br>Current cult objective: Summon [SSticker.cultdat ? SSticker.cultdat.entity_name : "Nar'Sie"]"
-			else if(gamemode.cult_objs.cult_status == NARSIE_HAS_RISEN)
-				dat += "<br>Current cult objective: Feed [SSticker.cultdat ? SSticker.cultdat.entity_name : "Nar'Sie"]"
-			else if(gamemode.cult_objs.cult_status == NARSIE_HAS_FALLEN)
-				dat += "<br>Current cult objective: Kill all non-cultists"
-			else
-				dat += "<br>Current cult objective: None! (This is most likely a bug, or var editing gone wrong.)"
-			dat += "<br>Sacrifice objectives completed: [gamemode.cult_objs.sacrifices_done]"
-			dat += "<br>Sacrifice objectives needed for summoning: [gamemode.cult_objs.sacrifices_required]"
-			dat += "<br>Summoning locations: [english_list(gamemode.cult_objs.obj_summon.summon_spots)]"
-			dat += "<br><a href='byond://?src=[UID()];cult_mindspeak=[UID()]'>Cult Mindspeak</a>"
-
-			if(gamemode.cult_objs.cult_status == NARSIE_DEMANDS_SACRIFICE)
-				dat += "<br><a href='byond://?src=[UID()];cult_adjustsacnumber=[UID()]'>Modify amount of sacrifices required</a>"
-				dat += "<br><a href='byond://?src=[UID()];cult_newtarget=[UID()]'>Reroll sacrifice target</a>"
-			else
-				dat += "<br>Modify amount of sacrifices required (Summon available!)</a>"
-				dat += "<br>Reroll sacrifice target (Summon available!)</a>"
-
-			dat += "<br><a href='byond://?src=[UID()];cult_newsummonlocations=[UID()]'>Reroll summoning locations</a>"
-			dat += "<br><a href='byond://?src=[UID()];cult_unlocknarsie=[UID()]'>Unlock Nar'Sie summoning</a>"
-
-		if(length(SSticker.mode.clockwork_cult))
-			var/datum/game_mode/gamemode = SSticker.mode
-			var/datum/objective/cur_demand_obj = gamemode.clocker_objs.obj_demand
-			dat += check_role_table("Clockers", SSticker.mode.clockwork_cult)
-			if(cur_demand_obj)
-				dat += "<br>Current clock cult objective: <br>[cur_demand_obj.explanation_text]"
-			else if(gamemode.clocker_objs.clock_status == RATVAR_NEEDS_SUMMONING)
-				dat += "<br>Current clock cult objective: Summon Ratvar"
-			else if(gamemode.clocker_objs.clock_status == RATVAR_HAS_RISEN)
-				dat += "<br>Current clock cult objective: Bring to Ratvar"
-			else if(gamemode.clocker_objs.clock_status == RATVAR_HAS_FALLEN)
-				dat += "<br>Current clock cult objective: Kill all non-clockers"
-			else
-				dat += "<br>Current clock cult objective: None! (This is most likely a bug, or var editing gone wrong.)"
-			dat += "<br>Power needed: [GLOB.clockwork_power]/[gamemode.clocker_objs.power_goal]"
-			dat += "<br>Beacons needed: [length(GLOB.clockwork_beacons)]/[gamemode.clocker_objs.beacon_goal]"
-			dat += "<br>Clockers needed: [SSticker.mode.get_clockers()]/[gamemode.clocker_objs.clocker_goal] Reveal:[SSticker.mode.clocker_objs.clocker_goal]"
-			dat += "<br>Summoning locations: [english_list(gamemode.clocker_objs.obj_summon.ritual_spots)]"
-			dat += "<br><a href='byond://?src=[UID()];clock_mindspeak=[UID()]'>Clock Cult Mindspeak</a>"
-
-			if(gamemode.clocker_objs.clock_status == RATVAR_DEMANDS_POWER)
-				dat += "<br><a href='byond://?src=[UID()];clock_adjustpower=[UID()]'>POWER CHANGE</a>"
-				dat += "<br><a href='byond://?src=[UID()];clock_adjustbeacon=[UID()]'>BEACON CHANGE</a>"
-				dat += "<br><a href='byond://?src=[UID()];clock_adjustclocker=[UID()]'>CLOCKER CHANGE</a>"
-			else
-				dat += "<br>The cult reached power demand! Summon available!</a>"
-
-			dat += "<br><a href='byond://?src=[UID()];clock_newsummonlocations=[UID()]'>Reroll summoning locations</a>"
-			dat += "<br><a href='byond://?src=[UID()];clock_unlockratvar=[UID()]'>Unlock Ratvar summoning</a>"
-
 		if(length(SSticker.mode.traitors))
 			dat += check_role_table("Traitors", SSticker.mode.traitors)
 
 		if(length(SSticker.mode.implanted))
 			dat += check_role_table("Mindslaves", SSticker.mode.implanted)
-
-		if(length(SSticker.mode.thieves))
-			dat += check_role_table("Thieves", SSticker.mode.thieves)
-
-		if(length(SSticker.mode.shadows))
-			dat += check_role_table("Shadowlings", SSticker.mode.shadows)
-
-		if(length(SSticker.mode.shadowling_thralls))
-			dat += check_role_table("Shadowling Thralls", SSticker.mode.shadowling_thralls)
 
 		if(length(SSticker.mode.abductors))
 			dat += check_role_table("Abductors", SSticker.mode.abductors)
@@ -246,12 +175,6 @@
 		if(length(SSticker.mode.vampire_enthralled))
 			dat += check_role_table("Vampire Thralls", SSticker.mode.vampire_enthralled)
 
-		if(length(SSticker.mode.demons))
-			dat += check_role_table("Demons", SSticker.mode.demons)
-
-		if(length(SSticker.mode.devils))
-			dat += check_role_table("Devils", SSticker.mode.devils)
-
 		if(length(SSticker.mode.superheroes))
 			dat += check_role_table("Superheroes", SSticker.mode.superheroes)
 
@@ -263,12 +186,6 @@
 
 		if(length(SSticker.mode.eventmiscs))
 			dat += check_role_table("Event Roles", SSticker.mode.eventmiscs)
-
-		if(length(SSticker.mode.zombies))
-			dat += check_role_table("Zombies", SSticker.mode.zombies)
-
-		if(length(SSticker.mode.zombie_infected))
-			dat += check_role_table_mob("Pre-zombie infected", SSticker.mode.zombie_infected)
 
 		if(length(SSticker.mode.ert))
 			dat += check_role_table("ERT", SSticker.mode.ert)

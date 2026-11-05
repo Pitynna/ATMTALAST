@@ -1,6 +1,4 @@
 #define HI_MINPLAYERS_TRIGGER 30
-#define GAMEMODE_IS_SHADOWLING (SSticker && istype(SSticker.mode, /datum/game_mode/shadowling))
-#define GAMEMODE_IS_CULTS (SSticker && (istype(SSticker.mode, /datum/game_mode/cult) || istype(SSticker.mode, /datum/game_mode/clockwork)))
 
 /datum/event/headslug_infestation
 	announceWhen = 400
@@ -47,9 +45,7 @@
 			log_game("[new_slug.key] has become Changeling Headslug.")
 
 /datum/event/headslug_infestation/proc/eventcheck()
-	if((num_station_players() <= HI_MINPLAYERS_TRIGGER) || GAMEMODE_IS_CULTS || GAMEMODE_IS_NUCLEAR || GAMEMODE_IS_SHADOWLING)
+	if((num_station_players() <= HI_MINPLAYERS_TRIGGER) || GAMEMODE_IS_NUCLEAR)
 		return TRUE
 
-#undef GAMEMODE_IS_CULTS
-#undef GAMEMODE_IS_SHADOWLING
 #undef HI_MINPLAYERS_TRIGGER

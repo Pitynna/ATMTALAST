@@ -156,7 +156,6 @@
 	new /obj/item/radio/headset/headset_service(src)
 	new /obj/item/radio/headset/headset_service(src)
 	new /obj/item/storage/bag/books(src)
-	new /obj/item/book/codex_gigas(src)
 	new /obj/item/camera(src)
 	new /obj/item/camera_film(src)
 	new /obj/item/camera_film(src)
@@ -167,17 +166,7 @@
 /obj/structure/closet/burial
 	icon_state = "chaplain"
 	name = "burial clothes"
-	desc = "В данном ящике хранится траурная одежда."
-
-/obj/structure/closet/burial/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик с траурной одеждой",
-		GENITIVE = "ящика с траурной одеждой",
-		DATIVE = "ящику с траурной одеждой",
-		ACCUSATIVE = "ящик с траурной одеждой",
-		INSTRUMENTAL = "ящиком с траурной одеждой",
-		PREPOSITIONAL = "ящике с траурной одеждой",
-	)
+	desc = "This closet contains mourning clothes."
 
 /obj/structure/closet/burial/populate_contents()
 	for(var/i = 1 to 7)

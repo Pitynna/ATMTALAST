@@ -1,7 +1,7 @@
 // MARK: Base
 /obj/item/clothing/accessory/head_strip
 	abstract_type = /obj/item/clothing/accessory/head_strip
-	name = "НАПИШИ БАГ-РЕПОРТ"
+	name = "FILE A BUG REPORT"
 	icon_state = null
 	item_state = null
 	gender = FEMALE
@@ -45,23 +45,9 @@
 	if(. && locate(/obj/item/clothing/accessory/head_strip, uniform.contents))
 		return FALSE
 
-/obj/item/clothing/accessory/head_strip/get_ru_names()
-	if(!strip_ru_name)
-		stack_trace("head strip does not have a 'strip_ru_name'")
-	var/name_in_quotes = "\"[strip_ru_name]\"" || name
-	return alist(
-		NOMINATIVE = "нашивка [name_in_quotes]",
-		GENITIVE = "нашивки [name_in_quotes]",
-		DATIVE = "нашивке [name_in_quotes]",
-		ACCUSATIVE = "нашивку [name_in_quotes]",
-		INSTRUMENTAL = "нашивкой [name_in_quotes]",
-		PREPOSITIONAL = "нашивке [name_in_quotes]",
-	)
-
-// MARK: Subtypes
 /obj/item/clothing/accessory/head_strip/captain
 	name = "Captain's strip"
-	desc = "Плотно сшитая круглая нашивка из синего бархата с позолотой, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый золотыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся управление станцией."
+	desc = "A densely stitched round patch of blue velvet with gold trim. The Nanotrasen logo is embroidered in gold metallic thread. Awarded by Central Command for outstanding station management."
 	icon_state = "capstrip"
 	item_state = "capstrip"
 	strip_ru_name = JOB_TITLE_RU_CAPTAIN
@@ -71,7 +57,7 @@
 
 /obj/item/clothing/accessory/head_strip/rd
 	name = "Research Director's strip"
-	desc = "Плотно сшитая круглая нашивка из фиолетового бархата, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый розоватыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся успехи в области исследований."
+	desc = "A densely stitched round patch of purple velvet. The Nanotrasen logo is embroidered in pinkish metallic thread. Awarded by Central Command for outstanding research achievements."
 	icon_state = "rdstrip"
 	item_state = "rdstrip"
 	strip_ru_name = JOB_TITLE_RU_RD
@@ -81,7 +67,7 @@
 
 /obj/item/clothing/accessory/head_strip/ce
 	name = "Chief Engineer's strip"
-	desc = "Плотно сшитая круглая нашивка из серо-желтого бархата, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый голубыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся успехи в области инженерии."
+	desc = "A densely stitched round patch of grey-and-yellow velvet. The Nanotrasen logo is embroidered in light-blue metallic thread. Awarded by Central Command for outstanding engineering achievements."
 	icon_state = "cestrip"
 	item_state = "cestrip"
 	strip_ru_name = JOB_TITLE_RU_CHIEF_ENGINEER
@@ -91,7 +77,7 @@
 
 /obj/item/clothing/accessory/head_strip/t4ce
 	name = "Grand Chief Engineer's strip"
-	desc = "Плотно сшитая круглая нашивка из серого бархата, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый желтыми металлическими нитями. Если присмотреться, можно заметить проходящее по нитям электричество и небольшие искорки."
+	desc = "A densely stitched round patch of grey velvet with the Nanotrasen logo embroidered in yellow metallic thread. Look closely and you can see electricity flowing through the thread, producing tiny sparks."
 	icon_state = "t4cestrip"
 	item_state = "t4cestrip"
 	strip_ru_name = "Супер" + JOB_TITLE_RU_CHIEF_ENGINEER
@@ -101,7 +87,7 @@
 
 /obj/item/clothing/accessory/head_strip/cmo
 	name = "Chief Medical Officer's strip"
-	desc = "Плотно сшитая круглая нашивка из голубого бархата, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый белыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся успехи в области медицины."
+	desc = "A densely stitched round patch of light-blue velvet. The Nanotrasen logo is embroidered in white metallic thread. Awarded by Central Command for outstanding medical achievements."
 	icon_state = "cmostrip"
 	item_state = "cmostrip"
 	strip_ru_name = JOB_TITLE_RU_CMO
@@ -111,7 +97,7 @@
 
 /obj/item/clothing/accessory/head_strip/hop
 	name = "Head of Personnel's strip"
-	desc = "Плотно сшитая круглая нашивка из синего бархата с красной окантовкой, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый белыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся управление персоналом."
+	desc = "A densely stitched round patch of blue velvet with red edging. The Nanotrasen logo is embroidered in white metallic thread. Awarded by Central Command for outstanding personnel management."
 	icon_state = "hopstrip"
 	item_state = "hopstrip"
 	strip_ru_name = JOB_TITLE_RU_HOP
@@ -121,7 +107,7 @@
 
 /obj/item/clothing/accessory/head_strip/hos
 	name = "Head of Security's strip"
-	desc = "Плотно сшитая круглая нашивка из черно-красного бархата, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый бело-красными металлическими нитями. Награда выданная Центральным командованием за выдающиеся успехи при службе на корпорацию."
+	desc = "A densely stitched round patch of black-and-red velvet. The Nanotrasen logo is embroidered in white-and-red metallic thread. Awarded by Central Command for outstanding service to the corporation."
 	icon_state = "hosstrip"
 	item_state = "hosstrip"
 	strip_ru_name = JOB_TITLE_RU_HOS
@@ -131,7 +117,7 @@
 
 /obj/item/clothing/accessory/head_strip/qm
 	name = "Quatermaster's strip"
-	desc = "Плотно сшитая круглая нашивка из коричневого бархата, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый белыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся успехи в области логистики и погрузки."
+	desc = "A densely stitched round patch of brown velvet. The Nanotrasen logo is embroidered in white metallic thread. Awarded by Central Command for outstanding logistics and cargo handling."
 	icon_state = "qmstrip"
 	item_state = "qmstrip"
 	strip_ru_name = JOB_TITLE_RU_QUARTERMASTER
@@ -141,7 +127,7 @@
 
 /obj/item/clothing/accessory/head_strip/bs
 	name = "Blueshield's strip"
-	desc = "Плотно сшитая круглая нашивка из синего бархата с темно-синей окантовкой, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый белыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся успехи при службе на корпорацию."
+	desc = "A densely stitched round patch of blue velvet with dark-blue edging. The Nanotrasen logo is embroidered in white metallic thread. Awarded by Central Command for outstanding service to the corporation."
 	icon_state = "bsstrip"
 	item_state = "bsstrip"
 	strip_ru_name = JOB_TITLE_RU_BLUESHIELD
@@ -151,7 +137,7 @@
 
 /obj/item/clothing/accessory/head_strip/ntr
 	name = "Nanotrasen Representative's strip"
-	desc = "Плотно сшитая круглая нашивка из чёрного бархата с золотистой окантовкой, по центру красуется логотип корпорации \"Нанотрейзен\" прошитый белыми металлическими нитями. Награда выданная Центральным командованием за выдающиеся заслуги при службе на корпорацию."
+	desc = "A densely stitched round patch of black velvet with gold edging. The Nanotrasen logo is embroidered in white metallic thread. Awarded by Central Command for exceptional service to the corporation."
 	icon_state = "ntrstrip"
 	item_state = "ntrstrip"
 	strip_ru_name = JOB_TITLE_RU_REPRESENTATIVE
@@ -161,7 +147,7 @@
 
 /obj/item/clothing/accessory/head_strip/syndicate
 	name = "Syndicate strip"
-	desc = "Круглый металлический значок тёмно-красного цвета с расположенной в центре ярко-зелёной буквой \"S\" с бордовым штырём."
+	desc = "A dark-red round metal badge with a bright-green S in the center and a burgundy pin."
 	icon_state = "syndistrip"
 	item_state = "syndistrip"
 	strip_ru_name = "Синдикат"
@@ -171,7 +157,7 @@
 
 /obj/item/clothing/accessory/head_strip/comrad
 	name = "Comrade patch"
-	desc = "Грубый прямоугольный шеврон цвета хаки с бело-золотыми вставками по бокам и вышитой красными нитями аббревиатурой \"СССП\" в центре: стандартная нашивка, выдаваемая добровольцам."
+	desc = "A rough rectangular khaki patch with white-and-gold side panels and USSP embroidered in red at its center. A standard patch issued to volunteers."
 	icon_state = "patch_sssp"
 	item_state = "patch_sssp"
 	strip_ru_name = "Товарищ"
@@ -181,7 +167,7 @@
 
 /obj/item/clothing/accessory/head_strip/federal
 	name = "Federal strip"
-	desc = "Плотно сшитая круглая нашивка из синего бархата с белой окантовкой и золотыми вставками. По центру красуется логотип ТСФ, прошитый бело-золотыми металлическими нитями: стандартный знак отличия для граждан ТСФ."
+	desc = "A densely stitched round patch of blue velvet with white edging and gold accents. The TSF logo is embroidered in white-and-gold metallic thread. Standard insignia for TSF citizens."
 	icon_state = "stripe_federal"
 	item_state = "stripe_federal"
 	strip_ru_name = "Федерал"
@@ -191,7 +177,7 @@
 
 /obj/item/clothing/accessory/head_strip/greytide
 	name = "GreyTide strip"
-	desc = "Плотно сшитая круглая нашивка серого цвета с расположенным в центре противогазом."
+	desc = "A densely stitched round grey patch with a gas mask in the center."
 	icon_state = "greytstrip"
 	item_state = "greytstrip"
 	strip_ru_name = "GreyTide"
@@ -201,7 +187,7 @@
 
 /obj/item/clothing/accessory/head_strip/lawyers_badge
 	name = "attorney's badge"
-	desc = "Наполняет вас убежденностью в СПРАВЕДЛИВОСТЬ. Юристы стремятся демонстрировать её всем, кого встречают."
+	desc = "Fills you with the conviction of JUSTICE. Lawyers tend to want to show it to everyone they meet."
 	icon_state = "lawyerbadge"
 	item_state = "lawyerbadge"
 	gender = MALE
@@ -218,7 +204,7 @@
 
 /obj/item/clothing/accessory/head_strip/cheese_badge
 	name = "great fellow's badge"
-	desc = "Плотно сшитая круглая нашивка из желто-оранжевого бархата, по центру красуется то ли корона, то ли головка сыра. Слегка отдает запахом Монтерей Джека."
+	desc = "A densely stitched round patch of yellow-orange velvet. Its center depicts either a crown or a wheel of cheese. Smells faintly of Monterey Jack."
 	icon_state = "cheesebadge"
 	item_state = "cheesebadge"
 	gender = MALE
@@ -234,7 +220,7 @@
 
 /obj/item/clothing/accessory/head_strip/clown
 	name = "clown's strip"
-	desc = "Плотно сшитая круглая нашивка с изображением клоуна. Идеально подойдет для совершения военных преступлений, ведь это не военное преступление, если тебе было весело!"
+	desc = "A densely stitched round patch depicting a clown. Perfect for committing war crimes, because it isn't a war crime if you had fun!"
 	icon_state = "clownstrip"
 	item_state = "clownstrip"
 	strip_ru_name = JOB_TITLE_RU_CLOWN
@@ -244,7 +230,7 @@
 
 /obj/item/clothing/accessory/head_strip/deathsquad
 	name = "deathsquad's strip"
-	desc = "Плотно сшитая круглая нашивка из чёрного бархата с красными вставками. По центру красуется шлем бойца Эскадрона Смерти, которые являются \[ОТРЕДАКТИРОВАНО\]."
+	desc = "A densely stitched round patch of black velvet with red accents. Its center depicts the helmet of a Deathsquad trooper, who is \[REDACTED]."
 	icon_state = "deathsquadstrip"
 	item_state = "deathsquadstrip"
 	strip_ru_name = "Эскадрон Смерти"
@@ -254,7 +240,7 @@
 
 /obj/item/clothing/accessory/head_strip/triforce
 	name = "triforce strip"
-	desc = "Круглая нашивка из твёрдого пластика жёлтого цвета с чёрной окантовкой, по центру расположены три светящихся треугольника голубого цвета. Треугольники явно расположены неправильно."
+	desc = "A round patch of hard yellow plastic with a black border and three glowing light-blue triangles in the center. The triangles are clearly arranged incorrectly."
 	icon_state = "triforcestrip"
 	item_state = "triforcestrip"
 	strip_ru_name = "Трифорс"
@@ -264,7 +250,7 @@
 
 /obj/item/clothing/accessory/head_strip/black_cat
 	name = "black cat strip"
-	desc = "Плотно сшитая нашивка из чёрного бархата в форме головы кота, по центру прошиты глаза и мордочка, выглядит замурчательно."
+	desc = "A densely stitched black velvet patch shaped like a cat's head, with embroidered eyes and a muzzle. Looks purrfect."
 	icon_state = "blackcatstrip"
 	item_state = "blackcatstrip"
 	strip_ru_name = "Чёрный кот"
@@ -274,7 +260,7 @@
 
 /obj/item/clothing/accessory/head_strip/fox
 	name = "fox strip"
-	desc = "Плотно сшитая нашивка из оранжевых нитей в форме головы лисы, в центре прошиты глаза и носик, выглядит достаточно мило."
+	desc = "A densely stitched orange-thread patch shaped like a fox's head, with embroidered eyes and a nose. Quite cute."
 	icon_state = "foxstrip"
 	item_state = "foxstrip"
 	strip_ru_name = "Лиса"
@@ -284,7 +270,7 @@
 
 /obj/item/clothing/accessory/head_strip/frog
 	name = "frog strip"
-	desc = "Плотно сшитая нашивка из зелёного бархата в форме весёлой лягушки, по центру прошит рот и белый животик. Сделано для истинных почитателей лягушек."
+	desc = "A densely stitched green velvet patch shaped like a cheerful frog, with an embroidered mouth and white belly. Made for true frog enthusiasts."
 	icon_state = "frogstrip"
 	item_state = "frogstrip"
 	strip_ru_name = "Лягушка"
@@ -294,7 +280,7 @@
 
 /obj/item/clothing/accessory/head_strip/whitecatstrip
 	name = "white cat strip"
-	desc = "Плотно сшитая нашивка из белого бархата в форме головы кота, по центру прошиты глаза и мордочка. Выглядит мило."
+	desc = "A densely stitched white velvet patch shaped like a cat's head, with embroidered eyes and a muzzle. Looks cute."
 	icon_state = "whitecatstrip"
 	item_state = "whitecatstrip"
 	strip_ru_name = "Белый кот"
@@ -304,7 +290,7 @@
 
 /obj/item/clothing/accessory/head_strip/orangecatstrip
 	name = "orange cat strip"
-	desc = "Плотно сшитая нашивка из нитей трех цветов в форме головы кота, по центру прошиты глаза и мордочка. Выглядит очень мило."
+	desc = "A densely stitched patch of three-colored thread shaped like a cat's head, with embroidered eyes and a muzzle. Looks very cute."
 	icon_state = "orangecatstrip"
 	item_state = "orangecatstrip"
 	strip_ru_name = "Трёхцветный кот"
@@ -314,7 +300,7 @@
 
 /obj/item/clothing/accessory/head_strip/ratstrip
 	name = "rat strip"
-	desc = "Плотно сшитая нашивка из серого бархата в форме головы крысы, по центру прошиты глаза и мордочка. Выглядит пи-пи-пи."
+	desc = "A densely stitched grey velvet patch shaped like a rat's head, with embroidered eyes and a muzzle. Looks squeak-squeak-squeaky."
 	icon_state = "ratstrip"
 	item_state = "ratstrip"
 	strip_ru_name = "Крыска"
@@ -324,7 +310,7 @@
 
 /obj/item/clothing/accessory/head_strip/devilstrip
 	name = "devil strip"
-	desc = "Плотно сшитая нашивка из красного бархата в форме головы дьявола, сверху красуются рога, а по центру два зловещих желтых глаза. От нашивки исходит инфернальное тепло."
+	desc = "A densely stitched red velvet patch shaped like a devil's head, with horns above two sinister yellow eyes. Radiates infernal warmth."
 	icon_state = "devilstrip"
 	item_state = "devilstrip"
 	strip_ru_name = "Дьявол"
@@ -334,7 +320,7 @@
 
 /obj/item/clothing/accessory/head_strip/labratstrip
 	name = "lab rat strip"
-	desc = "Плотно сшитая нашивка из белоснежного бархата в форме головы лабораторной крысы, по центру прошиты розовые ушки и красные глаза. Выглядит как будто повидала в жизни немало."
+	desc = "A densely stitched snow-white velvet patch shaped like a laboratory rat's head, with pink ears and red eyes. Looks as if it has seen a lot."
 	icon_state = "labratstrip"
 	item_state = "labratstrip"
 	strip_ru_name = "Лабораторная Крыска"
@@ -344,7 +330,7 @@
 
 /obj/item/clothing/accessory/head_strip/krampusstrip
 	name = "krampus"
-	desc = "Плотно сшитая нашивка из льдисто-голубого бархата в форме головы крампуса, сверху красуются ветвистые рога, а по центру прошиты фиолетовые глаза. Идеально для тех, кто плохо вёл себя в этом году."
+	desc = "A densely stitched icy-blue velvet patch shaped like Krampus's head, with branching horns and embroidered purple eyes. Perfect for anyone who has been naughty this year."
 	icon_state = "krampusstrip"
 	item_state = "krampusstrip"
 	strip_ru_name = "Крампус"
@@ -354,7 +340,7 @@
 
 /obj/item/clothing/accessory/head_strip/pursuitstrip
 	name = "pursuit"
-	desc = "Плотно сшитая нашивка из чёрного бархата в форме колеса, по центру белыми нитками прошита буква \"P\", а по бокам — синий и красный маячки. Слегка пахнет жжёной резиной."
+	desc = "A densely stitched black velvet patch shaped like a wheel. A white P is embroidered in the center, flanked by blue and red warning lights. Smells faintly of burned rubber."
 	icon_state = "pursuitstrip"
 	item_state = "pursuitstrip"
 	strip_ru_name = "Преследователь"
@@ -364,7 +350,7 @@
 
 /obj/item/clothing/accessory/head_strip/tvstrip
 	name = "tvstrip"
-	desc = "Плотно сшитая нашивка из коричневого бархата в форме старого телевизора, на экране прошита цветная тест-полоса, а сверху красуются две антенны. Не пытайтесь настроить цвета — и так сойдёт."
+	desc = "A densely stitched brown velvet patch shaped like an old television, with an embroidered color test pattern on its screen and two antennas on top. Don't adjust the colors; they're fine as they are."
 	icon_state = "tvstrip"
 	item_state = "tvstrip"
 	strip_ru_name = "Телевизор"

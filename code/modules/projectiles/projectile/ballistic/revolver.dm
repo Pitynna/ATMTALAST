@@ -6,16 +6,6 @@
 	icon_state = "bullet-r"
 	ricochet_chance = 20
 
-/obj/projectile/bullet/weakbullet2/get_ru_names()
-	return alist(
-		NOMINATIVE = "резиновая пуля",
-		GENITIVE = "резиновой пули",
-		DATIVE = "резиновой пуле",
-		ACCUSATIVE = "резиновую пулю",
-		INSTRUMENTAL = "резиновой пулей",
-		PREPOSITIONAL = "резиновой пуле",
-	)
-
 /obj/projectile/bullet/hp38
 	damage = 35
 	armour_penetration = -50
@@ -37,16 +27,6 @@
 	icon_state = null
 	hitsound_wall = null
 	nodamage = TRUE
-
-/obj/projectile/bullet/weakbullet2/invisible/get_ru_names()
-	return alist(
-		NOMINATIVE = "невидимая пуля",
-		GENITIVE = "невидимой пули",
-		DATIVE = "невидимой пуле",
-		ACCUSATIVE = "невидимую пулю",
-		INSTRUMENTAL = "невидимой пулей",
-		PREPOSITIONAL = "невидимой пуле",
-	)
 
 /obj/projectile/bullet/weakbullet2/invisible/fake
 	weaken = 0
@@ -72,16 +52,6 @@
 	damage = 25
 	ricochets_max = 3
 	ricochet_chance = 100
-
-/obj/projectile/bullet/midbullet3/pea/get_ru_names()
-	return alist(
-		NOMINATIVE = "гороховая пуля",
-		GENITIVE = "гороховой пули",
-		DATIVE = "гороховой пуле",
-		ACCUSATIVE = "гороховую пулю",
-		INSTRUMENTAL = "гороховой пулей",
-		PREPOSITIONAL = "гороховой пуле",
-	)
 
 /obj/projectile/bullet/midbullet3/pea/Initialize(mapload)
 	. = ..()

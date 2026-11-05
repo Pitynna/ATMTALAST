@@ -191,8 +191,6 @@
 #define MECH_FAB_CATEGORY_CYBORG_REPAIR "Компоненты роботов"
 #define MECH_FAB_CATEGORY_CYBORG_EQUIPMENT "Оборудование роботов"
 #define MECH_FAB_CATEGORY_IPC "КПБ"
-#define MECH_FAB_CATEGORY_MODSUIT_CONSTRUCTION "Сборка МЭК"
-#define MECH_FAB_CATEGORY_MODSUIT_MODULES "Модули МЭК"
 #define MECH_FAB_CATEGORY_EXOSUIT_EQUIPMENT "Оборудование экзоскелетов"
 #define MECH_FAB_CATEGORY_EXOSUIT_PAINTKITS "Наборы кастомизации экзоскелетов"
 #define MECH_FAB_CATEGORY_RIPLEY "Рипли"
@@ -261,10 +259,3 @@
 #define FG_OFFLINE 0
 #define FG_CHARGING 1
 #define FG_ONLINE 2
-
-#define HYPERTORUS_INACTIVE 0 // No or minimal energy
-#define HYPERTORUS_NOMINAL 1 // Normal operation
-#define HYPERTORUS_WARNING 2 // Integrity damaged
-#define HYPERTORUS_DANGER 3 // Integrity < 50%
-#define HYPERTORUS_EMERGENCY 4 // Integrity < 25%
-#define HYPERTORUS_MELTING 5 // Pretty obvious.

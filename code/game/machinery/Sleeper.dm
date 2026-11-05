@@ -6,7 +6,7 @@
 
 /obj/machinery/sleeper
 	name = "Sleeper"
-	desc = "Медицинское устройство, предназначеное для стабилизации пациентов. Позволяет вводить ограниченный набор веществ в организм субъекта."
+	desc = "Injects chemicals into the bloodstream of the occupant, can remove chemicals from the bloodstream of the occupant through dialysis."
 	icon = 'icons/obj/machines/cryogenic2.dmi'
 	icon_state = "sleeper-open"
 	var/base_icon = "sleeper"
@@ -31,16 +31,6 @@
 
 	light_color = LIGHT_COLOR_CYAN
 	light_power = 0.5
-
-/obj/machinery/sleeper/get_ru_names()
-	return alist(
-		NOMINATIVE = "слипер",
-		GENITIVE = "слипера",
-		DATIVE = "слиперу",
-		ACCUSATIVE = "слипер",
-		INSTRUMENTAL = "слипером",
-		PREPOSITIONAL = "слипере",
-	)
 
 /obj/machinery/sleeper/Initialize(mapload)
 	. = ..()
@@ -415,16 +405,6 @@
 	if(occupant)
 		go_out()
 	..(severity)
-
-/obj/machinery/sleeper/narsie_act()
-	go_out()
-	new /obj/effect/gibspawner/generic(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	qdel(src)
-
-/obj/machinery/sleeper/ratvar_act()
-	go_out()
-	new /obj/effect/decal/cleanable/blood/gibs/clock(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	qdel(src)
 
 /obj/machinery/sleeper/proc/toggle_filter()
 	if(filtering || !beaker)

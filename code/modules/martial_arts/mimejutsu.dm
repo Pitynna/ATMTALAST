@@ -50,21 +50,11 @@
 
 /obj/item/mimejutsu_scroll
 	name = "Mimejutsu manual"
-	desc =	"Старое пособие по боевому искусству мимов."
+	desc =	"Its a beret with a note stapled to it..."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "mimemanual"
 	item_state = "mimemanual"
 	var/used = FALSE
-
-/obj/item/mimejutsu_scroll/get_ru_names()
-	return alist(
-		NOMINATIVE = "мануал Мимдзютсю",
-		GENITIVE = "мануала Мимдзютсю",
-		DATIVE = "мануалу Мимдзютсю",
-		ACCUSATIVE = "мануал Мимдзютсю",
-		INSTRUMENTAL = "мануалом Мимдзютсю",
-		PREPOSITIONAL = "мануале Мимдзютсю",
-	)
 
 /obj/item/mimejutsu_scroll/attack_self(mob/user)
 	if(!ishuman(user))
@@ -75,7 +65,7 @@
 		F.teach(H)
 		to_chat(H, span_boldannounceic("..."))
 		used = TRUE
-		desc = "Старое пособие по боевому искусству мимов, но страницы его пусты."
+		desc = "An old mime martial arts manual, but its pages are blank."
 	else
 		to_chat(user, span_warning("Сначала вы должны принять обет молчания!"))
 

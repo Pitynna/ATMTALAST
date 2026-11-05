@@ -403,10 +403,6 @@ LOG_TIMERS_ON_BUCKET_RESET
 TOPIC_FILTERING_WHITELIST 127.0.0.1
 
 ## Silero Text-to-speech
-#TTS_TOKEN_SILERO mytoken
-#TTS_URL_SILERO https://example.com
-#TTS_ENABLED
-#TTS_CACHE
 
 # Number of players required for automatic gamemode change to extended. Doesn't work if set to zero or commented
 #AUTO_EXTENDED_PLAYERS_NUM 10

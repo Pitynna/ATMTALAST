@@ -1,6 +1,6 @@
 /obj/machinery/processor
 	name = "Food Processor"
-	desc = "Высокоэффективный прибор для стандартизации процесса приготовления. Автоматически нарезает, мнёт, формует и экструдирует."
+	desc = "Used for turning ingredients into other ingredients."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "processor"
 	density = TRUE
@@ -13,16 +13,6 @@
 	active_power_usage = 50
 	var/rating_speed = 0
 	var/rating_amount = 0
-
-/obj/machinery/processor/get_ru_names()
-	return alist(
-		NOMINATIVE = "кухонный комбайн",
-		GENITIVE = "кухонного комбайна",
-		DATIVE = "кухонному комбайну",
-		ACCUSATIVE = "кухонный комбайн",
-		INSTRUMENTAL = "кухонным комбайном",
-		PREPOSITIONAL = "кухонном комбайне"
-	)
 
 /obj/machinery/processor/Initialize(mapload)
 	. = ..()

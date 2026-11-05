@@ -239,7 +239,7 @@ GLOBAL_VAR_INIT(tdome_arena_melee, locate(/area/centcom/tdome/new_arena/cqc))
  */
 /obj/minigame_anchor/thunderdome_poller
 	name = "Thunderdome Poller"
-	desc = "Желаете стать лучшим бойцом? Опробуйте себя на Тандердоме в роли мастера ближнего боя!"
+	desc = "Want to become the best fighter? Test yourself in the Thunderdome as a master of close combat!"
 	var/gamemode_type = /datum/thunderdome_gamemode
 	var/datum/mini_game/thunderdome_battle/thunderdome
 	var/datum/thunderdome_gamemode/mode
@@ -253,12 +253,12 @@ GLOBAL_VAR_INIT(tdome_arena_melee, locate(/area/centcom/tdome/new_arena/cqc))
 
 /obj/minigame_anchor/thunderdome_poller/ranged
 	name = "Thunderdome Poller (Ranged)"
-	desc = "Желаете стать лучшим стрелком? Опробуйте себя на Тандердоме в роли мастера со смертельным дальнобойным арсеналом!"
+	desc = "Want to become the best marksman? Test yourself in the Thunderdome with a deadly ranged arsenal!"
 	gamemode_type = /datum/thunderdome_gamemode/ranged
 
 /obj/minigame_anchor/thunderdome_poller/mixed
 	name = "Thunderdome Poller (Mixed)"
-	desc = "Желаете стать лучшим воином? Опробуйте себя на Тандердоме в роли мастера стрелковых искусств и техник ближнего боя!"
+	desc = "Want to become the best warrior? Test yourself in the Thunderdome as a master of both marksmanship and close combat!"
 	gamemode_type = /datum/thunderdome_gamemode/mixed
 
 /obj/minigame_anchor/thunderdome_poller/Initialize(mapload)

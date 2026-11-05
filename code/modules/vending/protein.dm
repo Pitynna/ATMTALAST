@@ -1,6 +1,6 @@
 /obj/machinery/vending/protein
-	name = "Автомат спортивного питания"
-	desc = "Автомат самообслуживания, любезно предоставленный корпорацией Donk Co. Исключительная польза!"
+	name = "sports nutrition vendor"
+	desc = "A self-service vending machine generously provided by Donk Co. Nothing but benefits!"
 	slogan_list = list(
 		"Попр+обуйте н+аш н+овый проте+иновый бат+ончик!",
 		"Накач+аться никогд+а не п+оздно!",
@@ -35,14 +35,4 @@
 	)
 	contraband = list(
 		/obj/item/reagent_containers/syringe/steroids = 5,
-	)
-
-/obj/machinery/vending/protein/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат спортивного питания",
-		GENITIVE = "торгового автомата спортивного питания",
-		DATIVE = "торговому автомату спортивного питания",
-		ACCUSATIVE = "торговый автомат спортивного питания",
-		INSTRUMENTAL = "торговым автоматом спортивного питания",
-		PREPOSITIONAL = "торговом автомате спортивного питания",
 	)

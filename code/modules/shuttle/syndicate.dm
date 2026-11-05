@@ -65,29 +65,29 @@
 
 /obj/machinery/computer/shuttle/sst
 	name = "Syndicate Strike Team Shuttle Console"
-	desc = "Используется для вызова и отправки шаттла Ударного Отряда \"Синдиката\"."
+	desc = "Used to call and send the SST shuttle."
 	icon_keyboard = "syndie_key"
 	icon_screen = "syndishuttle"
 	req_access = list(ACCESS_SYNDICATE)
 	bubble_icon = "syndibot"
 	shuttleId = "sst"
-	possible_destinations = "sst_home;sst_away;sst_custom;sst_taipan"
+	possible_destinations = "sst_home;sst_away;sst_custom"
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/machinery/computer/shuttle/sit
 	name = "Syndicate Infiltration Team Shuttle Console"
-	desc = "Используется для вызова и отправки шаттла Диверсионного Отряда \"Синдиката\"."
+	desc = "Used to call and send the SIT shuttle."
 	icon_keyboard = "syndie_key"
 	icon_screen = "syndishuttle"
 	req_access = list(ACCESS_SYNDICATE)
 	bubble_icon = "syndibot"
 	shuttleId = "sit"
-	possible_destinations = "sit_arrivals;sit_engshuttle;sit_away;sit_custom;sit_taipan"
+	possible_destinations = "sit_arrivals;sit_engshuttle;sit_away;sit_custom"
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate
 	name = "syndicate shuttle navigation computer"
-	desc = "Используется, чтобы указать точное местоположение для отправки шаттла \"Синдиката\"."
+	desc = "Used to designate a precise transit location for the syndicate shuttle."
 	icon_screen = "syndinavigation"
 	icon_keyboard = "syndie_key"
 	shuttleId = "syndicate"
@@ -101,20 +101,18 @@
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sst
 	name = "SST shuttle navigation computer"
-	desc = "Используется, чтобы указать точное местоположение для отправки шаттла Ударного Отряда \"Синдиката\"."
+	desc = "Used to designate a precise transit location for the SST shuttle."
 	shuttleId = "sst"
 	shuttlePortId = "sst_custom"
 	x_offset = 0
 	y_offset = 0
-	access_taipan = TRUE
 
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sit
 	name = "SIT shuttle navigation computer"
-	desc = "Используется, чтобы указать точное местоположение для отправки шаттла Диверсионного Отряда \"Синдиката\"."
+	desc = "Used to designate a precise transit location for the SIT shuttle."
 	shuttleId = "sit"
 	shuttlePortId = "sit_custom"
 	x_offset = 0
 	y_offset = 0
-	access_taipan = TRUE
 
 #undef SYNDICATE_CHALLENGE_TIMER

@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(active_entertainment_cameras)
 
 /obj/item/broadcast_camera
 	name = "broadcast camera"
-	desc = "Камера, что принимает киноленты и может быть установлена на штатив."
+	desc = "A camera that accepts film reels and can be mounted on a tripod."
 	icon = 'icons/obj/tripod_camera.dmi'
 	icon_state = "broadcast_camera_off"
 	item_state = "broadcast_camera_off"
@@ -34,16 +34,6 @@ GLOBAL_LIST_EMPTY(active_entertainment_cameras)
 /obj/item/broadcast_camera/Initialize(mapload)
 	. = ..()
 	soundloop = new(src, FALSE)
-
-/obj/item/broadcast_camera/get_ru_names()
-	return alist(
-		NOMINATIVE = "трансляционная камера",
-		GENITIVE = "трансляционной камеры",
-		DATIVE = "трансляционной камере",
-		ACCUSATIVE = "трансляционную камеру",
-		INSTRUMENTAL = "трансляционной камерой",
-		PREPOSITIONAL = "трансляционной камере",
-	)
 
 /obj/item/broadcast_camera/Destroy(force)
 	if(camera) // null until toggled on

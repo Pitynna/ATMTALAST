@@ -62,7 +62,7 @@
 // Base bench types by geometry
 /obj/structure/chair/sofa/bench
 	name = "bench"
-	desc = "Спроектирована таким образом, чтобы на ней было удобно сидеть, но невозможно спать."
+	desc = "Designed to be comfortable for sitting but impossible to sleep on."
 	gender = FEMALE
 	icon = 'icons/map_icons/objects.dmi'
 	icon_state = "/obj/structure/chair/sofa/bench"
@@ -70,16 +70,6 @@
 	greyscale_colors = COLOR_BENCH_BROWN
 	post_init_icon_state = "bench_middle"
 	comfort = 0.1
-
-/obj/structure/chair/sofa/bench/get_ru_names()
-	return alist(
-		NOMINATIVE = "скамья",
-		GENITIVE = "скамьи",
-		DATIVE = "скамье",
-		ACCUSATIVE = "скамью",
-		INSTRUMENTAL = "скамьёй",
-		PREPOSITIONAL = "скамье"
-	)
 
 /obj/structure/chair/sofa/bench/left
 	icon_state = "/obj/structure/chair/sofa/bench/left"

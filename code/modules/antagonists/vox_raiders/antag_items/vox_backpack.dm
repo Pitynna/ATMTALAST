@@ -1,6 +1,6 @@
 /obj/item/storage/backpack/vox
 	name = "vox backpack"
-	desc = "Рюкзак воксов из плотно переплетенного синтетического волокна. Хорошо защищает спину носителя при побегах и вмещает достаточно добра."
+	desc = "A vox backpack woven from dense synthetic fiber. Protects its wearer's back during escapes and holds plenty of loot."
 	icon_state = "backpack_vox"
 	item_color = "backpack_vox"
 	item_state = "backpack_vox"
@@ -15,7 +15,7 @@
 
 /obj/item/storage/backpack/satchel_flat/vox
 	name = "vox satchel"
-	desc = "Ранец воксов из синтетического волокна. Компактный, из-за чего его можно отлично прятать."
+	desc = "A compact vox satchel made from synthetic fiber. Easy to conceal."
 	icon_state = "satchel_vox"
 	item_color = "satchel_vox"
 	item_state = "satchel_vox"
@@ -29,7 +29,7 @@
 
 /obj/item/storage/backpack/duffel/vox
 	name = "vox duffelbag"
-	desc = "Сумка воксов из синтетического волокна. Емкий, вмещает много добра."
+	desc = "A spacious vox bag made from synthetic fiber. Holds plenty of loot."
 	icon_state = "duffel_vox"
 	item_color = "duffel_vox"
 	item_state = "duffel_vox"
@@ -45,7 +45,7 @@
 
 /obj/item/storage/belt/vox
 	name = "vox belt"
-	desc = "Удобный пояс с петельками для ношения всячины."
+	desc = "A comfortable belt with loops for carrying assorted things."
 	icon_state = "securitybelt"
 	item_state = "security"
 	origin_tech = "syndicate=1"
@@ -74,7 +74,7 @@
 
 /obj/item/storage/belt/vox/bio
 	name = "bio-vox belt"
-	desc = "Удобный пояс с плетенными кармашками для ношения ядер, взрывчатки и шприцов."
+	desc = "A comfortable belt with woven pockets for carrying cores, explosives and syringes."
 	icon_state = "assaultbelt"
 	item_state = "assault"
 	storage_slots = 21

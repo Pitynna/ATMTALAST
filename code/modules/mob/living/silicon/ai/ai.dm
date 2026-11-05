@@ -22,7 +22,6 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	VERB_META(/mob/living/silicon/ai, botcall),
 	VERB_META(/mob/living/silicon/ai, change_arrival_message),
 	VERB_META(/mob/living/silicon/ai, arrivals_announcement),
-	VERB_META(/mob/living/silicon/ai, ai_change_voice),
 ))
 
 //Not sure why this is necessary...
@@ -196,9 +195,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 
 	holo_icon = getHologramIcon(icon('icons/mob/ai.dmi',"holo1"))
 
-	if(B?.clock)
-		INVOKE_ASYNC(src, TYPE_PROC_REF(/atom, ratvar_act))
-	else if(HAS_TRAIT(SSstation, STATION_TRAIT_UNIQUE_AI))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_UNIQUE_AI))
 		make_special_laws()
 	else if(L)
 		if(istype(L, /datum/ai_laws))
@@ -559,18 +556,6 @@ GAME_VERB_PROC_DESC(/mob/living/silicon/ai, announcement, "Звуковое оп
 		if(EXPLODE_LIGHT)
 			if(stat != 2)
 				apply_damage(30)
-
-/mob/living/silicon/ai/ratvar_act()
-	if(isclocker(src))
-		return
-	SSticker.mode.add_clocker(mind)
-	laws = new /datum/ai_laws/ratvar
-	add_overlay("clockwork_frame")
-	for(var/mob/living/silicon/robot/R in connected_robots)
-		to_chat(R, span_danger("ERROR: Master AI has be&# &#@)!-"))
-		to_chat(R, span_clocklarge("\"Your master is under my control, so do you\""))
-		R.ratvar_act(TRUE, TRUE)
-		SSticker?.score?.save_silicon_laws(R, additional_info = "Ratvar act via master AI conversion", log_all_laws = TRUE)
 
 /mob/living/silicon/ai/Topic(href, href_list)
 	if(usr != src)
@@ -1029,9 +1014,6 @@ GAME_VERB_PROC_DESC(/mob/living/silicon/ai, toggle_camera_light, "Подсвет
 GAME_VERB_PROC_DESC(/mob/living/silicon/ai, sensor_mode, "Сенсоры камеры", "Augment visual feed with internal sensor overlays.", VERB_CATEGORY_AICOMMANDS)
 	toggle_sensor_mode()
 
-GAME_VERB_PROC_DESC(/mob/living/silicon/ai, ai_change_voice, "Сменить голос", "Express yourself!", VERB_CATEGORY_AICOMMANDS)
-	change_voice()
-
 GAME_VERB_PROC_DESC(/mob/living/silicon/ai, arrivals_announcement, "Авто-оповещения о прибытии", "Change whether or not you wish to announce arrivals.", VERB_CATEGORY_AICOMMANDS)
 	announce_arrivals = !announce_arrivals
 	to_chat(usr, "Arrivals announcement system [announce_arrivals ? "enabled" : "disabled"]")
@@ -1337,8 +1319,6 @@ GAME_VERB_PROC_DESC(/mob/living/silicon/ai, control_integrated_radio, "Наст�
 		deployed_shell.show_laws()
 
 /mob/living/silicon/ai/proc/can_connect_to(mob/living/silicon/robot/target)
-	if(isclocker(target) && !isclocker(src))
-		return FALSE
 	if(target.key)
 		return FALSE
 	if(!target.shell || target.deployed)
@@ -1386,8 +1366,6 @@ GAME_VERB_PROC_DESC(/mob/living/silicon/ai, control_integrated_radio, "Наст�
 	RegisterSignal(target, COMSIG_LIVING_DEATH, PROC_REF(disconnect_shell))
 	deployed_shell = target
 	target.deploy_init(src)
-	if(isclocker(src))
-		target.ratvar_act(TRUE, TRUE)
 	mind.transfer_to(target)
 	var/area/area = get_area(target)
 	log_game("[ckey] has entered AI shell \"[target.name]\" in [sanitize(area.name)]([COORD(target)])")

@@ -97,23 +97,13 @@
 
 /obj/item/shield/riot/goliath
 	name = "goliath shield"
-	desc = "Щит, сплетённый из пластин шкуры голиафа."
+	desc = "A shield made from interwoven plates of goliath hide."
 	icon_state = "goliath_shield"
 	item_state = "goliath_shield"
 	materials = list()
 	origin_tech = "materials=1;combat=3;biotech=2"
 	obj_integrity = 380
 	max_integrity = 380
-
-/obj/item/shield/riot/goliath/get_ru_names()
-	return alist(
-		NOMINATIVE = "щит из пластин голиафа",
-		GENITIVE = "щита из пластин голиафа",
-		DATIVE = "щиту из пластин голиафа",
-		ACCUSATIVE = "щит из пластин голиафа",
-		INSTRUMENTAL = "щитом из пластин голиафа",
-		PREPOSITIONAL = "щите из пластин голиафа",
-	)
 
 /obj/item/shield/riot/goliath/add_parry_component()
 	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.55, _parry_time_out_time = PARRY_SHIELD_TIMEOUT, _parryable_attack_types = ALL_ATTACK_TYPES)

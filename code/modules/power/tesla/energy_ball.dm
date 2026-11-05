@@ -15,7 +15,7 @@
 /// The Tesla engine
 /obj/energy_ball
 	name = "energy ball"
-	desc = "Энергетический шар."
+	desc = "An energy ball."
 	icon = 'icons/obj/engines_and_power/tesla/energy_ball.dmi'
 	icon_state = "energy_ball"
 	anchored = TRUE
@@ -49,16 +49,6 @@
 	var/list/shocked_things = list()
 	/// Looping ambient sound of the tesla ball.
 	var/datum/looping_sound/tesla/soundloop
-
-/obj/energy_ball/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергетический шар",
-		GENITIVE = "энергетического шара",
-		DATIVE = "энергетическому шару",
-		ACCUSATIVE = "энергетический шар",
-		INSTRUMENTAL = "энергетическим шаром",
-		PREPOSITIONAL = "энергетическом шаре",
-	)
 
 /obj/energy_ball/Initialize(mapload, starting_energy = 50, is_miniball = FALSE)
 	. = ..()

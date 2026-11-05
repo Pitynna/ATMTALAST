@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/compare/toggle
 	display_name = "Переключить"
-	desc = "Компонент, который переключается между включением и выключением при срабатывании. \
-			Все входные порты, кроме порта переключения, активируют компонент."
+	desc = "A component that toggles on and off when triggered. All input ports except the toggle port activate the component."
 	category = "Math"
 
 	/// A signal to reset the toggle back to 0

@@ -1,7 +1,7 @@
 //DNA machine
 /obj/machinery/dnaforensics
-	name = "Анализатор ДНК"
-	desc = "Высокотехнологичная машина, которая предназначена для правильного считывания образцов ДНК."
+	name = "\improper DNA analyzer"
+	desc = "A high-tech machine that is designed to sequence DNA samples."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "dna_open"
 	anchored = TRUE
@@ -62,7 +62,7 @@
 
 	if(swab)
 		var/obj/item/forensics/swab/bloodswab = swab
-		report.name = ("Отчет ДНК сканера №[++report_num]: [bloodswab.name]")
+		report.name = ("DNA Scanner Report #[++report_num]: [bloodswab.name]")
 		//dna data itself
 		var/data = "Нет доступных данных по анализу."
 		if(bloodswab.dna != null)

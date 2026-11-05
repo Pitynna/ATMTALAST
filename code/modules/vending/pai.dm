@@ -1,6 +1,6 @@
 /obj/machinery/vending/pai
 	name = "RoboFriends"
-	desc = "Потрясающий продавец ПИИ-друзей и всяких робо штучек!"
+	desc = "Wonderful vendor of PAI friends"
 	icon_state = "paivend_off"
 	panel_overlay = "paivend_panel"
 	screen_overlay = "paivend"
@@ -71,14 +71,4 @@
 	contraband = list(
 		/obj/item/pai_cartridge/syndi_emote = 1,
 		/obj/item/pai_cartridge/snake = 1,
-	)
-
-/obj/machinery/vending/pai/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат RoboFriends",
-		GENITIVE = "торгового автомата RoboFriends",
-		DATIVE = "торговому автомату RoboFriends",
-		ACCUSATIVE = "торговый автомат RoboFriends",
-		INSTRUMENTAL = "торговым автоматом RoboFriends",
-		PREPOSITIONAL = "торговом автомате RoboFriends",
 	)

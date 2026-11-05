@@ -3,7 +3,7 @@
 //	condiments, additives, and such go.
 
 /datum/reagent/consumable
-	name = "Съедомная масса"
+	name = "Consumable"
 	id = "consumable"
 	harmless = TRUE
 	taste_description = "чего-то съедобного"
@@ -17,7 +17,7 @@
 	return ..()
 
 /datum/reagent/consumable/nutriment		// Pure nutriment, universally digestable and thus slightly less effective
-	name = "Питательные вещества"
+	name = "Nutriment"
 	id = "nutriment"
 	description = "Сомнительная смесь чистых питательных веществ, обычно встречающихся в переработанных продуктах питания."
 	nutriment_factor = 15 * REAGENTS_METABOLISM
@@ -63,13 +63,13 @@
 		.[nutriment_taste] = amount
 
 /datum/reagent/consumable/nutriment/plantmatter		// Plant-based biomatter, digestable by herbivores and omnivores, worthless to carnivores
-	name = "Растительная масса"
+	name = "Plant-matter"
 	id = "plantmatter"
 	description = "Богатые витаминами волокна и натуральные сахара, которые обычно содержатся в свежих продуктах."
 	diet_flags = DIET_HERB | DIET_OMNI
 
 /datum/reagent/consumable/nutriment/vitamin
-	name = "Витамины"
+	name = "Vitamin"
 	id = "vitamin"
 	description = "Все лучшие витамины, минералы и углеводы, необходимые организму, в чистом виде."
 	burn_heal = 1
@@ -81,7 +81,7 @@
 	return ..()
 
 /datum/reagent/consumable/nutriment/protein // Meat-based protein, digestable by carnivores and omnivores, worthless to herbivores
-	name = "Белки"
+	name = "Protein"
 	id = "protein"
 	description = "Вещество, которое обычно содержится в мясе и крови животных."
 	diet_flags = DIET_CARN | DIET_OMNI
@@ -101,7 +101,7 @@
 	user.remove_status_effect(status_effect_type)
 
 /datum/reagent/consumable/nutriment/protein/liquid
-	name = "Разбавленный протеин"
+	name = "Diluted Protein"
 	id = "protein_liquid"
 	reagent_state = LIQUID
 	nutriment_factor = 15 * REAGENTS_METABOLISM / 4
@@ -109,12 +109,12 @@
 	status_effect_type = /datum/status_effect/sport_reagents/protein/water
 
 /datum/reagent/consumable/nutriment/protein/liquid/milk
-	name = "Разбавленный протеин на молоке"
+	name = "Milk-Based Diluted Protein"
 	id = "protein_liquid_milk"
 	status_effect_type = /datum/status_effect/sport_reagents/protein/milk
 
 /datum/reagent/consumable/sugar
-	name = "Сахар"
+	name = "Sugar"
 	id = "sugar"
 	description = "Органическое соединение, широко известное как столовый сахар и иногда называемое сахарозой. Это белый кристаллический порошок без запаха, обладающий приятным сладким вкусом."
 	color = "#FFFFFF" // rgb: 255, 255, 255
@@ -169,7 +169,7 @@
 	..()
 
 /datum/reagent/consumable/aspartame
-	name = "Аспартам"
+	name = "Aspartame"
 	id = "aspartame"
 	description = "Искусственный подсластитель. В отличие от сахара, обладает нулевой калорийностью, благодаря чему его часто используют в продуктах \"для похудения\"."
 	color = "#FFFFFF" // rgb: 255, 255, 255
@@ -191,7 +191,7 @@
 #undef ASPARTAME_DISGUST_THRESHOLD
 
 /datum/reagent/consumable/soysauce
-	name = "Соевый соус"
+	name = "Soysauce"
 	id = "soysauce"
 	description = "Солёный соус из соевого растения."
 	reagent_state = LIQUID
@@ -200,7 +200,7 @@
 	taste_description = "сои"
 
 /datum/reagent/consumable/ketchup
-	name = "Кетчуп"
+	name = "Ketchup"
 	id = "ketchup"
 	description = "Кетчуп, кекчуп, кечап, как будет угодно. Это томатная паста."
 	reagent_state = LIQUID
@@ -209,7 +209,7 @@
 	taste_description = "кетчупа"
 
 /datum/reagent/consumable/tomatosauce
-	name = "Томатный соус"
+	name = "Tomato Sauce"
 	id = "tsauce"
 	description = "Отец всех соусов. Помидоры, немного специй и ничего лишнего."
 	reagent_state = LIQUID
@@ -218,7 +218,7 @@
 	taste_description = "томатного соуса"
 
 /datum/reagent/consumable/cheesesauce
-	name = "Сырный соус"
+	name = "Cheese Sauce"
 	id = "csauce"
 	description = "Сыр, сливки и молоко... максимальная концентрация белка!"
 	reagent_state = LIQUID
@@ -227,7 +227,7 @@
 	taste_description = "сырного соуса"
 
 /datum/reagent/consumable/mushroomsauce
-	name = "Грибной соус"
+	name = "Mushroom Sauce"
 	id = "msauce"
 	description = "Сливочный соус с грибами, имеет довольно резкий запах."
 	reagent_state = LIQUID
@@ -236,7 +236,7 @@
 	taste_description = "грибного соуса"
 
 /datum/reagent/consumable/garlicsauce
-	name = "Чесночный соус"
+	name = "Garlic Sauce"
 	id = "gsauce"
 	description = "Крепкий чесночный с резким запахом. Некоторые члены экипажа наверняка будут шипеть на вас из-за этого."
 	reagent_state = LIQUID
@@ -245,7 +245,7 @@
 	taste_description = "чесночного соуса"
 
 /datum/reagent/consumable/diablosauce
-	name = "Соус \"Диабло\""
+	name = "Diablo Sauce"
 	id = "dsauce"
 	description = "Древний жгучий соус, рецепт которого практически не изменился с момента его создания."
 	reagent_state = LIQUID
@@ -254,7 +254,7 @@
 	taste_description = "острого томатного соуса"
 
 /datum/reagent/consumable/custard
-	name = "Заварной крем"
+	name = "Custard"
 	id = "custard"
 	description = "Мягкий и сладкий крем, используемый в кондитерских изделиях."
 	reagent_state = LIQUID
@@ -263,7 +263,7 @@
 	taste_description = "сладкого мягкого крема"
 
 /datum/reagent/consumable/capsaicin
-	name = "Капсаициновое масло"
+	name = "Capsaicin Oil"
 	id = "capsaicin"
 	description = "Именно это делает чили острым."
 	reagent_state = LIQUID
@@ -300,7 +300,7 @@
 	return ..()
 
 /datum/reagent/consumable/condensedcapsaicin
-	name = "Сгущённое капсаициновое масло"
+	name = "Condensed Capsaicin"
 	id = "condensedcapsaicin"
 	description = "Ещё острее."
 	reagent_state = LIQUID
@@ -381,7 +381,7 @@
 				victim.drop_from_active_hand()
 
 /datum/reagent/consumable/frostoil
-	name = "Ледяное масло"
+	name = "Frost Oil"
 	id = "frostoil"
 	description = "Масло, сильно охлаждающее тело. Добывается из ледяных перцев."
 	reagent_state = LIQUID
@@ -438,7 +438,7 @@
 			M.adjustToxLoss(rand(15, 30))
 
 /datum/reagent/consumable/sodiumchloride
-	name = "Соль"
+	name = "Salt"
 	id = "sodiumchloride"
 	description = "Хлорид натрия, обычная поваренная соль."
 	color = "#B1B0B0"
@@ -454,13 +454,13 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/blackpepper
-	name = "Чёрный перец"
+	name = "Black Pepper"
 	id = "blackpepper"
 	description = "Порошок, измельченный из перца. Только не вдыхайте его полной грудью."
 	taste_description = "перца"
 
 /datum/reagent/consumable/cocoa
-	name = "Какао-порошок"
+	name = "Cocoa Powder"
 	id = "cocoa"
 	description = "Жирная, горькая паста из какао-бобов."
 	nutriment_factor = 5 * REAGENTS_METABOLISM
@@ -468,7 +468,7 @@
 	taste_description = "горького какао"
 
 /datum/reagent/consumable/vanilla
-	name = "Ванильный порошок"
+	name = "Vanilla"
 	id = "vanilla"
 	description = "Жирная, горькая паста из стручков ванили."
 	nutriment_factor = 5 * REAGENTS_METABOLISM
@@ -476,14 +476,14 @@
 	taste_description = "горькой ванили"
 
 /datum/reagent/consumable/herbs
-	name = "Микс трав"
+	name = "Mixed Herbs"
 	id = "herbsmix"
 	description = "Смесь различных трав."
 	color = "#2c5c04"
 	taste_description = "сухих трав"
 
 /datum/reagent/consumable/hot_coco
-	name = "Горячий шоколад"
+	name = "Hot Chocolate"
 	id = "hot_coco"
 	description = "Сделано с любовью! И какао-бобами."
 	reagent_state = LIQUID
@@ -497,7 +497,7 @@
 	return ..()
 
 /datum/reagent/consumable/garlic
-	name = "Чесночный сок"
+	name = "Garlic Juice"
 	id = "garlic"
 	description = "Cспелый чеснок. Повара его любят, но от него может неприятно пахнуть."
 	color = "#FEFEFE"
@@ -523,7 +523,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/sprinkles
-	name = "Посыпка"
+	name = "Sprinkles"
 	id = "sprinkles"
 	description = "Разноцветные кусочки сахара, обычно встречающиеся на пончиках. Копы любят такое."
 	color = "#FF00FF" // rgb: 255, 0, 255
@@ -537,7 +537,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/cornoil
-	name = "Кукурузное масло"
+	name = "Corn Oil"
 	id = "cornoil"
 	description = "Масло, получаемое из различных видов кукурузы."
 	reagent_state = LIQUID
@@ -553,7 +553,7 @@
 	T.quench(1000, 2)
 
 /datum/reagent/consumable/cornoil/oliveoil
-	name = "Оливковое масло"
+	name = "Olive Oil"
 	id = "oliveoil"
 	description = "Масло, получаемое из молодых оливок. Очень жирное."
 	nutriment_factor = 10 * REAGENTS_METABOLISM
@@ -561,7 +561,7 @@
 	taste_description = "горько-сладкого оливкового масла"
 
 /datum/reagent/consumable/enzyme
-	name = "Универсальный фермент"
+	name = "Universal Enzyme"
 	id = "enzyme"
 	description = "Специальный катализатор, благодаря которому некоторые кулинарные химические реакции происходят мгновенно, а не занимают несколько часов или дней."
 	reagent_state = LIQUID
@@ -569,14 +569,14 @@
 	taste_description = "сладости"
 
 /datum/reagent/consumable/dry_ramen
-	name = "Сухой рамен"
+	name = "Dry Ramen"
 	id = "dry_ramen"
 	description = "Космическая еда начиная с 25 августа 1958 года. Содержит сушёную лапшу, овощи и химикаты, которые закипают при контакте с водой."
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "дешёвой лапши со специями"
 
 /datum/reagent/consumable/hot_ramen
-	name = "Горячий рамен"
+	name = "Hot Ramen"
 	id = "hot_ramen"
 	description = "Лапша варёная, ароматизаторы искусственные, а вы как будто бы снова в школе."
 	reagent_state = LIQUID
@@ -590,7 +590,7 @@
 	return ..()
 
 /datum/reagent/consumable/hell_ramen
-	name = "Адский рамен"
+	name = "Hell Ramen"
 	id = "hell_ramen"
 	description = "Лапша варёная, ароматизаторы искусственные, а вы как будто бы снова в школе... В АДУ!"
 	reagent_state = LIQUID
@@ -603,7 +603,7 @@
 	return ..()
 
 /datum/reagent/consumable/flour
-	name = "Мука"
+	name = "Flour"
 	id = "flour"
 	description = "Это то, чем вы натираете себя, чтобы притвориться призраком."
 	color = "#FFFFFF" // rgb: 0, 0, 0
@@ -614,7 +614,7 @@
 		new /obj/effect/decal/cleanable/flour(T)
 
 /datum/reagent/consumable/rice
-	name = "Рис"
+	name = "Rice"
 	id = "rice"
 	description = "Наслаждайтесь великолепным вкусом ничего."
 	nutriment_factor = 3 * REAGENTS_METABOLISM
@@ -622,7 +622,7 @@
 	taste_description = "риса"
 
 /datum/reagent/consumable/buckwheat
-	name = "Гречка"
+	name = "Buckwheat"
 	id = "buckwheat"
 	description = "По слухам, советские люди питаются только водкой и... этим?"
 	nutriment_factor = 3 * REAGENTS_METABOLISM
@@ -630,7 +630,7 @@
 	taste_description = "сухой гречки"
 
 /datum/reagent/consumable/cherryjelly
-	name = "Вишнёвое желе"
+	name = "Cherry Jelly"
 	id = "cherryjelly"
 	description = "Абсолютно лучший. Наносится только на продукты с отличной боковой симметрией."
 	reagent_state = LIQUID
@@ -638,7 +638,7 @@
 	taste_description = "вишнёвого желе"
 
 /datum/reagent/consumable/bluecherryjelly
-	name = "Голубичное желе"
+	name = "Blue Cherry Jelly"
 	id = "bluecherryjelly"
 	description = "Более вкусная версия желе из голубики."
 	reagent_state = LIQUID
@@ -646,7 +646,7 @@
 	taste_description = "голубичного желе"
 
 /datum/reagent/consumable/egg
-	name = "Яйцо"
+	name = "Egg"
 	id = "egg"
 	description = "Текучая и вязкая смесь белка и желтка."
 	reagent_state = LIQUID
@@ -659,7 +659,7 @@
 	return ..()
 
 /datum/reagent/consumable/corn_starch
-	name = "Кукурузный крахмал"
+	name = "Corn Starch"
 	id = "corn_starch"
 	description = "Порошкообразный крахмал кукурузы, получаемый из эндосперма зерен. Используется в качестве загустителя для соусов и пудингов."
 	reagent_state = LIQUID
@@ -667,7 +667,7 @@
 	taste_description = "муки"
 
 /datum/reagent/consumable/corn_syrup
-	name = "Кукурузный сироп"
+	name = "Corn Syrup"
 	id = "corn_syrup"
 	description = "Сладкий сироп, получаемый из кукурузного крахмала преобразованного в мальтозу и другие сахара."
 	reagent_state = LIQUID
@@ -679,7 +679,7 @@
 	return ..()
 
 /datum/reagent/consumable/vhfcs
-	name = "Высокофруктозный кукурузный сироп"
+	name = "Very-high-fructose corn syrup"
 	id = "vhfcs"
 	description = "Невероятно сладкая жидкость, созданная из кукурузного сиропа, обработанного ферментами для превращения сахаров во фруктозу."
 	reagent_state = LIQUID
@@ -691,7 +691,7 @@
 	return ..()
 
 /datum/reagent/consumable/honey
-	name = "Мёд"
+	name = "Honey"
 	id = "honey"
 	description = "Густое сладкое вещество, вырабатываемое пчелами в результате частичного переваривания. Пчелиная блевотина."
 	reagent_state = LIQUID
@@ -708,7 +708,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/onion
-	name = "Концентрированный луковый сок"
+	name = "Concentrated Onion Juice"
 	id = "onionjuice"
 	description = "Сильное на вкус вещество, способное вызывать частичную слепоту."
 	color = "#c0c9a0"
@@ -727,15 +727,15 @@
 	..()
 
 /datum/reagent/consumable/chocolate
-	name = "Шоколад"
+	name = "Chocolate"
 	id = "chocolate"
 	description = "Шоколад — это восхитительный продукт, получаемый из семян дерева \"Theobroma cacao\"."
 	reagent_state = LIQUID
 	nutriment_factor = 5 * REAGENTS_METABOLISM		//same as pure cocoa powder, because it makes no sense that chocolate won't fill you up and make you fat
 	color = "#2E2418"
 	drink_icon = "chocolateglass"
-	drink_name = "стакан шоколада"
-	drink_desc = "Вкуснятина!"
+	drink_name = "Glass of chocolate"
+	drink_desc = "Tasty!"
 	taste_description = "шоколада"
 
 /datum/reagent/consumable/chocolate/on_mob_life(mob/living/M)
@@ -743,7 +743,7 @@
 	return ..()
 
 /datum/reagent/consumable/chocolate_sprinkle
-	name = "Шоколадная посыпка"
+	name = "Chocolate Sprinkles"
 	id = "chocolate_sprinkle"
 	description = "Измельчённый шоколад. Такой часто добавляют в выпечку или кофе."
 	nutriment_factor = 5 * REAGENTS_METABOLISM	//same as chocolate
@@ -755,7 +755,7 @@
 		new /obj/item/reagent_containers/food/snacks/choc_pile(T)
 
 /datum/reagent/consumable/mugwort
-	name = "Полынь"
+	name = "Mugwort"
 	id = "mugwort"
 	description = "Довольно горькая трава, которая, как считается, обладает магическими защитными свойствами."
 	reagent_state = LIQUID
@@ -773,7 +773,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/porktonium
-	name = "Порктониум"
+	name = "Porktonium"
 	id = "porktonium"
 	description = "Высокорадиоактивный побочный продукт свинины, впервые обнаруженный в хот-догах."
 	reagent_state = LIQUID
@@ -792,7 +792,7 @@
 	return list(0, STATUS_UPDATE_NONE)
 
 /datum/reagent/consumable/chicken_soup
-	name = "Куриный бульон"
+	name = "Chicken soup"
 	id = "chicken_soup"
 	description = "Старинное домашнее средство для лечения лёгких простудных заболеваний."
 	reagent_state = LIQUID
@@ -802,7 +802,7 @@
 	taste_description = "куриного бульона"
 
 /datum/reagent/consumable/cheese
-	name = "Сыр"
+	name = "Cheese"
 	id = "cheese"
 	description = "Немного сыра. Вылейте его, чтобы он стал твердым."
 	color = "#FFFF00"
@@ -818,7 +818,7 @@
 		new /obj/item/reagent_containers/food/snacks/cheesewedge(T)
 
 /datum/reagent/consumable/fake_cheese
-	name = "Заменитель сыра"
+	name = "Cheese substitute"
 	id = "fake_cheese"
 	description = "Сыроподобное вещество, полученное из настоящего сыра."
 	reagent_state = LIQUID
@@ -835,7 +835,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/consumable/weird_cheese
-	name = "Странный сыр"
+	name = "Weird cheese"
 	id = "weird_cheese"
 	description = "Чёрт, я даже не знаю, сыр ли это. Что бы это ни было, это ненормально. Если хотите, вылейте его, чтобы он стал твердым."
 	color = "#50FF00"
@@ -851,7 +851,7 @@
 		new /obj/item/reagent_containers/food/snacks/weirdcheesewedge(T)
 
 /datum/reagent/consumable/beans
-	name = "Жареная фасоль"
+	name = "Refried beans"
 	id = "beans"
 	description = "Блюдо из фасолевого пюре, приготовленного с добавлением сала."
 	reagent_state = LIQUID
@@ -859,14 +859,14 @@
 	taste_description = "бурритос"
 
 /datum/reagent/consumable/bread
-	name = "Хлеб"
+	name = "Bread"
 	id = "bread"
 	description = "Хлеб! Кто его не любит?"
 	color = "#9C5013"
 	taste_description = "хлеба"
 
 /datum/reagent/consumable/soybeanoil
-	name = "Соевое масло"
+	name = "Space-soybean oil"
 	id = "soybeanoil"
 	description = "Масло, полученное из соевых бобов."
 	reagent_state = LIQUID
@@ -881,7 +881,7 @@
 	return ..()
 
 /datum/reagent/consumable/hydrogenated_soybeanoil
-	name = "Частично гидрогенизированное соевое масло"
+	name = "Partially hydrogenated space-soybean oil"
 	id = "hydrogenated_soybeanoil"
 	description = "Масло, полученное из соевых бобов, в которое добавлены дополнительные атомы водорода для преобразования его в насыщенную форму."
 	reagent_state = LIQUID
@@ -917,7 +917,7 @@
 	return list(0, update_flags)
 
 /datum/reagent/consumable/meatslurry
-	name = "Мясная жижа"
+	name = "Meat Slurry"
 	id = "meatslurry"
 	description = "Паста, состоящая из сильно переработанного органического материала. Напоминает спред из ветчины."
 	reagent_state = LIQUID
@@ -935,14 +935,14 @@
 		playsound(T, 'sound/effects/splat.ogg', 50, TRUE, -3)
 
 /datum/reagent/consumable/mashedpotatoes
-	name = "Картофельное пюре"
+	name = "Mashed potatoes"
 	id = "mashedpotatoes"
 	description = "Паста из вареного картофеля."
 	color = "#D6D9C1"
 	taste_description = "картофеля"
 
 /datum/reagent/consumable/gravy
-	name = "Подливка"
+	name = "Gravy"
 	id = "gravy"
 	description = "Пикантный соус, приготовленный из простого мясного рулета и молока."
 	reagent_state = LIQUID
@@ -952,7 +952,7 @@
 ///Food Related, but non-nutritious
 
 /datum/reagent/questionmark // food poisoning
-	name = "Сгоревшая пищевая масса"
+	name = "????"
 	id = "????"
 	description = "Отвратительная и ядовитая субстанция."
 	reagent_state = LIQUID
@@ -970,7 +970,7 @@
 		D.Contract(H)
 
 /datum/reagent/msg
-	name = "Глутамат натрия"
+	name = "Monosodium glutamate"
 	id = "msg"
 	description = "Глутамат натрия — это натриевая соль, известная главным образом благодаря своему использованию в качестве спорного усилителя вкуса."
 	reagent_state = LIQUID
@@ -994,7 +994,7 @@
 	return ..() | update_flags
 
 /datum/reagent/cholesterol
-	name = "Холестерин"
+	name = "Cholesterol"
 	id = "cholesterol"
 	description = "Чистый холестерин. Достаточно вредная штука."
 	reagent_state = LIQUID
@@ -1018,7 +1018,7 @@
 	return ..() | update_flags
 
 /datum/reagent/fungus
-	name = "Космический грибок"
+	name = "Space fungus"
 	id = "fungus"
 	description = "Соскобы неизвестного грибка, растущего на стенах станции."
 	reagent_state = LIQUID
@@ -1039,7 +1039,7 @@
 			to_chat(M, "Чёрт, да какого хера!")
 
 /datum/reagent/ectoplasm
-	name = "Эктоплазма"
+	name = "Ectoplasm"
 	id = "ectoplasm"
 	description = "Причудливая студенистая субстанция, якобы получаемая из призраков."
 	reagent_state = LIQUID
@@ -1069,7 +1069,7 @@
 		///Vomit///
 
 /datum/reagent/vomit
-	name = "Блевотина"
+	name = "Vomit"
 	id = "vomit"
 	description = "Похоже, кто-то потерял свой обед. А потом собрал его. Фу."
 	reagent_state = LIQUID
@@ -1081,7 +1081,7 @@
 		T.add_vomit_floor()
 
 /datum/reagent/greenvomit
-	name = "Зелёная блевотина"
+	name = "Green vomit"
 	id = "green_vomit"
 	description = "Вау, это не может быть естественным. Это ужасно."
 	reagent_state = LIQUID
@@ -1095,7 +1095,7 @@
 ////Lavaland Flora Reagents////
 
 /datum/reagent/consumable/entpoly
-	name = "Экстракт Энтропийного Полипния"
+	name = "Entropic Polypnium"
 	id = "entpoly"
 	description = "Токсичное вещество, добываемое из некоторых видов грибов."
 	color = "#1d043d"
@@ -1114,7 +1114,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/tinlux
-	name = "Светящийся грибок"
+	name = "Tinea Luxor"
 	id = "tinlux"
 	description = "Стимулирующий ихор, который вызывает рост люминесцентных грибков на коже."
 	color = "#b5a213"
@@ -1148,7 +1148,7 @@
 		qdel(mob_light_obj)
 
 /datum/reagent/consumable/vitfro
-	name = "Стекловидная пена"
+	name = "Vitrium Froth"
 	id = "vitfro"
 	description = "Пенистая паста, заживляющая раны на коже."
 	color = "#d3a308"
@@ -1163,7 +1163,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/animal_feed
-	name = "Еда для животных"
+	name = "Animal Feed"
 	id = "afeed"
 	description = "Пища, которой кормят домашних животных."
 	color = "#ac3308"
@@ -1185,7 +1185,7 @@
 	return ..() | update_flags
 
 /datum/reagent/consumable/caramel
-	name = "Карамель"
+	name = "Caramel"
 	id = "caramel"
 	description = "Липкая масса, получаемая путём нагревания сахара. Сладко и вкусно."
 	nutriment_factor = 10

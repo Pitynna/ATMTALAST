@@ -174,9 +174,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 		if(current_location && !is_level_reachable(current_location.z))
 			return TARGET_INVALID_UNREACHABLE
 
-	if(isgolem(possible_target.current))
-		return TARGET_INVALID_GOLEM
-
 	if(possible_target.offstation_role)
 		return TARGET_INVALID_EVENT
 
@@ -305,37 +302,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 	return TRUE
 
 // MARK: Punish
-/datum/objective/punish
-	name = "Punish"
-	antag_menu_name = "Наказать"
-
-/datum/objective/punish/find_target(list/target_blacklist)
-	. = ..()
-
-	if(!target?.current)
-		return
-
-	explanation_text = "[capitalize(target.current.real_name)], [target.assigned_role], очень плохо себя вел в этом году. Его нужно наказать. Избейте его до невозможности сопротивляться и поместите в мешок."
-
-	if(target in SSticker.mode.victims)
-		return
-
-	SSticker.mode.victims.Add(target)
-
-/datum/objective/punish/check_completion()
-	. = ..()
-	var/mob/living/carbon/true_devil/krampus/krampus = owner.current
-
-	if(!istype(krampus))
-		return
-
-	for(var/mob/mob as anything in krampus.bag_content)
-		if(mob.mind != target)
-			continue
-		return TRUE
-
-	return FALSE
-
 // MARK: Mutiny
 /datum/objective/mutiny
 	name = "Mutiny"
@@ -623,8 +589,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 		log_admin("[key_name(owner.current)]'s mindslave master has cryo'd, and is no longer a mindslave.")
 		message_admins("[key_name_admin(owner.current)]'s mindslave master has cryo'd, and is no longer a mindslave.") //Since they were on antag hud earlier, this feels important to log
 		qdel(src)
-
-/datum/objective/protect/contractor //subtype for support units
 
 // MARK: Hijack
 /datum/objective/hijack
@@ -936,18 +900,8 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 	switch(type_theft_flag)
 		if(THEFT_FLAG_HIGHRISK)
 			return GLOB.potential_theft_objectives
-		if(THEFT_FLAG_HARD)
-			return GLOB.potential_theft_objectives_hard
-		if(THEFT_FLAG_MEDIUM)
-			return GLOB.potential_theft_objectives_medium
-		if(THEFT_FLAG_COLLECT)
-			return GLOB.potential_theft_objectives_collect
 		if(THEFT_FLAG_UNIQUE)
 			return subtypesof(/datum/theft_objective/unique)
-		if(THEFT_FLAG_STRUCTURE)
-			return GLOB.potential_theft_objectives_structure
-		if(THEFT_FLAG_ANIMAL)
-			return GLOB.potential_theft_objectives_animal
 		else
 			return GLOB.potential_theft_objectives
 
@@ -1026,24 +980,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 
 /datum/objective/steal/with_special_items
 	allow_special_items = TRUE
-
-/datum/objective/steal/hard
-	type_theft_flag = THEFT_FLAG_HARD
-
-/datum/objective/steal/medium
-	type_theft_flag = THEFT_FLAG_MEDIUM
-
-/datum/objective/steal/structure
-	antag_menu_name = "Украсть структуру"
-	type_theft_flag = THEFT_FLAG_STRUCTURE
-
-/datum/objective/steal/animal
-	antag_menu_name = "Украсть животное"
-	type_theft_flag = THEFT_FLAG_ANIMAL
-
-/datum/objective/steal/collect
-	antag_menu_name = "Собрать коллекцию"
-	type_theft_flag = THEFT_FLAG_COLLECT
 
 /datum/objective/steal/exchange
 	needs_target = FALSE
@@ -1287,51 +1223,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 	explanation_text = "Используя свои перчатки, обратите на свою сторону хотя бы одного киборга, чтобы он помог вам в саботаже станции!"
 	needs_target = FALSE
 
-/datum/objective/plant_explosive
-	name = "Plant Explosive"
-	antag_menu_name = "Заложить бомбу"
-	///Where we should KABOOM
-	var/area/detonation_location
-	var/list/area_blacklist = list(
-		/area/station/engineering/engine, /area/station/engineering/supermatter/engine,
-		/area/station/science/toxins/test, /area/station/ai/satellite/chamber)
-	needs_target = FALSE
-
-/datum/objective/plant_explosive/New(text, datum/team/team_to_join)
-	if(!choose_target_area())
-		explanation_text = "Свободная цель"
-	..()
-
-/datum/objective/plant_explosive/Destroy()
-	. = ..()
-	detonation_location = null
-
-/datum/objective/plant_explosive/proc/choose_target_area()
-	for(var/sanity in 1 to 100) // 100 checks at most.
-		var/area/selected_area = pick(get_sorted_areas())
-		if(selected_area && is_station_level(selected_area.z) && selected_area.valid_territory) //Целью должна быть зона на станции!
-			if(selected_area in area_blacklist)
-				continue
-			detonation_location = selected_area
-			break
-	. = detonation_location
-	if(.)
-		explanation_text = "Взорвите выданную вам бомбу в [detonation_location]. Учтите, что бомбу нельзя активировать на не предназначенной для подрыва территории!"
-
-/datum/objective/plant_explosive/proc/give_bomb(delayed = null)
-	if(isnull(delayed))
-		actual_give_bomb()
-	else if(isnum(delayed))
-		addtimer(CALLBACK(src, PROC_REF(actual_give_bomb)), delayed)
-
-/datum/objective/plant_explosive/proc/actual_give_bomb()
-	if(!owner || !owner.current || !detonation_location || completed)
-		return
-	var/mob/ninja = owner.current
-	var/obj/item/grenade/plastic/c4/ninja/bomb_item = new(ninja)
-	bomb_item.detonation_objective = src
-	ninja.equip_or_collect(bomb_item, ITEM_SLOT_POCKET_LEFT)
-
 /datum/objective/get_money
 	name = "Steal Money"
 	antag_menu_name = "Украсть деньги"
@@ -1369,66 +1260,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 				cash_sum += current_cash.amount
 
 	return cash_sum >= target_amount
-
-/datum/objective/protect/ninja
-	name = "Ninja's Protect"
-	var/list/killers_objectives = list()
-	var/list/killers = list()
-
-/datum/objective/protect/ninja/Destroy()
-	if(killers_objectives)
-		for(var/datum/objective/killer_objective in killers_objectives)
-			qdel(killer_objective)
-	return ..()
-
-/datum/objective/protect/ninja/find_target(list/target_blacklist)
-	if(!needs_target)
-		return
-
-	var/list/possible_targets = list()
-	for(var/datum/mind/possible_target in SSticker.minds)
-		if(is_invalid_target(possible_target) || (possible_target in killers) || (possible_target in target_blacklist) || target == possible_target)
-			continue
-		possible_targets |= possible_target
-
-		if(length(killers_objectives))
-			for(var/datum/objective/killer_objective in killers_objectives)
-				possible_targets -= killer_objective.owner
-
-	target = safepick(possible_targets)
-
-	if(target?.current)
-		explanation_text = "На [target.current.real_name], [target.assigned_role] ведут охоту. [target.current.real_name] должен[GEND_A_O_Y(target.current)] любой ценой \
-							дожить до конца смены и ваша работа как можно незаметнее позаботится о том, чтобы [GEND_HE_SHE(target.current)] остал[GEND_SYA_AS_OS_IS(target.current)] жив[GEND_A_O_Y(target.current)]."
-	else
-		explanation_text = "Свободная цель"
-
-	return target
-
-/datum/objective/protect/ninja/post_target_cryo(list/owners)
-	find_target(existing_targets_blacklist())
-	if(!target?.current)
-		qdel(src)
-	else
-		update_killers()
-
-	for(var/datum/mind/user in owners)
-		var/list/messages = user.prepare_announce_objectives()
-		to_chat(user.current, custom_boxed_message("red_box center", messages.Join("<br>")))
-
-/datum/objective/protect/ninja/proc/update_killers()
-	if(!length(killers_objectives))
-		return
-
-	for(var/datum/objective/killer_objective in killers_objectives)
-		killer_objective.target = target
-		if(istype(killer_objective, /datum/objective/assassinate))
-			killer_objective.explanation_text = "Убить [killer_objective.target.current.real_name], [killer_objective.target.assigned_role]."
-		else if(istype(killer_objective, /datum/objective/maroon))
-			killer_objective.explanation_text = "Не дать сбежать жив[GEND_YM_OI_YM_YMI(killer_objective.target.current)] или свободн[GEND_YM_OI_YM_YMI(killer_objective.target.current)] [killer_objective.target.current.real_name], [killer_objective.target.assigned_role]."
-
-		for(var/datum/mind/killer in killer_objective.get_owners())
-			killer.prepare_announce_objectives()
 
 /**
  * Set up a victim so that they are arrested.
@@ -1631,24 +1462,6 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 		return FALSE
 	return resolved_overmind.stat != DEAD
 
-// MARK: Bingle
-/datum/objective/bingle_lord
-	needs_target = FALSE
-	antag_menu_name = "Создать яму"
-	explanation_text = "Найдите на станции укромное место, где вы сможете быстро напитать вашу яму."
-
-/datum/objective/bingle
-	needs_target = FALSE
-	antag_menu_name = "Защищайте и наращивайте вашу яму."
-	explanation_text = "Тащите в яму всё, что попадётся под ноги."
-
-// If there is any hole with max-size, then the goal is completed
-/datum/objective/bingle/check_completion()
-	if(!team)
-		return FALSE
-	var/datum/team/bingles/bingle_team = team
-	return bingle_team.goal_size_achieved
-
 // MARK: Serve
 /datum/objective/serve
 	name = "Служить"
@@ -1683,10 +1496,3 @@ GLOBAL_LIST_EMPTY(admin_objective_list)
 	REMOVE_TRAIT(mind, TRAIT_HIJACK, UNIQUE_TRAIT_SOURCE(src))
 
 /// Main goal of swarmers, completed on mega-swarmer spawn
-/datum/objective/swarmer_goal
-	antag_menu_name = "Создать Мега-Свармера"
-	needs_target = FALSE
-
-/datum/objective/swarmer_goal/New(text, datum/team/team_to_join)
-	..()
-	explanation_text = "Создайте Мега-Свармера, накопив командой [MEGA_SWARMER_SPAWN_VALUE] органических ресурсов."

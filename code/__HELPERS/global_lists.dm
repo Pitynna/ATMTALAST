@@ -1,7 +1,6 @@
 /proc/makeDatumRefLists()
 
 	init_datum_subtypes(/datum/wryn_building, GLOB.wryn_structures, null, "name")
-	init_datum_subtypes(/datum/zombie_class, GLOB.zombie_classes, null, "name")
 
 	init_datum_subtypes(/datum/robot_skin, GLOB.robot_skins, null, "type")
 
@@ -24,7 +23,6 @@
 	init_datum_subtypes(/datum/language, GLOB.all_languages, null, "name")
 	init_datum_subtypes(/datum/secspear_mode, GLOB.secspear_modes, null, "name")
 
-	init_datum_subtypes(/datum/devil_contract, GLOB.devil_contracts, list(/datum/devil_contract), "contract_type")
 
 	// Setup languages
 	for(var/language_name in GLOB.all_languages)
@@ -200,38 +198,6 @@
 		GLOB.exoframe_types[exoframe_instance.id] = exoframe_instance
 
 	init_dice_rolls()
-
-	// Init list for skills
-	init_datum_subtypes(/datum/skill, GLOB.skills, null, "name")
-
-	var/list/banned_skill_books = list(
-		/obj/item/book/skill_manual/random,
-		/obj/item/book/skill_manual/general,
-		/obj/item/book/skill_manual/general/random,
-		/obj/item/book/skill_manual/service,
-		/obj/item/book/skill_manual/service/random,
-		/obj/item/book/skill_manual/combat,
-		/obj/item/book/skill_manual/combat/random,
-		/obj/item/book/skill_manual/engineering,
-		/obj/item/book/skill_manual/engineering/random,
-		/obj/item/book/skill_manual/medical,
-		/obj/item/book/skill_manual/medical/random,
-		/obj/item/book/skill_manual/research,
-		/obj/item/book/skill_manual/research/random,
-	)
-	GLOB.skill_manual_types = subtypesof(/obj/item/book/skill_manual) - banned_skill_books
-
-	GLOB.skill_neurotrainers = subtypesof(/obj/item/neurotrainer) - GLOB.skill_neurotrainer_blacklist
-
-	var/list/banned_skill_types = list(
-		/datum/skill/general,
-		/datum/skill/service,
-		/datum/skill/combat,
-		/datum/skill/medical,
-		/datum/skill/research,
-	)
-	GLOB.skill_types = subtypesof(/datum/skill) - banned_skill_types
-
 /**
  * Creates every subtype of a given prototype (excluding the prototype itself) and adds them to a list
  *
@@ -333,8 +299,7 @@
 		EQUIPMENT("Jump Boots Implants", /obj/item/storage/box/jumpbootimplant, 7000),
 		EQUIPMENT("Lazarus Capsule", /obj/item/mobcapsule, 300),
 		EQUIPMENT("Lazarus Capsule belt", /obj/item/storage/belt/lazarus, 400),
-		EQUIPMENT("Mining MODsuit", /obj/item/mod/control/pre_equipped/mining/vendor, 2500),
-		EQUIPMENT("Advanced Jetpack Module", /obj/item/mod/module/jetpack/advanced, 2000),
+		EQUIPMENT("Mining Hardsuit", /obj/item/clothing/suit/space/hardsuit/mining, 2500),
 		EQUIPMENT("Tracking Implant Kit", /obj/item/storage/box/minertracker, 800),
 		EQUIPMENT("Industrial Mining Satchel", /obj/item/storage/bag/ore/bigger, 500),
 		EQUIPMENT("Meson Health Scanner HUD", /obj/item/clothing/glasses/hud/health/meson, 1500),
@@ -422,14 +387,12 @@
 		EQUIPMENT("HRD-MDE Project Box", /obj/item/storage/box/hardmode_box, 2500),
 	)
 	prize_list["Extra"] = list(
-		EQUIPMENT("Extra ID", /obj/item/card/id/golem, 250),
 		EQUIPMENT("Science Backpack", /obj/item/storage/backpack/science, 250),
 		EQUIPMENT("Full Toolbelt", /obj/item/storage/belt/utility/full/multitool, 250),
 		EQUIPMENT("Monkey Cube", /obj/item/reagent_containers/food/snacks/monkeycube, 250),
 		EQUIPMENT("Royal Cape of the Liberator", /obj/item/bedsheet/rd/royal_cape, 500),
 		EQUIPMENT("Grey Slime Extract", /obj/item/slime_extract/grey, 1000),
 		EQUIPMENT("KA Trigger Modification Kit", /obj/item/borg/upgrade/modkit/trigger_guard, 1000),
-		EQUIPMENT("Shuttle Console Board", /obj/item/circuitboard/shuttle/golem_ship, 2000),
 		EQUIPMENT("The Liberator's Legacy", /obj/item/storage/box/rndboards, 2000),
 	)
 	prize_list["Scum"] = list(

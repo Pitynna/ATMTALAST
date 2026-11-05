@@ -135,8 +135,8 @@
 	summon_radius = 0
 
 /obj/effect/forcefield/terror
-	name = "Защитная мембрана"
-	desc = "Толстая защитная мембрана, созданная Защитником Ужаса."
+	name = "Guardian shield"
+	desc = "Thick protective membrane produced by Guardians of Terror."
 	icon_state = "terror_shield"
 	initial_duration = 16.5 SECONDS                       //max 2 shields existing at one time
 	light_color = LIGHT_COLOR_PURPLE

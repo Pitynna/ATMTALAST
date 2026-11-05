@@ -1,6 +1,6 @@
 /obj/machinery/vending/cigarette
 	name = "ShadyCigs Deluxe"
-	desc = "Если вы собираетесь заболеть раком, по крайней мере, сделайте это стильно!"
+	desc = "If you want to get cancer, might as well do it in style."
 	slogan_list = list(
 		"Космосигар+еты весьм+а хор+оши на вкус, как+ими он+и и должн+ы быть!",
 		"Затян+итесь!",
@@ -71,16 +71,6 @@
 		/obj/item/storage/fancy/cigarettes/cigpack_med = 3,
 	)
 
-/obj/machinery/vending/cigarette/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат ShadyCigs Deluxe",
-		GENITIVE = "торгового автомата ShadyCigs Deluxe",
-		DATIVE = "торговому автомату ShadyCigs Deluxe",
-		ACCUSATIVE = "торговый автомат ShadyCigs Deluxe",
-		INSTRUMENTAL = "торговым автоматом ShadyCigs Deluxe",
-		PREPOSITIONAL = "торговом автомате ShadyCigs Deluxe",
-	)
-
 /obj/machinery/vending/cigarette/free
 	all_products_free = TRUE
 
@@ -116,7 +106,7 @@
 
 /obj/machinery/vending/cigarette/beach //Used in the lavaland_biodome_beach.dmm ruin
 	name = "ShadyCigs Ultra"
-	desc = "Теперь с дополнительными продуктами премиум-класса!"
+	desc = "Now with extra premium products!"
 	slogan_list = list(
 		"Наверняк+а не +очень-то и вр+едно для вас!",
 		"Никот+ин провед+ёт ч+ерез безд+енежье л+учше, чем д+еньги ч+ерез безникот+инье!",
@@ -159,14 +149,4 @@
 		/obj/item/clothing/mask/cigarette/cigar/havana = 2,
 		/obj/item/storage/fancy/cigarettes/cigpack_robustgold = 1,
 		/obj/item/lighter/zippo = 3,
-	)
-
-/obj/machinery/vending/cigarette/beach/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат ShadyCigs Ultra",
-		GENITIVE = "торгового автомата ShadyCigs Ultra",
-		DATIVE = "торговому автомату ShadyCigs Ultra",
-		ACCUSATIVE = "торговый автомат ShadyCigs Ultra",
-		INSTRUMENTAL = "торговым автоматом ShadyCigs Ultra",
-		PREPOSITIONAL = "торговом автомате ShadyCigs Ultra",
 	)

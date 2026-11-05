@@ -111,9 +111,6 @@
 		"с" = list("з", "зс", "ззз", "ззсз"),
 	)
 	autohiss_exempt = list("Хитин")
-	max_select_skills = list(
-		/datum/skill/service/cleaning = 3,
-	)
 
 /datum/species/kidan/get_species_runechat_color(mob/living/carbon/human/H)
 	var/obj/item/organ/internal/eyes/E = H.get_int_organ(/obj/item/organ/internal/eyes)
@@ -144,8 +141,8 @@
 
 /// Pheromones spawnable by kida, only perceivable by other kida
 /obj/effect/kidan_pheromones
-	name = "Феромоны киданов"
-	desc = "Особые феромоны, выделяемые киданами."
+	name = "kidan pheromones"
+	desc = "Special pheromones secreted by a kidan."
 	gender = PLURAL
 	hud_possible = list(KIDAN_PHEROMONES_HUD)
 

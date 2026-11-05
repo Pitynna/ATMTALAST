@@ -7,7 +7,7 @@
  */
 /obj/item/circuit_component/mmi
 	display_name = "Нейро-Компьютерный Интерфейс"
-	desc = "Компонент, позволяющий НКИ входить в оболочки для отправки выходных сигналов."
+	desc = "A component that allows an MMI to enter shells and send output signals."
 	category = "Action"
 	circuit_flags = CIRCUIT_FLAG_REFUSE_MODULE
 

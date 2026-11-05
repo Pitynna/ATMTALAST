@@ -12,7 +12,6 @@
 
 	universal_speak = 1		// Tell the humans spooky things about the afterlife
 	speak_emote = list("бормочет", "стонет", "шепчет", "визжит")
-	tts_seed = "Sylvanas"
 
 	allow_spin = 0			// No spinning. Spinning breaks our floating animation.
 	no_spin_thrown = TRUE

@@ -244,70 +244,70 @@ research holder datum.
 
 /datum/tech/materials
 	name = RESEARCH_TREE_MATERIALS_NAME
-	desc = "Исследование и разработка новых материалов с улучшенными характеристиками."
+	desc = "Development of new and improved materials."
 	id = RESEARCH_TREE_MATERIALS
 	max_level = 8
 
 /datum/tech/engineering
 	name = RESEARCH_TREE_ENGINEERING_NAME
-	desc = "Совершенствование конструкций, узлов и методов сборки промышленного оборудования."
+	desc = "Development of new and improved engineering parts and methods."
 	id = RESEARCH_TREE_ENGINEERING
 	max_level = 8
 
 /datum/tech/plasmatech
 	name = RESEARCH_TREE_PLASMA_NAME
-	desc = "Изучение свойств и применение вещества под названием \"Плазма\" в различных сферах."
+	desc = "Research into the mysterious substance colloqually known as 'plasma'."
 	id = RESEARCH_TREE_PLASMA
 	max_level = 8
 	rare = 3
 
 /datum/tech/powerstorage
 	name = RESEARCH_TREE_POWERSTORAGE_NAME
-	desc = "Разработка технологий генерации, накопления и распределения электрической энергии."
+	desc = "The various technologies behind the storage and generation of electicity."
 	id = RESEARCH_TREE_POWERSTORAGE
 	max_level = 8
 
 /datum/tech/bluespace
 	name = RESEARCH_TREE_BLUESPACE_NAME
-	desc = "Изучение подпространственного слоя реальности, известного как \"Блюспейс\", и его применение в различных сферах."
+	desc = "Research into the sub-reality known as 'bluespace'."
 	id = RESEARCH_TREE_BLUESPACE
 	max_level = 8
 	rare = 2
 
 /datum/tech/biotech
 	name = RESEARCH_TREE_BIOTECH_NAME
-	desc = "Исследование живых организмов, генной инженерии и органических соединений."
+	desc = "Research into the deeper mysteries of life and organic substances."
 	id = RESEARCH_TREE_BIOTECH
 	max_level = 8
 
 /datum/tech/combat
 	name = RESEARCH_TREE_COMBAT_NAME
-	desc = "Разработка наступательных и оборонительных технологий."
+	desc = "The development of offensive and defensive systems."
 	id = RESEARCH_TREE_COMBAT
 	max_level = 8
 
 /datum/tech/magnets
 	name = RESEARCH_TREE_MAGNETS_NAME
-	desc = "Исследование электромагнитного спектра и его применение на практике."
+	desc = "Research into the electromagnetic spectrum. No clue how they actually work, though."
 	id = RESEARCH_TREE_MAGNETS
 	max_level = 8
 
 /datum/tech/programming
 	name = RESEARCH_TREE_PROGRAMMING_NAME
-	desc = "Развитие архитектур искусственного интеллекта, систем хранения информации и вычислительных протоколов."
+	desc = "The development of new computer and artificial intelligence and data storage systems."
 	id = RESEARCH_TREE_PROGRAMMING
 	max_level = 8
 
 /datum/tech/toxins //not meant to be raised by deconstruction, do not give objects toxins as an origin_tech
 	name = RESEARCH_TREE_TOXINS_NAME
-	desc = "Исследование плазменных взрывчатых веществ и реактивных химических соединений."
+	desc = "Research into plasma based explosive devices. Upgrade through testing explosives in the toxins lab."
 	id = RESEARCH_TREE_TOXINS
 	max_level = 8
 	rare = 2
 
 /datum/tech/syndicate
 	name = RESEARCH_TREE_ILLEGAL_NAME
-	desc = "Изучение систем и устройств, нарушающих регламенты безопасности \"Нанотрейзен\"."
+	desc = "The study of technologies that violate standard Nanotrasen regulations."
 	id = RESEARCH_TREE_ILLEGAL
 	level = 0 // Illegal tech level dont need to show in roundstart on console
 	max_level = 8 // Used for admin button so need max level like other tech
@@ -315,7 +315,7 @@ research holder datum.
 
 /datum/tech/abductor
 	name = RESEARCH_TREE_ALIEN_NAME
-	desc = "Анализ и адаптация технологий, используемых высокоразвитой цивилизацией, известной как \"Абдукторы\"."
+	desc = "The development of advanced automated, autonomous machines."
 	id = RESEARCH_TREE_ALIEN
 	level = 0 // Alien tech level hide roundstart like illegal
 	max_level = 8
@@ -344,23 +344,13 @@ research holder datum.
 
 /obj/item/disk/tech_disk
 	name = "technology disk"
-	desc = "Переносной носитель данных, специализированный для хранения научной информации."
+	desc = "A disk for storing technology data for further research."
 	icon_state = "datadisk2"
 	materials = list(MAT_METAL=30, MAT_GLASS=10)
 	var/datum/tech/stored
 	var/default_name = "technology disk"
-	var/default_desc = "Переносной носитель данных, специализированный для хранения научной информации."
+	var/default_desc = "A portable storage medium designed to hold scientific data."
 	var/default_ru_names = alist(
-		NOMINATIVE = "дискета технологий",
-		GENITIVE = "дискеты технологий",
-		DATIVE = "дискете технологий",
-		ACCUSATIVE = "дискету технологий",
-		INSTRUMENTAL = "дискетой технологий",
-		PREPOSITIONAL = "дискете технологий"
-	)
-
-/obj/item/disk/tech_disk/get_ru_names()
-	return alist(
 		NOMINATIVE = "дискета технологий",
 		GENITIVE = "дискеты технологий",
 		DATIVE = "дискете технологий",
@@ -376,7 +366,7 @@ research holder datum.
 
 /obj/item/disk/tech_disk/proc/load_tech(datum/tech/tech_tree)
 	name = "[default_name] \[[tech_tree]\]"
-	desc = tech_tree.desc + " <b>Уровень: \"[tech_tree.level]\"</b>."
+	desc = tech_tree.desc + " <b>Level: \"[tech_tree.level]\"</b>."
 
 	set_ru_names_suffix(" \[[tech_tree]\]")
 
@@ -439,41 +429,21 @@ research holder datum.
 /obj/structure/closet/crate/full_tech
 	name = "Crate with Tech Disks"
 
-/obj/structure/closet/crate/full_tech/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик с дискетами технологий",
-		GENITIVE = "ящика с дискетами технологий",
-		DATIVE = "ящику с дискетами технологий",
-		ACCUSATIVE = "ящик с дискетами технологий",
-		INSTRUMENTAL = "ящиком с дискетами технологий",
-		PREPOSITIONAL = "ящике с дискетами технологий"
-	)
-
 /obj/structure/closet/crate/full_tech/populate_contents()
 	for(var/path in subtypesof(/obj/item/disk/tech_disk/loaded))
 		new path(src)
 
 /obj/item/disk/design_disk
 	name = "Component Design Disk"
-	desc = "Переносной носитель данных, специализированный для хранения шаблонов печати."
+	desc = "A disk for storing device design data for construction in lathes."
 	icon_state = "datadisk2"
 	materials = list(MAT_METAL=100, MAT_GLASS=100)
 	var/datum/design/blueprint
 	// I'm doing this so that disk paths with pre-loaded designs don't get weird names
 	// Otherwise, I'd use "initial()"
 	var/default_name = "Component Design Disk"
-	var/default_desc = "Переносной носитель данных, специализированный для хранения шаблонов печати."
+	var/default_desc = "A portable storage medium designed to hold component blueprints."
 	var/default_ru_names = alist(
-		NOMINATIVE = "дискета шаблона печати",
-		GENITIVE = "дискеты шаблона печати",
-		DATIVE = "дискете шаблона печати",
-		ACCUSATIVE = "дискету шаблона печати",
-		INSTRUMENTAL = "дискетой шаблона печати",
-		PREPOSITIONAL = "дискете шаблона печати"
-	)
-
-/obj/item/disk/design_disk/get_ru_names()
-	return alist(
 		NOMINATIVE = "дискета шаблона печати",
 		GENITIVE = "дискеты шаблона печати",
 		DATIVE = "дискете шаблона печати",
@@ -504,25 +474,6 @@ research holder datum.
 	ru_names = default_ru_names
 	blueprint = null
 
-/obj/item/disk/design_disk/golem_shell
-	name = "golem creation disk"
-	icon_state = "datadisk1"
-
-/obj/item/disk/design_disk/golem_shell/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета для создания голема",
-		GENITIVE = "дискеты для создания голема",
-		DATIVE = "дискете для создания голема",
-		ACCUSATIVE = "дискету для создания голема",
-		INSTRUMENTAL = "дискетой для создания голема",
-		PREPOSITIONAL = "дискете для создания голема"
-	)
-
-/obj/item/disk/design_disk/golem_shell/Initialize(mapload)
-	. = ..()
-	var/datum/design/golem_shell/G = new
-	blueprint = G
-
 /* Station goals design disks */
 /** Base */
 /obj/item/disk/design_disk/station_goal_machinery
@@ -530,9 +481,6 @@ research holder datum.
 	desc = ""
 	icon_state = "datadisk5"
 	var/design_type
-
-/obj/item/disk/design_disk/station_goal_machinery/brs_server/get_ru_names()
-	return alist()
 
 /obj/item/disk/design_disk/station_goal_machinery/Initialize(mapload)
 	. = ..()
@@ -543,62 +491,20 @@ research holder datum.
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_server
 	name = "Bluespace rift scan server design"
-	desc = "Экспериментальный проект сервера сканирования блюспейс-разломов."
+	desc = "An experimental design for a bluespace rift scanning server."
 	design_type = /datum/design/brs_server
-
-/obj/item/disk/design_disk/station_goal_machinery/brs_server/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Сервер сканирования БС-разломов)",
-		GENITIVE = "дискеты шаблона печати (Сервер сканирования БС-разломов)",
-		DATIVE = "дискете шаблона печати (Сервер сканирования БС-разломов)",
-		ACCUSATIVE = "дискету шаблона печати (Сервер сканирования БС-разломов)",
-		INSTRUMENTAL = "дискетой шаблона печати (Сервер сканирования БС-разломов)",
-		PREPOSITIONAL = "дискете шаблона печати (Сервер сканирования БС-разломов)"
-	)
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_portable_scanner
 	name = "Bluespace rift portable scanner design"
-	desc = "Экспериментальный проект портативного сканера блюспейс-разломов."
+	desc = "An experimental design for a portable bluespace rift scanner."
 	design_type = /datum/design/brs_portable_scanner
-
-/obj/item/disk/design_disk/station_goal_machinery/brs_portable_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Портативный сканер БС-разломов)",
-		GENITIVE = "дискеты шаблона печати (Портативный сканер БС-разломов)",
-		DATIVE = "дискете шаблона печати (Портативный сканер БС-разломов)",
-		ACCUSATIVE = "дискету шаблона печати (Портативный сканер БС-разломов)",
-		INSTRUMENTAL = "дискетой шаблона печати (Портативный сканер БС-разломов)",
-		PREPOSITIONAL = "дискете шаблона печати (Портативный сканер БС-разломов)"
-	)
 
 /obj/item/disk/design_disk/station_goal_machinery/brs_stationary_scanner
 	name = "Bluespace rift stationary scanner design"
-	desc = "Экспериментальный проект стационарного сканера блюспейс-разломов."
+	desc = "An experimental design for a stationary bluespace rift scanner."
 	design_type = /datum/design/brs_stationary_scanner
-
-/obj/item/disk/design_disk/station_goal_machinery/brs_stationary_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Стационарный сканер БС-разломов)",
-		GENITIVE = "дискеты шаблона печати (Стационарный сканер БС-разломов)",
-		DATIVE = "дискете шаблона печати (Стационарный сканер БС-разломов)",
-		ACCUSATIVE = "дискету шаблона печати (Стационарный сканер БС-разломов)",
-		INSTRUMENTAL = "дискетой шаблона печати (Стационарный сканер БС-разломов)",
-		PREPOSITIONAL = "дискете шаблона печати (Стационарный сканер БС-разломов)"
-	)
-
 
 /obj/item/disk/design_disk/tailblade/blade_nt
 	name = "Tail laserblade implant design"
-	desc = "Переносной носитель данных, специализированный для хранения шаблонов печати. \
-			Получен корпорацией \"Нанотрейзен\" по уникальному контракту с \"Кибернетикой М’Саи\"."
+	desc = "A laser blade designed to be hidden inside the tail. Latest design of House Eshie'Ssharahss, issued to Nanotrasen in exclusive contract."
 	blueprint = new /datum/design/tailblade
-
-/obj/item/disk/design_disk/tailblade/blade_nt/get_ru_names()
-	return alist(
-		NOMINATIVE = "дискета шаблона печати (Имплант хвостового лазера)",
-		GENITIVE = "дискеты шаблона печати (Имплант хвостового лазера)",
-		DATIVE = "дискете шаблона печати (Имплант хвостового лазера)",
-		ACCUSATIVE = "дискету шаблона печати (Имплант хвостового лазера)",
-		INSTRUMENTAL = "дискетой шаблона печати (Имплант хвостового лазера)",
-		PREPOSITIONAL = "дискете шаблона печати (Имплант хвостового лазера)"
-	)

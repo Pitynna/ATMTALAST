@@ -190,22 +190,12 @@
 
 /obj/item/birthday_invite
 	name = "birthday invitation"
-	desc = "Небольшая карточка, на которой сказано, что у кого-то сегодня день рождения."
+	desc = "A small card announcing that today is someone's birthday."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/birthday_invite/get_ru_names()
-	return alist(
-		NOMINATIVE = "приглашение на день рождения",
-		GENITIVE = "приглашения на день рождения",
-		DATIVE = "приглашению на день рождения",
-		ACCUSATIVE = "приглашение на день рождения",
-		INSTRUMENTAL = "приглашением на день рождения",
-		PREPOSITIONAL = "приглашении на день рождения",
-	)
-
 /obj/item/birthday_invite/proc/setup_card(birthday_name)
-	desc = "Небольшая карточка с надписью: \"[birthday_name] сегодня празднует/ют свой день рождения!\""
+	desc = "A small card that reads: \"It's [birthday_name]'s birthday today!\""
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "slip"
 

@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/vox
 	name = "vox gauntlets"
-	desc = "Плотные рукавицы причудливой формы с когтями."
+	desc = "Thick, oddly shaped clawed gloves."
 	icon_state = "gloves-vox"
 	item_state = "gloves-vox"
 	item_color = "gloves-vox"
@@ -19,7 +19,7 @@
 
 /obj/item/clothing/gloves/color/yellow/vox
 	name = "insulated vox gauntlets"
-	desc = "Плотные изоляционные рукавицы причудливой формы с когтями."
+	desc = "These bizarre gauntlets seem to be fitted for... bird claws?"
 	icon_state = "gloves-vox-insulated"
 	item_state = "gloves-vox"
 	item_color = "gloves-vox-insulated"

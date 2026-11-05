@@ -30,7 +30,7 @@
 	return ..()
 
 /datum/reagent/blob/reactive_spines
-	name = "Реактивные шипы"
+	name = "Reactive Spines"
 	id = "blob_reactive_spines"
 	taste_description = "камней"
 	color = "#9ACD32"

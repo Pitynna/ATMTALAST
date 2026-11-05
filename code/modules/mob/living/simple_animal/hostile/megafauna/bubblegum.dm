@@ -377,7 +377,7 @@ Difficulty: Hard
 /mob/living/simple_animal/hostile/megafauna/bubblegum/proc/hit_up_narsi()
 	SetRecoveryTime(20)
 	visible_message(
-	span_colossus("<b>[pick("[SSticker.cultdat.entity_name], я взываю к ТЕБЕ для одной услуги, которую ты мне должен!","[SSticker.cultdat.entity_title1], я взываю к тебе за поддержкой...","Давай посмотрим, как тебе понравятся приспешники [SSticker.cultdat.entity_title2]!","О, [SSticker.cultdat.entity_title3] присоединись ко мне, чтобы РАЗОРВАТЬ ЭТОГО ЩЕНКА НА ЧАСТИ!")]</b>"))
+	span_colossus("<b>[pick("Narsie, я взываю к ТЕБЕ для одной услуги, которую ты мне должен!","Blood God, я взываю к тебе за поддержкой...","Давай посмотрим, как тебе понравятся приспешники Narsie!","О, Blood God присоединись ко мне, чтобы РАЗОРВАТЬ ЭТОГО ЩЕНКА НА ЧАСТИ!")]</b>"))
 	var/list/turfs = list()
 	var/constructs = 0
 	for(var/turf/T in view(6, target))
@@ -535,18 +535,8 @@ Difficulty: Hard
 
 /obj/effect/decal/cleanable/blood/gibs/bubblegum
 	name = "thick blood"
-	desc = "Густая, разбрызганная кровь."
+	desc = "Thick, splattered blood."
 	random_icon_states = list("gib3", "gib5", "gib6")
-
-/obj/effect/decal/cleanable/blood/gibs/bubblegum/get_ru_names()
-	return alist(
-		NOMINATIVE = "густая кровь",
-		GENITIVE = "густой крови",
-		DATIVE = "густой крови",
-		ACCUSATIVE = "густую кровь",
-		INSTRUMENTAL = "густой кровью",
-		PREPOSITIONAL = "густой крови",
-	)
 
 /obj/effect/decal/cleanable/blood/gibs/bubblegum/can_bloodcrawl_in()
 	return TRUE

@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(rad_collectors)
 
 /obj/machinery/power/energy_accumulator/rad_collector
 	name = "radiation collector array"
-	desc = "Устройство, преобразующее радиацию в полезную электрическую энергию с использованием плазмы."
+	desc = "A device which converts raditation to useable electical energy using plasma. It absorbs Beta particles extremely well, and Gamma particles to a lesser extent"
 	icon = 'icons/obj/engines_and_power/singularity.dmi'
 	icon_state = "ca"
 	req_access = list(ACCESS_ENGINE_EQUIP)
@@ -27,16 +27,6 @@ GLOBAL_LIST_EMPTY(rad_collectors)
 	var/powerproduction_drain = 0.02
 	/// Share (0..1) of the wanted plasma burn we could actually supply last tick. Scales power output.
 	var/last_drain_efficiency = 0
-
-/obj/machinery/power/energy_accumulator/rad_collector/get_ru_names()
-	return alist(
-		NOMINATIVE = "радиационный коллектор",
-		GENITIVE = "радиационного коллектора",
-		DATIVE = "радиационному коллектору",
-		ACCUSATIVE = "радиационный коллектор",
-		INSTRUMENTAL = "радиационным коллектором",
-		PREPOSITIONAL = "радиационном коллекторе"
-	)
 
 /obj/machinery/power/energy_accumulator/rad_collector/anchored
 	anchored = TRUE

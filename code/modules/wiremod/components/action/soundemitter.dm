@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/soundemitter
 	display_name = "Динамик"
-	desc = "Компонент, издающий звук при получении входного сигнала. \
-			Частота — множитель, определяющий скорость воспроизведения звука."
+	desc = "A component that plays a sound when it receives an input signal. Frequency is a multiplier that determines playback speed."
 	category = "Action"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

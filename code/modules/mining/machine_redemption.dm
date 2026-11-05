@@ -11,8 +11,7 @@
  */
 /obj/machinery/mineral/ore_redemption
 	name = "ore redemption machine"
-	desc = "Промышленное устройство, перерабатывающее руду в готовые листы материалов. Автоматически начисляет баллы \
-			на аккаунт подключённой ID-карты в зависимости от типа руды, которые можно обменять в раздатчике шахтёрского оборудования."
+	desc = "A machine that accepts ore and instantly transforms it into workable material sheets. Points for ore are generated based on type and can be redeemed at a mining equipment vendor."
 	gender = FEMALE
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
@@ -59,16 +58,6 @@
 	var/invalid_material
 	COOLDOWN_DECLARE(messages_cooldown)
 
-/obj/machinery/mineral/ore_redemption/get_ru_names()
-	return alist(
-		NOMINATIVE = "печь для руды",
-		GENITIVE = "печи для руды",
-		DATIVE = "печи для руды",
-		ACCUSATIVE = "печь для руды",
-		INSTRUMENTAL = "печью для руды",
-		PREPOSITIONAL = "печи для руды",
-	)
-
 /obj/machinery/mineral/ore_redemption/Initialize(mapload)
 	. = ..()
 	// Components
@@ -85,12 +74,6 @@
 	component_parts += new /obj/item/stack/sheet/glass(null)
 	RefreshParts()
 	ADD_TRAIT(src, TRAIT_LOGISTICS_COMPATIBLE, INNATE_TRAIT)
-	// Special access for built on Taipan machines
-	var/area/area = get_area(src)
-	if(istype(area, /area/syndicate/unpowered/syndicate_space_base))
-		req_access = list(ACCESS_SYNDICATE)
-		req_access_claim = ACCESS_SYNDICATE
-
 /obj/machinery/mineral/ore_redemption/upgraded/Initialize(mapload)
 	. = ..()
 	component_parts = list()
@@ -113,21 +96,6 @@
  *
  * Golem variant of the ORM.
  */
-/obj/machinery/mineral/ore_redemption/golem
-	req_access = list(ACCESS_FREE_GOLEMS)
-	req_access_claim = ACCESS_FREE_GOLEMS
-
-/obj/machinery/mineral/ore_redemption/golem/Initialize(mapload)
-	. = ..()
-	component_parts = list()
-	component_parts += new /obj/item/circuitboard/ore_redemption/golem(null)
-	component_parts += new /obj/item/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/stock_parts/manipulator(null)
-	component_parts += new /obj/item/stock_parts/micro_laser(null)
-	component_parts += new /obj/item/assembly/igniter(null)
-	component_parts += new /obj/item/stack/sheet/glass(null)
-	RefreshParts()
-
 /**
  * # Ore Redemption Machine (Labor Camp)
  *
@@ -137,16 +105,6 @@
 	name = "labor camp ore redemption machine"
 	req_access = list()
 	anyone_claim = TRUE
-
-/obj/machinery/mineral/ore_redemption/labor/get_ru_names()
-	return alist(
-		NOMINATIVE = "печь для руды трудового лагеря",
-		GENITIVE = "печи для руды трудового лагеря",
-		DATIVE = "печи для руды трудового лагеря",
-		ACCUSATIVE = "печь для руды трудового лагеря",
-		INSTRUMENTAL = "печью для руды трудового лагеря",
-		PREPOSITIONAL = "печи для руды трудового лагеря",
-	)
 
 /obj/machinery/mineral/ore_redemption/labor/Initialize(mapload)
 	. = ..()

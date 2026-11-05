@@ -1,5 +1,5 @@
 /datum/reagent/consumable/drink
-	name = "Напиток"
+	name = "Drink"
 	id = "drink"
 	description = "Напиток, вроде как."
 	reagent_state = LIQUID

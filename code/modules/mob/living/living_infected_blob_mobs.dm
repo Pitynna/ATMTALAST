@@ -9,13 +9,7 @@
 		return FALSE
 	return !(dna.species.name in BLOB_RESTRICTED_SPECIES)
 
-/mob/living/simple_animal/imp/can_be_blob()
-	return FALSE
-
 /mob/living/simple_animal/borer/can_be_blob()
-	return FALSE
-
-/mob/living/simple_animal/demon/can_be_blob()
 	return FALSE
 
 /mob/living/simple_animal/revenant/can_be_blob()
@@ -27,19 +21,10 @@
 /mob/living/simple_animal/spiderbot/can_be_blob()
 	return FALSE
 
-/mob/living/simple_animal/ascendant_shadowling/can_be_blob()
-	return FALSE
-
-/mob/living/simple_animal/mouse/clockwork/can_be_blob()
-	return FALSE
-
 /mob/living/simple_animal/mouse/fluff/clockwork/can_be_blob()
 	return FALSE
 
 /mob/living/simple_animal/pet/dog/corgi/borgi/can_be_blob()
-	return FALSE
-
-/mob/living/simple_animal/hostile/swarmer/can_be_blob()
 	return FALSE
 
 /mob/living/simple_animal/hostile/guardian/can_be_blob()
@@ -52,9 +37,6 @@
 	return FALSE
 
 /mob/living/simple_animal/hostile/construct/can_be_blob()
-	return FALSE
-
-/mob/living/simple_animal/hostile/clockwork/can_be_blob()
 	return FALSE
 
 /mob/living/simple_animal/hostile/alien/can_be_blob()

@@ -15,7 +15,7 @@
  */
 /obj/item/circuit_component/arithmetic
 	display_name = "Арифметика"
-	desc = "Компонент с возможностями общих арифметических операций."
+	desc = "A component that performs common arithmetic operations."
 	category = "Math"
 
 	var/datum/port/input/option/arithmetic_option

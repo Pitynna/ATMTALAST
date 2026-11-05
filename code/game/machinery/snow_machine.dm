@@ -5,7 +5,7 @@
  */
 /obj/machinery/snow_machine
 	name = "snow machine"
-	desc = "Добавьте немного воды, и у вас появится своя зимняя сказка!"
+	desc = "Just add water and you too can have your own winter wonderland! Carol singers not included."
 	icon_state = "snow_machine_off"
 	density = TRUE
 	layer = OBJ_LAYER
@@ -21,16 +21,6 @@
 	var/lower_temperature_limit = T0C - 10
 	/// If TRUE, machine does not consume reagents to produce snow
 	var/infinite_snow = FALSE
-
-/obj/machinery/snow_machine/get_ru_names()
-	return alist(
-		NOMINATIVE = "снегогенератор",
-		GENITIVE = "снегогенератора",
-		DATIVE = "снегогенератору",
-		ACCUSATIVE = "снегогенератор",
-		INSTRUMENTAL = "снегогенератором",
-		PREPOSITIONAL = "снегогенераторе"
-	)
 
 /obj/machinery/snow_machine/Initialize(mapload)
 	. = ..()
@@ -192,5 +182,5 @@
 	return TRUE
 
 /obj/machinery/snow_machine/infinite
-	desc = "Добавьте немного воды, и у вас появится своя зимняя сказка! Кажется сказка будет длиться вечно..."
+	desc = "Add a little water to create your own winter wonderland! This one seems to last forever..."
 	infinite_snow = TRUE

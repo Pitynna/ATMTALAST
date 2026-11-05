@@ -41,22 +41,12 @@
 
 /obj/item/organ/internal/cyberimp/eyes/shield/ling
 	name = "protective membranes"
-	desc = "Эти защитные мембраны с переменной прозрачностью защитят вас от сварочных работ и вспышек, а также помогут восстановить поврежденные глаза."
+	desc = "These variable transparency organic membranes will protect you from welders and flashes and heal your eye damage."
 	icon_state = "ling_eyeshield"
 	implant_overlay = null
 	slot = INTERNAL_ORGAN_EYE_LING
 	status = NONE
 	aug_message = "Мембраны приспосабливаются для защиты глаз от яркого света."
-
-/obj/item/organ/internal/cyberimp/eyes/shield/ling/get_ru_names()
-	return alist(
-		NOMINATIVE = "защитные мембраны",
-		GENITIVE = "защитных мембран",
-		DATIVE = "защитным мембранам",
-		ACCUSATIVE = "защитные мембраны",
-		INSTRUMENTAL = "защитными мембранами",
-		PREPOSITIONAL = "защитных мембранах",
-	)
 
 /obj/item/organ/internal/cyberimp/eyes/shield/ling/on_life()
 	if(!QDELETED(owner))
@@ -82,23 +72,13 @@
 
 /obj/item/organ/internal/cyberimp/eyes/thermals/empproof/ling
 	name = "heat receptors"
-	desc = "Эти тепловые рецепторы повысят вашу чувствительность к световому и тепловому излучению."
+	desc = "These heat receptors dramatically increases eyes light sensing ability."
 	icon_state = "ling_thermal"
 	eye_colour = "#000000"
 	implant_overlay = null
 	slot = INTERNAL_ORGAN_EYE_LING
 	status = NONE
 	aug_message = "Рецепторы фокусируются и позволяют нам лучше видеть в темноте и сквозь препятствия."
-
-/obj/item/organ/internal/cyberimp/eyes/thermals/empproof/ling/get_ru_names()
-	return alist(
-		NOMINATIVE = "тепловые рецепторы",
-		GENITIVE = "тепловых рецепторов",
-		DATIVE = "тепловым рецепторам",
-		ACCUSATIVE = "тепловые рецепторы",
-		INSTRUMENTAL = "тепловыми рецепторами",
-		PREPOSITIONAL = "тепловых рецепторах",
-	)
 
 /obj/item/organ/internal/cyberimp/eyes/thermals/empproof/ling/insert(mob/living/carbon/M, special = ORGAN_MANIPULATION_DEFAULT)
 	. = ..()

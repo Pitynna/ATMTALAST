@@ -1,125 +1,45 @@
 /obj/item/organ/internal/eyes/nian
 	name = "luam eyeballs"
-	desc = "Парный орган, отвечающий за зрение — восприятие света и его трансформацию в видимое изображение. Эти принадлежали луам."
+	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to a nian."
 	item_state = "nian_eyes"
 	see_in_dark = 5
 
-/obj/item/organ/internal/eyes/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаза луам",
-		GENITIVE = "глаз луам",
-		DATIVE = "глазам луам",
-		ACCUSATIVE = "глаза луам",
-		INSTRUMENTAL = "глазами луам",
-		PREPOSITIONAL = "глазах луам",
-	)
-
 /obj/item/organ/internal/ears/nian
 	name = "luam ears"
-	desc = "Парный орган, отвечающий за аудиальное восприятие окружающей среды и получение информации о положении гуманоида в пространстве. Эти принадлежали луам."
-
-/obj/item/organ/internal/ears/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "уши луам",
-		GENITIVE = "ушей луам",
-		DATIVE = "ушам луам",
-		ACCUSATIVE = "уши луам",
-		INSTRUMENTAL = "ушами луам",
-		PREPOSITIONAL = "ушах луам",
-	)
+	desc = "Paired organs responsible for hearing and providing information about a humanoid's orientation in space. These belonged to a nian."
 
 /obj/item/organ/internal/liver/nian
 	name = "luam liver"
-	desc = "Орган, выполняющий множество функций, таких как фильтрация кровотока от вредных веществ, синтез необходимых белков и ферментов и удаление токсинов из организма. Эта принадлежала луам."
+	desc = "An organ with many functions, including filtering harmful substances from the blood, synthesizing essential proteins and enzymes, and removing toxins. This belonged to a nian."
 	icon = 'icons/obj/species_organs/nian.dmi'
 	item_state = "nian_liver"
 
-/obj/item/organ/internal/liver/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "печень луам",
-		GENITIVE = "печени луам",
-		DATIVE = "печени луам",
-		ACCUSATIVE = "печень луам",
-		INSTRUMENTAL = "печенью луам",
-		PREPOSITIONAL = "печени луам",
-	)
-
 /obj/item/organ/internal/heart/nian
 	name = "luam heart"
-	desc = "Орган, качающий кровь или её заменяющую субстанцию по организму гуманоида. Это принадлежало луам."
+	desc = "An organ that pumps blood or a substitute through a humanoid body. This belonged to a nian."
 	icon = 'icons/obj/species_organs/nian.dmi'
 	item_state = "nian_heart-on"
 	item_base = "nian_heart"
 
-/obj/item/organ/internal/heart/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "сердце луам",
-		GENITIVE = "сердца луам",
-		DATIVE = "сердцу луам",
-		ACCUSATIVE = "сердце луам",
-		INSTRUMENTAL = "сердцем луам",
-		PREPOSITIONAL = "сердце луам",
-	)
-
 /obj/item/organ/internal/brain/nian
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал луам."
+	desc = "The primary organ of a humanoid's central nervous system. The mind itself resides here. This belonged to a nian."
 	icon = 'icons/obj/species_organs/nian.dmi'
 	item_state = "nian_brain"
 	mmi_icon = 'icons/obj/species_organs/nian.dmi'
 
-/obj/item/organ/internal/brain/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозг луам",
-		GENITIVE = "мозга луам",
-		DATIVE = "мозгу луам",
-		ACCUSATIVE = "мозг луам",
-		INSTRUMENTAL = "мозгом луам",
-		PREPOSITIONAL = "мозге луам",
-	)
-
 /obj/item/organ/internal/lungs/nian
 	name = "luam lungs"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и кровотоком организма гуманоида. Эти принадлежали луам."
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a nian."
 	icon = 'icons/obj/species_organs/nian.dmi'
 	item_state = "nian_lungs"
 
-/obj/item/organ/internal/lungs/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "лёгкие луам",
-		GENITIVE = "лёгких луам",
-		DATIVE = "лёгким луам",
-		ACCUSATIVE = "лёгкие луам",
-		INSTRUMENTAL = "лёгкими луам",
-		PREPOSITIONAL = "лёгких луам",
-	)
-
 /obj/item/organ/internal/kidneys/nian
 	name = "luam kidneys"
-	desc = "Парный орган, отвечающий за фильтрацию кровотока и выведение токсинов и отходов из организма. Эти принадлежали луам."
+	desc = "Paired organs that filter the bloodstream and remove toxins and waste from the body. These belonged to a nian."
 	icon = 'icons/obj/species_organs/nian.dmi'
 	item_state = "nian_kidneys"
 
-/obj/item/organ/internal/kidneys/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "почки луам",
-		GENITIVE = "почек луам",
-		DATIVE = "почкам луам",
-		ACCUSATIVE = "почки луам",
-		INSTRUMENTAL = "почками луам",
-		PREPOSITIONAL = "почках луам",
-	)
-
 /obj/item/organ/external/wing/nian
 	name = "luam wings"
-	desc = "Крылья. Эти принадлежали луам."
+	desc = "Wings. These belonged to a nian."
 	max_damage = 25
-
-/obj/item/organ/external/wing/nian/get_ru_names()
-	return alist(
-		NOMINATIVE = "крылья луам",
-		GENITIVE = "крыльев луам",
-		DATIVE = "крыльям луам",
-		ACCUSATIVE = "крылья луам",
-		INSTRUMENTAL = "крыльями луам",
-		PREPOSITIONAL = "крыльях луам",
-	)

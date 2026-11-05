@@ -5,10 +5,10 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/nova/AbondonedFitnessRoom
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/old_fitness
-	name = "заброшенная фитнес-зона вместо старых дормиторий"
+	name = "abandoned fitness area replacing old dormitory"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/old_warehouse
-	name = "заброшенный склад вместо старых дормиторий"
+	name = "abandoned warehouse replacing old dormitory"
 
 // East Maintenance submap
 
@@ -17,10 +17,10 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/nova/EastMaintenance
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/EastMaintenance/janitor
-	name = "Восточные техи второго этажа с хранилищем одежды и коморкой уборщика"
+	name = "second-floor east maintenance with clothing storage and janitor's closet"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/EastMaintenance/offices
-	name = "Восточные техи второго этажа вариант c большим офисом"
+	name = "second-floor east maintenance with a large office"
 
 // Old Banya Maintenance submap
 
@@ -29,13 +29,13 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/nova/Banya
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/Banya/Club
-	name = "Старая баня заменена на клуб"
+	name = "club replacing old bathhouse"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/Banya/entrance
-	name = "Старая баня заменена на проходную с маленькой инженерной коморкой"
+	name = "passage and engineering closet replacing old bathhouse"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/Banya/consarea
-	name = "Старая баня заменена на инженерную стройплощадку с автолатом"
+	name = "construction site with autolathe replacing old bathhouse"
 
 // Abandoned Chapel submap
 
@@ -44,13 +44,13 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/nova/AbondonedChapel
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedChapel/OldPokerClub
-	name = "Старая церковь заменена на покерный клуб"
+	name = "poker club replacing abandoned chapel"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedChapel/Incinerator
-	name = "Старая церковь заменена на сжигатель"
+	name = "incinerator replacing abandoned chapel"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedChapel/ServerRoom
-	name = "Старая церковь заменена на комнату с серверами"
+	name = "server room replacing abandoned chapel"
 
 // Abondoned Med submap
 
@@ -59,16 +59,16 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/nova/AbondonedMed
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedMed/hangar
-	name = "Старый медотдел заменен на ангар карго"
+	name = "cargo hangar replacing abandoned medical department"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedMed/entrance
-	name = "Старый медотдел заменен на проходную из техов"
+	name = "maintenance passage replacing abandoned medical department"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedMed/med2
-	name = "Чуть измененная версия старого медотдела"
+	name = "modified abandoned medical department"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedMed/oldrestaurant
-	name = "Старый медотдел заменен на проходную с рестораном"
+	name = "passage and restaurant replacing abandoned medical department"
 
 // Abondoned Library submap
 
@@ -77,7 +77,7 @@
 /obj/effect/map_effect/marker/mapmanip/submap/insert/nova/AbondonedLibrary
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedLibrary/electronicsden
-	name = "Старая библиотека заменена на магазин электроники"
+	name = "electronics shop replacing abandoned library"
 
 /obj/effect/map_effect/marker_helper/submap_def/nova/AbondonedLibrary/entrance
-	name = "Старая библиотека заменена на проходную из техов"
+	name = "maintenance passage replacing abandoned library"

@@ -3,7 +3,7 @@
 /// MARK: Centrifuge
 /obj/machinery/nuclear_centrifuge
 	name = "Fuel Enrichment Centrifuge"
-	desc = "Продвинутое устройство, отделяющее и собирающее делящиеся материалы из обогащённых топливных стержней."
+	desc = "An advanced device capable of separating and collecting fissile materials from enriched fuel rods."
 	icon = 'icons/obj/fission/reactor_machines.dmi'
 	icon_state = "centrifuge_empty"
 	idle_power_usage = 200
@@ -25,16 +25,6 @@
 	var/datum/looping_sound/centrifuge/soundloop
 
 	COOLDOWN_DECLARE(enrichment_timer)
-
-/obj/machinery/nuclear_centrifuge/get_ru_names()
-	return alist(
-		NOMINATIVE = "центрифуга обогащения топлива",
-		GENITIVE = "центрифуги обогащения топлива",
-		DATIVE = "центрифуге обогащения топлива",
-		ACCUSATIVE = "центрифугу обогащения топлива",
-		INSTRUMENTAL = "центрифугой обогащения топлива",
-		PREPOSITIONAL = "центрифуге обогащения топлива",
-	)
 
 /obj/machinery/nuclear_centrifuge/Initialize(mapload)
 	. = ..()
@@ -169,7 +159,7 @@
 
 /obj/machinery/nuclear_rod_fabricator
 	name = "Nuclear Fuel Rod Fabricator"
-	desc = "Высоко специализированная фабрика для изготовления ядерных стержней."
+	desc = "A highly specialized fabricator for crafting nuclear rods."
 	icon = 'icons/obj/fission/reactor_machines.dmi'
 	icon_state = "rod_fab"
 	idle_power_usage = 50
@@ -196,16 +186,6 @@
 	var/work_time
 
 	COOLDOWN_DECLARE(fabrication_timer)
-
-/obj/machinery/nuclear_rod_fabricator/get_ru_names()
-	return alist(
-		NOMINATIVE = "фабрикатор ядерных стержней",
-		GENITIVE = "фабрикатора ядерных стержней",
-		DATIVE = "фабрикатору ядерных стержней",
-		ACCUSATIVE = "фабрикатор ядерных стержней",
-		INSTRUMENTAL = "фабрикатором ядерных стержней",
-		PREPOSITIONAL = "фабрикаторе ядерных стержней",
-	)
 
 /obj/machinery/nuclear_rod_fabricator/upgraded
 	upgraded = TRUE

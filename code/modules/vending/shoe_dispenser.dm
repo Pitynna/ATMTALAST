@@ -1,6 +1,6 @@
 /obj/machinery/vending/shoedispenser
 	name = "Shoelord 9000"
-	desc = "Оу, шляпы у Hatlord такие классные, костюмы у Suitlord такие элегантные, а у этого всё такое обычное... Дизайнер, должно быть, идиот."
+	desc = "Wow, hatlord looked fancy, suitlord looked streamlined, and this is just normal. The guy who designed these must be an idiot."
 	icon_state = "shoes_off"
 	icon_state = "shoes_off"
 	panel_overlay = "shoes_panel"
@@ -36,16 +36,6 @@
 	)
 	premium = list(
 		/obj/item/clothing/shoes/rainbow = 1,
-	)
-
-/obj/machinery/vending/shoedispenser/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Shoelord 9000",
-		GENITIVE = "торгового автомата Shoelord 9000",
-		DATIVE = "торговому автомату Shoelord 9000",
-		ACCUSATIVE = "торговый автомат Shoelord 9000",
-		INSTRUMENTAL = "торговым автоматом Shoelord 9000",
-		PREPOSITIONAL = "торговом автомате Shoelord 9000",
 	)
 
 /obj/machinery/vending/shoedispenser/free

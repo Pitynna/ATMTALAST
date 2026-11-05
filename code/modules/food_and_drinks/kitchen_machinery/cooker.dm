@@ -1,6 +1,6 @@
 /obj/machinery/cooker
 	name = "cooker"
-	desc = "Вы не должны были этого видеть. Пожалуйста, сообщите о нахождении этого предмета в #баг-репорты-v2"
+	desc = "You shouldn't be seeing this!"
 	density = TRUE
 	anchored = TRUE
 	idle_power_usage = 5
@@ -16,17 +16,6 @@
 	var/has_specials = 0		//Set to 1 if the machine has specials to check, otherwise leave it at 0
 	var/upgradeable = 0			//Set to 1 if the machine supports upgrades / deconstruction, or else it will ignore stuff like screwdrivers and parts exchangers
 
-/obj/machinery/cooker/get_ru_names()
-	return alist(
-		NOMINATIVE = "кухонный аппарат",
-		GENITIVE = "кухонного аппарата",
-		DATIVE = "кухонному аппарату",
-		ACCUSATIVE = "кухонный аппарат",
-		INSTRUMENTAL = "кухонным аппаратом",
-		PREPOSITIONAL = "кухонном аппарате"
-	)
-
-// checks if the snack has been cooked in a certain way
 /obj/machinery/cooker/proc/checkCooked(obj/item/reagent_containers/food/snacks/D)
 	return LAZYACCESS(D.cooktype, thiscooktype)
 
@@ -82,7 +71,7 @@
 	if(prob(firechance))
 		var/obj/effect/decal/cleanable/liquid_fuel/oil = new(drop_turf)
 		oil.name = "fat"
-		oil.desc = "Ой-ой, похоже это жир из [declent_ru(GENITIVE)]."
+		oil.desc = "Uh-oh, this looks like grease from [name]."
 		oil.ru_names = alist(
 			NOMINATIVE = "жир",
 			GENITIVE = "жира",

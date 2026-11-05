@@ -25,13 +25,3 @@
 	name = "Fusty FMJ 5.45 bullet"
 	damage = 20
 	stamina = 6
-
-/obj/projectile/bullet/f545/get_ru_names()
-	return alist(
-		NOMINATIVE = "старая пуля FMJ 5,45x39 мм",
-		GENITIVE = "старой пули FMJ 5,45x39 мм",
-		DATIVE = "старой пуле FMJ 5,45x39 мм",
-		ACCUSATIVE = "старую пулю FMJ 5,45x39 мм",
-		INSTRUMENTAL = "старой пулей FMJ 5,45x39 мм",
-		PREPOSITIONAL = "старой пуле FMJ 5,45x39 мм",
-	)

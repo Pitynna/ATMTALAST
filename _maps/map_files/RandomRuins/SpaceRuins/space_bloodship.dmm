@@ -1,26 +1,24 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "dJ" = (
-/obj/item/clothing/suit/hooded/cultrobes/cult_shield,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "ge" = (
 /obj/structure/table/wood,
 /obj/item/spellbook/oneuse/fake_gib,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "iG" = (
-/obj/structure/cult/archives,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "jV" = (
 /obj/machinery/door/airlock/public,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "kg" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "lw" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -28,29 +26,27 @@
 /area/ruin/unpowered)
 "nl" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "oc" = (
 /turf/simulated/mineral/random,
 /area/ruin/unpowered)
 "oo" = (
-/obj/item/clothing/shoes/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "pf" = (
 /obj/item/flag/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "pj" = (
 /obj/structure/table/wood,
 /obj/item/storage/firstaid/doctor,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "qE" = (
 /obj/structure/table/wood,
 /obj/item/candle/eternal,
-/obj/item/whetstone/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "sW" = (
 /turf/simulated/wall/shuttle,
@@ -63,14 +59,13 @@
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 "vW" = (
-/obj/item/reagent_containers/cup/glass/bottle/unholywater,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "xv" = (
 /turf/space,
 /area/space)
 "xZ" = (
-/turf/simulated/wall/cult,
+/turf/simulated/wall,
 /area/ruin/unpowered)
 "yu" = (
 /turf/simulated/wall/indestructible/necropolis,
@@ -78,47 +73,17 @@
 "AW" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/storage/toolbox/emergency,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Bg" = (
-/mob/living/simple_animal/hostile/illusion/cult{
-	deathmessage = "disappears into the air with a cry of agony";
-	desc = "The deceived soul";
-	health = 200;
-	maxHealth = 350;
-	name = "The soul of the cultist";
-	icon = 'icons/mob/mob.dmi';
-	icon_living = "shade";
-	icon_state = "shade";
-	icon_dead = "shade_dead";
-	melee_damage_lower = 10;
-	melee_damage_upper = 25
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Bs" = (
-/obj/effect/rune/narsie{
-	color = "#ff0000";
-	used = 1
-	},
 /obj/item/clothing/accessory/medal/fluff/elo{
 	name = "Bloody Medal";
 	desc = "Rusted and bloodstained medal. Given to who believes in... illegible to you, rust erased last words."
 	},
-/mob/living/simple_animal/hostile/illusion/cult{
-	deathmessage = "disappears into the air with a cry of agony";
-	desc = "The deceived soul";
-	health = 350;
-	maxHealth = 350;
-	name = "The soul of the cultist";
-	icon = 'icons/mob/mob.dmi';
-	icon_living = "shade";
-	icon_state = "shade";
-	icon_dead = "shade_dead";
-	melee_damage_lower = 10;
-	melee_damage_upper = 25
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Cb" = (
 /obj/structure/window/full/shuttle,
@@ -126,44 +91,17 @@
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 "Cj" = (
-/mob/living/simple_animal/hostile/illusion/cult{
-	deathmessage = "disappears into the air with a cry of agony";
-	desc = "The deceived soul";
-	health = 350;
-	maxHealth = 350;
-	name = "The soul of the cultist";
-	icon = 'icons/mob/mob.dmi';
-	icon_living = "shade";
-	icon_state = "shade";
-	icon_dead = "shade_dead";
-	melee_damage_lower = 10;
-	melee_damage_upper = 25
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "CJ" = (
 /turf/simulated/wall/shuttle/nosmooth,
 /area/ruin/unpowered)
 "CO" = (
-/obj/item/melee/cultblade,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "CT" = (
 /obj/effect/decal/cleanable/blood/old,
-/mob/living/simple_animal/hostile/illusion/cult{
-	deathmessage = "disappears into the air with a cry of agony";
-	desc = "The deceived soul";
-	health = 200;
-	maxHealth = 350;
-	name = "The soul of the cultist";
-	icon = 'icons/mob/mob.dmi';
-	icon_living = "shade";
-	icon_state = "shade";
-	icon_dead = "shade_dead";
-	melee_damage_lower = 10;
-	melee_damage_upper = 25
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Dp" = (
 /turf/template_noop,
@@ -194,11 +132,11 @@
 /area/ruin/unpowered)
 "Hm" = (
 /obj/effect/decal/remains/human,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Jn" = (
 /obj/structure/bookcase,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Kp" = (
 /obj/structure/table/wood/fancy/black,
@@ -206,40 +144,37 @@
 	pixel_x = 4;
 	pixel_y = -4
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "KT" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "KY" = (
-/obj/item/reagent_containers/cup/glass/bottle/unholywater,
 /obj/effect/decal/cleanable/crayon{
 	color = "#cc3300";
 	desc = null
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Li" = (
 /obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Lp" = (
-/obj/structure/cult/altar,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Mi" = (
 /obj/structure/chair/comfy/shuttle,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Mt" = (
 /obj/structure/computerframe,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "MO" = (
-/obj/item/clothing/suit/hooded/cultrobes,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "MV" = (
 /mob/living/simple_animal/hostile/carp,
@@ -251,14 +186,14 @@
 /area/ruin/unpowered)
 "NF" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "NU" = (
 /obj/effect/decal/cleanable/crayon{
 	color = "#cc3300";
 	desc = null
 	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Pz" = (
 /turf/simulated/wall/shuttle/nosmooth{
@@ -268,29 +203,15 @@
 /area/ruin/unpowered)
 "RD" = (
 /obj/effect/decal/cleanable/blood/old,
-/mob/living/simple_animal/hostile/illusion/cult{
-	deathmessage = "disappears into the air with a cry of agony";
-	desc = "The deceived soul";
-	health = 350;
-	maxHealth = 350;
-	name = "The soul of the cultist";
-	icon = 'icons/mob/mob.dmi';
-	icon_living = "shade";
-	icon_state = "shade";
-	icon_dead = "shade_dead";
-	melee_damage_lower = 10;
-	melee_damage_upper = 25
-	},
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "TZ" = (
 /obj/structure/table/wood,
 /obj/item/candle/eternal,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Uv" = (
-/obj/structure/cult/forge,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "UX" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -301,24 +222,21 @@
 "Vn" = (
 /obj/structure/table/wood,
 /obj/item/storage/firstaid/brute,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Wh" = (
-/obj/item/clothing/head/helmet/space/cult,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "WW" = (
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Xi" = (
-/obj/structure/cult/pylon,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 "Yt" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/candle/eternal,
-/obj/effect/temp_visual/cult/sparks,
-/turf/simulated/floor/engine/cult,
+/turf/simulated/floor/engine,
 /area/ruin/unpowered)
 
 (1,1,1) = {"

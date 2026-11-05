@@ -1,7 +1,7 @@
 // MARK: Generic wooden bow
 /obj/item/gun/projectile/bow
 	name = "bow"
-	desc = "Прочный лук, сделанный из дерева."
+	desc = "A sturdy bow made out of wood and reinforced with iron."
 	gender = MALE
 	icon_state = "bow"
 	base_icon_state = "bow"
@@ -24,16 +24,6 @@
 	var/speed_modifier = 1.5
 	var/range_modifier = 0.8
 	var/ready_to_fire_time = 1.5 SECONDS
-
-/obj/item/gun/projectile/bow/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянный лук",
-		GENITIVE = "деревянного лука",
-		DATIVE = "деревянному луку",
-		ACCUSATIVE = "деревянный лук",
-		INSTRUMENTAL = "деревянным луком",
-		PREPOSITIONAL = "деревянном луке",
-	)
 
 /obj/item/gun/projectile/bow/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
@@ -70,8 +60,7 @@
 		icon_state = base_icon_state
 
 /obj/item/gun/projectile/bow/proc/update_slowdown()
-	CALCULATE_SKILL_MOD(gun_user, BOW_SLOWDOWN_MOD, skill_mod)
-	slowdown = ready_to_fire ? slowdown_when_ready * skill_mod : initial(slowdown)
+	slowdown = ready_to_fire ? slowdown_when_ready : initial(slowdown)
 
 /obj/item/gun/projectile/bow/dropped(mob/user, slot, silent = FALSE)
 	if(chambered)
@@ -82,8 +71,7 @@
 	return ..()
 
 /obj/item/gun/projectile/bow/attack_self(mob/living/user)
-	GET_SKILL_LEVEL(user, /datum/skill/combat/bows, skill_level)
-	if(!chambered && skill_level >= SKILL_LEVEL_ADVANCED && !user.get_inactive_hand())
+	if(!chambered && !user.get_inactive_hand())
 		var/list/possible_quivers = list(user.get_item_by_slot(ITEM_SLOT_BACK), user.get_item_by_slot(ITEM_SLOT_BELT))
 		for(var/obj/item/storage/backpack/quiver/quiver in possible_quivers)
 			if(!length(quiver.contents))
@@ -98,8 +86,7 @@
 	return ..()
 
 /obj/item/gun/projectile/bow/unload_act(mob/user)
-	CALCULATE_SKILL_MOD(user, BOW_READY_TO_FIRE_MOD, skill_mod)
-	if(chambered && !ready_to_fire && do_after(user, ready_to_fire_time * skill_mod, src, timed_action_flags = DA_IGNORE_USER_LOC_CHANGE, max_interact_count = 1))
+	if(chambered && !ready_to_fire && do_after(user, ready_to_fire_time, src, timed_action_flags = DA_IGNORE_USER_LOC_CHANGE, max_interact_count = 1))
 		ready_to_fire = TRUE
 		playsound(user, draw_sound, 100, TRUE)
 	else
@@ -141,7 +128,7 @@
 // MARK: Bone
 /obj/item/gun/projectile/bow/ashen
 	name = "bone bow"
-	desc = "Примитивный лук с тетивой, сделанной из жилы. Обычно используется племенными охотниками и воинами."
+	desc = "A primitive bow with a sinew bowstring. Typically used by tribal hunters and warriors. Due to the specific design of the bow, it's able to shoot only bone arrows."
 	icon_state = "ashenbow"
 	base_icon_state = "ashenbow"
 	item_state = "ashenbow"
@@ -157,20 +144,9 @@
 	range_modifier = 1.1
 	ready_to_fire_time = 1 SECONDS
 
-/obj/item/gun/projectile/bow/ashen/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяной лук",
-		GENITIVE = "костяного лука",
-		DATIVE = "костяному луку",
-		ACCUSATIVE = "костяной лук",
-		INSTRUMENTAL = "костяным луком",
-		PREPOSITIONAL = "костяном луке",
-	)
-
-// MARK: Compound
 /obj/item/gun/projectile/bow/compound
 	name = "compound bow"
-	desc = "Композитный лук, предназначенный для любительской охоты и соревнований."
+	desc = "A composite bow for recreational hunting and competitions."
 	icon_state = "modernbow"
 	base_icon_state = "modernbow"
 	item_state = "modernbow"
@@ -183,20 +159,9 @@
 	range_modifier = 1.1
 	ready_to_fire_time = 1 SECONDS
 
-/obj/item/gun/projectile/bow/compound/get_ru_names()
-	return alist(
-		NOMINATIVE = "композитный лук",
-		GENITIVE = "композитного лука",
-		DATIVE = "композитному луку",
-		ACCUSATIVE = "композитный лук",
-		INSTRUMENTAL = "композитным луком",
-		PREPOSITIONAL = "композитном луке",
-	)
-
-// MARK: Tactical
 /obj/item/gun/projectile/bow/tactical
 	name = "tactical bow"
-	desc = "Тактический лук \"Синдиката\", предназначенный для особых операций, для которых не подходит любое другое оружие. Для удобства прицеливания установлен прицел малой кратности."
+	desc = "A Syndicate tactical bow for special operations where other weapons are unsuitable. Includes a low-magnification sight for easier aiming."
 	icon_state = "assaultbow"
 	base_icon_state = "assaultbow"
 	item_state = "assaultbow"
@@ -210,16 +175,6 @@
 	range_modifier = 1.1
 	ready_to_fire_time = 0.5 SECONDS
 
-/obj/item/gun/projectile/bow/tactical/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактический лук",
-		GENITIVE = "тактического лука",
-		DATIVE = "тактическому луку",
-		ACCUSATIVE = "тактический лук",
-		INSTRUMENTAL = "тактическим луком",
-		PREPOSITIONAL = "тактическом луке",
-	)
-
 /obj/item/gun/projectile/bow/tactical/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 0.86, range_is_multiplier = FALSE)
@@ -227,27 +182,15 @@
 // MARK: Handmade
 /obj/item/gun/projectile/bow/handmade
 	name = "handmade bow"
-	desc = "Самодельный лук, сделанный из того, что нашлось под рукой."
+	desc = "A homemade bow assembled from whatever was available."
 	icon_state = "homemade"
 	base_icon_state = "homemade"
 	item_state = "homemade"
 	force = 10
 
-/obj/item/gun/projectile/bow/handmade/get_ru_names()
-	return alist(
-		NOMINATIVE = "самодельный лук",
-		GENITIVE = "самодельного лука",
-		DATIVE = "самодельному луку",
-		ACCUSATIVE = "самодельный лук",
-		INSTRUMENTAL = "самодельным луком",
-		PREPOSITIONAL = "самодельном луке",
-	)
-
-// MARK: Arrow storages
-// TODO: move it into it's own files
 /obj/item/storage/backpack/quiver
 	name = "quiver"
-	desc = "Колчан для хранения стрел."
+	desc = "A quiver for holding arrows."
 	gender =  MALE
 	icon_state = "quiver"
 	item_state = "quiver"
@@ -256,16 +199,6 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	can_hold = list(
 		/obj/item/ammo_casing/caseless/arrow,
-	)
-
-/obj/item/storage/backpack/quiver/get_ru_names()
-	return alist(
-		NOMINATIVE = "колчан",
-		GENITIVE = "колчана",
-		DATIVE = "колчану",
-		ACCUSATIVE = "колчан",
-		INSTRUMENTAL = "колчаном",
-		PREPOSITIONAL = "колчане",
 	)
 
 /obj/item/storage/backpack/quiver/full/populate_contents()
@@ -281,7 +214,7 @@
 
 /obj/item/storage/backpack/quiver/weaver
 	name = "weaver chitin quiver"
-	desc = "Огнеупорный колчан, сделанный из хитина ткача. Используется для хранения стрел."
+	desc = "A fireproof quiver made from the chitin of a marrow weaver. Used to hold arrows."
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "quiver_weaver"
 	item_state = "quiver_weaver"
@@ -289,16 +222,6 @@
 	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
 	resistance_flags = FIRE_PROOF
 	storage_slots = 30
-
-/obj/item/storage/backpack/quiver/weaver/get_ru_names()
-	return alist(
-		NOMINATIVE = "колчан из хитина ткача",
-		GENITIVE = "колчана из хитина ткача",
-		DATIVE = "колчану из хитина ткача",
-		ACCUSATIVE = "колчан из хитина ткача",
-		INSTRUMENTAL = "колчаном из хитина ткача",
-		PREPOSITIONAL = "колчане из хитина ткача",
-	)
 
 /obj/item/storage/backpack/quiver/weaver/update_icon_state()
 	return
@@ -309,20 +232,10 @@
 
 /obj/item/storage/backpack/quiver/modern
 	name = "modern quiver"
-	desc = "Качественный колчан из синтетической кожи."
+	desc = "A well-made synthetic leather quiver."
 	icon_state = "quivermodern"
 	item_state = "quivermodern"
 	storage_slots = 30
-
-/obj/item/storage/backpack/quiver/modern/get_ru_names()
-	return alist(
-		NOMINATIVE = "колчан из синтетической кожи",
-		GENITIVE = "колчана из синтетической кожи",
-		DATIVE = "колчану из синтетической кожи",
-		ACCUSATIVE = "колчан из синтетической кожи",
-		INSTRUMENTAL = "колчаном из синтетической кожи",
-		PREPOSITIONAL = "колчане из синтетической кожи",
-	)
 
 /obj/item/storage/backpack/quiver/modern/update_icon_state()
 	if(length(contents))
@@ -339,19 +252,9 @@
 
 /obj/item/storage/backpack/quiver/homemade
 	name = "homemade quiver"
-	desc = "Колчан из того, что можно найти в ближайшей куче мусора. Лучше чем ничего."
+	desc = "A quiver made from things found in the nearest rubbish heap. Better than nothing."
 	icon_state = "homemade"
 	storage_slots = 10
-
-/obj/item/storage/backpack/quiver/homemade/get_ru_names()
-	return alist(
-		NOMINATIVE = "колчан из мусорного пакета",
-		GENITIVE = "колчана из мусорного пакета",
-		DATIVE = "колчану из мусорного пакета",
-		ACCUSATIVE = "колчан из мусорного пакета",
-		INSTRUMENTAL = "колчаном из мусорного пакета",
-		PREPOSITIONAL = "колчане из мусорного пакета",
-	)
 
 /obj/item/storage/backpack/quiver/homemade/update_icon_state()
 	if(length(contents))

@@ -10,8 +10,7 @@
 
 /obj/machinery/computer/crew
 	name = "crew monitoring computer"
-	desc = "Консоль, используемая для контроля активных датчиков состояния здоровья, \
-			встроенных в униформу большинства членов экипажа."
+	desc = "Used to monitor active health sensors built into most of the crew's uniforms."
 	icon_keyboard = "med_key"
 	icon_screen = "crew"
 	idle_power_usage = 250
@@ -19,16 +18,6 @@
 	light_color = LIGHT_COLOR_DARK_BLUE
 	circuit = /obj/item/circuitboard/crew
 	var/datum/ui_module/crew_monitor/crew_monitor
-
-/obj/machinery/computer/crew/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль наблюдения за экипажем",
-		GENITIVE = "консоли наблюдения за экипажем",
-		DATIVE = "консоли наблюдения за экипажем",
-		ACCUSATIVE = "консоль наблюдения за экипажем",
-		INSTRUMENTAL = "консолью наблюдения за экипажем",
-		PREPOSITIONAL = "консоли наблюдения за экипажем",
-	)
 
 /obj/machinery/computer/crew/Initialize(mapload)
 	. = ..()
@@ -69,8 +58,7 @@
 
 /obj/item/circuit_component/medical_console_data
 	display_name = "Данные мониторинга экипажа"
-	desc = "Выводит биометрические данные гуманоидов на консоль наблюдения за экипажем,  \
-			где её затем можно отфильтровать с помощью компонента \"Выбрать запрос\"."
+	desc = "Outputs humanoid biometric data from the crew monitoring console, which can then be filtered using a Select Query component."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 
 	/// The records retrieved

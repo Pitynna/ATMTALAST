@@ -1,7 +1,7 @@
 // MARK: Ammo box
 /obj/item/ammo_box
 	name = "ammo box (generic)"
-	desc = "Коробка с боеприпасами."
+	desc = "A box of ammo?"
 	gender = FEMALE
 	icon_state = "357"
 	icon = 'icons/obj/weapons/ammo.dmi'
@@ -36,16 +36,6 @@
 	var/bullet_load_duration = 0.4 SECONDS
 	/// Additional info to be added to examine text.
 	var/extra_info = ""
-
-/obj/item/ammo_box/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка [get_ammo_descriptor()] [get_cartridge_marking()]",
-		GENITIVE = "коробки [get_ammo_descriptor()] [get_cartridge_marking()]",
-		DATIVE = "коробке [get_ammo_descriptor()] [get_cartridge_marking()]",
-		ACCUSATIVE = "коробку [get_ammo_descriptor()] [get_cartridge_marking()]",
-		INSTRUMENTAL = "коробкой [get_ammo_descriptor()] [get_cartridge_marking()]",
-		PREPOSITIONAL = "коробке [get_ammo_descriptor()] [get_cartridge_marking()]",
-	)
 
 /obj/item/ammo_box/Initialize(mapload)
 	. = ..()
@@ -134,7 +124,7 @@
 /// What corresponding ammo should be called in examine procs.
 /// Should be set in genitive case like `"патронов"` or `"выстрелов"`.
 /obj/item/ammo_box/proc/get_ammo_descriptor()
-	return "патронов"
+	return "cartridges"
 
 /// Getter for cartridge marking
 /obj/item/ammo_box/proc/get_cartridge_marking()
@@ -149,8 +139,7 @@
 
 /obj/item/ammo_box/update_desc(updates = ALL)
 	. = ..()
-	desc = "Коробка для хранения боеприпасов. Предназначена для [get_ammo_descriptor()] [get_cartridge_marking()], \
-			вмещает вплоть до [max_ammo].[extra_info ? " " + extra_info : ""]"
+	desc = "An ammunition box for [get_cartridge_marking()] [get_ammo_descriptor()]. Holds up to [max_ammo] rounds.[extra_info ? " " + extra_info : ""]"
 
 /obj/item/ammo_box/examine(mob/user)
 	. = ..()
@@ -223,12 +212,11 @@
 	var/ammo_casing = isammocasing(I)
 
 	if(ammo_box)
-		CALCULATE_SKILL_MOD(user, MAGAZINE_RELOAD_MOD, skill_modifier)
 		var/obj/item/ammo_box/box = I
 		for(var/obj/item/ammo_casing/casing in box.stored_ammo)
 			if(!can_fast_load)
 				playsound(src, insert_sound, 50, TRUE)
-				if(!do_after(user, bullet_load_duration * skill_modifier, box, DA_IGNORE_USER_LOC_CHANGE, max_interact_count = 1))
+				if(!do_after(user, bullet_load_duration, box, DA_IGNORE_USER_LOC_CHANGE, max_interact_count = 1))
 					break
 				box.update_appearance()
 				box.update_equipped_item()
@@ -328,7 +316,7 @@
 // MARK: Мagazine
 /obj/item/ammo_box/magazine
 	name = "magazine (generic)"
-	desc = "Магазин для огнестрельного оружия."
+	desc = "A magazine for a firearm."
 	gender = MALE
 	materials = list(MAT_METAL = 2000)
 	can_fast_load = FALSE
@@ -336,20 +324,9 @@
 	/// Should be in genitive case like `"пистолета \"Стечкин\""` or `"пулемёта L6 SAW"`.
 	var/gun_name = ""
 
-/obj/item/ammo_box/magazine/get_ru_names()
-	return alist(
-		NOMINATIVE = "магазин [gun_name] [get_cartridge_marking()]",
-		GENITIVE = "магазина [gun_name] [get_cartridge_marking()]",
-		DATIVE = "магазину [gun_name] [get_cartridge_marking()]",
-		ACCUSATIVE = "магазин [gun_name] [get_cartridge_marking()]",
-		INSTRUMENTAL = "магазином [gun_name] [get_cartridge_marking()]",
-		PREPOSITIONAL = "магазине [gun_name] [get_cartridge_marking()]",
-	)
-
 /obj/item/ammo_box/magazine/update_desc(updates = ALL)
 	. = ..()
-	desc = "Съёмный магазин для [gun_name ? gun_name : "огнестрельного оружия"]. \
-			Предназначен для [get_ammo_descriptor()] [get_cartridge_marking()], вмещает вплоть до [max_ammo].[extra_info ? " " + extra_info : ""]"
+	desc = "A detachable magazine for [gun_name ? gun_name : "firearms"]. Designed for [get_cartridge_marking()] [get_ammo_descriptor()], holding up to [max_ammo] rounds.[extra_info ? " " + extra_info : ""]"
 
 /obj/item/ammo_box/magazine/proc/ammo_count(countempties = TRUE)
 	return length(stored_ammo)

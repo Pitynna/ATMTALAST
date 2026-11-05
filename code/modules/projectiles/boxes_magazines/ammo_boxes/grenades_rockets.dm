@@ -6,7 +6,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_box/a40mm/get_ammo_descriptor()
-	return "выстрелов"
+	return "rounds"
 
 // MARK: .40mm - GL-06
 /obj/item/ammo_box/secgl
@@ -16,7 +16,7 @@
 	max_ammo = 4
 
 /obj/item/ammo_box/secgl/get_ammo_descriptor()
-	return "выстрелов"
+	return "rounds"
 
 /obj/item/ammo_box/secgl/solid
 	ammo_type = /obj/item/ammo_casing/a40mm/secgl/solid

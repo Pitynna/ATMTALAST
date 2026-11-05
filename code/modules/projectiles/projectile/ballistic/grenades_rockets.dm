@@ -1,7 +1,7 @@
 // MARK: 84mm HEDP
 /obj/projectile/bullet/a84mm_hedp
 	name = "HEDP rocket"
-	desc = "ИСПОЛЬЗУЙ ПНЕВМАТИЧЕСКИЙ ПИСТОЛЕТ"
+	desc = "USE A WEEL GUN"
 	icon_state = "84mm-hedp"
 	icon = 'icons/obj/weapons/ammo.dmi'
 	damage = 80
@@ -66,16 +66,6 @@
 	damage = 60
 	ricochets_max = 0
 
-/obj/projectile/bullet/a40mm/get_ru_names()
-	return alist(
-		NOMINATIVE = "40мм граната",
-		GENITIVE = "40мм гранаты",
-		DATIVE = "40мм гранате",
-		ACCUSATIVE = "40мм гранату",
-		INSTRUMENTAL = "40мм гранатой",
-		PREPOSITIONAL = "40мм гранате",
-	)
-
 /obj/projectile/bullet/a40mm/on_hit(atom/target, blocked = 0)
 	..()
 	explosion(target, devastation_range = -1, heavy_impact_range = 0, light_impact_range = 2, flash_range = 1, adminlog = TRUE, flame_range = 3, cause = "[type] fired by [key_name(firer)]")
@@ -84,7 +74,7 @@
 // MARK: 70mm HE
 /obj/projectile/bullet/a70mm_he
 	name = "70mm HE missile"
-	desc = "Небольшой взрыв."
+	desc = "A small explosion."
 	icon_state = "70mm-he"
 	icon = 'icons/obj/weapons/ammo.dmi'
 	damage = 25
@@ -95,17 +85,6 @@
 	..()
 	explosion(get_turf(src), devastation_range = 0, heavy_impact_range = 2, light_impact_range = 3, flash_range = 4, cause = src)
 
-/obj/projectile/bullet/a70mm_he/get_ru_names()
-	return alist(
-		NOMINATIVE = "70мм ракета",
-		GENITIVE = "70мм ракеты",
-		DATIVE = "70мм ракете",
-		ACCUSATIVE = "70мм ракету",
-		INSTRUMENTAL = "70мм ракетой",
-		PREPOSITIONAL = "70мм ракете",
-	)
-
-// MARK: Bombarda grenade
 /obj/projectile/grenade/improvised
 	icon = 'icons/obj/weapons/bombarda.dmi'
 	icon_state = null

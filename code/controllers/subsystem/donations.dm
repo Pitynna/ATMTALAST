@@ -12,7 +12,6 @@ SUBSYSTEM_DEF(donations)
 	var/list/donators = list()
 	var/month_donations = 0
 	var/target_donation = 0
-	var/tts_target_donation = 0
 	var/donations_text
 	var/boosty_url
 	var/kofi_url
@@ -26,7 +25,6 @@ SUBSYSTEM_DEF(donations)
 
 /datum/controller/subsystem/donations/OnConfigLoad()
 	target_donation = CONFIG_GET(number/target_donation)
-	tts_target_donation = CONFIG_GET(number/tts_target_donation)
 	boosty_url = CONFIG_GET(string/boosty_url)
 	kofi_url = CONFIG_GET(string/kofi_url)
 	discord_url = CONFIG_GET(string/discord_url)

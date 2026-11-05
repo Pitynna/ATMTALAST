@@ -30,7 +30,6 @@ GLOBAL_LIST_EMPTY(ts_spiderling_list)
 	var/spider_intro_text = "Если ты это видишь, это баг."
 	speak_emote = list("шипит")
 	emote_hear = list("шипит")
-	tts_seed = "Anubarak"
 	sentience_type = SENTIENCE_OTHER
 	response_help  = "гладит"
 	response_disarm = "осторожно отодвигает в сторону"

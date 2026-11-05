@@ -30,16 +30,6 @@
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/neck.dmi',
 	)
 
-/obj/item/camera/get_ru_names()
-	return alist(
-		NOMINATIVE = "фотоаппарат",
-		GENITIVE = "фотоаппарата",
-		DATIVE = "фотоаппарату",
-		ACCUSATIVE = "фотоаппарат",
-		INSTRUMENTAL = "фотоаппаратом",
-		PREPOSITIONAL = "фотоаппарате"
-	)
-
 /obj/item/camera/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/shell,\
@@ -384,8 +374,7 @@
 #define MAX_PICTURE_SIZE 7
 /obj/item/circuit_component/camera
 	display_name = "Камера"
-	desc = "Камера Polaroid, делающая снимки при вызове. \
-			Порты координат изображения определяются относительно положения камеры."
+	desc = "A Polaroid camera that takes a picture when triggered. Image coordinate ports are relative to the camera's position."
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL
 
 	/// The atom that was photographed from either user click or trigger input.

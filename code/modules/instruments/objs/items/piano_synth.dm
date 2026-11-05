@@ -1,6 +1,6 @@
 /obj/item/instrument/piano_synth
 	name = "synthesizer"
-	desc = "Электронный синтезатор, который может имитировать различные инструменты."
+	desc = "An advanced electronic synthesizer that can be used as various instruments."
 	icon_state = "synth"
 	item_state = "synth"
 	allowed_instrument_ids = "piano"
@@ -15,7 +15,7 @@
 
 /obj/item/circuit_component/synth
 	display_name = "Синтезатор"
-	desc = "Электронный синтезатор, который может имитировать различные инструменты."
+	desc = "An electronic synthesizer that can imitate various instruments."
 
 	/// The song, represented in latin alphabet A to G, that'll be played when play is triggered.
 	var/datum/port/input/song

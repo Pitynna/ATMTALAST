@@ -13,20 +13,10 @@
 	sound = 'sound/magic/staff_healing.ogg'
 
 /obj/item/melee/touch_attack/revive_touch
-	name = "воскрешающее касание"
-	desc = "Воскрешает тело умершего на определенное время."
+	name = "resurrecting touch"
+	desc = "Temporarily resurrects a dead body."
 	icon_state = "disintegrate"
 	color = "#acb78e"
-
-/obj/item/melee/touch_attack/revive_touch/get_ru_names()
-	return alist(
-		NOMINATIVE = "воскрешающее касание",
-		GENITIVE = "воскрешающего касания",
-		DATIVE = "воскрешающему касанию",
-		ACCUSATIVE = "воскрешающее касание",
-		INSTRUMENTAL = "воскрешающим касанием",
-		PREPOSITIONAL = "воскрешающем касании",
-	)
 
 /datum/action/cooldown/spell/touch/revive_touch/is_valid_target(atom/cast_on)
 	if(!ishuman(cast_on))

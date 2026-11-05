@@ -60,16 +60,6 @@
 	origin_tech = "materials=6;programming=5;biotech=5"
 	emp_proof = TRUE
 
-/obj/item/organ/internal/cyberimp/brain/anti_drop/hardened/get_ru_names()
-	return alist(
-		NOMINATIVE = "укрепленный имплант анти-дроп",
-		GENITIVE = "укрепленного импланта анти-дропа",
-		DATIVE = "укрепленному импланту анти-дропа",
-		ACCUSATIVE = "укрепленный имплант анти-дропа",
-		INSTRUMENTAL = "укрепленным имплантом анти-дропа",
-		PREPOSITIONAL = "укрепленном импланте анти-дропа",
-	)
-
 /obj/item/organ/internal/cyberimp/brain/anti_drop/ui_action_click(mob/user, datum/action/action, leftclick)
 	active = !active
 	if(active)
@@ -448,7 +438,7 @@
 
 /obj/item/organ/internal/cyberimp/chest/exoframe
 	name = "Exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Стандартная модель, не отличающаяся выдающимися характеристиками."
+	desc = "A structural support serving as the skeleton of a humanoid robot. A standard model with unremarkable specifications."
 	implant_color = "#3a3a3aff"
 	implant_overlay = null
 	origin_tech = "materials=3;engineering=4"
@@ -464,16 +454,6 @@
 	var/low_pressure_hazard = HAZARD_LOW_PRESSURE
 	var/low_pressure_warning = WARNING_LOW_PRESSURE
 	var/coldmod = 1
-
-/obj/item/organ/internal/cyberimp/chest/exoframe/get_ru_names()
-	return alist(
-		NOMINATIVE = "стандартный каркас экзоскелета",
-		GENITIVE = "стандартного каркаса экзоскелета",
-		DATIVE = "стандартному каркасу экзоскелета",
-		ACCUSATIVE = "стандартный каркас экзоскелета",
-		INSTRUMENTAL = "стандартным каркасом экзоскелета",
-		PREPOSITIONAL = "стандартном каркасе экзоскелета",
-	)
 
 /obj/item/organ/internal/cyberimp/chest/exoframe/insert(mob/living/carbon/human/target)
 	if(!crit_fail)
@@ -543,7 +523,7 @@
 
 /obj/item/organ/internal/cyberimp/chest/exoframe/reinforced
 	name = "Reinforced exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Укреплённая модель, способная выдержать больше повреждений."
+	desc = "A structural support serving as the skeleton of a humanoid robot. A reinforced model that can withstand more damage."
 	id = "EXO_REINFORCED"
 	icon_state = "exoframe_reinforced"
 	given_health = 20
@@ -551,19 +531,9 @@
 	traits_added = list(TRAIT_IGNOREDAMAGESLOWDOWN)
 	strength_gain = 3
 
-/obj/item/organ/internal/cyberimp/chest/exoframe/reinforced/get_ru_names()
-	return alist(
-			NOMINATIVE = "укрепленный каркас экзоскелета",
-			GENITIVE = "укрепленного каркаса экзоскелета",
-			DATIVE = "укрепленному каркасу экзоскелета",
-			ACCUSATIVE = "укрепленный каркас экзоскелета",
-			INSTRUMENTAL = "укрепленным каркасом экзоскелета",
-			PREPOSITIONAL = "укрепленном каркасе экзоскелета",
-		)
-
 /obj/item/organ/internal/cyberimp/chest/exoframe/industrial
 	name = "Industrial exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Промышленная модель, созданная специально для работ в открытом космосе."
+	desc = "A structural support serving as the skeleton of a humanoid robot. An industrial model designed specifically for work in open space."
 	id = "EXO_INDUSTRIAL"
 	icon_state = "exoframe_industrial"
 	traits_added = list(TRAIT_SHOCKIMMUNE)
@@ -573,19 +543,9 @@
 	coldmod = -1
 	external_emp_damage = 1.5
 
-/obj/item/organ/internal/cyberimp/chest/exoframe/industrial/get_ru_names()
-	return alist(
-		NOMINATIVE = "промышленный каркас экзоскелета",
-		GENITIVE = "промышленного каркаса экзоскелета",
-		DATIVE = "промышленному каркасу экзоскелета",
-		ACCUSATIVE = "промышленный каркас экзоскелета",
-		INSTRUMENTAL = "промышленным каркасом экзоскелета",
-		PREPOSITIONAL = "промышленном каркасе экзоскелета",
-	)
-
 /obj/item/organ/internal/cyberimp/chest/exoframe/combat
 	name = "Combat exoframe"
-	desc = "Несущая опора, выполняющая роль \"скелета\" в конструкции гуманоидных роботов. Облегченная модель из пластитанового сплава с повышенной прочностью конструкции."
+	desc = "A structural support serving as the skeleton of a humanoid robot. A lightweight plastitanium-alloy model with increased structural strength."
 	id = "EXO_COMBAT"
 	icon_state = "exoframe_combat"
 	origin_tech = "materials=4;engineering=4;syndicate=3;combat=4"
@@ -597,16 +557,6 @@
 	external_emp_damage = 0.5
 	var/active = FALSE
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
-
-/obj/item/organ/internal/cyberimp/chest/exoframe/combat/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой каркас экзоскелета",
-		GENITIVE = "боевого каркаса экзоскелета",
-		DATIVE = "боевому каркасу экзоскелета",
-		ACCUSATIVE = "боевой каркас экзоскелета",
-		INSTRUMENTAL = "боевым каркасом экзоскелета",
-		PREPOSITIONAL = "боевом каркасе экзоскелета",
-	)
 
 /obj/item/organ/internal/cyberimp/chest/exoframe/combat/insert(mob/living/carbon/human/target)
 	. = ..()

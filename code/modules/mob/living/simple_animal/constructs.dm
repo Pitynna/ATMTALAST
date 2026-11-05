@@ -3,7 +3,6 @@
 	real_name = "Construct"
 	speak_emote = list("шипит")
 	emote_hear = list("визжит", "воет")
-	tts_seed = "Acolyte"
 	response_help  = "thinks better of touching"
 	response_disarm = "flails at"
 	response_harm   = "punches"
@@ -30,25 +29,13 @@
 
 /mob/living/simple_animal/hostile/construct/Initialize(mapload)
 	. = ..()
-	if(cult_icon_changing)
-		if(!SSticker.mode)//work around for maps with runes and cultdat is not loaded all the way
-			name = "[construct_type] ([rand(1, 1000)])"
-			real_name = construct_type
-			icon_living = construct_type
-			icon_state = construct_type
-		else
-			name = "[SSticker.cultdat.get_name(construct_type)] ([rand(1, 1000)])"
-			real_name = SSticker.cultdat.get_name(construct_type)
-			icon_living = SSticker.cultdat.get_icon(construct_type)
-			icon_state = SSticker.cultdat.get_icon(construct_type)
+	name = "[initial(name)] ([rand(1, 1000)])"
 
 	for(var/spell in construct_spells)
 		AddSpell(new spell)
 
-	set_light_range_power_color(2, 3, SSticker.cultdat ? SSticker.cultdat.construct_glow : LIGHT_COLOR_BLOOD_MAGIC)
+	set_light_range_power_color(2, 3, LIGHT_COLOR_BLOOD_MAGIC)
 
-/mob/living/simple_animal/hostile/construct/Initialize(mapload)
-	. = ..()
 	if(holy)
 		ADD_TRAIT(src, TRAIT_HEALS_FROM_HOLY_PYLONS, INNATE_TRAIT)
 	else
@@ -65,7 +52,6 @@
 
 /mob/living/simple_animal/hostile/construct/death(gibbed)
 	. = ..()
-	SSticker.mode.remove_cultist(mind, FALSE)
 
 /mob/living/simple_animal/hostile/construct/examine(mob/user)
 	. = ..()
@@ -98,9 +84,6 @@
 				to_chat(M, span_cult("You cannot repair your own dents, as you have none!"))
 	else if(src != M)
 		return ..()
-
-/mob/living/simple_animal/hostile/construct/narsie_act()
-	return
 
 /mob/living/simple_animal/hostile/construct/electrocute_act(shock_damage, atom/source, siemens_coeff = 1, flags = NONE, jitter_time = 10 SECONDS, stutter_time = 6 SECONDS, stun_duration = 4 SECONDS)
 	return FALSE
@@ -182,7 +165,6 @@
 	construct_spells = list(/datum/action/cooldown/spell/nightvision, /datum/action/cooldown/spell/jaunt/ethereal_jaunt/shift)
 	retreat_distance = 2 //AI wraiths will move in and out of combat
 	playstyle_string = "<b>You are a Wraith. Though relatively fragile, you are fast, deadly, and even able to phase through walls.</b>"
-	tts_seed = "Kelthuzad"
 	hud_type = /datum/hud/construct/wraith
 
 /mob/living/simple_animal/hostile/construct/wraith/hostile //actually hostile, will move around, hit things

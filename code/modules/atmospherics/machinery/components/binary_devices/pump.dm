@@ -219,7 +219,7 @@ Thus, the two variables affect pump operation are set in New():
 
 /obj/item/circuit_component/atmos_pump
 	display_name = "Атмосферный бинарный насос"
-	desc = "Интерфейс для связи с насосом."
+	desc = "An interface for communicating with a pump."
 
 	///Set the target pressure of the pump
 	var/datum/port/input/pressure_value

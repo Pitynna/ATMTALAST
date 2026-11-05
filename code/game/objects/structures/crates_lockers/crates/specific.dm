@@ -94,34 +94,14 @@
 	new /obj/item/clothing/head/radiation(src)
 
 /obj/structure/closet/crate/vault
-	desc = "Ящик с ценностями."
+	desc = "A crate of valuables."
 	name = "vault crate"
 	icon_state = "vaultcrate"
 
-/obj/structure/closet/crate/vault/get_ru_names()
-	return alist(
-		NOMINATIVE = "ящик с ценностями",
-		GENITIVE = "ящика с ценностями",
-		DATIVE = "ящику с ценностями",
-		ACCUSATIVE = "ящик с ценностями",
-		INSTRUMENTAL = "ящиком с ценностями",
-		PREPOSITIONAL = "ящике с ценностями",
-	)
-
 /obj/structure/closet/crate/wooden //i'm sure hope this won't be used as cheese strat to obtain cargo points
 	name = "wooden crate"
-	desc = "Ящик, сделанный из дерева."
+	desc = "A crate made from wood."
 	icon_state = "wooden_crate"
-
-/obj/structure/closet/crate/wooden/get_ru_names()
-	return alist(
-		NOMINATIVE = "деревянный ящик",
-		GENITIVE = "деревянного ящика",
-		DATIVE = "деревянному ящику",
-		ACCUSATIVE = "деревянный ящик",
-		INSTRUMENTAL = "деревянным ящиком",
-		PREPOSITIONAL = "деревянном ящике",
-	)
 
 /obj/structure/closet/crate/hydroponics
 	name = "hydroponics crate"
@@ -163,16 +143,6 @@
 		new /obj/item/bikehorn/rubberducky(src)
 
 //crates of gear in the free golem ship
-/obj/structure/closet/crate/golemgear/populate_contents()
-	new /obj/item/storage/backpack/industrial(src)
-	new /obj/item/shovel(src)
-	new /obj/item/pickaxe(src)
-	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
-	new /obj/item/storage/bag/ore(src)
-	new /obj/item/clothing/glasses/meson(src)
-	new /obj/item/card/id/golem(src)
-	new /obj/item/flashlight/lantern(src)
-
 //syndie crates by Furukai
 /obj/structure/closet/crate/syndicate
 	desc = "Definitely a property of an evil corporation!"

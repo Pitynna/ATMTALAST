@@ -364,13 +364,13 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 	return "Огромный"
 
 /obj/item/spacepod_equipment/locators/basic_pod_locator
-	name = "Модуль поиска астероидов"
-	desc = "Сканирующее устройство позволяющее определять координаты астероидов в секторе."
+	name = "asteroid locator module"
+	desc = "A scanning device that determines asteroid coordinates within the sector."
 	icon_state = "pod_locator"
 	origin_tech = "engineering=5;magnets=4"
 
 /obj/item/spacepod_equipment/locators/advanced_pod_locator
-	name = "Улучшеный модуль поиска астероидов"
-	desc = "Улучшеный модуль поиска способный обнаружить любой объект в секторе"
+	name = "advanced asteroid locator module"
+	desc = "An upgraded locator module capable of detecting any object in the sector."
 	icon_state = "pod_locator"
 	can_found_all = TRUE

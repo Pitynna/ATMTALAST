@@ -58,7 +58,7 @@
 
 /obj/item/gun_module/under/flashlight/pistol
 	name = "pistol underbarrel light"
-	desc = "Фонарь, предназначенный для установки на цевьё пистолета. Несовместим с другими классами оружия."
+	desc = "A flashlight designed for pistol mounting rails. Incompatible with other weapon classes."
 	icon_state = "light"
 	item_state = "light"
 	overlay_state = "light_o"
@@ -66,35 +66,15 @@
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 0)
 	custom_price = PAYCHECK_LOWER
 
-/obj/item/gun_module/under/flashlight/pistol/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный фонарь для пистолетов",
-		GENITIVE = "подствольного фонаря для пистолетов",
-		DATIVE = "подствольному фонарю для пистолетов",
-		ACCUSATIVE = "подствольный фонарь для пистолетов",
-		INSTRUMENTAL = "подствольным фонарём для пистолетов",
-		PREPOSITIONAL = "подствольном фонаре для пистолетов",
-	)
-
 /obj/item/gun_module/under/flashlight/rifle
 	name = "rifle underbarrel light"
-	desc = "Фонарь, предназначенный для установки на цевьё. Несовместим с пистолетами."
+	desc = "A rail-mounted flashlight. Incompatible with pistols."
 	icon_state = "light_s"
 	item_state = "light_s"
 	overlay_state = "light_s_o"
 	class = GUN_MODULE_CLASS_SHOTGUN_UNDER | GUN_MODULE_CLASS_RIFLE_UNDER
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 0)
 	custom_price = 1.5 * PAYCHECK_LOWER
-
-/obj/item/gun_module/under/flashlight/rifle/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный фонарь",
-		GENITIVE = "подствольного фонаря",
-		DATIVE = "подствольному фонарю",
-		ACCUSATIVE = "подствольный фонарь",
-		INSTRUMENTAL = "подствольным фонарём",
-		PREPOSITIONAL = "подствольном фонаре",
-	)
 
 /**
  * MARK: Handguard
@@ -119,7 +99,7 @@
 
 /obj/item/gun_module/under/hand/simple
 	name = "rifle hand"
-	desc = "Прямая рукоятка, предназначенная для установки на нижнюю планку цевья. Повышает удобство стрельбы."
+	desc = "A vertical grip for a weapon's lower mounting rail. Improves handling while firing."
 	gender = FEMALE
 	icon_state = "hand"
 	item_state = "hand"
@@ -130,19 +110,9 @@
 	spread_reduction = 0.20
 	custom_price = 2 * PAYCHECK_LOWER
 
-/obj/item/gun_module/under/hand/simple/get_ru_names()
-	return alist(
-		NOMINATIVE = "прямая рукоятка",
-		GENITIVE = "прямой рукоятки",
-		DATIVE = "прямую рукоятку",
-		ACCUSATIVE = "прямая рукоятка",
-		INSTRUMENTAL = "прямой рукояткой",
-		PREPOSITIONAL = "прямой рукоятке",
-	)
-
 /obj/item/gun_module/under/hand/angle
 	name = "rifle angle hand"
-	desc = "Угловая рукоятка, предназначенная для установки на нижнюю планку цевья. Повышает удобство стрельбы."
+	desc = "An angled grip for a weapon's lower mounting rail. Improves handling while firing."
 	gender = FEMALE
 	icon_state = "hand_a"
 	item_state = "hand_a"
@@ -151,23 +121,13 @@
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 0)
 	custom_price = 3 * PAYCHECK_LOWER
 
-/obj/item/gun_module/under/hand/angle/get_ru_names()
-	return alist(
-		NOMINATIVE = "угловая рукоятка",
-		GENITIVE = "угловой рукоятки",
-		DATIVE = "угловой рукоятке",
-		ACCUSATIVE = "угловую рукоятку",
-		INSTRUMENTAL = "угловой рукояткой",
-		PREPOSITIONAL = "угловой рукоятке",
-	)
-
 /**
  * MARK: Laser Sight
  */
 
 /obj/item/gun_module/under/laser
 	name = "laser sight"
-	desc = "Лазерный целеуказатель, предназначенный для установки на цевьё. Повышает точность стрельбы и понижает разброс при стрельбе."
+	desc = "A rail-mounted laser sight. Improves accuracy and reduces shot dispersion."
 	icon_state = "laser"
 	item_state = "laser"
 	overlay_state = "laser_o"
@@ -235,35 +195,13 @@
 	name = "laser sight (ray)"
 	component_type = /datum/component/laser_sight/ray
 
-/obj/item/gun_module/under/laser/ray/get_ru_names()
-	return alist(
-		NOMINATIVE = "лазерный целеуказатель (луч)",
-		GENITIVE = "лазерного целеуказателя (луч)",
-		DATIVE = "лазерному целеуказателю (луч)",
-		ACCUSATIVE = "лазерный целеуказатель (луч)",
-		INSTRUMENTAL = "лазерным целеуказателем (луч)",
-		PREPOSITIONAL = "лазерном целеуказателе (луч)",
-	)
-
 /obj/item/gun_module/under/laser/point
 	name = "laser sight (point)"
 	component_type = /datum/component/laser_sight/point
 
-/obj/item/gun_module/under/laser/point/get_ru_names()
-	return alist(
-		NOMINATIVE = "лазерный целеуказатель (точка)",
-		GENITIVE = "лазерного целеуказателя (точка)",
-		DATIVE = "лазерному целеуказателю (точка)",
-		ACCUSATIVE = "лазерный целеуказатель (точка)",
-		INSTRUMENTAL = "лазерным целеуказателем (точка)",
-		PREPOSITIONAL = "лазерном целеуказателе (точка)",
-	)
-
-
-// MARK: Bayonet
 /obj/item/gun_module/under/bayonet
 	name = "bayonet"
-	desc = "Универсальный короткий клинок, оснащенный специальным креплением для монтажа на ствол винтовки. Основное предназначение — нанесение колющего удара в ближнем бою. Компактный дизайн и надежность конструкции делают его эффективным вспомогательным оружием."
+	desc = "A universal short blade with a specialized rifle barrel mount, intended primarily for close-range thrusting attacks. Its compact, reliable design makes it an effective auxiliary weapon."
 	icon_state = "bayonet_short"
 	item_state = "knife"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
@@ -283,16 +221,6 @@
 	/// Variable for save gun old sharp var
 	var/old_sharp
 
-/obj/item/gun_module/under/bayonet/get_ru_names()
-	return alist(
-		NOMINATIVE = "штык-нож",
-		GENITIVE = "штык-ножа",
-		DATIVE = "штык-ножу",
-		ACCUSATIVE = "штык-нож",
-		INSTRUMENTAL = "штык-ножом",
-		PREPOSITIONAL = "штык-ноже",
-	)
-
 /obj/item/gun_module/under/bayonet/sharpen_act(obj/item/whetstone/whetstone, mob/user)
 	. = ..()
 	if(!.)
@@ -301,7 +229,7 @@
 
 /obj/item/gun_module/under/bayonet/long
 	name = "long bayonet"
-	desc = "Крупногабаритный клинок с удлиненным острием, предназначенный для крепления к оружию. Благодаря длине и прочности лезвия, обеспечивает дополнительную убойную силу при рукопашной атаке. Незаменим в ситуациях, когда стрельба невозможна или затруднительна."
+	desc = "A large blade with an extended point, designed to mount on a weapon. Its length and strength provide additional force in melee, making it useful when firing is impossible or impractical."
 	icon_state = "bayonet_long"
 	overlay_state = "bayonet_long_o"
 	overlay_offset = list(ATTACHMENT_OFFSET_X = 6, ATTACHMENT_OFFSET_Y = 4)
@@ -309,16 +237,6 @@
 	force = 15
 	custom_price = 3 * PAYCHECK_CREW
 	bonus_force = 10
-
-/obj/item/gun_module/under/bayonet/long/get_ru_names()
-	return alist(
-		NOMINATIVE = "длинный штык-нож",
-		GENITIVE = "длинного штык-ножа",
-		DATIVE = "длинному штык-ножу",
-		ACCUSATIVE = "длинный штык-нож",
-		INSTRUMENTAL = "длинным штык-ножом",
-		PREPOSITIONAL = "длинном штык-ноже",
-	)
 
 /obj/item/gun_module/under/bayonet/on_attach(obj/item/gun/target_gun, mob/user)
 	target_gun.force += bonus_force
@@ -337,7 +255,7 @@
 // MARK: Underbarrel gun
 /obj/item/gun_module/under/gun
 	name = "underbarrel gun"
-	desc = "Модуль подствольного оружия. Вы не должны видеть это описание."
+	desc = "An underbarrel weapon module. You should not be seeing this description."
 	overlay_offset = list(ATTACHMENT_OFFSET_X = -2, ATTACHMENT_OFFSET_Y = 2)
 	class = GUN_MODULE_CLASS_RIFLE_UNDER
 	/// Attached internal gun instance
@@ -389,20 +307,10 @@
 // MARK: Grenade launcher
 /obj/item/gun_module/under/gun/grenade_launcher
 	name = "underbarrel grenade launcher"
-	desc = "Модуль подствольного 40 мм гранатомета."
+	desc = "An underbarrel 40mm grenade launcher module."
 	icon_state = "grenade"
 	overlay_state = "grenade_o"
 	internal_gun_type = /obj/item/gun/projectile/revolver/grenadelauncher
-
-/obj/item/gun_module/under/gun/grenade_launcher/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный гранатомёт",
-		GENITIVE = "подствольного гранатомёта",
-		DATIVE = "подствольному гранатомёту",
-		ACCUSATIVE = "подствольный гранатомёт",
-		INSTRUMENTAL = "подствольным гранатомётом",
-		PREPOSITIONAL = "подствольном гранатомёте",
-	)
 
 /obj/item/gun_module/under/gun/grenade_launcher/try_reload_internal_gun(obj/item/item, mob/living/user, list/modifiers)
 	var/obj/item/gun/projectile/revolver/grenadelauncher/launcher = internal_gun
@@ -421,20 +329,10 @@
 // MARK: Shotgun
 /obj/item/gun_module/under/gun/shotgun
 	name = "underbarrel shotgun"
-	desc = "Модуль подствольного дробовика 12 калибра на 3+1 патронов."
+	desc = "An underbarrel 12-gauge shotgun module holding 3+1 shells."
 	icon_state = "shotgun"
 	overlay_state = "shotgun_o"
 	internal_gun_type = /obj/item/gun/projectile/shotgun/riot/short
-
-/obj/item/gun_module/under/gun/shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный дробовик",
-		GENITIVE = "подствольного дробовика",
-		DATIVE = "подствольному дробовику",
-		ACCUSATIVE = "подствольный дробовик",
-		INSTRUMENTAL = "подствольным дробовиком",
-		PREPOSITIONAL = "подствольном дробовике",
-	)
 
 /obj/item/gun_module/under/gun/shotgun/fire_internal_gun(obj/item/item, mob/user, atom/target, list/modifiers)
 	. = ..()
@@ -445,17 +343,7 @@
 // MARK: Taser
 /obj/item/gun_module/under/gun/taser
 	name = "underbarrel taser"
-	desc = "Модуль подствольного тазера. Устройство позвоялет совершить 15 выстрелов, но к сожалению не имеет возможности зарядки."
+	desc = "An underbarrel taser module. Holds fifteen shots but unfortunately cannot be recharged."
 	icon_state = "shotgun"
 	overlay_state = "shotgun_o"
 	internal_gun_type = /obj/item/gun/energy/taser
-
-/obj/item/gun_module/under/gun/shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "подствольный тазер",
-		GENITIVE = "подствольного тазера",
-		DATIVE = "подствольному тазеру",
-		ACCUSATIVE = "подствольный тазер",
-		INSTRUMENTAL = "подствольным тазером",
-		PREPOSITIONAL = "подствольном тазере",
-	)

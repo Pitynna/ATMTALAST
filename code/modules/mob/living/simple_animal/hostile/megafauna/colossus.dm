@@ -36,7 +36,6 @@ Difficulty: Very Hard
 	friendly = "пристально смотрит"
 	icon = 'icons/mob/lavaland/96x96megafauna.dmi'
 	speak_emote = list("рычит")
-	tts_seed = "Mannoroth"
 	armour_penetration = 40
 	melee_damage_lower = 40
 	melee_damage_upper = 40
@@ -47,7 +46,6 @@ Difficulty: Very Hard
 	base_pixel_x = -32
 	del_on_death = TRUE
 	universal_speak = TRUE
-	tts_seed = null
 	achievement_type = /datum/award/achievement/boss/colossus_kill
 	crusher_achievement_type = /datum/award/achievement/boss/colossus_crusher
 	score_achievement_type = /datum/award/score/colossus_score
@@ -337,7 +335,7 @@ Difficulty: Very Hard
 
 /obj/effect/temp_visual/at_shield
 	name = "anti-toolbox field"
-	desc = "Мерцающее силовое поле, защищающее колосса."
+	desc = "A shimmering forcefield protecting the colossus."
 	icon_state = "at_shield2"
 	layer = FLY_LAYER
 	light_range = 2

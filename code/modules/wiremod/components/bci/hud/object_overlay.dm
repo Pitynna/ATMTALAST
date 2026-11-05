@@ -20,8 +20,7 @@
 
 /obj/item/circuit_component/object_overlay
 	display_name = "Отображение маркировки"
-	desc = "Требуется ИМК-оболочка. \
-			Компонент, отображающий маркировку поверх объекта."
+	desc = "Requires a BCI shell. Displays a marker over an object."
 	category = "BCI"
 
 	required_shells = list(/obj/item/organ/internal/cyberimp/brain/bci)

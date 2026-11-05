@@ -8,7 +8,7 @@ GLOBAL_LIST_EMPTY(fax_blacklist)
 
 /obj/machinery/photocopier/faxmachine
 	name = "fax machine"
-	desc = "Небольшая машинка для работы с факсами. Не смотря на свой размер, обладает большой силой."
+	desc = "Because just talking to your coworkers is too efficient."
 	icon_state = "fax"
 	insert_anim = "faxsend"
 	pass_flags = PASSTABLE
@@ -38,16 +38,6 @@ GLOBAL_LIST_EMPTY(fax_blacklist)
 
 	/// Target department to send outgoing faxes to
 	var/destination
-
-/obj/machinery/photocopier/faxmachine/get_ru_names()
-	return alist(
-		NOMINATIVE = "факс",
-		GENITIVE = "факса",
-		DATIVE = "факсу",
-		ACCUSATIVE = "факс",
-		INSTRUMENTAL = "факсом",
-		PREPOSITIONAL = "факсе",
-	)
 
 /obj/machinery/photocopier/faxmachine/Initialize(mapload)
 	. = ..()
@@ -233,7 +223,7 @@ GLOBAL_LIST_EMPTY(fax_blacklist)
 				if(copyitem && copyitem.loc == src && usr.stat == 0)
 					if(istype(copyitem, /obj/item/paper))
 						copyitem.name = "[(n_name ? text("[n_name]") : initial(copyitem.name))]"
-						copyitem.desc = "Бумага, подписанная как \"" + copyitem.name + "\"."
+						copyitem.desc = "A paper labeled \"" + copyitem.name + "\"."
 						if(ru_names)
 							ru_names[NOMINATIVE] = "\"[copyitem.name]\""
 							ru_names[GENITIVE] = "\"[copyitem.name]\""

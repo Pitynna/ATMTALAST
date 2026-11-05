@@ -2,22 +2,12 @@
 
 /obj/item/grenade/iedcasing
 	name = "improvised firebomb"
-	desc = "Самопальное взрывное устройство малой мощности."
+	desc = "A sketchy improvised incendiary device."
 	icon_state = "improvised_grenade"
 	throw_speed = 3
 	throw_range = 7
 	display_timer = 0
 	var/list/times
-
-/obj/item/grenade/iedcasing/get_ru_names()
-	return alist(
-		NOMINATIVE = "самодельная взрывчатка",
-		GENITIVE = "самодельной взрывчатки",
-		DATIVE = "самодельной взрывчатке",
-		ACCUSATIVE = "самодельную взрывчатку",
-		INSTRUMENTAL = "самодельной взрывчаткой",
-		PREPOSITIONAL = "самодельной взрывчатке",
-	)
 
 /obj/item/grenade/iedcasing/Initialize(mapload)
 	. = ..()

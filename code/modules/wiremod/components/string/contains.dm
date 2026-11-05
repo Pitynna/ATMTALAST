@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/compare/contains
 	display_name = "Вхождение подстроки"
-	desc = "Проверяет, содержит ли строка подстроку. Возвращает индекс первого вхождения."
+	desc = "Checks whether a string contains a substring. Returns the index of the first occurrence."
 	category = "String"
 
 	var/datum/port/input/needle

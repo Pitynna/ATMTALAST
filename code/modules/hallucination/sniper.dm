@@ -25,7 +25,7 @@
 	return TRUE
 
 /obj/effect/client_image_holder/hallucination/sniper_bullet
-	name = "пуля"
+	name = "bullet"
 	image_layer = ABOVE_MOB_LAYER
 	var/hal_icon = 'icons/obj/weapons/guns/projectiles.dmi'
 	var/hal_icon_state = "bullet"
@@ -77,7 +77,7 @@
 	qdel(src)
 
 /obj/effect/client_image_holder/hallucination/sniper_bloodsplatter
-	name = "кровь"
+	name = "blood"
 	image_icon = 'icons/effects/blood.dmi'
 	image_state = "mfloor1"
 	image_layer = ABOVE_NORMAL_TURF_LAYER

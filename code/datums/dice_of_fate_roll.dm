@@ -49,10 +49,6 @@ GLOBAL_ALIST_EMPTY(dice_rolls)
 			messages.Add(user.prepare_announce_objectives(FALSE))
 			to_chat(user.current, custom_boxed_message("red_box center", messages.Join("<br>")))
 			SEND_SOUND(user.current, sound('sound/ambience/misc/alarm4.ogg'))
-	if(is_sacrifice_target(delete_target.mind))
-		if(!SSticker.mode.cult_objs.find_new_sacrifice_target())
-			SSticker.mode.cult_objs.ready_to_summon()
-
 /datum/dice_roll/butcher
 	number = 2
 
@@ -255,8 +251,8 @@ GLOBAL_ALIST_EMPTY(dice_rolls)
 	number = 19
 
 /datum/dice_roll/magic_coin/activate(mob/living/carbon/human/user, obj/item/dice/d20/fate/dice)
-	user.visible_message(span_userdanger("В руках у [user.declent_ru(GENITIVE)] появляется странная монета!"))
-	var/coin = new /obj/item/coin/magic
+	user.visible_message(span_userdanger("В руках у [user.declent_ru(GENITIVE)] появляется адамантиновая монета!"))
+	var/coin = new /obj/item/coin/adamantine
 	user.put_in_hands(coin)
 
 /datum/dice_roll/become_wizard

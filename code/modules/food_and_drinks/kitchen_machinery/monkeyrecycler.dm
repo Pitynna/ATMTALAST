@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 
 /obj/machinery/monkey_recycler
 	name = "Monkey Recycler"
-	desc = "Экологично перерабатывает органику обратно в удобные для хранения обезьяньи кубики."
+	desc = "A machine used for recycling dead monkeys into monkey cubes."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "grinder"
 	density = TRUE
@@ -17,16 +17,6 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 	var/obj/item/reagent_containers/food/snacks/monkeycube/cube_type = /obj/item/reagent_containers/food/snacks/monkeycube
 	var/cubename = "шимпанзе"
 	var/list/connected = list()
-
-/obj/machinery/monkey_recycler/get_ru_names()
-	return alist(
-		NOMINATIVE = "утилизатор обезьян",
-		GENITIVE = "утилизатора обезьян",
-		DATIVE = "утилизатору обезьян",
-		ACCUSATIVE = "утилизатор обезьян",
-		INSTRUMENTAL = "утилизатором обезьян",
-		PREPOSITIONAL = "утилизаторе обезьян"
-	)
 
 /obj/machinery/monkey_recycler/examine(mob/user)
 	. = ..()

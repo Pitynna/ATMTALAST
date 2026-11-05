@@ -5,9 +5,7 @@
  */
 /obj/item/circuit_component/module
 	display_name = "Модуль"
-	desc = "Компонент, содержащий другие компоненты внутри, действующий как функция. \
-			Используется, чтобы управлять количеством входных и выходных портов, \
-			а также получать доступ к встроенной интегральной схеме."
+	desc = "A component that contains other components and acts as a function. It controls the number of input and output ports and provides access to the built-in integrated circuit."
 	category = "Abstract"
 
 	var/obj/item/integrated_circuit/module/internal_circuit
@@ -81,7 +79,7 @@
 
 /obj/item/circuit_component/module_input
 	display_name = "Вход"
-	desc = "Компонент, который получает данные из модуля, к которому он подключен."
+	desc = "A component that receives data from the module to which it is connected."
 
 	removable = FALSE
 
@@ -94,7 +92,7 @@
 
 /obj/item/circuit_component/module_output
 	display_name = "Выход"
-	desc = "Компонент, который получает данные из модуля, к которому он подключен."
+	desc = "A component that receives data from the module to which it is connected."
 
 	removable = FALSE
 

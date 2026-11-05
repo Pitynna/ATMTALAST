@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/reagentscanner
 	display_name = "Сканер веществ"
-	desc = "Выводит список веществ, обнаруженных внутри контейнера."
+	desc = "Outputs a list of reagents found inside a container."
 	category = "Entity"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL

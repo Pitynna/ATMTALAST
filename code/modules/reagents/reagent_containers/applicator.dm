@@ -3,7 +3,7 @@
 
 /obj/item/reagent_containers/applicator
 	name = "auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов."
+	desc = "A small electronic device designed to topically apply healing chemicals."
 	gender = MALE
 	icon = 'icons/map_icons/items/_item.dmi'
 	greyscale_config = /datum/greyscale_config/mender
@@ -32,16 +32,6 @@
 	var/applying = FALSE
 	// list of sound to play when applying reagents
 	var/apply_sounds = SFX_MENDER
-
-/obj/item/reagent_containers/applicator/get_ru_names()
-	return alist(
-		NOMINATIVE = "авто-мендер",
-		GENITIVE = "авто-мендера",
-		DATIVE = "авто-мендеру",
-		ACCUSATIVE = "авто-мендер",
-		INSTRUMENTAL = "авто-мендером",
-		PREPOSITIONAL = "авто-мендере",
-	)
 
 /obj/item/reagent_containers/applicator/emag_act(mob/user)
 	if(!emagged)
@@ -140,8 +130,7 @@
 	var/cycle_count = 0
 
 	var/measured_health = 0
-	CALCULATE_SKILL_MOD(user, HEAL_DURATION_MOD, skill_duration_mod)
-	var/cycle_delay = (2 - reacting_to_applied_ratio) * (1 SECONDS) * skill_duration_mod
+	var/cycle_delay = (2 - reacting_to_applied_ratio) * (1 SECONDS)
 	while(do_after(user, cycle_delay, target))
 		measured_health = target.health
 		apply_to(target, user, 1, FALSE, def_zone)
@@ -171,54 +160,24 @@
 
 /obj/item/reagent_containers/applicator/brute
 	name = "brute auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов. Эта версия — для заживления механических повреждений."
+	desc = "A small electronic device for applying medication topically. This version treats physical injuries."
 	icon_state = "/obj/item/reagent_containers/applicator/brute"
 	greyscale_colors = COLOR_MENDER_BRUTE
 	list_reagents = list("styptic_powder" = 200)
 
-/obj/item/reagent_containers/applicator/brute/get_ru_names()
-	return alist(
-		NOMINATIVE = "авто-мендер (Мех. Повреждения)",
-		GENITIVE = "авто-мендера (Мех. Повреждения)",
-		DATIVE = "авто-мендеру (Мех. Повреждения)",
-		ACCUSATIVE = "авто-мендер (Мех. Повреждения)",
-		INSTRUMENTAL = "авто-мендером (Мех. Повреждения)",
-		PREPOSITIONAL = "авто-мендере (Мех. Повреждения)",
-	)
-
 /obj/item/reagent_containers/applicator/burn
 	name = "burn auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов. Эта версия — для заживления термических повреждений."
+	desc = "A small electronic device for applying medication topically. This version treats burns."
 	greyscale_colors = COLOR_MENDER_BURN
 	icon_state = "/obj/item/reagent_containers/applicator/burn"
 	list_reagents = list("silver_sulfadiazine" = 200)
 
-/obj/item/reagent_containers/applicator/burn/get_ru_names()
-	return alist(
-		NOMINATIVE = "авто-мендер (Терм. Повреждения)",
-		GENITIVE = "авто-мендера (Терм. Повреждения)",
-		DATIVE = "авто-мендеру (Терм. Повреждения)",
-		ACCUSATIVE = "авто-мендер (Терм. Повреждения)",
-		INSTRUMENTAL = "авто-мендером (Терм. Повреждения)",
-		PREPOSITIONAL = "авто-мендере (Терм. Повреждения)",
-	)
-
 /obj/item/reagent_containers/applicator/dual
 	name = "dual auto-mender"
-	desc = "Небольшое электронное устройство, предназначенное для местного применения лекарственных препаратов. Эта версия — для заживления как механических, так и термических повреждений."
+	desc = "A small electronic device for applying medication topically. This version treats both physical injuries and burns."
 	greyscale_colors = COLOR_MENDER_DUAL
 	icon_state = "/obj/item/reagent_containers/applicator/dual"
 	list_reagents = list("synthflesh" = 200)
-
-/obj/item/reagent_containers/applicator/dual/get_ru_names()
-	return alist(
-		NOMINATIVE = "авто-мендер (Синт-плоть)",
-		GENITIVE = "авто-мендера (Синт-плоть)",
-		DATIVE = "авто-мендеру (Синт-плоть)",
-		ACCUSATIVE = "авто-мендер (Синт-плоть)",
-		INSTRUMENTAL = "авто-мендером (Синт-плоть)",
-		PREPOSITIONAL = "авто-мендере (Синт-плоть)",
-	)
 
 /obj/item/reagent_containers/applicator/dual/syndi // It magically goes through hardsuits. Don't ask how.
 	ignore_flags = TRUE

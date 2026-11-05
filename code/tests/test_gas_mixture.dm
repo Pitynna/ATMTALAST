@@ -1,0 +1,23 @@
+/datum/unit_test/gas_mixture/Run()
+	var/datum/gas_mixture/air = allocate(/datum/gas_mixture)
+	air.set_temperature(T20C)
+	var/list/amounts = list(
+		TLV_O2 = 1, TLV_CO2 = 2, TLV_N2 = 3, TLV_PL = 4,
+		TLV_N2O = 5, TLV_AGENT_B = 6, TLV_H2 = 7, TLV_H2O = 8,
+	)
+	air.adjust_multiple_gases(amounts)
+	TEST_ASSERT_EQUAL(air.total_moles(), 36, "All gases must contribute to total moles")
+	TEST_ASSERT(abs(air.return_pressure() - 36 * R_IDEAL_GAS_EQUATION * T20C / air.volume) < 0.001, "Pressure must include all eight gases")
+	var/list/actual = air.get_interesting()
+	for(var/gas_id, amount in amounts)
+		TEST_ASSERT_EQUAL(actual[gas_id], amount, "Incorrect gas amount for [gas_id]")
+		var/datum/gas_mixture/removed = air.remove_specific(gas_id, amount + 10)
+		TEST_ASSERT_NOTNULL(removed, "Expected a separated mixture")
+		TEST_ASSERT_EQUAL(removed.total_moles(), amount, "Removal must be capped at available gas")
+		TEST_ASSERT_EQUAL(removed.temperature(), T20C, "Separated gas must retain temperature")
+		air.merge(removed)
+		qdel(removed)
+	TEST_ASSERT_EQUAL(air.total_moles(), 36, "Removing and merging must conserve gas")
+	air.clear()
+	TEST_ASSERT_EQUAL(air.total_moles(), 0, "Clear must remove every gas")
+	TEST_ASSERT_EQUAL(length(air.get_interesting()), 0, "Empty mixtures must have no gas entries")

@@ -4,10 +4,6 @@
 	lefthand_file = 'icons/mob/inhands/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/melee_righthand.dmi'
 
-/obj/item/melee/energy/Initialize(mapload)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_MELEE_WEAPON, ROUNDSTART_TRAIT)
-
 /obj/item/melee/proc/check_martial_counter(mob/living/carbon/human/target, mob/living/carbon/human/user)
 	var/message = span_danger("[target.name] blocks [src] and twists [user]'s arm behind [user.p_their()] back!")
 	var/self_message = span_userdanger("You block the attack!")
@@ -100,7 +96,7 @@
 
 /obj/item/melee/rapier/centcomm
 	name = "centcomm plastitanium rapier"
-	desc = "Симбиоз непозволительной роскоши и статуса с титановым лезвием на вашем поясе, обладатель этого шедевра оружейного дела может похвастаться тем, что постиг корпоративную вершину."
+	desc = "An extravagant fusion of luxury, status and a titanium blade at your hip. The owner of this weaponsmithing masterpiece can claim to have reached the corporate summit."
 	icon_state = "centcomm_rapier"
 	item_state = "centcomm_rapier"
 	origin_tech = "combat=5;biotech=5;syndicate=4"

@@ -443,7 +443,6 @@
 	value_mode = VALUE_MODE_NUM
 	default = list(
 		ROLE_TRAITOR = 60,
-		ROLE_THIEF = 0,
 		ROLE_VAMPIRE = 20,
 		ROLE_CHANGELING = 20,
 	)
@@ -453,7 +452,6 @@
 	value_mode = VALUE_MODE_NUM
 	default = list(
 		ROLE_TRAITOR = 60,
-		ROLE_THIEF = 0,
 		ROLE_VAMPIRE = 20,
 		ROLE_CHANGELING = 20,
 	)
@@ -463,7 +461,6 @@
 	value_mode = VALUE_MODE_NUM
 	default = list(
 		ROLE_TRAITOR = 60,
-		ROLE_THIEF = 0,
 		ROLE_VAMPIRE = 20,
 		ROLE_CHANGELING = 20,
 	)
@@ -475,10 +472,7 @@
 		"hijacker" = 10,
 		"malfai" = 10,
 		"prisoner" = 10,
-		"ninja" = 10,
-		"thief" = 10,
 		"nothing" = 20,
-		"devil" = 10,
 	)
 
 /datum/config_entry/keyed_list/antag_paradise_mode_subtypes
@@ -619,9 +613,6 @@
 	integer = FALSE
 	min_val = 0
 
-/datum/config_entry/number/can_cult_convert
-	default = TRUE
-
 /datum/config_entry/flag/enable_gamemode_player_limit
 
 /datum/config_entry/number/byond_account_age_threshold
@@ -690,8 +681,6 @@
 
 /datum/config_entry/flag/item_animations_enabled
 
-/datum/config_entry/flag/disable_taipan
-
 /datum/config_entry/flag/disable_lavaland
 
 /datum/config_entry/flag/config_errors_runtime
@@ -713,8 +702,6 @@
 /datum/config_entry/keyed_list/emoji
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_TEXT
-
-/datum/config_entry/number/shadowling_max_age
 
 /datum/config_entry/flag/guest_ban
 

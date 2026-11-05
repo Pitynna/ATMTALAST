@@ -138,18 +138,12 @@
 				message_say = "FOR THE SYNDICATE!"
 			else if(role == ROLE_CHANGELING)
 				message_say = "FOR THE HIVE!"
-			else if(role == ROLE_CULTIST)
-				message_say = "FOR NARSIE!"
-			else if(role == ROLE_NINJA)
-				message_say = "FOR THE SPIDER CLAN!"
 			else if(role == ROLE_WIZARD)
 				message_say = "FOR THE FEDERATION!"
 			else if(role == ROLE_REV || role == "head revolutionary")
 				message_say = "FOR THE REVOLUTION!"
 			else if(role == "death commando" || role == ROLE_ERT)
 				message_say = "FOR NANOTRASEN!"
-			else if(role == ROLE_DEVIL)
-				message_say = "FOR INFERNO!"
 	user.say(message_say)
 	target = user
 	sleep(10)

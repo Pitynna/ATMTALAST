@@ -23,12 +23,12 @@
 	new /obj/item/storage/box/syndie_kit/gun_mods/super(crate)
 
 /datum/loot_tier/first
-	name = "снаряжение зеленого кода"
+	name = "code green equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение зеленого кода",
+		NOMINATIVE = "code green equipment",
 		GENITIVE = "снаряжения зеленого кода",
 		DATIVE = "снаряжению зеленого кода",
-		ACCUSATIVE = "снаряжение зеленого кода",
+		ACCUSATIVE = "code green equipment",
 		INSTRUMENTAL = "снаряжением зеленого кода",
 		PREPOSITIONAL = "снаряжении зеленого кода",
 	)
@@ -89,12 +89,12 @@
 	)
 
 /datum/loot_tier/second
-	name = "снаряжение синего кода"
+	name = "code blue equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение синего кода",
+		NOMINATIVE = "code blue equipment",
 		GENITIVE = "снаряжения синего кода",
 		DATIVE = "снаряжению синего кода",
-		ACCUSATIVE = "снаряжение синего кода",
+		ACCUSATIVE = "code blue equipment",
 		INSTRUMENTAL = "снаряжением синего кода",
 		PREPOSITIONAL = "снаряжении синего кода",
 	)
@@ -108,7 +108,7 @@
 		/obj/item/gun/energy/gun,
 		/obj/item/gun/energy/tesla_cannon,
 		/obj/item/gun/energy/laser/scatter,
-		/obj/item/gun/energy/laser/hitscan/carbine,
+		/obj/item/gun/energy/laser,
 		/obj/item/gun/energy/emittercannon,
 		/obj/item/gun/energy/dominator,
 		/obj/item/gun/energy/plasma_pistol,
@@ -226,7 +226,6 @@
 		/obj/item/clothing/suit/armor/vest/capcarapace,
 		/obj/item/clothing/suit/armor/vest/capcarapace/alt,
 		/obj/item/clothing/suit/armor/laserproof,
-		/obj/item/whetstone/cult,
 		/obj/item/implanter/emp,
 		/obj/item/storage/box/cyber_implants/reviver_hardened,
 		/obj/item/storage/box/cyber_implants/anti_stun_hardened,
@@ -239,12 +238,12 @@
 	)
 
 /datum/loot_tier/third
-	name = "снаряжение красного кода"
+	name = "code red equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение красного кода",
+		NOMINATIVE = "code red equipment",
 		GENITIVE = "снаряжения красного кода",
 		DATIVE = "снаряжению красного кода",
-		ACCUSATIVE = "снаряжение красного кода",
+		ACCUSATIVE = "code red equipment",
 		INSTRUMENTAL = "снаряжением красного кода",
 		PREPOSITIONAL = "снаряжении красного кода",
 	)
@@ -388,7 +387,6 @@
 		/obj/item/storage/box/syndie_kit/rsh12_revolver,
 		/obj/item/shield/energy,
 		/obj/item/twohanded/spear/grey_tide,
-		/obj/item/kitchen/knife/ghostface_knife/devil,
 		/obj/item/melee/ghost_sword,
 		/obj/item/shield/riot/buckler,
 		/obj/item/storage/belt/champion/wrestling,
@@ -411,8 +409,6 @@
 		/obj/item/dnainjector/farvisionmut,
 		/obj/item/relict_production/strange_teleporter,
 		/obj/item/clothing/suit/space/hardsuit/syndi,
-		/obj/item/clothing/suit/space/hardsuit/contractor,
-		/obj/item/clothing/suit/space/hardsuit/contractor/agent,
 		/obj/item/clothing/suit/space/hardsuit/syndi/freedom,
 		/obj/item/clothing/suit/space/hardsuit/ert/security,
 		/obj/item/clothing/suit/space/hardsuit/ert/solgov,
@@ -437,10 +433,6 @@
 			/obj/item/clothing/gloves/reflector,
 			/obj/item/clothing/shoes/reflector,
 		),
-		list(
-			/obj/item/clothing/suit/space/syndicate/contractor,
-			/obj/item/clothing/head/helmet/space/syndicate/contractor,
-		),
 		/obj/item/clothing/suit/hooded/drake,
 		/obj/item/implanter/adrenalin/prototype,
 		/obj/item/implanter/krav_maga,
@@ -448,12 +440,12 @@
 	)
 
 /datum/loot_tier/fourth
-	name = "снаряжение кода ГАММА"
+	name = "code gamma equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение кода ГАММА",
+		NOMINATIVE = "code gamma equipment",
 		GENITIVE = "снаряжения кода ГАММА",
 		DATIVE = "снаряжению кода ГАММА",
-		ACCUSATIVE = "снаряжение кода ГАММА",
+		ACCUSATIVE = "code gamma equipment",
 		INSTRUMENTAL = "снаряжением кода ГАММА",
 		PREPOSITIONAL = "снаряжении кода ГАММА",
 	)
@@ -576,12 +568,12 @@
 	)
 
 /datum/loot_tier/fifth
-	name = "снаряжение кода ЭПСИЛОН"
+	name = "code epsilon equipment"
 	ru_names = alist(
-		NOMINATIVE = "снаряжение кода ЭПСИЛОН",
+		NOMINATIVE = "code epsilon equipment",
 		GENITIVE = "снаряжения кода ЭПСИЛОН",
 		DATIVE = "снаряжению кода ЭПСИЛОН",
-		ACCUSATIVE = "снаряжение кода ЭПСИЛОН",
+		ACCUSATIVE = "code epsilon equipment",
 		INSTRUMENTAL = "снаряжением кода ЭПСИЛОН",
 		PREPOSITIONAL = "снаряжении кода ЭПСИЛОН",
 	)
@@ -620,13 +612,6 @@
 		/obj/item/plasma_fist_scroll,
 		/obj/item/twohanded/knighthammer,
 		/obj/item/twohanded/chainsaw,
-		list(
-			/obj/item/melee/baton/telescopic/contractor,
-			/obj/item/baton_upgrade/cuff,
-			/obj/item/baton_upgrade/mute,
-			/obj/item/baton_upgrade/focus,
-			/obj/item/baton_upgrade/antidrop,
-		),
 		/obj/item/reagent_containers/hypospray/autoinjector/stimulants,
 		/obj/item/dnainjector/xraymut,
 		/obj/item/storage/firstaid/tactical,
@@ -636,12 +621,12 @@
 	)
 
 /datum/loot_tier/ammo
-	name = "патроны"
+	name = "ammunition"
 	ru_names = alist(
-		NOMINATIVE = "патроны",
+		NOMINATIVE = "ammunition",
 		GENITIVE = "патронов",
 		DATIVE = "патронам",
-		ACCUSATIVE = "патроны",
+		ACCUSATIVE = "ammunition",
 		INSTRUMENTAL = "патронами",
 		PREPOSITIONAL = "патронах",
 	)
@@ -793,12 +778,12 @@
 	. = ..(user, crate, loot_list[current_loot])
 
 /datum/loot_tier/medical
-	name = "медикаменты"
+	name = "medical supplies"
 	ru_names = alist(
-		NOMINATIVE = "медикаменты",
+		NOMINATIVE = "medical supplies",
 		GENITIVE = "медикаментов",
 		DATIVE = "медикаментам",
-		ACCUSATIVE = "медикаменты",
+		ACCUSATIVE = "medical supplies",
 		INSTRUMENTAL = "медикаментами",
 		PREPOSITIONAL = "медикаментах",
 	)

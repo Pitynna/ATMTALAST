@@ -14,7 +14,7 @@
 
 /obj/machinery/disposal
 	name = "disposal unit"
-	desc = "Пневматическая система утилизации отходов."
+	desc = "A pneumatic waste disposal unit, or a basketball hoop if you're bored. Alt-click to manually eject its contents."
 	icon = 'icons/obj/pipes_and_stuff/not_atmos/disposal.dmi'
 	icon_state = "disposal"
 	base_icon_state = "disposal"
@@ -44,16 +44,6 @@
 	/// Maximum value of the w_classes of all the items in contents, before we stop inserting new objects
 	var/max_combined_w_class = 50
 	COOLDOWN_DECLARE(eject_effects_cd)
-
-/obj/machinery/disposal/get_ru_names()
-	return alist(
-		NOMINATIVE = "мусоропровод",
-		GENITIVE = "мусоропровода",
-		DATIVE = "мусоропроводу",
-		ACCUSATIVE = "мусоропровод",
-		INSTRUMENTAL = "мусоропроводом",
-		PREPOSITIONAL = "мусоропроводе",
-	)
 
 /obj/machinery/disposal/Initialize(mapload, obj/structure/disposalconstruct/made_from)
 	// this will get a copy of the air turf and take a SEND PRESSURE amount of air from it
@@ -604,21 +594,11 @@
 
 /obj/machinery/disposal/deliveryChute
 	name = "Delivery chute"
-	desc = "Люк для транспортировки как больших, так и маленьких грузов!"
+	desc = "A chute for big and small packages alike!"
 	icon_state = "intake"
 	base_icon_state = "intake"
 	/// Whether this chute directs all items into the cargo waste sorting area
 	var/to_waste = TRUE
-
-/obj/machinery/disposal/deliveryChute/get_ru_names()
-	return alist(
-		NOMINATIVE = "грузовой люк",
-		GENITIVE = "грузового люка",
-		DATIVE = "грузовому люку",
-		ACCUSATIVE = "грузовой люк",
-		INSTRUMENTAL = "грузовым люком",
-		PREPOSITIONAL = "грузовом люке",
-	)
 
 /obj/machinery/disposal/deliveryChute/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)

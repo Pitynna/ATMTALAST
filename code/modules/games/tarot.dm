@@ -3,31 +3,15 @@
 
 /obj/item/deck/tarot
 	name = "deck of tarot cards"
-	desc = "Для всех ваших оккультных нужд!"
+	desc = "For all your occult needs!"
 	icon_state = "deck_tarot"
 
-/obj/item/deck/tarot/get_ru_names()
-	return alist(
-		NOMINATIVE = "колода карт таро",
-		GENITIVE = "колоды карт таро",
-		DATIVE = "колоде карт таро",
-		ACCUSATIVE = "колоду карт таро",
-		INSTRUMENTAL = "колодой карт таро",
-		PREPOSITIONAL = "колоде карт таро",
-	)
-
 /obj/item/deck/tarot/build_deck()
-	for(var/tarotname in list("Шут", "Маг", "Верховная Жрица", "Императрица", "Император", "Иерофант", "Влюблённые", "Колесница", "Сила", "Отшельник", "Колесо Фортуны", "Справедливость", "Повешенный", "Смерть", "Умеренность", "Дьявол", "Башня", "Звезда", "Луна", "Солнце", "Суд", "Мир"))
+	for(var/tarotname in list("The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit", "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance", "The Devil", "The Tower", "The Star", "The Moon", "The Sun", "Judgement", "The World"))
 		cards += new /datum/playingcard("[tarotname]", "tarot_major", "card_back_tarot")
-	var/list/ru_suit = list(
-		"wands" = "жезлов",
-		"pentacles" = "пентаклей",
-		"cups" = "кубков",
-		"swords" = "мечей"
-	)
 	for(var/suit in list("wands","pentacles","cups","swords"))
-		for(var/number in list("Туз", "Двойка", "Тройка", "Четвёрка", "Пятёрка", "Шестёрка", "Семёрка", "Восьмёрка", "Девятка", "Десятка", "Паж", "Рыцарь", "Королева", "Король"))
-			cards += new /datum/playingcard("[number] [ru_suit[suit]]", "tarot_[suit]", "card_back_tarot")
+		for(var/number in list("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Page", "Knight", "Queen", "King"))
+			cards += new /datum/playingcard("[number] of [suit]", "tarot_[suit]", "card_back_tarot")
 
 /obj/item/deck/tarot/deckshuffle(mob/user)
 	if(!COOLDOWN_FINISHED(src, shuffle_cooldown) || !iscarbon(user) || user.incapacitated() || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))
@@ -37,9 +21,9 @@
 	var/list/newcards = list()
 	while(length(cards))
 		var/datum/playingcard/card = pick_n_take(cards)
-		card.name = replacetext(card.name," перевёрнутая", "")
+		card.name = replacetext(card.name," reversed", "")
 		if(prob(50))
-			card.name += " перевёрнутая"
+			card.name += " reversed"
 		newcards += card
 	cards = newcards
 	playsound(user, 'sound/items/cardshuffle.ogg', 50, TRUE)

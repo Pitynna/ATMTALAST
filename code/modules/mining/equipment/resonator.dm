@@ -8,7 +8,7 @@
 	icon_state = "resonator"
 	item_state = "resonator"
 	origin_tech = "magnets=3;engineering=3"
-	desc = "Портативное устройство, создающее энергетические поля, которые резонируют до детонации, разрушая породу. Наносит повышенный урон в условиях низкого давления. Имеет два режима: автоматический и ручной подрыв."
+	desc = "A handheld device that creates small fields of energy that resonate until they detonate, crushing rock. It can also be activated without a target to create a field at the user's location, to act as a delayed time trap. It's more effective in a vaccuum."
 	force = 15
 	throwforce = 10
 	/// the mode of the resonator; has three modes: auto (1), manual (2), and matrix (3)
@@ -21,16 +21,6 @@
 	var/list/fields = list()
 	/// the number that is added to the failure_prob, which is the probability of whether it will spread or not
 	var/adding_failure = 50
-
-/obj/item/resonator/get_ru_names()
-	return alist(
-		NOMINATIVE = "резонатор",
-		GENITIVE = "резонатора",
-		DATIVE = "резонатору",
-		ACCUSATIVE = "резонатор",
-		INSTRUMENTAL = "резонатором",
-		PREPOSITIONAL = "резонаторе",
-	)
 
 /obj/item/resonator/attack_self(mob/user)
 	if(mode == RESONATOR_MODE_AUTO)
@@ -61,7 +51,7 @@
 //resonance field, crushes rock, damages mobs
 /obj/effect/temp_visual/resonance
 	name = "resonance field"
-	desc = "Энергетическое поле, наносящее значительный урон всему внутри при разрыве. Эффективнее в условиях низкого давления."
+	desc = "A resonating field that significantly damages anything inside of it when the field eventually ruptures. More damaging in low pressure environments."
 	icon_state = "shield1"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 5 SECONDS
@@ -79,16 +69,6 @@
 	var/failure_prob = 0
 	/// the number that is added to the failure_prob. Will default to 40
 	var/adding_failure
-
-/obj/effect/temp_visual/resonance/get_ru_names()
-	return alist(
-		NOMINATIVE = "резонансное поле",
-		GENITIVE = "резонансного поля",
-		DATIVE = "резонансному полю",
-		ACCUSATIVE = "резонансное поле",
-		INSTRUMENTAL = "резонансным полем",
-		PREPOSITIONAL = "резонансном поле",
-	)
 
 /obj/effect/temp_visual/resonance/Initialize(mapload, set_creator, set_resonator, mode, set_failure = 40)
 	if(mode == RESONATOR_MODE_AUTO)
@@ -169,22 +149,12 @@
 
 /obj/item/resonator/upgraded
 	name = "upgraded resonator"
-	desc = "Усовершенствованная версия резонатора, способная создавать больше полей одновременно без потери урона при раннем подрыве. Позволяет устанавливать \"резонансные матрицы\", срабатывающие рядом с целью."
+	desc = "An upgraded version of the resonator that can produce more fields at once, as well as having no damage penalty for bursting a resonance field early. It also allows you to set 'Resonance matrixes', that detonate after someone (or something) walks over it."
 	icon_state = "resonator_u"
 	fieldlimit = 6
 	quick_burst_mod = 1
 	adding_failure = 20
 	origin_tech = "materials=4;powerstorage=3;engineering=3;magnets=3"
-
-/obj/item/resonator/upgraded/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенный резонатор",
-		GENITIVE = "улучшенного резонатора",
-		DATIVE = "улучшенному резонатору",
-		ACCUSATIVE = "улучшенный резонатор",
-		INSTRUMENTAL = "улучшенным резонатором",
-		PREPOSITIONAL = "улучшенном резонаторе",
-	)
 
 /obj/item/resonator/upgraded/attack_self(mob/user)
 	if(mode == RESONATOR_MODE_AUTO)

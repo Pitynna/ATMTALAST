@@ -10,7 +10,6 @@
 	health = 50
 	speak_emote = list("шипит")
 	emote_hear = list("воет", "визжит")
-	tts_seed = "Kelthuzad"
 	response_help  = "протягивает руку сквозь"
 	response_disarm = "размахивает перед"
 	response_harm   = "бьёт кулаком по"
@@ -42,7 +41,6 @@
 
 /mob/living/simple_animal/shade/death(gibbed)
 	. = ..()
-	SSticker.mode.remove_cultist(mind, FALSE)
 
 /mob/living/simple_animal/shade/attackby(obj/item/I, mob/user, params)
 	if(user.a_intent == INTENT_HARM)
@@ -61,12 +59,6 @@
 /mob/living/simple_animal/shade/Process_Spacemove(movement_dir = NONE, continuous_move = FALSE)
 	return TRUE
 
-/mob/living/simple_animal/shade/cult/Initialize(mapload)
-	. = ..()
-	icon_state = SSticker.cultdat?.shade_icon_state
-	ADD_TRAIT(src, TRAIT_HEALS_FROM_CULT_PYLONS, INNATE_TRAIT)
-	AddElement(/datum/element/simple_flying)
-
 /mob/living/simple_animal/shade/holy
 	holy = TRUE
 	icon_state = "shade_angelic"
@@ -77,18 +69,3 @@
 /mob/living/simple_animal/shade/sword/Initialize(mapload)
 	.=..()
 	ADD_TRAIT(src, TRAIT_GODMODE, INNATE_TRAIT)
-
-/mob/living/simple_animal/shade/talisman
-	faction = list("neutral")
-	tts_seed = "Alextraza_echo"
-	// Ckey check for master of talisman
-	var/master
-
-/mob/living/simple_animal/shade/talisman/Initialize(mapload)
-	.=..()
-	ADD_TRAIT(src, TRAIT_GODMODE, INNATE_TRAIT)
-
-/mob/living/simple_animal/shade/talisman/Initialize(mapload)
-	. = ..()
-	var/datum/atom_hud/medsensor = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	medsensor.show_to(src)

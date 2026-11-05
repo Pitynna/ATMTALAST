@@ -140,7 +140,7 @@
 
 /obj/machinery/computer/turbine_computer
 	name = "gas turbine control computer"
-	desc = "Компьютер для дистанционного управления газовой турбиной."
+	desc = "A computer to remotely control a gas turbine. Link it to a turbine via use of a multitool."
 	icon_screen = "turbinecomp"
 	icon_keyboard = "tech_key"
 	circuit = /obj/item/circuitboard/turbine_computer

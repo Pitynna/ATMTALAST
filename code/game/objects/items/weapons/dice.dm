@@ -1,20 +1,10 @@
 /obj/item/storage/pill_bottle/dice
 	name = "dice pack"
-	desc = "Мешочек с игральными костями внутри."
+	desc = "Contains all the luck you'll ever need."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "dicebag"
 	can_hold = list(/obj/item/dice)
 	allow_wrap = FALSE
-
-/obj/item/storage/pill_bottle/dice/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок игральных костей",
-		GENITIVE = "мешка игральных костей",
-		DATIVE = "мешку игральных костей",
-		ACCUSATIVE = "мешок игральных костей",
-		INSTRUMENTAL = "мешком игральных костей",
-		PREPOSITIONAL = "мешке игральных костей",
-	)
 
 /obj/item/storage/pill_bottle/dice/populate_contents()
 	var/special_die = pick("1", "2", "fudge", "00", "100")
@@ -36,8 +26,8 @@
 		new /obj/item/dice/d100(src)
 
 /obj/item/storage/box/dice
-	name = "Коробка игральных костей"
-	desc = "ЕЩЁ ОДНИ!? ДА БЛЯДЬ!"
+	name = "Box of dice"
+	desc = "ANOTHER ONE!? FUCK!"
 
 /obj/item/storage/box/dice/populate_contents()
 	new /obj/item/dice/d2(src)
@@ -54,7 +44,7 @@
 
 /obj/item/dice //depreciated d6, use /obj/item/dice/d6 if you actually want a d6
 	name = "dice"
-	desc = "Кость с шестью гранями. Непримечательна и проста в обращении."
+	desc = "A die with six sides. Basic and serviceable."
 	gender = FEMALE
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "d6"
@@ -66,16 +56,6 @@
 
 	var/rigged = DICE_NOT_RIGGED
 	var/rigged_value
-
-/obj/item/dice/get_ru_names()
-	return alist(
-		NOMINATIVE = "игральная кость",
-		GENITIVE = "игральной кости",
-		DATIVE = "игральной кости",
-		ACCUSATIVE = "игральную кость",
-		INSTRUMENTAL = "игральной костью",
-		PREPOSITIONAL = "игральной кости",
-	)
 
 /obj/item/dice/Initialize(mapload)
 	. = ..()
@@ -93,19 +73,19 @@
 
 /obj/item/dice/d1
 	name = "d1"
-	desc = "Кость с одной гранью. Очень детерминировано!"
+	desc = "A die with one side. Deterministic!"
 	icon_state = "d1"
 	sides = 1
 
 /obj/item/dice/d2
 	name = "d2"
-	desc = "Кость с двумя гранями. Если монеты вас не достойны."
+	desc = "A die with two sides. Coins are undignified!"
 	icon_state = "d2"
 	sides = 2
 
 /obj/item/dice/d4
 	name = "d4"
-	desc = "Кость с четырьмя гранями. По задротски - «чеснок»."
+	desc = "A die with four sides. The nerd's caltrop."
 	icon_state = "d4"
 	sides = 4
 
@@ -117,45 +97,45 @@
 	name = "d6"
 
 /obj/item/dice/fudge
-	name = "Fudge-кость"
-	desc = "Кость с шестью гранями, но только с тремя результатами. Это плюс или минус? Ваш разум опустел..."
+	name = "fudge die"
+	desc = "A die with six sides but only three results. Is this a plus or a minus? Your mind is drawing a blank..."
 	sides = 3
 	icon_state = "fudge"
 	special_faces = list("minus","blank","plus")
 
 /obj/item/dice/d8
 	name = "d8"
-	desc = "Кость с восемью гранями. Кажется… везучей."
+	desc = "A die with eight sides. It feels... lucky."
 	icon_state = "d8"
 	sides = 8
 
 /obj/item/dice/d10
 	name = "d10"
-	desc = "Кость с десятью гранями. Полезно для процентов."
+	desc = "A die with ten sides. Useful for percentages."
 	icon_state = "d10"
 	sides = 10
 
 /obj/item/dice/d00
 	name = "d00"
-	desc = "Кость с десятью гранями. Подходит для бросков d100 лучше мяча для гольфа."
+	desc = "A die with ten sides. Works better for d100 rolls than a golf ball."
 	icon_state = "d00"
 	sides = 10
 
 /obj/item/dice/d12
 	name = "d12"
-	desc = "Кость с двенадцатью гранями. Похоже им никогда не пользовались..."
+	desc = "A die with twelve sides. There's an air of neglect about it."
 	icon_state = "d12"
 	sides = 12
 
 /obj/item/dice/d20
 	name = "d20"
-	desc = "Кость с двадцатью гранями. Именно такой чаще всего бросают в игровых мастеров."
+	desc = "A die with twenty sides. The preferred die to throw at the GM."
 	icon_state = "d20"
 	sides = 20
 
 /obj/item/dice/d100
 	name = "d100"
-	desc = "Игральная кость с сотней граней! Вряд ли развесовка выверена…"
+	desc = "A die with one hundred sides! Probably not fairly weighted..."
 	icon_state = "d100"
 	sides = 100
 
@@ -235,69 +215,28 @@
 // Die of Fate
 /obj/item/dice/d20/fate
 	name = "Die of Fate"
-	desc = "Кубик с двадцатью гранями. От него исходит таинственная энергия. Использовать его может быть ОЧЕНЬ рискованно."
+	desc = "A die with twenty sides. You can feel unearthly energies radiating from it. Using this might be VERY risky."
 	var/reusable = TRUE
 	var/used = FALSE
 
-/obj/item/dice/d20/fate/get_ru_names()
-	return alist(
-		NOMINATIVE = "Игральная Кость Судьбы",
-		GENITIVE = "Игральной Кости Судьбы",
-		DATIVE = "Игральной Кости Судьбы",
-		ACCUSATIVE = "Игральную Кость Судьбы",
-		INSTRUMENTAL = "Игральной Костью Судьбы",
-		PREPOSITIONAL = "Игральной Кости Судьбы"
-	)
-
 /obj/item/dice/d20/fate/stealth
 	name = "d20"
-	desc = "Кость с двадцатью гранями. Именно такой чаще всего бросают в игровых мастеров."
-
-/obj/item/dice/d20/fate/stealth/get_ru_names()
-	return alist(
-		NOMINATIVE = "игральная кость",
-		GENITIVE = "игральной кости",
-		DATIVE = "игральной кости",
-		ACCUSATIVE = "игральную кость",
-		INSTRUMENTAL = "игральной костью",
-		PREPOSITIONAL = "игральной кости"
-	)
+	desc = "A die with twenty sides. The preferred die to throw at the GM."
 
 /obj/item/dice/d20/fate/one_use
 	reusable = FALSE
 
 /obj/item/dice/d20/fate/one_use/stealth
 	name = "d20"
-	desc = "Кость с двадцатью гранями. Именно такой чаще всего бросают в игровых мастеров."
-
-/obj/item/dice/d20/fate/one_use/stealth/get_ru_names()
-	return alist(
-		NOMINATIVE = "игральная кость",
-		GENITIVE = "игральной кости",
-		DATIVE = "игральной кости",
-		ACCUSATIVE = "игральную кость",
-		INSTRUMENTAL = "игральной костью",
-		PREPOSITIONAL = "игральной кости"
-	)
-
+	desc = "A die with twenty sides. The preferred die to throw at the GM."
 
 /obj/item/dice/d20/fate/cursed
 	name = "cursed Die of Fate"
-	desc = "Кость с двадцатью гранями. Вы чувствуете, что бросать её это ОЧЕНЬ плохая идея."
+	desc = "A die with twenty sides. You feel that rolling this is a REALLY bad idea."
 	color = "#00BB00"
 
 	rigged = DICE_TOTALLY_RIGGED
 	rigged_value = 1
-
-/obj/item/dice/d20/fate/cursed/get_ru_names()
-	return alist(
-		NOMINATIVE = "проклятая Игральная Кость Судьбы",
-		GENITIVE = "проклятой Игральной Кости Судьбы",
-		DATIVE = "проклятой Игральной Кости Судьбы",
-		ACCUSATIVE = "проклятую Игральную Кость Судьбы",
-		INSTRUMENTAL = "проклятой Игральной Костью Судьбы",
-		PREPOSITIONAL = "проклятой Игральной Кости Судьбы"
-	)
 
 /obj/item/dice/d20/fate/diceroll(mob/user)
 	. = ..()

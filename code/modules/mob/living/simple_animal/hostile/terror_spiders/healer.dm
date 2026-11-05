@@ -25,7 +25,6 @@
 	web_type = /obj/structure/spider/terrorweb/green
 	special_abillity = list(/datum/action/cooldown/spell/aoe/terror_healing)
 	spider_intro_text = "Будучи Лекарем Ужаса, ваша задача — исцелять других пауков и откладывать яйца. Чем больше трупов вы поглотили, тем эффективнее исцеление и тем больше яиц вы сможете отложить."
-	tts_seed = "Jolene"
 	var/feedings_to_lay = 3
 
 /mob/living/simple_animal/hostile/poison/terror_spider/healer/get_ru_names()
@@ -137,17 +136,7 @@
 
 /obj/structure/spider/terrorweb/green
 	name = "slimy web"
-	desc = "Эта паутина частично состоит из нитей зелёной слизи."
-
-/obj/structure/spider/terrorweb/green/get_ru_names()
-	return alist(
-		NOMINATIVE = "скользкая паутина",
-		GENITIVE = "скользкой паутины",
-		DATIVE = "скользкой паутине",
-		ACCUSATIVE = "скользкую паутину",
-		INSTRUMENTAL = "скользкой паутиной",
-		PREPOSITIONAL = "скользкой паутине",
-	)
+	desc = "This web is partly composed of strands of green slime."
 
 /obj/structure/spider/terrorweb/green/web_special_ability(mob/living/carbon/C)
 	if(istype(C))

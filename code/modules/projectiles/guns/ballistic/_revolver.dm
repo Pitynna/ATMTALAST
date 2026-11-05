@@ -5,7 +5,7 @@
 //TODO: make it a proper base revolver class
 /obj/item/gun/projectile/revolver
 	name = ".357 revolver"
-	desc = "Классический револьвер с барабаном на 6 патронов."
+	desc = "A powerful revolver commonly used by the Syndicate. Uses .357 magnum ammo."
 	gender = MALE
 	icon_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
@@ -21,16 +21,6 @@
 	/// If TRUE will show empty casing on examine
 	var/show_live_rounds = TRUE
 	var/can_spin_cylinder = TRUE
-
-/obj/item/gun/projectile/revolver/get_ru_names()
-	return alist(
-		NOMINATIVE = "револьвер .357 Magnum",
-		GENITIVE = "револьвера .357 Magnum",
-		DATIVE = "револьверу .357 Magnum",
-		ACCUSATIVE = "револьвер .357 Magnum",
-		INSTRUMENTAL = "револьвером .357 Magnum",
-		PREPOSITIONAL = "револьвере .357 Magnum",
-	)
 
 /obj/item/gun/projectile/revolver/Initialize(mapload)
 	. = ..()

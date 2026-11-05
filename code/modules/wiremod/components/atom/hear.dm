@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/hear
 	display_name = "Голосовой активатор"
-	desc = "Компонент, прослушивающий сообщения. Требуется оболочка."
+	desc = "A component that listens for messages. Requires a shell."
 	category = "Entity"
 
 	/// The on/off port

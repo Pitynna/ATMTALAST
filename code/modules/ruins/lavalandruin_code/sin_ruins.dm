@@ -116,7 +116,7 @@
 	var/turf/user_turf = get_turf(user)
 	var/list/levels = GLOB.space_manager.z_list.Copy()
 	for(var/level in levels)
-		if(!is_teleport_allowed(level) || is_taipan(level) || text2num(level) == user_turf.z)
+		if(!is_teleport_allowed(level) || text2num(level) == user_turf.z)
 			levels -= level
 
 	var/turf/dest

@@ -11,7 +11,6 @@ interface MuteStates {
   adminhelp: boolean;
   deadchat: boolean;
   emote: boolean;
-  tts: boolean;
   webreq: boolean;
   all: boolean;
 }
@@ -660,13 +659,6 @@ const MobManipulationSection = (_props: unknown) => {
           >
             CUSTOM EQUIPMENT
           </Button>
-          <Button
-            fluid
-            icon="microphone"
-            onClick={() => handleAction('changevoice')}
-          >
-            CHANGE VOICE
-          </Button>
           {isButtonAllowed('event') ? (
             <Button
               fluid
@@ -676,13 +668,6 @@ const MobManipulationSection = (_props: unknown) => {
               MIRROR UI TO ADMIN
             </Button>
           ) : null}
-          <Button
-            fluid
-            icon="circle-user"
-            onClick={() => handleAction('editskills')}
-          >
-            EDIT SKILLS
-          </Button>
         </Grid.Column>
         <Grid.Column size={6}>
           <Button

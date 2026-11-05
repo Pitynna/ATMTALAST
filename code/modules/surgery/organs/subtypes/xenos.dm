@@ -30,25 +30,15 @@
 //XENOMORPH ORGANS
 /obj/item/organ/internal/brain/xeno
 	name = "xenomorph brain"
-	desc = "Основной орган центральной нервной системы гуманоида. Фактически, именно здесь и находится разум. Этот принадлежал ксеноморфу."
+	desc = "We barely understand the brains of terrestial animals. Who knows what we may find in the brain of such an advanced species?"
 	icon_state = "brain-x"
 	origin_tech = "biotech=6"
 	mmi_icon = 'icons/mob/alien.dmi'
 	mmi_icon_state = "AlienMMI"
 
-/obj/item/organ/internal/brain/xeno/get_ru_names()
-	return alist(
-		NOMINATIVE = "мозг человека",
-		GENITIVE = "мозга человека",
-		DATIVE = "мозгу человека",
-		ACCUSATIVE = "мозг человека",
-		INSTRUMENTAL = "мозгом человека",
-		PREPOSITIONAL = "мозге человека",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel
 	name = "xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. "
+	desc = "An organ responsible for secreting plasma inside a xenomorph."
 	gender = FEMALE
 	icon_state = "plasma"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -68,19 +58,9 @@
 	/// Gained plasma amount per Life() cycle.
 	var/plasma_rate = 10
 
-/obj/item/organ/internal/xenos/plasmavessel/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа ксеноморфа",
-		GENITIVE = "плазменной железы ксеноморфа",
-		DATIVE = "плазменной железе ксеноморфа",
-		ACCUSATIVE = "плазменную железу ксеноморфа",
-		INSTRUMENTAL = "плазменной железой ксеноморфа",
-		PREPOSITIONAL = "плазменной железе ксеноморфа",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel/queen
 	name = "bloated xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала королеве."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph queen."
 	icon_state = "plasma_large"
 	origin_tech = "biotech=6;plasmatech=4"
 	max_plasma = 750
@@ -88,102 +68,42 @@
 	plasma_rate = 30
 	alien_powers = list(/datum/action/cooldown/spell/conjure/plant_weeds/queen, /datum/action/cooldown/spell/touch/transfer_plasma)
 
-/obj/item/organ/internal/xenos/plasmavessel/queen/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа королевы ксеноморфов",
-		GENITIVE = "плазменной железы королевы ксеноморфов",
-		DATIVE = "плазменной железе королевы ксеноморфов",
-		ACCUSATIVE = "плазменную железу королевы ксеноморфов",
-		INSTRUMENTAL = "плазменной железой королевы ксеноморфов",
-		PREPOSITIONAL = "плазменной железе королевы ксеноморфов",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel/praetorian
 	name = "huge xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала преторианцу."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph praetorian."
 	icon_state = "plasma_large"
 	max_plasma = 750
 	stored_plasma = 100
 	plasma_rate = 15
 
-/obj/item/organ/internal/xenos/plasmavessel/praetorian/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа преторианца",
-		GENITIVE = "плазменной железы преторианца",
-		DATIVE = "плазменной железе преторианца",
-		ACCUSATIVE = "плазменную железу преторианца",
-		INSTRUMENTAL = "плазменной железой преторианца",
-		PREPOSITIONAL = "плазменной железе преторианца",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel/drone
 	name = "large xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала рабочему."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph drone."
 	icon_state = "plasma_large"
 	max_plasma = 300
 	stored_plasma = 200
 	plasma_rate = 25
 
-/obj/item/organ/internal/xenos/plasmavessel/drone/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа рабочего",
-		GENITIVE = "плазменной железы рабочего",
-		DATIVE = "плазменной железе преторианца",
-		ACCUSATIVE = "плазменную железу рабочего",
-		INSTRUMENTAL = "плазменной железой рабочего",
-		PREPOSITIONAL = "плазменной железе рабочего",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel/sentinel
 	name = "medium xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала часовому."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph sentinel."
 	max_plasma = 200
 	stored_plasma = 100
 	plasma_rate = 25
 
-/obj/item/organ/internal/xenos/plasmavessel/sentinel/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа часового",
-		GENITIVE = "плазменной железы часового",
-		DATIVE = "плазменной железе часового",
-		ACCUSATIVE = "плазменную железу часового",
-		INSTRUMENTAL = "плазменной железой часового",
-		PREPOSITIONAL = "плазменной железе часового",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel/hunter
 	name = "small xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала охотнику."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph hunter."
 	icon_state = "plasma_tiny"
 	max_plasma = 150
 	stored_plasma = 100
 
-/obj/item/organ/internal/xenos/plasmavessel/hunter/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа охотника",
-		GENITIVE = "плазменной железы охотника",
-		DATIVE = "плазменной железе охотника",
-		ACCUSATIVE = "плазменную железу охотника",
-		INSTRUMENTAL = "плазменной железой охотника",
-		PREPOSITIONAL = "плазменной железе охотника",
-	)
-
 /obj/item/organ/internal/xenos/plasmavessel/larva
 	name = "tiny xeno plasma vessel"
-	desc = "Орган, ответственный за секрецию плазмы в организме ксеноморфа. Эта принадлежала лярве."
+	desc = "An organ responsible for secreting plasma inside a xenomorph. This belonged to a xenomorph larva."
 	icon_state = "plasma_tiny"
 	max_plasma = 100
 	alien_powers = list()
-
-/obj/item/organ/internal/xenos/plasmavessel/larva/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменная железа лярвы",
-		GENITIVE = "плазменной железы лярвы",
-		DATIVE = "плазменной железе лярвы",
-		ACCUSATIVE = "плазменную железу лярвы",
-		INSTRUMENTAL = "плазменной железой лярвы",
-		PREPOSITIONAL = "плазменной железе лярвы",
-	)
 
 /obj/item/organ/internal/xenos/plasmavessel/prepare_eat()
 	var/obj/S = ..()
@@ -229,7 +149,7 @@
 
 /obj/item/organ/internal/xenos/acidgland
 	name = "xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа."
+	desc = "An organ responsible for secreting acid inside a xenomorph."
 	gender = FEMALE
 	icon_state = "acid"
 	parent_organ_zone = BODY_ZONE_HEAD
@@ -237,80 +157,30 @@
 	origin_tech = "biotech=5;materials=2;combat=2"
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit)
 
-/obj/item/organ/internal/xenos/acidgland/get_ru_names()
-	return alist(
-		NOMINATIVE = "кислотная железа",
-		GENITIVE = "кислотной железы",
-		DATIVE = "кислотной железе",
-		ACCUSATIVE = "кислотную железу",
-		INSTRUMENTAL = "кислотной железой",
-		PREPOSITIONAL = "кислотной железе",
-	)
-
 /obj/item/organ/internal/xenos/acidgland/sentinel
 	name = "medium xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа. Эта принадлежала часовому."
+	desc = "An organ responsible for secreting acid inside a xenomorph. This belonged to a xenomorph sentinel."
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit/sentinel)
-
-/obj/item/organ/internal/xenos/acidgland/sentinel/get_ru_names()
-	return alist(
-		NOMINATIVE = "кислотная железа часового",
-		GENITIVE = "кислотной железы часового",
-		DATIVE = "кислотной железе часового",
-		ACCUSATIVE = "кислотную железу часового",
-		INSTRUMENTAL = "кислотной железой часового",
-		PREPOSITIONAL = "кислотной железе часового",
-	)
 
 /obj/item/organ/internal/xenos/acidgland/praetorian
 	name = "massive xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа. Эта принадлежала преторианцу."
+	desc = "An organ responsible for secreting acid inside a xenomorph. This belonged to a xenomorph praetorian."
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit/praetorian)
-
-/obj/item/organ/internal/xenos/acidgland/praetorian/get_ru_names()
-	return alist(
-		NOMINATIVE = "кислотная железа преторианца",
-		GENITIVE = "кислотной железы преторианца",
-		DATIVE = "кислотной железе преторианца",
-		ACCUSATIVE = "кислотную железу преторианца",
-		INSTRUMENTAL = "кислотной железой преторианца",
-		PREPOSITIONAL = "кислотной железе преторианца",
-	)
 
 /obj/item/organ/internal/xenos/acidgland/queen
 	name = "royal xeno acid gland"
-	desc = "Орган, ответственный за секрецию кислоты в организме ксеноморфа. Эта принадлежала королеве ксеноморфов."
+	desc = "An organ responsible for secreting acid inside a xenomorph. This belonged to a xenomorph queen."
 	alien_powers = list(/datum/action/cooldown/spell/touch/corrosive_acid_spit/queen)
-
-/obj/item/organ/internal/xenos/acidgland/queen/get_ru_names()
-	return alist(
-		NOMINATIVE = "кислотная железа королевы ксеноморфов",
-		GENITIVE = "кислотной железы королевы ксеноморфов",
-		DATIVE = "кислотной железе королевы ксеноморфов",
-		ACCUSATIVE = "кислотную железу королевы ксеноморфов",
-		INSTRUMENTAL = "кислотной железой королевы ксеноморфов",
-		PREPOSITIONAL = "кислотной железе королевы ксеноморфов",
-	)
 
 /obj/item/organ/internal/xenos/hivenode
 	name = "xeno hive node"
-	desc = "Орган, ответственный за телепатическую связь с ульем ксеноморфов."
+	desc = "An organ responsible for telepathic communication with the xenomorph hive."
 	icon_state = "hivenode"
 	parent_organ_zone = BODY_ZONE_HEAD
 	slot = INTERNAL_ORGAN_HIVENODE
 	origin_tech = "biotech=5;magnets=4;bluespace=3"
 	w_class = WEIGHT_CLASS_TINY
 	alien_powers = list(/datum/action/cooldown/spell/pointed/xeno_whisper)
-
-/obj/item/organ/internal/xenos/hivenode/get_ru_names()
-	return alist(
-		NOMINATIVE = "узел улья ксеноморфов",
-		GENITIVE = "узел улья ксеноморфов",
-		DATIVE = "узел улья ксеноморфов",
-		ACCUSATIVE = "узел улья ксеноморфов",
-		INSTRUMENTAL = "узел улья ксеноморфов",
-		PREPOSITIONAL = "узел улья ксеноорфов",
-	)
 
 /obj/item/organ/internal/xenos/hivenode/insert(mob/living/carbon/M, special = ORGAN_MANIPULATION_DEFAULT)
 	. = ..()
@@ -326,7 +196,7 @@
 
 /obj/item/organ/internal/xenos/neurotoxin
 	name = "large xeno neurotoxin gland"
-	desc = "Орган, ответственный за секрецию нейротоксина в организме ксеноморфа."
+	desc = "An organ responsible for secreting neurotoxin inside a xenomorph."
 	gender = FEMALE
 	icon_state = "neurotox"
 	parent_organ_zone = BODY_ZONE_HEAD
@@ -334,34 +204,14 @@
 	origin_tech = "biotech=5;combat=5"
 	alien_powers = list(/datum/action/cooldown/spell/pointed/projectile/neurotoxin_spit)
 
-/obj/item/organ/internal/xenos/neurotoxin/get_ru_names()
-	return alist(
-		NOMINATIVE = "железа нейротоксина",
-		GENITIVE = "железы нейротоксина",
-		DATIVE = "железе нейротоксина",
-		ACCUSATIVE = "железу нейротоксина",
-		INSTRUMENTAL = "железой нейротоксина",
-		PREPOSITIONAL = "железе нейротоксина",
-	)
-
 /obj/item/organ/internal/xenos/neurotoxin/sentinel
 	name = "medium xeno neurotoxin gland"
-	desc = "Орган, ответственный за секрецию нейротоксина в организме ксеноморфа. Эта принадлежала стражу"
+	desc = "An organ responsible for secreting neurotoxin inside a xenomorph. This belonged to a sentinel."
 	alien_powers = list(/datum/action/cooldown/spell/pointed/projectile/neurotoxin_spit/sentinel)
-
-/obj/item/organ/internal/xenos/neurotoxin/sentinel/get_ru_names()
-	return alist(
-		NOMINATIVE = "железа нейротоксина стража",
-		GENITIVE = "железы нейротоксина стража",
-		DATIVE = "железе нейротоксина стража",
-		ACCUSATIVE = "железу нейротоксина стража",
-		INSTRUMENTAL = "железой нейротоксина стража",
-		PREPOSITIONAL = "железе нейротоксина стража",
-	)
 
 /obj/item/organ/internal/xenos/resinspinner
 	name = "xeno resin organ"//...there tiger....
-	desc = "Орган, ответственный за секрецию смолы в организме ксеноморфа."
+	desc = "An organ responsible for secreting resin inside a xenomorph."
 	gender = FEMALE
 	icon_state = "liver-x"
 	parent_organ_zone = BODY_ZONE_PRECISE_MOUTH
@@ -369,32 +219,12 @@
 	origin_tech = "biotech=5;materials=4"
 	alien_powers = list(/datum/action/cooldown/spell/build_resin)
 
-/obj/item/organ/internal/xenos/resinspinner/get_ru_names()
-	return alist(
-		NOMINATIVE = "смоляная железа",
-		GENITIVE = "смоляной железы",
-		DATIVE = "смоляной железе",
-		ACCUSATIVE = "смоляную железу",
-		INSTRUMENTAL = "смоляной железой",
-		PREPOSITIONAL = "смоляной железе",
-	)
-
 /obj/item/organ/internal/xenos/eggsac
 	name = "xeno egg sac"
-	desc = "Орган, ответственный за секрецию смолы в организме ксеноморфа."
+	desc = "An organ responsible for secreting resin inside a xenomorph."
 	icon_state = "eggsac"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
 	slot = INTERNAL_ORGAN_EGGSAC
 	w_class = WEIGHT_CLASS_BULKY
 	origin_tech = "biotech=6"
 	alien_powers = list(/datum/action/cooldown/spell/conjure/xeno_eggs)
-
-/obj/item/organ/internal/xenos/eggsac/get_ru_names()
-	return alist(
-		NOMINATIVE = "яйцевой мешок ксеноморфов",
-		GENITIVE = "яйцевого мешка ксеноморфов",
-		DATIVE = "яйцевоу мешку ксеноморфов",
-		ACCUSATIVE = "яйцевой мешок ксеноморфов",
-		INSTRUMENTAL = "яйцевым мешком ксеноморфов",
-		PREPOSITIONAL = "яйцевом мешке ксеноморфов",
-	)

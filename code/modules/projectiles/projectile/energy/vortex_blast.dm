@@ -7,16 +7,6 @@
 	hitsound_wall = null
 	suppressed = TRUE
 
-/obj/projectile/energy/vortex_blast/get_ru_names()
-	return alist(
-		NOMINATIVE = "вортекс-выстрел",
-		GENITIVE = "вортекс-выстрела",
-		DATIVE = "вортекс-выстрелу",
-		ACCUSATIVE = "вортекс-выстрел",
-		INSTRUMENTAL = "вортекс-выстрелом",
-		PREPOSITIONAL = "вортекс-выстреле",
-	)
-
 /obj/projectile/energy/vortex_blast/prehit(atom/target)
 	. = ..()
 	if(ishuman(target))

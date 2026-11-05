@@ -3,8 +3,8 @@
 
 /obj/item/gun/projectile/shotgun
 	name = "shotgun"
-	desc = "Классический дробовик с деревянной отделкой и трубчатым магазином на 4 патрона."
-	sawn_desc = "Кустарно модифицированная версия с укороченным стволом."
+	desc = "A traditional shotgun with wood furniture and a four-shell capacity underneath."
+	sawn_desc = "A crudely modified version with a shortened barrel."
 	gender = MALE
 	icon_state = "shotgun"
 	item_state = "shotgun"
@@ -25,16 +25,6 @@
 	var/reload_sound = 'sound/weapons/gun_interactions/shotgunpump.ogg'
 	/// Available reload animation (pump action animation)
 	var/available_reload_animation = TRUE
-
-/obj/item/gun/projectile/shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "дробовик 12g",
-		GENITIVE = "дробовика 12g",
-		DATIVE = "дробовику 12g",
-		ACCUSATIVE = "дробовик 12g",
-		INSTRUMENTAL = "дробовиком 12g",
-		PREPOSITIONAL = "дробовике 12g",
-	)
 
 /obj/item/gun/projectile/shotgun/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()

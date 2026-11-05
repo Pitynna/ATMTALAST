@@ -2,7 +2,7 @@
 
 /obj/item/reagent_containers/cup/bottle
 	name = "bottle"
-	desc = "Небольшая стеклянная бутылочка."
+	desc = "A small bottle."
 	gender = FEMALE
 	icon_state = "bottle"
 	item_state = "bottle"
@@ -13,16 +13,6 @@
 	custom_price = PAYCHECK_MIN * 0.6
 	fill_icon_thresholds = list(1, 10, 25, 50, 75, 80, 100)
 	is_glass = TRUE
-
-/obj/item/reagent_containers/cup/bottle/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка",
-		GENITIVE = "бутылки",
-		DATIVE = "бутылке",
-		ACCUSATIVE = "бутылку",
-		INSTRUMENTAL = "бутылкой",
-		PREPOSITIONAL = "бутылке",
-	)
 
 /obj/item/reagent_containers/cup/bottle/Initialize(mapload)
 	. = ..()
@@ -39,89 +29,39 @@
 
 /obj/item/reagent_containers/cup/bottle/toxin
 	name = "toxin bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится сильный токсин."
+	desc = "A small bottle containing toxic compounds."
 	list_reagents = list("toxin" = 30)
-
-/obj/item/reagent_containers/cup/bottle/toxin/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Токсины)",
-		GENITIVE = "бутылки (Токсины)",
-		DATIVE = "бутылке (Токсины)",
-		ACCUSATIVE = "бутылку (Токсины)",
-		INSTRUMENTAL = "бутылкой (Токсины)",
-		PREPOSITIONAL = "бутылке (Токсины)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/atropine
 	name = "atropine bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится атропин."
+	desc = "A small bottle containing atropine, used for cardiac emergencies."
 	list_reagents = list("atropine" = 30)
 	custom_price = PAYCHECK_MIN
 
-/obj/item/reagent_containers/cup/bottle/atropine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Атропин)",
-		GENITIVE = "бутылки (Атропин)",
-		DATIVE = "бутылке (Атропин)",
-		ACCUSATIVE = "бутылку (Атропин)",
-		INSTRUMENTAL = "бутылкой (Атропин)",
-		PREPOSITIONAL = "бутылке (Атропин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/saline
 	name = "saline-glucose bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится физиологический раствор."
+	desc = "A small bottle containing saline-glucose solution."
 	list_reagents = list("salglu_solution" = 30)
 
 /obj/item/reagent_containers/cup/bottle/saline/get_short_name()
 	return "Физраствор"
 
-/obj/item/reagent_containers/cup/bottle/saline/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Физраствор)",
-		GENITIVE = "бутылки (Физраствор)",
-		DATIVE = "бутылке (Физраствор)",
-		ACCUSATIVE = "бутылку (Физраствор)",
-		INSTRUMENTAL = "бутылкой (Физраствор)",
-		PREPOSITIONAL = "бутылке (Физраствор)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/salicylic
 	name = "salicylic acid bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится салициловая кислота."
+	desc = "A small bottle containing medicine for pain and fevers."
 	list_reagents = list("sal_acid" = 30)
 
 /obj/item/reagent_containers/cup/bottle/salicylic/get_short_name()
 	return "Сал. кислота"
 
-/obj/item/reagent_containers/cup/bottle/salicylic/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Салициловая кислота)",
-		GENITIVE = "бутылки (Салициловая кислота)",
-		DATIVE = "бутылке (Салициловая кислота)",
-		ACCUSATIVE = "бутылку (Салициловая кислота)",
-		INSTRUMENTAL = "бутылкой (Салициловая кислота)",
-		PREPOSITIONAL = "бутылке (Салициловая кислота)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/cyanide
 	name = "cyanide bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится очень токсичный цианид."
+	desc = "A small bottle of cyanide. Bitter almonds?"
 	list_reagents = list("cyanide" = 30)
-
-/obj/item/reagent_containers/cup/bottle/cyanide/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Цианид)",
-		GENITIVE = "бутылки (Цианид)",
-		DATIVE = "бутылке (Цианид)",
-		ACCUSATIVE = "бутылку (Цианид)",
-		INSTRUMENTAL = "бутылкой (Цианид)",
-		PREPOSITIONAL = "бутылке (Цианид)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/mutagen
 	name = "unstable mutagen bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится нестабильный мутаген."
+	desc = "A small bottle of unstable mutagen. Randomly changes the DNA structure of whoever comes in contact."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("mutagen" = 30)
@@ -129,53 +69,23 @@
 /obj/item/reagent_containers/cup/bottle/mutagen/get_short_name()
 	return "Нестаб. мутаген"
 
-/obj/item/reagent_containers/cup/bottle/mutagen/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Нестабильный мутаген)",
-		GENITIVE = "бутылки (Нестабильный мутаген)",
-		DATIVE = "бутылке (Нестабильный мутаген)",
-		ACCUSATIVE = "бутылку (Нестабильный мутаген)",
-		INSTRUMENTAL = "бутылкой (Нестабильный мутаген)",
-		PREPOSITIONAL = "бутылке (Нестабильный мутаген)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/ammonia
 	name = "ammonia bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится аммиак."
+	desc = "A small glass bottle containing ammonia."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("ammonia" = 30)
 
-/obj/item/reagent_containers/cup/bottle/ammonia/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Аммиак)",
-		GENITIVE = "бутылки (Аммиак)",
-		DATIVE = "бутылке (Аммиак)",
-		ACCUSATIVE = "бутылку (Аммиак)",
-		INSTRUMENTAL = "бутылкой (Аммиак)",
-		PREPOSITIONAL = "бутылке (Аммиак)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/diethylamine
 	name = "diethylamine bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится диэтиламин."
+	desc = "A small glass bottle containing diethylamine."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("diethylamine" = 30)
 
-/obj/item/reagent_containers/cup/bottle/diethylamine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Диэтиламин)",
-		GENITIVE = "бутылки (Диэтиламин)",
-		DATIVE = "бутылке (Диэтиламин)",
-		ACCUSATIVE = "бутылку (Диэтиламин)",
-		INSTRUMENTAL = "бутылкой (Диэтиламин)",
-		PREPOSITIONAL = "бутылке (Диэтиламин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/facid
 	name = "Fluorosulfuric Acid Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится фторсерная кислота."
+	desc = "A small bottle. Contains a small amount of Fluorosulfuric Acid"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("facid" = 30)
@@ -183,53 +93,23 @@
 /obj/item/reagent_containers/cup/bottle/facid/get_short_name()
 	return "Фторсер. кислота"
 
-/obj/item/reagent_containers/cup/bottle/facid/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Фторсерная кислота)",
-		GENITIVE = "бутылки (Фторсерная кислота)",
-		DATIVE = "бутылке (Фторсерная кислота)",
-		ACCUSATIVE = "бутылку (Фторсерная кислота)",
-		INSTRUMENTAL = "бутылкой (Фторсерная кислота)",
-		PREPOSITIONAL = "бутылке (Фторсерная кислота)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/adminordrazine
 	name = "Adminordrazine Bottle"
-	desc = "Небольшая стеклянная бутылочка, содержащая в себе божественную эссенцию."
+	desc = "A small bottle. Contains the liquid essence of the gods."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "holyflask"
 	list_reagents = list("adminordrazine" = 30)
 
-/obj/item/reagent_containers/cup/bottle/adminordrazine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Админордразин)",
-		GENITIVE = "бутылки (Админордразин)",
-		DATIVE = "бутылке (Админордразин)",
-		ACCUSATIVE = "бутылку (Админордразин)",
-		INSTRUMENTAL = "бутылкой (Админордразин)",
-		PREPOSITIONAL = "бутылке (Админордразин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/capsaicin
 	name = "Capsaicin Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится капсаицин, получаемый из перца чили."
+	desc = "A small bottle. Contains hot sauce."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("capsaicin" = 30)
 
-/obj/item/reagent_containers/cup/bottle/capsaicin/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Капсаицин)",
-		GENITIVE = "бутылки (Капсаицин)",
-		DATIVE = "бутылке (Капсаицин)",
-		ACCUSATIVE = "бутылку (Капсаицин)",
-		INSTRUMENTAL = "бутылкой (Капсаицин)",
-		PREPOSITIONAL = "бутылке (Капсаицин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/frostoil
 	name = "Frost Oil Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится ледяное масло, получаемое из ледяного перца чили."
+	desc = "A small bottle. Contains cold sauce."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("frostoil" = 30)
@@ -237,54 +117,24 @@
 /obj/item/reagent_containers/cup/bottle/frostoil/get_short_name()
 	return "Лед. масло"
 
-/obj/item/reagent_containers/cup/bottle/frostoil/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Ледяное масло)",
-		GENITIVE = "бутылки (Ледяное масло)",
-		DATIVE = "бутылке (Ледяное масло)",
-		ACCUSATIVE = "бутылку (Ледяное масло)",
-		INSTRUMENTAL = "бутылкой (Ледяное масло)",
-		PREPOSITIONAL = "бутылке (Ледяное масло)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/morphine
 	name = "Morphine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится морфин."
+	desc = "A small glass bottle containing morphine."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("morphine" = 30)
 	custom_price = PAYCHECK_MIN
 
-/obj/item/reagent_containers/cup/bottle/morphine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Морфин)",
-		GENITIVE = "бутылки (Морфин)",
-		DATIVE = "бутылке (Морфин)",
-		ACCUSATIVE = "бутылку (Морфин)",
-		INSTRUMENTAL = "бутылкой (Морфин)",
-		PREPOSITIONAL = "бутылке (Морфин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/ether
 	name = "Ether Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится эфир."
+	desc = "A small bottle of an ether, a strong anesthetic and sedative."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("ether" = 30)
 
-/obj/item/reagent_containers/cup/bottle/ether/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Эфир)",
-		GENITIVE = "бутылки (Эфир)",
-		DATIVE = "бутылке (Эфир)",
-		ACCUSATIVE = "бутылку (Эфир)",
-		INSTRUMENTAL = "бутылкой (Эфир)",
-		PREPOSITIONAL = "бутылке (Эфир)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/charcoal
 	name = "Charcoal Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится активированный уголь."
+	desc = "A small bottle. Contains charcoal."
 	icon_state = "wide_bottle"
 	item_state = "wide_bottle"
 	list_reagents = list("charcoal" = 30)
@@ -292,70 +142,30 @@
 /obj/item/reagent_containers/cup/bottle/charcoal/get_short_name()
 	return "Акт. уголь"
 
-/obj/item/reagent_containers/cup/bottle/charcoal/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Активированный уголь)",
-		GENITIVE = "бутылки (Активированный уголь)",
-		DATIVE = "бутылке (Активированный уголь)",
-		ACCUSATIVE = "бутылку (Активированный уголь)",
-		INSTRUMENTAL = "бутылкой (Активированный уголь)",
-		PREPOSITIONAL = "бутылке (Активированный уголь)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/epinephrine
 	name = "Epinephrine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится эпинефрин."
+	desc = "A small bottle. Contains epinephrine - used to stabilize patients."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("epinephrine" = 30)
 
-/obj/item/reagent_containers/cup/bottle/epinephrine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Эпинефрин)",
-		GENITIVE = "бутылки (Эпинефрин)",
-		DATIVE = "бутылке (Эпинефрин)",
-		ACCUSATIVE = "бутылку (Эпинефрин)",
-		INSTRUMENTAL = "бутылкой (Эпинефрин)",
-		PREPOSITIONAL = "бутылке (Эпинефрин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/pancuronium
 	name = "Pancuronium Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится панкуроний."
+	desc = "A small bottle of pancuronium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("pancuronium" = 30)
 
-/obj/item/reagent_containers/cup/bottle/pancuronium/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Панкуроний)",
-		GENITIVE = "бутылки (Панкуроний)",
-		DATIVE = "бутылке (Панкуроний)",
-		ACCUSATIVE = "бутылку (Панкуроний)",
-		INSTRUMENTAL = "бутылкой (Панкуроний)",
-		PREPOSITIONAL = "бутылке (Панкуроний)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/sulfonal
 	name = "Sulfonal Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится сульфонал."
+	desc = "A small bottle of Sulfonal."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("sulfonal" = 30)
 
-/obj/item/reagent_containers/cup/bottle/sulfonal/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Сульфонал)",
-		GENITIVE = "бутылки (Сульфонал)",
-		DATIVE = "бутылке (Сульфонал)",
-		ACCUSATIVE = "бутылку (Сульфонал)",
-		INSTRUMENTAL = "бутылкой (Сульфонал)",
-		PREPOSITIONAL = "бутылке (Сульфонал)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/plasma
 	name = "plasma dust bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится плазменная пыль."
+	desc = "A small bottle of plasma in dust form. Extremely toxic and reacts with micro-organisms inside blood."
 	icon_state = "wide_bottle"
 	item_state = "wide_bottle"
 	list_reagents = list("plasma_dust" = 30)
@@ -363,67 +173,27 @@
 /obj/item/reagent_containers/cup/bottle/plasma/get_short_name()
 	return "Плазм. пыль"
 
-/obj/item/reagent_containers/cup/bottle/plasma/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Плазменная пыль)",
-		GENITIVE = "бутылки (Плазменная пыль)",
-		DATIVE = "бутылке (Плазменная пыль)",
-		ACCUSATIVE = "бутылку (Плазменная пыль)",
-		INSTRUMENTAL = "бутылкой (Плазменная пыль)",
-		PREPOSITIONAL = "бутылке (Плазменная пыль)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/diphenhydramine
 	name = "diphenhydramine bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится дифенгидрамин."
+	desc = "A small bottle of diphenhydramine."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("diphenhydramine" = 30)
 
-/obj/item/reagent_containers/cup/bottle/diphenhydramine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Дифенгидрамин)",
-		GENITIVE = "бутылки (Дифенгидрамин)",
-		DATIVE = "бутылке (Дифенгидрамин)",
-		ACCUSATIVE = "бутылку (Дифенгидрамин)",
-		INSTRUMENTAL = "бутылкой (Дифенгидрамин)",
-		PREPOSITIONAL = "бутылке (Дифенгидрамин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/oculine
 	name = "oculine bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится окулин."
+	desc = "A small bottle of combined eye and ear medication."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("oculine" = 30)
 	custom_price = PAYCHECK_MIN * 2
 
-/obj/item/reagent_containers/cup/bottle/oculine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Окулин)",
-		GENITIVE = "бутылки (Окулин)",
-		DATIVE = "бутылке (Окулин)",
-		ACCUSATIVE = "бутылку (Окулин)",
-		INSTRUMENTAL = "бутылкой (Окулин)",
-		PREPOSITIONAL = "бутылке (Окулин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/potassium_iodide
 	name = "potassium iodide bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится иодид калия."
+	desc = "A small bottle of potassium iodide."
 	icon_state = "wide_bottle"
 	item_state = "wide_bottle"
 	list_reagents = list("potass_iodide" = 30)
-
-/obj/item/reagent_containers/cup/bottle/potassium_iodide/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Иодид калия)",
-		GENITIVE = "бутылки (Иодид калия)",
-		DATIVE = "бутылке (Иодид калия)",
-		ACCUSATIVE = "бутылку (Иодид калия)",
-		INSTRUMENTAL = "бутылкой (Иодид калия)",
-		PREPOSITIONAL = "бутылке (Иодид калия)",
-	)
 
 /**
  * MARK: Reagent bottle
@@ -438,230 +208,90 @@
 
 /obj/item/reagent_containers/cup/bottle/reagent/oil
 	name = "Oil Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится масло."
+	desc = "A reagent bottle. Contains oil."
 	list_reagents = list("oil" = 50)
 	pixel_x = -4
 	pixel_y = 6
 
-/obj/item/reagent_containers/cup/bottle/reagent/oil/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Масло)",
-		GENITIVE = "бутылки (Масло)",
-		DATIVE = "бутылке (Масло)",
-		ACCUSATIVE = "бутылку (Масло)",
-		INSTRUMENTAL = "бутылкой (Масло)",
-		PREPOSITIONAL = "бутылке (Масло)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/reagent/phenol
 	name = "Phenol Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится фенол."
+	desc = "A reagent bottle. Contains phenol."
 	list_reagents = list("phenol" = 50)
 	pixel_x = 6
 	pixel_y = 6
 
-/obj/item/reagent_containers/cup/bottle/reagent/phenol/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Фенол)",
-		GENITIVE = "бутылки (Фенол)",
-		DATIVE = "бутылке (Фенол)",
-		ACCUSATIVE = "бутылку (Фенол)",
-		INSTRUMENTAL = "бутылкой (Фенол)",
-		PREPOSITIONAL = "бутылке (Фенол)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/reagent/acetone
 	name = "Acetone Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится ацетон."
+	desc = "A reagent bottle. Contains acetone."
 	list_reagents = list("acetone" = 50)
 	pixel_x = -4
 
-/obj/item/reagent_containers/cup/bottle/reagent/acetone/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Ацетон)",
-		GENITIVE = "бутылки (Ацетон)",
-		DATIVE = "бутылке (Ацетон)",
-		ACCUSATIVE = "бутылку (Ацетон)",
-		INSTRUMENTAL = "бутылкой (Ацетон)",
-		PREPOSITIONAL = "бутылке (Ацетон)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/reagent/ammonia
 	name = "Ammonia Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится аммиак."
+	desc = "A small glass bottle containing ammonia."
 	list_reagents = list("ammonia" = 50)
 	pixel_x = 6
 
-/obj/item/reagent_containers/cup/bottle/reagent/ammonia/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Аммиак)",
-		GENITIVE = "бутылки (Аммиак)",
-		DATIVE = "бутылке (Аммиак)",
-		ACCUSATIVE = "бутылку (Аммиак)",
-		INSTRUMENTAL = "бутылкой (Аммиак)",
-		PREPOSITIONAL = "бутылке (Аммиак)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/reagent/diethylamine
 	name = "Diethylamine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится диэтиламин."
+	desc = "A small glass bottle containing diethylamine."
 	list_reagents = list("diethylamine" = 50)
 	pixel_x = -4
 	pixel_y = -6
 
-/obj/item/reagent_containers/cup/bottle/reagent/diethylamine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Диэтиламин)",
-		GENITIVE = "бутылки (Диэтиламин)",
-		DATIVE = "бутылке (Диэтиламин)",
-		ACCUSATIVE = "бутылку (Диэтиламин)",
-		INSTRUMENTAL = "бутылкой (Диэтиламин)",
-		PREPOSITIONAL = "бутылке (Диэтиламин)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/reagent/acid
 	name = "Acid Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится серная кислота."
+	desc = "A reagent bottle. Contains sulfuric acid."
 	list_reagents = list("sacid" = 50)
 	pixel_x = 6
 	pixel_y = -6
 
-/obj/item/reagent_containers/cup/bottle/reagent/acid/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Серная кислота)",
-		GENITIVE = "бутылки (Серная кислота)",
-		DATIVE = "бутылке (Серная кислота)",
-		ACCUSATIVE = "бутылку (Серная кислота)",
-		INSTRUMENTAL = "бутылкой (Серная кислота)",
-		PREPOSITIONAL = "бутылке (Серная кислота)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/reagent/formaldehyde
 	name = "Formaldehyde Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится формальдегид."
+	desc = "A reagent bottle. Contains formaldehyde."
 	list_reagents = list("formaldehyde" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/formaldehyde/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Формальдегид)",
-		GENITIVE = "бутылки (Формальдегид)",
-		DATIVE = "бутылке (Формальдегид)",
-		ACCUSATIVE = "бутылку (Формальдегид)",
-		INSTRUMENTAL = "бутылкой (Формальдегид)",
-		PREPOSITIONAL = "бутылке (Формальдегид)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/synaptizine
 	name = "Synaptizine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится синаптизин."
+	desc = "A reagent bottle. Contains synaptizine."
 	list_reagents = list("synaptizine" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/synaptizine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Синаптизин)",
-		GENITIVE = "бутылки (Синаптизин)",
-		DATIVE = "бутылке (Синаптизин)",
-		ACCUSATIVE = "бутылку (Синаптизин)",
-		INSTRUMENTAL = "бутылкой (Синаптизин)",
-		PREPOSITIONAL = "бутылке (Синаптизин)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/morphine
 	name = "Morphine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится морфин."
+	desc = "A small glass bottle containing morphine."
 	list_reagents = list("morphine" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/morphine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Морфин)",
-		GENITIVE = "бутылки (Морфин)",
-		DATIVE = "бутылке (Морфин)",
-		ACCUSATIVE = "бутылку (Морфин)",
-		INSTRUMENTAL = "бутылкой (Морфин)",
-		PREPOSITIONAL = "бутылке (Морфин)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/insulin
 	name = "Insulin Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится инсулин."
+	desc = "A reagent bottle. Contains insulin."
 	list_reagents = list("insulin" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/insulin/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Инсулин)",
-		GENITIVE = "бутылки (Инсулин)",
-		DATIVE = "бутылке (Инсулин)",
-		ACCUSATIVE = "бутылку (Инсулин)",
-		INSTRUMENTAL = "бутылкой (Инсулин)",
-		PREPOSITIONAL = "бутылке (Инсулин)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/hairgrownium
 	name = "Hair Grow Gel"
-	desc = "Небольшая стеклянная бутылочка, внутри находится власорост."
+	desc = "A bottle full of a stimulative hair growth formula."
 	list_reagents = list("hairgrownium" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/hairgrownium/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Власорост)",
-		GENITIVE = "бутылки (Власорост)",
-		DATIVE = "бутылке (Власорост)",
-		ACCUSATIVE = "бутылку (Власорост)",
-		INSTRUMENTAL = "бутылкой (Власорост)",
-		PREPOSITIONAL = "бутылке (Власорост)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/hair_dye
 	name = "Quantum Hair Dye Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится квантовая краска для волос."
+	desc = "A bottle of the ever-changing quantum hair dye."
 	list_reagents = list("hair_dye" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/hair_dye/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Квантовая краска для волос)",
-		GENITIVE = "бутылки (Квантовая краска для волос)",
-		DATIVE = "бутылке (Квантовая краска для волос)",
-		ACCUSATIVE = "бутылку (Квантовая краска для волос)",
-		INSTRUMENTAL = "бутылкой (Квантовая краска для волос)",
-		PREPOSITIONAL = "бутылке (Квантовая краска для волос)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/omnizine
 	name = "Omnizine Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится омнизин."
+	desc = "A reagent bottle. Contains Omnizine."
 	list_reagents = list("omnizine" = 50)
-
-/obj/item/reagent_containers/cup/bottle/reagent/omnizine/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Омнизин)",
-		GENITIVE = "бутылки (Омнизин)",
-		DATIVE = "бутылке (Омнизин)",
-		ACCUSATIVE = "бутылку (Омнизин)",
-		INSTRUMENTAL = "бутылкой (Омнизин)",
-		PREPOSITIONAL = "бутылке (Омнизин)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/reagent/strange_reagent
 	name = "Strange Reagent Bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится странный реагент."
+	desc = "A bottle of glowing fluid."
 	list_reagents = list("strange_reagent" = 30)
-
-/obj/item/reagent_containers/cup/bottle/reagent/strange_reagent/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Странный реагент)",
-		GENITIVE = "бутылки (Странный реагент)",
-		DATIVE = "бутылке (Странный реагент)",
-		ACCUSATIVE = "бутылку (Странный реагент)",
-		INSTRUMENTAL = "бутылкой (Странный реагент)",
-		PREPOSITIONAL = "бутылке (Странный реагент)",
-	)
 
 /**
  * MARK: Traitor poison bottle
  */
 
 /obj/item/reagent_containers/cup/bottle/traitor
-	desc = "На ней изображён маленький череп и скрещённые кости. О-о-о!"
+	desc = "It has a small skull and crossbones on it. Uh-oh!"
 	possible_transfer_amounts = list(5, 10, 15, 25, 30, 40)
 	volume = 40
 
@@ -675,603 +305,253 @@
 
 /obj/item/reagent_containers/cup/bottle/cold
 	name = "Rhinovirus culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Простуда\"."
+	desc = "A small bottle. Contains XY-rhinovirus culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/cold
 
-/obj/item/reagent_containers/cup/bottle/cold/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Простуда)",
-		GENITIVE = "вирусной культуры (Простуда)",
-		DATIVE = "вирусной культуре (Простуда)",
-		ACCUSATIVE = "вирусную культуру (Простуда)",
-		INSTRUMENTAL = "вирусной культурой (Простуда)",
-		PREPOSITIONAL = "вирусной культуре (Простуда)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/flu
 	name = "Flu virion culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Грипп\"."
+	desc = "A small bottle. Contains H13N1 flu virion culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/flu
 
-/obj/item/reagent_containers/cup/bottle/flu/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Грипп)",
-		GENITIVE = "вирусной культуры (Грипп)",
-		DATIVE = "вирусной культуре (Грипп)",
-		ACCUSATIVE = "вирусную культуру (Грипп)",
-		INSTRUMENTAL = "вирусной культурой (Грипп)",
-		PREPOSITIONAL = "вирусной культуре (Грипп)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/sneezing
 	name = "Sneezing symptom bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Чихание\"."
+	desc = "A small bottle. Contains a simple advanced virus in synthblood medium that makes infected sneeze."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/sneezing
 
-/obj/item/reagent_containers/cup/bottle/sneezing/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Чихание)",
-		GENITIVE = "вирусной культуры (Чихание)",
-		DATIVE = "вирусной культуре (Чихание)",
-		ACCUSATIVE = "вирусную культуру (Чихание)",
-		INSTRUMENTAL = "вирусной культурой (Чихание)",
-		PREPOSITIONAL = "вирусной культуре (Чихание)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/cough
 	name = "Cough symptom bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Кашель\"."
+	desc = "A small bottle. Contains a simple advanced virus in synthblood medium that makes infected cough."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/cough
 
-/obj/item/reagent_containers/cup/bottle/cough/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Кашель)",
-		GENITIVE = "вирусной культуры (Кашель)",
-		DATIVE = "вирусной культуре (Кашель)",
-		ACCUSATIVE = "вирусную культуру (Кашель)",
-		INSTRUMENTAL = "вирусной культурой (Кашель)",
-		PREPOSITIONAL = "вирусной культуре (Кашель)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/epiglottis_virion
 	name = "Epiglottis virion culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Надгортанник\"."
+	desc = "A small bottle. Contains Epiglottis virion culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/voice_change
 
-/obj/item/reagent_containers/cup/bottle/epiglottis_virion/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Надгортанник)",
-		GENITIVE = "вирусной культуры (Надгортанник)",
-		DATIVE = "вирусной культуре (Надгортанник)",
-		ACCUSATIVE = "вирусную культуру (Надгортанник)",
-		INSTRUMENTAL = "вирусной культурой (Надгортанник)",
-		PREPOSITIONAL = "вирусной культуре (Надгортанник)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/liver_enhance_virion
 	name = "Liver enhancement virion culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Укрепление печени\"."
+	desc = "A small bottle. Contains liver enhancement virion culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/heal
 
-/obj/item/reagent_containers/cup/bottle/liver_enhance_virion/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Укрепление печени)",
-		GENITIVE = "вирусной культуры (Укрепление печени)",
-		DATIVE = "вирусной культуре (Укрепление печени)",
-		ACCUSATIVE = "вирусную культуру (Укрепление печени)",
-		INSTRUMENTAL = "вирусной культурой (Укрепление печени)",
-		PREPOSITIONAL = "вирусной культуре (Укрепление печени)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/hullucigen_virion
 	name = "Hullucigen virion culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Галлюцинации\"."
+	desc = "A small bottle. Contains hullucigen virion culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/hullucigen
 
-/obj/item/reagent_containers/cup/bottle/hullucigen_virion/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Галлюцинации)",
-		GENITIVE = "вирусной культуры (Галлюцинации)",
-		DATIVE = "вирусной культуре (Галлюцинации)",
-		ACCUSATIVE = "вирусную культуру (Галлюцинации)",
-		INSTRUMENTAL = "вирусной культурой (Галлюцинации)",
-		PREPOSITIONAL = "вирусной культуре (Галлюцинации)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/pierrot_throat
 	name = "Pierrot's Throat culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Горло Пьеро\"."
+	desc = "A small bottle. Contains H0NI<42 virion culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/pierrot_throat
 
-/obj/item/reagent_containers/cup/bottle/pierrot_throat/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Горло Пьеро)",
-		GENITIVE = "вирусной культуры (Горло Пьеро)",
-		DATIVE = "вирусной культуре (Горло Пьеро)",
-		ACCUSATIVE = "вирусную культуру (Горло Пьеро)",
-		INSTRUMENTAL = "вирусной культурой (Горло Пьеро)",
-		PREPOSITIONAL = "вирусной культуре (Горло Пьеро)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/mind_restoration
 	name = "Reality Purifier culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Восстановление сознания\"."
+	desc = "A small bottle. Contains Reality Purifier culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/mind_restoration
 
-/obj/item/reagent_containers/cup/bottle/mind_restoration/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Восстановление сознания)",
-		GENITIVE = "вирусной культуры (Восстановление сознания)",
-		DATIVE = "вирусной культуре (Восстановление сознания)",
-		ACCUSATIVE = "вирусную культуру (Восстановление сознания)",
-		INSTRUMENTAL = "вирусной культурой (Восстановление сознания)",
-		PREPOSITIONAL = "вирусной культуре (Восстановление сознания)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/advanced_regeneration
 	name = "Advanced Neogenesis culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Улучшенная регенерация\"."
+	desc = "A small bottle. Contains Advanced Neogenesis culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/advanced_regeneration
 
-/obj/item/reagent_containers/cup/bottle/advanced_regeneration/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Улучшенная регенерация)",
-		GENITIVE = "вирусной культуры (Улучшенная регенерация)",
-		DATIVE = "вирусной культуре (Улучшенная регенерация)",
-		ACCUSATIVE = "вирусную культуру (Улучшенная регенерация)",
-		INSTRUMENTAL = "вирусной культурой (Улучшенная регенерация)",
-		PREPOSITIONAL = "вирусной культуре (Улучшенная регенерация)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/stealth_necrosis
 	name = "Necroeyrosis culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Некроз\"."
+	desc = "A small bottle. Contains Necroeyrosis culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/stealth_necrosis
 
-/obj/item/reagent_containers/cup/bottle/stealth_necrosis/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Некроз)",
-		GENITIVE = "вирусной культуры (Некроз)",
-		DATIVE = "вирусной культуре (Некроз)",
-		ACCUSATIVE = "вирусную культуру (Некроз)",
-		INSTRUMENTAL = "вирусной культурой (Некроз)",
-		PREPOSITIONAL = "вирусной культуре (Некроз)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/pre_kingstons
 	name = "Neverlasting Stranger culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Синдром Кингстона\"."
+	desc = "A small bottle. Contains Neverlasting Stranger culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/pre_kingstons
 
-/obj/item/reagent_containers/cup/bottle/pre_kingstons/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Синдром Кингстона)",
-		GENITIVE = "вирусной культуры (Синдром Кингстона)",
-		DATIVE = "вирусной культуре (Синдром Кингстона)",
-		ACCUSATIVE = "вирусную культуру (Синдром Кингстона)",
-		INSTRUMENTAL = "вирусной культурой (Синдром Кингстона)",
-		PREPOSITIONAL = "вирусной культуре (Синдром Кингстона)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/love
 	name = "love"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Любовь\"."
+	desc = "love"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/love
 
-/obj/item/reagent_containers/cup/bottle/love/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Любовь)",
-		GENITIVE = "вирусной культуры (Любовь)",
-		DATIVE = "вирусной культуре (Любовь)",
-		ACCUSATIVE = "вирусную культуру (Любовь)",
-		INSTRUMENTAL = "вирусной культурой (Любовь)",
-		PREPOSITIONAL = "вирусной культуре (Любовь)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/aggression
 	name = "aggression"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Агрессия\"."
+	desc = "aggression"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/aggression
 
-/obj/item/reagent_containers/cup/bottle/aggression/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Агрессия)",
-		GENITIVE = "вирусной культуры (Агрессия)",
-		DATIVE = "вирусной культуре (Агрессия)",
-		ACCUSATIVE = "вирусную культуру (Агрессия)",
-		INSTRUMENTAL = "вирусной культурой (Агрессия)",
-		PREPOSITIONAL = "вирусной культуре (Агрессия)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/obsession
 	name = "obsession"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Одержимость\"."
+	desc = "obsession"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/obsession
 
-/obj/item/reagent_containers/cup/bottle/obsession/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Одержимость)",
-		GENITIVE = "вирусной культуры (Одержимость)",
-		DATIVE = "вирусной культуре (Одержимость)",
-		ACCUSATIVE = "вирусную культуру (Одержимость)",
-		INSTRUMENTAL = "вирусной культурой (Одержимость)",
-		PREPOSITIONAL = "вирусной культуре (Одержимость)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/confusion
 	name = "confusion"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Замешательство\"."
+	desc = "confusion"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/confusion
 
-/obj/item/reagent_containers/cup/bottle/confusion/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Замешательство)",
-		GENITIVE = "вирусной культуры (Замешательство)",
-		DATIVE = "вирусной культуре (Замешательство)",
-		ACCUSATIVE = "вирусную культуру (Замешательство)",
-		INSTRUMENTAL = "вирусной культурой (Замешательство)",
-		PREPOSITIONAL = "вирусной культуре (Замешательство)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/bones
 	name = "bones"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Кости\"."
+	desc = "Someone's been drinking their milk."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/bones
 
-/obj/item/reagent_containers/cup/bottle/bones/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Кости)",
-		GENITIVE = "вирусной культуры (Кости)",
-		DATIVE = "вирусной культуре (Кости)",
-		ACCUSATIVE = "вирусную культуру (Кости)",
-		INSTRUMENTAL = "вирусной культурой (Кости)",
-		PREPOSITIONAL = "вирусной культуре (Кости)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/limb_throw
 	name = "limb_throw"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Отстреливание конечностей\"."
+	desc = "limb_throw"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/limb_throw
 
-/obj/item/reagent_containers/cup/bottle/limb_throw/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Отстреливание конечностей)",
-		GENITIVE = "вирусной культуры (Отстреливание конечностей)",
-		DATIVE = "вирусной культуре (Отстреливание конечностей)",
-		ACCUSATIVE = "вирусную культуру (Отстреливание конечностей)",
-		INSTRUMENTAL = "вирусной культурой (Отстреливание конечностей)",
-		PREPOSITIONAL = "вирусной культуре (Отстреливание конечностей)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/laugh
 	name = "laugh"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Смех\"."
+	desc = "laugh"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/laugh
 
-/obj/item/reagent_containers/cup/bottle/laugh/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Смех)",
-		GENITIVE = "вирусной культуры (Смех)",
-		DATIVE = "вирусной культуре (Смех)",
-		ACCUSATIVE = "вирусную культуру (Смех)",
-		INSTRUMENTAL = "вирусной культурой (Смех)",
-		PREPOSITIONAL = "вирусной культуре (Смех)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/moan
 	name = "moan"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Стоны\"."
+	desc = "moan"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/moan
 
-/obj/item/reagent_containers/cup/bottle/moan/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Стоны)",
-		GENITIVE = "вирусной культуры (Стоны)",
-		DATIVE = "вирусной культуре (Стоны)",
-		ACCUSATIVE = "вирусную культуру (Стоны)",
-		INSTRUMENTAL = "вирусной культурой (Стоны)",
-		PREPOSITIONAL = "вирусной культуре (Стоны)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/infection
 	name = "infection"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Инфекция\"."
+	desc = "infection"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/infection
 
-/obj/item/reagent_containers/cup/bottle/infection/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Инфекция)",
-		GENITIVE = "вирусной культуры (Инфекция)",
-		DATIVE = "вирусной культуре (Инфекция)",
-		ACCUSATIVE = "вирусную культуру (Инфекция)",
-		INSTRUMENTAL = "вирусной культурой (Инфекция)",
-		PREPOSITIONAL = "вирусной культуре (Инфекция)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/loyalty
 	name = "loyalty"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Преданность\"."
+	desc = "loyalty"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/loyalty
 
-/obj/item/reagent_containers/cup/bottle/loyalty/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Преданность)",
-		GENITIVE = "вирусной культуры (Преданность)",
-		DATIVE = "вирусной культуре (Преданность)",
-		ACCUSATIVE = "вирусную культуру (Преданность)",
-		INSTRUMENTAL = "вирусной культурой (Преданность)",
-		PREPOSITIONAL = "вирусной культуре (Преданность)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/pre_loyalty
 	name = "pre_loyalty"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Пре-преданность\"."
+	desc = "pre_loyalty"
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/pre_loyalty
 
-/obj/item/reagent_containers/cup/bottle/pre_loyalty/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Пре-преданность)",
-		GENITIVE = "вирусной культуры (Пре-преданность)",
-		DATIVE = "вирусной культуре (Пре-преданность)",
-		ACCUSATIVE = "вирусную культуру (Пре-преданность)",
-		INSTRUMENTAL = "вирусной культурой (Пре-преданность)",
-		PREPOSITIONAL = "вирусной культуре (Пре-преданность)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/retrovirus
 	name = "Retrovirus culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Ретровирус\"."
+	desc = "A small bottle. Contains a retrovirus culture in a synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/dna_retrovirus
 
-/obj/item/reagent_containers/cup/bottle/retrovirus/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Ретровирус)",
-		GENITIVE = "вирусной культуры (Ретровирус)",
-		DATIVE = "вирусной культуре (Ретровирус)",
-		ACCUSATIVE = "вирусную культуру (Ретровирус)",
-		INSTRUMENTAL = "вирусной культурой (Ретровирус)",
-		PREPOSITIONAL = "вирусной культуре (Ретровирус)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/gbs
 	name = "GBS culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"ГБС+\"."
+	desc = "A small bottle. Contains Gravitokinetic Bipotential SADS+ culture in synthblood medium."//Or simply - General BullShit
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	amount_per_transfer_from_this = 5
 	spawned_disease = /datum/disease/virus/gbs
 
-/obj/item/reagent_containers/cup/bottle/gbs/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (ГБС+)",
-		GENITIVE = "вирусной культуры (ГБС+)",
-		DATIVE = "вирусной культуре (ГБС+)",
-		ACCUSATIVE = "вирусную культуру (ГБС+)",
-		INSTRUMENTAL = "вирусной культурой (ГБС+)",
-		PREPOSITIONAL = "вирусной культуре (ГБС+)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/fake_gbs
 	name = "GBS culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"ГБС-\"."
+	desc = "A small bottle. Contains Gravitokinetic Bipotential SADS- culture in synthblood medium."//Or simply - General BullShit
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/fake_gbs
 
-/obj/item/reagent_containers/cup/bottle/fake_gbs/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (ГБС-)",
-		GENITIVE = "вирусной культуры (ГБС-)",
-		DATIVE = "вирусной культуре (ГБС-)",
-		ACCUSATIVE = "вирусную культуру (ГБС-)",
-		INSTRUMENTAL = "вирусной культурой (ГБС-)",
-		PREPOSITIONAL = "вирусной культуре (ГБС-)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/brainrot
 	name = "Brainrot culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Мозговая гниль\"."
+	desc = "A small bottle. Contains Cryptococcus Cosmosis culture in synthblood medium."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/brainrot
 
-/obj/item/reagent_containers/cup/bottle/brainrot/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Мозговая гниль)",
-		GENITIVE = "вирусной культуры (Мозговая гниль)",
-		DATIVE = "вирусной культуре (Мозговая гниль)",
-		ACCUSATIVE = "вирусную культуру (Мозговая гниль)",
-		INSTRUMENTAL = "вирусной культурой (Мозговая гниль)",
-		PREPOSITIONAL = "вирусной культуре (Мозговая гниль)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/magnitis
 	name = "Magnitis culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Магнитис\"."
+	desc = "A small bottle. Contains a small dosage of Fukkos Miracos."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/magnitis
 
-/obj/item/reagent_containers/cup/bottle/magnitis/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Магнитис)",
-		GENITIVE = "вирусной культуры (Магнитис)",
-		DATIVE = "вирусной культуре (Магнитис)",
-		ACCUSATIVE = "вирусную культуру (Магнитис)",
-		INSTRUMENTAL = "вирусной культурой (Магнитис)",
-		PREPOSITIONAL = "вирусной культуре (Магнитис)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/wizarditis
 	name = "Wizarditis culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Визардис\"."
+	desc = "A small bottle. Contains a sample of Rincewindus Vulgaris."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/wizarditis
 
-/obj/item/reagent_containers/cup/bottle/wizarditis/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Визардис)",
-		GENITIVE = "вирусной культуры (Визардис)",
-		DATIVE = "вирусной культуре (Визардис)",
-		ACCUSATIVE = "вирусную культуру (Визардис)",
-		INSTRUMENTAL = "вирусной культурой (Визардис)",
-		PREPOSITIONAL = "вирусной культуре (Визардис)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/anxiety
 	name = "Severe Anxiety culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Сильное беспокойство\"."
+	desc = "A small bottle. Contains a sample of Lepidopticides."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/anxiety
 
-/obj/item/reagent_containers/cup/bottle/anxiety/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Сильное беспокойство)",
-		GENITIVE = "вирусной культуры (Сильное беспокойство)",
-		DATIVE = "вирусной культуре (Сильное беспокойство)",
-		ACCUSATIVE = "вирусную культуру (Сильное беспокойство)",
-		INSTRUMENTAL = "вирусной культурой (Сильное беспокойство)",
-		PREPOSITIONAL = "вирусной культуре (Сильное беспокойство)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/beesease
 	name = "Beesease culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Пчелораза\"."
+	desc = "A small bottle. Contains a sample of invasive Apidae."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/beesease
 
-/obj/item/reagent_containers/cup/bottle/beesease/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Пчелораза)",
-		GENITIVE = "вирусной культуры (Пчелораза)",
-		DATIVE = "вирусной культуре (Пчелораза)",
-		ACCUSATIVE = "вирусную культуру (Пчелораза)",
-		INSTRUMENTAL = "вирусной культурой (Пчелораза)",
-		PREPOSITIONAL = "вирусной культуре (Пчелораза)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/fluspanish
 	name = "Spanish flu culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Испанский Грипп\"."
+	desc = "A small bottle. Contains a sample of Inquisitius."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/fluspanish
 
-/obj/item/reagent_containers/cup/bottle/fluspanish/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Испанский Грипп)",
-		GENITIVE = "вирусной культуры (Испанский Грипп)",
-		DATIVE = "вирусной культуре (Испанский Грипп)",
-		ACCUSATIVE = "вирусную культуру (Испанский Грипп)",
-		INSTRUMENTAL = "вирусной культурой (Испанский Грипп)",
-		PREPOSITIONAL = "вирусной культуре (Испанский Грипп)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/tuberculosis
 	name = "Fungal Tuberculosis culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Грибковый туберкулёз\"."
+	desc = "A small bottle. Contains a sample of Fungal Tubercle bacillus."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/tuberculosis
 
-/obj/item/reagent_containers/cup/bottle/tuberculosis/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Грибковый туберкулёз)",
-		GENITIVE = "вирусной культуры (Грибковый туберкулёз)",
-		DATIVE = "вирусной культуре (Грибковый туберкулёз)",
-		ACCUSATIVE = "вирусную культуру (Грибковый туберкулёз)",
-		INSTRUMENTAL = "вирусной культурой (Грибковый туберкулёз)",
-		PREPOSITIONAL = "вирусной культуре (Грибковый туберкулёз)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/regeneration
 	name = "Regeneration culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Восстановление\"."
+	desc = "A small bottle. Contains a sample of a virus that heals toxin damage."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/heal
 
-/obj/item/reagent_containers/cup/bottle/regeneration/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Восстановление)",
-		GENITIVE = "вирусной культуры (Восстановление)",
-		DATIVE = "вирусной культуре (Восстановление)",
-		ACCUSATIVE = "вирусную культуру (Восстановление)",
-		INSTRUMENTAL = "вирусной культурой (Восстановление)",
-		PREPOSITIONAL = "вирусной культуре (Восстановление)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/sensory_restoration
 	name = "Sensory Restoration culture bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вирусная культура \"Сенсорное восстановление\"."
+	desc = "A small bottle. Contains a sample of a virus that heals sensory damage."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/sensory_restoration
 
-/obj/item/reagent_containers/cup/bottle/sensory_restoration/get_ru_names()
-	return alist(
-		NOMINATIVE = "вирусная культура (Сенсорное восстановление)",
-		GENITIVE = "вирусной культуры (Сенсорное восстановление)",
-		DATIVE = "вирусной культуре (Сенсорное восстановление)",
-		ACCUSATIVE = "вирусную культуру (Сенсорное восстановление)",
-		INSTRUMENTAL = "вирусной культурой (Сенсорное восстановление)",
-		PREPOSITIONAL = "вирусной культуре (Сенсорное восстановление)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/tuberculosiscure
 	name = "BVAK bottle"
-	desc = "Небольшая стеклянная бутылочка, внутри находится смесь лекарственных веществ для лечения био-вирусов."
+	desc = "A small bottle containing Bio Virus Antidote Kit."
 	icon_state = "wide_bottle"
 	item_state = "wide_bottle"
 	list_reagents = list("atropine" = 5, "epinephrine" = 5, "salbutamol" = 10, "spaceacillin" = 10)
@@ -1279,98 +559,36 @@
 /obj/item/reagent_containers/cup/bottle/tuberculosiscure/get_short_name()
 	return "Антидот"
 
-/obj/item/reagent_containers/cup/bottle/tuberculosiscure/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Био-вирусный антидот)",
-		GENITIVE = "бутылки (Био-вирусный антидот)",
-		DATIVE = "бутылке (Био-вирусный антидот)",
-		ACCUSATIVE = "бутылку (Био-вирусный антидот)",
-		INSTRUMENTAL = "бутылкой (Био-вирусный антидот)",
-		PREPOSITIONAL = "бутылке (Био-вирусный антидот)",
-	)
-
 /obj/item/reagent_containers/cup/bottle/zombiecure1
 	name = "Anti-Plague Sequence Alpha bottle"
-	desc = "Небольшой флакон, содержащий 50 единиц противовирусной сыворотки Альфа. Предотвращает заражение, лечит заражение 1-го уровня."
+	desc = "A small bottle containing 50 units of Anti-Plague Sequence Alpha. Prevents infection, cures level 1 infection."
 	list_reagents = list("zombiecure1" = 50)
-
-/obj/item/reagent_containers/cup/bottle/zombiecure1/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Противовирусная сыворотка Альфа)",
-		GENITIVE = "бутылки (Противовирусная сыворотка Альфа)",
-		DATIVE = "бутылке (Противовирусная сыворотка Альфа)",
-		ACCUSATIVE = "бутылку (Противовирусная сыворотка Альфа)",
-		INSTRUMENTAL = "бутылкой (Противовирусная сыворотка Альфа)",
-		PREPOSITIONAL = "бутылке (Противовирусная сыворотка Альфа)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/zombiecure2
 	name = "Anti-Plague Sequence Beta bottle"
-	desc = "Небольшой флакон, содержащий 50 единиц противовирусной сыворотки Бета. Ослабляет зомби, лечит слабые заражения."
+	desc = "A small bottle containing 50 units of Anti-Plague Sequence Beta. Weakens zombies, heals low infections."
 	list_reagents = list("zombiecure2" = 50)
-
-/obj/item/reagent_containers/cup/bottle/zombiecure2/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Противовирусная сыворотка Бета)",
-		GENITIVE = "бутылки (Противовирусная сыворотка Бета)",
-		DATIVE = "бутылке (Противовирусная сыворотка Бета)",
-		ACCUSATIVE = "бутылку (Противовирусная сыворотка Бета)",
-		INSTRUMENTAL = "бутылкой (Противовирусная сыворотка Бета)",
-		PREPOSITIONAL = "бутылке (Противовирусная сыворотка Бета)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/zombiecure3
 	name = "Anti-Plague Sequence Gamma bottle"
-	desc = "Небольшой флакон, содержащий 50 единиц противовирусной сыворотки Гамма. Снижает исцеление зомби. Лечит заражение 5-й стадии и замедляет заражение 6-й стадии."
+	desc = "A small bottle containing 50 units of Anti-Plague Sequence Gamma. Lowers zombies healing. Heals stage 5 and slows stage 6 infections."
 	list_reagents = list("zombiecure3" = 50)
-
-/obj/item/reagent_containers/cup/bottle/zombiecure3/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Противовирусная сыворотка Гамма)",
-		GENITIVE = "бутылки (Противовирусная сыворотка Гамма)",
-		DATIVE = "бутылке (Противовирусная сыворотка Гамма)",
-		ACCUSATIVE = "бутылку (Противовирусная сыворотка Гамма)",
-		INSTRUMENTAL = "бутылкой (Противовирусная сыворотка Гамма)",
-		PREPOSITIONAL = "бутылке (Противовирусная сыворотка Гамма)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/zombiecure4
 	name = "Anti-Plague Sequence Omega bottle"
-	desc = "Небольшой флакон, содержащий 50 единиц противовирусной сыворотки Омега. Лечит все случаи некротизирующей чумы. Также исцеляет мёртвые конечности."
+	desc = "A small bottle containing 50 units of Anti-Plague Sequence Omega. Cures all cases of the Necrotizing Plague. Also heals dead limbs."
 	list_reagents = list("zombiecure4" = 50)
-
-/obj/item/reagent_containers/cup/bottle/zombiecure4/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Противовирусная сыворотка Омега)",
-		GENITIVE = "бутылки (Противовирусная сыворотка Омега)",
-		DATIVE = "бутылке (Противовирусная сыворотка Омега)",
-		ACCUSATIVE = "бутылку (Противовирусная сыворотка Омега)",
-		INSTRUMENTAL = "бутылкой (Противовирусная сыворотка Омега)",
-		PREPOSITIONAL = "бутылке (Противовирусная сыворотка Омега)",
-	)
 
 /obj/item/reagent_containers/cup/bottle/monkeylangue
 	name = "bottle of monkey language potion"
-	desc = "Небольшая стеклянная бутылочка, внутри находится вещество, заставляющее выпившего выучить обезьяний язык. Удивительно."
+	desc = "A bottle of monkey language potion."
 	icon_state = "round_bottle"
 	item_state = "round_bottle"
 	list_reagents = list("monkeylanguage" = 30)
 
-/obj/item/reagent_containers/cup/bottle/monkeylangue/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка (Обезьяний язык)",
-		GENITIVE = "бутылки (Обезьяний язык)",
-		DATIVE = "бутылке (Обезьяний язык)",
-		ACCUSATIVE = "бутылку (Обезьяний язык)",
-		INSTRUMENTAL = "бутылкой (Обезьяний язык)",
-		PREPOSITIONAL = "бутылке (Обезьяний язык)",
-	)
-
-// MARK: Syrup bottles
-// Basically an unspillable cup that transfers reagents upon clicking on it with a cup
 /obj/item/reagent_containers/cup/bottle/syrup_bottle
 	name = "syrup bottle"
-	desc = "Стеклянная бутылка для сиропа, предназначенного для добавления в кофе. Оснащена удобным дозатором."
+	desc = "A glass bottle of syrup for adding to coffee, fitted with a convenient dispenser."
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "syrup"
 	base_icon_state = "syrup"
@@ -1381,16 +599,6 @@
 	materials = list(MAT_GLASS = 500)
 	can_lid = FALSE
 	fill_icon_thresholds = list(20, 40, 60, 80, 100)
-
-/obj/item/reagent_containers/cup/bottle/syrup_bottle/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка для сиропа",
-		GENITIVE = "бутылки для сиропа",
-		DATIVE = "бутылке для сиропа",
-		ACCUSATIVE = "бутылку для сиропа",
-		INSTRUMENTAL = "бутылкой для сиропа",
-		PREPOSITIONAL = "бутылке для сиропа"
-	)
 
 /obj/item/reagent_containers/cup/bottle/syrup_bottle/examine(mob/user)
 	. = ..()
@@ -1443,32 +651,10 @@
 
 /obj/item/reagent_containers/cup/bottle/syrup_bottle/caramel
 	name = "bottle of caramel syrup"
-	desc = "Стеклянная бутылка для сиропа, предназначенного для добавления в кофе. Оснащена удобным дозатором. \
-			Содержит карамелизированный сахар, также известный как карамель. Очень липкий."
+	desc = "A glass bottle of syrup for adding to coffee, fitted with a convenient dispenser. Contains caramelized sugar, also known as caramel. Very sticky."
 	list_reagents = list("caramel" = 50)
-
-/obj/item/reagent_containers/cup/bottle/syrup_bottle/caramel/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка для сиропа (Карамель)",
-		GENITIVE = "бутылки для сиропа (Карамель)",
-		DATIVE = "бутылке для сиропа (Карамель)",
-		ACCUSATIVE = "бутылку для сиропа (Карамель)",
-		INSTRUMENTAL = "бутылкой для сиропа (Карамель)",
-		PREPOSITIONAL = "бутылке для сиропа (Карамель)"
-	)
 
 /obj/item/reagent_containers/cup/bottle/syrup_bottle/liqueur
 	name = "bottle of coffee liqueur syrup"
-	desc = "Стеклянная бутылка для сиропа, предназначенного для добавления в кофе. Оснащена удобным дозатором. \
-			Содержит мексиканский ликёр \"Калуа\". В производстве с 1936 года!"
+	desc = "A glass bottle of syrup for adding to coffee, fitted with a convenient dispenser. Contains Mexican Kahlua liqueur. In production since 1936!"
 	list_reagents = list("kahlua" = 50)
-
-/obj/item/reagent_containers/cup/bottle/syrup_bottle/liqueur/get_ru_names()
-	return alist(
-		NOMINATIVE = "бутылка для сиропа (Калуа)",
-		GENITIVE = "бутылки для сиропа (Калуа)",
-		DATIVE = "бутылке для сиропа (Калуа)",
-		ACCUSATIVE = "бутылку для сиропа (Калуа)",
-		INSTRUMENTAL = "бутылкой для сиропа (Калуа)",
-		PREPOSITIONAL = "бутылке для сиропа (Калуа)"
-	)

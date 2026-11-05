@@ -8,7 +8,6 @@
 	speak_emote = list("позёвывает", "сонливо произносит")
 	emote_hear = list("похрапывает", "зевает")
 	emote_see = list("подрёмывает", "сонно оглядывается")
-	tts_seed = "Peon"
 	speak_chance = 1
 	turns_per_move = 5
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat = 3)

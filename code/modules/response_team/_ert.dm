@@ -121,7 +121,6 @@ ADMIN_VERB(dispatch_ert, R_EVENT, "Dispatch CentComm Response Team", "Send an Ce
 				new_commando.mind.key = user.key
 				new_commando.possess_by_player(user.ckey)
 				new_commando.update_icons()
-				new_commando.change_voice()
 				break
 	GLOB.send_emergency_team = FALSE
 

@@ -129,20 +129,12 @@ GLOBAL_DATUM_INIT(major_announcement, /datum/announcer, new(config_type = /datum
 	return list(receivers, garbled_receivers)
 
 /datum/announcer/proc/announce_message(message, garbled_message, receivers, garbled_receivers, message_sound)
-	var/tts_seed = "Glados"
-	if(length(GLOB.ai_list))
-		var/mob/living/silicon/ai/AI = pick(GLOB.ai_list)
-		tts_seed = AI.tts_seed
-	var/message_tts = message
-	var/garbled_message_tts = garbled_message
 	message = replace_characters(message, list("+"))
 	garbled_message = replace_characters(garbled_message, list("+"))
 	for(var/mob/mob in receivers)
 		to_chat(mob, message, MESSAGE_TYPE_WARNING)
-		INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, null, mob, message_tts, tts_seed, FALSE, SOUND_EFFECT_NONE, TTS_TRAIT_RATE_MEDIUM, message_sound)
 	for(var/mob/mob in garbled_receivers)
 		to_chat(mob, garbled_message, MESSAGE_TYPE_WARNING)
-		INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, null, mob, garbled_message_tts, tts_seed, FALSE, SOUND_EFFECT_NONE, TTS_TRAIT_RATE_MEDIUM, message_sound)
 
 /datum/announcer/proc/format(message, title, subtitle = null, color_override = null)
 	var/formatted_message = ""
@@ -187,10 +179,6 @@ GLOBAL_DATUM_INIT(major_announcement, /datum/announcer, new(config_type = /datum
 	if(!message_sound)
 		return
 	for(var/mob/mob in receivers)
-		if(CONFIG_GET(flag/tts_enabled))
-			var/volume = mob.client.prefs.get_channel_volume(CHANNEL_TTS_RADIO)
-			if(volume > 0)
-				continue
 		var/volume_mod = 100 * mob?.client?.prefs?.get_channel_volume(CHANNEL_ANNOUNCER)
 		SEND_SOUND(mob, sound(
 				message_sound,

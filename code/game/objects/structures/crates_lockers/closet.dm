@@ -119,13 +119,13 @@ GLOBAL_LIST_EMPTY(closets)
 			if(opened)
 				context[SCREENTIP_CONTEXT_RMB] = "Close"
 			else
-				context[SCREENTIP_CONTEXT_RMB] = !locked ? "Lock" : "Unlock"
+				context[SCREENTIP_CONTEXT_ALT_LMB] = !locked ? "Lock" : "Unlock"
 				if(locked)
 					context[SCREENTIP_CONTEXT_LMB] = "Unlock"
 		screentip_change = TRUE
 	if(secure && !opened && is_id_card(held_item))
 		context[SCREENTIP_CONTEXT_LMB] = !locked ? "Lock" : "Unlock"
-		context[SCREENTIP_CONTEXT_RMB] = !locked ? "Lock" : "Unlock"
+		context[SCREENTIP_CONTEXT_ALT_LMB] = !locked ? "Lock" : "Unlock"
 		screentip_change = TRUE
 
 	if(iswelder(held_item))
@@ -447,8 +447,7 @@ GLOBAL_LIST_EMPTY(closets)
 		return
 	if(opened)
 		WELDER_ATTEMPT_SLICING_MESSAGE
-		CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-		if(used.use_tool(src, user, 4 SECONDS * construction_mod, volume = used.tool_volume))
+		if(used.use_tool(src, user, 40, volume = used.tool_volume))
 			WELDER_SLICING_SUCCESS_MESSAGE
 			deconstruct(TRUE)
 			return
@@ -461,8 +460,7 @@ GLOBAL_LIST_EMPTY(closets)
 			span_notice("You begin welding [src] [adjective]..."),
 			span_warning("You hear welding.")
 		)
-		CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-		if(used.use_tool(src, user, 1.5 SECONDS * construction_mod, volume = used.tool_volume))
+		if(used.use_tool(src, user, 15, volume = used.tool_volume))
 			if(opened)
 				to_chat(user, span_notice("Keep [src] shut while doing that!"))
 				return
@@ -747,11 +745,15 @@ GAME_VERB_SRC(/obj/structure/closet, verb_toggleopen, view(1), "Toggle Open", VE
 	// Its okay to silently teleport mobs out of lockers, since the only thing affected is their contents list.
 	return
 
-/obj/structure/closet/click_alt(mob/living/simple_animal/hostile/gorilla/gorilla)
-	if(istype(gorilla))
+/obj/structure/closet/click_alt(mob/user)
+	if(istype(user, /mob/living/simple_animal/hostile/gorilla))
+		var/mob/living/simple_animal/hostile/gorilla/gorilla = user
 		gorilla.face_atom(src)
 		toggle()
 		gorilla.oogaooga()
+		return CLICK_ACTION_SUCCESS
+	if(secure && !opened && !broken)
+		togglelock(user)
 		return CLICK_ACTION_SUCCESS
 	return ..()
 

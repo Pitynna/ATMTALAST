@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable/list/listremove
 	display_name = "Список — Удалить"
-	desc = "Удаляет элемент из списка переменных."
+	desc = "Removes an entry from a list variable."
 	category = "List"
 
 	/// Element to remove to the list

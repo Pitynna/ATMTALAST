@@ -1,23 +1,12 @@
 /obj/item/grenade/frag
 	name = "frag grenade"
-	desc = "Взрывчатое устройство, предназначенное для ручного подрыва. При детонации создаёт \
-			взрывную волну и выпускает множественные осколки."
+	desc = "A grenade with a specially designed casing that will launch lethal fragments in all directions upon detonation. Fire in the hole!"
 	icon_state = "frag"
 	origin_tech = "materials=3;magnets=4"
 	det_time = 3 SECONDS
 	shrapnel_type = /obj/projectile/shrapnel/grenade
 	shrapnel_radius = 4
 	var/range = 5
-
-/obj/item/grenade/frag/get_ru_names()
-	return alist(
-		NOMINATIVE = "осколочная граната",
-		GENITIVE = "осколочной гранаты",
-		DATIVE = "осколочной гранате",
-		ACCUSATIVE = "осколочную гранату",
-		INSTRUMENTAL = "осколочной гранатой",
-		PREPOSITIONAL = "осколочной гранате"
-	)
 
 /obj/item/grenade/frag/prime()
 	. = ..()
@@ -27,19 +16,8 @@
 
 /obj/item/grenade/frag/contact
 	name = "contact frag grenade"
-	desc = "Контактная осколочная граната. Взрывается по таймеру или при приземлении. При детонации \
-			создаёт взрывную волну и выпускает множественные осколки."
+	desc = "An impact fragmentation grenade. Detonates on its timer or upon landing, producing a blast wave and numerous fragments."
 	det_time = 5 SECONDS
-
-/obj/item/grenade/frag/contact/get_ru_names()
-	return alist(
-		NOMINATIVE = "контактная осколочная граната",
-		GENITIVE = "контактной осколочной гранаты",
-		DATIVE = "контактной осколочной гранате",
-		ACCUSATIVE = "контактную осколочную гранату",
-		INSTRUMENTAL = "контактной осколочной гранатой",
-		PREPOSITIONAL = "контактной осколочной гранате"
-	)
 
 /obj/item/grenade/frag/contact/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()

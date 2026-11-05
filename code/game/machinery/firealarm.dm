@@ -72,9 +72,6 @@ GLOBAL_LIST_EMPTY(firealarms)
 	report_fire_alarms = FALSE
 	show_alert_level = FALSE
 
-/obj/machinery/firealarm/syndicate/taipan
-	report_fire_alarms = TRUE
-
 /obj/machinery/firealarm/update_icon_state()
 	if(wiresexposed)
 		icon_state = "firealarm_b[buildstage]"
@@ -174,8 +171,7 @@ GLOBAL_LIST_EMPTY(firealarms)
 	if(!I.tool_use_check(user, 0))
 		return
 	CROWBAR_ATTEMPT_PRY_CIRCUIT_MESSAGE
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(!I.use_tool(src, user, 2 SECONDS * construction_mod, volume = I.tool_volume) || buildstage != FIRE_ALARM_UNWIRED)
+	if(!I.use_tool(src, user, 20, volume = I.tool_volume) || buildstage != FIRE_ALARM_UNWIRED)
 		return
 	new /obj/item/firealarm_electronics(drop_location())
 	buildstage = FIRE_ALARM_FRAME
@@ -358,7 +354,7 @@ Just a object used in constructing fire alarms
 
 /obj/item/circuit_component/firealarm
 	display_name = "Пожарная сигнализация"
-	desc = "Интерфейс управления пожарной сигнализацией."
+	desc = "A fire alarm control interface."
 
 	var/datum/port/input/alarm_trigger
 	var/datum/port/input/reset_trigger
@@ -432,4 +428,3 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm, 26, 26)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm/no_alarm, 26, 26)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm/triggered_nosignals, 26, 26)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm/syndicate, 26, 26)
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm/syndicate/taipan, 26, 26)

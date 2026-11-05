@@ -88,7 +88,7 @@
 
 /obj/item/ecig
 	name = "electronic cigarette"
-	desc = "Гладкий никотиновый испаритель в сдержанном зелёном корпусе. Создаёт плотное, но быстро рассеивающееся облако пара. Одобрен для рабочих зон: дым без пепла и характерного запаха."
+	desc = "A sleek nicotine vaporizer in a discreet green casing. Produces a dense cloud of vapor that quickly dissipates. Approved for work areas: smoke without ash or the usual smell."
 	gender = FEMALE
 	icon = 'icons/obj/device.dmi'
 	icon_state = "ecig"
@@ -98,16 +98,6 @@
 	var/amount_left = 600
 	var/applying = FALSE
 	var/list/reagent = list("nicotine")
-
-/obj/item/ecig/get_ru_names()
-	return alist(
-		NOMINATIVE = "электронная сигарета",
-		GENITIVE = "электронной сигареты",
-		DATIVE = "электронной сигарете",
-		ACCUSATIVE = "электронную сигарету",
-		INSTRUMENTAL = "электронной сигаретой",
-		PREPOSITIONAL = "электронной сигарете"
-	)
 
 /obj/item/ecig/emag_act(mob/user)
 	if(emagged)
@@ -240,107 +230,15 @@
 
 /obj/item/ecig/syndi
 	name = "suspicious e-cigarette"
-	desc = "Гладкий никотиновый испаритель в подозрительном красном корпусе. Выдаёт плотное облако пара с лёгким химическим оттенком."
+	desc = "A sleek nicotine vaporizer in a suspicious red casing. Produces a dense cloud of vapor with a faint chemical undertone."
 	icon_state = "ecig_syndi"
 	item_state = "ecig_syndi"
 	reagent = list("nicotine", "syndiezine")
-
-/obj/item/ecig/syndi/get_ru_names()
-	return alist(
-		NOMINATIVE = "подозрительная электронная сигарета",
-		GENITIVE = "подозрительной электронной сигареты",
-		DATIVE = "подозрительной электронной сигарете",
-		ACCUSATIVE = "подозрительную электронную сигарету",
-		INSTRUMENTAL = "подозрительной электронной сигаретой",
-		PREPOSITIONAL = "подозрительной электронной сигарете"
-	)
 
 #undef MAX_AMOUNT
 #undef SAFE_THRESHOLD
 #undef AWARD_THRESHOLD
 
 #define COAL_CHOICE "Уголь"
-
-/obj/item/krampus_bag
-	name = "krampus bag"
-	desc = "Старый потрепаный мешок. На нем видны следы засохшей крови и ... угля?"
-	icon_state = "krampus_bag"
-	actions_types = list(/datum/action/item_action/krampus_bag)
-	COOLDOWN_DECLARE(bag_cooldown)
-
-/obj/item/krampus_bag/equipped(mob/user, slot, initial)
-	if(!iskrampus(user))
-		user.drop_item_ground()
-		return
-	. = ..()
-
-
-/obj/item/krampus_bag/get_ru_names()
-	return alist(
-		NOMINATIVE = "мешок Крампуса",
-		GENITIVE = "мешка Крампуса",
-		DATIVE = "мешку Крампуса",
-		ACCUSATIVE = "мешок Крампуса",
-		INSTRUMENTAL = "мешком Крампуса",
-		PREPOSITIONAL = "мешке Крампуса",
-	)
-
-/obj/item/krampus_bag/attack_self(mob/user)
-	var/mob/living/carbon/true_devil/krampus/krampus = user
-
-	if(!istype(krampus) || !COOLDOWN_FINISHED(src, bag_cooldown))
-		balloon_alert(user, "не открывается")
-		return ..()
-
-	COOLDOWN_START(src, bag_cooldown, 1 MINUTES)
-	var/choice = tgui_input_list(user, "Что вы хотите достать из мешка?", "Мешок Крампуса", krampus.bag_content + COAL_CHOICE)
-
-	if(isnull(choice))
-		return ..()
-
-	var/turf/move_turf = get_turf(user)
-
-	if(!istype(move_turf))
-		return ..()
-
-	if(choice == COAL_CHOICE)
-		new /obj/item/toy/pet_rock/naughty_coal(move_turf)
-		return ..()
-
-	var/mob/living/mob_choice = choice
-
-	if(!istype(mob_choice))
-		return ..()
-
-	mob_choice.forceMove(move_turf)
-	mob_choice.revive()
-	krampus.bag_content -= mob_choice
-	. = ..()
-
-
-/obj/item/krampus_bag/attack(mob/living/M, mob/user, params, def_zone, skip_attack_anim = FALSE)
-	if((M.stat || M?.health <= (HEALTH_THRESHOLD_CRIT + 30)) && do_after(user, 5 SECONDS, M))
-		consume(M, user)
-		return
-	..()
-
-/obj/item/krampus_bag/proc/consume(mob/living/victim, mob/user)
-	if(QDELETED(victim))
-		return
-
-	var/mob/living/carbon/true_devil/krampus/krampus = user
-
-	if(!istype(krampus))
-		balloon_alert(user, "невозможно использовать")
-		return
-
-	victim.visible_message(span_warning("[DECLENT_RU_CAP(src, NOMINATIVE)] открывается нараспашку и захватывает [victim.declent_ru(ACCUSATIVE)]!"), span_his_grace("[span_big("[declent_ru(NOMINATIVE)] захватывает вас!")]"))
-	victim.death()
-
-	LAZYADD(krampus.bag_content, victim)
-	victim.forceMove(krampus)
-
-/datum/action/item_action/krampus_bag
-	name = "Достать из мешка"
 
 #undef COAL_CHOICE

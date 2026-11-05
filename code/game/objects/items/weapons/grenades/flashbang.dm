@@ -1,7 +1,6 @@
 /obj/item/grenade/flashbang
 	name = "flashbang"
-	desc = "Взрывчатое устройство, предназначенное для ручного подрыва. При детонации испускает яркую вспышку и громкий звук, \
-			что оглушает и дезориентирует цель."
+	desc = "A less-than-lethal grenade designed for crowd control. Blinds all unprotected targets in range and disrupts their balance, sending them falling to the floor."
 	icon_state = "flashbang"
 	belt_icon = "flashbang"
 	origin_tech = "materials=2;combat=3"
@@ -10,16 +9,6 @@
 	var/light_time = 0.2 SECONDS
 	/// The range in tiles of the flashbang
 	var/range = 7
-
-/obj/item/grenade/flashbang/get_ru_names()
-	return alist(
-		NOMINATIVE = "светошумовая граната",
-		GENITIVE = "светошумовой гранаты",
-		DATIVE = "светошумовой гранате",
-		ACCUSATIVE = "светошумовую гранату",
-		INSTRUMENTAL = "светошумовой гранатой",
-		PREPOSITIONAL = "светошумовой гранате"
-	)
 
 /obj/item/grenade/flashbang/prime(power = 1)
 	. = ..()
@@ -78,10 +67,6 @@
 
 			if(issilicon(M))
 				M.Weaken(status_duration * 2)
-			if(isswarmer(M))
-				M.Weaken(SWARMER_FLASHBANG_STUN)
-
-		// Bang
 		if(!bang)
 			continue
 

@@ -7,9 +7,6 @@
 
 	. = ..()
 
-	if(!tts_seed)
-		tts_seed = SStts.get_random_seed(src)
-
 	// Physiology needs to be created before species, as some species modify physiology
 	physiology = new(src)
 
@@ -83,12 +80,6 @@
 /mob/living/carbon/human/unathi_draconid/Initialize(mapload)
 	. = ..(mapload, /datum/species/unathi/draconid)
 
-/mob/living/carbon/human/unathi_ashwalker/Initialize(mapload)
-	. = ..(mapload, /datum/species/unathi/ashwalker)
-
-/mob/living/carbon/human/unathi_ashwalker_shaman/Initialize(mapload)
-	. = ..(mapload, /datum/species/unathi/ashwalker/shaman)
-
 /mob/living/carbon/human/vox/Initialize(mapload)
 	. = ..(mapload, /datum/species/vox)
 
@@ -115,14 +106,6 @@
 
 /mob/living/carbon/human/diona/Initialize(mapload)
 	. = ..(mapload, /datum/species/diona)
-	if(!tts_seed)
-		tts_seed = "Priest"
-
-/mob/living/carbon/human/pod_diona/Initialize(mapload)
-	. = ..(mapload, /datum/species/diona/pod)
-	if(!tts_seed)
-		tts_seed = "Priest"
-
 /mob/living/carbon/human/machine/Initialize(mapload)
 	. = ..(mapload, /datum/species/machine)
 
@@ -146,66 +129,6 @@
 
 /mob/living/carbon/human/shadow/Initialize(mapload)
 	. = ..(mapload, /datum/species/shadow)
-
-/mob/living/carbon/human/shadowling/Initialize(mapload)
-	. = ..(mapload, /datum/species/shadow/ling)
-
-/mob/living/carbon/human/golem/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem)
-
-/mob/living/carbon/human/golem_random/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/random)
-
-/mob/living/carbon/human/golem_adamantine/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/adamantine)
-
-/mob/living/carbon/human/golem_plasma/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plasma)
-
-/mob/living/carbon/human/golem_diamond/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/diamond)
-
-/mob/living/carbon/human/golem_gold/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/gold)
-
-/mob/living/carbon/human/golem_silver/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/silver)
-
-/mob/living/carbon/human/golem_plasteel/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plasteel)
-
-/mob/living/carbon/human/golem_titanium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/titanium)
-
-/mob/living/carbon/human/golem_plastitanium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plastitanium)
-
-/mob/living/carbon/human/golem_alien_alloy/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/alloy)
-
-/mob/living/carbon/human/golem_uranium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/uranium)
-
-/mob/living/carbon/human/golem_plastic/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/plastic)
-
-/mob/living/carbon/human/golem_sand/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/sand)
-
-/mob/living/carbon/human/golem_glass/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/glass)
-
-/mob/living/carbon/human/golem_bluespace/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/bluespace)
-
-/mob/living/carbon/human/golem_bananium/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/bananium)
-
-/mob/living/carbon/human/golem_tranquillite/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/tranquillite)
-
-/mob/living/carbon/human/golem_clockwork/Initialize(mapload)
-	. = ..(mapload, /datum/species/golem/clockwork)
 
 /mob/living/carbon/human/wryn/Initialize(mapload)
 	. = ..(mapload, /datum/species/wryn)
@@ -259,14 +182,6 @@
 		if(vamp)
 			status_tab_data[++status_tab_data.len] = list("Всего крови:", "[vamp.bloodtotal]")
 			status_tab_data[++status_tab_data.len] = list("Доступная кровь:", "[vamp.bloodusable]")
-
-		if(isclocker(mind.current))
-			status_tab_data[++status_tab_data.len] = list("Заряд:", "[GLOB.clockwork_power]")
-
-		var/datum/antagonist/ninja/ninja = mind?.has_antag_datum(/datum/antagonist/ninja)
-		if(ninja?.my_suit)
-			status_tab_data[++status_tab_data.len] = list("Заряд костюма:","[ninja.get_cell_charge()]")
-			status_tab_data[++status_tab_data.len] = list("Заряд рывков:","[ninja.get_dash_charge()]")
 
 	if(isspacepod(loc))
 		var/obj/spacepod/S = loc
@@ -574,22 +489,13 @@
 			var/obj/item/organ/external/bodypart = locateUID(href_list["open_fracture_limb"])
 			if(QDELETED(bodypart) || !bodypart.has_fracture() || bodypart.fracture != FRACTURE_TYPE_OPEN)
 				return
-			GET_SKILL_LEVEL(usr, /datum/skill/medical/heal, heal_skill_level)
-			if(heal_skill_level < SKILL_LEVEL_BEGINNER)
-				balloon_alert(usr, "проблема с навыками")
-				return
-			// level 2 - 20%, levl 3 - 40%, level 4 - 60%, level 5 - 80%, level 6,7 - 100%
-			var/reattach_chance = min(100, 20 * (heal_skill_level - SKILL_LEVEL_NONE))
-			if(usr != src) // double chance
-				reattach_chance = min(100, reattach_chance * 2)
 			if(!do_after(usr, 10 SECONDS, src, max_interact_count = 1))
 				return
 			if(QDELETED(bodypart) || !bodypart.has_fracture() || bodypart.fracture != FRACTURE_TYPE_OPEN)
 				return
 			bodypart.owner.emote("scream")
-			if(prob(reattach_chance)) //success
+			if(prob(bodypart.fracture.reattach_chance)) //success
 				bodypart.fracture = FRACTURE_TYPE_CLOSED
-				balloon_alert(usr, "кость вправлена")
 				return
 			bodypart.owner.custom_pain("Ваш[GEND_A_E_I(bodypart)] [bodypart.declent_ru_base(NOMINATIVE)] горит огнем!")
 			bodypart.external_receive_damage(brute = bodypart.fracture.reattach_fail_damage)
@@ -1042,7 +948,6 @@ GAME_VERB_SRC(/mob/living/carbon/human, check_pulse, view(1), "Проверит�
 	// DNA ready
 	dna.ready_dna(src, TRUE, monkeybasic)
 	dna.real_name = real_name
-	dna.tts_seed_dna = tts_seed
 	sync_organ_dna()
 
 /mob/living/carbon/human/proc/change_dna(datum/dna/new_dna, include_species_change = FALSE, keep_flavor_text = FALSE)
@@ -1514,97 +1419,51 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 		step_towards(hand_item, src)
 		to_chat(src, span_warning("[singularity.declent_ru(NOMINATIVE)] вырывает [hand_item.declent_ru(ACCUSATIVE)] из вашей хватки!"))
 
-/mob/living/carbon/human/narsie_act(obj/god/narsie)
-	if(iswizard(src) && iscultist(src)) //Wizard cultists are immune to narsie because it would prematurely end the wiz round that's about to end by the automated shuttle call anyway
-		return
-	if(narsie)
-		narsie.soul_devoured++
-	return ..()
-
-/mob/living/carbon/human/ratvar_act(weak, obj/god/ratvar)
-	if(ratvar)
-		ratvar.soul_devoured++
-	return ..()
-
-/mob/living/carbon/human/proc/do_cpr(mob/living/carbon/human/target_human)
-	GET_SKILL_LEVEL(src, /datum/skill/medical/heal, heal_skill_level)
-	if(heal_skill_level < SKILL_LEVEL_BASIC)
-		return // skill issue
-	if(target_human == src)
+/mob/living/carbon/human/proc/do_cpr(mob/living/carbon/human/H)
+	if(H == src)
 		balloon_alert(src, "слр на себе невозможна!")
 		return
-	if(target_human.stat == DEAD || HAS_TRAIT(target_human, TRAIT_FAKEDEATH))
+	if(H.stat == DEAD || HAS_TRAIT(H, TRAIT_FAKEDEATH))
 		balloon_alert(src, "цель мертва!")
 		return
 	if(!check_has_mouth())
 		balloon_alert(src, "у вас нет рта!")
 		return
-	if(!target_human.check_has_mouth())
+	if(!H.check_has_mouth())
 		balloon_alert(src, "у цели нет рта!")
 		return
 	if((head && (head.flags_cover & HEADCOVERSMOUTH)) || (wear_mask && (wear_mask.flags_cover & MASKCOVERSMOUTH) && !wear_mask.up))
 		balloon_alert(src, "ваш рот заблокирован!")
 		return
-	if((target_human.head && (target_human.head.flags_cover & HEADCOVERSMOUTH)) || (target_human.wear_mask && (target_human.wear_mask.flags_cover & MASKCOVERSMOUTH) && !target_human.wear_mask.up))
+	if((H.head && (H.head.flags_cover & HEADCOVERSMOUTH)) || (H.wear_mask && (H.wear_mask.flags_cover & MASKCOVERSMOUTH) && !H.wear_mask.up))
 		balloon_alert(src, "рот цели заблокирован!")
 		return
-	if(target_human.receiving_cpr) // To prevent spam stacking
+	if(H.receiving_cpr) // To prevent spam stacking
 		balloon_alert(src, "на цели уже применяют слр!")
 		return
 	visible_message(
-		span_danger("[src] пыта[PLUR_ET_YUT(src)]ся провести СЛР на [target_human.declent_ru(PREPOSITIONAL)]."),
+		span_danger("[src] пыта[PLUR_ET_YUT(src)]ся провести СЛР на [H.declent_ru(PREPOSITIONAL)]."),
 		ignored_mobs = src
 	)
-	target_human.balloon_alert(src, "проведение слр...")
-	target_human.receiving_cpr = TRUE
-	var/cpr_power = max(0, heal_skill_level - SKILL_LEVEL_ADVANCED)
-	var/cpr_logged = FALSE
-	while(!QDELETED(target_human) && !QDELETED(src) && target_human.health <= HEALTH_THRESHOLD_CRIT)
-		if(target_human.stat == DEAD || HAS_TRAIT(target_human, TRAIT_FAKEDEATH))
-			break
-		if(!do_after(src, 4 SECONDS, target_human, NONE))
-			balloon_alert(src, "не двигайтесь во время слр!")
-			break
-		if(QDELETED(target_human) || QDELETED(src) || target_human.health > HEALTH_THRESHOLD_CRIT)
-			break
-		if(target_human.stat == DEAD || HAS_TRAIT(target_human, TRAIT_FAKEDEATH))
-			break
-		target_human.heal_damage_type(15 + cpr_power * 5, OXY)
-		target_human.SetLoseBreath(0)
-		var/paralysis_reduction = (2 + cpr_power) SECONDS
-		target_human.AdjustParalysis(-paralysis_reduction)
-		visible_message(
-			span_danger("[src] успешно провод[PLUR_IT_YAT(src)] СЛР на [target_human.declent_ru(PREPOSITIONAL)]."),
-			ignored_mobs = src
-		)
-		target_human.balloon_alert(src, "слр проведена")
-		to_chat(target_human, span_notice("Вы чувствуете поток свежего воздуха, идущего в ваши лёгкие."))
-		if(!cpr_logged)
-			add_attack_logs(src, target_human, "CPRed", ATKLOG_ALL)
-			cpr_logged = TRUE
-		target_human.try_cpr_status_cure(heal_skill_level)
-	if(!QDELETED(target_human))
-		target_human.receiving_cpr = FALSE
-	return TRUE
-
-/// remove random status effect
-/mob/living/carbon/human/proc/try_cpr_status_cure(heal_skill_level)
-	var/list/removable_effects = list()
-	for(var/datum/status_effect/effect as anything in status_effects)
-		if(istype(effect, /datum/status_effect/transient) || istype(effect, /datum/status_effect/incapacitating))
-			removable_effects += effect
-	if(!length(removable_effects))
-		return FALSE
-	var/cure_chance = max(1, heal_skill_level - SKILL_LEVEL_ADVANCED + 1)
-	if(!prob(cure_chance))
-		return FALSE
-	var/datum/status_effect/effect_to_remove = pick(removable_effects)
-	remove_status_effect(effect_to_remove.type)
-	visible_message(
-		span_notice("[GEND_HE_SHE_CAP(src)] приход[PLUR_IT_YAT(src)] в себя после СЛР."),
-		span_notice("Вы приходите в себя после СЛР.")
-	)
-	return TRUE
+	H.balloon_alert(src, "проведение слр...")
+	H.receiving_cpr = TRUE
+	if(do_after(src, 4 SECONDS, H, NONE))
+		if(H.health <= HEALTH_THRESHOLD_CRIT)
+			H.heal_damage_type(15, OXY)
+			H.SetLoseBreath(0)
+			H.AdjustParalysis(-2 SECONDS)
+			visible_message(
+				span_danger("[src] успешно провод[PLUR_IT_YAT(src)] СЛР на [H.declent_ru(PREPOSITIONAL)]."),
+				ignored_mobs = src
+			)
+			H.balloon_alert(src, "слр проведена")
+			to_chat(H, span_notice("Вы чувствуете поток свежего воздуха, идущего в вашие лёгкие."))
+			H.receiving_cpr = FALSE
+			add_attack_logs(src, H, "CPRed", ATKLOG_ALL)
+			return TRUE
+	else
+		H.receiving_cpr = FALSE
+		balloon_alert(src, "не двигайтесь во время слр!")
 
 /mob/living/carbon/human/has_mutated_organs()
 	for(var/obj/item/organ/external/E as anything in bodyparts)
@@ -1717,11 +1576,6 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 		return FALSE
 
 	// ninjas will not use default ranged weapons
-	var/datum/antagonist/ninja/ninja = mind?.has_antag_datum(/datum/antagonist/ninja)
-	if(ninja && !ninja.allow_guns && !check_gun.ninja_weapon)
-		to_chat(src, "[ninja.no_guns_message]")
-		return FALSE
-
 /mob/living/carbon/human/proc/change_icobase(new_icobase, new_deform, owner_sensitive)
 	for(var/obj/item/organ/external/O as anything in bodyparts)
 		O.change_organ_icobase(new_icobase, new_deform, owner_sensitive) //Change the icobase/deform of all our organs. If owner_sensitive is set, that means the proc won't mess with frankenstein limbs.
@@ -2199,7 +2053,7 @@ GAME_VERB_DESC(/mob/living/carbon/human, set_flavor, "Описание внеш�
 			[belt?.icon] [belt?.icon_state]"
 
 /mob/living/carbon/human/proc/get_unarmed_attack()
-	var/datum/antagonist/zombie/zombie = mind?.has_antag_datum(/datum/antagonist/zombie)
-	if(!istype(zombie))
-		return dna.species.unarmed
-	return zombie.claw_attack
+	return dna.species.unarmed
+
+/mob/living/carbon/human/pod_diona/Initialize(mapload)
+	. = ..(mapload, /datum/species/diona/pod)

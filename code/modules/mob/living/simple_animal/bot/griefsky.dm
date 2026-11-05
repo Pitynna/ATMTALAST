@@ -19,7 +19,7 @@
 	var/stun_chance = 50
 	var/spam_flag = FALSE
 	var/frustration_number = 15
-	var/syndie = FALSE	// taipan griefsky
+	var/syndie = FALSE	// Syndicate variant
 
 /mob/living/simple_animal/bot/secbot/griefsky/get_ru_names()
 	return alist(
@@ -59,33 +59,6 @@
 
 /obj/machinery/bot_core/toy
 	req_access = list(ACCESS_MAINT_TUNNELS, ACCESS_THEATRE, ACCESS_ROBOTICS)
-
-/mob/living/simple_animal/bot/secbot/griefsky/syndicate
-	name = "General Syndie"
-	desc = "В процессе его создания пострадало как минимум 24 агента. 22 из них не выжили..."
-	icon_state = "general_syndie0"
-	base_icon = "general_syndie"
-	spin_icon = "general_syndie-c"
-	radio_channel = SYND_TAIPAN_FREQ_NAME
-	faction = list("syndicate")
-	allow_pai = TRUE
-	auto_patrol = TRUE
-	remote_disabled = TRUE
-	weaponscheck = TRUE
-	check_records = FALSE
-	idcheck = TRUE
-	bot_core_type = /obj/machinery/bot_core/syndicate
-	syndie = TRUE
-
-/mob/living/simple_animal/bot/secbot/griefsky/syndicate/get_ru_names()
-	return alist(
-		NOMINATIVE = "Генерал Синди",
-		GENITIVE = "Генерала Синди",
-		DATIVE = "Генералу Синди",
-		ACCUSATIVE = "Генерала Синди",
-		INSTRUMENTAL = "Генералом Синди",
-		PREPOSITIONAL = "Генерале Синди",
-	)
 
 /obj/machinery/bot_core/syndicate
 	req_access = list(ACCESS_SYNDICATE)
@@ -160,9 +133,6 @@
 	if(!on)
 		return
 
-	if(hijacked)
-		return // is there a good reason this override doesn't call its parent?
-
 	switch(mode)
 		if(BOT_IDLE)		// idle
 			icon_state = "[base_icon][on]"
@@ -223,9 +193,6 @@
 				threatlevel = 0
 			else if(!("syndicate" in C.faction))
 				threatlevel = 20
-			if(is_taipan(z) && C.mind?.assigned_role != "Space Base Syndicate Comms Officer" && (check_for_mug(C.get_active_hand()) || check_for_mug(C.get_inactive_hand())))
-				speak("[C.name], наглый ты воришка! Положи кружку на место!", radio_channel)
-				threatlevel += 4
 		else
 			threatlevel = C.assess_threat(src)
 
@@ -247,13 +214,8 @@
 			continue
 
 /**
- * Taipan bullshit.
+ * Mug interaction.
  */
-/mob/living/simple_animal/bot/secbot/griefsky/proc/check_for_mug(obj/item/slot_item)
-	if(istype(slot_item, /obj/item/reagent_containers/cup/glass/mug/comms))
-		return TRUE
-	return FALSE
-
 /mob/living/simple_animal/bot/secbot/griefsky/explode()
 	GLOB.move_manager.stop_looping(src)
 	visible_message(span_boldannounceic("[DECLENT_RU_CAP(src, NOMINATIVE)] разлетается на части!"))
@@ -313,4 +275,3 @@
 		playsound(loc, 'sound/weapons/blade1.ogg', 50, TRUE, -1)
 		return ATTACK_CHAIN_BLOCKED_ALL
 	return ..()
-

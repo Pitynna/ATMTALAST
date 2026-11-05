@@ -6,9 +6,7 @@
 
 /obj/item/circuit_component/ntnet_send
 	display_name = "NTNet передатчик"
-	desc = "Отправляет пакет данных через NTNet. \
-			Если установлен ключ шифрования, переданные данные будут приняты \
-			только получателями с таким же ключом шифрования."
+	desc = "Sends a data packet over NTNet. If an encryption key is set, only receivers with the same key will accept it."
 	category = "NTNet"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL

@@ -114,13 +114,6 @@
 	user.get_up(instant = TRUE)
 	to_chat(user, span_notice("Вы наполняете свое тело чистой кровью и снимаете все обездвиживающие эффекты."))
 	var/datum/antagonist/vampire/vampire_datum = user.mind.has_antag_datum(/datum/antagonist/vampire)
-	for(var/datum/disease/virus/zombie/zombie_infection in user.diseases)
-		zombie_infection.stage = min(zombie_infection.stage, round(7 - (vampire_datum.bloodtotal/100))) // 700 max usable blood can cleanse any zombie infection
-		if(zombie_infection.stage <= 0)
-			zombie_infection.cure()
-			to_chat(user, span_notice("Вы очищаете свой организм от чумы."))
-		else
-			to_chat(user, span_warning("Вы ослабляете чуму в своём организме, но у вас недостаточно крови, чтобы полностью её удалить."))
 	var/rejuv_bonus = vampire_datum.get_rejuv_bonus()
 	if(rejuv_bonus)
 		INVOKE_ASYNC(src, PROC_REF(heal), user, rejuv_bonus)
@@ -244,10 +237,7 @@
 	subclass = new_subclass
 	if(subclass_to_add == SUBCLASS_BESTIA)
 		suck_rate = BESTIA_SUCK_RATE
-	if(subclass?.skill_type)
-		skill_bonuses[subclass.skill_type] = subclass.skill_level
 	check_vampire_upgrade(announce)
-	owner.refresh_skills()
 	if(log_choice)
 		SSblackbox.record_feedback("nested tally", "vampire_subclasses", 1, list("[new_subclass.name]"))
 
@@ -405,8 +395,8 @@
 	to_chat(owner, span_warning("Вы направляете поток блюспейс энергии в тело [victim], запуская необратимый процесс мутации!"))
 	playsound(owner, 'sound/magic/wandodeath.ogg', 70, TRUE)
 	owner.Beam(victim, "sendbeam", 'icons/effects/effects.dmi', time = 3 SECONDS, maxdistance = 7, beam_type = /obj/effect/ebeam)
-	new /obj/effect/temp_visual/cult/sparks(owner.loc)
-	new /obj/effect/temp_visual/cult/sparks(victim.loc)
+	new /obj/effect/temp_visual/blood_magic_sparks(owner.loc)
+	new /obj/effect/temp_visual/blood_magic_sparks(victim.loc)
 	add_attack_logs(owner, victim, "raised from the dead as a free vampire")
 	victim.revive()
 	victim.mind.make_free_vampire()
@@ -455,12 +445,12 @@
 
 /datum/action/cooldown/spell/aoe/raise_vampires/before_cast(atom/cast_on)
 	. = ..()
-	new /obj/effect/temp_visual/cult/sparks(owner.loc)
+	new /obj/effect/temp_visual/blood_magic_sparks(owner.loc)
 	to_chat(owner, span_warning("Вы взываете к блюспейсу, призывая на помощь ещё больше вампирических духов!"))
 
 /datum/action/cooldown/spell/aoe/raise_vampires/cast_on_thing_in_aoe(atom/victim, atom/caster)
 	caster.Beam(victim, "sendbeam", 'icons/effects/effects.dmi', time = 30, maxdistance = 7, beam_type = /obj/effect/ebeam)
-	new /obj/effect/temp_visual/cult/sparks(victim.loc)
+	new /obj/effect/temp_visual/blood_magic_sparks(victim.loc)
 	raise_vampire(owner, victim)
 
 /datum/action/cooldown/spell/aoe/raise_vampires/proc/raise_vampire(mob/user, mob/living/carbon/human/victim)

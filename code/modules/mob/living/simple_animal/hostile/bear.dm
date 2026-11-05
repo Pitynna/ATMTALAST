@@ -10,7 +10,6 @@
 	speak_emote = list("фырчит", "рычит")
 	emote_hear = list("рычит", "ревёт", "фыркает")
 	emote_see = list("свирепо осматривается", "топчется на месте")
-	tts_seed = "Shaker"
 	speak_chance = 1
 	turns_per_move = 5
 	nightvision = 6

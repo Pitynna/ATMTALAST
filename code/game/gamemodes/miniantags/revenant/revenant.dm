@@ -36,7 +36,6 @@
 	pass_flags_self = PASSMOB | PASSPROJECTILE
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 
-	tts_seed = "Sylvanas"
 
 	var/essence = 75 //The resource of revenants. Max health is equal to three times this amount
 	var/essence_regen_cap = 75 //The regeneration cap of essence (go figure); regenerates every Life() tick up to this amount.
@@ -116,12 +115,6 @@
 
 /mob/living/simple_animal/revenant/singularity_act()
 	return //don't walk into the singularity expecting to find corpses, okay?
-
-/mob/living/simple_animal/revenant/narsie_act()
-	return //most humans will now be either bones or harvesters, but we're still un-alive.
-
-/mob/living/simple_animal/revenant/ratvar_act()
-	return
 
 /mob/living/simple_animal/revenant/electrocute_act(shock_damage, atom/source, siemens_coeff = 1, flags = NONE, jitter_time = 10 SECONDS, stutter_time = 6 SECONDS, stun_duration = 4 SECONDS)
 	return FALSE //You are a ghost, atmos and grill makes sparks, and you make your own shocks with lights.
@@ -413,7 +406,7 @@
 
 /obj/item/ectoplasm/revenant
 	name = "glimmering residue"
-	desc = "Куча мелкой синей пыли. Вокруг неё вьются тонкие фиолетовые туманные завитки."
+	desc = "A pile of fine blue dust. Small tendrils of violet mist swirl around it."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "revenantEctoplasm"
 	w_class = WEIGHT_CLASS_SMALL
@@ -422,16 +415,6 @@
 	var/essence = 75 //the maximum essence of the reforming revenant
 	var/inert = FALSE
 	var/client/client_to_revive
-
-/obj/item/ectoplasm/revenant/get_ru_names()
-	return alist(
-		NOMINATIVE = "фантомная пыль",
-		GENITIVE = "фантомной пыли",
-		DATIVE = "фантомной пыли",
-		ACCUSATIVE = "фантомную пыль",
-		INSTRUMENTAL = "фантомной пылью",
-		PREPOSITIONAL = "фантомной пыли",
-	)
 
 /obj/item/ectoplasm/revenant/Initialize(mapload)
 	. = ..()

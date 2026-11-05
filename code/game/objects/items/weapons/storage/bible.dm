@@ -1,6 +1,6 @@
 /obj/item/storage/bible
 	name = "bible"
-	desc = "Многократно прислоняйте к голове."
+	desc = "Apply to head repeatedly."
 	gender = FEMALE
 	lefthand_file = 'icons/mob/inhands/chaplain_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/chaplain_righthand.dmi'
@@ -37,16 +37,6 @@
 		"Грин текст" =			list("state" = "bible_greentext",	  	"inhand" = "greentext"),
 )
 
-/obj/item/storage/bible/get_ru_names()
-	return alist(
-		NOMINATIVE = "Библия",
-		GENITIVE = "Библии",
-		DATIVE = "Библии",
-		ACCUSATIVE = "Библию",
-		INSTRUMENTAL = "Библией",
-		PREPOSITIONAL = "Библии",
-	)
-
 /obj/item/storage/bible/copy
 	has_antimagic = FALSE
 
@@ -81,16 +71,6 @@
 	return TRUE // Don't run the fart emote
 
 /obj/item/storage/bible/booze
-
-/obj/item/storage/bible/booze/get_ru_names()
-	return alist(
-		NOMINATIVE = "Библия",
-		GENITIVE = "Библии",
-		DATIVE = "Библии",
-		ACCUSATIVE = "Библию",
-		INSTRUMENTAL = "Библией",
-		PREPOSITIONAL = "Библии",
-	)
 
 /obj/item/storage/bible/booze/populate_contents()
 	new /obj/item/reagent_containers/cup/soda_cans/beer(src)
@@ -210,14 +190,8 @@
 
 	if(isfloorturf(target))
 		to_chat(user, span_notice("Вы ударяете пол [declent_ru(INSTRUMENTAL)]."))
-		if(user.mind && HAS_MIND_TRAIT(user, TRAIT_HOLY))
-			for(var/obj/O in target)
-				O.cult_reveal()
 	if(is_airlock(target))
 		to_chat(user, span_notice("Вы ударяете шлюз [declent_ru(INSTRUMENTAL)]."))
-		if(user.mind && HAS_MIND_TRAIT(user, TRAIT_HOLY))
-			var/obj/airlock = target
-			airlock.cult_reveal()
 
 	var/obj/item/storage/bible/bible = astype(target, /obj/item/storage/bible/copy)
 

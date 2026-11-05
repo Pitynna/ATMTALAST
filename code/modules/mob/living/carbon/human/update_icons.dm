@@ -208,10 +208,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts)
 				base_icon.Blend(temp, ICON_OVERLAY)
 
 		if(!skeleton)
-			if(isgolem(src))
-				var/datum/species/golem/G = src.dna.species
-				if(G.golem_colour)
-					base_icon?.ColorTone(G.golem_colour)
 			if(husk)
 				base_icon.ColorTone(husk_color_mod)
 			else if(hulk)
@@ -1412,4 +1408,3 @@ use_item_state: SS1984 legacy var, used to fix fact, that item_state randomly us
 
 /mob/living/carbon/human/get_cached_height()
 	return cached_body_height
-

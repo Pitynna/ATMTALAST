@@ -87,7 +87,7 @@
 	add_game_logs("was made into a slime by pyroclastic anomaly at [AREACOORD(turf)].", slime)
 
 /obj/effect/anomaly/atmospheric/tier1
-	name = "малая атмосферная аномалия"
+	name = "minor atmospheric anomaly"
 	core_type = /obj/item/assembly/signaler/core/atmospheric/tier1
 	stronger_anomaly_type = /obj/effect/anomaly/atmospheric/tier2
 	tier = 1
@@ -100,18 +100,8 @@
 	collapse_range = 2
 	collapse_gas_amount = 150
 
-/obj/effect/anomaly/atmospheric/tier1/get_ru_names()
-	return alist(
-		NOMINATIVE = "малая атмосферная аномалия", \
-		GENITIVE = "малой атмосферной аномалии", \
-		DATIVE = "малой атмосферной аномалии", \
-		ACCUSATIVE = "малую ​​атмосферную аномалию", \
-		INSTRUMENTAL = "малой ​атмосферной аномалией", \
-		PREPOSITIONAL = "малой ​​атмосферной аномалии",
-	)
-
 /obj/effect/anomaly/atmospheric/tier2
-	name = "атмосферная аномалия"
+	name = "atmospheric anomaly"
 	core_type = /obj/item/assembly/signaler/core/atmospheric/tier2
 	weaker_anomaly_type = /obj/effect/anomaly/atmospheric/tier1
 	stronger_anomaly_type = /obj/effect/anomaly/atmospheric/tier3
@@ -126,18 +116,8 @@
 	collapse_gas_amount = 350
 	collapse_slimes_high = 2
 
-/obj/effect/anomaly/atmospheric/tier2/get_ru_names()
-	return alist(
-		NOMINATIVE = "атмосферная аномалия", \
-		GENITIVE = "атмосферной аномалии", \
-		DATIVE = "атмосферной аномалии", \
-		ACCUSATIVE = "​​атмосферную аномалию", \
-		INSTRUMENTAL = "​атмосферной аномалией", \
-		PREPOSITIONAL = "​​атмосферной аномалии",
-	)
-
 /obj/effect/anomaly/atmospheric/tier3
-	name = "большая атмосферная аномалия"
+	name = "major atmospheric anomaly"
 	core_type = /obj/item/assembly/signaler/core/atmospheric/tier3
 	weaker_anomaly_type = /obj/effect/anomaly/atmospheric/tier2
 	tier = 3
@@ -150,16 +130,6 @@
 	collapse_range = 7
 	collapse_gas_amount = 700
 	collapse_slimes_high = 3
-
-/obj/effect/anomaly/atmospheric/tier3/get_ru_names()
-	return alist(
-		NOMINATIVE = "большая атмосферная аномалия", \
-		GENITIVE = "большой атмосферной аномалии", \
-		DATIVE = "большой атмосферной аномалии", \
-		ACCUSATIVE = "большую ​​атмосферную аномалию", \
-		INSTRUMENTAL = "большой ​атмосферной аномалией", \
-		PREPOSITIONAL = "большой ​​атмосферной аномалии",
-	)
 
 /obj/effect/anomaly/atmospheric/tier3/Initialize(mapload, spawn_strength, spawn_stability)
 	. = ..()
@@ -183,7 +153,7 @@
 //		TIER 4 ANOMALY | ADMIN SPAWN ONLY!
 
 /obj/effect/anomaly/atmospheric/tier4
-	name = "колосальная атмосферная аномалия"
+	name = "colossal atmospheric anomaly"
 	core_type = /obj/item/assembly/signaler/core/atmospheric/tier3/tier4
 	weaker_anomaly_type = /obj/effect/anomaly/atmospheric/tier4
 	tier = 4
@@ -199,16 +169,6 @@
 	collapse_gas_amount = 5000
 	collapse_slimes_low = 3
 	collapse_slimes_high = 6
-
-/obj/effect/anomaly/atmospheric/tier4/get_ru_names()
-	return alist(
-		NOMINATIVE = "колосальная атмосферная аномалия", \
-		GENITIVE = "колоссальной атмосферной аномалии", \
-		DATIVE = "колоссальной атмосферной аномалии", \
-		ACCUSATIVE = "колосальную ​​атмосферную аномалию", \
-		INSTRUMENTAL = "колоссальной ​атмосферной аномалией", \
-		PREPOSITIONAL = "колоссальной ​атмосферной аномалии",
-	)
 
 /obj/effect/anomaly/atmospheric/tier4/do_move(dir)
 	. = ..()

@@ -1,7 +1,7 @@
 /datum/sprite_accessory/body_markings/unathi
 	abstract_type = /datum/sprite_accessory/body_markings/unathi
 	icon = 'icons/mob/sprite_accessories/unathi/unathi_body_markings.dmi'
-	species_allowed = list(SPECIES_UNATHI, SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_DRACONOID)
+	species_allowed = list(SPECIES_UNATHI, SPECIES_DRACONOID)
 
 /datum/sprite_accessory/body_markings/unathi/stripe_una
 	name = "Unathi Stripe"

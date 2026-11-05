@@ -1,5 +1,5 @@
 /obj/mecha/makeshift
-	desc = "Шкафчик с украденными проводами, распорками, электроникой и сервоприводами шлюза, грубо собранными во что-то, напоминающее меха."
+	desc = "A locker with stolen wires, struts, electronics and airlock servos crudley assemebled into something that resembles the fuctions of a mech."
 	name = "Locker Mech"
 	gender = MALE
 	icon = 'icons/obj/mecha/lockermech.dmi'
@@ -17,16 +17,6 @@
 	cargo_capacity = 5 // you can fit a few things in this locker but not much.
 	mech_type = MECH_TYPE_LOCKER
 
-/obj/mecha/makeshift/get_ru_names()
-	return alist(
-		NOMINATIVE = "Шкафомех",
-		GENITIVE = "Шкафомеха",
-		DATIVE = "Шкафомеху",
-		ACCUSATIVE = "Шкафомеха",
-		INSTRUMENTAL = "Шкафомехом",
-		PREPOSITIONAL = "Шкафомехе",
-	)
-
 /obj/mecha/makeshift/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
@@ -36,7 +26,7 @@
 	return ..()
 
 /obj/mecha/makeshift/lockersyndie
-	desc = "Шкафчик с украденными проводами, распорками, электроникой и сервоприводами шлюза, грубо собранными во что-то, напоминающее меха. Окрашен в темно-красный цвет."
+	desc = "A locker with stolen wires, struts, electronics and airlock servos crudley assemebled into something that resembles the fuctions of a mech. Dark-red painted."
 	name = "Syndie Locker Mech"
 	icon_state = "syndielockermech"
 	initial_icon = "syndielockermech"
@@ -47,16 +37,6 @@
 	max_equip = 4
 	ui_theme = "syndicate"
 	allowed_equipment = MECH_EQUIPMENT_ALL
-
-/obj/mecha/makeshift/lockersyndie/get_ru_names()
-	return alist(
-		NOMINATIVE = "Синди-Шкафомех",
-		GENITIVE = "Синди-Шкафомеха",
-		DATIVE = "Синди-Шкафомеху",
-		ACCUSATIVE = "Синди-Шкафомеха",
-		INSTRUMENTAL = "Синди-Шкафомехом",
-		PREPOSITIONAL = "Синди-Шкафомехе",
-	)
 
 /obj/mecha/makeshift/lockersyndie/add_cell()
 	cell = new /obj/item/stock_parts/cell/high/slime(src)
@@ -83,7 +63,7 @@
 
 /obj/item/mecha_drop
 	name = "mechadrop tool"
-	desc = "Простой инструмент, всего с одной кнопкой."
+	desc = "Simple looking tool with only one button"
 	icon = 'icons/obj/device.dmi'
 	icon_state = "pointer"
 	item_state = "pen"
@@ -91,16 +71,6 @@
 	var/obj/mecha/summon_mecha
 	var/list/summon_sound = 'sound/items/bikehorn.ogg'
 	var/used = FALSE
-
-/obj/item/mecha_drop/get_ru_names()
-	return alist(
-		NOMINATIVE = "инструмент для доставки меха",
-		GENITIVE = "инструмента для доставки меха",
-		DATIVE = "инструменту для доставки меха",
-		ACCUSATIVE = "инструмент для доставки меха",
-		INSTRUMENTAL = "инструментом для доставки меха",
-		PREPOSITIONAL = "инструменте для доставки меха",
-	)
 
 /obj/item/mecha_drop/Initialize(mapload)
 	. = ..()

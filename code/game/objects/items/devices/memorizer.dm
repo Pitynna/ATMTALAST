@@ -158,8 +158,8 @@
 	burn_out()
 
 /obj/item/memorizer/syndicate
-	name = "Нейрализатор"
-	desc = "Если перед вами сработает это устройство, скорее всего вы не сможете об этом вспомнить!"
+	name = "neuralyzer"
+	desc = "If this device goes off in front of you, you probably won't remember it!"
 	origin_tech = "abductor=3;syndicate=2"
 
 /obj/item/memorizer/syndicate/memorize_carbon(mob/living/carbon/fucking_target, mob/user = null, power = 10 SECONDS, targeted = TRUE)
@@ -177,17 +177,6 @@
 				visible_message(span_disarm("[user] стирает память [fucking_target] с помощью Нейрализатора!"))
 				to_chat(user, span_danger("Вы стёрли память [fucking_target] с помощью Нейрализатора!"))
 				to_chat(fucking_target, span_danger(span_reallybig("Ваша память о последних недавних событиях была стёрта!")))
-				if(is_taipan(fucking_target.z) && !fucking_target.mind.lost_memory)
-					var/objective = "Вы не помните ничего о последних событиях, так как ваша память была стёрта. \
-					В частности вы не помните о базе \"Синдиката\" \"Тайпан\", о том как туда добраться и обо всём так или иначе с ней связанным!"
-					var/datum/objective/custom_objective = new(objective)
-					custom_objective.needs_target = FALSE
-					custom_objective.owner = fucking_target.mind
-					custom_objective.antag_menu_name = "Память стёрта"
-					fucking_target.mind.objectives += custom_objective
-					fucking_target.mind.lost_memory = TRUE
-					var/list/messages = fucking_target.mind.prepare_announce_objectives()
-					to_chat(fucking_target, custom_boxed_message("red_box center", messages.Join("<br>")))
 				last_used = world.time
 				if(fucking_target.weakeyes)
 					fucking_target.Stun(4 SECONDS)

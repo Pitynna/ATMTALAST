@@ -10,7 +10,6 @@
 	clown_gain_text = "Your syndicate training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
 	clown_removal_text = "You lose your syndicate training and return to your own clumsy, clownish self."
 	antag_menu_name = "Раб"
-	has_skill_bonus = FALSE
 	/// Whether mindslave uses special handling on transfer mind.
 	var/special = FALSE
 	/// Icon slave master will get, must be without "hud" prefix.
@@ -121,6 +120,3 @@
 	. = ..()
 	var/mob/mob = .
 	REMOVE_TRAIT(mob, TRAIT_NECROMANT_CURSED, UNIQUE_TRAIT_SOURCE(src))
-
-/datum/antagonist/mindslave/necromancy/plague_zombie
-	name = "Necromancy-risen Plague Zombie"

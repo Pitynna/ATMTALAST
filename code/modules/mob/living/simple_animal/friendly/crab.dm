@@ -22,7 +22,6 @@
 	pass_door_while_hidden = TRUE
 	can_collar = 1
 	gold_core_spawnable = FRIENDLY_SPAWN
-	tts_seed = "Riki"
 	holder_type = /obj/item/holder/crab
 	mob_size = MOB_SIZE_SMALL
 

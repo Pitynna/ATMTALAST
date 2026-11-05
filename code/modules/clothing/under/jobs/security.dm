@@ -121,8 +121,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/uniform.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/uniform.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/uniform.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/uniform.dmi',
 		SPECIES_FARWA = 'icons/mob/clothing/species/monkey/uniform.dmi',
@@ -321,7 +319,7 @@
 	)
 
 /obj/item/clothing/under/rank/security/brigmedical
-	desc = "Комбинезон медика СБ синего цвета 26-го века. Является компромиссом между санитарными нормами и стандартами защиты."
+	desc = "A blue 26th-century security medic's jumpsuit. A compromise between hygiene standards and protective requirements."
 	name = "brig medical's jumpsuit"
 	icon_state = "brig_medical"
 	item_state = "brig_medical"

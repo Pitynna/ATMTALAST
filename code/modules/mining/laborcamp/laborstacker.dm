@@ -2,7 +2,7 @@
 
 /obj/machinery/mineral/labor_claim_console
 	name = "point claim console"
-	desc = "Консоль с электромагнитным записывающим устройством для учета добытой заключенными руды."
+	desc = "A stacking console with an electromagnetic writer, used to track ore mined by prisoners."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	anchored = TRUE
@@ -12,16 +12,6 @@
 	var/obj/machinery/door/airlock/release_door
 	var/door_tag = "prisonshuttle"
 	var/static/list/sheet_values
-
-/obj/machinery/mineral/labor_claim_console/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль учета добытой руды",
-		GENITIVE = "консоли учета добытой руды",
-		DATIVE = "консоли учета добытой руды",
-		ACCUSATIVE = "консоль учета добытой руды",
-		INSTRUMENTAL = "консолью учета добытой руды",
-		PREPOSITIONAL = "консоли учета добытой руды",
-	)
 
 /obj/machinery/mineral/labor_claim_console/Initialize(mapload)
 	. = ..()
@@ -166,20 +156,10 @@
 /**********************Point Lookup Console**************************/
 /obj/machinery/mineral/labor_points_checker
 	name = "points checking console"
-	desc = "Консоль для проверки заключенными прогресса выполнения квоты. Просто проведите картой заключенного."
+	desc = "A console used by prisoners to check the progress on their quotas. Simply swipe a prisoner ID."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
 	anchored = TRUE
-
-/obj/machinery/mineral/labor_points_checker/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль проверки очков",
-		GENITIVE = "консоли проверки очков",
-		DATIVE = "консоли проверки очков",
-		ACCUSATIVE = "консоль проверки очков",
-		INSTRUMENTAL = "консолью проверки очков",
-		PREPOSITIONAL = "консоли проверки очков",
-	)
 
 /obj/machinery/mineral/labor_points_checker/attack_hand(mob/user)
 	. = ..()

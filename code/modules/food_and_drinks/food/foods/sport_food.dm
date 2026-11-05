@@ -1,7 +1,6 @@
 /obj/item/reagent_containers/food/snacks/proteinbar_banana
-	name = "протеиновый батончик \"Банановый рай\""
-	desc = "Специализированный пищевой продукт с высоким содержанием белка. \
-			Разработан филиалом Donk Co расположенным на планете клоунов."
+	name = "Banana Paradise protein bar"
+	desc = "A specialized high-protein food developed by Donk Co.'s branch on the clown planet."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "proteinbar_bananza"
 	filling_color = "#d1a62f"
@@ -11,20 +10,9 @@
 	foodtype = JUNKFOOD
 	opened = FALSE
 
-/obj/item/reagent_containers/food/snacks/proteinbar_banana/get_ru_names()
-	return alist(
-		NOMINATIVE = "протеиновый батончик \"Банановый рай\"",
-		GENITIVE = "протеинового батончика \"Банановый рай\"",
-		DATIVE = "протеиновому батончику \"Банановый рай\"",
-		ACCUSATIVE = "протеиновый батончик \"Банановый рай\"",
-		INSTRUMENTAL = "протеиновым батончиком \"Банановый рай\"",
-		PREPOSITIONAL = "протеиновом батончике \"Банановый рай\"",
-	)
-
 /obj/item/reagent_containers/food/snacks/proteinbar_cherry
-	name = "протеиновый батончик \"Вишнёвая слаймодевочка\""
-	desc = "Специализированный пищевой продукт с высоким содержанием белка. \
-			Долгое время существовал миф, будто в его состав входит слизь одной известной слаймолюдки."
+	name = "Cherry Slimegirl protein bar"
+	desc = "A specialized high-protein food. For years, a myth claimed that it contained slime from a certain famous slimegirl."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "proteinbar_cherry"
 	filling_color = "#d1a62f"
@@ -34,20 +22,9 @@
 	foodtype = JUNKFOOD
 	opened = FALSE
 
-/obj/item/reagent_containers/food/snacks/proteinbar_cherry/get_ru_names()
-	return alist(
-		NOMINATIVE = "протеиновый батончик \"Вишнёвая слаймодевочка\"",
-		GENITIVE = "протеинового батончика \"Вишнёвая слаймодевочка\"",
-		DATIVE = "протеиновому батончику \"Вишнёвая слаймодевочка\"",
-		ACCUSATIVE = "протеиновый батончик \"Вишнёвая слаймодевочка\"",
-		INSTRUMENTAL = "протеиновым батончиком \"Вишнёвая слаймодевочка\"",
-		PREPOSITIONAL = "протеиновом батончике \"Вишнёвая слаймодевочка\"",
-	)
-
 /obj/item/reagent_containers/food/snacks/proteinbar_beef
-	name = "протеиновый батончик \"Наследие Бурёнки\""
-	desc = "Специализированный пищевой продукт с высоким содержанием белка. \
-			Во время производства ни одна корова не пострадала."
+	name = "Bessie's Legacy protein bar"
+	desc = "A specialized high-protein food. No cows were harmed during its production."
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "proteinbar_beef"
 	filling_color = "#d1a62f"
@@ -56,15 +33,4 @@
 	tastes = list("говядины" = 1, "удовольствия" = 1)
 	foodtype = JUNKFOOD
 	opened = FALSE
-
-/obj/item/reagent_containers/food/snacks/proteinbar_beef/get_ru_names()
-	return alist(
-		NOMINATIVE = "протеиновый батончик \"Наследие Бурёнки\"",
-		GENITIVE = "протеинового батончика \"Наследие Бурёнки\"",
-		DATIVE = "протеиновому батончику \"Наследие Бурёнки\"",
-		ACCUSATIVE = "протеиновый батончик \"Наследие Бурёнки\"",
-		INSTRUMENTAL = "протеиновым батончиком \"Наследие Бурёнки\"",
-		PREPOSITIONAL = "протеиновом батончике \"Наследие Бурёнки\"",
-	)
-
 

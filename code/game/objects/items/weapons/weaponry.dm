@@ -24,7 +24,7 @@
 	return ..()
 
 /obj/item/banhammer/meta_hammer
-	desc = "Наполнен мета-энергией."
+	desc = "Filled with meta-energy"
 	COOLDOWN_DECLARE(cooldown)
 
 /obj/item/banhammer/meta_hammer/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
@@ -134,22 +134,12 @@
 
 /obj/item/melee/katana/basalt
 	name = "basalt katana"
-	desc = "Катана, изготовленная из закалённого базальта, представляет особую опасность для обитателей Лазиса."
+	desc = "a katana made out of hardened basalt. Particularly damaging to lavaland fauna."
 	icon_state = "basalt_katana"
 	item_state = "basalt_katana"
 	force = 30
 	var/faction_bonus_force = 30
 	var/nemesis_factions = list("mining", "boss")
-
-/obj/item/melee/katana/basalt/get_ru_names()
-	return alist(
-		NOMINATIVE = "базальтовая катана",
-		GENITIVE = "базальтовой катаны",
-		DATIVE = "базальтовой катане",
-		ACCUSATIVE = "базальтовую катану",
-		INSTRUMENTAL = "базальтовой катаной",
-		PREPOSITIONAL = "базальтовой катане",
-	)
 
 /obj/item/melee/katana/basalt/add_parry_component()
 	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.7, _parryable_attack_types = ALL_ATTACK_TYPES)
@@ -387,7 +377,7 @@
 	return REFLECT_NORMAL
 
 /obj/item/melee/baseball_bat/homerun/central_command
-	name = "тактическая бита Флота \"Нанотрейзен\""
+	name = "Nanotrasen Fleet tactical baseball bat"
 	w_class = WEIGHT_CLASS_SMALL
 
 	can_deflect = FALSE
@@ -420,8 +410,8 @@
 	и инструментом высшего правосудия.")
 
 /obj/item/melee/baseball_bat/homerun/central_command/srt
-	name = "тактическая бита ГСН"
-	desc = "Выдвижная тактическая бита Центрального командования \"Нанотрейзен\". Скорее всего, к этому моменту командование станции уже осознало, что их коленные чашечки не переживут эту встречу."
+	name = "SRT tactical baseball bat"
+	desc = "A telescopic tactical bat used by Nanotrasen Central Command. By now, station command has probably realized that their kneecaps will not survive this meeting."
 	item_state = "srt_bat_0"
 	item_state_on = "srt_bat_1"
 	icon_state = "srt_bat_0"
@@ -466,23 +456,13 @@
 
 /obj/item/melee/claymore/bone
 	name = "bone sword"
-	desc = "Зубчатые костяные обломки привязаны к тому, что выглядит как бедренная кость голиафа."
+	desc = "A curved blade made of sharpened bone and bound with sinew."
 	icon_state = "bone_sword"
 	item_state = "bone_sword"
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_BACK
 	force = 18
 	armour_penetration = 15
 	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/melee/claymore/bone/get_ru_names()
-	return alist(
-		NOMINATIVE = "костяной меч",
-		GENITIVE = "костяного меча",
-		DATIVE = "костяному мечу",
-		ACCUSATIVE = "костяной меч",
-		INSTRUMENTAL = "костяным мечом",
-		PREPOSITIONAL = "костяном мече",
-	)
 
 /obj/item/melee/claymore/bone/add_parry_component()
 	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.7, _parryable_attack_types = ALL_ATTACK_TYPES)
@@ -500,7 +480,7 @@
 
 /obj/item/melee/nutcracker
 	name = "nutcracker"
-	desc = "Простейшая дубина из кости. Воплощение силы первобытного разума и природной мощи. Настоящая классика."
+	desc = "A simple bone club. The embodiment of primitive ingenuity and natural strength. A true classic."
 	icon_state = "nutcracker"
 	item_state = "nutcracker"
 	gender = FEMALE
@@ -509,16 +489,6 @@
 	force = 3
 	throwforce = 3
 	var/stamina_damage = 22
-
-/obj/item/melee/nutcracker/get_ru_names()
-	return alist(
-		NOMINATIVE = "колотушка",
-		GENITIVE = "колотушки",
-		DATIVE = "колотушке",
-		ACCUSATIVE = "колотушку",
-		INSTRUMENTAL = "колотушкой",
-		PREPOSITIONAL = "колотушке",
-	)
 
 /obj/item/melee/nutcracker/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)
 	if(!isliving(target) || !proximity_flag || user.incapacitated() || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))

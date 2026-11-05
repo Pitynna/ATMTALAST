@@ -39,18 +39,6 @@
 	animate(alpha = 150, time = 3 SECONDS, easing = SINE_EASING | EASE_OUT)
 
 // MARK: Heart
-/obj/effect/warp_effect/heart
-	var/range = 12
-
-/obj/effect/warp_effect/heart/Initialize(mapload)
-	. = ..()
-	if(GLOB.heart)
-		range = GLOB.heart.pulse_range * 4
-	var/matrix/scale_matrix = matrix() * 0.5
-	transform = scale_matrix
-	animate(src, transform = scale_matrix * range, time = 0.1 * range SECONDS, alpha = 0)
-	QDEL_IN(src, 0.1 * range SECONDS)
-
 // MARK: Gravity generator
 /obj/effect/warp_effect/gravity_generator
 

@@ -13,7 +13,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/structure/easel
 	name = "easel"
-	desc = "Только для лучших произведений искусства!"
+	desc = "For only the finest works of art!"
 	icon = 'icons/obj/art/artstuff.dmi'
 	icon_state = "easel"
 	density = TRUE
@@ -22,17 +22,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	//custom_materials = list(/datum/material/wood = SHEET_MATERIAL_AMOUNT * 5)
 	var/obj/item/canvas/painting = null
 
-/obj/structure/easel/get_ru_names()
-	return alist(
-		NOMINATIVE = "мольберт",
-		GENITIVE = "мольберта",
-		DATIVE = "мольберту",
-		ACCUSATIVE = "мольберт",
-		INSTRUMENTAL = "мольбертом",
-		PREPOSITIONAL = "мольберте"
-	)
-
-//Adding canvases
 /obj/structure/easel/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/canvas))
 		var/obj/item/canvas/canvas = tool
@@ -55,7 +44,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/canvas
 	name = "canvas"
-	desc = "Нарисуйте свою душу на этом холсте!"
+	desc = "Paint your soul onto this canvas!"
 	icon = 'icons/obj/art/artstuff.dmi'
 	icon_state = "11x11"
 	flags = UNPAINTABLE
@@ -92,16 +81,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	var/pixels_per_unit = 9
 
 	SET_BASE_PIXEL(11, 10)
-
-/obj/item/canvas/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст",
-		GENITIVE = "холста",
-		DATIVE = "холсту",
-		ACCUSATIVE = "холст",
-		INSTRUMENTAL = "холстом",
-		PREPOSITIONAL = "холсте"
-	)
 
 /obj/item/canvas/Initialize(mapload)
 	. = ..()
@@ -536,16 +515,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	framed_offset_x = 7
 	framed_offset_y = 7
 
-/obj/item/canvas/nineteen_nineteen/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст (19x19)",
-		GENITIVE = "холста (19x19)",
-		DATIVE = "холсту (19x19)",
-		ACCUSATIVE = "холст (19x19)",
-		INSTRUMENTAL = "холстом (19x19)",
-		PREPOSITIONAL = "холсте (19x19)"
-	)
-
 /obj/item/canvas/twentythree_nineteen
 	name = "canvas (23x19)"
 	icon_state = "23x19"
@@ -555,16 +524,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	framed_offset_x = 5
 	framed_offset_y = 7
 	pixels_per_unit = 8
-
-/obj/item/canvas/twentythree_nineteen/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст (23x19)",
-		GENITIVE = "холста (23x19)",
-		DATIVE = "холсту (23x19)",
-		ACCUSATIVE = "холст (23x19)",
-		INSTRUMENTAL = "холстом (23x19)",
-		PREPOSITIONAL = "холсте (23x19)"
-	)
 
 /obj/item/canvas/twentythree_twentythree
 	name = "canvas (23x23)"
@@ -577,16 +536,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	pixels_per_unit = 8
 
 
-/obj/item/canvas/twentythree_twentythree/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст (23x23)",
-		GENITIVE = "холста (23x23)",
-		DATIVE = "холсту (23x23)",
-		ACCUSATIVE = "холст (23x23)",
-		INSTRUMENTAL = "холстом (23x23)",
-		PREPOSITIONAL = "холсте (23x23)"
-	)
-
 /obj/item/canvas/twentyfour_twentyfour
 	name = "canvas (24x24) (AI Universal Standard)"
 	desc = "Besides being almost too large for a standard frame, the AI can accept these as a display from their internal database after you've hung it up."
@@ -598,19 +547,9 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	framed_offset_y = 4
 	pixels_per_unit = 8
 
-/obj/item/canvas/twentyfour_twentyfour/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст (24x24) (Универсальный стандарт ИИ)",
-		GENITIVE = "холста (24x24) (Универсальный стандарт ИИ)",
-		DATIVE = "холсту (24x24) (Универсальный стандарт ИИ)",
-		ACCUSATIVE = "холст (24x24) (Универсальный стандарт ИИ)",
-		INSTRUMENTAL = "холстом (24x24) (Универсальный стандарт ИИ)",
-		PREPOSITIONAL = "холсте (24x24) (Универсальный стандарт ИИ)"
-	)
-
 /obj/item/canvas/thirtysix_twentyfour
 	name = "canvas (36x24)"
-	desc = "Очень большой холст, чтобы выплеснуть свою душу. Для рамы понадобится стена побольше."
+	desc = "A very large canvas for pouring out your soul. You will need a bigger wall for its frame."
 	icon_state = "24x24" //The vending spritesheet needs the icons to be 32x32. We'll set the actual icon on Initialize.
 	width = 36
 	height = 24
@@ -622,16 +561,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 	custom_price = PAYCHECK_CREW * 1.25
 
-/obj/item/canvas/thirtysix_twentyfour/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст (36x24)",
-		GENITIVE = "холста (36x24)",
-		DATIVE = "холсту (36x24)",
-		ACCUSATIVE = "холст (36x24)",
-		INSTRUMENTAL = "холстом (36x24)",
-		PREPOSITIONAL = "холсте (36x24)"
-	)
-
 /obj/item/canvas/thirtysix_twentyfour/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/item_scaling, 1, 0.8)
@@ -640,7 +569,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/canvas/fortyfive_twentyseven
 	name = "canvas (45x27)"
-	desc = "Самый большой холст на космическом рынке. Для рамы понадобится стена побольше."
+	desc = "The largest canvas on the space market. You will need a bigger wall for its frame."
 	icon_state = "24x24" //Ditto
 	width = 45
 	height = 27
@@ -652,16 +581,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 	custom_price = PAYCHECK_CREW * 1.75
 
-/obj/item/canvas/fortyfive_twentyseven/get_ru_names()
-	return alist(
-		NOMINATIVE = "холст (45x27)",
-		GENITIVE = "холста (45x27)",
-		DATIVE = "холсту (45x27)",
-		ACCUSATIVE = "холст (45x27)",
-		INSTRUMENTAL = "холстом (45x27)",
-		PREPOSITIONAL = "холсте (45x27)"
-	)
-
 /obj/item/canvas/fortyfive_twentyseven/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/item_scaling, 1, 0.7)
@@ -670,7 +589,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/item/wallframe/painting
 	name = "painting frame"
-	desc = "Идеальная витрина для ваших любимых воспоминаний."
+	desc = "The perfect display for your favorite memories."
 	icon = 'icons/obj/decals.dmi'
 	//custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
 	resistance_flags = FLAMMABLE
@@ -678,16 +597,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	icon_state = "frame-empty"
 	result_path = /obj/structure/sign/painting
 	pixel_shift = 30
-
-/obj/item/wallframe/painting/get_ru_names()
-	return alist(
-		NOMINATIVE = "рама",
-		GENITIVE = "рамы",
-		DATIVE = "раме",
-		ACCUSATIVE = "раму",
-		INSTRUMENTAL = "рамой",
-		PREPOSITIONAL = "раме"
-	)
 
 #define PAINTING_ID_LIBRARY "library"
 #define PAINTING_ID_LIBRARY_SECURE "library_secure"
@@ -697,7 +606,7 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 
 /obj/structure/sign/painting
 	name = "Painting"
-	desc = "Искусство или \"Исскуство\"? Зависит только от вас."
+	desc = "Art or ART? That is entirely up to you."
 	icon_state = "frame-empty"
 	base_icon_state = "frame"
 	//custom_materials = list(/datum/material/wood =SHEET_MATERIAL_AMOUNT)
@@ -718,15 +627,6 @@ GLOBAL_LIST_INIT(canvas_dimensions, init_canvas_dimensions())
 	/// the type of wallframe it 'disassembles' into
 	var/wallframe_type = /obj/item/wallframe/painting
 
-/obj/structure/sign/painting/get_ru_names()
-	return alist(
-		NOMINATIVE = "картина",
-		GENITIVE = "картины",
-		DATIVE = "картине",
-		ACCUSATIVE = "картину",
-		INSTRUMENTAL = "картиной",
-		PREPOSITIONAL = "картине"
-	)
 /*
 /obj/structure/sign/painting/get_save_vars()
 	return ..() - NAMEOF(src, icon)

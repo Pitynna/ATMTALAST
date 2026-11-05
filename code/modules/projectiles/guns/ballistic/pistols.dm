@@ -35,8 +35,7 @@
 // MARK: DCA-P9 Enforcer
 /obj/item/gun/projectile/automatic/pistol/enforcer
 	name = "DCA-P9 \"Enforcer\" pistol"
-	desc = "Сбалансированный пистолет калибра 9x19 мм производства \"Donk Co. Arms\". Хорошая эргономика, низкая отдача, высокая точность. \
-			Используется службой безопасности \"Нанотрейзен\"."
+	desc = "A 9mm sidearm commonly used by Nanotrasen Asset Protection."
 	icon_state = "enforcer_grey"
 	force = 10
 	mag_type = /obj/item/ammo_box/magazine/enforcer
@@ -50,16 +49,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	origin_tech = "combat=4;materials=2"
 	magazine_icon = "enforcer_mag"
-
-/obj/item/gun/projectile/automatic/pistol/enforcer/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет DCA-P9 \"Блюститель\"",
-		GENITIVE = "пистолета DCA-P9 \"Блюститель\"",
-		DATIVE = "пистолету DCA-P9 \"Блюститель\"",
-		ACCUSATIVE = "пистолет DCA-P9 \"Блюститель\"",
-		INSTRUMENTAL = "пистолетом DCA-P9 \"Блюститель\"",
-		PREPOSITIONAL = "пистолете DCA-P9 \"Блюститель\"",
-	)
 
 /obj/item/gun/projectile/automatic/pistol/enforcer/add_deep_lore()
 	AddElement(/datum/element/examine_lore, \
@@ -86,8 +75,7 @@
 // MARK: P-40 Acer
 /obj/item/gun/projectile/automatic/pistol/sp8
 	name = "P-40 \"Acer\" pistol"
-	desc = "Штурмовой пистолет под патрон .40 N&R производства \"Mars Special\". Высокая точность, низкая отдача и усиленный ствол \
-			для стрельбы боеприпасами повышенной мощности. Используется элитными подразделениями сил защиты активов \"Нанотрейзен\"."
+	desc = "A .40 N&R assault pistol manufactured by Mars Special. Highly accurate, with low recoil and a reinforced barrel for high-power ammunition. Used by elite Nanotrasen Asset Protection units."
 	greyscale_config = /datum/greyscale_config/sp8
 	greyscale_colors = COLOR_ALMOST_BLACK
 	icon_state = "/obj/item/gun/projectile/automatic/pistol/sp8"
@@ -104,16 +92,6 @@
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 7, ATTACHMENT_OFFSET_Y = -4),
 	)
 
-/obj/item/gun/projectile/automatic/pistol/sp8/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет P-40 \"Эйсер\"",
-		GENITIVE = "пистолета P-40 \"Эйсер\"",
-		DATIVE = "пистолету P-40 \"Эйсер\"",
-		ACCUSATIVE = "пистолет P-40 \"Эйсер\"",
-		INSTRUMENTAL = "пистолетом P-40 \"Эйсер\"",
-		PREPOSITIONAL = "пистолете P-40 \"Эйсер\"",
-	)
-
 /obj/item/gun/projectile/automatic/pistol/sp8/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/item_skins)
@@ -121,7 +99,7 @@
 // MARK: Stechkin
 /obj/item/gun/projectile/automatic/pistol/stechkin
 	name = "Stechkin pistol"
-	desc = "Компактный пистолет калибра 10x25 мм. Совместим с широким спектром специальных боеприпасов. Встречается повсеместно — от гражданского рынка до криминальных структур."
+	desc = "A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors."
 	origin_tech = "combat=3;materials=2;syndicate=3"
 	fire_sound = 'sound/weapons/gunshots/1stechkin.ogg'
 	accuracy = GUN_ACCURACY_PISTOL_STECHKIN
@@ -131,21 +109,9 @@
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 1, ATTACHMENT_OFFSET_Y = 7),
 	)
 
-/obj/item/gun/projectile/automatic/pistol/stechkin/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет \"Стечкин\"",
-		GENITIVE = "пистолета \"Стечкин\"",
-		DATIVE = "пистолету \"Стечкин\"",
-		ACCUSATIVE = "пистолет \"Стечкин\"",
-		INSTRUMENTAL = "пистолетом \"Стечкин\"",
-		PREPOSITIONAL = "пистолете \"Стечкин\"",
-	)
-
-// MARK: SGM-P50 "Colossus"
 /obj/item/gun/projectile/automatic/pistol/deagle
 	name = "SGM-P50 \"Colossus\""
-	desc = "Тяжёлый пистолет калибра .50 AE производства \"Shellguard Munitions\". Патроны имеют огромную останавливающую силу, \
-			ценой которой служат значительная отдача и малый магазин. Один из самых мощных пистолетов в классе."
+	desc = "A robust .50 AE handgun."
 	icon_state = "deagle"
 	force = 14.0
 	w_class = WEIGHT_CLASS_NORMAL
@@ -162,16 +128,6 @@
 	accuracy = GUN_ACCURACY_PISTOL_UPLINK
 	recoil = GUN_RECOIL_HIGH
 
-/obj/item/gun/projectile/automatic/pistol/deagle/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет SGM-P50 \"Колосс\"",
-		GENITIVE = "пистолета SGM-P50 \"Колосс\"",
-		DATIVE = "пистолету SGM-P50 \"Колосс\"",
-		ACCUSATIVE = "пистолет SGM-P50 \"Колосс\"",
-		INSTRUMENTAL = "пистолетом SGM-P50 \"Колосс\"",
-		PREPOSITIONAL = "пистолете SGM-P50 \"Колосс\"",
-	)
-
 /obj/item/gun/projectile/automatic/pistol/deagle/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/item_skins)
@@ -179,7 +135,7 @@
 // MARK: APS Pistol
 /obj/item/gun/projectile/automatic/pistol/aps
 	name = "APS pistol"
-	desc = "Старинный пистолет калибра 9x19 мм. Стреляет очередями."
+	desc = "The original russian version of a widely used Syndicate sidearm. Uses 9mm ammo."
 	icon_state = "aps"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/pistolm9mm
@@ -194,22 +150,9 @@
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC)
 	magazine_icon = "aps_mag"
 
-/obj/item/gun/projectile/automatic/pistol/aps/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет АПС",
-		GENITIVE = "пистолета АПС",
-		DATIVE = "пистолету АПС",
-		ACCUSATIVE = "пистолет АПС",
-		INSTRUMENTAL = "пистолетом АПС",
-		PREPOSITIONAL = "пистолете АПС",
-	)
-
-// MARK: Scarecrow
 /obj/item/gun/projectile/automatic/pistol/aps/scarecrow
 	name = "\"Scarecrow\" pistol"
-	desc = "Автоматический пистолет калибра 10x25 мм. Прозван \"Пугалом\" за способность разгонять толпу громкой стрельбой и высокой скорострельностью. \
-			На деле — дешёвая поделка из низкокачественных компонентов: кучность падает с каждым выстрелом, а убойность оставляет желать лучшего. \
-			Для питания использует магазины для пистолета \"Стечкин\"."
+	desc = "A 10x25mm automatic pistol nicknamed Scarecrow for its loud, rapid crowd-dispersing gunfire. In reality, a cheap product made from poor components: grouping worsens with every shot, and stopping power is unimpressive. Uses Stechkin pistol magazines."
 	icon_state = "scarecrow"
 	fire_sound = 'sound/weapons/gunshots/1scarecrow.ogg'
 	magin_sound = 'sound/weapons/gun_interactions/scarecrowmagin.ogg'
@@ -226,21 +169,9 @@
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 3, ATTACHMENT_OFFSET_Y = 7),
 	)
 
-/obj/item/gun/projectile/automatic/pistol/aps/scarecrow/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет \"Пугало\"",
-		GENITIVE = "пистолета \"Пугало\"",
-		DATIVE = "пистолету \"Пугало\"",
-		ACCUSATIVE = "пистолет \"Пугало\"",
-		INSTRUMENTAL = "пистолетом \"Пугало\"",
-		PREPOSITIONAL = "пистолете \"Пугало\"",
-	)
-
-// MARK: M1911
 /obj/item/gun/projectile/automatic/pistol/m1911
 	name = "M1911"
-	desc = "Классический пистолет калибра .45 с малой ёмкостью магазина. Низкая отдача, высокая останавливающая сила, простота в обслуживании. \
-			Конструкция, проверенная временем."
+	desc = "A classic .45 handgun with a small magazine capacity."
 	icon_state = "m1911"
 	mag_type = /obj/item/ammo_box/magazine/m45
 	magazine_icon = "m1911_mag"
@@ -251,14 +182,4 @@
 		ATTACHMENT_SLOT_MUZZLE = list(ATTACHMENT_OFFSET_X = 21, ATTACHMENT_OFFSET_Y = 6),
 		ATTACHMENT_SLOT_RAIL = list(ATTACHMENT_OFFSET_X = 0, ATTACHMENT_OFFSET_Y = 9),
 		ATTACHMENT_SLOT_UNDER = list(ATTACHMENT_OFFSET_X = 8, ATTACHMENT_OFFSET_Y = -1),
-	)
-
-/obj/item/gun/projectile/automatic/pistol/m1911/get_ru_names()
-	return alist(
-		NOMINATIVE = "пистолет M1911",
-		GENITIVE = "пистолета M1911",
-		DATIVE = "пистолету M1911",
-		ACCUSATIVE = "пистолет M1911",
-		INSTRUMENTAL = "пистолетом M1911",
-		PREPOSITIONAL = "пистолете M1911",
 	)

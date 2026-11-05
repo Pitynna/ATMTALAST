@@ -93,14 +93,13 @@
 		return
 	. = TRUE
 	balloon_alert(user, "откручиваем панель...")
-	CALCULATE_SKILL_MOD(user, LOCKPICK_SPEED_MOD, lockpick_mod)
-	if(!tool.use_tool(src, user, 16 SECONDS * lockpick_mod, volume = tool.tool_volume))
+	if(!tool.use_tool(src, user, 160, volume = tool.tool_volume))
 		return
 	if(prob(95)) // EZ
 		if(broken == SECURE_CRATE_STAGE_PANEL_OPEN)
 			return
 		balloon_alert(user, "панель снята")
-		desc += " Панель управления снята."
+		desc += " The control panel has been removed."
 		broken = SECURE_CRATE_STAGE_PANEL_OPEN
 		//icon_state = icon_off // Crates has no icon_off :(
 		return
@@ -117,15 +116,13 @@
 		return
 	. = TRUE
 	balloon_alert(user, "подготавливаем провода...")
-	CALCULATE_SKILL_MOD(user, LOCKPICK_SPEED_MOD, lockpick_mod)
-	if(!tool.use_tool(src, user, 16 SECONDS * lockpick_mod, volume = tool.tool_volume))
+	if(!tool.use_tool(src, user, 16 SECONDS, volume = tool.tool_volume))
 		return
-	CALCULATE_SKILL_MOD(user, LOCKPICK_POSITIVE_CHANCE_MOD, prob_mod)
-	if(prob(80 * prob_mod)) // Good hacker!
+	if(prob(80)) // Good hacker!
 		if(broken == SECURE_CRATE_STAGE_WIRES_PREPARED)
 			return
 		balloon_alert(user, "провода подготовлены")
-		desc += " Провода отключены и торчат наружу."
+		desc += " The wires have been disconnected and are sticking out."
 		broken = SECURE_CRATE_STAGE_WIRES_PREPARED
 		return
 	balloon_alert(user, "не тот провод!")
@@ -138,15 +135,13 @@
 		return
 	. = TRUE
 	balloon_alert(user, "подключаем провода...")
-	CALCULATE_SKILL_MOD(user, LOCKPICK_SPEED_MOD, lockpick_mod)
-	if(!tool.use_tool(src, user, 16 SECONDS * lockpick_mod, volume = tool.tool_volume))
+	if(!tool.use_tool(src, user, 16 SECONDS, volume = tool.tool_volume))
 		return
-	CALCULATE_SKILL_MOD(user, LOCKPICK_POSITIVE_CHANCE_MOD, prob_mod)
-	if(prob(80 * prob_mod)) // Good hacker!
+	if(prob(80)) // Good hacker!
 		if(broken == SECURE_CRATE_STAGE_NO_BROKEN || broken == SECURE_CRATE_STAGE_OPENED)
 			return
 		balloon_alert(user, "взломано!")
-		desc += " Замок отключён."
+		desc += " The lock has been disabled."
 		broken = SECURE_CRATE_STAGE_OPENED // Can be emagged
 		emag_act(user)
 		return
@@ -275,84 +270,34 @@
 // MARK: Blood crates
 /obj/structure/closet/crate/secure/blood
 	name = "secure human blood crate"
-	desc = "Ящик, содержащий капельницы с человеческой кровью."
+	desc = "A crate containing IV bags of human blood."
 	icon_state = "bloodcrate"
 	material_drop = /obj/item/stack/sheet/mineral/plastitanium
 	req_access = list(ACCESS_MEDICAL)
 
-/obj/structure/closet/crate/secure/blood/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (человеческий)",
-		GENITIVE = "комплекта донорской крови (человеческий)",
-		DATIVE = "комплекту донорской крови (человеческий)",
-		ACCUSATIVE = "комплект донорской крови (человеческий)",
-		INSTRUMENTAL = "комплектом донорской крови (человеческий)",
-		PREPOSITIONAL = "комплекте донорской крови (человеческий)",
-	)
-
 /obj/structure/closet/crate/secure/blood/xeno
 	name = "secure xenoblood crate"
-	desc = "Ящик, содержащий капельницы с кровью различных рас."
+	desc = "A crate containing IV bags of blood from various species."
 	icon_state = "xenobloodcrate"
-
-/obj/structure/closet/crate/secure/blood/xeno/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (ксено)",
-		GENITIVE = "комплекта донорской крови (ксено)",
-		DATIVE = "комплекту донорской крови (ксено)",
-		ACCUSATIVE = "комплект донорской крови (ксено)",
-		INSTRUMENTAL = "комплектом донорской крови (ксено)",
-		PREPOSITIONAL = "комплекте донорской крови (ксено)",
-	)
 
 /obj/structure/closet/crate/secure/blood/mixed
 	name = "secure mixed blood crate"
-	desc = "Ящик, содержащий капельницы с различной кровью."
+	desc = "A crate containing IV bags of assorted blood."
 	icon_state = "mixbloodcrate"
-
-/obj/structure/closet/crate/secure/blood/mixed/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (смешанная)",
-		GENITIVE = "комплекта донорской крови (смешанная)",
-		DATIVE = "комплекту донорской крови (смешанная)",
-		ACCUSATIVE = "комплект донорской крови (смешанная)",
-		INSTRUMENTAL = "комплектом донорской крови (смешанная)",
-		PREPOSITIONAL = "комплекте донорской крови (смешанная)",
-	)
 
 /obj/structure/closet/crate/secure/blood/nitrogenis
 	name = "secure nitrogenis blood crate"
-	desc = "Ящик, содержащий капельницы с синтетической кровью (Азот)."
+	desc = "A crate containing IV bags of synthetic blood (nitrogen)."
 	icon_state = "syntheticbloodcrate"
-
-/obj/structure/closet/crate/secure/blood/nitrogenis/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (синтетическая кровь — азот)",
-		GENITIVE = "комплекта донорской крови (синтетическая кровь — азот)",
-		DATIVE = "комплекту донорской крови (синтетическая кровь — азот)",
-		ACCUSATIVE = "комплект донорской крови (синтетическая кровь — азот)",
-		INSTRUMENTAL = "комплектом донорской крови (синтетическая кровь — азот)",
-		PREPOSITIONAL = "комплекте донорской крови (синтетическая кровь — азот)",
-	)
 
 /obj/structure/closet/crate/secure/blood/oxygenis
 	name = "secure synthetic blood crate"
-	desc = "Ящик, содержащий капельницы с синтетической кровью (Кислород)."
+	desc = "A crate containing IV bags of synthetic blood (oxygen)."
 	icon_state = "nitrogenbloodcrate"
-
-/obj/structure/closet/crate/secure/blood/oxygenis/get_ru_names()
-	return alist(
-		NOMINATIVE = "комплект донорской крови (синтетическая кровь — кислород)",
-		GENITIVE = "комплекта донорской крови (синтетическая кровь — кислород)",
-		DATIVE = "комплекту донорской крови (синтетическая кровь — кислород)",
-		ACCUSATIVE = "комплект донорской крови (синтетическая кровь — кислород)",
-		INSTRUMENTAL = "комплектом донорской крови (синтетическая кровь — кислород)",
-		PREPOSITIONAL = "комплекте донорской крови (синтетическая кровь — кислород)",
-	)
 
 /obj/structure/closet/crate/secure/engineering/teg
 	name = "thermoelectric generator crate"
-	desc = "Ящик, в котором находятся детали для термоэлектрического генератора"
+	desc = "A crate containing thermoelectric generator parts."
 
 /obj/structure/closet/crate/secure/engineering/teg/populate_contents()
 	new /obj/machinery/power/generator(src)

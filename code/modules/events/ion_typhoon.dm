@@ -2,9 +2,6 @@
 	var/ninja_ckey = ""
 
 /datum/event/ion_typhoon/New(datum/event_meta/EM, skeleton = FALSE, forced = FALSE, mob/living/carbon/human/cause)
-	if(isninja(cause))
-		ninja_ckey = "[cause.ckey]"
-		EM = new /datum/event_meta(EVENT_LEVEL_MAJOR, "Ninja hacking (ckey: [ninja_ckey]).", src.type)
 	..()
 
 /datum/event/ion_typhoon/start()

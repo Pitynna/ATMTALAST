@@ -156,7 +156,6 @@
 #define VV_HK_ADD_VERB "addverb"
 #define VV_HK_REMOVE_VERB "remverb"
 #define VV_HK_GRANT_ALL_LANGUAGE "grantalllanguage"
-#define VV_HK_CHANGE_VOICE "changevoice"
 
 // /mob/living
 #define VV_HK_GIVE_SPEECH_IMPEDIMENT "impede_speech"

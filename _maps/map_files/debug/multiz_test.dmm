@@ -14,18 +14,18 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/obj/item/mod/control/pre_equipped/advanced,
+/obj/item/clothing/suit/space/hardsuit/engine/elite,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "ar" = (
-/obj/item/mod/control/pre_equipped/responsory/inquisitory/chaplain,
+/obj/item/clothing/suit/space/hardsuit/ert/paranormal/inquisitor,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "aF" = (
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 4
 	},
-/obj/item/mod/control/pre_equipped/magnate,
+/obj/item/clothing/suit/space/hardsuit,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "aS" = (
@@ -85,7 +85,7 @@
 /turf/simulated/floor/plating,
 /area/station/engineering/engine)
 "co" = (
-/obj/item/mod/control/pre_equipped/responsory/inquisitory/commander,
+/obj/item/clothing/suit/space/hardsuit/ert/gamma/commander,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "cr" = (
@@ -146,7 +146,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/obj/item/mod/control/pre_equipped/mining,
+/obj/item/clothing/suit/space/hardsuit/mining,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "eO" = (
@@ -206,7 +206,7 @@
 /area/station/command/bridge)
 "gj" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/obj/item/mod/control/pre_equipped/responsory/security,
+/obj/item/clothing/suit/space/hardsuit/ert/security,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "gn" = (
@@ -256,7 +256,7 @@
 /area/construction)
 "gZ" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/obj/item/mod/control/pre_equipped/administrative,
+/obj/item/clothing/suit/space/hardsuit/deathsquad,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "hj" = (
@@ -353,7 +353,7 @@
 /turf/simulated/floor/plasteel,
 /area/construction/hallway)
 "jl" = (
-/obj/item/mod/control/pre_equipped/traitor,
+/obj/item/clothing/suit/space/hardsuit/syndi,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "js" = (
@@ -361,7 +361,7 @@
 /area/construction/solars)
 "jv" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/obj/item/mod/control/pre_equipped/corporate,
+/obj/item/clothing/suit/space/hardsuit/ert/commander,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "jF" = (
@@ -406,7 +406,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 4
 	},
-/obj/item/mod/control/pre_equipped/medical,
+/obj/item/clothing/suit/space/hardsuit/medical,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "kZ" = (
@@ -443,7 +443,7 @@
 	},
 /area/construction/hallway)
 "lM" = (
-/obj/item/mod/control/pre_equipped/traitor_elite,
+/obj/item/clothing/suit/space/hardsuit/syndi/elite,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "lT" = (
@@ -460,7 +460,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
 	},
-/obj/item/mod/control/pre_equipped/standard,
+/obj/item/clothing/suit/space/hardsuit,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "mb" = (
@@ -694,7 +694,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/obj/item/mod/control/pre_equipped/engineering,
+/obj/item/clothing/suit/space/hardsuit/engine,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "ss" = (
@@ -744,7 +744,7 @@
 	},
 /area/station/command/bridge)
 "tI" = (
-/obj/item/mod/control/pre_equipped/responsory/engineer,
+/obj/item/clothing/suit/space/hardsuit/ert/engineer,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "tM" = (
@@ -763,7 +763,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/obj/item/mod/control/pre_equipped/loader,
+/obj/item/clothing/suit/space/hardsuit/engine,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "uh" = (
@@ -790,7 +790,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
 	},
-/obj/item/mod/control/pre_equipped/praetorian,
+/obj/item/clothing/suit/space/hardsuit/blueshield,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "uT" = (
@@ -871,7 +871,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/obj/item/mod/control/pre_equipped/mining/asteroid,
+/obj/item/clothing/suit/space/hardsuit/mining,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "wG" = (
@@ -936,7 +936,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
 	},
-/obj/item/mod/control/pre_equipped/responsory/janitor,
+/obj/item/clothing/suit/space/hardsuit/ert/janitor,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "xL" = (
@@ -1010,7 +1010,7 @@
 /area/station/engineering/engine)
 "zt" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/obj/item/mod/control/pre_equipped/responsory/medic,
+/obj/item/clothing/suit/space/hardsuit/ert/medical,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "zY" = (
@@ -1036,7 +1036,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/obj/item/mod/control/pre_equipped/atmospheric,
+/obj/item/clothing/suit/space/hardsuit/engine/atmos,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Aw" = (
@@ -1057,7 +1057,7 @@
 /turf/simulated/openspace,
 /area/construction/hallway)
 "AQ" = (
-/obj/item/mod/control/pre_equipped/safeguard_mk_two/gamma,
+/obj/item/clothing/suit/space/hardsuit/security/hos,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "AX" = (
@@ -1067,7 +1067,7 @@
 /turf/simulated/wall/r_wall,
 /area/station/commons/storage/primary)
 "Bg" = (
-/obj/item/mod/control/pre_equipped/empty/syndicate,
+/obj/item/clothing/suit/space/hardsuit/syndi,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Bh" = (
@@ -1128,11 +1128,11 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
 	},
-/obj/item/mod/control/pre_equipped/responsory/chaplain,
+/obj/item/clothing/suit/space/hardsuit/ert/paranormal,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "CC" = (
-/obj/item/mod/control/pre_equipped/security,
+/obj/item/clothing/suit/space/hardsuit/security,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "CJ" = (
@@ -1162,7 +1162,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 4
 	},
-/obj/item/mod/control/pre_equipped/responsory/inquisitory/security,
+/obj/item/clothing/suit/space/hardsuit/ert/gamma/security,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Dr" = (
@@ -1267,7 +1267,7 @@
 /turf/simulated/floor/plating,
 /area/station/command/bridge)
 "Gu" = (
-/obj/item/mod/control/pre_equipped/safeguard_mk_one,
+/obj/item/clothing/suit/space/hardsuit/security/warden,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Gv" = (
@@ -1323,7 +1323,7 @@
 /turf/simulated/floor/plasteel,
 /area/station/commons/storage/primary)
 "HU" = (
-/obj/item/mod/control/pre_equipped/responsory/inquisitory/medic,
+/obj/item/clothing/suit/space/hardsuit/ert/gamma/medical,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "If" = (
@@ -1396,7 +1396,7 @@
 /area/station/commons/storage/primary)
 "JX" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/obj/item/mod/control/pre_equipped/debug,
+/obj/item/clothing/suit/space/hardsuit/deathsquad,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "JY" = (
@@ -1491,11 +1491,11 @@
 /turf/simulated/floor/plasteel,
 /area/station/command/bridge)
 "Mq" = (
-/obj/item/mod/control/pre_equipped/safeguard_mk_two,
+/obj/item/clothing/suit/space/hardsuit/security/hos,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Mz" = (
-/obj/item/mod/control/pre_equipped/responsory/clown,
+/obj/item/clothing/suit/space/hardsuit/ert,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "MK" = (
@@ -1666,7 +1666,7 @@
 	},
 /area/station/engineering/gravity_generator)
 "Qm" = (
-/obj/item/mod/control/pre_equipped/prototype,
+/obj/item/clothing/suit/space/hardsuit,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Qs" = (
@@ -1676,11 +1676,11 @@
 /turf/simulated/floor/plasteel,
 /area/station/commons/storage/primary)
 "Qt" = (
-/obj/item/mod/control/pre_equipped/cosmohonk,
+/obj/item/clothing/suit/space/hardsuit,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Rk" = (
-/obj/item/mod/control/pre_equipped/elite,
+/obj/item/clothing/suit/space/hardsuit/syndi/elite,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Rn" = (
@@ -1697,7 +1697,7 @@
 /turf/simulated/floor/plasteel,
 /area/construction)
 "RI" = (
-/obj/item/mod/control/pre_equipped/brigmed,
+/obj/item/clothing/suit/space/hardsuit/security/brigmed,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "RN" = (
@@ -1797,7 +1797,7 @@
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Ud" = (
-/obj/item/mod/control/pre_equipped/responsory/commander,
+/obj/item/clothing/suit/space/hardsuit/ert/commander,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Uq" = (
@@ -1852,7 +1852,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
 	},
-/obj/item/mod/control/pre_equipped/rescue,
+/obj/item/clothing/suit/space/hardsuit/medical,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Vx" = (
@@ -1903,7 +1903,7 @@
 /turf/simulated/floor/plating,
 /area/construction)
 "Wo" = (
-/obj/item/mod/control/pre_equipped/research,
+/obj/item/clothing/suit/space/hardsuit/rd,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Wp" = (
@@ -2015,7 +2015,7 @@
 /area/station/engineering/gravity_generator)
 "Yt" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/obj/item/mod/control/pre_equipped/apocryphal,
+/obj/item/clothing/suit/space/hardsuit/deathsquad,
 /turf/simulated/floor/plasteel,
 /area/construction/solars)
 "Yv" = (

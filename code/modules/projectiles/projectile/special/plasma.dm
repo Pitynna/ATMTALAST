@@ -21,16 +21,6 @@
 	impact_light_range = 2.5
 	impact_light_color_override = LIGHT_COLOR_CYAN
 
-/obj/projectile/plasma/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменный луч",
-		GENITIVE = "плазменного луча",
-		DATIVE = "плазменному лучу",
-		ACCUSATIVE = "плазменный луч",
-		INSTRUMENTAL = "плазменным лучом",
-		PREPOSITIONAL = "плазменном луче",
-	)
-
 /obj/projectile/plasma/on_hit(atom/target, pointblank = 0)
 	. = ..()
 	if(ismineralturf(target))
@@ -87,31 +77,10 @@
 	hitsound = 'sound/weapons/plasma_cutter.ogg'
 	damage_type = TOX
 
-/obj/projectile/energy/toxplasma/get_ru_names()
-	return alist(
-		NOMINATIVE = "токсичный заряд",
-		GENITIVE = "токсичного заряда",
-		DATIVE = "токсичному заряду",
-		ACCUSATIVE = "токсичный заряд",
-		INSTRUMENTAL = "токсичным зарядом",
-		PREPOSITIONAL = "токсичном заряде",
-	)
-
-// MARK: Plasma pistol
 /obj/projectile/energy/weak_plasma
 	name = "plasma bolt"
 	icon_state = "plasma_light"
 	damage = 20
-
-/obj/projectile/energy/weak_plasma/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменный импульс",
-		GENITIVE = "плазменного импульса",
-		DATIVE = "плазменному импульсу",
-		ACCUSATIVE = "плазменный импульс",
-		INSTRUMENTAL = "плазменным импульсом",
-		PREPOSITIONAL = "плазменном импульсе",
-	)
 
 /obj/projectile/energy/charged_plasma
 	name = "charged plasma bolt"
@@ -120,13 +89,3 @@
 	armour_penetration = 10 // It can have a little armor pen, as a treat. Bigger than it looks, energy armor is often low.
 	shield_buster = TRUE
 	reflectability = REFLECTABILITY_NEVER //I will let eswords block it like a normal projectile, but it's not getting reflected, and eshields will take the hit hard.
-
-/obj/projectile/energy/charged_plasma/get_ru_names()
-	return alist(
-		NOMINATIVE = "заряженный плазменный импульс",
-		GENITIVE = "заряженного плазменного импульса",
-		DATIVE = "заряженному плазменному импульсу",
-		ACCUSATIVE = "заряженный плазменный импульс",
-		INSTRUMENTAL = "заряженным плазменным импульсом",
-		PREPOSITIONAL = "заряженном плазменном импульсе",
-	)

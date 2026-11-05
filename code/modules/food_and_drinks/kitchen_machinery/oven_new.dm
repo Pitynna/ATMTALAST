@@ -1,7 +1,7 @@
 
 /obj/machinery/kitchen_machine/oven
 	name = "oven"
-	desc = "Печь, в которой получаются идеальные печеньки. Или горелые лепёшки. Как повезёт."
+	desc = "Cookies are ready, dear."
 	icon = 'icons/obj/machines/cooking_machines.dmi'
 	icon_state = "oven_off"
 	cook_verbs = list("Запекается", "Жарится")
@@ -11,18 +11,6 @@
 	broken_icon = "oven_broke"
 	dirty_icon = "oven_dirty"
 	open_icon = "oven_open"
-
-/obj/machinery/kitchen_machine/oven/get_ru_names()
-	return alist(
-		NOMINATIVE = "духовка",
-		GENITIVE = "духовки",
-		DATIVE = "духовке",
-		ACCUSATIVE = "духовку",
-		INSTRUMENTAL = "духовкой",
-		PREPOSITIONAL = "духовке"
-	)
-
-// see code/modules/food/recipes_oven.dm for recipes
 
 /*******************
 *   Initialising

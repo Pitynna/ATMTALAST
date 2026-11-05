@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/pressuresensor
 	display_name = "Датчик давления"
-	desc = "Считывает значение давления окружающей среды. \
-			Возвращает значение в Паскалях."
+	desc = "Reads the ambient pressure. Returns a value in pascals."
 	category = "Sensor"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL

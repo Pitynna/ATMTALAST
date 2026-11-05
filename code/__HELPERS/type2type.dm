@@ -570,10 +570,6 @@ GLOBAL_LIST_INIT(modulo_angle_to_dir, list(NORTH, NORTHEAST, EAST, SOUTHEAST, SO
 			return "Эмбиент"
 		if(CHANNEL_WEATHER)
 			return "Погода"
-		if(CHANNEL_TTS_LOCAL)
-			return "TTS рядом"
-		if(CHANNEL_TTS_RADIO)
-			return "TTS в радиосвязи"
 		if(CHANNEL_RADIO_NOISE)
 			return "Звуки радиосвязи"
 		if(CHANNEL_INTERACTION_SOUNDS)

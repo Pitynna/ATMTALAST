@@ -4,8 +4,7 @@
 
 /obj/item/flash
 	name = "flash"
-	desc = "Многоцелевое импульсное осветительное устройство. При активации испускает яркую вспышку, что может быть использовано как для дезориентации противника в бою, \
-			так и для калибровки роботизированных оптических сенсоров. Матрица имеет тенденцию быстро выгорать при активном использовании."
+	desc = "A powerful and versatile flashbulb device, with applications ranging from disorienting attackers to acting as visual receptors in robot production."
 	gender = MALE
 	icon = 'icons/obj/device.dmi'
 	icon_state = "flash"
@@ -35,16 +34,6 @@
 	light_system = OVERLAY_LIGHT_DIRECTIONAL
 	light_on = FALSE
 	light_range = 2
-
-/obj/item/flash/get_ru_names()
-	return alist(
-		NOMINATIVE = "флешер",
-		GENITIVE = "флешера",
-		DATIVE = "флешеру",
-		ACCUSATIVE = "флешер",
-		INSTRUMENTAL = "флешером",
-		PREPOSITIONAL = "флешере"
-	)
 
 /obj/item/flash/Initialize(mapload)
 	. = ..()
@@ -187,12 +176,12 @@
 			burn_out()
 		return .|ATTACK_CHAIN_SUCCESS
 
-	if(issilicon(target) || isswarmer(target))
+	if(issilicon(target))
 		add_attack_logs(user, target, "Flashed with [src]")
 		if(!target.flash_eyes(affect_silicon = TRUE))
 			return .|ATTACK_CHAIN_SUCCESS
 
-		var/weaken_time = issilicon(target) ? SILICON_FLASH_ATTACK_STUN : SWARMER_FLASH_ATTACK_STUN
+		var/weaken_time = SILICON_FLASH_ATTACK_STUN
 		target.Weaken(weaken_time)
 		target.visible_message(
 			span_disarm("[user.declent_ru(NOMINATIVE)] перегружа[PLUR_ET_YUT(user)] оптические сенсоры [target.declent_ru(GENITIVE)] [declent_ru(INSTRUMENTAL)]!"),
@@ -274,16 +263,6 @@
 	var/charge_tick = 0
 	use_sound = 'sound/items/polaroid1.ogg'
 
-/obj/item/flash/cameraflash/get_ru_names()
-	return alist(
-		NOMINATIVE = "фотоаппарат",
-		GENITIVE = "фотоаппарата",
-		DATIVE = "фотоаппарату",
-		ACCUSATIVE = "фотоаппарат",
-		INSTRUMENTAL = "фотоаппаратом",
-		PREPOSITIONAL = "фотоаппарате"
-	)
-
 /obj/item/flash/cameraflash/burn_out() //stops from burning out
 	return
 
@@ -320,20 +299,9 @@
 
 /obj/item/flash/armimplant
 	name = "photon projector"
-	desc = "Высокомощное устройство, предназначенное в первую очередь для освещения, хотя и может быть использовано в качестве средства самообороны. \
-			Протоколы самовосстановления автоматически восстановят матрицу в случае выгорания."
+	desc = "A high-powered photon projector implant normally used for lighting purposes, but also doubles as a flashbulb weapon. Self-repair protocols fix the flashbulb if it ever burns out."
 	cooldown_duration = 2 SECONDS
 	var/obj/item/organ/internal/cyberimp/arm/flash/I = null
-
-/obj/item/flash/armimplant/get_ru_names()
-	return alist(
-		NOMINATIVE = "фотонный излучатель",
-		GENITIVE = "фотонного излучателя",
-		DATIVE = "фотонному излучателю",
-		ACCUSATIVE = "фотонный излучатель",
-		INSTRUMENTAL = "фотонным излучателем",
-		PREPOSITIONAL = "фотонном излучателе"
-	)
 
 /obj/item/flash/armimplant/Destroy()
 	I = null

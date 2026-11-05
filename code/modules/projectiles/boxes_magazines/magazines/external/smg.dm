@@ -1,6 +1,6 @@
 // MARK: 9mm - Sparkle-A12
 /obj/item/ammo_box/magazine/sparkle_a12
-	gun_name = "пистолета-пулемёта А-12 \"Искра\""
+	gun_name = "A-12 \"Sparkle\" submachine guns"
 	icon_state = "sparkle_a12"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
@@ -14,7 +14,7 @@
 
 // MARK: 9mm - UZI
 /obj/item/ammo_box/magazine/uzim9mm
-	gun_name = "пистолета-пулемёта UZI"
+	gun_name = "UZI submachine guns"
 	icon_state = "uzi9mm-32"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
@@ -25,7 +25,7 @@
 
 // MARK: 9mm - K-45
 /obj/item/ammo_box/magazine/kedr
-	gun_name = "пистолета-пулемёта K-45"
+	gun_name = "K-45 submachine guns"
 	icon_state = "kedr"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
@@ -36,7 +36,7 @@
 
 // MARK: 9mm - Saber SMG
 /obj/item/ammo_box/magazine/smgm9mm
-	gun_name = "пистолета-пулемёта SABR-9"
+	gun_name = "SABR-9 submachine guns"
 	icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
@@ -62,7 +62,7 @@
 
 // MARK: 9mm - SFG-5
 /obj/item/ammo_box/magazine/sfg9mm
-	gun_name = "пистолета-пулемёта SFG-5"
+	gun_name = "SFG-5 submachine guns"
 	icon_state = "sfg5"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
@@ -76,7 +76,7 @@
 
 // MARK: .45 - DCA S45
 /obj/item/ammo_box/magazine/smgm45
-	gun_name = "пистолета-пулемёта DCA S45"
+	gun_name = "DCA S45 submachine guns"
 	icon_state = "c20r45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = CALIBER_DOT_45
@@ -87,7 +87,7 @@
 
 // MARK: .45 - Tommy Gun
 /obj/item/ammo_box/magazine/tommygunm45
-	gun_name = "пистолета-пулемёта Томпсона"
+	gun_name = "Thompson submachine guns"
 	icon_state = "drum45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = CALIBER_DOT_45
@@ -95,7 +95,7 @@
 
 // MARK: .45 N&R - DCA S91
 /obj/item/ammo_box/magazine/sp91rc
-	gun_name = "пистолета-пулемёта DCA S91"
+	gun_name = "DCA S91 submachine guns"
 	icon_state = "45NRmag"
 	ammo_type = /obj/item/ammo_casing/c45nr
 	caliber = CALIBER_45NR
@@ -110,7 +110,7 @@
 
 // MARK: 7.62x25mm - PPSh
 /obj/item/ammo_box/magazine/ppsh
-	gun_name = "пистолета-пулемёта ППШ"
+	gun_name = "PPSh submachine guns"
 	icon_state = "ppshDrum"
 	origin_tech = "combat=3;syndicate=1"
 	ammo_type = /obj/item/ammo_casing/ftt762
@@ -120,7 +120,7 @@
 
 // MARK: 4.6x30mm - WT-550
 /obj/item/ammo_box/magazine/wt550m9
-	gun_name = "пистолета-пулемёта WT-550"
+	gun_name = "WT-550 submachine guns"
 	icon_state = "46x30mmt"
 	ammo_type = /obj/item/ammo_casing/c46x30mm
 	caliber = CALIBER_4_DOT_6X30MM

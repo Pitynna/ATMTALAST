@@ -232,16 +232,16 @@ GLOBAL_LIST_EMPTY(body_accessory_by_species)
 	name = "Smooth"
 	icon_state = "smooth"
 	animated_icon_state = "smooth_a"
-	allowed_species = list(SPECIES_UNATHI, SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_DRACONOID)
+	allowed_species = list(SPECIES_UNATHI, SPECIES_DRACONOID)
 
 /datum/body_accessory/tail/tiger
 	name = "Tiger"
 	icon_state = "dtiger"
 	animated_icon_state = "dtiger_a"
-	allowed_species = list(SPECIES_UNATHI, SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_DRACONOID)
+	allowed_species = list(SPECIES_UNATHI, SPECIES_DRACONOID)
 
 /datum/body_accessory/tail/spikes
 	name = "Spikes"
 	icon_state = "spikes"
 	animated_icon_state = "spikes_a"
-	allowed_species = list(SPECIES_UNATHI, SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_DRACONOID)
+	allowed_species = list(SPECIES_UNATHI, SPECIES_DRACONOID)

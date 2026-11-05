@@ -31,15 +31,5 @@
 // MARK: Glockroack
 /obj/item/ammo_casing/caseless/glockroach
 	name = "0.9mm bullet casing"
-	desc = "Это... 0.9mm гильза? Чего?"
+	desc = "A... 0.9mm bullet casing? What?"
 	projectile_type = /obj/projectile/glockroachbullet
-
-/obj/item/ammo_casing/caseless/glockroach/get_ru_names()
-	return alist(
-		NOMINATIVE = "гильза 0,9 мм",
-		GENITIVE = "гильзы 0,9 мм",
-		DATIVE = "гильзе 0,9 мм",
-		ACCUSATIVE = "гильзу 0,9 мм",
-		INSTRUMENTAL = "гильзой 0,9 мм",
-		PREPOSITIONAL = "гильзе 0,9 мм",
-	)

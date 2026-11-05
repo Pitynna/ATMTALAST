@@ -148,10 +148,6 @@
 	if(severity > EXPLODE_LIGHT)
 		ChangeTurf(baseturf)
 
-/turf/simulated/floor/vines/narsie_act()
-	if(prob(20))
-		ChangeTurf(baseturf) //nar sie eats this shit
-
 /turf/simulated/floor/vines/singularity_pull(atom/singularity, current_size)
 	if(current_size >= STAGE_FIVE)
 		if(prob(50))

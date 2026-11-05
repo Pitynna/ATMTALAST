@@ -112,7 +112,6 @@
 								/obj/item/gun/energy/kinetic_accelerator/crossbow = 1,						// 45 TK
 								/obj/item/chameleon = 1,													// 25 TK
 								/obj/item/clothing/glasses/chameleon/thermal = 1,							// 20 TK
-								/obj/item/clothing/gloves/color/black/thief = 1,							// 30 TK
 								/obj/item/card/id/syndicate = 1,											// 10 TK
 								/obj/item/clothing/shoes/chameleon/noslip = 1,								// 10 TK
 								/obj/item/storage/backpack/satchel_flat = 1,								// 10 TK
@@ -170,7 +169,6 @@
 								/obj/item/implanter/explosive = 1,											// 10 TK
 								/obj/item/implanter/storage = 1,											// 30 TK
 								/obj/item/encryptionkey/syndicate = 1),										// 0-2 TK
-
 			"Hacker" = list("Name" = "'Hacker' bundle",	// 242.6-249.6 TK
 								"Desc" = "A kit with everything you need to hack into and disrupt the Station, AI, its cyborgs and the Security team.",
 								/obj/item/melee/energy/sword/saber = 1,										// 40 TK
@@ -228,7 +226,7 @@
 								/obj/item/storage/box/sec = 1),												// 0 TK
 			"MetaOps" = list("Name" = "'MetaOps' bundle",	// 140-187 TK
 								"Desc" = "Wreak chaos and disguise yourself as a nuclear operative.",
-								/obj/item/mod/control/pre_equipped/traitor_elite = 1,						// 50 TK
+								/obj/item/clothing/suit/space/hardsuit/syndi/elite = 1,						// 50 TK
 								/obj/item/gun/projectile/automatic/shotgun/bulldog/mastiff = 1,			// 0-45 TK
 								/obj/item/implanter/explosive = 1,											// 10 TK
 								/obj/item/ammo_box/magazine/cheap_m12g = 2,								// 20 TK
@@ -252,7 +250,7 @@
 								/obj/item/ammo_box/magazine/m10mm = 2,										// 5 TK
 								/obj/item/ammo_box/magazine/m10mm/fire = 2,									// 10 TK
 								/obj/item/clothing/shoes/chameleon/noslip = 1,								// 10 TK
-								/obj/item/mod/control/pre_equipped/traitor = 1,								// 30 TK
+								/obj/item/storage/box/syndie_kit/hardsuit = 1,								// 30 TK
 								/obj/item/clothing/gloves/combat = 1,										// 0-5 TK
 								/obj/item/card/id/syndicate = 1,											// 10 TK
 								/obj/item/encryptionkey/syndicate = 1),										// 0-2 TK
@@ -269,22 +267,7 @@
 								/obj/item/clothing/head/beret = 1,                                          // 0 TK
 								/obj/item/clothing/accessory/scarf/red = 1,                               	// 0 TK
 								/obj/item/encryptionkey/syndicate = 1,										// 0-2 TK
-								/obj/item/clothing/mask/holo_cigar = 1),                                    //20 TK
-
-			"Metroid" = list("Name" = "Набор \"Метроид\"",	//  210 + modules + laser gun
-								"Desc" = "Получите снаряжение элитного оперативника Синдиката и с боем пробейтесь через станцию!",
-								/obj/item/mod/control/pre_equipped/traitor_elite = 1,
-								/obj/item/mod/module/visor/thermal = 1,
-								/obj/item/mod/module/stealth = 1,
-								/obj/item/mod/module/power_kick = 1,
-								/obj/item/mod/module/sphere_transform = 1,
-								/obj/item/autoimplanter = 1,
-								/obj/item/pinpointer/advpinpointer = 1,
-								/obj/item/storage/box/syndidonkpockets = 1,
-								/obj/item/storage/belt/utility/full/multitool = 1,
-								/obj/item/clothing/head/collectable/slime = 1,
-								/obj/item/encryptionkey/syndicate = 1),
-
+								/obj/item/clothing/mask/holo_cigar = 1),                                    // 20 TK
 			"Griefsky" = list("Name" = "Набор \"Грифски\"", // 130-220 ТК
 								"Desc" = "Набор, содержащий детали для сборки Грифски.",
 								/obj/item/encryptionkey/syndicate = 1,										// 0-2 TK

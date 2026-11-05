@@ -7,7 +7,7 @@
 
 /obj/item/extinguisher
 	name = "fire extinguisher"
-	desc = "Традиционный красный огнетушитель."
+	desc = "A traditional red fire extinguisher."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "fire_extinguisher0"
 	base_icon_state = "fire_extinguisher"
@@ -40,19 +40,9 @@
 	/// Detects when extinguisher exploding
 	var/blowing_up = FALSE
 
-/obj/item/extinguisher/get_ru_names()
-	return alist(
-		NOMINATIVE = "огнетушитель",
-		GENITIVE = "огнетушителя",
-		DATIVE = "огнетушителю",
-		ACCUSATIVE = "огнетушитель",
-		INSTRUMENTAL = "огнетушителем",
-		PREPOSITIONAL = "огнетушителе",
-	)
-
 /obj/item/extinguisher/mini
 	name = "pocket fire extinguisher"
-	desc = "Лёгкая и компактная модель огнетушителя в фиберглассовом корпусе."
+	desc = "A light and compact fibreglass-framed model fire extinguisher."
 	icon_state = "miniFE0"
 	base_icon_state = "miniFE"
 	item_state = "miniFE"
@@ -66,16 +56,6 @@
 	dog_fashion = null
 	toolbox_radial_menu_compatibility = TRUE
 	can_explode = FALSE
-
-/obj/item/extinguisher/mini/get_ru_names()
-	return alist(
-		NOMINATIVE = "карманный огнетушитель",
-		GENITIVE = "карманного огнетушителя",
-		DATIVE = "карманному огнетушителю",
-		ACCUSATIVE = "карманный огнетушитель",
-		INSTRUMENTAL = "карманным огнетушителем",
-		PREPOSITIONAL = "карманном огнетушителе",
-	)
 
 /obj/item/extinguisher/Initialize(mapload)
 	. = ..()
@@ -146,7 +126,7 @@
 
 /obj/item/extinguisher/update_desc(updates = ALL)
 	. = ..()
-	desc = "Предохранитель [safety ? "включён" : "выключен"]."
+	desc = "The safety is [safety ? "on" : "off"]."
 
 /obj/item/extinguisher/attack_self(mob/user)
 	if(blowing_up)

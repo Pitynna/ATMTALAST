@@ -13,8 +13,6 @@
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/helmet.dmi',
 	)
@@ -45,8 +43,6 @@
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/suit.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
 
@@ -105,7 +101,7 @@
 
 /obj/item/clothing/head/helmet/space/deathsquad/beret
 	name = "officer's beret"
-	desc = "Бронированный берет, обычно используемый офицерами подразделений специального назначения \"Нанотрейзен\"."
+	desc = "An armored beret commonly used by special operations officers."
 	icon_state = "beret_officer"
 	armor = list(MELEE = 80, BULLET = 80, LASER = 50, ENERGY = 100, BOMB = 100, BIO = 100, FIRE = 100, ACID = 100)
 	flags_inv = NONE
@@ -118,32 +114,12 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/suit.dmi',
 	)
 
-/obj/item/clothing/head/helmet/space/deathsquad/beret/get_ru_names()
-	return alist(
-		NOMINATIVE = "берет офицера СО \"Нанотрейзен\"",
-		GENITIVE = "берета офицера СО \"Нанотрейзен\"",
-		DATIVE = "берету офицера СО \"Нанотрейзен\"",
-		ACCUSATIVE = "берет офицера СО \"Нанотрейзен\"",
-		INSTRUMENTAL = "беретом офицера СО \"Нанотрейзен\"",
-		PREPOSITIONAL = "берете офицера СО \"Нанотрейзен\"",
-)
-
 /obj/item/clothing/head/helmet/space/deathsquad/beret/captain
 	name = "Nanotrasen Fleet Captain's Cap"
-	desc = "Парадная фуражка, спроектированная и изготовленная под индивидуальную мерку действующего капитана флота \"Нанотрейзен\" в секторе Эпсилон Лукусты. Если вы когда-нибудь увидите её носителя, вам стоит надеяться, что он прибыл для награждения вас за ваши заслуги, а не разрешения вызванного вами кризиса."
+	desc = "A ceremonial cap tailored for the serving Nanotrasen fleet captain in Epsilon Lucustae. If you ever see its wearer, hope they have come to reward your achievements rather than resolve a crisis you caused."
 	icon_state = "ntsc_cap"
 	item_state = "ntsc_cap"
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 100, BOMB = 100, BIO = 100, FIRE = 100, ACID = 100)
-
-/obj/item/clothing/head/helmet/space/deathsquad/beret/captain/get_ru_names()
-	return alist(
-		NOMINATIVE = "фуражка капитана флота \"Нанотрейзен\"",
-		GENITIVE = "фуражки капитана флота \"Нанотрейзен\"",
-		DATIVE = "фуражке капитана флота \"Нанотрейзен\"",
-		ACCUSATIVE = "фуражку капитана флота \"Нанотрейзен\"",
-		INSTRUMENTAL = "фуражкой капитана флота \"Нанотрейзен\"",
-		PREPOSITIONAL = "фуражке капитана флота \"Нанотрейзен\"",
-)
 
 /obj/item/clothing/head/helmet/space/deathsquad/beret/solgov
 	name = "Trans-Solar Federation commander's beret"
@@ -152,7 +128,7 @@
 
 /obj/item/clothing/suit/space/deathsquad/officer
 	name = "officer jacket"
-	desc = "Высокотехнологичная куртка с высокими защитными свойствами, используются в основном офицерами специальных операций \"Нанотрейзен\"."
+	desc = "An armored jacket used in special operations."
 	icon_state = "bladerunner_coat"
 	item_state = "bladerunner_coat"
 	blood_overlay_type = "coat"
@@ -162,66 +138,26 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	species_restricted = null
 
-/obj/item/clothing/suit/space/deathsquad/officer/get_ru_names()
-	return alist(
-		NOMINATIVE = "куртка офицера СО \"Нанотрейзен\"",
-		GENITIVE = "куртки офицера СО \"Нанотрейзен\"",
-		DATIVE = "куртке офицера СО \"Нанотрейзен\"",
-		ACCUSATIVE = "куртку офицера СО \"Нанотрейзен\"",
-		INSTRUMENTAL = "курткой офицера СО \"Нанотрейзен\"",
-		PREPOSITIONAL = "куртке офицера СО \"Нанотрейзен\"",
-	)
-
 /obj/item/clothing/suit/space/deathsquad/officer/centcom
 	name = "CCO Jacket"
-	desc = "Куртка из дорогостоящих материалов с золотой отделкой."
+	desc = "A jacket made from expensive materials with gold trim."
 	icon_state = "dress_capjacket_black_open"
 	item_state = "dress_capjacket_black_open"
 	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 15, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)
 
-/obj/item/clothing/suit/space/deathsquad/officer/centcom/get_ru_names()
-	return alist(
-		NOMINATIVE = "куртка офицера ЦК \"Нанотрейзен\"",
-		GENITIVE = "куртки офицера ЦК \"Нанотрейзен\"",
-		DATIVE = "куртке офицера ЦК \"Нанотрейзен\"",
-		ACCUSATIVE = "куртку офицера ЦК \"Нанотрейзен\"",
-		INSTRUMENTAL = "курткой офицера ЦК \"Нанотрейзен\"",
-		PREPOSITIONAL = "куртке офицера ЦК \"Нанотрейзен\"",
-)
-
 /obj/item/clothing/suit/space/deathsquad/officer/captain
 	name = "Nanotreisen Fleet Captain's Cloak"
-	desc = "Парадный плащ, спроектированный и сшитый под индивидуальную мерку действующего капитана флота \"Нанотрейзен\" в секторе Эпсилон Лукусты. Внутренний слой формы представляет из себя защитную оболочку, состоящую из миллионов нанитов; кластеры этих миниатюрных роботов способны эффективно рассеивать кинетическую и термальную энергию, обеспечивая превосходный уровень защиты для носителя."
+	desc = "A ceremonial cloak tailored for the serving Nanotrasen fleet captain in Epsilon Lucustae. Its inner protective layer consists of millions of nanites, whose clusters efficiently disperse kinetic and thermal energy to provide exceptional protection."
 	icon_state = "ntsc_uniform"
 	item_state = "ntsc_uniform"
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 100, BOMB = 100, BIO = 100, FIRE = 100, ACID = 100)
 
-/obj/item/clothing/suit/space/deathsquad/officer/captain/get_ru_names()
-	return alist(
-		NOMINATIVE = "плащ капитана флота \"Нанотрейзен\"",
-		GENITIVE = "плаща капитана флота \"Нанотрейзен\"",
-		DATIVE = "плащу капитана флота \"Нанотрейзен\"",
-		ACCUSATIVE = "плащ капитана флота \"Нанотрейзен\"",
-		INSTRUMENTAL = "плащом капитана флота \"Нанотрейзен\"",
-		PREPOSITIONAL = "плаще капитана флота \"Нанотрейзен\"",
-)
-
 /obj/item/clothing/suit/space/deathsquad/officer/field
 	name = "Nanotrasen Fleet Officer's Field Cloak"
-	desc = "Парадный плащ, разработанный в качестве массового варианта формы Верховного Главнокомандующего. У этой униформы нет тех же защитных свойств, что и у оригинала, но она все ещё является довольно удобным и стильным предметом гардероба."
+	desc = "A ceremonial cloak developed as a mass-produced version of the supreme commander's uniform. It lacks the original's protection, but remains comfortable and stylish."
 	icon_state = "ntsc_uniform"
 	item_state = "ntsc_uniform"
 	armor = list(MELEE = 30, BULLET = 50, LASER = 30,ENERGY = 15, BOMB = 30, BIO = 30, FIRE = 60, ACID = 75)
-
-/obj/item/clothing/suit/space/deathsquad/officer/field/get_ru_names()
-	return alist(
-		NOMINATIVE = "полевая форма офицера флота \"Нанотрейзен\"",
-		GENITIVE = "полевой формы офицера флота \"Нанотрейзен\"",
-		DATIVE = "полевой форме офицера флота \"Нанотрейзен\"",
-		ACCUSATIVE = "полевую форму офицера флота \"Нанотрейзен\"",
-		INSTRUMENTAL = "полевой формой офицера флота \"Нанотрейзен\"",
-		PREPOSITIONAL = "полевой форме офицера флота \"Нанотрейзен\"",
-	)
 
 /obj/item/clothing/suit/space/deathsquad/officer/solgov
 	name = "Trans-Solar Federation commander's jacket"
@@ -346,8 +282,6 @@
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/helmet.dmi',
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
 	)
@@ -367,8 +301,6 @@
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/suit.dmi',
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/suit.dmi',
 	)
@@ -383,8 +315,6 @@
 	sprite_sheets = list(
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/suit.dmi',
@@ -400,8 +330,6 @@
 	sprite_sheets = list(
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/helmet.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
@@ -461,8 +389,6 @@
 	armor = list(melee = 10, bullet = 5, laser = 30, energy = 25, bomb = 0, bio = 100, fire = 50, acid = 65)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/suit.dmi',
 		SPECIES_SKRELL = 'icons/mob/clothing/species/skrell/suit.dmi',
@@ -479,8 +405,6 @@
 	flash_protect = FLASH_PROTECTION_WELDER
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/helmet.dmi',
 		SPECIES_SKRELL = 'icons/mob/clothing/species/skrell/helmet.dmi',

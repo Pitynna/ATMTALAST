@@ -538,7 +538,7 @@
 	id = "Acad2";
 	id_target = "Acad22";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/carpet/black,
 /area/awaymission/academy/headmaster)
@@ -594,7 +594,7 @@
 	id = "Acad1";
 	id_target = "Acad11";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/carpet/black,
 /area/awaymission/academy/headmaster)
@@ -676,7 +676,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "dm" = (
-/obj/structure/cult/archives,
 /obj/item/twohanded/staff,
 /turf/simulated/floor/wood/fancy/oak,
 /area/awaymission/academy/classrooms)
@@ -1294,7 +1293,7 @@
 	icon_state = "acad_portal";
 	id_target = "sekretka1";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -2396,7 +2395,7 @@
 	icon_state = "acad_portal";
 	id_target = "sekretka2";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -2751,7 +2750,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 73";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -2967,7 +2966,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 77";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -3142,7 +3141,7 @@
 	icon_state = "acad_portal";
 	id_target = "Acad_end1";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/headmaster)
@@ -3414,9 +3413,9 @@
 /obj/item/storage/fancy/cigarettes/syndicate,
 /obj/item/lighter/random,
 /obj/item/melee/baseball_bat{
-	desc = "Величайшее из оружий.";
+	desc = "The greatest of all weapons.";
 	force = 1;
-	name = "Легендарнейшая бита"
+	name = "Most Legendary Bat"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 5;
@@ -3709,7 +3708,6 @@
 	dir = 4
 	},
 /obj/structure/stone_tile,
-/obj/item/melee/cultblade,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -3720,7 +3718,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 76";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -3842,7 +3840,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 74";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/vault,
@@ -4031,9 +4029,9 @@
 /area/awaymission/academy/classrooms)
 "zb" = (
 /obj/item/crowbar/red{
-	desc = "Величайшее оружие против пола.";
+	desc = "The greatest weapon against floors.";
 	force = 1;
-	name = "Легендарнейшая из монтировок"
+	name = "Most Legendary Crowbar"
 	},
 /turf/simulated/floor/engine,
 /area/awaymission/academy/academyaft)
@@ -4164,7 +4162,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 71";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -4301,7 +4299,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 72";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -4435,7 +4433,7 @@
 	id = "Acad3";
 	id_target = "Acad33";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/carpet/black,
 /area/awaymission/academy/headmaster)
@@ -4451,7 +4449,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 75";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -4735,7 +4733,7 @@
 	icon_state = "acad_portal";
 	id_target = "sekretka3";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/plasteel,
 /area/awaymission/academy/academyaft)
@@ -5504,7 +5502,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr24";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -5588,7 +5586,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 78";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -5836,7 +5834,7 @@
 	icon_state = "acad_portal";
 	id_target = "Hub";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/grass,
 /area/awaymission/academy/academygate)
@@ -5856,7 +5854,7 @@
 	icon_state = "acad_portal";
 	id_target = "sekretka4";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/plasteel,
 /area/awaymission/academy/academyaft)
@@ -5964,7 +5962,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 69";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -6006,7 +6004,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 69";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/vault,
@@ -6053,7 +6051,7 @@
 	icon_state = "acad_portal";
 	id_target = "Acad_end2";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/sepia,
 /area/awaymission/academy/academyaft)
@@ -6211,7 +6209,7 @@
 	icon_state = "acad_portal";
 	id_target = "labr 70";
 	invisibility = 0;
-	name = "Межпространственный Разрыв"
+	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
@@ -6497,7 +6495,7 @@
 	icon_state = "acad_portal";
 	id_target = "Acad_end3";
 	invisibility = 0;
-	name = "Межпространственный Разрыв";
+	name = "Interdimensional Rift";
 	pixel_x = -1
 	},
 /turf/simulated/floor/carpet,

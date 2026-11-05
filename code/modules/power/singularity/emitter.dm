@@ -1,6 +1,6 @@
 /obj/machinery/power/emitter
 	name = "emitter"
-	desc = "Мощный промышленный лазер, который часто применяется для питания защитных полей при производстве электроэнергии."
+	desc = "A heavy duty industrial laser."
 	icon = 'icons/obj/engines_and_power/singularity.dmi'
 	icon_state = "emitter"
 	base_icon_state = "emitter"
@@ -44,16 +44,6 @@
 	var/charge = 0
 	/// the disk in the gun
 	var/obj/item/emitter_disk/diskie
-
-/obj/machinery/power/emitter/get_ru_names()
-	return alist(
-		NOMINATIVE = "эмиттер",
-		GENITIVE = "эмиттера",
-		DATIVE = "эмиттеру",
-		ACCUSATIVE = "эмиттер",
-		INSTRUMENTAL = "эмиттером",
-		PREPOSITIONAL = "эмиттере"
-	)
 
 /obj/machinery/power/emitter/Initialize(mapload)
 	. = ..()

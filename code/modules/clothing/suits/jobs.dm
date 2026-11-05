@@ -457,8 +457,6 @@
 
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/suit.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/suit.dmi',
@@ -714,21 +712,10 @@
 // Surgeon
 /obj/item/clothing/suit/apron/surgical
 	name = "surgical apron"
-	desc = "Стерильный хирургический фартук синего цвета, предназначенный для ношения хирургами в операционных. \
-			Изготовлен из многослойного материала с антисептической пропиткой, оборудован креплениями для хирургических инструментов."
+	desc = "A sterile blue surgical apron."
 	icon_state = "surgical"
 	item_state = "surgical"
 	allowed = list(/obj/item/scalpel, /obj/item/surgical_drapes, /obj/item/cautery, /obj/item/hemostat, /obj/item/retractor)
-
-/obj/item/clothing/suit/apron/surgical/get_ru_names()
-	return alist(
-		NOMINATIVE = "хирургический фартук",
-		GENITIVE = "хирургического фартука",
-		DATIVE = "хирургическому фартуку",
-		ACCUSATIVE = "хирургический фартук",
-		INSTRUMENTAL = "хирургическим фартуком",
-		PREPOSITIONAL = "хирургическом фартуке",
-	)
 
 /obj/item/clothing/suit/hop_jacket
 	name = "head of personnel's jacket"
@@ -770,8 +757,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/suit.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/suit.dmi',

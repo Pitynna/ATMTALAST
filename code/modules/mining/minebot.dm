@@ -295,19 +295,9 @@
 
 /obj/item/mine_bot_upgrade
 	name = "minebot melee upgrade"
-	desc = "Апгрейд для шахтёрского бота."
+	desc = "A minebot upgrade."
 	icon_state = "door_electronics"
 	icon = 'icons/obj/doors/door_assembly.dmi'
-
-/obj/item/mine_bot_upgrade/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль ближнего боя для шахтёрского бота",
-		GENITIVE = "модуля ближнего боя для шахтёрского бота",
-		DATIVE = "модулю ближнего боя для шахтёрского бота",
-		ACCUSATIVE = "модуль ближнего боя для шахтёрского бота",
-		INSTRUMENTAL = "модулем ближнего боя для шахтёрского бота",
-		PREPOSITIONAL = "модуле ближнего боя для шахтёрского бота",
-	)
 
 /obj/item/mine_bot_upgrade/afterattack(mob/living/simple_animal/hostile/mining_drone/target, mob/user, proximity_flag, list/modifiers, status)
 	if(!istype(target) || !proximity_flag)
@@ -328,16 +318,6 @@
 /obj/item/mine_bot_upgrade/health
 	name = "minebot armor upgrade"
 
-/obj/item/mine_bot_upgrade/health/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль брони для шахтёрского бота",
-		GENITIVE = "модуля брони для шахтёрского бота",
-		DATIVE = "модулю брони для шахтёрского бота",
-		ACCUSATIVE = "модуль брони для шахтёрского бота",
-		INSTRUMENTAL = "модулем брони для шахтёрского бота",
-		PREPOSITIONAL = "модуле брони для шахтёрского бота",
-	)
-
 /obj/item/mine_bot_upgrade/health/upgrade_bot(mob/living/simple_animal/hostile/mining_drone/M, mob/user)
 	if(M.maxHealth != initial(M.maxHealth))
 		to_chat(user, "[DECLENT_RU_CAP(src, NOMINATIVE)] уже имеет усиленный корпус!")
@@ -350,7 +330,7 @@
 
 /obj/item/slimepotion/sentience/mining
 	name = "minebot AI upgrade"
-	desc = "Может использоваться для наделения шахтёрских ботов самосознанием."
+	desc = "Can be used to grant sentience to minebots."
 	icon_state = "door_electronics"
 	icon = 'icons/obj/doors/door_assembly.dmi'
 	sentience_type = SENTIENCE_MINEBOT
@@ -359,16 +339,6 @@
 	var/base_damage_add = 1 //this thus disables other minebot upgrades
 	var/base_speed_add = 1
 	var/base_cooldown_add = 10 //base cooldown isn't reset to normal, it's just added on, since it's not practical to disable the cooldown module
-
-/obj/item/slimepotion/sentience/mining/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль ИИ для шахтёрского бота",
-		GENITIVE = "модуля ИИ для шахтёрского бота",
-		DATIVE = "модулю ИИ для шахтёрского бота",
-		ACCUSATIVE = "модуль ИИ для шахтёрского бота",
-		INSTRUMENTAL = "модулем ИИ для шахтёрского бота",
-		PREPOSITIONAL = "модуле ИИ для шахтёрского бота",
-	)
 
 /obj/item/slimepotion/sentience/mining/after_success(mob/living/user, mob/living/simple_animal/SM)
 	if(istype(SM, /mob/living/simple_animal/hostile/mining_drone))
@@ -386,21 +356,11 @@
 
 /obj/item/mining_drone_cube
 	name = "mining drone cube"
-	desc = "Сжатый шахтёрский дрон, готовый к развёртыванию. Просто нажмите кнопку для активации!"
+	desc = "Compressed mining drone, ready for deployment. Just press the button to activate!"
 	w_class = WEIGHT_CLASS_SMALL
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "minedronecube"
 	item_state = "electronic"
-
-/obj/item/mining_drone_cube/get_ru_names()
-	return alist(
-		NOMINATIVE = "куб шахтёрского бота",
-		GENITIVE = "куба шахтёрского бота",
-		DATIVE = "кубу шахтёрского бота",
-		ACCUSATIVE = "куб шахтёрского бота",
-		INSTRUMENTAL = "кубом шахтёрского бота",
-		PREPOSITIONAL = "кубе шахтёрского бота",
-	)
 
 /obj/item/mining_drone_cube/attack_self(mob/user)
 	user.visible_message(

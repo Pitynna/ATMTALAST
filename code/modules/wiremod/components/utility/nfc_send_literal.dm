@@ -8,8 +8,7 @@
  */
 /obj/item/circuit_component/list_literal/nfc_send
 	display_name = "NFC передатчик литералов"
-	desc = "Создаёт пакет данных списка литералов и отправляет его через NFC. \
-			Если задан ключ шифрования, передаваемые данные будут приняты только получателями с таким же ключом шифрования."
+	desc = "Creates a data packet from a list literal and sends it over NFC. If an encryption key is set, only receivers with the same key will accept it."
 	category = "Utility"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL

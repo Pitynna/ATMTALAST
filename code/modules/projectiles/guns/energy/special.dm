@@ -225,21 +225,11 @@
 // MARK: Vortex shotgun
 /obj/item/gun/energy/vortex_shotgun
 	name = "reality vortex wrist mounted shotgun"
-	desc = "Это оружие использует силу вихревой аномалии для локального разрушения ткани реальности."
+	desc = "This weapon uses the power of the vortex core to rip apart the fabric of reality in front of it."
 	icon_state = "flayer" //Sorta wrist mounted? Sorta? Not really but we work with what we got.
 	ammo_type = list(/obj/item/ammo_casing/energy/vortex_blast)
 	fire_sound = 'sound/weapons/bladeslice.ogg'
 	cell_type = /obj/item/stock_parts/cell/infinite
-
-/obj/item/gun/energy/vortex_shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "вортекс-дробовик",
-		GENITIVE = "вортекс-дробовика",
-		DATIVE = "вортекс-дробовику",
-		ACCUSATIVE = "вортекс-дробовик",
-		INSTRUMENTAL = "вортекс-дробовиком",
-		PREPOSITIONAL = "вортекс-дробовике",
-	)
 
 /obj/effect/temp_visual/target_angled/muzzle_flash/vortex_blast
 	invisibility = INVISIBILITY_ABSTRACT // visual is from effect
@@ -487,70 +477,6 @@
 		TED.pass_mind(M)
 
 // MARK: Shuriken emitter
-/obj/item/gun/energy/shuriken_emitter
-	name = "shuriken emitter"
-	desc = "Спрятанный в костюме Ниндзя девайс. Выпускает 3 энергетических сюрикена, которые замедляют и временно ослепляют цели."
-	icon = 'icons/obj/ninjaobjects.dmi'
-	icon_state = "shuriken_emitter"
-	item_state = ""
-	ninja_weapon = TRUE
-	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = NONE
-	item_flags = DROPDEL|ABSTRACT|NOBLUDGEON
-	ammo_type = list(/obj/item/ammo_casing/energy/shuriken)
-	can_charge = FALSE
-	burst_amount = 3
-	var/cost = 100
-	var/obj/item/clothing/suit/space/space_ninja/my_suit = null
-	var/datum/action/item_action/advanced/ninja/toggle_shuriken_fire_mode/my_action = null
-
-/obj/item/gun/energy/shuriken_emitter/get_ru_names()
-	return alist(
-		NOMINATIVE = "генератор энергетических сюрикенов",
-		GENITIVE = "генератора энергетических сюрикенов",
-		DATIVE = "генератору энергетических сюрикенов",
-		ACCUSATIVE = "генератор энергетических сюрикенов",
-		INSTRUMENTAL = "генератором энергетических сюрикенов",
-		PREPOSITIONAL = "генераторе энергетических сюрикенов",
-	)
-
-/obj/item/gun/energy/shuriken_emitter/Destroy()
-	. = ..()
-	my_suit?.shuriken_emitter = null
-	my_suit = null
-	my_action?.action_ready = FALSE
-	my_action?.use_action()
-	my_action = null
-
-/obj/item/gun/energy/shuriken_emitter/equip_to_best_slot(mob/user, force = FALSE, drop_on_fail = FALSE, qdel_on_fail = FALSE)
-	qdel(src)
-
-/obj/item/gun/energy/shuriken_emitter/run_drop_held_item(mob/user)
-	qdel(src)
-
-/obj/item/gun/energy/shuriken_emitter/can_shoot(mob/user)
-	. = ..()
-	return !my_suit.ninjacost(cost * burst_amount)
-
-/obj/item/gun/energy/shuriken_emitter/borg
-	name = "robotic shuriken emitter"
-	desc = "A device sneakily hidden inside your robotic hand. Shoots 3 energy shurikens that slows and temporary blinds their targets"
-	ammo_type = list(/obj/item/ammo_casing/energy/shuriken/borg)
-	item_flags = ABSTRACT|NOBLUDGEON
-	// These two values are not needed for borgs - they don't wear a ninja suit
-	cost = null
-	my_suit = null
-
-/obj/item/gun/energy/shuriken_emitter/borg/equip_to_best_slot(mob/M)
-	return
-
-/obj/item/gun/energy/shuriken_emitter/borg/run_drop_held_item(mob/user)
-	return
-
-/obj/item/gun/energy/shuriken_emitter/borg/can_shoot(mob/user)
-	. = ..()
-	return TRUE
-
 // MARK: Noise cannon
 /obj/item/gun/energy/noisecannon
 	name = "alien heavy cannon"

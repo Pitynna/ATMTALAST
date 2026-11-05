@@ -32,7 +32,6 @@ GLOBAL_ALIST_INIT(huds, alist(
 	ANTAG_HUD_SOULLESS = new/datum/atom_hud/antag/hidden(),
 	ANTAG_HUD_EVENTMISC = new/datum/atom_hud/antag/hidden(),
 	ANTAG_HUD_BLOB = new/datum/atom_hud/antag(),
-	TAIPAN_HUD = new/datum/atom_hud/antag(),
 	ANTAG_HUD_THIEF = new/datum/atom_hud/antag/hidden(),
 	ANTAG_HUD_PRISONER_TRAITOR = new/datum/atom_hud/antag(),
 	ANTAG_HUD_TEAM_1 = new /datum/atom_hud/antag(),

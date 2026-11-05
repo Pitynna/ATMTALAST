@@ -3,8 +3,8 @@
 /// and the mesmerize tick. Subtypes only customize their flavor.
 /obj/god
 	abstract_type = /obj/god
-	name = "Бог"
-	desc = "Ваш разум пульсирует и плывёт в безуспешных попытках осознать ЭТО."
+	name = "God"
+	desc = "Your mind throbs and swims as it struggles in vain to comprehend THIS."
 	anchored = TRUE
 	appearance_flags = LONG_GLIDE
 	move_resist = INFINITY

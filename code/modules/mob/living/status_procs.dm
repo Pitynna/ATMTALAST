@@ -583,35 +583,7 @@
 	SetSlur(directional_bounded_sum(AmountSluring(), amount, bound_lower, bound_upper))
 
 /// CULTSLURRING
-/mob/living/proc/AmountCultSlurring()
-	RETURN_STATUS_EFFECT_STRENGTH(STATUS_EFFECT_CULT_SLUR)
-
-/mob/living/proc/CultSlur(amount)
-	SetCultSlur(max(AmountCultSlurring(), amount))
-
-/mob/living/proc/SetCultSlur(amount)
-	if(HAS_TRAIT(src, TRAIT_GODMODE))
-		return
-	SET_STATUS_EFFECT_STRENGTH(STATUS_EFFECT_CULT_SLUR, amount)
-
-/mob/living/proc/AdjustCultSlur(amount, bound_lower = 0, bound_upper = INFINITY)
-	SetCultSlur(directional_bounded_sum(AmountCultSlurring(), amount, bound_lower, bound_upper))
-
 /// CLOCKSLURRING
-/mob/living/proc/AmountClockSlurring()
-	RETURN_STATUS_EFFECT_STRENGTH(STATUS_EFFECT_CLOCK_CULT_SLUR)
-
-/mob/living/proc/ClockSlur(amount)
-	SetClockSlur(max(AmountClockSlurring(), amount))
-
-/mob/living/proc/SetClockSlur(amount)
-	if(HAS_TRAIT(src, TRAIT_GODMODE))
-		return
-	SET_STATUS_EFFECT_STRENGTH(STATUS_EFFECT_CLOCK_CULT_SLUR, amount)
-
-/mob/living/proc/AdjustClockSlur(amount, bound_lower = 0, bound_upper = INFINITY)
-	SetClockSlur(directional_bounded_sum(AmountClockSlurring(), amount, bound_lower, bound_upper))
-
 // MARK: STUN
 
 /mob/proc/IsStunned()

@@ -2,16 +2,6 @@
 /obj/structure/closet/crate/necropolis/colossus
 	name = "colossus chest"
 
-/obj/structure/closet/crate/necropolis/colossus/get_ru_names()
-	return alist(
-		NOMINATIVE = "сундук колосса",
-		GENITIVE = "сундука колосса",
-		DATIVE = "сундуку колосса",
-		ACCUSATIVE = "сундук колосса",
-		INSTRUMENTAL = "сундуком колосса",
-		PREPOSITIONAL = "сундуке колосса",
-	)
-
 /obj/structure/closet/crate/necropolis/colossus/populate_contents()
 	var/list/choices = subtypesof(/obj/machinery/anomalous_crystal)
 	var/random_crystal = pick(choices)
@@ -22,16 +12,6 @@
 /obj/structure/closet/crate/necropolis/colossus/crusher
 	name = "angelic colossus chest"
 
-/obj/structure/closet/crate/necropolis/colossus/crusher/get_ru_names()
-	return alist(
-		NOMINATIVE = "ангельский сундук колосса",
-		GENITIVE = "ангельского сундука колосса",
-		DATIVE = "ангельскому сундуку колосса",
-		ACCUSATIVE = "ангельский сундук колосса",
-		INSTRUMENTAL = "ангельским сундуком колосса",
-		PREPOSITIONAL = "ангельском сундуке колосса",
-	)
-
 /obj/structure/closet/crate/necropolis/colossus/crusher/populate_contents()
 	. = ..()
 	new /obj/item/crusher_trophy/blaster_tubes(src)
@@ -41,7 +21,7 @@
 
 /obj/machinery/anomalous_crystal
 	name = "anomalous crystal"
-	desc = "Странный осколок кристалла. Нахождение рядом с ним наполняет вас смесью восторга и ужаса."
+	desc = "A strange chunk of crystal, being in the presence of it fills you with equal parts excitement and dread."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "anomaly_crystal"
 	light_range = 8
@@ -54,16 +34,6 @@
 	var/cooldown_add = 30
 	var/list/affected_targets = list()
 	var/activation_sound = 'sound/effects/break_stone.ogg'
-
-/obj/machinery/anomalous_crystal/get_ru_names()
-	return alist(
-		NOMINATIVE = "аномальный кристалл",
-		GENITIVE = "аномального кристалла",
-		DATIVE = "аномальному кристаллу",
-		ACCUSATIVE = "аномальный кристалл",
-		INSTRUMENTAL = "аномальным кристаллом",
-		PREPOSITIONAL = "аномальном кристалле",
-	)
 
 /obj/machinery/anomalous_crystal/Initialize(mapload)
 	. = ..()
@@ -151,9 +121,9 @@
 	. = ..()
 	terrain_theme = pick("lavaland","winter","jungle","alien")
 	switch(terrain_theme)
-		if("lavaland")//Depressurizes the place... and free cult metal, I guess.
+		if("lavaland")//Volcanic terrain.
 			NewTerrainFloors = /turf/simulated/floor/plating/asteroid/basalt // Needs to be updated after turf update
-			NewTerrainWalls = /turf/simulated/wall/cult
+			NewTerrainWalls = /turf/simulated/wall/mineral
 			NewFlora = list(/mob/living/simple_animal/hostile/asteroid/goldgrub)
 			florachance = 1
 		if("winter") //Snow terrain is slow to move in and cold! Get the assistants to shovel your driveway.
@@ -244,7 +214,7 @@
 	if(..())
 		for(var/i in range(1, src))
 			if(isturf(i))
-				new /obj/effect/temp_visual/cult/sparks(i)
+				new /obj/effect/temp_visual/blood_magic_sparks(i)
 				continue
 			if(ishuman(i))
 				var/mob/living/carbon/human/H = i
@@ -255,109 +225,13 @@
 					ADD_TRAIT(H, TRAIT_NO_CLONE, ANOMALOUS_CRYSTAL_TRAIT)
 					H.grab_ghost(force = TRUE)
 
-/obj/machinery/anomalous_crystal/helpers //Lets ghost spawn as helpful creatures that can only heal people slightly. Incredibly fragile and they can't converse with humans
-	var/ready_to_deploy = 0
-
-/obj/machinery/anomalous_crystal/helpers/ActivationReaction(mob/user, method)
-	if(..() && !ready_to_deploy)
-		ready_to_deploy = 1
-		notify_ghosts("Аномальный кристалл активирован в [get_area(src)]! Теперь призраки могут использовать его в любое время.", enter_link = "<a href='byond://?src=[UID()];ghostjoin=1'>(Нажмите для входа)</a>", source = src, action = NOTIFY_ATTACK)
-
-/obj/machinery/anomalous_crystal/helpers/attack_ghost(mob/dead/observer/user)
-	..()
-	if(ready_to_deploy)
-		var/be_helper = tgui_alert(user, "Стать духом света? (Внимание: после этого вас нельзя будет клонировать!)", "Возрождение", list("Да","Нет"))
-		if(be_helper != "Да")
-			return
-		var/mob/living/simple_animal/hostile/lightgeist/W = new /mob/living/simple_animal/hostile/lightgeist(get_turf(loc))
-		W.possess_by_player(user.key)
-
-/obj/machinery/anomalous_crystal/helpers/Topic(href, href_list)
-	if(href_list["ghostjoin"])
-		var/mob/dead/observer/ghost = usr
-		if(istype(ghost))
-			attack_ghost(ghost)
-
-/mob/living/simple_animal/hostile/lightgeist
-	name = "lightgeist"
-	desc = "Это маленькое парящее создание — абсолютно неизвестная форма жизни... Его присутствие наполняет вас чувством умиротворения."
-	icon_state = "lightgeist"
-	icon_living = "lightgeist"
-	icon_dead = "butterfly_dead"
-	response_help = "отмахивается"
-	response_disarm = "отталкивает"
-	response_harm = "разрушает"
-	speak_emote = list("пульсирует")
-	maxHealth = 2
-	health = 2
-	harm_intent_damage = 1
-	friendly = "восстанавливает"
-	density = FALSE
-	obj_damage = 0
-	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
-	ventcrawler_trait = TRAIT_VENTCRAWLER_ALWAYS
-	mob_size = MOB_SIZE_TINY
-	gold_core_spawnable = HOSTILE_SPAWN
-	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
-	luminosity = 4
-	faction = list("neutral")
-	del_on_death = 1
-	unsuitable_atmos_damage = 0
-	environment_smash = 0
-	AIStatus = AI_OFF
-	stop_automated_movement = 1
-	var/heal_power = 5
-
-/mob/living/simple_animal/hostile/lightgeist/get_ru_names()
-	return alist(
-		NOMINATIVE = "дух света",
-		GENITIVE = "духа света",
-		DATIVE = "духу света",
-		ACCUSATIVE = "духа света",
-		INSTRUMENTAL = "духом света",
-		PREPOSITIONAL = "духе света",
-	)
-
-/mob/living/simple_animal/hostile/lightgeist/Initialize(mapload)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NO_FLOATING_ANIM, INNATE_TRAIT)
-	AddElement(/datum/element/simple_flying)
-	UNASSIGN_GAME_VERB(src, /mob, me_verb)
-	var/datum/atom_hud/med_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	med_hud.show_to(src)
-
-/mob/living/simple_animal/hostile/lightgeist/Destroy()
-	var/datum/atom_hud/med_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	med_hud.hide_from(src)
-	return ..()
-
-/mob/living/simple_animal/hostile/lightgeist/ComponentInitialize()
-	AddComponent( \
-		/datum/component/animal_temperature, \
-		maxbodytemp = 1500, \
-		minbodytemp = 0, \
-	)
-
-/mob/living/simple_animal/hostile/lightgeist/AttackingTarget()
-	. = ..()
-	if(isliving(target) && target != src)
-		var/mob/living/L = target
-		if(L.stat < DEAD)
-			L.heal_overall_damage(heal_power, heal_power)
-			new /obj/effect/temp_visual/heal(get_turf(target), "#80F5FF")
-
-/mob/living/simple_animal/hostile/lightgeist/ghostize()
-	if(..())
-		death()
-
 /obj/machinery/anomalous_crystal/refresher //Deletes and recreates a copy of the item, "refreshing" it.
 	cooldown_add = 50
 	activation_sound = 'sound/magic/timeparadox2.ogg'
 	var/list/banned_items_typecache = list(
 		/obj/item/storage, /obj/item/implant, /obj/item/implanter, /obj/item/disk/nuclear,
-		/obj/projectile, /obj/item/spellbook, /obj/item/clothing/mask/facehugger, /obj/item/contractor_uplink,
-		/obj/item/dice/d20/fate, /obj/item/gem, /obj/item/guardiancreator, /obj/item/dna_upgrader, /obj/item/mod,
-		/obj/item/autoimplanter, /obj/item/card/mining_point_card, /obj/item/neurotrainer,
+		/obj/item/dice/d20/fate, /obj/item/gem, /obj/item/guardiancreator, /obj/item/dna_upgrader,
+		/obj/item/autoimplanter, /obj/item/card/mining_point_card,
 	)
 
 /obj/machinery/anomalous_crystal/refresher/Initialize(mapload)
@@ -397,22 +271,12 @@
 
 /obj/structure/closet/stasis
 	name = "quantum entanglement stasis warp field"
-	desc = "Вы едва можете осознать эту вещь... поэтому и не видите её."
+	desc = "You can hardly comprehend this thing... which is why you can't see it."
 	icon_state = null //This shouldn't even be visible, so if it DOES show up, at least nobody will notice
 	anchored = TRUE
 	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
 	var/mob/living/simple_animal/holder_animal
 	var/datum/action/cooldown/spell/exit_possession/posession_spell
-
-/obj/structure/closet/stasis/get_ru_names()
-	return alist(
-		NOMINATIVE = "квантовое стазисное поле",
-		GENITIVE = "квантового стазисного поля",
-		DATIVE = "квантовому стазисному полю",
-		ACCUSATIVE = "квантовое стазисное поле",
-		INSTRUMENTAL = "квантовым стазисным полем",
-		PREPOSITIONAL = "квантовом стазисном поле",
-	)
 
 /obj/structure/closet/stasis/process()
 	if(holder_animal)
@@ -473,4 +337,3 @@
 	current.gib()
 	Remove(owner)
 	qdel(src)
-

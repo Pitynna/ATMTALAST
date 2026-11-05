@@ -1,7 +1,7 @@
 //pyro claws
 /obj/item/twohanded/required/pyro_claws
 	name = "hardplasma energy claws"
-	desc = "Мощь солнца, в моих когтях!"
+	desc = "The power of the sun, in the claws of your hand."
 	gender = PLURAL
 	icon_state = "pyro_claws"
 	item_flags = ABSTRACT|DROPDEL
@@ -12,16 +12,6 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut", "savaged", "clawed")
 	toolspeed = 0.5
-
-/obj/item/twohanded/required/pyro_claws/get_ru_names()
-	return alist(
-		NOMINATIVE = "энергокогти", \
-		GENITIVE = "энергокогтей", \
-		DATIVE = "энергокогтям", \
-		ACCUSATIVE = "энергокогти", \
-		INSTRUMENTAL = "энергокогтями", \
-		PREPOSITIONAL = "энергокогтях",
-	)
 
 /obj/item/twohanded/required/pyro_claws/Initialize(mapload)
 	. = ..()
@@ -94,8 +84,7 @@
 
 /obj/item/clothing/gloves/color/black/pyro_claws
 	name = "fusion gauntlets"
-	desc = "Перчатки разработаенные Cybersun Industries после того, как один из солдат прикрепил ядро атмосферной аномалии ​​к \
-			энергетическому мечу, и нашел результат весьма эффективными."
+	desc = "A pair of heavy combat gauntlets that project lethal energy claws via the power of a captive pyroclastic anomaly core."
 	item_state = "pyro"
 	item_color = "pyro"
 	icon_state = "pyro"
@@ -104,16 +93,6 @@
 	var/on_cooldown = FALSE
 	var/used = FALSE
 	var/obj/item/assembly/signaler/core/atmospheric/core
-
-/obj/item/clothing/gloves/color/black/pyro_claws/get_ru_names()
-	return alist(
-		NOMINATIVE = "плавящие перчатки", \
-		GENITIVE = "плавящих перчаток", \
-		DATIVE = "плавящим перчаткам", \
-		ACCUSATIVE = "плавящие перчатки", \
-		INSTRUMENTAL = "плавящими перчатками", \
-		PREPOSITIONAL = "плавящих перчатках",
-	)
 
 /obj/item/clothing/gloves/color/black/pyro_claws/Destroy()
 	QDEL_NULL(core)

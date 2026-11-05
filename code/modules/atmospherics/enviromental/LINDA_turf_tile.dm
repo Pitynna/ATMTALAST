@@ -21,19 +21,6 @@
 	air.set_agent_b(0)
 	air.set_hydrogen(0)
 	air.set_water_vapor(0)
-	air.set_tritium(0)
-	air.set_bz(0)
-	air.set_pluoxium(0)
-	air.set_miasma(0)
-	air.set_freon(0)
-	air.set_nitrium(0)
-	air.set_healium(0)
-	air.set_proto_nitrate(0)
-	air.set_zauker(0)
-	air.set_halon(0)
-	air.set_helium(0)
-	air.set_antinoblium(0)
-	air.set_hypernoblium(0)
 	air.set_temperature(0)
 	return air
 
@@ -170,30 +157,7 @@
 /turf/proc/Initialize_Atmos(milla_tick)
 	// This is one of two places expected to call this otherwise-unsafe method.
 	var/list/connectivity = private_unsafe_recalculate_atmos_connectivity()
-	var/list/air = list(
-		oxygen,
-		carbon_dioxide,
-		nitrogen,
-		toxins,
-		sleeping_agent,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		temperature
-	)
+	var/list/air = list(oxygen, carbon_dioxide, nitrogen, toxins, sleeping_agent, 0, 0, 0, temperature)
 	milla_data = connectivity[1] + list(atmos_mode, SSmapping.environments[atmos_environment]) +  air + connectivity[2]
 
 /turf/simulated/Initialize_Atmos(milla_tick)

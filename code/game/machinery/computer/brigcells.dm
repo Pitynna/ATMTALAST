@@ -1,6 +1,6 @@
 /obj/machinery/computer/brigcells
 	name = "cell management computer"
-	desc = "Используется для управления тюремными камерами."
+	desc = "Used to manage prison cells."
 	icon_keyboard = "security_key"
 	icon_screen = "cell_monitor"
 	idle_power_usage = 250

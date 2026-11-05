@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(safes)
  */
 /obj/structure/safe
 	name = "safe"
-	desc = "Огромный кусок металла со встроенным в него циферблатом. Мелким шрифтом на циферблате написано: \"Сейф от концерна \"Скарборо\" надёжно защитит ваши ценные вещи от любых посягательств, включая любопытных ассистентов\"."
+	desc = "A huge chunk of metal with a dial embedded in it. Fine print on the dial reads \"Scarborough Arms tumbler safe, guaranteed thermite resistant, explosion resistant, and assistant resistant.\""
 	gender = MALE
 	icon_state = "safe"
 	anchored = TRUE
@@ -64,16 +64,6 @@ GLOBAL_LIST_EMPTY(safes)
 	var/known_by = list()
 	/// UID of that who placed the drill on the safe. Used to trigger the status effect.
 	var/driller_UID
-
-/obj/structure/safe/get_ru_names()
-	return alist(
-		NOMINATIVE = "сейф",
-		GENITIVE = "сейфа",
-		DATIVE = "сейфу",
-		ACCUSATIVE = "сейф",
-		INSTRUMENTAL = "сейфом",
-		PREPOSITIONAL = "сейфе",
-	)
 
 /obj/structure/safe/ComponentInitialize()
 	. = ..()
@@ -461,7 +451,7 @@ GLOBAL_LIST_EMPTY(safes)
  */
 /obj/structure/safe/floor
 	name = "floor safe"
-	desc = "Огромный металлический люк со встроенным в него цифербалтом. Мелким шрифтом на циферблате написано: \"Напольный сейф от концерна \"Скарборо\" надёжно защитит ваши ценные вещи от любых посягательств, включая любопытных ассистентов\"."
+	desc = "A huge metal hatch with a built-in dial. Fine print reads: Scarborough Arms floor safe - reliable protection for your valuables against any intrusion, including curious assistants."
 	icon_state = "floorsafe"
 	density = FALSE
 	level = 1 //Under the floor
@@ -469,16 +459,6 @@ GLOBAL_LIST_EMPTY(safes)
 	layer = ABOVE_PLATING_LAYER
 	drill_x_offset = -1
 	drill_y_offset = 20
-
-/obj/structure/safe/floor/get_ru_names()
-	return alist(
-		NOMINATIVE = "напольный сейф",
-		GENITIVE = "напольного сейфа",
-		DATIVE = "напольному сейфу",
-		ACCUSATIVE = "напольный сейф",
-		INSTRUMENTAL = "напольным сейфом",
-		PREPOSITIONAL = "напольном сейфе",
-	)
 
 /obj/structure/safe/floor/Initialize(mapload)
 	. = ..()
@@ -491,18 +471,8 @@ GLOBAL_LIST_EMPTY(safes)
  */
 /obj/item/safe_internals
 	name = "safe internals"
-	desc = "Механизм и запирающие ригели для тумблерного сейфа \"Скарборо Армс – \"."
+	desc = "The mechanism and locking bolts for a Scarborough Arms - 2 tumbler safe."
 	icon_state = "safe_internals"
-
-/obj/item/safe_internals/get_ru_names()
-	return alist(
-		NOMINATIVE = "внутренности сейфа",
-		GENITIVE = "внтренностей сейфа",
-		DATIVE = "внутренностям сейфа",
-		ACCUSATIVE = "внутренности сейфа",
-		INSTRUMENTAL = "внутренностями сейфа",
-		PREPOSITIONAL = "внутренностях сейфа",
-	)
 
 /**
  * # Safe Codes
@@ -511,19 +481,9 @@ GLOBAL_LIST_EMPTY(safes)
  */
 /obj/item/paper/safe_code
 	name = "safe codes"
-	desc = "Надежный способ сохранить секретность важных цифр."
+	desc = "A reliable way to keep important numbers secret."
 	var/owner
 	info = "<div style='text-align:center;'><img src = ntlogo.png><center><h3>Коды от сейфа</h3></center>"
-
-/obj/item/paper/safe_code/get_ru_names()
-	return alist(
-		NOMINATIVE = "коды от сейфа",
-		GENITIVE = "кодов от сейфа",
-		DATIVE = "кодам от сейфа",
-		ACCUSATIVE = "коды от сейфа",
-		INSTRUMENTAL = "кодами от сейфа",
-		PREPOSITIONAL = "кодах от сейфа",
-	)
 
 /obj/item/paper/safe_code/Initialize(mapload)
 	. = ..()

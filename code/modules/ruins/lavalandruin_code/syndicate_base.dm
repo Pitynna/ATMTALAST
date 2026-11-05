@@ -23,69 +23,6 @@
 	resistance_flags = FIRE_PROOF
 
 // Spawners
-/obj/effect/mob_spawn/human/lavaland_syndicate
-	name = "Syndicate Bioweapon Scientist sleeper"
-	mob_name = "Syndicate Bioweapon Scientist"
-	roundstart = FALSE
-	death = FALSE
-	icon = 'icons/obj/machines/cryogenic2.dmi'
-	icon_state = "sleeper_s"
-	important_info = "Не мешайте другим оперативникам \"Синдиката\" (таким, как предатели или ядерные оперативники). Вы можете работать вместе или против не связанных с \"Синдикатом\" антагонистов в индивидуальном порядке. Не покидайте свою базу без разрешения администрации! Ваша база, её секретность и сохранность является для вас высшим приоритетом!"
-	description = "Экспериментируйте с опасными химикатами и вирусами в спокойной обстановке или помогайте любым посещающим агентам \"Синдиката\"."
-	flavour_text = "Вы — агент \"Синдиката\", работающий в сверхсекретном исследовательском центре, разрабатывающем биологическое оружие. К сожалению, ваш заклятый враг, \"Нанотрейзен\", начал добычу полезных ископаемых в этом секторе. Продолжайте свои исследования, как можете, и старайтесь не привлекать к себе внимания. База заминирована, не покидайте её и не позволяйте ей попасть в руки врага! \
-	Вам ясно дали понять, что Синдикат заставит вас пожалеть, если вы их разочаруете."
-	outfit = /datum/outfit/lavaland_syndicate
-	assignedrole = "Lavaland Syndicate"
-	del_types = list() // Necessary to prevent del_types from removing radio!
-	allow_species_pick = TRUE
-
-/obj/effect/mob_spawn/human/lavaland_syndicate/Destroy()
-	var/obj/structure/fluff/empty_sleeper/syndicate/S = new /obj/structure/fluff/empty_sleeper/syndicate(get_turf(src))
-	S.setDir(dir)
-	return ..()
-
-/datum/outfit/lavaland_syndicate
-	name = "Lavaland Syndicate Agent"
-	r_hand = /obj/item/gun/projectile/automatic/sniper_rifle
-	uniform = /obj/item/clothing/under/syndicate
-	suit = /obj/item/clothing/suit/storage/labcoat
-	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/combat
-	r_ear = /obj/item/radio/headset/syndicate/alt/lavaland // See del_types above
-	back = /obj/item/storage/backpack
-	r_pocket = /obj/item/gun/projectile/automatic/pistol/stechkin
-	id = /obj/item/card/id/syndicate/anyone
-	implants = list(/obj/item/implant/weapons_auth)
-
-/datum/outfit/lavaland_syndicate/post_equip(mob/living/carbon/human/H)
-	H.faction |= "syndicate"
-
-/obj/effect/mob_spawn/human/lavaland_syndicate/comms
-	name = "Syndicate Comms Agent sleeper"
-	mob_name = "Syndicate Comms Agent"
-	description = "Следите за переговорами и камерами, старайтесь помогать агентам на станции, сохраняя своё существование в тайне."
-	flavour_text = "Вы — агент \"Синдиката\", работающий в сверхсекретном исследовательском центре, разрабатывающем биологическое оружие. К сожалению, ваш заклятый враг, \"Нанотрейзен\", начал добычу полезных ископаемых в этом секторе. Следите за активностью врага, как можете, и старайтесь не привлекать к себе внимания."
-	outfit = /datum/outfit/lavaland_syndicate/comms
-
-/obj/effect/mob_spawn/human/lavaland_syndicate/comms/space
-	flavour_text = "You are a syndicate agent, employed in a small listening outpost. You'd be bored to death if you couldn't listen in on those NT idiots mess up all the time."
-
-/obj/effect/mob_spawn/human/lavaland_syndicate/comms/space/Initialize(mapload)
-	. = ..()
-	if(prob(90)) //only has a 10% chance of existing, otherwise it'll just be a NPC syndie.
-		new /mob/living/simple_animal/hostile/syndicate/ranged(get_turf(src))
-		return INITIALIZE_HINT_QDEL
-
-/datum/outfit/lavaland_syndicate/comms
-	name = "Lavaland Syndicate Comms Agent"
-	r_ear = /obj/item/radio/headset/syndicate/alt // See del_types above
-	r_hand = /obj/item/melee/energy/sword/saber
-	mask = /obj/item/clothing/mask/chameleon/gps
-	suit = /obj/item/clothing/suit/armor/vest
-	backpack_contents = list(
-		/obj/item/paper/monitorkey = 1, // message console on lavaland does NOT spawn with this
-	)
-
 /obj/item/clothing/mask/chameleon/gps/Initialize(mapload)
 	. = ..()
 	new /obj/item/gps/internal/lavaland_syndicate_base(src)

@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/health
 	display_name = "Получить состояние здоровья"
-	desc = "Компонент, возвращающий оценку состояния здоровья организма."
+	desc = "A component that returns an organism's health state."
 	category = "Entity"
 
 	/// The input port

@@ -4,16 +4,6 @@
 	damage = 20
 	flag = "energy"
 
-/obj/projectile/forcebolt/get_ru_names()
-	return alist(
-		NOMINATIVE = "силовой импульс",
-		GENITIVE = "силового импульса",
-		DATIVE = "силовому импульсу",
-		ACCUSATIVE = "силовой импульс",
-		INSTRUMENTAL = "силовым импульсом",
-		PREPOSITIONAL = "силовом импульсе",
-	)
-
 /obj/projectile/forcebolt/strong
 
 /obj/projectile/forcebolt/on_hit(atom/target, blocked = 0)

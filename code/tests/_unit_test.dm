@@ -232,15 +232,12 @@ GLOBAL_LIST_EMPTY(unit_test_tguis)
 		/atom/movable/lighting_object,
 		// 1984 edition
 		// Requires APC to spawn in
-		/obj/machinery/integration_cog,
 		// Can't exist without possesed item
 		/mob/living/simple_animal/possessed_object,
 		// Doesn't exist on its own
-		/obj/effect/countdown/clockworkgate,
 		// Mapping only object
 		/obj/structure/toilet/cancollectmapitems,
 		// Can't exist without parent pit
-		/obj/structure/bingle_pit_overlay,
 		// Shouldn't be spawned outside of syndie depot
 		/obj/structure/fusionreactor,
 		// Requires start and end turfs passed in
@@ -250,7 +247,6 @@ GLOBAL_LIST_EMPTY(unit_test_tguis)
 		// Should not exist on its own
 		/obj/machinery/gravity_generator/part,
 		// Requires mind
-		/obj/effect/mob_spawn/human/demonic_friend,
 		// Requires owner
 		/obj/effect/portal_sensor,
 		// Admin smite, requires machinery to work
@@ -262,7 +258,6 @@ GLOBAL_LIST_EMPTY(unit_test_tguis)
 		// Requires frame to be passed in
 		/obj/structure/sign/picture_frame,
 		// Requires contract owner
-		/obj/item/paper/contract/infernal,
 		// Requires target
 		/obj/effect/temp_visual/dragon_swoop/bubblegum/ancient_robot,
 		// Requires target

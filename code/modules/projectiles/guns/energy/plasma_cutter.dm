@@ -1,7 +1,7 @@
 // MARK: Generic
 /obj/item/gun/energy/plasmacutter
 	name = "plasma cutter"
-	desc = "Шахтёрский инструмент, стреляющий сконцентрированной плазмой. Можете отрезать конечности ксеносам! Или, ну там... руду добывать."
+	desc = "A mining tool capable of expelling concentrated plasma bursts. Its effectiveness drops dramatically outside of low-pressure environments. You could use it to cut limbs off of xenos! Or, you know, mine stuff."
 	icon_state = "plasmacutter"
 	item_state = "plasmacutter"
 	origin_tech = "combat=1;materials=3;magnets=2;plasmatech=3;engineering=1"
@@ -14,16 +14,6 @@
 	can_charge = FALSE
 	accuracy = GUN_ACCURACY_RIFLE
 	heat = T3800K
-
-/obj/item/gun/energy/plasmacutter/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменный резак",
-		GENITIVE = "плазменного резака",
-		DATIVE = "плазменному резаку",
-		ACCUSATIVE = "плазменный резак",
-		INSTRUMENTAL = "плазменным резаком",
-		PREPOSITIONAL = "плазменном резаке",
-	)
 
 /obj/item/gun/energy/plasmacutter/examine(mob/user)
 	. = ..()
@@ -77,38 +67,17 @@
 	force = 15
 	accuracy = GUN_ACCURACY_SNIPER
 
-/obj/item/gun/energy/plasmacutter/adv/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый плазменный резак",
-		GENITIVE = "продвинутого плазменного резака",
-		DATIVE = "продвинутому плазменному резаку",
-		ACCUSATIVE = "продвинутый плазменный резак",
-		INSTRUMENTAL = "продвинутым плазменным резаком",
-		PREPOSITIONAL = "продвинутом плазменном резаке",
-	)
-
 /obj/item/gun/energy/plasmacutter/adv/mega
 	name = "magmite plasma cutter"
 	icon_state = "adv_plasmacutter_m"
 	item_state = "plasmacutter_mega"
-	desc = "Улучшенная версия плазменного резака с использованием плазменного магмита. Режет ксеносов вдвое эффективнее! И руду тоже."
+	desc = "A mining tool capable of expelling concentrated plasma bursts. You could use it to cut limbs off xenos! Or, you know, mine stuff. This one has been enhanced with plasma magmite."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv/mega)
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
-/obj/item/gun/energy/plasmacutter/adv/mega/get_ru_names()
-	return alist(
-		NOMINATIVE = "магмитовый плазменный резак",
-		GENITIVE = "магмитового плазменного резака",
-		DATIVE = "магмитовому плазменному резаку",
-		ACCUSATIVE = "магмитовый плазменный резак",
-		INSTRUMENTAL = "магмитовым плазменным резаком",
-		PREPOSITIONAL = "магмитовом плазменном резаке",
-	)
-
-// MARK: Shotgun
 /obj/item/gun/energy/plasmacutter/shotgun
 	name = "plasma cutter shotgun"
-	desc = "Промышленный тяжелый дробовик для шахтёрских работ."
+	desc = "An industrial-grade, heavy-duty mining shotgun."
 	icon_state = "miningshotgun"
 	item_state = "miningshotgun"
 	origin_tech = "combat=5;materials=5;magnets=5;plasmatech=6;engineering=5"
@@ -116,30 +85,10 @@
 	force = 10
 	accuracy = GUN_ACCURACY_SHOTGUN
 
-/obj/item/gun/energy/plasmacutter/shotgun/get_ru_names()
-	return alist(
-		NOMINATIVE = "плазменный дробовик",
-		GENITIVE = "плазменного дробовика",
-		DATIVE = "плазменному дробовику",
-		ACCUSATIVE = "плазменный дробовик",
-		INSTRUMENTAL = "плазменным дробовиком",
-		PREPOSITIONAL = "плазменном дробовике",
-	)
-
 /obj/item/gun/energy/plasmacutter/shotgun/mega
 	name = "magmite plasma cutter shotgun"
 	icon_state = "miningshotgun_mega"
 	item_state = "miningshotgun_mega"
-	desc = "Улучшенный промышленный дробовик с плазменным магмитом. Разрезает... значит добывает."
+	desc = "An industrial-grade, heavy-duty mining shotgun. This one seems upgraded with plasma magmite."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/shotgun/mega)
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
-
-/obj/item/gun/energy/plasmacutter/shotgun/mega/get_ru_names()
-	return alist(
-		NOMINATIVE = "магмитовый плазменный дробовик",
-		GENITIVE = "магмитового плазменного дробовика",
-		DATIVE = "магмитовому плазменному дробовику",
-		ACCUSATIVE = "магмитовый плазменный дробовик",
-		INSTRUMENTAL = "магмитовым плазменным дробовиком",
-		PREPOSITIONAL = "магмитовом плазменном дробовике",
-	)

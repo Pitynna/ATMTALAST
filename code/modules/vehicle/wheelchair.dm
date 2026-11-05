@@ -1,6 +1,6 @@
 /obj/vehicle/ridden/wheelchair
 	name = "wheelchair"
-	desc = "Коляска для людей с ограниченными физическими возможностями. Почему просто не пришить новые ноги?"
+	desc = "A wheelchair for people with limited mobility. Why not just sew on new legs?"
 	icon = 'icons/obj/chairs.dmi'
 	icon_state = "wheelchair"
 	base_icon_state = "wheelchair"
@@ -17,16 +17,6 @@
 	var/detonation_delay = FALSE
 	var/obj/item/grenade/bomb = null
 	var/datum/action/innate/wheelchair/bell/bell_action
-
-/obj/vehicle/ridden/wheelchair/get_ru_names()
-	return alist(
-		NOMINATIVE = "инвалидная коляска",
-		GENITIVE = "инвалидной коляски",
-		DATIVE = "инвалидной коляске",
-		ACCUSATIVE = "инвалидную коляску",
-		INSTRUMENTAL = "инвалидной коляской",
-		PREPOSITIONAL = "инвалидной коляске",
-	)
 
 /obj/vehicle/ridden/wheelchair/Initialize(mapload)
 	. = ..()
@@ -101,9 +91,9 @@
 	. = ..()
 	desc = applied_skin ? initial(applied_skin.new_desc) : initial(desc)
 	if(exists_bell)
-		desc += " К подлокотнику зачем-то прикреплён звонок."
+		desc += " A bell has been attached to the armrest for some reason."
 	if(bomb)
-		desc += " Под сиденьем что-то есть."
+		desc += " There's something under the seat."
 
 ///Modify logic
 

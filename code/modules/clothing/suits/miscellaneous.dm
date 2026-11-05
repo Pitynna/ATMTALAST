@@ -195,8 +195,6 @@
 	flags_inv = HIDESHOES|HIDEJUMPSUIT
 	sprite_sheets = list(
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/species/plasmaman/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
@@ -309,8 +307,6 @@
 	hoodtype = /obj/item/clothing/head/hooded/carp_hood
 	sprite_sheets = list(
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/species/plasmaman/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
@@ -361,8 +357,6 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	sprite_sheets = list(
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/species/plasmaman/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
@@ -663,8 +657,6 @@
 	breakout_time = 5 MINUTES
 	sprite_sheets = list(
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/species/plasmaman/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
@@ -744,7 +736,7 @@
 
 /obj/item/clothing/suit/storage/leather_trenchcoat/runner
 	name = "leather trenchcoat"
-	desc = "Длинное кожаное пальто-тренч с натуральным мехом. Вы чувствуете себя одиноко, когда носите его..."
+	desc = "A long leather trench coat with natural fur. Wearing it makes you feel lonely..."
 	icon_state = "bladerunner_coat"
 	item_state = "bladerunner_coat"
 
@@ -839,8 +831,6 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 	sprite_sheets = list(
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/species/plasmaman/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
 	)
@@ -1228,7 +1218,7 @@
 
 /obj/item/clothing/suit/hooded/hijab
 	name = "hijab"
-	desc = "Тёмное одеяние скрывающее тело."
+	desc = "A cloth worn around the head for modesty and dignity."
 	icon_state = "hijab"
 	flags_inv = HIDETAIL
 	hoodtype = /obj/item/clothing/head/hooded/hijab
@@ -1237,8 +1227,6 @@
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/suit.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/suit.dmi',
 		SPECIES_FARWA = 'icons/mob/clothing/species/monkey/suit.dmi',
@@ -1249,7 +1237,7 @@
 
 /obj/item/clothing/head/hooded/hijab
 	name = "hijab hood"
-	desc = "Тёмное одеяние скрывающее лицо."
+	desc = "A dark garment concealing the face."
 	icon_state = "hijab_head"
 	flags_inv = HIDEHEADSETS|HIDENAME|HIDEHAIR
 	sprite_sheets = list(
@@ -1257,8 +1245,6 @@
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/head.dmi',
 		SPECIES_GREY = 'icons/mob/clothing/species/grey/head.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/head.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/head.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/head.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/head.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/head.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/head.dmi',
@@ -1474,7 +1460,7 @@
 
 /obj/item/clothing/suit/towel
 	name = "towel"
-	desc = "Мягкое хлопковое полотенце."
+	desc = "A soft cotton towel."
 	icon_state = "towel_long"
 	item_state = "towel"
 	item_flags = SKIP_ATTACK_MESSAGE
@@ -1490,20 +1476,8 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/suit.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/suit.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/suit.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
-	)
-
-/obj/item/clothing/suit/towel/get_ru_names()
-	return alist(
-		NOMINATIVE = "полотенце",
-		GENITIVE = "полотенца",
-		DATIVE = "полотенцу",
-		ACCUSATIVE = "полотенце",
-		INSTRUMENTAL = "полотенцем",
-		PREPOSITIONAL = "полотенце",
 	)
 
 /obj/item/clothing/suit/towel/Initialize(mapload)
@@ -1615,7 +1589,7 @@
 
 /obj/item/clothing/suit/hooded/ghostfacesuit
 	name = "Ghostface suit"
-	desc = "Чёрный, просторный балахон, что может навеивать смутные напоминания о чём-то."
+	desc = "A loose black robe that vaguely reminds you of something."
 	icon_state = "ghostface_suit"
 	item_state = "ghostface_suit"
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS|FEET
@@ -1627,22 +1601,12 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/suit.dmi',
 	)
 
-/obj/item/clothing/suit/hooded/ghostfacesuit/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрный балахон",
-		GENITIVE = "чёрного балахона",
-		DATIVE = "чёрному балахону",
-		ACCUSATIVE = "чёрный балахон",
-		INSTRUMENTAL = "чёрным балахоном",
-		PREPOSITIONAL = "чёрном балахоне",
-	)
-
 /obj/item/clothing/suit/hooded/ghostfacesuit/update_icon_state()
 	return
 
 /obj/item/clothing/head/hooded/ghostface
 	name = "Ghostface hood"
-	desc = "Чёрный капюшон. Он вам что-то точно напоминает..."
+	desc = "A black hood. It definitely reminds you of something..."
 	icon_state = "ghostface_hood"
 	item_state = "ghostface"
 	flags_inv = HIDEHEADSETS|HIDEHAIR
@@ -1652,52 +1616,21 @@
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/suit.dmi',
 	)
 
-/obj/item/clothing/head/hooded/ghostface/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрный капюшон",
-		GENITIVE = "чёрного капюшона",
-		DATIVE = "чёрному капюшону",
-		ACCUSATIVE = "чёрный капюшон",
-		INSTRUMENTAL = "чёрным капюшоном",
-		PREPOSITIONAL = "чёрном капюшоне",
-	)
-
 /obj/item/clothing/head/hooded/ghostface/true
 	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
-
-/obj/item/clothing/suit/hooded/ghostfacesuit/devil
-	desc = "Чёрный с прожилками красного просторный балахон, что может навеивать смутные напоминания о чём-то."
-	icon_state = "devil_ghostface_suit"
-	item_state = "devil_ghostface_suit"
-
-/obj/item/clothing/suit/hooded/ghostfacesuit/devil/get_ru_names()
-	return alist(
-		NOMINATIVE = "кроваво-чёрный балахон",
-		GENITIVE = "кроваво-чёрного балахона",
-		DATIVE = "кроваво-чёрному балахону",
-		ACCUSATIVE = "кроваво-чёрный балахон",
-		INSTRUMENTAL = "кроваво-чёрным балахоном",
-		PREPOSITIONAL = "кроваво-чёрном балахоне",
-	)
 
 /obj/item/clothing/suit/hooded/ghostfacesuit/true
 	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
 	hoodtype = /obj/item/clothing/head/hooded/ghostface/true
 
-/obj/item/clothing/suit/hooded/ghostfacesuit/devil/true
-	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 0, bio = 0, fire = 10, acid = 10)
-	hoodtype = /obj/item/clothing/head/hooded/ghostface/true
-
 /obj/item/clothing/suit/hooded/penguin_costume
 	name = "penguin suit"
-	desc = "Глупый и забавный полноразмерный костюм пингвина."
+	desc = "A silly, amusing full-body penguin costume."
 	icon_state = "penguin"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|TAIL
 	hide_tail_by_species = list(
 		SPECIES_TAJARAN,
 		SPECIES_UNATHI,
-		SPECIES_ASHWALKER_BASIC,
-		SPECIES_ASHWALKER_SHAMAN,
 		SPECIES_DRACONOID,
 		SPECIES_VOX,
 		SPECIES_VULPKANIN,
@@ -1712,19 +1645,9 @@
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/suit.dmi',
 	)
 
-/obj/item/clothing/suit/hooded/penguin_costume/get_ru_names()
-	return alist(
-		NOMINATIVE = "костюм пингвина",
-		GENITIVE = "костюма пингвина",
-		DATIVE = "костюму пингвина",
-		ACCUSATIVE = "костюм пингвина",
-		INSTRUMENTAL = "костюмом пингвина",
-		PREPOSITIONAL = "костюме пингвина",
-	)
-
 /obj/item/clothing/head/hooded/penguin_hood
 	name = "penguin hood"
-	desc = "Капюшон от костюма пингвина."
+	desc = "The hood of a penguin costume."
 	icon_state = "penguin"
 	flags_inv = HIDEHEADSETS|HIDEHAIR
 	sprite_sheets = list(
@@ -1736,19 +1659,9 @@
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/head.dmi',
 	)
 
-/obj/item/clothing/head/hooded/penguin_hood/get_ru_names()
-	return alist(
-		NOMINATIVE = "капюшон костюма пингвина",
-		GENITIVE = "капюшона костюма пингвина",
-		DATIVE = "капюшону костюма пингвина",
-		ACCUSATIVE = "капюшон костюма пингвина",
-		INSTRUMENTAL = "капюшоном костюмома пингвина",
-		PREPOSITIONAL = "капюшоне костюма пингвина",
-	)
-
 /obj/item/clothing/suit/storage/bomber
 	name = "bomber"
-	desc = "Тёплая толстовка."
+	desc = "A warm hoodie."
 	icon_state = "hoody_undershirt"
 	item_state = "hoody_undershirt"
 	color = "#ffffffff"
@@ -1761,35 +1674,15 @@
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)
 
-/obj/item/clothing/suit/storage/bomber/get_ru_names()
-	return alist(
-		NOMINATIVE = "толстовка",
-		GENITIVE = "толстовки",
-		DATIVE = "толстовке",
-		ACCUSATIVE = "толстовку",
-		INSTRUMENTAL = "толстовкой",
-		PREPOSITIONAL = "толстовке",
-	)
-
 /obj/item/clothing/suit/storage/zazalord
 	name = "zaza-lord swag bomber"
-	desc = "Бомбер, выпущенный ограниченным тиражом корпорацией \"Robust Softdrinks\" в рамках рекламной компании нового напитка \"Заза\". Выдавался за собранные крышки от бутылок."
+	desc = "A limited-edition bomber jacket released by Robust Softdrinks to promote its new Zaza beverage. Redeemable with collected bottle caps."
 	icon_state = "hoody_zaza"
 	item_state = "hoody_zaza"
 
-/obj/item/clothing/suit/storage/zazalord/get_ru_names()
-	return alist(
-		NOMINATIVE = "заза-лорд бомбер",
-		GENITIVE = "заза-лорд бомбера",
-		DATIVE = "заза-лорд бомберу",
-		ACCUSATIVE = "заза-лорд бомбера",
-		INSTRUMENTAL = "заза-лорд бомбером",
-		PREPOSITIONAL = "заза-лорд бомбере",
-	)
-
 /obj/item/clothing/suit/red_jacket
 	name = "red jacket"
-	desc = "Стильная красная короткая куртка."
+	desc = "A red forensics technician jacket."
 	icon_state = "red_jacket"
 	item_state = "red_jacket"
 	body_parts_covered = UPPER_TORSO|ARMS

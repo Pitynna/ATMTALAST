@@ -3,22 +3,12 @@
  */
 /obj/machinery/smartfridge/smart_container
 	name = "Smart Container"
-	desc = "Умный контейнер для хранения любых предметов. Вместимость масштабируется с качеством matter bin."
+	desc = "A smart container for storing any items. Capacity scales with matter bin quality."
 	icon_state = "smart_container"
 	status_overlay = "smartfridge"
 	max_n_of_items = 63
 	fridge_circuit = /obj/item/circuitboard/smart_container
 	starting_matter_bins = 4
-
-/obj/machinery/smartfridge/smart_container/get_ru_names()
-	return alist(
-		NOMINATIVE = "умный контейнер",
-		GENITIVE = "умного контейнера",
-		DATIVE = "умному контейнеру",
-		ACCUSATIVE = "умный контейнер",
-		INSTRUMENTAL = "умным контейнером",
-		PREPOSITIONAL = "умном контейнере",
-	)
 
 /obj/machinery/smartfridge/smart_container/Initialize(mapload)
 	. = ..()

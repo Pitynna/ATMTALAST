@@ -22,7 +22,7 @@
 			return //undeads are unaffected by the spook-pocalypse.
 		C.Jitter(70 SECONDS)
 		C.SetStuttering(40 SECONDS)
-		if(!isdiona(H) && !ismachineperson(H) && !isslimeperson(H) && !isgolem(H) && !isplasmaman(H))
+		if(!isdiona(H) && !ismachineperson(H) && !isslimeperson(H) && !isplasmaman(H))
 			C.apply_damage(25, STAMINA) //boneless humanoids don't lose the will to live
 		to_chat(C, "<font color='red' size='4'><b>DOOT</b></font>")
 		spectral_change(H)
@@ -32,7 +32,7 @@
 		C.SetStuttering(40 SECONDS)
 
 /datum/component/spooky/proc/spectral_change(mob/living/carbon/human/H, mob/user)
-	if((H.getStaminaLoss() > 95) && (!isdiona(H) && !ismachineperson(H) && !isslimeperson(H) && !isgolem(H) && !isplasmaman(H) && !isskeleton(H)))
+	if((H.getStaminaLoss() > 95) && (!isdiona(H) && !ismachineperson(H) && !isslimeperson(H) && !isplasmaman(H) && !isskeleton(H)))
 		H.Stun(40 SECONDS)
 		H.set_species(/datum/species/skeleton)
 		H.visible_message(span_warning("[H] has given up on life as a mortal."))

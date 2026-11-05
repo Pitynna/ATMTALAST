@@ -1,6 +1,6 @@
 /obj/item/circuit_component/id_getter
 	display_name = "Геттер ID"
-	desc = "Компонент, который возвращает первую доступную ID-карту субъекта."
+	desc = "A component that returns the subject's first available ID card."
 	category = "ID"
 
 	/// The input port

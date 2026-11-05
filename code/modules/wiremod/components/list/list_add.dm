@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable/list/listadd
 	display_name = "Список — добавить"
-	desc = "Добавляет элемент в переменную списка."
+	desc = "Adds an entry to a list variable."
 	category = "List"
 
 	/// Element to add to the list

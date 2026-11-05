@@ -19,7 +19,6 @@
 	pass_flags = PASSFLAPS
 	AI_delay_max = 0 SECONDS
 	speak_emote = list("констатирует")
-	tts_seed = null
 	friendly = "утыкается в"
 	bubble_icon = "machine"
 	faction = list("neutral", "silicon")
@@ -60,8 +59,6 @@
 	var/hacked = FALSE
 	/// Custom text returned to a silicon upon hacking a bot.
 	var/text_hack = ""
-	/// Being hijacked by a pulse demon?
-	var/hijacked = FALSE
 	/// Text shown when resetting a bots hacked status to normal.
 	var/text_dehack = ""
 	/// Shown when a silicon tries to reset a bot emagged with the emag item, which cannot be reset.
@@ -204,8 +201,6 @@
 		return paicard ? "<b>Под управлением ПИИ</b>" : "<b>Автономный режим</b>"
 	else if(!on)
 		return span_bad("Отключён")
-	else if(hijacked)
-		return span_bad("ОШИБКА")
 	else if(!mode)
 		return span_good("Бездействие")
 	else
@@ -366,9 +361,6 @@
 
 	if(!on)
 		return
-	if(hijacked)
-		return
-
 	switch(mode) //High-priority overrides are processed first. Bots can do nothing else while under direct command.
 		if(BOT_RESPONDING)	//Called by the AI.
 			call_mode()
@@ -437,7 +429,7 @@
 	if(istype(I, /obj/item/paicard))
 		add_fingerprint(user)
 		var/obj/item/paicard/card = I
-		if(locked || open || hijacked)
+		if(locked || open)
 			balloon_alert(user, "слот для ПИИ заблокирован!")
 			return ATTACK_CHAIN_PROCEED
 		if(paicard)
@@ -464,7 +456,6 @@
 		bot_name = name
 		name = paicard.pai.name
 		faction = user.faction
-		tts_seed = paicard.pai.tts_seed
 		add_attack_logs(user, paicard.pai, "Uploaded to [bot_name]")
 		return ATTACK_CHAIN_BLOCKED_ALL
 
@@ -892,7 +883,7 @@ Pass the desired type path itself, declaring a temporary var beforehand is not r
 	if(signal.data["active"] != src)
 		return
 
-	if(emagged == 2 || remote_disabled || hijacked) //Emagged bots do not respect anyone's authority! Bots with their remote controls off cannot get commands.
+	if(emagged == 2 || remote_disabled) //Emagged bots do not respect anyone's authority! Bots with their remote controls off cannot get commands.
 		return
 
 	if(client)
@@ -1123,11 +1114,9 @@ Pass the desired type path itself, declaring a temporary var beforehand is not r
 	if(emagged == 2) //An emagged bot cannot be controlled by humans, silicons can if one hacked it.
 		if(!hacked) //Manually emagged by a human - access denied to all.
 			return TRUE
-		else if(!(issilicon(user) || ispulsedemon(user))) //Bot is hacked, so only silicons are allowed access.
+		else if(!issilicon(user)) //Bot is hacked, so only silicons are allowed access.
 			return TRUE
-	if(hijacked && !ispulsedemon(user))
-		return FALSE
-	if(locked && !(issilicon(user) || ispulsedemon(user)))
+	if(locked && !issilicon(user))
 		return TRUE
 	return FALSE
 
@@ -1177,7 +1166,6 @@ Pass the desired type path itself, declaring a temporary var beforehand is not r
 		paicard = null
 		name = bot_name
 		faction = initial(faction)
-		tts_seed = initial(tts_seed)
 
 /mob/living/simple_animal/bot/proc/ejectpairemote(mob/user)
 	if(bot_core.allowed(user) && paicard)
@@ -1232,9 +1220,6 @@ GAME_VERB(/mob/living/simple_animal/bot, show_laws, "Набор законов",
 		to_chat(src, "[paicard.pai.pai_laws]")
 
 /mob/living/simple_animal/bot/get_access()
-	if(hijacked)
-		return get_all_accesses()
-
 	. = ..()
 	if(access_card)
 		. |= access_card.GetAccess()

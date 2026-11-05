@@ -4,19 +4,9 @@
 
 /obj/item/clothing/accessory/armguard
 	name = "armguard"
-	desc = "Красивые наручи, только для красоты."
+	desc = "Attractive armguards. Purely decorative."
 	icon_state = "armguard"
 	slot = ACCESSORY_SLOT_ARMBAND
-
-/obj/item/clothing/accessory/armguard/get_ru_names()
-	return alist(
-		NOMINATIVE = "наручи",
-		GENITIVE = "наручей",
-		DATIVE = "наручам",
-		ACCUSATIVE = "наручи",
-		INSTRUMENTAL = "наручами",
-		PREPOSITIONAL = "наручах",
-	)
 
 /obj/item/clothing/accessory/armguard/syndicate
 	var/datum/action/armguard_hidden_blade/blade_action = new
@@ -119,7 +109,7 @@
 
 /obj/item/kitchen/knife/hidden_blade
 	name = "hidden blade"
-	desc = "Короткий клинок спрятанный в наручах, профессиональное устройство убийц. Выглядит острым и опасным."
+	desc = "A short blade concealed in armguards, a professional assassin's tool. Looks sharp and dangerous."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "armguard_hidden_blade"
 	item_state = "knife"
@@ -138,16 +128,6 @@
 	var/backstab_cooldown_duration = 10
 	COOLDOWN_DECLARE(backstab_cooldown)
 	var/silence = FALSE
-
-/obj/item/kitchen/knife/hidden_blade/get_ru_names()
-	return alist(
-		NOMINATIVE = "скрытый клинок",
-		GENITIVE = "скрытого клинка",
-		DATIVE = "скрытому клинку",
-		ACCUSATIVE = "скрытый клинок",
-		INSTRUMENTAL = "скрытым клинком",
-		PREPOSITIONAL = "скрытом клинке",
-	)
 
 /obj/item/kitchen/knife/hidden_blade/Initialize(mapload, obj/item/clothing/accessory/armguard/syndicate/parent_armguard)
 	. = ..()

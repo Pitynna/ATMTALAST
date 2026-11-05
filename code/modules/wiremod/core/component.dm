@@ -106,16 +106,6 @@
 	QDEL_LIST(input_ports)
 	return ..()
 
-/obj/item/circuit_component/get_ru_names()
-	return alist(
-			NOMINATIVE = "компонент \"[display_name]\"" ,
-			GENITIVE = "компонента \"[display_name]\"",
-			DATIVE = "компоненту \"[display_name]\"",
-			ACCUSATIVE = "компонента \"[display_name]\"",
-			INSTRUMENTAL = "компонентом \"[display_name]\"",
-			PREPOSITIONAL = "компоненте \"[display_name]\""
-		)
-
 /obj/item/circuit_component/drop_location()
 	if(parent?.shell)
 		return parent.shell.drop_location()

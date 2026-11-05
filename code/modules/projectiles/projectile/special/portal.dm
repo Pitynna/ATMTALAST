@@ -12,30 +12,10 @@
 	hitscan = TRUE
 	var/is_orange = FALSE
 
-/obj/projectile/beam/wormhole/get_ru_names()
-	return alist(
-		NOMINATIVE = "блюспейс-луч",
-		GENITIVE = "блюспейс-луча",
-		DATIVE = "блюспейс-лучу",
-		ACCUSATIVE = "блюспейс-луч",
-		INSTRUMENTAL = "блюспейс-лучом",
-		PREPOSITIONAL = "блюспейс-луче",
-	)
-
 /obj/projectile/beam/wormhole/orange
 	name = "orange bluespace beam"
 	color = "#FF6600"
 	is_orange = TRUE
-
-/obj/projectile/beam/wormhole/orange/get_ru_names()
-	return alist(
-		NOMINATIVE = "оранжевый блюспейс-луч",
-		GENITIVE = "оранжевого блюспейс-луча",
-		DATIVE = "оранжевому блюспейс-лучу",
-		ACCUSATIVE = "оранжевый блюспейс-луч",
-		INSTRUMENTAL = "оранжевым блюспейс-лучом",
-		PREPOSITIONAL = "оранжевом блюспейс-луче",
-	)
 
 /obj/projectile/beam/wormhole/on_hit(atom/target)
 	if(ismob(target))
@@ -55,16 +35,6 @@
 	icon_state = "bluespace"
 	nodamage = TRUE
 	var/teleport_target = null
-
-/obj/projectile/energy/teleport/get_ru_names()
-	return alist(
-		NOMINATIVE = "вспышка телепортации",
-		GENITIVE = "вспышки телепортации",
-		DATIVE = "вспышке телепортации",
-		ACCUSATIVE = "вспышку телепортации",
-		INSTRUMENTAL = "вспышкой телепортации",
-		PREPOSITIONAL = "вспышке телепортации",
-	)
 
 /obj/projectile/energy/teleport/Initialize(mapload, tele_target)
 	. = ..()

@@ -401,12 +401,3 @@
 						continue
 					current_thing.change_from_station_trait(trait_to_give)
 				CHECK_TICK
-
-/datum/station_trait/outdated_hardsuits
-	name = "Устаревшее снаряжение для ВКД"
-	report_message = "Из-за острой нехватки финансирования, на ваш объект не были закуплены модульные экзо-костюмы, так что вам придётся довольствоваться устаревшими хардсьютами."
-	trait_type = STATION_TRAIT_NEGATIVE
-	show_in_report = TRUE
-	trait_to_give = STATION_TRAIT_OUTDATED_HARDSUITS
-	weight = 2
-	can_revert = FALSE

@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/direction
 	display_name = "Получить направление"
-	desc = "Компонент, который возвращает направление себя и объекта."
+	desc = "A component that returns its own direction and the direction of an object."
 	category = "Entity"
 
 	/// The input port

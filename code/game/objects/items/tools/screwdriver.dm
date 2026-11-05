@@ -1,6 +1,6 @@
 /obj/item/screwdriver
 	name = "screwdriver"
-	desc = "Инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой."
+	desc = "A common screwdriver made of plastic and steel, fitted with a Sector-standard Phillips head."
 	icon = 'icons/map_icons/items/_item.dmi'
 	icon_state = "/obj/item/screwdriver"
 	post_init_icon_state = "screwdriver"
@@ -42,16 +42,6 @@
 		"yellow" = "#ffa500"
 	)
 
-/obj/item/screwdriver/get_ru_names()
-	return alist(
-		NOMINATIVE = "отвёртка",
-		GENITIVE = "отвёртки",
-		DATIVE = "отвёртке",
-		ACCUSATIVE = "отвёртку",
-		INSTRUMENTAL = "отвёрткой",
-		PREPOSITIONAL = "отвёртке"
-	)
-
 /obj/item/screwdriver/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] вонза[PLUR_ET_YUT(user)] [declent_ru(ACCUSATIVE)] себе в [pick("висок", "сердце")]! Это похоже на попытку самоубийства!"))
 	return BRUTELOSS
@@ -78,8 +68,7 @@
 	return eyestab(target, user)
 
 /obj/item/screwdriver/nuke
-	desc = "Инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой. \
-			Оснащена ультратонким наконечником."
+	desc = "A specialized screwdriver with an ultra-thin flathead tip, meant for accessing very specific machinery."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver_nuke"
 	belt_icon = "screwdriver_nuke"
@@ -92,20 +81,9 @@
 	greyscale_config_belt = null
 	greyscale_colors = null
 
-/obj/item/screwdriver/nuke/get_ru_names()
-	return alist(
-		NOMINATIVE = "ультратонкая отвёртка",
-		GENITIVE = "ультратонкой отвёртки",
-		DATIVE = "ультратонкой отвёртке",
-		ACCUSATIVE = "ультратонкую отвёртку",
-		INSTRUMENTAL = "ультратонкой отвёрткой",
-		PREPOSITIONAL = "ультратонкой отвёртке"
-	)
-
 /obj/item/screwdriver/brass
 	name = "brass screwdriver"
-	desc = "Инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой. \
-			Ручка на ощупь ледяная."
+	desc = "A screwdriver made of brass. The handle feels freezing cold."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver_brass"
 	belt_icon = "screwdriver_brass"
@@ -119,20 +97,9 @@
 	greyscale_config_belt = null
 	greyscale_colors = null
 
-/obj/item/screwdriver/brass/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунная отвёртка",
-		GENITIVE = "латунной отвёртки",
-		DATIVE = "латунной отвёртке",
-		ACCUSATIVE = "латунную отвёртку",
-		INSTRUMENTAL = "латунной отвёрткой",
-		PREPOSITIONAL = "латунной отвёртке"
-	)
-
 /obj/item/screwdriver/abductor
 	name = "alien screwdriver"
-	desc = "Инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой. \
-			Кажется, будто бы её наконечник крутится сам по себе."
+	desc = "An ultrasonic screwdriver."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "screwdriver"
 	belt_icon = "alien_screwdriver"
@@ -147,38 +114,16 @@
 	greyscale_config_belt = null
 	greyscale_colors = null
 
-/obj/item/screwdriver/abductor/get_ru_names()
-	return alist(
-		NOMINATIVE = "чужеродная отвёртка",
-		GENITIVE = "чужеродной отвёртки",
-		DATIVE = "чужеродной отвёртке",
-		ACCUSATIVE = "чужеродную отвёртку",
-		INSTRUMENTAL = "чужеродной отвёрткой",
-		PREPOSITIONAL = "чужеродной отвёртке"
-	)
-
 /obj/item/screwdriver/cyborg
 	name = "powered screwdriver"
-	desc = "Гидравлический инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой. \
-			Специализированная версия для установки в роботизированные системы."
+	desc = "A powered screwdriver typically found in construction and engineering robots."
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.5
 	flags = parent_type::flags | NO_NEW_GAGS_PREVIEW
 
-/obj/item/screwdriver/cyborg/get_ru_names()
-	return alist(
-		NOMINATIVE = "электрическая отвёртка",
-		GENITIVE = "электрической отвёртки",
-		DATIVE = "электрической отвёртке",
-		ACCUSATIVE = "электрическую отвёртку",
-		INSTRUMENTAL = "электрической отвёрткой",
-		PREPOSITIONAL = "электрической отвёртке"
-	)
-
 /obj/item/screwdriver/power
 	name = "hand drill"
-	desc = "Электрическая инструмент, используемый для завинчивания объектов с резьбой \
-			и закручивания болтов и гаек."
+	desc = "A powerful, hand-held drill fitted with a long-lasting battery. It has a screwdriver head attached."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "drill_screw"
 	item_state = "drill"
@@ -202,16 +147,6 @@
 	random_color = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/screwdriver/power/get_ru_names()
-	return alist(
-		NOMINATIVE = "ручная дрель",
-		GENITIVE = "ручной дрели",
-		DATIVE = "ручной дрели",
-		ACCUSATIVE = "ручную дрель",
-		INSTRUMENTAL = "ручной дрелью",
-		PREPOSITIONAL = "ручной дрели"
-	)
-
 /obj/item/crowbar/power/examine(mob/user)
 	. = ..()
 	. += span_notice("Установлена <b>винтовая</b> бита.")
@@ -233,8 +168,7 @@
 
 /obj/item/screwdriver/industrial
 	name = "industrial screwdriver"
-	desc = "Инструмент, предназначенный для завинчивания и отвинчивания изделий с резьбой. \
-			Нескользящие накладки улучшают хват, облегчая работу."
+	desc = "A tool for tightening and loosening threaded fasteners. Nonslip grip pads make it easier to use."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver_industrial"
 	post_init_icon_state = null
@@ -245,13 +179,3 @@
 	greyscale_config_inhand_left = null
 	greyscale_config_inhand_right = null
 	greyscale_colors = null
-
-/obj/item/screwdriver/industrial/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутая отвёртка",
-		GENITIVE = "продвинутой отвёртки",
-		DATIVE = "продвинутой отвёртке",
-		ACCUSATIVE = "продвинутую отвёртку",
-		INSTRUMENTAL = "продвинутой отвёрткой",
-		PREPOSITIONAL = "продвинутой отвёртке"
-	)

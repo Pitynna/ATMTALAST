@@ -4,8 +4,7 @@
 #define RD_SERVER_SCREEN_LOGS 3
 /obj/machinery/r_n_d/server
 	name = "R&D Server"
-	desc = "Центральный сервер отдела НИО. Предназначен для хранения и управления базой данных шаблонов печати. \
-			Обеспечивает синхронизацию данных между подключёнными консолями и научным оборудованием."
+	desc = "The R&D department's central server. Stores and manages the design database and synchronizes data between connected consoles and scientific equipment."
 	icon_state = "server"
 	base_icon_state = "server"
 	var/datum/research/files
@@ -26,25 +25,10 @@
 	var/static/logs_decryption_key = null
 	var/list/design_blacklist = list()
 
-/obj/machinery/r_n_d/server/get_ru_names()
-	return alist(
-		NOMINATIVE = "сервер НИО",
-		GENITIVE = "сервера НИО",
-		DATIVE = "серверу НИО",
-		ACCUSATIVE = "сервер НИО",
-		INSTRUMENTAL = "сервером НИО",
-		PREPOSITIONAL = "сервере НИО",
-	)
-
 /obj/machinery/r_n_d/server/Initialize(mapload)
 	. = ..()
 	if(!logs_decryption_key)
 		logs_decryption_key = GenerateKey()
-	if(is_taipan(z))
-		syndicate = 1
-		req_access = list(ACCESS_SYNDICATE_RESEARCH_DIRECTOR)
-		icon_state = "syndie_server"
-		base_icon_state = "syndie_server"
 	component_parts = list()
 	component_parts += new /obj/item/circuitboard/rdserver(null)
 	component_parts += new /obj/item/stock_parts/scanning_module(null)
@@ -253,45 +237,15 @@
 	server_id = 1
 	plays_sound = 1
 
-/obj/machinery/r_n_d/server/core/get_ru_names()
-	return alist(
-		NOMINATIVE = "центральный сервер НИО",
-		GENITIVE = "центрального сервера НИО",
-		DATIVE = "центральному серверу НИО",
-		ACCUSATIVE = "центральный сервер НИО",
-		INSTRUMENTAL = "центральным сервером НИО",
-		PREPOSITIONAL = "центральном сервере НИО",
-	)
-
 /obj/machinery/r_n_d/server/robotics
 	name = "Robotics and Mechanic R&D Server"
 	id_with_upload_string = "1;2;4;6"
 	id_with_download_string = "1;2;4;6"
 	server_id = 2
 
-/obj/machinery/r_n_d/server/robotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "сервер робототехники и механики НИО",
-		GENITIVE = "сервера робототехники и механики НИО",
-		DATIVE = "серверу робототехники и механики НИО",
-		ACCUSATIVE = "сервер робототехники и механики НИО",
-		INSTRUMENTAL = "сервером робототехники и механики НИО",
-		PREPOSITIONAL = "сервере робототехники и механики НИО",
-	)
-
 /obj/machinery/r_n_d/server/centcom
 	name = "CentComm. Central R&D Database"
 	server_id = -1
-
-/obj/machinery/r_n_d/server/centcom/get_ru_names()
-	return alist(
-		NOMINATIVE = "сервер НИО ЦК",
-		GENITIVE = "сервера НИО ЦК",
-		DATIVE = "серверу НИО ЦК",
-		ACCUSATIVE = "сервер НИО ЦК",
-		INSTRUMENTAL = "сервером НИО ЦК",
-		PREPOSITIONAL = "сервере НИО ЦК",
-	)
 
 /obj/machinery/r_n_d/server/centcom/Initialize(mapload)
 	. = ..()
@@ -325,7 +279,7 @@
 
 /obj/machinery/computer/rdservercontrol
 	name = "R&D server controller"
-	desc = "Комьютер, предназначенный для администрирования системы серверов НИО."
+	desc = "A computer for administering the R&D server system."
 	icon_screen = "rdcomp"
 	icon_keyboard = "rd_key"
 	light_color = LIGHT_COLOR_LAVENDER
@@ -338,22 +292,8 @@
 	var/badmin = 0
 	var/syndicate = 0 //добавленный для синдибазы флаг
 
-/obj/machinery/computer/rdservercontrol/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления серверами НИО",
-		GENITIVE = "консоли управления серверами НИО",
-		DATIVE = "консоли управления серверами НИО",
-		ACCUSATIVE = "консоль управления серверами НИО",
-		INSTRUMENTAL = "консолью управления серверами НИО",
-		PREPOSITIONAL = "консоли управления серверами НИО",
-	)
-
 /obj/machinery/computer/rdservercontrol/Initialize(mapload)
 	. = ..()
-	if(is_taipan(z))
-		syndicate = 1
-		req_access = list(ACCESS_SYNDICATE_RESEARCH_DIRECTOR)
-
 /obj/machinery/computer/rdservercontrol/emag_act(mob/user)
 	if(emagged)
 		return FALSE

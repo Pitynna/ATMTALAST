@@ -13,7 +13,6 @@
 	ranged_cooldown_time = 120
 	friendly = "воет на"
 	speak_emote = list("ревёт")
-	tts_seed = "Bloodseeker"
 	vision_range = 4
 	speed = 3
 	maxHealth = 300
@@ -309,16 +308,6 @@
 	icon_state = "Goliath_tentacle_spawn"
 	layer = BELOW_MOB_LAYER
 	var/mob/living/spawner
-
-/obj/effect/temp_visual/goliath_tentacle/get_ru_names()
-	return alist(
-		NOMINATIVE = "щупальце голиафа",
-		GENITIVE = "щупальца голиафа",
-		DATIVE = "щупальцу голиафа",
-		ACCUSATIVE = "щупальце голиафа",
-		INSTRUMENTAL = "щупальцем голиафа",
-		PREPOSITIONAL = "щупальце голиафа",
-	)
 
 /obj/effect/temp_visual/goliath_tentacle/Initialize(mapload, mob/living/new_spawner)
 	. = ..()

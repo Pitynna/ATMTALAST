@@ -820,7 +820,6 @@
 	},
 /area/awaymission/research)
 "cN" = (
-/obj/effect/rune,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -1008,7 +1007,6 @@
 	},
 /area/awaymission/research)
 "dm" = (
-/obj/god/narsie/sc_Narsie,
 /turf/space,
 /area/awaymission/research)
 "dn" = (
@@ -1901,7 +1899,7 @@
 	},
 /area/awaymission/arrivalblock)
 "fI" = (
-/turf/simulated/wall/cult,
+/turf/simulated/wall,
 /area/awaymission/midblock)
 "fJ" = (
 /obj/structure/window/reinforced,

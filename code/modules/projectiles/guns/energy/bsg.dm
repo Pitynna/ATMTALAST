@@ -1,6 +1,6 @@
 /obj/item/gun/energy/bsg
-	name = "Б.С.П."
-	desc = "Большая С*** Пушка. Использует ядро энергетической аномалии и блюспейс кристалл для производства разрушительных взрывов энергии, вдохновленный дивизионом БСА \"Нанотрейзен\"."
+	name = "\improper B.S.G"
+	desc = "The Blue Space Gun. Uses a flux anomaly core and a bluespace crystal to produce destructive bluespace energy blasts, inspired by Nanotrasen's BSA division."
 	icon_state = "bsg"
 	item_state = "bsg"
 	origin_tech = "combat=6;materials=6;powerstorage=6;bluespace=6;magnets=6" //cutting edge technology, be my guest if you want to deconstruct one instead of use it.
@@ -163,7 +163,7 @@
 	update_icon(UPDATE_ICON_STATE)
 
 /obj/item/gun/energy/bsg/prebuilt/admin
-	desc = "Большая С*** Пушка. Лучшим людям ― лучшее творение. У этой версии БС кристалл никогда не треснет, и уже загружено ядро энергетической аномалии."
+	desc = "The Blue Space Gun. Uses a flux anomaly core and a bluespace crystal to produce destructive bluespace energy blasts, inspired by Nanotrasen's BSA division. This is an executive model, and its bluespace crystal will not shatter."
 	admin_model = TRUE
 	core = new /obj/item/assembly/signaler/core/energetic/tier3/tier4()
 

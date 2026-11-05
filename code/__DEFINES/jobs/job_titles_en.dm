@@ -101,16 +101,6 @@
 #define JOB_TITLE_TEAM2 "Team 2"
 #define JOB_TITLE_TEAM3 "Team 3"
 
-// Taipan
-#define JOB_TITLE_TAIPAN_SCIENTIST "Space Base Syndicate Scientist"
-#define JOB_TITLE_TAIPAN_MEDIC "Space Base Syndicate Medic"
-#define JOB_TITLE_TAIPAN_BOTANIST "Space Base Syndicate Botanist"
-#define JOB_TITLE_TAIPAN_CARGO "Space Base Syndicate Cargo Technician"
-#define JOB_TITLE_TAIPAN_CHEF "Space Base Syndicate Chef"
-#define JOB_TITLE_TAIPAN_ENGINEER "Space Base Syndicate Engineer"
-#define JOB_TITLE_TAIPAN_COMMS "Space Base Syndicate Comms Officer"
-#define JOB_TITLE_TAIPAN_RD "Space Base Syndicate Research Director"
-#define JOB_TITLE_TAIPAN_CYBORG "Cyborg"
 
 /// MARK: Job lists
 GLOBAL_LIST_INIT(ai_death_alarm_jobs, list(

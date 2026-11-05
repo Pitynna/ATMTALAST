@@ -4753,10 +4753,10 @@
 /area/awaymission/BMPship/MedBay)
 "Fh" = (
 /obj/structure/rack/gunrack,
-/obj/item/gun/energy/laser/hitscan/carbine{
+/obj/item/gun/energy/laser{
 	pixel_x = -8
 	},
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/structure/alien/weeds,
 /obj/structure/alien/resin{
 	layer = 3.1
@@ -5244,7 +5244,7 @@
 /obj/effect/mob_spawn/human/corpse/tacticool{
 	layer = 4
 	},
-/obj/item/gun/energy/laser/hitscan/carbine{
+/obj/item/gun/energy/laser{
 	pixel_x = -5
 	},
 /turf/simulated/floor/plating/asteroid/airless,

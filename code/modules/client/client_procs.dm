@@ -258,7 +258,7 @@
 
 	initialize_commandbar_spy()
 
-	set_right_click_menu_mode(TRUE)
+	set_right_click_menu_mode(FALSE)
 
 	if(connection != "seeker") //Invalid connection type.
 		return null
@@ -418,7 +418,6 @@
 
 	loot_panel = new(src)
 
-	skills_select_window = new()
 
 	view_size = new(src)
 	view_size.resetFormat()
@@ -459,7 +458,6 @@
 	tgui_panel.window.send_message("donations/load_data", list(
 		"monthDonations" = SSdonations.month_donations,
 		"targetDonation" = SSdonations.target_donation,
-		"ttsTargetDonation" = SSdonations.tts_target_donation,
 		"donationsText" = SSdonations.donations_text,
 		"boostyUrl" = SSdonations.boosty_url,
 		"kofiUrl" = SSdonations.kofi_url,
@@ -547,7 +545,6 @@
 	QDEL_NULL(tooltips)
 	QDEL_NULL(loot_panel)
 	QDEL_NULL(parallax_rock)
-	QDEL_NULL(skills_select_window)
 	seen_messages = null
 	sound_tokens = null
 	Master.UpdateTickRate()
@@ -1744,14 +1741,7 @@ GAME_VERB_DESC(/client, link_discord_account, "Привязка Discord", "Пр�
 	return persistent_client.achievements.get_achievement_status(achievement_type)
 
 /client/proc/set_right_click_menu_mode(shift_only)
-	if(shift_only)
-		winset(src, SKIN_MAPWINDOW_MAP, "right-click=true")
-		winset(src, "ShiftUp", "is-disabled=false")
-		winset(src, "Shift", "is-disabled=false")
-	else
-		winset(src, SKIN_MAPWINDOW_MAP, "right-click=false")
-		winset(src, SKIN_DEFAULT_SHIFT, "is-disabled=true")
-		winset(src, SKIN_DEFAULT_SHIFTUP, "is-disabled=true")
+	winset(src, SKIN_MAPWINDOW_MAP, "right-click=false")
 
 /client/proc/open_filter_editor(atom/in_atom)
 	if(holder)

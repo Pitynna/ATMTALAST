@@ -116,12 +116,6 @@
 	)
 	autohiss_exempt = list("Синт'Унати")
 
-	max_select_skills = list(
-		/datum/skill/combat/fists = 3,
-		/datum/skill/medical/heal = 1,
-		/datum/skill/medical/genetic = 1,
-	)
-
 /datum/species/unathi/handle_death(gibbed, mob/living/carbon/human/H)
 	H.stop_tail_wagging()
 
@@ -156,113 +150,6 @@
 			if(prob(5) && H.bodytemperature <= 170)
 				H.AdjustSleeping(4 SECONDS)
 				to_chat(H, span_danger("Слишком холодно, я засыпаю..."))
-
-/datum/species/unathi/ashwalker
-	name = SPECIES_ASHWALKER_BASIC
-	name_plural = "Ash Walkers"
-	inherent_factions = list("ashwalker")
-
-	blurb = "Пеплоходцы — рептильные гуманоиды, по-видимому, родственные унати. Но кажутся значительно менее развитыми. \
-	Они бродят по пустошам Лазиса, поклоняются мёртвому городу и ловят ничего не подозревающих шахтёров."
-
-	default_language = LANGUAGE_UNATHI
-	brute_mod = 0.9
-	speed_mod = -0.50
-
-	inherent_traits = list(
-		TRAIT_HAS_LIPS,
-		TRAIT_NO_GUNS,
-		TRAIT_PIERCEIMMUNE,
-		TRAIT_HEALS_FROM_ASH_TENDRIL,
-	)
-
-	has_organ = list(
-		INTERNAL_ORGAN_HEART = /obj/item/organ/internal/heart/unathi,
-		INTERNAL_ORGAN_LUNGS = /obj/item/organ/internal/lungs/unathi/ash_walker,
-		INTERNAL_ORGAN_LIVER = /obj/item/organ/internal/liver/unathi,
-		INTERNAL_ORGAN_KIDNEYS = /obj/item/organ/internal/kidneys/unathi,
-		INTERNAL_ORGAN_BRAIN = /obj/item/organ/internal/brain/unathi,
-		INTERNAL_ORGAN_APPENDIX = /obj/item/organ/internal/appendix,
-		INTERNAL_ORGAN_EYES = /obj/item/organ/internal/eyes/unathi/ash_walker,
-		INTERNAL_ORGAN_EARS = /obj/item/organ/internal/ears/unathi,
-	)
-
-/datum/species/unathi/ashwalker/on_species_gain(mob/living/carbon/human/H)
-	. = ..()
-	var/datum/action/innate/ignite_unathi/fire = locate() in H.actions
-	if(!fire)
-		fire = new
-		fire.Grant(H)
-	RegisterSignal(H, COMSIG_MOVABLE_Z_CHANGED, PROC_REF(speedylegs), override = TRUE)
-	speedylegs(H)
-
-/datum/species/unathi/ashwalker/on_species_loss(mob/living/carbon/human/H)
-	. = ..()
-	var/datum/action/innate/ignite_unathi/fire = locate() in H.actions
-	fire?.Remove(H)
-	UnregisterSignal(H, COMSIG_MOVABLE_Z_CHANGED)
-
-/datum/species/unathi/ashwalker/proc/speedylegs(mob/living/carbon/human/H)
-	SIGNAL_HANDLER
-
-	if(is_mining_level(H.z))
-		H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/species_speedmod, multiplicative_slowdown = speed_mod)
-	else
-		H.remove_movespeed_modifier(/datum/movespeed_modifier/species_speedmod)
-
-//Ash walker shaman, worse defensive stats, but better at surgery and have a healing touch ability
-/datum/species/unathi/ashwalker/shaman
-	name = SPECIES_ASHWALKER_SHAMAN
-	inherent_traits = list(
-		TRAIT_HAS_LIPS,
-		TRAIT_NO_GUNS,
-		TRAIT_VIRUSIMMUNE,
-		TRAIT_PIERCEIMMUNE,
-		TRAIT_HEALS_FROM_ASH_TENDRIL,
-	)
-	brute_mod = 1.15
-	burn_mod = 1.15
-	speed_mod = -0.37 //less fast as ash walkers
-	punchdamagelow = 4
-	punchdamagehigh = 7
-	punchstunthreshold = 7 //still can stun people pretty often
-	toolspeedmod = -0.1 //they're smart and efficient unlike other lizards
-	surgeryspeedmod = -0.1	//shaman is slightly better at surgeries
-
-	has_organ = list(
-		INTERNAL_ORGAN_HEART = /obj/item/organ/internal/heart/unathi,
-		INTERNAL_ORGAN_LUNGS = /obj/item/organ/internal/lungs/unathi/ash_walker,
-		INTERNAL_ORGAN_LIVER = /obj/item/organ/internal/liver/unathi,
-		INTERNAL_ORGAN_KIDNEYS = /obj/item/organ/internal/kidneys/unathi,
-		INTERNAL_ORGAN_BRAIN = /obj/item/organ/internal/brain/unathi,
-		INTERNAL_ORGAN_APPENDIX = /obj/item/organ/internal/appendix,
-		INTERNAL_ORGAN_EYES = /obj/item/organ/internal/eyes/unathi/ash_walker_shaman,
-		INTERNAL_ORGAN_EARS = /obj/item/organ/internal/ears,
-	)
-
-/datum/species/unathi/ashwalker/shaman/on_species_gain(mob/living/carbon/human/owner)
-	. = ..()
-	var/datum/action/cooldown/spell/touch/healtouch/shaman/spell = locate() in owner.mob_spell_list
-	if(!spell)
-		owner.AddSpell(new /datum/action/cooldown/spell/touch/healtouch/shaman)
-	var/datum/action/innate/shaman_gps/finder = locate() in owner.actions
-	if(!finder)
-		finder = new
-		finder.Grant(owner)
-	var/datum/action/innate/ignite_unathi/fire = locate() in owner.actions
-	if(!fire)
-		fire = new
-		fire.Grant(owner)
-
-/datum/species/unathi/ashwalker/shaman/on_species_loss(mob/living/carbon/human/owner)
-	. = ..()
-	owner.RemoveSpell(/datum/action/cooldown/spell/touch/healtouch/shaman)
-	var/datum/action/innate/shaman_gps/finder = locate() in owner.actions
-	if(finder)
-		finder.Remove(owner)
-	var/datum/action/innate/shaman_gps/fire = locate() in owner.actions
-	if(fire)
-		fire.Remove(owner)
 
 /*
 draconids
@@ -319,7 +206,7 @@ They're basically just lizards with all-around marginally better stats and fire 
 	var/datum/action/innate/ignite_unathi/fire = locate() in owner.actions
 	fire?.Remove(owner)
 
-//igniter. only for ashwalkers and drakonids because of """lore"""
+// Draconids can create a small flame.
 /datum/action/innate/ignite_unathi
 	name = "Поджог"
 	desc = "Вы формируете небольшой сгусток пламени в вашей пасти, достаточный для... розжига костра."
@@ -344,44 +231,6 @@ They're basically just lizards with all-around marginally better stats and fire 
 	else
 		qdel(fire)
 		user.balloon_alert(user, "ваши руки заняты!")
-
-/datum/action/innate/shaman_gps
-	name = "Помощь некрополя"
-	desc = "Вы используете силу Некрополя, чтобы узнать примерное местоположение точек интереса."
-	button_icon = 'icons/mob/actions/actions_clockwork.dmi'
-	button_icon_state = "stun"
-
-/datum/action/innate/shaman_gps/Activate()
-	var/list/list_of_points = GLOB.lavaland_points_of_interest
-	if(list_of_points)
-		var/selected_poi = tgui_input_list(owner, "Выберите точку интереса", "Точки интереса", list_of_points)
-		addtimer(CALLBACK(GLOBAL_PROC, /proc/to_chat, owner, \
-							span_warning("Я чувствую, что [selected_poi] [get_direction(selected_poi)]")), 2 SECONDS)
-
-	if(!LAZYLEN(GLOB.lavaland_points_of_interest))
-		to_chat(owner, "Все церемониальные тотемы уничтожены.")
-		return
-
-	var/selected_poi = tgui_input_list(owner, "Выберите точку интереса", "точки интереса", GLOB.lavaland_points_of_interest)
-
-	if(!selected_poi)
-		return
-
-	addtimer(CALLBACK(GLOBAL_PROC, /proc/to_chat, owner, \
-							span_warning("Я чувствую, что [selected_poi] [get_direction(selected_poi)]")), 2 SECONDS)
-
-/datum/action/innate/shaman_gps/proc/get_direction(obj/structure/selected_poi)
-	if(!selected_poi)
-		return "уничтожен."
-
-	var/turf/turf = get_turf(selected_poi)
-
-	if(owner.z != turf.z)
-		return "находится где-то далеко отсюда."
-
-	. = "находится где-то на "
-	. += dir2rustext(get_dir(owner.loc, selected_poi.loc))
-	. += "e."
 
 /datum/species/unathi/compressor_grind(location)
 	new /obj/item/stack/sheet/animalhide/lizard(location)

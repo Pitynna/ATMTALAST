@@ -221,8 +221,6 @@ ADMIN_VERB(cmd_admin_godmode_in_list, R_ADMIN, "Godmode in List", "Toggles godmo
 			mute_string = "adminhelp, admin PM and ASAY"
 		if(MUTE_DEADCHAT)
 			mute_string = "deadchat and DSAY"
-		if(MUTE_TTS)
-			mute_string = "text to speech"
 		if(MUTE_EMOTE)
 			mute_string = "emote"
 		if(MUTE_INTERNET_REQUEST)

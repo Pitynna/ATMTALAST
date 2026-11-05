@@ -44,10 +44,6 @@
 			. = span_danger("Выглядит сильно повреждённой.")
 	. += span_notice("<br>Использование сварочного инструмента на этом предмете позволит вам разрезать его, в конечном итоге удалив внешний слой.")
 
-/obj/structure/falsewall/ratvar_act()
-	new /obj/structure/falsewall/brass(loc)
-	qdel(src)
-
 /obj/structure/falsewall/Destroy()
 	set_density(FALSE)
 	recalculate_atmos_connectivity()
@@ -179,8 +175,7 @@
 	if(our_rcd.checkResource(RCD_COST_WALL * 2, user))
 		to_chat(user, "Деконструкция стены...")
 		playsound(get_turf(our_rcd), 'sound/machines/click.ogg', 50, TRUE)
-		CALCULATE_SKILL_MOD(user, BUILDING_SPEED_MOD, building_mod)
-		if(do_after(user, 4 SECONDS * our_rcd.toolspeed * building_mod, src, category = DA_CAT_TOOL))
+		if(do_after(user, 4 SECONDS * our_rcd.toolspeed, src, category = DA_CAT_TOOL))
 			if(!our_rcd.useResource(RCD_COST_WALL * 2, user))
 				return RCD_ACT_FAILED
 			playsound(get_turf(our_rcd), our_rcd.usesound, 50, TRUE)
@@ -464,50 +459,3 @@
 	walltype = /turf/simulated/wall/mineral/plastitanium
 	canSmoothWith = SMOOTH_GROUP_PLASTITANIUM_WALLS
 	smoothing_groups = SMOOTH_GROUP_PLASTITANIUM_WALLS
-
-/obj/structure/falsewall/brass
-	name = "clockwork wall"
-	desc = "A huge chunk of warm metal. The clanging of machinery emanates from within."
-	icon = 'icons/turf/walls/clockwork_wall.dmi'
-	base_icon_state = "clockwork_wall"
-	icon_state = "clockwork_wall-0"
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	mineral_amount = 1
-	canSmoothWith = SMOOTH_GROUP_CLOCKWORK_WALLS
-	smoothing_groups = SMOOTH_GROUP_CLOCKWORK_WALLS
-	girder_type = /obj/structure/clockwork/wall_gear/displaced
-	walltype = /turf/simulated/wall/clockwork
-	mineral = /obj/item/stack/sheet/brass
-
-/obj/structure/falsewall/brass/fake
-	desc = "A huge chunk of warm metal. The clanging of machinery emanates from within. You feel a wind."
-	girder_type = /obj/structure/clockwork/wall_gear/fake/displaced
-	walltype = /turf/simulated/wall/clockwork/fake
-	mineral = /obj/item/stack/sheet/brass_fake
-
-/obj/structure/falsewall/brass/Initialize(mapload)
-	. = ..()
-	var/turf/T = get_turf(src)
-	new /obj/effect/temp_visual/ratvar/wall/false(T)
-	new /obj/effect/temp_visual/ratvar/beam/falsewall(T)
-
-/obj/structure/falsewall/clockwork/attack_hand(mob/user)
-	if(!isclocker(user))
-		user.changeNext_move(CLICK_CD_MELEE)
-		to_chat(user, span_notice("Вы толкаете стену, но ничего не происходит!"))
-		playsound(src, 'sound/weapons/genhit.ogg', 25, TRUE) //sneaky
-		return FALSE
-	return ..()
-
-/obj/structure/falsewall/clockwork/fake/attack_hand(mob/user)
-	return ..()
-
-/obj/structure/falsewall/clockwork/welder_act(mob/user, obj/item/I)
-	if(!density)
-		return
-	WELDER_ATTEMPT_SLICING_MESSAGE
-	if(I.use_tool(src, user, 120, volume = I.tool_volume)) // 20% more than double normal wall.
-		dismantle(user, TRUE)
-
-/obj/structure/falsewall/clockwork/screwdriver_act(mob/living/user, obj/item/I)
-	return FALSE	// wall change is unavailable, idk why

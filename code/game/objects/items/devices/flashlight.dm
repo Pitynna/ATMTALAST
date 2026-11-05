@@ -4,7 +4,7 @@
 
 /obj/item/flashlight
 	name = "flashlight"
-	desc = "Ручной аварийный источник света. Питается от внутренней батареи."
+	desc = "A hand-held emergency light."
 	gender = MALE
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flashlight"
@@ -27,17 +27,6 @@
 	/// When true, painting the flashlight won't change its light color
 	var/ignore_base_color = FALSE
 
-/obj/item/flashlight/get_ru_names()
-	return alist(
-		NOMINATIVE = "фонарик",
-		GENITIVE = "фонарика",
-		DATIVE = "фонарику",
-		ACCUSATIVE = "фонарик",
-		INSTRUMENTAL = "фонариком",
-		PREPOSITIONAL = "фонарике"
-	)
-
-
 /obj/item/flashlight/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/right_click_mapper/attack_self, "Переключить свет")
@@ -45,16 +34,6 @@
 /obj/item/flashlight/dummy
 	name = "Testing flashlight"
 	light_system = OVERLAY_LIGHT
-
-/obj/item/flashlight/dummy/get_ru_names()
-	return alist(
-		NOMINATIVE = "дебаг-фонарик",
-		GENITIVE = "дебаг-фонарика",
-		DATIVE = "дебаг-фонарику",
-		ACCUSATIVE = "дебаг-фонарик",
-		INSTRUMENTAL = "дебаг-фонариком",
-		PREPOSITIONAL = "дебаг-фонарике"
-	)
 
 /obj/item/flashlight/Initialize(mapload)
 	. = ..()
@@ -150,7 +129,7 @@
 
 /obj/item/flashlight/pen
 	name = "penlight"
-	desc = "Небольшой фонарь в форме ручки. Используется медицинским персоналом."
+	desc = "A pen, and a light. Used by medical staff."
 	gender = FEMALE
 	icon_state = "penlight"
 	item_state = ""
@@ -160,21 +139,9 @@
 	light_system = OVERLAY_LIGHT
 	light_range = 2
 
-/obj/item/flashlight/pen/get_ru_names()
-	return alist(
-		NOMINATIVE = "фонарик-ручка",
-		GENITIVE = "фонарик-ручки",
-		DATIVE = "фонарик-ручке",
-		ACCUSATIVE = "фонарик-ручку",
-		INSTRUMENTAL = "фонарик-ручкой",
-		PREPOSITIONAL = "фонарик-ручке"
-	)
-
 /obj/item/flashlight/seclite
 	name = "seclite"
-	desc = "Ручной источник света. За счёт аккумулятора увеличенной мощности \
-			обладает широким радиусом освещения. Достаточно увесистый, \
-			чтобы сойти за небольшую дубинку. Используется силовыми и охранными структурами."
+	desc = "A robust flashlight used by security."
 	icon_state = "seclite"
 	item_state = "seclite"
 	belt_icon = "seclite"
@@ -182,51 +149,20 @@
 	light_range = 5 // A little better than the standard flashlight.
 	hitsound = 'sound/weapons/genhit1.ogg'
 
-/obj/item/flashlight/seclite/get_ru_names()
-	return alist(
-		NOMINATIVE = "тактический фонарик",
-		GENITIVE = "тактического фонарика",
-		DATIVE = "тактическому фонарику",
-		ACCUSATIVE = "тактический фонарик",
-		INSTRUMENTAL = "тактическим фонариком",
-		PREPOSITIONAL = "тактическом фонарике",
-	)
-
 /obj/item/flashlight/sectaclight
 	name = "security tactical flashlight"
-	desc = "Прочный тактический фонарь, оборудованный для комфортного ношения на голове. \
-			Используется силовыми и охранными структурами."
+	desc = "A rugged tactical flashlight fitted for comfortable head mounting. Used by security and law enforcement personnel."
 	icon_state = "sectaclight"
 	item_state = ""
 	slot_flags = ITEM_SLOT_EARS
 
-/obj/item/flashlight/sectaclight/get_ru_names()
-	return alist(
-		NOMINATIVE = "головной фонарь",
-		GENITIVE = "головного фонаря",
-		DATIVE = "головному фонарю",
-		ACCUSATIVE = "головной фонарь",
-		INSTRUMENTAL = "головным фонарём",
-		PREPOSITIONAL = "головном фонаре",
-	)
-
 /obj/item/flashlight/drone
 	name = "low-power flashlight"
-	desc = "Портативный источник света, предназначенный для установки в роботизированные системы."
+	desc = "A miniature lamp, that might be used by small robots."
 	icon_state = "penlight"
 	item_state = ""
 	light_range = 2
 	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/flashlight/drone/get_ru_names()
-	return alist(
-		NOMINATIVE = "маломощный фонарь",
-		GENITIVE = "маломощного фонаря",
-		DATIVE = "маломощному фонарю",
-		ACCUSATIVE = "маломощный фонарь",
-		INSTRUMENTAL = "маломощным фонарём",
-		PREPOSITIONAL = "маломощном фонаре",
-	)
 
 /**
  * MARK: Desk lamps
@@ -234,7 +170,7 @@
 
 /obj/item/flashlight/lamp
 	name = "desk lamp"
-	desc = "Стационарный источник света. Предназначена в первую очередь для офисного освещения."
+	desc = "A desk lamp with an adjustable mount."
 	gender = FEMALE
 	icon_state = "lamp"
 	item_state = "lamp"
@@ -245,50 +181,19 @@
 	materials = list()
 	on = TRUE
 
-/obj/item/flashlight/lamp/get_ru_names()
-	return alist(
-		NOMINATIVE = "настольная лампа",
-		GENITIVE = "настольной лампы",
-		DATIVE = "настольной лампе",
-		ACCUSATIVE = "настольную лампу",
-		INSTRUMENTAL = "настольной лампой",
-		PREPOSITIONAL = "настольной лампе",
-	)
-
 /obj/item/flashlight/lamp/green
 	name = "green-shaded desk lamp"
-	desc = "Стационарный источник света. Классический вариант зелёного цвета."
+	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
 	item_state = "lampgreen"
 	light_color = LIGHT_COLOR_TUNGSTEN
 
-/obj/item/flashlight/lamp/green/get_ru_names()
-	return alist(
-		NOMINATIVE = "зелёная настольная лампа",
-		GENITIVE = "зелёной настольной лампы",
-		DATIVE = "зелёной настольной лампе",
-		ACCUSATIVE = "зелёную настольную лампу",
-		INSTRUMENTAL = "зелёной настольной лампой",
-		PREPOSITIONAL = "зелёной настольной лампе",
-	)
-
 /obj/item/flashlight/lamp/bananalamp
 	name = "banana lamp"
-	desc = "Стационарный источник света. Жёлтого цвета лампа с абажуром в форме \
-			банановой кожуры и дурацким шнуром включения."
+	desc = "Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring."
 	icon_state = "bananalamp"
 	item_state = "bananalamp"
 	light_color = LIGHT_COLOR_BRIGHT_YELLOW
-
-/obj/item/flashlight/lamp/bananalamp/get_ru_names()
-	return alist(
-		NOMINATIVE = "банановая настольная лампа",
-		GENITIVE = "банановой настольной лампы",
-		DATIVE = "банановой настольной лампе",
-		ACCUSATIVE = "банановую настольную лампу",
-		INSTRUMENTAL = "банановой настольной лампой",
-		PREPOSITIONAL = "банановой настольной лампе",
-	)
 
 /**
  * MARK: Flares
@@ -296,8 +201,7 @@
 
 /obj/item/flashlight/flare
 	name = "flare"
-	desc = "Ручной аварийный источник света. Заполнен пиротехническим составом, который поджигается \
-			при активации, давая яркое пламя красного цвета."
+	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
 	light_range = 8
 	light_system = OVERLAY_LIGHT
 	light_color = "#ff0000"
@@ -317,16 +221,6 @@
 	var/spawn_fuel = TRUE
 	/// Lighting middleman, lets us do a flicker effect
 	var/datum/light_middleman/middleman
-
-/obj/item/flashlight/flare/get_ru_names()
-	return alist(
-		NOMINATIVE = "фальшфейер",
-		GENITIVE = "фальшфейера",
-		DATIVE = "фальшфейеру",
-		ACCUSATIVE = "фальшфейер",
-		INSTRUMENTAL = "фальшфейером",
-		PREPOSITIONAL = "фальшфейере",
-	)
 
 /obj/item/flashlight/flare/Initialize(mapload)
 	if(spawn_fuel)
@@ -418,7 +312,7 @@
 /// Acts like a flare, just even stronger, and set length
 /obj/item/flashlight/flare/on/illumination
 	name = "illumination flare"
-	desc = "Очень яркий и недоступный для глаз игроков."
+	desc = "It's really bright, and unreachable."
 	icon_state = "" //No sprite
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	light_range = 7
@@ -443,8 +337,7 @@
 
 /obj/item/flashlight/flare/glowstick
 	name = "green glowstick"
-	desc = "Ручной химический источник света. Активация путём сгибания корпуса обеспечивает \
-			равномерное свечение в течение определённого времени. Одноразовый, непроницаемый, не выделяет тепла."
+	desc = "A military-grade glowstick."
 	light_range = 4
 	color = LIGHT_COLOR_GREEN
 	icon_state = "glowstick"
@@ -456,16 +349,6 @@
 	fuel_upp = 2000
 	ignore_base_color = TRUE
 	var/chemglow_sprite_type = "green"
-
-/obj/item/flashlight/flare/glowstick/get_ru_names()
-	return alist(
-		NOMINATIVE = "зелёный химсвет",
-		GENITIVE = "зелёного химсвета",
-		DATIVE = "зелёному химсвету",
-		ACCUSATIVE = "зелёный химсвет",
-		INSTRUMENTAL = "зелёным химсветом",
-		PREPOSITIONAL = "зелёном химсвете",
-	)
 
 /obj/item/flashlight/flare/glowstick/Initialize(mapload)
 	set_light_color(color)
@@ -491,16 +374,6 @@
 	color = COLOR_SOFT_RED
 	chemglow_sprite_type = "red"
 
-/obj/item/flashlight/flare/glowstick/red/get_ru_names()
-	return alist(
-		NOMINATIVE = "красный химсвет",
-		GENITIVE = "красного химсвета",
-		DATIVE = "красному химсвету",
-		ACCUSATIVE = "красный химсвет",
-		INSTRUMENTAL = "красным химсветом",
-		PREPOSITIONAL = "красном химсвете",
-	)
-
 /obj/item/flashlight/flare/glowstick/green
 
 /obj/item/flashlight/flare/glowstick/blue
@@ -508,80 +381,28 @@
 	color = LIGHT_COLOR_BLUE
 	chemglow_sprite_type = "blue"
 
-/obj/item/flashlight/flare/glowstick/blue/get_ru_names()
-	return alist(
-		NOMINATIVE = "синий химсвет",
-		GENITIVE = "синего химсвета",
-		DATIVE = "синему химсвету",
-		ACCUSATIVE = "синий химсвет",
-		INSTRUMENTAL = "синим химсветом",
-		PREPOSITIONAL = "синем химсвете",
-	)
-
 /obj/item/flashlight/flare/glowstick/orange
 	name = "orange glowstick"
 	color = LIGHT_COLOR_ORANGE
 	chemglow_sprite_type = "orange"
-
-/obj/item/flashlight/flare/glowstick/orange/get_ru_names()
-	return alist(
-		NOMINATIVE = "оранжевый химсвет",
-		GENITIVE = "оранжевого химсвета",
-		DATIVE = "оранжевому химсвету",
-		ACCUSATIVE = "оранжевый химсвет",
-		INSTRUMENTAL = "оранжевым химсветом",
-		PREPOSITIONAL = "оранжевом химсвете",
-	)
 
 /obj/item/flashlight/flare/glowstick/yellow
 	name = "yellow glowstick"
 	color = LIGHT_COLOR_DIM_YELLOW
 	chemglow_sprite_type = "yellow"
 
-/obj/item/flashlight/flare/glowstick/yellow/get_ru_names()
-	return alist(
-		NOMINATIVE = "жёлтый химсвет",
-		GENITIVE = "жёлтого химсвета",
-		DATIVE = "жёлтому химсвету",
-		ACCUSATIVE = "жёлтый химсвет",
-		INSTRUMENTAL = "жёлтым химсветом",
-		PREPOSITIONAL = "жёлтом химсвете",
-	)
-
 /obj/item/flashlight/flare/glowstick/pink
 	name = "pink glowstick"
 	color = LIGHT_COLOR_PINK
 	chemglow_sprite_type = "pink"
 
-/obj/item/flashlight/flare/glowstick/pink/get_ru_names()
-	return alist(
-		NOMINATIVE = "розовый химсвет",
-		GENITIVE = "розового химсвета",
-		DATIVE = "розовому химсвету",
-		ACCUSATIVE = "розовый химсвет",
-		INSTRUMENTAL = "розовым химсветом",
-		PREPOSITIONAL = "розовом химсвете",
-	)
-
 /obj/item/flashlight/flare/glowstick/emergency
 	name = "emergency glowstick"
-	desc = "Ручной химический источник света. Активация путём сгибания корпуса обеспечивает \
-			равномерное свечение в течение определённого времени. Одноразовый, непроницаемый, не выделяет тепла. \
-			Дешёвая вариация, предназначенная для чрезвычайных ситуаций."
+	desc = "A cheap looking, mass produced glowstick. You can practically feel it was made on a tight budget."
 	color = LIGHT_COLOR_BLUE
 	fuel_lower = 30
 	fuel_upp = 90
 	chemglow_sprite_type = "blue"
-
-/obj/item/flashlight/flare/glowstick/emergency/get_ru_names()
-	return alist(
-		NOMINATIVE = "аварийный химсвет",
-		GENITIVE = "аварийного химсвета",
-		DATIVE = "аварийному химсвету",
-		ACCUSATIVE = "аварийный химсвет",
-		INSTRUMENTAL = "аварийным химсветом",
-		PREPOSITIONAL = "аварийном химсвете",
-	)
 
 /obj/item/flashlight/flare/glowstick/random
 	name = "random colored glowstick"
@@ -600,7 +421,7 @@
 
 /obj/item/flashlight/flare/torch
 	name = "torch"
-	desc = "Простейший источник света, сделанный из ветоши, намотанной на древесину."
+	desc = "A torch fashioned from some leaves and a log."
 	w_class = WEIGHT_CLASS_BULKY
 	light_range = 6
 	icon_state = "torch"
@@ -610,23 +431,13 @@
 	fuel_lower = 60
 	fuel_upp = 70
 
-/obj/item/flashlight/flare/torch/get_ru_names()
-	return alist(
-		NOMINATIVE = "факел",
-		GENITIVE = "факела",
-		DATIVE = "факелу",
-		ACCUSATIVE = "факел",
-		INSTRUMENTAL = "факелом",
-		PREPOSITIONAL = "факеле",
-	)
-
 /**
  * MARK: Slime
  */
 
 /obj/item/flashlight/slime
 	name = "glowing slime extract"
-	desc = "Светящийся комок слизи янтарного цвета."
+	desc = "A glowing ball of what appears to be amber."
 	icon_state = "slime"
 	w_class = WEIGHT_CLASS_TINY
 	light_range = 6
@@ -634,16 +445,6 @@
 	light_color = "#FFBF00"
 	materials = list()
 	on = TRUE //Bio-luminesence has one setting, on.
-
-/obj/item/flashlight/slime/get_ru_names()
-	return alist(
-		NOMINATIVE = "светящийся экстракт слайма",
-		GENITIVE = "светящегося экстракта слайма",
-		DATIVE = "светящемуся экстракту слайма",
-		ACCUSATIVE = "светящийся экстракт слайма",
-		INSTRUMENTAL = "светящимся экстрактом слайма",
-		PREPOSITIONAL = "светящемся экстракте слайма",
-	)
 
 /obj/item/flashlight/slime/update_icon_state()
 	return
@@ -710,7 +511,7 @@
 
 /obj/item/flashlight/spotlight //invisible lighting source
 	name = "disco light"
-	desc = "Заводной..."
+	desc = "Groovy..."
 	icon_state = null
 	light_system = COMPLEX_LIGHT
 	light_power = 2

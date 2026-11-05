@@ -1,8 +1,7 @@
 ## The amount of donations to pay for the server infrastructure
 TARGET_DONATION 20000
 
-## The amount of donations for server infrastructure and TTS
-TTS_TARGET_DONATION 40500
+## The amount of donations for server infrastructure
 
 ## Link to boosty
 BOOSTY_URL "https://boosty.to/ss220"

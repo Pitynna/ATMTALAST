@@ -36,19 +36,6 @@ GLOBAL_LIST_INIT(human_tlv, list(
 		TLV_N2O = new /datum/tlv/dangerous(),
 		TLV_H2 = new /datum/tlv/dangerous(),
 		TLV_H2O = new /datum/tlv/water_vapor(),
-		TLV_TRITIUM = new /datum/tlv/dangerous(),
-		TLV_BZ = new /datum/tlv/dangerous(),
-		TLV_PLUOXIUM = new /datum/tlv/ignore(),
-		TLV_MIASMA = new /datum/tlv/dangerous(),
-		TLV_FREON = new /datum/tlv/dangerous(),
-		TLV_NITRIUM = new /datum/tlv/dangerous(),
-		TLV_HEALIUM = new /datum/tlv/dangerous(),
-		TLV_PROTO_NITRATE = new /datum/tlv/dangerous(),
-		TLV_ZAUKER = new /datum/tlv/dangerous(),
-		TLV_HALON = new /datum/tlv/dangerous(),
-		TLV_HELIUM = new /datum/tlv/ignore(),
-		TLV_ANTINOBLIUM = new /datum/tlv/ignore(),
-		TLV_HYPERNOBLIUM = new /datum/tlv/ignore(),
 		TLV_OTHER = new /datum/tlv/other_gas(),
 		TLV_PRESSURE = new /datum/tlv/pressure(),
 		TLV_TEMPERATURE = new /datum/tlv/temperature()
@@ -186,9 +173,6 @@ GLOBAL_LIST_INIT(human_tlv, list(
 
 	// the shit code block
 	set_frequency(frequency)
-	if(is_taipan(z)) // Синдидоступ при сборке на тайпане
-		req_access = list(ACCESS_SYNDICATE)
-
 /obj/machinery/alarm/Destroy()
 	SStgui.close_uis(wires)
 	GLOB.air_alarms -= src
@@ -714,7 +698,7 @@ GLOBAL_LIST_INIT(human_tlv, list(
 		return TRUE
 	if(user.can_admin_interact())
 		return TRUE
-	else if(isAI(user) || (isrobot(user) || emagged || user.has_unlimited_silicon_privilege) && !iscogscarab(user))
+	else if((isAI(user)) || ((isrobot(user)) || (emagged) || (user.has_unlimited_silicon_privilege)))
 		return TRUE
 	else
 		return !locked
@@ -908,8 +892,7 @@ GLOBAL_LIST_INIT(human_tlv, list(
 	if(!I.tool_start_check(src, user, 0))
 		return
 	CROWBAR_ATTEMPT_PRY_CIRCUIT_MESSAGE
-	CALCULATE_SKILL_MOD(user, CONSTRUCTING_SPEED_MOD, construction_mod)
-	if(!I.use_tool(src, user, 2 SECONDS * construction_mod, volume = I.tool_volume))
+	if(!I.use_tool(src, user, 20, volume = I.tool_volume))
 		return
 	if(buildstage != AIR_ALARM_BUILD_CIRCUIT)
 		return

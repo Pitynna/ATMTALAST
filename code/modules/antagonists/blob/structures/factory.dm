@@ -1,7 +1,7 @@
 /obj/structure/blob/special/factory
 	name = "factory blob"
 	icon_state = "blob_factory"
-	desc = "Толстый шпиль щупалец."
+	desc = "A thick spire of tentacles."
 	max_integrity = BLOB_FACTORY_MAX_HP
 	point_return = BLOB_REFUND_FACTORY_COST
 	resistance_flags = LAVA_PROOF

@@ -1,6 +1,6 @@
 /obj/machinery/computer/camera_advanced/shuttle_docker
 	name = "navigation computer"
-	desc = "Используется, чтобы указать точное местоположение для отправки шаттла."
+	desc = "Used to designate a precise transit location for a spacecraft."
 	icon_screen = "navigation"
 	icon_keyboard = "med_key"
 	jump_action = null
@@ -14,7 +14,6 @@
 	var/access_station = TRUE		//can we park near station?
 	var/access_admin_zone = FALSE	//can we park on Admin z_lvls?
 	var/access_mining = FALSE		//can we park on Lavaland z_lvl?
-	var/access_taipan = FALSE		//can we park on Taipan z_lvl?
 	var/access_away = FALSE		//can we park on Away_Mission z_lvl?
 	var/access_derelict = FALSE		//can we park in Unexplored Space?
 	var/obj/docking_port/stationary/my_port //the custom docking port placed by this console
@@ -43,9 +42,7 @@
 			jumpto_ports += list("nav_z[level]" = 1)
 		else if(access_mining && is_mining_level(level))
 			jumpto_ports += list("nav_z[level]" = 1)
-		else if(access_taipan && is_taipan(level))
-			jumpto_ports += list("nav_z[level]" = 1)
-		else if(access_away && is_away_level(level))
+		if(access_away && is_away_level(level))
 			jumpto_ports += list("nav_z[level]" = 1)
 		else if(access_derelict && is_explorable_space(level))
 			jumpto_ports += list("nav_z[level]" = 1)

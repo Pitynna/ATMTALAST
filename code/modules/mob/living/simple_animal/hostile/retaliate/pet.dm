@@ -7,7 +7,6 @@
 	icon_living = "guard(old)"
 	icon_dead = "guard_dead(old)"
 	icon_gib = "guard_dead(old)"
-	tts_seed = "Anubarak"
 	turns_per_move = 8
 	response_help = "pets"
 	emote_hear = list("щебечет")

@@ -1,10 +1,10 @@
 /obj/item/clothing/shoes/roman/vox
 	name = "vox sandals"
-	desc = "Синтетические обертки подходящие для большинства типов ног."
+	desc = "Synthetic wraps suitable for most kinds of feet."
 
 /obj/item/clothing/shoes/magboots/vox
 	name = "vox magclaws"
-	desc = "Тяжелые бронированные налапочники для когтистых лап причудливой формы."
+	desc = "A pair of heavy, jagged armoured foot pieces, seemingly suitable for a velociraptor."
 	item_state = "boots-vox"
 	icon_state = "boots-vox"
 	icon = 'icons/obj/clothing/species/vox/shoes.dmi'
@@ -47,7 +47,7 @@
 
 /obj/item/clothing/shoes/magboots/vox/combat
 	name = "vox combat magclaws"
-	desc = "Боевые бронированные налапочники для когтистых лап причудливой формы с улучшенным сцеплением с поверхностью."
+	desc = "Armored combat foot coverings for oddly shaped clawed feet, with improved surface grip."
 	item_state = "boots-vox-combat"
 	icon_state = "boots-vox-combat"
 	permeability_coefficient = 0.01
@@ -57,7 +57,7 @@
 
 /obj/item/clothing/shoes/magboots/vox/heavy
 	name = "vox heavy magclaws"
-	desc = "Тяжелые бронированные налапочники для когтистых лап причудливой формы для ведения боевых действий и защит нижних конечностей от всевозможных угроз."
+	desc = "Heavy armored coverings for oddly shaped clawed feet, intended for combat and protection against all manner of threats."
 	item_state = "boots-vox-heavy"
 	icon_state = "boots-vox-heavy"
 	body_parts_covered = FEET|LEGS
@@ -73,7 +73,7 @@
 
 /obj/item/clothing/shoes/magboots/vox/scout
 	name = "vox scout magclaws"
-	desc = "Легкие налапочники для когтистых лап причудливой формы с продвинутым сцеплением с поверхностью для ускорение передвижения."
+	desc = "Light coverings for oddly shaped clawed feet, with advanced traction for faster movement."
 	item_state = "boots-vox-combat"
 	icon_state = "boots-vox-combat"
 	slowdown_passive = -0.25

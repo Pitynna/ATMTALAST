@@ -1,6 +1,6 @@
 /obj/machinery/drone_fabricator
 	name = "drone fabricator"
-	desc = "Большая автоматизированная фабрика для производства дронов обслуживания."
+	desc = "A large automated factory for producing maintenance drones."
 	icon = 'icons/obj/machines/drone_fab.dmi'
 	icon_state = "drone_fab_idle"
 	density = TRUE
@@ -10,16 +10,6 @@
 	var/drone_progress = 0
 	var/produce_drones = TRUE
 	var/time_last_drone = 500
-
-/obj/machinery/drone_fabricator/get_ru_names()
-	return alist(
-		NOMINATIVE = "фабрикатор дронов",
-		GENITIVE = "фабрикатора дронов",
-		DATIVE = "фабрикатору дронов",
-		ACCUSATIVE = "фабрикатор дронов",
-		INSTRUMENTAL = "фабрикатором дронов",
-		PREPOSITIONAL = "фабрикаторе дронов",
-	)
 
 /obj/machinery/drone_fabricator/update_icon_state()
 	if(stat & NOPOWER)

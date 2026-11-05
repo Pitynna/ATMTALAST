@@ -72,7 +72,6 @@
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/cursedclown, ITEM_SLOT_GLOVES)
 	equip_to_slot_or_del(new /obj/item/clothing/mask/cursedclown, ITEM_SLOT_MASK)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/cursedclown, ITEM_SLOT_FEET)
-	grant_mimicking()
 
 /mob/living/carbon/human/proc/makeAntiCluwne()
 	to_chat(src, span_danger("You don't feel very funny."))

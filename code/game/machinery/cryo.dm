@@ -5,7 +5,7 @@
 
 /obj/machinery/atmospherics/unary/cryo_cell
 	name = "cryo cell"
-	desc = "Медицинское устройство, представляющее из себя высокую капсулу, напичканную датчиками и сканерами. Судя по всему, она понижает температуру тела субъекта внутри."
+	desc = "Lowers the body temperature so certain medications may take effect."
 	icon = 'icons/obj/machines/cryogenics.dmi'
 	icon_state = "pod0"
 	density = TRUE
@@ -31,16 +31,6 @@
 	var/conduction_coefficient = 1
 
 	var/running_bob_animation = 0 // This is used to prevent threads from building up if update_icons is called multiple times
-
-/obj/machinery/atmospherics/unary/cryo_cell/get_ru_names()
-	return alist(
-		NOMINATIVE = "криогенная капсула",
-		GENITIVE = "криогенной капсулы",
-		DATIVE = "криогенной капсуле",
-		ACCUSATIVE = "криогенную капсулу",
-		INSTRUMENTAL = "криогенной капсулой",
-		PREPOSITIONAL = "криогенной капсуле",
-	)
 
 /obj/machinery/atmospherics/unary/cryo_cell/power_change(forced = FALSE)
 	..()
@@ -511,17 +501,6 @@ GAME_VERB_SRC(/obj/machinery/atmospherics/unary/cryo_cell, move_eject, oview(1),
 		add_attack_logs(usr, occupant, "Ejected from cryo cell at [COORD(src)]")
 		go_out()
 	add_fingerprint(usr)
-
-/obj/machinery/atmospherics/unary/cryo_cell/narsie_act()
-	go_out()
-	new /obj/effect/gibspawner/generic(get_turf(loc)) //I REPLACE YOUR TECHNOLOGY WITH FLESH!
-	color = "red"//force the icon to red
-	light_color = COLOR_SOFT_RED
-
-/obj/machinery/atmospherics/unary/cryo_cell/ratvar_act()
-	go_out()
-	new /obj/effect/decal/cleanable/blood/gibs/clock(get_turf(src))
-	qdel(src)
 
 /datum/data/function/proc/reset()
 	return

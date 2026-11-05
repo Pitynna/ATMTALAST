@@ -1,23 +1,13 @@
 /// A pair of binoculars. Wield them in both hands to look far away towards your cursor.
 /obj/item/binoculars
 	name = "binoculars"
-	desc = "Используется для наблюдения за объектами на дальних расстояниях."
+	desc = "Used to observe distant objects."
 	gender = MALE
 	icon_state = "binoculars"
 	item_state = "binoculars"
 	slot_flags = ITEM_SLOT_NECK
 	w_class = WEIGHT_CLASS_SMALL
 	force = 8
-
-/obj/item/binoculars/get_ru_names()
-	return alist(
-		NOMINATIVE = "бинокль",
-		GENITIVE = "бинокля",
-		DATIVE = "биноклю",
-		ACCUSATIVE = "бинокль",
-		INSTRUMENTAL = "биноклем",
-		PREPOSITIONAL = "бинокле",
-	)
 
 /obj/item/binoculars/Initialize(mapload)
 	. = ..()

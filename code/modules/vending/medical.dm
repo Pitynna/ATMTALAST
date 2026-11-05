@@ -1,6 +1,6 @@
 /obj/machinery/vending/medical
 	name = "NanoMed Plus"
-	desc = "Медицинский раздатчик веществ."
+	desc = "Medical drug dispenser."
 	icon_state = "med_off"
 	panel_overlay = "med_panel"
 	screen_overlay = "med"
@@ -117,16 +117,6 @@
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/medical
 
-/obj/machinery/vending/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат NanoMed Plus",
-		GENITIVE = "торгового автомата NanoMed Plus",
-		DATIVE = "торговому автомату NanoMed Plus",
-		ACCUSATIVE = "торговый автомат NanoMed Plus",
-		INSTRUMENTAL = "торговым автоматом NanoMed Plus",
-		PREPOSITIONAL = "торговом автомате NanoMed Plus",
-	)
-
 /obj/machinery/vending/medical/syndicate_access
 	name = "SyndiMed Plus"
 	icon_state = "syndi-big-med_off"
@@ -135,16 +125,6 @@
 	deny_overlay = "syndi-big-med_deny"
 
 	req_access = list(ACCESS_SYNDICATE)
-
-/obj/machinery/vending/medical/syndicate_access/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат SyndiMed Plus",
-		GENITIVE = "торгового автомата SyndiMed Plus",
-		DATIVE = "торговому автомату SyndiMed Plus",
-		ACCUSATIVE = "торговый автомат SyndiMed Plus",
-		INSTRUMENTAL = "торговым автоматом SyndiMed Plus",
-		PREPOSITIONAL = "торговом автомате SyndiMed Plus",
-	)
 
 /obj/machinery/vending/medical/syndicate_access/beamgun
 	premium = list(

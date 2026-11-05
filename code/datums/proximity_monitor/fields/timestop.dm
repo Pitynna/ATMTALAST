@@ -1,6 +1,6 @@
 /obj/effect/timestop
 	name = "chronofield"
-	desc = "Поле, искажающее течение времени. Вы всё равно в игре это не прочитаете."
+	desc = "ZA WARUDO!"
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "time"
 	layer = FLY_LAYER

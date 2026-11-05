@@ -4,10 +4,7 @@
 /obj/effect/mob_spawn/human/thunderdome
 	roundstart = FALSE
 	death = FALSE
-	allow_tts_pick = FALSE
 	banType = ROLE_THUNDERDOME
-	skills_ref_job = JOB_TITLE_OFFICER
-	use_antag_skills = TRUE
 	var/datum/mini_game/thunderdome_battle/thunderdome
 
 /obj/effect/mob_spawn/human/thunderdome/Destroy()

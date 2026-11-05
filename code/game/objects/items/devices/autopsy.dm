@@ -2,7 +2,7 @@
 
 /obj/item/autopsy_scanner
 	name = "autopsy scanner"
-	desc = "Небольшое устройство, используемое для проведения аутопсии."
+	desc = "Extracts information on wounds."
 	icon = 'icons/obj/autopsy_scanner.dmi'
 	icon_state = "autopsy_scanner"
 	flags = CONDUCT
@@ -17,16 +17,6 @@
 	var/timeofscan = null
 	var/target_rank = null
 	STATIC_COOLDOWN_DECLARE(print_cooldown)
-
-/obj/item/autopsy_scanner/get_ru_names()
-	return alist(
-		NOMINATIVE = "сканер аутопсии",
-		GENITIVE = "сканера аутопсии",
-		DATIVE = "сканеру аутопсии",
-		ACCUSATIVE = "сканер аутопсии",
-		INSTRUMENTAL = "сканером аутопсии",
-		PREPOSITIONAL = "сканере аутопсии",
-	)
 
 /obj/item/autopsy_scanner/Destroy()
 	QDEL_LIST_ASSOC_VAL(wdata)
@@ -215,7 +205,7 @@
 	sleep(PRINT_TIMER)
 
 	var/obj/item/paper/paper = new(drop_location())
-	paper.name = "Отчёт об аутопсии — [target_name]"
+	paper.name = "Autopsy Report - [target_name]"
 	paper.info = "<tt>[scan_data]</tt>"
 	paper.update_icon()
 	user.put_in_hands(paper, ignore_anim = FALSE)
@@ -235,7 +225,7 @@
 
 	COOLDOWN_START(src, print_cooldown, PRINT_TIMER)
 	var/obj/item/paper/paper = new(user.loc)
-	paper.name = "Отчёт патологоанатома — [dead_name]"
+	paper.name = "Coroner's Report - [dead_name]"
 	paper.info = "<b><center>[station_name()] — Отчёт патологоанатома</b></center><br><br><b>Имя погибшего:</b> [dead_name]</br><br><b>Должность погибшего:</b> [dead_rank]<br><br><b>Время смерти:</b> [dead_tod]<br><br><b>Причина смерти:</b> [dead_cause]<br><br><b>Химические следы:</b> [dead_chems]<br><br><b>Дополнительные детали:</b> [dead_notes]<br><br><b>Подпись патологоанатома:</b> <span class=\"paper_field\">"
 	playsound(loc, 'sound/goonstation/machines/printer_thermal.ogg', 50, TRUE)
 	user.put_in_hands(paper, ignore_anim = FALSE)

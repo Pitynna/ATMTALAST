@@ -4,7 +4,7 @@
 
 /obj/item/reagent_containers/hypospray
 	name = "hypospray"
-	desc = "Гипоспрей — это стерильный автоинъектор с воздушной иглой для быстрого введения лекарств пациентам."
+	desc = "The DeForest Medical Corporation hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
 	icon = 'icons/obj/hypo.dmi'
 	item_state = "hypo"
 	icon_state = "hypo"
@@ -16,16 +16,6 @@
 	custom_price = PAYCHECK_LOWER
 	var/ignore_flags = FALSE
 	var/safety_hypo = FALSE
-
-/obj/item/reagent_containers/hypospray/get_ru_names()
-	return alist(
-		NOMINATIVE = "гипоспрей",
-		GENITIVE = "гипоспрея",
-		DATIVE = "гипоспрею",
-		ACCUSATIVE = "гипоспрей",
-		INSTRUMENTAL = "гипоспреем",
-		PREPOSITIONAL = "гипоспрее",
-	)
 
 /obj/item/reagent_containers/hypospray/attack(mob/living/carbon/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	. = ATTACK_CHAIN_PROCEED
@@ -84,22 +74,12 @@
 
 /obj/item/reagent_containers/hypospray/safety
 	name = "medical hypospray"
-	desc = "Медицинский гипоспрей общего назначения для быстрого введения химических веществ. На курке имеется кнопка безопасности."
+	desc = "A general use medical hypospray for quick injection of chemicals. There is a safety button by the trigger."
 	icon_state = "medivend_hypo"
 	belt_icon = "medical_hypospray"
 	safety_hypo = TRUE
 	var/paint_color
 	var/color_overlay = "colour_hypo"
-
-/obj/item/reagent_containers/hypospray/safety/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский гипоспрей",
-		GENITIVE = "медицинского гипоспрея",
-		DATIVE = "медицинскому гипоспрею",
-		ACCUSATIVE = "медицинский гипоспрей",
-		INSTRUMENTAL = "медицинским гипоспреем",
-		PREPOSITIONAL = "медицинском гипоспрее",
-	)
 
 /obj/item/reagent_containers/hypospray/safety/proc/update_state()
 	update_icon(UPDATE_ICON_STATE)
@@ -139,22 +119,12 @@
 
 /obj/item/reagent_containers/hypospray/safety/upgraded
 	name = "upgraded medical hypospray"
-	desc = "Улучшенный медицинский гипоспрей общего назначения для быстрого введения химических веществ. Эта модель имеет увеличенную емкость."
+	desc = "Improved general-purpose medical hypospray for rapid administration of chemicals. This model has increased capacity."
 	item_state = "upg_hypo"
 	icon_state = "upg_hypo"
 	volume = 60
 	possible_transfer_amounts = list(1, 2, 5, 10, 15, 20, 25, 30, 40, 60)
 	color_overlay = "colour_upgradedhypo"
-
-/obj/item/reagent_containers/hypospray/safety/upgraded/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенный медицинский гипоспрей",
-		GENITIVE = "улучшенного медицинского гипоспрея",
-		DATIVE = "улучшенному медицинскому гипоспрею",
-		ACCUSATIVE = "улучшенный медицинский гипоспрей",
-		INSTRUMENTAL = "улучшенным медицинским гипоспреем",
-		PREPOSITIONAL = "улучшенном медицинском гипоспрее",
-	)
 
 /obj/item/reagent_containers/hypospray/safety/upgraded/update_icon_state()
 	icon_state = paint_color ? "upg_hypo_white" : "upg_hypo"
@@ -166,31 +136,11 @@
 	name = "medical hypospray (Omnizine)"
 	list_reagents = list("omnizine" = 30)
 
-/obj/item/reagent_containers/hypospray/safety/ert/get_ru_names()
-	return alist(
-		NOMINATIVE = "медицинский гипоспрей (Омнизин)",
-		GENITIVE = "медицинского гипоспрея (Омнизин)",
-		DATIVE = "медицинскому гипоспрею (Омнизин)",
-		ACCUSATIVE = "медицинский гипоспрей (Омнизин)",
-		INSTRUMENTAL = "медицинским гипоспреем (Омнизин)",
-		PREPOSITIONAL = "медицинском гипоспрее (Омнизин)",
-	)
-
 /obj/item/reagent_containers/hypospray/CMO
 	volume = 250
 	possible_transfer_amounts = list(1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
 	list_reagents = list("omnizine" = 100)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-
-/obj/item/reagent_containers/hypospray/CMO/get_ru_names()
-	return alist(
-		NOMINATIVE = "гипоспрей Главного Врача",
-		GENITIVE = "гипоспрея Главного Врача",
-		DATIVE = "гипоспрею Главного Врача",
-		ACCUSATIVE = "гипоспрей Главного Врача",
-		INSTRUMENTAL = "гипоспреем Главного Врача",
-		PREPOSITIONAL = "гипоспрее Главного Врача",
-	)
 
 /obj/item/reagent_containers/hypospray/CMO/Initialize(mapload)
 	. = ..()
@@ -201,23 +151,13 @@
 
 /obj/item/reagent_containers/hypospray/combat
 	name = "combat stimulant injector"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. It has a proprietary adapter allowing it to inject through the ports of Syndicate-made hardsuits."
 	amount_per_transfer_from_this = 15
 	has_variable_transfer_amount = FALSE
 	icon_state = "combat_hypo"
 	volume = 90
 	ignore_flags = 1 // So they can heal their comrades.
 	list_reagents = list("epinephrine" = 30, "weak_omnizine" = 30, "salglu_solution" = 30)
-
-/obj/item/reagent_containers/hypospray/combat/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор",
-		GENITIVE = "боевого инъектора",
-		DATIVE = "боевому инъектору",
-		ACCUSATIVE = "боевой инъектор",
-		INSTRUMENTAL = "боевым инъектором",
-		PREPOSITIONAL = "боевом инъекторе",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm
 	volume = 90
@@ -228,137 +168,57 @@
 /obj/item/reagent_containers/hypospray/ertm/hydrocodone
 	amount_per_transfer_from_this = 10
 	name = "Hydrocodon combat stimulant injector"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит гидрокодон."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains hydrocodone."
 	icon_state = "hypocombat-hydro"
 	list_reagents = list("hydrocodone" = 90)
-
-/obj/item/reagent_containers/hypospray/ertm/hydrocodone/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Гидрокодон)",
-		GENITIVE = "боевого инъектора (Гидрокодон)",
-		DATIVE = "боевому инъектору (Гидрокодон)",
-		ACCUSATIVE = "боевой инъектор (Гидрокодон)",
-		INSTRUMENTAL = "боевым инъектором (Гидрокодон)",
-		PREPOSITIONAL = "боевом инъекторе (Гидрокодон)",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm/perfluorodecalin
 	amount_per_transfer_from_this = 3
 	name = "Perfluorodecalin combat stimulant injector"
 	icon_state = "hypocombat-perfa"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит Перфтордекалин."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains perfluorodecalin."
 	list_reagents = list("perfluorodecalin" = 90)
-
-/obj/item/reagent_containers/hypospray/ertm/perfluorodecalin/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Перфтодекалин)",
-		GENITIVE = "боевого инъектора (Перфтодекалин)",
-		DATIVE = "боевому инъектору (Перфтодекалин)",
-		ACCUSATIVE = "боевой инъектор (Перфтодекалин)",
-		INSTRUMENTAL = "боевым инъектором (Перфтодекалин)",
-		PREPOSITIONAL = "боевом инъекторе (Перфтодекалин)",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm/pentic_acid
 	name = "Pentic acid combat stimulant injector"
 	icon_state = "hypocombat-dtpa"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит пентетовую кислоту."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains pentic acid."
 	list_reagents = list("pen_acid" = 90)
-
-/obj/item/reagent_containers/hypospray/ertm/pentic_acid/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Пентетовая кислота)",
-		GENITIVE = "боевого инъектора (Пентетовая кислота)",
-		DATIVE = "боевому инъектору (Пентетовая кислота)",
-		ACCUSATIVE = "боевой инъектор (Пентетовая кислота)",
-		INSTRUMENTAL = "боевым инъектором (Пентетовая кислота)",
-		PREPOSITIONAL = "боевом инъекторе (Пентетовая кислота)",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm/epinephrine
 	name = "Epinephrine combat stimulant injector"
 	icon_state = "hypocombat-epi"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит эпинефрин."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains epinephrine."
 	list_reagents = list("epinephrine" = 90)
-
-/obj/item/reagent_containers/hypospray/ertm/epinephrine/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Эпинефрин)",
-		GENITIVE = "боевого инъектора (Эпинефрин)",
-		DATIVE = "боевому инъектору (Эпинефрин)",
-		ACCUSATIVE = "боевой инъектор (Эпинефрин)",
-		INSTRUMENTAL = "боевым инъектором (Эпинефрин)",
-		PREPOSITIONAL = "боевом инъекторе (Эпинефрин)",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm/mannitol
 	name = "Mannitol combat stimulant injector"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит маннитол."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains mannitol."
 	icon_state = "hypocombat-mani"
 	list_reagents = list("mannitol" = 90)
-
-/obj/item/reagent_containers/hypospray/ertm/mannitol/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Маннитол)",
-		GENITIVE = "боевого инъектора (Маннитол)",
-		DATIVE = "боевому инъектору (Маннитол)",
-		ACCUSATIVE = "боевой инъектор (Маннитол)",
-		INSTRUMENTAL = "боевым инъектором (Маннитол)",
-		PREPOSITIONAL = "боевом инъекторе (Маннитол)",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm/oculine
 	name = "Oculine combat stimulant injector"
 	icon_state = "hypocombat-ocu"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит окулин."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains oculine."
 	list_reagents = list("oculine" = 90)
-
-/obj/item/reagent_containers/hypospray/ertm/oculine/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Окулин)",
-		GENITIVE = "боевого инъектора (Окулин)",
-		DATIVE = "боевому инъектору (Окулин)",
-		ACCUSATIVE = "боевой инъектор (Окулин)",
-		INSTRUMENTAL = "боевым инъектором (Окулин)",
-		PREPOSITIONAL = "боевом инъекторе (Окулин)",
-	)
 
 /obj/item/reagent_containers/hypospray/ertm/omnisal
 	amount_per_transfer_from_this = 10
 	name = "DilOmni-Salglu solution combat stimulant injector"
 	icon_state = "hypocombat-womnisal"
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Содержит разбавленный омнизин и физиологический раствор."
+	desc = "A modified air-needle autoinjector, used by support operatives to quickly heal injuries in combat. Contains a solution of dilute omnisin and saline."
 	list_reagents = list("weak_omnizine" = 45, "salglu_solution" = 45)
 	possible_transfer_amounts = list(10, 20, 30)
 
-/obj/item/reagent_containers/hypospray/ertm/omnisal/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Разб. омнизин + Физраствор)",
-		GENITIVE = "боевого инъектора (Разб. омнизин + Физраствор)",
-		DATIVE = "боевому инъектору (Разб. омнизин + Физраствор)",
-		ACCUSATIVE = "боевой инъектор (Разб. омнизин + Физраствор)",
-		INSTRUMENTAL = "боевым инъектором (Разб. омнизин + Физраствор)",
-		PREPOSITIONAL = "боевом инъекторе (Разб. омнизин + Физраствор)",
-	)
-
 /obj/item/reagent_containers/hypospray/combat/nanites
-	desc = "Модифицированный автоинъектор с воздушной иглой, используемый оперативниками поддержки для быстрого заживления ран в бою. Заполнен дорогостоящими медицинскими нанитами для быстрого заживления."
+	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with a cocktail of experimental combat drugs and <b>extremely</b> expensive medical nanomachines. Capable of healing almost any injury in just a few seconds. It can interface with the injection ports on any type of hardsuit."
 	volume = 100
 	list_reagents = list("nanites" = 100)
 
-/obj/item/reagent_containers/hypospray/combat/nanites/get_ru_names()
-	return alist(
-		NOMINATIVE = "боевой инъектор (Боевые наниты)",
-		GENITIVE = "боевого инъектора (Боевые наниты)",
-		DATIVE = "боевому инъектору (Боевые наниты)",
-		ACCUSATIVE = "боевой инъектор (Боевые наниты)",
-		INSTRUMENTAL = "боевым инъектором (Боевые наниты)",
-		PREPOSITIONAL = "боевом инъекторе (Боевые наниты)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector
 	name = "emergency autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу эпинефрина. Быстрый и безопасный способ стабилизации пациентов в критическом состоянии для персонала, не обладающего глубокими медицинскими знаниями."
+	desc = "A rapid and safe way to inject chemicals into humanoids. This one is empty."
 	icon_state = "autoinjector"
 	item_state = "autoinjector"
 	belt_icon = "autoinjector"
@@ -376,16 +236,6 @@
 	var/only_self = FALSE
 	/// Is it used?
 	var/spent = FALSE
-
-/obj/item/reagent_containers/hypospray/autoinjector/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Эпинефрин)",
-		GENITIVE = "автоинъектора (Эпинефрин)",
-		DATIVE = "автоинъектору (Эпинефрин)",
-		ACCUSATIVE = "автоинъектор (Эпинефрин)",
-		INSTRUMENTAL = "автоинъектором (Эпинефрин)",
-		PREPOSITIONAL = "автоинъекторе (Эпинефрин)",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/update_icon_state()
 	var/base_state
@@ -482,126 +332,56 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/teporone //basilisks
 	name = "teporone autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу тепорона. Быстрый способ восстановления температуры тела до естественных показателей."
+	desc = "A rapid way to regulate your body's temperature in the event of a hardsuit malfunction."
 	icon_state = "lepopen"
 	list_reagents = list("teporone" = 10)
 
-/obj/item/reagent_containers/hypospray/autoinjector/teporone/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Тепорон)",
-		GENITIVE = "автоинъектора (Тепорон)",
-		DATIVE = "автоинъектору (Тепорон)",
-		ACCUSATIVE = "автоинъектор (Тепорон)",
-		INSTRUMENTAL = "автоинъектором (Тепорон)",
-		PREPOSITIONAL = "автоинъекторе (Тепорон)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/traneksam
 	name = "traneksam acid autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу транексамовой кислота. Экстренный способ остановки кровотечений."
+	desc = "A small pen-shaped injector containing a dose of tranexamic acid for emergency bleeding control."
 	icon_state = "orangeinjector"
 	list_reagents = list("traneksam_acid" = 5)
 
-/obj/item/reagent_containers/hypospray/autoinjector/traneksam/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Транексамовая кислота)",
-		GENITIVE = "автоинъектора (Транексамовая кислота)",
-		DATIVE = "автоинъектору (Транексамовая кислота)",
-		ACCUSATIVE = "автоинъектор (Транексамовая кислота)",
-		INSTRUMENTAL = "автоинъектором (Транексамовая кислота)",
-		PREPOSITIONAL = "автоинъекторе (Транексамовая кислота)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/neuromatin
 	name = "neuromatin autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу нейроматина. Мощный иммунодепрессант."
+	desc = "A small pen-shaped injector containing a dose of neuromatin, a powerful immunosuppressant."
 	icon_state = "violetinjector"
 	volume = 15
 	amount_per_transfer_from_this = 15
 	list_reagents = list("neuromatin" = 15)
 
-/obj/item/reagent_containers/hypospray/autoinjector/neuromatin/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Нейроматин)",
-		GENITIVE = "автоинъектора (Нейроматин)",
-		DATIVE = "автоинъектору (Нейроматин)",
-		ACCUSATIVE = "автоинъектор (Нейроматин)",
-		INSTRUMENTAL = "автоинъектором (Нейроматин)",
-		PREPOSITIONAL = "автоинъекторе (Нейроматин)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/stimpack //goliath kiting
 	name = "stimpack autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу стимуляторов. Для тех случаев, когда вам срочно нужна доза адреналина."
+	desc = "A rapid way to stimulate your body's adrenaline, allowing for freer movement in restrictive armor."
 	icon_state = "stimpen"
 	volume = 20
 	amount_per_transfer_from_this = 20
 	list_reagents = list("methamphetamine" = 10, "coffee" = 10)
 
-/obj/item/reagent_containers/hypospray/autoinjector/stimpack/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Стим-пак)",
-		GENITIVE = "автоинъектора (Стим-пак)",
-		DATIVE = "автоинъектору (Стим-пак)",
-		ACCUSATIVE = "автоинъектор (Стим-пак)",
-		INSTRUMENTAL = "автоинъектором (Стим-пак)",
-		PREPOSITIONAL = "автоинъекторе (Стим-пак)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/stimulants
 	name = "Stimulants autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу стимуляторов, кратковременно увеличивающих физическую силу, заживляющих повреждения, ускоряющих работу нервной системы и так далее. "
+	desc = "Rapidly stimulates and regenerates the body's organ system."
 	icon_state = "stimpen"
 	amount_per_transfer_from_this = 50
 	volume = 50
 	list_reagents = list("stimulants" = 50)
 
-/obj/item/reagent_containers/hypospray/autoinjector/stimulants/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Стимуляторы)",
-		GENITIVE = "автоинъектора (Стимуляторы)",
-		DATIVE = "автоинъектору (Стимуляторы)",
-		ACCUSATIVE = "автоинъектор (Стимуляторы)",
-		INSTRUMENTAL = "автоинъектором (Стимуляторы)",
-		PREPOSITIONAL = "автоинъекторе (Стимуляторы)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/survival
 	name = "survival medipen"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу веществ для спасения во время экстренных ситуаций, которые могут произойти на пустошах Лазиса.\n" + span_boldwarning_alt("ПРЕДУПРЕЖДЕНИЕ: Не используйте более одного за раз!")
+	desc = "A medipen for surviving in the harshest of environments, heals and protects from environmental hazards."
 	icon_state = "stimpen"
 	belt_icon = "survival_medipen"
 	volume = 42
 	amount_per_transfer_from_this = 42
 	list_reagents = list("salbutamol" = 10, "teporone" = 15, "epinephrine" = 10, "lavaland_extract" = 2, "weak_omnizine" = 5) //Short burst of healing, followed by minor healing from the saline
 
-/obj/item/reagent_containers/hypospray/autoinjector/survival/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор выживания",
-		GENITIVE = "автоинъектора выживания",
-		DATIVE = "автоинъектору выживания",
-		ACCUSATIVE = "автоинъектор выживания",
-		INSTRUMENTAL = "автоинъектором выживания",
-		PREPOSITIONAL = "автоинъекторе выживания",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/survival/luxury
 	name = "luxury medipen"
-	desc = "Улучшенная версия стандартного автоинъектора выживания, вмещающая в себя до 40 единиц мощных медикаментов." + span_boldwarning_alt("ПРЕДУПРЕЖДЕНИЕ: Не используйте более одного за раз!")
+	desc = "Cutting edge bluespace technology allowed Nanotrasen to compact 40 of volume into a single medipen. Contains rare and powerful chemicals used to aid in exploration of very hard enviroments.  <br><span class='boldwarning'>WARNING: more than one pen injection in quick succession WILL result in quick death.</span>"
 	icon_state = "redinjector"
 	volume = 40
 	amount_per_transfer_from_this = 40
 	list_reagents = list("salbutamol" = 10, "adv_lava_extract" = 10, "teporone" = 10, "hydrocodone" = 10)
-
-/obj/item/reagent_containers/hypospray/autoinjector/survival/luxury/get_ru_names()
-	return alist(
-		NOMINATIVE = "улучшенный автоинъектор выживания",
-		GENITIVE = "улучшенного автоинъектора выживания",
-		DATIVE = "улучшенному автоинъектору выживания",
-		ACCUSATIVE = "улучшенный автоинъектор выживания",
-		INSTRUMENTAL = "улучшенным автоинъектором выживания",
-		PREPOSITIONAL = "улучшенном автоинъекторе выживания",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/survival/luxury/attack(mob/living/carbon/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	if(lavaland_equipment_pressure_check(get_turf(user)))
@@ -617,21 +397,11 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/nanocalcium
 	name = "protoype nanite autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу экспериментального вещества, предназначенного для заживления внутренних повреждений. Имеются побочные эффекты."
+	desc = "A highly experimental prototype chemical designed to fully mend limbs and organs of soldiers in the field, shuts down body systems whilst aiding in repair."
 	icon_state = "bonepen"
 	amount_per_transfer_from_this = 15
 	volume = 15
 	list_reagents = list("nanocalcium" = 15)
-
-/obj/item/reagent_containers/hypospray/autoinjector/nanocalcium/get_ru_names()
-	return alist(
-		NOMINATIVE = "экспериментальный автоинъектор (Нано-Кальций)",
-		GENITIVE = "экспериментального автоинъектора (Нано-Кальций)",
-		DATIVE = "экспериментальному автоинъектору (Нано-Кальций)",
-		ACCUSATIVE = "экспериментальный автоинъектор (Нано-Кальций)",
-		INSTRUMENTAL = "экспериментальным автоинъектором (Нано-Кальций)",
-		PREPOSITIONAL = "экспериментальном автоинъекторе (Нано-Кальций)",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/nanocalcium/attack(mob/living/carbon/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	. = ..()
@@ -640,23 +410,13 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/selfmade
 	name = "autoinjector"
-	desc = "Кустарно произведённая копия автоинъектора. Из-за особенностей конструкции его невозможно использовать на ком-то, кроме себя."
+	desc = "A homemade copy of an auto-injector. Its design prevents using it on anyone except yourself."
 	volume = 15
 	amount_per_transfer_from_this = 15
 	list_reagents = list()
 	only_self = TRUE
 	reskin_allowed = TRUE
 	container_type = OPENCONTAINER
-
-/obj/item/reagent_containers/hypospray/autoinjector/selfmade/get_ru_names()
-	return alist(
-		NOMINATIVE = "самодельный автоинъектор",
-		GENITIVE = "самодельного автоинъектора",
-		DATIVE = "самодельному автоинъектору",
-		ACCUSATIVE = "самодельный автоинъектор",
-		INSTRUMENTAL = "самодельным автоинъектором",
-		PREPOSITIONAL = "самодельном автоинъекторе",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/selfmade/attack(mob/living/carbon/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	. = ..()
@@ -665,92 +425,42 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/salbutamol
 	name = "Salbutamol autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу сальбутамола для экстренной помощи при удушье."
+	desc = "A medipen used for basic oxygen damage treatment"
 	icon_state = "ablueinjector"
 	amount_per_transfer_from_this = 20
 	volume = 20
 	list_reagents = list("salbutamol" = 20)
 
-/obj/item/reagent_containers/hypospray/autoinjector/salbutamol/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Сальбутамол)",
-		GENITIVE = "автоинъектора (Сальбутамол)",
-		DATIVE = "автоинъектору (Сальбутамол)",
-		ACCUSATIVE = "автоинъектор (Сальбутамол)",
-		INSTRUMENTAL = "автоинъектором (Сальбутамол)",
-		PREPOSITIONAL = "автоинъекторе (Сальбутамол)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/radium
 	name = "Radium autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу радия для экстренной первой помощи нуклеациям."
+	desc = "A small medipen used for basic nucleation treatment."
 	icon_state = "ablueinjector"
 	list_reagents = list("radium" = 10)
 
-/obj/item/reagent_containers/hypospray/autoinjector/radium/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Радий)",
-		GENITIVE = "автоинъектора (Радий)",
-		DATIVE = "автоинъектору (Радий)",
-		ACCUSATIVE = "автоинъектор (Радий)",
-		INSTRUMENTAL = "автоинъектором (Радий)",
-		PREPOSITIONAL = "автоинъекторе (Радий)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/charcoal
 	name = "Charcoal autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу активированного угля для экстренной помощи при отравлениях."
+	desc = "A medipen used for basic toxin damage treatment"
 	icon_state = "greeninjector"
 	amount_per_transfer_from_this = 20
 	volume = 20
 	list_reagents = list("charcoal" = 20)
 
-/obj/item/reagent_containers/hypospray/autoinjector/charcoal/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Активированный уголь)",
-		GENITIVE = "автоинъектора (Активированный уголь)",
-		DATIVE = "автоинъектору (Активированный уголь)",
-		ACCUSATIVE = "автоинъектор (Активированный уголь)",
-		INSTRUMENTAL = "автоинъектором (Активированный уголь)",
-		PREPOSITIONAL = "автоинъекторе (Активированный уголь)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/sanguinius
 	name = "Sanguinius autoinjector"
-	desc = "Маленький инъектор в форме ручки, содержащий внутри дозу \"Сангвиния\" для экстренной помощи при кровопотерях."
+	desc = "A small pen-shaped injector containing Sanguinius for emergency treatment of blood loss."
 	icon_state = "redinjector"
 	amount_per_transfer_from_this = 15
 	volume = 15
 	list_reagents = list("sanguinius" = 15)
 
-/obj/item/reagent_containers/hypospray/autoinjector/sanguinius/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Сангвиний)",
-		GENITIVE = "автоинъектора (Сангвиний)",
-		DATIVE = "автоинъектору (Сангвиний)",
-		ACCUSATIVE = "автоинъектор (Сангвиний)",
-		INSTRUMENTAL = "автоинъектором (Сангвиний)",
-		PREPOSITIONAL = "автоинъекторе (Сангвиний)",
-	)
-
 /obj/item/reagent_containers/hypospray/autoinjector/zombiecure
 	name = "Anti-Plague Sequence Alpha autoinjector"
-	desc = "Небольшой автоинъектор, содержащий 15 единиц противовирусной сыворотки Альфа. Предотвращает заражение, лечит заражение 1-го уровня."
+	desc = "A small autoinjector containing 15 units of Anti-Plague Sequence Alpha. Prevents infection, cures level 1 infection."
 	icon_state = "zombiepen"
 	amount_per_transfer_from_this = 15
 	volume = 15
 	container_type = NONE // No sucking out the reagent
 	list_reagents = list("zombiecure1" = 15)
-
-/obj/item/reagent_containers/hypospray/autoinjector/zombiecure/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Противовирусная сыворотка Альфа)",
-		GENITIVE = "автоинъектора (Противовирусная сыворотка Альфа)",
-		DATIVE = "автоинъектору (Противовирусная сыворотка Альфа)",
-		ACCUSATIVE = "автоинъектор (Противовирусная сыворотка Альфа)",
-		INSTRUMENTAL = "автоинъектором (Противовирусная сыворотка Альфа)",
-		PREPOSITIONAL = "автоинъекторе (Противовирусная сыворотка Альфа)",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/zombiecure/afterattack(atom/target, mob/user, proximity_flag, list/modifiers, status)
 	. = ..()
@@ -759,45 +469,15 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/zombiecure/zombiecure2
 	name = "Anti-Plague Sequence Beta autoinjector"
-	desc = "Небольшой автоинъектор, содержащий 15 единиц противовирусной сыворотки Бета. Ослабляет зомби, лечит слабые заражения."
+	desc = "A small autoinjector containing 15 units of Anti-Plague Sequence Beta. Weakens zombies, heals low infections."
 	list_reagents = list("zombiecure2" = 15)
-
-/obj/item/reagent_containers/hypospray/autoinjector/zombiecure/zombiecure2/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Противовирусная сыворотка Бета)",
-		GENITIVE = "автоинъектора (Противовирусная сыворотка Бета)",
-		DATIVE = "автоинъектору (Противовирусная сыворотка Бета)",
-		ACCUSATIVE = "автоинъектор (Противовирусная сыворотка Бета)",
-		INSTRUMENTAL = "автоинъектором (Противовирусная сыворотка Бета)",
-		PREPOSITIONAL = "автоинъекторе (Противовирусная сыворотка Бета)",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/zombiecure/zombiecure3
 	name = "Anti-Plague Sequence Gamma autoinjector"
-	desc = "Небольшой автоинъектор, содержащий 15 единиц противовирусной сыворотки Гамма. Снижает исцеление зомби. Лечит заражение 5-й стадии и замедляет заражение 6-й стадии."
+	desc = "A small autoinjector containing 15 units of Anti-Plague Sequence Gamma. Lowers zombies healing. Heals stage 5 and slows stage 6 infections."
 	list_reagents = list("zombiecure3" = 15)
-
-/obj/item/reagent_containers/hypospray/autoinjector/zombiecure/zombiecure3/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Противовирусная сыворотка Гамма)",
-		GENITIVE = "автоинъектора (Противовирусная сыворотка Гамма)",
-		DATIVE = "автоинъектору (Противовирусная сыворотка Гамма)",
-		ACCUSATIVE = "автоинъектор (Противовирусная сыворотка Гамма)",
-		INSTRUMENTAL = "автоинъектором (Противовирусная сыворотка Гамма)",
-		PREPOSITIONAL = "автоинъекторе (Противовирусная сыворотка Гамма)",
-	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/zombiecure/zombiecure4
 	name = "Anti-Plague Sequence Omega autoinjector"
-	desc = "Небольшой автоинъектор, содержащий 15 единиц противовирусной сыворотки Омега. Лечит все случаи некротизирующей чумы. Также исцеляет мёртвые конечности."
+	desc = "A small autoinjector containing 15 units of Anti-Plague Sequence Omega. Cures all cases of the Necrotizing Plague. Also heals dead limbs."
 	list_reagents = list("zombiecure4" = 15)
-
-/obj/item/reagent_containers/hypospray/autoinjector/zombiecure/zombiecure4/get_ru_names()
-	return alist(
-		NOMINATIVE = "автоинъектор (Противовирусная сыворотка Омега)",
-		GENITIVE = "автоинъектора (Противовирусная сыворотка Омега)",
-		DATIVE = "автоинъектору (Противовирусная сыворотка Омега)",
-		ACCUSATIVE = "автоинъектор (Противовирусная сыворотка Омега)",
-		INSTRUMENTAL = "автоинъектором (Противовирусная сыворотка Омега)",
-		PREPOSITIONAL = "автоинъекторе (Противовирусная сыворотка Омега)",
-	)

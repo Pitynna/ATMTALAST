@@ -28,19 +28,6 @@
 	)
 	exp_type = EXP_TYPE_SERVICE
 	outfit = /datum/outfit/job/hop
-	skill_levels = list(
-		/datum/skill/general/cooking = SKILL_LEVEL_ADVANCED,
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_ADVANCED,
-		/datum/skill/service/botany = SKILL_LEVEL_ADVANCED,
-		/datum/skill/service/cleaning = SKILL_LEVEL_ADVANCED,
-		/datum/skill/combat/accuracy = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/guns = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/melee = SKILL_LEVEL_BEGINNER,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general)
-	base_free_skill_point = DEFAULT_FREE_POINTS_FOR_SERVICE_JOBS
-
 
 /datum/outfit/job/hop
 	name = JOB_TITLE_RU_HOP
@@ -58,6 +45,7 @@
 		/obj/item/storage/box/ids = 1,
 		/obj/item/melee/baton/telescopic = 1,
 	)
+
 	implants = list()
 
 /datum/job/service
@@ -71,8 +59,6 @@
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_CREW
-	discount_skill_category = list(/datum/skill/service)
-	base_free_skill_point = DEFAULT_FREE_POINTS_FOR_SERVICE_JOBS
 
 /datum/job/service/bartender
 	title = JOB_TITLE_BARTENDER
@@ -85,13 +71,6 @@
 		ALT_JOB_TITLE_RU_BARISTA,
 	)
 	outfit = /datum/outfit/job/bartender
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BASIC,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_PROFESSIONAL,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/guns = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/bartender
 	name = JOB_TITLE_RU_BARTENDER
@@ -127,15 +106,6 @@
 		ALT_JOB_TITLE_RU_ART_CHEF,
 	)
 	outfit = /datum/outfit/job/chef
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_PROFESSIONAL,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BASIC,
-		/datum/skill/service/botany = SKILL_LEVEL_BASIC,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/fists = SKILL_LEVEL_BASIC,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general/cooking)
 
 /datum/outfit/job/chef
 	name = JOB_TITLE_RU_CHEF
@@ -182,13 +152,6 @@
 		ALT_JOB_TITLE_RU_AGROBIOLOGIST,
 	)
 	outfit = /datum/outfit/job/botanist
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/botany = SKILL_LEVEL_PROFESSIONAL,
-	)
 
 /datum/outfit/job/botanist
 	name = JOB_TITLE_RU_BOTANIST
@@ -218,12 +181,6 @@
 		ALT_JOB_TITLE_RU_COMEDIANT,
 	)
 	outfit = /datum/outfit/job/clown
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/clown
 	name = JOB_TITLE_RU_CLOWN
@@ -274,131 +231,6 @@
 	H.force_gene_block(GLOB.clumsyblock, TRUE, TRUE)
 	H.force_gene_block(GLOB.comicblock, TRUE, TRUE)
 	H.add_language(LANGUAGE_CLOWN)
-	H.grant_mimicking()
-
-/mob/living/carbon/human/proc/grant_mimicking()
-	if(!(locate(/datum/action/innate/mimicking) in actions))
-		var/datum/action/innate/mimicking/mimicking = new
-		mimicking.Grant(src)
-
-/datum/action/innate/mimicking
-	name = "Подражание"
-	button_icon_state = "clown"
-	check_flags = AB_CHECK_CONSCIOUS
-	var/list/voice_slots = list()
-	var/empty_slots = 3
-	var/list/available_voices
-	var/datum/mimicking_voice/selected
-
-/datum/action/innate/mimicking/New()
-	..()
-	var/donor_level = owner?.client ? owner.client.donator_level : 0
-	available_voices = list()
-	for(var/level in 0 to donor_level)
-		available_voices += SStts.tts_seeds_names_by_donator_levels["[level]"]
-
-/datum/action/innate/mimicking/Trigger(mob/clicker, trigger_flags)
-	if(!..())
-		return FALSE
-	ui_interact(owner)
-
-/datum/action/innate/mimicking/ui_state(mob/user)
-	return GLOB.conscious_state
-
-/datum/action/innate/mimicking/ui_interact(mob/user, datum/tgui/ui = null)
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
-		ui = new(user, src, "Mimicking", "Подражание")
-		ui.set_autoupdate(FALSE)
-		ui.open()
-
-/datum/action/innate/mimicking/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
-	if(..())
-		return
-	var/datum/mimicking_voice/voice
-	if(params["id"])
-		for(var/datum/mimicking_voice/find_voice in voice_slots)
-			if(find_voice.UID() != params["id"])
-				continue
-			voice = find_voice
-	switch(action)
-		if("Choose")
-			if(!voice)
-				stack_trace("Mimicking can not find it own voice.")
-				return
-			if(voice.selected)
-				return
-			set_selected(voice)
-			owner.update_tts_seed(voice.voice)
-		if("Delete")
-			if(!voice)
-				stack_trace("Mimicking can not find it own voice.")
-				return
-			if(voice.selected)
-				selected = null
-			voice_slots -= voice
-			empty_slots++
-		if("Add")
-			if(empty_slots < 1)
-				to_chat(owner, span_notice("У вас нет свободных слотов."))
-				return
-			var/voice_name = tgui_input_text(owner, "Выберите имя для слота", "Подражание")
-			if(!voice_name)
-				return
-			var/voice_seed = tgui_input_list(owner, "Выберите TTS-голос для слота.", "Подражание", available_voices, owner.tts_seed)
-			if(!voice_seed)
-				return
-			var/new_voice = new /datum/mimicking_voice(voice_name, voice_seed)
-			add_voice(new_voice)
-	SStgui.update_uis(src)
-
-/datum/action/innate/mimicking/ui_data(mob/user)
-	var/list/data = list()
-	var/list/slots = list()
-	for(var/datum/mimicking_voice/voice in voice_slots)
-		if(istype(voice))
-			slots += list(voice.voice_data())
-	data["slots"] = slots
-	return data
-
-/datum/action/innate/mimicking/proc/set_selected(datum/mimicking_voice/new_voice)
-	if(selected)
-		selected.selected = FALSE
-	selected = new_voice
-	selected.selected = TRUE
-
-/datum/action/innate/mimicking/proc/add_voice(datum/mimicking_voice/voice)
-	voice_slots += voice
-	empty_slots--
-
-/datum/action/innate/mimicking/proc/remove_voice(datum/mimicking_voice/voice)
-	voice_slots -= voice
-	empty_slots++
-
-/datum/mimicking_voice
-	var/name
-	var/voice
-	var/selected = FALSE
-
-/datum/mimicking_voice/New(name, voice)
-	src.name = name
-	src.voice = voice
-
-/datum/mimicking_voice/proc/voice_data()
-	return list("name" = name, "voice" = voice, "selected" = selected, "id" = UID())
-
-/mob/living/carbon/human/proc/mimicking(mob/living/carbon/human/H)
-	if(!H)
-		to_chat(usr, span_notice("Используйте <b>ПКМ</b> для выбора цели."))
-	var/datum/action/innate/mimicking/mimic = locate(/datum/action/innate/mimicking) in usr.actions
-	if(!mimic)
-		return
-	if(mimic.empty_slots < 1)
-		to_chat(usr, span_notice("У вас нет свободных слотов."))
-		return
-	var/new_voice = new /datum/mimicking_voice(H.name, H.tts_seed)
-	mimic.add_voice(new_voice)
-	SStgui.update_uis(mimic)
 
 //action given to antag clowns
 /datum/action/innate/toggle_clumsy
@@ -434,12 +266,6 @@
 		ALT_JOB_TITLE_RU_PANTHOMIMIST,
 	)
 	outfit = /datum/outfit/job/mime
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/mime
 	name = JOB_TITLE_RU_MIME
@@ -489,13 +315,6 @@
 		ALT_JOB_TITLE_RU_CLEANING_SPECIALIST,
 	)
 	outfit = /datum/outfit/job/janitor
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/drink_mixing = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_PROFESSIONAL,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general/carrying)
 
 /datum/outfit/job/janitor
 	name = JOB_TITLE_RU_JANITOR
@@ -519,11 +338,6 @@
 		ALT_JOB_TITLE_RU_CORRESPONDENT,
 	)
 	outfit = /datum/outfit/job/librarian
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-	)
 
 /datum/outfit/job/librarian
 	name = JOB_TITLE_RU_LIBRARIAN
@@ -554,14 +368,6 @@
 		ALT_JOB_TITLE_RU_SPIRITUAL_MENTOR,
 	)
 	outfit = /datum/outfit/job/chaplain
-	skill_levels = list(
-		/datum/skill/general/mod_use = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/cooking = SKILL_LEVEL_BEGINNER,
-		/datum/skill/general/carrying = SKILL_LEVEL_BEGINNER,
-		/datum/skill/service/cleaning = SKILL_LEVEL_BEGINNER,
-		/datum/skill/combat/melee = SKILL_LEVEL_BASIC,
-	)
-	discount_skill_category = list(/datum/skill/service, /datum/skill/general/carrying, /datum/skill/combat/melee)
 
 /datum/outfit/job/chaplain
 	name = JOB_TITLE_RU_CHAPLAIN

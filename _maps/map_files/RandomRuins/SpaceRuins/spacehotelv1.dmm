@@ -1042,7 +1042,7 @@
 	},
 /area/ruin/space/spacehotelv1/entryhallway)
 "ju" = (
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/ruin/space/spacehotelv1/guestroom1)
@@ -1051,7 +1051,7 @@
 /turf/simulated/floor/wood,
 /area/ruin/space/spacehotelv1/guestroom5)
 "jw" = (
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -1747,7 +1747,7 @@
 /turf/simulated/floor/wood,
 /area/ruin/space/spacehotelv1/restoraunt)
 "pM" = (
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -1892,9 +1892,9 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/directional/south,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/ruin/space/spacehotelv1/aftmaints)
@@ -2062,9 +2062,9 @@
 "sC" = (
 /obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/plating,
@@ -2327,7 +2327,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/ruin/space/spacehotelv1/guestroom1)
@@ -2367,7 +2367,7 @@
 "uR" = (
 /obj/machinery/power/apc/directional/south,
 /obj/structure/cable,
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/simulated/floor/plasteel{
@@ -3017,9 +3017,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 6;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plating,
@@ -3061,9 +3061,9 @@
 /area/ruin/space/spacehotelv1/forehallway)
 "Bj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 9;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door_control{
@@ -3756,9 +3756,9 @@
 "HR" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/space,
 /area/ruin/space/spacehotelv1/aftmaints)
@@ -4233,7 +4233,7 @@
 	},
 /area/ruin/space/spacehotelv1/bar)
 "LQ" = (
-/obj/structure/table/reinforced/brass,
+/obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/simulated/floor/plasteel{
@@ -5558,9 +5558,9 @@
 /area/ruin/space/spacehotelv1/centralhallway)
 "Xo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/door/airlock/external{
 	id_tag = "ext_sol2_door";

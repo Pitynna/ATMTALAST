@@ -6,7 +6,7 @@
  */
 /obj/item/gun_module
 	name = "unknown gun module"
-	desc = "Неизвестный модуль для оружия."
+	desc = "An unknown weapon module."
 	gender = MALE
 	icon = 'icons/obj/weapons/attachments.dmi'
 	lefthand_file = 'icons/mob/inhands/attachments_lefthand.dmi'

@@ -1,6 +1,6 @@
 /obj/machinery/computer/atmos_alert
 	name = "atmospheric alert computer"
-	desc = "Используется для мониторинга атмосферных датчиков станции."
+	desc = "Used to access the station's atmospheric sensors."
 	circuit = /obj/item/circuitboard/atmos_alert
 	var/ui_x = 350
 	var/ui_y = 300

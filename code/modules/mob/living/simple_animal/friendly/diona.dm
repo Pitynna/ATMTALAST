@@ -22,7 +22,6 @@
 	speak_emote = list("щебечет", "стрекочет")
 	emote_hear = list("щебечет", "стрекочет")
 	emote_see = list("щебечет", "стрекочет")
-	tts_seed = "Priest"
 
 	response_help  = "гладит"
 	response_harm   = "бьёт"

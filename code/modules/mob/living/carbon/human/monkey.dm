@@ -15,7 +15,6 @@
 
 /mob/living/carbon/human/lesser/monkey/Initialize(mapload)
 	. = ..(mapload, /datum/species/monkey)
-	tts_seed = "Sniper"
 
 /mob/living/carbon/human/lesser/monkey/agressive
 	ai_controller = /datum/ai_controller/monkey/angry
@@ -28,25 +27,21 @@
 
 /mob/living/carbon/human/lesser/farwa/Initialize(mapload)
 	. = ..(mapload, /datum/species/monkey/tajaran)
-	tts_seed = "Gyro"
 
 /mob/living/carbon/human/lesser/wolpin
 	icon_state = "wolfling"
 
 /mob/living/carbon/human/lesser/wolpin/Initialize(mapload)
 	. = ..(mapload, /datum/species/monkey/vulpkanin)
-	tts_seed = "Bloodseeker"
 
 /mob/living/carbon/human/lesser/neara
 	icon_state = "skrellkey1"
 
 /mob/living/carbon/human/lesser/neara/Initialize(mapload)
 	. = ..(mapload, /datum/species/monkey/skrell)
-	tts_seed = "Bounty"
 
 /mob/living/carbon/human/lesser/stok
 	icon_state = "stokkey1"
 
 /mob/living/carbon/human/lesser/stok/Initialize(mapload)
 	. = ..(mapload, /datum/species/monkey/unathi)
-	tts_seed = "Witchdoctor"

@@ -4,7 +4,7 @@
 
 /obj/structure/fireplace
 	name = "fireplace"
-	desc = "Большой камин из каменного кирпича."
+	desc = "A large stone brick fireplace."
 	icon = 'icons/obj/fireplace.dmi'
 	icon_state = "fireplace"
 	anchored = TRUE
@@ -112,7 +112,7 @@
 
 /obj/structure/fireplace/update_desc()
 	. = ..()
-	desc = lit ? "Большой каменный камин, тёплый и уютный." : initial(desc)
+	desc = lit ? "A large stone fireplace, warm and cozy." : initial(desc)
 
 /obj/structure/fireplace/update_overlays()
 	. = ..()

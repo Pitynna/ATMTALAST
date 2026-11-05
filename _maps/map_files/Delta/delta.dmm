@@ -86,9 +86,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 6;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -217,9 +217,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -1062,8 +1062,8 @@
 /obj/effect/turf_decal/delivery/hollow,
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -1211,9 +1211,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/binary/volume_pump{
-	desc = "Позволяет подать горючую смесь в турбину";
+	desc = "Allows fuel mixture to enter the turbine.";
 	dir = 1;
-	name = "Смесь в турбину"
+	name = "Fuel Mixture to Turbine"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -1774,9 +1774,9 @@
 	sensors = list("o2_sensor"="Tank")
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -1927,9 +1927,9 @@
 /area/space)
 "auF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -2350,9 +2350,9 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 5;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/power/electrolyzer,
 /turf/simulated/floor/plasteel,
@@ -2369,9 +2369,9 @@
 /area/station/science/server)
 "azU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/structure/lattice/catwalk,
@@ -2457,9 +2457,9 @@
 /area/station/legal/office/law)
 "aBl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/effect/turf_decal/siding/white,
 /turf/simulated/floor/plasteel{
@@ -2497,9 +2497,9 @@
 /area/station/science/sm_chamber)
 "aBD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -3645,9 +3645,9 @@
 /area/station/service/mime)
 "aOl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/meter{
 	id = "mair_in_meter";
@@ -3733,9 +3733,9 @@
 /area/station/maintenance/asmaint3)
 "aPm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 9;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/fpmaint)
@@ -3847,7 +3847,7 @@
 "aQM" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	name = "Смесь в использование"
+	name = "Gas to Distribution"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos/mixing_atmos)
@@ -3868,7 +3868,6 @@
 	},
 /area/station/service/chapel)
 "aRa" = (
-/obj/structure/cult/archives,
 /turf/simulated/floor/plating,
 /area/station/maintenance/library)
 "aRf" = (
@@ -4074,9 +4073,9 @@
 /area/station/hallway/secondary/entry/eastarrival)
 "aTD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -4516,13 +4515,13 @@
 /area/station/security/prison/perma)
 "aXG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/electrical)
@@ -7064,9 +7063,9 @@
 /area/station/science/server)
 "bBj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 6;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos/mixing_atmos)
@@ -7218,8 +7217,8 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -7581,9 +7580,9 @@
 /area/janitor)
 "bGQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -8024,9 +8023,9 @@
 /area/station/science/research)
 "bLX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 10;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -8315,9 +8314,9 @@
 "bPV" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/space,
 /area/space)
@@ -8696,14 +8695,14 @@
 /area/station/hallway/primary/central/south)
 "bUa" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/delivery/hollow,
 /turf/simulated/floor/plasteel,
@@ -8806,9 +8805,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 5;
@@ -8837,9 +8836,9 @@
 /area/space)
 "bVi" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 8;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -8905,7 +8904,6 @@
 /turf/simulated/wall/rust,
 /area/station/maintenance/engineering)
 "bVD" = (
-/obj/machinery/computer/skill_manuals,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -8973,9 +8971,9 @@
 /area/station/maintenance/tourist)
 "bWz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -9248,14 +9246,14 @@
 /area/station/ai/satellite/chamber)
 "bZR" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт кислород для смешивания с другими газами";
+	desc = "Supplies oxygen for mixing with other gases.";
 	dir = 8;
-	name = "Кислород (O2) в смеситель";
+	name = "Oxygen (O2) to Mixer";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel,
@@ -9349,9 +9347,9 @@
 /area/station/legal/courtroom)
 "caU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/computer/general_air_control/large_tank_control{
 	input_tag = "n2o_in";
@@ -9737,9 +9735,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 9;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -10304,18 +10302,18 @@
 "clk" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/space,
 /area/space)
 "clm" = (
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/light{
 	dir = 8
@@ -10440,8 +10438,8 @@
 "cmO" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -10821,14 +10819,14 @@
 /area/janitor)
 "cqV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -11185,9 +11183,9 @@
 "cuo" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/space,
 /area/space)
@@ -11479,14 +11477,14 @@
 /area/station/medical/reception)
 "cyT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -12046,9 +12044,9 @@
 /area/station/maintenance/library)
 "cGL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -13174,9 +13172,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 9;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -14036,9 +14034,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/plasteel,
@@ -14192,9 +14190,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -14851,9 +14849,9 @@
 /area/station/commons/locker)
 "dnS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -15550,9 +15548,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -15584,9 +15582,9 @@
 "dvB" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 5;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 5
@@ -15819,9 +15817,9 @@
 "dyy" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 10;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 10
@@ -15883,9 +15881,9 @@
 	network = list("SS13","Engineering")
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "caution"
@@ -16040,9 +16038,9 @@
 /area/station/commons/fitness)
 "dzS" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 9
@@ -16597,8 +16595,8 @@
 /area/station/engineering/engine)
 "dHx" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos/mixing_atmos)
@@ -17020,9 +17018,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 5;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -17130,9 +17128,9 @@
 /area/station/engineering/engine)
 "dOK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
@@ -17545,9 +17543,9 @@
 /area/station/hallway/primary/aft)
 "dTY" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -17562,9 +17560,9 @@
 /area/space)
 "dUh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -17976,9 +17974,9 @@
 /area/station/medical/cloning)
 "dXZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
@@ -18000,9 +17998,9 @@
 /area/station/engineering/engine/reactor)
 "dYn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 6;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
@@ -19889,14 +19887,14 @@
 /area/station/command/teleporter/abandoned)
 "erI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт дыхательную смесь для смешивания с другими газами";
+	desc = "Supplies breathable air for mixing with other gases.";
 	dir = 8;
-	name = "Дыхательная смесь в смеситель";
+	name = "Breathable Air to Mixer";
 	target_pressure = 101
 	},
 /obj/effect/turf_decal/siding/white{
@@ -20362,9 +20360,9 @@
 /area/station/medical/virology)
 "ewy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -20450,9 +20448,9 @@
 /area/station/maintenance/fpmaint)
 "exs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 9;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -20635,9 +20633,9 @@
 "ezd" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 4;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
@@ -20725,9 +20723,9 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 5;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -21050,9 +21048,9 @@
 /area/station/service/chapel/office)
 "eDo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 5;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -21204,9 +21202,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 10;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -22253,13 +22251,13 @@
 /area/station/service/theatre)
 "ePB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Отправляет смесь из трубы в хранилище для неё";
-	name = "Смесь в хранилище";
+	desc = "Sends gas from the pipe into its storage chamber.";
+	name = "Gas to Storage";
 	on = 1
 	},
 /turf/simulated/floor/plasteel,
@@ -22790,9 +22788,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel{
@@ -22849,7 +22847,7 @@
 /area/station/commons/trading)
 "eWz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
-	name = "Из скрабберов на фильтрацию"
+	name = "Scrubbers to Filtration"
 	},
 /turf/simulated/wall,
 /area/station/engineering/atmos)
@@ -22901,9 +22899,9 @@
 	},
 /obj/machinery/atmospherics/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 6;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -23002,8 +23000,8 @@
 /obj/item/extinguisher,
 /obj/item/bot_assembly/secbot_assembly{
 	created_name = "Officer Podsky";
-	desc = "Ты не узнаешь ценность чего-либо, пока не потеряешь это...";
-	name = "Обломки офицера Подски";
+	desc = "You never know the value of something until you lose it...";
+	name = "Officer Pudskey's Remains";
 	pixel_y = 21
 	},
 /turf/simulated/floor/plasteel{
@@ -23105,9 +23103,9 @@
 "eZJ" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 6;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -23359,9 +23357,9 @@
 /area/station/command/office/captain)
 "fce" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -23385,9 +23383,9 @@
 /area/station/medical/virology)
 "fcg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 5;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -24951,18 +24949,18 @@
 "fsB" = (
 /obj/structure/safe/floor,
 /obj/item/paper{
-	desc = "Мятый лист бумаги. От одного вида на него у вас начинается головокружение.";
+	desc = "A crumpled sheet of paper. Just looking at it makes you dizzy.";
 	info = "<h1>Мргмлрмглумр мрглмлм</h1><hr><br><large><large><b>МРГЛГРУМЛРГУМ МРГУЛМГРУМЛМУ МРГМАРГАМУГАРМАГР</b></large></large>";
-	name = "Странные записи"
+	name = "Strange Notes"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet,
 /area/station/maintenance/brig)
 "fsL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 6;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -24985,9 +24983,9 @@
 "fsW" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -25461,9 +25459,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/trinary/filter/co2{
-	desc = "Отфильтровывает углекислый газ из трубы и отправляет его в камеру хранения";
+	desc = "Filters carbon dioxide out of the pipe and sends it to its storage chamber.";
 	dir = 4;
-	name = "Фильтр Углекислого Газа (СO2)";
+	name = "Carbon Dioxide (CO2) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -25566,9 +25564,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -26074,9 +26072,9 @@
 /area/station/cargo/storage)
 "fFy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
@@ -26830,14 +26828,14 @@
 /area/station/security/processing)
 "fNJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт азот в смеситель для создания дыхательной смеси, которая потом распространяется по станции";
+	desc = "Supplies nitrogen to the mixer to produce breathable air for the station.";
 	dir = 8;
-	name = "Азот (N2) в дыхательную смесь";
+	name = "Nitrogen (N2) to Breathable Air";
 	on = 1;
 	target_pressure = 101
 	},
@@ -27869,9 +27867,9 @@
 /area/station/medical/sleeper)
 "fZg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 6;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cautioncorner"
@@ -27904,12 +27902,6 @@
 /area/station/medical/medbay)
 "fZG" = (
 /obj/structure/safe/floor,
-/obj/item/melee/cultblade,
-/obj/item/restraints/legcuffs/bola/cult,
-/obj/item/whetstone/cult,
-/obj/item/stack/sheet/runed_metal{
-	amount = 50
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -28021,9 +28013,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -28400,9 +28392,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -28449,8 +28441,8 @@
 /area/station/medical/reception)
 "ggy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/light{
 	dir = 4
@@ -28483,14 +28475,14 @@
 /area/station/commons/trading)
 "ggW" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -28511,8 +28503,8 @@
 /area/station/command/bridge)
 "gha" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -28685,9 +28677,9 @@
 /area/station/service/bar)
 "giv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/simulated/floor/plasteel,
@@ -28867,8 +28859,8 @@
 /area/station/commons/serviceyard)
 "gkH" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
-	name = "Труба дыхательной смеси"
+	desc = "This pipe contains breathable air for the station.";
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -29369,9 +29361,9 @@
 /area/station/command/bridge)
 "gqD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -30071,7 +30063,7 @@
 /obj/item/paper{
 	desc = "Paper attached to freezer";
 	info = "<h1>Моему сменщику</h1><hr>Одна из камер содержания снабжена теплопроводящим контуром. Чтобы контур работал эффективно, пусти в него плазму из хранилища токсинов и настрой охладитель на желаемую температуру.<br><br><br><br>-Пит.";
-	name = "Записка"
+	name = "Note"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 10;
@@ -30287,9 +30279,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -30347,8 +30339,8 @@
 /area/station/maintenance/asmaint)
 "gzM" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -30626,9 +30618,9 @@
 /area/station/maintenance/perma)
 "gCr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/computer/general_air_control/large_tank_control{
 	input_tag = "mix_in";
@@ -30767,9 +30759,9 @@
 /area/station/command/vip)
 "gDL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 10;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel,
@@ -30807,9 +30799,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -30967,14 +30959,14 @@
 /area/station/commons/serviceyard)
 "gGn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -31031,13 +31023,13 @@
 /area/station/commons/fitness)
 "gGS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -31132,9 +31124,9 @@
 /area/station/service/mime)
 "gHZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice/catwalk,
 /obj/machinery/access_button{
@@ -31495,9 +31487,9 @@
 /area/station/science/toxins/mixing)
 "gMf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 8;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -32907,9 +32899,9 @@
 /area/station/maintenance/fpmaint)
 "hdg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 5;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
@@ -33244,8 +33236,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -33326,9 +33318,9 @@
 /area/station/ai/satellite/chamber)
 "hhk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -33439,9 +33431,9 @@
 /area/station/engineering/engine/reactor)
 "hiV" = (
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Переводит смесь из хранилища в трубы";
+	desc = "Transfers gas from storage into the pipes.";
 	dir = 1;
-	name = "Из хранилища в трубы";
+	name = "Storage to Pipes";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel{
@@ -33565,9 +33557,9 @@
 /area/station/hallway/primary/central/north)
 "hkf" = (
 /obj/machinery/atmospherics/trinary/filter/flipped/co2{
-	desc = "Отфильтровывает углекислый газ из трубы и отправляет его в камеру хранения.";
+	desc = "Filters carbon dioxide out of the pipe and sends it to its storage chamber.";
 	dir = 8;
-	name = "Фильтр Углекислого Газа (СO2).";
+	name = "Carbon Dioxide (CO2) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -33933,9 +33925,9 @@
 /area/station/maintenance/fpmaint)
 "hnC" = (
 /obj/machinery/atmospherics/trinary/filter/o2{
-	desc = "Отфильтровывает кислород из трубы и отправляет его в камеру хранения";
+	desc = "Filters oxygen out of the pipe and sends it to its storage chamber.";
 	dir = 1;
-	name = "Фильтр Кислорода (O2)";
+	name = "Oxygen (O2) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -33999,9 +33991,9 @@
 /area/station/hallway/secondary/entry/additional)
 "hon" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -34798,9 +34790,9 @@
 /area/station/service/chapel/office)
 "hwM" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -34894,7 +34886,6 @@
 /obj/machinery/light_construct/small{
 	dir = 8
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -35005,7 +34996,7 @@
 /area/station/engineering/supermatter/room)
 "hxU" = (
 /obj/structure/statue/bananium/clown/unique{
-	name = "Статуя Великого Кекеги"
+	name = "Statue of the Great Kekega"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
@@ -35041,9 +35032,9 @@
 /area/station/command/office/hop)
 "hyl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -35142,9 +35133,9 @@
 /area/station/command/office/hos)
 "hyY" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -35756,9 +35747,9 @@
 /area/station/maintenance/engineering)
 "hFT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -36418,9 +36409,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/fpmaint)
@@ -36467,9 +36458,9 @@
 /area/station/maintenance/solars/port/aft)
 "hOO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/computer/general_air_control/large_tank_control{
 	input_tag = "co2_in";
@@ -36961,9 +36952,9 @@
 /area/station/maintenance/asmaint4)
 "hUs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -37062,16 +37053,16 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
 "hVa" = (
 /obj/structure/chair{
-	desc = "Этот красивый стул был отлит из двух трофейных боргов \"Синдиката\".";
-	name = "Дизайнерский стул"
+	desc = "This beautiful chair was cast from two captured Syndicate cyborgs.";
+	name = "Designer Chair"
 	},
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -37496,8 +37487,8 @@
 /area/station/security/detectives_office)
 "hZQ" = (
 /obj/machinery/atmospherics/trinary/filter/n2{
-	desc = "Отфильтровывает азот из трубы и отправляет его в камеру хранения";
-	name = "Фильтр Азота (N2)";
+	desc = "Filters nitrogen out of the pipe and sends it to its storage chamber.";
+	name = "Nitrogen (N2) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -37578,9 +37569,9 @@
 "iaJ" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -37725,7 +37716,6 @@
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "yellowcorner"
@@ -38646,9 +38636,9 @@
 /area/station/maintenance/starboard)
 "ily" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 9;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -39368,9 +39358,9 @@
 /area/station/hallway/primary/central/south)
 "iuq" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -39379,8 +39369,8 @@
 /area/station/engineering/atmos)
 "iur" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -39498,9 +39488,9 @@
 "ivK" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -40786,8 +40776,8 @@
 /obj/machinery/power/apc/directional/west,
 /obj/effect/turf_decal/delivery/hollow,
 /obj/structure/closet/crate/engineering{
-	desc = "В ящике хранится оборудование и ресурсы для осуществления ремонта станции гражданским персоналом в случае нужды или безработицы";
-	name = "Ящик оборудования для ремонта"
+	desc = "This crate contains equipment and materials for civilian personnel to repair the station when needed, or when out of work.";
+	name = "Repair Equipment Crate"
 	},
 /obj/item/stack/sheet/metal{
 	amount = 50
@@ -40871,9 +40861,9 @@
 /area/station/science/toxins/launch)
 "iKW" = (
 /obj/machinery/atmospherics/binary/valve/digital{
-	desc = "Открывает газу путь к нагревателям, холодильникам и фильтрам";
+	desc = "Opens the gas route to the heaters, coolers and filters.";
 	dir = 4;
-	name = "Газ на обработку"
+	name = "Gas to Processing"
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/simulated/floor/plasteel{
@@ -40885,9 +40875,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/binary/volume_pump{
-	desc = "Позволяет опустошить трубу дыхательной смеси, отправив её в отходы на повторную фильтрацию";
+	desc = "Empties the breathable air pipe, sending its contents to waste for another pass through filtration.";
 	dir = 4;
-	name = "Дыхательную смесь в отходы"
+	name = "Breathable Air to Waste"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -41282,9 +41272,9 @@
 "iPd" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 4;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/effect/spawner/window/reinforced/plasma,
 /turf/simulated/floor/plating,
@@ -42036,9 +42026,9 @@
 /area/station/command/bridge)
 "iWX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 9;
@@ -42443,9 +42433,9 @@
 /area/station/command/teleporter/abandoned)
 "jbp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 5;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel,
@@ -43297,9 +43287,9 @@
 /area/station/science/research/lobby)
 "jlw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 9;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -43492,8 +43482,8 @@
 "joh" = (
 /obj/machinery/atmospherics/meter,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -43614,9 +43604,9 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 4;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/supermatter/room)
@@ -43675,14 +43665,14 @@
 /area/station/engineering/break_room)
 "jpN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos/mixing_atmos)
@@ -43862,9 +43852,9 @@
 /obj/machinery/alarm/directional/west,
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 8;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -44380,9 +44370,9 @@
 /area/station/commons/fitness)
 "jxt" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/simulated/floor/plasteel,
@@ -45000,9 +44990,9 @@
 /area/station/legal/office/magistrate)
 "jFy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -45184,9 +45174,9 @@
 /area/station/maintenance/asmaint4)
 "jHy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -45403,8 +45393,8 @@
 /area/station/maintenance/consarea_virology)
 "jKu" = (
 /obj/structure/sign/goldenplaque{
-	desc = "ЦК награждает клоуна Шляпку как первого заключённого брига после перестройки. Он был задержан по статьям 100 104 и 309. Так держать.";
-	name = "Награда за первое нарушение в новом бриге";
+	desc = "Central Command awards the clown Shlyapka for being the first prisoner in the newly rebuilt brig. He was detained under articles 100, 104 and 309. Keep it up.";
+	name = "First Offense in the New Brig Award";
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -46281,13 +46271,13 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -47786,9 +47776,9 @@
 /area/station/medical/medbay)
 "kji" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -48411,7 +48401,6 @@
 	},
 /area/station/service/theatre)
 "kpy" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/effect/decal/cleanable/crayon{
 	color = "#cc3300"
 	},
@@ -48680,9 +48669,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -48780,14 +48769,14 @@
 /area/station/ai/satellite)
 "ksE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт углекислый для смешивания с другими газами";
+	desc = "Supplies carbon dioxide for mixing with other gases.";
 	dir = 1;
-	name = "Углекислый газ (CO2) в смеситель";
+	name = "Carbon Dioxide (CO2) to Mixer";
 	target_pressure = 101
 	},
 /obj/structure/window/reinforced,
@@ -48853,8 +48842,8 @@
 	},
 /obj/effect/turf_decal/delivery/hollow,
 /obj/structure/closet/crate/plastic{
-	desc = "В ящике хранится оборудование для осуществления уборки станции гражданским персоналом в случае нужды или безработицы";
-	name = "Ящик оборудования для уборки"
+	desc = "This crate contains cleaning equipment for civilian personnel to clean the station when needed, or when out of work.";
+	name = "Cleaning Equipment Crate"
 	},
 /obj/item/mop,
 /obj/item/mop,
@@ -49162,9 +49151,9 @@
 /area/station/command/office/rd)
 "kwK" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/atmospherics/meter{
 	id = "wloop_atm_meter";
@@ -49998,8 +49987,8 @@
 /area/station/hallway/secondary/entry/commercial)
 "kEV" = (
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Позволяет подать смесь в вентиляции станции";
-	name = "Подача смеси в систему вентиляции";
+	desc = "Allows gas to enter the station's ventilation system.";
+	name = "Gas Supply to Ventilation";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel{
@@ -50161,7 +50150,6 @@
 /turf/simulated/floor/plasteel,
 /area/station/cargo/miningdock)
 "kGU" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/starboard)
 "kGV" = (
@@ -50383,9 +50371,9 @@
 /area/station/security/prison/cell_block/secondary)
 "kJc" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -51563,9 +51551,9 @@
 /area/station/commons/serviceyard)
 "kVJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -52501,7 +52489,6 @@
 	},
 /area/station/cargo/storage)
 "lfN" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel,
 /area/station/commons/fitness)
 "lfW" = (
@@ -53619,9 +53606,9 @@
 /area/station/security/prison/perma)
 "lrD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -53853,9 +53840,9 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 6;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -53932,7 +53919,7 @@
 "luC" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
-	name = "Из скрабберов на фильтрацию"
+	name = "Scrubbers to Filtration"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/electrical)
@@ -54129,9 +54116,9 @@
 "lwL" = (
 /obj/structure/safe/floor,
 /obj/item/paper{
-	desc = "Мятый лист бумаги. От одного вида на него у вас начинается головокружение.";
+	desc = "A crumpled sheet of paper. Just looking at it makes you dizzy.";
 	info = "<h1>ПОМОГИТЕ МНЕ</h1><hr><br><large><large><b>ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ ПОМОГИТЕМНЕ МНЕ ПОМОГИТЕМНЕПОМОГИТЕ МНЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕПОМОГИТЕМНЕ ПОМОГИТЕПОМОГИТЕПОМОГИТЕ МНЕПОМОГИТЕМНЕМНЕ ПОМОГИТЕМНЕМНЕПОМОГИТЕ </b></large></large>";
-	name = "Странные записи"
+	name = "Strange Notes"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/ai)
@@ -54719,18 +54706,18 @@
 /area/station/maintenance/tourist)
 "lCD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт токсины для смешивания с другими газами";
+	desc = "Supplies toxins for mixing with other gases.";
 	dir = 1;
-	name = "Токсины (Плазма) в смеситель";
+	name = "Toxins (Plasma) to Mixer";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel{
@@ -55123,7 +55110,6 @@
 	},
 /area/station/engineering/transit_tube)
 "lHw" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/station/maintenance/perma)
@@ -55639,8 +55625,8 @@
 	pixel_x = -6
 	},
 /obj/item/clothing/head/cone{
-	desc = "Старый дорожный конус. Говорят он увеличивает интеллект носителя.";
-	name = "Символ Разумизма";
+	desc = "An old traffic cone. They say it makes the wearer smarter.";
+	name = "Symbol of Rationalism";
 	pixel_x = -4;
 	pixel_y = 7
 	},
@@ -55654,9 +55640,9 @@
 /area/station/commons/locker)
 "lMd" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 8;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -56031,9 +56017,9 @@
 /area/station/commons/storage/primary)
 "lPK" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/camera{
 	c_tag = "Atmospherics Distribution";
@@ -56069,9 +56055,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/volume_pump{
-	desc = "Отправляет неотфильтрованные газы в отходы на повторную фильтрацию";
+	desc = "Sends unfiltered gases to waste for another pass through filtration.";
 	dir = 4;
-	name = "Остатки газа в отходы"
+	name = "Residual Gas to Waste"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -56142,9 +56128,9 @@
 "lQz" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -56224,14 +56210,14 @@
 /area/station/command/meeting_room)
 "lRD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -56710,9 +56696,9 @@
 /area/station/security/prison/visit)
 "lWu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -56766,13 +56752,13 @@
 /area/station/security/hallway/armory)
 "lWU" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -57127,9 +57113,9 @@
 /obj/structure/table/reinforced,
 /obj/item/t_scanner,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -57237,8 +57223,8 @@
 /area/space)
 "mbW" = (
 /obj/structure/statue/gold/hop{
-	desc = "Золотая литая статуя, посвящённая великому ХоПу — Михаилу Калинину, который продолжал исполнять свой долг даже в самых критических ситуациях";
-	name = "Статуя Михаила Калинина"
+	desc = "A solid gold statue honoring the great Head of Personnel, Mikhail Kalinin, who kept doing his duty even in the most critical situations.";
+	name = "Statue of Mikhail Kalinin"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -57651,9 +57637,9 @@
 "mhg" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 9;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 9
@@ -58348,9 +58334,9 @@
 /area/station/hallway/secondary/entry/lounge)
 "mnl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 6;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -58703,9 +58689,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
@@ -59445,9 +59431,9 @@
 /area/station/maintenance/fpmaint)
 "myQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -59725,9 +59711,9 @@
 "mBB" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos/mixing_atmos)
@@ -60595,8 +60581,8 @@
 "mLJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
-	name = "Труба дыхательной смеси"
+	desc = "This pipe contains breathable air for the station.";
+	name = "Breathable Air Pipe"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel{
@@ -60962,9 +60948,9 @@
 /area/station/commons/fitness)
 "mOS" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 6;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -61402,9 +61388,9 @@
 "mUX" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/simulated/floor/plasteel,
@@ -62512,9 +62498,9 @@
 /area/station/science/rnd)
 "nhW" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
@@ -63232,9 +63218,9 @@
 	sensors = list("air_sensor"="Tank")
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 10;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -63996,8 +63982,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -64024,7 +64010,6 @@
 "nyz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random_spawners/rodent,
-/obj/effect/landmark/spawner/swarmer,
 /turf/simulated/floor/plating,
 /area/station/maintenance/bar)
 "nyL" = (
@@ -64648,9 +64633,9 @@
 /area/station/engineering/engine/reactor)
 "nGu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
@@ -65658,9 +65643,9 @@
 /area/station/science/sm_chamber)
 "nRg" = (
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Позволяет пропустить смесь не загружая её в хранилище";
+	desc = "Allows gas to bypass storage.";
 	dir = 8;
-	name = "Смесь в обход хранилища";
+	name = "Storage Bypass";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel,
@@ -66211,9 +66196,9 @@
 /area/station/hallway/primary/central/sw)
 "nXO" = (
 /obj/machinery/atmospherics/trinary/filter/n2{
-	desc = "Отфильтровывает азот из трубы и отправляет его в камеру хранения";
+	desc = "Filters nitrogen out of the pipe and sends it to its storage chamber.";
 	dir = 1;
-	name = "Фильтр Азота (N2)";
+	name = "Nitrogen (N2) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -66633,9 +66618,9 @@
 	network = list("Engineering","SS13")
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 10;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -66830,9 +66815,9 @@
 /obj/effect/turf_decal/delivery/hollow,
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -66942,9 +66927,9 @@
 "ofg" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -67061,9 +67046,9 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/binary/valve/digital/open{
-	desc = "Позволяет отключить подачу дыхательной смеси на станцию, не отключая саму закачку газа. (Например, если требуется подать только смесь из оранжевых труб)";
+	desc = "Shuts off the supply of breathable air to the station without stopping gas pumping. Useful when supplying only the mixture from the orange pipes, for example.";
 	dir = 4;
-	name = "Подача дыхательной смеси на станцию"
+	name = "Breathable Air Supply to Station"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -68180,7 +68165,6 @@
 /area/station/command/vault)
 "osd" = (
 /obj/structure/chair/sofa/right,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/asmaint4)
 "osf" = (
@@ -68290,13 +68274,13 @@
 /area/station/service/theatre)
 "otn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -68959,7 +68943,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
 "oBr" = (
@@ -69058,8 +69041,8 @@
 /area/hydroponics)
 "oCK" = (
 /obj/vehicle/ridden/wheelchair{
-	desc = "Это кресло осталось от одного из предыдущих детективов. Говорят, что тот открыл в себе псионические способности и ушёл работать в федерацию магов.";
-	name = "Старое инвалидное кресло"
+	desc = "This chair belonged to a former detective. They say he discovered his psionic abilities and left to work for the Wizard Federation.";
+	name = "Old Wheelchair"
 	},
 /obj/structure/extinguisher_cabinet/directional/south,
 /turf/simulated/floor/plasteel{
@@ -69445,9 +69428,9 @@
 /area/station/engineering/engine)
 "oGI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 10;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/fpmaint)
@@ -69723,9 +69706,9 @@
 "oJx" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 4;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
@@ -69758,9 +69741,9 @@
 "oJN" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -69890,14 +69873,14 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -70409,9 +70392,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/volume_pump{
-	desc = "Позволяет опустошить трубы для смеси, отправив весь газ в отходы на фильтрацию";
+	desc = "Empties the mixing pipes, sending all their gas to waste for filtration.";
 	dir = 4;
-	name = "Смесь в отходы"
+	name = "Gas to Waste"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -70659,9 +70642,9 @@
 "oUi" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos/mixing_atmos)
@@ -70900,13 +70883,13 @@
 /area/station/command/office/ntrep)
 "oWI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -71065,9 +71048,9 @@
 /area/station/engineering/engine/reactor)
 "oZo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/effect/turf_decal/delivery,
 /turf/simulated/floor/plasteel{
@@ -71089,9 +71072,9 @@
 /area/station/security/range)
 "oZy" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 4;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -72593,9 +72576,9 @@
 /area/station/medical/virology)
 "poe" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
@@ -72687,9 +72670,9 @@
 /area/station/engineering/mechanic_workshop)
 "poR" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 10;
@@ -72763,7 +72746,6 @@
 /obj/structure/window/plasmareinforced{
 	dir = 1
 	},
-/obj/effect/landmark/spawner/swarmer,
 /obj/structure/cable/layer1,
 /turf/simulated/floor/plating,
 /area/station/science/sm_chamber)
@@ -72863,9 +72845,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -73142,13 +73124,13 @@
 /area/station/maintenance/casino)
 "ptF" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 4;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -73674,9 +73656,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/trinary/mixer{
-	desc = "Смешивает кислород и азот, создавая смесь для дыхания на станции";
+	desc = "Mixes oxygen and nitrogen to make breathable air for the station.";
 	dir = 4;
-	name = "Дыхательный смеситель";
+	name = "Breathable Air Mixer";
 	node1_concentration = 0.8;
 	node2_concentration = 0.2;
 	on = 1;
@@ -73847,9 +73829,9 @@
 "pAr" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 9;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -73930,9 +73912,9 @@
 /area/station/ai/satellite/chamber)
 "pBP" = (
 /obj/machinery/atmospherics/trinary/filter/flipped{
-	desc = "Отфильтровывает токсины из трубы и отправляет их в камеру хранения.";
+	desc = "Filters toxins out of the pipe and sends them to their storage chamber.";
 	dir = 8;
-	name = "Фильтр Токсинов (Плазма).";
+	name = "Toxins (Plasma) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -74011,9 +73993,9 @@
 /area/station/science/toxins/launch)
 "pCX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/effect/turf_decal/delivery/hollow,
 /turf/simulated/floor/plasteel,
@@ -74545,9 +74527,9 @@
 /area/space)
 "pIg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/computer/general_air_control/large_tank_control{
 	input_tag = "tox_in";
@@ -75148,9 +75130,9 @@
 /area/station/service/kitchen)
 "pOy" = (
 /obj/machinery/atmospherics/binary/volume_pump/on{
-	desc = "Выкачивает углекислый газ и токсины со станции и отправляет на фильтрацию";
+	desc = "Pumps carbon dioxide and toxins out of the station and sends them to filtration.";
 	dir = 1;
-	name = "Из скрабберов в фильтрацию"
+	name = "Scrubbers to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 6;
@@ -75458,13 +75440,13 @@
 "pRN" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
-	name = "Труба на фильтрацию"
+	desc = "This pipe carries gas to filtration.";
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -76296,9 +76278,9 @@
 /area/station/ai/satellite/chamber)
 "qam" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -76537,9 +76519,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 6;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel,
@@ -76622,8 +76604,8 @@
 	},
 /obj/item/clothing/ears/earmuffs,
 /obj/structure/toilet/directional/east{
-	desc = "Старый грязный туалет, по какой-то причине стоящий в техах. У вас нет ни единого понятия откуда он здесь.";
-	name = "Параша"
+	desc = "An old, filthy toilet standing in maintenance for some reason. You have no idea how it got here.";
+	name = "Crappy Toilet"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -76702,9 +76684,9 @@
 /area/station/medical/virology/lab)
 "qfm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -76712,9 +76694,9 @@
 /area/station/engineering/atmos)
 "qfp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 4;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
@@ -76961,9 +76943,9 @@
 "qgK" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -77173,9 +77155,9 @@
 "qig" = (
 /obj/effect/landmark/start/atmospheric,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -77647,9 +77629,9 @@
 /area/station/maintenance/fpmaint)
 "qmV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 9;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -77965,8 +77947,8 @@
 /area/station/security/medical)
 "qpC" = (
 /obj/machinery/atmospherics/binary/volume_pump/on{
-	desc = "Отправляет неотфильтрованный газ в космос";
-	name = "Остатки газа в космос"
+	desc = "Vents unfiltered gas into space.";
+	name = "Residual Gas to Space"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 10;
@@ -78007,9 +77989,9 @@
 /area/station/maintenance/starboard)
 "qqa" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -80245,13 +80227,13 @@
 /area/station/maintenance/electrical)
 "qNJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /obj/effect/turf_decal/delivery/hollow,
 /turf/simulated/floor/plasteel,
@@ -80423,9 +80405,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -80620,7 +80602,7 @@
 /obj/item/crowbar/red{
 	desc = "...";
 	force = 20;
-	name = "Легендарная монтировка"
+	name = "Legendary Crowbar"
 	},
 /obj/item/weaponcrafting/revolverbarrel/steel,
 /obj/item/stack/sheet/cardboard{
@@ -80830,9 +80812,9 @@
 /area/station/maintenance/starboard)
 "qSi" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 10;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -81103,9 +81085,9 @@
 "qVt" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 1;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -81813,18 +81795,18 @@
 /area/station/medical/medbay)
 "rea" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт оксид азота для смешивания с другими газами";
+	desc = "Supplies nitrous oxide for mixing with other gases.";
 	dir = 1;
-	name = "Оксид азота (NO2) в смеситель";
+	name = "Nitrous Oxide (N2O) to Mixer";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel{
@@ -82915,9 +82897,9 @@
 /area/station/maintenance/asmaint4)
 "rqk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 9;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -83296,8 +83278,8 @@
 	dir = 4
 	},
 /obj/structure/toilet/directional/east{
-	desc = "Старый грязный туалет, по какой-то причине стоящий в техах. У вас нет ни единого понятия откуда он здесь.";
-	name = "Параша"
+	desc = "An old, filthy toilet standing in maintenance for some reason. You have no idea how it got here.";
+	name = "Crappy Toilet"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -83674,7 +83656,6 @@
 	},
 /area/station/security/customs)
 "rzp" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -83876,9 +83857,9 @@
 /area/station/science/rnd)
 "rBQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -85133,9 +85114,9 @@
 /area/station/security/customs)
 "rMU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "escape"
@@ -85198,7 +85179,6 @@
 	},
 /area/station/medical/virology/lab)
 "rNq" = (
-/obj/structure/cult/archives,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -85399,9 +85379,9 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 1;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -85686,9 +85666,9 @@
 "rRd" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos/mixing_atmos)
@@ -86347,7 +86327,6 @@
 	},
 /area/station/hallway/primary/fore)
 "rWR" = (
-/obj/structure/cult/archives,
 /obj/machinery/newscaster/directional/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -87441,7 +87420,6 @@
 /area/station/engineering/break_room)
 "sfi" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -87613,9 +87591,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/trinary/mixer{
-	desc = "Смешивает кислород и азот, создавая смесь для дыхания на станции";
+	desc = "Mixes oxygen and nitrogen to make breathable air for the station.";
 	dir = 1;
-	name = "Дыхательный смеситель";
+	name = "Breathable Air Mixer";
 	node1_concentration = 0.8;
 	node2_concentration = 0.2;
 	on = 1;
@@ -87732,9 +87710,9 @@
 /area/station/science/xenobiology)
 "shS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 10;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/structure/lattice/catwalk,
@@ -88253,7 +88231,7 @@
 /area/station/engineering/atmos)
 "snv" = (
 /obj/effect/decal/remains/mouse{
-	name = "Джерри"
+	name = "Jerry"
 	},
 /turf/simulated/floor/engine,
 /area/station/science/toxins/mixing)
@@ -89098,9 +89076,9 @@
 /area/station/maintenance/bar)
 "swh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/turf_decal/siding/white{
@@ -89479,9 +89457,9 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -90014,9 +89992,9 @@
 /area/station/security/courtroom)
 "sGj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/turf_decal/siding/white{
@@ -90966,9 +90944,9 @@
 /obj/structure/grille,
 /obj/machinery/atmospherics/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/wall/r_wall,
 /area/station/engineering/atmos)
@@ -91012,9 +90990,9 @@
 /area/station/ai/satellite/chamber)
 "sQK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/plasteel{
@@ -91431,8 +91409,8 @@
 /area/station/command/office/captain)
 "sVi" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -92107,9 +92085,9 @@
 /area/station/science/toxins/mixing)
 "tco" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -92132,8 +92110,8 @@
 "tcL" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
-	name = "Труба дыхательной смеси"
+	desc = "This pipe contains breathable air for the station.";
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/meter{
 	id = "dloop_atm_meter";
@@ -92220,14 +92198,14 @@
 /area/station/engineering/atmos/mixing_atmos)
 "tdK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -92910,14 +92888,14 @@
 /area/station/maintenance/ai)
 "tkS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -93026,9 +93004,9 @@
 "tmw" = (
 /obj/machinery/atmospherics/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 6;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -93538,9 +93516,9 @@
 /obj/item/storage/belt/utility,
 /obj/item/wrench,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -93689,14 +93667,14 @@
 /area/station/engineering/supermatter/room)
 "ttq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -93859,9 +93837,9 @@
 "tve" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/atmos)
@@ -93909,9 +93887,9 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -93947,7 +93925,6 @@
 	},
 /area/station/maintenance/kitchen)
 "tww" = (
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/wood{
 	icon_state = "wood-broken7"
 	},
@@ -93990,9 +93967,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel,
@@ -94682,9 +94659,9 @@
 "tDc" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/space,
 /area/space)
@@ -94717,9 +94694,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 10;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -94947,9 +94924,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -95101,9 +95078,9 @@
 "tIk" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/wall/r_wall,
 /area/station/engineering/atmos/mixing_atmos)
@@ -96254,9 +96231,9 @@
 /area/station/maintenance/garden)
 "tXE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -96433,9 +96410,9 @@
 "tZI" = (
 /obj/effect/landmark/start/hangover,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -96475,8 +96452,8 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -97404,9 +97381,9 @@
 /area/station/engineering/engine)
 "ukX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -97652,9 +97629,9 @@
 	sensors = list("n2_sensor"="Tank")
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -97674,9 +97651,9 @@
 /area/station/security/medical)
 "uoh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
@@ -98647,9 +98624,9 @@
 /area/station/hallway/secondary/entry/lounge)
 "uxs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/meter{
 	id = "mair_out_meter";
@@ -99639,9 +99616,9 @@
 /area/station/command/teleporter/abandoned)
 "uGM" = (
 /obj/machinery/atmospherics/trinary/filter/flipped/n2o{
-	desc = "Отфильтровывает оксид азота из трубы и отправляет его в камеру хранения.";
+	desc = "Filters nitrous oxide out of the pipe and sends it to its storage chamber.";
 	dir = 8;
-	name = "Фильтр Оксида Азота (NO2)";
+	name = "Nitrous Oxide (N2O) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -100181,7 +100158,6 @@
 /obj/effect/decal/cleanable/blood/writing{
 	dir = 8
 	},
-/obj/effect/landmark/spawner/swarmer,
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
@@ -100999,9 +100975,9 @@
 	pixel_y = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "caution"
@@ -101187,9 +101163,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 6;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -101367,14 +101343,14 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -101836,14 +101812,14 @@
 /area/station/hallway/primary/central/south)
 "vga" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт азот для смешивания с другими газами";
+	desc = "Supplies nitrogen for mixing with other gases.";
 	dir = 8;
-	name = "Азот (N2) в смеситель";
+	name = "Nitrogen (N2) to Mixer";
 	target_pressure = 101
 	},
 /turf/simulated/floor/plasteel,
@@ -102078,9 +102054,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -102187,9 +102163,9 @@
 /area/station/engineering/gravity_generator)
 "vjz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "caution"
@@ -102261,8 +102237,8 @@
 "vjU" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/binary/pump/on{
-	desc = "Отправляет дыхательную смесь из трубы распространяться по станции через вентиляции";
-	name = "Дыхательную смесь на станцию";
+	desc = "Sends breathable air from the pipe into the station's ventilation system.";
+	name = "Breathable Air to Station";
 	target_pressure = 303.325
 	},
 /turf/simulated/floor/plasteel{
@@ -102618,9 +102594,9 @@
 /area/station/science/explab)
 "vnx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -102831,9 +102807,9 @@
 "vpK" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Подаёт азот из атмосферки в систему охлаждения реактора, таким образом запитывая её хладагентом";
+	desc = "Supplies nitrogen from atmospherics to the reactor's cooling system as coolant.";
 	dir = 1;
-	name = "Труба подачи азота в реактор"
+	name = "Nitrogen Supply Pipe to Reactor"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /turf/space,
@@ -103020,7 +102996,6 @@
 /obj/machinery/power/apc/directional/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/landmark/spawner/ninja_teleport,
 /turf/simulated/floor/carpet/green,
 /area/station/commons/mrchangs)
 "vrF" = (
@@ -103334,8 +103309,8 @@
 /area/station/engineering/monitor)
 "vvD" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
-	name = "Труба обработки"
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
@@ -103424,7 +103399,7 @@
 "vwO" = (
 /obj/machinery/atmospherics/binary/volume_pump{
 	dir = 4;
-	name = "Обработанный газ"
+	name = "Processed Gas"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -103809,9 +103784,9 @@
 /area/station/maintenance/bar)
 "vCc" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 5;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -103857,9 +103832,9 @@
 /area/station/cargo/delivery)
 "vCZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 5;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -103891,8 +103866,8 @@
 "vDk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/trinary/filter/o2{
-	desc = "Отфильтровывает кислород из трубы и отправляет его в камеру хранения";
-	name = "Фильтр Кислорода (O2)";
+	desc = "Filters oxygen out of the pipe and sends it to its storage chamber.";
+	name = "Oxygen (O2) Filter";
 	on = 1;
 	target_pressure = 4500
 	},
@@ -104363,9 +104338,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/fpmaint)
@@ -104419,9 +104394,9 @@
 "vKq" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -105309,8 +105284,8 @@
 /area/station/hallway/primary/port)
 "vTm" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -105456,9 +105431,9 @@
 /area/station/hallway/secondary/entry/additional)
 "vUJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 5;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -105588,9 +105563,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel,
@@ -105715,9 +105690,9 @@
 /area/station/hallway/secondary/entry/lounge)
 "vXj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel{
@@ -106440,11 +106415,6 @@
 "weT" = (
 /obj/machinery/firealarm/directional/south,
 /obj/structure/table/reinforced,
-/obj/item/laser_modification_case,
-/obj/item/laser_modification_case{
-	pixel_y = 7;
-	pixel_x = 1
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkred"
 	},
@@ -106779,7 +106749,7 @@
 "wiI" = (
 /obj/machinery/door/airlock/highsecurity{
 	heat_proof = 1;
-	name = "Комната смешивания";
+	name = "Mixing Chamber";
 	req_access = list(10,24)
 	},
 /obj/structure/fans/tiny,
@@ -106975,9 +106945,9 @@
 /obj/item/weldingtool,
 /obj/item/clothing/head/welding,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 4;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -107378,9 +107348,9 @@
 /area/station/science/rnd)
 "woI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -108040,9 +108010,9 @@
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 4;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -108491,9 +108461,9 @@
 /area/station/hallway/primary/fore)
 "wzK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -108604,7 +108574,7 @@
 "wAO" = (
 /obj/machinery/door/airlock/highsecurity{
 	heat_proof = 1;
-	name = "Комната смешивания";
+	name = "Mixing Chamber";
 	req_access = list(10,24)
 	},
 /obj/structure/fans/tiny,
@@ -108746,14 +108716,14 @@
 /area/station/hallway/secondary/exit)
 "wCf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 4;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 1;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -108943,9 +108913,9 @@
 "wES" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 6;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -109452,9 +109422,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 5;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -109589,14 +109559,14 @@
 /area/station/commons/locker)
 "wLB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	desc = "Подаёт кислород в смеситель для создания дыхательной смеси, которая потом распространяется по станции";
+	desc = "Supplies oxygen to the mixer to produce breathable air for the station.";
 	dir = 8;
-	name = "Кислород (O2) в дыхательную смесь";
+	name = "Oxygen (O2) to Breathable Air";
 	on = 1;
 	target_pressure = 101
 	},
@@ -110425,7 +110395,7 @@
 /obj/item/paper{
 	desc = "Paper attached to freezer";
 	info = "Валере<hr>Мы заметили что наш асистуха Олег, горит одной мыслёй. Выпивая рюмку бахуса, он бормочит что то про перестройку техов карго, говорит мол там скучно. По этому он понабрал материалов и инструментов, дабы перестраивать техтонели. Сообщаем это по той причине.. Однако причины нет, просто на всякий случай, вдруг понадобится Олег.<br><br><br><br>-Скопления Жаждущих Найти Идею.";
-	name = "Записка";
+	name = "Note";
 	pixel_y = -8
 	},
 /turf/simulated/floor/plasteel{
@@ -110515,9 +110485,9 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
+	desc = "This pipe carries gas for processing, then returns it to the mixing pipe.";
 	dir = 10;
-	name = "Труба обработки"
+	name = "Processing Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -111152,7 +111122,6 @@
 /area/station/hallway/secondary/entry)
 "xbY" = (
 /obj/structure/chair/office/dark,
-/obj/effect/landmark/spawner/swarmer,
 /turf/simulated/floor/plating,
 /area/station/maintenance/library)
 "xbZ" = (
@@ -113757,9 +113726,9 @@
 /area/station/engineering/atmos)
 "xEh" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 1;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -114138,22 +114107,6 @@
 "xHv" = (
 /obj/item/radio/intercom/directional/south,
 /obj/structure/table/reinforced,
-/obj/item/mod/module/quick_cuff{
-	pixel_x = -8;
-	pixel_y = -6
-	},
-/obj/item/mod/module/quick_cuff{
-	pixel_x = -8;
-	pixel_y = 6
-	},
-/obj/item/mod/module/pepper_shoulders{
-	pixel_x = 9;
-	pixel_y = 6
-	},
-/obj/item/mod/module/hat_stabilizer{
-	pixel_x = 8;
-	pixel_y = -6
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "darkred"
 	},
@@ -114411,9 +114364,9 @@
 /area/station/commons/fitness)
 "xJO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
-	desc = "Труба ведёт газ на фильтрацию";
+	desc = "This pipe carries gas to filtration.";
 	dir = 6;
-	name = "Труба на фильтрацию"
+	name = "Pipe to Filtration"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "neutralfull"
@@ -114469,9 +114422,9 @@
 /area/station/command/vip)
 "xKI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	desc = "Труба содержит дыхательную смесь для подачи на станцию";
+	desc = "This pipe contains breathable air for the station.";
 	dir = 10;
-	name = "Труба дыхательной смеси"
+	name = "Breathable Air Pipe"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -114998,9 +114951,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
+	desc = "This pipe holds gases for mixing.";
 	dir = 4;
-	name = "Труба смешивания"
+	name = "Mixing Pipe"
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
@@ -116043,9 +115996,9 @@
 "ybM" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/space,
 /area/space)
@@ -116319,9 +116272,9 @@
 "yeB" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
-	desc = "Труба проводящая газ по фильтрам, где он перемещается в камеры хранения";
+	desc = "This pipe carries gas through the filters, which send it to the storage chambers.";
 	dir = 1;
-	name = "Труба фильтрации"
+	name = "Filtration Pipe"
 	},
 /turf/simulated/wall/r_wall,
 /area/station/engineering/atmos/mixing_atmos)
@@ -116481,8 +116434,8 @@
 /area/station/security/courtroom)
 "ygM" = (
 /obj/structure/statue/gold/ce{
-	desc = "Золотая литая статуя, посвящённая великому СЕ — Гарри Оппенгеймеру, который продолжал исполнять свой долг даже в самых тяжелых условиях";
-	name = "Статуя Гарри Оппенгеймера"
+	desc = "A solid gold statue honoring the great Chief Engineer, Harry Oppenheimer, who kept doing his duty even under the harshest conditions.";
+	name = "Statue of Harry Oppenheimer"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -116961,8 +116914,8 @@
 /area/station/maintenance/asmaint4)
 "ymd" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow{
-	desc = "Труба хранит в себе набор газов для смешивания";
-	name = "Труба смешивания"
+	desc = "This pipe holds gases for mixing.";
+	name = "Mixing Pipe"
 	},
 /obj/machinery/atmospherics/meter,
 /turf/simulated/floor/plasteel,

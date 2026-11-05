@@ -23,16 +23,6 @@
 	/// book title in ru_names
 	var/manual_title_ru = ""
 
-/obj/item/book/manual/get_ru_names()
-	return alist(
-		NOMINATIVE = "руководство \"[manual_title_ru]\"",
-		GENITIVE = "руководства \"[manual_title_ru]\"",
-		DATIVE = "руководству \"[manual_title_ru]\"",
-		ACCUSATIVE = "руководство \"[manual_title_ru]\"",
-		INSTRUMENTAL = "руководством \"[manual_title_ru]\"",
-		PREPOSITIONAL = "руководстве \"[manual_title_ru]\"",
-	)
-
 /obj/item/book/manual/Initialize(mapload)
 	. = ..()
 	name = "manual \"[manual_title]\""
@@ -55,7 +45,7 @@
 /obj/item/book/manual/engineering_construction
 	manual_title = "Maintenance and construction"
 	manual_title_ru = "Ремонт и строительство"
-	desc = "Руководство по строительсву, сборке и ремонту оборудования."
+	desc = "A guide to constructing, assembling and repairing equipment."
 	icon_state = "bookEngineering"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -64,7 +54,7 @@
 /obj/item/book/manual/engineering_particle_accelerator
 	manual_title = "Tesla Engine: User Manual"
 	manual_title_ru = "Тесла двигатель: Руководство пользователя"
-	desc = "Руководство по запуску Тесла Двигателя."
+	desc = "An engineer's guide to shooting relativistic particles out of a big gun."
 	icon_state = "bookParticleAccelerator"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -73,7 +63,7 @@
 /obj/item/book/manual/supermatter_engine
 	manual_title = "SuperMatter Engine: User Manual"
 	manual_title_ru = "Двигатель на Суперматерии: Руководство пользователя"
-	desc = "Руководство по запуску двигателя на Суперматерии."
+	desc = "An engineer's best tool for dealing with their worst frenemy: The Supermatter and its anomalous behavior."
 	icon_state = "bookSupermatter"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -82,7 +72,7 @@
 /obj/item/book/manual/engineering_hacking
 	manual_title = "Hacking"
 	manual_title_ru = "Взлом"
-	desc = "Руководство по взлому различных устройств."
+	desc = "A guide to hacking various devices."
 	icon_state = "bookHacking"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -91,7 +81,7 @@
 /obj/item/book/manual/engineering_singularity_safety
 	manual_title = "Singularity Engine: User Manual"
 	manual_title_ru = "Сингулярный двигатель: Руководство пользователя"
-	desc = "Руководство по запуску Сингулярности."
+	desc = "A sufficiently succinct suppliment to securing singularities."
 	icon_state = "bookEngineeringSingularitySafety"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -100,7 +90,7 @@
 /obj/item/book/manual/hydroponics_pod_people
 	manual_title = "The Human Harvest - From seed to market"
 	manual_title_ru = "От семян до урожая: полное руководство по выращиванию людей на грядках."
-	desc = "Руководство по клонированию людей в стручках Боба-репликанта."
+	desc = "Blurry pictures of people coming out of pods are taped to the cover."
 	icon_state = "bookHydroponicsPodPeople"
 	item_state = "bookHydroponicsPodPeople"
 	author = "Джон Фермер"
@@ -138,7 +128,7 @@
 /obj/item/book/manual/medical_cloning
 	manual_title = "Cloning Techniques of the 26th century"
 	manual_title_ru = "Технология клонирования 26 века"
-	desc = "Руководство по классическому клонированию, актуально на сегодняшний день."
+	desc = "A guide covering the basics of cloning."
 	icon_state = "bookCloning"
 	item_state = "bookCloning"
 	author = "Медицинский Журнал \"Доктор Виталя\", выпуск 3"
@@ -216,7 +206,7 @@
 /obj/item/book/manual/ripley_build_and_repair
 	manual_title = "APLU \"Ripley\" Construction and Operation Manual"
 	manual_title_ru = "Сборка и оперирование АТМЕ \"Рипли\""
-	desc = "Руководство по сбору и оперированию меха АТМЕ \"Рипли\"."
+	desc = "A small guidebook on how to operate a Ripley powerloader exosuit. It's filled with disclaimers and pre-signed waivers."
 	author = "Корпорация \"Вейланд-Ютани\""
 //big pile of shit below.
 
@@ -292,7 +282,7 @@
 /obj/item/book/manual/experimentor
 	manual_title = "E.X.P.E.R.I-MENTOR for Dummies"
 	manual_title_ru = "Э.К.С.П.Е.Р.И-МЕНТОР для чайников"
-	desc = "Руководство по работе с Э.К.С.П.Е.Р.И-МЕНТОРом для самых маленьких сотрудников научного отдела."
+	desc = "An EXPERIMENTOR operating manual for the science department's youngest employees."
 	icon_state = "rdbook"
 	item_state = "rdbook"
 	author = "Доктор Кой-Карпов"
@@ -427,7 +417,7 @@
 /obj/item/book/manual/research_and_development
 	manual_title = "Research and Development for Dummies"
 	manual_title_ru = "Исследование и разработка для чайников"
-	desc = "Руководство по работе в РнД для самых маленьких."
+	desc = "The mad scientist's second best friend, after coffee."
 	icon_state = "rdbook"
 	item_state = "rdbook"
 	author = "Доктор С. Вет"
@@ -480,7 +470,7 @@
 /obj/item/book/manual/robotics_cyborgs
 	manual_title = "Robotics for Dummies"
 	manual_title_ru = "Робототехника для чайников"
-	desc = "Руководство по работе роботами и прочими синтетиками для самых маленьких сотрудников научного отдела."
+	desc = "A guide to working with robots and other synthetics for the science department's youngest employees."
 	icon_state = "borgbook"
 	item_state = "borgbook"
 	author = "NanoChat™"
@@ -683,7 +673,7 @@
 /obj/item/book/manual/security_space_law
 	manual_title = "Space Law"
 	manual_title_ru = "Космический закон"
-	desc = "Свод корпоративных правил \"Нанотрейзен\" для поддержания закона и порядка на своих объектах."
+	desc = "A set of Nanotrasen guidelines for keeping law and order on their space stations."
 	icon_state = "bookSpaceLaw"
 	item_state = "bookSpaceLaw"
 	force = 4 //advanced magistrate tactics
@@ -693,14 +683,14 @@
 /obj/item/book/manual/security_space_law/black
 	manual_title = "Space Law - Limited Edition"
 	manual_title_ru = "Космический закон — ограниченное издание"
-	desc = "Кожаный переплет и безукоризненное качество исполнения — превосходня копия ПРАВОСУДИЯ."
+	desc = "A leather-bound, immaculately-written copy of JUSTICE."
 	icon_state = "bookSpaceLawblack"
 	item_state = "bookSpaceLawblack"
 
 /obj/item/book/manual/engineering_guide
 	manual_title = "General Engineering"
 	manual_title_ru = "Основы инженерии"
-	desc = "Классическое издание руководства по инженерии, широко используемое в образовательных учреждениях."
+	desc = "A classic engineering manual widely used in educational institutions."
 	icon_state ="bookEngineering2"
 	item_state = "bookEng"
 	author = "Инженерная Энциклопедия"
@@ -709,7 +699,7 @@
 /obj/item/book/manual/chef_recipes
 	manual_title = "The Flavor Bible: Introduction"
 	manual_title_ru = "Азбука вкуса: Введение"
-	desc = "Одна из частей сборника рецептов шеф-повара."
+	desc = "One volume of the chef's recipe collection."
 	icon_state = "cooked_book"
 	item_state = "cooked_book"
 	author = "\"Нанотрейзен\""
@@ -768,7 +758,7 @@
 /obj/item/book/manual/barman_recipes
 	manual_title = "Barman on your own: Introduction"
 	manual_title_ru = "Сам себе бармен: Введение"
-	desc = "Одна из частей сборника рецептов бармена."
+	desc = "A coffee-stained guide to mixing drinks."
 	icon_state = "barbook"
 	author = "\"Нанотрейзен\""
 	wiki_title = "Руководство_по_напиткам"
@@ -816,7 +806,7 @@
 /obj/item/book/manual/detective
 	manual_title = "The Film Noir: Proper Procedures for Investigations"
 	manual_title_ru = "Киношный нуар: Надлежащие процедуры расследования"
-	desc = "Нуарная книга о том, как необходимо проводить расследования"
+	desc = "A gumshoe's guide to find out whodunnit, howdunnit, and wheredunnit."
 	icon_state ="bookDetective"
 	item_state = "bookDetective"
 	author = "\"Нанотрейзен\""
@@ -1065,7 +1055,7 @@
 /obj/item/book/manual/faxes
 	manual_title = "Faxes for dummies"
 	manual_title_ru = "Факсы для чайников"
-	desc = "Руководство по написанию факсов, одобренное руководством \"Нанотрейзен\""
+	desc = "A Nanotrasen-approved guide to writing faxes"
 	icon_state = "book6"
 	item_state = "book6"
 	author = "\"Нанотрейзен\""
@@ -1126,8 +1116,8 @@
 /obj/item/book/manual/sop_science
 	manual_title = "Standard Operating Procedures (Science)"
 	manual_title_ru = "Стандартные Рабочие Процедуры научного отдела"
-	name = "Стандартные Рабочие Процедуры Научного Отдела"
-	desc = "Свод правил, направленных на безопасное ведение любой научной деятельности."
+	name = "Science Standard Operating Procedures"
+	desc = "A set of guidelines aiming at the safe conduct of all scientific activities."
 	icon_state = "sop_science"
 	item_state = "sop_science"
 	author = "\"Нанотрейзен\""
@@ -1136,7 +1126,7 @@
 /obj/item/book/manual/sop_medical
 	manual_title = "Standard Operating Procedures (Medical)"
 	manual_title_ru = "Стандартные Рабочие Процедуры медицинского отдела"
-	desc = "Свод правил, направленных на безопасное ведение любой медицинской деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all medical activities."
 	icon_state = "sop_medical"
 	item_state = "sop_medical"
 	author = "\"Нанотрейзен\""
@@ -1145,7 +1135,7 @@
 /obj/item/book/manual/sop_engineering
 	manual_title = "Standard Operating Procedures (Engineering)"
 	manual_title_ru = "Стандартные Рабочие Процедуры инженерного отдела"
-	desc = "Свод правил, направленных на безопасное ведение любой инженерной деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all engineering activities."
 	icon_state = "sop_engineering"
 	item_state = "sop_engineering"
 	author = "\"Нанотрейзен\""
@@ -1154,7 +1144,7 @@
 /obj/item/book/manual/sop_service
 	manual_title = "Standard Operating Procedures (Service)"
 	manual_title_ru = "Стандартные Рабочие Процедуры отдела Обслуживания"
-	desc = "Свод правил, направленных на безопасное ведение любой обслуживающей деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all service activities."
 	icon_state = "sop_service"
 	item_state = "sop_service"
 	author = "\"Нанотрейзен\""
@@ -1163,7 +1153,7 @@
 /obj/item/book/manual/sop_supply
 	manual_title = "Standard Operating Procedures (Cargo)"
 	manual_title_ru = "Стандартные Рабочие Процедуры отдела снабжения"
-	desc = "Свод правил, направленных на безопасное ведение любой снабженческой деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all supply activities."
 	icon_state = "sop_cargo"
 	item_state = "sop_cargo"
 	author = "\"Нанотрейзен\""
@@ -1172,7 +1162,7 @@
 /obj/item/book/manual/sop_security
 	manual_title = "Standard Operating Procedures (Security)"
 	manual_title_ru = "Стандартные Рабочие Процедуры службы безопасности"
-	desc = "Свод правил, направленных на безопасное ведение любой охранной деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all security activities."
 	icon_state = "sop_security"
 	item_state = "sop_security"
 	author = "\"Нанотрейзен\""
@@ -1181,7 +1171,7 @@
 /obj/item/book/manual/sop_legal
 	manual_title = "Standard Operating Procedures (Legal)"
 	manual_title_ru = "Стандартные Рабочие Процедуры отдела юриспруденции"
-	desc = "Свод правил, направленных на безопасное ведение любой юридической деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all legal activities."
 	icon_state = "sop_legal"
 	item_state = "sop_legal"
 	author = "\"Нанотрейзен\""
@@ -1190,7 +1180,7 @@
 /obj/item/book/manual/sop_general
 	manual_title = "General Standard Operating Procedures"
 	manual_title_ru = "Общие Стандартные Рабочие Процедуры"
-	desc = "Свод правил, направленных на безопасное ведение любой деятельности на объектах НТ."
+	desc = "A set of guidelines aiming at the safe conduct of all station activities."
 	icon_state = "sop"
 	item_state = "sop"
 	author = "\"Нанотрейзен\""
@@ -1199,7 +1189,7 @@
 /obj/item/book/manual/sop_command
 	manual_title = "Standard Operating Procedures (Command)"
 	manual_title_ru = "Стандартные Рабочие Процедуры коммандования"
-	desc = "Свод правил, направленных на безопасное ведение любой управленческой деятельности."
+	desc = "A set of guidelines aiming at the safe conduct of all Command activities."
 	icon_state = "sop_command"
 	item_state = "sop_command"
 	author = "\"Нанотрейзен\""

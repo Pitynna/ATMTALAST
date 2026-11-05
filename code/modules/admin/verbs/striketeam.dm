@@ -92,7 +92,6 @@ GLOBAL_VAR_INIT(sent_strike_team, FALSE)
 				new_commando.possess_by_player(ghost_mob.key)
 				new_commando.internal = new_commando.s_store
 				new_commando.update_action_buttons_icon()
-				new_commando.change_voice()
 				if(nuke_code)
 					new_commando.mind.store_memory("<b>Коды от боеголовки:</b> [span_warning("[nuke_code].")]")
 				new_commando.mind.store_memory("<b>Миссия:</b> [span_warning("[input].")]")
@@ -142,7 +141,7 @@ GLOBAL_VAR_INIT(sent_strike_team, FALSE)
 			Теперь, прежде чем удалить диск, если нужно переместить бомбу, можешь: открепить её, переместить и снова закрепить.</p><p>\
 			Код ядерной аутентификации: <b>[nuke_code ? nuke_code : "Не предоставлен"]</b></p>\
 			<p><b>Удачи, солдат!</b></p>"
-			P.name = "Руководство по Специальным Операциям"
+			P.name = "Special Operations Manual"
 			P.stamp(/obj/item/stamp/centcom)
 
 	for(var/obj/effect/landmark/L in GLOB.landmarks_list)

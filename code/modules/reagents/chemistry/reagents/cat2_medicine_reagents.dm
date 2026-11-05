@@ -12,7 +12,7 @@
 /******BRUTE******/
 /*Suffix: -bital*/
 /datum/reagent/medicine/c2/helbital //only REALLY a C2 if you heal the other damages but not being able to outright heal the other guys is close enough to damaging
-	name = "Хельбитал"
+	name = "Helbital"
 	id = "helbital"
 	description = "Названное в честь норвежской богини Хель, это лекарство залечивает раны пациента тем эффективнее, чем ближе он к смерти. \
 		Ожоги, токсины и удушье усиливают исцеление, но эти повреждения должны поддерживаться, пока препарат метаболизируется, иначе лекарство вызовет негативную реакцию."

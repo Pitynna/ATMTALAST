@@ -37,8 +37,6 @@
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/head.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/helmet.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/helmet.dmi',
 		SPECIES_TAJARAN = 'icons/mob/clothing/species/tajaran/helmet.dmi',
 		SPECIES_VULPKANIN = 'icons/mob/clothing/species/vulpkanin/helmet.dmi',
@@ -359,7 +357,7 @@
 
 /obj/item/clothing/head/shapka_pepega
 	name = "frog hat"
-	desc = "Милая шапочка в виде головы лягушки, окутывающая голову. Мило, мягко и приятно!"
+	desc = "An adorable frog-head hat that wraps around your head. Cute, soft and comfortable!"
 	icon_state = "shapka_pepega"
 	item_state = "shapka_pepega"
 	sprite_sheets = list(
@@ -374,19 +372,9 @@
 	)
 	flags_inv = HIDEHEADSETS|HIDEHAIR
 
-/obj/item/clothing/head/shapka_pepega/get_ru_names()
-	return alist(
-		NOMINATIVE = "лягушачья шапка",
-		GENITIVE = "лягушачьей шапки",
-		DATIVE = "лягушачьей шапке",
-		ACCUSATIVE = "лягушачью шапку",
-		INSTRUMENTAL = "лягушачьей шапкой",
-		PREPOSITIONAL = "лягушачьей шапке",
-	)
-
 /obj/item/clothing/head/carp_hat
 	name = "carp hat"
-	desc = "Шапочка в виде устрашающего хищника космоса. Мило!"
+	desc = "A hat shaped like a fearsome space predator. Cute!"
 	icon_state = "carp_hat"
 	item_state = "carp_hat"
 	sprite_sheets = list(
@@ -400,13 +388,3 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/head.dmi',
 	)
 	flags_inv = HIDEHEADSETS|HIDEHEADHAIR
-
-/obj/item/clothing/head/carp_hat/get_ru_names()
-	return alist(
-		NOMINATIVE = "карповая шапка",
-		GENITIVE = "карповой шапки",
-		DATIVE = "карповой шапке",
-		ACCUSATIVE = "капровую шапку",
-		INSTRUMENTAL = "карповой шапкой",
-		PREPOSITIONAL = "карповой шапке",
-	)

@@ -40,7 +40,6 @@
 	can_wrap = FALSE
 	spider_intro_text = "Будучи Защитником Ужаса, ваша задача — охрана гнезда, яиц, Принцесс и Королевы. Вы очень сильны и живучи, используйте это, чтобы защитить выводок. Ваша активная способность создаёт временный неразрушимый барьер, через который могут пройти только пауки. Если встанет выбор, спасти Принцессу, или Королеву, при этои обрекая себя на смерть — делайте это без раздумий!"
 	ai_spins_webs = FALSE
-	tts_seed = "Avozu"
 	var/queen_visible = TRUE
 	var/cycles_noqueen = 0
 	var/max_queen_range = 15
@@ -141,16 +140,6 @@
 
 /obj/structure/spider/terrorweb/purple
 	name = "thick web"
-	desc = "Эта паутина настолько толстая, что большинство не может видеть сквозь нее."
+	desc = "This web is so thick, most cannot see beyond it."
 	opacity = TRUE
 	max_integrity = 40
-
-/obj/structure/spider/terrorweb/purple/get_ru_names()
-	return alist(
-		NOMINATIVE = "толстая паутина",
-		GENITIVE = "толстой паутины",
-		DATIVE = "толстой паутине",
-		ACCUSATIVE = "толстую паутину",
-		INSTRUMENTAL = "толстой паутиной",
-		PREPOSITIONAL = "толстой паутине",
-	)

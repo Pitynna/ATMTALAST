@@ -1,7 +1,7 @@
 /obj/item/organ/external/chest/diona
 	species_type = /datum/species/diona
 	name = "core trunk"
-	desc = "Основной ствол — ядро."
+	desc = "The main trunk: the core."
 	gender = MALE
 	max_damage = 200
 	min_broken_damage = 50
@@ -12,114 +12,54 @@
 	encased = null
 	convertable_children = list(/obj/item/organ/external/groin/diona)
 
-/obj/item/organ/external/chest/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "основной ствол",
-		GENITIVE = "основного ствола",
-		DATIVE = "основному стволу",
-		ACCUSATIVE = "основной ствол",
-		INSTRUMENTAL = "основным стволом",
-		PREPOSITIONAL = "основном стволе",
-	)
-
 /obj/item/organ/external/groin/diona
 	species_type = /datum/species/diona
 	name = "fork"
-	desc = "Нижнее разветвление ствола."
+	desc = "A multi-pronged eating utensil. Sure is pointy. Keep away from outlets."
 	gender = NEUTER
 	min_broken_damage = 50
 	amputation_point = "нижний ствол"
 	gendered_icon = FALSE
 
-/obj/item/organ/external/groin/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "нижнее разветвление",
-		GENITIVE = "нижнего разветвления",
-		DATIVE = "нижнему разветвлению",
-		ACCUSATIVE = "нижнее разветвление",
-		INSTRUMENTAL = "нижним разветвлением",
-		PREPOSITIONAL = "нижнем разветвлении",
-	)
-
 /obj/item/organ/external/arm/diona
 	species_type = /datum/species/diona
 	name = "left upper tendril"
-	desc = "Верхнее левое ответвление ствола."
+	desc = "The upper-left branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
 	amputation_point = "левый верхний отросток"
 	convertable_children = list(/obj/item/organ/external/hand/diona)
 
-/obj/item/organ/external/arm/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "левый верхний отросток",
-		GENITIVE = "левого верхнего отростка",
-		DATIVE = "левому верхнему отростку",
-		ACCUSATIVE = "левый верхний отросток",
-		INSTRUMENTAL = "левым верхним отростоком",
-		PREPOSITIONAL = "левом верхнем отростке",
-	)
-
 /obj/item/organ/external/arm/right/diona
 	species_type = /datum/species/diona
 	name = "right upper tendril"
-	desc = "Верхнее правое ответвление ствола."
+	desc = "The upper-right branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
 	amputation_point = "правый верхний отросток"
 	convertable_children = list(/obj/item/organ/external/hand/right/diona)
 
-/obj/item/organ/external/arm/right/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "правый верхний отросток",
-		GENITIVE = "правого верхнего отростка",
-		DATIVE = "правому верхнему отростку",
-		ACCUSATIVE = "правый верхний отросток",
-		INSTRUMENTAL = "правым верхним отростоком",
-		PREPOSITIONAL = "правом верхнем отростке",
-	)
-
 /obj/item/organ/external/leg/diona
 	species_type = /datum/species/diona
 	name = "left lower tendril"
-	desc = "Нижнее левое ответвление ствола."
+	desc = "The lower-left branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
 	amputation_point = "левый нижний отросток"
 	convertable_children = list(/obj/item/organ/external/foot/diona)
 
-/obj/item/organ/external/leg/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "левый нижний отросток",
-		GENITIVE = "левого нижнего отростка",
-		DATIVE = "левому нижнему отростку",
-		ACCUSATIVE = "левый нижний отросток",
-		INSTRUMENTAL = "левым нижним отростоком",
-		PREPOSITIONAL = "левом нижнем отростке",
-	)
-
 /obj/item/organ/external/leg/right/diona
 	species_type = /datum/species/diona
 	name = "right lower tendril"
-	desc = "Нижнее правое ответвление ствола."
+	desc = "The lower-right branch of the trunk."
 	gender = MALE
 	max_damage = 35
 	min_broken_damage = 20
 	amputation_point = "правый нижний отросток"
 	convertable_children = list(/obj/item/organ/external/foot/right/diona)
-
-/obj/item/organ/external/leg/right/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "правый нижний отросток",
-		GENITIVE = "правого нижнего отростка",
-		DATIVE = "правому нижнему отростку",
-		ACCUSATIVE = "правый нижний отросток",
-		INSTRUMENTAL = "правым нижним отростоком",
-		PREPOSITIONAL = "правом нижнем отростке",
-	)
 
 /obj/item/organ/external/foot/diona
 	species_type = /datum/species/diona
@@ -136,41 +76,21 @@
 /obj/item/organ/external/hand/diona
 	species_type = /datum/species/diona
 	name = "left grasper"
-	desc = "Левый верхняя ветка, выполняющая хватательную функцию."
+	desc = "The upper-left grasping branch."
 	gender = MALE
 	amputation_point = "левую верхнюю ветку"
-
-/obj/item/organ/external/hand/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "левый захват",
-		GENITIVE = "левого захвата",
-		DATIVE = "левому захвату",
-		ACCUSATIVE = "левый захват",
-		INSTRUMENTAL = "левым захватом",
-		PREPOSITIONAL = "левом захвате",
-	)
 
 /obj/item/organ/external/hand/right/diona
 	species_type = /datum/species/diona
 	name = "right grasper"
-	desc = "Правая верхняя ветка, выполняющая хватательную функцию."
+	desc = "The upper-right grasping branch."
 	gender = MALE
 	amputation_point = "правую верхнюю ветку"
-
-/obj/item/organ/external/hand/right/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "правый захват",
-		GENITIVE = "правого захвата",
-		DATIVE = "правому захвату",
-		ACCUSATIVE = "правый захват",
-		INSTRUMENTAL = "правым захватом",
-		PREPOSITIONAL = "правом захвате",
-	)
 
 /obj/item/organ/external/head/diona
 	species_type = /datum/species/diona
 	name = "upper trunk"
-	desc = "Верхнее ответвление ствола."
+	desc = "The upper branch of the trunk."
 	gender = NEUTER
 	max_damage = 50
 	min_broken_damage = 25
@@ -180,39 +100,19 @@
 	cannot_break = TRUE
 	encased = null
 
-/obj/item/organ/external/head/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "верхнее ответвление",
-		GENITIVE = "верхнего ответвления",
-		DATIVE = "верхнему ответвлению",
-		ACCUSATIVE = "верхнее ответвление",
-		INSTRUMENTAL = "верхним ответвлением",
-		PREPOSITIONAL = "верхнем ответвлении",
-	)
-
 /obj/item/organ/diona/process()
 	return
 
 /obj/item/organ/internal/brain/diona
 	species_type = /datum/species/diona
 	name = "neural strata"
-	desc = "Прослойка из нейронной ткани, центральный орган нервной системы гештальта. Эта принадлежала дионе."
+	desc = "A layer of neural tissue, the central organ of a gestalt's nervous system. This belonged to a diona."
 	gender = FEMALE
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
 	dead_icon = null
 	parent_organ_zone = BODY_ZONE_CHEST
 	actions_types = list(/datum/action/item_action/organ_action/diona_brain_evacuation)
-
-/obj/item/organ/internal/brain/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "нейронная прослойка дионы",
-		GENITIVE = "нейронной прослойки дионы",
-		DATIVE = "нейронной прослойке дионы",
-		ACCUSATIVE = "нейронную прослойку дионы",
-		INSTRUMENTAL = "нейронной прослойкой дионы",
-		PREPOSITIONAL = "нейронной прослойке дионы",
-	)
 
 /obj/item/organ/internal/brain/diona/Initialize(mapload)
 	. = ..()
@@ -252,19 +152,9 @@
 /obj/item/organ/internal/kidneys/diona
 	species_type = /datum/species/diona
 	name = "filtrating vacuoles"
-	desc = "Парный орган, отвечающий за выведение токсинов и вредных веществ из биомассы гештальта. Эти принадлежали дионе."
+	desc = "Paired organs that remove toxins and harmful substances from a gestalt's biomass. These belonged to a diona."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
-
-/obj/item/organ/internal/kidneys/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "фильтрационные вакуоли",
-		GENITIVE = "фильтрационных вакуолей",
-		DATIVE = "фильтрационным вакуолям",
-		ACCUSATIVE = "фильтрационные вакуоли",
-		INSTRUMENTAL = "фильтрационными вакуолями",
-		PREPOSITIONAL = "фильтрационных вакуолях",
-	)
 
 /obj/item/organ/internal/kidneys/diona/Initialize(mapload)
 	. = ..()
@@ -273,19 +163,9 @@
 /obj/item/organ/internal/lungs/diona
 	species_type = /datum/species/diona
 	name = "gas bladder"
-	desc = "Парный орган, отвечающий за газообмен между внешней средой и биомассой гештальта. Эти принадлежали дионе."
+	desc = "Paired organs responsible for gas exchange between the environment and a gestalt's biomass. These belonged to a diona."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
-
-/obj/item/organ/internal/lungs/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "газовые пузыри",
-		GENITIVE = "газовых пузырей",
-		DATIVE = "газовым пузырям",
-		ACCUSATIVE = "газовые пузыри",
-		INSTRUMENTAL = "газовыми пузырями",
-		PREPOSITIONAL = "газовых пузырях",
-	)
 
 /obj/item/organ/internal/lungs/diona/Initialize(mapload)
 	. = ..()
@@ -294,19 +174,9 @@
 /obj/item/organ/internal/appendix/diona
 	species_type = /datum/species/diona
 	name = "polyp segment"
-	desc = "Наслоение биомассы. Является рудиментарным органом и не несёт полезной функции для гештальта. Этот принадлежал дионе."
+	desc = "A layer of biomass. A vestigial organ with no useful function for the gestalt. This belonged to a diona."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
-
-/obj/item/organ/internal/appendix/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "сегментированный отросток",
-		GENITIVE = "сегментированного отростка",
-		DATIVE = "сегментированному отростку",
-		ACCUSATIVE = "сегментированный отросток",
-		INSTRUMENTAL = "сегментированным отростком",
-		PREPOSITIONAL = "сегментированном отростке",
-	)
 
 /obj/item/organ/internal/appendix/diona/Initialize(mapload)
 	. = ..()
@@ -315,21 +185,11 @@
 /obj/item/organ/internal/heart/diona
 	species_type = /datum/species/diona
 	name = "anchoring ligament"
-	desc = "Орган, связывающий части гештальта воедино. Этот принадлежал дионе."
+	desc = "An organ binding the parts of a gestalt together. This belonged to a diona."
 	gender = FEMALE
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "nymph"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
-
-/obj/item/organ/internal/heart/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "якорная связка",
-		GENITIVE = "якорной связки",
-		DATIVE = "якорной связке",
-		ACCUSATIVE = "якорную связку",
-		INSTRUMENTAL = "якорной связкой",
-		PREPOSITIONAL = "якорной связке",
-	)
 
 /obj/item/organ/internal/heart/diona/Initialize(mapload)
 	. = ..()
@@ -341,21 +201,11 @@
 /obj/item/organ/internal/eyes/diona
 	species_type = /datum/species/diona
 	name = "receptor node"
-	desc = "Светочувстительные мембраны, выполняющие зрительную функцию. Этот принадлежал дионе."
+	desc = "Light-sensitive membranes responsible for vision. This belonged to a diona."
 	gender = MALE
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "claw"
 	parent_organ_zone = BODY_ZONE_CHEST
-
-/obj/item/organ/internal/eyes/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "рецепторный узел",
-		GENITIVE = "рецепторного узла",
-		DATIVE = "рецепторному узлу",
-		ACCUSATIVE = "рецепторный узел",
-		INSTRUMENTAL = "рецепторным узлом",
-		PREPOSITIONAL = "рецепторном узле",
-	)
 
 /obj/item/organ/internal/eyes/diona/Initialize(mapload)
 	. = ..()
@@ -364,20 +214,10 @@
 /obj/item/organ/internal/liver/diona
 	species_type = /datum/species/diona
 	name = "nutrient vessel"
-	desc = "Железа, отвечающая за метаболизацию поступающих в гештальт веществ. Эта принадлежала дионе."
+	desc = "A gland responsible for metabolizing substances absorbed by the gestalt. This belonged to a diona."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "claw"
 	alcohol_intensity = 0.5
-
-/obj/item/organ/internal/liver/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "питательная железа",
-		GENITIVE = "питательной железы",
-		DATIVE = "питательной железе",
-		ACCUSATIVE = "питательную железа",
-		INSTRUMENTAL = "питательной железой",
-		PREPOSITIONAL = "питательной железе",
-	)
 
 /obj/item/organ/internal/liver/diona/Initialize(mapload)
 	. = ..()
@@ -386,21 +226,11 @@
 /obj/item/organ/internal/ears/diona
 	species_type = /datum/species/diona
 	name = "oscillatory catcher"
-	desc = "Сгусток биомассы, улавливающий колебания в окружающей среде и отвечающий за ориентацию гештальта в пространстве. Этот принадлежал дионе."
+	desc = "A strange organic object used by a Gestalt for orientation in a three-dimensional projection."
 	gender = MALE
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "claw"
 	parent_organ_zone = BODY_ZONE_PRECISE_GROIN
-
-/obj/item/organ/internal/ears/diona/get_ru_names()
-	return alist(
-		NOMINATIVE = "колебательный уловитель",
-		GENITIVE = "колебательного уловителя",
-		DATIVE = "колебательному уловителю",
-		ACCUSATIVE = "колебательный уловитель",
-		INSTRUMENTAL = "колебательным уловителем",
-		PREPOSITIONAL = "колебательном уловителе",
-	)
 
 /obj/item/organ/internal/ears/diona/Initialize(mapload)
 	. = ..()

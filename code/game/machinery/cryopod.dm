@@ -14,7 +14,7 @@
 
 /obj/machinery/computer/cryopod
 	name = "cryogenic oversight console"
-	desc = "Интерфейс управления системой контроля за криогенным хранилищем."
+	desc = "An interface between crew and the cryogenic storage oversight systems."
 	icon = 'icons/obj/machines/cryogenic2.dmi'
 	icon_state = "cellconsole"
 	circuit = /obj/item/circuitboard/cryopodcontrol
@@ -42,7 +42,7 @@
 
 /obj/machinery/computer/cryopod/Initialize(mapload)
 	. = ..()
-	for(var/T in GLOB.potential_theft_objectives + GLOB.potential_theft_objectives_hard + GLOB.potential_theft_objectives_medium /*+ GLOB.potential_theft_objectives_collect*/)
+	for(var/T in GLOB.potential_theft_objectives)
 		theft_cache += new T
 
 /obj/machinery/computer/cryopod/attack_ai(mob/user)
@@ -245,7 +245,6 @@
 		/obj/item/stamp,
 		/obj/item/sensor_device/advanced,
 		/obj/item/qm_quest_tablet,
-		/obj/item/mod/control,
 		/obj/item/autopsy_scanner,
 		/obj/item/storage/belt/rapier,
 	)
@@ -253,19 +252,6 @@
 	var/static/list/do_not_preserve_items = list (
 		/obj/item/mmi/robotic_brain
 	)
-
-/obj/machinery/cryopod/get_ru_names()
-	return alist(
-		NOMINATIVE = "криогенный морозильник",
-		GENITIVE = "криогенного морозильника",
-		DATIVE = "криогенному морозильнику",
-		ACCUSATIVE = "криогенный морозильник",
-		INSTRUMENTAL = "криогенным морозильником",
-		PREPOSITIONAL = "криогенном морозильнике",
-	)
-
-//////
-//Syndie cryopod.
 
 /obj/machinery/cryopod/syndie
 	icon_state = "cryo_s"
@@ -381,11 +367,6 @@
 			QDEL_NULL(P.id)
 			qdel(P)
 			continue
-		if(ismodstorage(I))
-			var/obj/item/storage/backpack/modstorage/our_storage = I
-			our_storage.forceMove(our_storage.source)
-			continue
-
 		var/preserve = should_preserve_item(I)
 		if(preserve == CRYO_DESTROY)
 			qdel(I)
@@ -399,15 +380,6 @@
 		SSticker.score.save_antag_info(occupant.mind)
 
 	// Find a new sacrifice target if needed, if unable allow summoning
-	if(is_sacrifice_target(occupant.mind))
-		if(!SSticker.mode.cult_objs.find_new_sacrifice_target())
-			SSticker.mode.cult_objs.ready_to_summon()
-
-	// We should track when taipan players get despawned
-	if(occupant.mind in GLOB.taipan_players_active)
-		GLOB.taipan_players_active -= occupant.mind
-
-	// Update any existing objectives involving this mob.
 	if(occupant.mind)
 		for(var/datum/objective/O in GLOB.all_objectives)
 			if(O.target != occupant.mind)
@@ -419,8 +391,6 @@
 		// Handle job slot/tater cleanup.
 		var/job = occupant.mind.assigned_role
 
-		if(istype(src, /obj/machinery/cryopod/syndie))
-			free_taipan_role(job)
 
 		SSjobs.FreeRole(job)
 
@@ -643,7 +613,7 @@
 
 /obj/machinery/computer/cryopod/robot
 	name = "robotic storage console"
-	desc = "Интерфейс управления системой контроля за робо-хранилищем."
+	desc = "An interface between crew and the robotic storage systems."
 	icon = 'icons/obj/machines/robot_storage.dmi'
 	icon_state = "console"
 	circuit = /obj/item/circuitboard/robotstoragecontrol
@@ -691,18 +661,12 @@
 		var/obj/O = person_to_cryo.loc
 		O.force_eject_occupant(person_to_cryo)
 	var/list/free_cryopods = list()
-	var/list/free_syndie_cryopods = list()
 	for(var/obj/machinery/cryopod/P in SSmachines.get_by_type(/obj/machinery/cryopod))
-		if(!P.occupant && istype(get_area(P), /area/syndicate/unpowered/syndicate_space_base) && istype(P, /obj/machinery/cryopod/syndie))
-			free_syndie_cryopods += P
-		else if(!P.occupant && istype(get_area(P), /area/station/commons/sleep))
+		if(!P.occupant && istype(get_area(P), /area/station/commons/sleep))
 			free_cryopods += P
 	var/obj/machinery/cryopod/target_cryopod = null
 	if(length(free_cryopods))
-		if(person_to_cryo.find_taipan_hud_number_by_job()) //Если вернёт хоть что то значит тайпановец. Иначе вернёт null
-			target_cryopod = safepick(free_syndie_cryopods)
-		else
-			target_cryopod = safepick(free_cryopods)
+		target_cryopod = safepick(free_cryopods)
 		if(target_cryopod.check_occupant_allowed(person_to_cryo))
 			var/turf/T = get_turf(person_to_cryo)
 			var/obj/effect/portal/SP = new /obj/effect/portal(T, null, null, 4 SECONDS, null, FALSE)

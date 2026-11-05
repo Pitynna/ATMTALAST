@@ -260,24 +260,16 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_REVENANT, /datum/event/revenant, 150),
 		new /datum/event_meta(
-			EVENT_LEVEL_MODERATE, EVENT_SWARMERS, /datum/event/swarmers, 40, is_one_shot = TRUE),
-		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_MORPH, /datum/event/spawn_morph, 40, list(ASSIGNMENT_SECURITY = 10), is_one_shot = TRUE),
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_ABDUCTORS, /datum/event/abductor/one_crew, 40, list(ASSIGNMENT_SECURITY = 3), TRUE),
-		new /datum/event_meta(
-			EVENT_LEVEL_MODERATE, EVENT_PULSE_DEMON, /datum/event/spawn_pulsedemon, 0),
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_DISEASE_OUTBREAK, /datum/event/disease_outbreak, 0, list(ASSIGNMENT_MEDICAL = 150), TRUE),
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_HEADCRABS, /datum/event/headcrabs, 0, list(ASSIGNMENT_SECURITY = 20)),
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_AIRLOCK_MALFUNCTION, /datum/event/door_runtime, 50, list(ASSIGNMENT_ENGINEER = 25, ASSIGNMENT_AI = 150), TRUE),
-		new /datum/event_meta(
-			EVENT_LEVEL_MODERATE, EVENT_SPACE_NINJA, /datum/event/space_ninja, 40, list(ASSIGNMENT_SECURITY = 10), is_one_shot = TRUE),
 		new /datum/event_meta/lone_operative(),
-		new /datum/event_meta(
-			EVENT_LEVEL_MODERATE, EVENT_DRIFTING_CONTRACTOR, /datum/event/drifting_contractor, 60, list(ASSIGNMENT_SECURITY = 10)),
 		new /datum/event_meta(
 			EVENT_LEVEL_MODERATE, EVENT_TRADERS, /datum/event/traders, 85, is_one_shot = TRUE),
 		new /datum/event_meta(
@@ -303,16 +295,6 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 			EVENT_LEVEL_MAJOR, EVENT_XENOMORPH_INFESTATION, /datum/event/alien_infestation, 20, list(ASSIGNMENT_SECURITY = 4), TRUE),
 		new /datum/event_meta(
 			EVENT_LEVEL_MAJOR, EVENT_TERROR_SPIDER, /datum/event/spider_terror, 20, list(ASSIGNMENT_SECURITY = 4), TRUE), // 7.1% on high pop, 5.3% on low pop
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_SLAUGHTER_DEMON, /datum/event/spawn_slaughter, 20, is_one_shot = TRUE), // 3% on high pop, 2.1% on low pop
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_LAUGHTER_DEMON, /datum/event/spawn_slaughter/laughter,	20, is_one_shot = TRUE),
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_SHADOW_DEMON, /datum/event/spawn_slaughter/shadow,	20, is_one_shot = TRUE),
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_SPACE_DRAGON, /datum/event/space_dragon, 20, list(ASSIGNMENT_SECURITY = 4), TRUE),
-		new /datum/event_meta(
-			EVENT_LEVEL_MAJOR, EVENT_ZOMBIE, /datum/event/zombie, 20, is_one_shot = TRUE),
 	)
 
 #undef ASSIGNMENT_ANY

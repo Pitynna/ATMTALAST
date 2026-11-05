@@ -9,7 +9,7 @@
  */
 /obj/structure/bonfire
 	name = "bonfire"
-	desc = "Для приготовления пищи, включая жарку, копчение, обугливание, запекание, поджаривание, тушение, обжиг, плавление, а иногда и для сжигания вещей."
+	desc = "For grilling, broiling, charring, smoking, heating, roasting, toasting, simmering, searing, melting, and occasionally burning things."
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "bonfire"
 	light_color = LIGHT_COLOR_FIRE
@@ -24,16 +24,6 @@
 	var/rod_installed = FALSE
 	/// Who lit the fucking thing
 	var/lighter
-
-/obj/structure/bonfire/get_ru_names()
-	return alist(
-		NOMINATIVE = "костёр",
-		GENITIVE = "костра",
-		DATIVE = "костру",
-		ACCUSATIVE = "костёр",
-		INSTRUMENTAL = "костром",
-		PREPOSITIONAL = "костре",
-	)
 
 /obj/structure/bonfire/Initialize(mapload)
 	. = ..()

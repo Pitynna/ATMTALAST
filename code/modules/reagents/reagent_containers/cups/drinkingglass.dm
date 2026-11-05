@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass
 	name = "glass"
-	desc = "Стеклянный стакан, из таких обычно пьют. Постарайтесь не разбить его."
+	desc = "Your standard drinking glass."
 	icon_state = "glass_empty"
 	item_state = "drinking_glass"
 	lefthand_file = 'icons/goonstation/mob/inhands/items_lefthand.dmi'
@@ -11,16 +11,6 @@
 	drop_sound = 'sound/items/handling/drop/drinkglass_drop.ogg'
 	pickup_sound =  'sound/items/handling/pickup/drinkglass_pickup.ogg'
 	custom_price = PAYCHECK_MIN * 0.2
-
-/obj/item/reagent_containers/cup/glass/drinkingglass/get_ru_names()
-	return alist(
-		NOMINATIVE = "стакан",
-		GENITIVE = "стакана",
-		DATIVE = "стакану",
-		ACCUSATIVE = "стакан",
-		INSTRUMENTAL = "стаканом",
-		PREPOSITIONAL = "стакане",
-	)
 
 /obj/item/reagent_containers/cup/glass/drinkingglass/Initialize(mapload)
 	. = ..()

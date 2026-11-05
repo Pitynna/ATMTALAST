@@ -165,10 +165,6 @@ SUBSYSTEM_DEF(mapping)
 	if(!CONFIG_GET(flag/disable_lavaland) && !(map_datum.disables & DISABLE_LAVALAND))
 		loadLavaland()
 	#endif
-	#ifndef SKIP_TAIPAN
-	if(!CONFIG_GET(flag/disable_taipan) && !(map_datum.disables & DISABLE_TAIPAN))
-		loadTaipan()
-	#endif
 	#ifndef SKIP_AWAY_MISSION
 	// Pick a random away mission.
 	if(!CONFIG_GET(flag/disable_away_missions) && !(map_datum.disables & DISABLE_AWAY_MISSIONS))
@@ -429,14 +425,6 @@ SUBSYSTEM_DEF(mapping)
 	GLOB.maploader.load_map(file(map_datum.lavaland_path), z_offset = lavaland_z_level)
 	log_startup_progress("Loaded Lavaland in [stop_watch(watch)]s")
 
-/datum/controller/subsystem/mapping/proc/loadTaipan()
-	var/watch = start_watch()
-	log_startup_progress("Loading Taipan...")
-	var/taipan_z_level = GLOB.space_manager.add_new_zlevel(RAMSS_TAIPAN, linkage = CROSSLINKED, traits = list(REACHABLE, TAIPAN))
-	GLOB.maploader.load_map(file("_maps/map_files/generic/syndicatebase.dmm"), z_offset = taipan_z_level)
-	log_startup_progress("Loaded Taipan in [stop_watch(watch)]s")
-
-// move it to code/datums/ruins.dm and make global proc plz thx k
 /datum/controller/subsystem/mapping/proc/seedRuins(list/z_levels = null, budget = 0, whitelist = /area/space, list/potentialRuins)
 	if(!z_levels || !length(z_levels))
 		WARNING("No Z levels provided - Not generating ruins")

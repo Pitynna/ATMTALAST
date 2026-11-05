@@ -7,30 +7,15 @@ Note: Must be placed within 3 tiles of the R&D Console
 */
 /obj/machinery/r_n_d/destructive_analyzer
 	name = "Destructive Analyzer"
-	desc = "Оборудование, предназначенное для проведения научных исследований методом обратной инженерии \
-			путём разборки различных объектов. Управление происходит с помощью подключаемой консоли."
+	desc = "Learn science by destroying things!"
 	icon_state = "d_analyzer"
 	base_icon_state = "d_analyzer"
 	var/decon_mod = 0
-
-/obj/machinery/r_n_d/destructive_analyzer/get_ru_names()
-	return alist(
-		NOMINATIVE = "деструктивный анализатор",
-		GENITIVE = "деструктивного анализатора",
-		DATIVE = "деструктивному анализатору",
-		ACCUSATIVE = "деструктивный анализатор",
-		INSTRUMENTAL = "деструктивным анализатором",
-		PREPOSITIONAL = "деструктивном анализаторе",
-	)
 
 /obj/machinery/r_n_d/destructive_analyzer/Initialize(mapload)
 	. = ..()
 	init_parts()
 	RefreshParts()
-	if(is_taipan(z))
-		icon_state = "syndie_d_analyzer"
-		base_icon_state = "syndie_d_analyzer"
-
 /obj/machinery/r_n_d/destructive_analyzer/proc/init_parts()
 	component_parts = list()
 	component_parts += new /obj/item/circuitboard/destructive_analyzer(null)
@@ -104,8 +89,7 @@ Note: Must be placed within 3 tiles of the R&D Console
 	flick("[base_icon_state]_insert", src)
 	loaded_item = I
 	balloon_alert(user, "помещено в камеру разбора")
-	CALCULATE_SKILL_MOD(user, RESEARCH_DURATION_MOD, skill_duration_mod)
-	addtimer(CALLBACK(src, PROC_REF(reset_processing)), 1 SECONDS * skill_duration_mod)
+	addtimer(CALLBACK(src, PROC_REF(reset_processing)), 1 SECONDS)
 	return ATTACK_CHAIN_BLOCKED_ALL
 
 /obj/machinery/r_n_d/destructive_analyzer/screwdriver_act_secondary(mob/living/user, obj/item/tool)

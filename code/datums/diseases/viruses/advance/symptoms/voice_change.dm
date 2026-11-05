@@ -38,7 +38,6 @@ Bonus
 				if(ishuman(M))
 					var/mob/living/carbon/human/H = M
 					H.SetSpecialVoice(H.dna.species.get_random_name(H.gender))
-					H.SetSpecialTTSVoice(SStts.get_random_seed(H))
 
 	return
 
@@ -47,5 +46,4 @@ Bonus
 	if(ishuman(A.affected_mob))
 		var/mob/living/carbon/human/H = A.affected_mob
 		H.UnsetSpecialVoice()
-		H.UnsetSpecialTTSVoice()
 	return

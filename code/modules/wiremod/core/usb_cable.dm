@@ -1,7 +1,7 @@
 /// A cable that can connect integrated circuits to anything with a USB port, such as computers and machines.
 /obj/item/usb_cable
 	name = "usb cable"
-	desc = "Кабель, позволяющий подключать интегральные схемы к любому устройству с USB-портом."
+	desc = "A cable that connects integrated circuits to any device with a USB port."
 	gender = MALE
 	icon = 'icons/obj/circuits.dmi'
 	icon_state = "usb_cable"
@@ -14,16 +14,6 @@
 
 	/// The currently connected circuit
 	var/obj/item/integrated_circuit/attached_circuit
-
-/obj/item/usb_cable/get_ru_names()
-	return alist(
-		NOMINATIVE = "USB-кабель",
-		GENITIVE = "USB-кабеля",
-		DATIVE = "USB-кабелю",
-		ACCUSATIVE = "USB-кабель",
-		INSTRUMENTAL = "USB-кабелем",
-		PREPOSITIONAL = "USB-кабеле",
-	)
 
 /obj/item/usb_cable/Initialize(mapload)
 	. = ..()

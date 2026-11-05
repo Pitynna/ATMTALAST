@@ -1,6 +1,6 @@
 /obj/structure/chair/plastic
-	name = "складной пластиковый стул"
-	desc = "Как бы вы ни ёрзали, все равно будет неудобно."
+	name = "folding plastic chair"
+	desc = "No amount of shifting around will make it comfortable."
 	icon_state = "plastic_chair"
 	resistance_flags = FLAMMABLE
 	max_integrity = 50
@@ -38,8 +38,8 @@
 	qdel(src)
 
 /obj/item/chair/plastic
-	name = "складной пластиковый стул"
-	desc = "Почему-то, всегда можно найти под рингом."
+	name = "folding plastic chair"
+	desc = "For some reason, you can always find one under the wrestling ring."
 	icon_state = "folded_chair"
 	item_state = "folded_chair"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -49,8 +49,8 @@
 	origin_type = /obj/structure/chair/plastic
 
 /obj/effect/decal/cleanable/plastic
-	name = "пластиковые осколки"
-	desc = "Куски рваного, сломанного, никчёмного пластика."
+	name = "plastic shards"
+	desc = "Pieces of torn, broken, worthless plastic."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
 	color = "#c6f4ff"

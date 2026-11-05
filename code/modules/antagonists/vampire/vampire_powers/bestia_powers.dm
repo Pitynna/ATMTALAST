@@ -169,7 +169,7 @@
 		return FALSE
 	if(blood_required && ishuman(victim) && (HAS_TRAIT(victim, TRAIT_NO_BLOOD) || HAS_TRAIT(victim, TRAIT_EXOTIC_BLOOD)))
 		return FALSE
-	if(issilicon(victim) || isbot(victim) || isswarmer(victim) || isguardian(victim))
+	if((issilicon(victim)) || (isbot(victim)) || (isguardian(victim)))
 		return FALSE
 	return TRUE
 
@@ -569,7 +569,7 @@
  */
 /obj/item/gun/magic/skull_gun
 	name = "infected skull"
-	desc = "Деформированный череп, передающий могильную лихорадку."
+	desc = "Malformed skull which transfers grave fever."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "ashen_skull"
 	item_state = "ashen_skull"
@@ -584,16 +584,6 @@
 	throw_range = 0
 	throw_speed = 0
 	var/datum/action/cooldown/spell/infected_trophy/parent_spell
-
-/obj/item/gun/magic/skull_gun/get_ru_names()
-	return alist(
-		NOMINATIVE = "заражённый череп",
-		GENITIVE = "заражённого черепа",
-		DATIVE = "заражённому черепу",
-		ACCUSATIVE = "заражённый череп",
-		INSTRUMENTAL = "заражённым черепом",
-		PREPOSITIONAL = "заражённом черепе",
-	)
 
 /obj/item/gun/magic/skull_gun/Initialize(mapload, spell)
 	. = ..()
@@ -1213,7 +1203,7 @@
 	if(QDELETED(user) || QDELETED(coffin))
 		return
 
-	new /obj/effect/temp_visual/cult/sparks(user_turf)
+	new /obj/effect/temp_visual/blood_magic_sparks(user_turf)
 	user.forceMove(user_turf)
 	qdel(user_image)
 
@@ -1250,7 +1240,7 @@
 	if(QDELETED(src) || QDELETED(coffin) || QDELETED(coffin.human_vampire))
 		return
 
-	new /obj/effect/temp_visual/cult/sparks(get_turf(coffin))
+	new /obj/effect/temp_visual/blood_magic_sparks(get_turf(coffin))
 	coffin.no_manipulation = FALSE
 	coffin.open()
 	coffin.no_manipulation = TRUE
@@ -1279,7 +1269,7 @@
  */
 /obj/structure/closet/coffin/vampire
 	name = "mysterious coffin"
-	desc = "Даже при взгляде на этот гроб волосы встают дыбом."
+	desc = "Even looking at this coffin makes your hair stand on end."
 	max_integrity = 500
 	color = "#7F0000"
 	anchored = TRUE
@@ -1309,16 +1299,6 @@
 
 	var/fullpower_unlocked = FALSE
 	var/fullpower_heal_done = FALSE
-
-/obj/structure/closet/coffin/vampire/get_ru_names()
-	return alist(
-		NOMINATIVE = "таинственный гроб",
-		GENITIVE = "таинственного гроба",
-		DATIVE = "таинственному гробу",
-		ACCUSATIVE = "таинственный гроб",
-		INSTRUMENTAL = "таинственным гробом",
-		PREPOSITIONAL = "таинственном гробе",
-	)
 
 /obj/structure/closet/coffin/vampire/Initialize(mapload, mob/living/carbon/human/_human_vampire)
 	. = ..()
@@ -1383,7 +1363,7 @@
 
 	human_vampire.set_stat(CONSCIOUS)
 
-	new /obj/effect/temp_visual/cult/sparks(source_turf)
+	new /obj/effect/temp_visual/blood_magic_sparks(source_turf)
 	playsound(loc, 'sound/effects/creepyshriek.ogg', 100, TRUE)
 	human_vampire.visible_message(span_danger("[human_vampire] выход[PLUR_IT_YAT(human_vampire)] из разрушенного гроба и изда[PLUR_YOT_YUT(human_vampire)] оглушительный вопль!"), \
 								span_userdanger("Ваш гроб разрушен, и вы кричите в неистовой ярости!"), \
@@ -1613,7 +1593,7 @@
 		to_chat(user, span_warning("Вы чувствуете, что это не очень хорошая идея..."))
 	else
 		LAZYREMOVE(lightheaded, user_UID)
-		new /obj/effect/temp_visual/cult/sparks(get_turf(user))
+		new /obj/effect/temp_visual/blood_magic_sparks(get_turf(user))
 		user.Weaken(10 SECONDS)	// well, you were warned!
 		user.Jitter(20 SECONDS)
 		user.visible_message(span_warning("Как только [user] прикаса[PLUR_ET_YUT(user)]ся к [declent_ru(DATIVE)], [GEND_HIS_HER(user)] тело начнет биться в конвульсиях."), \

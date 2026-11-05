@@ -1,6 +1,6 @@
 /obj/machinery/vending/artvend
 	name = "ArtVend"
-	desc = "Торговый автомат для всех ваших художественных нужд."
+	desc = "A vending machine for art supplies."
 	slogan_list = list(
 		"Забир+айте сво+и прик+ольные вещ+ички!",
 		"Раскр+асьте пол цветн+ыми карандаш+ами, а не кр+овью!",
@@ -69,14 +69,4 @@
 	)
 	premium = list(
 		/obj/item/poster/random_contraband = 5,
-	)
-
-/obj/machinery/vending/artvend/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат ArtVend",
-		GENITIVE = "торгового автомата ArtVend",
-		DATIVE = "торговому автомату ArtVend",
-		ACCUSATIVE = "торговый автомат ArtVend",
-		INSTRUMENTAL = "торговым автоматом ArtVend",
-		PREPOSITIONAL = "торговом автомате ArtVend",
 	)

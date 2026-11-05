@@ -12,19 +12,19 @@
 
 /obj/item/clothing/ears/earrings
 	name = "Earrings"
-	desc = "Простые золотые серёжки"
+	desc = "Simple gold earrings."
 	icon_state = "earring_gold"
 	item_state = "earring_gold"
 	species_restricted = list(SPECIES_HUMAN, SPECIES_VOX, SPECIES_VULPKANIN, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_DRASK, SPECIES_SLIMEPERSON, SPECIES_SKRELL, SPECIES_MACHINEPERSON, SPECIES_MOTH, SPECIES_NUCLEATION)
 
 /obj/item/clothing/ears/earrings/Nt
 	name = "Earrings NT"
-	desc = "Золотые серьги с гравировкой НТ"
+	desc = "Gold earrings engraved with NT."
 	icon_state = "earring_NT"
 	item_state = "earring_NT"
 
 /obj/item/clothing/ears/earrings/silver
 	name = "Silver earings"
-	desc = "Простые серебряные серьги"
+	desc = "Simple silver earrings."
 	icon_state = "earring_silver"
 	item_state = "earring_silver"

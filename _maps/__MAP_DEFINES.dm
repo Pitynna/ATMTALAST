@@ -27,8 +27,6 @@
 	#define AI_OK "AI Allowed"
 	/// Ruins will spawn on this z-level
 	#define SPAWN_RUINS "Spawn Ruins"
-	/// Ghost role Taipan z-level.
-	#define TAIPAN "RaMSS Taipan"
 	/// Reserved z-level used only by shuttles
 	#define RESERVED_LEVEL "Transit/Reserved"
 	/// A level used for spawning map areas in tests
@@ -44,7 +42,6 @@
 	#define MINING "Lavaland"
 	#define EMPTY_AREA "Empty Area"
 	#define AWAY_MISSION "Away Mission"
-	#define RAMSS_TAIPAN "RAMSS Taipan"
 	#define RESERVED_ZONE "Transit/Reserved"
 
 /*
@@ -56,7 +53,6 @@ If something breaks due to z order change, it means it's hardcoded and then it m
 2: Admin Zone
 3: Station
 4: Mining
-5: Taipan
 6: Away mission
 7-11: Randomized space
 last: Transit

@@ -158,17 +158,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				return_name = initial(our_reagent.name)
 	return capitalize(return_name)
 
-/obj/machinery/computer/rdconsole/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО",
-		GENITIVE = "консоли НИО",
-		DATIVE = "консоли НИО",
-		ACCUSATIVE = "консоль НИО",
-		INSTRUMENTAL = "консолью НИО",
-		PREPOSITIONAL = "консоли НИО",
-	)
-
-/// Makes sure it is properly sync'ed up with the devices attached to it (if any).
 /obj/machinery/computer/rdconsole/proc/SyncRDevices()
 	for(var/obj/machinery/r_n_d/D in range(range, src))
 		if(!isnull(D.linked_console) || D.panel_open)
@@ -213,15 +202,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	))
 	files = new /datum/research(src) //Setup the research data holder.
 	matching_designs = list()
-	if(is_taipan(z))
-		syndicate = 1
-		ui_theme = "syndicate"
-		icon_screen = "syndie_rdcomp"
-		icon_keyboard = "syndie_key"
-		req_access = list(ACCESS_SYNDICATE_SCIENTIST)
-		id = 0027
-		update_icon()
-
 	SyncRDevices()
 
 /obj/machinery/computer/rdconsole/Destroy()
@@ -391,12 +371,10 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			return
 
 	linked_destroy.busy = TRUE
-	CALCULATE_SKILL_MOD(user, RESEARCH_DURATION_MOD, skill_duration_mod)
-	var/deconstruct_delay = DECONSTRUCT_DELAY * skill_duration_mod
 	flick("[linked_destroy.base_icon_state]_process", linked_destroy)
-	add_wait_message("Разборка объекта и обновление базы данных...", deconstruct_delay)
+	add_wait_message("Разборка объекта и обновление базы данных...", DECONSTRUCT_DELAY)
 	playsound(loc, 'sound/machines/rnd_machines/destructor_scanning.ogg', HALFWAY_SOUND_VOLUME, TRUE, -1, use_reverb = TRUE)
-	addtimer(CALLBACK(src, PROC_REF(finish_destroyer), temp_tech, user), deconstruct_delay)
+	addtimer(CALLBACK(src, PROC_REF(finish_destroyer), temp_tech, user), DECONSTRUCT_DELAY)
 
 // Sends salvaged materials to a linked protolathe, if any.
 /obj/machinery/computer/rdconsole/proc/send_mats()
@@ -417,10 +395,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	if(!linked_destroy || !temp_tech)
 		return FALSE
 
-	var/success = TRUE
-	if(user)
-		CALCULATE_SKILL_MOD(user, RESEARCH_SUCCESS_MOD, skill_chance_mod)
-		success = prob(100 * skill_chance_mod)
 
 	var/actually_increased = FALSE
 
@@ -428,7 +402,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		if(!linked_destroy.loaded_item)
 			if(user)
 				to_chat(user, span_danger("[DECLENT_RU_CAP(linked_destroy, NOMINATIVE)] пуст!"))
-		else if(success)
+		else
 			var/tech_log
 			for(var/T in temp_tech)
 				var/new_level = files.UpdateTech(T, temp_tech[T])
@@ -482,14 +456,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		to_chat(user, span_danger("Выбран неизвестный шаблон печати!"))
 		return FALSE
 
-	var/skill_rand_prob = 1
-	if(usr)
-		CALCULATE_SKILL_MOD(user, PROTOLATHE_RAND_BUILD_PROB, calculated_prob)
-		skill_rand_prob = calculated_prob
-	skill_rand_prob *= 100
-	if(user && prob(skill_rand_prob))
-		being_built = pick(matching_designs)
-
 	for(var/obj/machinery/r_n_d/server/rnd_server as anything in connected_servers)
 		if(!rnd_server || QDELETED(rnd_server))
 			continue
@@ -512,28 +478,19 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	var/max_amount = is_lathe ? 10 : 1
 	amount = max(1, min(max_amount, amount))
 
-	var/protolathe_skill_level
-	GET_SKILL_LEVEL(user, /datum/skill/research/protolathe, calculated_level)
-	protolathe_skill_level = calculated_level ||= SKILL_LEVEL_BASIC
-	if(protolathe_skill_level < SKILL_LEVEL_BASIC)
-		amount += rand(0, 3)
-
 	var/power = BUILD_POWER
 	for(var/M in being_built.materials)
 		power += round(being_built.materials[M] * amount / 5)
 	power = max(BUILD_POWER, power)
 
-	var/skill_duration_mod = 1
-	if(user)
-		CALCULATE_SKILL_MOD(user, PROTOLATHE_DURATION_MOD, calculated_duration)
-		skill_duration_mod = calculated_duration
+	// goes down (1 -> 0.4) with upgrades
 	var/coeff = machine.efficiency_coeff
 
 	var/time_to_construct = 0
 	if(is_imprinter)
-		time_to_construct = IMPRINTER_DELAY * amount * skill_duration_mod
+		time_to_construct = IMPRINTER_DELAY * amount
 	else
-		time_to_construct = PROTOLATHE_CONSTRUCT_DELAY * coeff * skill_duration_mod * being_built.lathe_time_factor * (amount ** 0.8)
+		time_to_construct = PROTOLATHE_CONSTRUCT_DELAY * coeff * being_built.lathe_time_factor * amount ** 0.8
 
 	if(is_lathe)
 		if(user)
@@ -548,11 +505,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	machine.busy = TRUE
 	use_power(power)
 
-	var/skill_resource_mod = 1
-	if(user)
-		CALCULATE_SKILL_MOD(user, PROTOLATHE_RESOURCE_MOD, calculated_resource)
-		skill_resource_mod = calculated_resource
-	coeff *= skill_resource_mod
 	var/list/efficient_mats = list()
 	for(var/MAT in being_built.materials)
 		efficient_mats[MAT] = being_built.materials[MAT] * coeff
@@ -596,7 +548,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	if(user)
 		investigate_log("[key_name_log(user)] built [amount] of [being_built.build_path] via [machine].", INVESTIGATE_RESEARCH)
 
-	var/locked = being_built.locked && !is_taipan(z)
+	var/locked = being_built.locked
 
 	for(var/print_index in 1 to amount)
 		var/obj/new_item = new being_built.build_path(!user ? src : machine.loc)
@@ -628,7 +580,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			var/list/lockbox_access
 			for(var/access_id in lockbox.req_access)
 				lockbox_access += "[get_access_desc(access_id)] "
-			lockbox.desc = "Металлический контейнер с электронным замком. Требуемый уровень доступа — \[[lockbox_access]\]."
+			lockbox.desc = "A metal container with an electronic lock. Required access: \[[lockbox_access]\]."
 
 			if(!user)
 				SEND_SIGNAL(src, COMSIG_CIRCUIT_RND_PRINT_COMPLETE, lockbox)
@@ -731,7 +683,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 					INSTRUMENTAL = "дискетой технологий ([new_known])",
 					PREPOSITIONAL = "дискете технологий ([new_known])"
 				)
-				t_disk.desc = new_known.desc + " <b>Уровень: \"[new_known.level]\"</b>."
+				t_disk.desc = new_known.desc + " <b>Level: \"[new_known.level]\"</b>."
 				t_disk.stored = new_known
 			menu = MENU_DISK
 			submenu = SUBMENU_MAIN
@@ -1187,20 +1139,8 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/core
 	name = "core R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Является основным узлом НИО."
+	desc = "A console used to interface with R&D tools."
 	id = 1
-
-/obj/machinery/computer/rdconsole/core/get_ru_names()
-	return alist(
-		NOMINATIVE = "главная консоль НИО",
-		GENITIVE = "главной консоли НИО",
-		DATIVE = "главной консоли НИО",
-		ACCUSATIVE = "главную консоль НИО",
-		INSTRUMENTAL = "главной консолью НИО",
-		PREPOSITIONAL = "главной консоли НИО",
-	)
 
 /obj/machinery/computer/rdconsole/core/old_frame
 	icon = 'icons/obj/machines/computer3.dmi'
@@ -1210,60 +1150,24 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/robotics
 	name = "robotics R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия, используемая в отделах робототехники."
+	desc = "A console used to interface with R&D tools."
 	id = 2
 	req_access = list(ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/rdconsole/robotics
 
-/obj/machinery/computer/rdconsole/robotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "робототехническая консоль НИО",
-		GENITIVE = "робототехнической консоли НИО",
-		DATIVE = "робототехнической консоли НИО",
-		ACCUSATIVE = "робототехническую консоль НИО",
-		INSTRUMENTAL = "робототехнической консолью НИО",
-		PREPOSITIONAL = "робототехнической консоли НИО",
-	)
-
 /obj/machinery/computer/rdconsole/experiment
 	name = "E.X.P.E.R.I-MENTOR R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия, используемая для работы с \"Э.К.С.П.Е.Р.И-МЕНТОР\"."
+	desc = "A console used to interface with R&D tools."
 	id = 3
 	range = 5
 	circuit = /obj/item/circuitboard/rdconsole/experiment
 
-/obj/machinery/computer/rdconsole/experiment/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		GENITIVE = "консоли НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		DATIVE = "консоли НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		ACCUSATIVE = "консоль НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		INSTRUMENTAL = "консолью НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-		PREPOSITIONAL = "консоли НИО (Э.К.С.П.Е.Р.И-МЕНТОР)",
-	)
-
 /obj/machinery/computer/rdconsole/mechanics
 	name = "mechanics R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия, используемая в мастерской для челноков."
+	desc = "A console used to interface with R&D tools."
 	id = 4
 	req_access = list(ACCESS_MECHANIC)
 	circuit = /obj/item/circuitboard/rdconsole/mechanics
-
-/obj/machinery/computer/rdconsole/mechanics/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО (Мастерская челноков)",
-		GENITIVE = "консоли НИО (Мастерская челноков)",
-		DATIVE = "консоли НИО (Мастерская челноков)",
-		ACCUSATIVE = "консоль НИО (Мастерская челноков)",
-		INSTRUMENTAL = "консолью НИО (Мастерская челноков)",
-		PREPOSITIONAL = "консоли НИО (Мастерская челноков)",
-	)
 
 /obj/machinery/computer/rdconsole/mechanics/old_frame
 	icon = 'icons/obj/machines/computer3.dmi'
@@ -1272,26 +1176,14 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 /obj/machinery/computer/rdconsole/public
 	name = "public R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий и \
-			управлению подключённым исследовательским оборудованием. \
-			Специализированная версия без ограничений по уровню доступа пользователя."
+	desc = "A console used to interface with R&D tools."
 	id = 5
 	req_access = list()
 	circuit = /obj/item/circuitboard/rdconsole/public
 
-/obj/machinery/computer/rdconsole/public/get_ru_names()
-	return alist(
-		NOMINATIVE = "публичная консоль НИО",
-		GENITIVE = "публичной консоли НИО",
-		DATIVE = "публичной консоли НИО",
-		ACCUSATIVE = "публичную консоль НИО",
-		INSTRUMENTAL = "публичной консолью НИО",
-		PREPOSITIONAL = "публичной консоли НИО",
-	)
-
 /obj/machinery/computer/rdconsole/cargo
 	name = "cargo R&D console"
-	desc = "Компьютер, обеспечивающий доступ к базе данных технологий. Специализированная версия, используемая в отделе Снабжения."
+	desc = "A computer providing access to the technology database. A specialized model used by the Supply Department."
 	id = 6
 	req_access = list(ACCESS_CARGO)
 	circuit = /obj/item/circuitboard/rdconsole/cargo
@@ -1301,16 +1193,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	icon_state = "cargocomp"
 	icon_screen = "cargocomp_screen_passive"
 	icon_keyboard = null
-
-/obj/machinery/computer/rdconsole/cargo/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль НИО отдела Снабжения",
-		GENITIVE = "консоли НИО отдела Снабжения",
-		DATIVE = "консоли НИО отдела Снабжения",
-		ACCUSATIVE = "консоль НИО отдела Снабжения",
-		INSTRUMENTAL = "консолью НИО отдела Снабжения",
-		PREPOSITIONAL = "консоли НИО отдела Снабжения"
-	)
 
 #undef TECH_UPDATE_DELAY
 #undef DESIGN_UPDATE_DELAY

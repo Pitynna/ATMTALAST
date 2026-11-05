@@ -27,12 +27,6 @@
 /turf/simulated/wall/indestructible/singularity_pull(atom/singularity, current_size)
 	return
 
-/turf/simulated/wall/indestructible/narsie_act()
-	return
-
-/turf/simulated/wall/indestructible/ratvar_act()
-	return
-
 /turf/simulated/wall/indestructible/burn_down()
 	return
 
@@ -273,14 +267,6 @@
 	canSmoothWith = SMOOTH_GROUP_BANANIUM_WALLS
 	smoothing_groups = SMOOTH_GROUP_BANANIUM_WALLS
 
-/turf/simulated/wall/indestructible/cult
-	name = "runed metal wall"
-	desc = "A cold metal wall engraved with indecipherable symbols. Studying them causes your head to pound."
-	icon = 'icons/turf/walls/cult_wall.dmi'
-	icon_state = "cult"
-	canSmoothWith = null
-	smoothing_groups = null
-
 /turf/simulated/wall/indestructible/mineral_rock
 	name = "rock"
 	icon = 'icons/turf/smoothrocks.dmi'
@@ -305,23 +291,6 @@
 // used with /effect/view_portal in order to get rid of dynamic lighting.
 /turf/simulated/wall/indestructible/invisible/view_portal
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-
-/turf/simulated/wall/indestructible/bingle
-	name = "Bingle Pit wall"
-	desc = "Оно... синее. Это всё, что приходит вам в голову. Вы не уверены, что это вообще можно разрушить."
-	icon = 'icons/turf/walls/bingle.dmi'
-	icon_state = "wall-0"
-	smooth = SMOOTH_BITMASK
-
-/turf/simulated/wall/indestructible/bingle/get_ru_names()
-	return alist(
-		NOMINATIVE = "яма Бинглов",
-		GENITIVE = "ямы Бинглов",
-		DATIVE = "яме Бинглов",
-		ACCUSATIVE = "яму Бинглов",
-		INSTRUMENTAL = "ямой Бинглов",
-		PREPOSITIONAL = "яме Бинглов",
-	)
 
 /turf/simulated/wall/indestructible/opsglass
 	name = "window"

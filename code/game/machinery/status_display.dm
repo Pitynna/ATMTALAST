@@ -42,7 +42,7 @@ GLOBAL_LIST_INIT(statdisp_picture_colors, list(
 /obj/machinery/status_display
 	icon = 'icons/obj/status_display.dmi'
 	icon_state = "frame"
-	name = "дисплей статуса"
+	name = "status display"
 	anchored = TRUE
 	idle_power_usage = 10
 	maptext_height = 26

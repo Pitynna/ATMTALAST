@@ -4,8 +4,7 @@
 
 /obj/item/multitool
 	name = "multimeter"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Результаты ЭКГ, снятого данным аппаратом, не признаются ни одной клиникой."
+	desc = "A compact gadget used for testing electrical connections, manipulating wiring, and accessing certain locking mechanisms."
 	gender = MALE
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "multitool"
@@ -31,16 +30,6 @@
 	var/obj/machinery/buffer
 	var/datum/multitool_menu_host/menu
 	var/broken_type = /obj/item/multitool_broken
-
-/obj/item/multitool/get_ru_names()
-	return alist(
-		NOMINATIVE = "мультиметр",
-		GENITIVE = "мультиметра",
-		DATIVE = "мультиметру",
-		ACCUSATIVE = "мультиметр",
-		INSTRUMENTAL = "мультиметром",
-		PREPOSITIONAL = "мультиметре",
-	)
 
 /obj/item/multitool/Initialize(mapload)
 	. = ..()
@@ -84,8 +73,7 @@
 
 /obj/item/multitool_broken
 	name = "broken multimeter"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Похоже, что он полностью сгорел."
+	desc = "An electrical instrument for measuring current characteristics and testing circuit continuity. It appears to be completely burned out."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "multitool_broken"
 	item_state = "multitool"
@@ -95,17 +83,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=50, MAT_GLASS=20)
 
-/obj/item/multitool_broken/get_ru_names()
-	return alist(
-		NOMINATIVE = "сломанный мультиметр",
-		GENITIVE = "сломанного мультиметра",
-		DATIVE = "сломанному мультиметру",
-		ACCUSATIVE = "сломанный мультиметр",
-		INSTRUMENTAL = "сломанным мультиметром",
-		PREPOSITIONAL = "сломанном мультиметре",
-	)
-
-// Syndicate device disguised as a multitool; it will turn red when an AI camera is nearby.
 /obj/item/multitool/ai_detect
 	var/track_cooldown = 0
 	/// How often it checks for proximity
@@ -160,8 +137,7 @@
 				break
 
 /obj/item/multitool/ai_detect/admin
-	desc = "Используется для подачи импульсов на провода, чтобы определить, какой из них перерезать. \
-			Не одобряется врачами. Имеет странную бирку с надписью: \"Гриферить в удовольствие\"."
+	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors. Has a strange tag that says 'Grief in Safety'" //What else should I say for a meme item?
 	track_delay = 5
 	shows_wire_information = TRUE
 
@@ -176,7 +152,7 @@
 				break
 
 /obj/item/multitool/cyborg
-	desc = "Оптимизированная компактная версия стандартного мультиметра."
+	desc = "An integrated multitool used for electrical maintenance, typically found in construction and engineering robots."
 	toolspeed = 0.5
 
 /obj/item/multitool/cyborg/ComponentInitialize()
@@ -185,8 +161,7 @@
 
 /obj/item/multitool/abductor
 	name = "alien multimeter"
-	desc = "Прибор из неизвестного сплава с голографическим интерфейсом. \
-			Похоже, что он предназначен для измерения показателей электрических объектов."
+	desc = "An omni-technological interface."
 	icon = 'icons/obj/abductor.dmi'
 	toolspeed = 0.1
 	usesound = 'sound/items/multitool2.ogg'
@@ -197,20 +172,9 @@
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
 
-/obj/item/multitool/abductor/get_ru_names()
-	return alist(
-		NOMINATIVE = "чужеродный мультиметр",
-		GENITIVE = "чужеродного мультиметра",
-		DATIVE = "чужеродному мультиметру",
-		ACCUSATIVE = "чужеродный мультиметр",
-		INSTRUMENTAL = "чужеродным мультиметром",
-		PREPOSITIONAL = "чужеродном мультиметре"
-	)
-
 /obj/item/multitool/brass
 	name = "brass multimeter"
-	desc = "Механический прибор из латуни, измеряющий показания тока. \
-			Отсутствие электронных компонентов делает его невосприимчивым к ЭМИ."
+	desc = "A multitool made of brass. You feel some signals coming out."
 	icon_state = "multitool_brass"
 	toolspeed = 0.5
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -219,20 +183,9 @@
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
 
-/obj/item/multitool/brass/get_ru_names()
-	return alist(
-		NOMINATIVE = "латунный мультиметр",
-		GENITIVE = "латунного мультиметра",
-		DATIVE = "латунному мультиметру",
-		ACCUSATIVE = "латунный мультиметр",
-		INSTRUMENTAL = "латунным мультиметром",
-		PREPOSITIONAL = "латунном мультиметре"
-	)
-
 /obj/item/multitool/old
 	name = "old multimeter"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Выглядит весьма устаревшим."
+	desc = "An electrical instrument for measuring current characteristics and testing circuit continuity. It looks rather outdated."
 	icon_state = "multitool_old_wire"
 	belt_icon = "multitool_old_wire"
 
@@ -240,34 +193,14 @@
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
 
-/obj/item/multitool/old/get_ru_names()
-	return alist(
-		NOMINATIVE = "старый мультиметр",
-		GENITIVE = "старого мультиметра",
-		DATIVE = "старому мультиметру",
-		ACCUSATIVE = "старый мультиметр",
-		INSTRUMENTAL = "старым мультиметром",
-		PREPOSITIONAL = "старом мультиметре",
-	)
-
 /obj/item/multitool/industrial
 	name = "industrial multitool"
-	desc = "Электрический прибор для измерения параметров тока и прозвонки электрических цепей. \
-			Оснащён более производительным процессором, по сравнению со стандартными моделями, что значительно увеличивает скорость работы."
+	desc = "An electrical instrument for measuring current characteristics and testing circuit continuity. A more powerful processor greatly improves its operating speed compared with standard models."
 	icon_state = "multitool_industrial"
 	usesound = 'sound/items/multitool2.ogg'
 	toolspeed = 0.6
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
-/obj/item/multitool/industrial/get_ru_names()
-	return alist(
-		NOMINATIVE = "продвинутый мультиметр",
-		GENITIVE = "продвинутого мультиметра",
-		DATIVE = "продвинутому мультиметру",
-		ACCUSATIVE = "продвинутый мультиметр",
-		INSTRUMENTAL = "продвинутым мультиметром",
-		PREPOSITIONAL = "продвинутом мультиметре",
-	)
 #undef PROXIMITY_NONE
 #undef PROXIMITY_ON_SCREEN
 #undef PROXIMITY_NEAR

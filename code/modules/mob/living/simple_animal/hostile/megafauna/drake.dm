@@ -487,22 +487,12 @@ Difficulty: Medium
 
 /obj/effect/temp_visual/drakewall
 	name = "Fire Barrier"
-	desc = "Истинное пламя пепельного дрейка."
+	desc = "An ash drakes true flame."
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "1"
 	density = TRUE
 	duration = 82
 	color = COLOR_DARK_ORANGE
-
-/obj/effect/temp_visual/drakewall/get_ru_names()
-	return alist(
-		NOMINATIVE = "огненный барьер",
-		GENITIVE = "огненного барьера",
-		DATIVE = "огненному барьеру",
-		ACCUSATIVE = "огненный барьер",
-		INSTRUMENTAL = "огненным барьером",
-		PREPOSITIONAL = "огненном барьере",
-	)
 
 /obj/effect/temp_visual/drakewall/CanAtmosPass(direction)
 	return !density
@@ -516,23 +506,13 @@ Difficulty: Medium
 
 /obj/effect/temp_visual/dragon_swoop
 	name = "certain death"
-	desc = "Не стойте на месте, двигайтесь!"
+	desc = "Don't just stand there, move!"
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "landing"
 	layer = BELOW_MOB_LAYER
 	pixel_x = -32
 	pixel_y = -32
 	color = "#FF0000"
-
-/obj/effect/temp_visual/dragon_swoop/get_ru_names()
-	return alist(
-		NOMINATIVE = "неизбежная смерть",
-		GENITIVE = "неизбежной смерти",
-		DATIVE = "неизбежной смерти",
-		ACCUSATIVE = "неизбежную смерть",
-		INSTRUMENTAL = "неизбежной смертью",
-		PREPOSITIONAL = "неизбежной смерти",
-	)
 
 /obj/effect/temp_visual/dragon_flight
 	icon = 'icons/mob/lavaland/64x64megafauna.dmi'
@@ -572,21 +552,11 @@ Difficulty: Medium
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "fireball"
 	name = "fireball"
-	desc = "Убирайтесь с дороги!"
+	desc = "Get out of the way!"
 	layer = FLY_LAYER
 	randomdir = FALSE
 	duration = 9
 	pixel_z = 270
-
-/obj/effect/temp_visual/fireball/get_ru_names()
-	return alist(
-		NOMINATIVE = "огненный шар",
-		GENITIVE = "огненного шара",
-		DATIVE = "огненному шару",
-		ACCUSATIVE = "огненный шар",
-		INSTRUMENTAL = "огненным шаром",
-		PREPOSITIONAL = "огненном шаре",
-	)
 
 /obj/effect/temp_visual/fireball/Initialize(mapload)
 	. = ..()

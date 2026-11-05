@@ -155,8 +155,8 @@
 	scanner.attach(src, MECH_HAND_RIGHT)
 
 /obj/mecha/working/ripley/full_load
-	name = "Тестовый Рипли"
-	desc = "Рипли, который несет в себе все возможные модули, предназначенные для рабочих мехов, с целью их испытания в индивидуальном порядке. Конструкция надежна как Nokia 3310, скорость как у гоночного болида, но стоимость производства настолько высока, что в массовое производство он никогда не пойдет. Специально для ведущих гениев робототехники."
+	name = "test Ripley"
+	desc = "A Ripley carrying every available working-mech module for individual testing. As reliable as a Nokia 3310 and as fast as a racing car, but so expensive to manufacture that it will never enter mass production. Reserved for the leading minds in robotics."
 	max_equip = 40
 	strafe_allowed = TRUE
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, fire = 0, acid = 0) // для тестов урона

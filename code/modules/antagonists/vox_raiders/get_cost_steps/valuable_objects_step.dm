@@ -1,7 +1,6 @@
 /datum/get_cost_step/valuable_objects_step
 	var/list/valuable_objects_dict = list(
 		/obj/machinery/nuclearbomb = 5000,
-		/obj/item/mod = 300,
 		/obj/machinery/power/port_gen = 800,
 		/obj/machinery/power = 600,
 		/obj/machinery/the_singularitygen/tesla = 8000,

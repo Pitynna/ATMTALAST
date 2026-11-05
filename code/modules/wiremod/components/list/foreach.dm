@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/foreach
 	display_name = "Перебор списка"
-	desc = "Компонент, который перебирает каждый элемент в списке."
+	desc = "A component that iterates over each entry in a list."
 	category = "List"
 
 	/// The list type

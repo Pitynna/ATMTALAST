@@ -9,11 +9,10 @@
 #define MINESWEEPER_16X30 "16x30"
 
 /obj/machinery/arcade/minesweeper
-	name = "Cапёр"
+	name = "Minesweeper"
 	icon_state = "minesweeper"
-	desc = "Классическая аркадная игра про флашки, цифры и БОМБЫ."
+	desc = "A classic arcade game about flags, numbers and BOMBS."
 	light_color = LIGHT_COLOR_BLUE
-	tts_seed = "Livsy"
 	token_price = 10
 	/// Livsy says after win
 	var/list/win_phrases = list("Ох, ну надо же!", "Вот это да!", "Видимо в этот раз без взрыва!")

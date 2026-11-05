@@ -19,60 +19,29 @@
 // MARK: Coffee cup
 /obj/item/reagent_containers/cup/glass/coffee_cup/normal
 	name = "coffee cup"
-	desc = "Удобный бумажный стакан со снимающейся крышкой. Предназначен для питья кофе."
+	desc = "A convenient paper cup with a removable lid, intended for coffee."
 	icon_state = "coffeecup"
 	base_icon_state = "coffeecup"
 	possible_transfer_amounts = list(10,25,50)
 	can_lid = TRUE
 	fill_icon_thresholds = list(55, 70, 85, 100)
 
-/obj/item/reagent_containers/cup/glass/coffee_cup/normal/get_ru_names()
-	return alist(
-		NOMINATIVE = "стакан кофе",
-		GENITIVE = "стакана кофе",
-		DATIVE = "стакану кофе",
-		ACCUSATIVE = "стакан кофе",
-		INSTRUMENTAL = "стаканом кофе",
-		PREPOSITIONAL = "стакане кофе"
-	)
-
-// MARK: Small coffee cup
 /obj/item/reagent_containers/cup/glass/coffee_cup/small
 	name = "small coffee cup"
-	desc = "Небольшой бумажный стакан. Обычно в таких подают кофе. Далеко не самый удобный."
+	desc = "A small paper cup commonly used to serve coffee. Not especially convenient."
 	icon_state = "coffeecup_small"
 	base_icon_state = "coffeecup_small"
 	possible_transfer_amounts = list(10,30)
 	volume = 30
 	fill_icon_thresholds = list(40, 60, 80, 100)
 
-/obj/item/reagent_containers/cup/glass/coffee_cup/small/get_ru_names()
-	return alist(
-		NOMINATIVE = "стаканчик кофе",
-		GENITIVE = "стаканчика кофе",
-		DATIVE = "стаканчику кофе",
-		ACCUSATIVE = "стаканчик кофе",
-		INSTRUMENTAL = "стаканчиком кофе",
-		PREPOSITIONAL = "стаканчике кофе"
-	)
-
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee
 	list_reagents = list("coffee" = 30)
 
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor
 	name = "cup of suspicious liquid"
-	desc = "На боковой стороне крупными, едва заметными, чернилами напечатан символ химической опасности."
+	desc = "A large, barely visible chemical hazard symbol is printed on its side."
 	var/selected_reagent
-
-/obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor/small/get_ru_names()
-	return alist(
-		NOMINATIVE = "стаканчик подозрительной жидкости",
-		GENITIVE = "стаканчика подозрительной жидкости",
-		DATIVE = "стаканчику подозрительной жидкости",
-		ACCUSATIVE = "стаканчик подозрительной жидкости",
-		INSTRUMENTAL = "стаканчиком подозрительной жидкости",
-		PREPOSITIONAL = "стаканчике подозрительной жидкости"
-	)
 
 /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee/experimentor/Initialize(mapload)
 	. = ..()

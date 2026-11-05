@@ -1,7 +1,7 @@
 
 /obj/machinery/juicer
 	name = "Juicer"
-	desc = "Машина для переработки твёрдых пищевых продуктов в форму сока. Принимает практически любой выращенный плод."
+	desc = "A machine for processing solid food into juice. Accepts almost any cultivated fruit."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "juicer1"
 	density = TRUE
@@ -27,16 +27,6 @@
 		/obj/item/reagent_containers/food/snacks/grown/blumpkin = "blumpkinjuice",
 		/obj/item/reagent_containers/food/snacks/grown/pineapple = "pineapplejuice",
 		/obj/item/reagent_containers/food/snacks/grown/peaslaugh = "laughsyrup"
-	)
-
-/obj/machinery/juicer/get_ru_names()
-	return alist(
-		NOMINATIVE = "соковыжималка",
-		GENITIVE = "соковыжималки",
-		DATIVE = "соковыжималке",
-		ACCUSATIVE = "соковыжималку",
-		INSTRUMENTAL = "соковыжималкой",
-		PREPOSITIONAL = "соковыжималке"
 	)
 
 /obj/machinery/juicer/Initialize(mapload)

@@ -5,16 +5,6 @@
 	damage = 4
 	damage_type = BURN
 
-/obj/projectile/snowball/get_ru_names()
-	return alist(
-		NOMINATIVE = "снежок",
-		GENITIVE = "снежка",
-		DATIVE = "снежку",
-		ACCUSATIVE = "снежок",
-		INSTRUMENTAL = "снежком",
-		PREPOSITIONAL = "снежке",
-	)
-
 /obj/projectile/snowball/on_hit(atom/target)	//chilling
 	. = ..()
 	if(isliving(target))

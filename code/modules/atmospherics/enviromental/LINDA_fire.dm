@@ -90,13 +90,7 @@
 	var/heat_a = 255
 	var/greyscale_fire = 1 //This determines how greyscaled the fire is.
 
-	if(cached_temperature < FREON_MAXIMUM_BURN_TEMPERATURE && coldfire_possible)
-		heat_r = 0
-		heat_g = LERP(255, cached_temperature, 1.2)
-		heat_b = max(100, LERP(255, cached_temperature, 0.9))
-		heat_a = 100
-
-	else if(cached_temperature < 5000) //This is where fire is very orange, we turn it into the normal fire texture here.
+	if(cached_temperature < 5000) //This is where fire is very orange, we turn it into the normal fire texture here.
 		var/normal_amt = gauss_lerp(cached_temperature, 1000, 3000)
 		heat_r = LERP(heat_r, 255, normal_amt)
 		heat_g = LERP(heat_g, 255, normal_amt)
@@ -172,8 +166,6 @@
 
 
 /obj/effect/hotspot/proc/perform_exposure()
-	if(temperature < FREON_MAXIMUM_BURN_TEMPERATURE && coldfire_possible)
-		return
 	for(var/atom/item in loc.contents)
 		if(!QDELETED(item) && item != src && !(item.resistance_flags & (INDESTRUCTIBLE|FIRE_PROOF))) // It's possible that the item is deleted in temperature_expose
 			item.fire_act(temperature, volume)
@@ -193,9 +185,6 @@
 
 /obj/effect/hotspot/proc/on_atom_entered(datum/source, mob/living/entered)
 	SIGNAL_HANDLER // COMSIG_ATOM_ENTERED
-
-	if(temperature < FREON_MAXIMUM_BURN_TEMPERATURE)
-		return
 
 	if(istype(entered))
 		entered.fire_act()

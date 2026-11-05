@@ -2,7 +2,7 @@
 
 /obj/machinery/atmospherics/reactor_chamber
 	name = "rod housing chamber"
-	desc = "Камера для размещения ядерных стержней различных типов, необходимых для протекания реакции деления."
+	desc = "A chamber used to house nuclear rods of various types to facilitate a fission reaction."
 	icon = 'icons/obj/fission/reactor_chamber.dmi'
 	icon_state = "chamber_down"
 	layer = BELOW_OBJ_LAYER
@@ -42,16 +42,6 @@
 	var/durability_level = 0
 	/// Holds our previous overlay.
 	var/previous_durability_level
-
-/obj/machinery/atmospherics/reactor_chamber/get_ru_names()
-	return alist(
-		NOMINATIVE = "камера размещения стержней",
-		GENITIVE = "камеры размещения стержней",
-		DATIVE = "камере размещения стержней",
-		ACCUSATIVE = "камеру размещения стержней",
-		INSTRUMENTAL = "камерой размещения стержней",
-		PREPOSITIONAL = "камере размещения стержней",
-	)
 
 /obj/machinery/atmospherics/reactor_chamber/Initialize(mapload)
 	. = ..()
@@ -854,20 +844,10 @@
 
 /obj/effect/immovablerod/nuclear_rod
 	name = "Nuclear Coolant Rod"
-	desc = "Если вас ударит этим, вы, возможно, пожалеете, что не получили лучевую болезнь."
+	desc = "Getting hit by this might make you wish you got radiation sickness instead."
 	notify = FALSE
 	var/turf/end
 	var/obj/held_rod
-
-/obj/effect/immovablerod/nuclear_rod/get_ru_names()
-	return alist(
-		NOMINATIVE = "ядерный охлаждающий стержень",
-		GENITIVE = "ядерного охлаждающего стержня",
-		DATIVE = "ядерному охлаждающему стержню",
-		ACCUSATIVE = "ядерный охлаждающий стержень",
-		INSTRUMENTAL = "ядерным охлаждающим стержнем",
-		PREPOSITIONAL = "ядерном охлаждающем стержне",
-	)
 
 /obj/effect/immovablerod/nuclear_rod/Initialize(mapload, atom/target_atom, move_delay, force_looping)
 	end = get_turf(target_atom)

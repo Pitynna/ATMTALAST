@@ -24,7 +24,7 @@
 /obj/item/storage/box
 	name = "box"
 	icon = 'icons/obj/storage/boxes.dmi'
-	desc = "Это обычная коробка."
+	desc = "It's just an ordinary box."
 	icon_state = "box"
 	righthand_file = 'icons/mob/inhands/storage_righthand.dmi'
 	lefthand_file = 'icons/mob/inhands/storage_lefthand.dmi'
@@ -43,23 +43,13 @@
 
 /obj/item/storage/box/large
 	name = "large box"
-	desc = "Это крайне вместительная коробка."
+	desc = "You could build a fort with this."
 	icon_state = "largebox"
 	item_state = "largebox"
 	w_class = 4 // Big, bulky.
 	foldable_amt = 4
 	storage_slots = 21
 	max_combined_w_class = 42 // 21*2
-
-/obj/item/storage/box/large/get_ru_names()
-	return alist(
-		NOMINATIVE = "большая коробка",
-		GENITIVE = "большой коробки",
-		DATIVE = "большой коробке",
-		ACCUSATIVE = "большую коробку",
-		INSTRUMENTAL = "большой коробкой",
-		PREPOSITIONAL = "большой коробке",
-	)
 
 /obj/item/storage/box/gloves
 	name = "box of latex gloves"
@@ -295,19 +285,9 @@
 
 /obj/item/storage/box/donkpockets
 	name = "box of donk-pockets"
-	desc = "<b>Инструкция:</b> <i>Разогрейте в микроволновой печи. Если продукт не употреблять в течение семи минут, он остынет.</i>"
+	desc = "A heavy, insulated box that reads, <b>Instructions:</b> <i>Heat in microwave. Product will cool if not eaten within seven minutes. Store product in box to keep warm.</i>"
 	icon_state = "donkpocket_box"
 	item_state = "donks"
-
-/obj/item/storage/box/donkpockets/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка с Донк-покетами",
-		GENITIVE = "коробки с Донк-покетами",
-		DATIVE = "коробке с Донк-покетами",
-		ACCUSATIVE = "коробку с Донк-покетами",
-		INSTRUMENTAL = "коробкой с Донк-покетами",
-		PREPOSITIONAL = "коробке с Донк-покетами",
-	)
 
 /obj/item/storage/box/donkpockets/populate_contents()
 	for(var/I in 1 to 6)
@@ -315,19 +295,9 @@
 
 /obj/item/storage/box/warmdonkpockets
 	name = "box of warm donk-pockets"
-	desc = "Коробка с уже разогретыми Донк-покетами. Ням-ням!"
+	desc = "A box of already-heated donk-pockets. Yum!"
 	icon_state = "donkpocket_box"
 	item_state = "donks"
-
-/obj/item/storage/box/warmdonkpockets/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка с разогретыми Донк-покетами",
-		GENITIVE = "коробки с разогретыми Донк-покетами",
-		DATIVE = "коробке с разогретыми Донк-покетами",
-		ACCUSATIVE = "коробку с разогретыми Донк-покетами",
-		INSTRUMENTAL = "коробкой с разогретыми Донк-покетами",
-		PREPOSITIONAL = "коробке с разогретыми Донк-покетами",
-	)
 
 /obj/item/storage/box/warmdonkpockets/populate_contents()
 	for(var/i in 1 to 6)
@@ -336,19 +306,9 @@
 
 /obj/item/storage/box/syndidonkpockets
 	name = "box of donk-pockets"
-	desc = "Эта коробка кажется немного тёплой на ощупь."
+	desc = "This box feels slightly warm."
 	icon_state = "donkpocket_box"
 	item_state = "donks"
-
-/obj/item/storage/box/syndidonkpockets/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка с Донк-покетами",
-		GENITIVE = "коробки с Донк-покетами",
-		DATIVE = "коробке с Донк-покетами",
-		ACCUSATIVE = "коробку с Донк-покетами",
-		INSTRUMENTAL = "коробкой с Донк-покетами",
-		PREPOSITIONAL = "коробке с Донк-покетами",
-	)
 
 /obj/item/storage/box/syndidonkpockets/populate_contents()
 	for(var/I in 1 to 6)
@@ -356,23 +316,13 @@
 
 /obj/item/storage/box/coffeepack
 	name = "arabica beans"
-	desc = "Пакет, содержащий высушенные зёрна кофе арабика. Произведено \"Waffle Corp\"."
+	desc = "A packet of dried arabica coffee beans. Manufactured by Waffle Corp."
 	gender = PLURAL
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "arabica_beans"
 	storage_slots = 5
 	can_hold = list(/obj/item/reagent_containers/food/snacks/grown/coffee)
 	var/beantype = /obj/item/reagent_containers/food/snacks/grown/coffee
-
-/obj/item/storage/box/coffeepack/get_ru_names()
-	return alist(
-		NOMINATIVE = "зёрна кофе арабика",
-		GENITIVE = "зёрен кофе арабика",
-		DATIVE = "зёрнам кофе арабика",
-		ACCUSATIVE = "зёрна кофе арабика",
-		INSTRUMENTAL = "зёрнами кофе арабика",
-		PREPOSITIONAL = "зёрнах кофе арабика"
-	)
 
 /obj/item/storage/box/coffeepack/ComponentInitialize()
 	. = ..()
@@ -394,37 +344,17 @@
 
 /obj/item/storage/box/coffeepack/robusta
 	name = "robusta beans"
-	desc = "Пакет, содержащий высушенные зёрна кофе робуста. Произведено \"Waffle Corp\"."
+	desc = "A packet of dried robusta coffee beans. Manufactured by Waffle Corp."
 	icon_state = "robusta_beans"
 	beantype = /obj/item/reagent_containers/food/snacks/grown/coffee/robusta
 
-/obj/item/storage/box/coffeepack/robusta/get_ru_names()
-	return alist(
-		NOMINATIVE = "зёрна кофе робуста",
-		GENITIVE = "зёрен кофе робуста",
-		DATIVE = "зёрнам кофе робуста",
-		ACCUSATIVE = "зёрна кофе робуста",
-		INSTRUMENTAL = "зёрнами кофе робуста",
-		PREPOSITIONAL = "зёрнах кофе робуста"
-	)
-
 /obj/item/storage/box/monkeycubes
 	name = "monkey cube box"
-	desc = "Кубы шимпанзе фирмы \"Драймейт\". Коробка содержит высушенных и сжатых существ, удобных для транспортировки. Просто добавь воды!"
+	desc = "Drymate brand monkey cubes. Just add water!"
 	icon_state = "monkey_box"
 	item_state = "mcube"
 	can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 	var/monkey_cube_type = /obj/item/reagent_containers/food/snacks/monkeycube
-
-/obj/item/storage/box/monkeycubes/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка кубов шимпанзе",
-		GENITIVE = "коробки кубов шимпанзе",
-		DATIVE = "коробке кубов шимпанзе",
-		ACCUSATIVE = "коробку кубов шимпанзе",
-		INSTRUMENTAL = "коробкой кубов шимпанзе",
-		PREPOSITIONAL = "коробке кубов шимпанзе"
-	)
 
 /obj/item/storage/box/monkeycubes/populate_contents()
 	for(var/i in 1 to 7)
@@ -436,73 +366,33 @@
 	pixel_y = base_pixel_y + rand(-5,5)
 
 /obj/item/storage/box/monkeycubes/syndicate
-	desc = "Кубы шимпанзе фирмы \"Waffle Co.\". Коробка содержит высушенных и сжатых существ, удобных для транспортировки. Просто добавь воды и щепотку обмана!"
+	desc = "Waffle Co. brand monkey cubes. Just add water and a dash of subterfuge!"
 	monkey_cube_type = /obj/item/reagent_containers/food/snacks/monkeycube/syndicate
 
 /obj/item/storage/box/monkeycubes/farwacubes
 	name = "farwa cube box"
-	desc = "Кубы фарв фирмы \"Драймейт\". Коробка содержит высушенных и сжатых существ, удобных для транспортировки. Просто добавь воды!"
+	desc = "Drymate brand farwa cubes. Just add water!"
 	icon_state = "farwa_box"
 	monkey_cube_type = /obj/item/reagent_containers/food/snacks/monkeycube/farwacube
 
-/obj/item/storage/box/monkeycubes/farwacubes/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка кубов фарв",
-		GENITIVE = "коробки кубов фарв",
-		DATIVE = "коробке кубов фарв",
-		ACCUSATIVE = "коробку кубов фарв",
-		INSTRUMENTAL = "коробкой кубов фарв",
-		PREPOSITIONAL = "коробке кубов фарв"
-	)
-
 /obj/item/storage/box/monkeycubes/stokcubes
 	name = "stok cube box"
-	desc = "Кубы стоков фирмы \"Драймейт\". Коробка содержит высушенных и сжатых существ, удобных для транспортировки. Просто добавь воды!"
+	desc = "Drymate brand stok cubes. Just add water!"
 	icon_state = "stok_box"
 	monkey_cube_type = /obj/item/reagent_containers/food/snacks/monkeycube/stokcube
 
-/obj/item/storage/box/monkeycubes/stokcubes/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка кубов стоков",
-		GENITIVE = "коробки кубов стоков",
-		DATIVE = "коробке кубов стоков",
-		ACCUSATIVE = "коробку кубов стоков",
-		INSTRUMENTAL = "коробкой кубов стоков",
-		PREPOSITIONAL = "коробке кубов стоков"
-	)
-
 /obj/item/storage/box/monkeycubes/neaeracubes
 	name = "neaera cube box"
-	desc = "Кубы неар фирмы \"Драймейт\". Коробка содержит высушенных и сжатых существ, удобных для транспортировки. Просто добавь воды!"
+	desc = "Drymate brand neaera cubes. Just add water!"
 	icon_state = "neaera_box"
 	monkey_cube_type = /obj/item/reagent_containers/food/snacks/monkeycube/neaeracube
 
 
-/obj/item/storage/box/monkeycubes/neaeracubes/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка кубов неар",
-		GENITIVE = "коробки кубов неар",
-		DATIVE = "коробке кубов неар",
-		ACCUSATIVE = "коробку кубов неар",
-		INSTRUMENTAL = "коробкой кубов неар",
-		PREPOSITIONAL = "коробке кубов неар"
-	)
-
 /obj/item/storage/box/monkeycubes/wolpincubes
 	name = "wolpin cube box"
-	desc = "Кубы вульпинов фирмы \"Драймейт\". Коробка содержит высушенных и сжатых существ, удобных для транспортировки. Просто добавь воды!"
+	desc = "Drymate brand wolpin cubes. Just add water!"
 	icon_state = "wolpin_box"
 	monkey_cube_type = /obj/item/reagent_containers/food/snacks/monkeycube/wolpincube
-
-/obj/item/storage/box/monkeycubes/wolpincubes/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка кубов вульпинов",
-		GENITIVE = "коробки кубов вульпинов",
-		DATIVE = "коробке кубов вульпинов",
-		ACCUSATIVE = "коробку кубов вульпинов",
-		INSTRUMENTAL = "коробкой кубов вульпинов",
-		PREPOSITIONAL = "коробке кубов вульпинов"
-	)
 
 /obj/item/storage/box/permits
 	name = "box of construction permits"
@@ -521,7 +411,7 @@
 
 /obj/item/storage/box/syndicate_permits/populate_contents()
 	for(var/I in 1 to 7)
-		new /obj/item/areaeditor/permit/syndicate(src)
+		new /obj/item/areaeditor/permit(src)
 
 /obj/item/storage/box/ids
 	name = "spare IDs"
@@ -748,7 +638,7 @@
 
 /obj/item/storage/box/matches
 	name = "matchbox"
-	desc = "Маленький коробок плазменных спичек почти премиум-класса."
+	desc = "A small box of Almost But Not Quite Plasma Premium Matches."
 	gender = MALE
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
@@ -763,16 +653,6 @@
 	can_hold = list(/obj/item/match)
 	use_sound = SFX_PATCHPACK
 	custom_price = PAYCHECK_MIN * 0.5
-
-/obj/item/storage/box/matches/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробок спичек",
-		GENITIVE = "коробка спичек",
-		DATIVE = "коробку спичек",
-		ACCUSATIVE = "коробок спичек",
-		INSTRUMENTAL = "коробком спичек",
-		PREPOSITIONAL = "коробке спичек",
-	)
 
 /obj/item/storage/box/matches/populate_contents()
 	for(var/i in 1 to storage_slots)
@@ -887,7 +767,7 @@
 
 /obj/item/storage/box/papersack
 	name = "paper sack"
-	desc = "Пакет, сложенный из бумаги. Идеально подходит, чтобы надеть на голову недруга."
+	desc = "A sack neatly crafted out of paper."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "paperbag_None"
 	item_state = "paperbag_None"
@@ -895,29 +775,19 @@
 	var/design = NODESIGN
 	var/apply_paper_bag_delay = BAG_PUTTING_DELAY
 
-/obj/item/storage/box/papersack/get_ru_names()
-	return alist(
-		NOMINATIVE = "бумажный пакет",
-		GENITIVE = "бумажного пакета",
-		DATIVE = "бумажному пакету",
-		ACCUSATIVE = "бумажный пакет",
-		INSTRUMENTAL = "бумажным пакетом",
-		PREPOSITIONAL = "бумажном пакете",
-	)
-
 /obj/item/storage/box/papersack/update_desc(updates = ALL)
 	. = ..()
 	switch(design)
 		if(NODESIGN)
-			desc = "Пакет, сложенный из бумаги. Идеально подходит, чтобы надеть на голову недруга."
+			desc = "A folded paper bag. Perfect for putting over an enemy's head."
 		if(NANOTRASEN)
-			desc = "Стандартный пакет НТ для завтраков для самых верных работников"
+			desc = "A standard Nanotrasen lunch bag for its most loyal employees."
 		if(SYNDI)
-			desc = "Дизайн этого бумажного пакета — секретнейшая разработка Синдиката"
+			desc = "This paper bag's design is a top-secret Syndicate development."
 		if(HEART)
-			desc = "Бумажный пакет с нарисованным сердечком. Как мило!"
+			desc = "A paper bag with a heart drawn on it. How sweet!"
 		if(SMILE)
-			desc = "Бумажный пакет с улыбкой. Чутка жуткий."
+			desc = "A paper bag with a smile. A little creepy."
 
 /obj/item/storage/box/papersack/update_icon_state()
 	item_state = "paperbag_[design]"
@@ -1074,7 +944,7 @@
 
 /obj/item/storage/box/bola
 	name = "Energy bola box"
-	desc = "Бола для самых быстрых из быстрых"
+	desc = "Bolas for the fastest of the fast."
 	icon_state = "box_security"
 	item_state = "sec"
 
@@ -1122,8 +992,8 @@
 		new /obj/item/wizard_armour_charge(src)
 
 /obj/item/storage/box/wizard/kit_spell_book
-	name = "набор волшебных книг"
-	desc = "Набор волшебных книг, купленных в волшебной книге, для волшебников, чтобы делать волшебство! ЗВУЧИТ ПРОСТО ВОЛШЕБНО!"
+	name = "magic book kit"
+	desc = "A set of magic books bought from a magic book, for wizards to do magic! SOUNDS ABSOLUTELY MAGICAL!"
 
 /obj/item/storage/box/wizard/kit_spell_book/populate_contents()
 	for(var/i in 1 to 4)
@@ -1175,8 +1045,8 @@
 	new /obj/item/tank/internals/emergency_oxygen (src)
 
 /obj/item/storage/box/candythief
-	name = "набор радужных конфет"
-	desc = "Набор для самых маленьких и не уверенных в себе работников, обожающих простые пути, смешивая всевозможные в один. Поставляется с сосательной конфетой. Удобный набор если нужно где-то засесть и не выходить. Производитель не отвечает за возникающие акне и галлюцинации от вашего времяпровождения."
+	name = "rainbow candy kit"
+	desc = "A kit for the youngest, least confident employees who love combining every shortcut into one. Comes with a lollipop. Handy when you need to hide somewhere and stay put. The manufacturer accepts no responsibility for resulting acne or hallucinations."
 	icon_state = "box_clown"
 	item_state = "clown"
 
@@ -1189,7 +1059,7 @@
 
 /obj/item/storage/box/sec
 	name = "officer starter kit"
-	desc = "Коробка, что вмещает в себе все нужное дабы стать офицером! Мелким шрифтом вы можете разобрать: Не включает действительно все."
+	desc = "A box containing everything you need to become an officer! The fine print reads: Does not actually include everything."
 	icon_state = "box_security"
 	item_state = "sec"
 
@@ -1207,7 +1077,7 @@
 	new /obj/item/implanter/fake_mindshield(src)
 
 /obj/item/storage/box/dominator_kit
-	name = "Набор энергитического пистолета \"Доминатор\""
+	name = "Dominator kit"
 	icon_state = "box_dominator"
 	item_state = "sec"
 
@@ -1216,7 +1086,7 @@
 	new /obj/item/clothing/accessory/holster(src)
 
 /obj/item/storage/box/enforcer_kit
-	name = "Набор пистолета \"Блюститель\""
+	name = "Enforcer kit"
 	icon_state = "box_enforcer"
 	item_state = "sec"
 
@@ -1227,20 +1097,10 @@
 	new /obj/item/clothing/accessory/holster(src)
 
 /obj/item/storage/box/specter_kit
-	name = "Набор энергитического пистолета \"Спектр\""
-	desc = "Коробка, содержащая пистолет \"Спектр\", кобуру и 2 аккумулятора."
+	name = "Specter energy pistol kit"
+	desc = "A box containing a Specter pistol, a holster and two batteries."
 	icon_state = "box_specter"
 	item_state = "sec"
-
-/obj/item/storage/box/specter_kit/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор Спектр",
-		GENITIVE = "набора Спектр",
-		DATIVE = "набору Спектр",
-		ACCUSATIVE = "набор Спектр",
-		INSTRUMENTAL = "набором Спектр",
-		PREPOSITIONAL = "наборе Спектр",
-	)
 
 /obj/item/storage/box/specter_kit/populate_contents()
 	new /obj/item/gun/energy/specter/sibyl(src)
@@ -1249,20 +1109,10 @@
 	new /obj/item/weapon_cell/specter(src)
 
 /obj/item/storage/box/taurus_kit
-	name = "Набор револьвера \"Таурус\""
-	desc = "Коробка с изображением револьвера \"Таурус\", двух патронных обойм и надписью \"Нелетальное оружие\"."
+	name = "taurus revolver kit (rubber)"
+	desc = "A box depicting a Taurus revolver and two speedloaders, labeled Nonlethal Weapon."
 	icon_state = "box_colt"
 	item_state = "sec"
-
-/obj/item/storage/box/taurus_kit/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор \"Таурус\"",
-		GENITIVE = "набора \"Таурус\"",
-		DATIVE = "набору \"Таурус\"",
-		ACCUSATIVE = "набор \"Таурус\"",
-		INSTRUMENTAL = "набором \"Таурус\"",
-		PREPOSITIONAL = "наборе \"Таурус\"",
-	)
 
 /obj/item/storage/box/taurus_kit/populate_contents()
 	new /obj/item/gun/projectile/revolver/taurus(src)
@@ -1271,7 +1121,7 @@
 	new /obj/item/ammo_box/speedloader/rubber45colt(src)
 
 /obj/item/storage/box/revolver_kit
-	name = "Набор револьвера \".38 Mars Special\""
+	name = "Revolver kit"
 	icon_state = "box_revolver"
 	item_state = "sec"
 
@@ -1408,16 +1258,6 @@
 		/obj/item/pen/fountain = 5,
 		/obj/item/pen/multi = 3,
 		/obj/item/pen/survival = 3,
-	)
-
-/obj/item/storage/box/pen_case/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор ручек",
-		GENITIVE = "набора ручек",
-		DATIVE = "набору ручек",
-		ACCUSATIVE = "набор ручек",
-		INSTRUMENTAL = "набором ручек",
-		PREPOSITIONAL = "наборе ручек",
 	)
 
 /obj/item/storage/box/pen_case/populate_contents()

@@ -20,7 +20,6 @@
 	melee_damage_upper = 25
 	attacktext = "кромсает"
 	speak_emote = list("шипит")
-	tts_seed = "Ladyvashj"
 	bubble_icon = "alien"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -96,7 +95,6 @@
 	var/plants_off = 0
 	var/egg_cooldown = 30
 	var/plant_cooldown = 30
-	tts_seed = "Queen"
 
 /mob/living/simple_animal/hostile/alien/queen/handle_automated_action()
 	if(!..())

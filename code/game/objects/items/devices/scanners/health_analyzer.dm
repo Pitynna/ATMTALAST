@@ -4,7 +4,7 @@
 
 /obj/item/healthanalyzer
 	name = "health analyzer"
-	desc = "Ручной сканер тела, способный определить жизненные показатели субъекта."
+	desc = "A hand-held body scanner able to distinguish vital signs of the subject."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "health"
 	item_state = "healthanalyzer"
@@ -34,19 +34,9 @@
 
 	var/mob/scanned = null
 
-/obj/item/healthanalyzer/get_ru_names()
-	return alist(
-		NOMINATIVE = "анализатор здоровья",
-		GENITIVE = "анализатора здоровья",
-		DATIVE = "анализатору здоровья",
-		ACCUSATIVE = "анализатор здоровья",
-		INSTRUMENTAL = "анализатором здоровья",
-		PREPOSITIONAL = "анализаторе здоровья",
-	)
-
 /obj/item/healthanalyzer/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
 	add_fingerprint(user)
-	scan_title = "Сканирование: [target]"
+	scan_title = "Scan: [target]"
 	scan_data = medical_scan_action(user, target, src, mode, advanced)
 	show_results(user)
 	return ATTACK_CHAIN_PROCEED_SUCCESS
@@ -834,7 +824,7 @@
 
 /obj/item/healthupgrade
 	name = "health analyzer upgrade"
-	desc = "Модуль, устанавливаемый на анализатор здоровья для расширения его функционала."
+	desc = "An upgrade unit that can be installed on a health analyzer for expanded functionality."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "healthupgrade"
 	w_class = WEIGHT_CLASS_TINY
@@ -842,32 +832,12 @@
 	usesound = 'sound/items/deconstruct.ogg'
 	custom_price = PAYCHECK_LOWER / 1.5
 
-/obj/item/healthupgrade/get_ru_names()
-	return alist(
-		NOMINATIVE = "модуль улучшения анализатора здоровья",
-		GENITIVE = "модуля улучшения анализатора здоровья",
-		DATIVE = "модулю улучшения анализатора здоровья",
-		ACCUSATIVE = "модуль улучшения анализатора здоровья",
-		INSTRUMENTAL = "модулем улучшения анализатора здоровья",
-		PREPOSITIONAL = "модуле улучшения анализатора здоровья",
-	)
-
 /obj/item/healthanalyzer/gem_analyzer
 	name = "eye of health"
-	desc = "Необычный самоцвет в форме сердца. Позволяет пользователю ощущать раны и болезни других существ на метафизическом уровне. Магия, не иначе."
+	desc = "An unusual heart-shaped gemstone. Allows its user to sense other creatures' wounds and illnesses on a metaphysical level. Definitely magic."
 	icon_state = "gem_analyzer"
 	item_state = "gem_analyzer"
 	origin_tech = null
-
-/obj/item/healthanalyzer/gem_analyzer/get_ru_names()
-	return alist(
-		NOMINATIVE = "глаз здоровья",
-		GENITIVE = "глаза здоровья",
-		DATIVE = "глазу здоровья",
-		ACCUSATIVE = "глаз здоровья",
-		INSTRUMENTAL = "глазом здоровья",
-		PREPOSITIONAL = "глазе здоровья",
-	)
 
 /obj/item/healthanalyzer/gem_analyzer/attackby(obj/item/I, mob/user, params)
 	return ATTACK_CHAIN_BLOCKED_ALL

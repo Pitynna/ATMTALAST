@@ -8,7 +8,7 @@
 //Admin sound emitters with highly customizable functions!
 /obj/effect/sound_emitter
 	name = "sound emitter"
-	desc = "Издаёт звуки, наверное."
+	desc = "Makes sounds, probably."
 	icon_state = "shield2"
 	invisibility = INVISIBILITY_OBSERVER
 	alpha = 175
@@ -19,16 +19,6 @@
 	var/emitter_range = SOUND_EMITTER_ZLEVEL //The range this emitter's sound is heard at; this isn't a number, but a string (see the defines above)
 	var/list/hearing_mobs
 	var/started = FALSE
-
-/obj/effect/sound_emitter/get_ru_names()
-	return alist(
-		NOMINATIVE = "излучатель звука",
-		GENITIVE = "излучателя звука",
-		DATIVE = "излучателю звука",
-		ACCUSATIVE = "излучатель звука",
-		INSTRUMENTAL = "излучателем звука",
-		PREPOSITIONAL = "излучателе звука",
-	)
 
 /obj/effect/sound_emitter/Destroy(force)
 	. = ..()

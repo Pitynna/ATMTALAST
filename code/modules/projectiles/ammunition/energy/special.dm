@@ -97,18 +97,6 @@
 	muzzle_flash_color = COLOR_SOFT_RED
 
 // MARK: Shuriken
-/obj/item/ammo_casing/energy/shuriken
-	projectile_type = /obj/projectile/beam/shuriken
-	muzzle_flash_color = LIGHT_COLOR_GREEN
-	select_name  = "shuriken"
-	e_cost = 0
-	fire_sound = 'sound/weapons/bulletflyby.ogg'
-	click_cooldown_override = 2
-	harmful = FALSE
-
-/obj/item/ammo_casing/energy/shuriken/borg
-	e_cost = 50
-
 // MARK: Specter pistol
 /obj/item/ammo_casing/energy/specter/laser
 	caliber = CALIBER_SPECTER

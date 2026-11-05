@@ -1,6 +1,6 @@
 /obj/machinery/vending/robotics
 	name = "Robotech Deluxe"
-	desc = "Все, что вам нужно для создания вашей собственной армии роботов."
+	desc = "All the tools you need to create your own robot army."
 	icon_state = "robotics_off"
 	panel_overlay = "robotics_panel"
 	screen_overlay = "robotics"
@@ -29,16 +29,6 @@
 		/obj/item/clothing/mask/breath/medical = 5,
 		/obj/item/screwdriver = 5,
 		/obj/item/crowbar = 5,
-	)
-
-/obj/machinery/vending/robotics/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Robotech Deluxe",
-		GENITIVE = "торгового автомата Robotech Deluxe",
-		DATIVE = "торговому автомату Robotech Deluxe",
-		ACCUSATIVE = "торговый автомат Robotech Deluxe",
-		INSTRUMENTAL = "торговым автоматом Robotech Deluxe",
-		PREPOSITIONAL = "торговом автомате Robotech Deluxe",
 	)
 
 /obj/machinery/vending/robotics/nt

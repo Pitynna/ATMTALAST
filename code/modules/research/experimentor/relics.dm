@@ -1,6 +1,6 @@
 /obj/item/relict_production
 	name = "perfect mix"
-	desc = "Странный объект без эффекта и иконки. Щитспавн онли."
+	desc = "A strange object with no effect or icon. Admin spawning only."
 	icon_state = ""
 	icon = 'icons/obj/assemblies.dmi'
 	origin_tech = "bluespace=3;materials=3"
@@ -15,7 +15,7 @@
 	return TRUE
 
 /obj/item/relict_production/perfect_mix
-	desc = "Странный объект из которого можно бесконечно заполнять емкости какой-то жидкостью."
+	desc = "A strange object that endlessly fills containers with some kind of liquid."
 	icon_state = "beaker"
 	item_state = "beaker"
 	icon = 'icons/obj/weapons/techrelic.dmi'
@@ -39,7 +39,7 @@
 
 /obj/item/relict_production/strange_teleporter
 	name = "strange teleporter"
-	desc = "Странный объект телепортирующий вас при активации."
+	desc = "A strange object that teleports you when activated."
 	icon_state = "prox-multitool2"
 	origin_tech = "materials=4;bluespace=4"
 	cooldown = 10 SECONDS
@@ -67,7 +67,7 @@
 
 /obj/item/relict_production/pet_spray
 	name = "pet spray"
-	desc = "Странный объект создающий враждебных существ."
+	desc = "A strange object that creates hostile creatures."
 	icon_state = "armor-igniter-analyzer"
 	origin_tech = "biotech=5"
 	cooldown = 60 SECONDS
@@ -108,7 +108,7 @@
 
 /obj/item/relict_production/rapid_dupe
 	name = "rapid dupe"
-	desc = "Странный объект создающий другие странные объекты при контакте с аномалиями."
+	desc = "A strange object that creates other strange objects on contact with anomalies."
 	icon_state = "shock_kit"
 	origin_tech = "materials=5"
 

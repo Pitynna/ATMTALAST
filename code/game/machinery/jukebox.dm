@@ -1,6 +1,6 @@
 /obj/machinery/jukebox
 	name = "jukebox"
-	desc = "Классический музыкальный автомат."
+	desc = "A classic jukebox."
 	icon = 'icons/obj/machines/jukebox.dmi'
 	icon_state = "jukebox"
 	base_icon_state = "jukebox"
@@ -24,16 +24,6 @@
 	var/need_coin = FALSE
 	/// Inserted coin for payment
 	var/obj/item/coin/payment
-
-/obj/machinery/jukebox/get_ru_names()
-	return alist(
-		NOMINATIVE = "музыкальный автомат",
-		GENITIVE = "музыкального автомата",
-		DATIVE = "музыкальному автомату",
-		ACCUSATIVE = "музыкальный автомат",
-		INSTRUMENTAL = "музыкальным автоматом",
-		PREPOSITIONAL = "музыкальном автомате",
-	)
 
 /obj/machinery/jukebox/Initialize(mapload)
 	. = ..()
@@ -260,7 +250,7 @@
 
 /obj/machinery/jukebox/disco
 	name = "radiant dance machine mark IV"
-	desc = "Производство первых трех прототипов было прекращено после массовых несчастных случаев."
+	desc = "The first three prototypes were discontinued after mass casualty incidents."
 	icon_state = "disco"
 	base_icon_state = "disco"
 	req_access = list(ACCESS_ENGINE)
@@ -270,31 +260,11 @@
 	/// Sparkle effects being played
 	VAR_PRIVATE/list/obj/effect/overlay/sparkles/sparkles = list()
 
-/obj/machinery/jukebox/disco/get_ru_names()
-	return alist(
-		NOMINATIVE = "блестящая танцевальная машина \"Mark IV\"",
-		GENITIVE = "блестящей танцевальной машины \"Mark IV\"",
-		DATIVE = "блестящей танцевальной машине \"Mark IV\"",
-		ACCUSATIVE = "блестящую танцевальную машину \"Mark IV\"",
-		INSTRUMENTAL = "блестящей танцевальной машиной \"Mark IV\"",
-		PREPOSITIONAL = "блестящей танцевальной машине \"Mark IV\"",
-	)
-
 /obj/machinery/jukebox/disco/indestructible
 	name = "radiant dance machine mark V"
-	desc = "Дизайн переработан с учетом данных, полученных в ходе обширных исследований в области танцев и плазменных накопителей."
+	desc = "A massive disco ball permanently anchored to the floor with heat-sealed bolts. Merely being in the presence of such a majestic contraption fills you with the urge to dance."
 	req_access = null
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-
-/obj/machinery/jukebox/disco/indestructible/get_ru_names()
-	return alist(
-		NOMINATIVE = "блестящая танцевальная машина \"Mark V\"",
-		GENITIVE = "блестящей танцевальной машины \"Mark V\"",
-		DATIVE = "блестящей танцевальной машине \"Mark V\"",
-		ACCUSATIVE = "блестящую танцевальную машину \"Mark V\"",
-		INSTRUMENTAL = "блестящей танцевальной машиной \"Mark V\"",
-		PREPOSITIONAL = "блестящей танцевальной машине \"Mark V\"",
-	)
 
 /obj/machinery/jukebox/disco/activate_music()
 	. = ..()

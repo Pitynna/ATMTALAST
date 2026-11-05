@@ -48,37 +48,6 @@
 
 #undef EMPHASIS_LETTERS_REGEX
 
-/mob/proc/combine_message_tts(list/message_pieces, atom/movable/speaker, always_stars = FALSE)
-	var/iteration_count = 0
-	var/msg = ""
-	for(var/datum/multilingual_say_piece/SP in message_pieces)
-		iteration_count++
-		var/piece = SP.message
-		if(piece == "")
-			continue
-
-		if(SP.speaking == GLOB.all_languages[LANGUAGE_NOISE]) // TTS should not read emotes like "laughts"
-			return ""
-
-		if(iteration_count == 1)
-			piece = capitalize(piece)
-
-		if(always_stars)
-			continue
-		if(!say_understands(speaker, SP.speaking))
-			if(isanimal(speaker))
-				var/mob/living/simple_animal/S = speaker
-				if(LAZYLEN(S.speak))
-					piece = pick(S.speak)
-				else
-					continue
-			else if(SP.speaking)
-				piece = SP.speaking.scramble(piece)
-			else
-				continue
-		msg += (piece + " ")
-	return trim(msg)
-
 /mob/proc/verb_message(list/message_pieces, message, atom/movable/speaker, verb)
 	if(!verb)
 		return message
@@ -129,7 +98,6 @@
 	if(message_clean == "")
 		return
 
-	var/message_tts = combine_message_tts(message_pieces, speaker)
 	var/message = message_clean
 
 	if(italics)
@@ -166,10 +134,6 @@
 		if(client?.prefs.toggles2 & PREFTOGGLE_2_RUNECHAT) // can_hear is checked up there on L99
 			create_chat_message(speaker, message_clean, italics ? list("italics") : null, get_runechat_language(message_pieces))
 
-		var/traits = TTS_TRAIT_RATE_FASTER
-		if(is_whisper)
-			traits |= TTS_TRAIT_PITCH_WHISPER
-		INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, speaker, src, message_tts, speaker.tts_seed, TRUE, SOUND_EFFECT_NONE, traits)
 
 		if(speech_sound && (get_dist(speaker, src) <= world.view && src.z == speaker.z))
 			var/turf/source = speaker? get_turf(speaker) : get_turf(src)
@@ -190,7 +154,6 @@
 		return
 
 	var/message = verb_message(message_pieces, message_clean, speaker, genderize_decode(speaker, verb))
-	var/message_tts = combine_message_tts(message_pieces, speaker, always_stars = hard_to_hear)
 
 	var/track = null
 	if(!follow_target)
@@ -212,9 +175,6 @@
 		if(client?.prefs.toggles2 & PREFTOGGLE_2_RUNECHAT)
 			if(speaker && get_turf(speaker))
 				create_chat_message(speaker, message_clean, list("radio"))
-
-		if(src != speaker || isrobot(src) || isAI(src))
-			INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, src, src, message_tts, speaker?.tts_seed, FALSE, SOUND_EFFECT_RADIO, null, null, 'sound/effects/radio_chatter.ogg', speaker)
 
 /mob/proc/handle_speaker_name(atom/movable/speaker = null, vname, hard_to_hear)
 	var/speaker_name = UNKNOWN_NAME_RUS
@@ -268,7 +228,6 @@
 		return
 
 	var/message = verb_message(message_pieces, message_clean, speaker, genderize_decode(speaker, verb))
-	var/message_tts = combine_message_tts(message_pieces, speaker)
 
 	var/name = speaker.name
 	if(!say_understands(speaker) && ismob(speaker))
@@ -278,7 +237,6 @@
 	if((client?.prefs.toggles2 & PREFTOGGLE_2_RUNECHAT) && !HAS_TRAIT(src, TRAIT_DEAF))
 		create_chat_message(H, message_clean, list("radio"))
 
-	INVOKE_ASYNC(GLOBAL_PROC, /proc/tts_cast, H, src, message_tts, speaker.tts_seed, TRUE, SOUND_EFFECT_RADIO)
 
 	var/rendered = span_gamesay("[span_name(name)] [message]")
 	to_chat(src, rendered)

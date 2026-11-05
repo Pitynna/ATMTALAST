@@ -5,8 +5,7 @@
  */
 /obj/item/circuit_component/list_pick
 	display_name = "Список — выбор"
-	desc = "Компонент, позволяющий пользователю выбрать один элемент из списка. \
-			Возвращает выбранный элемент."
+	desc = "A component that lets the user pick one entry from a list. Returns the selected entry."
 	category = "List"
 
 	/// The data type of the input_list

@@ -4,16 +4,6 @@
 	damage_type = BURN
 	speed = 0.8
 
-/obj/projectile/watcher/get_ru_names()
-	return alist(
-		NOMINATIVE = "оглушающий выброс",
-		GENITIVE = "оглушающего выброса",
-		DATIVE = "оглушающему выбросу",
-		ACCUSATIVE = "оглушающий выброс",
-		INSTRUMENTAL = "оглушающим выбросом",
-		PREPOSITIONAL = "оглушающем выбросе",
-	)
-
 /obj/projectile/watcher/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if(.)

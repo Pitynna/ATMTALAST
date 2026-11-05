@@ -680,7 +680,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 
 /obj/item/circuit_component/conveyor_switch
 	display_name = "Конвейерный переключатель"
-	desc = "Позволяет управлять подключёнными конвейерными лентами."
+	desc = "Allows control of connected conveyor belts."
 
 	/// Direction input ports.
 	var/datum/port/input/stop

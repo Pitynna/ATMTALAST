@@ -28,7 +28,6 @@
 	special_abillity = list(/datum/action/cooldown/spell/terror_stealth)
 	spider_intro_text = "Будучи Наблюдателем Ужаса, ваша задача — устраивать засады. Вы почти невидимы в паутине, и наносите сокрушительный урон, пробивающий броню, если находитесь в ней. Вы также можете стать полностью невидимым на короткий промежуток времени."
 	ai_spins_webs = FALSE // uses massweb instead
-	tts_seed = "Cassiopeia"
 	var/prob_ai_massweb = 10
 
 /mob/living/simple_animal/hostile/poison/terror_spider/lurker/get_ru_names()
@@ -88,17 +87,7 @@
 /obj/structure/spider/terrorweb/gray
 	alpha = 80
 	name = "transparent web"
-	desc = "Эта паутина частично прозрачна, поэтому её труднее увидеть и легче попасться."
-
-/obj/structure/spider/terrorweb/gray/get_ru_names()
-	return alist(
-		NOMINATIVE = "прозрачная паутина",
-		GENITIVE = "прозрачной паутины",
-		DATIVE = "прозрачной паутине",
-		ACCUSATIVE = "прозрачную паутину",
-		INSTRUMENTAL = "прозрачной паутиной",
-		PREPOSITIONAL = "прозрачной паутине",
-	)
+	desc = "This web is partly transparent, making it harder to see, and easier to get caught by."
 
 /obj/structure/spider/terrorweb/gray/web_special_ability(mob/living/carbon/C) //super deadly web
 	if(istype(C))

@@ -1,6 +1,6 @@
 /// An info button that, when clicked, puts some text in the user's chat
 /obj/effect/abstract/info
-	name = "справка"
+	name = "help"
 	icon_state = "info"
 	icon = 'icons/effects/effects.dmi'
 	invisibility = INVISIBILITY_NONE

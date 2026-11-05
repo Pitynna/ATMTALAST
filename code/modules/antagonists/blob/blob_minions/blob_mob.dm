@@ -20,8 +20,6 @@
 	sentience_type = SENTIENCE_OTHER
 	can_be_on_fire = TRUE
 	fire_damage = 3
-	tts_seed = "Earth"
-	tts_atom_say_effect = SOUND_EFFECT_NONE
 	/// Is blob mob linked to factory
 	var/factory_linked = FALSE
 

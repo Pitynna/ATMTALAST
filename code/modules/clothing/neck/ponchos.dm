@@ -18,8 +18,6 @@
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/neck.dmi',
 		SPECIES_PLASMAMAN = 'icons/mob/clothing/species/plasmaman/neck.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/neck.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/neck.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/neck.dmi',
 		SPECIES_DRACONOID =  'icons/mob/clothing/species/unathi/neck.dmi',
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/neck.dmi',
 		SPECIES_WRYN = 'icons/mob/clothing/species/wryn/neck.dmi',
@@ -126,7 +124,7 @@
 
 /obj/item/clothing/neck/poncho/security
 	name = "corporate poncho"
-	desc = "Пончо в корпоративных цветах, при его виде пропадает желание нелегально пересекать сектор"
+	desc = "A poncho in corporate colors. Looking at it makes you lose any desire to cross the sector illegally."
 	icon_state = "secponcho"
 	item_color = "sec"
 

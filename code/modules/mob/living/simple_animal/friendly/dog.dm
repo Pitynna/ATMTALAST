@@ -13,7 +13,6 @@
 	speak_emote = list("лает", "рявкает", "гавкает")
 	emote_hear = list("лает", "гавкает", "тявкает", "пыхтит")
 	emote_see = list("трясёт головой", "пытается поймать свой хвост", "дрожит")
-	tts_seed = "Stetmann"
 	faction = list("neutral")
 	maxHealth = 50
 	health = 50
@@ -486,18 +485,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 			custom_emote(EMOTE_VISIBLE, pick("танцу%(ет,ют)% на месте.", "гоня%(ет,ют)%ся за своим хвостом."))
 			spin(20, 1)
 
-/mob/living/simple_animal/pet/dog/corgi/Ian/narsie_act()
-	playsound(src, 'sound/misc/demon_dies.ogg', 75, TRUE)
-	var/mob/living/simple_animal/pet/dog/corgi/narsie/N = new(loc)
-	N.setDir(dir)
-	gib()
-
-/mob/living/simple_animal/pet/dog/corgi/Ian/ratvar_act()
-	playsound(src, 'sound/misc/demon_dies.ogg', 75, TRUE)
-	var/mob/living/simple_animal/pet/dog/corgi/ratvar/N = new(loc)
-	N.setDir(dir)
-	gib()
-
 /mob/living/simple_animal/pet/dog/corgi/narsie
 	name = "Nars-Ian"
 	desc = "Ia! Ia!"
@@ -509,7 +496,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	gold_core_spawnable = NO_SPAWN
 	nofur = TRUE
 	unique_pet = TRUE
-	tts_seed = "Mannoroth"
 	holder_type = /obj/item/holder/narsian
 	maxHealth = 300
 	health = 300
@@ -525,7 +511,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 				span_cult(span_bigbold("DELICIOUS SOULS"))
 			)
 			playsound(src, 'sound/misc/demon_attack1.ogg', 75, TRUE)
-			narsie_act()
 			if(P.mind)
 				if(P.mind.hasSoul)
 					P.mind.hasSoul = FALSE //Nars-Ian ate your soul; you don't have one anymore
@@ -541,9 +526,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	speak_emote = list("рычит", "зловеще лает")
 	emote_hear = list("лает эхом", "одержимо гавкает", "жутко тявкает", "непонятно бормочет")
 	emote_see = list("общается с Безымянным", "пытается учуять души", "трясётся")
-
-/mob/living/simple_animal/pet/dog/corgi/narsie/narsie_act()
-	adjustBruteLoss(-maxHealth)
 
 /mob/living/simple_animal/pet/dog/corgi/ratvar
 	name = "Cli-k"
@@ -566,9 +548,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	emote_hear = list("лает эхом", "одержимо гавкает", "авторитетно тявкает", "непонятно бормочет")
 	emote_see = list("общается с Безымянным", "пытается учуять души заблудших", "трясётся")
 
-/mob/living/simple_animal/pet/dog/corgi/ratvar/ratvar_act()
-	adjustBruteLoss(-maxHealth)
-
 /mob/living/simple_animal/pet/dog/corgi/puppy
 	name = "corgi puppy"
 	desc = "It's a corgi puppy!"
@@ -578,7 +557,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	density = FALSE
 	pass_flags = PASSMOB
 	collar_type = "puppy"
-	tts_seed = "Jaina"
 	maxHealth = 20
 	health = 20
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/corgi = 1)
@@ -593,7 +571,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	icon_dead = "void_puppy_dead"
 	nofur = TRUE
 	unsuitable_atmos_damage = 0
-	tts_seed = "Kael"
 	holder_type = /obj/item/holder/void_puppy
 	maxHealth = 60
 	health = 60
@@ -642,7 +619,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	icon_dead = "lisa_dead"
 	var/turns_since_scan = 0
 	var/puppies = 0
-	tts_seed = "Luna"
 	holder_type = /obj/item/holder/lisa
 
 /mob/living/simple_animal/pet/dog/corgi/Lisa/Life()
@@ -678,7 +654,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	icon_living = "borgi"
 	bark_sound = null	//No robo-bjork...
 	yelp_sound = null	//Or robo-Yelp.
-	tts_seed = "Glados"
 	var/emagged = FALSE
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	loot = list(/obj/effect/decal/cleanable/blood/gibs/robot)
@@ -771,7 +746,6 @@ GAME_VERB_DESC(/mob/living/simple_animal/pet/dog, chasetail, "Гоняться �
 	icon_dead = "pug_dead"
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/pug = 3)
 	collar_type = "pug"
-	tts_seed = "Kleiner"
 	holder_type = /obj/item/holder/pug
 	collar_type = "pug"
 	maxHealth = 30

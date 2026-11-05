@@ -7,7 +7,7 @@
 
 /obj/item/circuit_component/reagent_injector
 	display_name = "Инъектор реагента"
-	desc = "Компонент, который может вводить реагенты из хранилища реагентов ИМК."
+	desc = "A component that injects reagents from the BCI's reagent storage."
 	category = "BCI"
 	circuit_flags = CIRCUIT_NO_DUPLICATES
 

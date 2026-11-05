@@ -4,7 +4,7 @@
 
 /obj/machinery/power/portagrav
 	name = "Portable Gravity Unit"
-	desc = "Компактный гравитационный генератор на переносной платформе. Создаёт поле искусственной гравитации вокруг себя, питаясь от батареи или от силового кабеля. Работает только закреплённым."
+	desc = "A compact gravity generator on a portable platform. Creates a local artificial gravity field using a battery or power cable. Only operates while anchored."
 	icon = 'icons/obj/machines/gravity_generator.dmi'
 	icon_state = "portagrav"
 	base_icon_state = "portagrav"
@@ -22,16 +22,6 @@
 	var/field_level = 1
 	var/tiles_per_level = 1
 	var/power_per_level = PORTAGRAV_BASE_POWER_PER_LEVEL
-
-/obj/machinery/power/portagrav/get_ru_names()
-	return alist(
-		NOMINATIVE = "портативный гравигенератор",
-		GENITIVE = "портативного гравигенератора",
-		DATIVE = "портативному гравигенератору",
-		ACCUSATIVE = "портативный гравигенератор",
-		INSTRUMENTAL = "портативным гравигенератором",
-		PREPOSITIONAL = "портативном гравигенераторе",
-	)
 
 /obj/machinery/power/portagrav/Initialize(mapload)
 	. = ..()

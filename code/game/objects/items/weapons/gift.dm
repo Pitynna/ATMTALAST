@@ -1,7 +1,7 @@
 /// Gifts to give to players, will contain a nice toy or other fun item for them to play with.
 /obj/item/gift
 	name = "gift"
-	desc = "Ураа!! Подарочееек!"
+	desc = "A wrapped item."
 	icon = 'icons/obj/storage/wrapping.dmi'
 	icon_state = "giftdeliverybox_map"
 	item_state = "gift"
@@ -14,16 +14,6 @@
 
 	/// Legacy shit for storage, useless, need to del it
 	var/obj/item/gift = null
-
-/obj/item/gift/get_ru_names()
-	return alist(
-		NOMINATIVE = "подарок",
-		GENITIVE = "подарка",
-		DATIVE = "подарку",
-		ACCUSATIVE = "подарок",
-		INSTRUMENTAL = "подарком",
-		PREPOSITIONAL = "подарке"
-	)
 
 /obj/item/gift/Initialize(mapload)
 	. = ..()
@@ -185,7 +175,7 @@
 		/obj/item/stack/spacecash/c1000,
 		/obj/item/storage/box/wizard/hardsuit,
 		/obj/item/storage/box/syndie_kit/hardsuit,
-		/obj/item/mod/control/pre_equipped/traitor,
+		/obj/item/clothing/suit/space/hardsuit/syndi,
 		/obj/item/clothing/suit/space/hardsuit/champion/templar/premium,
 		/obj/item/clothing/suit/space/hardsuit/soviet,
 		/obj/item/clothing/suit/space/hardsuit/ancient,

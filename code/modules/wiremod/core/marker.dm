@@ -1,22 +1,11 @@
 /obj/item/multitool/circuit
 	name = "circuit multitool"
-	desc = "Мультиметр для схем. Используется для маркировки объектов, которые затем можно загрузить \
-			в компоненты нажатием кнопки загрузки на порту. В остальном действует как обычный мультиметр."
+	desc = "A circuit multitool. Use it to mark objects, then load them into components by pressing a port's load button. Otherwise, it works like a regular multitool."
 	icon = 'icons/obj/circuits.dmi'
 	icon_state = "multitool_circuit"
 
 	/// The marked atom of this multitool
 	var/atom/marked_atom
-
-/obj/item/multitool/circuit/get_ru_names()
-	return alist(
-		NOMINATIVE = "мультиметр для схем",
-		GENITIVE = "мультиметра для схем",
-		DATIVE = "мультиметру для схем",
-		ACCUSATIVE = "мультиметр для схем",
-		INSTRUMENTAL = "мультиметром для схем",
-		PREPOSITIONAL = "мультиметре для схем"
-	)
 
 /obj/item/multitool/circuit/Initialize(mapload)
 	. = ..()

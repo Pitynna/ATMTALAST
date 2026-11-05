@@ -31,8 +31,6 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/shoes.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/shoes.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/shoes.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/shoes.dmi',
 	)
 
@@ -164,19 +162,9 @@
 
 /obj/item/clothing/shoes/jackboots/high
 	name = "high jackboots"
-	desc = "Защитные высокие берцы, предназначенные для боевых действий."
+	desc = "Protective high combat boots."
 	icon_state = "highjacks"
 	item_state = "highjacks"
-
-/obj/item/clothing/shoes/jackboots/high/get_ru_names()
-	return alist(
-		NOMINATIVE = "высокие берцы",
-		GENITIVE = "высоких берцов",
-		DATIVE = "высоким берцам",
-		ACCUSATIVE = "высокие берцы",
-		INSTRUMENTAL = "высокими берцами",
-		PREPOSITIONAL = "высоких берцах",
-	)
 
 /obj/item/clothing/shoes/jackboots/Initialize(mapload)
 	. = ..()
@@ -212,8 +200,6 @@
 		SPECIES_NEARA = 'icons/mob/clothing/species/monkey/shoes.dmi',
 		SPECIES_STOK = 'icons/mob/clothing/species/monkey/shoes.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/shoes.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/shoes.dmi',
 	)
 
@@ -227,19 +213,9 @@
 
 /obj/item/clothing/shoes/workboots/mining
 	name = "mining boots"
-	desc = "Шахтёрские ботинки со стальным носком для работы в опасных условиях. Отлично защищают пальцы от раздавливания."
+	desc = "Steel-toed mining boots for mining in hazardous environments. Very good at keeping toes uncrushed."
 	icon_state = "explorer"
 	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/shoes/workboots/mining/get_ru_names()
-	return alist(
-		NOMINATIVE = "шахтёрские ботинки",
-		GENITIVE = "шахтёрских ботинок",
-		DATIVE = "шахтёрским ботинкам",
-		ACCUSATIVE = "шахтёрские ботинки",
-		INSTRUMENTAL = "шахтёрскими ботинками",
-		PREPOSITIONAL = "шахтёрских ботинках"
-	)
 
 /obj/item/clothing/shoes/workboots/mining/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/kitchen/knife/combat/survival))
@@ -285,19 +261,6 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET|LEGS
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
-
-/obj/item/clothing/shoes/cult
-	name = "boots"
-	desc = "A pair of boots usually worn by cultists."
-	icon_state = "cult"
-	item_state = "cult"
-	item_color = "cult"
-
-	cold_protection = FEET
-	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
-	heat_protection = FEET
-	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
-	magical = TRUE
 
 /obj/item/clothing/shoes/cyborg
 	name = "cyborg boots"
@@ -474,41 +437,21 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/footwraps/goliath
 	name = "goliath hide footwraps"
-	desc = "Эти обмотки, изготовленные из шкуры голиафа, подарят вашим ступням ощущение уюта и безопасности, оставаясь при этом дышащими и лёгкими."
+	desc = "These wraps, made from goliath hide, make your feet feel snug and secure, while still being breathable and light."
 	icon_state = "footwraps_goliath"
 	item_state = "footwraps_goliath"
 	armor = list(MELEE = 10, BULLET = 10, LASER = 15, ENERGY = 5, BOMB = 10, BIO = 0, FIRE = 10, ACID = 0)
 	resistance_flags = FIRE_PROOF
 	paintable = FALSE
 
-/obj/item/clothing/shoes/footwraps/goliath/get_ru_names()
-	return alist(
-		NOMINATIVE = "обмотки из шкуры голиафа",
-		GENITIVE = "обмоток из шкуры голиафа",
-		DATIVE = "обмоткам из шкуры голиафа",
-		ACCUSATIVE = "обмотки из шкуры голиафа",
-		INSTRUMENTAL = "обмотками из шкуры голиафа",
-		PREPOSITIONAL = "обмотках из шкуры голиафа",
-	)
-
 /obj/item/clothing/shoes/footwraps/dragon
 	name = "ash drake hide footwraps"
-	desc = "Эти обмотки, изготовленные из шкуры пепельного дракона, обеспечат вам комфорт и безопасность ваших ног, оставаясь при этом лёгкими и дышащими."
+	desc = "These wraps, made from ash drake hide, make your feet feel snug and secure, while still being breathable and light."
 	icon_state = "footwraps_dragon"
 	item_state = "footwraps_dragon"
 	armor = list(MELEE = 10, BULLET = 10, LASER = 15, ENERGY = 10, BOMB = 0, BIO = 10, FIRE = 15, ACID = 0)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	paintable = FALSE
-
-/obj/item/clothing/shoes/footwraps/dragon/get_ru_names()
-	return alist(
-		NOMINATIVE = "обмотки из шкуры пепельного дракона",
-		GENITIVE = "обмоток из шкуры пепельного дракона",
-		DATIVE = "обмоткам из шкуры пепельного дракона",
-		ACCUSATIVE = "обмотки из шкуры пепельного дракона",
-		INSTRUMENTAL = "обмотками из шкуры пепельного дракона",
-		PREPOSITIONAL = "обмотках из шкуры пепельного дракона",
-	)
 
 /obj/item/clothing/shoes/bhop
 	name = "jump boots"
@@ -567,7 +510,7 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/bhop/clown
 	name = "clown shoes"
-	desc = "Стандартные клоунские башмаки. Чёрт возьми, они такие огромные!"
+	desc = "The prankster's standard-issue clowning shoes. Damn they're huge! Ctrl-click to toggle the waddle dampeners!"
 	icon_state = "clown"
 	item_state = "clown_shoes"
 	slowdown = SHOES_SLOWDOWN+1
@@ -579,16 +522,6 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 /obj/item/clothing/shoes/bhop/clown/examine_more(mob/user)
 	. = ..()
 	. += span_warning("Эти ботинки снабжены специальным механизмом для прыжков, работающим на основе технологии \"хонк-спейс\", позволяя выполнять захватывающие акробатические трюки!")
-
-/obj/item/clothing/shoes/bhop/clown/get_ru_names()
-	return alist(
-		NOMINATIVE = "клоунские башмаки",
-		GENITIVE = "клоунских башмаков",
-		DATIVE = "клоунским башмакам",
-		ACCUSATIVE = "клоунские башмаки",
-		INSTRUMENTAL = "клоунскими башмаками",
-		PREPOSITIONAL = "клоунских башмаках",
-	)
 
 /obj/item/clothing/shoes/bhop/clown/ui_action_click(mob/user, datum/action/action, leftclick)
 	user.emote("flip")
@@ -622,7 +555,7 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/ducky
 	name = "rubber ducky shoes"
-	desc = "Эти тапочки сделаны, чтобы крякать, и они реально крякают!"
+	desc = "These shoes are made for quacking, and that's just what they'll do."
 	icon_state = "ducky"
 	item_state = "ducky"
 
@@ -657,15 +590,13 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/leather_boots
 	name = "high leather boots"
-	desc = "Стройные сапоги сделанные из кожи."
+	desc = "Sleek leather boots."
 	icon_state = "leather_boots"
 	item_state = "leather_boots"
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/clothing/species/vox/shoes.dmi',
 		SPECIES_DRASK = 'icons/mob/clothing/species/drask/shoes.dmi',
 		SPECIES_UNATHI = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_BASIC = 'icons/mob/clothing/species/unathi/shoes.dmi',
-		SPECIES_ASHWALKER_SHAMAN = 'icons/mob/clothing/species/unathi/shoes.dmi',
 		SPECIES_DRACONOID = 'icons/mob/clothing/species/unathi/shoes.dmi',
 		SPECIES_MONKEY = 'icons/mob/clothing/species/monkey/shoes.dmi',
 		SPECIES_FARWA = 'icons/mob/clothing/species/monkey/shoes.dmi',
@@ -676,34 +607,14 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 
 /obj/item/clothing/shoes/chad
 	name = "Chad shoes"
-	desc = "Сапоги с сильной аурой."
+	desc = "Boots with a powerful aura."
 	icon_state = "chadboots"
 	item_state = "chadboots"
 	species_restricted = list(SPECIES_HUMAN)
 
-/obj/item/clothing/shoes/chad/get_ru_names()
-	return alist(
-		NOMINATIVE = "сапоги Гигачада",
-		GENITIVE = "сапога Гигачада",
-		DATIVE = "сапогу Гигачада",
-		ACCUSATIVE = "сапоги Гигачада",
-		INSTRUMENTAL = "сапогами Гигачада",
-		PREPOSITIONAL = "сапогах Гигачада",
-	)
-
 /obj/item/clothing/shoes/crocks
 	name = "crocks shoes"
-	desc = "Пара резиновых сабо. Выглядят как сплавленная воедино дешевая пластмасса."
+	desc = "A pair of rubber clogs. They look like cheap plastic fused together."
 	icon_state = "crocks"
 	item_state = "crocks"
-	species_restricted = list("exclude", SPECIES_ASHWALKER_BASIC, SPECIES_ASHWALKER_SHAMAN, SPECIES_UNATHI)
-
-/obj/item/clothing/shoes/chad/get_ru_names()
-	return alist(
-		NOMINATIVE = "жёлтые кроксы",
-		GENITIVE = "жёлтых кроксов",
-		DATIVE = "жёлтым кроксам",
-		ACCUSATIVE = "жёлтые кроксы",
-		INSTRUMENTAL = "жёлтыми кроксами",
-		PREPOSITIONAL = "жёлтых кроксах",
-	)
+	species_restricted = list("exclude", SPECIES_UNATHI)

@@ -96,10 +96,6 @@
 	},
 /area/shuttle/transport)
 "N" = (
-/obj/effect/rune{
-	icon = 'icons/effects/96x96.dmi';
-	icon_state = "rune_large"
-	},
 /obj/effect/decal/cleanable/confetti,
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"

@@ -1,7 +1,6 @@
 /obj/item/circuit_component/wirenet_receive
 	display_name = "WireNet приёмник"
-	desc = "Получает пакеты данных через WireNet. \
-			Если установлен ключ шифрования, будут приниматься только сигналы с таким же ключом шифрования."
+	desc = "Receives data packets over WireNet. If an encryption key is set, only signals with the same key will be accepted."
 	category = "Utility"
 
 	circuit_flags = CIRCUIT_FLAG_OUTPUT_SIGNAL //trigger_output

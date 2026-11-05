@@ -567,9 +567,6 @@
 /obj/item/abductor/silencer,
 /obj/item/abductor/mind_device,
 /obj/item/abductor/gizmo,
-/obj/structure/ninjatele{
-	pixel_x = -28
-	},
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "fL" = (
@@ -1162,7 +1159,6 @@
 /area/holodeck/source_knightarena)
 "ne" = (
 /obj/structure/table/wood,
-/obj/item/whetstone/cult,
 /turf/simulated/floor/plasteel{
 	icon_state = "hierophant1"
 	},
@@ -2052,7 +2048,7 @@
 /area/holodeck/source_basketball)
 "zm" = (
 /obj/structure/table/wood,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/gun/energy/laser/awaymission_aeg,
 /obj/item/gun/energy/laser/cyborg,
 /obj/item/gun/energy/laser/practice,
@@ -2268,7 +2264,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -30
@@ -2531,7 +2527,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 3;
@@ -2627,7 +2623,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 3;
@@ -2662,7 +2658,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -30
@@ -2814,7 +2810,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 3;
@@ -2918,7 +2914,7 @@
 	armor = list("melee" = 1000, "bullet" = 1000, "laser" = 1000, "energy" = 1000, "bomb" = 1000, "bio" = 1000, "fire" = 500, "acid" = 500)
 	},
 /obj/item/reagent_containers/food/snacks/charred_krill{
-	name = "ТАНДЕРДРОМНЫЙ КРИИЛ"
+	name = "THUNDERDROME KRILL"
 	},
 /turf/simulated/floor/indestructible/asteroid,
 /area/centcom/tdome/new_arena/cqc)
@@ -2982,7 +2978,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 30
@@ -3368,7 +3364,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 30
@@ -3757,17 +3753,6 @@
 /area/centcom/admin_room)
 "TF" = (
 /obj/structure/table/wood,
-/obj/item/clothing/head/helmet/space/space_ninja,
-/obj/item/clothing/shoes/space_ninja,
-/obj/item/clothing/mask/gas/space_ninja,
-/obj/item/clothing/gloves/space_ninja,
-/obj/item/clothing/suit/space/space_ninja,
-/obj/item/clothing/under/ninja,
-/obj/item/storage/backpack/ninja,
-/obj/item/melee/energy_katana,
-/obj/item/melee/energy_katana/borg{
-	pixel_y = 6
-	},
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "TM" = (
@@ -4086,7 +4071,7 @@
 /obj/item/clothing/shoes/color/brown,
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/swat,
-/obj/item/gun/energy/laser/hitscan/carbine,
+/obj/item/gun/energy/laser,
 /obj/item/shield/energy,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 3;

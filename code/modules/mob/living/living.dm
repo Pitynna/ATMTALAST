@@ -765,12 +765,6 @@
 		QDEL_LIST(reagents.addiction_list)
 		reagents.addiction_threshold_accumulated.Cut()
 
-	if(iscultist(src))
-		if(SSticker.mode.cult_risen)
-			SSticker.mode.rise(src)
-		if(SSticker.mode.cult_ascendant)
-			SSticker.mode.ascend(src)
-
 	QDEL_LIST(processing_patches)
 	..()
 
@@ -1340,42 +1334,6 @@ GAME_VERB(/mob/living, resist, "Сопротивляться", VERB_CATEGORY_IC)
 	else if(!mob_negates_gravity())
 		step_towards(src, singularity)
 
-/mob/living/narsie_act()
-	if(client)
-		make_new_construct(/mob/living/simple_animal/hostile/construct/harvester, src, cult_override = TRUE)
-	spawn_dust()
-	gib()
-
-/mob/living/ratvar_act(weak = FALSE)
-	if(weak)
-		return //It's too weak to break a flesh!
-	if(client)
-		switch(rand(1,3))
-			if(1)
-				var/mob/living/simple_animal/hostile/clockwork/marauder/cog = new (get_turf(src))
-				if(mind)
-					SSticker.mode.add_clocker(mind)
-					mind.transfer_to(cog)
-				else
-					cog.possess_by_player(client.key)
-			if(2)
-				var/mob/living/silicon/robot/cogscarab/cog = new (get_turf(src))
-				if(mind)
-					SSticker.mode.add_clocker(mind)
-					mind.transfer_to(cog)
-				else
-					cog.possess_by_player(client.key)
-			if(3)
-				var/mob/living/silicon/robot/cog = new (get_turf(src))
-				if(mind)
-					SSticker.mode.add_clocker(mind)
-					mind.transfer_to(cog)
-				else
-					cog.possess_by_player(client.key)
-				cog.ratvar_act()
-	spawn_dust()
-	gib()
-
 /mob/living/do_attack_animation(atom/A, visual_effect_icon, obj/item/used_item, no_effect)
 	if(!used_item)
 		used_item = get_active_hand()
@@ -1436,9 +1394,7 @@ GAME_VERB(/mob/living, resist, "Сопротивляться", VERB_CATEGORY_IC)
 	. = TRUE
 	to_chat(user, span_notice("Вы начинаете разделывать [declent_ru(ACCUSATIVE)]..."))
 	playsound(loc, 'sound/weapons/slice.ogg', 50, TRUE, -1)
-	CALCULATE_SKILL_MOD(user, BUTCHERING_SPEED_MOD, butchering_skill_mod)
-	var/butchering_duration = I.has_speed_harvest ? 1 SECONDS : (4 SECONDS * mob_size)
-	if(!do_after(user, butchering_duration * butchering_skill_mod, src, NONE, max_interact_count = 1, cancel_on_max = TRUE) || !Adjacent(user))
+	if(!do_after(user, I.has_speed_harvest ? 1 SECONDS : (4 SECONDS * mob_size), src, NONE, max_interact_count = 1, cancel_on_max = TRUE) || !Adjacent(user))
 		return .
 	harvest(user)
 

@@ -5,7 +5,7 @@
 
 /obj/item/paper
 	name = "paper"
-	desc = "Пустой листок бумаги."
+	desc = "A blank sheet of paper."
 	gender = FEMALE
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "paper"
@@ -51,16 +51,6 @@
 	var/const/signfont = "Times New Roman"
 	var/const/crayonfont = "Comic Sans MS"
 	var/time = "00:00"
-
-/obj/item/paper/get_ru_names()
-	return alist(
-		NOMINATIVE = "бумага",
-		GENITIVE = "бумаги",
-		DATIVE = "бумаге",
-		ACCUSATIVE = "бумагу",
-		INSTRUMENTAL = "бумагой",
-		PREPOSITIONAL = "бумаге",
-	)
 
 /obj/item/paper/Initialize(mapload)
 	. = ..()
@@ -718,7 +708,7 @@
 	language = LANGUAGE_SOL_COMMON
 
 /obj/item/paper/central_command
-	name = "Директива Центрального командования"
+	name = "paper"
 	info = ""
 
 /obj/item/paper/central_command/Initialize(mapload)
@@ -735,54 +725,8 @@
 
 /obj/item/paper/central_command/archive/memes
 
-/obj/item/paper/thief
-	name = "Инструкции"
-	header = "<font face=\"Verdana\" color=black>\
-			<table cellspacing=0 cellpadding=3  align=\"right\">\
-			<tr><td><img src= thieflogo.png></td></tr>\
-			<br><hr></font>"
-	info = "<font face=\"Verdana\"\
-	<br><center><h2>Инструкции</h2></center> \
-	<br><center><h3>Здравия, товарищ по ремеслу!</h3></center> \
-	<br>\n<br>\nДанная инструкция поможет тебе разобраться и сразу не попасться.<br> \
-	\nНу... Тут как повезет. Но помни, если тебя поймали — ты никого не знаешь.<br> \
-	\nМы постараемся вытащить тебя как только так сразу. \
-	\nА до этого момента сиди держи язык за зубами. Гильдия всегда всё знает.<br> \
-	<br><hr> \
-	<br>\n<b>Начнем с основ.</b><br> \
-	\nВ твоих руках находится коробка с твоими личным инструментарием, который ты взял с собой. \
-	Надеюсь ты тщательно подумал что берешь. В любом случае, думать уже поздно, теперь работай с тем что есть и что под рукой.<br> \
-	\nНадеюсь ты не взял с собой термальные очки. Ты же уважающий себя член нашей гильдии. Ведь так?<br> \
-	\nА даже если взял, наверняка мы заменили тебе их на не-хамелеонные и приложили коробку сладостей. Наслаждайся.<br> \
-	\nЕсли же не взял — мое личное уважение за знание своего ремесла и уверенность.<br> \
-	\nТакже в твой набор вложен портфель и перчатки. \
-	\nПортфель позволяет тебе спрятать вещи в него, а после запрятать их где-нибудь под-полом. \
-	Конечно ты можешь и без этого спрятать их в бачок унитаза, судить твои методы не буду. Они все хороши.<br> \
-	\nНаши фирменные перчатки не оставляют следов и позволяют стащить вещь у твоей цели прямо на её глазах в твои руки. \
-	И она даже ничего не заметит. Конечно если ты не снимаешь с неё трусы. Лёгкий ветерок щекочащий булочки вызывает подозрения.<br> \
-	<br><hr> \
-	<br>\n<b>А теперь по пунктам:</b><br>\
-	\n1. Получи информацию по цели.<br> \
-	\n2. Найди цель.<br> \
-	\n3. Продумай план с использованием своего снаряжения и снаряжения станции.<br> \
-	\n\t	3.1 Заполучи дополнительное снаряжение при необходимости.<br> \
-	\n\t	3.2 Воспользуйся украденными денежными средствами для получения снаряжения.<br> \
-	\n4. Действуй. Не сиди и не жди. Чем дольше ты ждешь, тем больше шансов что цель пострадает до её заполучения.<br> \
-	\n\t	4.1 Если цель — предмет, просто не потеряй его после кражи.<br> \
-	\n\t	4.2 Если цель — структура, убедись что её не разобрали никакие клоуны.<br> \
-	\n\t	4.3 Если цель — питомец, убедись в её безопасности, помести её в переноску, рюкзак или шкаф, свяжи по возможности.<br> \
-	\n5. Контролируй сохранность цели во избежания её повреждения или... смерти. Иначе задача будет провалена.<br> \
-	\n6. Для успешного выполнения цели необходимо:<br> \
-	\n\t	6.1 Предметы: Храни их на себе, в себе, в карманах или рюкзаке. <br> \
-	\n\t	6.2 Структура: Держи её возле себя по прибытию. <br> \
-	\n\t	6.3 Питомец: Держи его в рюкзаке, в карманах, переноске, шкафу или на голове по прибытию. <br> \
-	\n7. ...<br> \
-	\n8. Profit!<br></font> \
-	<br>\n<br>\n<font size = \"1\"><b>Уничтожь улики, коробку и инструкцию во избежании раскрытия работы гильдии.</b></span> \
-	<br>\n\t\t<font size = \"1\">~~~ <b>Твой Куратор:</b> Персональный Управляемый Помощник Согласования ~~~</span>"
-
 /obj/item/paper/dog_detective_explain
-	name = "Форма NT-PET- — Уведомление агента внутренних дел \"Нанотрейзен\" о питомце \"Гав Гавыч\""
+	name = "Form NT-PET - Internal Affairs Agent's Notice Regarding Woof Woofych"
 	header ="<p><img style='display: block; margin-left: auto; margin-right: auto;' src='ntlogo.png' alt='' width='220' height='135' /></p><hr /><h3 style='text-align: center;font-family: Verdana;'><b> Отдел внутренних дел \"Нанотрейзен\" по надзору за животными.</h3><p style='text-align: center;font-family:Verdana;'>Официальное Уведомление</p></b><hr />"
 	info = "<font face=\"Verdana\" color=black>ᅠᅠАгенство внутренних дел по надзору за домашними животными находящимися на станции сообщает, приставленный к вам питомец \"Гав Гавыч\" почил. Он верно служил ремеслу дознавателей, сыщиков и детективов. Мы будем помнить о его вкладе и сохраним о нём память в анналах истории о домашних питомцах \"Нанотрейзен\".<br><hr>"
 	footer = "<center><font size=\"4\"><b>Штампы и данные:</b></font></center><br>Время принятия отчета: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве уполномоченных лиц, и выдаче агенту.<br>*Данный документ может содержать личную информацию. </font></font>"
@@ -966,49 +910,49 @@
 // MARK: Главы станции
 
 /obj/item/paper/form/NT_COM_ORDER
-	name = "Форма NT-COM-ORDER"
+	name = "Form NT-COM-ORDER"
 	id = "NT-COM-ORDER"
 	altername = "Приказ"
 	category = "Главы станции"
 	info = "<font face=\"Verdana\" color=black>Я, <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>, приказываю:<br><br><span class=\"paper_field\"></span><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><br>Подпись инициатора: <span class=\"paper_field\"></span><br>Время подписания приказа: <span class=\"paper_field\"></span><br>Дата подписания приказа: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве должностного лица.</font></font>"
 
 /obj/item/paper/form/NT_COM_ST
-	name = "Форма NT-COM-ST"
+	name = "Form NT-COM-ST"
 	id = "NT-COM-ST"
 	altername = "Отчет о ситуации на станции"
 	category = "Главы станции"
 	info = "<font face=\"Verdana\" color=black><center><b>Приветствую Центральное командование</b></center><br>Сообщает вам <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>.<br><br>В данный момент на станции код: <span class=\"paper_field\"></span><br>Активные угрозы для станции: <b><span class=\"paper_field\"></span></b><br>Потери среди экипажа: <span class=\"paper_field\"></span><br>Повреждения на станции: <span class=\"paper_field\"></span><br>Общее состояние станции: <span class=\"paper_field\"></span><br>Дополнительная информация: <span class=\"paper_field\"></span><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись: <span class=\"paper_field\"></span><hr><font size = \"1\">*В данном документе описывается полное состояние станции, необходимо перечислить всю доступную информацию. <br>*Информацию, которую вы считаете нужной, необходимо сообщить в разделе — дополнительная информация. <br>*<b>Данный документ считается официальным только после подписи уполномоченного лица и наличии на документе его печати.</b> </font></font>"
 
 /obj/item/paper/form/NT_COM_ACAP
-	name = "Форма NT-COM-ACAP"
+	name = "Form NT-COM-ACAP"
 	id = "NT-COM-ACAP"
 	altername = "Заявление о повышении главы отдела до и.о. капитана"
 	category = "Главы станции"
 	info = "<font face=\"Verdana\" color=black>Я, <span class=\"paper_field\"></span>, в должности главы отделения <span class=\"paper_field\"></span>, прошу согласовать нынешнее командование станции Керберос, в повышении меня до и.о. капитана.<br><br>⠀⠀⠀При назначении меня на данную должность, я обязуюсь выполнять все рекомендации и правила, согласно стандартным рабочим процедурам капитана. До появления капитана, я обеспечиваю порядок и управление станцией, сохранность и безопасность <i>диска с кодами авторизации ядерной боеголовки, а также самой боеголовки, коды от сейфов и личные вещи капитана</i>.<br><br>⠀⠀⠀При появлении капитана мне необходибо будет сообщить: состояние и статус станции, о своем продвижении до и.о. капитана, и обнулить капитанский доступ при первому требованию капитана.<hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><br>Подпись заявителя: <span class=\"paper_field\"></span><br>Подпись инициатора повышения: <span class=\"paper_field\"></span><br>Время вступления в должность и.о. капитана: <span class=\"paper_field\"></span><br>Подпись главы отделения <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br>Подпись главы отделения <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br>Подпись главы отделения <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве уполномоченного лица, производившего инициацию повышения, и выдаче заявителю.<br>*Если один (или более) глав отсутствуют, необходимо собрать подписи, действующих глав.<br>*Так же в данном документе, главам, которые согласились с кандидатом, необходимо поставить свою печать и подпись.</font></font>"
 
 /obj/item/paper/form/NT_COM_ACOM
-	name = "Форма NT-COM-ACOM"
+	name = "Form NT-COM-ACOM"
 	id = "NT-COM-ACOM"
 	altername = "Заявление о повышении сотрудника до и.о. главы отделения"
 	category = "Главы станции"
 	info = "<font face=\"Verdana\" color=black><br>ᅠᅠЯ, <span class=\"paper_field\"></span>, в должности сотрудника отделения <b><span class=\"paper_field\"></span></b>, прошу согласовать нынешнее командование станции Керберос, в повышении меня до звания и.о. главы <span class=\"paper_field\"></span>.<br><br>⠀⠀⠀При назначении меня на данную должность, я обязуюсь выполнять все рекомендации, и правила, которые присутствуют на главе отделения <span class=\"paper_field\"></span>. До появления основного главы отделения, я обеспечиваю порядок и управление своим отделом, сохранность и безопасность <i>личных вещей главы отделения</i>.<br><br>⠀⠀⠀При появлении главы отделения, мне неообходимо сообщить: состояние и статус своего отдела, о своем продвижении до и.о. главы отделения, и сдать доступ и.о. главы и взятые вещи при первом требовании прибывшего главы.<br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись заявителя: <span class=\"paper_field\"></span><br>Подпись инициатора повышения: <span class=\"paper_field\"></span><br>Время вступления в и.о. <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br>Подпись главы отделения <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br>Подпись главы отделения <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br>Подпись главы отделения <span class=\"paper_field\"></span>: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве уполномоченного лица, производившего инициацию повышения, и выдаче заявителю.<br>*При указании главы, рекомендуется использовать сокращения:<br>*ГВ (глав. врач), ГИ (глав. инженер), НР (науч. рук.), КМ (квартирмейстер), ГСБ (глава СБ), ГП (глава персонала).<br>*Если один (или более) глав отсутствуют, необходимо собрать подписи, действующих глав.<br>*Так же в данном документе, главам, которые согласились с кандидатом, необходимо поставить свою печать и подпись.</font></font>"
 
 /obj/item/paper/form/NT_COM_LCOM
-	name = "Форма NT-COM-LCOM"
+	name = "Form NT-COM-LCOM"
 	id = "NT-COM-LCOM"
 	altername = "Заявление об увольнении главы отделения"
 	category = "Главы станции"
 	info = "<font face=\"Verdana\" color=black><br>ᅠᅠЯ, <span class=\"paper_field\"></span>, в должности – <span class=\"paper_field\"></span>, заявляю об официальном увольнении действующего главы <span class=\"paper_field\"></span>, отделения <span class=\"paper_field\"></span>. Причина увольнения:<span class=\"paper_field\"></span><br>⠀⠀⠀При наличии иных причин, от других глав, они так же могут написать их в данном документе.<br><span class=\"paper_field\"></span><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись инициатора увольнения: <span class=\"paper_field\"></span><br>Подпись увольняемого, о ознакомлении: <span class=\"paper_field\"></span><br>Дата и время увольнения: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве уполномоченного лица, производившего инициацию увольнения, и выдаче увольняемому.<br>*Для полной эффективности данного документа, необходимо собрать как можно больше причин для увольнения, и перечислить их. Инициировать увольнение может только <i> капитан или глава персонала. </i></font></font>"
 
 /obj/item/paper/form/NT_COM_REQ
-	name = "Форма NT-COM-REQ"
+	name = "Form NT-COM-REQ"
 	id = "NT-COM-REQ"
 	altername = "Запрос на поставку с Центрального командования"
 	category = "Главы станции"
 	info = "<font face=\"Verdana\" color=black><br><center><b>Приветствую Центральное командование</b></center><br><br>Сообщает вам <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>.<br><br><b>Текст запроса:</b> <span class=\"paper_field\"></span><br><br><b>Причина запроса:</b><span class=\"paper_field\"></span><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><br>Подпись: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*В данном документе описывается запросы на поставку оборудования/ресурсов, необходимо перечислить по пунктно необходимое для поставки. <br>*Данный документ считается, официальным, только после подписи уполномоченного лица, и наличии на документе его печати.</b> </font></font>"
 
 /obj/item/paper/form/NT_COM_OS
-	name = "Форма NT-COM-OS"
+	name = "Form NT-COM-OS"
 	id = "NT-COM-OS"
 	altername = "Отчёт о выполнении цели"
 	category = "Главы станции"
@@ -1017,7 +961,7 @@
 // MARK: Медицинский отдел
 
 /obj/item/paper/form/NT_MD_01
-	name = "Форма NT-MD-01"
+	name = "Form NT-MD-01"
 	id = "NT-MD-01"
 	altername = "Постановление на поставку медикаментов"
 	category = "Медицинский отдел"
@@ -1025,7 +969,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_MD_02
-	name = "Форма NT-MD-02"
+	name = "Form NT-MD-02"
 	id = "NT-MD-02"
 	altername = "Отчёт о вскрытии"
 	category = "Медицинский отдел"
@@ -1033,7 +977,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_MD_03
-	name = "Форма NT-MD-03"
+	name = "Form NT-MD-03"
 	id = "NT-MD-03"
 	altername = "Постановление на изготовление химических препаратов"
 	category = "Медицинский отдел"
@@ -1041,7 +985,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_MD_04
-	name = "Форма NT-MD-04"
+	name = "Form NT-MD-04"
 	id = "NT-MD-04"
 	altername = "Сводка о вирусе"
 	category = "Медицинский отдел"
@@ -1049,7 +993,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_MD_05
-	name = "Форма NT-MD-05"
+	name = "Form NT-MD-05"
 	id = "NT-MD-05"
 	altername = "Отчет об психологическом состоянии"
 	category = "Медицинский отдел"
@@ -1057,7 +1001,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_MD_VRR
-	name = "Форма NT-MD-VRR"
+	name = "Form NT-MD-VRR"
 	id = "NT-MD-VRR"
 	altername = "Запрос на распространение вируса"
 	category = "Медицинский отдел"
@@ -1067,21 +1011,21 @@
 // MARK: Исследовательский отдел
 
 /obj/item/paper/form/NT_RND_01
-	name = "Форма NT-RND-01"
+	name = "Form NT-RND-01"
 	id = "NT-RND-01"
 	altername = "Отчет о странном предмете"
 	category = "Исследовательский отдел"
 	info = "<font face=\"Verdana\" color=black><br>Название предмета: <span class=\"paper_field\"></span><br>Тип предмета: <span class=\"paper_field\"></span><br>Строение: <span class=\"paper_field\"></span><br>Особенности и функционал: <span class=\"paper_field\"></span><br>Дополнительная информация: <span class=\"paper_field\"></span><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись производившего осмотр: <span class=\"paper_field\"></span><br><hr><i><font size = \"1\">*В дополнительной информации, рекомендуется указать остальную информацию о предмете, любое взаимодействие с ним, модификации, итоговый вариант после модификации.</i></font></font>"
 
 /obj/item/paper/form/NT_RND_02
-	name = "Форма NT-RND-02"
+	name = "Form NT-RND-02"
 	id = "NT-RND-02"
 	altername = "Заявление на киберизацию"
 	category = "Исследовательский отдел"
 	info = "<font face=\"Verdana\" color=black>⠀⠀⠀ Я, <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>, самовольно подтверждаю согласие на проведение киберизации.<br>⠀⠀⠀ Я полностью доверяю работнику <span class=\"paper_field\"></span> в должности – <span class=\"paper_field\"></span>. Я хорошо осведомлен о рисках, связанных как с операцией, так и с киберизацией, и понимаю, что Nanotrasen не несет ответственности, если эти процедуры вызовут боль, заражение или иные случаи летального характера.<br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись заявителя: <span class=\"paper_field\"></span><br>Подпись уполномоченного: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Если член экипажа мертв, данный документ нету необходимости создавать.<br>*Если член экипажа жив, данный документ сохраняется только у уполномоченного лица.<br>*Данный документ может использоваться как для создания киборгов, так и для ИИ<font size = \"1\"></font>"
 
 /obj/item/paper/form/NT_RND_03
-	name = "Форма NT-RND-03"
+	name = "Form NT-RND-03"
 	id = "NT-RND-03"
 	altername = "Заявление на получение и установку импланта"
 	category = "Исследовательский отдел"
@@ -1090,7 +1034,7 @@
 // MARK: Общие формы
 
 /obj/item/paper/form/NT_BLANK
-	name = "Форма NT"
+	name = "Form NT"
 	id = "NT-BLANK"
 	altername = "Пустой бланк для любых целей"
 	category = "Общие формы"
@@ -1098,7 +1042,7 @@
 	footer = null
 
 /obj/item/paper/form/NT_E_112
-	name = "Форма NT-E-112"
+	name = "Form NT-E-112"
 	id = "NT-E-112"
 	altername = "Экстренное письмо"
 	category = "Общие формы"
@@ -1109,7 +1053,7 @@
 // MARK: Отдел кадров
 
 /obj/item/paper/form/NT_HR_00
-	name = "Форма NT-HR-00"
+	name = "Form NT-HR-00"
 	id = "NT-HR-00"
 	altername = "Бланк заявления"
 	category = "Отдел кадров"
@@ -1117,77 +1061,77 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_HR_01
-	name = "Форма NT-HR-01"
+	name = "Form NT-HR-01"
 	id = "NT-HR-01"
 	altername = "Заявление о приеме на работу"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Заявление</b></font></center><br><table></td><tr><td>Имя заявителя:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта заявителя:<br><font size = \"1\">Эта информация есть в ваших заметках</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Запрашиваемая должность:<br><font size = \"1\">Требует наличия квалификации</font><td><span class=\"paper_field\"></span><br></td><tr><td>Список компетенций:<br><span class=\"paper_field\"></span><br><br></td></tr></table></font><font face=\"Verdana\" color=black><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись заявителя:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись будущего главы:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_02
-	name = "Форма NT-HR-02"
+	name = "Form NT-HR-02"
 	id = "NT-HR-02"
 	altername = "Заявление на смену должности"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Заявление</b></font></center><br><table></td><tr><td>Имя заявителя:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта заявителя:<br><font size = \"1\">Эта информация есть в ваших заметках</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Запрашиваемая должность:<br><font size = \"1\">Требует наличия квалификации</font><td><span class=\"paper_field\"></span><br></td><tr><td>Причина:<br><font size = \"1\">Объясните свои намерения</font><br><span class=\"paper_field\"></span><br><br></td></tr></table><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись заявителя:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись текущего главы:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись будущего главы:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_12
-	name = "Форма NT-HR-12"
+	name = "Form NT-HR-12"
 	id = "NT-HR-12"
 	altername = "Приказ на смену должности"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Приказ</b></font></center><br><table></td><tr><td>Имя сотрудника:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта сотрудника:<br><font size = \"1\">Эта информация есть у главы персонала</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Запрашиваемая должность:<br><font size = \"1\">Требует наличия квалификации</font><td><span class=\"paper_field\"></span><br></td><tr><td>Причина:<br><font size = \"1\">Объясните свои намерения</font><br><span class=\"paper_field\"></span><br><br></td></tr></table><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись инициатора:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_03
-	name = "Форма NT-HR-03"
+	name = "Form NT-HR-03"
 	id = "NT-HR-03"
 	altername = "Заявление об увольнении"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Заявление</b></font></center><br><table></td><tr><td>Имя заявителя:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта заявителя:<br><font size = \"1\">Эта информация есть в ваших заметках</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Причина:<br><font size = \"1\">Объясните свои намерения</font><br><span class=\"paper_field\"></span><br><br></td></tr></table><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись заявителя:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись текущего главы:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_13
-	name = "Форма NT-HR-13"
+	name = "Form NT-HR-13"
 	id = "NT-HR-13"
 	altername = "Приказ об увольнении"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Приказ</b></font></center><br><table></td><tr><td>Имя увольняемого:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта увольняемого:<br><font size = \"1\">Эта информация есть у главы персонала</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Причина:<br><font size = \"1\">Объясните свои намерения</font><br><span class=\"paper_field\"></span><br><br></td></tr></table><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись инициатора:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_04
-	name = "Форма NT-HR-04"
+	name = "Form NT-HR-04"
 	id = "NT-HR-04"
 	altername = "Заявление на выдачу новой ID карты"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Заявление</b></font></center><br><table></td><tr><td>Имя заявителя:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта заявителя:<br><font size = \"1\">Эта информация есть в ваших заметках</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Причина:<br><font size = \"1\">Объясните свои намерения</font><br><span class=\"paper_field\"></span><br><br></td></tr></table><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись заявителя:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_05
-	name = "Форма NT-HR-05"
+	name = "Form NT-HR-05"
 	id = "NT-HR-05"
 	altername = "Заявление на дополнительный доступ"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size=\"4\"><b>Заявление</b></font></center><br><table></td><tr><td>Имя заявителя:<br><font size = \"1\">Полностью и без ошибок</font><td><span class=\"paper_field\"></span><br></td><tr><td>Номер аккаунта заявителя:<br><font size = \"1\">Эта информация есть в ваших заметках</font><td><span class=\"paper_field\"></span><br></td><tr><td>Текущая должность:<br><font size = \"1\">Указано на ID карте</font><td><span class=\"paper_field\"></span><br></td><tr><td>Требуемый доступ:<br><font size = \"1\">Может требовать дополнительного согласования</font><td><span class=\"paper_field\"></span><br></td><tr><td>Причина:<br><font size = \"1\">Объясните свои намерения</font><br><span class=\"paper_field\"></span><br><br></td></tr></table><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br><table></td><tr><td>Время:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись заявителя:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись главы персонала:<td><span class=\"paper_field\"></span><br></td><tr><td>Подпись текущего главы:<td><span class=\"paper_field\"></span><br></td></tr></table></font>"
 
 /obj/item/paper/form/NT_HR_06
-	name = "Форма NT-HR-06"
+	name = "Form NT-HR-06"
 	id = "NT-HR-06"
 	altername = "Лицензия на создание организации/отдела"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><font size = \"4\"><b>Заявление</b></font></i></center><br><br>Я <b><span class=\"paper_field\"></span></b>, прошу Вашего разрешения на создание <b><span class=\"paper_field\"></span></b> для работы с экипажем.<br><br>Наше Агенство/Отдел займет <b><span class=\"paper_field\"></span></b>.<br><br>Наша Организация обязуется соблюдать Космический Закон. Также я <b><span class=\"paper_field\"></span></b>, как глава отдела, буду нести ответственность за своих сотрудников и обязуюсь наказывать их за несоблюдение Космического Закона. Или же передавать сотрудникам Службы Безопасности.<br><br><hr><br><center><i><font size=\"4\"><b>Подписи и штампы</b></font></i></center><br><i><br>Время: <span class=\"paper_field\"></span><br><br>Подпись заявителя: <span class=\"paper_field\"></span><br><br>Подпись главы персонала: <span class=\"paper_field\"></span></i><br><hr><font size = \"1\">*Обязательно провести копирование документа для главы персонала, оригинал документа должен быть выдан обладателю лицензии.</font><br><br><font size = \"1\">*Данная форма документа, обязательно должна подтверждаться печатью ответственного лица. В случае наличия опечаток и отсутствия подписей или печатей, лицензия будет являться недействительной.</font></font>"
 
 /obj/item/paper/form/NT_HR_07
-	name = "Форма NT-HR-07"
+	name = "Form NT-HR-07"
 	id = "NT-HR-07"
 	altername = "Разрешение на перестройку/перестановку"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black><center><i><font size=\"4\"><b>Разрешение</b></font></i></center><br>Я <b><span class=\"paper_field\"></span></b>, прошу Вашего разрешения на перестройку/перестановку помещения <b><span class=\"paper_field\"></span></b> под свои нужды или нужды организации.<br><br>Должность заявителя: <span class=\"paper_field\"></span><br><br><hr><br><center><i><font size=\"4\"><b>Подписи и штампы</b></font></i></center><br><i><br>Время: <span class=\"paper_field\"></span><br><br>Подпись заявителя: <span class=\"paper_field\"></span><br><br>Подпись главы персонала: <span class=\"paper_field\"></span></i><br><br><hr><font size = \"1\">*Обязательно провести копирование документа для главы персонала, оригинал документа должен быть выдан заявителю.</font></font>"
 
 /obj/item/paper/form/NT_HR_08
-	name = "Форма NT-HR-08"
+	name = "Form NT-HR-08"
 	id = "NT-HR-08"
 	altername = "Запрос о постройке меха"
 	category = "Отдел кадров"
 	info = "<font face=\"Verdana\" color=black>⠀⠀⠀Я, <span class=\"paper_field\"></span>, прошу произвести постройку меха – <b><span class=\"paper_field\"></span></b>, с данными модификациями – <i><span class=\"paper_field\"></span></i>, для выполнения задач: <i><span class=\"paper_field\"></span></i>.<br>⠀⠀⠀Так же я, <span class=\"paper_field\"></span>, обязуюсь соблюдать все правила, законы и предупреждения, а также соглашаюсь выполнять все устные или письменные инструкции, или приказы со стороны командования, представителей или агентов Nanotrasen, и Центрального командования.<br>⠀⠀⠀При получении меха, я становлюсь ответственным за его повреждение, уничтожение, похищение, или попадание в руки людей, относящимся к врагам Nanotrasen.<br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись заявителя: <span class=\"paper_field\"></span><br>Время постройки меха: <span class=\"paper_field\"></span><br>Время передачи меха заявителю: <span class=\"paper_field\"></span><br>Подпись изготовителя меха: <span class=\"paper_field\"></span><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве уполномоченных лиц, и выдаче заявителю.</font></font>"
 
 /obj/item/paper/form/NT_HR_09
-	name = "Форма NT-HR-09"
+	name = "Form NT-HR-09"
 	id = "NT-HR-09"
 	altername = "Квитанция о продаже пода"
 	category = "Отдел кадров"
@@ -1196,14 +1140,14 @@
 // MARK: Отдел сервиса
 
 /obj/item/paper/form/NT_MR
-	name = "Форма NT-MR"
+	name = "Form NT-MR"
 	id = "NT-MR"
 	altername = "Свидетельство о заключении брака"
 	category = "Отдел сервиса"
 	info = "<font face=\"Verdana\" color=black>⠀⠀⠀Объявляется, что <span class=\"paper_field\"></span>, и <span class=\"paper_field\"></span>, официально прошли процедуру заключения гражданского брака.<br><br><hr><br><center><font size=\"4\"><b>Подписи и штампы</b></font></center><br>Подпись уполномоченного: <span class=\"paper_field\"></span><br>Подпись свидетеля: <span class=\"paper_field\"></span><br>Подпись свидетеля: <span class=\"paper_field\"></span><br><br><hr><font size = \"1\">*Данный документ подлежит ксерокопированию, для сохранения в архиве уполномоченных лиц, и выдаче одному из представителей брака.<br>*При заявлении о расторжении брака, необходимо наличие двух супругов, и данного документа.</font></font>"
 
 /obj/item/paper/form/NT_MRL
-	name = "Форма NT-MRL"
+	name = "Form NT-MRL"
 	id = "NT-MRL"
 	altername = "Заявление о расторжении брака"
 	category = "Отдел сервиса"
@@ -1212,7 +1156,7 @@
 // MARK: Отдел снабжения
 
 /obj/item/paper/form/NT_REQ_01
-	name = "Форма NT-REQ-01"
+	name = "Form NT-REQ-01"
 	id = "NT-REQ-01"
 	altername = "Запрос на поставку"
 	category = "Отдел снабжения"
@@ -1220,7 +1164,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_SUP_01
-	name = "Форма NT-SUP-01"
+	name = "Form NT-SUP-01"
 	id = "NT-SUP-01"
 	altername = "Регистрационная форма для подтверждения заказа"
 	category = "Отдел снабжения"
@@ -1230,7 +1174,7 @@
 // MARK: Служба безопасности
 
 /obj/item/paper/form/NT_SEC_01
-	name = "Форма NT-SEC-01"
+	name = "Form NT-SEC-01"
 	id = "NT-SEC-01"
 	altername = "Свидетельские показания"
 	category = "Служба безопасности"
@@ -1238,7 +1182,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_11
-	name = "Форма NT-SEC-11"
+	name = "Form NT-SEC-11"
 	id = "NT-SEC-11"
 	altername = "Ордер на обыск"
 	category = "Служба безопасности"
@@ -1246,7 +1190,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_21
-	name = "Форма NT-SEC-21"
+	name = "Form NT-SEC-21"
 	id = "NT-SEC-21"
 	altername = "Ордер на арест"
 	category = "Служба безопасности"
@@ -1254,7 +1198,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_02
-	name = "Форма NT-SEC-02"
+	name = "Form NT-SEC-02"
 	id = "NT-SEC-02"
 	altername = "Отчёт по результатам расследования"
 	category = "Служба безопасности"
@@ -1262,7 +1206,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_03
-	name = "Форма NT-SEC-03"
+	name = "Form NT-SEC-03"
 	id = "NT-SEC-03"
 	altername = "Заявление о краже"
 	category = "Служба безопасности"
@@ -1270,7 +1214,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_04
-	name = "Форма NT-SEC-04"
+	name = "Form NT-SEC-04"
 	id = "NT-SEC-04"
 	altername = "Заявление о причинении вреда здоровью или имуществу"
 	category = "Служба безопасности"
@@ -1278,7 +1222,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_05
-	name = "Форма NT-SEC-05"
+	name = "Form NT-SEC-05"
 	id = "NT-SEC-05"
 	altername = "Разрешение на оружие"
 	category = "Служба безопасности"
@@ -1286,7 +1230,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_06
-	name = "Форма NT-SEC-06"
+	name = "Form NT-SEC-06"
 	id = "NT-SEC-06"
 	altername = "Разрешение на присваивание канала связи"
 	category = "Служба безопасности"
@@ -1294,7 +1238,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_07
-	name = "Форма NT-SEC-07"
+	name = "Form NT-SEC-07"
 	id = "NT-SEC-07"
 	altername = "Лицензия на использование канала связи и владение дополнительным оборудованием"
 	category = "Служба безопасности"
@@ -1302,7 +1246,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_SEC_08
-	name = "Форма NT-SEC-08"
+	name = "Form NT-SEC-08"
 	id = "NT-SEC-08"
 	altername = "Лицензирование вооружения и экипировки для исполнения деятельности"
 	category = "Служба безопасности"
@@ -1312,7 +1256,7 @@
 // MARK: Юридический отдел
 
 /obj/item/paper/form/NT_LD_00
-	name = "Форма NT-LD-00"
+	name = "Form NT-LD-00"
 	id = "NT-LD-00"
 	altername = "Бланк заявления"
 	category = "Юридический отдел"
@@ -1320,7 +1264,7 @@
 	footer = footer_signstamp
 
 /obj/item/paper/form/NT_LD_01
-	name = "Форма NT-LD-01"
+	name = "Form NT-LD-01"
 	id = "NT-LD-01"
 	altername = "Судебный приговор"
 	category = "Юридический отдел"
@@ -1329,7 +1273,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_LD_02
-	name = "Форма NT-LD-02"
+	name = "Form NT-LD-02"
 	id = "NT-LD-02"
 	altername = "Смертный приговор"
 	category = "Юридический отдел"
@@ -1338,7 +1282,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_LD_03
-	name = "Форма NT-LD-03"
+	name = "Form NT-LD-03"
 	id = "NT-LD-03"
 	altername = "Заявление о нарушении СРП членом экипажа"
 	category = "Юридический отдел"
@@ -1346,7 +1290,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_LD_04
-	name = "Форма NT-LD-04"
+	name = "Form NT-LD-04"
 	id = "NT-LD-04"
 	altername = "Заявление о нарушении СРП одним из отделов"
 	category = "Юридический отдел"
@@ -1354,7 +1298,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_LD_05
-	name = "Форма NT-LD-05"
+	name = "Form NT-LD-05"
 	id = "NT-LD-05"
 	altername = "Отчет агента внутренних дел"
 	category = "Юридический отдел"
@@ -1362,7 +1306,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_LD_06
-	name = "Форма NT-LD-06"
+	name = "Form NT-LD-06"
 	id = "NT-LD-06"
 	altername = "Бланк жалоб АВД"
 	category = "Юридический отдел"
@@ -1370,7 +1314,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_LD_DENY
-	name = "Форма NT-LD-DENY"
+	name = "Form NT-LD-DENY"
 	id = "NT-LD-DENY"
 	altername = "Запрет на реанимацию"
 	category = "Юридический отдел"
@@ -1380,7 +1324,7 @@
 // MARK: Центральное командование
 
 /obj/item/paper/form/NT_COM_01
-	name = "Форма NT-COM-01"
+	name = "Form NT-COM-01"
 	id = "NT-COM-01"
 	altername = "Запрос отчёта общего состояния станции"
 	category = "Центральное командование"
@@ -1392,7 +1336,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_COM_02
-	name = "Форма NT-COM-02"
+	name = "Form NT-COM-02"
 	id = "NT-COM-02"
 	altername = "Запрос отчёта состояния трудовых активов станции"
 	category = "Центральное командование"
@@ -1404,7 +1348,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_COM_03
-	name = "Форма NT-COM-03"
+	name = "Form NT-COM-03"
 	id = "NT-COM-03"
 	altername = "Запрос отчёта криминального статуса станции"
 	category = "Центральное командование"
@@ -1419,7 +1363,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_COM_04
-	name = "Форма NT-COM-04"
+	name = "Form NT-COM-04"
 	id = "NT-COM-04"
 	altername = "Запрос отчёта здравоохранения станции"
 	category = "Центральное командование"
@@ -1431,7 +1375,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_COM_05
-	name = "Форма NT-COM-05"
+	name = "Form NT-COM-05"
 	id = "NT-COM-05"
 	altername = "Запрос отчёта научно-технического прогресса станции"
 	category = "Центральное командование"
@@ -1443,7 +1387,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_COM_06
-	name = "Форма NT-COM-06"
+	name = "Form NT-COM-06"
 	id = "NT-COM-06"
 	altername = "Запрос отчёта инженерного обеспечения станции"
 	category = "Центральное командование"
@@ -1455,7 +1399,7 @@
 	footer = footer_confidential
 
 /obj/item/paper/form/NT_COM_07
-	name = "Форма NT-COM-07"
+	name = "Form NT-COM-07"
 	id = "NT-COM-07"
 	altername = "Запрос отчёта статуса снабжения станции "
 	category = "Центральное командование"
@@ -1465,148 +1409,6 @@
 	access = ACCESS_CENT_GENERAL
 	info = ""
 	footer = footer_confidential
-
-// MARK: Синдикатские формы
-
-/obj/item/paper/form/syndieform
-	name = "ALERT A CODER SYND FORM"
-	altername = "ALERT A CODER FORM"
-	access = ACCESS_SYNDICATE_COMMAND
-	confidential = TRUE
-	category = null
-	syndicate = TRUE
-	var/const/footer_to_taipan =   "<i><font face=\"Verdana\" color=black size = \"1\">\
-									<hr>\
-									*Несоблюдение и/или нарушение указаний, содержащихся в данном письме, карается смертью.\
-									<br>*Копирование, распространение и использование содержащейся информации карается смертью, за исключением случаев, описанных в письме.\
-									<br>*Письмо подлежит уничтожению после ознакомления.\
-									</font></i>"
-	var/const/footer_from_taipan = "<i><font face=\"Verdana\" color=black size = \"1\">\
-									<hr>\
-									*Целевым получателем запроса является Синдикат\
-									<br>*Копирование, распространение и использование документа и представленной информации \
-									за пределами целевого получателя запроса и экипажа станции запрещено.\
-									<br>*Оригинал документа после отправки целевому получателю подлежит хранению в защищённом месте, \
-									либо уничтожению с соответствующим указанием.\
-									<br>*В случае проникновения на объект посторонних лиц или угрозы проникновения документ подлежит уничтожению до или после отправки.\
-									</font></i>"
-	footer = footer_to_taipan
-
-/obj/item/paper/form/syndieform/Initialize(mapload)
-	. = ..()
-	if(is_header_needed)
-		header = "	<font face=\"Verdana\" color=black>\
-					<table cellspacing=0 cellpadding=3  align=\"right\">\
-					<tr><td><img src= syndielogo.png></td></tr>\
-					</table><br>\
-					<table border=10 cellspacing=0 cellpadding=3 width =\"250\" height=\"100\"  align=\"center\" bgcolor=\"#B50F1D\">\
-					<td><center><b>[confidential ? "СОВЕРШЕННО СЕКРЕТНО<br>" : ""]</b><b>[id]</b></center></td>\
-					</table>\
-					<br><hr></font>"
-	populatefields()
-
-/obj/item/paper/form/syndieform/SYND_COM_TC
-	name = "Форма SYND-COM-TC"
-	id = "SYND-COM-TC"
-	altername = "Официальное письмо"
-	category = "Синдикат"
-	info = "<font face=\"Verdana\" color=black>\
-			<center><h2><u>Официальное письмо объекту</u><br>&#34;ННКСС Тайпан&#34;</h2></center><hr>\
-			<span class=\"paper_field\"></span><br>\
-			<font size = \"1\">\
-			Подпись: <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>\
-			<br>Дата: <span class=\"paper_field\"></span> \
-			<br>Время: <span class=\"paper_field\"></span> \
-			<br></font></font>"
-
-/obj/item/paper/form/syndieform/SYND_COM_SUP
-	name = "Форма SYND-COM-SUP"
-	id = "SYND-COM-SUP"
-	altername = "Запрос особой доставки"
-	category = "Синдикат"
-	access = ACCESS_SYNDICATE
-	footer = footer_from_taipan
-	info = "<font face=\"Verdana\" color=black>\
-			<center><h2>Запрос особой доставки на станцию<br>\"Синдиката\"</h2></center><hr>\
-			<center><table>\
-			<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'>\
-			<td><center><font size=\"4\">Данные<br>для<br>доставки</font></center><td>\
-			<center><b><u><font size=\"4\">Получатель</font></u></b></center>\
-			<u>Наименование станции</u>: &#34;ННКСС <b>Тайпан</b>&#34;\
-			<br><u>Наименование сектора</u>: Эпсилон Лукусты\
-			</td></tr></table>\
-			</center><br>В связи с отсутствием в стандартном перечени заказов прошу доставить следующее:\
-			<br><ul><li><u><span class=\"paper_field\"></span></u></ul>\
-			<br>Причина запроса: <b><span class=\"paper_field\"></span></b>\
-			<br><font size = \"1\">\
-			Подпись: <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>\
-			<br>Дата: <span class=\"paper_field\"></span> \
-			<br>Время: <span class=\"paper_field\"></span> \
-			<br></font></font>"
-
-/obj/item/paper/form/syndieform/SYND_TAI_NO00
-	name = "Форма SYND-TAI-№00"
-	id = "SYND-TAI-№00"
-	altername = "Экстренное письмо"
-	category = "Синдикат"
-	access = ACCESS_SYNDICATE
-	footer = footer_from_taipan
-	info = "<font face=\"Verdana\" color=black>\
-			<center><h2><u>Экстренное письмо</u><br>ННКСС &#34;Тайпан&#34;</h2></center><hr>\
-			<span class=\"paper_field\"></span>\
-			<br><font size = \"1\">\
-			Подпись: <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>\
-			<br>Дата: <span class=\"paper_field\"></span> \
-			<br>Время: <span class=\"paper_field\"></span> \
-			<br></font></font>"
-
-/obj/item/paper/form/syndieform/SYND_TAI_NO01
-	name = "Форма SYND-TAI-№01"
-	id = "SYND-TAI-№01"
-	altername = "Отчёт о ситуации на станции"
-	category = "Синдикат"
-	access = ACCESS_SYNDICATE
-	footer = footer_from_taipan
-	info = "<font face=\"Verdana\" color=black>\
-			<h3>Отчёт о ситуации на станции</h3><hr>\
-			<u>Наименование станции</u>: ННКСС &#34;Тайпан&#34;<br>\
-			<br>Общее состояние станции: <span class=\"paper_field\"></span>\
-			<br>Численность персонала станции: <span class=\"paper_field\"></span>\
-			<br>Общее состояние персонала станции: <span class=\"paper_field\"></span>\
-			<br>Непосредственные внешние угрозы: <b><span class=\"paper_field\"></span></b>\
-			<br>Подробности: <span class=\"paper_field\"></span>\
-			<br>Дополнительная информация: <span class=\"paper_field\"></span><br>\
-			<br><font size = \"1\">\
-			Подпись: <span class=\"paper_field\"></span>, в должности <span class=\"paper_field\"></span>\
-			<br>Дата: <span class=\"paper_field\"></span> \
-			<br>Время: <span class=\"paper_field\"></span> \
-			<br></font></font>"
-
-/obj/item/paper/form/syndieform/SYND_TAI_NO02
-	name = "Форма SYND-TAI-№02"
-	id = "SYND-TAI-№02"
-	altername = "Отчёт о разработке вируса"
-	category = "Синдикат"
-	access = ACCESS_SYNDICATE
-	footer = footer_from_taipan
-	info = "<font face=\"Verdana\" color=black>\
-			<h3>Отчёт о разработке вируса</h3>\
-			<hr><u>Наименование вируса</u>: <b><span class=\"paper_field\"></span></b><br>\
-			<br>Тип вируса: <span class=\"paper_field\"></span>\
-			<br>Способ распространения: <span class=\"paper_field\"></span>\
-			<br>Перечень симптомов: <span class=\"paper_field\"></span>\
-			<br>Описание: <span class=\"paper_field\"></span><br>\
-			<br><u>Наличие вакцины</u>: <b><span class=\"paper_field\"></span></b>\
-			<br><u>Наименование вакцины</u>: <span class=\"paper_field\"></span><br>\
-			<br>Дополнительная информация***: <span class=\"paper_field\"></span>\
-			<br>Указания к хранению вируса***: <span class=\"paper_field\"></span><br>\
-			<br><font size = \"1\">Подпись разработчика: <span class=\"paper_field\"></span>, в должности <b><span class=\"paper_field\"></span></b>\
-			<br>Подпись Директора Исследований**: <span class=\"paper_field\"></span>\
-			<br>Дата: <span class=\"paper_field\"></span> \
-			<br>Время: <span class=\"paper_field\"></span> \
-			<hr><i><font size = \"1\">**Отчёт недействителен без подписи Директора Исследований. \
-			В случае его отсутствия требуется подпись Офицера Телекоммуникаций или заменяющего его лица с указанием должности.\
-			<br>***Заполняется Директором Исследований. В случае его отсутствия, заполняется Офицером Телекоммуникаций или заменяющим его лицом</font>"
 
 /obj/item/paper/pamphletdeathsquad
 	icon_state = "pamphlet-ds"

@@ -90,11 +90,6 @@
 		JOB_MIN_AGE_COMMAND = 15,
 	)
 
-	max_select_skills = list(
-		/datum/skill/service/cleaning = 3,
-		/datum/skill/combat/accuracy = 1,
-	)
-
 /datum/species/moth/on_species_gain(mob/living/carbon/human/H)
 	. = ..()
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/limbless)
@@ -214,8 +209,8 @@
 	qdel(C)
 
 /obj/structure/moth/cocoon
-	name = "Кокон Ниан"
-	desc = "Кто-то завернулся в кокон."
+	name = "\improper Nian cocoon"
+	desc = "Someone wrapped in a Nian cocoon."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "cocoon1"
 	color = LIGHT_COLOR_DIM_YELLOW //So tiders (hopefully) don't decide to immediately bust them open

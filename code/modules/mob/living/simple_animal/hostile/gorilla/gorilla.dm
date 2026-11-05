@@ -29,7 +29,6 @@
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	gold_core_spawnable = HOSTILE_SPAWN
 	stat_attack = UNCONSCIOUS // Sleeping won't save you
-	tts_seed = "Mannoroth"
 	AI_delay_max = 0.5 SECONDS
 	/// Is the gorilla stood up or not?
 	var/is_bipedal = FALSE

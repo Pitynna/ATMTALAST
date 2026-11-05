@@ -31,16 +31,16 @@
 
 /datum/outfit/admin/syndicate/operative/loneop
 	name = "Syndicate Nuclear Operative (Loneop)"
-	suit = null
 	l_hand = null
 	r_pocket = /obj/item/radio/uplink/nuclear/loneop
 	uplink_uses = null
-	back = /obj/item/mod/control/pre_equipped/nuclear
+	suit = /obj/item/clothing/suit/space/hardsuit/syndi/on
+	back = /obj/item/storage/backpack
 
 /datum/outfit/admin/syndicate/operative/nuclear
 	name = "Syndicate Nuclear Operative"
-	toggle_helmet = FALSE
-	suit = null
+	toggle_helmet = TRUE
+	suit = /obj/item/clothing/suit/space/hardsuit/syndi/on
 	belt = /obj/item/gun/projectile/automatic/pistol/stechkin
 	shoes = /obj/item/clothing/shoes/combat
 	l_pocket = null

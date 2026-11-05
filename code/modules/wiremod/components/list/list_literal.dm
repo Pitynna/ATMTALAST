@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/list_literal
 	display_name = "Список — элемент"
-	desc = "Компонент, который создает список на основе любых введённых вами данных."
+	desc = "A component that creates a list from any data you supply."
 	category = "List"
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL|CIRCUIT_FLAG_OUTPUT_SIGNAL
 

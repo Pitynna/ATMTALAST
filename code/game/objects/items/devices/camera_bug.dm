@@ -1,7 +1,7 @@
 // This item just has an integrated camera console, which the data is "proxied" to
 /obj/item/camera_bug
 	name = "camera bug"
-	desc = "Для незаконного слежения через сеть камер наблюдения."
+	desc = "For illicit snooping through the camera network."
 	gender = MALE
 	icon = 'icons/obj/device.dmi'
 	icon_state = "camera_bug"
@@ -13,19 +13,9 @@
 	/// Integrated camera console to serve UI data
 	var/obj/machinery/computer/security/camera_bug/integrated_console
 
-/obj/item/camera_bug/get_ru_names()
-	return alist(
-		NOMINATIVE = "переносной монитор",
-		GENITIVE = "переносного монитора",
-		DATIVE = "переносному монитору",
-		ACCUSATIVE = "переносной монитор",
-		INSTRUMENTAL = "переносным монитором",
-		PREPOSITIONAL = "переносном мониторе",
-	)
-
 /obj/machinery/computer/security/camera_bug
 	name = "invasive camera utility"
-	desc = "Как это сюда попало?! Пожалуйста, сообщите об этом как об ошибке на github."
+	desc = "How did this get here?! Please report this as a bug to github"
 	use_power = NO_POWER_USE
 
 /obj/item/camera_bug/Initialize(mapload)
@@ -50,7 +40,7 @@
 
 /obj/item/camera_bug/ert
 	name = "ERT Camera Monitor"
-	desc = "Небольшое портативное устройство, используемое командирами ОБР для удаленного наблюдения."
+	desc = "A small handheld device used by ERT commanders to view camera feeds remotely."
 
 /obj/item/camera_bug/ert/Initialize(mapload)
 	. = ..()
@@ -58,7 +48,7 @@
 
 // 		MARK: Syndicate Advanced Bug
 /obj/item/camera_bug/syndicate
-	desc = "Переносной монитор с чипом удалённого доступа. Позволяет свободно перемещать обзор по всей сети камер."
+	desc = "A portable monitor with a remote access chip. Allows free viewing throughout the camera network."
 	var/obj/machinery/computer/camera_advanced/portable/advanced_console
 
 /obj/item/camera_bug/syndicate/Initialize(mapload)

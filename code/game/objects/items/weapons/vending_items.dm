@@ -1,6 +1,6 @@
 /obj/item/vending_refill
 	name = "resupply canister"
-	desc = "Контейнер, предназначенный для пополнения ассортимента торгового автомата."
+	desc = "A vending machine restock cart."
 	gender = MALE
 	icon = 'icons/obj/vending_restock.dmi'
 	icon_state = "refill_snack"
@@ -12,7 +12,7 @@
 	throw_speed = 1
 	w_class = WEIGHT_CLASS_BULKY
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 70, ACID = 30)
-	var/machine_name = "Шаблонное название"
+	var/machine_name = "Generic"
 
 	// Built automatically from the corresponding vending machine.
 	// If null, considered to be full. Otherwise, is list(/typepath = amount).
@@ -20,16 +20,6 @@
 	var/list/product_categories
 	var/list/contraband
 	var/list/premium
-
-/obj/item/vending_refill/get_ru_names()
-	return alist(
-		NOMINATIVE = "набор пополнения",
-		GENITIVE = "набора пополнения",
-		DATIVE = "набору пополнения",
-		ACCUSATIVE = "набор пополнения",
-		INSTRUMENTAL = "набором пополнения",
-		PREPOSITIONAL = "наборе пополнения",
-	)
 
 /obj/item/vending_refill/Initialize(mapload)
 	. = ..()
@@ -222,7 +212,7 @@
 	icon_state = "refill_plasma"
 
 /obj/item/vending_refill/protein
-	machine_name = "Автомат спортивного питания"
+	machine_name = "Sports Nutrition Vendor"
 
 /obj/item/vending_refill/ammo
 	machine_name = "Liberty"

@@ -142,7 +142,6 @@ ADMIN_VERB(show_old_player_panel, R_ADMIN|R_MOD, "Show Old Player Panel", ADMIN_
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_PRAY]'><span style='color: [check_mute(M.client.ckey, MUTE_PRAY) ? "#ffaa00" : "#aabbff"];'>PRAY</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_ADMINHELP]'><span style='color: [check_mute(M.client.ckey, MUTE_ADMINHELP) ? "#ffaa00" : "#aabbff"];'>ADMINHELP</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_DEADCHAT]'><span style='color: [check_mute(M.client.ckey, MUTE_DEADCHAT) ?"#ffaa00" : "#aabbff"];'>DEADCHAT</span></a> |
-			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_TTS]'><span style='color: [check_mute(M.client.ckey, MUTE_TTS)?"#ffaa00":"#aabbff"];'>TTS</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_EMOTE]'><span style='color: [check_mute(M.client.ckey, MUTE_EMOTE) ? "#ffaa00" : "#aabbff"];'>EMOTE</span></a> |
 			<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_INTERNET_REQUEST]'><span style='color: [check_mute(M.client.ckey, MUTE_INTERNET_REQUEST) ? "#ffaa00" : "#aabbff"];'>WEBREQ</span></a>\]
 			(<a href='byond://?_src_=holder;mute=[M.UID()];mute_type=[MUTE_ALL]'><span style='color: [check_mute(M.client.ckey, MUTE_ALL) ? "#ffaa00" : "#aabbff"];'>toggle all</span></a>)
@@ -159,7 +158,6 @@ ADMIN_VERB(show_old_player_panel, R_ADMIN|R_MOD, "Show Old Player Panel", ADMIN_
 			<a href='byond://?_src_=holder;select_equip=[M.UID()]'>Select Equipment</a> |
 			<a href='byond://?_src_=holder;custom_equip=[M.UID()]'>Custom Equipment</a> |
 			<a href='byond://?_src_=holder;update_mob_sprite=[M.UID()]'>Update Mob Sprite</a> |
-			<a href='byond://?_src_=holder;change_voice=[M.UID()]'>Change Voice</a> |
 			"}
 		if(isliving(M))
 			body += {"<a href='byond://?_src_=holder;check_contents=[M.UID()]'>Check Contents</a> |"}
@@ -579,8 +577,6 @@ ADMIN_VERB(delay, R_SERVER, "Delay Pre-Game", "Delay the game start.", ADMIN_CAT
 		antag_list += "Head Rev"
 	if(M.mind in SSticker.mode.revolutionaries)
 		antag_list += "Revolutionary"
-	if(M.mind in SSticker.mode.cult)
-		antag_list += "Cultist"
 	if(M.mind.has_antag_datum(/datum/antagonist/nuclear_operative))
 		antag_list += "Nuclear Operative"
 	if(M.mind in SSticker.mode.wizards)
@@ -686,10 +682,10 @@ ADMIN_VERB(spawn_atom_pod, R_SPAWN, "PodSpawn", "Spawn an atom via supply drop."
 
 ADMIN_VERB(spawn_cargo, R_SPAWN, "Spawn Cargo", "Spawn a cargo crate.", ADMIN_CATEGORY_DEBUG)
 	VERB_ARG(object, VERB_ARG_TYPE_TYPEPATH, VERB_ARG_SOURCE_INPUT)
-	var/chosen = pick_closest_path(object, make_types_fancy(subtypesof(/datum/supply_order) + subtypesof(/datum/syndie_supply_packs)))
+	var/chosen = pick_closest_path(object, make_types_fancy(subtypesof(/datum/supply_packs)))
 	if(!chosen)
 		return
-	var/datum/supply_order/order = (chosen in typecacheof(/datum/supply_packs))? new /datum/supply_order : new /datum/syndie_supply_order
+	var/datum/supply_order/order = new /datum/supply_order
 	order.ordernum = 0
 	order.object = new chosen
 	order.orderedby = "ОШИБКА"

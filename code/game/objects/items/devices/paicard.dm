@@ -1,6 +1,6 @@
 /obj/item/paicard
 	name = "personal AI device"
-	desc = "Возможно, ваш новый лучший друг!"
+	desc = "A handheld device that allows you to install an artificial intelligence to be your companion."
 	icon = 'icons/obj/aicards.dmi'
 	icon_state = "pai"
 	item_state = "pai"
@@ -22,16 +22,6 @@
 	var/list/upgrades = list()
 
 	var/current_emotion = 1
-
-/obj/item/paicard/get_ru_names()
-	return alist(
-		NOMINATIVE = "интелкарта пИИ",
-		GENITIVE = "интелкарты пИИ",
-		DATIVE = "интелкарте пИИ",
-		ACCUSATIVE = "интелкарту пИИ",
-		INSTRUMENTAL = "интелкартой пИИ",
-		PREPOSITIONAL = "интелкарте пИИ",
-	)
 
 /obj/item/paicard/syndicate // Only seems that it is syndicard
 	name = "syndicate personal AI device"
@@ -238,7 +228,6 @@
 
 	pai.reset_software()
 
-	SSticker.mode.update_cult_icons_removed(pai.mind)
 	SSticker.mode.update_rev_icons_removed(pai.mind)
 
 	var/list/welcome_message = list()
@@ -474,9 +463,6 @@
 /obj/item/paicard_upgrade/unused
 	used = FALSE
 
-/obj/item/paicard_upgrade/contractor/unused
-	used = FALSE
-
 /obj/item/paicard_upgrade/protolate
 
 /obj/item/paicard_upgrade/proc/set_syndie_key(obj/item/paicard/paicard)
@@ -498,7 +484,7 @@
 	return
 
 /obj/item/paper/pai_upgrade
-	name = "Инструкция по применению"
+	name = "instruction manual"
 	icon_state = "paper_words"
 	info = {"<center> <b>Инструкция по применению СпИИ</b> </center><br>
 
@@ -528,7 +514,7 @@
 	return
 
 /obj/item/storage/box/syndie_kit/pai
-	name = "Набор ПИИ"
+	name = "pAI kit"
 
 /obj/item/storage/box/syndie_kit/pai/populate_contents()
 	new /obj/item/paicard(src)

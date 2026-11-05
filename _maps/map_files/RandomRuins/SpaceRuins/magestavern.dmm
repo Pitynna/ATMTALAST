@@ -4,7 +4,7 @@
 /obj/item/ship_in_a_bottle,
 /obj/item/paper{
 	info = "Ох, Паульс, идиот, зачем ты пронес паучьи яйца? Чем там второй идиот, Карл, занимается, что за идиотский ящик он притащил? Ни дня покоя. Одна лишь бутыль с кораблем дает мне покой. Спасибо моему отцу..";
-	name = "Тишина"
+	name = "Silence"
 	},
 /turf/simulated/floor/carpet/orange,
 /area/ruin/unpowered)
@@ -285,7 +285,7 @@
 /area/ruin/unpowered)
 "ld" = (
 /obj/effect/mob_spawn/human/corpse/assistant{
-	name = "Отис"
+	name = "Otis"
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/carpet/purple,
@@ -371,7 +371,7 @@
 /obj/item/clothing/suit/wizrobe/red,
 /obj/item/paper{
 	info = "Ох. Как же это мясо вкусно пахнет! К сожалению, оно не для приготовления. Что ж, чему там меня учил профессор Жан? Надо бы попробовать..";
-	name = "Создание существа"
+	name = "Creating a Creature"
 	},
 /turf/simulated/floor/carpet/red,
 /area/ruin/unpowered)
@@ -486,8 +486,6 @@
 /turf/simulated/floor/carpet,
 /area/ruin/unpowered)
 "vM" = (
-/obj/structure/cult/archives,
-/obj/item/book/codex_gigas,
 /obj/item/necromantic_stone,
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)
@@ -539,7 +537,7 @@
 /obj/item/stack/sheet/wood,
 /obj/item/paper{
 	info = "Я стану лучим магом призыва. И для начала, я покажу свои таланты этим неучам. Как хорошо,что я научился призывать статуй и эм.. Живые ящики! Интересно, с какого измерения эти твари? Выглядят жутко, но они вроде как меня слушаются, а большего и не надо. А теперь, напою своих друзей вкуснейшим дедушкиным отваром.";
-	name = "Призыватель"
+	name = "Summoner"
 	},
 /turf/simulated/floor/carpet/blue,
 /area/ruin/unpowered)
@@ -568,11 +566,11 @@
 	dir = 8
 	},
 /obj/effect/mob_spawn/human/corpse/assistant{
-	name = "Фауст"
+	name = "Faust"
 	},
 /obj/item/paper{
 	info = "Какие же они тупые мрази, ничего не понимающие в магии. Они смеются надо мной из-за отсутствия заклинаний, ведь даже книги мне якобы не помогают. Они не знают, что я изучал вовсе другую школу, хе-хе.. Сегодня я убью их всех, а после — создам то, над чем так долго работал!";
-	name = "Победа!"
+	name = "Victory!"
 	},
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)
@@ -586,7 +584,7 @@
 /obj/structure/table/wood,
 /obj/item/paper{
 	info = "Я нашел странную скрытую дверь в холодильнике из-за кровавого следа, в которой находится комната. Чтож, там я и обоснуюсь. В холодильнике был чей-то труп, он был здесь до нас.. Странно конечно, но мне больше интересно то, во что все это выльется.";
-	name = "Ублюдки"
+	name = "Bastards"
 	},
 /turf/simulated/floor/carpet,
 /area/ruin/unpowered)
@@ -677,7 +675,7 @@
 /obj/structure/bookcase,
 /obj/item/paper{
 	info = "Наконец-то. Спустя столько времени, я сделал его, и даже воскресил труп, взятый с холодильника! Даже не хочу знать, откуда он или кому принадлежит, но скелет слушает все мои команды. Он очень слаб, видимо из-за того что ослаб я сам. Черт, я так сильно хочу есть. Интересно, они там все попередохли? Уротрус, скорее всего сбежал. Статуи все еще здесь, я знаю это. Ох, что-то мне не хорошо..";
-	name = "Успех"
+	name = "Success"
 	},
 /obj/item/spellbook/oneuse/fake_gib,
 /turf/simulated/floor/wood,
@@ -711,10 +709,10 @@
 /obj/effect/decal/cleanable/blood,
 /obj/item/paper{
 	info = "Гребаный Отис! В начале напоил нас какой-то херней, а затем призвал какие-то статуи и ящик, который успел меня укусить! Черт, надо подождать пока мана восстановится. Я не умру в туалете!";
-	name = "Я выживу!"
+	name = "I Will Survive!"
 	},
 /obj/effect/mob_spawn/human/corpse/assistant{
-	name = "Чарли"
+	name = "Charlie"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -829,7 +827,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/spider/stickyweb,
 /obj/effect/mob_spawn/human/corpse/assistant{
-	name = "Йохан"
+	name = "Johan"
 	},
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)
@@ -850,7 +848,7 @@
 	dir = 4
 	},
 /obj/effect/mob_spawn/human/corpse/assistant{
-	name = "Карл"
+	name = "Karl"
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/carpet/red,
@@ -875,7 +873,7 @@
 	},
 /obj/item/paper{
 	info = "Как хорошо иметь друга, который слишком невнимателен к таким как я. Что ж, теперь я хочу чтобы мой лучший друг стал немного побольше. Возьму-ка мясо у Карла. Интересно, зачем ему столько?";
-	name = "Новый друг"
+	name = "A New Friend"
 	},
 /turf/simulated/floor/carpet/black,
 /area/ruin/unpowered)
@@ -961,7 +959,7 @@
 /obj/item/flashlight/lantern,
 /obj/item/paper{
 	info = "Каждый год я возвращаюсь сюда, в таверну магов, дабы вспомнить те самые деньки, проведенные с друзьями после сдачи экзаменов.. Спустя столько лет, я не могу забыть того, что произошло здесь после того как Отис решил похвастаться своим напитком, а потом магией призыва. Ох, ну что за идиот! Жаль что нет магии, способной докучать духам. Отис, Карл, Паульс, Йохан, Томас и конечно же, главный идиот новой академии — Фауст, мои дрожайшие друзья, простите что не спас вас. Я был напуган. Я ничего не смог сделать. Отдельное извинение для Чарли. Прости что пригласил тебя. Ты погиб из-за меня. Что ж. Историю не перепишешь. Ты, тот кто это читает, будь осторожен. В этом месте еще остались различные твари, ты обязательно их встретишь. Я лишь хочу чтобы кто-то помнил это место, ведь правду знал только я, последний выживший после инцидента. Я оставлю тебе лампу, как прощальный подарок.Надеюсь ты не тронешь Гошу, охранника этого места. -Адепт школы исцеления Новой Академии Магов, УроТат.";
-	name = "Добро пожаловать!"
+	name = "Welcome!"
 	},
 /turf/simulated/floor/wood,
 /area/ruin/unpowered)
@@ -1107,11 +1105,11 @@
 /obj/effect/decal/ants,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/human/corpse/assistant{
-	name = "Паульс"
+	name = "Pauls"
 	},
 /obj/item/paper{
 	info = "Надеюсь, нет ничего плохого в том, чтобы взять паучьи яйца с класса биологии сюда для изучения. Я не намерен развлекаться даже после сдачи экзаменов. Буду продолжать учиться, пока мои друзья-дурачки буянят и страдают фигней. Так, Паульс, сосредоточься, в этот раз ты точно займешь первое место на экзаменах..";
-	name = "Запись #1. Начало"
+	name = "Entry #1: The Beginning"
 	},
 /turf/simulated/floor/carpet/green,
 /area/ruin/unpowered)

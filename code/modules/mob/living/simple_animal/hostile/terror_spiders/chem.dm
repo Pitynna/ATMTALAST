@@ -1,6 +1,6 @@
 // Terror Spider, Black, Deadly Venom
 /datum/reagent/terror_black_toxin
-	name = "Яд Вдовы Ужаса"
+	name = "Black Terror venom"
 	id = "terror_black_toxin"
 	description = "Невероятно токсичный яд, который впрыскивает Вдова Ужаса."
 	can_synth = FALSE

@@ -1,6 +1,6 @@
 /obj/machinery/vending/department_clothesmate
 	name = "Broken Departament ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды отдела."
+	desc = "A vending machine dispensing departmental clothing."
 	icon_state = "clothes_off"
 	panel_overlay = "clothes_panel"
 	screen_overlay = "clothes"
@@ -38,19 +38,9 @@
 	)
 	vend_reply = "Спас+ибо за исп+ользование автом+ата-пом+ощника в в+ыборе од+ежды отд+ела!"
 
-/obj/machinery/vending/department_clothesmate/get_ru_names()
-	return alist(
-		NOMINATIVE = "сломанный торговый автомат Departament ClothesMate",
-		GENITIVE = "сломанного торгового автомата Departament ClothesMate",
-		DATIVE = "сломанному торговому автомату Departament ClothesMate",
-		ACCUSATIVE = "сломанный торговый автомат Departament ClothesMate",
-		INSTRUMENTAL = "сломанным торговым автоматом Departament ClothesMate",
-		PREPOSITIONAL = "сломанном торговом автомате Departament ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/security
 	name = "Departament Security ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Службы безопасности."
+	desc = "A vending machine dispensing security clothing."
 	icon_state = "clothes-dep-sec_off"
 	screen_overlay = "clothes-dep-sec"
 	broken_overlay = "clothes-dep-sec_broken"
@@ -151,19 +141,9 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/security/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Security ClothesMate",
-		GENITIVE = "торгового автомата Departament Security ClothesMate",
-		DATIVE = "торговому автомату Departament Security ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Security ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Security ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Security ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/medical
 	name = "Departament Medical ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Медицинского отдела."
+	desc = "A vending machine dispensing medical clothing."
 	icon_state = "clothes-dep-med_off"
 	screen_overlay = "clothes-dep-med"
 	broken_overlay = "clothes-dep-med_broken"
@@ -284,19 +264,9 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/medical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Medical ClothesMate",
-		GENITIVE = "торгового автомата Departament Medical ClothesMate",
-		DATIVE = "торговому автомату Departament Medical ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Medical ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Medical ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Medical ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/engineering
 	name = "Departament Engineering ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Инженерного отдела."
+	desc = "A vending machine dispensing engineering clothing."
 	icon_state = "clothes-dep-eng_off"
 	screen_overlay = "clothes-dep-eng"
 	broken_overlay = "clothes-dep-eng_broken"
@@ -380,19 +350,9 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/engineering/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Engineering ClothesMat",
-		GENITIVE = "торгового автомата Departament Engineering ClothesMat",
-		DATIVE = "торговому автомату Departament Engineering ClothesMat",
-		ACCUSATIVE = "торговый автомат Departament Engineering ClothesMat",
-		INSTRUMENTAL = "торговым автоматом Departament Engineering ClothesMat",
-		PREPOSITIONAL = "торговом автомате Departament Engineering ClothesMat",
-	)
-
 /obj/machinery/vending/department_clothesmate/science
 	name = "Departament Science ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Научного отдела."
+	desc = "A vending machine dispensing science clothing."
 	icon_state = "clothes-dep-sci_off"
 	screen_overlay = "clothes-dep-sci"
 	broken_overlay = "clothes-dep-sci_broken"
@@ -468,19 +428,9 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/science/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Science ClothesMate",
-		GENITIVE = "торгового автомата Departament Science ClothesMate",
-		DATIVE = "торговому автомату Departament Science ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Science ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Science ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Science ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/cargo
 	name = "Departament Cargo ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Отд+ела снабжения."
+	desc = "A vending machine dispensing supply department clothing."
 	icon_state = "clothes-dep-car_off"
 	screen_overlay = "clothes-dep-car"
 	broken_overlay = "clothes-dep-car_broken"
@@ -560,19 +510,9 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/cargo/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Cargo ClothesMate",
-		GENITIVE = "торгового автомата Departament Cargo ClothesMate",
-		DATIVE = "торговому автомату Departament Cargo ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Cargo ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Cargo ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Cargo ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/law
 	name = "Departament Law ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Юридического отдела."
+	desc = "A vending machine dispensing legal department clothing."
 	icon_state = "clothes-dep-sec_off"
 	screen_overlay = "clothes-dep-sec"
 	broken_overlay = "clothes-dep-sec_broken"
@@ -645,36 +585,16 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/law/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Law ClothesMate",
-		GENITIVE = "торгового автомата Departament Law ClothesMate",
-		DATIVE = "торговому автомату Departament Law ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Law ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Law ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Law ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/service
 	name = "Departament Service ClothesMate"
-	desc = "Автомат-помощник по выдаче одежды Отдела обслуживания."
+	desc = "A vending machine dispensing service department clothing."
 	req_access = list()
 	products = list()
 	refill_canister = /obj/item/vending_refill/clothing/service
 
-/obj/machinery/vending/department_clothesmate/service/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Service ClothesMate",
-		GENITIVE = "торгового автомата Departament Service ClothesMate",
-		DATIVE = "торговому автомату Departament Service ClothesMate",
-		ACCUSATIVE = "торговый автомат Departament Service ClothesMate",
-		INSTRUMENTAL = "торговым автоматом Departament Service ClothesMate",
-		PREPOSITIONAL = "торговом автомате Departament Service ClothesMate",
-	)
-
 /obj/machinery/vending/department_clothesmate/service/chaplain
 	name = "Departament Service ClothesMate Chaplain"
-	desc = "Автомат-помощник по выдаче одежды для священнослужителей."
+	desc = "A vending machine dispensing clergy clothing."
 	icon_state = "clothes-dep-car_off"
 	screen_overlay = "clothes-dep-car"
 	broken_overlay = "clothes-dep-car_broken"
@@ -740,19 +660,9 @@
 		),
 	)
 
-/obj/machinery/vending/department_clothesmate/service/chaplain/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Service ClothesMate Chaplain",
-		GENITIVE = "торгового автомата Departament Service ClothesMate Chaplain",
-		DATIVE = "торговому автомату Departament Service ClothesMate Chaplain",
-		ACCUSATIVE = "торговый автомат Departament Service ClothesMate Chaplain",
-		INSTRUMENTAL = "торговым автоматом Departament Service ClothesMate Chaplain",
-		PREPOSITIONAL = "торговом автомате Departament Service ClothesMate Chaplain",
-	)
-
 /obj/machinery/vending/department_clothesmate/service/botanical
 	name = "Departament Service ClothesMate Botanical"
-	desc = "Автомат-помощник по выдаче ботанической одежды."
+	desc = "A vending machine dispensing botanical clothing."
 	req_access = list(ACCESS_HYDROPONICS)
 	refill_canister = /obj/item/vending_refill/clothing/service/botanical
 
@@ -818,14 +728,4 @@
 				/obj/item/storage/backpack/duffel/hydro = 5,
 			),
 		),
-	)
-
-/obj/machinery/vending/department_clothesmate/service/botanical/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Departament Service ClothesMate Botanical",
-		GENITIVE = "торгового автомата Departament Service ClothesMate Botanical",
-		DATIVE = "торговому автомату Departament Service ClothesMate Botanical",
-		ACCUSATIVE = "торговый автомат Departament Service ClothesMate Botanical",
-		INSTRUMENTAL = "торговым автоматом Departament Service ClothesMate Botanical",
-		PREPOSITIONAL = "торговом автомате Departament Service ClothesMate Botanical",
 	)

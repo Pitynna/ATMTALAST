@@ -1,6 +1,6 @@
 /obj/machinery/computer/drone_control
 	name = "maintenance drone control console"
-	desc = "Используется для наблюдения за популяцией дронов на станции и сборщиком, который их обслуживает."
+	desc = "Used to monitor the station's drone population and the assembler that services them."
 	icon_screen = "power"
 	icon_keyboard = "power_key"
 	req_access = list(ACCESS_ENGINE_EQUIP)
@@ -12,16 +12,6 @@
 	var/drone_call_area = "Engineering"
 	/// Cooldown for area pings
 	COOLDOWN_DECLARE(ping_cooldown)
-
-/obj/machinery/computer/drone_control/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль управления дронами",
-		GENITIVE = "консоли управления дронами",
-		DATIVE = "консоли управления дронами",
-		ACCUSATIVE = "консоль управления дронами",
-		INSTRUMENTAL = "консолью управления дронами",
-		PREPOSITIONAL = "консоли управления дронами",
-	)
 
 /obj/machinery/computer/drone_control/Initialize(mapload)
 	. = ..()

@@ -63,7 +63,7 @@
 
 	/// emag
 	var/emaggable = FALSE
-	var/emag_desc = span_danger_alt("</br>Слоты оборудования меха опасно искрят!")
+	var/emag_desc = span_danger_alt("</br>The mech's equipment slots spark dangerously!")
 
 	//inner atmos
 	var/use_internal_tank = FALSE
@@ -531,8 +531,6 @@
 	var/move_type = FALSE
 	var/old_direction = dir //Initial direction of the mecha
 	var/step_in_final = strafe ? (step_in * strafe_speed_factor) : step_in //Modifies strafe speed, if "strafe_speed_factor" is anything other than 1
-	CALCULATE_SKILL_MOD(occupant, MECHA_DRIVING_SPEED_MOD, skill_factor)
-	step_in_final *= skill_factor
 	var/strafed_backwards = FALSE //Checks if mecha moved backwards, while strafe is active (used later to modify speed and energy drain)
 
 	var/keyheld = FALSE //Checks if player pressed ALT button down while strafe is active
@@ -1382,15 +1380,14 @@
 	if(user.has_buckled_mobs()) //mob attached to us
 		to_chat(user, span_warning("You can't enter the exosuit with other creatures attached to you!"))
 		return
-	if(ratvarized && !isclocker(user))
+	if(ratvarized)
 		balloon_alert(user, "запечатано!")
 		return
 	visible_message(span_notice("[user] starts to climb into [src]"))
 	INVOKE_ASYNC(src, TYPE_PROC_REF(/obj/mecha, put_in), user)
 
 /obj/mecha/proc/put_in(mob/user)
-	CALCULATE_SKILL_MOD(user, MECHA_CLIMBING_SPEED_MOD, skill_factor)
-	if(do_after(user, mech_enter_time * skill_factor, src, category = DA_CAT_TOOL))
+	if(do_after(user, mech_enter_time, src, category = DA_CAT_TOOL))
 		if(obj_integrity <= 0)
 			to_chat(user, span_warning("You cannot get in the [name], it has been destroyed!"))
 		else if(occupant)
@@ -1652,12 +1649,9 @@
 
 /obj/mecha/proc/use_power(amount)
 	if(get_charge())
-		if(occupant)
-			CALCULATE_SKILL_MOD(occupant, MECHA_CELL_USAGE_MOD, skill_factor)
-			cell.use(round(amount / skill_factor))
-			update_cell()
-			return TRUE
 		cell.use(amount)
+		if(occupant)
+			update_cell()
 		return TRUE
 	return FALSE
 
@@ -1927,20 +1921,4 @@
 				occupant_message(span_boldnotice("Короткое замыкание устранено."))
 	internal_damage &= ~int_dam_flag
 	diag_hud_set_mechstat()
-/obj/mecha/ratvar_act(convert_mecha)
-	if(!convert_mecha)
-		return
-	if(ratvarized)
-		repair_damage(max_integrity / 2)
-		return
-	ratvar_convert()
-
-/obj/mecha/proc/ratvar_convert()
-	for(var/rat_mecha in GLOB.ratvar_mechas)
-		var/datum/ratvar_mecha/converter = new rat_mecha
-		if(mech_type in converter.mech_types)
-			converter.convert(src)
-			visible_message(span_clocklarge("[DECLENT_RU_CAP(src, NOMINATIVE)] начинает громко грохотать, его механизмы заменяются шестернями!"))
-		QDEL_NULL(converter)
-
 #undef OCCUPANT_LOGGING

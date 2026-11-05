@@ -15,7 +15,6 @@
 
 	speak_emote = list("рычит")
 	emote_hear = list("рычит")
-	tts_seed = "Grunt"
 	response_help  = "thinks better of touching"
 	response_disarm = "flails at"
 	response_harm   = "punches"
@@ -57,7 +56,6 @@
 
 	speak_emote = list("хонкает")
 	emote_hear = list("хонкает")
-	tts_seed = "Bandit"
 	attack_sound = list('sound/items/bikehorn.ogg')
 	health_regen = 24
 
@@ -83,7 +81,6 @@
 
 	speak_emote = list("рычит", "ревёт")
 	emote_hear = list("рычит", "ревёт")
-	tts_seed = "Huskar"
 	attack_sound = list('sound/weapons/bite.ogg')
 
 	hulk_powers = list(

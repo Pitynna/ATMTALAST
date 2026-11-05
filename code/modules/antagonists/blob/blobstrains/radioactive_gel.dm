@@ -23,7 +23,7 @@
 	return ..()
 
 /datum/reagent/blob/radioactive_gel
-	name = "Рadioactive_gel"
+	name = "Radioactive Gel"
 	id = "blob_radioactive_gel"
 	taste_description = "радиации"
 	color = "#2476f0"

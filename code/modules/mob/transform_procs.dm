@@ -47,7 +47,6 @@
 
 	O.rename_self(JOB_TITLE_AI,1)
 
-	O.tts_seed = tts_seed
 
 	INVOKE_ASYNC(GLOBAL_PROC, /proc/qdel, src) // To prevent the proc from returning null.
 	return O
@@ -117,7 +116,6 @@
 
 	O.Namepick()
 
-	O.tts_seed = tts_seed
 
 	INVOKE_ASYNC(GLOBAL_PROC, /proc/qdel, src) // To prevent the proc from returning null.
 	return O

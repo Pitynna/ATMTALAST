@@ -1,6 +1,6 @@
 /obj/machinery/vending/snack
 	name = "Getmore Chocolate Corp"
-	desc = "Автомат самообслуживания, любезно предоставленный шоколадной корпорацией Getmore, базирующейся на Марсе."
+	desc = "A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars."
 	slogan_list = list(
 		"Попр+обуйте наш н+овый бат+ончик с нуг+ой!",
 		"Вдв+ое б+ольше кал+орий за п+олц+ены!",
@@ -40,14 +40,4 @@
 	)
 	contraband = list(
 		/obj/item/reagent_containers/food/snacks/syndicake = 6,
-	)
-
-/obj/machinery/vending/snack/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Getmore Chocolate Corp",
-		GENITIVE = "торгового автомата Getmore Chocolate Corp",
-		DATIVE = "торговому автомату Getmore Chocolate Corp",
-		ACCUSATIVE = "торговый автомат Getmore Chocolate Corp",
-		INSTRUMENTAL = "торговым автоматом Getmore Chocolate Corp",
-		PREPOSITIONAL = "торговом автомате Getmore Chocolate Corp",
 	)

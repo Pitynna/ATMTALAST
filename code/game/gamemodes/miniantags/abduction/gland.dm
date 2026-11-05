@@ -1,6 +1,6 @@
 /obj/item/organ/internal/heart/gland
 	name = "fleshy mass"
-	desc = "Кусок извивающейся плоти и металла. Вызывает отвращение"
+	desc = "A nausea-inducing hunk of twisting flesh and metal."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "gland"
 	dead_icon = null
@@ -17,16 +17,6 @@
 	var/mind_control_uses = 1
 	var/mind_control_duration = 1800
 	var/active_mind_control = FALSE
-
-/obj/item/organ/internal/heart/gland/get_ru_names()
-	return alist(
-		NOMINATIVE = "мясистая масса",
-		GENITIVE = "мясистой массы",
-		DATIVE = "мясистой массе",
-		ACCUSATIVE = "мясистую массу",
-		INSTRUMENTAL = "мясистой массой",
-		PREPOSITIONAL = "мясистой массе",
-	)
 
 /obj/item/organ/internal/heart/gland/update_icon_state()
 	return
@@ -345,7 +335,3 @@
 	if(istype(turf))
 		turf.atmos_spawn_air(gas_flag, gas_amount, T20C)
 	owner.vomit()
-
-/obj/item/organ/internal/heart/gland/toxic_gas/bz
-	gas_flag = LINDA_SPAWN_BZ
-	gas_amount = 50

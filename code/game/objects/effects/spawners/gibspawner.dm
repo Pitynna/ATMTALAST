@@ -42,15 +42,6 @@
 	gibamounts[6] = pick(0,1,2)
 	return ..()
 
-/obj/effect/gibspawner/clock
-	sparks = 2
-	gibtypes = list(/obj/effect/decal/cleanable/blood/gibs/clock,/obj/effect/decal/cleanable/blood/gibs/clock,/obj/effect/decal/cleanable/blood/gibs/clock,/obj/effect/decal/cleanable/blood/gibs/clock,/obj/effect/decal/cleanable/blood/gibs/clock,/obj/effect/decal/cleanable/blood/gibs/clock)
-	gibamounts = list(1,1,1,1,1,1)
-
-/obj/effect/gibspawner/clock/Initialize(mapload, datum/dna/mob_dna)
-	gibdirections = list(list(NORTH, NORTHEAST, NORTHWEST),list(SOUTH, SOUTHEAST, SOUTHWEST),list(WEST, NORTHWEST, SOUTHWEST),list(EAST, NORTHEAST, SOUTHEAST), GLOB.alldirs, GLOB.alldirs)
-	return ..()
-
 /obj/effect/gibspawner/confetti
 	gibtypes = list(/obj/effect/decal/cleanable/confetti, /obj/effect/decal/cleanable/confetti)
 	gibamounts = list(3, 1) //separated to leave one in place

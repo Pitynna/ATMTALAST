@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/concat_list
 	display_name = "Объединить список"
-	desc = "Компонент, объединяющий список с разделителем в одну строку."
+	desc = "A component that joins a list into a single string using a separator."
 	category = "List"
 
 	/// The input port

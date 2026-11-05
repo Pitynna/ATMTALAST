@@ -86,41 +86,14 @@
 	icon_state = "ion_fade"
 	layer = BELOW_MOB_LAYER
 
-/obj/effect/temp_visual/dir_setting/ninja
-	name = "ninja shadow"
-	icon = 'icons/mob/mob.dmi'
-	icon_state = "uncloak"
-	duration = 9
-
-/obj/effect/temp_visual/dir_setting/ninja/cloak
-	icon_state = "cloak"
-
-/obj/effect/temp_visual/dir_setting/ninja/shadow
-	icon_state = "shadow"
-
-/obj/effect/temp_visual/dir_setting/ninja/phase
-	name = "ninja energy"
-	icon_state = "phasein"
-
-/obj/effect/temp_visual/dir_setting/ninja/phase/out
-	icon_state = "phaseout"
-
 /obj/effect/temp_visual/dir_setting/wraith
 	name = "blood"
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "phase_shift2"
 	duration = 12
 
-/obj/effect/temp_visual/dir_setting/wraith/Initialize(mapload)
-	. = ..()
-	icon_state = SSticker.cultdat?.wraith_jaunt_in_animation
-
 /obj/effect/temp_visual/dir_setting/wraith/out
 	icon_state = "phase_shift"
-
-/obj/effect/temp_visual/dir_setting/wraith/out/Initialize(mapload)
-	. = ..()
-	icon_state = SSticker.cultdat?.wraith_jaunt_out_animation
 
 /obj/effect/temp_visual/dir_setting/holy_shift
 	name = "blood"
@@ -537,10 +510,38 @@
 
 	do_sparks(15, TRUE, src)
 
-/obj/effect/temp_visual/shadowling_phase
-	icon_state = "blank"
-	duration = 2 SECONDS
+/obj/effect/temp_visual/blood_magic_sparks
+	name = "blood sparks"
+	icon = 'icons/effects/cult_effects.dmi'
+	icon_state = "bloodsparkles"
+	randomdir = TRUE
 
-/obj/effect/temp_visual/shadowling_phase/Initialize(mapload)
-	. = ..()
-	animate(src, alpha = 0, time = 2 SECONDS)
+/obj/effect/temp_visual/dir_setting/phase_glow
+	name = "phase glow"
+	icon = 'icons/mob/mob.dmi'
+	icon_state = "phasein"
+	duration = 9
+
+/obj/effect/temp_visual/dir_setting/phase_glow/out
+	icon_state = "phaseout"
+
+/obj/effect/temp_visual/dir_setting/blood_phase
+	name = "phase glow"
+	icon = 'icons/effects/cult_effects.dmi'
+	icon_state = "cultin"
+	duration = 12
+
+/obj/effect/temp_visual/dir_setting/blood_phase/out
+	icon_state = "cultout"
+
+/obj/effect/temp_visual/dir_setting/stealth_glow
+	name = "stealth glow"
+	icon = 'icons/mob/mob.dmi'
+	icon_state = "uncloak"
+	duration = 9
+
+/obj/effect/temp_visual/dir_setting/stealth_glow/cloak
+	icon_state = "cloak"
+
+/obj/effect/temp_visual/dir_setting/stealth_glow/shadow
+	icon_state = "shadow"

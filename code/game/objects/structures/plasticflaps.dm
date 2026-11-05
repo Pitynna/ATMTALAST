@@ -1,6 +1,6 @@
 /obj/structure/plasticflaps
 	name = "airtight plastic flaps"
-	desc = "Прочные герметичные пластиковые занавески. Сквозь них точно не пройти. Ни за что."
+	desc = "Completely impassable - or are they?"
 	gender = PLURAL
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "plasticflaps"
@@ -23,35 +23,15 @@
 	/// Can it atmos pass?
 	var/can_atmos_pass = FALSE
 
-/obj/structure/plasticflaps/get_ru_names()
-	return alist(
-		NOMINATIVE = "герметичные пластиковые занавески",
-		GENITIVE = "герметичных пластиковых занавесок",
-		DATIVE = "герметичным пластиковым занавескам",
-		ACCUSATIVE = "герметичные пластиковые занавески",
-		INSTRUMENTAL = "герметичными пластиковыми занавесками",
-		PREPOSITIONAL = "герметичных пластиковых занавесках",
-	)
-
 /obj/structure/plasticflaps/opaque
 	opacity = TRUE
 
 /obj/structure/plasticflaps/kitchen
 	name = "cold room plastic flaps"
-	desc = "Лёгкие и герметичные пластиковые занавески, призванные удерживать холод в холодильной комнате, а тепло — в тёплой."
+	desc = "Lightweight, airtight plastic flaps designed to keep cold air in refrigerated rooms and warm air in heated rooms."
 	armor = list(MELEE = 50, BULLET = 80, LASER = 80, ENERGY = 100, BOMB = 50, BIO = 100, FIRE = 20, ACID = 20)
 	require_resting = FALSE
 	flaps_alpha = 150
-
-/obj/structure/plasticflaps/kitchen/get_ru_names()
-	return alist(
-		NOMINATIVE = "пластиковые занавески холодильной комнаты",
-		GENITIVE = "пластиковых занавесок холодильной комнаты",
-		DATIVE = "пластиковым занавескам холодильной комнаты",
-		ACCUSATIVE = "пластиковые занавески холодильной комнаты",
-		INSTRUMENTAL = "пластиковыми занавесками холодильной комнаты",
-		PREPOSITIONAL = "пластиковых занавесках холодильной комнаты",
-	)
 
 /obj/structure/plasticflaps/Initialize(mapload)
 	. = ..()

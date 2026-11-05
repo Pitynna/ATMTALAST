@@ -7,7 +7,7 @@
  */
 /obj/structure/closet/crate/secure/loot
 	name = "abandoned crate"
-	desc = "Какой-то странный ржавый ящик... Интересно, что может быть внутри?"
+	desc = "What could be inside?"
 	icon_state = "dangercrate"
 	base_icon_state = "dangercrate"
 	integrity_failure = 0 // Cannot be broken open physically
@@ -104,16 +104,6 @@
 			/obj/effect/spawner/abandoned_crate/soulstone = 5,
 			) = 21,
 		)
-
-/obj/structure/closet/crate/secure/loot/get_ru_names()
-	return alist(
-		NOMINATIVE = "заброшенный ящик",
-		GENITIVE = "заброшенного ящика",
-		DATIVE = "заброшенному ящику",
-		ACCUSATIVE = "заброшенный ящик",
-		INSTRUMENTAL = "заброшенным ящиком",
-		PREPOSITIONAL = "заброшенном ящике",
-	)
 
 /obj/structure/closet/crate/secure/loot/Initialize(mapload)
 	. = ..()

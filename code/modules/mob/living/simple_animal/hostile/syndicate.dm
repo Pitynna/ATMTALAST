@@ -364,7 +364,6 @@
 	minimum_distance = 5
 	projectilesound = 'sound/weapons/gunshots/1c20.ogg'
 	casingtype = /obj/item/ammo_casing/c45nr //15 brute
-	tts_effect_override = SOUND_EFFECT_OLD_VOCODER
 	loot = list(/obj/effect/mob_spawn/human/corpse/syndicatehazmat, /obj/item/gun/projectile/automatic/smg/c20r/rusted)
 
 /mob/living/simple_animal/hostile/syndicate/hazmat/mindless

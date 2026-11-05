@@ -15,16 +15,6 @@
 	var/obj/effect/dummy/chameleon/active_dummy = null
 	var/saved_appearance = null
 
-/obj/item/chameleon/get_ru_names()
-	return alist(
-		NOMINATIVE = "\"Хамелеон\"-проектор",
-		GENITIVE = "\"Хамелеон\"-проектора",
-		DATIVE = "\"Хамелеон\"-проектору",
-		ACCUSATIVE = "\"Хамелеон\"-проектор",
-		INSTRUMENTAL = "\"Хамелеон\"-проектором",
-		PREPOSITIONAL = "\"Хамелеон\"-проекторе",
-	)
-
 /obj/item/chameleon/Initialize(mapload)
 	. = ..()
 	var/obj/item/cigbutt/butt = /obj/item/cigbutt

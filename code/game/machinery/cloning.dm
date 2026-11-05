@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 /obj/machinery/clonepod
 	anchored = TRUE
 	name = "experimental biomass pod"
-	desc = "Капсула, предназначенная для искусственного выращивания органической ткани. Оборудована электронным замком. Выглядит жутковато."
+	desc = "A pod for growing organic tissue."
 	density = TRUE
 	icon = 'icons/obj/machines/cloning.dmi'
 	icon_state = "pod_idle"
@@ -51,16 +51,6 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
 
-/obj/machinery/clonepod/get_ru_names()
-	return alist(
-		NOMINATIVE = "капсула клонирования",
-		GENITIVE = "капсулы клонирования",
-		DATIVE = "капсуле клонирования",
-		ACCUSATIVE = "капсулу клонирования",
-		INSTRUMENTAL = "капсулой клонирования",
-		PREPOSITIONAL = "капсуле клонирования",
-	)
-
 /obj/machinery/clonepod/power_change(forced = FALSE)
 	..() //we don't check return here because we also care about the BROKEN flag
 	if(!(stat & (BROKEN|NOPOWER)))
@@ -73,10 +63,6 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 
 /obj/machinery/clonepod/Initialize(mapload)
 	. = ..()
-
-	if(is_taipan(z)) //Синдидоступ и никаких анонсов о клонированных при сборке на тайпане
-		radio_announce = FALSE
-		req_access = list(ACCESS_SYNDICATE)
 
 	countdown = new(src)
 
@@ -140,19 +126,9 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 //TO-DO: Make the genetics machine accept them.
 /obj/item/disk/data
 	name = "Cloning Data Disk"
-	desc = "Дискета, предназначенная для хранения данных ДНК-кода гуманоида."
+	desc = "A floppy disk intended to store a humanoid's DNA data."
 	var/datum/dna2/record/buf = null
 	var/read_only = FALSE //Well,it's still a floppy disk
-
-/obj/item/disk/data/get_ru_names()
-	return alist(
-		NOMINATIVE = "ДНК-дискета",
-		GENITIVE = "ДНК-дискеты",
-		DATIVE = "ДНК-дискете",
-		ACCUSATIVE = "ДНК-дискету",
-		INSTRUMENTAL = "ДНК-дискетой",
-		PREPOSITIONAL = "ДНК-дискете",
-	)
 
 /obj/item/disk/data/proc/initialize_data()
 	buf = new
@@ -163,7 +139,7 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 	return ..()
 
 /obj/item/disk/data/demo
-	name = "data disk - 'Император Человечества'"
+	name = "data disk - 'God Emperor of Mankind'"
 	read_only = TRUE
 
 /obj/item/disk/data/demo/Initialize(mapload)
@@ -180,7 +156,7 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 	buf.dna.UpdateUI()
 
 /obj/item/disk/data/monkey
-	name = "data disk - 'Мистер Магглс'"
+	name = "data disk - 'Mr. Muggles'"
 	read_only = 1
 
 /obj/item/disk/data/monkey/Initialize(mapload)
@@ -302,9 +278,6 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 
 	for(var/datum/language/L in R.languages)
 		H.add_language(L.name)
-
-	if(is_taipan(z))
-		H.faction.Add("syndicate")	// So that Syndie guys remain Syndie guys after cloning
 
 	H.check_genes(MUTCHK_FORCED) // Ensures species that get powers by the species proc handle_dna keep them
 
@@ -516,17 +489,6 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 	// Check to see if the clone's mind is an antagonist of any kind and handle them accordingly to make sure they get their spells, HUD/whatever else back.
 	if((H.mind in SSticker.mode:revolutionaries) || (H.mind in SSticker.mode:head_revolutionaries))
 		SSticker.mode.update_rev_icons_added() //So the icon actually appears
-	if(H.mind in SSticker.mode.cult)
-		SSticker.mode.update_cult_icons_added(H.mind) // Adds the cult antag hud
-		SSticker.mode.add_cult_actions(H.mind) // And all the actions
-		if(SSticker.mode.cult_risen)
-			SSticker.mode.rise(H)
-			if(SSticker.mode.cult_ascendant)
-				SSticker.mode.ascend(H)
-	if((H.mind in SSticker.mode.shadowling_thralls) || (H.mind in SSticker.mode.shadows))
-		SSticker.mode.update_shadow_icons_added(H.mind)
-
-//Put messages in the connected computer's temp var for display.
 /obj/machinery/clonepod/proc/connected_message(message)
 	if((isnull(connected)) || (!istype(connected, /obj/machinery/computer/cloning)))
 		return FALSE
@@ -697,18 +659,8 @@ GLOBAL_LIST_INIT(cloner_biomass_items, list(\
 
 /obj/item/storage/box/disks
 	name = "Diskette Box"
-	desc = "Коробка для хранения дискет."
+	desc = "A box for storing floppy disks."
 	icon_state = "box_disc"
-
-/obj/item/storage/box/disks/get_ru_names()
-	return alist(
-		NOMINATIVE = "коробка с дискетами",
-		GENITIVE = "коробки с дискетами",
-		DATIVE = "коробке с дискетами",
-		ACCUSATIVE = "коробку с дискетами",
-		INSTRUMENTAL = "коробкой с дискетами",
-		PREPOSITIONAL = "коробке с дискетами",
-	)
 
 /obj/item/storage/box/disks/populate_contents()
 	for(var/I in 1 to 7)

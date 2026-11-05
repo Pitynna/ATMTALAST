@@ -43,23 +43,13 @@
 
 // MARK: Improvised revolvers
 /obj/item/ammo_box/magazine/internal/cylinder/improvised
-	gun_name = "импровизированного револьвера"
+	gun_name = "improvised revolvers"
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "rev_cylinder"
 	ammo_type = null
 	start_empty = TRUE
 	caliber = list(CALIBER_DOT_257)
 	max_ammo = 4
-
-/obj/item/ammo_box/magazine/internal/cylinder/improvised/get_ru_names()
-	return alist(
-		NOMINATIVE = "кустарный барабан [gun_name] [get_cartridge_marking()]",
-		GENITIVE = "кустарного барабана [gun_name] [get_cartridge_marking()]",
-		DATIVE = "кустарному барабану [gun_name] [get_cartridge_marking()]",
-		ACCUSATIVE = "кустарный барабан [gun_name] [get_cartridge_marking()]",
-		INSTRUMENTAL = "кустарным барабаном [gun_name] [get_cartridge_marking()]",
-		PREPOSITIONAL = "кустарном барабане [gun_name] [get_cartridge_marking()]",
-	)
 
 /obj/item/ammo_box/magazine/internal/cylinder/improvised/ammo_suitability(obj/item/ammo_casing/new_casing)
 	if(!new_casing || !(new_casing.caliber in caliber))
@@ -70,22 +60,11 @@
 	return jointext(caliber, "/")
 
 /obj/item/ammo_box/magazine/internal/cylinder/improvised/steel
-	extra_info = "Совместим с патронами обоих калибров."
+	extra_info = "Compatible with cartridges of both calibers."
 	icon_state = "s_rev_cylinder"
 	caliber = list(CALIBER_DOT_257, CALIBER_DOT_38)
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/improvised/steel/get_ru_names()
-	return alist(
-		NOMINATIVE = "стальной барабан [gun_name] [get_cartridge_marking()]",
-		GENITIVE = "стального барабана [gun_name] [get_cartridge_marking()]",
-		DATIVE = "стальному барабану [gun_name] [get_cartridge_marking()]",
-		ACCUSATIVE = "стальной барабан [gun_name] [get_cartridge_marking()]",
-		INSTRUMENTAL = "стальным барабаном [gun_name] [get_cartridge_marking()]",
-		PREPOSITIONAL = "стальном барабане [gun_name] [get_cartridge_marking()]",
-	)
-
-// MARK: Russian roulette .357
 /obj/item/ammo_box/magazine/internal/rus357
 	name = "russian revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/a357

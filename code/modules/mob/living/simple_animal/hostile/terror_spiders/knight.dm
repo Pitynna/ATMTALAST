@@ -29,7 +29,6 @@
 	move_resist = MOVE_FORCE_STRONG // no more pushing a several hundred if not thousand pound spider
 	web_type = /obj/structure/spider/terrorweb/knight
 	spider_intro_text = "Будучи Рыцарем Ужаса, ваша задача — создавать места для прорыва, или же оборонять гнездо. Несмотря на медлительность, вы живучи и опасны вблизи, используйте свою силу и выносливость, чтобы другие пауки могли выполнять свои функции! Ваши способности позволяют вам переключаться между режимом атаки и обороны, первый — увеличивает скорость, а также наносимый и получаемый урон, второй — уменьшает скорость, получаемый и наносимый урон."
-	tts_seed = "Chu"
 	var/last_attack_mode = 0
 	var/last_defence_mode = 0
 	var/attack_mode_av = 1
@@ -119,14 +118,4 @@
 /obj/structure/spider/terrorweb/knight
 	max_integrity = 30
 	name = "reinforced web"
-	desc = "Эта паутина усилена прочными нитями для дополнительной прочности."
-
-/obj/structure/spider/terrorweb/knight/get_ru_names()
-	return alist(
-		NOMINATIVE = "укрепленная паутина",
-		GENITIVE = "укрепленной паутины",
-		DATIVE = "укрепленной паутине",
-		ACCUSATIVE = "укрепленную паутину",
-		INSTRUMENTAL = "укрепленной паутиной",
-		PREPOSITIONAL = "укрепленной паутине",
-	)
+	desc = "This web is reinforced with extra strands, for added strength."

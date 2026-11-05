@@ -1,6 +1,6 @@
 /obj/machinery/vending/coffee
 	name = "Solar's Best Hot Drinks"
-	desc = "Это машина, которая готовит горячие напитки. Ну, знаете, такие, которые кипятком заливают."
+	desc = "A vending machine which dispenses hot drinks."
 	slogan_list = list(
 		"В+ыпейте!",
 		"В+ыпьем!",
@@ -41,16 +41,6 @@
 	)
 	contraband = list(
 		/obj/item/reagent_containers/cup/glass/ice = 10,
-	)
-
-/obj/machinery/vending/coffee/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Solar's Best Hot Drinks",
-		GENITIVE = "торгового автомата Solar's Best Hot Drinks",
-		DATIVE = "торговому автомату Solar's Best Hot Drinks",
-		ACCUSATIVE = "торговый автомат Solar's Best Hot Drinks",
-		INSTRUMENTAL = "торговым автоматом Solar's Best Hot Drinks",
-		PREPOSITIONAL = "торговом автомате Solar's Best Hot Drinks",
 	)
 
 /obj/machinery/vending/coffee/item_slot_check(mob/user, obj/item/I)

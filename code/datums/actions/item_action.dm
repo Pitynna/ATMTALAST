@@ -117,19 +117,6 @@
 		return target == carbon_owner.internal
 	return ..()
 
-/datum/action/item_action/set_internals_ninja
-	name = "Переключить баллон"
-	button_icon = 'icons/mob/actions/actions_ninja.dmi'
-	background_icon = 'icons/mob/actions/actions_ninja.dmi'
-	background_icon_state = "background_green"
-	background_icon_state_active = "background_green_active"
-
-/datum/action/item_action/set_internals_ninja/is_action_active(atom/movable/screen/movable/action_button/current_button)
-	if(iscarbon(owner))
-		var/mob/living/carbon/carbon_owner = owner
-		return target == carbon_owner.internal
-	return ..()
-
 /datum/action/item_action/toggle_mister
 	name = "Переключить распылитель"
 
@@ -296,29 +283,6 @@
 	if(!istype(J) || !J.on)
 		return FALSE
 	return ..()
-
-/datum/action/item_action/toggle_jetpack/ninja
-	button_icon = 'icons/mob/actions/actions_ninja.dmi'
-	background_icon = 'icons/mob/actions/actions_ninja.dmi'
-	background_icon_state = "background_green"
-	background_icon_state_active = "background_green_active"
-
-/datum/action/item_action/toggle_jetpack/ninja/is_action_active(atom/movable/screen/movable/action_button/current_button)
-	. = ..()
-	var/obj/item/tank/jetpack/jetpack = target
-	return istype(jetpack) && jetpack.on
-
-/datum/action/item_action/jetpack_stabilization/ninja
-	button_icon = 'icons/mob/actions/actions_ninja.dmi'
-	background_icon = 'icons/mob/actions/actions_ninja.dmi'
-	background_icon_state = "background_green"
-	background_icon_state_active = "background_green_active"
-
-/datum/action/item_action/jetpack_stabilization/ninja/is_action_active(atom/movable/screen/movable/action_button/current_button)
-	. = ..()
-	var/obj/item/tank/jetpack/jetpack = target
-	return istype(jetpack) && jetpack.stabilize
-
 
 /datum/action/item_action/hands_free
 	check_flags = AB_CHECK_CONSCIOUS
@@ -649,29 +613,3 @@
 
 
 //Ninja action type
-/datum/action/item_action/advanced/ninja
-	coold_overlay_icon = 'icons/mob/actions/actions_ninja.dmi'
-	coold_overlay_icon_state = "background_green"
-	background_icon = 'icons/mob/actions/actions_ninja.dmi'
-	icon_state_active = "background_green_active"
-	icon_state_disabled = "background_green"
-	var/action_initialisation_text = null
-
-/datum/action/item_action/advanced/ninja/New(Target)
-	. = ..()
-	var/obj/item/clothing/suit/space/space_ninja/ninja_suit = target
-	if(istype(ninja_suit))
-		recharge_text_color = ninja_suit.color_choice
-		coold_overlay_icon_state = "background_[ninja_suit.color_choice]"
-
-/datum/action/item_action/advanced/ninja/IsAvailable(feedback = FALSE)
-	if(!target && !istype(target, /obj/item/clothing/suit/space/space_ninja))
-		return FALSE
-	return ..()
-
-/datum/action/item_action/advanced/ninja/toggle_button_on_off()
-	if(action_ready)
-		background_icon_state = icon_state_active
-	else
-		background_icon_state = icon_state_disabled
-	UpdateButtonIcon()

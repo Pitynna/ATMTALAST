@@ -4,20 +4,10 @@
 	name = "stacking machine console"
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "console"
-	desc = "Управляет упаковочной машиной... по крайней мере в теории."
+	desc = "Controls a stacking machine... in theory."
 	anchored = TRUE
 	var/obj/machinery/mineral/stacking_machine/machine
 	var/machinedir = SOUTHEAST
-
-/obj/machinery/mineral/stacking_unit_console/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль упаковочной машины",
-		GENITIVE = "консоли упаковочной машины",
-		DATIVE = "консоли упаковочной машины",
-		ACCUSATIVE = "консоль упаковочной машины",
-		INSTRUMENTAL = "консолью упаковочной машины",
-		PREPOSITIONAL = "консоли упаковочной машины",
-	)
 
 /obj/machinery/mineral/stacking_unit_console/Initialize(mapload)
 	. = ..()
@@ -80,7 +70,7 @@
 	name = "stacking machine"
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "stacker"
-	desc = "Автоматически формирует стопки материалов. Управляется через консоль."
+	desc = "A machine that automatically stacks acquired materials. Controlled by a nearby console."
 	density = TRUE
 	anchored = TRUE
 	input_dir = EAST
@@ -90,16 +80,6 @@
 	var/list/stack_list = list() //Key: Type.  Value: Instance of type.
 	/// Ammount to stack before releassing
 	var/stack_amt = 50
-
-/obj/machinery/mineral/stacking_machine/get_ru_names()
-	return alist(
-		NOMINATIVE = "упаковочная машина",
-		GENITIVE = "упаковочной машины",
-		DATIVE = "упаковочной машине",
-		ACCUSATIVE = "упаковочную машину",
-		INSTRUMENTAL = "упаковочной машиной",
-		PREPOSITIONAL = "упаковочной машине",
-	)
 
 /obj/machinery/mineral/stacking_machine/Destroy()
 	QDEL_LIST(stack_list)

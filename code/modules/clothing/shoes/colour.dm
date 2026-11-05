@@ -11,8 +11,6 @@
 		SPECIES_VOX = /datum/greyscale_config/sneakers_worn/vox,
 		SPECIES_DRASK = /datum/greyscale_config/sneakers_worn/drask,
 		SPECIES_UNATHI = /datum/greyscale_config/sneakers_worn/unathi,
-		SPECIES_ASHWALKER_BASIC = /datum/greyscale_config/sneakers_worn/unathi,
-		SPECIES_ASHWALKER_SHAMAN = /datum/greyscale_config/sneakers_worn/unathi,
 		SPECIES_DRACONOID = /datum/greyscale_config/sneakers_worn/unathi,
 		SPECIES_MONKEY = /datum/greyscale_config/sneakers_worn/monkey,
 		SPECIES_FARWA =  /datum/greyscale_config/sneakers_worn/monkey,
@@ -161,8 +159,6 @@
 		SPECIES_VOX = /datum/greyscale_config/sneakers_orange_worn/vox,
 		SPECIES_DRASK = /datum/greyscale_config/sneakers_orange_worn/drask,
 		SPECIES_UNATHI = /datum/greyscale_config/sneakers_orange_worn/unathi,
-		SPECIES_ASHWALKER_BASIC = /datum/greyscale_config/sneakers_orange_worn/unathi,
-		SPECIES_ASHWALKER_SHAMAN = /datum/greyscale_config/sneakers_orange_worn/unathi,
 		SPECIES_DRACONOID = /datum/greyscale_config/sneakers_orange_worn/unathi,
 		SPECIES_MONKEY = /datum/greyscale_config/sneakers_orange_worn/monkey,
 		SPECIES_FARWA =  /datum/greyscale_config/sneakers_orange_worn/monkey,
@@ -215,48 +211,18 @@
 
 /obj/item/clothing/shoes/prison
 	name = "prison boots"
-	desc = "Твердая и неудобная обувь, сделанная другими заключенными."
+	desc = "Hard, uncomfortable shoes made by other prisoners."
 	icon_state = "prison_boots"
 	item_state = "prison_boots"
 
-/obj/item/clothing/shoes/prison/get_ru_names()
-	return alist(
-		NOMINATIVE = "тюремные башмаки",
-		GENITIVE = "тюремные башмаки",
-		DATIVE = "тюремным башмакам",
-		ACCUSATIVE = "тюремные башмаки",
-		INSTRUMENTAL = "тюремныим башмаками",
-		PREPOSITIONAL = "тюремных башмаках",
-	)
-
 /obj/item/clothing/shoes/convers
 	name = "black convers"
-	desc = "Пара высоких чёрных кед, сделанных по последнему писку моды. Выглядят просто отпадно."
+	desc = "A pair of fashionable black high-top sneakers. They look fantastic."
 	icon_state = "blackconvers"
 	item_state = "blackconvers"
 
-/obj/item/clothing/shoes/convers/get_ru_names()
-	return alist(
-		NOMINATIVE = "чёрные высокие кеды",
-		GENITIVE = "чёрных высоких кедов",
-		DATIVE = "чёрным высоким кедам",
-		ACCUSATIVE = "чёрные высокие кеды",
-		INSTRUMENTAL = "чёрными высокими кедами",
-		PREPOSITIONAL = "чёрных высоких кедах",
-	)
-
 /obj/item/clothing/shoes/convers/red
 	name = "red convers"
-	desc = "Пара высоких красных кед, сделанных по последнему писку моды. Выглядят просто отпадно."
+	desc = "A pair of fashionable red high-top sneakers. They look fantastic."
 	icon_state = "redconvers"
 	item_state = "redconvers"
-
-/obj/item/clothing/shoes/convers/red/get_ru_names()
-	return alist(
-		NOMINATIVE = "красные высокие кеды",
-		GENITIVE = "красных высоких кедов",
-		DATIVE = "красным высоким кедам",
-		ACCUSATIVE = "красные высокие кеды",
-		INSTRUMENTAL = "красными высокими кедами",
-		PREPOSITIONAL = "красных высоких кедах",
-	)

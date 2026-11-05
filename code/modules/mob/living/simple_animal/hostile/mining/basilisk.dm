@@ -27,7 +27,6 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	loot = list(/obj/item/stack/ore/diamond{layer = ABOVE_MOB_LAYER},
 				/obj/item/stack/ore/diamond{layer = ABOVE_MOB_LAYER})
-	tts_seed = "Antimage"
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/get_ru_names()
 	return alist(

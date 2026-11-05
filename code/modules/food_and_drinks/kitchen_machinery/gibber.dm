@@ -2,7 +2,7 @@
 
 /obj/machinery/gibber
 	name = "Gibber"
-	desc = "Промышленная мясорубка для утилизации органических отходов. Эффективно перерабатывает биомассу гуманоидного типа в мясосодержащий продукт."
+	desc = "The name isn't descriptive enough?"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "grinder"
 	density = TRUE
@@ -23,16 +23,6 @@
 
 	idle_power_usage = 2
 	active_power_usage = 500
-
-/obj/machinery/gibber/get_ru_names()
-	return alist(
-		NOMINATIVE = "мясорубка",
-		GENITIVE = "мясорубки",
-		DATIVE = "мясорубке",
-		ACCUSATIVE = "мясорубку",
-		INSTRUMENTAL = "мясорубкой",
-		PREPOSITIONAL = "мясорубке"
-	)
 
 /obj/machinery/gibber/Initialize(mapload)
 	. = ..()
@@ -270,7 +260,7 @@ GAME_VERB_SRC(/obj/machinery/gibber, eject, oview(1), "Опустошить мя
 		var/skinned = H.dna.species.skinned_type
 		if(ismachineperson(H))
 			new /obj/effect/gibspawner/robot(src)
-		else if(!isplasmaman(H) && !isnucleation(H) && !isgolem(H))
+		else if(!isplasmaman(H) && !isnucleation(H))
 			new /obj/effect/gibspawner(src, H.dna)
 		if(skinned)
 			new skinned(src)

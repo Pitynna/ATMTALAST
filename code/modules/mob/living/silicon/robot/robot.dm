@@ -31,7 +31,6 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		VERB_META(/mob/living/silicon/, subsystem_law_manager),
 	)
 
-	tts_effect_override = SOUND_EFFECT_ROBOT
 
 	var/sight_mode = 0
 	var/custom_name = ""
@@ -187,7 +186,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 
 	init(alien, connect_to_AI, ai_to_sync_to)
 
-	if(is_taipan(z) || syndie) // So syndicate turrets dont shoot at syndieborgs
+	if(syndie) // So syndicate turrets dont shoot at syndieborgs
 		faction += "syndicate"
 
 	if(has_camera && !camera && !syndie)
@@ -203,9 +202,6 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	else if(mmi == null)
 		mmi = new /obj/item/mmi/robotic_brain(src)	//Give the borg an MMI if he spawns without for some reason. (probably not the correct way to spawn a robotic brain, but it works)
 		mmi.icon_state = "boris"
-
-	else if(mmi.clock)
-		INVOKE_ASYNC(src, TYPE_PROC_REF(/atom, ratvar_act), TRUE)
 
 	initialize_components()
 
@@ -364,7 +360,6 @@ GAME_VERB(/mob/living/silicon/robot, Namepick, "Сменить имя", VERB_CAT
 	rename_self(braintype, 1)
 
 GAME_VERB_DESC(/mob/living/silicon/robot, Change_Voice, "Сменить голос", "Express yourself!", VERB_CATEGORY_ROBOTCOMMANDS)
-	change_voice()
 
 /mob/living/silicon/robot/proc/sync()
 	if(lawupdate && connected_ai)
@@ -420,12 +415,6 @@ GAME_VERB_DESC(/mob/living/silicon/robot, Change_Voice, "Сменить голо
 				CYBORG_MODULE_NAME_MEDIC_ERT_SPECIAL = /obj/item/robot_module/syndicate_medical,
 				CYBORG_MODULE_NAME_BATTLEDROID = /obj/item/robot_module/syndicate
 			)
-
-	if(mmi?.ninja)
-		forced_module = /obj/item/robot_module/ninja
-
-	if(mmi?.clock || isclocker(src))
-		forced_module = /obj/item/robot_module/clockwork
 
 	if(forced_module)
 		modtype = forced_module
@@ -487,8 +476,8 @@ GAME_VERB_DESC(/mob/living/silicon/robot, Change_Voice, "Сменить голо
 		if("Medical")
 			R = new /mob/living/silicon/robot/syndicate/medical(T)
 			R.playstyle_string = "[span_userdanger("Вы Медицинский Киборг \"Синдиката\"!")]<br> \
-						<b>Вас построили на ННКСС 'Тайпан' Помогайте персоналу станции и исполняйте их приказы. \
-						Возможно вас приставят к агенту или выдадут особую миссию, но до тех пор не покидайте пределы станции! \
+						<b>Вас создал Синдикат. Выполняйте приказы вашего командования. \
+						Возможно, вас приставят к агенту или выдадут особую миссию. \
 						Ваш Гипоспрей способен создавать восстанавливающие Наниты, чудодействующее лекарство, способное вылечить большинство видов телесных повреждений, включая урон от клонирования и мозгу. Он так же производит морфин для наступления. \
 						Электроды вашего дефибриллятора способны оживлять оперативников и агентов через их хардсьюты, а так же могут быть использованы с намерением вреда, чтобы шокировать ваших врагов! \
 						Ваша энергетическая пила функционирует как циркулярная пила, но её можно активировать для нанесения дополнительного урона. \
@@ -496,8 +485,8 @@ GAME_VERB_DESC(/mob/living/silicon/robot, Change_Voice, "Сменить голо
 		if("Saboteur")
 			R = new /mob/living/silicon/robot/syndicate/saboteur(T)
 			R.playstyle_string = "[span_userdanger("Вы Киборг Саботажник \"Синдиката\"!")]<br> \
-						<b>Вас построили на ННКСС 'Тайпан' Помогайте персоналу станции и исполняйте их приказы. \
-						Возможно вас приставят к агенту или выдадут особую миссию, но до тех пор не покидайте пределы станции! \
+						<b>Вас создал Синдикат. Выполняйте приказы вашего командования. \
+						Возможно, вас приставят к агенту или выдадут особую миссию. \
 						Вы экипированны крепким набором инженерных инструментов для выполнения различного рода задач. \
 						В вас встроен специальный маячок для посылок, который позволит вам незаметно передвигаться по станциям НТ через мусорные трубы. \
 						Ваш хамеллион проектор позволяет вам замаскироваться под стандартного инженерного киборга Нанотрэйзен и выполнять любого рода саботаж под прикрытием. \
@@ -508,8 +497,8 @@ GAME_VERB_DESC(/mob/living/silicon/robot, Change_Voice, "Сменить голо
 		if("Bloodhound")
 			R = new /mob/living/silicon/robot/syndicate(T)
 			R.playstyle_string = "[span_userdanger("Вы Штурмовой Киборг \"Синдиката\"!")]<br> \
-						<b>Вас построили на ННКСС 'Тайпан' Помогайте персоналу станции и исполняйте их приказы. \
-						Возможно вас приставят к агенту или выдадут особую миссию, но до тех пор не покидайте пределы станции! \
+						<b>Вас создал Синдикат. Выполняйте приказы вашего командования. \
+						Возможно, вас приставят к агенту или выдадут особую миссию. \
 						Вы вооружены мощными наступательными инструментами чтобы выполнять выданные вам миссии. \
 						Встроенное в вас LMG самостоятельно производит патроны используя вашу батарею. \
 						Ваш пинпоинтер позволяет вам найти Ядерных Оперативников \"Синдиката\" из вашей группы, если вас к таковой приставят."
@@ -854,17 +843,6 @@ GAME_VERB(/mob/living/silicon/robot, cmd_robot_alerts, "Список трево�
 		cell_component.brute_damage = 0
 		cell_component.electronics_damage = 0
 
-		var/been_hijacked = FALSE
-		for(var/mob/living/simple_animal/demon/pulse_demon/demon in cell)
-			if(!been_hijacked)
-				demon.do_hijack_robot(src)
-				been_hijacked = TRUE
-			else
-				demon.exit_to_turf()
-
-		if(been_hijacked)
-			cell.rigged = FALSE
-
 		module?.update_cells()
 		diag_hud_set_borgcell()
 		return ATTACK_CHAIN_BLOCKED_ALL
@@ -955,14 +933,6 @@ GAME_VERB(/mob/living/silicon/robot, cmd_robot_alerts, "Список трево�
 		qdel(I)
 
 		return ATTACK_CHAIN_BLOCKED_ALL
-
-	if(istype(I, /obj/item/clockwork/clockslab) && isclocker(src) && isclocker(user) && src != user)
-		add_fingerprint(user)
-		locked = !locked
-
-		balloon_alert_to_viewers("техпанель [locked ? "за" : "раз"]блокирована")
-		update_icons()
-		return ATTACK_CHAIN_PROCEED_SUCCESS
 
 	return ..()
 
@@ -1144,22 +1114,6 @@ GAME_VERB(/mob/living/silicon/robot, cmd_robot_alerts, "Список трево�
 	if(!ishuman(user) && !issilicon(user))
 		return
 
-	if(isclocker(src))
-		to_chat(user, span_clocklarge("Убери свои грязные руки от моего слуги."))
-		if(isrobot(user))
-			return
-		to_chat(user, span_danger("Вы попытались провести криптографическим секвенсором по адаптеру [src], но он просто вылетел из ваших рук, движимый неизвестной и невероятно мощной магией."))
-		if(!iscarbon(user))
-			return
-		var/mob/living/carbon/carbon = user
-		var/obj/item/item = carbon.get_active_hand()
-		if(!item)
-			return
-		if(carbon.drop_item_ground(item))
-			var/turf/destination = get_edge_target_turf(src, turn(user.dir, 180))
-			item.throw_at(destination, 10, 5, user)
-		return
-
 	var/mob/living/M = user
 	if(!opened)//Cover is closed
 		if(!is_emaggable)
@@ -1253,29 +1207,6 @@ GAME_VERB(/mob/living/silicon/robot, cmd_robot_alerts, "Список трево�
 	to_chat(src, "<b>Obey these laws:</b>")
 	laws.show_laws(src)
 
-/mob/living/silicon/robot/ratvar_act(weak = FALSE, shell_affected = FALSE)
-	if(mainframe)
-		var/mob/living/silicon/ai/AI = mainframe
-		evacuate_ai(DANGER_LVL_NONE)
-		AI.ratvar_act()
-		return
-	if(shell && !shell_affected)
-		return
-	if(isclocker(src) && module?.type == /obj/item/robot_module/clockwork)
-		return
-
-	if(!weak)
-		if(module)
-			reset_module()
-
-		pick_module("Clockwork")
-		pdahide = TRUE
-
-	SSticker.mode.add_clocker(mind)
-	if(!shell)
-		UnlinkSelf()
-	laws = new /datum/ai_laws/ratvar
-
 GAME_VERB_DESC(/mob/living/silicon/robot, toggle_own_cover, "Блокировка панели", "Toggles the lock on your cover.", VERB_CATEGORY_ROBOTCOMMANDS)
 
 	if(can_lock_cover)
@@ -1365,18 +1296,10 @@ GAME_VERB_DESC(/mob/living/silicon/robot, toggle_own_cover, "Блокировк�
 	if(stat != DEAD && !HAS_TRAIT(src, TRAIT_INCAPACITATED) && !low_power_mode) //Not dead, not stunned.
 		var/eyes_olay
 		if(selected_skin)
-			if(isclocker(src) && SSticker.mode.power_reveal)
-				eyes_olay = "eyes-[selected_skin.eye_prefix]-clocked"
-
-			else
-				eyes_olay = "eyes-[selected_skin.eye_prefix]"
+			eyes_olay = "eyes-[selected_skin.eye_prefix]"
 
 		else
-			if(isclocker(src) && SSticker.mode.power_reveal)
-				eyes_olay = "eyes-[icon_state]-clocked"
-
-			else
-				eyes_olay = "eyes-[icon_state]"
+			eyes_olay = "eyes-[icon_state]"
 
 		if(eyes_olay)
 			add_overlay(eyes_olay)
@@ -1565,10 +1488,6 @@ GAME_VERB_DESC(/mob/living/silicon/robot, toggle_own_cover, "Блокировк�
 /mob/living/silicon/robot/proc/deconstruct()
 	var/turf/T = get_turf(src)
 
-	if((modtype != /obj/item/robot_module/clockwork || !mmi.clock) && isclocker(src))
-		to_chat(src, span_warning("Вместе с вашим телом были разрушены и оковы ужасного заводного культа! Вы свободны от его пагубного влияния и можете продолжить служить станции!"))
-		SSticker.mode.remove_clocker(mind, FALSE)
-
 	evacuate_ai(DANGER_LVL_NONE)
 
 	if(robot_suit)
@@ -1659,10 +1578,6 @@ GAME_VERB_DESC(/mob/living/silicon/robot, toggle_own_cover, "Блокировк�
 	return
 
 /mob/living/silicon/robot/proc/SetLockdown(state = TRUE)
-	if(isclocker(src))
-		return
-
-	// They stay locked down if their wire is cut.
 	if(wires?.is_cut(WIRE_BORG_LOCKED))
 		state = TRUE
 
@@ -1996,11 +1911,7 @@ GAME_VERB_DESC(/mob/living/silicon/robot, toggle_own_cover, "Блокировк�
 /mob/living/silicon/robot/destroyer/eyes_overlays()
 	if(stat != DEAD && !HAS_TRAIT(src, TRAIT_INCAPACITATED) && !low_power_mode) //Not dead, not stunned.
 		var/eyes_olay
-		if(isclocker(src) && SSticker.mode.power_reveal)
-			eyes_olay = "eyes-[base_icon]-clocked"
-
-		else
-			eyes_olay = "eyes-[base_icon]"
+		eyes_olay = "eyes-[base_icon]"
 
 		if(eyes_olay)
 			add_overlay(eyes_olay)
@@ -2247,7 +2158,6 @@ GAME_VERB(/mob/living/silicon/robot, powerwarn, "Состояние заряда
 	deployed = TRUE
 	lawupdate = 0
 	grant_shell_actions()
-	tts_seed = AI.tts_seed
 	lawsync()
 
 	set_hud_image_state(DIAG_AISHELL_STAT_HUD, "hudtrackingai-active")

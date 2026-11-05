@@ -33,9 +33,6 @@
 		target.Dizzy(10 SECONDS)
 		target.Confused(10 SECONDS)
 
-		if(!HAS_TRAIT(user, TRAIT_NON_INFECTIOUS_ZOMBIE))
-			for(var/datum/disease/virus/zombie/zomb in target.diseases)
-				zomb.stage = max(rand(3, 4), zomb.stage)
 		return TRUE
 
 	if(HAS_TRAIT(target, TRAIT_I_WANT_BRAINS))
@@ -67,10 +64,6 @@
 
 	for(var/datum/disease/virus/virus in user.diseases)
 		virus.Contract(target, BLOOD|BITES, need_protection_check = FALSE, zone = user.zone_selected)
-
-	if(!HAS_TRAIT(user, TRAIT_NON_INFECTIOUS_ZOMBIE))
-		for(var/datum/disease/virus/zombie/zomb in target.diseases)
-			zomb.stage = max(5, zomb.stage)
 
 	if(!do_after(user, 1 SECONDS, target))
 		return

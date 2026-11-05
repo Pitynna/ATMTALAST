@@ -8,9 +8,7 @@
  */
 /obj/item/circuit_component/list_literal/ntnet_send
 	display_name = "NTNet передатчик списка элементов"
-	desc = "Создаёт пакет данных в виде списка литералов и отправляет его через NTNet. \
-			Если задан ключ шифрования, передаваемые данные будут приняты \
-			только получателями с таким же ключом шифрования."
+	desc = "Creates a data packet from a list literal and sends it over NTNet. If an encryption key is set, only receivers with the same key will accept it."
 	category = "NTNet"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL

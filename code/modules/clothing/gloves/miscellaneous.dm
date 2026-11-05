@@ -50,7 +50,7 @@
 
 /obj/item/clothing/gloves/brown_short_gloves
 	name = "short leather gloves"
-	desc = "Короткие облегающие перчатки из кожи."
+	desc = "Short, close-fitting leather gloves."
 	icon_state = "brown_short_gloves"
 	item_state = "brown_short_gloves"
 	sprite_sheets = list(
@@ -66,7 +66,7 @@
 
 /obj/item/clothing/gloves/adaptive_gloves
 	name = "adaptive gloves"
-	desc = "Перчатки с технологией \"Хамелеон\", позволяющие выбрать на постоянную основу из нескольких видов перчаток, созданных по последнему пику моды."
+	desc = "Chameleon gloves that let you permanently select one of several fashionable glove styles."
 	icon_state = "transmog"
 	item_state = "transmog"
 	sprite_sheets = list(
@@ -82,13 +82,3 @@
 /obj/item/clothing/gloves/adaptive_gloves/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/item_skins)
-
-/obj/item/clothing/gloves/adaptive_gloves/get_ru_names()
-	return alist(
-		NOMINATIVE = "адаптивные перчатки",
-		GENITIVE = "адаптивных перчаток",
-		DATIVE = "адаптивным перчаткам",
-		ACCUSATIVE = "адаптивные перчатки",
-		INSTRUMENTAL = "адаптивными перчатками",
-		PREPOSITIONAL = "адаптивных перчатках",
-	)

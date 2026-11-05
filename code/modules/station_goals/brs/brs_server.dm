@@ -7,8 +7,8 @@
 #define DATA_RECORD_LENGTH 6
 
 /obj/item/circuitboard/brs_server
-	board_name = "Сервер сканирирования разлома"
-	desc = "Плата сервера сканирования и изучения блюспейс разлома."
+	board_name = "Rift Scanning Server"
+	desc = "A circuit board for a bluespace rift scanning and research server."
 	build_path = /obj/machinery/brs_server
 	icon_state = "cpuboard_super"
 	greyscale_config = null
@@ -23,7 +23,7 @@
 	)
 
 /obj/machinery/brs_server
-	name = "Сервер сканирования блюспейс разлома"
+	name = "bluespace rift scanning server"
 	icon = 'icons/obj/machines/BRS/scanner_server.dmi'
 	icon_state = "scan_server"
 	anchored = TRUE

@@ -11,7 +11,7 @@
 
 /obj/item/circuit_component/compare/health_state
 	display_name = "Сравнение состояния здоровья"
-	desc = "Компонент, который сравнивает оценку состояния здоровья организма и возвращает значение \"истина\" или \"ложь\"."
+	desc = "A component that compares an organism's health state and returns true or false."
 	category = "Entity"
 
 	/// The input port

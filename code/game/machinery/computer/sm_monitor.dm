@@ -1,5 +1,5 @@
 /obj/machinery/computer/sm_monitor
-	name = "консоль мониторинга суперматерии"
+	name = "supermatter monitoring console"
 	desc = "Crystal Integrity Monitoring System, connects to specially calibrated supermatter sensors to provide information on the status of supermatter-based engines."
 	icon_keyboard = "power_key"
 	icon_screen = "smmon_0"
@@ -11,16 +11,6 @@
 	var/last_status = SUPERMATTER_INACTIVE
 	/// The supermatter which will send a notification to us if it's delamming.
 	var/obj/machinery/power/supermatter_crystal/focused_supermatter
-
-/obj/machinery/computer/sm_monitor/get_ru_names()
-	return alist(
-		NOMINATIVE = "консоль мониторинга суперматерии",
-		GENITIVE = "консоли мониторинга суперматерии",
-		DATIVE = "консоли мониторинга суперматерии",
-		ACCUSATIVE = "консоль мониторинга суперматерии",
-		INSTRUMENTAL = "консолью мониторинга суперматерии",
-		PREPOSITIONAL = "консоли мониторинга суперматерии"
-	)
 
 /obj/machinery/computer/sm_monitor/Initialize(mapload, obj/structure/computerframe/frame)
 	. = ..()

@@ -369,22 +369,12 @@
 /obj/item/slimepotion/transference
 	name = "consciousness transference potion"
 	id = "Transference"
-	desc = "Странное вещество наподобие слизи. При использовании позволяет перенести сознание в менее развитое существо."
+	desc = "A strange slime-based chemical that, when used, allows the user to transfer their consciousness to a lesser being."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle19"
 	origin_tech = "biotech=6"
 	var/prompted = FALSE
 	var/animal_type = SENTIENCE_ORGANIC
-
-/obj/item/slimepotion/transference/get_ru_names()
-	return alist(
-		NOMINATIVE = "зелье переноса сознания",
-		GENITIVE = "зелья переноса сознания",
-		DATIVE = "зелью переноса сознания",
-		ACCUSATIVE = "зелье переноса сознания",
-		INSTRUMENTAL = "зельем переноса сознания",
-		PREPOSITIONAL = "зелье переноса сознания"
-	)
 
 /obj/item/slimepotion/transference/afterattack(mob/living/target, mob/user, proximity_flag, list/modifiers, status)
 	if(!proximity_flag || user.incapacitated() || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))
@@ -426,10 +416,6 @@
 	to_chat(SM, span_notice("Вы моментально чувствуете как ваше сознание перетекло в [SM.declent_ru(ACCUSATIVE)]!"))
 	to_chat(SM, span_warning("Отныне вы [SM.declent_ru(NOMINATIVE)]. Ваши роли, союзники и те, кому вы подчиняетесь, остались такими же, как были до переноса сознания."))
 	SM.name = "[SM.name] как [user.real_name]"
-	if(istype(SM, /mob/living/simple_animal/hostile/lightgeist))
-		if(!GLOB.med_hud_users.Find(SM))
-			var/datum/atom_hud/medsensor = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-			medsensor.show_to(SM)
 	qdel(src)
 
 /obj/item/slimepotion/slime/steroid
@@ -546,11 +532,6 @@
 			var/obj/item/clothing/cloth = target
 			if(cloth.clothing_flags & FIXED_SLOWDOWN)
 				to_chat(user, span_warning("[I] can't be made any faster!</span>"))
-				return
-		if(ismodcontrol(target))
-			var/obj/item/mod/control/C = target
-			if(C.active)
-				balloon_alert(user, "сначала выключите костюм!")
 				return
 		I.slowdown /= 2
 		I.item_flags |= SPEEDPOTION_APPLIED

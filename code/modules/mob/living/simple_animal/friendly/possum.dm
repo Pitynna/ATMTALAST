@@ -13,7 +13,6 @@
 	speak_emote = list("шипит", "бурчит")
 	emote_hear = list("шипит", "бурчит")
 	emote_see = list("трясёт головой", "гоняется за своим хвостом", "дрожит")
-	tts_seed = "Clockwerk"
 	faction = list("neutral")
 	maxHealth = 30
 	health = 30

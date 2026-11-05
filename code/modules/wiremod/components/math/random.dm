@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/random
 	display_name = "Случайно"
-	desc = "Возвращает случайное число."
+	desc = "Returns a random number."
 	category = "Math"
 
 	/// The minimum value that the random number can be

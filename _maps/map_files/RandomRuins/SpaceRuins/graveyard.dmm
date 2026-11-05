@@ -1,6 +1,5 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/item/restraints/handcuffs/manacles,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
@@ -42,7 +41,6 @@
 	},
 /area/ruin/space/graveyard/church)
 "aZ" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/item/flashlight/lantern,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
@@ -142,7 +140,6 @@
 /turf/simulated/floor/plating/asteroid,
 /area/ruin/space/graveyard/graves)
 "cG" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/decal/cleanable/dust{
 	icon = 'icons/obj/rune.dmi';
 	icon_state = "spirit_realm";
@@ -177,7 +174,6 @@
 /area/ruin/space/graveyard/church)
 "dp" = (
 /obj/structure/kitchenspike,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
@@ -303,12 +299,10 @@
 /turf/simulated/floor/wood/oak,
 /area/ruin/space/graveyard/graves)
 "gM" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "gR" = (
 /obj/item/trash/candle,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "gS" = (
@@ -409,13 +403,11 @@
 /obj/item/flashlight/lantern,
 /obj/item/paper/crumpled{
 	info = "Дебилы! Как вы меня уже достали! Хватит пытаться заменить лампочку! Если кто-нибудь еще сунет свои рученки — отправится к господу богу...";
-	desc = "Старая помятая бумажка"
+	desc = "An old, crumpled scrap of paper."
 	},
 /turf/simulated/floor/wood/oak,
 /area/ruin/space/graveyard/church)
 "jS" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
-/obj/structure/cult/altar,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "kb" = (
@@ -647,8 +639,6 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "oj" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
-/obj/item/melee/cultblade/dagger,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "om" = (
@@ -716,8 +706,6 @@
 	id = "devilroom";
 	dir = 1
 	},
-/obj/effect/clockwork/overlay/floor/bloodcult,
-/obj/structure/cult/archives,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "qo" = (
@@ -793,7 +781,6 @@
 "rR" = (
 /obj/item/clothing/suit/hooded/fluff/bone,
 /obj/item/flag/cult,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "sd" = (
@@ -952,7 +939,6 @@
 /turf/space/black,
 /area/space)
 "vA" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/structure/decorative_structures/corpse{
 	dir = 8
 	},
@@ -1100,7 +1086,6 @@
 /area/ruin/space/graveyard/church)
 "za" = (
 /obj/item/stack/cable_coil,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "ze" = (
@@ -1109,7 +1094,6 @@
 /area/ruin/space/graveyard/church)
 "zu" = (
 /obj/effect/decal/remains/mouse,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "zD" = (
@@ -1233,7 +1217,6 @@
 /turf/simulated/floor/grass,
 /area/ruin/space/graveyard/graves)
 "Cz" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -4;
 	pixel_y = -4
@@ -1294,7 +1277,6 @@
 /turf/simulated/floor/carpet/red,
 /area/ruin/space/graveyard/church)
 "CT" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/decal/cleanable/dust{
 	icon = 'icons/obj/rune.dmi';
 	icon_state = "blood_boil";
@@ -1356,9 +1338,7 @@
 /turf/simulated/floor/wood/oak,
 /area/ruin/space/graveyard/graves)
 "DW" = (
-/obj/item/whetstone/cult,
 /obj/item/flag/cult,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "Ef" = (
@@ -1525,7 +1505,6 @@
 /turf/simulated/floor/wood/oak,
 /area/ruin/space/graveyard/church)
 "II" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/item/restraints/handcuffs/manacles/used,
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -4;
@@ -1601,13 +1580,10 @@
 /turf/simulated/floor/grass,
 /area/ruin/space/graveyard/graves)
 "Km" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
-/obj/structure/decorative_structures/cult_crystal,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "KM" = (
 /obj/item/stack/tape_roll,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "KO" = (
@@ -1727,7 +1703,6 @@
 /area/ruin/space/graveyard/church)
 "Oo" = (
 /obj/effect/decal/cleanable/blood/old,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "OF" = (
@@ -1909,7 +1884,6 @@
 /turf/simulated/floor/wood/oak,
 /area/ruin/space/graveyard/church)
 "Sl" = (
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/item/stack/rods{
 	amount = 10
 	},
@@ -1974,7 +1948,6 @@
 	specialfunctions = 4;
 	pixel_x = 32
 	},
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "TR" = (
@@ -2020,7 +1993,6 @@
 /area/ruin/space/graveyard/church)
 "Uv" = (
 /obj/item/kitchen/knife/combat/survival/bone,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/decal/cleanable/dust{
 	icon = 'icons/obj/rune.dmi';
 	icon_state = "blood_boil";
@@ -2042,7 +2014,6 @@
 /area/ruin/space/graveyard/graves)
 "Va" = (
 /obj/effect/decal/remains/mouse,
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -4;
 	pixel_y = -4
@@ -2290,7 +2261,6 @@
 	specialfunctions = 4;
 	pixel_x = -32
 	},
-/obj/effect/clockwork/overlay/floor/bloodcult,
 /turf/simulated/floor/plating,
 /area/ruin/space/graveyard/church)
 "YO" = (

@@ -9,16 +9,6 @@
 	stamina = 55
 	ricochet_chance = 20 //rubber bullets - high ricochet chance
 
-/obj/projectile/bullet/weakbullet/get_ru_names()
-	return alist(
-		NOMINATIVE = "патрон \"Погремушка\"",
-		GENITIVE = "патрона \"Погремушка\"",
-		DATIVE = "патрону \"Погремушка\"",
-		ACCUSATIVE = "патрон \"Погремушка\"",
-		INSTRUMENTAL = "патроном \"Погремушка\"",
-		PREPOSITIONAL = "патроне \"Погремушка\"",
-	)
-
 /obj/projectile/bullet/weakbullet/booze
 
 /obj/projectile/bullet/weakbullet/booze/on_hit(atom/target, blocked = 0)
@@ -52,30 +42,9 @@
 	color = "#FFFF00"
 	ricochets_max = 0
 
-/obj/projectile/bullet/stunshot/get_ru_names()
-	return alist(
-		NOMINATIVE = "оглушающая пуля",
-		GENITIVE = "оглушающей пули",
-		DATIVE = "оглушающей пуле",
-		ACCUSATIVE = "оглушающую пулю",
-		INSTRUMENTAL = "оглушающей пулей",
-		PREPOSITIONAL = "оглушающей пуле",
-	)
-
-// MARK: Indendiary slugs
 /obj/projectile/bullet/incendiary/shell
 	name = "incendiary slug"
 	damage = 20
-
-/obj/projectile/bullet/incendiary/shell/get_ru_names()
-	return alist(
-		NOMINATIVE = "зажигательная пуля",
-		GENITIVE = "зажигательной пули",
-		DATIVE = "зажигательной пуле",
-		ACCUSATIVE = "зажигательную пулю",
-		INSTRUMENTAL = "зажигательной пулей",
-		PREPOSITIONAL = "зажигательной пуле",
-	)
 
 /obj/projectile/bullet/incendiary/shell/Move(atom/newloc, direct = NONE, glide_size_override = 0, update_dir = TRUE)
 	. = ..()
@@ -94,16 +63,6 @@
 	damage_type = BURN
 	range = 10
 
-/obj/projectile/bullet/incendiary/shell/dragonsbreath/get_ru_names()
-	return alist(
-		NOMINATIVE = "пуля \"Дыхание дракона\"",
-		GENITIVE = "пули \"Дыхание дракона\"",
-		DATIVE = "пуле \"Дыхание дракона\"",
-		ACCUSATIVE = "пулю \"Дыхание дракона\"",
-		INSTRUMENTAL = "пулей \"Дыхание дракона\"",
-		PREPOSITIONAL = "пуле \"Дыхание дракона\"",
-	)
-
 /obj/projectile/bullet/incendiary/shell/dragonsbreath/napalm
 	damage = 14
 
@@ -113,32 +72,11 @@
 	damage_type = BRUTE
 	range = 50
 
-/obj/projectile/bullet/incendiary/shell/dragonsbreath/mecha/get_ru_names()
-	return alist(
-		NOMINATIVE = "пуля \"Жидкая лава\"",
-		GENITIVE = "пули \"Жидкая лава\"",
-		DATIVE = "пуле \"Жидкая лава\"",
-		ACCUSATIVE = "пулю \"Жидкая лава\"",
-		INSTRUMENTAL = "пулей \"Жидкая лава\"",
-		PREPOSITIONAL = "пуле \"Жидкая лава\"",
-	)
-
-// MARK: Frag-12
 /obj/projectile/bullet/frag12
 	name = "explosive slug"
 	damage = 20
 	knockdown = 5 SECONDS
 	ricochets_max = 0
-
-/obj/projectile/bullet/frag12/get_ru_names()
-	return alist(
-		NOMINATIVE = "разрывная пуля",
-		GENITIVE = "разрывной пули",
-		DATIVE = "разрывной пуле",
-		ACCUSATIVE = "разрывную пулю",
-		INSTRUMENTAL = "разрывной пулей",
-		PREPOSITIONAL = "разрывной пуле",
-	)
 
 /obj/projectile/bullet/frag12/on_hit(atom/target, blocked = 0)
 	..()
@@ -154,16 +92,6 @@
 	weaken = 4 SECONDS
 	hitsound = 'sound/effects/meteorimpact.ogg'
 	ricochets_max = 0
-
-/obj/projectile/bullet/meteorshot/get_ru_names()
-	return alist(
-		NOMINATIVE = "метеор",
-		GENITIVE = "метеора",
-		DATIVE = "метеору",
-		ACCUSATIVE = "метеор",
-		INSTRUMENTAL = "метеором",
-		PREPOSITIONAL = "метеоре",
-	)
 
 /obj/projectile/bullet/meteorshot/on_hit(atom/target, blocked = 0)
 	..()
@@ -191,16 +119,6 @@
 	armour_penetration = -20
 	ricochets_max = 0
 
-/obj/projectile/bullet/pellet/get_ru_names()
-	return alist(
-		NOMINATIVE = "гранула",
-		GENITIVE = "гранулы",
-		DATIVE = "грануле",
-		ACCUSATIVE = "гранулу",
-		INSTRUMENTAL = "гранулой",
-		PREPOSITIONAL = "грануле",
-	)
-
 /obj/projectile/bullet/pellet/magnum
 	damage = 15.5
 	tile_dropoff = 0.4
@@ -221,16 +139,6 @@
 	tile_dropoff = 0
 	armour_penetration = 20
 
-/obj/projectile/bullet/pellet/flechette/get_ru_names()
-	return alist(
-		NOMINATIVE = "флешетта",
-		GENITIVE = "флешетты",
-		DATIVE = "флешетте",
-		ACCUSATIVE = "флешетту",
-		INSTRUMENTAL = "флешеттой",
-		PREPOSITIONAL = "флешетте",
-	)
-
 /obj/projectile/bullet/pellet/rubber
 	name = "rubber pellet"
 	damage = 3
@@ -238,16 +146,6 @@
 	icon_state = "bullet-r"
 	ricochets_max = 1
 	ricochet_chance = 20
-
-/obj/projectile/bullet/pellet/rubber/get_ru_names()
-	return alist(
-		NOMINATIVE = "резиновый шарик",
-		GENITIVE = "резинового шарика",
-		DATIVE = "резиновому шарику",
-		ACCUSATIVE = "резиновый шарик",
-		INSTRUMENTAL = "резиновым шариком",
-		PREPOSITIONAL = "резиновом шарике",
-	)
 
 /obj/projectile/bullet/pellet/weak
 	tile_dropoff = 0.55		//Come on it does 6 damage don't be like that.

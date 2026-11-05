@@ -1,6 +1,6 @@
 /obj/machinery/vending/ammo
 	name = "Liberty"
-	desc = "Боеприпасы для тех, кто стреляет первым."
+	desc = "Ammunition for those who shoot first."
 	slogan_list = list(
 		"Я не встр+ечал ник+ого умн+ее пул+и!",
 		"К+огда я ск+ажу 3, то б+уду стр+елять! 3!",
@@ -57,14 +57,4 @@
 		/obj/item/storage/box/barrier = 2,
 		/obj/item/storage/box/teargas = 2,
 		/obj/item/ammo_box/a357 = 1,
-	)
-
-/obj/machinery/vending/ammo/get_ru_names()
-	return alist(
-		NOMINATIVE = "торговый автомат Liberty",
-		GENITIVE = "торгового автомата Liberty",
-		DATIVE = "торговому автомату Liberty",
-		ACCUSATIVE = "торговый автомат Liberty",
-		INSTRUMENTAL = "торговым автоматом Liberty",
-		PREPOSITIONAL = "торговом автомате Liberty",
 	)

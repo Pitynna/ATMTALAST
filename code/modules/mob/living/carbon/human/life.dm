@@ -12,7 +12,6 @@
 	life_tick++
 
 	voice = GetVoice()
-	tts_seed = GetTTSVoice()
 
 	if(.) // not dead
 		handle_pain()
@@ -40,12 +39,6 @@
 	var/datum/antagonist/vampire/vamp = mind?.has_antag_datum(/datum/antagonist/vampire)
 	if(vamp && life_tick == 1)
 		regenerate_icons() // Make sure the inventory updates
-
-	var/datum/antagonist/ninja/ninja = mind?.has_antag_datum(/datum/antagonist/ninja)
-	if(ninja)
-		ninja.handle_ninja()
-		if(life_tick == 1)
-			regenerate_icons() // Make sure the inventory updates
 
 	if(player_ghosted > 0 && stat == CONSCIOUS && job && !HAS_TRAIT(src, TRAIT_RESTRAINED))
 		handle_ghosted()
@@ -319,26 +312,10 @@
 			take_overall_damage(brute = pressure_damage, used_weapon = "Low Pressure")
 			throw_alert("pressure", /atom/movable/screen/alert/lowpressure, 2)
 
-	handle_gas_interaction(src, readonly_environment)
 
 /**
  *	Handles exposure to the skin of various gases.
  */
-/mob/living/carbon/human/proc/handle_gas_interaction(mob/living/carbon/human/human, datum/gas_mixture/environment)
-	/// Some non-clothing items may end up in these slots, e.g. flowers worn on the head, so we should consider clothing_flags as potentially nonexistant as a var.
-	/// Otherwise we will get a very spammy runtime.
-	var/suit_flags = astype(human?.wear_suit, /obj/item/clothing)?.clothing_flags
-	var/head_flags = astype(human?.head, /obj/item/clothing)?.clothing_flags
-
-	if((suit_flags & STOPSPRESSUREDAMAGE) && (head_flags & STOPSPRESSUREDAMAGE))
-		return
-
-	for(var/gas_id, gas_amount in environment.get_interesting())
-		switch(gas_id)
-			if(TLV_ANTINOBLIUM) // Antinoblium - irradiates the target.
-				if(gas_amount >= MOLES_GAS_VISIBLE && prob(min(gas_amount, 100)))
-					SSradiation.irradiate(human)
-
 ///FIRE CODE
 /mob/living/carbon/human/handle_fire()
 	. = ..()

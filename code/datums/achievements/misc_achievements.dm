@@ -46,36 +46,6 @@
 	database_id = MEDAL_LOOKOUTSIR
 	icon_state = "martyr" // purple heart on an explosive danger warning sign (well, sort of)
 
-/datum/award/achievement/misc/ascension
-	name = "Возвышение"
-	desc = "Caedite eos. Novit enim Dominus qui sunt eius."
-	database_id = MEDAL_ASCENSION
-	icon_state = "ascension"
-
-/datum/award/achievement/misc/cult_shuttle_omfg
-	name = "ЧТО ТОЛЬКО ЧТО ПРОИЗОШЛО?"
-	desc = "Будучи в кровавом культе, три раза прокляните шаттл за 10 секунд. А теперь представьте, что вам придется все это убирать. Фуу!"
-	database_id = MEDAL_CULT_SHUTTLE_OMFG
-	icon_state = "cult_shuttle_omfg"
-
-/datum/award/achievement/misc/springlock
-	name = "ЭТО ЧТО, УКУС 87-ОГО????"
-	desc = "Проигнорируйте предупреждение пружинного модуля для МЭК."
-	database_id = MEDAL_SPRINGLOCK
-	icon_state = "springlock"
-
-/datum/award/achievement/misc/arch_devil
-	name = "Адский босс"
-	desc = "Вы достигли вершин адской иерархии!"
-	database_id = MEDAL_ARCH_DEVIL
-	icon_state = "arch_devil"
-
-/datum/award/achievement/misc/no_hell_today
-	name = "Никакого Ада сегодня"
-	desc = "Вы совершили практически невозможное. Изгнать архидьявола и спасти мир от Ада удаётся не каждому."
-	database_id = MEDAL_NO_HELL_TODAY
-	icon_state = "no_hell_today"
-
 /datum/award/achievement/misc/kerberos_master
 	name = "Мастер Кербероса"
 	desc = "Вы смогли победить в режиме de_kerberos_2 и успешно эвакуироваться. Да вы настоящий мастер Кербероса."
@@ -143,3 +113,9 @@
 	database_id = MEDAL_HEALTHY
 	icon_state = "picofhealth"
 */
+
+/datum/award/achievement/misc/ascension
+	name = "Возвышение"
+	desc = "Caedite eos. Novit enim Dominus qui sunt eius."
+	database_id = MEDAL_ASCENSION
+	icon_state = "ascension"

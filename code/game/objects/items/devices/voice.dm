@@ -11,7 +11,6 @@
 	var/inform_about_toggle = TRUE
 
 	var/voice
-	var/tts_voice
 	var/active
 
 /obj/item/voice_changer/Initialize(mapload)
@@ -43,7 +42,6 @@
 
 /obj/item/voice_changer/proc/set_voice(mob/user)
 	var/mimic_voice
-	var/mimic_voice_tts
 
 	var/mimic_option = tgui_alert(user, "What voice do you want to mimic?", "Set Voice Changer", list("Real Voice", "Custom Voice", "Cancel"))
 	switch(mimic_option)
@@ -53,42 +51,19 @@
 				return
 
 			mimic_voice = human.real_name
-			mimic_voice_tts = human.dna.tts_seed_dna
 		if("Custom Voice")
 			mimic_voice = reject_bad_name(tgui_input_text(user, "Enter a name to mimic.", "Set Voice Changer", null, max_length = MAX_NAME_LEN), TRUE)
 			if(!mimic_voice)
 				to_chat(user, span_warning("Invalid name, try again."))
 				return
-			mimic_voice_tts = user.select_voice(user, override = TRUE)
 		if("Cancel")
 			return
 
 	voice = mimic_voice
-	tts_voice = mimic_voice_tts
 	if(inform_about_toggle)
 		to_chat(user, span_notice("You are now mimicking <b>[voice]</b>."))
 
 //Войс ченджер является частью способности хамелиона и должен быть недосягаем без неё, хоть и хранится в маске
-/obj/item/voice_changer/ninja
-	name = "ninja voice changer"
-	desc = "A voice scrambling module."
-	actions_types = null
-	inform_about_toggle = FALSE
-
-/obj/item/voice_changer/ninja/set_voice(mob/user, chosen_voice)
-	if(!chosen_voice)
-		voice = null
-		tts_voice = null
-		if(inform_about_toggle)
-			to_chat(user, span_notice("You are now mimicking the voice on your ID card."))
-		return
-	voice = chosen_voice
-	tts_voice = null
-	for(var/mob/living/carbon/human/target in GLOB.human_list)
-		if(target.name == chosen_voice)
-			tts_voice = target.dna.tts_seed_dna
-			return
-
 /obj/item/voice_changer/voice_modulator
 	name = "voice modulator"
 	desc = "A voice scrambling module."
@@ -97,9 +72,8 @@
 
 /obj/item/voice_changer/ghostface
 	name = "Ghostface emmission"
-	desc = "Вы не должны были этого видеть. Пожалуйста, сообщите о нахождении этого предмета в #баг-репорты-v2"
+	desc = "You shouldn't be seeing this!"
 	voice = "Ghostface"
-	tts_voice = "Bloodseeker"
 	active = TRUE
 	actions_types = null
 	inform_about_toggle = FALSE

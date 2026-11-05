@@ -3,22 +3,11 @@
 	abstract_type = /obj/item/ammo_box/speedloader
 	gender = MALE
 	can_fast_load = FALSE
-	var/gun_name = "револьверов"
-
-/obj/item/ammo_box/speedloader/get_ru_names()
-	return alist(
-		NOMINATIVE = "ускоритель заряжания [get_cartridge_marking()]",
-		GENITIVE = "ускорителя заряжания [get_cartridge_marking()]",
-		DATIVE = "ускорителю заряжания [get_cartridge_marking()]",
-		ACCUSATIVE = "ускоритель заряжания [get_cartridge_marking()]",
-		INSTRUMENTAL = "ускорителем заряжания [get_cartridge_marking()]",
-		PREPOSITIONAL = "ускорителе заряжания [get_cartridge_marking()]",
-	)
+	var/gun_name = "revolvers"
 
 /obj/item/ammo_box/speedloader/update_desc(updates = ALL)
 	. = ..()
-	desc = "Устройство для быстрой перезарядки [gun_name] калибра [caliber]. Вмещает вплоть до [max_ammo] \
-			боеприпас[DECL_A_OV_OV(max_ammo)].[extra_info ? " " + extra_info : ""]"
+	desc = "A device for quickly reloading [caliber] [gun_name]. Holds up to [max_ammo] rounds.[extra_info ? " " + extra_info : ""]"
 
 // MARK: Revolvers
 /obj/item/ammo_box/speedloader/a357
@@ -30,7 +19,7 @@
 	icon_prefix = "357" // icon prefix, used in above formula to generate dynamic icons
 
 /obj/item/ammo_box/speedloader/improvised
-	extra_info = "Импровизированный вариант, сделанный из подручных материалов."
+	extra_info = "An improvised version made from materials at hand."
 	ammo_type = null
 	icon_state = "makeshift_speedloader"
 	max_ammo = 4
@@ -88,7 +77,7 @@
 	caliber = CALIBER_12G
 	ammo_type = null
 	w_class = WEIGHT_CLASS_NORMAL
-	gun_name = "дробовиков"
+	gun_name = "shotguns"
 
 /obj/item/ammo_box/speedloader/shotgun/Initialize(mapload)
 	. = ..()
@@ -175,19 +164,8 @@
 	ammo_type = /obj/item/ammo_casing/a762x54
 	max_ammo = 5
 	multiple_sprites = 1
-	gun_name = "винтовок"
+	gun_name = "rifles"
 
-/obj/item/ammo_box/speedloader/a762/get_ru_names()
-	return alist(
-		NOMINATIVE = "обойма [get_cartridge_marking()]",
-		GENITIVE = "обоймы [get_cartridge_marking()]",
-		DATIVE = "обойме [get_cartridge_marking()]",
-		ACCUSATIVE = "обойму [get_cartridge_marking()]",
-		INSTRUMENTAL = "обоймой [get_cartridge_marking()]",
-		PREPOSITIONAL = "обойме [get_cartridge_marking()]",
-	)
-
-// MARK: Misc
 /obj/item/ammo_box/speedloader/caps
 	ammo_type = /obj/item/ammo_casing/cap
 	caliber = CALIBER_CAP

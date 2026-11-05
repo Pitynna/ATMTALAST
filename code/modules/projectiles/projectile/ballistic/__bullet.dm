@@ -9,16 +9,6 @@
 	ricochets_max = 1
 	ricochet_chance = 5
 
-/obj/projectile/bullet/get_ru_names()
-	return alist(
-		NOMINATIVE = "пуля",
-		GENITIVE = "пули",
-		DATIVE = "пуле",
-		ACCUSATIVE = "пулю",
-		INSTRUMENTAL = "пулей",
-		PREPOSITIONAL = "пуле",
-	)
-
 /obj/projectile/bullet/on_ricochet(atom/A)
 	. = ..()
 	damage = damage / 2

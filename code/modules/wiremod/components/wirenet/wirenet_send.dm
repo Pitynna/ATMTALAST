@@ -1,7 +1,6 @@
 /obj/item/circuit_component/wirenet_send
 	display_name = "WireNet передатчик"
-	desc = "Отправляет пакет данных через WireNet. \
-			Если установлен ключ шифрования, переданные данные будут приняты только получателями с таким же ключом шифрования."
+	desc = "Sends a data packet over WireNet. If an encryption key is set, only receivers with the same key will accept it."
 	category = "Utility"
 
 	circuit_flags = CIRCUIT_FLAG_INPUT_SIGNAL

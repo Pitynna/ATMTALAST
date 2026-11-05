@@ -16,7 +16,7 @@
  */
 /obj/machinery/newscaster
 	name = "newscaster"
-	desc = "Устройство, позволяющее получить доступ к самым свежим новостям со всей Галактики. Лицензировано \"Нанотрейзен\" для использования на коммерческих объектах."
+	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. All the news you absolutely have no use for, in one place!"
 	icon = 'icons/obj/machines/terminals.dmi'
 	icon_state = "newscaster"
 	base_icon_state = "newscaster"
@@ -50,31 +50,10 @@
 	/// Static, lazy list containing a user's last view time per channel.
 	var/static/last_views
 
-/obj/machinery/newscaster/get_ru_names()
-	return alist(
-			NOMINATIVE = "новостник",
-			GENITIVE = "новостника",
-			DATIVE = "новостнику",
-			ACCUSATIVE = "новостник",
-			INSTRUMENTAL = "новостником",
-			PREPOSITIONAL = "новостнике",
-	)
-
 /obj/machinery/newscaster/security_unit
 	name = "security newscaster"
-	desc = "Устройство, позволяющее получить доступ к самым свежим новостям со всей Галактики. Лицензировано \"Нанотрейзен\" для использования на коммерческих объектах. \
-			Эта модель оснащена расширенным функционалом, специально для службы безопасности."
+	desc = "A security Nanotrasen-licensed newsfeed handler for use in commercial space stations. It comes with a small slot for inserting photos."
 	is_security = TRUE
-
-/obj/machinery/newscaster/security_unit/get_ru_names()
-	return alist(
-			NOMINATIVE = "новостник службы безопасности",
-			GENITIVE = "новостника службы безопасности",
-			DATIVE = "новостнику службы безопасности",
-			ACCUSATIVE = "новостник службы безопасности",
-			INSTRUMENTAL = "новостником службы безопасности",
-			PREPOSITIONAL = "новостнике службы безопасности",
-	)
 
 /obj/machinery/newscaster/Initialize(mapload)
 	. = ..()

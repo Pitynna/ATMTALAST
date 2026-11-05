@@ -294,7 +294,6 @@
 	///Which ambient sound this client is currently being provided.
 	var/current_ambient_sound
 
-	var/datum/ui_module/skills_select_win/skills_select_window
 
 	var/commandbar_thinking = FALSE
 	var/commandbar_typing = FALSE

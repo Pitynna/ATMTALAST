@@ -85,11 +85,10 @@
 	. = ..()
 	if(locked && broken == 0 && user.a_intent != INTENT_HARM) // Stage one
 		to_chat(user, span_notice("Вы начинаете откручивать панель замка [src]..."))
-		CALCULATE_SKILL_MOD(user, LOCKPICK_SPEED_MOD, lockpick_mod)
-		if(I.use_tool(src, user, 16 SECONDS * lockpick_mod, volume = I.tool_volume))
+		if(I.use_tool(src, user, 160, volume = I.tool_volume))
 			if(prob(95)) // EZ
 				to_chat(user, span_notice("Вы успешно открутили и сняли панель с замка [src]!"))
-				desc += " Панель управления снята."
+				desc += " The control panel has been removed."
 				broken = 3
 				update_icon()
 			else // Bad day)
@@ -104,12 +103,10 @@
 	. = ..()
 	if(locked && broken == 3 && user.a_intent != INTENT_HARM) // Stage two
 		to_chat(user, span_notice("Вы начинаете подготавливать провода панели [src]..."))
-		CALCULATE_SKILL_MOD(user, LOCKPICK_SPEED_MOD, lockpick_mod)
-		if(I.use_tool(src, user, 16 SECONDS * lockpick_mod, volume = I.tool_volume))
-			CALCULATE_SKILL_MOD(user, LOCKPICK_POSITIVE_CHANCE_MOD, prob_mod)
-			if(prob(80 * prob_mod)) // Good hacker!
+		if(I.use_tool(src, user, 160, volume = I.tool_volume))
+			if(prob(80)) // Good hacker!
 				to_chat(user, span_notice("Вы успешно подготовили провода панели замка [src]!"))
-				desc += " Провода отключены и торчат наружу."
+				desc += " The wires have been disconnected and are sticking out."
 				broken = 2
 			else // woopsy
 				to_chat(user, span_warning("Черт! Не тот провод!"))
@@ -121,11 +118,9 @@
 	. = ..()
 	if(locked && broken == 2 && user.a_intent != INTENT_HARM) // Stage three
 		to_chat(user, span_notice("Вы начинаете подключать провода панели замка [src] к [I]..."))
-		CALCULATE_SKILL_MOD(user, LOCKPICK_SPEED_MOD, lockpick_mod)
-		if(I.use_tool(src, user, 16 SECONDS * lockpick_mod, volume = I.tool_volume))
-			CALCULATE_SKILL_MOD(user, LOCKPICK_POSITIVE_CHANCE_MOD, prob_mod)
-			if(prob(80 * prob_mod)) // Good hacker!
-				desc += " Замок отключен."
+		if(I.use_tool(src, user, 160, volume = I.tool_volume))
+			if(prob(80)) // Good hacker!
+				desc += " The lock has been disabled."
 				broken = 0 // Can be emagged
 				emag_act(user)
 			else // woopsy

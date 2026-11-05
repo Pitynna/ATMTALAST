@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/variable
 	display_name = "Абстрактный переменный компонент"
-	desc = "Вы не должны были это увидеть!"
+	desc = "You weren't supposed to see this!"
 
 	/// Variable name
 	var/datum/port/input/option/variable_name

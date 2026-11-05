@@ -27,7 +27,7 @@
 		actor.take_overall_damage(BLOB_REAGENT_SPORE_VOL, BLOB_REAGENT_SPORE_VOL)
 
 /datum/reagent/blob/explosive_lattice
-	name = "Взрывная решетка"
+	name = "Explosive Lattice"
 	id = "blob_explosive_lattice"
 	taste_description = "бомба"
 	color = "#8B2500"

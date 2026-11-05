@@ -5,7 +5,7 @@
 
 /obj/item/grapple_gun
 	name = "grapple gun"
-	desc = "Небольшое устройство, стреляющее крюком-кошкой и позволяющее пользователю подтянуться к намеченной цели. Значительно облегчает путешествие по труднопроходимой местности."
+	desc = "A small device that fires a grappling hook and pulls its user toward the target. Makes difficult terrain much easier to traverse."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "grapple_gun"
 	lefthand_file = 'icons/mob/inhands/guns_lefthand.dmi'
@@ -32,16 +32,6 @@
 	var/datum/looping_sound/zipline/zipline_sound
 	/// our initial matrix
 	var/matrix/initial_matrix
-
-/obj/item/grapple_gun/get_ru_names()
-	return alist(
-		NOMINATIVE = "крюк-кошка",
-		GENITIVE = "крюка-кошки",
-		DATIVE = "крюку-кошке",
-		ACCUSATIVE = "крюк-кошку",
-		INSTRUMENTAL = "крюком-кошкой",
-		PREPOSITIONAL = "крюке-кошке",
-	)
 
 /obj/item/grapple_gun/Initialize(mapload)
 	. = ..()
