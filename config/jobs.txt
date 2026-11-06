@@ -11,7 +11,6 @@ Blueshield=1
 
 Station Engineer=5
 Life Support Specialist=3
-Trainee Engineer=3
 Mechanic=1
 
 Medical Doctor=5
@@ -19,13 +18,11 @@ Chemist=2
 Coroner=1
 Geneticist=2
 Virologist=1
-Intern=3
 Psychiatrist=1
 Paramedic=1
 
 Scientist=5
 Roboticist=2
-Student Scientist=3
 
 Bartender=1
 Botanist=2
@@ -38,7 +35,6 @@ Mime=1
 
 Shaft Miner=6
 Cargo Technician=4
-Mining Medic=1
 
 Warden=1
 Detective=1

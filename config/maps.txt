@@ -15,7 +15,7 @@ MAP_VOTE_MODE all
 VOTE_NO_DEAD
 
 ## Default server map
-DEFAULT_MAP /datum/map/delta
+DEFAULT_MAP /datum/map/ulthor
 
 ## Override away mission map. Spawns it even if it is not mentioned in away_mission_config.txt
 # OVERRIDE_AWAY_MISSION _maps/map_files/RandomZLevels/academy.dmm
@@ -26,16 +26,8 @@ EXTRA_SPACE_RUIN_LEVELS_MIN 4
 ## Maximum number of space ruins levels to generate
 EXTRA_SPACE_RUIN_LEVELS_MAX 8
 
-## Lavaland "Budget"
-# Lavaland ruin spawning has an imaginary budget to spend on ruins, where
-# a less lootfilled or smaller or less round effecting ruin costs less to
-# spawn, while the converse is true. Alter this number to affect the amount
-# of ruins.
-LAVALAND_BUDGET 100
-
-
-## Disable the loading of Lavaland
-#DISABLE_LAVALAND
+## Disable the loading of Mining Asteroid
+#DISABLE_MINING
 
 ## Disable the loading of away missions
 #DISABLE_AWAY_MISSIONS
