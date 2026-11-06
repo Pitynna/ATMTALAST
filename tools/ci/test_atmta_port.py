@@ -111,6 +111,13 @@ def main():
         if changed:
             raise RuntimeError(f"Tracked source files changed during the run: {changed}")
         print("All tracked files remain present; source SHA-256 hashes are unchanged.", flush=True)
+        # The separate runtime keeps its own copies. Remove only the three exact
+        # files this invocation generated in the project root; never recurse.
+        for extension in ("dme", "dmb", "rsc"):
+            generated = ROOT / f"{name}.{extension}"
+            check_plain_path(generated)
+            if generated.exists():
+                generated.unlink()
 
 
 if __name__ == "__main__":

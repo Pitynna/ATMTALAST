@@ -1,0 +1,13 @@
+{
+  "target": "paradise.dme",
+  "binary": "paradise.dmb",
+  "resources": "paradise.rsc",
+  "errors": 0,
+  "warnings": 0,
+  "source_commit": "ec1803503a341528ef7e215e5c6e7b5a97d5dcf8",
+  "binary_sha256": "d9d5e9d1903c9cc25ef70f8d953dfed838b285ecaecc8e4a6480b8a6670361d5",
+  "binary_bytes": 37426378,
+  "targeted_tests_passed": 6,
+  "runtime_errors": 0,
+  "tracked_sources_verified_unchanged": true
+}

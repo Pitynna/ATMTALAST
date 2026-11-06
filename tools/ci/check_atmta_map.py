@@ -3,6 +3,7 @@
 Requires mapmerge2's bidict dependency. This checker reads maps and never saves them.
 """
 
+import argparse
 import json
 from pathlib import Path
 import subprocess
@@ -14,10 +15,13 @@ from dmm import DMM
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--revision", help="Check a saved map revision instead of the current worktree")
+    args = parser.parse_args()
     manifest = json.loads((ROOT / "docs/ATMTA_PORT.json").read_text(encoding="utf-8"))
     name = "_maps/map_files/Ulthor/Ulthor.dmm"
     original = DMM.from_bytes(subprocess.check_output(["git", "show", f"{manifest['baseline_ref']}:{name}"], cwd=ROOT))
-    current = DMM.from_file(ROOT / name)
+    current = DMM.from_bytes(subprocess.check_output(["git", "show", f"{args.revision}:{name}"], cwd=ROOT)) if args.revision else DMM.from_file(ROOT / name)
     assert original.grid == current.grid, "Map coordinates or dictionary keys changed"
     changes = []
     for pos in original.grid:

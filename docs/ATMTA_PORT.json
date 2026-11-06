@@ -324,5 +324,7 @@
     }
   ],
   "source": "OLD_ExcidiumStation_ATMTA/hyntatmta/code/modules/client/preference/loadout/loadout_karma.dm",
-  "baseline_ref": "027aa0547859532be5ecfb7e881d75d051de1318"
+  "baseline_ref": "027aa0547859532be5ecfb7e881d75d051de1318",
+  "source_commit": "4f8778dd7f242aa03738c6be09fbcd21fa6e3155",
+  "port_map_revision": "13ca202e2f0d634d1d9655d2553875f97a9be40b"
 }
