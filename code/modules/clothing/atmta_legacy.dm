@@ -1,31 +1,37 @@
 // Player-obtainable hyntatmta clothing. Sources and exclusions: docs/ATMTA_PORT.md.
 
 /obj/item/clothing/head/atmta
+	abstract_type = /obj/item/clothing/head/atmta
 	icon = 'icons/obj/clothing/atmta/hats.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_HEAD_STRING = 'icons/mob/clothing/atmta/head.dmi')
 
 /obj/item/clothing/suit/atmta
+	abstract_type = /obj/item/clothing/suit/atmta
 	icon = 'icons/obj/clothing/atmta/suits.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_CLOTH_OUTER_STRING = 'icons/mob/clothing/atmta/suit.dmi')
 
 /obj/item/clothing/under/atmta
+	abstract_type = /obj/item/clothing/under/atmta
 	icon = 'icons/obj/clothing/atmta/uniforms.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_CLOTH_INNER_STRING = 'icons/mob/clothing/atmta/uniform.dmi')
 
 /obj/item/clothing/gloves/atmta
+	abstract_type = /obj/item/clothing/gloves/atmta
 	icon = 'icons/obj/clothing/atmta/gloves.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_GLOVES_STRING = 'icons/mob/clothing/atmta/hands.dmi')
 
 /obj/item/clothing/shoes/atmta
+	abstract_type = /obj/item/clothing/shoes/atmta
 	icon = 'icons/obj/clothing/atmta/shoes.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_FEET_STRING = 'icons/mob/clothing/atmta/feet.dmi')
 
 /obj/item/clothing/suit/atmta/space
+	abstract_type = /obj/item/clothing/suit/atmta/space
 	parent_type = /obj/item/clothing/suit/space
 	icon = 'icons/obj/clothing/atmta/suits.dmi'
 	sprite_sheets = null

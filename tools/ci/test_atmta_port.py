@@ -45,7 +45,9 @@ def main():
         raise RuntimeError("Tracked files are missing; refusing to start a server")
     OUTPUT.mkdir(parents=True, exist_ok=True)
     tracked = git("ls-files").splitlines()
-    baseline = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in tracked}
+    # Other authorized chats may update their reports while this run is active.
+    # Source hashes are strict; presence is checked for every tracked document too.
+    baseline = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in tracked if not name.startswith("docs/")}
     runtime = ROOT / ".git/atmta-port-runs" / uuid.uuid4().hex
     check_plain_path(runtime.parent)
     runtime.mkdir(parents=True)
@@ -61,7 +63,7 @@ def main():
         copy_file(path, runtime / path.name)
     # Only versioned configuration is copied; local credentials and data are excluded.
     for name_in_repo in tracked:
-        if name_in_repo.startswith(("_maps/", "config/", "strings/", "html/", "icons/", "code/datums/greyscale/json_configs/")):
+        if name_in_repo.startswith(("_maps/", "config/", "strings/", "html/", "icons/", "sound/", "code/datums/greyscale/json_configs/")):
             copy_file(ROOT / name_in_repo, runtime / name_in_repo)
     (runtime / "wardrobe").mkdir()
     result_path = runtime / "atmta-port-result.json"
@@ -102,10 +104,13 @@ def main():
                     process.terminate()
                     process.wait(timeout=15)
     finally:
+        missing = [name for name in tracked if not (ROOT / name).is_file()]
+        if missing:
+            raise RuntimeError(f"Tracked files went missing during the run: {missing}")
         changed = [name for name, digest in baseline.items() if not (ROOT / name).is_file() or hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest]
         if changed:
             raise RuntimeError(f"Tracked source files changed during the run: {changed}")
-        print("All tracked files retain their original SHA-256 hashes.", flush=True)
+        print("All tracked files remain present; source SHA-256 hashes are unchanged.", flush=True)
 
 
 if __name__ == "__main__":
