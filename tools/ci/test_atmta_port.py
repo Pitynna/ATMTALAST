@@ -91,6 +91,8 @@ def main():
                 previews.mkdir(exist_ok=True)
                 for preview in (runtime / "wardrobe").glob("*.png"):
                     copy_file(preview, previews / preview.name)
+                if (runtime / "wardrobe/index.json").exists():
+                    copy_file(runtime / "wardrobe/index.json", previews / "index.json")
                 (OUTPUT / "result.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
                 print(json.dumps(report, ensure_ascii=False), flush=True)
                 if report["passed"] != report["total"] or error_lines or not report["prison_parashas"] or report["ordinary_prison_toilets"]:

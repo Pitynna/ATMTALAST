@@ -22,6 +22,7 @@ GLOBAL_DATUM_INIT(atmta_port_probe, /datum/atmta_port_probe, new)
 	var/list/tests = list(
 		/datum/unit_test/atmta_loadout_catalogue,
 		/datum/unit_test/atmta_loadout_role_access,
+		/datum/unit_test/atmta_legacy_equipment,
 		/datum/unit_test/atmta_parasha_scavenging,
 		/datum/unit_test/atmta_gallows_rescue,
 		/datum/unit_test/atmta_gallows_crafting_and_cutting,

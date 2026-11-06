@@ -30,6 +30,7 @@
 	icon = 'icons/obj/clothing/atmta/suits.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_CLOTH_OUTER_STRING = 'icons/mob/clothing/atmta/suit.dmi')
+	rad_insulation = 0.5
 
 /obj/item/clothing/gloves/atmta/biker
 	name = "Biker's Gloves"
@@ -185,6 +186,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	strip_delay = 80
+	allowed = list(/obj/item/gun/energy, /obj/item/gun/projectile, /obj/item/reagent_containers/spray/pepper, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/restraints/handcuffs, /obj/item/flashlight/seclite, /obj/item/kitchen/knife/combat)
 
 /obj/item/clothing/under/atmta/biker
 	name = "Biker's outfit"

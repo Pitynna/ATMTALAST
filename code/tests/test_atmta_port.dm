@@ -1,5 +1,6 @@
 /datum/unit_test/atmta_loadout_catalogue/Run()
 	var/count = 0
+	var/list/previews = list()
 	var/mob/living/carbon/human/wearer = allocate(/mob/living/carbon/human, locate(20, 20, 1))
 	for(var/gear_type in subtypesof(/datum/gear/atmta))
 		var/datum/gear/gear = new gear_type
@@ -19,10 +20,12 @@
 		TEST_ASSERT(wearer.equip_to_slot_if_possible(item, gear.slot, disable_warning = TRUE), "[gear.path] must equip through the real inventory API")
 		wearer.regenerate_icons()
 		fcopy(getFlatIcon(wearer), "wardrobe/[count].png")
+		previews["[count].png"] = gear.get_display_name()
 		qdel(item)
 		count++
 		qdel(gear)
 	TEST_ASSERT_EQUAL(count, 38, "The complete historical karma catalogue must be ported")
+	rustlib_file_write(json_encode(previews), "wardrobe/index.json")
 
 /datum/unit_test/atmta_loadout_role_access/Run()
 	var/datum/gear/atmta/dornan/helmet = new
@@ -37,6 +40,17 @@
 		var/datum/gear/gear = new gear_type
 		TEST_ASSERT_NOT(findtext("[gear.path]", "doom") || findtext("[gear.path]", "hunter") || findtext("[gear.path]", "invisible") || findtext("[gear.path]", "bane"), "Admin-only equipment must not enter the loadout")
 		qdel(gear)
+
+/datum/unit_test/atmta_legacy_equipment/Run()
+	var/turf/ground = locate(20, 20, 1)
+	var/mob/living/carbon/human/user = allocate(/mob/living/carbon/human, ground)
+	var/obj/item/clothing/suit/atmta/sundowner/coat = allocate(/obj/item/clothing/suit/atmta/sundowner, ground)
+	var/obj/item/gun/energy/taser/gun = allocate(/obj/item/gun/energy/taser, ground)
+	TEST_ASSERT(user.equip_to_slot_if_possible(coat, ITEM_SLOT_CLOTH_OUTER), "The HOS must be able to wear the greatcoat")
+	TEST_ASSERT(user.equip_to_slot_if_possible(gun, ITEM_SLOT_SUITSTORE), "The historical greatcoat must retain weapon storage")
+	var/obj/item/clothing/suit/atmta/space/hev/hev = allocate(/obj/item/clothing/suit/atmta/space/hev, ground)
+	TEST_ASSERT(hev.clothing_flags & STOPSPRESSUREDAMAGE, "HEV must retain actual pressure protection")
+	TEST_ASSERT(hev.rad_insulation < RAD_NO_INSULATION, "HEV must retain the historical radiation shielding")
 
 /datum/unit_test/atmta_parasha_scavenging/Run()
 	var/turf/ground = locate(20, 20, 1)
