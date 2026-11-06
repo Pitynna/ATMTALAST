@@ -655,7 +655,7 @@
 /turf/simulated/floor/plating,
 /area/station/science/xenobiology)
 "avD" = (
-/obj/structure/toilet,
+/obj/structure/toilet/parasha,
 /obj/item/kitchen/utensil/fork,
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -8509,7 +8509,7 @@
 	},
 /area/station/service/ulthor_80_150)
 "fPV" = (
-/obj/structure/toilet,
+/obj/structure/toilet/parasha,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 1
@@ -18014,7 +18014,7 @@
 	},
 /area/station/science/toxins/mixing)
 "mlA" = (
-/obj/structure/toilet,
+/obj/structure/toilet/parasha,
 /obj/effect/decal/cleanable/vomit,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel{

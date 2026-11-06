@@ -1,0 +1,328 @@
+{
+  "gear": [
+    {
+      "id": "dio",
+      "path": "/obj/item/clothing/head/atmta/dio",
+      "name": "dio headband",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "dio_jacket",
+      "path": "/obj/item/clothing/suit/atmta/dio",
+      "name": "dio jacket",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "dio_pants",
+      "path": "/obj/item/clothing/under/atmta/dio",
+      "name": "dio pants",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "dio_wrist",
+      "path": "/obj/item/clothing/gloves/atmta/dio",
+      "name": "dio wristbands",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "dio_shoes",
+      "path": "/obj/item/clothing/shoes/atmta/dio",
+      "name": "dio shoes",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "phantomblood",
+      "path": "/obj/item/clothing/suit/atmta/phantomblood",
+      "name": "phantom dio",
+      "cost": 5,
+      "roles": []
+    },
+    {
+      "id": "oldsnake",
+      "path": "/obj/item/clothing/suit/atmta/oldsnake",
+      "name": "old snake suit",
+      "cost": 5,
+      "roles": []
+    },
+    {
+      "id": "kaminacape",
+      "path": "/obj/item/bedsheet/kaminacape",
+      "name": "kamina cape",
+      "cost": 5,
+      "roles": []
+    },
+    {
+      "id": "simoncoat",
+      "path": "/obj/item/clothing/suit/atmta/simoncoat",
+      "name": "simon coat",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_CAPTAIN",
+        "JOB_TITLE_HOP",
+        "JOB_TITLE_REPRESENTATIVE",
+        "JOB_TITLE_BLUESHIELD"
+      ]
+    },
+    {
+      "id": "mechanicus",
+      "path": "/obj/item/clothing/suit/atmta/mechanicus",
+      "name": "adeptus mechanicus",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_CHIEF_ENGINEER",
+        "JOB_TITLE_ENGINEER",
+        "JOB_TITLE_ATMOSTECH",
+        "JOB_TITLE_ROBOTICIST"
+      ]
+    },
+    {
+      "id": "hev",
+      "path": "/obj/item/clothing/suit/atmta/space/hev",
+      "name": "H.E.V.",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_CHIEF_ENGINEER",
+        "JOB_TITLE_ENGINEER",
+        "JOB_TITLE_ATMOSTECH"
+      ]
+    },
+    {
+      "id": "fullmetal",
+      "path": "/obj/item/clothing/suit/atmta/fullmetal",
+      "name": "alchemist robes",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_CHEMIST",
+        "JOB_TITLE_LIBRARIAN"
+      ]
+    },
+    {
+      "id": "dornan",
+      "path": "/obj/item/clothing/head/atmta/dornan",
+      "name": "sergeant helmet",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_HOS",
+        "JOB_TITLE_WARDEN"
+      ]
+    },
+    {
+      "id": "slastena_dress",
+      "path": "/obj/item/clothing/under/atmta/slastena",
+      "name": "slastena dress",
+      "cost": 1,
+      "roles": [
+        "JOB_TITLE_CIVILIAN",
+        "JOB_TITLE_CHEF"
+      ]
+    },
+    {
+      "id": "slastena_wig",
+      "path": "/obj/item/clothing/head/atmta/slastena",
+      "name": "slastena hair wig",
+      "cost": 1,
+      "roles": [
+        "JOB_TITLE_CIVILIAN",
+        "JOB_TITLE_CHEF"
+      ]
+    },
+    {
+      "id": "slastena_shoes",
+      "path": "/obj/item/clothing/shoes/atmta/slastena",
+      "name": "slastena shoes",
+      "cost": 1,
+      "roles": [
+        "JOB_TITLE_CIVILIAN",
+        "JOB_TITLE_CHEF"
+      ]
+    },
+    {
+      "id": "victorian_tailcoat",
+      "path": "/obj/item/clothing/suit/tailcoat",
+      "name": "victorian tailcoat",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_ladycoat",
+      "path": "/obj/item/clothing/suit/victcoat",
+      "name": "ladies victorian tailcoat",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_redladycoat",
+      "path": "/obj/item/clothing/suit/victcoat/red",
+      "name": "ladies red victorian tailcoat",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_blackdress",
+      "path": "/obj/item/clothing/under/victdress",
+      "name": "black victorian dress",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_reddress",
+      "path": "/obj/item/clothing/under/victdress/red",
+      "name": "red victorian dress",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_suit",
+      "path": "/obj/item/clothing/under/victsuit",
+      "name": "victorian suit",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_redblksuit",
+      "path": "/obj/item/clothing/under/victsuit/redblk",
+      "name": "victorian red and black suit",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "victorian_redsuit",
+      "path": "/obj/item/clothing/under/victsuit/red",
+      "name": "victorian red suit",
+      "cost": 1,
+      "roles": []
+    },
+    {
+      "id": "kung_suit",
+      "path": "/obj/item/clothing/under/atmta/kung",
+      "name": "kung suit",
+      "cost": 2,
+      "roles": [
+        "JOB_TITLE_OFFICER",
+        "JOB_TITLE_DETECTIVE"
+      ]
+    },
+    {
+      "id": "kung_shoes",
+      "path": "/obj/item/clothing/shoes/atmta/kung",
+      "name": "kung shoes",
+      "cost": 1,
+      "roles": [
+        "JOB_TITLE_OFFICER",
+        "JOB_TITLE_DETECTIVE"
+      ]
+    },
+    {
+      "id": "kung_headband",
+      "path": "/obj/item/clothing/head/atmta/kung",
+      "name": "kung headband",
+      "cost": 1,
+      "roles": [
+        "JOB_TITLE_OFFICER",
+        "JOB_TITLE_DETECTIVE"
+      ]
+    },
+    {
+      "id": "kung_jacket",
+      "path": "/obj/item/clothing/suit/atmta/kung",
+      "name": "kung jacket",
+      "cost": 1,
+      "roles": [
+        "JOB_TITLE_OFFICER",
+        "JOB_TITLE_DETECTIVE"
+      ]
+    },
+    {
+      "id": "clubskirt",
+      "path": "/obj/item/clothing/under/atmta/clubskirt",
+      "name": "literature club skirt",
+      "cost": 2,
+      "roles": [
+        "JOB_TITLE_LIBRARIAN"
+      ]
+    },
+    {
+      "id": "sundowner_coat",
+      "path": "/obj/item/clothing/suit/atmta/sundowner",
+      "name": "armoured greatcoat",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_HOS"
+      ]
+    },
+    {
+      "id": "scorpio_jacket",
+      "path": "/obj/item/clothing/suit/atmta/scorpiojacket",
+      "name": "scorpio jacket",
+      "cost": 5,
+      "roles": []
+    },
+    {
+      "id": "richard",
+      "path": "/obj/item/clothing/head/atmta/richard",
+      "name": "richard's mask",
+      "cost": 3,
+      "roles": []
+    },
+    {
+      "id": "jacket_suit",
+      "path": "/obj/item/clothing/under/atmta/jacketsuit",
+      "name": "richard's outfit",
+      "cost": 3,
+      "roles": []
+    },
+    {
+      "id": "biker_helmet",
+      "path": "/obj/item/clothing/head/atmta/biker",
+      "name": "biker helmet",
+      "cost": 2,
+      "roles": []
+    },
+    {
+      "id": "biker_suit",
+      "path": "/obj/item/clothing/under/atmta/biker",
+      "name": "biker suit",
+      "cost": 2,
+      "roles": []
+    },
+    {
+      "id": "biker_gloves",
+      "path": "/obj/item/clothing/gloves/atmta/biker",
+      "name": "biker gloves",
+      "cost": 2,
+      "roles": []
+    },
+    {
+      "id": "biker_shoes",
+      "path": "/obj/item/clothing/shoes/atmta/biker",
+      "name": "biker shoes",
+      "cost": 2,
+      "roles": []
+    },
+    {
+      "id": "cia",
+      "path": "/obj/item/clothing/under/atmta/cia",
+      "name": "CIA",
+      "cost": 5,
+      "roles": [
+        "JOB_TITLE_LAWYER"
+      ]
+    }
+  ],
+  "excluded": "Doom, Bane, invisible helmet, Hunter admin kit, unfinished sovietrig and clothes without a non-admin acquisition source.",
+  "loot_excluded": [],
+  "loot_type_count": 84,
+  "prison_maps": [
+    {
+      "map": "_maps/map_files/Ulthor/Ulthor.dmm",
+      "dictionary_entries": 3
+    }
+  ],
+  "source": "OLD_ExcidiumStation_ATMTA/hyntatmta/code/modules/client/preference/loadout/loadout_karma.dm",
+  "baseline_ref": "027aa0547859532be5ecfb7e881d75d051de1318"
+}
