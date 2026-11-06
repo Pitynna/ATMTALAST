@@ -2522,6 +2522,7 @@
 #include "code\modules\client\preference\loadout\loadout_implants.dm"
 #include "code\modules\client\preference\loadout\loadout_neck.dm"
 #include "code\modules\client\preference\loadout\loadout_plushie.dm"
+#include "code\modules\client\preference\loadout\loadout_preview.dm"
 #include "code\modules\client\preference\loadout\loadout_racial.dm"
 #include "code\modules\client\preference\loadout\loadout_shoes.dm"
 #include "code\modules\client\preference\loadout\loadout_suit.dm"

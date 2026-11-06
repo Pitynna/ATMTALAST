@@ -17,6 +17,7 @@ import { createSearch } from 'tgui-core/string';
 import { useBackend } from '../backend';
 import { JOBS_RU } from '../constants';
 import { Window } from '../layouts';
+import { CharacterPreview } from './common/CharacterPreview';
 
 type Data = {
   user_tier: number;
@@ -24,6 +25,9 @@ type Data = {
   max_gear_slots: number;
   selected_gears: string[];
   gears: Record<string, Record<string, Gear>>;
+  character_preview_view?: string;
+  try_on: string[];
+  show_job: boolean;
 };
 
 type Gear = {
@@ -59,7 +63,7 @@ export const Loadout = (props: unknown) => {
   const [tweakedGear, setTweakedGear] = useState('');
 
   return (
-    <Window width={975} height={650}>
+    <Window width={1200} height={650}>
       {tweakedGear && (
         <GearTweak tweakedGear={tweakedGear} setTweakedGear={setTweakedGear} />
       )}
@@ -70,10 +74,13 @@ export const Loadout = (props: unknown) => {
           </Stack.Item>
           <Stack.Item grow>
             <Stack fill>
-              <Stack.Item basis="25%">
+              <Stack.Item basis="20%">
                 <LoadoutEquipped setTweakedGear={setTweakedGear} />
               </Stack.Item>
-              <Stack.Item basis="75%">
+              <Stack.Item>
+                <LoadoutPreview />
+              </Stack.Item>
+              <Stack.Item grow>
                 <LoadoutGears
                   category={category}
                   search={search}
@@ -197,6 +204,10 @@ const LoadoutGears = (props) => {
       {contents.map(({ key, gear }) => {
         const maxTextLength = 12;
         const selected = Object.keys(data.selected_gears).includes(key);
+        const tryingOn = data.try_on.includes(key);
+        const cannotAdd =
+          gear.gear_tier > user_tier ||
+          (gear_slots + gear.cost > max_gear_slots && !selected);
         const costText =
           gear.cost === 1
             ? `${gear.cost} Очк${declension_ru(gear.cost, 'о', 'а', 'ов')}`
@@ -214,6 +225,15 @@ const LoadoutGears = (props) => {
 
         const tooltipsInfo = (
           <>
+            <Button
+              width="22px"
+              color={selected ? 'good' : 'transparent'}
+              icon={selected ? 'check' : 'plus'}
+              disabled={cannotAdd}
+              tooltip={selected ? 'Убрать из снаряжения' : 'Добавить в снаряжение'}
+              tooltipPosition="top"
+              onClick={() => act('toggle_gear', { gear: gear.index_name })}
+            />
             {gear.allowed_roles && (
               <Button
                 width="22px"
@@ -283,18 +303,79 @@ const LoadoutGears = (props) => {
             }
             tooltipPosition={'bottom'}
             selected={selected}
-            disabled={
-              gear.gear_tier > user_tier ||
-              (gear_slots + gear.cost > max_gear_slots && !selected)
-            }
+            color={tryingOn ? 'average' : undefined}
             buttons={tooltipsInfo}
             buttonsAlt={textInfo}
-            onClick={() => act('toggle_gear', { gear: gear.index_name })}
+            onClick={() => act('try_gear', { gear: gear.index_name })}
           >
             {gear.name}
           </ImageButton>
         );
       })}
+    </Section>
+  );
+};
+
+const LoadoutPreview = (props) => {
+  const { act, data } = useBackend<Data>();
+  return (
+    <Section
+      fill
+      title="Примерка"
+      buttons={
+        <Button
+          icon="eraser"
+          disabled={!data.try_on.length}
+          tooltip="Снять примеряемые вещи"
+          tooltipPosition="bottom-end"
+          onClick={() => act('clear_try_on')}
+        />
+      }
+    >
+      <Stack vertical fill>
+        <Stack.Item grow>
+          {data.character_preview_view ? (
+            <CharacterPreview id={data.character_preview_view} height="440px" />
+          ) : (
+            <Box color="label">Нет данных</Box>
+          )}
+        </Stack.Item>
+        <Stack.Item>
+          <Stack>
+            <Stack.Item>
+              <Button
+                icon="rotate-left"
+                tooltip="Повернуть"
+                onClick={() => act('rotate', { clockwise: 0 })}
+              />
+            </Stack.Item>
+            <Stack.Item grow>
+              <Button
+                fluid
+                textAlign="center"
+                icon="user-tie"
+                selected={data.show_job}
+                tooltip="Показывать форму профессии с высоким приоритетом"
+                onClick={() => act('toggle_job')}
+              >
+                {data.show_job ? 'С формой' : 'Без формы'}
+              </Button>
+            </Stack.Item>
+            <Stack.Item>
+              <Button
+                icon="rotate-right"
+                tooltip="Повернуть"
+                onClick={() => act('rotate', { clockwise: 1 })}
+              />
+            </Stack.Item>
+          </Stack>
+        </Stack.Item>
+        <Stack.Item>
+          <Box color="label" fontSize={0.85}>
+            Клик по вещи — примерить, «+» — добавить в снаряжение.
+          </Box>
+        </Stack.Item>
+      </Stack>
     </Section>
   );
 };
