@@ -88,11 +88,3 @@
 	materials = list(MAT_METAL = 4000, MAT_PLASMA = 6000, MAT_URANIUM = 1000)
 	build_path = /obj/item/grenade/plastic/miningcharge/mega
 	category = list(PROTOLATHE_CATEGORY_MINING)
-
-/datum/design/fishingrod
-	id = "fishingrod"
-	req_tech = list(RESEARCH_TREE_MATERIALS = 5, RESEARCH_TREE_ENGINEERING = 4, RESEARCH_TREE_PLASMA = 5, RESEARCH_TREE_BIOTECH = 4)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 4000, MAT_TITANIUM = 6000)
-	build_path = /obj/item/twohanded/fishing_rod
-	category = list(PROTOLATHE_CATEGORY_MINING)

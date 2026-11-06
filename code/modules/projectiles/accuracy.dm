@@ -232,31 +232,10 @@ GLOBAL_DATUM_INIT(gun_accuracy_sniper, /datum/gun_accuracy, GUN_ACCURACY_SNIPER)
 // MARK: Procs
 
 /datum/gun_accuracy/proc/randomize_spread(mob/living/user, bonus_spread, shoots_count)
-	// no spread guns
-	if(!max_spread)
-		return round((rand() - 0.5) * bonus_spread)
-	// spread increase logic
-	if(spread_increase_step)
-		current_spread = min(current_spread + spread_increase_step * shoots_count, max_spread)
-	// randomize spread
-	var/rnd_angle = round((rand() - 0.5) * (current_spread + bonus_spread))
-	if(HAS_TRAIT(user, TRAIT_BADASS))
-		return 0.5 * rnd_angle
-	return rnd_angle
+	return 0
 
 /obj/projectile/proc/calculate_hit_chance(obj/projectile/projectile, mob/living/target)
-	if(forced_accuracy)
-		return 100
-	var/distance = get_dist(starting, target)
-	if(distance < 2) //point-back shot (diagonal dist is 1.414)
-		return 100
-	var/obj/item/gun/gun = projectile.firer_source_atom
-	var/datum/gun_accuracy/gun_accuracy = GLOB.gun_accuracy_sniper
-	if(istype(gun))
-		gun_accuracy = gun.accuracy
-	var/def_zone_accuracy = gun_accuracy.get_accuracy_for(projectile.def_zone)
-	var/distance_mod = accuracy_for_distance(distance) / 100
-	return clamp(def_zone_accuracy * distance_mod, 0, 100)
+	return 100
 
 #define FULL_ACCURACY_DISTANCE 3
 #define MIN_ACCURACY_DISTANCE 20
@@ -270,12 +249,7 @@ GLOBAL_DATUM_INIT(gun_accuracy_sniper, /datum/gun_accuracy, GUN_ACCURACY_SNIPER)
 	return clamp(distance_progress * (FULL_ACCURACY_PERCENT - MIN_ACCURACY_PERCENT) + MIN_ACCURACY_PERCENT, 0, 100)
 
 /obj/projectile/proc/calculate_randomize_def_zone_chance(obj/projectile/projectile, distance)
-	var/obj/item/gun/gun = projectile.firer_source_atom
-	var/datum/gun_accuracy/gun_accuracy = GLOB.gun_accuracy_sniper
-	if(istype(gun) && gun.accuracy)
-		gun_accuracy = gun.accuracy
-	var/def_zone_accuracy = gun_accuracy.get_accuracy_for(projectile.def_zone)
-	return clamp(def_zone_accuracy * (max(100 - 3*distance, 33) / 100), 0, 100)
+	return max(100 - 7 * distance, 5)
 
 #undef FULL_ACCURACY_DISTANCE
 #undef MIN_ACCURACY_DISTANCE

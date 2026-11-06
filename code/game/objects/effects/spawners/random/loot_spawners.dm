@@ -114,7 +114,6 @@
 		///obj/item/melee/skateboard/hoverboard = 1,
 		/obj/item/organ/internal/brain = 1,
 		/obj/item/organ/internal/brain/xeno = 1,
-		/obj/item/organ/internal/cyberimp/arm/katana = 1,
 		/obj/item/soulstone/anybody = 1,
 		/obj/item/weed_extract = 1,
 	)

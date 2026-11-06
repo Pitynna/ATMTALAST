@@ -148,6 +148,8 @@
 	return TRUE
 
 /datum/personal_crafting/proc/construct_item(mob/user, datum/crafting_recipe/R)
+	if(is_legacy_blocked_type(R.result))
+		return ", unavailable recipe."
 	var/list/contents = get_surroundings(user)
 	var/send_feedback = 1
 	if(!check_contents(R.reqs, R.chem_catalysts, R.blacklist, contents))

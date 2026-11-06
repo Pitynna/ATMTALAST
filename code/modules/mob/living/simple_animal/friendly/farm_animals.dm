@@ -311,11 +311,7 @@
 	if(.)
 		amount_grown += rand(1,2)
 		if(amount_grown >= 100)
-			var/mob/living/simple_animal/A
-			if(prob(5))
-				A = new /mob/living/simple_animal/cock(loc)
-			else
-				A = new /mob/living/simple_animal/chicken(loc)
+			var/mob/living/simple_animal/A = new /mob/living/simple_animal/chicken(loc)
 			if(mind)
 				mind.transfer_to(A)
 			qdel(src)

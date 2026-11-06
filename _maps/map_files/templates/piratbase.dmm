@@ -2592,7 +2592,7 @@
 /area/ruin/space/pirate_base/arrivals)
 "iC" = (
 /obj/item/trash/spentcasing,
-/obj/item/gun/projectile/shotgun/riot/buckshot,
+/obj/item/gun/projectile/shotgun,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -4350,11 +4350,6 @@
 /obj/machinery/alarm/syndicate/pirate/directional/east,
 /turf/simulated/floor/plasteel,
 /area/ruin/space/pirate_base/atrium)
-"ox" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/pirate_base/lab_hall)
 "oy" = (
 /turf/simulated/wall,
 /area/ruin/space/pirate_base/lab_hall)
@@ -5481,9 +5476,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/ruin/space/pirate_base/mining)
-"sq" = (
-/turf/simulated/floor/engine,
-/area/ruin/space/pirate_base/virus_lab)
 "sr" = (
 /obj/item/inflatable/door,
 /turf/simulated/floor/plasteel{
@@ -7261,10 +7253,6 @@
 	icon_state = "darkbluecorners"
 	},
 /area/ruin/space/pirate_base/lab_medical)
-"yy" = (
-/obj/item/assembly/signaler/core/bluespace/tier2,
-/turf/simulated/floor/engine,
-/area/ruin/space/pirate_base/virus_lab)
 "yz" = (
 /obj/machinery/computer/crew{
 	name = "Pirate hack monitoring computer"
@@ -7516,10 +7504,10 @@
 "zE" = (
 /obj/structure/table,
 /obj/effect/spawner/random_spawners/syndicate/loot{
-	result = list(/obj/item/storage/toolbox/syndicate = 1, /obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1, /obj/item/deck/cards/syndicate = 1, /obj/item/storage/secure/briefcase/syndie = 1, /obj/item/toy/balloon/syndicate = 1, /obj/item/soap/syndie = 1, /obj/item/clothing/under/syndicate = 1, /obj/item/clothing/under/syndicate/tacticool = 1, /obj/item/clothing/mask/gas/syndicate = 1, /obj/item/gun_module/muzzle/suppressor = 1, /obj/item/coin/antagtoken/syndicate = 1, /obj/item/storage/box/syndie_kit/cutouts = 1)
+	result = list(/obj/item/storage/toolbox/syndicate = 1, /obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1, /obj/item/deck/cards/syndicate = 1, /obj/item/storage/secure/briefcase/syndie = 1, /obj/item/toy/balloon/syndicate = 1, /obj/item/soap/syndie = 1, /obj/item/clothing/under/syndicate = 1, /obj/item/clothing/under/syndicate/tacticool = 1, /obj/item/clothing/mask/gas/syndicate = 1, /obj/item/coin/antagtoken/syndicate = 1, /obj/item/storage/box/syndie_kit/cutouts = 1)
 	},
 /obj/effect/spawner/random_spawners/syndicate/loot{
-	result = list(/obj/item/storage/toolbox/syndicate = 1, /obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1, /obj/item/deck/cards/syndicate = 1, /obj/item/storage/secure/briefcase/syndie = 1, /obj/item/toy/balloon/syndicate = 1, /obj/item/soap/syndie = 1, /obj/item/clothing/under/syndicate = 1, /obj/item/clothing/under/syndicate/tacticool = 1, /obj/item/clothing/mask/gas/syndicate = 1, /obj/item/gun_module/muzzle/suppressor = 1, /obj/item/coin/antagtoken/syndicate = 1, /obj/item/storage/box/syndie_kit/cutouts = 1)
+	result = list(/obj/item/storage/toolbox/syndicate = 1, /obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1, /obj/item/deck/cards/syndicate = 1, /obj/item/storage/secure/briefcase/syndie = 1, /obj/item/toy/balloon/syndicate = 1, /obj/item/soap/syndie = 1, /obj/item/clothing/under/syndicate = 1, /obj/item/clothing/under/syndicate/tacticool = 1, /obj/item/clothing/mask/gas/syndicate = 1, /obj/item/coin/antagtoken/syndicate = 1, /obj/item/storage/box/syndie_kit/cutouts = 1)
 	},
 /obj/item/storage/box/syndie_kit/chameleon,
 /turf/simulated/floor/pod/light,
@@ -8929,22 +8917,6 @@
 /obj/structure/table,
 /obj/structure/sign/poster/contraband/revolver{
 	pixel_y = 32
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
 	},
 /obj/item/gun/projectile/automatic/pistol/stechkin{
 	pixel_x = -2;
@@ -11079,13 +11051,6 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/plating,
 /area/ruin/space/pirate_base/security_maint)
-"KU" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "cafeteria"
-	},
-/area/ruin/space/pirate_base/lab_hall)
 "KX" = (
 /obj/machinery/door/window/brigdoor{
 	dir = 2;
@@ -11528,12 +11493,6 @@
 "MD" = (
 /turf/simulated/wall/r_wall,
 /area/ruin/space/pirate_base/xeno_lab)
-"MF" = (
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "cafeteria"
-	},
-/area/ruin/space/pirate_base/lab_hall)
 "MG" = (
 /turf/simulated/floor/pod/light,
 /area/ruin/space/pirate_base/security_maint)
@@ -13860,13 +13819,6 @@
 	icon_state = "white"
 	},
 /area/ruin/space/pirate_base/laboratory)
-"Us" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/pirate_base/lab_maint)
 "Ut" = (
 /obj/structure/bookcase,
 /obj/item/book/manual/nuclear,
@@ -13939,11 +13891,6 @@
 	icon_state = "sepia"
 	},
 /area/ruin/space/pirate_base/security_medical)
-"UK" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/pirate_base/xeno_lab)
 "UM" = (
 /obj/machinery/power/smes{
 	charge = 1000000;
@@ -15552,7 +15499,6 @@
 /obj/effect/spawner/random_spawners/syndicate/loot/level2{
 	result = list(/obj/item/storage/box/syndie_kit/space = 2, /obj/item/clothing/shoes/magboots/syndie = 2, /obj/item/clothing/suit/armor/vest/combat = 2, /obj/item/ammo_box/magazine/m10mm = 7, /obj/item/storage/pill_bottle/happy = 1, /obj/item/storage/pill_bottle/zoom = 2, /obj/item/storage/pill_bottle/random_drug_bottle = 2, /obj/item/clothing/shoes/chameleon/noslip = 3, /obj/item/storage/belt/military = 5, /obj/item/clothing/under/chameleon = 3, /obj/item/storage/backpack/satchel_flat = 1, /obj/item/stamp/chameleon = 3, /obj/item/flag/chameleon = 1, /obj/item/lighter/zippo/gonzofist = 1, /obj/item/clothing/gloves/fingerless/rapid = 1, /obj/item/storage/box/syndie_kit/throwing_weapons = 1, /obj/item/pen/edagger = 1, /obj/item/reagent_containers/food/snacks/syndicake = 2, /obj/item/coin/antagtoken/syndicate = 2, /obj/item/gun/projectile/automatic/pistol/stechkin = 4, /obj/item/gun/syringe/rapidsyringe = 8, /obj/item/storage/box/syndie_kit/bioterror = 8)
 	},
-/obj/item/gun_module/muzzle/suppressor,
 /turf/simulated/floor/pod/light,
 /area/ruin/space/pirate_base/security_maint)
 "ZQ" = (
@@ -20355,7 +20301,7 @@ JF
 It
 Sj
 sr
-ox
+iK
 iM
 Lg
 XK
@@ -20465,8 +20411,8 @@ SZ
 hZ
 Vq
 NG
-Us
-Us
+hZ
+hZ
 Gk
 RR
 xM
@@ -21369,7 +21315,7 @@ AK
 AK
 cS
 cS
-ox
+iK
 pQ
 pQ
 oz
@@ -21778,7 +21724,7 @@ AK
 AK
 cS
 nM
-KU
+kS
 tA
 nk
 Bt
@@ -22187,7 +22133,7 @@ AK
 cS
 in
 NE
-MF
+wi
 cS
 cS
 Wq
@@ -23211,7 +23157,7 @@ AK
 MD
 Nv
 nl
-UK
+wl
 wl
 MD
 MD
@@ -23432,8 +23378,8 @@ PL
 wQ
 vY
 jZ
-sq
-sq
+dD
+dD
 dD
 jZ
 AK
@@ -23738,7 +23684,7 @@ dx
 mo
 vY
 UV
-yy
+dD
 UW
 dD
 jZ
@@ -23842,7 +23788,7 @@ vG
 jZ
 Ia
 Ia
-sq
+dD
 jZ
 AK
 ci

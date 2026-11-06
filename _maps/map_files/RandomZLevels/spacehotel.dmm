@@ -99,14 +99,6 @@
 	icon_state = "metal11"
 	},
 /area/awaymission/spacehotel/amazing_place)
-"ay" = (
-/mob/living/simple_animal/hostile/carp/sea,
-/turf/simulated/floor/indestructible/beach/water/deep/wood_floor{
-	icon = 'icons/turf/shuttle/shuttle.dmi';
-	icon_state = "floor";
-	name = "Pool Floor"
-	},
-/area/awaymission/spacehotel/undersea)
 "aA" = (
 /turf/simulated/wall/indestructible{
 	icon_state = "metal10"
@@ -172,17 +164,6 @@
 "aV" = (
 /turf/simulated/wall/indestructible/fakeglass,
 /area/awaymission/spacehotel/snowland)
-"aY" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/mob/living/simple_animal/hostile/carp/sea,
-/turf/simulated/floor/indestructible/beach/water/deep/wood_floor{
-	icon = 'icons/turf/shuttle/shuttle.dmi';
-	icon_state = "floor";
-	name = "Pool Floor"
-	},
-/area/awaymission/spacehotel/undersea)
 "aZ" = (
 /obj/structure/ladder/unbreakable/dive_point/anchor{
 	id = "weirddive";
@@ -1306,13 +1287,6 @@
 	},
 /turf/template_noop,
 /area/awaymission/spacehotel)
-"fw" = (
-/mob/living/simple_animal/hostile/carp/sea,
-/turf/simulated/floor/indestructible/beach/water{
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "light_on"
-	},
-/area/awaymission/spacehotel)
 "fx" = (
 /obj/effect/landmark/awaystart,
 /turf/simulated/floor/indestructible/carpet,
@@ -2428,12 +2402,6 @@
 	name = "engraved floor"
 	},
 /area/awaymission/spacehotel)
-"jj" = (
-/turf/simulated/floor/indestructible{
-	icon_state = "cult";
-	name = "engraved floor"
-	},
-/area/awaymission/spacehotel)
 "jk" = (
 /obj/structure/closet/crate/critter,
 /turf/simulated/floor/indestructible{
@@ -2519,12 +2487,6 @@
 	},
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/indestructible/grass,
-/area/awaymission/spacehotel)
-"jz" = (
-/turf/simulated/floor/indestructible{
-	icon_state = "cult";
-	name = "engraved floor"
-	},
 /area/awaymission/spacehotel)
 "jA" = (
 /obj/structure/chair/comfy,
@@ -2724,12 +2686,6 @@
 	name = "Gateway"
 	},
 /turf/simulated/floor/indestructible/carpet,
-/area/awaymission/spacehotel)
-"ke" = (
-/turf/simulated/floor/indestructible{
-	icon_state = "cult";
-	name = "engraved floor"
-	},
 /area/awaymission/spacehotel)
 "kf" = (
 /obj/item/kitchen/knife/butcher{
@@ -6347,7 +6303,7 @@ ai
 ai
 ai
 ai
-aY
+dz
 ai
 ai
 ai
@@ -6864,7 +6820,7 @@ dO
 ab
 ai
 ai
-ay
+ai
 ai
 ai
 ai
@@ -7457,7 +7413,7 @@ eb
 eb
 fi
 fr
-fw
+fr
 fr
 fy
 eb
@@ -7467,7 +7423,7 @@ eb
 eb
 fi
 fr
-fw
+fr
 fr
 fy
 eb
@@ -7477,7 +7433,7 @@ eb
 eb
 fi
 fr
-fw
+fr
 fr
 fy
 eb
@@ -22988,7 +22944,7 @@ ai
 ai
 ai
 ai
-aY
+dz
 ai
 ai
 ai
@@ -23505,7 +23461,7 @@ dx
 ab
 ai
 ai
-ay
+ai
 ai
 ai
 ai
@@ -26471,7 +26427,7 @@ ln
 iQ
 CZ
 iQ
-ke
+iQ
 cl
 pj
 pj
@@ -26729,7 +26685,7 @@ in
 iD
 iQ
 jg
-jz
+iQ
 ji
 iQ
 cl
@@ -26860,7 +26816,7 @@ iD
 iD
 jh
 jA
-jz
+iQ
 iQ
 cl
 pj
@@ -26989,7 +26945,7 @@ cl
 iD
 iD
 ji
-jz
+iQ
 ji
 kf
 cl
@@ -27378,7 +27334,7 @@ id
 cl
 iD
 iQ
-jj
+iQ
 iQ
 iQ
 iD

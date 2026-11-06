@@ -81,7 +81,10 @@
 	name = "disabler beam"
 	icon_state = "omnilaser"
 	shockbull = TRUE
-	damage_type = STAMINA
+	damage = 0
+	nodamage = TRUE
+	stun = 5 SECONDS
+	weaken = 5 SECONDS
 	flag = ENERGY
 	hitsound = 'sound/weapons/plasma_cutter.ogg'
 	eyeblur = 0
@@ -97,9 +100,12 @@
 /obj/projectile/beam/specter/disabler
 	name = "specter paralyzer beam"
 	icon_state = "omnilaser"
-	damage = 30
+	damage = 0
+	nodamage = TRUE
+	stun = 5 SECONDS
+	weaken = 5 SECONDS
 	shockbull = TRUE
-	damage_type = STAMINA
+	damage_type = BURN
 	flag = ENERGY
 	hitsound = 'sound/weapons/plasma_cutter.ogg'
 	hitsound_wall = 'sound/weapons/sear.ogg'
@@ -356,8 +362,10 @@
 /obj/projectile/beam/podsniper/disabler
 	name = "sniper disabler beam"
 	icon_state = "LSR_disabler"
-	damage = 40
-	damage_type = STAMINA
+	damage = 0
+	nodamage = TRUE
+	stun = 5 SECONDS
+	weaken = 5 SECONDS
 	hitsound = 'sound/weapons/resonator_blast.ogg'
 	flag = ENERGY
 	eyeblur = 0
@@ -459,7 +467,10 @@
 	name = "paralyzer beam"
 	icon_state = "omnilaser"
 	shockbull = TRUE
-	damage_type = STAMINA
+	damage = 0
+	nodamage = TRUE
+	stun = 5 SECONDS
+	weaken = 5 SECONDS
 	flag = ENERGY
 	hitsound = 'sound/weapons/plasma_cutter.ogg'
 	hitsound_wall = 'sound/weapons/sear.ogg'

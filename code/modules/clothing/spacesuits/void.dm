@@ -119,7 +119,7 @@
 	name = "NASA mining spacesuit"
 	desc = "A hybrid spacesuit for mining in space. Reinforced for hostile environments and fitted with a medium-class industrial exoskeleton. Developed by NASA."
 	icon_state = "void_yellow"
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe, /obj/item/resonator, /obj/item/mining_scanner, /obj/item/t_scanner/adv_mining_scanner, /obj/item/gun/energy/kinetic_accelerator, /obj/item/twohanded/kinetic_crusher, /obj/item/hierophant_club, /obj/item/twohanded/fireaxe/boneaxe, /obj/item/shovel)
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe, /obj/item/resonator, /obj/item/mining_scanner, /obj/item/t_scanner/adv_mining_scanner, /obj/item/gun/energy/kinetic_accelerator, /obj/item/twohanded/kinetic_crusher, /obj/item/twohanded/fireaxe/boneaxe, /obj/item/shovel)
 	armor = list(MELEE = 60, BULLET = 15, LASER = 15, ENERGY = 15, BOMB = 75, BIO = 100, FIRE = 75, ACID = 75)
 	slowdown = 4
 	item_state = "void_yellow"

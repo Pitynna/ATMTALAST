@@ -95,9 +95,6 @@
 	name = "goat crate"
 	content_mob = /mob/living/simple_animal/hostile/retaliate/goat
 
-/obj/structure/closet/crate/critter/goat/populate_contents()
-	if(prob(30))
-		content_mob = /mob/living/simple_animal/hostile/retaliate/goat/hump
 
 /obj/structure/closet/crate/critter/turkey
 	name = "turkey crate"
@@ -117,8 +114,6 @@
 /obj/structure/closet/crate/critter/cat/populate_contents()
 	if(prob(30))
 		content_mob = /mob/living/simple_animal/pet/cat/Proc
-	if(prob(5))
-		content_mob = /mob/living/simple_animal/pet/cat/fat
 
 /obj/structure/closet/crate/critter/cat_white
 	name = "white cat crate"
@@ -132,9 +127,6 @@
 	name = "fox crate"
 	content_mob = /mob/living/simple_animal/pet/dog/fox
 
-/obj/structure/closet/crate/critter/fox/populate_contents()
-	if(prob(30))
-		content_mob = /mob/living/simple_animal/pet/dog/fox/forest
 
 /obj/structure/closet/crate/critter/fennec
 	name = "fennec crate"

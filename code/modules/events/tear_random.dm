@@ -31,6 +31,8 @@
 		hostile_mobs = list()
 		// It works like the create_random_mob proc, but with only aggressive mobs.
 		for(var/T in typesof(/mob/living/simple_animal))
+			if(is_legacy_blocked_type(T))
+				continue
 			var/mob/living/simple_animal/SA = T
 			if(initial(SA.gold_core_spawnable) == HOSTILE_SPAWN)
 				hostile_mobs += T

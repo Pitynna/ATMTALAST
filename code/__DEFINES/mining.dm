@@ -23,12 +23,7 @@
 	/obj/item/twohanded/spear, \
 	/obj/item/twohanded/fireaxe/boneaxe, \
 	/obj/item/melee/energy/cleaving_saw, \
-	/obj/item/organ/internal/regenerative_core/legion, \
-	/obj/item/hierophant_club, \
-	/obj/item/gun/magic/hook, \
+	/obj/item/organ/internal/regenerative_core, \
 	/obj/item/nullrod, \
-	/obj/item/rune_scimmy, \
-	/obj/item/wisp_lantern, \
-	/obj/item/warp_cube, \
 	/obj/item/immortality_talisman, \
 )

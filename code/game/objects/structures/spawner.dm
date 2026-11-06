@@ -148,7 +148,7 @@
 	max_integrity = 200
 	max_mobs = 15
 	spawn_time = 600
-	mob_types = list(/mob/living/simple_animal/hostile/headcrab, /mob/living/simple_animal/hostile/headcrab/fast, /mob/living/simple_animal/hostile/headcrab/poison)
+	mob_types = list(/mob/living/simple_animal/hostile/headcrab)
 	spawn_text = "crawls out of"
 	faction = list("hostile")
 	mob_gps_id = "HC"

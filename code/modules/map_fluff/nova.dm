@@ -3,7 +3,6 @@
 /datum/map/nova
 	name = "Nova"
 	map_path = "_maps/map_files/nova/nova.dmm"
-	lavaland_path = "_maps/map_files/nova/Lavaland.dmm"
 	traits = list(
 		list(MAIN_STATION, STATION_LEVEL = "First Floor", STATION_CONTACT, REACHABLE, AI_OK, ZTRAIT_UP),
 		list(STATION_LEVEL = "Second Floor", STATION_CONTACT, REACHABLE, AI_OK, ZTRAIT_DOWN, ZTRAIT_BASETURF = /turf/simulated/openspace),

@@ -189,11 +189,7 @@
 	return TRUE
 
 /obj/machinery/power/emitter/attack_animal(mob/living/simple_animal/user)
-	if(ismegafauna(user) && anchored)
-		anchored = FALSE
-		user.visible_message(span_warning("[user] rips [src] free from its moorings!"))
-	else
-		. = ..()
+	. = ..()
 
 	if(. && !anchored)
 		step(src, get_dir(user, src))

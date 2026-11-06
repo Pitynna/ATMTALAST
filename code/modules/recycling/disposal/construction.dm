@@ -49,6 +49,10 @@
 			return /obj/structure/disposalpipe/trunk
 		if(PIPE_DISPOSALS_BIN)
 			return /obj/machinery/disposal
+		if(PIPE_DISPOSALS_WALL_BIN)
+			return /obj/machinery/disposal/wall
+		if(PIPE_DISPOSALS_MAIL_CHUTE)
+			return /obj/machinery/disposal/mail
 		if(PIPE_DISPOSALS_OUTLET)
 			return /obj/structure/disposaloutlet
 		if(PIPE_DISPOSALS_CHUTE)
@@ -63,6 +67,8 @@
 			return /obj/structure/disposalpipe/rotator
 
 /obj/structure/disposalconstruct/update_icon_state()
+	if(!is_pipe())
+		icon = initial(pipe_type.icon)
 	if(pipe_type == /obj/machinery/disposal)
 		// Disposal bins receive special icon treating
 		icon_state = "[anchored ? "" : "con"]disposal"

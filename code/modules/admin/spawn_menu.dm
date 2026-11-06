@@ -42,7 +42,7 @@
 
 		if("spawn")
 			var/path = text2path(params["type"])
-			if(!path)
+			if(!path || is_legacy_blocked_type(path))
 				return TRUE
 			var/amount = clamp(text2num(params["amount"]) || 1, 1, ADMIN_SPAWN_CAP)
 			var/turf/target_turf = get_turf(ui.user)
@@ -84,6 +84,8 @@
 	if(isnull(types_list))
 		var/list/local_types = list()
 		for(var/atom/atom_type as anything in subtypesof(/atom))
+			if(is_legacy_blocked_type(atom_type))
+				continue
 			local_types[atom_type] = atom_type::name || ""
 		types_list = local_types
 	data["types"] = types_list

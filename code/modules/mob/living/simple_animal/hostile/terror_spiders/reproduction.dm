@@ -87,7 +87,7 @@
 		qdel(src)
 	else
 		if(!grow_as)
-			grow_as = pick(/mob/living/simple_animal/hostile/poison/terror_spider/knight, /mob/living/simple_animal/hostile/poison/terror_spider/lurker, /mob/living/simple_animal/hostile/poison/terror_spider/healer, /mob/living/simple_animal/hostile/poison/terror_spider/reaper, /mob/living/simple_animal/hostile/poison/terror_spider/builder)
+			grow_as = pick(/mob/living/simple_animal/hostile/poison/terror_spider/knight, /mob/living/simple_animal/hostile/poison/terror_spider/lurker, /mob/living/simple_animal/hostile/poison/terror_spider/healer)
 		var/mob/living/simple_animal/hostile/poison/terror_spider/S = new grow_as(T)
 		S.spider_myqueen = spider_myqueen
 		S.spider_mymother = spider_mymother
@@ -191,6 +191,8 @@
 // --------------------------------------------------------------------------------
 
 /mob/living/simple_animal/hostile/poison/terror_spider/proc/DoLayTerrorEggs(lay_type, lay_number)
+	if(is_legacy_blocked_type(lay_type))
+		return
 	stop_automated_movement = 1
 	var/obj/structure/spider/eggcluster/terror_eggcluster/C = new /obj/structure/spider/eggcluster/terror_eggcluster(get_turf(src), lay_type)
 	C.spiderling_number = lay_number

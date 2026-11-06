@@ -367,9 +367,6 @@
 	mymob.pullin.screen_loc = ui_pull_resist
 	static_inventory += mymob.pullin
 
-	mymob.stamina_bar = new /atom/movable/screen/stamina_bar(null, src)
-	infodisplay += mymob.stamina_bar
-
 	mymob.nutrition_bar = new /atom/movable/screen/nutrition_bar(null, src)
 	infodisplay += mymob.nutrition_bar
 

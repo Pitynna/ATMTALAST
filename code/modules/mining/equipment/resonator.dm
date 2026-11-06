@@ -104,7 +104,7 @@
 	if(!proj_turf)
 		proj_turf = get_turf(src)
 	resonance_damage = initial(resonance_damage)
-	if(lavaland_equipment_pressure_check(proj_turf))
+	if(mining_equipment_pressure_check(proj_turf))
 		name = "strong [initial(name)]"
 		resonance_damage *= 3
 	else

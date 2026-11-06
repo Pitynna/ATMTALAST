@@ -31,12 +31,6 @@
 	icon_state = "floor4"
 	},
 /area/shuttle/transport)
-"n" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/shuttle{
-	icon_state = "floor4"
-	},
-/area/shuttle/transport)
 "t" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/shuttle{
@@ -79,24 +73,12 @@
 /area/shuttle/transport)
 "H" = (
 /obj/structure/toilet/directional/east,
-/mob/living/simple_animal/hostile/megafauna/colossus{
-	faction = list("syndicate")
-	},
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"
 	},
 /area/shuttle/transport)
 "L" = (
 /obj/structure/toilet/directional/west,
-/mob/living/simple_animal/hostile/megafauna/dragon{
-	faction = list("syndicate")
-	},
-/turf/simulated/floor/shuttle{
-	icon_state = "floor4"
-	},
-/area/shuttle/transport)
-"N" = (
-/obj/effect/decal/cleanable/confetti,
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"
 	},
@@ -108,18 +90,12 @@
 /area/shuttle/transport)
 "Q" = (
 /obj/structure/toilet/directional/south,
-/mob/living/simple_animal/hostile/megafauna/bubblegum{
-	faction = list("syndicate")
-	},
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"
 	},
 /area/shuttle/transport)
 "T" = (
 /obj/structure/toilet/directional/north,
-/mob/living/simple_animal/hostile/megafauna/hierophant{
-	faction = list("syndicate")
-	},
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"
 	},
@@ -157,7 +133,7 @@ E
 "}
 (4,1,1) = {"
 E
-n
+P
 P
 P
 E
@@ -166,14 +142,14 @@ E
 E
 i
 j
-n
+P
 E
 "}
 (6,1,1) = {"
 E
 t
 H
-N
+i
 E
 "}
 (7,1,1) = {"
@@ -194,12 +170,12 @@ E
 E
 i
 P
-n
+P
 E
 "}
 (10,1,1) = {"
 E
-n
+P
 P
 j
 E

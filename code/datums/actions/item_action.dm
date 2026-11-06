@@ -132,40 +132,8 @@
 /datum/action/item_action/toggle_hardsuit_mode
 	name = "Надеть/Снять шлем"
 
-/datum/action/item_action/toggle_unfriendly_fire
-	name = "Переключить дружественный огонь \[ВКЛ\]"
-	desc = "Определяет, будут ли атаки посоха наносить урон союзникам."
-	button_icon_state = "vortex_ff_on"
-
 /datum/action/item_action/toggle_backpack_light
 	name = "Переключить мигалку на рюкзаке"
-
-/datum/action/item_action/toggle_unfriendly_fire/do_effect(trigger_flags)
-	if(..())
-		UpdateButtonIcon()
-
-/datum/action/item_action/toggle_unfriendly_fire/UpdateButtonIcon()
-	if(istype(target, /obj/item/hierophant_club))
-		var/obj/item/hierophant_club/H = target
-		if(H.friendly_fire_check)
-			button_icon_state = "vortex_ff_off"
-			name = "Переключить дружественный огонь \[ВЫКЛ\]"
-		else
-			button_icon_state = "vortex_ff_on"
-			name = "Переключить дружественный огонь \[ВКЛ\]"
-	..()
-
-/datum/action/item_action/vortex_recall
-	name = "Вихревой возврат"
-	desc = "Телепортирует вас и ближайших существ к настроенному маяку иерофанта в любой момент.<br>Если маяк всё ещё прикреплён, он отсоединится."
-	button_icon_state = "vortex_recall"
-
-/datum/action/item_action/vortex_recall/IsAvailable(feedback = FALSE)
-	if(istype(target, /obj/item/hierophant_club))
-		var/obj/item/hierophant_club/H = target
-		if(H.teleporting)
-			return FALSE
-	return ..()
 
 /datum/action/item_action/change_headphones_song
 	name = "Сменить трек в наушниках"

@@ -275,6 +275,7 @@ GLOBAL_LIST_INIT(job_titles_ru, list(
 // Research director
 #define ALT_JOB_TITLE_RU_CHIEF_ENGINEER_RESEARCHER "Главный научный сотрудник"
 // Scientist
+#define ALT_JOB_TITLE_RU_XENOARCHAEOLOGIST "Ксеноархеолог"
 #define ALT_JOB_TITLE_RU_ANOMALIST "Аномалист"
 #define ALT_JOB_TITLE_RU_PLASMOLOGIST "Исследователь плазмы"
 #define ALT_JOB_TITLE_RU_XENOBIOLOGIST "Ксенобиолог"

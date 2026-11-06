@@ -43,6 +43,8 @@
 	var/storage_slots = 50
 	/// Maximum value of the w_classes of all the items in contents, before we stop inserting new objects
 	var/max_combined_w_class = 50
+	/// Whether living mobs can climb or be stuffed into this unit.
+	var/can_contain_mobs = TRUE
 	COOLDOWN_DECLARE(eject_effects_cd)
 
 /obj/machinery/disposal/Initialize(mapload, obj/structure/disposalconstruct/made_from)
@@ -63,7 +65,12 @@
 /datum/milla_safe/disposal_suck_air
 
 /datum/milla_safe/disposal_suck_air/on_run(obj/machinery/disposal/disposal)
+	// The unit may have been dismantled while this atmos callback was queued.
+	if(QDELETED(disposal))
+		return
 	var/turf/location = get_turf(disposal)
+	if(!location)
+		return
 	var/datum/gas_mixture/env = get_turf_air(location)
 
 	var/pressure_delta = (SEND_PRESSURE + 1) - disposal.air_contents.return_pressure()
@@ -193,6 +200,8 @@
 
 /obj/machinery/disposal/grab_attack(mob/living/grabber, atom/movable/grabbed_thing)
 	. = TRUE
+	if(!can_contain_mobs)
+		return .
 	if(grabber.grab_state < GRAB_AGGRESSIVE || !isliving(grabbed_thing))
 		return .
 
@@ -241,6 +250,8 @@
 	qdel(src)
 
 /obj/machinery/disposal/shove_impact(mob/living/target, mob/living/attacker)
+	if(!can_contain_mobs)
+		return FALSE
 	target.visible_message(
 		span_warning("[DECLENT_RU_CAP(attacker, NOMINATIVE)] заталкива[PLUR_ET_YUT(attacker)] [target.declent_ru(ACCUSATIVE)] в [declent_ru(ACCUSATIVE)]!"),
 		span_userdanger("[DECLENT_RU_CAP(attacker, NOMINATIVE)] заталкива[PLUR_ET_YUT(attacker)] вас в [declent_ru(ACCUSATIVE)]!"),
@@ -255,6 +266,8 @@
 // mouse drop another mob or self
 //
 /obj/machinery/disposal/mouse_drop_receive(mob/living/target, mob/living/user, params)
+	if(!can_contain_mobs)
+		return
 	if(!istype(target) || target.buckled || target.has_buckled_mobs() || !in_range(user, src) || !in_range(user, target) || user.incapacitated() || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED) || isAI(user))
 		return
 	if(user.has_status_effect(STATUS_EFFECT_LEANING) || target.has_status_effect(STATUS_EFFECT_LEANING))
@@ -272,6 +285,8 @@
 	INVOKE_ASYNC(src, TYPE_PROC_REF(/obj/machinery/disposal, put_in), target, user)
 
 /obj/machinery/disposal/proc/put_in(mob/living/target, mob/living/user) // need this proc to use INVOKE_ASYNC in other proc. You're not recommended to use that one
+	if(!can_contain_mobs)
+		return
 	var/msg
 	var/target_loc = target.loc
 	if(!do_after(usr, 2 SECONDS, target))
@@ -301,6 +316,8 @@
 
 /// Alternative tg proc, used in monkey AI
 /obj/machinery/disposal/proc/monkey_stuff_mob(mob/living/target, mob/living/user)
+	if(!can_contain_mobs)
+		return
 	var/ventcrawler = HAS_TRAIT(user, TRAIT_VENTCRAWLER_ALWAYS) || HAS_TRAIT(user, TRAIT_VENTCRAWLER_NUDE)
 	var/target_loc = target.loc
 	if(!iscarbon(user) && !ventcrawler) //only carbon and ventcrawlers can climb into disposal by themselves.
@@ -534,6 +551,7 @@
 	var/obj/structure/disposalholder/holder = new(src)
 	manage_wrapping(holder)
 	holder.init(src)	// copy the contents of disposer to holder
+	configure_holder(holder)
 	air_contents = new() // The holder just took our gas; replace it
 	holder.start(src) // start the holder processing movement
 	flushing = FALSE
@@ -551,6 +569,10 @@
 		if(isdrone(thing) || istype(thing, /mob/living/silicon/robot/syndicate/saboteur) || istype(thing, /obj/item/smallDelivery))
 			holder.tomail = TRUE
 			return
+
+/// Final routing policy, applied after wrapped items have supplied their own tags.
+/obj/machinery/disposal/proc/configure_holder(obj/structure/disposalholder/holder)
+	return
 
 // called when area power changes
 /obj/machinery/disposal/power_change(forced = FALSE)
@@ -686,6 +708,43 @@
 		holder.tomail = TRUE
 	else if(!wrap_check && to_waste)
 		holder.destinationTag = 1
+
+/// Compact Goonstation disposal unit. Occupies a walkable floor tile beside a wall.
+/obj/machinery/disposal/wall
+	name = "wall-mounted disposal unit"
+	desc = "A compact pneumatic waste disposal unit. Its opening is too small for a person. Alt-click to manually eject its contents."
+	icon = 'icons/goonstation/objects/disposal_wall.dmi'
+	density = FALSE
+	can_contain_mobs = FALSE
+
+/obj/machinery/disposal/wall/north
+	dir = NORTH
+
+/obj/machinery/disposal/wall/south
+	dir = SOUTH
+
+/obj/machinery/disposal/wall/east
+	dir = EAST
+
+/obj/machinery/disposal/wall/west
+	dir = WEST
+
+/obj/machinery/disposal/wall/update_overlays()
+	. = list()
+	underlays.Cut()
+	. += flush ? "disposal-fhandle" : "disposal-handle"
+	if((stat & (NOPOWER|BROKEN)) || mode == UNSCREWED)
+		return
+	if(length(contents))
+		. += "disposal-full"
+		underlays += emissive_appearance(icon, "disposal-full", src)
+	switch(mode)
+		if(CHARGING)
+			. += "disposal-charge"
+			underlays += emissive_appearance(icon, "disposal-charge", src)
+		if(CHARGED)
+			. += "disposal-ready"
+			underlays += emissive_appearance(icon, "disposal-ready", src)
 
 #undef SEND_PRESSURE
 #undef UNSCREWED

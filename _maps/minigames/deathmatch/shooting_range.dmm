@@ -29,19 +29,6 @@
 /obj/machinery/light/directional/north,
 /turf/simulated/floor/wood/fancy/light,
 /area/deathmatch)
-"gb" = (
-/obj/item/ammo_box/magazine/m10mm,
-/turf/simulated/floor/wood/birch,
-/area/deathmatch)
-"gC" = (
-/obj/structure/table/reinforced,
-/obj/item/ammo_box/magazine/m10mm,
-/turf/simulated/floor/wood/dark,
-/area/deathmatch)
-"hy" = (
-/obj/item/ammo_box/magazine/m10mm/hp,
-/turf/simulated/floor/wood/fancy/light,
-/area/deathmatch)
 "in" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
@@ -76,10 +63,6 @@
 /obj/structure/barricade/wooden,
 /turf/simulated/floor/wood/cherry,
 /area/deathmatch)
-"kE" = (
-/obj/item/ammo_box/magazine/m10mm/fire,
-/turf/simulated/floor/wood/birch,
-/area/deathmatch)
 "lB" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -95,21 +78,8 @@
 /obj/machinery/light/directional/north,
 /turf/simulated/floor/wood/fancy/oak,
 /area/deathmatch)
-"na" = (
-/obj/item/ammo_box/magazine/m10mm/hp,
-/turf/simulated/floor/wood,
-/area/deathmatch)
 "nn" = (
 /turf/simulated/floor/wood/birch,
-/area/deathmatch)
-"oV" = (
-/obj/item/ammo_box/magazine/m10mm,
-/turf/simulated/floor/wood/fancy/cherry,
-/area/deathmatch)
-"rC" = (
-/obj/item/ammo_box/magazine/m10mm/ap,
-/obj/machinery/light/directional/south,
-/turf/simulated/floor/wood/fancy/light,
 /area/deathmatch)
 "sn" = (
 /obj/structure/barricade/sandbags,
@@ -124,10 +94,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/wood/cherry,
-/area/deathmatch)
-"uc" = (
-/obj/item/ammo_box/magazine/m10mm,
-/turf/simulated/floor/wood/fancy/light,
 /area/deathmatch)
 "vl" = (
 /obj/structure/barricade/wooden,
@@ -157,10 +123,6 @@
 /obj/machinery/light/directional/south,
 /turf/simulated/floor/wood/fancy/oak,
 /area/deathmatch)
-"Ca" = (
-/obj/item/ammo_box/magazine/m10mm,
-/turf/simulated/floor/wood,
-/area/deathmatch)
 "DM" = (
 /obj/machinery/light/directional/south,
 /turf/simulated/floor/wood/fancy/light,
@@ -177,28 +139,15 @@
 /obj/machinery/light/directional/east,
 /turf/simulated/floor/wood,
 /area/deathmatch)
-"Hs" = (
-/obj/item/ammo_box/magazine/m10mm/fire,
-/turf/simulated/floor/wood/fancy/oak,
-/area/deathmatch)
 "HQ" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
 	},
 /turf/simulated/floor/wood/cherry,
 /area/deathmatch)
-"HV" = (
-/obj/item/ammo_box/magazine/m10mm,
-/turf/simulated/floor/wood/fancy/oak,
-/area/deathmatch)
 "Id" = (
 /obj/effect/landmark/deathmatch_player_spawn,
 /turf/simulated/floor/wood/birch,
-/area/deathmatch)
-"JS" = (
-/obj/structure/table/reinforced,
-/obj/item/ammo_box/magazine/m10mm/fire,
-/turf/simulated/floor/wood/dark,
 /area/deathmatch)
 "KI" = (
 /obj/effect/landmark/deathmatch_player_spawn,
@@ -219,16 +168,11 @@
 "Os" = (
 /turf/simulated/floor/wood/dark,
 /area/deathmatch)
-"Pr" = (
-/obj/item/ammo_box/magazine/m10mm/ap,
-/turf/simulated/floor/wood/fancy/cherry,
-/area/deathmatch)
 "SK" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
 /obj/structure/table/reinforced,
-/obj/item/ammo_box/magazine/m10mm/hp,
 /turf/simulated/floor/wood/cherry,
 /area/deathmatch)
 "Tw" = (
@@ -329,7 +273,7 @@ ta
 fz
 xf
 xf
-rC
+DM
 Bk
 Tw
 kf
@@ -366,7 +310,7 @@ kf
 kn
 bc
 bc
-Hs
+bc
 Bt
 Bk
 Bf
@@ -379,7 +323,7 @@ jL
 Bk
 xf
 xf
-na
+kf
 kf
 kf
 GF
@@ -437,7 +381,7 @@ Os
 kf
 kn
 bc
-HV
+bc
 bc
 bc
 Bk
@@ -454,7 +398,7 @@ kf
 kf
 Bk
 Os
-gC
+dq
 KI
 Fm
 Os
@@ -479,7 +423,7 @@ kf
 Bk
 Os
 dq
-JS
+dq
 XX
 Bk
 kf
@@ -511,7 +455,7 @@ kf
 kf
 kf
 Za
-na
+kf
 kf
 Bf
 ta
@@ -553,7 +497,7 @@ kf
 kf
 kf
 Za
-Ca
+kf
 kf
 kf
 GF
@@ -630,7 +574,7 @@ kf
 kf
 lI
 nn
-gb
+nn
 Oh
 Bk
 Bf
@@ -641,13 +585,13 @@ ta
 fz
 dj
 dj
-Pr
+dj
 dj
 Bk
 kf
 Bk
 xf
-uc
+xf
 xf
 jL
 kf
@@ -655,7 +599,7 @@ kf
 lI
 nn
 Id
-kE
+nn
 Bk
 Bf
 ta
@@ -664,7 +608,7 @@ ta
 ta
 fz
 dj
-oV
+dj
 Vs
 xc
 Bk
@@ -672,7 +616,7 @@ Tw
 Bk
 fD
 ET
-hy
+xf
 jL
 Ui
 kf

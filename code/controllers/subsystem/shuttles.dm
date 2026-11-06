@@ -78,6 +78,14 @@ SUBSYSTEM_DEF(shuttle)
 	for(var/typepath in subtypesof(/datum/supply_packs))
 		var/datum/supply_packs/P = new typepath()
 		if(P.name == "HEADER") continue		// To filter out group headers
+		var/blocked_pack = is_legacy_blocked_type(P.containertype)
+		for(var/item_type in P.contains)
+			if(is_legacy_blocked_type(item_type))
+				blocked_pack = TRUE
+				break
+		if(blocked_pack)
+			qdel(P)
+			continue
 		supply_packs["[P.type]"] = P
 	initial_move()
 

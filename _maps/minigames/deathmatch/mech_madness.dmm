@@ -47,7 +47,7 @@
 "dp" = (
 /obj/machinery/light/directional/east,
 /obj/structure/table/wood,
-/obj/item/gun/projectile/bombarda,
+/obj/item/gun/grenadelauncher,
 /turf/simulated/floor/sepia,
 /area/deathmatch)
 "dq" = (

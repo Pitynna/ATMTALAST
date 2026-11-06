@@ -162,6 +162,8 @@
 <a href='byond://?src=[UID()];dmake=104'>Y-Junction</a><br>
 <a href='byond://?src=[UID()];dmake=105'>Trunk</a><br>
 <a href='byond://?src=[UID()];dmake=106'>Bin</a><br>
+<a href='byond://?src=[UID()];dmake=[PIPE_DISPOSALS_WALL_BIN]'>Wall-mounted Bin</a><br>
+<a href='byond://?src=[UID()];dmake=[PIPE_DISPOSALS_MAIL_CHUTE]'>Mail Chute</a><br>
 <a href='byond://?src=[UID()];dmake=107'>Outlet</a><br>
 <a href='byond://?src=[UID()];dmake=108'>Chute</a><br>
 <a href='byond://?src=[UID()];dmake=113'>Rotator</a><br>

@@ -259,9 +259,7 @@ GLOBAL_LIST_EMPTY(unit_test_tguis)
 		/obj/structure/sign/picture_frame,
 		// Requires contract owner
 		// Requires target
-		/obj/effect/temp_visual/dragon_swoop/bubblegum/ancient_robot,
 		// Requires target
-		/obj/effect/temp_visual/beam_target,
 		// Shouldn't exist on its own without carbon
 		/obj/effect/frosty_breath,
 		// Requires atoms in initialize
@@ -315,7 +313,6 @@ GLOBAL_LIST_EMPTY(unit_test_tguis)
 	//This lad also sleeps
 //	returnable_list += typesof(/obj/item/hilbertshotel)
 	//this boi spawns turf changing stuff, and it stacks and causes pain. Let's just not
-	returnable_list += typesof(/obj/effect/sliding_puzzle)
 	//these can explode and cause the turf to be destroyed at unexpected moments
 	returnable_list += typesof(/obj/effect/mine)
 	returnable_list += typesof(/obj/effect/spawner/random_spawners/syndicate/trap/mine)

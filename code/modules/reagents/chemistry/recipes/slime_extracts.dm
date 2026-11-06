@@ -217,7 +217,7 @@
 							/obj/item/reagent_containers/cup/glass/drinkingglass/shotglass,
 							/obj/item/reagent_containers/cup/glass/drinkingglass,
 							/obj/item/reagent_containers/cup/glass/bottle,
-							/obj/item/reagent_containers/cup/glass/mushroom_bowl
+							/obj/item/reagent_containers/food/snacks/grown/mushroom/chanterelle
 							)
 	blocked += typesof(/obj/item/reagent_containers/cup/glass/flask)
 	blocked += typesof(/obj/item/reagent_containers/cup/glass/trophy)

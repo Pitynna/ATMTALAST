@@ -77,6 +77,8 @@
 	pod_style_info = list()
 	pod_style_lookup = list()
 	for(var/datum/pod_style/style as anything in typesof(/datum/pod_style))
+		if(ispath(style, /datum/pod_style/gondola))
+			continue
 		pod_style_info += list(list("id" = style::id, "title" = style::ui_name))
 		pod_style_lookup[style::id] = style
 

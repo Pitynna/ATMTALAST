@@ -836,20 +836,7 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	can_hold = list(
 		/obj/item/reagent_containers/food/snacks/grown,
 		/obj/item/stack/medical,
-		/obj/item/reagent_containers/food/snacks/bait,
-		/obj/item/reagent_containers/food/snacks/charred_krill,
 		/obj/item/stack/sheet/cartilage_plate,
 		/obj/item/stack/sheet/razor_sharp_teeth,
 	)
 	storage_with_item_size = WEIGHT_CLASS_NORMAL
-
-/obj/item/storage/bag/medpouch/fishing
-	name = "fishing pouch"
-	desc = "A small pouch for assorted bait and fish parts."
-	icon_state = "fishpouch_ash"
-	can_hold = list(
-		/obj/item/reagent_containers/food/snacks/bait,
-		/obj/item/reagent_containers/food/snacks/charred_krill,
-		/obj/item/stack/sheet/cartilage_plate,
-		/obj/item/stack/sheet/razor_sharp_teeth,
-	)

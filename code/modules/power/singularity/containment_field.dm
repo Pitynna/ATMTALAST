@@ -62,19 +62,6 @@
 /obj/machinery/field/containment/ex_act(severity, target)
 	return FALSE
 
-/obj/machinery/field/containment/attack_animal(mob/living/simple_animal/user)
-	if(!field_gen_1 || !field_gen_2)
-		qdel(src)
-		return
-	if(ismegafauna(user))
-		user.visible_message(
-			span_warning("[user] glows fiercely as the containment field flickers out!"),
-		)
-		field_gen_1.calc_power(INFINITY) // rip that 'containment' field
-		user.adjustHealth(-user.obj_damage)
-	else
-		return ..()
-
 /obj/machinery/field/containment/proc/on_entered(datum/source, atom/movable/considered_atom, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER
 

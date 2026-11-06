@@ -2808,11 +2808,6 @@
 	icon_state = "yellowfull"
 	},
 /area/ruin/space/USSP_gorky17/engineering)
-"mJ" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/USSP_gorky17/utility)
 "mK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -4191,7 +4186,7 @@
 	name = "Gorky17 ammunition locker";
 	req_access = list(123)
 	},
-/obj/item/gun/projectile/automatic/aks74u/rusted,
+/obj/item/gun/projectile/automatic/arg,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "red"
@@ -6319,9 +6314,6 @@
 	icon_state = "red"
 	},
 /area/ruin/space/USSP_gorky17/common)
-"BA" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/gate)
 "BC" = (
 /obj/machinery/door/airlock/multi_tile{
 	dir = 1;
@@ -7695,7 +7687,7 @@
 /obj/item/melee/baton,
 /obj/item/clothing/gloves/combat,
 /obj/structure/cable,
-/obj/item/gun/projectile/automatic/smg/ppsh/rusted,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/structure/closet/secure_closet{
 	color = "#ff9999";
 	name = "Gorky17 ammunition locker";
@@ -10885,7 +10877,7 @@
 /obj/item/clothing/suit/armor/vest,
 /obj/item/melee/baton,
 /obj/item/clothing/gloves/combat,
-/obj/item/gun/projectile/automatic/smg/ppsh/rusted,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/structure/closet/secure_closet{
 	color = "#ff9999";
 	name = "Gorky17 ammunition locker";
@@ -31965,7 +31957,7 @@ fB
 fB
 ts
 kI
-BA
+qL
 tp
 ZK
 fQ
@@ -32167,7 +32159,7 @@ fB
 Np
 BX
 kI
-BA
+qL
 cu
 lE
 jq
@@ -38848,9 +38840,9 @@ il
 aF
 fw
 Wz
-mJ
-mJ
-mJ
+ga
+ga
+ga
 sD
 NH
 NH

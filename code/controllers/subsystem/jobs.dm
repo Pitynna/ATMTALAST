@@ -63,6 +63,8 @@ SUBSYSTEM_DEF(jobs)
 		department_groups[department] = list()
 
 	for(var/J in all_jobs)
+		if(is_legacy_blocked_type(J))
+			continue
 		var/datum/job/job = new J()
 
 		if(!job || !job.title) // to avoid adding special cod-only datums without title

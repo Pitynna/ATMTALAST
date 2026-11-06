@@ -1161,7 +1161,6 @@
 /area/deathmatch)
 "Ik" = (
 /obj/effect/turf_decal/delivery/red/hollow,
-/obj/machinery/vending/gun_mods,
 /turf/simulated/floor/plasteel,
 /area/deathmatch)
 "Iq" = (

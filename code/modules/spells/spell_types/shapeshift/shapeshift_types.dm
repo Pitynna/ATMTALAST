@@ -4,7 +4,7 @@
 	desc = "Take on the shape a lesser ash drake after a short delay."
 	invocation = "*scream"
 	invocation_type = INVOCATION_SHOUT
-	possible_shapes = list(/mob/living/simple_animal/hostile/megafauna/dragon/lesser)
+	possible_shapes = list(/mob/living/simple_animal/hostile/wizard_dragon)
 	revert_on_death = FALSE
 
 /datum/action/cooldown/spell/shapeshift/dragon/do_shapeshift(mob/living/caster)
@@ -18,7 +18,7 @@
 	return ..()
 
 /datum/action/cooldown/spell/shapeshift/dragon/do_unshapeshift(mob/living/caster)
-	var/mob/living/simple_animal/hostile/megafauna/dragon/lesser/dragon = caster
+	var/mob/living/simple_animal/hostile/wizard_dragon/dragon = caster
 	if(dragon.swooping)
 		return
 	return ..()

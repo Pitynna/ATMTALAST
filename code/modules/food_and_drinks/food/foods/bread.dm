@@ -116,7 +116,7 @@
 	foodtype = GRAIN
 
 /obj/item/reagent_containers/food/snacks/sliceable/bread/on_teleported()
-	if(length(GLOB.bread_monsters) < GLOB.bread_monsters_maxcap)
+	if(!is_legacy_blocked_type(/mob/living/simple_animal/hostile/bread_monster) && length(GLOB.bread_monsters) < GLOB.bread_monsters_maxcap)
 		new /mob/living/simple_animal/hostile/bread_monster(get_turf(src))
 		qdel(src)
 	return

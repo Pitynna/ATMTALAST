@@ -314,6 +314,8 @@
 	for(var/recipe in recipes_to_iterate)
 		if(istype(recipe, /datum/stack_recipe))
 			var/datum/stack_recipe/single_recipe = recipe
+			if(is_legacy_blocked_type(single_recipe.result_type))
+				continue
 			recipes_data["[single_recipe.title]"] = build_recipe_data(single_recipe)
 
 		else if(istype(recipe, /datum/stack_recipe_list))

@@ -502,6 +502,8 @@
 			product_to_category[product_key] = category
 
 	for(var/typepath in productlist)
+		if(is_legacy_blocked_type(typepath))
+			continue
 		var/amount = productlist[typepath]
 		if(isnull(amount))
 			amount = 0

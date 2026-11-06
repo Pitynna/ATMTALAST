@@ -107,6 +107,8 @@ research holder datum.
 	known_tech[T.id] = copy
 
 /datum/research/proc/CanAddDesign2Known(datum/design/D)
+	if(is_legacy_blocked_type(D.build_path))
+		return FALSE
 	if(D.id in known_designs)
 		return FALSE
 	return TRUE

@@ -117,6 +117,8 @@ GLOBAL_VAR(current_date_string)
 	return data
 
 /obj/machinery/computer/account_database/ui_act(action, list/params)
+	if(action == "set_salary_modifier")
+		return FALSE
 	if(..())
 		return
 

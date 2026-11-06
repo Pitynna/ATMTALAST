@@ -50,7 +50,6 @@ GLOBAL_LIST_EMPTY(active_jammers)										// List of active radio jammers
 GLOBAL_LIST_EMPTY(ladders)
 GLOBAL_LIST_EMPTY(stairs)
 GLOBAL_LIST_EMPTY(mirrors)												//list of all mirrors and mirror shields.
-GLOBAL_LIST_EMPTY(lavaland_points_of_interest)							//for use in founding world anvil and other stuff
 
 GLOBAL_LIST_EMPTY(active_diseases)										//List of Active disease in all mobs; purely for quick referencing.
 

@@ -200,9 +200,6 @@ const BodyScannerMainOccupant = (props) => {
           <Button icon="print" onClick={() => act('print_p')}>
             Распечатать отчёт
           </Button>
-          <Button icon="print" onClick={() => act('insurance')}>
-            Списать страховку
-          </Button>
           <Button icon="user-slash" onClick={() => act('eject_id')}>
             Извлечь карту
           </Button>

@@ -202,6 +202,8 @@
 	INVOKE_ASYNC(GLOBAL_PROC, /proc/qdel, src)
 
 /mob/proc/gorillize(gorilla_type = "Normal", message = TRUE)
+	if(is_legacy_blocked_type(/mob/living/simple_animal/hostile/gorilla))
+		return
 	if(HAS_TRAIT(src, TRAIT_NO_TRANSFORM))
 		return
 

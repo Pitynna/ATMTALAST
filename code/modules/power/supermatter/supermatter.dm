@@ -195,6 +195,12 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	AddElement(/datum/element/supermatter_crystal, PROC_REF(wrench_act_callback), PROC_REF(consume_callback))
 
 /obj/machinery/power/supermatter_crystal/Initialize(mapload)
+	warning_point = 50
+	emergency_point = 500
+	explosion_point = 900
+	explosion_power = 8
+	absorption_ratio = 0.125
+	bullet_energy = 2
 	. = ..()
 	current_gas_behavior = init_sm_gas()
 	gas_percentage = list()
@@ -282,101 +288,51 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	supermatter.process_atmos_safely(current_turf, env)
 
 /obj/machinery/power/supermatter_crystal/proc/process_atmos_safely(turf/local_turf, datum/gas_mixture/env)
-	// PART 1: PRELIMINARIES
-	if(disable_process != SM_PROCESS_ENABLED)
+	if(disable_process != SM_PROCESS_ENABLED || !istype(local_turf) || isspaceturf(local_turf) || !env)
 		return
-
-	if(!istype(local_turf)) //We are in a crate or somewhere that isn't turf, if we return to turf resume processing but for now.
-		return //Yeah just stop.
-
-	if(isclosedturf(local_turf) || local_turf.density)
-		var/turf/did_it_melt = local_turf.ChangeTurf(local_turf.baseturf)
-		if(!isclosedturf(did_it_melt) || !did_it_melt.density) //In case some joker finds way to place these on indestructible walls
-			visible_message(span_warning("[DECLENT_RU_CAP(src, NOMINATIVE)] проплавляет [local_turf.declent_ru(ACCUSATIVE)]!"))
+	internal_energy = max(0, internal_energy + external_power_immediate + external_power_trickle)
+	external_power_immediate = 0
+	external_power_trickle = 0
+	damage += external_damage_immediate
+	external_damage_immediate = 0
+	if(damage > explosion_point)
+		legacy_explode()
 		return
-
-	// PART 2: GAS PROCESSING
-	absorbed_gasmix = env?.remove_ratio(absorption_ratio) || new()
-	absorbed_gasmix.volume = (env?.volume || CELL_VOLUME) * absorption_ratio // To match the pressure.
-	calculate_gases()
-	// Extra effects should always fire after the compositions are all finished
-	// Some extra effects like [/datum/sm_gas/carbon_dioxide/extra_effects]
-	// needs more than one gas and rely on a fully parsed gas_percentage.
+	if(damage > warning_point && world.time > lastwarning + 30 SECONDS)
+		radio_announce("Crystal instability: [round(damage / explosion_point * 100)]%", name, damage > emergency_point ? emergency_channel : warning_channel, src)
+		lastwarning = world.time
+	absorbed_gasmix = env.remove_ratio(absorption_ratio)
+	// Keep the monitor accurate without applying the modern gas modifiers.
+	gas_percentage = list()
+	combined_gas = absorbed_gasmix?.total_moles() || 0
+	if(!absorbed_gasmix || !absorbed_gasmix.total_moles())
+		if(!disable_damage)
+			damage += max((internal_energy - 1600) / 10, 0)
+		internal_energy = min(internal_energy, 1600)
+		return
 	var/list/gases = absorbed_gasmix.get_interesting()
-	for(var/tlv_id in gases)
-		var/datum/sm_gas/sm_gas = current_gas_behavior[tlv_id]
-		if(!sm_gas)
-			continue
-		sm_gas.extra_effects(src)
-
-	// PART 3: POWER PROCESSING
-	internal_energy_factors = calculate_internal_energy()
-	zap_factors = calculate_zap_transmission_rate()
-	var/delta_time = (SSmachines.times_fired - last_energy_accumulation_perspective_machines) * SSmachines.wait / (1 SECONDS)
-	var/accumulated_energy = accumulate_energy(ZAP_ENERGY_ACCUMULATION_NORMAL, energy = internal_energy * zap_transmission_rate * delta_time)
-	if(accumulated_energy && (last_power_zap + (4 - internal_energy * 0.001) SECONDS) < world.time)
-		var/discharged_energy = discharge_energy(ZAP_ENERGY_ACCUMULATION_NORMAL)
-		playsound(src, 'sound/weapons/emitter2.ogg', 70, TRUE)
-		hue_angle_shift = clamp(903 * log(10, (internal_energy + 8000)) - 3590, -50, 240)
-		var/zap_color = color_matrix_rotate_hue(hue_angle_shift)
-		supermatter_zap(
-			zapstart = src,
-			range = 3,
-			zap_str = discharged_energy,
-			zap_flags = ZAP_SUPERMATTER_FLAGS,
-			zap_cutoff = 240 KILO JOULES,
-			power_level = internal_energy,
-			color = zap_color,
-		)
-
-		last_power_zap = world.time
-	last_energy_accumulation_perspective_machines = SSmachines.times_fired
-
-	// PART 4: DAMAGE PROCESSING
-	temp_limit_factors = calculate_temp_limit()
+	for(var/gas_id, mole_count in gases)
+		if(mole_count > 0)
+			gas_percentage[gas_id] = mole_count / combined_gas
 	damage_archived = damage
-	damage_factors = calculate_damage()
-	if(damage == 0) // Clear any in game forced delams if on full health.
-		set_delam(SM_DELAM_PRIO_IN_GAME, SM_DELAM_STRATEGY_PURGE)
-	else if(!final_countdown)
-		set_delam(SM_DELAM_PRIO_NONE, SM_DELAM_STRATEGY_PURGE) // This one cant clear any forced delams.
-	delamination_strategy.delam_progress(src)
-	if(damage > explosion_point && !final_countdown)
-		count_down()
-
-	// PART 5: WASTE GAS PROCESSING
-	waste_multiplier_factors = calculate_waste_multiplier()
-	var/device_energy = internal_energy * REACTION_POWER_MODIFIER
-
-	/// Do waste on another gasmix so we can keep a copy of the gasmix we use for processing.
-	absorbed_gasmix.set_temperature((absorbed_gasmix.temperature() + device_energy * waste_multiplier / THERMAL_RELEASE_MODIFIER))
-	absorbed_gasmix.set_temperature(clamp(absorbed_gasmix.temperature(), TCMB, 2500 * waste_multiplier))
-	absorbed_gasmix.set_toxins(absorbed_gasmix.toxins() + max(device_energy * waste_multiplier / PLASMA_RELEASE_MODIFIER, 0))
-	absorbed_gasmix.set_oxygen((absorbed_gasmix.oxygen() + max(((device_energy + absorbed_gasmix.temperature() * waste_multiplier) - T0C) / OXYGEN_RELEASE_MODIFIER, 0)))
+	if(!disable_damage)
+		damage = max(damage + (absorbed_gasmix.temperature() - 800) / 150, 0)
+	var/oxygen_factor = clamp((absorbed_gasmix.oxygen() - 2 * absorbed_gasmix.nitrogen()) / MOLES_CELLSTANDARD, 0, 1)
+	var/temp_factor = oxygen_factor > 0.8 ? 50 : 30
+	if(!disable_power_change)
+		internal_energy = max((absorbed_gasmix.temperature() * temp_factor / T0C) * oxygen_factor + internal_energy, 0)
+	for(var/obj/machinery/power/energy_accumulator/rad_collector/collector in range(15, src))
+		collector.receive_pulse(internal_energy / 10)
+	var/device_energy = internal_energy * 0.55
+	if(!disable_gas)
+		absorbed_gasmix.set_temperature(clamp(absorbed_gasmix.temperature() + device_energy / 5, TCMB, 2500))
+		absorbed_gasmix.set_toxins(absorbed_gasmix.toxins() + max(device_energy / 750, 0))
+		absorbed_gasmix.set_oxygen(absorbed_gasmix.oxygen() + max((device_energy + absorbed_gasmix.temperature() - T0C) / 325, 0))
 	env.merge(absorbed_gasmix)
 	recalculate_atmos_connectivity()
-
-	// PART 6: EXTRA BEHAVIOUR
-	emit_radiation()
-	processing_sound()
-	handle_high_power()
-	psychological_examination()
-
-	// handle the engineers that saved the engine from cascading, if there were any
-	if(get_status() < SUPERMATTER_EMERGENCY && !isnull(saviors))
-		for(var/datum/weakref/savior_ref as anything in saviors)
-			var/mob/living/savior = savior_ref.resolve()
-			if(!istype(savior)) // didn't live to tell the tale, sadly.
-				continue
-			savior.client?.give_award(/datum/award/achievement/jobs/theoretical_limits, savior)
-		LAZYNULL(saviors)
-
-	if(prob(15))
-		supermatter_pull(loc, min(internal_energy / 850, 3))//850, 1700, 2550
-	update_appearance()
-	delamination_strategy.lights(src)
-	delamination_strategy.filters(src)
-	absorption_ratio = clamp(absorption_ratio - 0.05, 0.15, 1)
+	visible_hallucination_pulse(center = src, radius = min(7, round(sqrt(internal_energy / 6))), hallucination_duration = internal_energy * 0.1, hallucination_max_duration = 20 SECONDS)
+	radiation_pulse(src, max_range = min(7, round((internal_energy / 100) ** 0.25)), threshold = clamp(internal_energy / 1600, 0, 1), chance = 100)
+	internal_energy = max(0, internal_energy - (internal_energy / 500) ** 3)
 	return TRUE
 
 // SupermatterMonitor UI for ghosts only. Inherited attack_ghost will call this.
@@ -557,9 +513,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	disable_process = SM_PROCESS_ENABLED
 
 /obj/machinery/power/supermatter_crystal/proc/force_delam()
-	SIGNAL_HANDLER
-	investigate_log("was forcefully delaminated", INVESTIGATE_ENGINE)
-	INVOKE_ASYNC(delamination_strategy, TYPE_PROC_REF(/datum/sm_delam, delaminate), src)
+	legacy_explode()
 
 /**
  * Count down, spout some messages, and then execute the delam itself.
@@ -570,79 +524,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
  * Even after countdown is already in progress.
  */
 /obj/machinery/power/supermatter_crystal/proc/count_down()
-	set waitfor = FALSE
-
-	if(final_countdown) // We're already doing it go away
-		stack_trace("[src] told to delaminate again while it's already delaminating.")
-		return
-
-	final_countdown = TRUE
-
-	notify_ghosts(
-		"[DECLENT_RU_CAP(src, NOMINATIVE)] начал процесс расслоения!",
-		source = src,
-		title = "Приближается расплавление",
-	)
-
-	var/list/count_down_messages = delamination_strategy.count_down_messages()
-
-	var/cached_emergency_channel = emergency_channel
-	radio_announce(
-		count_down_messages[1],
-		DECLENT_RU_CAP(src, NOMINATIVE),
-		cached_emergency_channel
-	)
-
-	var/delamination_countdown_time = SUPERMATTER_COUNTDOWN_TIME
-	// If a sliver was removed from the supermatter, the countdown time is significantly decreased
-	if(supermatter_sliver_removed == TRUE)
-		delamination_countdown_time = SUPERMATTER_SLIVER_REMOVED_COUNTDOWN_TIME
-		radio_announce(
-			"ВНИМАНИЕ: Расчётное время до полного расслоения кристалла значительно меньше ожидаемого. \
-				Проверьте кристалл на структурные аномалии или следы саботажа!",
-			DECLENT_RU_CAP(src, NOMINATIVE),
-			cached_emergency_channel
-		)
-
-	var/cached_explosion_point = explosion_point
-
-	for(var/i in delamination_countdown_time to 0 step -10)
-		var/message
-		var/healed = FALSE
-
-		if(damage < cached_explosion_point) // Cutting it a bit close there engineers
-			message = count_down_messages[2]
-			healed = TRUE
-		else if((i % 50) != 0 && i > 50) // A message once every 5 seconds until the final 5 seconds which count down individualy
-			sleep(1 SECONDS)
-			continue
-		else if(i > 50)
-			message = "[DisplayTimeText(i, TRUE)] [count_down_messages[3]]"
-		else
-			message = "[i * 0.1]..."
-
-		radio_announce(
-			message,
-			DECLENT_RU_CAP(src, NOMINATIVE),
-			cached_emergency_channel
-		)
-
-		if(healed)
-			final_countdown = FALSE
-
-			if(!istype(delamination_strategy, /datum/sm_delam/cascade))
-				return
-			for(var/mob/living/lucky_engi as anything in mobs_in_area_type(list(/area/station/engineering/supermatter/engine)))
-				if(isnull(lucky_engi.client))
-					continue
-				if(isanimal(lucky_engi))
-					continue
-				LAZYADD(saviors, WEAKREF(lucky_engi))
-
-			return // delam averted
-		sleep(1 SECONDS)
-
-	delamination_strategy.delaminate(src)
+	legacy_explode()
 
 // All the calculate procs should only update variables.
 // Move the actual real-world effects to [/obj/machinery/power/supermatter_crystal/process_atmos].
@@ -901,33 +783,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
  * Returns: Not used for anything, just returns true on successful set, manual and automatic. Helps admins check stuffs.
  */
 /obj/machinery/power/supermatter_crystal/proc/set_delam(priority = SM_DELAM_PRIO_NONE, manual_delam_path = SM_DELAM_STRATEGY_PURGE)
-	if(priority < delam_priority)
-		return FALSE
-	var/datum/sm_delam/new_delam = null
-
-	var/cached_delamination_strategy = delamination_strategy
-
-	if(manual_delam_path == SM_DELAM_STRATEGY_PURGE)
-		for(var/delam_path, delam_value in GLOB.sm_delam_list)
-			var/datum/sm_delam/delam = delam_value
-			if(!delam.can_select(src))
-				continue
-			if(delam == cached_delamination_strategy)
-				return FALSE
-			new_delam = delam
-			break
-		delam_priority = SM_DELAM_PRIO_NONE
-	else
-		new_delam = GLOB.sm_delam_list[manual_delam_path]
-		delam_priority = priority
-
-	if(!new_delam)
-		return FALSE
-	delamination_strategy?.on_deselect(src)
-	delamination_strategy = new_delam
-	delamination_strategy.on_select(src)
-	return TRUE
-
+	delamination_strategy = GLOB.sm_delam_list[/datum/sm_delam/explosive]
+	delam_priority = SM_DELAM_PRIO_NONE
 
 /**
  * Accumulates energy for the zap_energy_accumulation key.

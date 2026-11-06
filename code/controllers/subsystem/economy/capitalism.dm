@@ -53,19 +53,8 @@ SUBSYSTEM_DEF(capitalism)
 	return "Default:[default_status ? "Y" : "N"] | Stage:[fire_stage] | Run:[length(currentrun)]"
 
 /datum/controller/subsystem/capitalism/fire(resumed = FALSE)
-	if(!resumed)
-		fire_stage = SSCAPITALISM_STAGE_BUILD_RUN
-
-	if(fire_stage == SSCAPITALISM_STAGE_BUILD_RUN)
-		build_payment_run()
-		if(MC_TICK_CHECK)
-			return
-		fire_stage = SSCAPITALISM_STAGE_GOALS
-
-	if(fire_stage == SSCAPITALISM_STAGE_GOALS)
-		process_station_goals()
-
-	fire_stage = SSCAPITALISM_STAGE_IDLE
+	// Station goal bounties remain independent of the retired payroll system.
+	process_station_goals()
 
 /// Snapshots all accounts that should receive a salary this cycle and sums their paychecks.
 /// Also resolves the default-status transition before any money is moved, so we don't half-pay.
@@ -90,7 +79,7 @@ SUBSYSTEM_DEF(capitalism)
 
 /// Walks the current gamemode's station goals, paying out any that completed since the last fire.
 /datum/controller/subsystem/capitalism/proc/process_station_goals()
-	if(!SSticker?.mode)
+	if(!STATION_GOALS_ENABLED || !SSticker?.mode)
 		return
 
 	var/total_station_goal_bounty = 0
@@ -173,7 +162,7 @@ SUBSYSTEM_DEF(capitalism)
 	. = FALSE
 	for(var/datum/money_account/account as anything in GLOB.all_money_accounts)
 		var/job_title = account.linked_job?.title
-		if(!jobs_payment[job_title] || !account.salary_payment_active || account.suspended)
+		if(!jobs_payment[job_title] || account.suspended)
 			continue
 		var/payout = jobs_payment[job_title]
 		if(!account.credit(payout, "Начисление награды за выполнение цели.", "Терминал Бизель №[rand(111,333)]", account.owner_name))

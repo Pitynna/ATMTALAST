@@ -211,7 +211,7 @@
 /obj/structure/disposalpipe/broken{
 	dir = 4
 	},
-/obj/item/gun/projectile/automatic/smg/ppsh/rusted,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/common)
 "aY" = (
@@ -1953,7 +1953,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
-/obj/item/gun/projectile/automatic/aks74u/rusted,
+/obj/item/gun/projectile/automatic/arg,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/common)
 "hn" = (
@@ -3530,11 +3530,6 @@
 	icon_state = "yellowfull"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/engineering)
-"mJ" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/utility)
 "mK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/cable_coil{
@@ -3831,9 +3826,6 @@
 /obj/item/shard,
 /turf/simulated/floor/plating/airless,
 /area/ruin/space/USSP_gorky17/collapsed/dinning)
-"nL" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/arrival)
 "nN" = (
 /obj/structure/marker_beacon{
 	icon_state = "markerburgundy-on"
@@ -5116,9 +5108,6 @@
 	icon_state = "whitered"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/medbay)
-"sq" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/arrival)
 "ss" = (
 /obj/structure/table,
 /turf/simulated/floor/plasteel{
@@ -5431,10 +5420,6 @@
 /obj/structure/cable,
 /turf/simulated/floor/carpet/airless,
 /area/ruin/space/USSP_gorky17/collapsed/dorms)
-"tD" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "tF" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/regular,
@@ -5606,9 +5591,6 @@
 	icon_state = "red"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/common)
-"uj" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/gate)
 "uk" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -4;
@@ -6136,12 +6118,6 @@
 /obj/effect/decal/cleanable/blood/gibs/body,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/check2)
-"wd" = (
-/obj/structure/table,
-/turf/simulated/floor/plasteel{
-	icon_state = "darkpurplefull"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/rnd)
 "we" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -6191,12 +6167,6 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/ruin/space/USSP_gorky17/collapsed/angar)
-"wl" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/bridge)
 "wm" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -8;
@@ -7105,19 +7075,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/vault,
 /area/ruin/space/USSP_gorky17/collapsed/vault)
-"zA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	dir = 1
-	},
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "zB" = (
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/check2)
@@ -7726,9 +7683,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/check1)
-"BA" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/gate)
 "BB" = (
 /obj/effect/decal/cleanable/glass,
 /turf/simulated/floor/plating/airless,
@@ -8000,9 +7954,6 @@
 	icon_state = "darkpurplefull"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/rnd)
-"CU" = (
-/turf/simulated/floor/carpet/airless,
-/area/ruin/space/USSP_gorky17/collapsed/dorms)
 "CW" = (
 /obj/machinery/light/small{
 	flickering = 1
@@ -8205,10 +8156,6 @@
 	icon_state = "darkyellow"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/engineering)
-"Dz" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/gate)
 "DA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -8246,13 +8193,6 @@
 	icon_state = "red"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/check1)
-"DE" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/grille/broken,
-/turf/simulated/floor/plating/airless,
-/area/ruin/space/USSP_gorky17/collapsed/dinning)
 "DF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -9278,10 +9218,6 @@
 	icon_state = "darkpurplefull"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/rnd)
-"GX" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "GZ" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -9546,22 +9482,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating/airless,
 /area/ruin/space/USSP_gorky17/collapsed/medbay)
-"Ij" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	dir = 1
-	},
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "Il" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/unary/outlet_injector/on,
@@ -9819,7 +9739,6 @@
 	req_access = list(123)
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/aks74u,
 /obj/item/clothing/gloves/combat,
 /turf/simulated/floor/plasteel{
 	dir = 1
@@ -10279,8 +10198,7 @@
 	name = "Gorky17 ammunition locker";
 	req_access = list(123)
 	},
-/obj/item/ammo_box/magazine/aks74u,
-/obj/item/gun/projectile/automatic/aks74u/rusted,
+/obj/item/gun/projectile/automatic/arg,
 /obj/item/clothing/gloves/combat,
 /turf/simulated/floor/plasteel{
 	dir = 1
@@ -10358,12 +10276,6 @@
 "Lb" = (
 /turf/simulated/floor/plating/airless,
 /area/ruin/space/USSP_gorky17/collapsed/dinning)
-"Lc" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	icon_state = "neutralfull"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/arrival)
 "Le" = (
 /obj/effect/decal/cleanable/dust,
 /turf/simulated/floor/plasteel{
@@ -10386,11 +10298,6 @@
 	icon_state = "white"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/medbay)
-"Ll" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/gate)
 "Ln" = (
 /obj/structure/door_assembly/door_assembly_sec,
 /turf/simulated/floor/plating,
@@ -10610,12 +10517,6 @@
 	icon_state = "dark"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/gate)
-"Md" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/engineering)
 "Mf" = (
 /obj/structure/table/reinforced,
 /obj/machinery/reagentgrinder,
@@ -10629,9 +10530,6 @@
 /obj/structure/lattice,
 /turf/space,
 /area/template_noop)
-"Mh" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/engineering)
 "Mi" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -4;
@@ -11486,12 +11384,6 @@
 	icon_state = "dark"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/angar)
-"Pb" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	dir = 1
-	},
-/area/ruin/space/USSP_gorky17/collapsed/check2)
 "Pc" = (
 /obj/structure/cable,
 /turf/simulated/floor/plating/airless,
@@ -11636,13 +11528,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/check1)
-"PE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "red"
-	},
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "PH" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -11663,13 +11548,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/engineering)
-"PM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "PQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11901,9 +11779,6 @@
 /obj/item/stack/ore/glass/basalt,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/ruin/space/USSP_gorky17/collapsed/asteroids)
-"QF" = (
-/turf/simulated/floor/plating/airless,
-/area/ruin/space/USSP_gorky17/collapsed/dorms)
 "QG" = (
 /obj/structure/marker_beacon{
 	icon_state = "markerjade-on"
@@ -12301,22 +12176,6 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/ruin/space/USSP_gorky17/collapsed/check1)
-"Sd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	dir = 1
-	},
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "Sf" = (
 /obj/item/stack/sheet/metal{
 	amount = 2
@@ -12637,13 +12496,6 @@
 /obj/effect/mapping_helpers/turfs/damage,
 /turf/simulated/floor/plating/airless,
 /area/ruin/space/USSP_gorky17/collapsed/dinning)
-"TC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "TE" = (
 /obj/item/twohanded/required/kirbyplants,
 /obj/structure/table_frame/wood,
@@ -12800,14 +12652,6 @@
 "Up" = (
 /turf/simulated/floor/plating/damaged,
 /area/ruin/space/USSP_gorky17/collapsed/check2)
-"Ur" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "Ut" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -13043,7 +12887,7 @@
 "Vr" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/gun/projectile/automatic/aks74u/rusted,
+/obj/item/gun/projectile/automatic/arg,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -13221,7 +13065,7 @@
 "VS" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/gun/projectile/automatic/smg/ppsh/rusted,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
@@ -13774,9 +13618,6 @@
 	icon_state = "whitered"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/medbay)
-"Yu" = (
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/common)
 "Yv" = (
 /obj/structure/table,
 /turf/simulated/floor/plasteel{
@@ -13914,10 +13755,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating/damaged,
 /area/ruin/space/USSP_gorky17/collapsed/common)
-"YY" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/engineering)
 "Za" = (
 /obj/machinery/light_construct{
 	dir = 4
@@ -14144,10 +13981,6 @@
 	icon_state = "red"
 	},
 /area/ruin/space/USSP_gorky17/collapsed/common)
-"ZR" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ruin/space/USSP_gorky17/collapsed/medbay)
 "ZS" = (
 /obj/structure/dresser,
 /turf/simulated/floor/wood/airless,
@@ -28217,7 +28050,7 @@ tz
 YO
 hL
 ph
-QF
+Jb
 KQ
 Zv
 sv
@@ -28418,8 +28251,8 @@ nX
 zU
 VB
 TR
-QF
-QF
+Jb
+Jb
 Ex
 Wl
 sv
@@ -28619,10 +28452,10 @@ BU
 nX
 Kl
 YO
-QF
+Jb
 lw
 KQ
-QF
+Jb
 AO
 KQ
 ph
@@ -28822,8 +28655,8 @@ We
 ZJ
 Cs
 OO
-QF
-QF
+Jb
+Jb
 KQ
 Bb
 Bb
@@ -29018,13 +28851,13 @@ gK
 xE
 rF
 kL
-QF
+Jb
 ph
-QF
-QF
-QF
+Jb
+Jb
+Jb
 KQ
-QF
+Jb
 YN
 GL
 KQ
@@ -29220,16 +29053,16 @@ BU
 Dd
 ns
 gB
-QF
+Jb
 VH
 gx
 GL
 gP
-QF
-QF
+Jb
+Jb
 fX
 Yl
-QF
+Jb
 Ce
 gK
 wZ
@@ -29425,13 +29258,13 @@ fx
 ZS
 BU
 YQ
-QF
+Jb
 Sf
-QF
-QF
-QF
+Jb
+Jb
+Jb
 KQ
-QF
+Jb
 BG
 BU
 wZ
@@ -29627,8 +29460,8 @@ BU
 gK
 ph
 SY
-QF
-QF
+Jb
+Jb
 OV
 ph
 ph
@@ -29828,12 +29661,12 @@ Ow
 ZX
 lw
 ph
-QF
+Jb
 AO
 Sf
 fY
 ph
-QF
+Jb
 be
 AN
 nS
@@ -30027,15 +29860,15 @@ EH
 gK
 na
 ns
-QF
+Jb
 AO
 Xc
 kL
 zU
 in
-QF
+Jb
 gh
-QF
+Jb
 Yl
 AO
 NB
@@ -30239,7 +30072,7 @@ Hq
 gK
 TE
 zU
-CU
+zU
 ax
 BU
 bF
@@ -30834,7 +30667,7 @@ ZT
 OP
 sW
 pO
-zA
+vJ
 UH
 ml
 wB
@@ -30843,8 +30676,8 @@ Sq
 Td
 vP
 Ar
-Lc
-Lc
+DX
+DX
 sK
 Ti
 Bg
@@ -31049,13 +30882,13 @@ DX
 QC
 hy
 ja
-Lc
+DX
 iZ
-Lc
-Lc
+DX
+DX
 VM
 Yo
-Lc
+DX
 yZ
 vP
 wZ
@@ -31257,7 +31090,7 @@ Rr
 rj
 Ut
 vw
-nL
+gS
 pb
 KA
 wZ
@@ -31439,7 +31272,7 @@ wV
 nA
 ov
 Ku
-GX
+rT
 py
 lV
 Rg
@@ -31458,8 +31291,8 @@ GC
 hy
 hy
 ez
-nL
-nL
+gS
+gS
 Tz
 KA
 wZ
@@ -31641,7 +31474,7 @@ IX
 hH
 Zj
 Ku
-GX
+rT
 dQ
 mn
 cG
@@ -31649,19 +31482,19 @@ cG
 cG
 mn
 uP
-Lc
-Lc
+DX
+DX
 ez
 dt
 eY
 Gy
 dA
 QC
-nL
+gS
 QO
 Dg
 DN
-nL
+gS
 Zo
 vP
 wZ
@@ -32059,8 +31892,8 @@ KC
 jX
 yd
 UI
-sq
-Lc
+gS
+DX
 lu
 oO
 gL
@@ -32270,7 +32103,7 @@ VE
 Qc
 Hy
 FT
-YY
+PJ
 uL
 oO
 oO
@@ -32446,11 +32279,11 @@ lT
 xy
 ic
 eM
-ZR
+eJ
 os
 Zf
-tD
-Sd
+rT
+AP
 mn
 Qs
 Eq
@@ -32469,7 +32302,7 @@ wv
 GK
 mR
 xW
-YY
+PJ
 vC
 kj
 ey
@@ -32647,8 +32480,8 @@ xy
 rD
 ym
 ic
-ZR
-ZR
+eJ
+eJ
 mN
 Ku
 ml
@@ -32674,7 +32507,7 @@ xW
 Wh
 bs
 bs
-Mh
+qY
 oO
 re
 nH
@@ -32854,7 +32687,7 @@ LF
 GQ
 Ku
 eP
-Sd
+AP
 mn
 OW
 GE
@@ -32873,7 +32706,7 @@ jr
 ET
 nl
 No
-Mh
+qY
 SQ
 bk
 wS
@@ -33253,7 +33086,7 @@ vy
 lT
 RB
 Pl
-ZR
+eJ
 TK
 og
 wP
@@ -33465,7 +33298,7 @@ IB
 Vp
 BP
 ei
-PM
+MY
 hG
 oM
 ei
@@ -33658,7 +33491,7 @@ ic
 xy
 vA
 iz
-ZR
+eJ
 tI
 OC
 EX
@@ -33668,13 +33501,13 @@ zr
 fm
 IO
 Bp
-GX
+rT
 Jx
 gi
 gi
 gi
 to
-GX
+rT
 EX
 rd
 Pr
@@ -33865,7 +33698,7 @@ VP
 wK
 eP
 AI
-GX
+rT
 ri
 ZH
 uv
@@ -33875,9 +33708,9 @@ eA
 cE
 Jw
 GD
-GX
-GX
-GX
+rT
+rT
+rT
 AP
 Pr
 ET
@@ -34057,7 +33890,7 @@ cn
 eX
 xz
 eJ
-ZR
+eJ
 VP
 xt
 Lk
@@ -34080,7 +33913,7 @@ Jw
 GD
 HJ
 WD
-Sd
+AP
 Pr
 oO
 uL
@@ -34294,7 +34127,7 @@ Ra
 Wo
 tW
 ld
-YY
+PJ
 Fm
 ET
 oO
@@ -34483,21 +34316,21 @@ Mn
 wh
 nk
 Ic
-PE
+cR
 OI
 WT
 su
 ET
 ka
 uK
-Md
-Md
+ld
+ld
 WA
-YY
+PJ
 Tp
 XP
 IP
-Mh
+qY
 uH
 ET
 wZ
@@ -34661,7 +34494,7 @@ fB
 fB
 ts
 kI
-BA
+qL
 tp
 ZK
 fQ
@@ -34691,7 +34524,7 @@ jF
 ER
 ET
 gU
-YY
+PJ
 Eu
 bM
 es
@@ -34699,7 +34532,7 @@ IT
 JF
 ku
 Op
-Mh
+qY
 PT
 gH
 fB
@@ -34863,7 +34696,7 @@ fB
 Np
 BX
 kI
-BA
+qL
 cu
 lE
 jq
@@ -35085,7 +34918,7 @@ xM
 wX
 bo
 Oq
-wl
+bo
 Vu
 Dq
 cE
@@ -35095,15 +34928,15 @@ EX
 ml
 oZ
 Nh
-Md
+ld
 OT
-Md
+ld
 vk
 jo
 mp
 sF
 Op
-Md
+ld
 Gz
 gH
 fB
@@ -35269,7 +35102,7 @@ BX
 kI
 qU
 PV
-Dz
+sN
 ts
 BX
 BX
@@ -35291,7 +35124,7 @@ BQ
 Jg
 hN
 Ic
-PE
+cR
 Ju
 QN
 Tq
@@ -35303,8 +35136,8 @@ XP
 Ft
 hg
 Lq
-YY
-YY
+PJ
+PJ
 qY
 gV
 ET
@@ -35462,10 +35295,10 @@ ts
 Ww
 ts
 yo
-Dz
-Dz
-Dz
-Dz
+sN
+sN
+sN
+sN
 km
 BX
 ts
@@ -35478,7 +35311,7 @@ YU
 zm
 BX
 RD
-Pb
+vt
 kk
 NC
 Su
@@ -35503,7 +35336,7 @@ wE
 Lx
 Dv
 Wt
-YY
+PJ
 Zm
 rZ
 NE
@@ -35664,7 +35497,7 @@ Ww
 Ww
 ts
 ya
-Dz
+sN
 lA
 sl
 HU
@@ -35677,7 +35510,7 @@ cO
 eW
 yY
 oN
-Ll
+Jt
 kI
 YT
 Eb
@@ -35871,14 +35704,14 @@ ts
 ts
 UB
 rQ
-Dz
+sN
 Wr
 aY
 Jn
 Mc
 ZG
 CK
-Dz
+sN
 VC
 ou
 Up
@@ -36081,7 +35914,7 @@ Wj
 hS
 RM
 wI
-Dz
+sN
 ou
 yW
 pM
@@ -36285,7 +36118,7 @@ Ej
 kT
 ih
 ou
-Pb
+vt
 WZ
 gJ
 Sk
@@ -36303,7 +36136,7 @@ oq
 Ct
 wz
 em
-GX
+rT
 SH
 SH
 dO
@@ -36506,7 +36339,7 @@ FD
 ml
 ik
 Ip
-Yu
+eP
 SH
 uT
 kv
@@ -36908,7 +36741,7 @@ Bc
 zH
 FD
 LO
-Sd
+AP
 wJ
 me
 vg
@@ -37110,7 +36943,7 @@ CW
 oq
 Ct
 oC
-Sd
+AP
 YX
 tu
 tu
@@ -37285,14 +37118,14 @@ jD
 bD
 qy
 xX
-Dz
+sN
 xB
 Mc
 Xl
-Dz
+sN
 Qq
-uj
-Dz
+qL
+sN
 KH
 fA
 ru
@@ -37311,8 +37144,8 @@ uV
 Xq
 oq
 Ct
-GX
-Sd
+rT
+AP
 xR
 tu
 rr
@@ -37491,11 +37324,11 @@ cU
 Di
 mf
 Dp
-Dz
+sN
 Fl
 xX
 md
-Dz
+sN
 ib
 Fd
 RT
@@ -37686,7 +37519,7 @@ BX
 of
 NG
 nO
-Dz
+sN
 id
 Ak
 Wj
@@ -37717,7 +37550,7 @@ hx
 Ct
 xv
 ml
-GX
+rT
 jG
 XJ
 sM
@@ -37886,10 +37719,10 @@ ts
 Ww
 BX
 ya
-Dz
-Dz
+sN
+sN
 cB
-Dz
+sN
 YI
 ts
 BX
@@ -38097,7 +37930,7 @@ BX
 kI
 ts
 PV
-Dz
+sN
 BX
 ts
 ts
@@ -38119,9 +37952,9 @@ dT
 YP
 Bv
 hx
-GX
+rT
 gX
-GX
+rT
 Cb
 OY
 Gb
@@ -38309,7 +38142,7 @@ uN
 lK
 eh
 PY
-GX
+rT
 wr
 kf
 sk
@@ -38321,7 +38154,7 @@ GR
 Ac
 gn
 Nl
-GX
+rT
 hz
 ny
 ow
@@ -38502,14 +38335,14 @@ kI
 fo
 fG
 qL
-Dz
+sN
 qL
 Vk
 hv
 ts
 Ec
 XU
-Yu
+eP
 vQ
 Zb
 CL
@@ -38523,7 +38356,7 @@ gw
 ne
 GU
 Nl
-GX
+rT
 LZ
 Vp
 bO
@@ -38716,7 +38549,7 @@ ml
 zS
 mo
 bi
-wd
+gn
 rv
 HI
 tJ
@@ -38728,7 +38561,7 @@ Nl
 eP
 Jx
 eP
-DE
+ow
 ks
 vx
 Lb
@@ -38913,7 +38746,7 @@ ts
 ts
 gr
 gr
-PE
+cR
 ml
 wJ
 oa
@@ -38928,8 +38761,8 @@ yc
 tO
 Ul
 td
-Ij
-GX
+AP
+rT
 Iy
 Cq
 Lb
@@ -39533,7 +39366,7 @@ hx
 hx
 cb
 NS
-GX
+rT
 Rf
 EX
 jG
@@ -39730,7 +39563,7 @@ aB
 no
 Mo
 At
-GX
+rT
 XA
 Um
 sn
@@ -39923,9 +39756,9 @@ mq
 Zz
 Zz
 xu
-GX
+rT
 rR
-TC
+MY
 Vp
 up
 hl
@@ -39936,7 +39769,7 @@ sY
 Od
 Ab
 MY
-Ur
+ei
 ei
 EL
 Ct
@@ -40127,11 +39960,11 @@ bf
 ng
 Vp
 gT
-GX
+rT
 sS
 JC
 zD
-zA
+vJ
 eP
 zD
 eP
@@ -41544,9 +41377,9 @@ il
 aF
 fw
 Wz
-mJ
-mJ
-mJ
+ga
+ga
+ga
 sD
 NH
 NH

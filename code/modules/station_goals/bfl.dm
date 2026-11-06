@@ -1,5 +1,3 @@
-#define COUNT_PLASMA_QUESTS 3
-
 /datum/station_goal/bfl
 	name = "BFL Mining laser"
 
@@ -27,11 +25,7 @@
 	P.special_enabled = TRUE
 	supply_list.Add(P)
 
-	if(length(SScargo_quests.plasma_quests) > COUNT_PLASMA_QUESTS)
-		return
-
-	for(var/I = 1 to COUNT_PLASMA_QUESTS)
-		SScargo_quests.create_new_quest(pick(SScargo_quests.plasma_departaments))
+	// Use normal cargo exports and supply points; cargo contracts are retired.
 
 /datum/station_goal/bfl/check_completion()
 	if(..())
@@ -40,14 +34,6 @@
 	if(goal_pack.times_ordered >= 1)
 		return TRUE
 	return FALSE
-
-/datum/station_goal/bfl/Destroy()
-	. = ..()
-	if(locate(/datum/station_goal/bfl) in SSticker.mode.station_goals)
-		return
-	SScargo_quests.remove_bfl_quests(COUNT_PLASMA_QUESTS)
-
-#undef COUNT_PLASMA_QUESTS
 
 ////////////
 //Building//
@@ -301,7 +287,7 @@
 	var/turf/turf_under = get_turf(src)
 	if(locate(/obj/bfl_crack) in turf_under)
 		ore_type = PLASMA
-	else if(istype(turf_under, /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface))
+	else if(istype(turf_under, /turf/simulated/floor/plating/asteroid/airless))
 		ore_type = SAND
 	else
 		ore_type = NOTHING

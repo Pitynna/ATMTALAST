@@ -754,7 +754,7 @@ GLOBAL_VAR_INIT(off_mob_spawns, FALSE)
 	icon_state = "mouse_brown_splat"
 
 /obj/effect/mob_spawn/ratdead
-	mob_type = /mob/living/simple_animal/mouse/rat
+	mob_type = /mob/living/simple_animal/mouse
 	name = "Dead rat"
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "rat_white_splat"

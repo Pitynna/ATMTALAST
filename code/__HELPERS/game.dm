@@ -267,7 +267,7 @@
  * Arguments:
  * * target_turf - The turf to check pressure on
  */
-/proc/lavaland_equipment_pressure_check(turf/target_turf)
+/proc/mining_equipment_pressure_check(turf/target_turf)
 	. = FALSE
 	if(!istype(target_turf))
 		return
@@ -275,7 +275,7 @@
 	if(!istype(environment))
 		return
 	var/pressure = environment.return_pressure()
-	if(pressure <= LAVALAND_EQUIPMENT_EFFECT_PRESSURE)
+	if(pressure <= MINING_EQUIPMENT_EFFECT_PRESSURE)
 		. = TRUE
 
 /**

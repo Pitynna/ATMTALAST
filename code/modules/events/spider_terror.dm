@@ -38,13 +38,13 @@
 			spider_type = TERROR_DEFILER
 			spawncount = 2
 		if(2)
-			spider_type = TERROR_PRINCESS
+			spider_type = TERROR_DEFILER
 			spawncount = 2
 		if(3)          //midpop spawns
 			spider_type = TERROR_DEFILER
 			spawncount = 3
 		if(4)
-			spider_type = TERROR_PRINCESS
+			spider_type = TERROR_DEFILER
 			spawncount = 3
 		if(5)          //highpop spawns
 			spider_type = TERROR_QUEEN

@@ -935,7 +935,7 @@ GAME_VERB(/mob/dead/observer, respawn, "Стать животным", VERB_CATEG
 		remove_from_respawnable_list()
 		client.time_joined_as_mouse = world.time
 		var/obj/vent_found = pick(found_vents)
-		var/choosen_type = prob(90) ? /mob/living/simple_animal/mouse : /mob/living/simple_animal/mouse/rat
+		var/choosen_type = /mob/living/simple_animal/mouse
 		var/mob/living/simple_animal/mouse/host = new choosen_type(vent_found.loc)
 		host.possess_by_player(ckey)
 		to_chat(host, span_notice("You are now a mouse. Try to avoid interaction with players, and do not give hints away that you are more than a simple rodent."))

@@ -901,10 +901,15 @@ ADMIN_VERB(show_tip, R_EVENT, "Show Tip", "Sends a tip to all players.", ADMIN_C
 	log_admin("[key_name(user)] sent \"[input]\" as the Tip of the Round.")
 	BLACKBOX_LOG_ADMIN_VERB("Show Tip")
 
+#if STATION_GOALS_ENABLED
 ADMIN_VERB(modify_goals, R_EVENT, "Modify Goals", "Modify the station goals for the shift.", ADMIN_CATEGORY_EVENTS)
 	user.holder.modify_goals()
+#endif
 
 /datum/admins/proc/modify_goals()
+	if(!STATION_GOALS_ENABLED)
+		return
+
 	if(!SSticker || !SSticker.mode)
 		to_chat(usr, span_warning("This verb can only be used if the round has started."), confidential = TRUE)
 		return

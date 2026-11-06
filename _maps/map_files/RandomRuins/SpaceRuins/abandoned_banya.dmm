@@ -1,9 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"as" = (
-/obj/effect/decal/cleanable/dust,
-/mob/living/simple_animal/moth,
-/turf/simulated/floor/wood,
-/area/ruin/ussp_space_banya)
 "aw" = (
 /obj/item/ammo_casing/shotgun/buckshot,
 /turf/simulated/floor/wood,
@@ -352,10 +347,6 @@
 	},
 /obj/effect/decal/ants,
 /turf/simulated/floor/wood,
-/area/ruin/ussp_space_banya)
-"pO" = (
-/mob/living/simple_animal/frog/scream,
-/turf/simulated/floor/indestructible/beach/water/deep,
 /area/ruin/ussp_space_banya)
 "pY" = (
 /obj/structure/sign/poster/contraband/communist_state{
@@ -1305,7 +1296,7 @@ nD
 Dd
 Dd
 Md
-pO
+Md
 Dd
 Dd
 nD
@@ -1729,7 +1720,7 @@ mh
 FV
 oC
 Dd
-as
+tQ
 cq
 OH
 Dd

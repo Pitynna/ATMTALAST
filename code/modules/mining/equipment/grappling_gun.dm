@@ -49,7 +49,7 @@
 		return NONE
 	if(target == user || !hooked)
 		return NONE
-	if(!lavaland_equipment_pressure_check(get_turf(user)) && !(emagged))
+	if(!mining_equipment_pressure_check(get_turf(user)) && !(emagged))
 		user.balloon_alert(user, "неподходящее давление!")
 		return ITEM_INTERACT_BLOCKING
 	if(get_dist(user, target) > MAXIMUM_RANGE)

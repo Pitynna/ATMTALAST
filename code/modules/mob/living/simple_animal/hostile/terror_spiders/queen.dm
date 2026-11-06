@@ -270,7 +270,7 @@
 		show_egg_timer()
 		return
 	var/list/eggtypes = ListAvailableEggTypes()
-	var/list/eggtypes_uncapped = list(TS_DESC_KNIGHT, TS_DESC_LURKER, TS_DESC_HEALER, TS_DESC_REAPER, TS_DESC_BUILDER)
+	var/list/eggtypes_uncapped = list(TS_DESC_KNIGHT, TS_DESC_LURKER, TS_DESC_HEALER)
 
 	var/eggtype = tgui_input_list(usr, "Какой тип яиц?", "", eggtypes)
 	if(canlay < 1)
@@ -307,10 +307,6 @@
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/lurker, numlings)
 		if(TS_DESC_HEALER)
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/healer, numlings)
-		if(TS_DESC_REAPER)
-			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/reaper, numlings)
-		if(TS_DESC_BUILDER)
-			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/builder, numlings)
 		if(TS_DESC_WIDOW)
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/widow, numlings)
 		if(TS_DESC_GUARDIAN)
@@ -321,8 +317,6 @@
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/mother, numlings)
 		if(TS_DESC_DEFILER)
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/defiler, numlings)
-		if(TS_DESC_PRINCESS)
-			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/queen/princess, numlings)
 		else
 			to_chat(src, span_danger("Неизвестный тип яйца."))
 
@@ -337,9 +331,9 @@
 	if(MinutesAlive() >= 25)
 		var/list/spider_array = CountSpidersDetailed(TRUE, list(/mob/living/simple_animal/hostile/poison/terror_spider/mother, /mob/living/simple_animal/hostile/poison/terror_spider/defiler, /mob/living/simple_animal/hostile/poison/terror_spider/queen/princess))
 		if(spider_array["all"] == 0)
-			return list(TS_DESC_DEFILER, TS_DESC_PRINCESS, TS_DESC_MOTHER)
+			return list(TS_DESC_DEFILER, TS_DESC_MOTHER)
 
-	var/list/valid_types = list(TS_DESC_KNIGHT, TS_DESC_LURKER, TS_DESC_HEALER, TS_DESC_REAPER, TS_DESC_BUILDER)
+	var/list/valid_types = list(TS_DESC_KNIGHT, TS_DESC_LURKER, TS_DESC_HEALER)
 	var/list/spider_array = CountSpidersDetailed(FALSE, list(/mob/living/simple_animal/hostile/poison/terror_spider/destroyer, /mob/living/simple_animal/hostile/poison/terror_spider/guardian, /mob/living/simple_animal/hostile/poison/terror_spider/widow))
 	if(spider_array[/mob/living/simple_animal/hostile/poison/terror_spider/destroyer] < 3)
 		valid_types += TS_DESC_DESTROYER

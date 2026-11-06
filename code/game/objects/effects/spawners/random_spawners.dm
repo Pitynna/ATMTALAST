@@ -171,20 +171,13 @@
 		/mob/living/simple_animal/mouse = 1,
 		/mob/living/simple_animal/mouse/white = 1,
 		/mob/living/simple_animal/mouse/brown = 1,
-		/mob/living/simple_animal/mouse/rat = 1,
-		/mob/living/simple_animal/mouse/rat/white = 1,
-		/mob/living/simple_animal/mouse/rat/irish = 1,
 		/mob/living/basic/cockroach = 3,
 	)
 
 /obj/effect/spawner/random_spawners/rat
 	name = "random color rat"
 	icon_state = "rat"
-	result = list(
-		/mob/living/simple_animal/mouse/rat = 1,
-		/mob/living/simple_animal/mouse/rat/white = 1,
-		/mob/living/simple_animal/mouse/rat/irish = 1,
-	)
+	result = list(/mob/living/simple_animal/mouse = 1, /mob/living/simple_animal/mouse/brown = 1, /mob/living/simple_animal/mouse/white = 1)
 
 /obj/effect/spawner/random_spawners/crate_spawner // for ruins
 	name = "lootcrate spawner"
@@ -375,7 +368,7 @@
 		/obj/item/gun/projectile/automatic/smg/c20r/rusted = 1,
 		/obj/item/gun/projectile/automatic/m90/rusted = 1,
 		/obj/item/melee/energy/sword/saber = 1,
-		/obj/item/gun/energy/kinetic_accelerator/crossbow/old = 1,
+		/obj/item/gun/energy/gun = 1,
 		/obj/item/gun/projectile/revolver = 1,
 		/obj/item/clothing/gloves/color/yellow/power = 1,
 		/obj/item/bee_briefcase = 1,
@@ -411,21 +404,6 @@
 	result = list(
 		/obj/spacepod/syndi = 1,
 		/obj/spacepod/syndi/unlocked = 1,
-	)
-
-//random lavaland loot
-/obj/effect/spawner/random_spawners/lavaland_random_loot //terraria fishing vibes
-	name = "33pc random lavaland minor loot"
-	result = list(
-		/datum/nothing = 40, //40-20
-		/obj/item/stack/sheet/sinew/five = 4,
-		/obj/item/stack/sheet/animalhide/goliath_hide/five = 2,
-		/obj/item/stack/sheet/animalhide/ashdrake = 1,
-		/obj/item/stack/sheet/animalhide/weaver_chitin/five = 3,
-		/obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit = 3,
-		/obj/item/kitchen/knife/combat/survival/bone = 1,
-		/obj/item/gem/random = 5,
-		/obj/item/clothing/accessory/necklace/gem = 1,
 	)
 
 /obj/effect/spawner/random_spawners/forty_pc_skull

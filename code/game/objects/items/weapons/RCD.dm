@@ -48,7 +48,7 @@
 	/// A list of access numbers which have been checked off by the user in the UI.
 	var/list/selected_accesses = list()
 	/// List of areas where we can't deconstruct stuff
-	var/static/list/areas_blacklist = list(/area/lavaland/surface/outdoors/necropolis)
+	var/static/list/areas_blacklist = list()
 	/// An associative list of airlock type paths as keys, and their names as values.
 	var/static/list/rcd_door_types = list()
 

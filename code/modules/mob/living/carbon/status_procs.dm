@@ -1,6 +1,13 @@
 /mob/living/carbon/proc/IsStamcrited()
 	return HAS_TRAIT_FROM(src, TRAIT_INCAPACITATED, STAMINA_TRAIT)
 
+// Legacy player combat has no stamina resource. Keep these APIs for content compatibility.
+/mob/living/carbon/adjustStaminaLoss(amount = 0, updating_health = TRUE, blocked = 0, forced = FALSE, used_weapon = null)
+	return STATUS_UPDATE_NONE
+
+/mob/living/carbon/setStaminaLoss(amount, updating_health = TRUE)
+	return STATUS_UPDATE_NONE
+
 /mob/living/carbon/proc/enter_stamcrit()
 	if(IsStamcrited()) //Already in stamcrit
 		return

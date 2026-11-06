@@ -6,7 +6,6 @@ import {
   Input,
   LabeledList,
   Section,
-  Slider,
   Stack,
   Table,
 } from 'tgui-core/components';
@@ -30,8 +29,6 @@ type Account = {
   suspended: boolean;
   money: number;
   transactions: Transaction[];
-  salary_modifier?: number;
-  salary_modifier_uid?: string;
 };
 
 export type Transaction = {
@@ -247,20 +244,7 @@ const DetailedAccountInfo = (_properties) => {
     money,
     suspended,
     transactions,
-    salary_modifier,
-    salary_modifier_uid,
   } = data;
-
-  const isModified = salary_modifier !== undefined && salary_modifier !== 0;
-  const [selectedValue, setSelectedValue] = useState<number>(
-    salary_modifier || 0,
-  );
-  const color =
-    (salary_modifier || 0) > 0
-      ? 'good'
-      : (salary_modifier || 0) < 0
-        ? 'bad'
-        : 'transparent';
 
   return (
     <Stack fill vertical>
@@ -294,69 +278,7 @@ const DetailedAccountInfo = (_properties) => {
                 {suspended ? 'Unsuspend' : 'Suspend'}
               </Button>
             </LabeledList.Item>
-            <LabeledList.Item label="Корректировка зарплаты">
-              <Box>
-                Введите значение процента выплаты заработной платы (диапазон: 1%
-                … 200%). 0 означает, что зарплата не будет выплачиваться вовсе.
-              </Box>
-              <Stack>
-                <Stack.Item grow maxWidth="50%">
-                  <Slider
-                    value={selectedValue}
-                    minValue={0}
-                    maxValue={200}
-                    step={1}
-                    width="100%"
-                    onChange={(e, value) => setSelectedValue(value)}
-                  />
-                </Stack.Item>
-                <Stack.Item>
-                  <Button
-                    icon="save"
-                    color="good"
-                    onClick={() =>
-                      act('set_salary_modifier', {
-                        modifier: selectedValue / 100,
-                        salary_modifier_uid: salary_modifier_uid,
-                      })
-                    }
-                  >
-                    Применить
-                  </Button>
-                </Stack.Item>
-              </Stack>
 
-              {isModified && (
-                <Box mt={0.5} fontSize="0.9rem">
-                  <Icon name="info-circle" color={color} />{' '}
-                  <Box color={color} inline>
-                    Текущий модификатор: {salary_modifier > 0 ? '+' : ''}
-                    {salary_modifier}%
-                  </Box>
-                  <Button
-                    ml={1}
-                    icon="undo"
-                    color="transparent"
-                    fontSize="0.8rem"
-                    onClick={() => {
-                      setSelectedValue(0);
-                      act('set_salary_modifier', {
-                        modifier: 0,
-                        owner_name: owner_name,
-                        salary_modifier_uid: salary_modifier_uid,
-                      });
-                    }}
-                  >
-                    Сбросить
-                  </Button>
-                </Box>
-              )}
-              <Box className="text-muted" mt={0.5} fontSize="11px">
-                <Icon name="info-circle" mr={0.5} />
-                Важно: Изменения будут применены автоматически со следующего
-                расчётного периода.
-              </Box>
-            </LabeledList.Item>
           </LabeledList>
         </Section>
       </Stack.Item>

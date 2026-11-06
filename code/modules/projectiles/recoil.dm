@@ -42,18 +42,7 @@ GLOBAL_DATUM_INIT(mob_hit_recoil, /datum/gun_recoil, GUN_RECOIL_LOW)
 
 /// animate recoil for gun
 /obj/item/gun/proc/do_recoil(mob/living/user, atom/target)
-	if(!recoil || !recoil.strength)
-		return
-	if(HAS_TRAIT(user, TRAIT_USER_SCOPED))
-		return // sights and recoil create visual bugs, disable recoil if we in sight mode.
-	if(HAS_TRAIT(user, TRAIT_BADASS))
-		return
-	if(recoil.knockback_dwrfs && HAS_TRAIT(user, TRAIT_DWARF))
-		do_knockback_dworfs(user, target)
-		return
-	var/shot_angle = get_angle(target, user)
-	var/rand_angle = (rand() - 0.5) * recoil.angle + shot_angle
-	recoil_camera(user, recoil.strength, recoil.in_duration, recoil.back_duration, rand_angle)
+	return
 
 /obj/item/gun/proc/do_knockback_dworfs(mob/living/user, atom/target)
 	var/knockback_dir = get_dir(target, user)
@@ -77,14 +66,5 @@ GLOBAL_DATUM_INIT(mob_hit_recoil, /datum/gun_recoil, GUN_RECOIL_LOW)
 	user.Knockdown(1 SECONDS)
 
 /proc/recoil_camera(mob/user, strength, duration, backtime_duration, angle)
-	if(!user || !istype(user) || !user.client)
-		return
-	var/client/sufferer = user.client
-	strength *= ICON_SIZE_ALL
-	var/oldx = sufferer.pixel_x
-	var/oldy = sufferer.pixel_y
-	//get pixels to move the camera in an angle
-	var/mpx = sin(angle) * strength
-	var/mpy = cos(angle) * strength
-	animate(sufferer, pixel_x = oldx + mpx, pixel_y = oldy + mpy, time = duration, flags = ANIMATION_RELATIVE)
-	animate(pixel_x = oldx, pixel_y = oldy, time = backtime_duration, easing = BACK_EASING)
+	return
+

@@ -1187,16 +1187,10 @@
 		/obj/item/stack/ore,
 		/obj/item/reagent_containers/applicator,
 		/obj/item/reagent_containers/food/snacks/grown,
-		/obj/item/reagent_containers/food/snacks/bait,
-		/obj/item/reagent_containers/food/snacks/charred_krill,
-		/obj/item/reagent_containers/food/snacks/lavaland,
 		/obj/item/whetstone,
-		/obj/item/conductive_organ,
 		/obj/item/stack/sheet/cartilage_plate,
 		/obj/item/stack/sheet/razor_sharp_teeth,
-		/obj/item/circular_saw_blade,
 		/obj/item/t_scanner/adv_mining_scanner/bleary_eye,
-		/obj/item/acid_bladder,
 	)
 	cant_hold = list(/obj/item/pickaxe/drill)
 

@@ -147,16 +147,6 @@
 		qdel(src)
 		return FALSE
 
-	if(ismegafauna(M))
-		var/creator_string = ""
-		var/obj_name = creation_obj_data[2]
-		if(creation_mob_ckey)
-			creator_string = " created by [key_name_admin(GLOB.directory[creation_mob_ckey])][obj_name ? " using \a [obj_name]" : ""]"
-		else if(obj_name)
-			creator_string = " created by \a [obj_name]"
-		message_admins("[M] has used a portal at [ADMIN_VERBOSEJMP(src)][creator_string].")
-		investigate_log("[M] has used a portal, [creator_string].", INVESTIGATE_TELEPORTATION)
-
 	if(prob(failchance))
 		var/list/target_z = levels_by_trait(SPAWN_RUINS)
 		target_z -= M.z

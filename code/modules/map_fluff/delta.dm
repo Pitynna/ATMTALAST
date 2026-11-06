@@ -5,7 +5,6 @@ Remapped by ThaumicNik, TrashDoxx, J4.BA, BeepBoop, mr_g, IceGreen, AlexRavenidz
 /datum/map/delta
 	name = "Delta"
 	map_path = "_maps/map_files/Delta/delta.dmm"
-	lavaland_path = "_maps/map_files/Delta/Lavaland.dmm"
 
 	station_name = "ИСН Керберос"
 	english_station_name = "NSS Kerberos"

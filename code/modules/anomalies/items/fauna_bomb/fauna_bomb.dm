@@ -170,7 +170,7 @@
 	if(!isanimal(target) && !iscarbon(target))
 		return ..()
 
-	if(isancientrobot(target) || isancientrobotleg(target) || isairmob(target))
+	if(isairmob(target))
 		return ..()
 
 	if(!proximity_flag)

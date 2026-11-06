@@ -24,7 +24,6 @@
 		/atom/movable/screen,
 		/obj/singularity,
 		/obj/effect,
-		/mob/living/simple_animal/hostile/megafauna,
 		/obj/machinery/dna_vault,
 		/obj/machinery/power/bluespace_tap,
 		/obj/structure/sign/barsign,

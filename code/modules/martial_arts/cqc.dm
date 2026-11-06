@@ -23,6 +23,8 @@
 	weight = 5
 
 /datum/martial_art/cqc/under_siege/teach(mob/living/carbon/human/H, make_temporary)
+	if(is_legacy_blocked_type(type))
+		return FALSE
 	RegisterSignal(H, COMSIG_ATOM_ENTERED_AREA, PROC_REF(kitchen_check))
 	return ..()
 
@@ -44,6 +46,8 @@
 	return ..()
 
 /datum/martial_art/cqc/teach(mob/living/carbon/human/H, make_temporary)
+	if(is_legacy_blocked_type(type))
+		return FALSE
 	if(H.mind)
 		for(var/datum/martial_art/cqc/under_siege/chef_art in H.mind.known_martial_arts)
 			chef_art.remove(H)

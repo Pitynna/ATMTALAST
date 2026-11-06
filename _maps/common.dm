@@ -6,7 +6,7 @@ currently it should check for the define (for example whether there are any revh
 z1 = station
 z2 = centcomm
 z3 = engineering stuff (called Z4, dont question it)
-z4 = lavaland
+z4 = mining asteroid
 */
 
 //#define FAST_LOAD

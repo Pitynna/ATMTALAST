@@ -37,6 +37,8 @@
 
 	var/race_key_counter = 0
 	for(var/species_path in subtypesof(/datum/species))
+		if(is_legacy_blocked_type(species_path))
+			continue
 		var/datum/species/species_instance = new species_path()
 		species_instance.race_key = ++race_key_counter // Used in mob icon caching.
 		GLOB.all_species[species_instance.name] = species_instance
@@ -45,11 +47,17 @@
 		GLOB.nuke_codes[nuke_path] = rand(10000, 99999)
 
 	init_subtypes(/datum/crafting_recipe, GLOB.crafting_recipes)
+	for(var/datum/crafting_recipe/recipe as anything in GLOB.crafting_recipes.Copy())
+		if(is_legacy_blocked_type(recipe.result))
+			GLOB.crafting_recipes -= recipe
+			qdel(recipe)
 
 	// Pipe list building
 	init_subtypes(/datum/pipes, GLOB.construction_pipe_list)
 	for(var/pipe_datum in GLOB.construction_pipe_list)
 		var/datum/pipes/pipe_instance = pipe_datum
+		if(is_legacy_blocked_type(pipe_instance.pipe_type))
+			continue
 		if(pipe_instance.rpd_dispensable)
 			GLOB.rpd_pipe_list += list(list("pipe_name" = pipe_instance.pipe_name, "pipe_id" = pipe_instance.pipe_id, "pipe_type" = pipe_instance.pipe_type, "pipe_category" = pipe_instance.pipe_category, "orientations" = pipe_instance.orientations, "pipe_icon" = pipe_instance.pipe_icon, "pipe_icon_file" = pipe_instance.pipe_icon_file, "bendy" = pipe_instance.bendy))
 
@@ -64,6 +72,8 @@
 
 	// Setup loadout gear
 	for(var/datum/gear/gear_type as anything in subtypesof(/datum/gear))
+		if(is_legacy_blocked_type(initial(gear_type.path)))
+			continue
 		if(gear_type == gear_type.path)
 			continue
 
@@ -271,6 +281,8 @@
 /proc/init_uplink_items_list()
 	. = list()
 	for(var/datum/uplink_item/uplink_item_type as anything in subtypesof(/datum/uplink_item))
+		if(is_legacy_blocked_type(initial(uplink_item_type.item)))
+			continue
 		if(!initial(uplink_item_type.item))
 			continue
 		var/datum/uplink_item/uplink_item_instance = new uplink_item_type
@@ -384,7 +396,6 @@
 		EQUIPMENT("Soap", /obj/item/soap/nanotrasen, 400),
 		EQUIPMENT("Space Cash", /obj/item/stack/spacecash/magic_linked, 2500),
 		EQUIPMENT("Whiskey", /obj/item/reagent_containers/cup/glass/bottle/whiskey, 500),
-		EQUIPMENT("HRD-MDE Project Box", /obj/item/storage/box/hardmode_box, 2500),
 	)
 	prize_list["Extra"] = list(
 		EQUIPMENT("Science Backpack", /obj/item/storage/backpack/science, 250),
@@ -520,7 +531,6 @@ GLOBAL_LIST_INIT(wallitems_interior, typecacheof(list(
 	/obj/structure/noticeboard,
 	/obj/structure/reagent_dispensers/peppertank,
 	/obj/structure/sign,
-	/obj/structure/torch_holder,
 )))
 
 /// Wall mounted machinery which are visually coming out of the wall.

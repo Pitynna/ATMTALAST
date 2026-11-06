@@ -35,8 +35,6 @@
 		/obj/machinery/telepad,
 		/obj/machinery/telepad_cargo,
 		/obj/machinery/clonepod,
-		/obj/effect/hierophant,
-		/obj/item/warp_cube,
 		/obj/machinery/quantumpad,
 		/obj/structure/extraction_point,
 		/obj/item/paicard

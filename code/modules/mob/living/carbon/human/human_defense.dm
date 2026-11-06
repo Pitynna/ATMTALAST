@@ -241,18 +241,7 @@ emp_act
 
 //End Here
 /mob/living/carbon/human/proc/check_shields(atom/AM, damage, attack_text = "атаку", attack_type = ITEM_ATTACK, armour_penetration = 0, shields_penetration = 0)
-	var/obj/item/shield = get_best_shield()
-
-	var/shield_result = shield?.hit_reaction(src, AM, attack_text, 0, damage, attack_type)
-	if(shield_result >= HIT_RESULT_SUCCESS)
-		return HIT_RESULT_SUCCESS
-
-	if(shield_result == HIT_RESULT_REFLECY_BACK)
-		return HIT_RESULT_REFLECY_BACK
-
-	if(shield_result == HIT_RESULT_PARRY)
-		return HIT_RESULT_PARRY
-
+	// Each held item gets one passive block attempt below.
 	if(wear_suit && wear_suit.hit_reaction(src, AM, attack_text, 0, damage, attack_type))
 		return HIT_RESULT_SUCCESS
 

@@ -19,7 +19,14 @@
 #include "test_elements.dm"
 #include "test_emotes.dm"
 #include "test_gas_mixture.dm"
+
+#include "test_goon_utilities.dm"
+
 #include "test_get_turf_pixel.dm"
+
+#include "test_legacy_combat.dm"
+#include "test_legacy_content.dm"
+#include "test_legacy_animals.dm"
 #include "test_legacy_spacesuits.dm"
 #include "test_greyscale_config.dm"
 #include "test_init_sanity.dm"
@@ -27,6 +34,7 @@
 #include "test_missing_icons.dm"
 #include "test_orphaned_genturf.dm"
 #include "test_mining_content.dm"
+#include "test_xenoarchaeology.dm"
 #include "test_paintings.dm"
 #include "test_portagrav.dm"
 #include "test_plane_double_transform.dm"
@@ -43,8 +51,15 @@
 #include "test_subsystem_metric_sanity.dm"
 #include "test_tgui_create_message.dm"
 #include "test_timer_sanity.dm"
+#include "test_ulthor.dm"
+#include "test_ulthor_systems.dm"
+
+#include "test_wall_disposal.dm"
+
 #include "test_washing.dm"
+
 #endif
+
 
 #ifdef REFERENCE_TRACKING_DEBUG //Don't try and parse this file if ref tracking isn't turned on. IE: don't parse ref tracking please mr linter
 #include "test_find_reference_sanity.dm"

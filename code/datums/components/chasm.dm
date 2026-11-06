@@ -8,15 +8,12 @@
 	/// List of refs to falling objects -> how many levels deep we've fallen
 	var/static/list/falling_atoms = list()
 	var/static/list/forbidden_types = typecacheof(list(
-		/mob/living/simple_animal/hostile/megafauna,
 		/obj/bfl_crack,
 		/obj/docking_port,
 		/obj/effect/abstract,
-		/obj/effect/collapse,
 		/obj/effect/ebeam,
 		/obj/effect/hotspot,
 		/obj/effect/landmark,
-		/obj/effect/light_emitter/tendril,
 		/obj/effect/particle_effect/fluid/smoke,
 		/obj/effect/particle_effect/ion_trails,
 		/obj/effect/particle_effect/sparks,
@@ -24,7 +21,6 @@
 		/obj/effect/projectile,
 		/obj/effect/spawner,
 		/obj/effect/temp_visual,
-		/obj/effect/wisp,
 		/obj/energy_ball,
 		/obj/god,
 		/obj/machinery/bfl_receiver,
@@ -33,7 +29,6 @@
 		/obj/spacepod,
 		/obj/structure/lattice,
 		/obj/structure/railing,
-		/obj/structure/stone_tile,
 	))
 
 /datum/component/chasm/Initialize(turf/target_turf, mapload)

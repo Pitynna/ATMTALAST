@@ -436,8 +436,6 @@
 		/obj/item/gun/energy/pulse,
 		/obj/item/sleeping_carp_scroll,
 		/obj/item/shield/riot/changeling,
-		/obj/item/lava_staff,
-		/obj/item/hierophant_club,
 		/obj/item/his_grace,
 		/obj/item/gun/projectile/automatic/l6_saw,
 		/obj/item/gun/magic/staff/chaos,

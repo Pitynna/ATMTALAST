@@ -70,9 +70,6 @@ type ScanData = {
   bleedingList: string[];
   extraFacture: BooleanLike;
   extraBleeding: BooleanLike;
-  insuranceType: string;
-  reqInsurance: number;
-  insurance: number;
   brainDamage: number | string;
   bleed: BooleanLike;
   staminaStatus: BooleanLike;
@@ -509,21 +506,7 @@ export const Healthanalyzer = (props: unknown) => {
 
                 {!!scan_data.implantDetect && <ImplantList />}
 
-                <Section title="Страховка">
-                  <LabeledList>
-                    <LabeledList.Item label="Тип страховки ">
-                      {scan_data.insuranceType}
-                    </LabeledList.Item>
-                    <LabeledList.Item label="Требуемое количество очков страховки">
-                      {scan_data.reqInsurance}
-                    </LabeledList.Item>
-                    {!!scan_data.insurance && (
-                      <LabeledList.Item label="Текущее количество очков страховки">
-                        {scan_data.insurance}
-                      </LabeledList.Item>
-                    )}
-                  </LabeledList>
-                </Section>
+
               </Box>
             );
           }
@@ -552,11 +535,7 @@ const TopButtons = (props: unknown) => {
             Печать отчёта
           </Button>
         )}
-        {!!data.advanced && (
-          <Button icon="file-invoice-dollar" onClick={() => act('insurance')}>
-            Списать страховку
-          </Button>
-        )}
+
       </Box>
     </Section>
   );

@@ -133,7 +133,7 @@
 		////////////////CONTRABAND STUFF//////////////////
 		/obj/item/grenade/clown_grenade = 3,
 		/obj/item/seeds/ambrosia/cruciatus = 3,
-		/obj/item/gun/projectile/automatic/pistol/aps/scarecrow = 1,
+		/obj/item/gun/projectile/automatic/pistol/stechkin = 1,
 		/obj/item/ammo_box/magazine/m10mm = 4,
 		/obj/item/implanter/fake_mindshield = 1,
 		/obj/item/soap/syndie = 7,
@@ -223,7 +223,7 @@
 		/obj/item/storage/box/chef_rare_ingredients_kit = 50,
 		/obj/item/grenade/clusterbuster/cleaner = 50,
 		/obj/item/mining_voucher = 50,
-		/obj/item/gun/energy/kinetic_accelerator/experimental = 50,
+		/obj/item/gun/energy/gun = 50,
 		/obj/item/borg/upgrade/modkit/aoe/turfs/andmobs = 50,
 		/obj/item/seeds/random/labelled = 150,
 		/obj/item/grenade/clusterbuster/honk = 50,
@@ -266,11 +266,11 @@
 		/obj/item/gun/projectile/automatic/smg/c20r/toy = 150,
 		/obj/item/gun/projectile/automatic/l6_saw/toy = 100,
 		/obj/item/gun/projectile/automatic/toy/pistol = 200,
-		/obj/item/gun/projectile/automatic/toy/pistol/enforcer/riot = 100,
+		/obj/item/gun/projectile/automatic/pistol/stechkin = 100,
 		/obj/item/gun/projectile/shotgun/toy = 100,
 		/obj/item/gun/projectile/shotgun/toy/crossbow = 100,
 		/obj/item/gun/projectile/shotgun/toy/tommygun = 100,
-		/obj/item/gun/projectile/automatic/sniper_rifle/toy = 100,
+		/obj/item/gun/projectile/automatic/sniper_rifle = 100,
 		/obj/item/ammo_box/foambox/sniper = 50,
 		/obj/item/ammo_box/foambox = 150,
 		/obj/item/ammo_box/foambox/riot = 100,
@@ -450,17 +450,6 @@
 		/obj/item/toy/desk/newtoncradle,
 		/obj/item/toy/desk/fan,
 		/obj/item/hourglass,
-	)
-
-/obj/effect/spawner/lootdrop/marrow_weaver
-	name = "40% marrow weaver spawner"
-	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
-	icon_state = "weaver"
-	lootdoubles = FALSE
-	loot = list(
-		/mob/living/simple_animal/hostile/asteroid/marrowweaver = 40,
-		/mob/living/simple_animal/hostile/asteroid/marrowweaver/frost = 20,
-		"" = 40,
 	)
 
 /obj/effect/spawner/lootdrop/bouquet_spawner

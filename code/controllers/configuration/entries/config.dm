@@ -608,11 +608,6 @@
 
 /datum/config_entry/flag/start_now_confirmation
 
-/datum/config_entry/number/lavaland_budget
-	default = 70
-	integer = FALSE
-	min_val = 0
-
 /datum/config_entry/flag/enable_gamemode_player_limit
 
 /datum/config_entry/number/byond_account_age_threshold
@@ -681,7 +676,7 @@
 
 /datum/config_entry/flag/item_animations_enabled
 
-/datum/config_entry/flag/disable_lavaland
+/datum/config_entry/flag/disable_mining
 
 /datum/config_entry/flag/config_errors_runtime
 

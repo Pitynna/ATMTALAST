@@ -77,9 +77,6 @@
 			add_attack_logs(chassis.occupant, M, "Squeezed with [src] ([uppertext(chassis.occupant.a_intent)]) ([uppertext(damtype)])")
 			start_cooldown()
 		else if(M.stat == DEAD && issilicon(M) || chassis.cargo_expanded)
-			if(ismegafauna(M))
-				occupant_message(span_warning("БЕГИ, ИДИОТ, НЕ ВРЕМЯ ДЛЯ ОБНИМАШЕК!!!"))
-				return FALSE
 			if(!M.anchored)
 				if(length(chassis.cargo) < chassis.cargo_capacity)
 					chassis.visible_message("[chassis] lifts [target] and starts to load it into cargo compartment.")

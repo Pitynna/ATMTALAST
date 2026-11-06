@@ -5847,7 +5847,6 @@
 "ckJ" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/directional/south,
-/obj/machinery/vending/gun_mods,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "darkred"
@@ -6403,9 +6402,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/computer/supplyquest/workers{
-	pixel_y = 28
-	},
 /turf/simulated/floor/plasteel,
 /area/coldcolony/malta/quartermaster/storage)
 "cvQ" = (
@@ -6850,13 +6846,6 @@
 	},
 /turf/simulated/floor/wood/fancy/birch,
 /area/coldcolony/malta/bridge/checkpoint)
-"cED" = (
-/mob/living/simple_animal/hostile/bear/polar{
-	health = 90;
-	maxHealth = 90
-	},
-/turf/simulated/floor/wood/cherry/cold,
-/area/coldcolony/ruin/abandoned_house)
 "cEG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -11741,11 +11730,6 @@
 /obj/effect/mapping_helpers/turfs/damage,
 /turf/simulated/floor/plasteel,
 /area/coldcolony/malta/resid_serv/kitchen)
-"eFj" = (
-/obj/structure/flora/grass/both,
-/mob/living/simple_animal/pet/dog/fox/forest/winter,
-/turf/simulated/floor/plating/asteroid/snow,
-/area/ruin/unpowered/coldcolony_outside)
 "eFo" = (
 /obj/effect/mapping_helpers/turfs/burn,
 /obj/effect/mapping_helpers/turfs/burn,
@@ -12643,7 +12627,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/mob/living/simple_animal/pet/cat/white/Penny,
 /obj/structure/bed/dogbed/pet,
 /turf/simulated/floor/plasteel,
 /area/coldcolony/malta/resid_serv/crew_quarters/fitness)
@@ -13115,9 +13098,6 @@
 /obj/item/shard,
 /turf/simulated/floor/wood/cherry/cold,
 /area/ruin/unpowered)
-"fiE" = (
-/turf/simulated/floor/plating,
-/area/coldcolony/malta/maintenance/dormitory)
 "fiU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel{
@@ -13908,10 +13888,6 @@
 /obj/structure/sign/poster/contraband/revolver{
 	pixel_y = 32
 	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
 /obj/item/gun/projectile/automatic/pistol/stechkin{
 	pixel_x = -2;
 	pixel_y = 6
@@ -14370,13 +14346,6 @@
 	icon_state = "darkblue"
 	},
 /area/coldcolony/malta/bridge)
-"fKQ" = (
-/mob/living/simple_animal/hostile/bear/polar{
-	health = 90;
-	maxHealth = 90
-	},
-/turf/simulated/floor/plating/asteroid/snow,
-/area/ruin/unpowered/coldcolony_outside)
 "fKR" = (
 /turf/simulated/floor/plasteel,
 /area/coldcolony/malta/quartermaster/qm)
@@ -20621,7 +20590,6 @@
 /turf/simulated/floor/plasteel,
 /area/coldcolony/malta/hallway/cargo_escape/exit)
 "igy" = (
-/obj/machinery/computer/roboquest,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/firealarm/directional/west,
 /turf/simulated/floor/plasteel{
@@ -23502,7 +23470,7 @@
 "jrh" = (
 /obj/structure/closet,
 /obj/effect/spawner/random_spawners/syndicate/loot{
-	result = list(/obj/item/storage/toolbox/syndicate = 1, /obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1, /obj/item/deck/cards/syndicate = 1, /obj/item/storage/secure/briefcase/syndie = 1, /obj/item/toy/balloon/syndicate = 1, /obj/item/soap/syndie = 1, /obj/item/clothing/under/syndicate = 1, /obj/item/clothing/under/syndicate/tacticool = 1, /obj/item/clothing/mask/gas/syndicate = 1, /obj/item/gun_module/muzzle/suppressor = 1, /obj/item/coin/antagtoken/syndicate = 1, /obj/item/storage/box/syndie_kit/cutouts = 1)
+	result = list(/obj/item/storage/toolbox/syndicate = 1, /obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1, /obj/item/deck/cards/syndicate = 1, /obj/item/storage/secure/briefcase/syndie = 1, /obj/item/toy/balloon/syndicate = 1, /obj/item/soap/syndie = 1, /obj/item/clothing/under/syndicate = 1, /obj/item/clothing/under/syndicate/tacticool = 1, /obj/item/clothing/mask/gas/syndicate = 1, /obj/item/coin/antagtoken/syndicate = 1, /obj/item/storage/box/syndie_kit/cutouts = 1)
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -25380,7 +25348,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable,
-/obj/effect/landmark/start/investor,
 /turf/simulated/floor/carpet/black,
 /area/coldcolony/malta/bridge/meeting_room)
 "kew" = (
@@ -27130,11 +27097,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/coldcolony/malta/maintenance/kitchen)
-"kQX" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/simulated/floor/engine,
-/area/coldcolony/malta/maintenance/incinerator)
 "kRr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -28594,10 +28556,6 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/simulated/floor/plating,
 /area/coldcolony/malta/maintenance/brig)
-"lyE" = (
-/mob/living/simple_animal/pet/dog/fox/forest/winter,
-/turf/simulated/floor/plating/asteroid/snow,
-/area/ruin/unpowered/coldcolony_outside)
 "lyQ" = (
 /turf/simulated/wall,
 /area/coldcolony/malta/security/checkpoint)
@@ -29143,13 +29101,6 @@
 /obj/structure/girder,
 /turf/simulated/floor/plating,
 /area/coldcolony/malta/maintenance/medbay)
-"lJg" = (
-/mob/living/simple_animal/hostile/bear/polar{
-	health = 90;
-	maxHealth = 90
-	},
-/turf/simulated/floor/plating/asteroid/cold,
-/area/ruin/unpowered/coldcolony_outside)
 "lJh" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/asteroid/snow,
@@ -29677,7 +29628,6 @@
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/clothing/mask/gas,
 /obj/item/cartridge/quartermaster,
-/obj/item/ammo_box/a762x54,
 /obj/item/ammo_box/speedloader/a762,
 /obj/machinery/light{
 	dir = 1
@@ -30823,10 +30773,6 @@
 	icon_state = "dark"
 	},
 /area/coldcolony/malta/security/brigstaff)
-"mqQ" = (
-/mob/living/simple_animal/hostile/bear/polar,
-/turf/simulated/floor/plating/asteroid/snow,
-/area/ruin/unpowered/coldcolony_outside)
 "mqZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31108,7 +31054,6 @@
 "mxH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dust,
-/mob/living/simple_animal/hostile/bear/polar,
 /turf/simulated/floor/plating,
 /area/shuttle/pirate_corvette)
 "myf" = (
@@ -32116,10 +32061,6 @@
 	icon_state = "neutralfull"
 	},
 /area/coldcolony/malta/hallway/service/central)
-"mSC" = (
-/mob/living/simple_animal/chicken/Wife,
-/turf/simulated/floor/grass,
-/area/coldcolony/malta/resid_serv/hydroponics)
 "mSQ" = (
 /obj/machinery/light{
 	dir = 4
@@ -35342,10 +35283,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/carpet/cold,
 /area/coldcolony/ruin/abandoned_banya)
-"oib" = (
-/mob/living/simple_animal/cock/Commandor,
-/turf/simulated/floor/grass,
-/area/coldcolony/malta/resid_serv/hydroponics)
 "oik" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -37579,7 +37516,6 @@
 "pbV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/bear/polar,
 /turf/simulated/floor/plasteel,
 /area/shuttle/pirate_corvette)
 "pcm" = (
@@ -39207,14 +39143,6 @@
 	icon_state = "darkblue"
 	},
 /area/coldcolony/malta/bridge/vip)
-"pIn" = (
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/coldcolony/malta/maintenance/engineering)
 "pIq" = (
 /obj/structure/cable,
 /turf/simulated/floor/plating,
@@ -39747,7 +39675,6 @@
 /turf/simulated/floor/plating,
 /area/coldcolony/malta/maintenance/bar)
 "pUq" = (
-/mob/living/simple_animal/moth,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -40555,9 +40482,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/coldcolony/malta/resid_serv/kitchen)
-"qpw" = (
-/turf/simulated/floor/wood,
-/area/coldcolony/malta/resid_serv/library)
 "qpy" = (
 /obj/machinery/door/window/brigdoor{
 	dir = 8;
@@ -43468,10 +43392,6 @@
 	},
 /turf/simulated/floor/plating/asteroid/snow,
 /area/ruin/unpowered/coldcolony_outside)
-"rtA" = (
-/obj/structure/flora/ash/rock/style_random,
-/turf/simulated/floor/plating/asteroid/snow,
-/area/ruin/unpowered/coldcolony_outside)
 "rtD" = (
 /obj/machinery/newscaster/directional/south,
 /obj/machinery/computer/merch{
@@ -44310,9 +44230,6 @@
 	icon_state = "darkred"
 	},
 /area/coldcolony/malta/security/permabrig)
-"rLw" = (
-/turf/simulated/floor/plating,
-/area/coldcolony/malta/research/test_chamber)
 "rLG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	desc = "This pipe holds gases for mixing.";
@@ -45465,7 +45382,6 @@
 /area/coldcolony/malta/hallway/cargo_escape/exit)
 "smq" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark/start/mining_medic,
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
@@ -45531,7 +45447,6 @@
 /turf/simulated/floor/plating/cold,
 /area/coldcolony/ruin/abandoned_banya)
 "soe" = (
-/obj/machinery/roboquest_pad,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light_switch/directional/west,
 /turf/simulated/floor/plasteel{
@@ -46812,9 +46727,6 @@
 "sNz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
-/obj/item/qm_quest_tablet{
-	pixel_y = -3
-	},
 /obj/item/flashlight/lamp{
 	pixel_x = -3;
 	pixel_y = 13
@@ -49387,7 +49299,6 @@
 	},
 /area/coldcolony/malta/research)
 "tNu" = (
-/mob/living/simple_animal/pig/Sanya,
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/grass,
 /area/coldcolony/malta/resid_serv/hydroponics)
@@ -49454,7 +49365,6 @@
 /obj/structure/bed/dogbed{
 	name = "kitty basket"
 	},
-/mob/living/simple_animal/pet/cat/floppa,
 /turf/simulated/floor/wood/fancy/oak,
 /area/coldcolony/malta/bridge/blueshield)
 "tPO" = (
@@ -49885,7 +49795,6 @@
 /area/shuttle/pirate_corvette)
 "tXL" = (
 /obj/structure/chair/comfy/beige,
-/obj/effect/landmark/start/mining_medic,
 /turf/simulated/floor/plasteel/white,
 /area/coldcolony/malta/medical/sleeper)
 "tXR" = (
@@ -56608,7 +56517,6 @@
 /area/coldcolony/ruin/sm_chamber)
 "wIu" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/supplyquest,
 /obj/structure/sign/poster/official/random{
 	pixel_y = -32
 	},
@@ -57427,7 +57335,6 @@
 	},
 /area/coldcolony/malta/turret_protected/ai)
 "wXQ" = (
-/mob/living/simple_animal/hostile/bear/polar,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -59648,10 +59555,6 @@
 	},
 /turf/simulated/floor/wood/cherry/cold,
 /area/coldcolony/ruin/abandoned_banya)
-"xTl" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/coldcolony/malta/maintenance/cargo)
 "xTo" = (
 /obj/structure/flora/grass/brown,
 /obj/structure/cable/orange,
@@ -62079,7 +61982,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -62203,7 +62106,7 @@ vPw
 vPw
 vPw
 rSb
-rtA
+rSb
 rSb
 hBQ
 rSb
@@ -62875,7 +62778,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 hBQ
 rSb
@@ -63072,7 +62975,7 @@ vPw
 vPw
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -64311,7 +64214,7 @@ rSb
 rSb
 xcr
 rSb
-rtA
+rSb
 vPw
 vPw
 vPw
@@ -64408,7 +64311,7 @@ vPw
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -64518,7 +64421,7 @@ rSb
 rSb
 xcr
 rSb
-rtA
+rSb
 vPw
 vPw
 vPw
@@ -64974,7 +64877,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -65099,7 +65002,7 @@ vPw
 vPw
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -66223,7 +66126,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 abG
 rSb
@@ -67464,7 +67367,7 @@ xOz
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -67759,7 +67662,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -68309,7 +68212,7 @@ rSb
 rSb
 xcr
 rSb
-rtA
+rSb
 vPw
 vPw
 vPw
@@ -69144,7 +69047,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -69357,7 +69260,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -69532,7 +69435,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -70021,7 +69924,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 abG
@@ -71950,7 +71853,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -72416,7 +72319,7 @@ vPw
 vPw
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -72849,7 +72752,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -73475,7 +73378,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 vPw
 vPw
@@ -74267,7 +74170,7 @@ rSb
 rSb
 rSb
 rSb
-mqQ
+rSb
 rSb
 rSb
 rSb
@@ -74692,14 +74595,14 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
 hBQ
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -75401,7 +75304,7 @@ vPw
 vPw
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -75442,7 +75345,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -75745,7 +75648,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 vPw
@@ -76027,7 +75930,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -76342,7 +76245,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -77042,7 +76945,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 vPw
@@ -77209,7 +77112,7 @@ rSb
 hBQ
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -78235,7 +78138,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 abG
 rSb
@@ -78245,7 +78148,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 abG
 rSb
@@ -79078,7 +78981,7 @@ xOz
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -79314,7 +79217,7 @@ vPw
 rSb
 rSb
 abG
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -79606,7 +79509,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 hBQ
 rSb
 rSb
@@ -81798,7 +81701,7 @@ vPw
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -82751,7 +82654,7 @@ rSb
 gNA
 bLB
 sGS
-lJg
+sGS
 sGS
 hMv
 sGS
@@ -83112,7 +83015,7 @@ rSb
 abG
 rSb
 rSb
-rtA
+rSb
 rSb
 abG
 rSb
@@ -83486,7 +83389,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -83785,7 +83688,7 @@ aRl
 qtM
 xep
 lWG
-fKQ
+rSb
 rSb
 rSb
 rSb
@@ -83902,7 +83805,7 @@ rSb
 hBQ
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -84149,7 +84052,7 @@ xOz
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -84289,7 +84192,7 @@ rSb
 xcr
 rSb
 rSb
-fKQ
+rSb
 gNA
 xep
 poc
@@ -84643,7 +84546,7 @@ hBQ
 rSb
 rSb
 rSb
-fKQ
+rSb
 rSb
 lNf
 gAD
@@ -84696,7 +84599,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 vPw
 abG
@@ -84738,7 +84641,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 jpa
@@ -85320,7 +85223,7 @@ rSb
 rSb
 gNA
 bLB
-lJg
+sGS
 sGS
 xmi
 pET
@@ -85729,7 +85632,7 @@ rSb
 rSb
 rSb
 rSb
-lyE
+rSb
 rSb
 rSb
 rSb
@@ -85898,7 +85801,7 @@ vPw
 vPw
 vPw
 rSb
-fKQ
+rSb
 rSb
 rSb
 rSb
@@ -86088,7 +85991,7 @@ rSb
 xcr
 rSb
 rSb
-fKQ
+rSb
 gNA
 xep
 poc
@@ -86228,7 +86131,7 @@ xcr
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -86729,7 +86632,7 @@ ybP
 wtK
 atw
 lFd
-fiE
+eWK
 arl
 lkO
 hdX
@@ -86986,11 +86889,11 @@ cYI
 sYK
 cYI
 czc
-fiE
+eWK
 rci
 fSA
-fiE
-fiE
+eWK
+eWK
 jhx
 lkO
 lkO
@@ -87038,7 +86941,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -87234,7 +87137,7 @@ gAD
 pbo
 rjD
 lkO
-fiE
+eWK
 bQa
 vwx
 vwx
@@ -87248,13 +87151,13 @@ rDW
 ccI
 fri
 czc
-fiE
+eWK
 nGb
 czc
 czc
 iMl
 uYP
-fiE
+eWK
 xtI
 xuz
 czc
@@ -87509,14 +87412,14 @@ vwx
 lkO
 rCi
 wcm
-fiE
-fiE
+eWK
+eWK
 czc
 fri
 czc
 auh
 czc
-fiE
+eWK
 nGb
 iGr
 hbJ
@@ -87764,8 +87667,8 @@ tAM
 jNr
 tCS
 lkO
-fiE
-fiE
+eWK
+eWK
 hjO
 rBM
 gga
@@ -87788,7 +87691,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -87888,7 +87791,7 @@ abG
 rSb
 xOz
 rSb
-fKQ
+rSb
 rSb
 rSb
 rSb
@@ -87960,7 +87863,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -88021,7 +87924,7 @@ rMP
 nHW
 qnK
 uSf
-fiE
+eWK
 luV
 soZ
 soZ
@@ -88348,7 +88251,7 @@ vPw
 vPw
 rSb
 rSb
-lyE
+rSb
 rSb
 rSb
 rSb
@@ -88719,7 +88622,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -88765,7 +88668,7 @@ aWC
 dFt
 dQv
 iXP
-kQX
+dQv
 sON
 sCT
 nDT
@@ -88837,7 +88740,7 @@ rSb
 rSb
 rSb
 rSb
-lyE
+rSb
 rSb
 rSb
 rSb
@@ -88886,7 +88789,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -89092,7 +88995,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -89262,7 +89165,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -89361,7 +89264,7 @@ rSb
 rSb
 jpa
 kyF
-lyE
+rSb
 nsy
 hgI
 pBE
@@ -89438,7 +89341,6 @@ rSb
 rSb
 rSb
 rSb
-rtA
 rSb
 rSb
 rSb
@@ -89449,7 +89351,8 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
+rSb
 rSb
 rSb
 rSb
@@ -89478,7 +89381,7 @@ vPw
 rSb
 tTj
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -89860,7 +89763,7 @@ wUJ
 gsG
 gsG
 gsG
-rtA
+rSb
 rSb
 rSb
 abG
@@ -89872,7 +89775,7 @@ rSb
 xOz
 rSb
 rSb
-rtA
+rSb
 jpa
 kyF
 abG
@@ -90144,7 +90047,7 @@ kuQ
 sHU
 dTT
 rSb
-rtA
+rSb
 rSb
 rSb
 xcr
@@ -90557,7 +90460,7 @@ hbE
 hbE
 hbE
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -91048,7 +90951,7 @@ rSb
 rSb
 xcr
 rSb
-lyE
+rSb
 rSb
 rSb
 rSb
@@ -91152,8 +91055,8 @@ nKe
 wif
 wif
 enR
-oib
-mSC
+bjt
+bjt
 kDj
 rSb
 rSb
@@ -91489,7 +91392,7 @@ xOz
 rSb
 hBQ
 rSb
-fKQ
+rSb
 rSb
 rSb
 rSb
@@ -91546,7 +91449,7 @@ xOz
 rSb
 rSb
 rSb
-rtA
+rSb
 xOz
 rSb
 rSb
@@ -92202,7 +92105,7 @@ khJ
 vPw
 vPw
 rSb
-eFj
+xOz
 rSb
 rSb
 rSb
@@ -92859,7 +92762,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -92988,7 +92891,7 @@ rSb
 rSb
 rSb
 rSb
-fKQ
+rSb
 rSb
 rSb
 rSb
@@ -93007,7 +92910,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -93055,7 +92958,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -93312,7 +93215,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -93603,7 +93506,7 @@ vOt
 vOt
 eDF
 abG
-rtA
+rSb
 woD
 vOt
 vOt
@@ -93800,14 +93703,14 @@ xcr
 abG
 rSb
 xcr
-fKQ
+rSb
 rSb
 wYH
 wYH
 wYH
 uWW
 uWW
-cED
+uWW
 uWW
 hxB
 uWW
@@ -94019,7 +93922,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -94571,7 +94474,7 @@ rSb
 abG
 rSb
 rSb
-fKQ
+rSb
 rSb
 wYH
 bsa
@@ -94984,7 +94887,7 @@ xqZ
 ptd
 teu
 dCw
-qpw
+mBG
 nfN
 hsl
 hsl
@@ -95240,7 +95143,7 @@ umr
 nXQ
 ptd
 mFl
-qpw
+mBG
 lVR
 ptd
 tkc
@@ -95272,7 +95175,7 @@ qQX
 qQX
 sGS
 kyF
-rtA
+rSb
 bjs
 puj
 ujB
@@ -95350,7 +95253,7 @@ mMt
 uWW
 hxB
 uWW
-cED
+uWW
 uWW
 uWW
 xIo
@@ -95597,7 +95500,7 @@ rSb
 hBQ
 rSb
 rSb
-rtA
+rSb
 abG
 rSb
 rSb
@@ -95658,7 +95561,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -95803,7 +95706,7 @@ aQM
 xww
 puj
 bjs
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -96186,7 +96089,7 @@ wpG
 eDF
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -96765,7 +96668,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 pwu
 rSb
@@ -96839,7 +96742,7 @@ rSb
 rSb
 abG
 rSb
-rtA
+rSb
 rSb
 nvQ
 nvQ
@@ -96948,7 +96851,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -97316,7 +97219,7 @@ xXw
 pHW
 bQv
 rSb
-rtA
+rSb
 jpa
 kyF
 rSb
@@ -97553,7 +97456,7 @@ awI
 sGS
 kyF
 abG
-rtA
+rSb
 rSb
 mtY
 tEb
@@ -97768,7 +97671,7 @@ lQI
 rSb
 xOz
 rSb
-rtA
+rSb
 rSb
 rSb
 wpG
@@ -97959,7 +97862,7 @@ vPw
 rSb
 tTj
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -98272,27 +98175,27 @@ xcr
 rSb
 rSb
 rSb
-lyE
+rSb
 rSb
 tTj
 rSb
 rSb
-rtA
-rSb
-rSb
-rSb
-rSb
-xcr
-rSb
-rSb
-rSb
 rSb
 rSb
 rSb
 rSb
 rSb
 xcr
-rtA
+rSb
+rSb
+rSb
+rSb
+rSb
+rSb
+rSb
+rSb
+xcr
+rSb
 rSb
 lQI
 jpa
@@ -98435,7 +98338,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -98544,7 +98447,7 @@ rSb
 abG
 abG
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -98886,7 +98789,7 @@ vQs
 sBl
 pGn
 iBA
-rLw
+iBA
 uhH
 uhH
 iBA
@@ -98917,7 +98820,7 @@ mcZ
 fVo
 aIL
 kUt
-pIn
+nma
 dbv
 hSD
 hSD
@@ -99072,7 +98975,7 @@ rSb
 rSb
 abG
 rSb
-lyE
+rSb
 rSb
 rSb
 cpt
@@ -99103,7 +99006,7 @@ rSb
 jpa
 kyF
 rSb
-rtA
+rSb
 rSb
 xcr
 abG
@@ -99276,7 +99179,7 @@ rSb
 rSb
 pOc
 rSb
-rtA
+rSb
 rSb
 wdf
 avC
@@ -99326,7 +99229,7 @@ rSb
 jpa
 kyF
 rSb
-rtA
+rSb
 abG
 rSb
 rSb
@@ -99367,7 +99270,7 @@ vQg
 vQg
 iqm
 iqm
-rtA
+rSb
 trl
 rSb
 tLF
@@ -99586,7 +99489,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 dMg
@@ -99921,7 +99824,7 @@ pwt
 pwt
 rSb
 hpq
-rtA
+rSb
 rSb
 jJU
 rma
@@ -100226,7 +100129,7 @@ rSb
 xcr
 hBQ
 rSb
-rtA
+rSb
 rSb
 xcr
 rSb
@@ -100873,7 +100776,7 @@ rSb
 rSb
 xcr
 rSb
-rtA
+rSb
 acY
 sUJ
 bJR
@@ -101272,7 +101175,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -101694,7 +101597,7 @@ vPw
 vPw
 rSb
 rSb
-rtA
+rSb
 hPx
 wiQ
 eNj
@@ -101898,7 +101801,7 @@ kyF
 rSb
 rSb
 xcr
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -103760,7 +103663,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 xOz
 rSb
@@ -103813,7 +103716,7 @@ rSb
 abG
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 hBQ
@@ -103952,7 +103855,7 @@ rSb
 jpa
 kyF
 xcr
-rtA
+rSb
 abG
 rSb
 onX
@@ -104051,7 +103954,7 @@ spG
 xhd
 rSb
 rSb
-rtA
+rSb
 rSb
 hBQ
 rSb
@@ -104090,7 +103993,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -104277,7 +104180,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -104295,7 +104198,7 @@ rSb
 rSb
 qUo
 rSb
-rtA
+rSb
 rSb
 kJj
 xhd
@@ -104543,7 +104446,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 hBQ
 rSb
@@ -104663,7 +104566,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 wYq
@@ -104717,7 +104620,7 @@ tly
 tly
 jOt
 tSW
-rtA
+rSb
 rSb
 rSb
 ePa
@@ -105111,7 +105014,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -105296,7 +105199,7 @@ rSb
 jpa
 kyF
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -105595,7 +105498,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -105938,7 +105841,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -106027,7 +105930,7 @@ rSb
 rSb
 rSb
 ePa
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -106312,7 +106215,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -106411,7 +106314,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -107231,7 +107134,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -107295,7 +107198,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 xcr
 xcr
 hBQ
@@ -107313,7 +107216,7 @@ rSb
 rSb
 xcr
 rSb
-rtA
+rSb
 rSb
 xcr
 rSb
@@ -107724,7 +107627,7 @@ vPw
 vPw
 vPw
 vPw
-lyE
+rSb
 rSb
 rSb
 rSb
@@ -107765,7 +107668,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 abG
 rSb
 rSb
@@ -107812,7 +107715,7 @@ hBQ
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 abG
 rSb
@@ -107829,7 +107732,7 @@ rSb
 rSb
 hBQ
 hBQ
-rtA
+rSb
 rSb
 rSb
 abG
@@ -107844,7 +107747,7 @@ rSb
 rSb
 rSb
 xcr
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -108117,11 +108020,11 @@ abG
 rSb
 rSb
 rSb
-rtA
 rSb
 rSb
 rSb
-rtA
+rSb
+rSb
 lyQ
 vyF
 kqn
@@ -108371,7 +108274,7 @@ jpa
 kyF
 lQI
 rSb
-rtA
+rSb
 rSb
 wVa
 rSb
@@ -108451,7 +108354,7 @@ qDo
 miM
 ePo
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -108619,7 +108522,7 @@ rSb
 rSb
 hBQ
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -108830,7 +108733,7 @@ tTj
 rSb
 xcr
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -108864,7 +108767,7 @@ abG
 rSb
 rSb
 rSb
-rtA
+rSb
 abG
 jpa
 kyF
@@ -109243,7 +109146,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -109721,7 +109624,7 @@ lYH
 rSb
 hBQ
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -109877,7 +109780,7 @@ rSb
 auy
 rSb
 rSb
-rtA
+rSb
 rSb
 abG
 rSb
@@ -109886,7 +109789,7 @@ rSb
 xcr
 rSb
 hBQ
-rtA
+rSb
 abG
 rSb
 rSb
@@ -109898,7 +109801,7 @@ jpa
 kyF
 oWB
 rSb
-rtA
+rSb
 abG
 hBQ
 rSb
@@ -110347,7 +110250,7 @@ rSb
 rSb
 abG
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -111235,7 +111138,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 cUB
 rSb
 rSb
@@ -112016,7 +111919,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -112833,7 +112736,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -113053,7 +112956,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -113940,7 +113843,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -114132,7 +114035,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -115299,13 +115202,13 @@ ykG
 eBL
 rlJ
 rbP
-xTl
+fNu
 xlQ
 dmJ
 rSb
 abG
 rSb
-rtA
+rSb
 rSb
 wQq
 rSb
@@ -115874,7 +115777,7 @@ rSb
 rSb
 rSb
 xcr
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -115969,7 +115872,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -117807,7 +117710,7 @@ rSb
 rSb
 hBQ
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -117868,7 +117771,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -117919,7 +117822,7 @@ rSb
 rSb
 rSb
 cUB
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -118205,7 +118108,7 @@ rSb
 rSb
 rSb
 rSb
-fKQ
+rSb
 rSb
 rSb
 hBQ
@@ -118580,7 +118483,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -118783,7 +118686,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -118848,7 +118751,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 uYL
 lRw
@@ -118918,7 +118821,7 @@ hBQ
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -118958,7 +118861,7 @@ rSb
 rSb
 rSb
 hBQ
-fKQ
+rSb
 rSb
 rSb
 rSb
@@ -119697,7 +119600,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -119725,7 +119628,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -120019,7 +119922,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -120710,7 +120613,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -121029,7 +120932,7 @@ rSb
 abG
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -121368,7 +121271,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -121465,7 +121368,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 xdZ
@@ -121580,7 +121483,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -122039,7 +121942,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -122381,7 +122284,7 @@ rSb
 hBQ
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -122435,7 +122338,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -122853,7 +122756,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -123275,7 +123178,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -123299,7 +123202,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -124261,7 +124164,7 @@ rSb
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -124285,7 +124188,7 @@ rSb
 vPw
 vPw
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -124317,7 +124220,7 @@ xcr
 rSb
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb
@@ -124371,7 +124274,7 @@ rSb
 xcr
 rSb
 rSb
-rtA
+rSb
 rSb
 rSb
 rSb

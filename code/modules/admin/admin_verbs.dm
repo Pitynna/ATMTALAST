@@ -271,7 +271,7 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(bless, R_EVENT, "Bless", /mob/living)
 				qdel(scarab)
 			logmsg = "scarab guardian."
 		if("Sentient Pet")
-			var/pets = subtypesof(/mob/living/simple_animal)
+			var/pets = legacy_available_types(subtypesof(/mob/living/simple_animal))
 			var/petchoice = tgui_input_list(user, "Select pet type", "Pets", pets)
 			if(isnull(petchoice))
 				return

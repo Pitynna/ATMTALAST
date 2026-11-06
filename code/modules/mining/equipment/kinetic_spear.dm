@@ -145,7 +145,7 @@ Kinetic spear - alternative mining weapon, used as... spear.
 
 	if(!thrower)
 		return ..()
-	if(recall_after_miss && (lavaland_equipment_pressure_check(target_turf) || can_hurt_on_station))
+	if(recall_after_miss && (mining_equipment_pressure_check(target_turf) || can_hurt_on_station))
 		returner = thrower
 		RegisterSignal(src, COMSIG_MOVABLE_THROW_LANDED, PROC_REF(return_spear_to_user))
 
@@ -181,14 +181,14 @@ Kinetic spear - alternative mining weapon, used as... spear.
 		remove_all_charges()
 		return ..()
 
-	if(iscarbon(hit_atom) && (can_hurt_on_station || lavaland_equipment_pressure_check(target_turf)))
+	if(iscarbon(hit_atom) && (can_hurt_on_station || mining_equipment_pressure_check(target_turf)))
 		if(charged && can_hurt_on_station)
 			core.charged_effect(hit_atom, src, user)
 		if(!recall_after_miss)
 			return_spear_to_user()
 		return ..()
 
-	if(is_lavaland_fauna(hit_atom) || ismegafauna(hit_atom))
+	if(is_asteroid_fauna(hit_atom))
 		throwforce = cached_throwforce + bonus_fauna_damage
 		if(charged)
 			core.charged_effect(hit_atom, src, user)
@@ -322,7 +322,7 @@ Spear cores. Gives spear special abilities and quirks
 	return "Вызывает кровотечение у фауны, нанося ей массивные повреждения."
 
 /obj/item/mining_spear_core/standart/charged_effect(mob/living/victim, obj/item/twohanded/mining_spear/spear, mob/user)
-	if(!(is_lavaland_fauna(victim) || ismegafauna(victim)))
+	if(!(is_asteroid_fauna(victim)))
 		return
 	var/datum/status_effect/saw_bleed/bloodletting/our_effect = victim.has_status_effect(STATUS_EFFECT_BLOODLETTING)
 	if(!our_effect)

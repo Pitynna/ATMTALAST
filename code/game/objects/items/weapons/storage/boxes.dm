@@ -1131,16 +1131,6 @@
 	new /obj/item/gun/projectile/revolver/detective(src)
 	new /obj/item/clothing/accessory/holster/armpit(src)
 
-/obj/item/storage/box/hardmode_box
-	name = "box of HRD-MDE project box"
-	desc = "Contains everything needed to get yourself killed for a medal."
-
-/obj/item/storage/box/hardmode_box/populate_contents()
-	for(var/I in 1 to 7)
-		new /obj/item/grenade/megafauna_hardmode(src)
-	new /obj/item/storage/lockbox/medal/hardmode_box(src)
-	new /obj/item/paper/hardmode(src)
-
 /obj/item/storage/box/random_syndi
 	icon_state = "box_of_doom"
 	item_state = "syndie"

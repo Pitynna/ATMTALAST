@@ -67,14 +67,6 @@
 	force = 15
 	accuracy = GUN_ACCURACY_SNIPER
 
-/obj/item/gun/energy/plasmacutter/adv/mega
-	name = "magmite plasma cutter"
-	icon_state = "adv_plasmacutter_m"
-	item_state = "plasmacutter_mega"
-	desc = "A mining tool capable of expelling concentrated plasma bursts. You could use it to cut limbs off xenos! Or, you know, mine stuff. This one has been enhanced with plasma magmite."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv/mega)
-	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
-
 /obj/item/gun/energy/plasmacutter/shotgun
 	name = "plasma cutter shotgun"
 	desc = "An industrial-grade, heavy-duty mining shotgun."
@@ -84,11 +76,3 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/shotgun)
 	force = 10
 	accuracy = GUN_ACCURACY_SHOTGUN
-
-/obj/item/gun/energy/plasmacutter/shotgun/mega
-	name = "magmite plasma cutter shotgun"
-	icon_state = "miningshotgun_mega"
-	item_state = "miningshotgun_mega"
-	desc = "An industrial-grade, heavy-duty mining shotgun. This one seems upgraded with plasma magmite."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/shotgun/mega)
-	trigger_guard = TRIGGER_GUARD_ALLOW_ALL

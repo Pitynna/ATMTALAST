@@ -299,15 +299,3 @@
 	desc = "Contains a pesticide."
 	icon_state = "plastic_jug_pk"
 	list_reagents = list("pestkiller" = 80)
-
-/obj/item/conductive_organ
-	name = "conductive organ"
-	desc = "A small yellowish sac harvested from a lava shellback. A powerful fertilizer that greatly increases a plant's yield and nutriment content."
-	gender = MALE
-	icon = 'icons/obj/lavaland/lava_fishing.dmi'
-	icon_state = "conductive_organ"
-	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/fish_items_righthand.dmi'
-	item_state = "acid_bladder" //yeah
-	w_class = WEIGHT_CLASS_TINY
-	origin_tech = "biotech=6"

@@ -187,7 +187,6 @@
 		/obj/item/clothing/head/blob,
 
 		// Magic items
-		/obj/structure/closet/crate/necropolis/tendril = 10,
 		/obj/item/spellbook/oneuse/fireball,
 		/obj/item/spellbook/oneuse/smoke,
 		/obj/item/spellbook/oneuse/blind,

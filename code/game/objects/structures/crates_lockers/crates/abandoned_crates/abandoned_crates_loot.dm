@@ -301,7 +301,6 @@
 /obj/effect/spawner/abandoned_crate/cybernetics
 	name = "cybernetics loot spawner"
 	loot = list(
-		/obj/item/organ/internal/cyberimp/arm/katana = 1,
 	)
 
 /obj/effect/spawner/abandoned_crate/dna_injectors

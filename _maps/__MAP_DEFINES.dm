@@ -39,7 +39,7 @@
 	#define ADMIN_ZONE "Admin Zone"
 	#define TELECOMMS "Telecomms Satellite"
 	#define DERELICT "Derelicted Station"
-	#define MINING "Lavaland"
+	#define MINING "Mining Asteroid"
 	#define EMPTY_AREA "Empty Area"
 	#define AWAY_MISSION "Away Mission"
 	#define RESERVED_ZONE "Transit/Reserved"
@@ -86,7 +86,6 @@ last: Transit
 #define PLACE_DEFAULT "random"
 #define PLACE_SAME_Z "same"
 #define PLACE_SPACE_RUIN "space"
-#define PLACE_LAVA_RUIN "lavaland"
 
 #define MAX_RUIN_SIZE_VALUE 170 // Which ruin should be considered large and create a separate level of space for it.
 

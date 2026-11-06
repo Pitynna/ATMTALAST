@@ -15,8 +15,6 @@ SUBSYSTEM_DEF(mapping)
 	var/datum/map/fallback_map = new /datum/map/delta
 	/// List of all areas that can be accessed via IC and OOC means
 	var/list/ghostteleportlocs
-	///What do we have as the lavaland theme today?
-	var/datum/lavaland_theme/lavaland_theme
 	///List of areas that exist on the station this shift
 	var/list/existing_station_areas
 	// Tells if all maintenance airlocks have emergency access enabled
@@ -150,10 +148,6 @@ SUBSYSTEM_DEF(mapping)
 
 	setupPlanes()
 	find_last_played_maps()
-	var/datum/lavaland_theme/lavaland_theme_type = pick(subtypesof(/datum/lavaland_theme))
-	ASSERT(lavaland_theme_type)
-	lavaland_theme = new lavaland_theme_type
-	log_startup_progress("We're in the mood for [initial(lavaland_theme.name)] today...") //We load this first. In the event some nerd ever makes a surface map, and we don't have it in lavaland in the event lavaland is disabled.
 
 	require_area_resort()
 	// Start creating z-levels and content in it
@@ -161,9 +155,9 @@ SUBSYSTEM_DEF(mapping)
 	preloadTemplates()
 	// Load the station
 	loadStation()
-	#ifndef SKIP_LAVALAND
-	if(!CONFIG_GET(flag/disable_lavaland) && !(map_datum.disables & DISABLE_LAVALAND))
-		loadLavaland()
+	#ifndef SKIP_MINING
+	if(!CONFIG_GET(flag/disable_mining) && !(map_datum.disables & DISABLE_MINING))
+		loadMiningAsteroid()
 	#endif
 	#ifndef SKIP_AWAY_MISSION
 	// Pick a random away mission.
@@ -185,29 +179,10 @@ SUBSYSTEM_DEF(mapping)
 	// Makes a blank space level for the sake of randomness
 	GLOB.space_manager.add_new_zlevel(EMPTY_AREA, linkage = CROSSLINKED, traits = empty_z_traits)
 
+	map_datum.prepare_map()
+
 	// Setup the Z-level linkage
 	GLOB.space_manager.do_transition_setup()
-	#ifndef SKIP_LAVALAND
-	if(!CONFIG_GET(flag/disable_lavaland) && !(map_datum.disables & DISABLE_LAVALAND))
-		// Spawn Lavaland ruins and rivers.
-		log_startup_progress("Populating lavaland...")
-		var/lavaland_setup_timer = start_watch()
-		seedRuins(list(level_name_to_num(MINING)), CONFIG_GET(number/lavaland_budget), /area/lavaland/surface/outdoors/unexplored, GLOB.lava_ruins_templates)
-		// Run map generation after ruin generation to prevent issues
-		run_map_terrain_generation()
-		if(lavaland_theme)
-			lavaland_theme.setup()
-		// now that the terrain is generated, including rivers, we can safely populate it with objects and mobs
-		run_map_terrain_population()
-		var/time_spent = stop_watch(lavaland_setup_timer)
-		log_startup_progress("Successfully populated lavaland in [time_spent]s.")
-		// This number is already in seconds
-		if(time_spent >= 15)
-			log_startup_progress("!!!ERROR!!! Lavaland took FAR too long to generate at [time_spent] seconds. Notify maintainers immediately! !!!ERROR!!!") //In 3 testing cases so far, I have had it take far too long to generate. I am 99% sure I have fixed this issue, but never hurts to be sure
-			WARNING("!!!ERROR!!! Lavaland took FAR too long to generate at [time_spent] seconds. Notify maintainers immediately! !!!ERROR!!!")
-	else
-		log_startup_progress("Skipping lavaland ruins...")
-	#endif
 
 	// Create transit/reserve area for shuttle to fly in and out
 	var/base_transit_z = add_reservation_zlevel()
@@ -417,13 +392,17 @@ SUBSYSTEM_DEF(mapping)
 	query_set_map.Execute(async = FALSE) // This happens during a time of intense server lag, so should be non-async
 	qdel(query_set_map)
 
-/datum/controller/subsystem/mapping/proc/loadLavaland()
+/datum/controller/subsystem/mapping/proc/loadMiningAsteroid()
 	var/watch = start_watch()
-	log_startup_progress("Loading Lavaland...")
-	var/trait_list = list(ORE_LEVEL, REACHABLE, STATION_CONTACT, ZTRAIT_ASHSTORM, AI_OK, ZTRAIT_BASETURF = /turf/simulated/floor/lava/mapping_lava)
-	var/lavaland_z_level = GLOB.space_manager.add_new_zlevel(MINING, linkage = UNAFFECTED, traits = trait_list)
-	GLOB.maploader.load_map(file(map_datum.lavaland_path), z_offset = lavaland_z_level)
-	log_startup_progress("Loaded Lavaland in [stop_watch(watch)]s")
+	log_startup_progress("Loading Mining Asteroid...")
+	var/trait_list = list(ORE_LEVEL, REACHABLE, STATION_CONTACT, AI_OK, ZTRAIT_BASETURF = /turf/space)
+	var/mining_z_level = GLOB.space_manager.add_new_zlevel(MINING, linkage = CROSSLINKED, traits = trait_list)
+	GLOB.maploader.load_map(file(map_datum.mining_path), z_offset = mining_z_level)
+	var/datum/map_generator/asteroid_tunnels/caves = new
+	caves.generate_terrain(Z_TURFS(mining_z_level))
+	qdel(caves)
+	new /obj/effect/landmark/xenoarch_initializer(locate(1, 1, mining_z_level))
+	log_startup_progress("Loaded Mining Asteroid in [stop_watch(watch)]s")
 
 /datum/controller/subsystem/mapping/proc/seedRuins(list/z_levels = null, budget = 0, whitelist = /area/space, list/potentialRuins)
 	if(!z_levels || !length(z_levels))

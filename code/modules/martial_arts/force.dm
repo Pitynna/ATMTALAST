@@ -32,6 +32,8 @@
 	return ..()
 
 /datum/martial_art/force/teach(mob/living/carbon/human/user, make_temporary = FALSE)
+	if(is_legacy_blocked_type(type))
+		return FALSE
 	. = ..()
 
 	if(!.)

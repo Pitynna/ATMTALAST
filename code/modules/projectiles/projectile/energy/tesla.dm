@@ -43,10 +43,3 @@
 		victim.electrocute_act(shock_damage, src, siemens_coeff = 1, flags = SHOCK_NOSTUN|SHOCK_TESLA)
 
 // MARK: Ancient
-/obj/projectile/energy/tesla/ancient
-	damage = 5
-
-/obj/projectile/energy/tesla/ancient/CanAllowThrough(atom/movable/mover, border_dir)
-	. = ..()
-	if(isancientrobotleg(mover))
-		return TRUE

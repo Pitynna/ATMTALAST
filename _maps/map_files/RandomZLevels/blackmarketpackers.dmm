@@ -441,13 +441,9 @@
 /area/awaymission/BMPship/MedBay)
 "cc" = (
 /obj/structure/rack/gunrack,
-/obj/item/gun/projectile/shotgun/riot/short{
-	pixel_x = 6
-	},
-/obj/item/gun/projectile/shotgun/riot/short{
-	pixel_x = 3
-	},
-/obj/item/gun/projectile/shotgun/riot/short,
+/obj/item/gun/projectile/shotgun,
+/obj/item/gun/projectile/shotgun,
+/obj/item/gun/projectile/shotgun,
 /obj/structure/alien/weeds,
 /obj/structure/alien/resin,
 /turf/simulated/floor/wood,
@@ -1485,7 +1481,6 @@
 /area/awaymission/BMPship/Buffer)
 "fP" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/retaliate/kangaroo,
 /obj/structure/closet/crate/critter{
 	opened = 1
 	},
@@ -6335,10 +6330,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/awaymission/BMPship/Containment)
-"Vt" = (
-/mob/living/simple_animal/hostile/carp/koi,
-/turf/space,
-/area/space)
 "Vu" = (
 /obj/structure/alien/weeds,
 /obj/structure/windoor_assembly{
@@ -10412,7 +10403,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -10679,7 +10670,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -11196,7 +11187,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -12758,7 +12749,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -13076,7 +13067,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -13720,7 +13711,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -16695,7 +16686,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -16963,7 +16954,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -17749,7 +17740,7 @@ ab
 oI
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -18347,7 +18338,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -18516,7 +18507,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -18972,7 +18963,7 @@ cw
 HV
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -19494,7 +19485,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -21022,7 +21013,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -21067,7 +21058,7 @@ aa
 BG
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -21171,7 +21162,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa
@@ -21550,7 +21541,7 @@ aa
 aa
 aa
 aa
-Vt
+aa
 aa
 aa
 aa

@@ -5,24 +5,6 @@
 	},
 /turf/simulated/floor/shuttle/plating,
 /area/shuttle/transport)
-"b" = (
-/obj/machinery/door/window/survival_pod{
-	dir = 2;
-	layer = 3;
-	req_access = list(104,106,63,19)
-	},
-/mob/living/simple_animal/pet/dog/corgi/narsie{
-	faction = list("neutral")
-	},
-/obj/structure/window/reinforced/survival_pod/unhittable{
-	dir = 8;
-	pixel_x = -4;
-	damage_deflection = 100
-	},
-/turf/simulated/floor{
-	icon_state = "darkgreycamo"
-	},
-/area/shuttle/transport)
 "i" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 2;
@@ -325,7 +307,7 @@ G
 "}
 (4,1,1) = {"
 G
-b
+T
 l
 W
 G

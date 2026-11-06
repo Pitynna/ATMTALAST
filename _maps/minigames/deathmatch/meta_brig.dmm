@@ -1298,13 +1298,6 @@
 /obj/effect/turf_decal/tile/neutral/half,
 /turf/simulated/floor/indestructible/brig_black,
 /area/deathmatch)
-"Kl" = (
-/obj/effect/turf_decal/tile/bar/half{
-	dir = 8
-	},
-/obj/machinery/vending/gun_mods,
-/turf/simulated/floor/indestructible/brig_black,
-/area/deathmatch)
 "Lb" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2189,7 +2182,7 @@ ZQ
 vn
 mJ
 ja
-Kl
+Dt
 tF
 fO
 GZ

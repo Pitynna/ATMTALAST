@@ -173,10 +173,6 @@
 /obj/effect/light_emitter/thunderdome,
 /turf/simulated/floor/engine,
 /area/deathmatch)
-"sW" = (
-/mob/living/simple_animal/pet/gondola,
-/turf/simulated/floor/grass,
-/area/deathmatch)
 "tp" = (
 /obj/structure/railing{
 	dir = 8
@@ -415,9 +411,6 @@
 "Rr" = (
 /obj/effect/decal/cleanable/dust,
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/engine,
-/area/deathmatch)
-"RM" = (
 /turf/simulated/floor/engine,
 /area/deathmatch)
 "Sr" = (
@@ -939,7 +932,7 @@ cw
 hc
 VX
 Mf
-RM
+yV
 yV
 yV
 XO
@@ -1119,7 +1112,7 @@ zt
 bv
 cw
 Wl
-sW
+yl
 Wp
 Mf
 ww

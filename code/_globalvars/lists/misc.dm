@@ -64,11 +64,10 @@ GLOBAL_LIST_INIT(cooking_recipe_types, list(
 	RECIPE_OVEN = /datum/recipe/oven,
 	RECIPE_GRILL = /datum/recipe/grill,
 	RECIPE_CANDY = /datum/recipe/candy,
-	RECIPE_TRIBAL_OVEN = /datum/recipe/tribal_oven
 	))
-GLOBAL_LIST_INIT(cooking_recipes, list(RECIPE_MICROWAVE = list(), RECIPE_OVEN = list(), RECIPE_GRILL = list(), RECIPE_CANDY = list(), RECIPE_TRIBAL_OVEN = list()))
-GLOBAL_LIST_INIT(cooking_ingredients, list(RECIPE_MICROWAVE = list(), RECIPE_OVEN = list(), RECIPE_GRILL = list(), RECIPE_CANDY = list(), RECIPE_TRIBAL_OVEN = list()))
-GLOBAL_LIST_INIT(cooking_reagents, list(RECIPE_MICROWAVE = list(), RECIPE_OVEN = list(), RECIPE_GRILL = list(), RECIPE_CANDY = list(), RECIPE_TRIBAL_OVEN = list()))
+GLOBAL_LIST_INIT(cooking_recipes, list(RECIPE_MICROWAVE = list(), RECIPE_OVEN = list(), RECIPE_GRILL = list(), RECIPE_CANDY = list()))
+GLOBAL_LIST_INIT(cooking_ingredients, list(RECIPE_MICROWAVE = list(), RECIPE_OVEN = list(), RECIPE_GRILL = list(), RECIPE_CANDY = list()))
+GLOBAL_LIST_INIT(cooking_reagents, list(RECIPE_MICROWAVE = list(), RECIPE_OVEN = list(), RECIPE_GRILL = list(), RECIPE_CANDY = list()))
 
 #define EGG_LAYING_MESSAGES list("lays an egg.", "squats down and croons.", "begins making a huge racket.", "begins clucking raucously.")
 
@@ -89,7 +88,6 @@ GLOBAL_LIST_EMPTY(exoframe_types)
 
 GLOBAL_LIST_EMPTY(secspear_modes)
 
-GLOBAL_LIST_EMPTY(ash_storm_sounds)
 
 GLOBAL_LIST_EMPTY(snowstorm_sounds)
 

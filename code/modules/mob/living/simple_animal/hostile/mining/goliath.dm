@@ -36,7 +36,7 @@
 	taunt_chance = 30
 	var/turf/charge_turf
 	var/reflect_chance = 30
-	food_type = list(/obj/item/reagent_containers/food/snacks/meat, /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit, /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf)
+	food_type = list(/obj/item/reagent_containers/food/snacks/meat)
 	tame_chance = 0
 	bonus_tame_chance = 10
 	COOLDOWN_DECLARE(post_charge_delay)
@@ -203,105 +203,6 @@
 		icon_state = icon_aggro
 
 //Lavaland Goliath
-/mob/living/simple_animal/hostile/asteroid/goliath/beast
-	desc = "Громадный зверь в бронированном панцире, со щупальцами, изгибающимися у него за спиной."
-	icon_state = "goliath"
-	icon_living = "goliath"
-	icon_aggro = "goliath"
-	icon_dead = "goliath_dead"
-	pre_attack_icon = "goliath2"
-	crusher_loot = /obj/item/crusher_trophy/goliath_tentacle
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/monstermeat/goliath= 2, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/bone = 2)
-	loot = list()
-	stat_attack = UNCONSCIOUS
-	robust_searching = TRUE
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/get_ru_names()
-	return alist(
-		NOMINATIVE = "голиаф",
-		GENITIVE = "голиафа",
-		DATIVE = "голиафу",
-		ACCUSATIVE = "голиафа",
-		INSTRUMENTAL = "голиафом",
-		PREPOSITIONAL = "голиафе",
-	)
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/random/Initialize(mapload)
-	. = ..()
-	if(prob(10))
-		new /mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient(loc)
-		return INITIALIZE_HINT_QDEL
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient
-	name = "ancient goliath"
-	desc = "Голиафы биологически бессмертны, и редкие особи живут веками. Этот явно древний, и его щупальца постоянно взрыхляют землю вокруг."
-	icon_state = "Goliath"
-	icon_living = "Goliath"
-	icon_aggro = "Goliath_alert"
-	icon_dead = "Goliath_dead"
-	maxHealth = 400
-	health = 400
-	speed = 4
-	pre_attack_icon = "Goliath_preattack"
-	crusher_loot = /obj/item/crusher_trophy/eyed_tentacle
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/monstermeat/goliath = 2, /obj/item/stack/sheet/animalhide/goliath_hide = 2, /obj/item/stack/sheet/bone = 2)
-	crusher_drop_mod = 30
-	wander = FALSE
-	reflect_chance = 50
-	bonus_tame_chance = 5
-	var/list/cached_tentacle_turfs
-	var/in_agro = FALSE
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/get_ru_names()
-	return alist(
-		NOMINATIVE = "древний голиаф",
-		GENITIVE = "древнего голиафа",
-		DATIVE = "древнему голиафу",
-		ACCUSATIVE = "древнего голиафа",
-		INSTRUMENTAL = "древним голиафом",
-		PREPOSITIONAL = "древнем голиафе",
-	)
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/Initialize(mapload)
-	. = ..()
-	find_tentacle_turfs()
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/handle_automated_action()
-	. = ..()
-
-	if(AIStatus == AI_OFF || QDELETED(src))
-		return .
-
-	if(in_agro && isturf(loc))
-		for(var/turf in cached_tentacle_turfs)
-			if(!prob(10))
-				continue
-			new /obj/effect/temp_visual/goliath_tentacle(turf, src)
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/Aggro()
-	in_agro = TRUE
-	return ..()
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/LoseAggro()
-	in_agro = FALSE
-	return ..()
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
-	. = ..()
-	LAZYCLEARLIST(cached_tentacle_turfs)
-	find_tentacle_turfs()
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/proc/find_tentacle_turfs()
-	if(!loc)
-		return
-	LAZYINITLIST(cached_tentacle_turfs)
-	for(var/turf/simulated/floor/turf in RECT_TURFS(4, 4, loc))
-		cached_tentacle_turfs |= turf
-
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/tendril
-	fromtendril = TRUE
-
-//Tentacles
 /obj/effect/temp_visual/goliath_tentacle
 	name = "goliath tentacle"
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'

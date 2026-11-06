@@ -93,6 +93,9 @@
 	return ..()
 
 /turf/simulated/mineral/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/xenoarch_tool/pick))
+		excavate(I, user)
+		return ATTACK_CHAIN_BLOCKED_ALL
 	. = ..()
 
 	if(ATTACK_CHAIN_CANCEL_CHECK(.) || !isturf(user.loc) || !COOLDOWN_FINISHED(src, last_act) || !is_type_in_typecache(I, allowed_picks_typecache))
@@ -323,7 +326,7 @@
 	hardness = 2
 	mineralSpawnChanceList = list(
 		/turf/simulated/mineral/uranium/volcanic/hard = 10, /turf/simulated/mineral/diamond/volcanic/hard = 2, /turf/simulated/mineral/gold/volcanic/hard = 10,
-		/turf/simulated/mineral/titanium/volcanic/hard = 21, /turf/simulated/mineral/magmite/volcanic/hard = 0.5, /turf/simulated/mineral/silver/volcanic/hard = 12,
+		/turf/simulated/mineral/titanium/volcanic/hard = 21, /turf/simulated/mineral/silver/volcanic/hard = 12,
 		/turf/simulated/mineral/plasma/volcanic/hard = 20, /turf/simulated/mineral/bscrystal/volcanic/hard = 2, /turf/simulated/mineral/gibtonite/volcanic/hard = 4,
 		/turf/simulated/mineral/iron/volcanic/hard = 40, /turf/simulated/mineral/gem/volcanic/hard = 2)
 
@@ -346,7 +349,7 @@
 	hardness = 3
 	mineralSpawnChanceList = list(
 		/turf/simulated/mineral/uranium/volcanic/hard/double = 15, /turf/simulated/mineral/diamond/volcanic/hard/double = 3, /turf/simulated/mineral/gold/volcanic/hard/double = 15,
-		/turf/simulated/mineral/titanium/volcanic/hard/double = 31, /turf/simulated/mineral/magmite/volcanic/hard/double = 2, /turf/simulated/mineral/silver/volcanic/hard/double = 12,
+		/turf/simulated/mineral/titanium/volcanic/hard/double = 31, /turf/simulated/mineral/silver/volcanic/hard/double = 12,
 		/turf/simulated/mineral/plasma/volcanic/hard/double = 25, /turf/simulated/mineral/bscrystal/volcanic/hard/double = 3, /turf/simulated/mineral/gibtonite/volcanic/hard/double = 4,
 		/turf/simulated/mineral/iron/volcanic/hard/double = 45, /turf/simulated/mineral/gem/volcanic/hard/double = 5, /turf/simulated/mineral/clown/volcanic/hard/double = 2,
 		/turf/simulated/mineral/mime/volcanic/hard/double = 2)
@@ -366,7 +369,7 @@
 	mineralSpawnChanceList = list(
 		/turf/simulated/mineral/uranium/volcanic/hard/double = 25, /turf/simulated/mineral/diamond/volcanic/hard/double = 7, /turf/simulated/mineral/gold/volcanic/hard/double = 45,
 		/turf/simulated/mineral/titanium/volcanic/hard/double = 45, /turf/simulated/mineral/silver/volcanic/hard/double = 20, /turf/simulated/mineral/plasma/volcanic/hard/double = 50,
-		/turf/simulated/mineral/bscrystal/volcanic/hard/double = 7, /turf/simulated/mineral/magmite/volcanic/hard/double = 3, /turf/simulated/mineral/gem/volcanic/hard/double = 7,
+		/turf/simulated/mineral/bscrystal/volcanic/hard/double = 7, /turf/simulated/mineral/gem/volcanic/hard/double = 7,
 		/turf/simulated/mineral/clown/volcanic/hard/double = 5, /turf/simulated/mineral/mime/volcanic/hard/double = 5)
 
 // Actual minerals
@@ -1089,56 +1092,6 @@
 #undef GIBTONITE_ACTIVE
 #undef GIBTONITE_STABLE
 #undef GIBTONITE_DETONATE
-
-//magmite
-/turf/simulated/mineral/magmite
-	mineralType = /obj/item/magmite
-	scan_state = "rock_Magmite"
-
-/turf/simulated/mineral/magmite/gets_drilled(mob/user, triggered_by_explosion = FALSE)
-	if(!triggered_by_explosion)
-		mineralAmt = 0
-	..(user,triggered_by_explosion,TRUE)
-
-/turf/simulated/mineral/magmite/volcanic
-	environment_type = "basalt"
-	turf_type = /turf/simulated/floor/plating/asteroid/basalt
-	baseturf = /turf/simulated/floor/plating/asteroid/basalt
-	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
-	atmos_environment = ENVIRONMENT_LAVALAND
-	defer_change = 1
-
-/turf/simulated/mineral/magmite/volcanic/hard
-	name = "hardened basalt"
-	icon = 'icons/turf/smoothrocks_hard.dmi'
-	base_icon_state = "smoothrocks_hard"
-	hardness = 2
-
-/turf/simulated/mineral/magmite/volcanic/hard/get_ru_names()
-	return alist(
-		NOMINATIVE = "закалённый базальт",
-		GENITIVE = "закалённого базальта",
-		DATIVE = "закалённому базальту",
-		ACCUSATIVE = "закалённый базальт",
-		INSTRUMENTAL = "закалённым базальтом",
-		PREPOSITIONAL = "закалённом базальте",
-	)
-
-/turf/simulated/mineral/magmite/volcanic/hard/double
-	name = "hardened volcanic basalt"
-	icon = 'icons/turf/smoothrocks_volcanic.dmi'
-	base_icon_state = "smoothrocks_volcanic"
-	hardness = 3
-
-/turf/simulated/mineral/magmite/volcanic/hard/double/get_ru_names()
-	return alist(
-		NOMINATIVE = "закалённый вулканический базальт",
-		GENITIVE = "закалённого вулканического базальта",
-		DATIVE = "закалённому вулканическому базальту",
-		ACCUSATIVE = "закалённый вулканический базальт",
-		INSTRUMENTAL = "закалённым вулканическим базальтом",
-		PREPOSITIONAL = "закалённом вулканическом базальте",
-	)
 
 #undef MINERAL_TYPE_BASE
 #undef MINERAL_TYPE_ANCIENT

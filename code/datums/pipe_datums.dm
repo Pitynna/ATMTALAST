@@ -339,11 +339,27 @@ GLOBAL_LIST_EMPTY(rpd_pipe_list) //Some pipes we don't want to be dispensable by
 	pipe_icon = "outlet"
 	rpd_dispensable = TRUE
 
+/datum/pipes/disposal/wall_bin
+	pipe_name = "wall-mounted disposals bin"
+	pipe_id = PIPE_DISPOSALS_WALL_BIN
+	orientations = 4
+	pipe_icon = "disposal"
+	pipe_icon_file = 'icons/goonstation/objects/disposal_wall.dmi'
+	rpd_dispensable = TRUE
+
 /datum/pipes/disposal/chute
 	pipe_name = "disposals chute"
 	pipe_id = PIPE_DISPOSALS_CHUTE
 	orientations = 4
 	pipe_icon = "intake"
+	rpd_dispensable = TRUE
+
+/datum/pipes/disposal/mail_chute
+	pipe_name = "pneumatic mail chute"
+	pipe_id = PIPE_DISPOSALS_MAIL_CHUTE
+	orientations = 1
+	pipe_icon = "mailchute"
+	pipe_icon_file = 'icons/goonstation/objects/mail_chute.dmi'
 	rpd_dispensable = TRUE
 
 /datum/pipes/disposal/sortjunction

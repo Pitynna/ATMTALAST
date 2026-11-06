@@ -199,16 +199,6 @@
 	origin_tech = "combat=5;powerstorage=3;engineering=5"
 	max_mod_capacity = 150
 
-/obj/item/gun/energy/kinetic_accelerator/mega
-	name = "magmite proto-kinetic accelerator"
-	desc = "A self recharging, ranged mining tool that does increased damage in low pressure. This one has been enhanced with plasma magmite."
-	icon_state = "kineticgun_m"
-	item_state = "kineticgun_mega"
-	empty_state = "kineticgun_m_empty"
-	origin_tech = "combat=5;powerstorage=3;engineering=5"
-	max_mod_capacity = 200
-	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
-
 /obj/item/borg/upgrade/modkit
 	name = "kinetic accelerator modification kit"
 	desc = "An upgrade for kinetic accelerators."
@@ -636,8 +626,6 @@
 
 /obj/item/borg/upgrade/modkit/bounty/proc/get_kill(mob/living/L)
 	var/bonus_mod = 1
-	if(ismegafauna(L)) // Megafauna reward.
-		bonus_mod = 4
 	var/target_bounty = LAZYACCESS(bounties_reaped, L.type)
 	if(!target_bounty)
 		LAZYADDASSOC(bounties_reaped, L.type, min(modifier * bonus_mod, maximum_bounty))

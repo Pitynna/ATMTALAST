@@ -213,11 +213,11 @@
 	id = /obj/item/card/id/centcom
 
 	backpack_contents = list(
-		/obj/item/gun/projectile/automatic/pistol/sp8 = 1,
+		/obj/item/gun/projectile/automatic/pistol/stechkin = 1,
 		/obj/item/ammo_box/magazine/sp8 = 2,
 		/obj/item/storage/box/survival/responseteam = 1,
 		/obj/item/gun/energy/gun/blueshield = 1,
-		/obj/item/gun/projectile/automatic/smg/saber = 1,
+		/obj/item/gun/projectile/automatic/smg/c20r = 1,
 		/obj/item/ammo_box/magazine/smgm9mm = 4,
 		/obj/item/shield/riot/tele = 1,
 		/obj/item/gun_module/muzzle/suppressor = 1,
@@ -754,7 +754,7 @@
 	belt = /obj/item/storage/belt/military/assault/soviet/full
 	l_pocket = /obj/item/card/emag
 	r_pocket = /obj/item/melee/baton/telescopic
-	l_hand = /obj/item/gun/projectile/automatic/ak814
+	l_hand = /obj/item/gun/projectile/automatic/arg
 	suit_store = /obj/item/tank/internals/emergency_oxygen/double
 
 	backpack_contents = list(
@@ -853,7 +853,7 @@
 
 /datum/outfit/admin/solgov/cats
 	name = "Solar Federation Marine (CATS)"
-	suit_store = /obj/item/gun/projectile/automatic/cats
+	suit_store = /obj/item/gun/projectile/shotgun
 	belt = /obj/item/storage/belt/military/assault/marines/cats/full
 	l_pocket = /obj/item/ammo_box/magazine/m45
 
@@ -932,7 +932,7 @@
 		/obj/item/hand_labeler_refill = 1,
 		/obj/item/melee/baton = 1,
 	)
-	suit_store = /obj/item/gun/projectile/automatic/cats
+	suit_store = /obj/item/gun/projectile/shotgun
 
 /datum/outfit/admin/sol_trader/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
@@ -1072,7 +1072,7 @@
 	head = /obj/item/clothing/head/det_hat
 	glasses = /obj/item/clothing/glasses/thermal/monocle
 	l_pocket = /obj/item/ammo_box/speedloader/a357
-	r_hand = /obj/item/gun/projectile/automatic/smg/saber
+	r_hand = /obj/item/gun/projectile/automatic/smg/c20r
 
 /datum/outfit/admin/tournament_chef //Steven Seagal FTW
 	name = "Tournament Chef"

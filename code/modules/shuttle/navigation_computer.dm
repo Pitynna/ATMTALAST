@@ -13,7 +13,7 @@
 	var/list/jumpto_ports = list() //list of ports to jump to
 	var/access_station = TRUE		//can we park near station?
 	var/access_admin_zone = FALSE	//can we park on Admin z_lvls?
-	var/access_mining = FALSE		//can we park on Lavaland z_lvl?
+	var/access_mining = FALSE		//can we park on mining asteroid z-level?
 	var/access_away = FALSE		//can we park on Away_Mission z_lvl?
 	var/access_derelict = FALSE		//can we park in Unexplored Space?
 	var/obj/docking_port/stationary/my_port //the custom docking port placed by this console
@@ -174,8 +174,6 @@
 	var/baseturf = check_level_trait(my_port.z, ZTRAIT_BASETURF)
 	if(baseturf)
 		my_port.turf_type = baseturf
-	else if(is_mining_level(my_port.z))
-		my_port.turf_type = SSmapping.lavaland_theme?.primary_turf_type ? SSmapping.lavaland_theme.primary_turf_type : /turf/simulated/floor/lava/lava_land_surface
 	else
 		my_port.turf_type = /turf/space
 	if(current_user.client)
@@ -304,7 +302,7 @@
 	return ..()
 
 /mob/camera/aiEye/remote/shuttle_docker/setLoc(turf/destination, force_update = FALSE)
-	if(isspacearea(get_area(destination)) || is_area_shuttle(get_area(destination)) ||  istype(get_area(destination), /area/lavaland) || istype(get_area(destination), /area/ruin))
+	if(isspacearea(get_area(destination)) || is_area_shuttle(get_area(destination)) ||  istype(get_area(destination), /area/mine) || istype(get_area(destination), /area/ruin))
 		..()
 		var/obj/machinery/computer/camera_advanced/shuttle_docker/console = origin
 		console.checkLandingSpot()

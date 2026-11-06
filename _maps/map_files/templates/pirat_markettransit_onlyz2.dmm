@@ -155,14 +155,6 @@
 /area/ruin/space/pirate_base/black_market)
 "gu" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
 /obj/item/gun/projectile/automatic/pistol/stechkin{
 	pixel_x = 3
 	},
@@ -551,14 +543,7 @@
 /obj/structure/closet/crate/syndicate{
 	name = "crate 60k"
 	},
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = -7
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 7
-	},
-/obj/item/gun/projectile/automatic/smg/sfg,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /turf/simulated/floor/indestructible/plating{
 	icon_state = "dark";
 	icon = 'icons/turf/floors.dmi'
@@ -587,19 +572,6 @@
 	id_target = "pirat_n2"
 	},
 /turf/simulated/floor/indestructible/plating,
-/area/ruin/space/pirate_base/black_market)
-"AU" = (
-/obj/structure/rack{
-	name = "rack 40k"
-	},
-/obj/item/CQC_manual{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/turf/simulated/floor/indestructible/plating{
-	icon_state = "dark";
-	icon = 'icons/turf/floors.dmi'
-	},
 /area/ruin/space/pirate_base/black_market)
 "BJ" = (
 /obj/effect/turf_decal/delivery,
@@ -727,54 +699,6 @@
 	},
 /obj/item/gun/projectile/automatic/pistol/stechkin{
 	pixel_x = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 4;
-	pixel_y = 3
 	},
 /turf/simulated/floor/indestructible/plating{
 	icon_state = "dark";
@@ -1165,10 +1089,6 @@
 /obj/structure/rack{
 	name = "rack 5k"
 	},
-/obj/item/storage/box/syndie_kit/mr_chang_technique{
-	pixel_x = -3;
-	pixel_y = 4
-	},
 /obj/item/pinpointer/advpinpointer{
 	pixel_y = -5;
 	pixel_x = 2
@@ -1207,27 +1127,6 @@
 "Zj" = (
 /obj/structure/closet/crate/syndicate{
 	name = "crate 20k"
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = -5
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = -5
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = -5
-	},
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 5
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 5
-	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = 5
 	},
 /obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/gun/projectile/automatic/pistol/stechkin,
@@ -1463,7 +1362,7 @@ Pw
 Pw
 Xv
 aP
-AU
+Xv
 ir
 Sk
 uf

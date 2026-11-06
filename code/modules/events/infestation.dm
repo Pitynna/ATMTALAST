@@ -62,28 +62,16 @@
 			vermstring = "мышей"
 		if(VERM_LIZARDS)
 			max_number = 6
-			if(prob(70))
-				spawn_types = list(/mob/living/simple_animal/lizard)
-				vermstring = "ящериц"
-			else
-				spawn_types = list(/mob/living/simple_animal/lizard/axolotl)
-				vermstring = "аксолотлей"
+			spawn_types = list(/mob/living/simple_animal/lizard)
+			vermstring = "ящериц"
 		if(VERM_SPIDERS)
 			spawn_types = list(/obj/structure/spider/spiderling)
 			max_number = 3
 			vermstring = "пауков"
 		if(VERM_RATS)
 			max_number = 8
-			switch(rand(1, 20))
-				if(1 to 14)
-					spawn_types	= list(/mob/living/simple_animal/mouse/rat)
-					vermstring	= "крыс"
-				if(15 to 17)
-					spawn_types	= list(/mob/living/simple_animal/mouse/rat/white)
-					vermstring	= "лабораторных крыс"
-				if(18 to 20)
-					spawn_types	= list(/mob/living/simple_animal/mouse/rat/irish)
-					vermstring	= "ирландских крыс"
+			spawn_types = list(/mob/living/simple_animal/mouse, /mob/living/simple_animal/mouse/brown, /mob/living/simple_animal/mouse/white)
+			vermstring = "мышей"
 		if(VERM_FROG)
 			max_number = 6
 			if(prob(85))

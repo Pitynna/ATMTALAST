@@ -16,20 +16,17 @@ GLOBAL_LIST_INIT(engineering_positions, list(
 	JOB_TITLE_CHIEF_ENGINEER,
 	JOB_TITLE_ENGINEER,
 	JOB_TITLE_ATMOSTECH,
-	JOB_TITLE_ENGINEER_TRAINEE,
 ))
 
 GLOBAL_LIST_INIT(medical_positions, list(
 	JOB_TITLE_CMO,
 	JOB_TITLE_DOCTOR,
 	JOB_TITLE_GENETICIST,
-	JOB_TITLE_MINING_MEDIC,
 	JOB_TITLE_PSYCHIATRIST,
 	JOB_TITLE_CHEMIST,
 	JOB_TITLE_VIROLOGIST,
 	JOB_TITLE_PARAMEDIC,
 	JOB_TITLE_CORONER,
-	JOB_TITLE_MEDICAL_INTERN
 ))
 
 GLOBAL_LIST_INIT(additional_medical_positions, list(
@@ -41,7 +38,6 @@ GLOBAL_LIST_INIT(science_positions, list(
 	JOB_TITLE_SCIENTIST,
 	JOB_TITLE_GENETICIST,	//Part of both medical and science
 	JOB_TITLE_ROBOTICIST,
-	JOB_TITLE_SCIENCE_STUDENT,
 	JOB_TITLE_SPACEPOD_TECHNICIAN,
 	JOB_TITLE_EXPLORER,
 ))
@@ -71,7 +67,6 @@ GLOBAL_LIST_INIT(support_positions, list(
 	JOB_TITLE_QUARTERMASTER,
 	JOB_TITLE_CARGOTECH,
 	JOB_TITLE_MINER,
-	JOB_TITLE_MINING_MEDIC,
 	JOB_TITLE_LAWYER,
 	JOB_TITLE_CHAPLAIN,
 	JOB_TITLE_CLOWN,
@@ -85,12 +80,10 @@ GLOBAL_LIST_INIT(supply_positions, list(
 	JOB_TITLE_QUARTERMASTER,
 	JOB_TITLE_CARGOTECH,
 	JOB_TITLE_MINER,
-	JOB_TITLE_MINING_MEDIC,
 ))
 
 GLOBAL_LIST_INIT(mining_positions, list(
 	JOB_TITLE_MINER,
-	JOB_TITLE_MINING_MEDIC
 ))
 
 GLOBAL_LIST_INIT(service_positions, (support_positions - supply_positions))
@@ -98,7 +91,6 @@ GLOBAL_LIST_INIT(service_positions, (support_positions - supply_positions))
 GLOBAL_LIST_INIT(civilian_positions, list(
 	JOB_TITLE_CIVILIAN,
 	JOB_TITLE_PRISONER,
-	JOB_TITLE_INVESTOR,
 ))
 
 GLOBAL_LIST_INIT(nonhuman_positions, list(
@@ -125,6 +117,8 @@ GLOBAL_LIST_INIT(whitelisted_positions, list(
 	var/list/all_jobs = typesof(/datum/job)
 
 	for(var/A in all_jobs)
+		if(is_legacy_blocked_type(A))
+			continue
 		var/datum/job/job = new A()
 		if(!job)	continue
 		occupations += job

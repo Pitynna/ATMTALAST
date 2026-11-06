@@ -12,7 +12,7 @@
 	r_hand = /obj/item/gun/energy/clown/security
 	l_pocket = /obj/item/signmaker
 	r_pocket = /obj/item/bikehorn
-	suit_store = /obj/item/gun/energy/dominator/sibyl
+	suit_store = /obj/item/gun/energy/gun
 	id = /obj/item/card/id/security/clown
 	pda = /obj/item/pda/clown/security
 	belt = /obj/item/storage/belt/security

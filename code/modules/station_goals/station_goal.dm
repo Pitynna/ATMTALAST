@@ -27,6 +27,9 @@
 	return TRUE
 
 /datum/station_goal/proc/send_report()
+	if(!STATION_GOALS_ENABLED)
+		return
+
 	on_report()
 	var/directive = "Директива \"Нанотрейзен\" [pick(GLOB.phonetic_alphabet)] \Roman[rand(1,50)]"
 	GLOB.minor_announcement.announce(

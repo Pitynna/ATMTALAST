@@ -187,6 +187,10 @@ log transactions
 	return data
 
 /obj/machinery/atm/ui_act(action, params)
+	if(action in list("insurance", "insurance_replenishment", "change_insurance_type"))
+		return FALSE
+	if(action == "view_screen" && text2num("[params["view_screen"]]") == CHANGE_INSURANCE_TYPE)
+		return FALSE
 	if(..())
 		return
 

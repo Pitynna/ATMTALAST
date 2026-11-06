@@ -31,7 +31,6 @@ GLOBAL_VAR_INIT(refid_filter, TYPEID(filter(type="angular_blur")))
 
 // Mobs
 
-#define ismegafauna(A) istype(A, /mob/living/simple_animal/hostile/megafauna)
 
 #define isliving(A) (istype(A, /mob/living))
 
@@ -70,7 +69,7 @@ GLOBAL_VAR_INIT(refid_filter, TYPEID(filter(type="angular_blur")))
 // Simple animals
 #define is_simple_animal(A) (istype(A, /mob/living/simple_animal))
 
-#define is_lavaland_fauna(A) (istype(A, /mob/living/simple_animal/hostile/asteroid))
+#define is_asteroid_fauna(A) (istype(A, /mob/living/simple_animal/hostile/asteroid))
 
 #define isshade(A) (istype(A, /mob/living/simple_animal/shade))
 
@@ -339,8 +338,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define ismorph(A) (istype(A, /mob/living/simple_animal/hostile/morph))
 #define isborer(A) (istype(A, /mob/living/simple_animal/borer))
 #define isairmob(A) (istype(A, /mob/living/simple_animal/hostile/airmob))
-#define isancientrobot(A) (istype(A, /mob/living/simple_animal/hostile/megafauna/ancient_robot))
-#define isancientrobotleg(A) (istype(A, /mob/living/simple_animal/hostile/ancient_robot_leg))
 #define ismarauder(A) (istype(A, /mob/living/simple_animal/hostile/clockwork/marauder))
 
 #define issilicon(A) (istype(A, /mob/living/silicon))

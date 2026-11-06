@@ -1,34 +1,11 @@
 /obj/machinery/power/supermatter_crystal/proc/eat_bullets(datum/source, obj/projectile/projectile)
 	SIGNAL_HANDLER
-
-	var/turf/local_turf = loc
-	if(!istype(local_turf))
+	if(!isturf(loc) || isspaceturf(loc))
 		return NONE
-
-	if(!istype(projectile.firer, /obj/machinery/power/emitter))
-		investigate_log("has been hit by [projectile] fired by [key_name(projectile.firer)]", INVESTIGATE_ENGINE)
-	if(projectile.flag != BULLET)
-		log_activation(who = projectile.firer, how = projectile.firer_source_atom)
+	if(projectile.flag == BULLET)
+		external_damage_immediate += projectile.damage * 2
 	else
-		external_damage_immediate += projectile.damage * bullet_energy * 0.01
-		// Stop taking damage at emergency point, yell to players at danger point.
-		// This isn't clean and we are repeating [/obj/machinery/power/supermatter_crystal/proc/calculate_damage], sorry for this.
-		var/damage_to_be = damage + external_damage_immediate * clamp((emergency_point - damage) / emergency_point, 0, 1)
-		if(damage_to_be > danger_point)
-			visible_message(span_notice("[DECLENT_RU_CAP(src, NOMINATIVE)] сжимается под нагрузкой, сопротивляясь дальнейшим ударам!"))
-		playsound(src, 'sound/effects/supermatter.ogg', 50, TRUE)
-	if(istype(projectile, /obj/projectile/beam/emitter/hitscan))
-		var/obj/projectile/beam/emitter/hitscan/mahlaser = projectile
-		if(mahlaser?.integrity_heal)
-			damage = max(0, damage - mahlaser?.integrity_heal)
-		if(mahlaser?.energy_reduction)
-			internal_energy = max(0, internal_energy - mahlaser?.energy_reduction)
-		if(mahlaser?.psi_change)
-			psy_coeff = clamp(psy_coeff + mahlaser?.psi_change, 0, 1)
-	external_power_immediate += projectile.damage * bullet_energy
-	if(istype(projectile, /obj/projectile/beam/emitter/hitscan/magnetic))
-		absorption_ratio = clamp(absorption_ratio + 0.05, 0.15, 1)
-
+		external_power_immediate += projectile.damage * 2
 	qdel(projectile)
 
 /obj/machinery/power/supermatter_crystal/singularity_act()

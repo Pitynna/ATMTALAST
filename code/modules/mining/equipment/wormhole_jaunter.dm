@@ -23,7 +23,7 @@
 	if(!device_turf || !is_teleport_allowed(device_turf.z))
 		return "Ошибка! Телепортация невозможна."
 
-	if(istype(get_area(device_turf), /area/ruin/space/bubblegum_arena) || !is_mining_level(device_turf.z) && !(emagged && is_station_level(device_turf.z)))
+	if(!is_mining_level(device_turf.z) && !(emagged && is_station_level(device_turf.z)))
 		return "Ошибка! Требуется натуральная гравитация для размещения якоря."
 
 	return TRUE
@@ -92,8 +92,6 @@
 	. = list()	// we need no mask here
 
 /obj/effect/portal/jaunt_tunnel/can_teleport(atom/movable/movable, silent = FALSE)
-	if(!emagged && ismegafauna(movable))
-		return FALSE
 	return ..()
 
 /obj/effect/portal/jaunt_tunnel/teleport(atom/movable/movable)

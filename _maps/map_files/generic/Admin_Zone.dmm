@@ -400,7 +400,7 @@
 /area/centcom/admin_room)
 "er" = (
 /obj/structure/table/wood,
-/obj/item/gun/energy/immolator/multi,
+/obj/item/gun/energy/gun,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "et" = (
@@ -468,11 +468,6 @@
 "eP" = (
 /obj/structure/table/wood,
 /obj/item/gun/magic/tentacle,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
-"eR" = (
-/obj/structure/table/wood,
-/obj/item/gun/energy/immolator/multi/cyborg,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "eT" = (
@@ -586,7 +581,7 @@
 /area/centcom/admin_room)
 "ge" = (
 /obj/structure/table/wood,
-/obj/item/gun/projectile/revolver/fingergun/fake,
+/obj/item/gun/projectile/revolver,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "darkgrey"
@@ -702,11 +697,6 @@
 /obj/item/mecha_parts/mecha_equipment/medical/syringe_gun,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
-"hI" = (
-/obj/structure/table/wood,
-/obj/item/gun/projectile/automatic/sniper_rifle/compact,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "hJ" = (
 /obj/effect/overlay/palmtree_r,
 /turf/simulated/floor/beach/sand,
@@ -722,10 +712,6 @@
 	icon_state = "snow"
 	},
 /area/holodeck/source_snowfield)
-"ic" = (
-/obj/machinery/vending/gun_mods/advanced,
-/turf/simulated/floor/carpet,
-/area/centcom/admin_room)
 "io" = (
 /obj/structure/table/wood,
 /obj/item/gun/projectile/automatic/smg/wt550,
@@ -791,7 +777,7 @@
 /area/centcom/admin_room)
 "iL" = (
 /obj/structure/table/wood,
-/obj/item/gun/projectile/automatic/sniper_rifle/toy,
+/obj/item/gun/projectile/automatic/sniper_rifle,
 /turf/simulated/floor/carpet/arcade,
 /area/centcom/admin_room)
 "iQ" = (
@@ -799,19 +785,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/tdome/tdome2)
-"iZ" = (
-/obj/structure/table/wood,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "jc" = (
 /turf/simulated/floor/holofloor{
 	dir = 8;
@@ -984,13 +957,6 @@
 "kw" = (
 /turf/simulated/floor/chasm/straight_down/lava_land_surface/normal_air,
 /area/centcom/tdome/new_arena)
-"kD" = (
-/obj/structure/table/wood,
-/obj/item/kitchen/knife/envy,
-/turf/simulated/floor/plasteel{
-	icon_state = "hierophant1"
-	},
-/area/centcom/admin_room)
 "kE" = (
 /obj/mecha/combat/marauder/mauler/loaded,
 /turf/simulated/floor/plasteel{
@@ -1120,11 +1086,6 @@
 /obj/item/assembly/prox_sensor,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
-"mz" = (
-/obj/structure/table/wood,
-/obj/item/gun/projectile/shotgun/riot/short,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "mJ" = (
 /obj/structure/table/wood,
 /obj/item/grenade/clusterbuster/mega_syndieminibomb,
@@ -1143,11 +1104,6 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "hierophant1"
 	},
-/area/centcom/admin_room)
-"mX" = (
-/obj/structure/table/wood,
-/obj/item/gun/projectile/automatic/smg/saber,
-/turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "nc" = (
 /obj/structure/table/holotable,
@@ -1186,11 +1142,6 @@
 	icon_state = "red"
 	},
 /area/holodeck/source_basketball)
-"nK" = (
-/obj/structure/table/wood,
-/obj/item/gun/syringe/blowgun,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "nM" = (
 /obj/structure/table/wood,
 /obj/item/kitchen/knife/carrotshiv,
@@ -1532,7 +1483,7 @@
 "sA" = (
 /obj/machinery/vending/toyliberationstation{
 	contraband = null;
-	products = list(/obj/item/gun/projectile/automatic/toy = 10, /obj/item/gun/projectile/automatic/toy/pistol = 10, /obj/item/gun/projectile/shotgun/toy = 10, /obj/item/toy/sword = 10, /obj/item/ammo_box/foambox = 20, /obj/item/toy/foamblade = 10, /obj/item/toy/balloon/syndicate = 10, /obj/item/clothing/suit/syndicatefake = 5, /obj/item/clothing/head/syndicatefake = 5, /obj/item/gun/projectile/shotgun/toy/crossbow = 10, /obj/item/gun/projectile/automatic/smg/c20r/toy/riot = 10, /obj/item/gun/projectile/automatic/l6_saw/toy/riot = 10, /obj/item/gun/projectile/automatic/sniper_rifle/toy = 10, /obj/item/ammo_box/foambox/riot = 20, /obj/item/toy/katana = 10, /obj/item/twohanded/dualsaber/toy = 5, /obj/item/deck/cards/syndicate = 10)
+	products = list(/obj/item/gun/projectile/automatic/toy = 10, /obj/item/gun/projectile/automatic/toy/pistol = 10, /obj/item/gun/projectile/shotgun/toy = 10, /obj/item/toy/sword = 10, /obj/item/ammo_box/foambox = 20, /obj/item/toy/foamblade = 10, /obj/item/toy/balloon/syndicate = 10, /obj/item/clothing/suit/syndicatefake = 5, /obj/item/clothing/head/syndicatefake = 5, /obj/item/gun/projectile/shotgun/toy/crossbow = 10, /obj/item/gun/projectile/automatic/smg/c20r/toy/riot = 10, /obj/item/gun/projectile/automatic/l6_saw/toy/riot = 10, /obj/item/gun/projectile/automatic/sniper_rifle = 10, /obj/item/ammo_box/foambox/riot = 20, /obj/item/toy/katana = 10, /obj/item/twohanded/dualsaber/toy = 5, /obj/item/deck/cards/syndicate = 10)
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
@@ -1579,11 +1530,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/tdome/arena)
-"tG" = (
-/obj/structure/table/wood,
-/obj/item/gun/magic/staff/slipping/honkmother,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "tK" = (
 /obj/structure/table/holotable,
 /obj/item/clothing/head/helmet/thunderdome,
@@ -1596,7 +1542,7 @@
 /area/holodeck/source_thunderdomecourt)
 "tO" = (
 /obj/structure/table/wood,
-/obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage,
+/obj/item/gun/projectile/shotgun,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "darkgrey"
@@ -2079,11 +2025,6 @@
 	icon_state = "darkbrown"
 	},
 /area/centcom/tdome/tdome1)
-"zE" = (
-/obj/structure/table/wood,
-/obj/item/gun/energy/dominator,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "zG" = (
 /obj/structure/table/wood,
 /obj/item/gun/energy/kinetic_accelerator/crossbow/large/cyborg,
@@ -2310,20 +2251,6 @@
 	icon_state = "carpet6-2"
 	},
 /area/holodeck/source_theatre)
-"BG" = (
-/obj/structure/table/wood,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/gun_module/muzzle/suppressor,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "BI" = (
 /turf/simulated/floor/plating/asteroid/basalt/lava,
 /area/centcom/tdome/new_arena)
@@ -2421,17 +2348,9 @@
 	},
 /area/holodeck/source_knightarena)
 "CJ" = (
-/obj/item/gun/energy/tesla_cannon,
+/obj/item/gun/energy/gun,
 /obj/structure/table/wood,
 /turf/simulated/floor/wood,
-/area/centcom/admin_room)
-"CY" = (
-/obj/structure/table/wood,
-/obj/item/gun/projectile/shotgun/boltaction/enchanted/arcane_barrage/blood,
-/turf/simulated/floor/plasteel{
-	dir = 6;
-	icon_state = "darkgrey"
-	},
 /area/centcom/admin_room)
 "Dc" = (
 /obj/structure/table/wood,
@@ -2542,13 +2461,6 @@
 "Ey" = (
 /obj/structure/table/wood,
 /obj/item/nullrod/tribal_knife,
-/turf/simulated/floor/plasteel{
-	icon_state = "hierophant1"
-	},
-/area/centcom/admin_room)
-"EA" = (
-/obj/structure/table/wood,
-/obj/item/gun/magic/hook,
 /turf/simulated/floor/plasteel{
 	icon_state = "hierophant1"
 	},
@@ -2909,15 +2821,6 @@
 /obj/item/gun/syringe/rapidsyringe,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
-"HY" = (
-/obj/structure/table/reinforced{
-	armor = list("melee" = 1000, "bullet" = 1000, "laser" = 1000, "energy" = 1000, "bomb" = 1000, "bio" = 1000, "fire" = 500, "acid" = 500)
-	},
-/obj/item/reagent_containers/food/snacks/charred_krill{
-	name = "THUNDERDROME KRILL"
-	},
-/turf/simulated/floor/indestructible/asteroid,
-/area/centcom/tdome/new_arena/cqc)
 "HZ" = (
 /obj/structure/table/wood,
 /obj/item/gun/projectile/automatic/l6_saw/toy/riot,
@@ -3079,29 +2982,14 @@
 	icon_state = "green"
 	},
 /area/holodeck/source_basketball)
-"JV" = (
-/obj/structure/table/wood,
-/obj/item/gun/energy/gun/pdw9,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "Ke" = (
 /obj/structure/table/wood,
 /obj/item/gun/projectile/automatic/smg/c20r/toy,
 /turf/simulated/floor/carpet/arcade,
 /area/centcom/admin_room)
-"Kf" = (
-/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
-/obj/structure/table/wood,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "Kp" = (
 /obj/structure/table/wood,
 /obj/item/gun/energy/lasercannon,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
-"KA" = (
-/obj/structure/table/wood,
-/obj/item/gun/projectile/shotgun/riot/buckshot,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "KL" = (
@@ -3621,11 +3509,6 @@
 /obj/item/gun/projectile/automatic/l6_saw,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
-"Sc" = (
-/obj/structure/table/wood,
-/obj/item/gun/magic/staff/slipping,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "Sm" = (
 /turf/simulated/floor/plasteel{
 	dir = 10;
@@ -3639,7 +3522,7 @@
 /area/centcom/admin_room)
 "Su" = (
 /obj/structure/table/wood,
-/obj/item/gun/energy/kinetic_accelerator/experimental,
+/obj/item/gun/energy/gun,
 /turf/simulated/floor/plasteel{
 	dir = 6;
 	icon_state = "darkgrey"
@@ -3749,10 +3632,6 @@
 /obj/item/encryptionkey/headset_sci,
 /obj/item/encryptionkey/headset_sec,
 /obj/item/encryptionkey/headset_service,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
-"TF" = (
-/obj/structure/table/wood,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
 "TM" = (
@@ -3866,7 +3745,7 @@
 "UO" = (
 /obj/structure/table/wood,
 /obj/item/gun/projectile/automatic/toy/pistol/enforcer,
-/obj/item/gun/projectile/automatic/toy/pistol/enforcer/riot,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /turf/simulated/floor/carpet/arcade,
 /area/centcom/admin_room)
 "UR" = (
@@ -3998,11 +3877,6 @@
 /obj/item/grenade/smokebomb,
 /turf/simulated/floor/wood,
 /area/centcom/admin_room)
-"Wd" = (
-/obj/structure/table/wood,
-/obj/item/gun/projectile/shotgun/riot,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "Wg" = (
 /turf/simulated/floor/holofloor{
 	dir = 4;
@@ -4098,11 +3972,6 @@
 	icon_state = "carpet10-8"
 	},
 /area/holodeck/source_theatre)
-"Xm" = (
-/obj/item/gun/energy/dominator,
-/obj/structure/table/wood,
-/turf/simulated/floor/wood,
-/area/centcom/admin_room)
 "Xw" = (
 /obj/structure/table/wood,
 /obj/item/gun/energy/decloner,
@@ -4627,12 +4496,12 @@ gD
 Ep
 Gi
 fE
-kD
+ne
 gA
 sZ
 aU
-ic
-ic
+ZG
+ZG
 wP
 ui
 Us
@@ -5913,7 +5782,7 @@ Ep
 qE
 fE
 Ey
-EA
+ne
 yL
 OG
 ZG
@@ -7970,7 +7839,7 @@ VO
 fE
 wt
 GU
-nK
+Uv
 Vs
 ZG
 ZG
@@ -8489,7 +8358,7 @@ qv
 ZG
 ZG
 Xw
-CY
+tO
 tO
 zh
 Lr
@@ -8731,8 +8600,8 @@ Ep
 iD
 TX
 fE
-BG
-iZ
+Qa
+Qa
 Vq
 aO
 wA
@@ -9512,7 +9381,7 @@ Zd
 bX
 Ep
 cH
-mX
+cR
 ZM
 ZG
 ZG
@@ -10017,16 +9886,16 @@ fE
 fE
 fE
 XT
-Wd
-KA
+LH
+LH
 fX
-Wd
+LH
 Dc
 LH
 Ep
 gp
 Ep
-hI
+QP
 QP
 ZG
 ZG
@@ -10273,7 +10142,7 @@ WP
 yF
 XG
 uN
-mz
+LH
 jE
 IN
 Je
@@ -10288,7 +10157,7 @@ wq
 ZG
 ZG
 tg
-Sc
+Za
 aQ
 FY
 Lr
@@ -11050,7 +10919,7 @@ Iu
 ZG
 ZG
 Do
-Kf
+Zh
 DV
 Ep
 Ep
@@ -11567,7 +11436,7 @@ Ep
 Ep
 Ep
 Ep
-tG
+Za
 fE
 QK
 Ep
@@ -11829,7 +11698,7 @@ fE
 WN
 Ep
 fC
-JV
+er
 lQ
 Ep
 of
@@ -12085,7 +11954,7 @@ eP
 fE
 KN
 Ep
-eR
+er
 TU
 kl
 Ep
@@ -13879,13 +13748,13 @@ fE
 PH
 cB
 su
-TF
+Qa
 FW
 fE
 yb
 iE
-Xm
-zE
+CJ
+er
 pp
 Tg
 Np
@@ -62251,7 +62120,7 @@ Ie
 kZ
 Uw
 cD
-HY
+PX
 cD
 cD
 Ie

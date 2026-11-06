@@ -67,6 +67,9 @@
 
 /// Returns TRUE if the recipe can be built, otherwise returns FALSE. This proc is only meant as a series of tests to check if construction is possible; the actual creation of the resulting atom should be handled in do_build()
 /datum/stack_recipe/proc/try_build(mob/user, obj/item/stack/material, multiplier)
+	if(is_legacy_blocked_type(result_type))
+		return FALSE
+
 	if(!isnum(multiplier) || (multiplier < 1) || !IS_FINITE(multiplier)) // href exploit protection
 		CRASH("Invalid multiplier value in stack creation [multiplier], [user] is most likely attempting an exploit")
 
@@ -102,6 +105,9 @@
 
 /// Creates the atom defined by the recipe. Should always return the object it creates or FALSE. This proc assumes that the construction is already possible; for checking whether a recipe *can* be built before construction, use try_build()
 /datum/stack_recipe/proc/do_build(mob/user, obj/item/stack/material, multiplier, atom/result)
+	if(is_legacy_blocked_type(result_type))
+		return FALSE
+
 	if(time)
 		to_chat(user, span_notice("Building [title]..."))
 		if(!do_after(user, time, target = material.loc))

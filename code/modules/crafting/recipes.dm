@@ -919,17 +919,6 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_ARMOR
 
-/datum/crafting_recipe/chitingloves
-	name = "Weaver Chitin Gloves"
-	result = /obj/item/clothing/gloves/fingerless/weaver
-	time = 2 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/leather = 1,
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 3,
-	)
-	category = CAT_PRIMAL
-	subcategory = CAT_ARMOR
-
 /datum/crafting_recipe/firebrand
 	name = "Firebrand"
 	result = /obj/item/match/firebrand
@@ -948,17 +937,6 @@
 		/obj/item/stack/sheet/sinew = 1,
 	)
 	result = /obj/item/stack/medical/splint/tribal
-	category = CAT_PRIMAL
-	subcategory = CAT_MISC2
-
-/datum/crafting_recipe/tribal_rod
-	name = "Tribal Fishing Rod"
-	time = 4 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/bone = 2,
-		/obj/item/stack/sheet/sinew = 1,
-	)
-	result = /obj/item/twohanded/fishing_rod/tribal
 	category = CAT_PRIMAL
 	subcategory = CAT_MISC2
 
@@ -1011,19 +989,6 @@
 		/obj/item/stack/sheet/bone = 4,
 		/obj/item/stack/sheet/sinew = 1,
 	)
-	category = CAT_PRIMAL
-	subcategory = CAT_WEAPONS
-
-/datum/crafting_recipe/chitinspear
-	name = "Chitin Spear"
-	result = /obj/item/twohanded/spear/bonespear/chitinspear
-	time = 7.5 SECONDS
-	reqs = list(
-		/obj/item/twohanded/spear/bonespear = 1, //tier 2 spear
-		/obj/item/stack/sheet/sinew = 3,
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 8,
-	)
-	blacklist = list(/obj/item/twohanded/spear/bonespear/chitinspear)
 	category = CAT_PRIMAL
 	subcategory = CAT_WEAPONS
 
@@ -1081,41 +1046,6 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_WEAPONS
 
-/datum/crafting_recipe/ashen_arrow //the price is fully justified
-	name = "Bone-tipped Arrows"
-	result = list(
-		/obj/item/ammo_casing/caseless/arrow/bone_tipped,
-		/obj/item/ammo_casing/caseless/arrow/bone_tipped,
-		/obj/item/ammo_casing/caseless/arrow/bone_tipped,
-	)
-	time = 4 SECONDS
-	reqs = list(
-		/obj/item/ammo_casing/caseless/arrow = 3,
-		/obj/item/stack/sheet/bone = 1,
-		/obj/item/stack/sheet/sinew = 2,
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 2,
-	)
-	blacklist = list(/obj/item/ammo_casing/caseless/arrow/bone_tipped)
-	category = CAT_PRIMAL
-	subcategory = CAT_WEAPONS
-
-/datum/crafting_recipe/jagged_arrow
-	name = "Jagged-tipped Arrows"
-	result = list(
-		/obj/item/ammo_casing/caseless/arrow/jagged,
-		/obj/item/ammo_casing/caseless/arrow/jagged,
-		/obj/item/ammo_casing/caseless/arrow/jagged,
-	)
-	time = 4 SECONDS
-	reqs = list(
-		/obj/item/ammo_casing/caseless/arrow = 3,
-		/obj/item/stack/sheet/razor_sharp_teeth = 1,
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 1,
-	)
-	blacklist = list(/obj/item/ammo_casing/caseless/arrow/jagged)
-	category = CAT_PRIMAL
-	subcategory = CAT_WEAPONS
-
 /datum/crafting_recipe/quiver
 	name = "Quiver"
 	result = /obj/item/storage/backpack/quiver
@@ -1123,16 +1053,6 @@
 		/obj/item/stack/sheet/wood = 2,
 		/obj/item/stack/sheet/sinew = 1,
 	)
-	category = CAT_PRIMAL
-	subcategory = CAT_WEAPONS
-
-/datum/crafting_recipe/chitinquiver
-	name = "Chitin Quiver"
-	result = /obj/item/storage/backpack/quiver/weaver
-	time = 8 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 4,
-	) //Just one spider!
 	category = CAT_PRIMAL
 	subcategory = CAT_WEAPONS
 
@@ -1158,19 +1078,6 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_WEAPONS
 
-/datum/crafting_recipe/upgraded_boneaxe
-	name = "Guillotine (Bone Axe)"
-	result = /obj/item/twohanded/fireaxe/boneaxe/guillotine
-	time = 5 SECONDS
-	reqs = list(
-		/obj/item/twohanded/fireaxe/boneaxe = 1,
-		/obj/item/circular_saw_blade = 1,
-		/obj/item/stack/sheet/sinew = 2,
-	)
-	blacklist = list(/obj/item/twohanded/fireaxe/boneaxe/guillotine)
-	category = CAT_PRIMAL
-	subcategory = CAT_WEAPONS
-
 /datum/crafting_recipe/bonfire
 	name = "Bonfire"
 	time = 60
@@ -1181,12 +1088,6 @@
 	category = CAT_PRIMAL
 	subcategory = CAT_MISC2
 	alert_admins_on_craft = TRUE
-
-/datum/crafting_recipe/bonfire/coaltree
-	name = "Bonfire (coaltree)"
-	reqs = list(
-		/obj/item/reagent_containers/food/snacks/grown/ash_flora/coaltree_log = 5,
-	)
 
 /datum/crafting_recipe/rake //Category resorting incoming
 	name = "Rake"
@@ -1887,31 +1788,6 @@
 	)
 	category = CAT_MISC
 
-/datum/crafting_recipe/pathcloak
-	name = "Pathfinder Cloak"
-	result = /obj/item/clothing/suit/hooded/pathfinder
-	time = 5 SECONDS
-	reqs = list(
-		/obj/item/clothing/suit/hooded/goliath = 1,
-		/obj/item/stack/sheet/animalhide/goliath_hide = 2, //2 plates for the cloak plus 2 here plus 3 for plating the armor = 7 total
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 6,
-		/obj/item/stack/sheet/bone = 5,
-		/obj/item/stack/sheet/sinew = 5,
-	)
-	category = CAT_PRIMAL
-	subcategory = CAT_ARMOR
-
-/datum/crafting_recipe/pathtreads
-	name = "Pathfinder Treads"
-	result = /obj/item/clothing/shoes/pathtreads
-	time = 5 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/sinew = 2,
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 2,
-	)
-	category = CAT_PRIMAL
-	subcategory = CAT_ARMOR
-
 /datum/crafting_recipe/makeshift_speedloader
 	name = "Makeshift Speedloader"
 	result = /obj/item/ammo_box/speedloader/improvised
@@ -2044,28 +1920,6 @@
 	time = 15 SECONDS
 	reqs = list(
 		/obj/item/stack/sheet/wood = 2,
-		/obj/item/stack/sheet/sinew = 1,
-	)
-	category = CAT_PRIMAL
-	subcategory = CAT_MISC2
-
-/datum/crafting_recipe/nutcracker
-	name = "Nutcracker" //Колотушка
-	result = /obj/item/melee/nutcracker
-	time = 4 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/bone = 2,
-		/obj/item/stack/sheet/animalhide/weaver_chitin = 2,
-	)
-	category = CAT_PRIMAL
-	subcategory = CAT_WEAPONS
-
-/datum/crafting_recipe/fishing_pouch
-	name = "Fishing pouch"
-	result = /obj/item/storage/bag/medpouch/fishing
-	time = 4 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/cloth = 3,
 		/obj/item/stack/sheet/sinew = 1,
 	)
 	category = CAT_PRIMAL

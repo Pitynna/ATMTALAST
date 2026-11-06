@@ -263,12 +263,6 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space/nearstation)
-"vd" = (
-/mob/living/simple_animal/crab/royal{
-	faction = list("carp")
-	},
-/turf/simulated/floor/plating,
-/area/ruin/unpowered)
 "vl" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/highsecurity{
@@ -788,7 +782,7 @@ Ap
 vl
 mA
 mA
-vd
+mA
 mA
 es
 iK

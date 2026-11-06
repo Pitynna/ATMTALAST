@@ -185,32 +185,7 @@
 	register_context()
 
 /obj/item/gun/add_context(atom/source, list/context, obj/item/held_item, mob/user)
-	. = ..()
-
-	if((isnull(held_item) || held_item == src) && user.is_in_hands(held_item))
-		for(var/slot in attachments_by_slot)
-			var/obj/item/gun_module/module = attachments_by_slot[slot]
-			if(!module?.can_detach)
-				continue
-			context[SCREENTIP_CONTEXT_ALT_LMB] = "Снять модуль"
-			. = CONTEXTUAL_SCREENTIP_SET
-			break
-
-	if(held_item == src)
-		var/obj/item/gun_module/stock/stock = attachments_by_slot[ATTACHMENT_SLOT_STOCK]
-		if(!stock)
-			return
-		context[SCREENTIP_CONTEXT_RMB] = "[stock.unfolded ? "С" : "Раз"]ложить приклад"
-		. = CONTEXTUAL_SCREENTIP_SET
-
-	if(istype(held_item, /obj/item/gun_module))
-		var/obj/item/gun_module/incoming_module = held_item
-		if(attachments_by_slot[incoming_module.slot])
-			return
-		context[SCREENTIP_CONTEXT_LMB] = "Установить модуль"
-		. = CONTEXTUAL_SCREENTIP_SET
-
-	return .
+	return ..()
 
 /obj/item/gun/Destroy()
 	QDEL_NULL(gun_light)
@@ -234,42 +209,10 @@
 	return ..()
 
 /obj/item/gun/proc/get_attachment_module_examine_text(mob/user, slot, missing_text = "модуль отсутствует")
-	var/obj/item/gun_module/module = attachments_by_slot[slot]
-	if(!module)
-		return "[missing_text]"
-	return "[module.get_examine_icon(user)] [DECLENT_RU_CAP(module, NOMINATIVE)]"
+	return ""
 
 /obj/item/gun/examine(mob/user)
-	. = ..()
-
-	var/static/list/attachment_examine_data = list(
-		// Scope
-		list(GUN_MODULE_CLASS_PISTOL_RAIL, "Совместимо с малогабаритными прицелами.", "Малая прицельная планка", ATTACHMENT_SLOT_RAIL),
-		list(GUN_MODULE_CLASS_SHOTGUN_RAIL, "Совместимо со среднегабаритными прицелами.", "Средняя прицельная планка", ATTACHMENT_SLOT_RAIL),
-		list(GUN_MODULE_CLASS_RIFLE_RAIL | GUN_MODULE_CLASS_SNIPER_RAIL, "Совместимо с крупногабаритными прицелами.", "Большая прицельная планка", ATTACHMENT_SLOT_RAIL),
-		// Muzzle
-		list(GUN_MODULE_CLASS_ANY_MUZZLE, "Совместимо с дульными модулями.", "Нарезы на стволе", ATTACHMENT_SLOT_MUZZLE),
-		// Underbarrel
-		list(GUN_MODULE_CLASS_PISTOL_UNDER, "Совместимо с малогабаритными подствольными модулями.", "Малая планка на цевье", ATTACHMENT_SLOT_UNDER),
-		list(GUN_MODULE_CLASS_SHOTGUN_UNDER, "Совместимо со среднегабаритными подствольными модулями.", "Средняя планка на цевье", ATTACHMENT_SLOT_UNDER),
-		list(GUN_MODULE_CLASS_RIFLE_UNDER, "Совместимо с крупногабаритными подствольными модулями.", "Большая планка на цевье", ATTACHMENT_SLOT_UNDER),
-		list(GUN_MODULE_CLASS_SNIPER_UNDER, "Совместимо с лазерными прицелами.", "Малое крепление на цевье", ATTACHMENT_SLOT_UNDER),
-		// Stock
-		list(GUN_MODULE_CLASS_SMG_STOCK, "Совместимо со специализированными прикладами.", "Замок приклада", ATTACHMENT_SLOT_STOCK)
-	)
-
-	for(var/list/entry in attachment_examine_data)
-		var/flag_mask = entry[1]
-		if(!(attachable_allowed & flag_mask))
-			continue
-		var/tooltip_text = entry[2]
-		var/tooltip_label = entry[3]
-		var/slot = entry[4]
-		. += span_notice("[span_tooltip(tooltip_text, tooltip_label)]: [get_attachment_module_examine_text(user, slot)]")
-
-	if(unique_rename)
-		. += span_notice("Используйте ручку для переименования.")
-
+	return ..()
 
 /obj/item/gun/update_overlays()
 	. = ..()
@@ -311,19 +254,9 @@
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/gun/proc/create_start_gun_modules()
-	if(!starting_attachment_types)
-		return
-	for(var/module_path in starting_attachment_types)
-		if(!ispath(module_path, /obj/item/gun_module))
-			continue
-		var/obj/item/gun_module/module = new module_path(src)
-		attachments_by_slot[module.slot] = module
-		if(module.exists_overlay)
-			add_attachment_overlay(module)
-		module.gun = src
-		module.on_attach(src, null)
-		SEND_SIGNAL(src, COMSIG_GUN_MODULE_ATTACH, null, src, module)
-
+	attachable_allowed = 0
+	starting_attachment_types = null
+	return
 
 /obj/item/gun/equipped(mob/user, slot)
 	if(!(slot & ITEM_SLOT_HANDS))
@@ -540,14 +473,7 @@
 
 ///Sets the projectile accuracy and scatter
 /obj/item/gun/proc/setup_bullet_accuracy()
-	SIGNAL_HANDLER
-	//DUAL WIELDING
 	bonus_spread = 0
-	if(dual_wield && !(gun_user && HAS_TRAIT(gun_user, TRAIT_BADASS)))
-		bonus_spread += accuracy.dual_wield_spread * weapon_weight
-	//CLOWN CHECK
-	if(gun_user && (HAS_TRAIT(gun_user, TRAIT_CLUMSY) || !gun_user.check_brain_for_complex_interactions()))
-		bonus_spread += 75
 
 /obj/item/gun/proc/set_fire_delay(value, mob/user)
 	fire_delay = value
@@ -928,26 +854,7 @@
 	return CLICK_ACTION_SUCCESS
 
 /obj/item/gun/proc/try_detach_gun_module(mob/user)
-	. = FALSE
-	var/list/choices = list()
-	for(var/slot in attachments_by_slot)
-		if(!attachments_by_slot[slot])
-			continue
-		var/obj/item/gun_module/module = attachments_by_slot[slot]
-		if(module.can_detach)
-			choices[DECLENT_RU_CAP(module, NOMINATIVE)] = image(icon = module.icon, icon_state = module.icon_state)
-	if(length(choices) == 0)
-		return
-	var/choice = show_radial_menu(user, src, choices, require_near = TRUE, autopick_single_option = FALSE)
-	if(!choice)
-		return FALSE
-	for(var/slot in attachments_by_slot)
-		if(!attachments_by_slot[slot])
-			continue
-		var/obj/item/gun_module/module = attachments_by_slot[slot]
-		if(DECLENT_RU_CAP(module, NOMINATIVE) == choice)
-			return module.detach_without_check(src, user)
-
+	return FALSE
 
 /obj/item/gun/proc/handle_suicide(mob/living/carbon/human/user, mob/living/carbon/human/target, list/modifiers)
 	if(!ishuman(user) || !ishuman(target))

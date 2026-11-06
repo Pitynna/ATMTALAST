@@ -272,30 +272,6 @@
 	if(prob(30))
 		owner.emote("sneeze")
 
-/atom/movable/screen/alert/status_effect/lavaland_tail_o_dead
-	name = "Хвост мертвеца"
-	desc = "Поедание человеческих конечностей себя оправдало!"
-	icon_state = "tail_o_dead"
-
-/datum/status_effect/lavaland_vision
-	id = "lavaland vision"
-	duration = 5 MINUTES
-	status_type = STATUS_EFFECT_REFRESH
-	alert_type = /atom/movable/screen/alert/status_effect/lavaland_tail_o_dead
-
-/datum/status_effect/lavaland_vision/on_apply()
-	if(ishuman(owner))
-		var/mob/living/carbon/human/human = owner
-		human.force_gene_block(GLOB.colourblindblock, TRUE)
-		human.set_vision_override(/datum/vision_override/nightvision)
-	return TRUE
-
-/datum/status_effect/lavaland_vision/on_remove()
-	if(ishuman(owner))
-		var/mob/living/carbon/human/human = owner
-		human.force_gene_block(GLOB.colourblindblock, FALSE)
-		human.set_vision_override(null)
-
 /atom/movable/screen/alert/status_effect/temperature_stabilize
 	name = "Тушёный пивной червь"
 	desc = "Температура вашего тела стабилизируется в разы быстрее."

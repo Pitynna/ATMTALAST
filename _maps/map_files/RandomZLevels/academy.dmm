@@ -53,19 +53,6 @@
 	icon_state = "white"
 	},
 /area/awaymission/academy/classrooms)
-"ap" = (
-/obj/structure/stone_tile/cracked,
-/obj/structure/stone_tile/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "aq" = (
 /obj/machinery/door/poddoor/impassable{
 	id_tag = "Acad_Door6"
@@ -339,31 +326,11 @@
 /obj/structure/bookcase,
 /turf/simulated/floor/carpet/black,
 /area/awaymission/academy/headmaster)
-"bJ" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "bK" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "chapel"
 	},
 /area/awaymission/academy/headmaster)
-"bL" = (
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "bQ" = (
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = 32
@@ -989,7 +956,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/blood/bubblegum,
 /turf/simulated/floor/plasteel{
 	dir = 10;
 	icon_state = "yellow"
@@ -1065,7 +1031,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "eK" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "yellow"
@@ -1095,7 +1060,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "eR" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
 /turf/simulated/floor/plasteel{
 	icon_state = "yellow"
 	},
@@ -1520,15 +1484,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/classrooms)
-"gC" = (
-/obj/structure/stone_tile/block/cracked,
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "gD" = (
 /obj/structure/table/reinforced,
 /obj/item/camera_film,
@@ -1644,17 +1599,6 @@
 "hc" = (
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academyaft)
-"hd" = (
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile/block{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "hf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/dresser,
@@ -1820,13 +1764,6 @@
 	icon_state = "chapel"
 	},
 /area/awaymission/academy/headmaster)
-"hZ" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "chapel"
-	},
-/area/awaymission/academy/classrooms)
 "ib" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/plasteel,
@@ -2603,19 +2540,6 @@
 	icon_state = "grimy"
 	},
 /area/awaymission/academy/classrooms)
-"lg" = (
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
-"lh" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/classrooms)
 "lk" = (
 /obj/machinery/door/poddoor/impassable{
 	id_tag = "Acad_Door4"
@@ -2710,17 +2634,6 @@
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
-"lT" = (
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "lU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -2733,15 +2646,6 @@
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "green"
-	},
-/area/awaymission/academy/classrooms)
-"lY" = (
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/obj/structure/stone_tile,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
 	},
 /area/awaymission/academy/classrooms)
 "ma" = (
@@ -3002,12 +2906,6 @@
 	icon_state = "green"
 	},
 /area/awaymission/academy/academyaft)
-"oI" = (
-/obj/structure/stone_tile,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "oL" = (
 /obj/structure/chair{
 	dir = 1
@@ -3177,15 +3075,6 @@
 	icon_state = "cafeteria"
 	},
 /area/awaymission/academy/academyaft)
-"qU" = (
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "qV" = (
 /turf/simulated/floor/indestructible/snow,
 /area/awaymission/academy/academyaft)
@@ -3208,16 +3097,6 @@
 /obj/machinery/disposal/deliveryChute,
 /turf/simulated/floor/indestructible/carpet,
 /area/awaymission/academy/academyaft)
-"rf" = (
-/obj/structure/stone_tile/block{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked,
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "rk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel{
@@ -3232,11 +3111,6 @@
 	icon_state = "hydrofloor"
 	},
 /area/awaymission/academy/academyaft)
-"ro" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/classrooms)
 "rp" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plasteel{
@@ -3328,16 +3202,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/classrooms)
-"si" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 4;
-	pixel_y = 15
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "darkyellow"
-	},
-/area/awaymission/academy/classrooms)
 "so" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
@@ -3391,12 +3255,6 @@
 /obj/effect/decal/remains/robot,
 /turf/simulated/floor/plasteel/dark/telecomms,
 /area/awaymission/academy/classrooms)
-"sS" = (
-/obj/structure/stone_tile/cracked,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "sU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel{
@@ -3425,15 +3283,6 @@
 "ta" = (
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/academygate)
-"tm" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/block/cracked{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "tp" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/green,
@@ -3460,22 +3309,6 @@
 	},
 /turf/simulated/floor/wood/fancy/oak,
 /area/awaymission/academy/headmaster)
-"tz" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "chapel"
-	},
-/area/awaymission/academy/classrooms)
-"tM" = (
-/obj/structure/stone_tile/block{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "tO" = (
 /obj/structure/table/wood/fancy/black,
 /turf/simulated/floor/carpet/black,
@@ -3499,15 +3332,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/headmaster)
-"uh" = (
-/obj/structure/stone_tile/cracked{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "uj" = (
 /obj/structure/table/wood,
 /obj/random/plushie,
@@ -3703,15 +3527,6 @@
 	icon_state = "grimy"
 	},
 /area/awaymission/academy/classrooms)
-"vV" = (
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/obj/structure/stone_tile,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "wc" = (
 /obj/effect/bump_teleporter{
 	icon = 'icons/obj/stationobjs.dmi';
@@ -3748,7 +3563,6 @@
 /area/awaymission/academy/classrooms)
 "wp" = (
 /obj/item/scythe,
-/obj/structure/flora/ash/cacti,
 /turf/simulated/floor/grass,
 /area/awaymission/academy/academyaft)
 "ws" = (
@@ -3820,19 +3634,6 @@
 	id = "labr7"
 	},
 /turf/simulated/floor/indestructible/grass,
-/area/awaymission/academy/academyaft)
-"xj" = (
-/obj/structure/stone_tile/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/obj/structure/stone_tile/cracked,
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
 /area/awaymission/academy/academyaft)
 "xm" = (
 /obj/effect/bump_teleporter{
@@ -3941,19 +3742,6 @@
 	icon_state = "cafeteria"
 	},
 /area/awaymission/academy/academyaft)
-"ym" = (
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/obj/structure/stone_tile/cracked,
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "yt" = (
 /obj/structure/chair/wood,
 /obj/structure/sign/poster/contraband/random{
@@ -4008,15 +3796,6 @@
 	},
 /turf/simulated/floor/indestructible/hierophant/two,
 /area/awaymission/academy/classrooms)
-"yL" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 4
-	},
-/obj/structure/stone_tile/block/cracked{
-	dir = 8
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "yM" = (
 /obj/structure/lattice,
 /turf/space,
@@ -4122,16 +3901,6 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
-/area/awaymission/academy/academyaft)
-"zW" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 1
-	},
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile,
-/turf/simulated/floor/carpet,
 /area/awaymission/academy/academyaft)
 "Ak" = (
 /obj/effect/bump_teleporter{
@@ -4248,12 +4017,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/awaymission/academy/academygate)
-"BN" = (
-/obj/structure/stone_tile/block,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "BP" = (
 /obj/structure/closet,
 /obj/item/clothing/under/color/lightpurple,
@@ -4302,16 +4065,6 @@
 	name = "Interdimensional Rift"
 	},
 /turf/simulated/floor/vault,
-/area/awaymission/academy/academyaft)
-"Cq" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/obj/structure/stone_tile,
-/turf/simulated/floor/carpet,
 /area/awaymission/academy/academyaft)
 "Cr" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -4462,9 +4215,6 @@
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/awaymission/academy/classrooms)
 "DY" = (
-/obj/structure/stone_tile/block{
-	dir = 1
-	},
 /obj/item/documents/syndicate/red,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -4539,13 +4289,6 @@
 	icon_state = "barber"
 	},
 /area/awaymission/academy/classrooms)
-"EL" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "yellow"
-	},
-/area/awaymission/academy/classrooms)
 "EW" = (
 /obj/structure/table/wood,
 /obj/machinery/door_control{
@@ -4592,9 +4335,6 @@
 	maxHealth = 200;
 	name = "bounty hunter";
 	pixel_x = -7
-	},
-/obj/structure/stone_tile/surrounding/cracked{
-	dir = 6
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -4797,10 +4537,6 @@
 	},
 /turf/simulated/floor/indestructible/carpet,
 /area/awaymission/academy/academyaft)
-"HS" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel,
-/area/awaymission/academy/classrooms)
 "HV" = (
 /obj/structure/chair/stool{
 	pixel_y = 9
@@ -4897,16 +4633,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/awaymission/academy/headmaster)
-"Jn" = (
-/obj/structure/stone_tile/block{
-	dir = 8;
-	pixel_y = 15
-	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "darkyellow"
-	},
-/area/awaymission/academy/classrooms)
 "Jq" = (
 /obj/effect/bump_teleporter{
 	id_target = "labr12"
@@ -5012,13 +4738,6 @@
 	icon_state = "cafeteria"
 	},
 /area/awaymission/academy/classrooms)
-"Km" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "yellow"
-	},
-/area/awaymission/academy/classrooms)
 "Kn" = (
 /obj/machinery/portable_atmospherics/scrubber/huge/stationary,
 /turf/simulated/floor/plasteel{
@@ -5120,18 +4839,6 @@
 	id_target = "labr25"
 	},
 /turf/simulated/floor/plasteel/stairs/old,
-/area/awaymission/academy/academyaft)
-"KT" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 4
-	},
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
 /area/awaymission/academy/academyaft)
 "KX" = (
 /obj/item/reagent_containers/food/snacks/cheesewedge{
@@ -5261,13 +4968,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/academy/headmaster)
-"Mr" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "yellow"
-	},
-/area/awaymission/academy/classrooms)
 "Ms" = (
 /obj/structure/chair/sofa/right{
 	dir = 8
@@ -5330,15 +5030,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/academyaft)
-"Ni" = (
-/obj/structure/stone_tile/block{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "Nm" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/cup/glass/mug,
@@ -5442,16 +5133,6 @@
 	icon_state = "hydrofloor"
 	},
 /area/awaymission/academy/academyaft)
-"OF" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked,
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "OI" = (
 /obj/structure/table/wood,
 /obj/machinery/door_control{
@@ -5532,13 +5213,6 @@
 /obj/structure/flora/rock/jungle,
 /turf/simulated/floor/grass,
 /area/awaymission/academy/academygate)
-"PI" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "chapel"
-	},
-/area/awaymission/academy/classrooms)
 "PO" = (
 /obj/effect/decal/cleanable/ash,
 /turf/simulated/floor/plasteel,
@@ -5566,13 +5240,6 @@
 	icon_state = "grimy"
 	},
 /area/awaymission/academy/classrooms)
-"PX" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 1
-	},
-/obj/structure/stone_tile/block/cracked,
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "Qc" = (
 /obj/effect/turf_decal/siding/brown,
 /obj/effect/turf_decal/siding/brown{
@@ -5596,13 +5263,6 @@
 	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/awaymission/academy/classrooms)
-"Qf" = (
-/obj/structure/stone_tile/block/cracked,
-/obj/structure/stone_tile/block/cracked{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "Qp" = (
 /turf/simulated/floor/wood/fancy/oak{
 	icon_state = "fancy-wood-oak-broken4"
@@ -5655,15 +5315,6 @@
 "Ra" = (
 /turf/simulated/floor/indestructible/asteroid,
 /area/awaymission/academy/academyaft)
-"Rc" = (
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "Rk" = (
 /obj/machinery/light_construct,
 /obj/structure/reagent_dispensers/watertank/high,
@@ -5692,13 +5343,6 @@
 "Rv" = (
 /turf/simulated/floor/wood/fancy/oak{
 	icon_state = "fancy-wood-oak-broken4"
-	},
-/area/awaymission/academy/classrooms)
-"Rw" = (
-/obj/structure/stone_tile,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
 	},
 /area/awaymission/academy/classrooms)
 "RB" = (
@@ -5740,19 +5384,6 @@
 	icon_state = "escape"
 	},
 /area/awaymission/academy/classrooms)
-"RK" = (
-/obj/structure/stone_tile,
-/obj/structure/stone_tile/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/obj/structure/stone_tile{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "RO" = (
 /obj/structure/table,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5760,12 +5391,6 @@
 "RU" = (
 /turf/simulated/floor/plasteel{
 	dir = 1;
-	icon_state = "chapel"
-	},
-/area/awaymission/academy/classrooms)
-"RW" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
 	icon_state = "chapel"
 	},
 /area/awaymission/academy/classrooms)
@@ -6067,15 +5692,6 @@
 	icon_state = "vault"
 	},
 /area/awaymission/academy/classrooms)
-"Uk" = (
-/obj/structure/stone_tile/block,
-/obj/structure/stone_tile/cracked{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "Uo" = (
 /obj/structure/table/wood,
 /obj/item/folder{
@@ -6164,15 +5780,6 @@
 	icon_state = "darkyellow"
 	},
 /area/awaymission/academy/classrooms)
-"Vh" = (
-/obj/structure/stone_tile/block{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "Vt" = (
 /obj/structure/foodcart,
 /turf/simulated/floor/plasteel{
@@ -6250,15 +5857,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/awaymission/academy/academyaft)
-"Wh" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 8
-	},
-/obj/structure/stone_tile/block{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "Wj" = (
 /obj/machinery/kitchen_machine/candy_maker,
 /turf/simulated/floor/plasteel{
@@ -6291,15 +5889,6 @@
 /turf/simulated/floor/plasteel{
 	dir = 10;
 	icon_state = "darkblue"
-	},
-/area/awaymission/academy/classrooms)
-"WG" = (
-/obj/structure/stone_tile/cracked{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
 	},
 /area/awaymission/academy/classrooms)
 "WO" = (
@@ -6386,27 +5975,9 @@
 	icon_state = "green"
 	},
 /area/awaymission/academy/classrooms)
-"Xu" = (
-/obj/structure/stone_tile{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "XF" = (
 /turf/simulated/floor/carpet/black,
 /area/awaymission/academy/headmaster)
-"XO" = (
-/obj/structure/stone_tile/block/cracked,
-/obj/structure/stone_tile{
-	dir = 1
-	},
-/obj/structure/stone_tile/cracked{
-	dir = 4
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academyaft)
 "XR" = (
 /obj/effect/decal/ants,
 /turf/simulated/floor/wood/fancy/oak,
@@ -6417,7 +5988,6 @@
 /turf/simulated/floor/plasteel,
 /area/awaymission/academy/classrooms)
 "Yb" = (
-/obj/structure/stone_tile/slab,
 /mob/living/simple_animal/hostile/faithless{
 	attack_sound = 'sound/misc/demon_attack1.ogg';
 	health = 200;
@@ -6431,14 +6001,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/academyaft)
-"Yd" = (
-/obj/structure/stone_tile/block/cracked{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/awaymission/academy/classrooms)
 "Yh" = (
 /obj/item/camera_assembly,
 /turf/simulated/floor/plasteel{
@@ -6558,12 +6120,6 @@
 	},
 /turf/simulated/floor/vault,
 /area/awaymission/academy/academyaft)
-"Zr" = (
-/obj/effect/decal/cleanable/blood/bubblegum,
-/turf/simulated/floor/plasteel{
-	icon_state = "grimy"
-	},
-/area/awaymission/academy/classrooms)
 "Zs" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/stripes/line{
@@ -7428,7 +6984,7 @@ yb
 yb
 yb
 yb
-Jn
+yb
 yb
 yb
 yb
@@ -7555,12 +7111,12 @@ gm
 cK
 lw
 Mu
-Ni
-uh
+Ju
+yU
 Mu
-Yd
 Mu
-lY
+Mu
+Mu
 Mu
 Ju
 yU
@@ -7686,14 +7242,14 @@ bv
 sf
 Mu
 yU
-Vh
-vV
-Xu
-Uk
-oI
+Ju
 Mu
-tM
-lg
+Mu
+Mu
+Mu
+Mu
+yU
+Ju
 Mu
 UK
 gm
@@ -7818,19 +7374,19 @@ Mu
 Mu
 Mu
 mU
-lT
+Mu
 Fl
-bJ
-hd
-sS
-Yd
-Xu
+Mu
+Mu
+Mu
+Mu
+Mu
 TT
 gm
 eb
 et
 gk
-EL
+eJ
 eR
 fa
 et
@@ -7945,22 +7501,22 @@ gm
 bw
 sf
 Mu
-lg
-qU
-bL
-oI
-gC
-Xu
+Ju
+yU
 Mu
-WG
-tM
-sS
+Mu
+Mu
+Mu
+Mu
+Ju
+yU
+Mu
 rp
 gm
 ec
 eu
-HS
-EL
+dv
+eJ
 eR
 dv
 fn
@@ -8075,26 +7631,26 @@ gm
 bw
 sf
 Mu
-Rc
-Rw
+yU
+Ju
 Mu
 DY
 Mu
-BN
+Mu
 Mu
 yU
 Ju
 Mu
 TS
 Ya
-Km
 ed
-HS
+ed
+dv
 eK
 eS
-HS
-Km
-Km
+dv
+ed
+ed
 Ya
 fI
 gX
@@ -8208,7 +7764,7 @@ Vc
 Vc
 qN
 Vc
-si
+Vc
 Vc
 Vc
 Vc
@@ -8217,12 +7773,12 @@ Vc
 Vc
 tt
 Ya
-Mr
-Mr
 Jz
-Mr
 Jz
-Mr
+Jz
+Jz
+Jz
+Jz
 Jz
 Jz
 Ya
@@ -8349,9 +7905,9 @@ gm
 gm
 ei
 ei
-Zr
-lh
-lh
+ei
+uB
+uB
 ei
 ei
 fk
@@ -8478,12 +8034,12 @@ og
 og
 gm
 vx
-Zr
-lh
+ei
 uB
-lh
-lh
-Zr
+uB
+uB
+uB
+ei
 ne
 gm
 Ay
@@ -8608,10 +8164,10 @@ og
 og
 gm
 Uw
-Zr
+ei
 uB
 uB
-lh
+uB
 uB
 ei
 fh
@@ -8738,11 +8294,11 @@ kx
 og
 gm
 vx
-Zr
+ei
 uB
-tz
-PI
-lh
+RU
+eT
+uB
 ei
 af
 gm
@@ -8869,11 +8425,11 @@ og
 ff
 uB
 uB
-lh
-hZ
+uB
+MJ
 eU
 uB
-Zr
+ei
 lc
 gm
 fK
@@ -9000,10 +8556,10 @@ ff
 uB
 uB
 uB
-lh
 uB
-lh
-Zr
+uB
+uB
+ei
 RH
 LR
 Uo
@@ -9128,12 +8684,12 @@ og
 og
 kF
 uB
-lh
-lh
-tz
-PI
 uB
-Zr
+uB
+RU
+eT
+uB
+ei
 Sz
 LR
 wP
@@ -9259,11 +8815,11 @@ og
 gm
 ex
 HV
-lh
-hZ
-RW
-lh
-Zr
+uB
+MJ
+eU
+uB
+ei
 RH
 LR
 mu
@@ -9389,10 +8945,10 @@ og
 gm
 ex
 HV
-lh
-lh
-lh
-lh
+uB
+uB
+uB
+uB
 ei
 ji
 LR
@@ -9519,7 +9075,7 @@ og
 gm
 ex
 HV
-lh
+uB
 RU
 eT
 uB
@@ -9648,11 +9204,11 @@ cM
 cM
 cM
 ei
-Zr
-lh
+ei
+uB
 MJ
 eU
-lh
+uB
 ei
 SY
 gm
@@ -9781,9 +9337,9 @@ Bl
 EA
 uB
 uB
-lh
-ro
-Zr
+uB
+uB
+ei
 ei
 hH
 zQ
@@ -9907,13 +9463,13 @@ dB
 GA
 FA
 cM
-Zr
-Zr
+ei
+ei
 uB
 SW
 eT
-lh
-lh
+uB
+uB
 uB
 hb
 zI
@@ -10038,12 +9594,12 @@ KM
 aF
 cM
 ei
-Zr
+ei
 uB
 MJ
 eU
-lh
-lh
+uB
+uB
 uB
 hb
 zI
@@ -10056,16 +9612,16 @@ zI
 zI
 ef
 zI
-yL
-yL
-ap
 zI
 zI
 zI
 zI
 zI
 zI
-Qf
+zI
+zI
+zI
+zI
 zI
 oP
 zI
@@ -10169,11 +9725,11 @@ eY
 cM
 ei
 ei
-lh
-lh
-lh
 uB
-Zr
+uB
+uB
+uB
+ei
 ei
 hH
 vG
@@ -10188,14 +9744,14 @@ hH
 zI
 zI
 zI
-rf
-Wh
 zI
 zI
 zI
 zI
 zI
-Qf
+zI
+zI
+zI
 SI
 hH
 zI
@@ -10297,13 +9853,13 @@ cu
 cu
 cu
 cM
-Zr
-Zr
+ei
+ei
 uB
 RU
 eT
-lh
-Zr
+uB
+ei
 ei
 hH
 xx
@@ -10318,14 +9874,14 @@ hH
 zI
 zI
 zI
-RK
+zI
 Yb
-xj
-Cq
-ym
-XO
-yL
-PX
+zI
+zI
+zI
+zI
+zI
+zI
 Da
 hH
 LQ
@@ -10427,12 +9983,12 @@ cu
 IU
 qw
 cM
-Zr
-Zr
+ei
+ei
 uB
-hZ
-RW
-lh
+MJ
+eU
+uB
 ei
 ei
 hH
@@ -10448,14 +10004,14 @@ hH
 zI
 zI
 zI
-KT
-OF
 zI
 zI
 zI
 zI
 zI
-Qf
+zI
+zI
+zI
 SI
 hH
 zI
@@ -10557,12 +10113,12 @@ cu
 cu
 cu
 cM
-Zr
 ei
-lh
-lh
+ei
 uB
-lh
+uB
+uB
+uB
 uB
 uB
 hb
@@ -10576,16 +10132,16 @@ zI
 zI
 ef
 zI
-tm
-tm
-zW
 zI
 zI
 zI
 zI
 zI
 zI
-Qf
+zI
+zI
+zI
+zI
 zI
 oP
 zI
@@ -10692,7 +10248,7 @@ uQ
 fy
 ZT
 eT
-lh
+uB
 uB
 uB
 hb
@@ -10821,9 +10377,9 @@ wk
 rA
 uB
 aO
-RW
-lh
-Zr
+eU
+uB
+ei
 mS
 hH
 zQ

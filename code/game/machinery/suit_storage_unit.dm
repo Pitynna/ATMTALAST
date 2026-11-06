@@ -126,15 +126,15 @@
 
 /obj/machinery/suit_storage_unit/lavaland
 	name = "mining suit storage unit"
-	suit_type = /obj/item/clothing/suit/hooded/explorer
-	mask_type = /obj/item/clothing/mask/gas/explorer
+	suit_type = /obj/item/clothing/suit/space/hardsuit/mining
+	mask_type = /obj/item/clothing/mask/breath
 	storage_type = /obj/item/gps/mining
 	req_access = list(ACCESS_MINING_STATION)
 
 /obj/machinery/suit_storage_unit/mining_medic
 	name = "mining medical suit storage unit"
-	suit_type = /obj/item/clothing/suit/hooded/explorer/mining
-	mask_type = /obj/item/clothing/mask/gas/mining_medic
+	suit_type = /obj/item/clothing/suit/space/hardsuit/mining
+	mask_type = /obj/item/clothing/mask/breath
 	storage_type = /obj/item/gps/mining
 	req_access = list(ACCESS_MEDICAL)
 

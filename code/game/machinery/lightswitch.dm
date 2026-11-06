@@ -22,7 +22,6 @@
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26, 26)
 
 /obj/machinery/light_switch/Initialize(mapload, direction)
-	. = ..()
 	if(direction)
 		setDir(direction)
 		set_pixel_offsets_from_dir(26, -26, 26, -26)
@@ -35,6 +34,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26, 26)
 
 	if(!area)
 		area = get_area(src)
+
+	// Machinery initialization can call power_change() and update the icon.
+	// Resolve the controlled area before those callbacks use it.
+	. = ..()
 
 	if(autoname)
 		name = "[declent_ru(NOMINATIVE)] ([area.name])"

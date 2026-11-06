@@ -1836,7 +1836,7 @@
 /area/ruin/space_prison)
 "Es" = (
 /obj/effect/decal/cleanable/dust,
-/obj/item/paper/crumpled/bloody/ruins,
+/obj/item/paper/crumpled/bloody,
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
@@ -2113,7 +2113,7 @@
 /turf/simulated/floor/plating,
 /area/ruin/space_prison)
 "NL" = (
-/obj/item/paper/crumpled/bloody/ruins,
+/obj/item/paper/crumpled/bloody,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},

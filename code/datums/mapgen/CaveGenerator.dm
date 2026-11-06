@@ -70,13 +70,13 @@
 	mob_spawn_list = expand_weights(weighted_mob_spawn_list)
 	mob_spawn_no_mega_list = expand_weights(weighted_mob_spawn_list - SPAWN_MEGAFAUNA)
 	if(!weighted_megafauna_spawn_list)
-		weighted_megafauna_spawn_list = GLOB.megafauna_spawn_list
+		weighted_megafauna_spawn_list = list()
 	megafauna_spawn_list = expand_weights(weighted_megafauna_spawn_list)
 	if(!weighted_flora_spawn_list)
-		weighted_flora_spawn_list = list(/obj/structure/flora/ash/leaf_shroom = 2 , /obj/structure/flora/ash/cap_shroom = 2 , /obj/structure/flora/ash/stem_shroom = 2 , /obj/structure/flora/ash/cacti = 1, /obj/structure/flora/ash/tall_shroom = 2)
+		weighted_flora_spawn_list = list()
 	flora_spawn_list = expand_weights(weighted_flora_spawn_list)
 	if(!weighted_feature_spawn_list)
-		weighted_feature_spawn_list = list(/obj/structure/spawner/lavaland/legion = 1) //this is bad, but we don't have geysers
+		weighted_feature_spawn_list = list()
 	feature_spawn_list = expand_weights(weighted_feature_spawn_list)
 	simulated_turf_types = expand_weights(weighted_simulated_turf_types)
 	wall_turf_types = expand_weights(weighted_wall_turf_types)
@@ -182,30 +182,11 @@
 				else //this is not danger, don't spawn a boss, spawn something else
 					picked_mob = pick(mob_spawn_no_mega_list) //What if we used 100% of the brain...and did something (slightly) less shit than a while loop?
 			var/can_spawn = TRUE
-			// prevents tendrils spawning in each other's collapse range
-			if(ispath(picked_mob, /obj/structure/spawner/lavaland))
-				for(var/obj/structure/spawner/lavaland/spawn_blocker in range(4, turf))
-					can_spawn = FALSE
-					break
-			//if the random is a standard mob, avoid spawning if there's another one within 12 tiles
-			else if(ispath(picked_mob, /mob/living/simple_animal/hostile/asteroid))
+			if(ispath(picked_mob, /mob/living/simple_animal/hostile/asteroid))
 				for(var/mob/living/simple_animal/hostile/asteroid/mob_blocker in urange(12, turf))
 					can_spawn = FALSE
 					break
-			//if there's a megafauna within standard view don't spawn anything at all (This isn't really consistent, I don't know why we do this. you do you tho)
 			if(can_spawn)
-				for(var/mob/living/simple_animal/hostile/megafauna/found_fauna in range(7, turf))
-					can_spawn = FALSE
-					break
-			if(can_spawn)
-				if(ispath(picked_mob, /mob/living/simple_animal/hostile/megafauna/bubblegum)) //there can be only one bubblegum, so don't waste spawns on it
-					weighted_megafauna_spawn_list.Remove(picked_mob)
-					megafauna_spawn_list = expand_weights(weighted_megafauna_spawn_list)
-					megas_allowed = megas_allowed && length(megafauna_spawn_list)
-				if(ispath(picked_mob, /mob/living/simple_animal/hostile/megafauna/ancient_robot)) //same as above, we do not want multiple of these robots
-					weighted_megafauna_spawn_list.Remove(picked_mob)
-					megafauna_spawn_list = expand_weights(weighted_megafauna_spawn_list)
-					megas_allowed = megas_allowed && length(megafauna_spawn_list)
 				new picked_mob(turf)
 				spawned_something = TRUE
 

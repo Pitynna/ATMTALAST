@@ -93,7 +93,7 @@
 	l_ear = /obj/item/radio/headset/headset_cargo/mining
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	gloves = /obj/item/clothing/gloves/color/black
-	uniform = /obj/item/clothing/under/rank/miner/lavaland
+	uniform = /obj/item/clothing/under/rank/miner
 	l_pocket = /obj/item/reagent_containers/hypospray/autoinjector/survival
 	r_pocket = /obj/item/storage/bag/ore
 	id = /obj/item/card/id/supply
@@ -114,8 +114,8 @@
 
 /datum/outfit/job/mining/equipped
 	toggle_helmet = TRUE
-	suit = /obj/item/clothing/suit/hooded/explorer
-	mask = /obj/item/clothing/mask/gas/explorer
+	suit = /obj/item/clothing/suit/space/hardsuit/mining
+	mask = /obj/item/clothing/mask/breath
 	glasses = /obj/item/clothing/glasses/meson
 	suit_store = /obj/item/tank/internals/emergency_oxygen
 	internals_slot = ITEM_SLOT_SUITSTORE

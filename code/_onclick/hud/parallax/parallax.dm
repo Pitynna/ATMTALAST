@@ -422,9 +422,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 	if(!owner)
 		return
 
-	if(SSmapping.lavaland_theme?.planet_icon_state)
-		icon_state = SSmapping.lavaland_theme.planet_icon_state
-
 	var/static/list/connections = list(
 		COMSIG_MOVABLE_Z_CHANGED = PROC_REF(on_z_change),
 		COMSIG_MOB_LOGOUT = PROC_REF(on_mob_logout),
@@ -450,7 +447,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 	if(!posobj)
 		return
 
-	SetInvisibility(is_station_level(posobj.z) ? INVISIBILITY_NONE : INVISIBILITY_ABSTRACT, id = type)
+	SetInvisibility(INVISIBILITY_ABSTRACT, id = type)
 
 /atom/movable/screen/parallax_layer/planet/update_o()
 	return //Shit won't move

@@ -142,7 +142,6 @@
 /area/deathmatch)
 "pi" = (
 /obj/structure/closet/coffin,
-/obj/item/gun/magic/hook,
 /obj/item/book/manual/chef_recipes,
 /turf/simulated/floor/indestructible/necropolis/air,
 /area/deathmatch)
@@ -469,7 +468,6 @@
 /area/deathmatch)
 "YL" = (
 /obj/machinery/light/directional/east,
-/mob/living/simple_animal/hostile/retaliate/goat/hump,
 /turf/simulated/floor/indestructible/necropolis/air,
 /area/deathmatch)
 "Zw" = (

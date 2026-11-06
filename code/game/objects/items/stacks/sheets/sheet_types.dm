@@ -58,7 +58,6 @@ GLOBAL_LIST_INIT(metal_recipes, list(
 		new /datum/stack_recipe("fire alarm frame", /obj/item/mounted/frame/firealarm, 2),
 		new /datum/stack_recipe("intercom frame", /obj/item/mounted/frame/intercom, 2),
 		new /datum/stack_recipe("shower", /obj/item/mounted/shower, 5, time = 0.7 SECONDS, on_floor = TRUE),
-		new /datum/stack_recipe("torch holder", /obj/item/mounted/frame/torch_holder, 2, time = 3 SECONDS),
 	)),
 	new /datum/stack_recipe_list("construction", list(
 		new /datum/stack_recipe("crate shelf parts", /obj/item/rack_parts/cargo_shelf),

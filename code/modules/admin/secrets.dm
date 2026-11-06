@@ -20,7 +20,6 @@
 						<a href='byond://?src=[UID()];secretsadmin=manifest'>Show Crew Manifest</a><br>
 						<a href='byond://?src=[UID()];secretsadmin=view_codewords'>Show code phrases and responses</a><br>
 						<a href='byond://?src=[UID()];secretsadmin=night_shift_set'>Set Night Shift Mode</a><br>
-						<a href='byond://?src=[UID()];secretsadmin=lavatype'>Изменить тип Лазиса</a><br>
 						<b>Bombs</b><br>
 						[check_rights(R_SERVER,  FALSE) ? "&nbsp;&nbsp;<a href='byond://?src=[UID()];secretsfun=togglebombcap'>Toggle bomb cap</a><br>" : "<br>"]
 						<b>Lists</b><br>
@@ -77,7 +76,6 @@
 					<b>Change Security Level</b><br>
 					[security_levels_data]<br>
 					<b>Create Weather</b><br>
-					<a href='byond://?src=[UID()];secretsfun=weatherashstorm'>Weather - Ash Storm</a>&nbsp;&nbsp;
 					<br>
 					<b>Reinforce Station</b><br>
 					<a href='byond://?src=[UID()];secretsfun=gammashuttle'>Move the Gamma Armory</a>&nbsp;&nbsp;

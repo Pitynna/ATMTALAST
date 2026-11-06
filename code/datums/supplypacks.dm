@@ -65,6 +65,8 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	..()
 	manifest += "<ul>"
 	for(var/path in contains)
+		if(is_legacy_blocked_type(path))
+			continue
 		if(!path)
 			continue
 		var/atom/movable/dummy = new path(locate(1, 1, 1))

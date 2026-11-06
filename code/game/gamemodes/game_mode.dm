@@ -746,6 +746,10 @@
 	return objective_parts.Join("<br>")
 
 /datum/game_mode/proc/generate_station_goals()
+	// Keep the shared toggle for round generation and admin-issued goals.
+	if(!STATION_GOALS_ENABLED)
+		return
+
 	var/list/possible = list()
 
 	for(var/T in subtypesof(/datum/station_goal))
@@ -770,6 +774,8 @@
 		send_station_goals_message()
 
 /datum/game_mode/proc/send_station_goals_message()
+	if(!STATION_GOALS_ENABLED)
+		return
 
 	var/list/goals = list()
 	for(var/datum/station_goal/goal in station_goals)
@@ -785,6 +791,9 @@
 	log_game("Station goals at round start were: [english_list(goals)].")
 
 /datum/game_mode/proc/declare_station_goal_completion()
+	if(!STATION_GOALS_ENABLED)
+		return
+
 	for(var/datum/station_goal/goal in station_goals)
 		if(!goal)
 			continue

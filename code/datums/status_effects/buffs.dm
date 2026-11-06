@@ -265,103 +265,6 @@
 	icon_state = "banana_power"
 
 //Hippocratic Oath: Applied when the Rod of Asclepius is activated.
-/datum/status_effect/hippocraticOath
-	id = "Hippocratic Oath"
-	tick_interval = 25
-	examine_text = span_notice_alt("Кажется, они окружены аурой исцеления и доброжелательности.")
-	alert_type = null
-
-	var/datum/component/aura_healing/aura_healing
-	var/hand
-	var/deathTick = 0
-
-/datum/status_effect/hippocraticOath/on_apply()
-	var/static/list/organ_healing = list(
-		"brain" = 1.4,
-	)
-
-	aura_healing = owner.AddComponent( \
-		/datum/component/aura_healing, \
-		range = 7, \
-		brute_heal = 1.4, \
-		burn_heal = 1.4, \
-		toxin_heal = 1.4, \
-		suffocation_heal = 1.4, \
-		stamina_heal = 1.4, \
-		clone_heal = 0.4, \
-		simple_heal = 1.4, \
-		mend_fractures_chance = 5, \
-		stop_internal_bleeding_chance = 5, \
-		organ_healing = organ_healing, \
-		healing_color = "#375637", \
-	)
-
-	//Makes the user passive, it's in their oath not to harm!
-	ADD_TRAIT(owner, TRAIT_PACIFISM, "hippocraticOath")
-	var/datum/atom_hud/med_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	med_hud.show_to(owner)
-	return ..()
-
-/datum/status_effect/hippocraticOath/on_remove()
-	QDEL_NULL(aura_healing)
-	REMOVE_TRAIT(owner, TRAIT_PACIFISM, "hippocraticOath")
-	var/datum/atom_hud/med_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
-	med_hud.hide_from(owner)
-
-/datum/status_effect/hippocraticOath/tick(seconds_between_ticks)
-	if(owner.stat == DEAD)
-		if(deathTick < 4)
-			deathTick += 1
-		else
-			owner.visible_message(span_notice("Душа [owner] поглощается посохом, освобождая предыдущую змею от её обязанностей."))
-			var/mob/living/simple_animal/hostile/retaliate/poison/snake/healSnake = new(owner.loc)
-			var/list/chems = list("bicaridine", "perfluorodecalin", "kelotane")
-			healSnake.poison_type = pick(chems)
-			healSnake.name = "Asclepius's Snake"
-			healSnake.real_name = "Asclepius's Snake"
-			healSnake.desc = "Мистическая змея, ранее заключённая в Посохе Асклепия, теперь освобождена от своей ноши. В отличие от обычной змеи, её укусы содержат химические вещества с лёгкими целебными свойствами."
-			new /obj/effect/decal/cleanable/ash(owner.loc)
-			new /obj/item/rod_of_asclepius(owner.loc)
-			qdel(owner)
-	else
-		if(ishuman(owner))
-			var/mob/living/carbon/human/itemUser = owner
-			var/obj/item/heldItem = (hand ==  1 ? itemUser.l_hand : itemUser.r_hand)
-			if(!heldItem || !istype(heldItem, /obj/item/rod_of_asclepius)) //Checks to make sure the rod is still in their hand
-				var/obj/item/rod_of_asclepius/newRod = new(itemUser.loc)
-				newRod.activated()
-				if(hand)
-					itemUser.drop_l_hand(TRUE)
-					if(itemUser.put_in_l_hand(newRod, TRUE))
-						to_chat(itemUser, span_notice("Посох Асклепия внезапно вырастает из вашей руки!"))
-					else
-						if(!itemUser.get_organ(BODY_ZONE_L_ARM))
-							new /obj/item/organ/external/arm(itemUser)
-						new /obj/item/organ/external/hand(itemUser)
-						itemUser.update_body()
-						itemUser.put_in_l_hand(newRod, TRUE)
-						to_chat(itemUser, span_notice("Ваша рука внезапно отрастает, и Посох Асклепия всё ещё прикреплён к ней!"))
-				else
-					itemUser.drop_r_hand(TRUE)
-					if(itemUser.put_in_r_hand(newRod, TRUE))
-						to_chat(itemUser, span_notice("Посох Асклепия внезапно вырастает из вашей руки!"))
-					else
-						if(!itemUser.get_organ(BODY_ZONE_R_ARM))
-							new /obj/item/organ/external/arm/right(itemUser)
-						new /obj/item/organ/external/hand/right(itemUser)
-						itemUser.update_body()
-						itemUser.put_in_r_hand(newRod, TRUE)
-						to_chat(itemUser, span_notice("Ваша рука внезапно отрастает, и Посох Асклепия всё ещё прикреплён к ней!"))
-
-			//Because a servant of medicines stops at nothing to help others, lets keep them on their toes and give them an additional boost.
-			if(itemUser.health < itemUser.maxHealth)
-				new /obj/effect/temp_visual/heal(get_turf(itemUser), "#375637")
-			var/update = NONE
-			update |= itemUser.heal_overall_damage(1.5, 1.5, updating_health = FALSE)
-			update |= itemUser.heal_damages(tox = 1.5, oxy = 1.5, clone = 0.5, stamina = 1.5, brain = 1.5, updating_health = FALSE)
-			if(update)
-				owner.updatehealth("Hippocratic Oath")
-
 /atom/movable/screen/alert/status_effect/regenerative_core
 	name = "Регенеративное ядро"
 	desc = "Вы можете двигаться быстрее, чем ваше повреждённое тело обычно позволяет!"
@@ -384,7 +287,7 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		H.set_bodytemperature(H.dna ? H.dna.species.body_temperature : BODYTEMP_NORMAL)
-		if(is_mining_level(H.z) || istype(get_area(H), /area/ruin/space/bubblegum_arena))
+		if(is_mining_level(H.z))
 			for(var/obj/item/organ/external/bodypart as anything in H.bodyparts)
 				bodypart.stop_internal_bleeding()
 				bodypart.stop_arterial_bleeding()
@@ -837,83 +740,6 @@
 /datum/status_effect/drill_payback/on_remove()
 	..()
 	owner.clear_fullscreen("payback")
-
-/atom/movable/screen/alert/status_effect/lavaland_freaky_leg
-	name = "Жуткие ноги"
-	desc = "Поедание человеческих конечностей себя оправдало!"
-	icon_state = "freaky_legs"
-
-/datum/status_effect/lavaland_no_pain
-	id = "Freaky Legs"
-	duration = 1 MINUTES
-	status_type = STATUS_EFFECT_REPLACE
-	alert_type = /atom/movable/screen/alert/status_effect/lavaland_freaky_leg
-
-/datum/status_effect/lavaland_no_pain/on_apply()
-	owner.ignore_slowdown(TRAIT_STATUS_EFFECT(id))
-	return TRUE
-
-/datum/status_effect/lavaland_no_pain/on_remove()
-	owner.unignore_slowdown(TRAIT_STATUS_EFFECT(id))
-
-/atom/movable/screen/alert/status_effect/lavaland_eternal_bleeding_fix
-	name = "Густая красная паста"
-	desc = "Вы чувствуете, как вам становится слегка лучше."
-	icon_state = "thick_red_paste"
-
-/datum/status_effect/lavaland_eternal_bleeding_fix
-	id = "Lavaland Eternal Bleeding"
-	status_type = STATUS_EFFECT_REPLACE
-	duration = 30 SECONDS
-	alert_type = /atom/movable/screen/alert/status_effect/lavaland_eternal_bleeding_fix
-
-/datum/status_effect/lavaland_eternal_bleeding_fix/tick(seconds_between_ticks)
-	if(ishuman(owner))
-		var/mob/living/carbon/human/hum = owner
-		for(var/obj/item/organ/external/bodypart as anything in hum.bodyparts)
-			if((bodypart.has_internal_bleeding() || bodypart.has_arterial_bleeding()) && prob(7))
-				to_chat(hum, span_notice("Вы чувствуете сильное жжение в [bodypart.declent_ru(PREPOSITIONAL)], а затем облегчение. Судя по всему, ваши повреждённые кровеносные сосуды восстанавливаются!"))
-				bodypart.stop_internal_bleeding()
-				bodypart.stop_arterial_bleeding()
-
-/atom/movable/screen/alert/status_effect/lavaland_night_vision
-	name = "Ксено-сетчатка"
-	desc = "Вы начинаете лучше видеть в темноте."
-	icon_state = "xeno_sticks"
-
-/datum/status_effect/lavaland_night_vision
-	id = "Lavaland Night Vision"
-	status_type = STATUS_EFFECT_REFRESH
-	duration = 450 SECONDS
-	alert_type = /atom/movable/screen/alert/status_effect/lavaland_night_vision
-
-/datum/status_effect/lavaland_night_vision/on_apply()
-	if(ishuman(owner))
-		var/mob/living/carbon/human/human = owner
-		human.set_vision_override(/datum/vision_override/nightvision)
-	return TRUE
-
-/datum/status_effect/lavaland_night_vision/on_remove()
-	if(ishuman(owner))
-		var/mob/living/carbon/human/human = owner
-		human.set_vision_override(null)
-
-/atom/movable/screen/alert/status_effect/lavaland_blood_regen
-	name = "Кроветворение"
-	desc = "Вы чувствуете, что ваша кровь начала восстанавливаться быстрее."
-	icon_state = "abu_ghosh"
-
-/datum/status_effect/lavaland_blood_regen
-	id = "Lavaland Blood Regeneration"
-	status_type = STATUS_EFFECT_REFRESH
-	duration = 5 MINUTES
-	alert_type = /atom/movable/screen/alert/status_effect/lavaland_blood_regen
-
-/datum/status_effect/lavaland_blood_regen/tick(seconds_between_ticks)
-	if(ishuman(owner))
-		var/mob/living/carbon/human/H = owner
-		if(!HAS_TRAIT(H, TRAIT_NO_BLOOD) && !HAS_TRAIT(H, TRAIT_NO_BLOOD_RESTORE) && H.blood_volume < BLOOD_VOLUME_NORMAL)
-			H.blood_volume += 0.4
 
 /datum/status_effect/drask_coma
 	id = "drask_coma"

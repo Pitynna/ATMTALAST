@@ -33,18 +33,7 @@
 
 /// Try attach module to gun, return TRUE if success
 /obj/item/gun_module/proc/try_attach(obj/item/gun/target_gun, mob/user)
-	if(!isgun(target_gun))
-		user.balloon_alert(user, "несовместимо с модулями")
-		return FALSE
-	var/obj/item/gun/gun = target_gun
-	var/allowed = gun.attachable_allowed & class
-	if(!allowed)
-		user.balloon_alert(user, "несовместимое оружие")
-		return FALSE
-	if(gun.attachments_by_slot[slot] != null)
-		user.balloon_alert(user, "слот для модуля занят")
-		return FALSE
-	return attach_without_check(gun, user)
+	return FALSE
 
 /// Attaching module to gun without check, use try_attach(/obj/item/gun/target, mob/user) for checks
 /obj/item/gun_module/proc/attach_without_check(obj/item/gun/target_gun, mob/user)

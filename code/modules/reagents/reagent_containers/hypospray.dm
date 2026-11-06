@@ -384,7 +384,7 @@
 	list_reagents = list("salbutamol" = 10, "adv_lava_extract" = 10, "teporone" = 10, "hydrocodone" = 10)
 
 /obj/item/reagent_containers/hypospray/autoinjector/survival/luxury/attack(mob/living/carbon/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
-	if(lavaland_equipment_pressure_check(get_turf(user)))
+	if(mining_equipment_pressure_check(get_turf(user)))
 		amount_per_transfer_from_this = initial(amount_per_transfer_from_this)
 		return ..()
 

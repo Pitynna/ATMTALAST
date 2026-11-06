@@ -7,6 +7,9 @@
 
 	var/atom/atom_to_spawn = spawn_params["selected_atom"]
 
+	if(is_legacy_blocked_type(atom_to_spawn))
+		return
+
 	if(!atom_to_spawn || (!ispath(atom_to_spawn, /obj) && !ispath(atom_to_spawn, /turf) && !ispath(atom_to_spawn, /mob)))
 		return
 

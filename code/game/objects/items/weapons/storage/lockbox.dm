@@ -200,38 +200,3 @@
 	new /obj/item/organ/internal/cyberimp/arm/toolset/mantisblade/shellguard(src)
 	new /obj/item/organ/internal/cyberimp/arm/toolset/mantisblade/shellguard/l(src)
 
-/obj/item/storage/lockbox/medal/hardmode_box
-	name = "HRD-MDE program medal box"
-	desc = "A locked box used to store medals of pride. Use a fauna research disk on the box to transmit the data and print a medal."
-	req_access = list(ACCESS_MINING) //No grubby assistant hands on my hard earned medals
-	can_hold = list(/obj/item/clothing/accessory, /obj/item/coin) //Whoops almost gave miners boxes that could store 12 legion cores. Scoped to accessory if they want to store neclaces or hope or something in there. Or a coin collection.
-	var/list/completed_fauna = list()
-	var/number_of_megafauna = 7 //Increase this if new megafauna are added.
-
-/obj/item/storage/lockbox/medal/hardmode_box/Initialize(mapload)
-	. = ..()
-	number_of_megafauna = length(subtypesof(/obj/item/disk/fauna_research))
-
-/obj/item/storage/lockbox/medal/hardmode_box/populate_contents()
-	return
-
-/obj/item/storage/lockbox/medal/hardmode_box/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/disk/fauna_research))
-		var/obj/item/disk/fauna_research/disky = I
-		if(!user.drop_transfer_item_to_loc(disky, src))
-			return ..()
-		add_fingerprint(user)
-		var/atom/drop_loc = drop_location()
-		var/obj/item/pride = new disky.output(drop_loc)
-		to_chat(user, span_notice("The [name] accepts [disky], and prints out [pride]."))
-		qdel(disky)
-		if(!is_type_in_list(pride, completed_fauna))
-			completed_fauna += pride.type
-			if(length(completed_fauna) == number_of_megafauna)
-				to_chat(user, span_notice("The [name] prints out a very fancy medal."))
-				var/obj/item/clothing/accessory/medal/gold/heroism/hardmode_full/accomplishment = new(drop_loc)
-				user.put_in_hands(accomplishment, ignore_anim = FALSE)
-		user.put_in_hands(pride, ignore_anim = FALSE)
-		return ATTACK_CHAIN_BLOCKED_ALL
-	return ..()
-

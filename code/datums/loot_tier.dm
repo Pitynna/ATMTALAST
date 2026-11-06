@@ -38,12 +38,12 @@
 		/obj/item/gun/energy/taser,
 		/obj/item/gun/energy/disabler,
 		/obj/item/gun/energy/laser/retro,
-		/obj/item/gun/energy/emittergun,
+		/obj/item/gun/energy/gun,
 		/obj/item/gun/energy/gun/mini,
 		/obj/item/gun/energy/gun/advtaser,
 		/obj/item/gun/energy/e_gun/old,
 		list(
-			/obj/item/gun/projectile/automatic/lr30,
+			/obj/item/gun/projectile/automatic/arg,
 			/obj/item/ammo_box/magazine/lr30mag,
 			/obj/item/ammo_box/magazine/lr30mag,
 			/obj/item/ammo_box/magazine/lr30mag,
@@ -106,30 +106,30 @@
 		/obj/item/gun/energy/gun/hos,
 		/obj/item/gun/energy/mindflayer,
 		/obj/item/gun/energy/gun,
-		/obj/item/gun/energy/tesla_cannon,
+		/obj/item/gun/energy/gun,
 		/obj/item/gun/energy/laser/scatter,
 		/obj/item/gun/energy/laser,
-		/obj/item/gun/energy/emittercannon,
-		/obj/item/gun/energy/dominator,
-		/obj/item/gun/energy/plasma_pistol,
-		/obj/item/gun/energy/kinetic_accelerator/crossbow/toy,
+		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/gun,
+		/obj/item/gun/energy/gun,
 		/obj/item/gun/energy/decloner,
 		/obj/item/gun/energy/lasercannon,
 		/obj/item/gun/energy/xray,
 		list(
-			/obj/item/gun/energy/specter,
+			/obj/item/gun/energy/gun,
 			/obj/item/weapon_cell/specter,
 			/obj/item/weapon_cell/specter,
 			/obj/item/weapon_cell/specter,
 		),
 		list(
-			/obj/item/gun/projectile/revolver/ga12,
+			/obj/item/gun/projectile/revolver,
 			/obj/item/ammo_box/shotgun/buck,
 			/obj/item/ammo_box/shotgun/buck,
 			/obj/item/ammo_box/speedloader/shotgun,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/smg/ppsh,
+			/obj/item/gun/projectile/automatic/smg/c20r,
 			/obj/item/ammo_box/magazine/ppsh,
 			/obj/item/ammo_box/magazine/ppsh,
 		),
@@ -140,7 +140,7 @@
 			/obj/item/ammo_box/speedloader/shotgun,
 		),
 		list(
-			/obj/item/gun/projectile/revolver/taurus,
+			/obj/item/gun/projectile/revolver,
 			/obj/item/ammo_box/speedloader/rubber45colt/empty,
 			/obj/item/ammo_box/speedloader/rubber45colt/empty,
 			/obj/item/ammo_box/speedloader/rubber45colt/empty,
@@ -171,13 +171,13 @@
 			/obj/item/ammo_box/magazine/toy/smgm45/riot,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/pistol/sp8,
+			/obj/item/gun/projectile/automatic/pistol/stechkin,
 			/obj/item/ammo_box/magazine/sp8,
 			/obj/item/ammo_box/magazine/sp8,
 			/obj/item/ammo_box/magazine/sp8,
 		),
 		list(
-			/obj/item/gun/projectile/shotgun/riot/short,
+			/obj/item/gun/projectile/shotgun,
 			/obj/item/ammo_box/shotgun,
 			/obj/item/ammo_box/shotgun/buck,
 			/obj/item/ammo_box/speedloader/shotgun,
@@ -189,20 +189,20 @@
 			/obj/item/ammo_box/magazine/m45,
 		),
 		list(
-			/obj/item/gun/projectile/shotgun/riot,
-			/obj/item/gun/projectile/shotgun/winchester,
+			/obj/item/gun/projectile/shotgun,
+			/obj/item/gun/projectile/shotgun,
 			/obj/item/ammo_box/shotgun,
 			/obj/item/ammo_box/shotgun/buck,
 			/obj/item/ammo_box/speedloader/shotgun,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/smg/saber,
+			/obj/item/gun/projectile/automatic/smg/c20r,
 			/obj/item/ammo_box/magazine/smgm9mm,
 			/obj/item/ammo_box/magazine/smgm9mm,
 			/obj/item/ammo_box/magazine/smgm9mm,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/smg/sparkle_a12,
+			/obj/item/gun/projectile/automatic/smg/c20r,
 			/obj/item/ammo_box/magazine/sparkle_a12,
 			/obj/item/ammo_box/magazine/sparkle_a12,
 			/obj/item/ammo_box/magazine/sparkle_a12,
@@ -251,12 +251,12 @@
 	open_time = 15 SECONDS
 	loot_count = 3
 	loot_list = list(
-		/obj/item/gun/energy/immolator/multi,
+		/obj/item/gun/energy/gun,
 		/obj/item/gun/energy/gun/nuclear,
 		/obj/item/gun/energy/laser/captain/scattershot,
 		/obj/item/gun/energy/kinetic_accelerator/crossbow/large,
 		/obj/item/gun/energy/laser/captain,
-		/obj/item/gun/energy/sniperrifle/pod_pilot,
+		/obj/item/gun/energy/gun,
 		list(
 			/obj/item/gun/projectile/automatic/smg/c20r,
 			/obj/item/ammo_box/magazine/smgm45,
@@ -270,7 +270,7 @@
 			/obj/item/ammo_box/magazine/wt550m9,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/smg/sfg,
+			/obj/item/gun/projectile/automatic/smg/c20r,
 			/obj/item/ammo_box/magazine/sfg9mm,
 			/obj/item/ammo_box/magazine/sfg9mm,
 			/obj/item/ammo_box/magazine/sfg9mm,
@@ -282,7 +282,7 @@
 			/obj/item/ammo_box/speedloader/shotgun,
 		),
 		list(
-			/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
+			/obj/item/gun/grenadelauncher,
 			/obj/item/ammo_casing/caseless/rocket/a70mm_he,
 			/obj/item/ammo_casing/caseless/rocket/a70mm_he,
 			/obj/item/ammo_casing/caseless/rocket/a70mm_he,
@@ -304,7 +304,7 @@
 			/obj/item/ammo_box/speedloader/shotgun,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/aks74u,
+			/obj/item/gun/projectile/automatic/arg,
 			/obj/item/ammo_box/magazine/aks74u,
 			/obj/item/ammo_box/magazine/aks74u,
 			/obj/item/ammo_box/magazine/aks74u,
@@ -316,7 +316,7 @@
 			/obj/item/ammo_box/magazine/m12g,
 		),
 		list(
-			/obj/item/gun/projectile/bombarda,
+			/obj/item/gun/grenadelauncher,
 			/obj/item/ammo_casing/a40mm/improvised/exp_shell,
 			/obj/item/ammo_casing/a40mm/improvised/exp_shell,
 			/obj/item/ammo_casing/a40mm/improvised/flame_shell,
@@ -331,7 +331,7 @@
 			/obj/item/ammo_box/speedloader/a357,
 		),
 		list(
-			/obj/item/gun/projectile/bombarda/secgl/m79,
+			/obj/item/gun/grenadelauncher,
 			/obj/item/ammo_casing/a40mm,
 			/obj/item/ammo_casing/a40mm,
 			/obj/item/ammo_casing/a40mm/secgl/solid,
@@ -370,7 +370,7 @@
 			/obj/item/ammo_box/speedloader/n762,
 		),
 		list(
-			/obj/item/gun/projectile/bombarda/secgl,
+			/obj/item/gun/grenadelauncher,
 			/obj/item/ammo_casing/a40mm,
 			/obj/item/ammo_casing/a40mm,
 			/obj/item/ammo_casing/a40mm/secgl/solid,
@@ -379,7 +379,7 @@
 			/obj/item/ammo_casing/a40mm/secgl/gas,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/smg/sp91rc,
+			/obj/item/gun/projectile/automatic/smg/c20r,
 			/obj/item/ammo_box/magazine/sp91rc,
 			/obj/item/ammo_box/magazine/sp91rc,
 			/obj/item/ammo_box/magazine/sp91rc,
@@ -453,7 +453,7 @@
 	open_time = 20 SECONDS
 	loot_count = 6
 	loot_list = list(
-		/obj/item/gun/energy/gun/minigun,
+		/obj/item/gun/energy/gun,
 		/obj/item/gun/energy/sniperrifle,
 		/obj/item/gun/energy/telegun,
 		/obj/item/gun/energy/kinetic_accelerator/crossbow,
@@ -464,18 +464,18 @@
 			/obj/item/ammo_box/magazine/m556,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/sniper_rifle/toy,
+			/obj/item/gun/projectile/automatic/sniper_rifle,
 			/obj/item/ammo_box/magazine/toy/sniper_rounds,
 			/obj/item/ammo_box/magazine/toy/sniper_rounds,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/ak814,
+			/obj/item/gun/projectile/automatic/arg,
 			/obj/item/ammo_box/magazine/ak814,
 			/obj/item/ammo_box/magazine/ak814,
 			/obj/item/ammo_box/magazine/ak814,
 		),
 		list(
-			/obj/item/gun/projectile/bombarda/secgl/x4,
+			/obj/item/gun/grenadelauncher,
 			/obj/item/ammo_casing/a40mm,
 			/obj/item/ammo_casing/a40mm,
 			/obj/item/ammo_casing/a40mm,
@@ -513,7 +513,7 @@
 			/obj/item/ammo_box/magazine/l6saw,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/m52,
+			/obj/item/gun/projectile/automatic/arg,
 			/obj/item/ammo_box/magazine/m52mag,
 			/obj/item/ammo_box/magazine/m52mag,
 			/obj/item/ammo_box/magazine/m52mag,
@@ -524,18 +524,18 @@
 			/obj/item/ammo_box/magazine/sniper_rounds/compact,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/cats,
+			/obj/item/gun/projectile/shotgun,
 			/obj/item/ammo_box/magazine/cats12g,
 			/obj/item/ammo_box/magazine/cats12g/large,
 			/obj/item/ammo_box/magazine/cats12g/large,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/sniper_rifle/compact,
+			/obj/item/gun/projectile/automatic/sniper_rifle,
 			/obj/item/ammo_box/magazine/sniper_rounds/compact,
 			/obj/item/ammo_box/magazine/sniper_rounds/compact,
 		),
 		list(
-			/obj/item/gun/projectile/bombarda/bombplet,
+			/obj/item/gun/grenadelauncher,
 			/obj/item/ammo_casing/a40mm/improvised/exp_shell,
 			/obj/item/ammo_casing/a40mm/improvised/exp_shell,
 			/obj/item/ammo_casing/a40mm/improvised/flame_shell,
@@ -564,7 +564,6 @@
 		/obj/item/implanter/adrenalin,
 		/obj/item/implanter/heal,
 		/obj/item/implanter/explosive_macro,
-		/obj/item/gun/magic/hook,
 	)
 
 /datum/loot_tier/fifth
@@ -582,9 +581,9 @@
 	loot_count = 6
 	loot_list = list(
 		/obj/item/gun/energy/pulse/pistol,
-		/obj/item/gun/energy/bsg/prebuilt,
+		/obj/item/gun/energy/gun,
 		list(
-			/obj/item/gun/projectile/automatic/shotgun/minotaur,
+			/obj/item/gun/projectile/shotgun,
 			/obj/item/ammo_box/magazine/m12g/XtrLrg/slug,
 			/obj/item/ammo_box/magazine/m12g/XtrLrg/slug,
 			/obj/item/ammo_box/magazine/m12g,
@@ -595,7 +594,7 @@
 			/obj/item/ammo_box/magazine/m75,
 		),
 		list(
-			/obj/item/gun/projectile/automatic/sniper_rifle/axmc,
+			/obj/item/gun/projectile/automatic/sniper_rifle,
 			/obj/item/ammo_box/magazine/a338,
 			/obj/item/ammo_box/magazine/a338,
 		),

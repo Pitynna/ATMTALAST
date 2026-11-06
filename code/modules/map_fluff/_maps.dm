@@ -8,7 +8,8 @@
 	var/name = "Unnamed Map"
 	/// Path to the map file.
 	var/map_path = ""
-	var/lavaland_path = "_maps/map_files/generic/Lavaland.dmm"
+	/// Shared ATMTA-style asteroid, independent of the station layout.
+	var/mining_path = "_maps/map_files/generic/MiningAsteroid.dmm"
 
 	// Multi-z vars.
 	/// A list of lists: every list inside is a trait list for every z-level. null for default 1 z-level space station. (May used by snow station or multi-z station)
@@ -36,8 +37,12 @@
 
 	var/datum/game_mode/forced_mode
 
-	/// Used to disable ruins, lavaland, etc. for a specific map.
+	/// Used to disable ruins, mining, etc. for a specific map.
 	var/disables = NONE
 
 	/// Boolean that tells us if this is a planetary station. (like Malta)
 	var/planetary = FALSE
+
+/// Map-specific compatibility work after levels load, before atom initialization.
+/datum/map/proc/prepare_map()
+	return

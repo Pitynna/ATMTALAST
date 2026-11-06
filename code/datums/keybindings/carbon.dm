@@ -55,10 +55,3 @@
 	var/mob/living/carbon/carbon_mob = user.mob
 	carbon_mob.toggle_give()
 	return TRUE
-
-/datum/keybinding/carbon/parry
-	name = "parry"
-	full_name = "Блок"
-	description = "Активирует блок предметом в руках, если предмет способен на это."
-	hotkey_keys = list("Space")
-	keybind_signal = COMSIG_KB_CARBON_PARRY

@@ -62,12 +62,3 @@
 
 /mob/living/simple_animal/hostile/poison/terror_spider/can_be_blob()
 	return FALSE
-
-/mob/living/simple_animal/hostile/megafauna/ancient_robot/can_be_blob()
-	return FALSE
-
-/mob/living/simple_animal/hostile/megafauna/hierophant/can_be_blob()
-	return FALSE
-
-/mob/living/simple_animal/hostile/megafauna/legion/can_be_blob()
-	return FALSE

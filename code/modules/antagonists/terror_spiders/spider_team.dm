@@ -345,7 +345,7 @@ GLOBAL_VAR_INIT(global_degenerate, FALSE)
 		if(TERROR_DEFILER)
 			return /mob/living/simple_animal/hostile/poison/terror_spider/defiler
 		if(TERROR_PRINCESS)
-			return /mob/living/simple_animal/hostile/poison/terror_spider/queen/princess
+			return null
 		if(TERROR_QUEEN)
 			return /mob/living/simple_animal/hostile/poison/terror_spider/queen
 		if(TERROR_PRINCE)

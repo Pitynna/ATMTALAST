@@ -60,17 +60,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
-"bj" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
-/turf/simulated/floor/plasteel,
-/area/ruin/unpowered)
 "bk" = (
 /obj/item/stack/sheet/wood{
 	amount = 5
@@ -113,13 +102,6 @@
 	dir = 5
 	},
 /obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
 /turf/simulated/floor/plasteel,
 /area/ruin/unpowered)
 "cX" = (
@@ -191,13 +173,6 @@
 "dW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 "dX" = (
@@ -875,7 +850,6 @@
 	pixel_x = 32
 	},
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/pizzaparty,
 /obj/item/reagent_containers/food/snacks/beans,
 /obj/item/reagent_containers/food/snacks/beans,
 /obj/item/reagent_containers/food/snacks/beans,
@@ -981,17 +955,6 @@
 "pI" = (
 /turf/simulated/wall/shuttle/onlyselfsmooth,
 /area/template_noop)
-"pY" = (
-/obj/effect/turf_decal/delivery,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
-/turf/simulated/floor/plasteel,
-/area/ruin/unpowered)
 "qd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -1670,16 +1633,6 @@
 /obj/effect/decal/ants,
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
-"Cn" = (
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
-/turf/simulated/floor/plating,
-/area/ruin/unpowered)
 "Cv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/ore/glass/basalt,
@@ -1912,13 +1865,6 @@
 /area/template_noop)
 "Hp" = (
 /obj/effect/decal/cleanable/vomit,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
 /obj/machinery/light/small{
 	brightness_range = 2;
 	dir = 8
@@ -2263,13 +2209,6 @@
 	},
 /obj/structure/sign/poster/contraband/communist_state{
 	pixel_y = 32
-	},
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
 	},
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
@@ -2694,13 +2633,6 @@
 	on = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 "Tr" = (
@@ -2818,13 +2750,6 @@
 	dir = 10
 	},
 /obj/item/stack/sheet/cheese,
-/mob/living/simple_animal/hostile/giant_rat{
-	damage_coeff = list("brute" = 0.9, "fire" = 0.9, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 0.8);
-	health = 150;
-	maxHealth = 150;
-	mob_size = 4;
-	name = "Mutant Giant rat"
-	},
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 "Ut" = (
@@ -3183,9 +3108,6 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/ruin/unpowered)
-"ZW" = (
 /turf/simulated/floor/plating,
 /area/ruin/unpowered)
 
@@ -4422,7 +4344,7 @@ Rk
 FU
 LA
 ZD
-Cn
+Op
 FU
 FU
 Zx
@@ -4786,7 +4708,7 @@ UH
 sb
 uF
 FU
-bj
+ZK
 GQ
 Tz
 sl
@@ -5032,7 +4954,7 @@ We
 It
 Xn
 nf
-pY
+Yc
 Za
 FU
 Zx
@@ -5685,7 +5607,7 @@ Zx
 Zx
 Zx
 FU
-ZW
+Op
 Ov
 LI
 Us
@@ -5745,7 +5667,7 @@ Yk
 Zx
 Zx
 FU
-ZW
+Op
 xm
 oU
 Op

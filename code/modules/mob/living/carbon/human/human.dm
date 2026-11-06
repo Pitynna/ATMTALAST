@@ -981,6 +981,8 @@ GAME_VERB_SRC(/mob/living/carbon/human, check_pulse, view(1), "Проверит�
  * * save_appearance - If `TRUE`, all bodyparts appearances (head hair style, body tattoos, tail type, etc.) will be transfered to new species.
  */
 /mob/living/carbon/human/proc/set_species(datum/species/new_species, use_default_color = FALSE, delay_icon_update = FALSE, skip_same_check = FALSE, retain_damage = FALSE, transformation = FALSE, keep_missing_bodyparts = FALSE, transfer_special_internals = TRUE, save_appearance = FALSE)
+	if(is_legacy_blocked_type(new_species))
+		new_species = /datum/species/human
 	if(!skip_same_check && dna.species.name == initial(new_species.name))
 		return
 

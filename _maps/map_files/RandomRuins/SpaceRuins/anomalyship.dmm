@@ -351,13 +351,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/indestructible/plating,
 /area/ae13/energy)
-"jH" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ae13/command)
 "jT" = (
 /obj/effect/mapping_helpers/turfs/damage,
 /obj/structure/sign/poster/official/healthy,
@@ -437,10 +430,6 @@
 	name = "floor"
 	},
 /area/ae13/hall)
-"mH" = (
-/mob/living/simple_animal/hostile/carp/sea,
-/turf/space,
-/area/space)
 "mM" = (
 /obj/machinery/light{
 	dir = 4
@@ -743,7 +732,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/gluttony,
 /turf/simulated/floor/plating,
 /area/ae13/hall)
 "tt" = (
@@ -781,7 +769,6 @@
 "tD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
-/obj/effect/gluttony,
 /turf/simulated/floor/plasteel{
 	icon_state = "sepia"
 	},
@@ -848,12 +835,6 @@
 	icon_state = "darkblue"
 	},
 /area/ae13/medbay)
-"uU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mapping_helpers/turfs/damage,
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/indestructible/plating,
-/area/ae13/epicenter)
 "vc" = (
 /turf/simulated/wall/shuttle/nosmooth{
 	dir = 9;
@@ -1101,10 +1082,6 @@
 "Au" = (
 /turf/simulated/wall/shuttle/onlyselfsmooth/nodiagonal,
 /area/ae13/epicenter)
-"Aw" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/ae13/miner)
 "Az" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/stripes/box,
@@ -1635,10 +1612,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/ae13/hall)
-"Nr" = (
-/obj/structure/alien/weeds,
-/turf/simulated/floor/plating/asteroid/airless,
-/area/ae13/asteroid)
 "Nx" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
@@ -1649,11 +1622,6 @@
 	icon_state = "chapel"
 	},
 /area/ae13/command)
-"NU" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/sentinel,
-/turf/simulated/floor/plating/asteroid/airless,
-/area/ae13/asteroid)
 "Ot" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel{
@@ -2154,21 +2122,11 @@
 	pixel_x = 15;
 	pixel_y = -12
 	},
-/obj/item/ammo_box/magazine/m10mm{
-	pixel_x = -7;
-	pixel_y = 10
-	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/ae13/asteroid)
 "WS" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds/node,
-/turf/simulated/floor/plating/asteroid/airless,
-/area/ae13/asteroid)
-"XG" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/egg/burst,
-/obj/item/ammo_box/magazine/m10mm,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/ae13/asteroid)
 "XH" = (
@@ -3026,7 +2984,7 @@ ew
 ew
 ew
 ew
-mH
+ew
 ew
 ew
 ew
@@ -3233,9 +3191,9 @@ ew
 vx
 dR
 Zv
-Nr
+aE
 Dg
-Nr
+aE
 WS
 Zv
 Zv
@@ -3279,7 +3237,7 @@ ew
 ew
 ew
 ew
-mH
+ew
 ew
 ew
 ew
@@ -3311,9 +3269,9 @@ ew
 vx
 dR
 Zv
-Nr
+aE
 Ca
-Nr
+aE
 pE
 xQ
 Zv
@@ -3327,7 +3285,7 @@ ew
 ew
 ew
 ew
-mH
+ew
 ew
 ew
 ew
@@ -3389,7 +3347,7 @@ ew
 vx
 dR
 Zv
-Nr
+aE
 Ca
 hc
 rP
@@ -3423,10 +3381,10 @@ ew
 ew
 vx
 vx
-Nr
+aE
 dR
-Nr
-Nr
+aE
+aE
 vx
 ew
 ew
@@ -3467,14 +3425,14 @@ ew
 vx
 dR
 Zv
-Nr
+aE
 mn
 VX
 GY
 Ca
-NU
-Nr
-Nr
+Ec
+aE
+aE
 vx
 vx
 ew
@@ -3500,11 +3458,11 @@ ew
 ew
 ew
 vx
-Nr
+aE
 dR
 dR
 dR
-Nr
+aE
 vx
 ew
 ew
@@ -3545,15 +3503,15 @@ ew
 vx
 dR
 Zv
-Nr
+aE
 Ca
 Ca
 Ca
 Ca
-Nr
+aE
 An
-Nr
-Nr
+aE
+aE
 vx
 vx
 ew
@@ -3578,7 +3536,7 @@ ew
 ew
 ew
 vx
-Nr
+aE
 dR
 dR
 dR
@@ -3623,13 +3581,13 @@ ew
 vx
 dR
 Zv
-Nr
+aE
 VX
-Nr
+aE
 Ca
-Nr
+aE
 WS
-Nr
+aE
 dR
 dR
 vx
@@ -3703,8 +3661,8 @@ dR
 dR
 dR
 Ca
-Nr
-Nr
+aE
+aE
 WS
 aE
 dR
@@ -3815,8 +3773,8 @@ ew
 vx
 vx
 dR
-Nr
-Nr
+aE
+aE
 vx
 ew
 ew
@@ -3876,7 +3834,7 @@ lq
 Au
 xI
 LR
-jH
+df
 df
 XZ
 LR
@@ -4350,7 +4308,7 @@ TU
 is
 qM
 XW
-Aw
+nV
 Yq
 ew
 ew
@@ -4885,7 +4843,7 @@ lq
 XQ
 Zh
 Rv
-uU
+fw
 Fl
 vo
 En
@@ -5224,10 +5182,10 @@ vx
 dR
 dR
 Zv
-XG
-Nr
-NU
-Nr
+YH
+aE
+Ec
+aE
 VX
 Ca
 Ca
@@ -5260,12 +5218,12 @@ ew
 dR
 RD
 vx
-Nr
+aE
 dR
 dR
 at
-Nr
-Nr
+aE
+aE
 vx
 dR
 ew
@@ -5303,10 +5261,10 @@ dR
 dR
 Zv
 Ca
-Nr
-Nr
-Nr
-Nr
+aE
+aE
+aE
+aE
 xQ
 Ca
 Zv
@@ -5338,11 +5296,11 @@ ew
 dR
 dR
 vx
-Nr
+aE
 dR
 dR
 dR
-Nr
+aE
 Pw
 dR
 dR
@@ -5377,15 +5335,15 @@ ew
 ew
 vx
 vx
-Nr
-Nr
+aE
+aE
 Ec
 Zv
-Nr
-Nr
-Nr
+aE
+aE
+aE
 WS
-Nr
+aE
 Ca
 Zv
 dR
@@ -5416,10 +5374,10 @@ ew
 dR
 dR
 vx
-Nr
+aE
 at
 dR
-Nr
+aE
 vx
 at
 dR
@@ -5454,7 +5412,7 @@ ew
 ew
 vx
 vx
-Nr
+aE
 WS
 Zv
 Zv
@@ -5462,7 +5420,7 @@ Ca
 Ha
 WN
 ZR
-NU
+Ec
 YH
 Zv
 dR
@@ -5533,13 +5491,13 @@ vx
 vx
 dR
 dR
-Nr
+aE
 Ca
 oQ
 oQ
-Nr
-Nr
-Nr
+aE
+aE
+aE
 xQ
 Ca
 Zv
@@ -5610,14 +5568,14 @@ ew
 vx
 dR
 dR
-Nr
-Nr
+aE
+aE
 Zv
-Nr
+aE
 mU
-Nr
+aE
 An
-Nr
+aE
 Zv
 Zv
 Zv
@@ -5688,14 +5646,14 @@ ew
 vx
 dR
 Ca
-Nr
+aE
 tt
 Zv
 dR
-Nr
-Nr
-Nr
-Nr
+aE
+aE
+aE
+aE
 Zv
 dR
 dR
@@ -5766,13 +5724,13 @@ vx
 vx
 dR
 Ca
-Nr
-Nr
+aE
+aE
 Zv
 dR
 YH
-Nr
-Nr
+aE
+aE
 Zv
 Zv
 dR
@@ -5848,9 +5806,9 @@ wy
 WS
 Zv
 Ca
-Nr
+aE
 WS
-Nr
+aE
 Zv
 dR
 dR
@@ -5923,11 +5881,11 @@ dR
 dR
 dR
 Ca
-Nr
-Nr
-Nr
+aE
+aE
+aE
 Gp
-Nr
+aE
 Zv
 Zv
 dR
@@ -6002,8 +5960,8 @@ dR
 dR
 Ca
 Ca
-Nr
-Nr
+aE
+aE
 Zc
 Ca
 Zv
@@ -6351,7 +6309,7 @@ ew
 ew
 ew
 ew
-mH
+ew
 ew
 ew
 ew
@@ -6667,9 +6625,9 @@ ew
 ew
 ew
 vx
-Nr
-Nr
-Nr
+aE
+aE
+aE
 vx
 vx
 ew
@@ -6826,7 +6784,7 @@ vx
 dR
 dR
 dR
-Nr
+aE
 vx
 ew
 ew
@@ -6850,8 +6808,8 @@ ew
 ew
 vx
 dR
-Nr
-Nr
+aE
+aE
 vx
 vx
 ew
@@ -6900,17 +6858,17 @@ ew
 ew
 ew
 vx
-Nr
+aE
 dR
 dR
 dR
 uf
-Nr
+aE
 ew
 ew
 ew
 ew
-mH
+ew
 ew
 ew
 ew
@@ -6978,8 +6936,8 @@ ew
 ew
 ew
 vx
-Nr
-Nr
+aE
+aE
 dR
 dR
 vx
@@ -7005,7 +6963,7 @@ ew
 ew
 ew
 vx
-Nr
+aE
 dR
 dR
 dR
@@ -7076,14 +7034,14 @@ ew
 ew
 ew
 ew
-mH
+ew
 ew
 ew
 ew
 ew
 ew
 vx
-Nr
+aE
 dR
 dR
 dR
@@ -7161,8 +7119,8 @@ ew
 ew
 ew
 ew
-Nr
-Nr
+aE
+aE
 dR
 dR
 vx

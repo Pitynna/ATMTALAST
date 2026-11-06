@@ -264,10 +264,6 @@
 /obj/structure/barricade/security,
 /turf/simulated/floor/indestructible/medical_white,
 /area/deathmatch)
-"Fk" = (
-/obj/machinery/kitchen_machine/tribal_oven,
-/turf/simulated/floor/indestructible/dirt_floor,
-/area/deathmatch)
 "Gd" = (
 /obj/structure/fence,
 /turf/simulated/floor/indestructible/dirt_floor,
@@ -340,7 +336,7 @@
 "Jz" = (
 /obj/structure/rack,
 /obj/item/ammo_box/shotgun/buck,
-/obj/item/gun/projectile/shotgun/riot,
+/obj/item/gun/projectile/shotgun,
 /turf/simulated/floor/indestructible/stone_floor,
 /area/deathmatch)
 "Kh" = (
@@ -637,7 +633,7 @@ rk
 "}
 (9,1,1) = {"
 rk
-Fk
+tW
 gy
 Yb
 Gd

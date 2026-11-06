@@ -61,12 +61,12 @@
 
 	readout += "- [active ? span_boldwarning(capitalize("[activated_word] и способна оглушать.")) : span_boldnotice("Не [activated_word] и не способна оглушать.")]"
 
-	if(stamina_damage <= 0) // The advanced baton actually does have 0 stamina damage so...yeah.
+	if(knockdown_time <= 0)
 		readout += "- [span_warning("Не может наносить оглушающие удары")], либо [span_warning("использует уникальный способ оглушения цели")]."
 		return readout.Join("\n")
 
 	if(active)
-		readout += "- Потребуется примерно [span_warning("[HITS_TO_CRIT(stamina_damage)] удар[DECL_0_A_OV(HITS_TO_CRIT(stamina_damage))]")], чтобы <b>[span_blue("нелетально")]</b> обезвредить противника."
+		readout += "- Одного успешного удара достаточно, чтобы сбить цель с ног."
 	return readout.Join("\n")
 
 /obj/item/melee/baton/proc/try_take_baton(baton, mob/living/carbon/user)
@@ -368,15 +368,13 @@
 	active = FALSE
 	allows_stun_in_harm = TRUE
 	force_say_chance = 50
-	stamina_damage = 45
-	knockdown_time = 5 SECONDS
+	stamina_damage = 0
+	knockdown_time = 7 SECONDS
 	clumsy_knockdown_time = 15 SECONDS
 	cooldown = 2.5 SECONDS
 	on_stun_sound = 'sound/weapons/egloves.ogg'
 	on_stun_volume = 50
 	activated_word = "включена"
-	/// Time passed between a hit and knockdown effect.
-	var/knockdown_delay_time = 4 SECONDS
 	/// Chance for the baton to stun when thrown at someone.
 	var/throw_stun_chance = 50
 	/// Cell to use, can be a path, to start loaded.
@@ -521,13 +519,13 @@
 /obj/item/melee/baton/security/baton_effect(mob/living/target, mob/living/user, stun_override)
 	if(!deductcharge(cell_hit_cost))
 		return FALSE
-	stun_override = 0 //Avoids knocking people down prematurely.
-	return ..()
+	. = ..()
+	if(. && !isrobot(target) && !isbot(target) && !HAS_TRAIT(target, TRAIT_BATON_RESISTANCE))
+		var/duration = isnull(stun_override) ? knockdown_time : stun_override
+		target.Stun(duration)
+		target.Weaken(duration)
 
-/*
- * After a target is hit, we apply some status effects.
- * After a period of time, we then check to see what stun duration we give.
- */
+/// Electrical side effects accompany the immediate stun.
 /obj/item/melee/baton/security/additional_effects_non_cyborg(mob/living/carbon/target, mob/living/user)
 	. = ..()
 	if(!.)
@@ -540,14 +538,6 @@
 	SEND_SIGNAL(target, COMSIG_LIVING_MINOR_SHOCK)
 	if(iscarbon(target))
 		target.shock_internal_organs(33)
-
-	addtimer(CALLBACK(src, PROC_REF(apply_stun_effect_end), target), knockdown_delay_time)
-
-/// After the initial stun period, we check to see if the target needs to have the stun applied.
-/obj/item/melee/baton/security/proc/apply_stun_effect_end(mob/living/target)
-	if(!target.IsKnockdown())
-		to_chat(target, span_warning("Ваши мышцы сводит судорогой, и вы падаете на землю!"))
-	target.Knockdown(knockdown_time)
 
 /obj/item/melee/baton/security/get_wait_description()
 	return "заряжается!"
@@ -592,8 +582,8 @@
 	item_state = "prod"
 	force = 3
 	throwforce = 5
-	stamina_damage = 35
-	knockdown_time = 3 SECONDS
+	stamina_damage = 0
+	knockdown_time = 5 SECONDS
 	throw_stun_chance = 40
 	slot_flags = ITEM_SLOT_BACK
 	/// Our prescious sparks holder

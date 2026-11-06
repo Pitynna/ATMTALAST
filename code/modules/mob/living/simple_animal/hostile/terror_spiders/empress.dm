@@ -58,7 +58,7 @@
 	queeneggs_action.name = "Empress Eggs"
 
 /mob/living/simple_animal/hostile/poison/terror_spider/queen/empress/LayQueenEggs()
-	var/eggtype = tgui_input_list(usr, "Какой тип яиц?", "Тип яиц", list(TS_DESC_QUEEN, TS_DESC_MOTHER, TS_DESC_PRINCE, TS_DESC_PRINCESS, TS_DESC_KNIGHT, TS_DESC_LURKER, TS_DESC_HEALER, TS_DESC_WIDOW, TS_DESC_GUARDIAN, TS_DESC_DEFILER, TS_DESC_DESTROYER))
+	var/eggtype = tgui_input_list(usr, "Какой тип яиц?", "Тип яиц", list(TS_DESC_QUEEN, TS_DESC_MOTHER, TS_DESC_PRINCE, TS_DESC_KNIGHT, TS_DESC_LURKER, TS_DESC_HEALER, TS_DESC_WIDOW, TS_DESC_GUARDIAN, TS_DESC_DEFILER, TS_DESC_DESTROYER))
 	var/numlings = tgui_input_number(usr, "Сколько в кладке?", "Количество яиц", 0, min(canlay, 50), 0)
 	if(!eggtype || !numlings)
 		to_chat(src, span_danger("Отменено."))
@@ -87,9 +87,6 @@
 			canlay -= numlings
 		if(TS_DESC_PRINCE)
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/prince, numlings)
-			canlay -= numlings
-		if(TS_DESC_PRINCESS)
-			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/queen/princess, numlings)
 			canlay -= numlings
 		if(TS_DESC_MOTHER)
 			DoLayTerrorEggs(/mob/living/simple_animal/hostile/poison/terror_spider/mother, numlings)

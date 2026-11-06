@@ -23,42 +23,14 @@ SUBSYSTEM_DEF(cargo_quests)
 
 /datum/controller/subsystem/cargo_quests/Initialize()
 
-	for(var/typepath in subtypesof(/datum/quest_customer/centcomm))
-		var/datum/quest_customer/departament = new typepath()
-		if(!departament.departament_name)
-			continue
-		centcomm_departaments += departament
-
-	for(var/typepath in subtypesof(/datum/quest_customer/corp))
-		var/datum/quest_customer/corp/corp = new typepath()
-		if(!corp.departament_name)
-			continue
-		corporations += corp
-
-	for(var/typepath in subtypesof(/datum/quest_customer/plasma))
-		var/datum/quest_customer/plasma/plasma_dep = new typepath()
-		if(!plasma_dep.departament_name)
-			continue
-		plasma_departaments += plasma_dep
-
-	for(var/typepath in subtypesof(/datum/quest_difficulty))
-		var/datum/quest_difficulty/quest_difficulty = new typepath()
-		if(!quest_difficulty.weight)
-			continue
-		difficulties += quest_difficulty
-		difficulties[quest_difficulty] = quest_difficulty.weight
-		if(quest_difficulty.for_easy_mode)
-			easy_mode_difficulties += quest_difficulty
-			easy_mode_difficulties[quest_difficulty] = quest_difficulty.weight
-
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/cargo_quests/proc/roll_start_quests()
-	for(var/I = 1 to NUMBER_OF_CC_QUEST)
+	for(var/I = 1; I <= NUMBER_OF_CC_QUEST && length(centcomm_departaments); I++)
 		create_new_quest(pick(centcomm_departaments), easy_mode = TRUE)
-	for(var/I = 1 to NUMBER_OF_CORP_QUEST)
+	for(var/I = 1; I <= NUMBER_OF_CORP_QUEST && length(corporations); I++)
 		create_new_quest(pick(corporations), easy_mode = TRUE)
-	for(var/I = 1 to NUMBER_OF_PLASMA_QUEST)
+	for(var/I = 1; I <= NUMBER_OF_PLASMA_QUEST && length(plasma_departaments); I++)
 		create_new_quest(pick(plasma_departaments), easy_mode = TRUE)
 
 /datum/controller/subsystem/cargo_quests/proc/get_customer_list(datum/quest_customer/customer)

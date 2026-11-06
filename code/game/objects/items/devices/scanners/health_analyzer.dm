@@ -220,10 +220,6 @@
 			P.header += "&emsp;[implant]<br>"
 
 	P.header += "<hr>"
-	P.header += "Тип страховки — [scan_data["insuranceType"]].<br>"
-	P.header += "Требуемое количество очков страховки: [scan_data["reqInsurance"]].<br>"
-	if(scan_data["insurance"])
-		P.header += "Текущее количество очков страховки: [scan_data["insurance"]].<br>"
 
 	P.info += "<br><br><b>Заметки:</b><br>"
 
@@ -530,15 +526,6 @@
 			data["extraBleeding"] = TRUE
 			break
 
-	var/datum/money_account/acc = get_insurance_account(H)
-	if(acc)
-		data["insuranceType"] = "[acc.insurance_type]"
-	else
-		data["insuranceType"] = "Аккаунт не обнаружен."
-	data["reqInsurance"] = "[get_req_insurance(H)]"
-	if(acc)
-		data["insurance"] = "[acc.insurance]"
-
 	var/list/implant_detect = list()
 	for(var/obj/item/organ/internal/cyberimp/cybernetics in H.internal_organs)
 		if(cybernetics.is_robotic())
@@ -756,14 +743,6 @@
 	else
 		scan_data += "Гены стабильны."
 
-	var/datum/money_account/acc = get_insurance_account(H)
-	if(acc)
-		scan_data += "Тип страховки — [acc.insurance_type]."
-	else
-		scan_data += "Аккаунт не обнаружен."
-	scan_data += "Требуемое количество очков страховки: [get_req_insurance(H)]."
-	if(acc)
-		scan_data += "Текущее количество очков страховки: [acc.insurance]."
 	to_chat(user, custom_boxed_message("blue_box", "[jointext(scan_data, "<br>")]"))
 
 /obj/item/healthanalyzer/proc/toggle_mode()

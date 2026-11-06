@@ -18,13 +18,5 @@
 	return ..()
 
 /datum/economy_process/payment/custom_process()
-	var/paycheck = target_account.linked_job?.paycheck
-	if(!paycheck)
-		return
-	if(!SScapitalism.default_status && !source_account.charge(paycheck * modifier, target_account, "Выплата зарплаты персоналу.", "Отдел финансов \"Нанотрейзен\"", "Поступление зарплаты.", "Поступление зарплаты", "Терминал Бизель №[rand(111,333)]"))
-		SScapitalism.default_status = TRUE
-		SScapitalism.default_announce()
-		return
-	target_account.notify_pda_owner("<b>Поступление зарплаты </b>\"На ваш привязанный аккаунт поступило [paycheck] кредитов\" (Невозможно Ответить)", FALSE)
-	SScapitalism.total_salary_payment += paycheck
+	return PROCESS_KILL
 

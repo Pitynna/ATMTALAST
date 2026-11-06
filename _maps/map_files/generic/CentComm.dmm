@@ -2435,7 +2435,7 @@
 /area/centcom/central_command_areas/special_operations)
 "bmm" = (
 /turf/simulated/floor/indestructible/necropolis,
-/area/ruin/space/bubblegum_arena)
+/area/ruin/unpowered)
 "bnT" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "Dark"
@@ -2598,13 +2598,6 @@
 	icon_state = "light-fancy-wood"
 	},
 /area/centcom/syndicate_base/control)
-"but" = (
-/obj/effect/turf_decal/delivery/hollow,
-/obj/machinery/vending/gun_mods/advanced,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/centcom/central_command_areas/supply)
 "buy" = (
 /obj/structure/chair/stool,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -3115,12 +3108,6 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/shuttle/vox)
-"bHn" = (
-/obj/machinery/vending/gun_mods/advanced,
-/turf/simulated/floor/wood{
-	icon_state = "fancy-wood-oak"
-	},
-/area/centcom/syndicate_base)
 "bHo" = (
 /obj/effect/turf_decal/box,
 /turf/simulated/floor/indestructible{
@@ -3199,12 +3186,6 @@
 /obj/item/flag/species/vox,
 /turf/simulated/floor/mineral/plastitanium/nitrogen/yellow,
 /area/shuttle/vox)
-"bJL" = (
-/obj/effect/turf_decal/box,
-/turf/simulated/floor/indestructible{
-	icon_state = "floorgrime"
-	},
-/area/centcom)
 "bKz" = (
 /obj/machinery/vending/nta/ertarmory/yellow{
 	req_access = list(104,109)
@@ -3400,11 +3381,6 @@
 /obj/item/book/manual/sop_supply,
 /turf/simulated/floor/carpet,
 /area/centcom/central_command_areas/prison)
-"bRM" = (
-/turf/simulated/floor/indestructible{
-	icon_state = "floorgrime"
-	},
-/area/centcom)
 "bRZ" = (
 /turf/simulated/floor/plasteel{
 	dir = 6;
@@ -3676,15 +3652,6 @@
 	},
 /turf/simulated/floor/indestructible/snow,
 /area/centcom)
-"bYi" = (
-/turf/simulated/wall/shuttle/nosmooth/interior{
-	dir = 9;
-	icon = 'icons/turf/walls/shuttle/ninja_shuttle_wall.dmi';
-	icon_state = "ninja_walls_corners";
-	underlay_floor_icon = 'icons/turf/shuttle/floors.dmi';
-	underlay_floor_icon_state = "floor13"
-	},
-/area/shuttle)
 "bYs" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/stripes/line{
@@ -4022,11 +3989,9 @@
 	},
 /area/centcom/syndicate_base/prison)
 "cjk" = (
-/obj/structure/stone_tile/surrounding/burnt,
-/obj/structure/stone_tile/center/burnt,
 /obj/effect/landmark/spawner/bubblegum,
 /turf/simulated/floor/lava/lava_land_surface,
-/area/ruin/space/bubblegum_arena)
+/area/ruin/unpowered)
 "cjr" = (
 /obj/structure/rack,
 /obj/item/gun/energy/ionrifle/carbine{
@@ -6639,12 +6604,6 @@
 	icon_state = "floorgrime"
 	},
 /area/centcom)
-"dum" = (
-/obj/structure/rack,
-/turf/simulated/floor/indestructible{
-	icon_state = "floorgrime"
-	},
-/area/centcom)
 "duM" = (
 /obj/machinery/light/spot{
 	dir = 8
@@ -7090,10 +7049,6 @@
 /obj/machinery/light_construct/small{
 	dir = 4
 	},
-/mob/living/simple_animal/frog/scream/mapper{
-	pixel_x = -2;
-	pixel_y = 11
-	},
 /obj/structure/table/holotable/wood,
 /turf/simulated/floor/carpet/black,
 /area/centcom/central_command_areas/special_operations)
@@ -7146,10 +7101,6 @@
 	},
 /turf/simulated/floor/wood/fancy/light,
 /area/centcom/central_command_areas/special_operations)
-"dGF" = (
-/mob/living/simple_animal/hostile/carp/koi,
-/turf/simulated/floor/indestructible/beach/water/deep/dense,
-/area/centcom)
 "dGL" = (
 /obj/structure/closet/crate/can,
 /turf/simulated/floor/plasteel{
@@ -7590,9 +7541,8 @@
 /turf/simulated/floor/indestructible/beach/water/deep/dense,
 /area/centcom)
 "dTR" = (
-/obj/structure/stone_tile/slab/burnt,
 /turf/simulated/floor/lava/lava_land_surface,
-/area/ruin/space/bubblegum_arena)
+/area/ruin/unpowered)
 "dTZ" = (
 /obj/item/flag/nt,
 /turf/simulated/floor/plasteel{
@@ -7996,10 +7946,10 @@
 /area/centcom/central_command_areas/supply)
 "edd" = (
 /obj/structure/rack/gunrack,
-/obj/item/gun/projectile/bombarda/secgl,
-/obj/item/gun/projectile/bombarda/secgl,
-/obj/item/gun/projectile/bombarda/secgl,
-/obj/item/gun/projectile/bombarda/secgl,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "navybluealt"
@@ -10293,10 +10243,10 @@
 /obj/item/gun/projectile/automatic/arg{
 	pixel_x = 6
 	},
-/obj/item/gun/projectile/revolver/rsh_12,
-/obj/item/gun/projectile/revolver/rsh_12,
-/obj/item/gun/projectile/revolver/rsh_12,
-/obj/item/gun/projectile/revolver/rsh_12,
+/obj/item/gun/projectile/revolver,
+/obj/item/gun/projectile/revolver,
+/obj/item/gun/projectile/revolver,
+/obj/item/gun/projectile/revolver,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -11485,7 +11435,7 @@
 "fGo" = (
 /obj/effect/landmark/spawner/bubblegum_arena,
 /turf/simulated/floor/indestructible/necropolis,
-/area/ruin/space/bubblegum_arena)
+/area/ruin/unpowered)
 "fGt" = (
 /obj/item/flag/species/diona,
 /turf/simulated/floor/plasteel{
@@ -12042,10 +11992,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/structure/closet/gun_stand/fishingrod{
-	pixel_x = 3;
-	pixel_y = 32
-	},
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "darkbluealt"
@@ -12160,7 +12106,7 @@
 "fWp" = (
 /obj/machinery/vending/toyliberationstation{
 	contraband = null;
-	products = list(/obj/item/gun/projectile/automatic/toy=10,/obj/item/gun/projectile/automatic/toy/pistol=10,/obj/item/gun/projectile/shotgun/toy=10,/obj/item/toy/sword=10,/obj/item/ammo_box/foambox=20,/obj/item/toy/foamblade=10,/obj/item/toy/balloon/syndicate=10,/obj/item/clothing/suit/syndicatefake=5,/obj/item/clothing/head/syndicatefake=5,/obj/item/gun/projectile/shotgun/toy/crossbow=10,/obj/item/gun/projectile/automatic/smg/c20r/toy/riot=10,/obj/item/gun/projectile/automatic/l6_saw/toy/riot=10,/obj/item/gun/projectile/automatic/sniper_rifle/toy=10,/obj/item/ammo_box/foambox/riot=20,/obj/item/toy/katana=10,/obj/item/twohanded/dualsaber/toy=5,/obj/item/deck/cards/syndicate=10)
+	products = list(/obj/item/gun/projectile/automatic/toy=10,/obj/item/gun/projectile/automatic/toy/pistol=10,/obj/item/gun/projectile/shotgun/toy=10,/obj/item/toy/sword=10,/obj/item/ammo_box/foambox=20,/obj/item/toy/foamblade=10,/obj/item/toy/balloon/syndicate=10,/obj/item/clothing/suit/syndicatefake=5,/obj/item/clothing/head/syndicatefake=5,/obj/item/gun/projectile/shotgun/toy/crossbow=10,/obj/item/gun/projectile/automatic/smg/c20r/toy/riot=10,/obj/item/gun/projectile/automatic/l6_saw/toy/riot=10,/obj/item/gun/projectile/automatic/sniper_rifle=10,/obj/item/ammo_box/foambox/riot=20,/obj/item/toy/katana=10,/obj/item/twohanded/dualsaber/toy=5,/obj/item/deck/cards/syndicate=10)
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -12892,15 +12838,6 @@
 /obj/effect/spawner/random/trash,
 /turf/simulated/floor/mineral/plastitanium/red/nitrogen,
 /area/centcom/vox_station)
-"gnr" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "rampbottom"
-	},
-/area/centcom)
 "gnD" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/simulated/floor/grass,
@@ -12957,15 +12894,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/central_command_areas/special_operations)
-"gpp" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "rampbottom"
-	},
-/area/centcom)
 "gpu" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/portable_atmospherics/canister/nitrogen,
@@ -13144,13 +13072,6 @@
 	icon_state = "navybluealt"
 	},
 /area/centcom/central_command_areas/special_operations)
-"gvL" = (
-/obj/structure/railing,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "rampbottom"
-	},
-/area/centcom)
 "gwk" = (
 /obj/effect/turf_decal{
 	icon_state = "golden_stripes"
@@ -13683,11 +13604,6 @@
 /obj/effect/mapping_helpers/turfs/damage,
 /turf/simulated/floor/plating/nitrogen,
 /area/centcom/vox_station)
-"gLq" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/centcom/syndicate_base/cargo)
 "gLt" = (
 /turf/simulated/wall/mineral/plastitanium,
 /area/centcom/vox_station)
@@ -14007,7 +13923,7 @@
 "gVK" = (
 /obj/machinery/vending/nta{
 	dir = 4;
-	products = list(/obj/item/grenade/flashbang=4,/obj/item/flash=5,/obj/item/flashlight/seclite=4,/obj/item/restraints/legcuffs/bola/energy=8,/obj/item/ammo_box/shotgun=4,/obj/item/ammo_box/shotgun/buck=4,/obj/item/ammo_box/shotgun/rubbershot=4,/obj/item/ammo_casing/shotgun/stunslug=35,/obj/item/ammo_casing/shotgun/ion=14,/obj/item/ammo_casing/shotgun/laserslug=35,/obj/item/ammo_box/speedloader/shotgun=8,/obj/item/ammo_box/magazine/lr30mag=12,/obj/item/ammo_box/magazine/enforcer=18,/obj/item/ammo_box/magazine/enforcer/lethal=28,/obj/item/ammo_box/magazine/sp8=8,/obj/item/ammo_box/magazine/ik60mag=12,/obj/item/ammo_box/magazine/wt550m9=20,/obj/item/ammo_box/magazine/m556=12,/obj/item/ammo_box/a40mm=4,/obj/item/ammo_box/c46x30mm=8,/obj/item/ammo_box/inc46x30mm=4,/obj/item/ammo_box/tox46x30mm=4,/obj/item/ammo_box/ap46x30mm=4,/obj/item/ammo_box/laserammobox=4);
+	products = list(/obj/item/grenade/flashbang=4,/obj/item/flash=5,/obj/item/flashlight/seclite=4,/obj/item/restraints/legcuffs/bola/energy=8,/obj/item/ammo_box/shotgun=4,/obj/item/ammo_box/shotgun/buck=4,/obj/item/ammo_box/shotgun/rubbershot=4,/obj/item/ammo_casing/shotgun/stunslug=35,/obj/item/ammo_casing/shotgun/ion=14,/obj/item/ammo_casing/shotgun/laserslug=35,/obj/item/ammo_box/speedloader/shotgun=8,/obj/item/ammo_box/magazine/enforcer=18,/obj/item/ammo_box/magazine/enforcer/lethal=28,/obj/item/ammo_box/magazine/ik60mag=12,/obj/item/ammo_box/magazine/wt550m9=20,/obj/item/ammo_box/magazine/m556=12,/obj/item/ammo_box/a40mm=4,/obj/item/ammo_box/c46x30mm=8,/obj/item/ammo_box/inc46x30mm=4,/obj/item/ammo_box/tox46x30mm=4,/obj/item/ammo_box/ap46x30mm=4,/obj/item/ammo_box/laserammobox=4);
 	req_access = list(104,109)
 	},
 /obj/effect/turf_decal/delivery/white/hollow,
@@ -14447,11 +14363,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -14477,8 +14389,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -14490,9 +14400,7 @@
 	desc = null;
 	name = "SRT uniform"
 	},
-/obj/item/gun/projectile/automatic/pistol/sp8,
-/obj/item/ammo_box/magazine/sp8,
-/obj/item/ammo_box/magazine/sp8,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/implanter/dust,
 /obj/item/clothing/accessory/holster,
 /turf/simulated/floor/plasteel{
@@ -15473,11 +15381,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/central_command_areas/zone/three)
-"hGJ" = (
-/obj/structure/flora/grass/both,
-/obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/indestructible/snow,
-/area/centcom)
 "hHa" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -17001,11 +16904,6 @@
 	icon_state = "floor13"
 	},
 /area/shuttle)
-"iwt" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/centcom/syndicate_base/cargo)
 "iwE" = (
 /obj/structure/bookcase,
 /obj/item/book/manual,
@@ -18348,11 +18246,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -18378,8 +18272,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -18391,9 +18283,7 @@
 	desc = null;
 	name = "SRT uniform"
 	},
-/obj/item/gun/projectile/automatic/pistol/sp8,
-/obj/item/ammo_box/magazine/sp8,
-/obj/item/ammo_box/magazine/sp8,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/implanter/dust,
 /obj/item/clothing/accessory/holster,
 /turf/simulated/floor/plasteel{
@@ -18945,8 +18835,8 @@
 /area/centcom/central_command_areas/zone/one)
 "jnJ" = (
 /obj/structure/rack/holorack,
-/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
-/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
@@ -20252,11 +20142,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -20282,8 +20168,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -20295,9 +20179,7 @@
 	desc = null;
 	name = "SRT uniform"
 	},
-/obj/item/gun/projectile/automatic/pistol/sp8,
-/obj/item/ammo_box/magazine/sp8,
-/obj/item/ammo_box/magazine/sp8,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/implanter/dust,
 /obj/item/clothing/accessory/holster,
 /turf/simulated/floor/plasteel{
@@ -21937,11 +21819,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -21967,8 +21845,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -21980,9 +21856,7 @@
 	desc = null;
 	name = "SRT uniform"
 	},
-/obj/item/gun/projectile/automatic/pistol/sp8,
-/obj/item/ammo_box/magazine/sp8,
-/obj/item/ammo_box/magazine/sp8,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/implanter/dust,
 /obj/item/clothing/accessory/holster,
 /turf/simulated/floor/plasteel{
@@ -22305,9 +22179,6 @@
 	icon_state = "darkyellowalt"
 	},
 /area/centcom/central_command_areas/supply)
-"kEk" = (
-/turf/simulated/floor/lava/lava_land_surface,
-/area/ruin/space/bubblegum_arena)
 "kEv" = (
 /obj/effect/turf_decal/caution/stand_clear/red,
 /turf/simulated/floor/plasteel{
@@ -22976,7 +22847,6 @@
 	pixel_x = 32;
 	pixel_y = 32
 	},
-/obj/machinery/vending/syndichem,
 /obj/structure/curtain/black{
 	pixel_y = 32
 	},
@@ -24024,47 +23894,7 @@
 /area/centcom/syndicate_base)
 "lsj" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
-/obj/item/ammo_box/magazine/sfg9mm,
 /obj/effect/turf_decal/delivery/red/hollow,
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
-/obj/item/ammo_box/magazine/sfg9mm{
-	pixel_x = 8
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -25548,7 +25378,7 @@
 	pixel_x = -32
 	},
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
+/obj/item/gun/grenadelauncher,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
@@ -25562,10 +25392,7 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
-/obj/item/gun/projectile/automatic/m52,
-/obj/item/ammo_box/magazine/m52mag,
-/obj/item/ammo_box/magazine/m52mag,
-/obj/item/ammo_box/magazine/m52mag,
+/obj/item/gun/projectile/automatic/arg,
 /turf/simulated/floor/shuttle{
 	icon_state = "floor4"
 	},
@@ -25817,36 +25644,16 @@
 "mhA" = (
 /obj/structure/rack/gunrack,
 /obj/effect/turf_decal/delivery/red/hollow,
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = -6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = -6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = -6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = -6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = -6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = 6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = 6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = 6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = 6
-	},
-/obj/item/gun/projectile/automatic/smg/sfg{
-	pixel_x = 6
-	},
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -27756,9 +27563,6 @@
 "mVX" = (
 /turf/space,
 /area/space)
-"mWl" = (
-/turf/simulated/floor/carpet,
-/area/centcom/syndicate_base/control)
 "mWn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door_control/secure{
@@ -27890,9 +27694,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
 /area/centcom/central_command_areas/zone/three)
-"nar" = (
-/turf/simulated/floor/carpet,
-/area/centcom/syndicate_base/control)
 "naw" = (
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/plasteel{
@@ -28144,9 +27945,6 @@
 	name = "Lounger";
 	pixel_x = -2
 	},
-/mob/living/simple_animal/pet/dog/fox/alisa{
-	pixel_x = -2
-	},
 /obj/effect/turf_decal/siding{
 	color = "#444444";
 	dir = 4
@@ -28393,13 +28191,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/central_command_areas/special_operations)
-"nkJ" = (
-/obj/structure/window/reinforced{
-	color = "red";
-	dir = 4
-	},
-/turf/simulated/floor/carpet/black,
-/area/centcom/syndicate_base/control)
 "nkV" = (
 /obj/structure/fans/tiny/invisible,
 /turf/simulated/floor/plasteel{
@@ -29606,9 +29397,6 @@
 	},
 /turf/simulated/floor/carpet/red,
 /area/centcom/central_command_areas/zone/three)
-"nKg" = (
-/turf/simulated/floor/carpet/black,
-/area/centcom/syndicate_base/prison)
 "nKo" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -31003,11 +30791,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -31033,8 +30817,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -31046,9 +30828,7 @@
 	desc = null;
 	name = "SRT uniform"
 	},
-/obj/item/gun/projectile/automatic/pistol/sp8,
-/obj/item/ammo_box/magazine/sp8,
-/obj/item/ammo_box/magazine/sp8,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/implanter/dust,
 /obj/item/clothing/accessory/holster,
 /turf/simulated/floor/plasteel{
@@ -31475,9 +31255,9 @@
 "oDO" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/structure/rack/holorack,
-/obj/item/gun/projectile/bombarda/secgl,
-/obj/item/gun/projectile/bombarda/secgl,
-/obj/item/gun/projectile/bombarda/secgl,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
 /obj/item/ammo_box/secgl/exp,
 /obj/item/ammo_box/secgl/exp,
 /obj/item/ammo_box/secgl/exp,
@@ -31600,24 +31380,12 @@
 "oGQ" = (
 /obj/structure/rack/gunrack,
 /obj/effect/turf_decal/delivery/green/hollow,
-/obj/item/gun/energy/gun/pdw9{
-	pixel_x = -6
-	},
-/obj/item/gun/energy/gun/pdw9{
-	pixel_x = -6
-	},
-/obj/item/gun/energy/gun/pdw9{
-	pixel_x = -6
-	},
-/obj/item/gun/energy/gun/pdw9{
-	pixel_x = 6
-	},
-/obj/item/gun/energy/gun/pdw9{
-	pixel_x = 6
-	},
-/obj/item/gun/energy/gun/pdw9{
-	pixel_x = 6
-	},
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -31756,10 +31524,6 @@
 "oJI" = (
 /turf/simulated/wall/shuttle,
 /area/shuttle/siberia)
-"oJP" = (
-/obj/structure/stone_tile/slab/cracked,
-/turf/simulated/floor/lava/lava_land_surface,
-/area/ruin/space/bubblegum_arena)
 "oKa" = (
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/plasteel{
@@ -33133,11 +32897,6 @@
 	},
 /turf/simulated/floor/carpet/black,
 /area/centcom/central_command_areas/zone/two)
-"psd" = (
-/turf/simulated/floor/shuttle{
-	icon_state = "floor13"
-	},
-/area/shuttle)
 "psn" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/machinery/portable_atmospherics/canister/oxygen{
@@ -35087,12 +34846,6 @@
 "qlX" = (
 /turf/simulated/floor/carpet,
 /area/centcom/central_command_areas/zone/one)
-"qmc" = (
-/turf/simulated/floor/shuttle{
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "dark"
-	},
-/area/centcom/syndicate_base/cargo)
 "qmw" = (
 /obj/structure/table/reinforced,
 /obj/item/tank/jetpack/oxygen/harness{
@@ -37453,11 +37206,6 @@
 	icon_state = "bot"
 	},
 /area/shuttle/escape)
-"rkI" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "darkfull"
-	},
-/area/centcom/syndicate_base/control)
 "rkN" = (
 /obj/structure/chair/comfy/purp{
 	dir = 8
@@ -39711,9 +39459,6 @@
 /area/centcom/central_command_areas/special_operations)
 "shB" = (
 /obj/structure/flora/rock/jungle,
-/mob/living/simple_animal/hostile/carp/koi{
-	faction = list("")
-	},
 /obj/effect/turf_decal/tile/neutral{
 	alpha = 85;
 	icon = 'icons/misc/beach.dmi';
@@ -41702,10 +41447,6 @@
 /obj/structure/decorative_structures/metal/statue/golden_disk,
 /turf/simulated/wall/indestructible/fakeglass/brass,
 /area/centcom/vox_station)
-"tdj" = (
-/obj/structure/flora/grass/both,
-/turf/simulated/floor/indestructible/snow,
-/area/centcom)
 "tdy" = (
 /obj/machinery/portable_atmospherics/canister/oxygen{
 	name = "Canister: \[O2] (CRYO)"
@@ -42900,12 +42641,6 @@
 	name = "floor"
 	},
 /area/centcom/syndicate_base/infiltrators)
-"tDi" = (
-/obj/machinery/vending/gun_mods/advanced,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/centcom/central_command_areas/supply)
 "tDk" = (
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/effect/decal/cleanable/dirt,
@@ -43709,11 +43444,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -43739,8 +43470,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -43752,9 +43481,7 @@
 	desc = null;
 	name = "SRT uniform"
 	},
-/obj/item/gun/projectile/automatic/pistol/sp8,
-/obj/item/ammo_box/magazine/sp8,
-/obj/item/ammo_box/magazine/sp8,
+/obj/item/gun/projectile/automatic/pistol/stechkin,
 /obj/item/implanter/dust,
 /obj/item/clothing/accessory/holster,
 /turf/simulated/floor/plasteel{
@@ -44511,15 +44238,9 @@
 	},
 /area/centcom/central_command_areas/zone/three)
 "unV" = (
-/obj/item/gun/projectile/automatic/smg/c20r/auto{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/gun/projectile/automatic/smg/c20r/auto,
-/obj/item/gun/projectile/automatic/smg/c20r/auto{
-	pixel_x = 3;
-	pixel_y = -3
-	},
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/machinery/light/small,
 /obj/item/storage/backpack/duffel/syndie/ammo/smg,
 /obj/item/storage/backpack/duffel/syndie/ammo/smg,
@@ -44528,14 +44249,6 @@
 /obj/structure/rack/gunrack,
 /turf/simulated/floor/mineral/plastitanium,
 /area/centcom/syndicate_base/elite_squad)
-"uor" = (
-/obj/structure/curtain/black{
-	pixel_y = 32
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/centcom/syndicate_base/control)
 "uoE" = (
 /obj/structure/railing{
 	dir = 4
@@ -48260,7 +47973,6 @@
 /area/centcom/central_command_areas/special_operations)
 "vVE" = (
 /obj/effect/turf_decal/delivery/white,
-/obj/machinery/vending/gun_mods/advanced,
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -50567,15 +50279,6 @@
 	},
 /turf/simulated/floor/wood/fancy/cherry,
 /area/centcom/central_command_areas/bridge)
-"xfs" = (
-/turf/simulated/wall/shuttle/nosmooth/interior{
-	dir = 5;
-	icon = 'icons/turf/walls/shuttle/ninja_shuttle_wall.dmi';
-	icon_state = "ninja_walls_corners";
-	underlay_floor_icon = 'icons/turf/shuttle/floors.dmi';
-	underlay_floor_icon_state = "floor13"
-	},
-/area/shuttle)
 "xfD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -50685,11 +50388,6 @@
 	icon_state = "darkyellowalt"
 	},
 /area/centcom/central_command_areas/supply)
-"xhP" = (
-/turf/simulated/floor/shuttle{
-	icon_state = "floor13"
-	},
-/area/shuttle)
 "xhT" = (
 /obj/machinery/computer/med_data,
 /obj/structure/railing{
@@ -51564,9 +51262,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/central_command_areas/supply)
-"xzh" = (
-/turf/simulated/floor/carpet,
-/area/centcom/syndicate_base/control)
 "xzN" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
@@ -52224,7 +51919,7 @@
 /area/centcom/vox_station)
 "xPO" = (
 /turf/simulated/wall/indestructible/necropolis,
-/area/ruin/space/bubblegum_arena)
+/area/ruin/unpowered)
 "xPR" = (
 /obj/structure/flora/tree/jungle,
 /obj/structure/fans/tiny/invisible,
@@ -52890,9 +52585,6 @@
 	icon_state = "darkblue"
 	},
 /area/centcom/central_command_areas/zone/three)
-"ykS" = (
-/turf/simulated/floor/indestructible/snow,
-/area/centcom)
 "yls" = (
 /obj/structure/table/wood,
 /obj/structure/window/reinforced,
@@ -52901,11 +52593,6 @@
 	icon_state = "grimy"
 	},
 /area/centcom/central_command_areas/zone/three)
-"ylz" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/centcom/syndicate_base/cargo)
 "ylC" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 1
@@ -52915,8 +52602,8 @@
 	},
 /area/centcom/central_command_areas/zone/one)
 "ylE" = (
-/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
-/obj/item/gun/projectile/revolver/rocketlauncher/rpg232,
+/obj/item/gun/grenadelauncher,
+/obj/item/gun/grenadelauncher,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
 /obj/item/ammo_casing/caseless/rocket/a70mm_he,
@@ -54442,8 +54129,8 @@ ciV
 wfY
 ciV
 lDB
-gLq
-gLq
+aDX
+aDX
 ktr
 gtw
 ciV
@@ -54700,7 +54387,7 @@ sAE
 ciV
 mss
 hYu
-gLq
+aDX
 ktr
 vHT
 ciV
@@ -55468,8 +55155,8 @@ ciV
 ciV
 ciV
 xxy
-gLq
-gLq
+aDX
+aDX
 wWz
 ciV
 ciV
@@ -55726,7 +55413,7 @@ pzQ
 ciV
 lke
 tpx
-gLq
+aDX
 oOt
 bMn
 oOt
@@ -55734,8 +55421,8 @@ xDM
 wKl
 xof
 wPQ
-gLq
-gLq
+aDX
+aDX
 oOt
 qEc
 oix
@@ -55982,7 +55669,7 @@ ciV
 ciV
 ciV
 xxy
-gLq
+aDX
 gbA
 oOt
 mVX
@@ -55991,8 +55678,8 @@ lKW
 lKW
 lKW
 wyW
-gLq
-gLq
+aDX
+aDX
 oOt
 qEc
 fQg
@@ -56232,18 +55919,18 @@ tPy
 gbA
 gbA
 oRh
-gLq
+aDX
 wbw
 lKW
 fPv
 ciV
 oor
 wyW
-gLq
-gLq
+aDX
+aDX
 oOt
 xis
-gLq
+aDX
 wWz
 tIM
 tIM
@@ -56490,8 +56177,8 @@ gbA
 ovM
 wyh
 kbw
-gLq
-ylz
+aDX
+aDX
 oOt
 kYC
 wPQ
@@ -56500,7 +56187,7 @@ lKW
 fPv
 oOt
 xis
-gLq
+aDX
 oOt
 jvC
 nov
@@ -56747,10 +56434,10 @@ gbA
 sST
 ciV
 sXC
-gLq
-gLq
+aDX
+aDX
 oOt
-gLq
+aDX
 wPQ
 uwF
 aDX
@@ -56998,23 +56685,23 @@ vPe
 vPe
 rnm
 wZQ
-qmc
+gbA
 gbA
 gbA
 bhK
 wyh
 qiB
-gLq
-iwt
+aDX
+aDX
 oOt
-gLq
+aDX
 wPQ
 nbu
 tIM
 nzX
 oOt
 bMn
-gLq
+aDX
 oOt
 jvC
 nov
@@ -57260,18 +56947,18 @@ tPy
 gbA
 gbA
 oRh
-gLq
+aDX
 nsV
 tIM
 nzX
 ciV
 nbu
 ebH
-gLq
-gLq
+aDX
+aDX
 oOt
 xis
-gLq
+aDX
 dbs
 lKW
 lKW
@@ -57524,8 +57211,8 @@ ciV
 ciV
 ciV
 xxy
-gLq
-gLq
+aDX
+aDX
 oOt
 xis
 wWz
@@ -57533,8 +57220,8 @@ tIM
 tIM
 tIM
 ebH
-gLq
-gLq
+aDX
+aDX
 oOt
 qEc
 qTL
@@ -57782,7 +57469,7 @@ xis
 ciV
 lke
 cKU
-gLq
+aDX
 oOt
 xis
 oOt
@@ -57790,8 +57477,8 @@ xDM
 wKl
 xof
 wPQ
-gLq
-gLq
+aDX
+aDX
 oOt
 qEc
 ylE
@@ -58038,8 +57725,8 @@ ciV
 ciV
 ciV
 xxy
-gLq
-gLq
+aDX
+aDX
 dbs
 ciV
 ciV
@@ -59068,7 +58755,7 @@ ciV
 vlN
 ciV
 dMF
-gLq
+aDX
 hLm
 gtw
 xhG
@@ -62421,7 +62108,7 @@ aSy
 fZg
 aSy
 dJo
-rkI
+akW
 akW
 dJo
 vPe
@@ -63957,8 +63644,8 @@ nMc
 wDe
 gSC
 dVl
-mWl
-xzh
+dVl
+dVl
 ebc
 hCl
 hCl
@@ -64215,7 +63902,7 @@ wDe
 gSC
 iWi
 nOy
-nar
+dVl
 gel
 hCl
 hCl
@@ -64984,8 +64671,8 @@ dmj
 wDe
 gSC
 sxa
-nar
-nar
+dVl
+dVl
 gOv
 vfh
 hCl
@@ -65242,7 +64929,7 @@ wDe
 gSC
 kwZ
 nOy
-nar
+dVl
 akD
 vfh
 hCl
@@ -66256,7 +65943,7 @@ wGu
 vPe
 vPe
 oDx
-uor
+bPp
 dmj
 nRz
 sRy
@@ -67042,7 +66729,7 @@ dJo
 dcA
 qzC
 fPz
-nkJ
+itt
 itt
 hCl
 hCl
@@ -67555,7 +67242,7 @@ wDe
 gSC
 vlG
 nOy
-nar
+dVl
 hNZ
 vfh
 hCl
@@ -67811,8 +67498,8 @@ dmj
 wDe
 gSC
 dNO
-nar
-nar
+dVl
+dVl
 fUE
 vfh
 hCl
@@ -68298,7 +67985,7 @@ wlI
 vZf
 mxA
 keo
-bHn
+xGb
 xGb
 xGb
 tkm
@@ -68584,7 +68271,7 @@ wDe
 gSC
 vlG
 nOy
-nar
+dVl
 aSA
 hCl
 hCl
@@ -68840,8 +68527,8 @@ nMc
 wDe
 gSC
 lHa
-nar
-nar
+dVl
+dVl
 ebc
 hCl
 hCl
@@ -73964,7 +73651,7 @@ dfm
 pQD
 azv
 bKX
-nKg
+aVE
 kxL
 xho
 akg
@@ -74221,7 +73908,7 @@ dfm
 gro
 azv
 lym
-nKg
+aVE
 cNs
 azv
 jhz
@@ -74478,7 +74165,7 @@ dfm
 gro
 azv
 mmX
-nKg
+aVE
 kJh
 azv
 iEU
@@ -74735,7 +74422,7 @@ dfm
 jtb
 xho
 obY
-nKg
+aVE
 wsI
 azv
 iEU
@@ -74991,8 +74678,8 @@ dfm
 dfm
 dfm
 wVt
-nKg
-nKg
+aVE
+aVE
 goZ
 xho
 iEU
@@ -76790,8 +76477,8 @@ dfm
 dfm
 muO
 xho
-nKg
-nKg
+aVE
+aVE
 ghO
 xho
 dgI
@@ -77047,8 +76734,8 @@ dfm
 dfm
 dfm
 wVt
-nKg
-nKg
+aVE
+aVE
 tpQ
 xho
 sxc
@@ -77305,7 +76992,7 @@ dfm
 xlF
 xho
 aeq
-nKg
+aVE
 ghO
 xho
 azv
@@ -81764,11 +81451,11 @@ mNj
 mNj
 lpu
 emN
-tdj
-ykS
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -81777,13 +81464,13 @@ mVX
 mVX
 mNj
 mNj
-ykS
-ykS
-ykS
+axc
+axc
+axc
 fDl
-ykS
-ykS
-ykS
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -82020,28 +81707,28 @@ mNj
 mNj
 gGY
 lpu
-tdj
-ykS
+adW
+axc
 rns
-tdj
-tdj
-ykS
-ykS
+adW
+adW
+axc
+axc
 mNj
 mNj
 mVX
 mNj
 mNj
 mNj
-ykS
-ykS
-ykS
+axc
+axc
+axc
 rns
-ykS
+axc
 fDl
-ykS
-ykS
-ykS
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -82277,29 +81964,29 @@ mNj
 gGY
 dJG
 lpu
-ykS
-ykS
-tdj
-tdj
-ykS
+axc
+axc
+adW
+adW
+axc
 fDl
-ykS
+axc
 rns
 mNj
 mNj
 mNj
-ykS
-ykS
+axc
+axc
 ycO
-ykS
-ykS
-ykS
+axc
+axc
+axc
 emN
-ykS
-ykS
-ykS
-tdj
-ykS
+axc
+axc
+axc
+adW
+axc
 mNj
 mVX
 mVX
@@ -82534,29 +82221,29 @@ cxG
 gGY
 gGY
 lpu
-tdj
-tdj
-ykS
+adW
+adW
+axc
 emN
 fDl
-tdj
-tdj
-tdj
-tdj
-tdj
+adW
+adW
+adW
+adW
+adW
 kQk
-ykS
-ykS
+axc
+axc
 htL
-ykS
+axc
 fDl
-ykS
-ykS
-ykS
-tdj
+axc
+axc
+axc
+adW
 ycO
-ykS
-tdj
+axc
+adW
 mNj
 mNj
 mVX
@@ -82786,14 +82473,14 @@ mVX
 mVX
 mNj
 mNj
-ykS
+axc
 kjK
-dGF
+gGY
 gGY
 dXa
-ykS
-ykS
-ykS
+axc
+axc
+axc
 ycO
 fUp
 drh
@@ -82801,20 +82488,20 @@ ova
 ova
 ova
 gLX
-ykS
+axc
 kQk
-ykS
-tdj
-ykS
-ykS
+axc
+adW
+axc
+axc
 kQk
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -83042,15 +82729,15 @@ mVX
 mVX
 mNj
 mNj
-ykS
+axc
 cxG
 gGY
 gGY
 lpu
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 fDl
 drh
 kQT
@@ -83062,17 +82749,17 @@ gLX
 rns
 kQk
 kQk
-tdj
+adW
 hZr
-ykS
+axc
 rns
-tdj
-tdj
-ykS
+adW
+adW
+axc
 fDl
 fDl
 emN
-ykS
+axc
 mNj
 mVX
 mVX
@@ -83298,22 +82985,22 @@ mVX
 mVX
 mNj
 mNj
-ykS
-ykS
+axc
+axc
 kjK
 dJG
 gGY
 dXa
-ykS
-ykS
-ykS
+axc
+axc
+axc
 fDl
 drh
 drz
-tdj
+adW
 rns
-ykS
-tdj
+axc
+adW
 pqv
 tcW
 ova
@@ -83325,11 +83012,11 @@ ova
 ova
 ova
 gLX
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -83554,23 +83241,23 @@ mVX
 mVX
 mNj
 mNj
-ykS
-ykS
+axc
+axc
 cxG
 gGY
 gGY
 dXa
-ykS
+axc
 emN
-tdj
+adW
 drh
 ova
 drz
 nVI
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 gNB
 pqv
 kQT
@@ -83584,10 +83271,10 @@ kQT
 tcW
 gLX
 rns
-ykS
+axc
 fDl
-ykS
-ykS
+axc
+axc
 mNj
 mNj
 mVX
@@ -83810,42 +83497,42 @@ mNj
 mNj
 mNj
 mNj
-ykS
-ykS
+axc
+axc
 dLF
 dSA
 dSA
 eph
-ykS
-tdj
+axc
+adW
 drh
 ova
 kQT
 drz
-tdj
-tdj
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
+adW
+adW
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+adW
+axc
 hwh
-ykS
-ykS
-ykS
-tdj
+axc
+axc
+axc
+adW
 pqv
 tcW
 gLX
-ykS
-ykS
+axc
+axc
 fDl
-ykS
-ykS
+axc
+axc
 mNj
 mVX
 mVX
@@ -84057,17 +83744,17 @@ mVX
 mVX
 mNj
 mNj
-ykS
-tdj
-ykS
+axc
+adW
+axc
 emN
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+adW
+axc
+axc
+axc
+axc
 drh
 dRA
 dRA
@@ -84077,7 +83764,7 @@ ova
 ova
 tcW
 drz
-tdj
+adW
 hFk
 hFk
 hFk
@@ -84088,21 +83775,21 @@ nct
 hFk
 hFk
 hFk
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
 rns
-ykS
+axc
 hxT
 cUD
-tdj
-ykS
+adW
+axc
 kQk
-ykS
-ykS
+axc
+axc
 mNj
 mNj
 mNj
@@ -84313,17 +84000,17 @@ mVX
 (123,1,1) = {"
 mNj
 mNj
-ykS
+axc
 adW
-ykS
-tdj
-ykS
-ykS
+axc
 adW
-tdj
+axc
+axc
+adW
+adW
 adW
 rns
-ykS
+axc
 drh
 kQT
 dYC
@@ -84334,7 +84021,7 @@ ery
 kQT
 drz
 fhO
-ykS
+axc
 hFk
 fFf
 qim
@@ -84345,32 +84032,32 @@ qim
 qim
 bSF
 hFk
-ykS
+axc
 nVI
-ykS
+axc
 hmH
-ykS
-ykS
+axc
+axc
 sQx
-ykS
+axc
 hxT
 cUD
-tdj
-ykS
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
+axc
 ycO
-ykS
-tdj
-ykS
-tdj
-tdj
-ykS
-ykS
-tdj
-tdj
-ykS
+axc
+adW
+axc
+adW
+adW
+axc
+axc
+adW
+adW
+axc
 mNj
 mNj
 mVX
@@ -84569,29 +84256,29 @@ mVX
 "}
 (124,1,1) = {"
 mNj
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 adW
 ycO
 adW
 sQx
-tdj
-ykS
-ykS
+adW
+axc
+axc
 diG
 drz
-ykS
+axc
 dMC
 dTy
 eaU
 eqJ
-tdj
-ykS
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
+axc
 hFk
 fGm
 kuh
@@ -84602,33 +84289,33 @@ gxr
 kuh
 buX
 hFk
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
 nVI
-ykS
+axc
 pqv
 tcW
 gLX
-tdj
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
+axc
+axc
+axc
 ycO
-tdj
-tdj
-tdj
-tdj
-tdj
+adW
+adW
+adW
+adW
+adW
 emN
-ykS
-ykS
+axc
+axc
 mNj
 mNj
 mVX
@@ -84826,20 +84513,20 @@ mVX
 "}
 (125,1,1) = {"
 mNj
-ykS
-ykS
+axc
+axc
 adW
-ykS
+axc
 adW
-ykS
-ykS
+axc
+axc
 adW
-tdj
-tdj
+adW
+adW
 rns
 adW
-ykS
-ykS
+axc
+axc
 kjK
 gGY
 lpu
@@ -84865,28 +84552,28 @@ hFk
 hFk
 hFk
 hFk
-ykS
+axc
 sQx
-tdj
+adW
 hxT
 cUD
-tdj
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
 meN
-tdj
-ykS
-tdj
-tdj
-ykS
-tdj
-tdj
-ykS
-tdj
-tdj
+adW
+axc
+adW
+adW
+axc
+adW
+adW
+axc
+adW
+adW
 emN
-ykS
+axc
 mNj
 mNj
 mVX
@@ -85083,19 +84770,19 @@ mVX
 "}
 (126,1,1) = {"
 mNj
-ykS
+axc
 ycO
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
+axc
+axc
+axc
+axc
+adW
+axc
 awu
 sQx
-tdj
-ykS
-ykS
+adW
+axc
+axc
 emN
 kjK
 gGY
@@ -85122,29 +84809,29 @@ nFg
 gwP
 gyV
 hFk
-ykS
+axc
 hmH
-ykS
+axc
 pqv
 tcW
 gLX
-ykS
+axc
 kQk
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
+axc
+adW
+axc
+axc
+axc
+axc
 mFm
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+adW
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -85340,19 +85027,19 @@ mVX
 "}
 (127,1,1) = {"
 mNj
-ykS
-ykS
+axc
+axc
 adW
-tdj
+adW
 sQx
 adW
-ykS
+axc
 adW
-ykS
+axc
 cBU
-tdj
+adW
 cBU
-ykS
+axc
 cBU
 kjK
 dJG
@@ -85379,30 +85066,30 @@ nIG
 nIG
 hnm
 hFk
-ykS
+axc
 emN
-ykS
-tdj
+axc
+adW
 hxT
 cUD
-tdj
-ykS
-ykS
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
+axc
+axc
 xsE
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
 rns
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 mNj
 mNj
 pNM
@@ -85597,19 +85284,19 @@ mVX
 "}
 (128,1,1) = {"
 mNj
-ykS
+axc
 adW
-ykS
-ykS
+axc
+axc
 rns
-ykS
-ykS
-ykS
+axc
+axc
+axc
 adW
 cBU
-ykS
+axc
 diH
-tdj
+adW
 cBU
 kjK
 gGY
@@ -85636,31 +85323,31 @@ nPr
 fiS
 hnm
 hFk
-ykS
-ykS
+axc
+axc
 hmH
-ykS
+axc
 pqv
 tcW
 gLX
 rns
 kQk
-ykS
-ykS
+axc
+axc
 fQN
 xDA
 fQN
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-tdj
-ykS
-tdj
-ykS
-ykS
+axc
+axc
+axc
+axc
+adW
+axc
+adW
+axc
+adW
+axc
+axc
 mNj
 pNM
 mVX
@@ -85854,11 +85541,11 @@ mVX
 "}
 (129,1,1) = {"
 mNj
-ykS
+axc
 awu
-ykS
-ykS
-tdj
+axc
+axc
+adW
 adW
 jSw
 jSw
@@ -85869,7 +85556,7 @@ jSw
 jSw
 dEs
 kjK
-dGF
+gGY
 lpu
 hFk
 eNb
@@ -85893,31 +85580,31 @@ hFk
 eNb
 hnm
 hFk
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
 pqv
 tcW
 gLX
-tdj
+adW
 kQk
-ykS
+axc
 fQN
 tbW
 xDA
 fQN
-ykS
+axc
 mFm
-ykS
-tdj
-ykS
-tdj
-ykS
-tdj
-ykS
-ykS
+axc
+adW
+axc
+adW
+axc
+adW
+axc
+axc
 mNj
 pNM
 mVX
@@ -86114,7 +85801,7 @@ mNj
 emN
 axc
 rns
-tdj
+adW
 adW
 jSw
 jSw
@@ -86150,31 +85837,31 @@ hFk
 eNb
 hnm
 hFk
-ykS
-ykS
-ykS
-ykS
-ykS
-tdj
+axc
+axc
+axc
+axc
+axc
+adW
 pqv
 tcW
 gLX
-tdj
-ykS
+adW
+axc
 fQN
 gLw
-xfs
+odX
 xDA
 xsE
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+adW
+axc
+axc
+axc
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -86368,10 +86055,10 @@ mVX
 "}
 (131,1,1) = {"
 mNj
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 jSw
 jSw
 dMb
@@ -86407,31 +86094,31 @@ hFk
 eNb
 iCc
 hFk
-ykS
+axc
 sQx
 nVI
 hmH
 sQx
-ykS
-tdj
+axc
+adW
 pqv
 tcW
 ova
 ova
 wae
 oYE
-xhP
-xfs
+cHW
+odX
 xDA
 fQN
-ykS
-ykS
-ykS
+axc
+axc
+axc
 rns
-ykS
-tdj
+axc
+adW
 emN
-ykS
+axc
 mNj
 pNM
 mVX
@@ -86632,10 +86319,10 @@ jSw
 jSw
 dMb
 dMb
-bRM
-bRM
-bRM
-bRM
+bHR
+bHR
+bHR
+bHR
 dmv
 dMb
 dMb
@@ -86664,14 +86351,14 @@ hFk
 eNb
 hnm
 hFk
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 emN
-ykS
-ykS
-ykS
+axc
+axc
+axc
 hxT
 tcW
 myy
@@ -86679,16 +86366,16 @@ fQN
 fmL
 lKB
 aTn
-xfs
+odX
 xDA
 fQN
-ykS
+axc
 mFm
-ykS
-tdj
-ykS
-tdj
-ykS
+axc
+adW
+axc
+adW
+axc
 mNj
 pNM
 mVX
@@ -86882,14 +86569,14 @@ mVX
 "}
 (133,1,1) = {"
 mNj
-ykS
-ykS
+axc
+axc
 adW
 jSw
 dMb
 dMb
-bRM
-bRM
+bHR
+bHR
 cig
 cDk
 cQF
@@ -86909,8 +86596,8 @@ hFk
 nct
 nct
 hFk
-gnr
-gvL
+bhg
+bDR
 hFk
 nct
 nct
@@ -86921,12 +86608,12 @@ hFk
 eNb
 hnm
 hFk
-ykS
-ykS
+axc
+axc
 sQx
-ykS
-ykS
-ykS
+axc
+axc
+axc
 rns
 drh
 tcW
@@ -86940,12 +86627,12 @@ wQF
 vNF
 xDA
 xsE
-ykS
-ykS
-tdj
-ykS
-tdj
-ykS
+axc
+axc
+adW
+axc
+adW
+axc
 mNj
 pNM
 mVX
@@ -87139,14 +86826,14 @@ mVX
 "}
 (134,1,1) = {"
 mNj
-ykS
-ykS
+axc
+axc
 adW
 jSw
 dMb
-bRM
-bRM
-bRM
+bHR
+bHR
+bHR
 dMb
 cDU
 dMb
@@ -87178,13 +86865,13 @@ hFk
 euF
 fwi
 hFk
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
+axc
 hxT
 cUD
 fQN
@@ -87198,11 +86885,11 @@ fAv
 tbW
 xDA
 fQN
-ykS
-ykS
-ykS
-tdj
-ykS
+axc
+axc
+axc
+adW
+axc
 mNj
 pNM
 mVX
@@ -87396,9 +87083,9 @@ mVX
 "}
 (135,1,1) = {"
 mNj
-ykS
+axc
 adW
-ykS
+axc
 jSw
 dMb
 nhl
@@ -87440,8 +87127,8 @@ hFk
 nct
 hFk
 hFk
-ykS
-ykS
+axc
+axc
 hxT
 cUD
 fQN
@@ -87457,9 +87144,9 @@ gfP
 xDA
 fQN
 rns
-ykS
-ykS
-ykS
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -87653,7 +87340,7 @@ mVX
 "}
 (136,1,1) = {"
 mNj
-ykS
+axc
 axc
 ycO
 jSw
@@ -87707,16 +87394,16 @@ eul
 rUo
 niX
 ubF
-xhP
-xhP
-xhP
-xfs
+cHW
+cHW
+cHW
+odX
 mll
 fQN
-ykS
-ykS
-tdj
-ykS
+axc
+axc
+adW
+axc
 mNj
 pNM
 mVX
@@ -87910,13 +87597,13 @@ mVX
 "}
 (137,1,1) = {"
 mNj
-ykS
-ykS
-ykS
+axc
+axc
+axc
 jSw
 dMb
 bht
-bRM
+bHR
 nhl
 civ
 byZ
@@ -87958,22 +87645,22 @@ hDU
 hfX
 tcW
 cUD
-ykS
+axc
 fQN
 eul
 oCt
 wlK
 uFn
-xhP
-xhP
+cHW
+cHW
 pvn
 cHW
 pYK
 qDb
-ykS
-tdj
-ykS
-ykS
+axc
+adW
+axc
+axc
 mNj
 pNM
 mVX
@@ -88167,17 +87854,17 @@ mVX
 "}
 (138,1,1) = {"
 mNj
-ykS
-ykS
+axc
+axc
 adW
 jSw
 dMb
 bhL
 bEB
 dMb
-bRM
+bHR
 bAh
-bRM
+bHR
 dMb
 dtL
 cMD
@@ -88215,22 +87902,22 @@ hDU
 fDZ
 tcW
 cUD
-ykS
+axc
 fQN
 eul
 rUo
 ljM
 rTc
-xhP
-xhP
+cHW
+cHW
 pvn
-psd
+cHW
 pYK
 fQN
-ykS
-ykS
-tdj
-ykS
+axc
+axc
+adW
+axc
 mNj
 pNM
 mVX
@@ -88424,9 +88111,9 @@ mVX
 "}
 (139,1,1) = {"
 mNj
-ykS
+axc
 rns
-ykS
+axc
 jSw
 dMb
 dMb
@@ -88478,16 +88165,16 @@ eul
 rUo
 oWO
 ubF
-xhP
-xhP
-xhP
-bYi
+cHW
+cHW
+cHW
+acK
 htX
 fQN
-ykS
-ykS
+axc
+axc
 emN
-ykS
+axc
 mNj
 pNM
 mVX
@@ -88681,9 +88368,9 @@ mVX
 "}
 (140,1,1) = {"
 mNj
-ykS
+axc
 sQx
-ykS
+axc
 jSw
 jSw
 dMb
@@ -88725,8 +88412,8 @@ hFk
 nct
 hFk
 hFk
-ykS
-ykS
+axc
+axc
 hxT
 cUD
 fQN
@@ -88742,9 +88429,9 @@ rgH
 bQF
 fQN
 nQm
-ykS
-tdj
-ykS
+axc
+adW
+axc
 mNj
 pNM
 mVX
@@ -88938,17 +88625,17 @@ mVX
 "}
 (141,1,1) = {"
 mNj
-tdj
 adW
-ykS
-ykS
+adW
+axc
+axc
 jSw
 dMb
 bHo
 ceS
 bRx
 gVw
-bRM
+bHR
 dnL
 duf
 dMb
@@ -88977,13 +88664,13 @@ hFk
 okZ
 okZ
 hFk
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+adW
+axc
+axc
+axc
+axc
 hxT
 cUD
 fQN
@@ -88997,11 +88684,11 @@ lxP
 tbW
 bQF
 fQN
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -89195,10 +88882,10 @@ mVX
 "}
 (142,1,1) = {"
 mNj
-tdj
-ykS
+adW
+axc
 aIz
-tdj
+adW
 jSw
 dMb
 bHR
@@ -89206,8 +88893,8 @@ bRx
 cjy
 nWf
 cRm
-bRM
-dum
+bHR
+duf
 dMb
 jSw
 kjK
@@ -89222,7 +88909,7 @@ hFk
 nct
 nct
 hFk
-gpp
+dsX
 eSC
 hFk
 nct
@@ -89234,12 +88921,12 @@ hFk
 okZ
 okZ
 hFk
-tdj
-tdj
-tdj
-ykS
-tdj
-ykS
+adW
+adW
+adW
+axc
+adW
+axc
 rns
 pqv
 tcW
@@ -89253,12 +88940,12 @@ wQF
 bpJ
 bQF
 xsE
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
+axc
+axc
+adW
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -89452,18 +89139,18 @@ mVX
 "}
 (143,1,1) = {"
 mNj
-ykS
+axc
 adW
-ykS
-tdj
+axc
+adW
 jSw
 dMb
 bHR
-bRM
+bHR
 cjy
 nEN
 bGP
-bRM
+bHR
 cqi
 dMb
 jSw
@@ -89491,14 +89178,14 @@ okZ
 okZ
 iFF
 hFk
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+axc
 pqv
 tcW
 myE
@@ -89506,16 +89193,16 @@ fQN
 pjn
 dnb
 ivU
-bYi
+acK
 bQF
 fQN
-ykS
+axc
 mFm
-ykS
-ykS
-tdj
-tdj
-tdj
+axc
+axc
+adW
+adW
+adW
 mNj
 pNM
 mVX
@@ -89709,18 +89396,18 @@ mVX
 "}
 (144,1,1) = {"
 mNj
-ykS
-hGJ
-tdj
-ykS
+axc
+awu
+adW
+axc
 jSw
 dMb
-bJL
-bRM
-bRM
+bHo
+bHR
+bHR
 bRx
-bRM
-bRM
+bHR
+bHR
 xlA
 dMb
 jSw
@@ -89748,31 +89435,31 @@ gxr
 okZ
 oaT
 hFk
-ykS
-tdj
+axc
+adW
 nVI
-tdj
-ykS
-tdj
+adW
+axc
+adW
 sQx
-ykS
-ykS
+axc
+axc
 pqv
 kQT
 wae
 wYn
-xhP
-bYi
+cHW
+acK
 bQF
 fQN
-ykS
-ykS
-ykS
+axc
+axc
+axc
 rns
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -89967,9 +89654,9 @@ mVX
 (145,1,1) = {"
 mNj
 rns
-ykS
-tdj
-tdj
+axc
+adW
+adW
 jSw
 dMb
 dMb
@@ -90005,31 +89692,31 @@ lKY
 okZ
 obR
 hFk
-ykS
-tdj
-ykS
-ykS
+axc
+adW
+axc
+axc
 ycO
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
+axc
+adW
+axc
+axc
+axc
+axc
 fQN
 rAu
-bYi
+acK
 bQF
 xsE
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-tdj
+axc
+axc
+axc
+axc
+axc
+axc
+adW
 emN
-ykS
+axc
 mNj
 pNM
 mVX
@@ -90223,9 +89910,9 @@ mVX
 "}
 (146,1,1) = {"
 mNj
-tdj
 adW
-ykS
+adW
+axc
 sQx
 jSw
 jSw
@@ -90262,31 +89949,31 @@ lKY
 okZ
 oha
 hFk
-tdj
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
+adW
+axc
+adW
+axc
+axc
+axc
+axc
+adW
+axc
+axc
+axc
 fQN
 tbW
 bQF
 fQN
-ykS
+axc
 mFm
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -90481,10 +90168,10 @@ mVX
 (147,1,1) = {"
 mNj
 kQk
-ykS
+axc
 adW
-hGJ
-tdj
+awu
+adW
 jSw
 jSw
 jSw
@@ -90519,31 +90206,31 @@ lKY
 okZ
 oiF
 hFk
-ykS
-tdj
-ykS
+axc
+adW
+axc
 sQx
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-tdj
+axc
+axc
+axc
+axc
+axc
+axc
+adW
 fQN
 bQF
 fQN
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+axc
+axc
 mNj
 pNM
 mVX
@@ -90737,20 +90424,20 @@ mVX
 "}
 (148,1,1) = {"
 mNj
-ykS
-ykS
-ykS
+axc
+axc
+axc
 aIz
-ykS
-ykS
+axc
+axc
 kQk
 cfa
 ckq
-tdj
+adW
 cRn
-tdj
-tdj
-ykS
+adW
+adW
+axc
 kjK
 dJG
 lpu
@@ -90776,30 +90463,30 @@ lKY
 okZ
 iKK
 hFk
-tdj
-tdj
-tdj
-tdj
-tdj
-ykS
-tdj
-ykS
+adW
+adW
+adW
+adW
+adW
+axc
+adW
+axc
 rns
-ykS
-tdj
-ykS
+axc
+adW
+axc
 xsE
-ykS
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
+axc
 rns
-tdj
-ykS
-tdj
-ykS
+adW
+axc
+adW
+axc
 mNj
 mNj
 pNM
@@ -90996,20 +90683,20 @@ mVX
 mNj
 mNj
 kQk
-ykS
-hGJ
+axc
+awu
 adW
 adW
 ycO
-tdj
+adW
 ckC
-ykS
+axc
 sJr
-ykS
-ykS
+axc
+axc
 cxG
 gGY
-dGF
+gGY
 lpu
 hFk
 eFk
@@ -91033,29 +90720,29 @@ lKY
 okZ
 iLk
 hFk
-ykS
+axc
 ycO
-ykS
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+axc
 sQx
-ykS
-ykS
-ykS
-tdj
-tdj
+axc
+axc
+axc
+adW
+adW
 mFm
-ykS
-ykS
-ykS
-tdj
-tdj
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+adW
+adW
+axc
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -91253,17 +90940,17 @@ mVX
 mVX
 mNj
 mNj
-ykS
+axc
 awu
 kQk
-ykS
-ykS
-tdj
+axc
+axc
+adW
 hxT
 cHK
 ova
 dov
-ykS
+axc
 kjK
 gGY
 gGY
@@ -91290,28 +90977,28 @@ hFV
 okZ
 iMb
 hFk
-ykS
-ykS
-tdj
-tdj
-hGJ
+axc
+axc
+adW
+adW
+awu
 sQx
 ycO
 sQx
-ykS
-ykS
-ykS
+axc
+axc
+axc
 ycO
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
-tdj
-ykS
-ykS
+axc
+axc
+axc
+axc
+adW
+axc
+axc
+adW
+axc
+axc
 mNj
 mNj
 mVX
@@ -91511,18 +91198,18 @@ mVX
 mVX
 mNj
 emN
-tdj
+adW
 kQk
-tdj
-ykS
+adW
+axc
 buy
 cli
 cHT
 cUD
 amT
-ykS
+axc
 kjK
-dGF
+gGY
 gGY
 dXa
 hFk
@@ -91547,27 +91234,27 @@ gyg
 okZ
 iMF
 hFk
-ykS
+axc
 nVI
-tdj
+adW
 ycO
-ykS
-ykS
-ykS
-tdj
-ykS
-tdj
-ykS
-ykS
-ykS
-tdj
-ykS
-tdj
-tdj
-ykS
-tdj
-tdj
-ykS
+axc
+axc
+axc
+adW
+axc
+adW
+axc
+axc
+axc
+adW
+axc
+adW
+adW
+axc
+adW
+adW
+axc
 mNj
 mNj
 mVX
@@ -91768,15 +91455,15 @@ mVX
 mVX
 mNj
 mNj
-ykS
+axc
 aYy
-ykS
+axc
 adW
-tdj
+adW
 pqv
 kQT
 cVb
-ykS
+axc
 cxG
 gGY
 dJG
@@ -91804,26 +91491,26 @@ hJr
 okZ
 iFF
 hFk
-ykS
-ykS
-tdj
-ykS
-tdj
-tdj
-ykS
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
+axc
+axc
+adW
+axc
+adW
+adW
+axc
+axc
+axc
+axc
+axc
+adW
+axc
+axc
+axc
+adW
+axc
+axc
 emN
-ykS
+axc
 mNj
 mNj
 mVX
@@ -92026,13 +91713,13 @@ mVX
 mVX
 mNj
 mNj
-ykS
-tdj
-tdj
+axc
+adW
+adW
 rns
 bYb
 bYb
-ykS
+axc
 rns
 kjK
 gGY
@@ -92062,14 +91749,14 @@ okZ
 okZ
 hFk
 ycO
-ykS
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
 sQx
-tdj
-tdj
-ykS
+adW
+adW
+axc
 mNj
 mNj
 mNj
@@ -92284,17 +91971,17 @@ mVX
 mVX
 mNj
 mNj
-tdj
-ykS
-ykS
-ykS
+adW
+axc
+axc
+axc
 ycO
-ykS
-tdj
+axc
+adW
 kjK
 gGY
 lpu
-ykS
+axc
 ejV
 hFk
 fCS
@@ -92318,15 +92005,15 @@ hFk
 okZ
 okZ
 hFk
-ykS
-tdj
+axc
+adW
 sQx
-tdj
-tdj
-ykS
-ykS
-tdj
-ykS
+adW
+adW
+axc
+axc
+adW
+axc
 mNj
 mVX
 mVX
@@ -92545,13 +92232,13 @@ mNj
 mNj
 mNj
 byG
-ykS
-tdj
-ykS
+axc
+adW
+axc
 kjK
 gGY
 lpu
-tdj
+adW
 ekh
 hFk
 nXT
@@ -92575,14 +92262,14 @@ hFk
 nXT
 nXT
 hFk
-ykS
-hGJ
-ykS
-tdj
-tdj
-tdj
-ykS
-ykS
+axc
+awu
+axc
+adW
+adW
+adW
+axc
+axc
 mNj
 mNj
 mVX
@@ -92802,14 +92489,14 @@ mVX
 mVX
 mNj
 mNj
-tdj
+adW
 ycO
-ykS
+axc
 kjK
 gGY
 lpu
-ykS
-tdj
+axc
+adW
 hFk
 eIy
 fFD
@@ -92832,13 +92519,13 @@ ggg
 fvn
 iNj
 hFk
-ykS
+axc
 nVI
-ykS
+axc
 rns
-tdj
-ykS
-ykS
+adW
+axc
+axc
 mNj
 mNj
 mVX
@@ -93060,13 +92747,13 @@ mVX
 mVX
 mNj
 mNj
-tdj
-tdj
+adW
+adW
 dvt
 gGY
 gGY
 dYY
-tdj
+adW
 hFk
 fbH
 glc
@@ -93089,12 +92776,12 @@ glc
 glc
 ooz
 hFk
-ykS
-ykS
+axc
+axc
 sQx
-ykS
+axc
 emN
-ykS
+axc
 mNj
 mNj
 mVX
@@ -93319,11 +93006,11 @@ mVX
 mNj
 mNj
 emN
-tdj
+adW
 kjK
 dJG
 lpu
-ykS
+axc
 hFk
 hFk
 nct
@@ -93346,12 +93033,12 @@ nct
 nct
 hFk
 hFk
-ykS
-tdj
-ykS
-ykS
-ykS
-tdj
+axc
+adW
+axc
+axc
+axc
+adW
 mNj
 mVX
 mVX
@@ -93575,39 +93262,39 @@ mVX
 mVX
 mVX
 mNj
-tdj
-ykS
+adW
+axc
 kjK
 gGY
 lpu
 sQx
-ykS
-ykS
-tdj
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
-tdj
-tdj
-tdj
-ykS
-ykS
-tdj
-ykS
+axc
+axc
+adW
+axc
+adW
+axc
+axc
+axc
+axc
+adW
+adW
+adW
+axc
+axc
+adW
+axc
 sQx
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
-ykS
-tdj
+axc
+axc
+axc
+axc
+adW
+axc
+axc
+axc
+axc
+adW
 mNj
 mNj
 mVX
@@ -93838,31 +93525,31 @@ kjK
 gGY
 lpu
 ycO
-ykS
-tdj
-ykS
+axc
+adW
+axc
 feM
-ykS
-ykS
+axc
+axc
 rns
-hGJ
-ykS
+awu
+axc
 sQx
 nVI
 lIw
-tdj
-ykS
-ykS
+adW
+axc
+axc
 ycO
-tdj
-tdj
+adW
+adW
 nVI
-ykS
-tdj
-ykS
-ykS
-tdj
-tdj
+axc
+adW
+axc
+axc
+adW
+adW
 sQx
 mNj
 mNj
@@ -94094,32 +93781,32 @@ emN
 kjK
 gGY
 lpu
-tdj
+adW
 emN
-tdj
-ykS
-ykS
-tdj
+adW
+axc
+axc
+adW
 sQx
 sQx
-tdj
-ykS
+adW
+axc
 emN
 mNj
 mNj
 mNj
 mNj
-ykS
-ykS
-tdj
-hGJ
-tdj
-ykS
+axc
+axc
+adW
+awu
+adW
+axc
 rns
-tdj
-ykS
+adW
+axc
 sQx
-ykS
+axc
 mNj
 mNj
 mVX
@@ -94354,12 +94041,12 @@ mNj
 mNj
 mNj
 mNj
-tdj
-tdj
-ykS
+adW
+adW
+axc
 ycO
-ykS
-ykS
+axc
+axc
 mNj
 mNj
 mNj
@@ -94368,14 +94055,14 @@ mVX
 mNj
 mNj
 mNj
-ykS
-ykS
-ykS
-ykS
-tdj
-ykS
-ykS
-ykS
+axc
+axc
+axc
+axc
+adW
+axc
+axc
+axc
 mNj
 mNj
 mVX
@@ -94612,9 +94299,9 @@ mVX
 mVX
 mNj
 mNj
-ykS
-tdj
-ykS
+axc
+adW
+axc
 emN
 mNj
 mNj
@@ -94629,8 +94316,8 @@ mNj
 mNj
 mNj
 emN
-ykS
-ykS
+axc
+axc
 mNj
 mNj
 mNj
@@ -98530,10 +98217,10 @@ mVX
 mVX
 xPO
 bmm
-kEk
-kEk
-kEk
-kEk
+dTR
+dTR
+dTR
+dTR
 bmm
 bmm
 bmm
@@ -98555,10 +98242,10 @@ bmm
 bmm
 bmm
 bmm
-kEk
-kEk
-kEk
-kEk
+dTR
+dTR
+dTR
+dTR
 bmm
 xPO
 mVX
@@ -98787,7 +98474,7 @@ mVX
 mVX
 xPO
 bmm
-kEk
+dTR
 bmm
 bmm
 bmm
@@ -98815,7 +98502,7 @@ bmm
 bmm
 bmm
 bmm
-kEk
+dTR
 bmm
 xPO
 mVX
@@ -99044,7 +98731,7 @@ mVX
 mVX
 xPO
 bmm
-kEk
+dTR
 bmm
 bmm
 bmm
@@ -99072,7 +98759,7 @@ bmm
 bmm
 bmm
 bmm
-kEk
+dTR
 bmm
 xPO
 mVX
@@ -99301,7 +98988,7 @@ mVX
 mVX
 xPO
 bmm
-kEk
+dTR
 bmm
 bmm
 bmm
@@ -99329,7 +99016,7 @@ bmm
 bmm
 bmm
 bmm
-kEk
+dTR
 bmm
 xPO
 mVX
@@ -101883,8 +101570,8 @@ bmm
 bmm
 bmm
 bmm
-oJP
-oJP
+dTR
+dTR
 dTR
 dTR
 dTR
@@ -102139,9 +101826,9 @@ bmm
 bmm
 bmm
 bmm
-oJP
-oJP
-oJP
+dTR
+dTR
+dTR
 cjk
 dTR
 dTR
@@ -102397,10 +102084,10 @@ bmm
 bmm
 bmm
 bmm
-oJP
-oJP
-oJP
-oJP
+dTR
+dTR
+dTR
+dTR
 dTR
 bmm
 bmm
@@ -102657,7 +102344,7 @@ bmm
 bmm
 dTR
 dTR
-oJP
+dTR
 bmm
 bmm
 bmm
@@ -104292,7 +103979,7 @@ xyc
 wNL
 eFN
 rFC
-but
+lzS
 oDO
 afP
 lzS
@@ -104955,7 +104642,7 @@ mVX
 mVX
 xPO
 bmm
-kEk
+dTR
 bmm
 bmm
 bmm
@@ -104983,7 +104670,7 @@ bmm
 bmm
 bmm
 bmm
-kEk
+dTR
 bmm
 xPO
 mVX
@@ -105212,7 +104899,7 @@ mVX
 mVX
 xPO
 bmm
-kEk
+dTR
 bmm
 bmm
 bmm
@@ -105240,7 +104927,7 @@ bmm
 bmm
 bmm
 bmm
-kEk
+dTR
 bmm
 xPO
 mVX
@@ -105313,7 +105000,7 @@ nQW
 gbo
 kBa
 jHX
-tDi
+fon
 jEU
 uym
 gXM
@@ -105469,7 +105156,7 @@ mVX
 mVX
 xPO
 bmm
-kEk
+dTR
 bmm
 bmm
 bmm
@@ -105497,7 +105184,7 @@ bmm
 bmm
 bmm
 bmm
-kEk
+dTR
 bmm
 xPO
 mVX
@@ -105726,10 +105413,10 @@ mVX
 mVX
 xPO
 bmm
-kEk
-kEk
-kEk
-kEk
+dTR
+dTR
+dTR
+dTR
 bmm
 bmm
 bmm
@@ -105751,10 +105438,10 @@ bmm
 bmm
 bmm
 bmm
-kEk
-kEk
-kEk
-kEk
+dTR
+dTR
+dTR
+dTR
 bmm
 xPO
 mVX

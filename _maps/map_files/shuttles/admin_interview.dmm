@@ -212,11 +212,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -242,8 +238,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -909,11 +903,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -939,8 +929,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";
@@ -1041,11 +1029,7 @@
 	icon_opened = "syndicate1open";
 	icon_state = "syndicate1"
 	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/gun/projectile/automatic/smg/saber,
+/obj/item/gun/projectile/automatic/smg/c20r,
 /obj/item/gun/energy/gun/blueshield,
 /obj/item/clothing/glasses/hud/security/sunglasses/aviators,
 /obj/item/reagent_containers/food/snacks/candy/mre,
@@ -1071,8 +1055,6 @@
 	name = "SRT bulletproof vest"
 	},
 /obj/item/shield/riot/tele,
-/obj/item/gun_module/muzzle/suppressor,
-/obj/item/CQC_manual,
 /obj/item/implanter/mindshield/ert,
 /obj/item/card/id/centcom{
 	name = "Special Reaction Team Member card";

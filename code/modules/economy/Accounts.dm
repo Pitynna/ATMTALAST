@@ -78,9 +78,7 @@ GLOBAL_DATUM(CC_account, /datum/money_account)
 	M.remote_access_pin = rand(111111, 999999)
 	M.money = starting_funds
 	M.linked_job = link_job
-	M.salary_payment_active = salary_active
-	if(salary_active)
-		M.payment_process = new(SScapitalism.payment_account, M)
+	M.salary_payment_active = FALSE
 
 	//create an entry in the account transaction log for when it was created
 	var/datum/transaction/T = new()

@@ -90,6 +90,10 @@ SUBSYSTEM_DEF(atoms)
 	var/start_tick = world.time
 
 	var/result = A.Initialize(arglist(arguments))
+	// Let a retired parent finish constructing its internals before it is deleted.
+	// Deleting (for example) its magazine mid-Initialize breaks the parent.
+	if(is_legacy_blocked_type(the_type) && !is_legacy_blocked_type(A.loc?.type))
+		result = INITIALIZE_HINT_QDEL
 
 	if(start_tick != world.time)
 		BadInitializeCalls[the_type] |= BAD_INIT_SLEPT

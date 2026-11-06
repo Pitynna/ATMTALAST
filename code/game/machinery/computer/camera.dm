@@ -137,6 +137,7 @@
 		var/old_camera = active_camera
 		active_camera?.computers_watched_by -= src
 		active_camera = selected_camera
+		last_camera_turf = null
 		active_camera.computers_watched_by += src
 		playsound(src, SFX_TERMINAL_TYPE, 25, FALSE)
 
@@ -147,6 +148,8 @@
 /obj/machinery/computer/security/proc/update_active_camera_screen()
 	// Show static if can't use the camera
 	if(!active_camera?.can_use())
+		// Re-enabling this camera must redraw, even when it has not moved.
+		last_camera_turf = null
 		cam_screen.show_camera_static()
 		return
 

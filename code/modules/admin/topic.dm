@@ -3048,12 +3048,6 @@
 				SSblackbox.record_feedback("tally", "admin_secrets_fun_used", 1,  "Lava Floor Fake")
 				SSweather.run_weather(/datum/weather/floor_is_lava/fake)
 				message_admins("[key_name_admin(usr)] made aesthetic lava on the floor")
-			if("weatherashstorm")
-				if(!you_realy_want_do_this())
-					return
-				SSblackbox.record_feedback("tally", "admin_secrets_fun_used", 1,  "Weather Ash Storm")
-				SSweather.run_weather(/datum/weather/ash_storm)
-				message_admins("[key_name_admin(usr)] spawned an ash storm on the mining level")
 			if("polymorph")
 				SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/polymorph_all)
 			if("stupify")
@@ -3354,9 +3348,6 @@
 						SSnightshift.update_nightshift(active = FALSE, announce = TRUE, forced = TRUE)
 						to_chat(usr, span_notice("Night shift forced off."), confidential = TRUE)
 
-			if("lavatype")
-				change_lava_type()
-
 		if(usr)
 			log_admin("[key_name(usr)] used secret [href_list["secretsadmin"]]")
 			if(ok)
@@ -3419,6 +3410,9 @@
 			error_viewer.show_to(usr, null, href_list["viewruntime_linear"])
 
 	else if(href_list["add_station_goal"])
+		if(!STATION_GOALS_ENABLED)
+			return
+
 		if(!check_rights(R_EVENT))
 			return
 		var/list/type_choices = typesof(/datum/station_goal)
@@ -3765,21 +3759,3 @@
 		swap.cast(target)
 	qdel(swap)
 	log_and_message_admins("Initiated mass mindswap")
-
-/datum/admins/proc/change_lava_type()
-	if(!SSticker || SSticker.current_state == GAME_STATE_STARTUP)
-		to_chat(usr, span_warning("Генерация ещё не завершена. Пожалуйста, подождите."))
-		return
-
-	var/list/themes = list()
-	var/list/only_names = list() // Req for tgui_alert
-	for(var/lava_theme in subtypesof(/datum/lavaland_theme))
-		var/datum/lavaland_theme/lavaland_theme_type = lava_theme
-		only_names.Add(lavaland_theme_type.name)
-		themes[lavaland_theme_type.name] = lavaland_theme_type
-
-	var/choosen = tgui_alert(usr, "Выберите тип Лазиса, который вы хотите установить.", "Выбор типа Лазиса", only_names)
-	if(!choosen)
-		return
-
-	set_lazis_type(themes[choosen])

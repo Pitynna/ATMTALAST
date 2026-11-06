@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(gas_sensors)
 #define LINDA_SPAWN_WATER_VAPOR (1<<10)
 
 //LAVALAND
-#define LAVALAND_EQUIPMENT_EFFECT_PRESSURE 50 //what pressure you have to be under to increase the effect of equipment meant for lavaland
+#define MINING_EQUIPMENT_EFFECT_PRESSURE 50 //what pressure you have to be under to increase the effect of equipment meant for lavaland
 #define LAVALAND_TEMPERATURE 300
 #define LAVALAND_OXYGEN 14
 #define LAVALAND_NITROGEN 23

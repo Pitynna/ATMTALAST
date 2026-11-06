@@ -430,7 +430,7 @@
 		opened = TRUE //We set opened to TRUE to avoid spending time trying to open (due to being deleted) during the Destroy() proc
 		qdel(src)
 		return
-	if(ispath(style, /datum/pod_style/gondola)) //Checks if we are supposed to be a gondola pod. If so, create a gondolapod mob, and move this pod to nullspace. I'd like to give a shout out, to my man oranges
+	if(ispath(style, /datum/pod_style/gondola) && !is_legacy_blocked_type(/mob/living/simple_animal/pet/gondola/gondolapod)) //Checks if we are supposed to be a gondola pod. If so, create a gondolapod mob, and move this pod to nullspace. I'd like to give a shout out, to my man oranges
 		var/mob/living/simple_animal/pet/gondola/gondolapod/benis = new(turf_underneath, src)
 		benis.contents |= contents //Move the contents of this supplypod into the gondolapod mob.
 		for(var/mob/living/mob_in_pod in benis.contents)

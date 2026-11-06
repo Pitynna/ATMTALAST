@@ -21,9 +21,7 @@
 	return OXYLOSS | BRUTELOSS
 
 /obj/item/assembly/signaler/core/examine(mob/user)
-	. = ..()
-	. += span_notice("Текущий заряд: [charge].")
-	. += span_notice("Текущая сила: [get_strength()].")
+	return ..()
 
 /obj/item/assembly/signaler/core/Initialize(mapload, charge)
 	. = ..()
@@ -49,7 +47,7 @@
 100 of tier 3 == 200 of tier 2 == 400 of tier 1
 */
 /obj/item/assembly/signaler/core/proc/get_strength()
-	return round(charge * (1 << (tier - 1)) * (tier != 4 ? 1 : 1.5))
+	return 150
 
 // ============================ Tier 1 ===================================
 /obj/item/assembly/signaler/core/tier1

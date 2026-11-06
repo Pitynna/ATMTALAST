@@ -352,18 +352,14 @@
 			Robot.clear_zeroth_law()
 		if("ТЕРРОР")
 			is_new_mind = TRUE
-			var/terror = pick(prob(20); "lurker", prob(20); "knight", prob(20); "drone", prob(15); "widow", prob(15); "reaper", prob(10); "destroyer")
+			var/terror = pick(prob(35); "lurker", prob(35); "knight", prob(20); "widow", prob(10); "destroyer")
 			switch(terror)
 				if("lurker")
 					new_mob = new /mob/living/simple_animal/hostile/poison/terror_spider/lurker(M.loc)
 				if("knight")
 					new_mob = new /mob/living/simple_animal/hostile/poison/terror_spider/knight(M.loc)
-				if("drone")
-					new_mob = new /mob/living/simple_animal/hostile/poison/terror_spider/builder(M.loc)
 				if("widow")
 					new_mob = new /mob/living/simple_animal/hostile/poison/terror_spider/widow(M.loc)
-				if("reaper")
-					new_mob = new /mob/living/simple_animal/hostile/poison/terror_spider/reaper(M.loc)
 				if("destroyer")
 					new_mob = new /mob/living/simple_animal/hostile/poison/terror_spider/destroyer(M.loc)
 			new_mob.universal_speak = TRUE
@@ -378,7 +374,7 @@
 			briefing_msg = "Вам разрешается убивать нексеноморфов среди вас. Прежде всего вам лучше обнаружить других себеподобных и подготовить место для улья.."
 		if("ЖИВОТНОЕ")
 			is_new_mind = TRUE
-			var/beast = pick("carp", "bear", "statue", "giantspider", "syndiemouse")
+			var/beast = pick("carp", "bear", "statue", "giantspider")
 			switch(beast)
 				if("carp")
 					new_mob = new /mob/living/simple_animal/hostile/carp(M.loc)
@@ -395,8 +391,6 @@
 							new_mob = new /mob/living/simple_animal/hostile/poison/giant_spider/nurse(M.loc)
 						if("basicspider")
 							new_mob = new /mob/living/simple_animal/hostile/poison/giant_spider(M.loc)
-				if("syndiemouse")
-					new_mob = new /mob/living/simple_animal/hostile/retaliate/syndirat(M.loc)
 			briefing_msg = "Вы агрессивное животное, питаемое жаждой голода, вы можете совершать убийства, \
 			сбиваться в стаи или следовать своему пути одиночки, но цель всегда будет одна — утолить свой голод."
 			new_mob.universal_speak = TRUE

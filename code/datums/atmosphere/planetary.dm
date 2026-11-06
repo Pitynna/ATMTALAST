@@ -22,7 +22,7 @@
 	maximum_temp = LAVALAND_MAX_TEMPERATURE
 
 	minimum_pressure = HAZARD_LOW_PRESSURE + 10
-	maximum_pressure = LAVALAND_EQUIPMENT_EFFECT_PRESSURE - 1
+	maximum_pressure = MINING_EQUIPMENT_EFFECT_PRESSURE - 1
 
 /datum/atmosphere/cold
 	id = ENVIRONMENT_COLD
@@ -46,7 +46,7 @@
 	maximum_temp = ICEBOX_MIN_TEMPERATURE
 
 	minimum_pressure = HAZARD_LOW_PRESSURE + 10
-	maximum_pressure = LAVALAND_EQUIPMENT_EFFECT_PRESSURE - 1
+	maximum_pressure = MINING_EQUIPMENT_EFFECT_PRESSURE - 1
 
 /datum/atmosphere/temperate
 	id = ENVIRONMENT_TEMPERATE

@@ -277,7 +277,7 @@
 
 
 /datum/cargo_quest/thing/miner
-	quest_type_name = "Добыча с Лазиса"
+	quest_type_name = "Добыча с астероида"
 	bounty_jobs = list(JOB_TITLE_MINER)
 
 	easy_items = list(
@@ -298,9 +298,9 @@
 	)
 
 	very_hard_items = list(
-		/obj/item/gem/data = 450,
-		/obj/item/gem/void = 500,
-		/obj/item/gem/bloodstone = 650,
+		/obj/item/gem/fdiamond = 450,
+		/obj/item/stack/ore/bluespace_crystal = 500,
+		/obj/item/stack/ore/diamond = 650,
 	)
 	difficultly_flags = (QUEST_DIFFICULTY_EASY|QUEST_DIFFICULTY_NORMAL|QUEST_DIFFICULTY_HARD|QUEST_DIFFICULTY_VERY_HARD)
 
@@ -479,11 +479,6 @@
 		/obj/item/seeds/berry/death = 80,
 		/obj/item/seeds/banana/mime = 80,
 		/obj/item/seeds/angel = 90,
-		/obj/item/seeds/lavaland/cactus = 100,
-		/obj/item/seeds/lavaland/ember = 100,
-		/obj/item/seeds/lavaland/inocybe = 100,
-		/obj/item/seeds/lavaland/polypore = 100,
-		/obj/item/seeds/lavaland/porcini = 100,
 	)
 
 	very_hard_items = list(
@@ -787,17 +782,11 @@
 	bounty_jobs = list(JOB_TITLE_MINER)
 
 	normal_items = list(
-		/mob/living/simple_animal/hostile/asteroid/goliath/beast = 180,
+		/mob/living/simple_animal/hostile/asteroid/goliath = 180,
 		/mob/living/simple_animal/hostile/asteroid/goldgrub = 120,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher = 130,
-		/mob/living/simple_animal/hostile/asteroid/marrowweaver = 210,
+		/mob/living/simple_animal/hostile/asteroid/basilisk = 130,
 	)
-	hard_items = list(
-		/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient = 450,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing = 330,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing = 350,
-		/mob/living/simple_animal/hostile/asteroid/marrowweaver/frost = 350,
-	)
+	hard_items = list(/mob/living/simple_animal/hostile/asteroid/hivelord = 300)
 	difficultly_flags = (QUEST_DIFFICULTY_NORMAL|QUEST_DIFFICULTY_HARD)
 
 /datum/cargo_quest/thing/capsule/length_quest()

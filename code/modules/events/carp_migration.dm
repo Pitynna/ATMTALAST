@@ -12,27 +12,13 @@
 		/mob/living/simple_animal/hostile/carp = 60,
 		/mob/living/simple_animal/hostile/carp/megacarp = 40
 	)
-	/// Normal koi numbers
-	var/spawned_kois = list(
-		/mob/living/simple_animal/hostile/carp/koi = 98,
-		/mob/living/simple_animal/hostile/carp/koi/honk = 2,
-	)
-	/// Koi infestation numbers
-	var/list/spawned_infestation_kois = list(
-		/mob/living/simple_animal/hostile/carp/koi = 40,
-		/mob/living/simple_animal/hostile/carp/koi/honk = 5,
-		/mob/living/simple_animal/hostile/carp = 55,
-	)
 
 /datum/event/carp_migration/setup()
 	announceWhen = rand(40, 60)
 	endWhen = rand(600, 1200)
 
 /datum/event/carp_migration/koi/start()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_CARP_INFESTATION))
-		spawn_fish(spawned_infestation_kois, length(GLOB.landmarks_list))
-	else
-		spawn_fish(spawned_kois, length(GLOB.landmarks_list))
+	return ..()
 
 /datum/event/carp_migration/announce()
 	var/announcement = ""

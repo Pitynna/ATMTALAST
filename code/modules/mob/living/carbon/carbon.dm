@@ -1030,7 +1030,6 @@ so that different stomachs can handle things in different ways VB*/
 /mob/living/carbon/proc/remove_all_parasites(vomit_organs = FALSE)
 	var/static/list/parasite_organs = typecacheof(list(
 		/obj/item/organ/internal/body_egg,
-		/obj/item/organ/internal/legion_tumour,
 	))
 
 	var/should_vomit = FALSE

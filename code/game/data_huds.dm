@@ -272,26 +272,7 @@
 		set_hud_image_state(STATUS_HUD, STATUS_HUD_HEALTHY)
 
 /mob/living/carbon/human/proc/med_hud_insurance_set_overlay()
-	var/datum/money_account/account = null
-	var/obj/item/card/id/temp_id = null
 	set_hud_image_inactive(INSURANCE_HUD)
-
-	if(!wear_id)
-		if((wear_mask && wear_mask.flags_inv & HIDENAME) || (head && head.flags_inv & HIDENAME))
-			return
-	else
-		temp_id = wear_id.GetID()
-
-	if(!temp_id)
-		if(dna.real_name == get_visible_name(add_id_name = FALSE))
-			account = get_insurance_account_DNA(src)
-	else
-		account = get_money_account(temp_id.associated_account_number)
-
-	if(account)
-		set_hud_image_state(INSURANCE_HUD, "[STATUS_HUD_HEALTHY]_[account.insurance_type]")
-		set_hud_image_active(INSURANCE_HUD)
-
 
 /mob/living/carbon/human/proc/update_hud_set()
 	sec_hud_set_ID()

@@ -28,9 +28,7 @@ type ATMData = {
   held_card_name: string;
   security_level: number;
   money: number;
-  insurance_type: string;
   owner_name: string;
-  insurance: number;
   transaction_log: Transaction[];
 };
 
@@ -69,9 +67,6 @@ export const ATM = (props: unknown) => {
         break;
       case 3: // VIEW_TRANSACTION_LOGS
         body = <ViewTransactionLogs />;
-        break;
-      case 4: // CHANGE_INSURANCE_TYPE
-        body = <ChangeInsuranceType />;
         break;
       default:
         body = <DefaultScreen />;
@@ -207,61 +202,10 @@ const TransferFunds = (props: unknown) => {
   );
 };
 
-const ChangeInsuranceType = (props: unknown) => {
-  const { act, data } = useBackend<ATMData>();
-  const { insurance_type } = data;
-  return (
-    <Section title="Выберите новый тип страховки">
-      <LabeledList>
-        <LabeledList.Item label="Тип">
-          <Button
-            icon="unlock"
-            selected={insurance_type === 'None'}
-            onClick={() =>
-              act('change_insurance_type', { new_insurance_type: 'None' })
-            }
-          >
-            Нет (0)
-          </Button>
-          <Button
-            icon="unlock"
-            selected={insurance_type === 'Bugetary'}
-            onClick={() =>
-              act('change_insurance_type', { new_insurance_type: 'Bugetary' })
-            }
-          >
-            Бюджетная (0)
-          </Button>
-          <Button
-            icon="unlock"
-            selected={insurance_type === 'Standart'}
-            onClick={() =>
-              act('change_insurance_type', { new_insurance_type: 'Standart' })
-            }
-          >
-            Стандартная (500)
-          </Button>
-          <Button
-            icon="unlock"
-            selected={insurance_type === 'Deluxe'}
-            onClick={() =>
-              act('change_insurance_type', { new_insurance_type: 'Deluxe' })
-            }
-          >
-            Делюкс (2000)
-          </Button>
-        </LabeledList.Item>
-      </LabeledList>
-      <BackButton />
-    </Section>
-  );
-};
-
 const DefaultScreen = (props: unknown) => {
   const { act, data } = useBackend<ATMData>();
   const [fundsAmount, setFundsAmount] = useState('0');
-  const [insuranceAmount, setInsuranceAmount] = useState('0');
-  const { owner_name, money, insurance } = data;
+  const { owner_name, money } = data;
   return (
     <>
       <Section
@@ -286,31 +230,6 @@ const DefaultScreen = (props: unknown) => {
             </Button>
           </LabeledList.Item>
 
-          <LabeledList.Item label="Insurance Points">
-            ${insurance}
-          </LabeledList.Item>
-          <LabeledList.Item label="Adding Insurance">
-            <Input onChange={setInsuranceAmount} />
-          </LabeledList.Item>
-          <LabeledList.Item>
-            <Button
-              icon="sign-out-alt"
-              onClick={() =>
-                act('insurance', { insurance_amount: insuranceAmount })
-              }
-            >
-              Add insurance points
-            </Button>
-          </LabeledList.Item>
-
-          <LabeledList.Item>
-            <Button
-              icon="sign-out-alt"
-              onClick={() => act('insurance_replenishment', {})}
-            >
-              Toggle auto-replenishment of insurance
-            </Button>
-          </LabeledList.Item>
         </LabeledList>
       </Section>
       <Section title="Menu">
@@ -338,14 +257,7 @@ const DefaultScreen = (props: unknown) => {
             View transaction log
           </Button>
         </Box>
-        <Box>
-          <Button
-            icon="lock"
-            onClick={() => act('view_screen', { view_screen: 4 })}
-          >
-            Change type of insurance
-          </Button>
-        </Box>
+
         <Box>
           <Button icon="print" onClick={() => act('balance_statement')}>
             Print balance statement

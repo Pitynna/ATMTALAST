@@ -198,6 +198,8 @@
 				objective.take_damage(damage, damage_type)
 
 /datum/martial_art/proc/teach(mob/living/carbon/human/human, make_temporary = FALSE)
+	if(is_legacy_blocked_type(type))
+		return FALSE
 	if(!human.mind)
 		return FALSE
 

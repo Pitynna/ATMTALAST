@@ -1,8 +1,4 @@
 //space area
-/area/ruin/space/bubblegum_arena
-	name = "Bubblegum Arena"
-
-//pirate base
 /area/ruin/space/pirate_base
 	name = "pirates base "
 	icon_state = "unknown"

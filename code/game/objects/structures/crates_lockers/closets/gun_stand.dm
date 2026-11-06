@@ -63,12 +63,6 @@
 
 
 //MARK: Finish rod stand
-/obj/structure/closet/gun_stand/fishingrod
-	name = "fishing cabinet"
-	desc = "There is a small label that reads \"Fo* Em**gen*y u*e *nly\". All the other text is scratched out and replaced with various fish weights."
-	icon_state = "fishingrod"
-	stored_item_type = /obj/item/twohanded/fishing_rod
-
 /obj/structure/closet/gun_stand/sechammer
 	name = "tactical sledgehammer cabinet"
 	desc = "A stand for a tactical sledgehammer. Its inscription reads: For special occasions."
