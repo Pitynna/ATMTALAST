@@ -23,13 +23,16 @@
 	try_on.Cut()
 	QDEL_NULL(preview_view)
 
-/datum/ui_module/loadout/proc/ensure_preview(mob/user, datum/tgui_window/window)
+/datum/ui_module/loadout/proc/ensure_preview(mob/user, datum/tgui_window/window = null)
 	if(QDELETED(preview_view))
 		preview_view = new
 		preview_view.generate_view("loadout_preview_[UID()]")
 		rebuild_preview(user)
-		if(user)
-			preview_view.display_to(user, window)
+	// Как в редакторе костюмов: повторно регистрируем карту при каждом обновлении,
+	// чтобы объект попал в уже созданный ByondUi-элемент окна.
+	preview_view.update_body()
+	if(user?.client)
+		preview_view.display_to(user, window)
 	return preview_view.assigned_map
 
 /// Профессия, выставленная игроком на высокий приоритет.

@@ -9,16 +9,16 @@ GLOBAL_LIST_EMPTY(gear_tgui_info)
 /datum/ui_module/loadout/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
+		ensure_preview(user)
 		ui = new(user, src, "Loadout", name)
 		ui.set_autoupdate(FALSE)
 		ui.open()
-		ensure_preview(user, ui.window)
 
 /datum/ui_module/loadout/ui_data(mob/user)
 	var/list/data = list()
 	data["gear_slots"] = user?.client?.prefs.build_loadout()
 	data["selected_gears"] = user?.client?.prefs?.tgui_loadout_gear
-	data["character_preview_view"] = preview_view?.assigned_map
+	data["character_preview_view"] = ensure_preview(user)
 	data["try_on"] = try_on
 	data["show_job"] = preview_show_job
 	return data
