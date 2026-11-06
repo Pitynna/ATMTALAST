@@ -1621,7 +1621,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "biy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -1795,7 +1795,7 @@
 "bqz" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "bqU" = (
 /obj/machinery/camera{
 	c_tag = "Secure Armory East";
@@ -1824,7 +1824,7 @@
 /area/shuttle/ulthor_admin)
 "brI" = (
 /turf/simulated/wall/r_wall,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "bsa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -2174,7 +2174,7 @@
 /obj/machinery/power/tracker,
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/starboard)
+/area/station/solars/starboard/ulthor)
 "bEQ" = (
 /obj/structure/table/wood,
 /turf/simulated/floor/carpet/black,
@@ -2415,7 +2415,7 @@
 	banned_links = 14
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "bOe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4252,7 +4252,7 @@
 	banned_links = 8
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "dbd" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	desc = "Труба содержит газ для обработки и после возвращает его обратно в трубу смешивания";
@@ -4365,7 +4365,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "dga" = (
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/plasteel{
@@ -4867,7 +4867,7 @@
 /area/station/science/rnd)
 "dyj" = (
 /turf/simulated/wall,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "dyD" = (
 /obj/structure/cable{
 	banned_links = 7
@@ -5825,7 +5825,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "eaJ" = (
 /obj/structure/grille/broken,
 /obj/structure/lattice,
@@ -6275,7 +6275,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plasteel,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "eoB" = (
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -6361,7 +6361,7 @@
 "eqs" = (
 /obj/structure/cable,
 /turf/simulated/wall/r_wall,
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "eqN" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -6535,7 +6535,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/bluegrid,
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "eAW" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -6691,7 +6691,7 @@
 	check_one_access = 0
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "eFw" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -6786,7 +6786,7 @@
 	check_one_access = 0
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "eIS" = (
 /obj/machinery/computer/card,
 /turf/simulated/floor/plasteel{
@@ -7001,7 +7001,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "eRK" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -7752,7 +7752,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "fql" = (
 /obj/structure/chair{
 	dir = 8
@@ -9043,7 +9043,7 @@
 /obj/effect/landmark/start/roboticist,
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "gnk" = (
 /turf/simulated/floor/plating,
 /area/station/security/evidence)
@@ -9282,7 +9282,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "gyI" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Bar Office Maintenance";
@@ -9712,7 +9712,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "gJY" = (
 /obj/structure/table,
 /obj/item/mounted/frame/apc_frame,
@@ -9914,7 +9914,7 @@
 	dir = 8;
 	icon_state = "neutralfull"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "gQD" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/unary/outlet_injector/on{
@@ -10912,7 +10912,7 @@
 /area/station/engineering/atmos)
 "hCd" = (
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "hCw" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/plasteel{
@@ -10958,7 +10958,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/starboard)
+/area/station/solars/starboard/ulthor)
 "hEA" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -11474,7 +11474,7 @@
 	banned_links = 6
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "hRL" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11508,7 +11508,7 @@
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/starboard)
+/area/station/solars/starboard/ulthor)
 "hTX" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -12373,7 +12373,7 @@
 	dir = 8;
 	icon_state = "neutralfull"
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "iBb" = (
 /obj/machinery/computer/communications,
 /turf/simulated/floor/wood,
@@ -12684,7 +12684,7 @@
 "iMa" = (
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/starboard)
+/area/station/solars/starboard/ulthor)
 "iMf" = (
 /obj/structure/chair/comfy/blue,
 /turf/simulated/floor/plasteel{
@@ -12890,7 +12890,7 @@
 	dir = 8;
 	icon_state = "neutralfull"
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "iTp" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -32;
@@ -14288,7 +14288,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "jUm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -14302,7 +14302,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "jUy" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -14692,7 +14692,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "kgl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plasteel{
@@ -15376,7 +15376,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "kBw" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
 /turf/simulated/floor/plasteel{
@@ -15801,7 +15801,7 @@
 	},
 /obj/item/megaphone,
 /turf/simulated/floor/plasteel,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "kQg" = (
 /obj/structure/rack{
 	dir = 8;
@@ -15961,7 +15961,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "kTO" = (
 /obj/structure/cable,
 /turf/simulated/floor/plasteel{
@@ -16182,7 +16182,7 @@
 	shock_proof = 1
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "ldb" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Atmospherics Maintenance";
@@ -16433,7 +16433,7 @@
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/port)
+/area/station/solars/port/ulthor)
 "llV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate,
@@ -16743,7 +16743,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "lwn" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
@@ -17448,7 +17448,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "lTW" = (
 /obj/machinery/light/spot{
 	dir = 4;
@@ -17704,7 +17704,7 @@
 	banned_links = 3
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "mcE" = (
 /obj/machinery/door_control{
 	id = "blueshield";
@@ -18323,7 +18323,7 @@
 	dir = 8;
 	icon_state = "neutralfull"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "mzl" = (
 /obj/machinery/vending/plasmaresearch,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -19045,7 +19045,7 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/plasteel,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "mZe" = (
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plasteel,
@@ -19071,7 +19071,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "mZB" = (
 /obj/machinery/door/airlock/shuttle{
 	id_tag = "s_docking_airlock"
@@ -19217,7 +19217,7 @@
 /turf/simulated/floor/plasteel/airless{
 	icon_state = "solarpanel"
 	},
-/area/station/solars/starboard)
+/area/station/solars/starboard/ulthor)
 "ndP" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = null;
@@ -20204,7 +20204,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "nMk" = (
 /obj/item/radio/intercom{
 	pixel_y = -28
@@ -20272,7 +20272,7 @@
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/port)
+/area/station/solars/port/ulthor)
 "nOw" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plasteel{
@@ -20520,7 +20520,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/starboard)
+/area/station/solars/starboard/ulthor)
 "nXf" = (
 /turf/simulated/floor/plasteel{
 	dir = 9;
@@ -20605,7 +20605,7 @@
 	dir = 8;
 	icon_state = "neutralfull"
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "oaK" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/tinted{
@@ -20669,7 +20669,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "obN" = (
 /obj/machinery/light{
 	dir = 1
@@ -22103,7 +22103,7 @@
 /area/station/security/prison/perma)
 "oXq" = (
 /turf/simulated/wall/r_wall,
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "oXy" = (
 /obj/structure/table,
 /obj/machinery/light/small{
@@ -22313,7 +22313,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "pfT" = (
 /obj/machinery/power/apc{
 	cell_type = 25000;
@@ -22420,7 +22420,7 @@
 	dir = 8;
 	icon_state = "neutralfull"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "phC" = (
 /obj/structure/table/wood,
 /obj/machinery/door_control{
@@ -22627,7 +22627,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "pmP" = (
 /obj/machinery/shieldwallgen,
 /turf/simulated/floor/plasteel{
@@ -22700,7 +22700,7 @@
 /area/station/science/rnd)
 "poY" = (
 /turf/simulated/floor/plating,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "ppa" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -22977,7 +22977,7 @@
 /area/station/command/ulthor_141_185)
 "pzA" = (
 /turf/simulated/wall/r_wall,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "pzB" = (
 /obj/machinery/light{
 	dir = 4
@@ -23021,7 +23021,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "pBK" = (
 /obj/structure/chair{
 	dir = 1
@@ -23305,7 +23305,7 @@
 /obj/machinery/atmospherics/unary/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "pKE" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -24363,7 +24363,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "qtd" = (
 /obj/structure/table,
 /obj/item/storage/box/gloves{
@@ -24486,7 +24486,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/plasteel,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "qzF" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -24818,7 +24818,7 @@
 "qKp" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "qKw" = (
 /obj/structure/closet/secure_closet/brig,
 /obj/machinery/camera{
@@ -24997,7 +24997,7 @@
 	check_one_access = 0
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "qRI" = (
 /turf/simulated/wall,
 /area/station/medical/ulthor_135_176)
@@ -25516,7 +25516,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "rjk" = (
 /obj/structure/cable{
 	banned_links = 6
@@ -25600,11 +25600,11 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "rjY" = (
 /obj/structure/filingcabinet,
 /turf/simulated/floor/plasteel,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "rke" = (
 /turf/simulated/wall,
 /area/station/command/ulthor_106_160)
@@ -25709,7 +25709,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "rna" = (
 /obj/machinery/flasher{
 	id = "permaflash1";
@@ -26169,7 +26169,7 @@
 "rEO" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "rFH" = (
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plasteel{
@@ -26209,7 +26209,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "rHl" = (
 /obj/structure/disposalpipe/segment{
 	name = "Sorting Office"
@@ -26941,7 +26941,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "slD" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -27639,7 +27639,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "sHS" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor{
@@ -28665,7 +28665,7 @@
 /area/station/service/ulthor_91_176)
 "tve" = (
 /turf/simulated/wall,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "tvk" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
@@ -28731,7 +28731,7 @@
 /area/station/command/office/captain)
 "tvZ" = (
 /turf/simulated/wall,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "twb" = (
 /obj/effect/landmark/start/cyborg,
 /obj/effect/turf_decal/stripes/line{
@@ -28847,7 +28847,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "whitepurplefull"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "tAN" = (
 /obj/item/twohanded/required/kirbyplants,
 /obj/machinery/camera{
@@ -28932,7 +28932,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "tDm" = (
 /obj/structure/table,
 /obj/item/hand_labeler,
@@ -29455,7 +29455,7 @@
 "tWL" = (
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/port)
+/area/station/solars/port/ulthor)
 "tXl" = (
 /obj/machinery/chem_dispenser,
 /turf/simulated/floor/shuttle,
@@ -29490,7 +29490,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "tXM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -30103,7 +30103,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "uuA" = (
 /obj/structure/cable/yellow{
 	banned_links = 2
@@ -30712,7 +30712,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "uNc" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -31951,7 +31951,7 @@
 /area/station/command/ulthor_153_164)
 "vES" = (
 /turf/simulated/floor/plating,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "vFf" = (
 /obj/structure/cable,
 /turf/simulated/floor/plasteel{
@@ -32049,7 +32049,7 @@
 /area/station/maintenance/turbine)
 "vIX" = (
 /turf/simulated/floor/bluegrid,
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "vJa" = (
 /obj/structure/table/wood,
 /obj/machinery/alarm{
@@ -32327,7 +32327,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "vQc" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -32360,14 +32360,14 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "vTY" = (
 /obj/structure/cable{
 	banned_links = 13
 	},
 /obj/machinery/power/smes,
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "vUJ" = (
 /obj/machinery/door/window/brigdoor{
 	dir = 2;
@@ -32992,7 +32992,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "wpa" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/reagent_containers/cup/bucket,
@@ -33485,7 +33485,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/port)
+/area/station/solars/port/ulthor)
 "wFb" = (
 /obj/machinery/vending/tool,
 /turf/simulated/floor/plasteel{
@@ -33798,7 +33798,7 @@
 /turf/simulated/floor/plasteel/airless{
 	icon_state = "solarpanel"
 	},
-/area/station/solars/port)
+/area/station/solars/port/ulthor)
 "wRj" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Bridge";
@@ -33840,7 +33840,7 @@
 	banned_links = 3
 	},
 /turf/simulated/floor/plating,
-/area/station/maintenance/solars/port)
+/area/station/maintenance/solars/port/ulthor)
 "wTe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -33941,7 +33941,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/space,
-/area/station/solars/port)
+/area/station/solars/port/ulthor)
 "wWC" = (
 /obj/machinery/newscaster/security_unit{
 	pixel_x = 28
@@ -34185,7 +34185,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "xfO" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green{
@@ -34408,7 +34408,7 @@
 	check_one_access = 0
 	},
 /turf/simulated/floor/plating,
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "xnA" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -34420,7 +34420,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "xnY" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -34443,7 +34443,7 @@
 /obj/structure/table,
 /obj/item/coin/silver,
 /turf/simulated/floor/plasteel,
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "xoi" = (
 /obj/machinery/computer/security/mining{
 	pixel_x = 5
@@ -34728,7 +34728,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/ai/upload)
+/area/station/ai/upload/ulthor)
 "xyN" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -34795,7 +34795,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "xAc" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -35244,7 +35244,7 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/station/science/robotics)
+/area/station/science/robotics/ulthor)
 "xLh" = (
 /turf/simulated/floor/plating,
 /area/station/service/ulthor_82_155)
@@ -35602,7 +35602,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "xYE" = (
 /obj/structure/table,
 /obj/item/lighter,
@@ -35949,7 +35949,7 @@
 /turf/simulated/floor/plasteel{
 	dir = 1
 	},
-/area/station/command/office/qm)
+/area/station/command/office/qm/ulthor)
 "ylt" = (
 /obj/machinery/light,
 /obj/machinery/hologram/holopad,

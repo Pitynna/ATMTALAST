@@ -1,0 +1,3252 @@
+{
+  "date": "2026-11-06",
+  "base_commit": "6a04e0614550f518305d6e849db08901ef8d5410",
+  "area_types": 109,
+  "unknown_before": 46,
+  "unknown_after": 0,
+  "map_size": [
+    255,
+    255,
+    1
+  ],
+  "unchanged": [
+    "all non-area map atoms including variables",
+    "floor/wall/space geometry",
+    "APC circuit footprints (one-to-one type renames only)",
+    "camera locations and circuit membership",
+    "all DMM grid keys"
+  ],
+  "changes": {
+    "explicit_states": 46,
+    "local_types": 6,
+    "area_only_remapped_tiles": 778,
+    "remaps": [
+      [
+        "/area/station/ai/upload",
+        "/area/station/ai/upload/ulthor",
+        "Ulthor AI Upload",
+        "ai_upload"
+      ],
+      [
+        "/area/station/command/office/qm",
+        "/area/station/command/office/qm/ulthor",
+        "Ulthor Quartermaster Office",
+        "quartoffice"
+      ],
+      [
+        "/area/station/science/robotics",
+        "/area/station/science/robotics/ulthor",
+        "Ulthor Robotics and Research Access",
+        "research"
+      ],
+      [
+        "/area/station/maintenance/solars/port",
+        "/area/station/maintenance/solars/port/ulthor",
+        "Ulthor West Solar Control and Maintenance",
+        "SolarcontrolP"
+      ],
+      [
+        "/area/station/solars/port",
+        "/area/station/solars/port/ulthor",
+        "Ulthor West Solar Array",
+        "panelsP"
+      ],
+      [
+        "/area/station/solars/starboard",
+        "/area/station/solars/starboard/ulthor",
+        "Ulthor South-East Solar Array",
+        "panelsS"
+      ]
+    ],
+    "renames": [
+      "Ulthor Drone Control",
+      "Ulthor Engineering Lounge and Monitoring"
+    ],
+    "map_before_sha256": "f8b9a92eab204609a08a5b75dbd44fef98e0e9d3eb5344ac064eae2b273ce2ea",
+    "map_after_sha256": "90de36be1fff05c6458749c36930f8e31eca0333594da7e4cc14c50f6c88191d"
+  },
+  "static_audit": {
+    "size": [
+      255,
+      255,
+      1
+    ],
+    "tiles": 65025,
+    "sha256": "90de36be1fff05c6458749c36930f8e31eca0333594da7e4cc14c50f6c88191d",
+    "apcs": 98,
+    "start_markers": 55,
+    "camera_count": 90,
+    "door_controls": 64,
+    "blast_doors": 155,
+    "jobs": {
+      "chef": 1,
+      "civilian": 9,
+      "bartender": 1,
+      "librarian": 1,
+      "quartermaster": 1,
+      "cargo_technician": 1,
+      "botanist": 1,
+      "chaplain": 1,
+      "janitor": 1,
+      "mime": 1,
+      "shaft_miner": 1,
+      "clown": 1,
+      "brig_physician": 1,
+      "nanotrasen_rep": 1,
+      "blueshield": 1,
+      "chemist": 1,
+      "head_of_security": 1,
+      "hop": 1,
+      "security_officer": 4,
+      "geneticist": 2,
+      "doctor": 1,
+      "magistrate": 1,
+      "lawyer": 2,
+      "warden": 1,
+      "virologist": 1,
+      "paramedic": 1,
+      "detective": 1,
+      "captain": 1,
+      "cmo": 1,
+      "psychiatrist": 1,
+      "ai": 1,
+      "cyborg": 2,
+      "chief_engineer": 1,
+      "engineer": 1,
+      "mechanic": 2,
+      "roboticist": 1,
+      "research_director": 1,
+      "atmospheric": 1,
+      "scientist": 2
+    },
+    "areas": {
+      "/area/space": 52510,
+      "/area/space/nearstation": 468,
+      "/area/station/solars/port/ulthor": 118,
+      "/area/station/maintenance/solars/port/ulthor": 166,
+      "/area/shuttle/ulthor_supply": 82,
+      "/area/station/hallway/secondary/entry": 315,
+      "/area/shuttle/ulthor_specops": 53,
+      "/area/station/service/ulthor_72_141": 85,
+      "/area/station/cargo/office": 248,
+      "/area/shuttle/ulthor_admin": 314,
+      "/area/station/commons/ulthor_81_165": 162,
+      "/area/station/maintenance/solars/port/aft": 369,
+      "/area/station/service/ulthor_82_155": 164,
+      "/area/station/cargo/storage": 67,
+      "/area/station/solars/port/aft": 111,
+      "/area/station/service/ulthor_80_150": 162,
+      "/area/station/cargo/ulthor_76_110": 9,
+      "/area/station/commons/ulthor_85_173": 110,
+      "/area/station/service/library": 231,
+      "/area/station/command/office/qm/ulthor": 61,
+      "/area/station/commons/locker": 115,
+      "/area/station/commons/storage/primary": 79,
+      "/area/station/service/ulthor_86_180": 64,
+      "/area/station/commons/ulthor_87_165": 71,
+      "/area/station/service/ulthor_93_151": 108,
+      "/area/station/service/barber": 258,
+      "/area/station/hallway/primary/port": 401,
+      "/area/station/commons/ulthor_89_175": 17,
+      "/area/station/service/ulthor_91_176": 115,
+      "/area/station/cargo/miningdock": 137,
+      "/area/station/commons/toilet/locker_toilet": 46,
+      "/area/station/commons/ulthor_96_166": 223,
+      "/area/station/command/ulthor_100_175": 43,
+      "/area/station/security/medical": 109,
+      "/area/shuttle/ulthor_mining": 35,
+      "/area/station/command/ulthor_104_164": 31,
+      "/area/station/command/office/hop": 156,
+      "/area/station/medical/ulthor_108_176": 52,
+      "/area/station/command/ulthor_106_160": 22,
+      "/area/station/science/ulthor_123_191": 172,
+      "/area/station/medical/ulthor_113_186": 44,
+      "/area/station/medical/ulthor_110_175": 27,
+      "/area/station/command/office/hos": 42,
+      "/area/station/security/hallway/execution": 28,
+      "/area/station/medical/ulthor_118_183": 97,
+      "/area/station/security/brig": 221,
+      "/area/shuttle/ulthor_laborcamp": 45,
+      "/area/station/security/prison/perma": 398,
+      "/area/station/command/bridge": 175,
+      "/area/station/legal/office/magistrate": 49,
+      "/area/station/medical/ulthor_124_179": 155,
+      "/area/station/legal/courtroom": 98,
+      "/area/station/medical/ulthor_122_183": 23,
+      "/area/station/ai/upload/ulthor": 40,
+      "/area/station/security/prison/lockers": 25,
+      "/area/station/security/hallway/armory": 105,
+      "/area/station/security/warden": 29,
+      "/area/station/security/lobby": 129,
+      "/area/station/legal/office/law": 44,
+      "/area/station/medical/ulthor_131_183": 28,
+      "/area/station/medical/ulthor_135_192": 67,
+      "/area/station/security/podbay": 125,
+      "/area/station/command/teleporter": 99,
+      "/area/station/command/meeting_room": 46,
+      "/area/station/medical/ulthor_135_176": 53,
+      "/area/station/command/ulthor_141_185": 52,
+      "/area/station/security/main": 50,
+      "/area/station/security/detectives_office": 232,
+      "/area/station/science/robotics/ulthor": 279,
+      "/area/station/command/office/captain/bedroom": 62,
+      "/area/station/ai/ulthor_141_152": 36,
+      "/area/station/medical/ulthor_139_176": 24,
+      "/area/station/command/office/captain": 108,
+      "/area/station/security/processing": 164,
+      "/area/station/medical/ulthor_145_181": 24,
+      "/area/station/security/interrogation": 22,
+      "/area/station/telecomms/ulthor_145_147": 64,
+      "/area/station/engineering/ulthor_149_129": 67,
+      "/area/station/engineering/storage/tech": 120,
+      "/area/station/ai/ulthor_148_151": 87,
+      "/area/station/engineering/ulthor_151_130": 140,
+      "/area/station/security/evidence": 74,
+      "/area/station/command/ulthor_153_164": 42,
+      "/area/station/command/ulthor_154_145": 67,
+      "/area/station/engineering/ulthor_152_122": 33,
+      "/area/station/science/server": 109,
+      "/area/station/engineering/ulthor_158_119": 91,
+      "/area/station/engineering/ulthor_163_93": 75,
+      "/area/station/science/robotics/chargebay": 76,
+      "/area/station/security/checkpoint": 275,
+      "/area/station/engineering/atmos": 530,
+      "/area/station/science/ulthor_coldroom": 37,
+      "/area/station/command/office/rd": 84,
+      "/area/station/science/genetics": 107,
+      "/area/station/maintenance/solars/starboard": 97,
+      "/area/station/maintenance/asmaint2": 191,
+      "/area/station/medical/break_room": 48,
+      "/area/station/solars/starboard/ulthor": 114,
+      "/area/station/science/rnd": 53,
+      "/area/station/science/chem_lab": 36,
+      "/area/station/science/xenobiology": 113,
+      "/area/station/hallway/secondary/exit": 193,
+      "/area/station/science/toxins/mixing": 86,
+      "/area/station/science/explab": 56,
+      "/area/station/science/storage": 32,
+      "/area/station/science/explab/chamber": 24,
+      "/area/shuttle/ulthor_emergency": 482,
+      "/area/station/science/ulthor_186_169": 13,
+      "/area/station/maintenance/turbine": 105
+    },
+    "failures": []
+  },
+  "builds": {
+    "normal-build.log": "paradise.dmb - 0 errors, 0 warnings (11/6/26 5:30 am)",
+    "map-build.log": "ulthor_mapcheck.test.dmb - 0 errors, 0 warnings (11/6/26 5:30 am)"
+  },
+  "sdmm_version": "2.18.0.alpha",
+  "sdmm_evidence": [
+    "2026-11-06 05:31:21 DBG sdmm/internal/app/project.go:130 > environment opened:Z:\\ATMTA\\ATMTALAST\\paradise.dme",
+    "2026-11-06 05:31:26 DBG sdmm/internal/app/project.go:264 > map opened:Z:\\ATMTA\\ATMTALAST\\_maps\\map_files\\Ulthor\\Ulthor.dmm",
+    "2026-11-06 05:31:29 DBG sdmm/internal/app/action.go:154 > title updated:paradise.dme [Ulthor.dmm] - StrongDMM"
+  ],
+  "areas": [
+    {
+      "area": "/area/shuttle/ulthor_admin",
+      "name": "\"Ulthor Admin Shuttle\"",
+      "icon": "\"shuttle\"",
+      "tiles": 314,
+      "floors": 205,
+      "bounds": [
+        68,
+        70,
+        86,
+        87
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/shuttle/ulthor_emergency",
+      "name": "\"Ulthor Emergency Shuttle\"",
+      "icon": "\"shuttle2\"",
+      "tiles": 482,
+      "floors": 372,
+      "bounds": [
+        183,
+        96,
+        200,
+        124
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/shuttle/ulthor_laborcamp",
+      "name": "\"Ulthor Laborcamp Shuttle\"",
+      "icon": "\"shuttlered\"",
+      "tiles": 45,
+      "floors": 30,
+      "bounds": [
+        111,
+        127,
+        115,
+        135
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/shuttle/ulthor_mining",
+      "name": "\"Ulthor Mining Shuttle\"",
+      "icon": "\"shuttlegrn\"",
+      "tiles": 35,
+      "floors": 23,
+      "bounds": [
+        101,
+        124,
+        105,
+        130
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/shuttle/ulthor_specops",
+      "name": "\"Ulthor Specops Shuttle\"",
+      "icon": "\"shuttlered2\"",
+      "tiles": 53,
+      "floors": 33,
+      "bounds": [
+        64,
+        88,
+        74,
+        92
+      ],
+      "apcs": [],
+      "cameras": [
+        {
+          "pos": [
+            68,
+            91,
+            1
+          ],
+          "name": "\"CentComm Special Ops. Shuttle\""
+        }
+      ]
+    },
+    {
+      "area": "/area/shuttle/ulthor_supply",
+      "name": "\"Ulthor Supply Shuttle\"",
+      "icon": "\"shuttle3\"",
+      "tiles": 82,
+      "floors": 55,
+      "bounds": [
+        63,
+        120,
+        69,
+        131
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/space",
+      "name": "\"Space\"",
+      "icon": "\"space\"",
+      "tiles": 52510,
+      "floors": 0,
+      "bounds": [
+        1,
+        1,
+        255,
+        255
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/space/nearstation",
+      "name": "\"Space\"",
+      "icon": "\"space_near\"",
+      "tiles": 468,
+      "floors": 14,
+      "bounds": [
+        33,
+        70,
+        195,
+        214
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/ai/ulthor_141_152",
+      "name": "\"Ulthor AI Core\"",
+      "icon": "\"ai_chamber\"",
+      "tiles": 36,
+      "floors": 20,
+      "bounds": [
+        137,
+        147,
+        144,
+        155
+      ],
+      "apcs": [
+        [
+          141,
+          152,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            137,
+            155,
+            1
+          ],
+          "name": "\"AI Satellite Exterior South\""
+        },
+        {
+          "pos": [
+            139,
+            148,
+            1
+          ],
+          "name": "\"AI Core South\""
+        },
+        {
+          "pos": [
+            141,
+            152,
+            1
+          ],
+          "name": "\"AI Core\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/ai/ulthor_148_151",
+      "name": "\"Ulthor Cyborg Storage\"",
+      "icon": "\"ai_foyer\"",
+      "tiles": 87,
+      "floors": 71,
+      "bounds": [
+        145,
+        150,
+        159,
+        158
+      ],
+      "apcs": [
+        [
+          148,
+          151,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            148,
+            153,
+            1
+          ],
+          "name": "\"AI Satellite Service Bay\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/ai/upload/ulthor",
+      "name": "\"Ulthor AI Upload\"",
+      "icon": "\"ai_upload\"",
+      "tiles": 40,
+      "floors": 19,
+      "bounds": [
+        121,
+        156,
+        128,
+        160
+      ],
+      "apcs": [
+        [
+          125,
+          159,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/cargo/miningdock",
+      "name": "\"Mining Dock\"",
+      "icon": "\"mining\"",
+      "tiles": 137,
+      "floors": 104,
+      "bounds": [
+        87,
+        124,
+        101,
+        135
+      ],
+      "apcs": [
+        [
+          94,
+          126,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/cargo/office",
+      "name": "\"Cargo Office\"",
+      "icon": "\"quartoffice\"",
+      "tiles": 248,
+      "floors": 214,
+      "bounds": [
+        67,
+        118,
+        86,
+        139
+      ],
+      "apcs": [
+        [
+          85,
+          138,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/cargo/storage",
+      "name": "\"Cargo Bay\"",
+      "icon": "\"quartstorage\"",
+      "tiles": 67,
+      "floors": 44,
+      "bounds": [
+        73,
+        111,
+        83,
+        118
+      ],
+      "apcs": [
+        [
+          79,
+          113,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            78,
+            113,
+            1
+          ],
+          "name": "\"Disposals\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/cargo/ulthor_76_110",
+      "name": "\"Ulthor Recycling\"",
+      "icon": "\"disposal\"",
+      "tiles": 9,
+      "floors": 7,
+      "bounds": [
+        75,
+        110,
+        78,
+        112
+      ],
+      "apcs": [
+        [
+          76,
+          110,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/bridge",
+      "name": "\"Bridge\"",
+      "icon": "\"bridge\"",
+      "tiles": 175,
+      "floors": 158,
+      "bounds": [
+        116,
+        156,
+        131,
+        175
+      ],
+      "apcs": [
+        [
+          124,
+          161,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            121,
+            163,
+            1
+          ],
+          "name": "\"Bridge West\""
+        },
+        {
+          "pos": [
+            128,
+            163,
+            1
+          ],
+          "name": "\"Bridge East\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/meeting_room",
+      "name": "\"Heads of Staff Meeting Room\"",
+      "icon": "\"meeting\"",
+      "tiles": 46,
+      "floors": 31,
+      "bounds": [
+        131,
+        158,
+        136,
+        165
+      ],
+      "apcs": [
+        [
+          132,
+          160,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/office/captain",
+      "name": "\"Captain's Office\"",
+      "icon": "\"captain\"",
+      "tiles": 108,
+      "floors": 76,
+      "bounds": [
+        138,
+        160,
+        152,
+        172
+      ],
+      "apcs": [
+        [
+          142,
+          161,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            146,
+            162,
+            1
+          ],
+          "name": "\"Captain's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/office/captain/bedroom",
+      "name": "\"Captain's Bedroom\"",
+      "icon": "\"captain\"",
+      "tiles": 62,
+      "floors": 27,
+      "bounds": [
+        137,
+        150,
+        145,
+        163
+      ],
+      "apcs": [
+        [
+          138,
+          159,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            139,
+            157,
+            1
+          ],
+          "name": "\"Captain's Quarters\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/office/hop",
+      "name": "\"Head of Personnel's Office\"",
+      "icon": "\"head_quarters\"",
+      "tiles": 156,
+      "floors": 118,
+      "bounds": [
+        104,
+        157,
+        118,
+        174
+      ],
+      "apcs": [
+        [
+          112,
+          163,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/office/hos",
+      "name": "\"Head of Security's Office\"",
+      "icon": "\"head_quarters\"",
+      "tiles": 42,
+      "floors": 26,
+      "bounds": [
+        109,
+        114,
+        115,
+        119
+      ],
+      "apcs": [
+        [
+          110,
+          117,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            110,
+            115,
+            1
+          ],
+          "name": "\"Brig Head of Security's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/office/qm/ulthor",
+      "name": "\"Ulthor Quartermaster Office\"",
+      "icon": "\"quartoffice\"",
+      "tiles": 61,
+      "floors": 43,
+      "bounds": [
+        79,
+        116,
+        86,
+        125
+      ],
+      "apcs": [
+        [
+          85,
+          125,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/office/rd",
+      "name": "\"Research Director's Office\"",
+      "icon": "\"head_quarters\"",
+      "tiles": 84,
+      "floors": 61,
+      "bounds": [
+        160,
+        160,
+        169,
+        169
+      ],
+      "apcs": [
+        [
+          165,
+          162,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            167,
+            161,
+            1
+          ],
+          "name": "\"Research Director's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/teleporter",
+      "name": "\"Teleporter\"",
+      "icon": "\"teleporter\"",
+      "tiles": 99,
+      "floors": 82,
+      "bounds": [
+        131,
+        164,
+        146,
+        177
+      ],
+      "apcs": [
+        [
+          137,
+          164,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/ulthor_100_175",
+      "name": "\"Ulthor Gateway\"",
+      "icon": "\"teleporter\"",
+      "tiles": 43,
+      "floors": 31,
+      "bounds": [
+        99,
+        172,
+        104,
+        179
+      ],
+      "apcs": [
+        [
+          100,
+          175,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            100,
+            176,
+            1
+          ],
+          "name": "\"Gateway\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/ulthor_104_164",
+      "name": "\"Ulthor Blueshield Office\"",
+      "icon": "\"blueshield\"",
+      "tiles": 31,
+      "floors": 22,
+      "bounds": [
+        103,
+        162,
+        107,
+        168
+      ],
+      "apcs": [
+        [
+          104,
+          164,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            106,
+            163,
+            1
+          ],
+          "name": "\"Blueshield's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/ulthor_106_160",
+      "name": "\"Ulthor Representative Office\"",
+      "icon": "\"ntrep\"",
+      "tiles": 22,
+      "floors": 12,
+      "bounds": [
+        105,
+        157,
+        108,
+        162
+      ],
+      "apcs": [
+        [
+          106,
+          160,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/ulthor_141_185",
+      "name": "\"Ulthor CMO Office\"",
+      "icon": "\"CMO\"",
+      "tiles": 52,
+      "floors": 40,
+      "bounds": [
+        133,
+        180,
+        142,
+        187
+      ],
+      "apcs": [
+        [
+          141,
+          185,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/command/ulthor_153_164",
+      "name": "\"Ulthor Vault\"",
+      "icon": "\"nuke_storage\"",
+      "tiles": 42,
+      "floors": 21,
+      "bounds": [
+        149,
+        160,
+        155,
+        165
+      ],
+      "apcs": [
+        [
+          153,
+          164,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            150,
+            162,
+            1
+          ],
+          "name": "\"Vault\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/command/ulthor_154_145",
+      "name": "\"Ulthor Chief Engineer Office\"",
+      "icon": "\"head_quarters\"",
+      "tiles": 67,
+      "floors": 50,
+      "bounds": [
+        149,
+        137,
+        158,
+        147
+      ],
+      "apcs": [
+        [
+          154,
+          145,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            150,
+            143,
+            1
+          ],
+          "name": "\"Engineering Chief Engineer's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/commons/locker",
+      "name": "\"Locker Room\"",
+      "icon": "\"locker\"",
+      "tiles": 115,
+      "floors": 90,
+      "bounds": [
+        84,
+        115,
+        101,
+        123
+      ],
+      "apcs": [
+        [
+          91,
+          121,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/commons/storage/primary",
+      "name": "\"Primary Tool Storage\"",
+      "icon": "\"primarystorage\"",
+      "tiles": 79,
+      "floors": 63,
+      "bounds": [
+        84,
+        108,
+        99,
+        114
+      ],
+      "apcs": [
+        [
+          93,
+          111,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            91,
+            112,
+            1
+          ],
+          "name": "\"Primary Tool Storage\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/commons/toilet/locker_toilet",
+      "name": "\"Locker Toilets\"",
+      "icon": "\"toilet\"",
+      "tiles": 46,
+      "floors": 31,
+      "bounds": [
+        89,
+        112,
+        100,
+        116
+      ],
+      "apcs": [
+        [
+          93,
+          114,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/commons/ulthor_81_165",
+      "name": "\"Ulthor Arcade\"",
+      "icon": "\"arcade\"",
+      "tiles": 162,
+      "floors": 119,
+      "bounds": [
+        69,
+        160,
+        86,
+        172
+      ],
+      "apcs": [
+        [
+          81,
+          165,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            80,
+            167,
+            1
+          ],
+          "name": "\"Arcade\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/commons/ulthor_85_173",
+      "name": "\"Ulthor Cryosleep\"",
+      "icon": "\"cryo\"",
+      "tiles": 110,
+      "floors": 82,
+      "bounds": [
+        76,
+        171,
+        86,
+        183
+      ],
+      "apcs": [
+        [
+          85,
+          173,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/commons/ulthor_87_165",
+      "name": "\"Ulthor Janitorial Office\"",
+      "icon": "\"janitor\"",
+      "tiles": 71,
+      "floors": 58,
+      "bounds": [
+        85,
+        160,
+        94,
+        170
+      ],
+      "apcs": [
+        [
+          87,
+          165,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/commons/ulthor_89_175",
+      "name": "\"Ulthor Chapel Storage\"",
+      "icon": "\"storage\"",
+      "tiles": 17,
+      "floors": 10,
+      "bounds": [
+        87,
+        173,
+        90,
+        177
+      ],
+      "apcs": [
+        [
+          89,
+          175,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/commons/ulthor_96_166",
+      "name": "\"Ulthor Fitness\"",
+      "icon": "\"fitness\"",
+      "tiles": 223,
+      "floors": 187,
+      "bounds": [
+        94,
+        153,
+        109,
+        184
+      ],
+      "apcs": [
+        [
+          96,
+          166,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/engineering/atmos",
+      "name": "\"Atmospherics\"",
+      "icon": "\"atmos\"",
+      "tiles": 530,
+      "floors": 424,
+      "bounds": [
+        158,
+        120,
+        189,
+        146
+      ],
+      "apcs": [
+        [
+          172,
+          143,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            166,
+            145,
+            1
+          ],
+          "name": "\"Atmospherics Control Room\""
+        },
+        {
+          "pos": [
+            182,
+            133,
+            1
+          ],
+          "name": "\"Atmospherics North-West\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/engineering/storage/tech",
+      "name": "\"Technical Storage\"",
+      "icon": "\"auxstorage\"",
+      "tiles": 120,
+      "floors": 90,
+      "bounds": [
+        145,
+        166,
+        156,
+        180
+      ],
+      "apcs": [
+        [
+          156,
+          175,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            152,
+            176,
+            1
+          ],
+          "name": "\"Tech Storage\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/engineering/ulthor_149_129",
+      "name": "\"Ulthor Engine Chamber\"",
+      "icon": "\"engine\"",
+      "tiles": 67,
+      "floors": 49,
+      "bounds": [
+        144,
+        121,
+        150,
+        130
+      ],
+      "apcs": [
+        [
+          149,
+          129,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            145,
+            128,
+            1
+          ],
+          "name": "\"Engineering Secure Storage North\""
+        },
+        {
+          "pos": [
+            145,
+            122,
+            1
+          ],
+          "name": "\"Engineering Secure Storage South\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/engineering/ulthor_151_130",
+      "name": "\"Ulthor Engineering\"",
+      "icon": "\"engine_hallway\"",
+      "tiles": 140,
+      "floors": 108,
+      "bounds": [
+        146,
+        127,
+        160,
+        140
+      ],
+      "apcs": [
+        [
+          151,
+          130,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/engineering/ulthor_152_122",
+      "name": "\"Ulthor Drone Control\"",
+      "icon": "\"engine_control\"",
+      "tiles": 33,
+      "floors": 20,
+      "bounds": [
+        151,
+        120,
+        155,
+        126
+      ],
+      "apcs": [
+        [
+          152,
+          122,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/engineering/ulthor_158_119",
+      "name": "\"Ulthor Engineering Lounge and Monitoring\"",
+      "icon": "\"engine_monitoring\"",
+      "tiles": 91,
+      "floors": 76,
+      "bounds": [
+        155,
+        118,
+        165,
+        128
+      ],
+      "apcs": [
+        [
+          158,
+          119,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/engineering/ulthor_163_93",
+      "name": "\"Ulthor Mechanic Workshop\"",
+      "icon": "\"mechbay\"",
+      "tiles": 75,
+      "floors": 50,
+      "bounds": [
+        156,
+        89,
+        164,
+        98
+      ],
+      "apcs": [
+        [
+          163,
+          93,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            159,
+            95,
+            1
+          ],
+          "name": "\"Mechanic's Workshop West\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/hallway/primary/port",
+      "name": "\"West Primary Hallway\"",
+      "icon": "\"hallP\"",
+      "tiles": 401,
+      "floors": 328,
+      "bounds": [
+        85,
+        87,
+        122,
+        109
+      ],
+      "apcs": [
+        [
+          116,
+          97,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/hallway/secondary/entry",
+      "name": "\"Arrivals Hallway\"",
+      "icon": "\"entry\"",
+      "tiles": 315,
+      "floors": 246,
+      "bounds": [
+        64,
+        88,
+        85,
+        113
+      ],
+      "apcs": [
+        [
+          76,
+          95,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            65,
+            100,
+            1
+          ],
+          "name": "\"Arrivals Shuttle South West\""
+        },
+        {
+          "pos": [
+            68,
+            107,
+            1
+          ],
+          "name": "\"Arrivals Shuttle North\""
+        },
+        {
+          "pos": [
+            69,
+            96,
+            1
+          ],
+          "name": "\"Arrivals Shuttle South\""
+        },
+        {
+          "pos": [
+            71,
+            100,
+            1
+          ],
+          "name": "\"Arrivals Shuttle South East\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/hallway/secondary/exit",
+      "name": "\"Escape Shuttle Hallway\"",
+      "icon": "\"escape\"",
+      "tiles": 193,
+      "floors": 166,
+      "bounds": [
+        172,
+        100,
+        182,
+        120
+      ],
+      "apcs": [
+        [
+          175,
+          105,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            173,
+            105,
+            1
+          ],
+          "name": "\"Departure Lounge South\""
+        },
+        {
+          "pos": [
+            175,
+            114,
+            1
+          ],
+          "name": "\"Departure Lounge North\""
+        },
+        {
+          "pos": [
+            178,
+            110,
+            1
+          ],
+          "name": "\"Departure Lounge East\""
+        },
+        {
+          "pos": [
+            181,
+            118,
+            1
+          ],
+          "name": "\"Departure Lounge Security\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/legal/courtroom",
+      "name": "\"Courtroom\"",
+      "icon": "\"courtroom\"",
+      "tiles": 98,
+      "floors": 72,
+      "bounds": [
+        118,
+        87,
+        126,
+        97
+      ],
+      "apcs": [
+        [
+          122,
+          88,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            119,
+            95,
+            1
+          ],
+          "name": "\"Courtroom\""
+        },
+        {
+          "pos": [
+            125,
+            91,
+            1
+          ],
+          "name": "\"Courtroom Lobby\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/legal/office/law",
+      "name": "\"Law Office\"",
+      "icon": "\"law\"",
+      "tiles": 44,
+      "floors": 31,
+      "bounds": [
+        123,
+        98,
+        130,
+        104
+      ],
+      "apcs": [
+        [
+          123,
+          102,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            123,
+            103,
+            1
+          ],
+          "name": "\"Internal Affairs Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/legal/office/magistrate",
+      "name": "\"Magistrate's Office\"",
+      "icon": "\"magistrate\"",
+      "tiles": 49,
+      "floors": 32,
+      "bounds": [
+        116,
+        98,
+        122,
+        104
+      ],
+      "apcs": [
+        [
+          121,
+          100,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            117,
+            103,
+            1
+          ],
+          "name": "\"Magistrate Office North\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/maintenance/asmaint2",
+      "name": "\"Science Maintenance\"",
+      "icon": "\"asmaint\"",
+      "tiles": 191,
+      "floors": 126,
+      "bounds": [
+        163,
+        144,
+        189,
+        183
+      ],
+      "apcs": [
+        [
+          183,
+          147,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/maintenance/solars/port/aft",
+      "name": "\"South-West Solar Maintenance\"",
+      "icon": "\"SolarcontrolP\"",
+      "tiles": 369,
+      "floors": 280,
+      "bounds": [
+        70,
+        172,
+        105,
+        197
+      ],
+      "apcs": [
+        [
+          79,
+          192,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            79,
+            192,
+            1
+          ],
+          "name": "\"Fore Port Solar Control\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/maintenance/solars/port/ulthor",
+      "name": "\"Ulthor West Solar Control and Maintenance\"",
+      "icon": "\"SolarcontrolP\"",
+      "tiles": 166,
+      "floors": 111,
+      "bounds": [
+        57,
+        140,
+        70,
+        159
+      ],
+      "apcs": [
+        [
+          62,
+          141,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            62,
+            141,
+            1
+          ],
+          "name": "\"Aft Port Solar Control\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/maintenance/solars/starboard",
+      "name": "\"East Solar Maintenance\"",
+      "icon": "\"SolarcontrolS\"",
+      "tiles": 97,
+      "floors": 76,
+      "bounds": [
+        162,
+        90,
+        176,
+        100
+      ],
+      "apcs": [
+        [
+          171,
+          95,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            171,
+            94,
+            1
+          ],
+          "name": "\"Aft Starboard Solar Control\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/maintenance/turbine",
+      "name": "\"Turbine\"",
+      "icon": "\"disposal\"",
+      "tiles": 105,
+      "floors": 63,
+      "bounds": [
+        186,
+        136,
+        194,
+        150
+      ],
+      "apcs": [
+        [
+          187,
+          148,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/medical/break_room",
+      "name": "\"Med Restroom\"",
+      "icon": "\"medbaybreak\"",
+      "tiles": 48,
+      "floors": 34,
+      "bounds": [
+        166,
+        170,
+        174,
+        179
+      ],
+      "apcs": [
+        [
+          170,
+          178,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            169,
+            178,
+            1
+          ],
+          "name": "\"Research Break Room\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_108_176",
+      "name": "\"Ulthor Medical Staff Room\"",
+      "icon": "\"medbaybreak\"",
+      "tiles": 52,
+      "floors": 32,
+      "bounds": [
+        105,
+        172,
+        115,
+        179
+      ],
+      "apcs": [
+        [
+          108,
+          176,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            107,
+            178,
+            1
+          ],
+          "name": "\"Medbay Staff Room\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_110_175",
+      "name": "\"Ulthor Chemistry\"",
+      "icon": "\"chem\"",
+      "tiles": 27,
+      "floors": 20,
+      "bounds": [
+        109,
+        172,
+        115,
+        176
+      ],
+      "apcs": [
+        [
+          110,
+          175,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/medical/ulthor_113_186",
+      "name": "\"Ulthor Morgue\"",
+      "icon": "\"morgue\"",
+      "tiles": 44,
+      "floors": 23,
+      "bounds": [
+        106,
+        182,
+        114,
+        189
+      ],
+      "apcs": [
+        [
+          113,
+          186,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            110,
+            186,
+            1
+          ],
+          "name": "\"Medbay Coroner's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_118_183",
+      "name": "\"Ulthor Medical Storage\"",
+      "icon": "\"medbaysecstorage\"",
+      "tiles": 97,
+      "floors": 77,
+      "bounds": [
+        110,
+        176,
+        121,
+        189
+      ],
+      "apcs": [
+        [
+          118,
+          183,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            119,
+            186,
+            1
+          ],
+          "name": "\"Medbay Medicine Storage\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_122_183",
+      "name": "\"Ulthor West Surgery\"",
+      "icon": "\"surgery1\"",
+      "tiles": 23,
+      "floors": 17,
+      "bounds": [
+        121,
+        182,
+        125,
+        187
+      ],
+      "apcs": [
+        [
+          122,
+          183,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            122,
+            186,
+            1
+          ],
+          "name": "\"Medbay Surgery West\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_124_179",
+      "name": "\"Ulthor Medbay\"",
+      "icon": "\"medbay\"",
+      "tiles": 155,
+      "floors": 135,
+      "bounds": [
+        118,
+        173,
+        133,
+        190
+      ],
+      "apcs": [
+        [
+          124,
+          179,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            123,
+            175,
+            1
+          ],
+          "name": "\"Medbay Cryogenics\""
+        },
+        {
+          "pos": [
+            128,
+            188,
+            1
+          ],
+          "name": "\"Medbay Surgery West Storage\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_131_183",
+      "name": "\"Ulthor East Surgery\"",
+      "icon": "\"surgery2\"",
+      "tiles": 28,
+      "floors": 20,
+      "bounds": [
+        128,
+        181,
+        132,
+        187
+      ],
+      "apcs": [
+        [
+          131,
+          183,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            131,
+            186,
+            1
+          ],
+          "name": "\"Medbay Surgery East\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_135_176",
+      "name": "\"Ulthor Medical Hallway and Paramedic Office\"",
+      "icon": "\"medbay2\"",
+      "tiles": 53,
+      "floors": 44,
+      "bounds": [
+        132,
+        173,
+        138,
+        183
+      ],
+      "apcs": [
+        [
+          135,
+          176,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            138,
+            180,
+            1
+          ],
+          "name": "\"Medbay Secondary Hallway South\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/medical/ulthor_135_192",
+      "name": "\"Ulthor Virology\"",
+      "icon": "\"virology\"",
+      "tiles": 67,
+      "floors": 44,
+      "bounds": [
+        129,
+        187,
+        138,
+        194
+      ],
+      "apcs": [
+        [
+          135,
+          192,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/medical/ulthor_139_176",
+      "name": "\"Ulthor Psychiatry\"",
+      "icon": "\"medbaypsych\"",
+      "tiles": 24,
+      "floors": 16,
+      "bounds": [
+        138,
+        175,
+        143,
+        180
+      ],
+      "apcs": [
+        [
+          139,
+          176,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/medical/ulthor_145_181",
+      "name": "\"Ulthor Medical Maintenance\"",
+      "icon": "\"asmaint\"",
+      "tiles": 24,
+      "floors": 13,
+      "bounds": [
+        142,
+        178,
+        146,
+        183
+      ],
+      "apcs": [
+        [
+          145,
+          181,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/chem_lab",
+      "name": "\"Research Testing Lab\"",
+      "icon": "\"toxmisc\"",
+      "tiles": 36,
+      "floors": 22,
+      "bounds": [
+        168,
+        152,
+        174,
+        157
+      ],
+      "apcs": [
+        [
+          170,
+          153,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/explab",
+      "name": "\"E.X.P.E.R.I-MENTOR Lab\"",
+      "icon": "\"toxmisc\"",
+      "tiles": 56,
+      "floors": 33,
+      "bounds": [
+        173,
+        155,
+        182,
+        162
+      ],
+      "apcs": [
+        [
+          176,
+          156,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/explab/chamber",
+      "name": "\"E.X.P.E.R.I-MENTOR Chamber\"",
+      "icon": "\"toxmisc\"",
+      "tiles": 24,
+      "floors": 13,
+      "bounds": [
+        177,
+        159,
+        182,
+        162
+      ],
+      "apcs": [
+        [
+          178,
+          161,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            179,
+            161,
+            1
+          ],
+          "name": "\"Research E.X.P.E.R.I-MENTOR Chamber\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/science/genetics",
+      "name": "\"Genetics Lab\"",
+      "icon": "\"genetics\"",
+      "tiles": 107,
+      "floors": 98,
+      "bounds": [
+        160,
+        147,
+        175,
+        166
+      ],
+      "apcs": [
+        [
+          165,
+          158,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/rnd",
+      "name": "\"Research and Development\"",
+      "icon": "\"toxlab\"",
+      "tiles": 53,
+      "floors": 36,
+      "bounds": [
+        167,
+        167,
+        173,
+        175
+      ],
+      "apcs": [
+        [
+          172,
+          172,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/robotics/chargebay",
+      "name": "\"Mech Bay\"",
+      "icon": "\"mechbay\"",
+      "tiles": 76,
+      "floors": 57,
+      "bounds": [
+        157,
+        156,
+        161,
+        175
+      ],
+      "apcs": [
+        [
+          160,
+          174,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/robotics/ulthor",
+      "name": "\"Ulthor Robotics and Research Access\"",
+      "icon": "\"research\"",
+      "tiles": 279,
+      "floors": 191,
+      "bounds": [
+        134,
+        167,
+        165,
+        197
+      ],
+      "apcs": [
+        [
+          164,
+          174,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/server",
+      "name": "\"Server Room\"",
+      "icon": "\"server\"",
+      "tiles": 109,
+      "floors": 84,
+      "bounds": [
+        152,
+        139,
+        165,
+        154
+      ],
+      "apcs": [
+        [
+          164,
+          149,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            164,
+            149,
+            1
+          ],
+          "name": "\"Research Server Room\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/science/storage",
+      "name": "\"Toxins Storage\"",
+      "icon": "\"toxstorage\"",
+      "tiles": 32,
+      "floors": 19,
+      "bounds": [
+        176,
+        163,
+        182,
+        167
+      ],
+      "apcs": [
+        [
+          178,
+          165,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/toxins/mixing",
+      "name": "\"Toxins Mixing Room\"",
+      "icon": "\"toxmix\"",
+      "tiles": 86,
+      "floors": 56,
+      "bounds": [
+        173,
+        165,
+        182,
+        176
+      ],
+      "apcs": [
+        [
+          174,
+          169,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            177,
+            173,
+            1
+          ],
+          "name": "\"Research Toxins Mixing North\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/science/ulthor_123_191",
+      "name": "\"Ulthor Genetics\"",
+      "icon": "\"genetics\"",
+      "tiles": 172,
+      "floors": 114,
+      "bounds": [
+        106,
+        187,
+        133,
+        197
+      ],
+      "apcs": [
+        [
+          123,
+          191,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/ulthor_186_169",
+      "name": "\"Ulthor Toxins Control\"",
+      "icon": "\"toxlaunch\"",
+      "tiles": 13,
+      "floors": 8,
+      "bounds": [
+        186,
+        166,
+        190,
+        170
+      ],
+      "apcs": [
+        [
+          186,
+          169,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            186,
+            169,
+            1
+          ],
+          "name": "\"Research Toxins Launch Room\""
+        },
+        {
+          "pos": [
+            190,
+            166,
+            1
+          ],
+          "name": "\"Toxins External Test Range\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/science/ulthor_coldroom",
+      "name": "\"Ulthor Server Coldroom\"",
+      "icon": "\"servercold\"",
+      "tiles": 37,
+      "floors": 24,
+      "bounds": [
+        159,
+        139,
+        164,
+        150
+      ],
+      "apcs": [
+        [
+          161,
+          149,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/science/xenobiology",
+      "name": "\"Xenobiology Lab\"",
+      "icon": "\"toxmix\"",
+      "tiles": 113,
+      "floors": 79,
+      "bounds": [
+        168,
+        146,
+        182,
+        154
+      ],
+      "apcs": [
+        [
+          169,
+          148,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            173,
+            151,
+            1
+          ],
+          "name": "\"Xenobiology Module North\""
+        },
+        {
+          "pos": [
+            176,
+            154,
+            1
+          ],
+          "name": "\"Xeno Containment 4\""
+        },
+        {
+          "pos": [
+            176,
+            147,
+            1
+          ],
+          "name": "\"Xeno Containment 1\""
+        },
+        {
+          "pos": [
+            180,
+            154,
+            1
+          ],
+          "name": "\"Xeno Containment 5\""
+        },
+        {
+          "pos": [
+            180,
+            147,
+            1
+          ],
+          "name": "\"Xeno Containment 2\""
+        },
+        {
+          "pos": [
+            181,
+            151,
+            1
+          ],
+          "name": "\"Xenobiology Module North-East\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/brig",
+      "name": "\"Brig\"",
+      "icon": "\"brig\"",
+      "tiles": 221,
+      "floors": 200,
+      "bounds": [
+        110,
+        107,
+        140,
+        123
+      ],
+      "apcs": [
+        [
+          128,
+          116,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            116,
+            119,
+            1
+          ],
+          "name": "\"Brig Briefing Room West\""
+        },
+        {
+          "pos": [
+            118,
+            109,
+            1
+          ],
+          "name": "\"Brig Cell 1\""
+        },
+        {
+          "pos": [
+            121,
+            115,
+            1
+          ],
+          "name": "\"Brig Briefing Room East\""
+        },
+        {
+          "pos": [
+            122,
+            109,
+            1
+          ],
+          "name": "\"Brig Cell 2\""
+        },
+        {
+          "pos": [
+            136,
+            109,
+            1
+          ],
+          "name": "\"Brig Cell 3\""
+        },
+        {
+          "pos": [
+            140,
+            109,
+            1
+          ],
+          "name": "\"Brig Cell 4\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/checkpoint",
+      "name": "\"Security Checkpoint\"",
+      "icon": "\"checkpoint1\"",
+      "tiles": 275,
+      "floors": 223,
+      "bounds": [
+        157,
+        99,
+        172,
+        120
+      ],
+      "apcs": [
+        [
+          169,
+          105,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            170,
+            107,
+            1
+          ],
+          "name": "\"Command Departure Checkpoint\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/detectives_office",
+      "name": "\"Detective's Office\"",
+      "icon": "\"detective\"",
+      "tiles": 232,
+      "floors": 189,
+      "bounds": [
+        133,
+        94,
+        158,
+        106
+      ],
+      "apcs": [
+        [
+          140,
+          103,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            140,
+            103,
+            1
+          ],
+          "name": "\"Detective's Lab\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/evidence",
+      "name": "\"Evidence Room\"",
+      "icon": "\"evidence\"",
+      "tiles": 74,
+      "floors": 50,
+      "bounds": [
+        146,
+        113,
+        159,
+        120
+      ],
+      "apcs": [
+        [
+          147,
+          118,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/security/hallway/armory",
+      "name": "\"Secure Armory\"",
+      "icon": "\"secarmory\"",
+      "tiles": 105,
+      "floors": 54,
+      "bounds": [
+        122,
+        118,
+        135,
+        125
+      ],
+      "apcs": [
+        [
+          124,
+          122,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            123,
+            121,
+            1
+          ],
+          "name": "\"Secure Armory West\""
+        },
+        {
+          "pos": [
+            132,
+            121,
+            1
+          ],
+          "name": "\"Secure Armory East\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/hallway/execution",
+      "name": "\"Execution\"",
+      "icon": "\"execution\"",
+      "tiles": 28,
+      "floors": 18,
+      "bounds": [
+        109,
+        108,
+        115,
+        111
+      ],
+      "apcs": [
+        [
+          110,
+          110,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/security/interrogation",
+      "name": "\"Interrogation\"",
+      "icon": "\"interrogation\"",
+      "tiles": 22,
+      "floors": 12,
+      "bounds": [
+        142,
+        115,
+        145,
+        120
+      ],
+      "apcs": [
+        [
+          143,
+          118,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/security/lobby",
+      "name": "\"Security Lobby\"",
+      "icon": "\"securitylobby\"",
+      "tiles": 129,
+      "floors": 120,
+      "bounds": [
+        123,
+        89,
+        139,
+        111
+      ],
+      "apcs": [
+        [
+          124,
+          108,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/security/main",
+      "name": "\"Security Office\"",
+      "icon": "\"securityoffice\"",
+      "tiles": 50,
+      "floors": 39,
+      "bounds": [
+        133,
+        114,
+        141,
+        119
+      ],
+      "apcs": [
+        [
+          140,
+          116,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/security/medical",
+      "name": "\"Security Medbay\"",
+      "icon": "\"security_medbay\"",
+      "tiles": 109,
+      "floors": 82,
+      "bounds": [
+        100,
+        109,
+        109,
+        122
+      ],
+      "apcs": [
+        [
+          107,
+          113,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            105,
+            113,
+            1
+          ],
+          "name": "\"Brig Medbay\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/podbay",
+      "name": "\"Security Podbay\"",
+      "icon": "\"securitypodbay\"",
+      "tiles": 125,
+      "floors": 78,
+      "bounds": [
+        129,
+        86,
+        143,
+        98
+      ],
+      "apcs": [
+        [
+          133,
+          96,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            133,
+            97,
+            1
+          ],
+          "name": "\"Brig Pod Pilot's Office\""
+        },
+        {
+          "pos": [
+            134,
+            94,
+            1
+          ],
+          "name": "\"Brig Podbay\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/prison/lockers",
+      "name": "\"Prisoner Lockers\"",
+      "icon": "\"sec_prison_lockers\"",
+      "tiles": 25,
+      "floors": 15,
+      "bounds": [
+        122,
+        126,
+        128,
+        129
+      ],
+      "apcs": [
+        [
+          124,
+          128,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            124,
+            128,
+            1
+          ],
+          "name": "\"Prisoner Lockers\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/prison/perma",
+      "name": "\"Perma Prison Wing\"",
+      "icon": "\"sec_prison_perma\"",
+      "tiles": 398,
+      "floors": 292,
+      "bounds": [
+        115,
+        123,
+        136,
+        149
+      ],
+      "apcs": [
+        [
+          116,
+          128,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            118,
+            144,
+            1
+          ],
+          "name": "\"Permabrig West\""
+        },
+        {
+          "pos": [
+            126,
+            144,
+            1
+          ],
+          "name": "\"Prison North\""
+        },
+        {
+          "pos": [
+            126,
+            132,
+            1
+          ],
+          "name": "\"Prison South\""
+        },
+        {
+          "pos": [
+            132,
+            138,
+            1
+          ],
+          "name": "\"Permabrig East\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/processing",
+      "name": "\"Prisoner Processing\"",
+      "icon": "\"prisonerprocessing\"",
+      "tiles": 164,
+      "floors": 125,
+      "bounds": [
+        141,
+        104,
+        158,
+        114
+      ],
+      "apcs": [
+        [
+          147,
+          112,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            142,
+            111,
+            1
+          ],
+          "name": "\"Brig Prisoner Processing West\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/security/warden",
+      "name": "\"Warden's Office\"",
+      "icon": "\"Warden\"",
+      "tiles": 29,
+      "floors": 22,
+      "bounds": [
+        122,
+        114,
+        127,
+        118
+      ],
+      "apcs": [
+        [
+          123,
+          117,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            125,
+            118,
+            1
+          ],
+          "name": "\"Brig Warden's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/barber",
+      "name": "\"Barber Shop\"",
+      "icon": "\"barber\"",
+      "tiles": 258,
+      "floors": 206,
+      "bounds": [
+        85,
+        134,
+        101,
+        153
+      ],
+      "apcs": [
+        [
+          91,
+          134,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            92,
+            139,
+            1
+          ],
+          "name": "\"Barber Shop\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/library",
+      "name": "\"Library\"",
+      "icon": "\"library\"",
+      "tiles": 231,
+      "floors": 184,
+      "bounds": [
+        78,
+        92,
+        104,
+        104
+      ],
+      "apcs": [
+        [
+          79,
+          97,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            88,
+            103,
+            1
+          ],
+          "name": "\"Library Study\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/ulthor_72_141",
+      "name": "\"Ulthor Kitchen\"",
+      "icon": "\"kitchen\"",
+      "tiles": 85,
+      "floors": 70,
+      "bounds": [
+        67,
+        139,
+        75,
+        153
+      ],
+      "apcs": [
+        [
+          72,
+          141,
+          1
+        ]
+      ],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/service/ulthor_80_150",
+      "name": "\"Ulthor Bar\"",
+      "icon": "\"barstation\"",
+      "tiles": 162,
+      "floors": 127,
+      "bounds": [
+        75,
+        134,
+        87,
+        153
+      ],
+      "apcs": [
+        [
+          80,
+          150,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            78,
+            139,
+            1
+          ],
+          "name": "\"Bar Storage\""
+        },
+        {
+          "pos": [
+            84,
+            142,
+            1
+          ],
+          "name": "\"Bar South\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/ulthor_82_155",
+      "name": "\"Ulthor Hydroponics\"",
+      "icon": "\"hydro\"",
+      "tiles": 164,
+      "floors": 132,
+      "bounds": [
+        70,
+        151,
+        93,
+        166
+      ],
+      "apcs": [
+        [
+          82,
+          155,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            76,
+            160,
+            1
+          ],
+          "name": "\"Hydroponics North\""
+        },
+        {
+          "pos": [
+            83,
+            152,
+            1
+          ],
+          "name": "\"Hydroponics South\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/ulthor_86_180",
+      "name": "\"Ulthor Chapel\"",
+      "icon": "\"chapeloffice\"",
+      "tiles": 64,
+      "floors": 42,
+      "bounds": [
+        85,
+        177,
+        94,
+        186
+      ],
+      "apcs": [
+        [
+          86,
+          180,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            86,
+            182,
+            1
+          ],
+          "name": "\"Chapel Chaplain's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/ulthor_91_176",
+      "name": "\"Ulthor Chapel Hall\"",
+      "icon": "\"chapel\"",
+      "tiles": 115,
+      "floors": 90,
+      "bounds": [
+        87,
+        167,
+        97,
+        183
+      ],
+      "apcs": [
+        [
+          91,
+          176,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            91,
+            177,
+            1
+          ],
+          "name": "\"Chapel West\""
+        },
+        {
+          "pos": [
+            96,
+            179,
+            1
+          ],
+          "name": "\"Chapel South\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/service/ulthor_93_151",
+      "name": "\"Ulthor Theatre\"",
+      "icon": "\"Theatre\"",
+      "tiles": 108,
+      "floors": 77,
+      "bounds": [
+        85,
+        148,
+        96,
+        160
+      ],
+      "apcs": [
+        [
+          93,
+          151,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            89,
+            157,
+            1
+          ],
+          "name": "\"Mime's Office\""
+        }
+      ]
+    },
+    {
+      "area": "/area/station/solars/port/aft",
+      "name": "\"South-West Solar Array\"",
+      "icon": "\"panelsP\"",
+      "tiles": 111,
+      "floors": 60,
+      "bounds": [
+        74,
+        198,
+        86,
+        212
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/solars/port/ulthor",
+      "name": "\"Ulthor West Solar Array\"",
+      "icon": "\"panelsP\"",
+      "tiles": 118,
+      "floors": 60,
+      "bounds": [
+        35,
+        136,
+        56,
+        148
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/solars/starboard/ulthor",
+      "name": "\"Ulthor South-East Solar Array\"",
+      "icon": "\"panelsS\"",
+      "tiles": 114,
+      "floors": 60,
+      "bounds": [
+        166,
+        72,
+        178,
+        89
+      ],
+      "apcs": [],
+      "cameras": []
+    },
+    {
+      "area": "/area/station/telecomms/ulthor_145_147",
+      "name": "\"Ulthor Station Telecomms\"",
+      "icon": "\"tcomms\"",
+      "tiles": 64,
+      "floors": 41,
+      "bounds": [
+        143,
+        139,
+        152,
+        150
+      ],
+      "apcs": [
+        [
+          145,
+          147,
+          1
+        ]
+      ],
+      "cameras": [
+        {
+          "pos": [
+            144,
+            148,
+            1
+          ],
+          "name": "\"Telecommunications Core\""
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Area colour diagrams are schematics built from DMM geometry and DMI area colours, not game screenshots.",
+    "No server or live power/atmosphere round was run for this change."
+  ]
+}
