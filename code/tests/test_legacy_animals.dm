@@ -49,7 +49,7 @@
 		qdel(mind.current)
 		qdel(mind)
 	var/mob/living/simple_animal/hostile/poison/terror_spider/queen/queen = allocate(/mob/living/simple_animal/hostile/poison/terror_spider/queen, locate(4, 4, 1))
-	var/list/egg_types = queen.get_valid_egg_types()
+	var/list/egg_types = queen.ListAvailableEggTypes()
 	TEST_ASSERT_NOT(TS_DESC_REAPER in egg_types, "Queen must not offer reaper eggs")
 	TEST_ASSERT_NOT(TS_DESC_BUILDER in egg_types, "Queen must not offer drone eggs")
 	TEST_ASSERT_NOT(TS_DESC_PRINCESS in egg_types, "Queen must not offer princess eggs")

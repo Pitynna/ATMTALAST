@@ -27,6 +27,7 @@
 #include "test_legacy_combat.dm"
 #include "test_legacy_content.dm"
 #include "test_legacy_animals.dm"
+#include "test_legacy_animals.dm"
 #include "test_legacy_spacesuits.dm"
 #include "test_greyscale_config.dm"
 #include "test_init_sanity.dm"

@@ -6,9 +6,78 @@
 	// Generic dog is new; old corgi, pug and fox children remain available.
 	if(typepath == /mob/living/simple_animal/pet/dog)
 		return TRUE
+	// Generic dog is new; old corgi, pug and fox children remain available.
+	if(typepath == /mob/living/simple_animal/pet/dog)
+		return TRUE
 	var/static/list/blocked
 	if(!blocked)
 		blocked = typecacheof(list(
+			// Animal roster compared with OLD_ExcidiumStation_ATMTA; see docs/LEGACY_ANIMALS.json.
+			/mob/living/basic/cockroach/glockroach,
+			/mob/living/basic/cockroach/hauberoach,
+			/mob/living/basic/mothroach,
+			/mob/living/simple_animal/chicken/Wife,
+			/mob/living/simple_animal/cock,
+			/mob/living/simple_animal/cow/Betsy,
+			/mob/living/simple_animal/crab/billy,
+			/mob/living/simple_animal/crab/evil,
+			/mob/living/simple_animal/crab/royal,
+			/mob/living/simple_animal/frog/scream,
+			/mob/living/simple_animal/frog/toxic/scream,
+			/mob/living/simple_animal/goose/Scientist,
+			/mob/living/simple_animal/goose/gosling,
+			/mob/living/simple_animal/hostile/bear/brown,
+			/mob/living/simple_animal/hostile/bear/polar,
+			/mob/living/simple_animal/hostile/bread_monster,
+			/mob/living/simple_animal/hostile/carp/koi,
+			/mob/living/simple_animal/hostile/carp/mcarp,
+			/mob/living/simple_animal/hostile/carp/sea,
+			/mob/living/simple_animal/hostile/giant_rat,
+			/mob/living/simple_animal/hostile/gorilla,
+			/mob/living/simple_animal/hostile/headcrab/fast,
+			/mob/living/simple_animal/hostile/headcrab/poison,
+			/mob/living/simple_animal/hostile/lizard,
+			/mob/living/simple_animal/hostile/poison/terror_spider/builder,
+			/mob/living/simple_animal/hostile/poison/terror_spider/queen/princess,
+			/mob/living/simple_animal/hostile/poison/terror_spider/reaper,
+			/mob/living/simple_animal/hostile/retaliate/goat/hump,
+			/mob/living/simple_animal/hostile/retaliate/kangaroo,
+			/mob/living/simple_animal/hostile/retaliate/luu,
+			/mob/living/simple_animal/hostile/retaliate/poison/snake/riraha,
+			/mob/living/simple_animal/hostile/retaliate/poison/snake/rouge,
+			/mob/living/simple_animal/hostile/retaliate/syndirat,
+			/mob/living/simple_animal/lizard/axolotl,
+			/mob/living/simple_animal/moth,
+			/mob/living/simple_animal/mouse/fluff/clockwork,
+			/mob/living/simple_animal/mouse/rat,
+			/mob/living/simple_animal/mouse/wooly,
+			/mob/living/simple_animal/pet/cat/birman,
+			/mob/living/simple_animal/pet/cat/cak,
+			/mob/living/simple_animal/pet/cat/fat,
+			/mob/living/simple_animal/pet/cat/floppa,
+			/mob/living/simple_animal/pet/cat/spacecat,
+			/mob/living/simple_animal/pet/cat/white,
+			/mob/living/simple_animal/pet/dog/brittany,
+			/mob/living/simple_animal/pet/dog/bullterrier,
+			/mob/living/simple_animal/pet/dog/corgi/exoticcorgi,
+			/mob/living/simple_animal/pet/dog/corgi/narsie,
+			/mob/living/simple_animal/pet/dog/corgi/puppy/slime,
+			/mob/living/simple_animal/pet/dog/corgi/puppy/void,
+			/mob/living/simple_animal/pet/dog/corgi/ratvar,
+			/mob/living/simple_animal/pet/dog/fox/alisa,
+			/mob/living/simple_animal/pet/dog/fox/fennec,
+			/mob/living/simple_animal/pet/dog/fox/forest,
+			/mob/living/simple_animal/pet/dog/german,
+			/mob/living/simple_animal/pet/dog/pug/Frank,
+			/mob/living/simple_animal/pet/dog/security,
+			/mob/living/simple_animal/pet/dog/tamaskan,
+			/mob/living/simple_animal/pet/gondola,
+			/mob/living/simple_animal/pet/library_owl,
+			/mob/living/simple_animal/pet/slugcat,
+			/mob/living/simple_animal/pig/Sanya,
+			/mob/living/simple_animal/possum,
+			/mob/living/simple_animal/snail,
+			/mob/living/simple_animal/turtle,
 			// Animal roster compared with OLD_ExcidiumStation_ATMTA; see docs/LEGACY_ANIMALS.json.
 			/mob/living/basic/cockroach/glockroach,
 			/mob/living/basic/cockroach/hauberoach,
@@ -312,6 +381,25 @@
 	if(ispath(typepath, /datum/outfit/job))
 		var/datum/outfit/job/outfit = typepath
 		return is_legacy_blocked_type(initial(outfit.jobtype))
+	if(ispath(typepath, /datum/supply_packs))
+		var/datum/supply_packs/pack = typepath
+		if(is_legacy_blocked_type(initial(pack.containertype)))
+			return TRUE
+		for(var/item_type in initial(pack.contains))
+			if(is_legacy_blocked_type(item_type))
+				return TRUE
+		return FALSE
+	if(ispath(typepath, /datum/supply_packs))
+		var/datum/supply_packs/pack = typepath
+		if(is_legacy_blocked_type(initial(pack.containertype)))
+			return TRUE
+		for(var/item_type in initial(pack.contains))
+			if(is_legacy_blocked_type(item_type))
+				return TRUE
+		return FALSE
+	if(ispath(typepath, /obj/structure/closet/crate/critter))
+		var/obj/structure/closet/crate/critter/crate = typepath
+		return is_legacy_blocked_type(initial(crate.content_mob))
 	if(ispath(typepath, /datum/supply_packs))
 		var/datum/supply_packs/pack = typepath
 		if(is_legacy_blocked_type(initial(pack.containertype)))

@@ -86,6 +86,8 @@
 		for(var/atom/atom_type as anything in subtypesof(/atom))
 			if(is_legacy_blocked_type(atom_type))
 				continue
+			if(is_legacy_blocked_type(atom_type))
+				continue
 			local_types[atom_type] = atom_type::name || ""
 		types_list = local_types
 	data["types"] = types_list

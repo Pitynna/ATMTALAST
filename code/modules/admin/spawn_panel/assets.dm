@@ -17,6 +17,8 @@
 	for(var/obj/each_object as anything in typesof(/obj))
 		if(is_legacy_blocked_type(each_object))
 			continue
+		if(is_legacy_blocked_type(each_object))
+			continue
 		data["atoms"][each_object] = list(
 			"icon" = each_object?.icon_preview || each_object?.icon || "none",
 			"icon_state" = each_object?.icon_state_preview || each_object?.icon_state || "none",
@@ -37,6 +39,8 @@
 		)
 
 	for(var/mob/each_mob as anything in typesof(/mob))
+		if(is_legacy_blocked_type(each_mob))
+			continue
 		if(is_legacy_blocked_type(each_mob))
 			continue
 		data["atoms"][each_mob] = list(

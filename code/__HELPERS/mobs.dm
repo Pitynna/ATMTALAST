@@ -474,6 +474,8 @@ GAME_VERB_NATIVE(/mob, MouseSubstitute, ".mouse", VERB_CATEGORY_HIDDEN, params a
 		for(var/T in typesof(/mob/living/simple_animal))
 			if(is_legacy_blocked_type(T))
 				continue
+			if(is_legacy_blocked_type(T))
+				continue
 			var/mob/living/simple_animal/SA = T
 			switch(initial(SA.gold_core_spawnable))
 				if(HOSTILE_SPAWN)
@@ -481,6 +483,8 @@ GAME_VERB_NATIVE(/mob, MouseSubstitute, ".mouse", VERB_CATEGORY_HIDDEN, params a
 				if(FRIENDLY_SPAWN)
 					mob_spawn_nicecritters += T
 		for(var/mob/living/basic/basic_mob as anything in typesof(/mob/living/basic))
+			if(is_legacy_blocked_type(basic_mob))
+				continue
 			if(is_legacy_blocked_type(basic_mob))
 				continue
 			switch(initial(basic_mob.gold_core_spawnable))

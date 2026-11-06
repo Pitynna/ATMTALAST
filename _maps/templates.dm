@@ -160,6 +160,7 @@
 #include "map_files/templates/spacehotel/s_06.dmm"
 #include "map_files/test_tiny/test_tiny.dmm"
 #include "map_files/tests/test_generic.dmm"
+#include "map_files/Ulthor/Ulthor.dmm"
 #include "minigames/deathmatch/arena_station.dmm"
 #include "minigames/deathmatch/backalley.dmm"
 #include "minigames/deathmatch/delta_bridge.dmm"
@@ -178,4 +179,3 @@
 #include "minigames/deathmatch/secu_ring.dmm"
 #include "minigames/deathmatch/shooting_range.dmm"
 #include "minigames/deathmatch/sniper_elite.dmm"
-#include "map_files/Ulthor/Ulthor.dmm"

@@ -193,6 +193,8 @@
 /mob/living/simple_animal/hostile/poison/terror_spider/proc/DoLayTerrorEggs(lay_type, lay_number)
 	if(is_legacy_blocked_type(lay_type))
 		return
+	if(is_legacy_blocked_type(lay_type))
+		return
 	stop_automated_movement = 1
 	var/obj/structure/spider/eggcluster/terror_eggcluster/C = new /obj/structure/spider/eggcluster/terror_eggcluster(get_turf(src), lay_type)
 	C.spiderling_number = lay_number
