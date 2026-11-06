@@ -1,0 +1,3980 @@
+[
+  {
+    "position": [
+      140,
+      154,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/ai/ulthor_141_152"
+  },
+  {
+    "position": [
+      141,
+      153,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/ai/ulthor_141_152"
+  },
+  {
+    "position": [
+      146,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/ai/ulthor_148_151"
+  },
+  {
+    "position": [
+      147,
+      151,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/ai/ulthor_148_151"
+  },
+  {
+    "position": [
+      87,
+      124,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"miningdock CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/cargo/miningdock"
+  },
+  {
+    "position": [
+      87,
+      125,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/cargo/miningdock"
+  },
+  {
+    "position": [
+      87,
+      131,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/cargo/miningdock"
+  },
+  {
+    "position": [
+      87,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8}",
+    "area": "/area/station/cargo/miningdock"
+  },
+  {
+    "position": [
+      86,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      87,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 8;on = 1}",
+    "area": "/area/station/cargo/miningdock"
+  },
+  {
+    "position": [
+      86,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      87,
+      132,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/cargo/miningdock"
+  },
+  {
+    "position": [
+      73,
+      120,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      120,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      121,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      122,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      123,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      124,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      125,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      126,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      127,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      128,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      129,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      130,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      131,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      132,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      133,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      73,
+      134,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      135,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      136,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      137,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      139,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      73,
+      141,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      73,
+      121,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"office CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      73,
+      122,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      85,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      86,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      85,
+      127,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 4;on = 1}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      86,
+      127,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/cargo/office"
+  },
+  {
+    "position": [
+      109,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"hop CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/command/office/hop"
+  },
+  {
+    "position": [
+      116,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/command/office/hop"
+  },
+  {
+    "position": [
+      117,
+      161,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/command/office/hop"
+  },
+  {
+    "position": [
+      134,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"teleporter CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      135,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      131,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      131,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      131,
+      171,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      131,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      132,
+      169,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/command/teleporter"
+  },
+  {
+    "position": [
+      104,
+      175,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/command/ulthor_100_175"
+  },
+  {
+    "position": [
+      104,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8}",
+    "area": "/area/station/command/ulthor_104_164"
+  },
+  {
+    "position": [
+      103,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/command/ulthor_104_164"
+  },
+  {
+    "position": [
+      102,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      101,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      105,
+      167,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/command/ulthor_104_164"
+  },
+  {
+    "position": [
+      105,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/command/ulthor_104_164"
+  },
+  {
+    "position": [
+      105,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/command/office/hop"
+  },
+  {
+    "position": [
+      105,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/command/office/hop"
+  },
+  {
+    "position": [
+      80,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_85_173 CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      80,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      80,
+      179,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      84,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      84,
+      172,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      84,
+      171,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      84,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      85,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      85,
+      172,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      85,
+      171,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      85,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      80,
+      181,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      87,
+      162,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_87_165 CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/commons/ulthor_87_165"
+  },
+  {
+    "position": [
+      87,
+      164,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/commons/ulthor_87_165"
+  },
+  {
+    "position": [
+      87,
+      175,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_89_175 CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/commons/ulthor_89_175"
+  },
+  {
+    "position": [
+      89,
+      174,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_89_175"
+  },
+  {
+    "position": [
+      89,
+      176,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/commons/ulthor_89_175"
+  },
+  {
+    "position": [
+      89,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      89,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      89,
+      179,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      88,
+      174,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/commons/ulthor_89_175"
+  },
+  {
+    "position": [
+      88,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/commons/ulthor_89_175"
+  },
+  {
+    "position": [
+      88,
+      172,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      88,
+      171,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      88,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      108,
+      181,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_96_166 CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/commons/ulthor_96_166"
+  },
+  {
+    "position": [
+      77,
+      181,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      77,
+      181,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      76,
+      181,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      75,
+      181,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      74,
+      181,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      76,
+      181,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor North-West Bedroom CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      77,
+      180,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      180,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      180,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      179,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      176,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      175,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      78,
+      174,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      78,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      78,
+      172,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/commons/ulthor_85_173"
+  },
+  {
+    "position": [
+      78,
+      171,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      78,
+      170,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      78,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      79,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      78,
+      181,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      182,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      78,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      79,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      80,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      81,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      82,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      83,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      84,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      85,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      86,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      87,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      88,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      77,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      77,
+      178,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      77,
+      179,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      77,
+      180,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      77,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor West Bedroom CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      76,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      77,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      177,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/commons/ulthor_bedroom_west_south"
+  },
+  {
+    "position": [
+      78,
+      179,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      180,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      181,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/commons/ulthor_bedroom_west_north"
+  },
+  {
+    "position": [
+      78,
+      182,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      169,
+      145,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/atmos"
+  },
+  {
+    "position": [
+      170,
+      145,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/atmos"
+  },
+  {
+    "position": [
+      168,
+      122,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/engineering/atmos"
+  },
+  {
+    "position": [
+      168,
+      123,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/engineering/atmos"
+  },
+  {
+    "position": [
+      171,
+      145,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/atmos"
+  },
+  {
+    "position": [
+      150,
+      123,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_149_129"
+  },
+  {
+    "position": [
+      147,
+      121,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/engineering/ulthor_149_129"
+  },
+  {
+    "position": [
+      153,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_151_130 CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      154,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      151,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      151,
+      127,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      151,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      151,
+      127,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      154,
+      127,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_151_130"
+  },
+  {
+    "position": [
+      153,
+      121,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_152_122 CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/engineering/ulthor_152_122"
+  },
+  {
+    "position": [
+      161,
+      124,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_158_119 CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/engineering/ulthor_158_119"
+  },
+  {
+    "position": [
+      101,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      100,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor EVA Storage CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      101,
+      164,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      101,
+      165,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      155,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      155,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      156,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      157,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      158,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      159,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      160,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      161,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      156,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Engineering Monitoring CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      157,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      158,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      159,
+      138,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      160,
+      138,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      160,
+      137,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      160,
+      138,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      159,
+      140,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/engineering/ulthor_monitoring"
+  },
+  {
+    "position": [
+      159,
+      129,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      159,
+      129,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      160,
+      129,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      161,
+      129,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      156,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Engineering Equipment Storage CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      159,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      159,
+      130,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      157,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2}",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      157,
+      127,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_158_119"
+  },
+  {
+    "position": [
+      157,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_158_119"
+  },
+  {
+    "position": [
+      157,
+      125,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/engineering/ulthor_158_119"
+  },
+  {
+    "position": [
+      156,
+      128,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/engineering/ulthor_tool_storage"
+  },
+  {
+    "position": [
+      156,
+      127,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      156,
+      126,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/engineering/ulthor_158_119"
+  },
+  {
+    "position": [
+      156,
+      125,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/engineering/ulthor_158_119"
+  },
+  {
+    "position": [
+      83,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      83,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      82,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_82_155"
+  },
+  {
+    "position": [
+      81,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_81_165"
+  },
+  {
+    "position": [
+      80,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_81_165"
+  },
+  {
+    "position": [
+      79,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_81_165"
+  },
+  {
+    "position": [
+      78,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_81_165"
+  },
+  {
+    "position": [
+      77,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_81_165"
+  },
+  {
+    "position": [
+      76,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/commons/ulthor_81_165"
+  },
+  {
+    "position": [
+      75,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      74,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      161,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      83,
+      162,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor EVA Access Hallway CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      83,
+      163,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      83,
+      164,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      83,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      84,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      83,
+      162,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 4;on = 1}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      84,
+      162,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/hallway/ulthor_eva_access"
+  },
+  {
+    "position": [
+      84,
+      157,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      84,
+      157,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      85,
+      157,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      85,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Service Hallway CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      85,
+      152,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      85,
+      153,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      84,
+      158,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      84,
+      159,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      84,
+      157,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      84,
+      158,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      85,
+      154,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      99,
+      135,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      135,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      136,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      137,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      98,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      97,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      96,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      95,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      94,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      93,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      92,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/barber"
+  },
+  {
+    "position": [
+      91,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/barber"
+  },
+  {
+    "position": [
+      90,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/barber"
+  },
+  {
+    "position": [
+      89,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      88,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      87,
+      138,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      99,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Service East Hallway CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      150,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      160,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      99,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      99,
+      162,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      99,
+      163,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      99,
+      164,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      99,
+      165,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      99,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      100,
+      160,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      100,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      100,
+      162,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      100,
+      163,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      100,
+      164,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/engineering/ulthor_eva"
+  },
+  {
+    "position": [
+      99,
+      152,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_east"
+  },
+  {
+    "position": [
+      74,
+      167,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      74,
+      167,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      73,
+      167,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      74,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor North-West Hallway CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      74,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      76,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      77,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      78,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 2}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      78,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 4;on = 1}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      79,
+      169,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      77,
+      171,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_service_north"
+  },
+  {
+    "position": [
+      73,
+      133,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Service South Hallway CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      84,
+      138,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      74,
+      133,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      85,
+      133,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 4;on = 1}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      86,
+      133,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      75,
+      133,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      89,
+      155,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      89,
+      155,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      88,
+      155,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      87,
+      155,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      90,
+      155,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Theatre Hallway CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      92,
+      154,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      92,
+      155,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      89,
+      155,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      89,
+      154,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 2}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      90,
+      155,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      90,
+      154,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      93,
+      154,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      73,
+      187,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/solars/port/aft"
+  },
+  {
+    "position": [
+      73,
+      188,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/solars/port/aft"
+  },
+  {
+    "position": [
+      60,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/maintenance/solars/port/ulthor"
+  },
+  {
+    "position": [
+      62,
+      143,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/maintenance/solars/port/ulthor"
+  },
+  {
+    "position": [
+      147,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/maintenance/ulthor_ai_passage"
+  },
+  {
+    "position": [
+      148,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor AI Maintenance CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/maintenance/ulthor_ai_passage"
+  },
+  {
+    "position": [
+      149,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/maintenance/ulthor_ai_passage"
+  },
+  {
+    "position": [
+      151,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_ai_passage"
+  },
+  {
+    "position": [
+      161,
+      129,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      140,
+      119,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_engineering_passage"
+  },
+  {
+    "position": [
+      98,
+      172,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_northwest_passage"
+  },
+  {
+    "position": [
+      98,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor North-West Maintenance CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_northwest_passage"
+  },
+  {
+    "position": [
+      150,
+      150,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_research_passage"
+  },
+  {
+    "position": [
+      150,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Research Maintenance CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_research_passage"
+  },
+  {
+    "position": [
+      150,
+      152,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_research_passage"
+  },
+  {
+    "position": [
+      94,
+      138,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      99,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Service Maintenance CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      100,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      101,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      72,
+      161,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      72,
+      166,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor West Maintenance CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      72,
+      167,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      72,
+      168,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      167,
+      148,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"genetics CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      170,
+      160,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      166,
+      147,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      166,
+      148,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      166,
+      150,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      166,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      170,
+      161,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/science/genetics"
+  },
+  {
+    "position": [
+      160,
+      175,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"chargebay CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/science/robotics/chargebay"
+  },
+  {
+    "position": [
+      158,
+      175,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/science/robotics/chargebay"
+  },
+  {
+    "position": [
+      163,
+      147,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/science/server"
+  },
+  {
+    "position": [
+      162,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_coldroom CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/science/ulthor_coldroom"
+  },
+  {
+    "position": [
+      160,
+      103,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/security/checkpoint"
+  },
+  {
+    "position": [
+      147,
+      116,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"evidence CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/security/evidence"
+  },
+  {
+    "position": [
+      150,
+      115,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/security/evidence"
+  },
+  {
+    "position": [
+      144,
+      116,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"interrogation CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/security/interrogation"
+  },
+  {
+    "position": [
+      142,
+      117,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/security/interrogation"
+  },
+  {
+    "position": [
+      138,
+      116,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"main CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/security/main"
+  },
+  {
+    "position": [
+      140,
+      115,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/security/main"
+  },
+  {
+    "position": [
+      141,
+      115,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/security/main"
+  },
+  {
+    "position": [
+      142,
+      115,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/security/interrogation"
+  },
+  {
+    "position": [
+      134,
+      114,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/security/main"
+  },
+  {
+    "position": [
+      134,
+      113,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/security/brig"
+  },
+  {
+    "position": [
+      134,
+      112,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers",
+    "area": "/area/station/security/brig"
+  },
+  {
+    "position": [
+      92,
+      138,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/barber"
+  },
+  {
+    "position": [
+      90,
+      135,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8}",
+    "area": "/area/station/service/barber"
+  },
+  {
+    "position": [
+      89,
+      135,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      88,
+      135,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      87,
+      135,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      86,
+      135,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      90,
+      136,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 8;on = 1}",
+    "area": "/area/station/service/barber"
+  },
+  {
+    "position": [
+      89,
+      136,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      88,
+      136,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      87,
+      136,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      86,
+      136,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      73,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_72_141 CCTV\";network = list(\"SS13\");dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      75,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      76,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      77,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      78,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      79,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      80,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      75,
+      150,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      75,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      75,
+      152,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 2}",
+    "area": "/area/station/service/ulthor_82_155"
+  },
+  {
+    "position": [
+      75,
+      153,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6}",
+    "area": "/area/station/service/ulthor_82_155"
+  },
+  {
+    "position": [
+      76,
+      153,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_82_155"
+  },
+  {
+    "position": [
+      77,
+      153,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/service/ulthor_82_155"
+  },
+  {
+    "position": [
+      77,
+      142,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      77,
+      142,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 2}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      77,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 2}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      78,
+      142,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      88,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      89,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      86,
+      182,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      86,
+      183,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      89,
+      180,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_86_180"
+  },
+  {
+    "position": [
+      91,
+      179,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_91_176"
+  },
+  {
+    "position": [
+      91,
+      178,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1}",
+    "area": "/area/station/service/ulthor_91_176"
+  },
+  {
+    "position": [
+      91,
+      179,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1}",
+    "area": "/area/station/service/ulthor_91_176"
+  },
+  {
+    "position": [
+      92,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 4;on = 1}",
+    "area": "/area/station/service/ulthor_91_176"
+  },
+  {
+    "position": [
+      93,
+      173,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_91_176"
+  },
+  {
+    "position": [
+      90,
+      152,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"ulthor_93_151 CCTV\";network = list(\"SS13\");dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      92,
+      152,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      77,
+      136,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      77,
+      136,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      76,
+      136,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      75,
+      136,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      74,
+      136,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      77,
+      137,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      77,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      79,
+      139,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      94,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      94,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      93,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      92,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      91,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      90,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      89,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      88,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      87,
+      149,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_service_center"
+  },
+  {
+    "position": [
+      95,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Costume Storage CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      95,
+      152,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      96,
+      149,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      95,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      94,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      93,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      92,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      91,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8}",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      95,
+      150,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 1;on = 1}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      95,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      94,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_costume_storage"
+  },
+  {
+    "position": [
+      93,
+      151,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1}",
+    "area": "/area/station/service/ulthor_93_151"
+  },
+  {
+    "position": [
+      68,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      68,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      68,
+      141,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      69,
+      141,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      70,
+      141,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      71,
+      141,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      69,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Kitchen Coldroom CCTV\";network = list(\"SS13\");dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      69,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      69,
+      142,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      69,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4}",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      70,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      71,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      72,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      73,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      74,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      75,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_72_141"
+  },
+  {
+    "position": [
+      76,
+      141,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/service/ulthor_80_150"
+  },
+  {
+    "position": [
+      69,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 2;on = 1}",
+    "area": "/area/station/service/ulthor_kitchen_coldroom"
+  },
+  {
+    "position": [
+      69,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      70,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      71,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      72,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      73,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      74,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      75,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/maintenance/ulthor_west_passage"
+  },
+  {
+    "position": [
+      76,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      77,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      78,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      79,
+      139,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/service/ulthor_bar_backroom"
+  },
+  {
+    "position": [
+      90,
+      159,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_mime_office"
+  },
+  {
+    "position": [
+      90,
+      159,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_mime_office"
+  },
+  {
+    "position": [
+      90,
+      158,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_mime_office"
+  },
+  {
+    "position": [
+      90,
+      157,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_mime_office"
+  },
+  {
+    "position": [
+      90,
+      156,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      90,
+      155,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/hallway/ulthor_theatre_access"
+  },
+  {
+    "position": [
+      91,
+      159,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_mime_office"
+  },
+  {
+    "position": [
+      94,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/power/apc{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      94,
+      140,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      94,
+      139,
+      1
+    ],
+    "atom": "/obj/structure/cable",
+    "area": "/area/station/maintenance/ulthor_service_passage"
+  },
+  {
+    "position": [
+      94,
+      147,
+      1
+    ],
+    "atom": "/obj/machinery/camera{c_tag = \"Ulthor Theatre CCTV\";network = list(\"SS13\");dir = 8;pixel_x = -24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      95,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/firealarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      96,
+      140,
+      1
+    ],
+    "atom": "/obj/machinery/alarm{dir = 1;pixel_x = 0;pixel_y = 24}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      88,
+      142,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      87,
+      142,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      86,
+      142,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      88,
+      143,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/unary/vent_scrubber{dir = 8;on = 1}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      87,
+      143,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      86,
+      143,
+      1
+    ],
+    "atom": "/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8}",
+    "area": "/area/station/hallway/ulthor_service_south"
+  },
+  {
+    "position": [
+      96,
+      143,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 4;pixel_x = 24;pixel_y = 0}",
+    "area": "/area/station/service/ulthor_theatre"
+  },
+  {
+    "position": [
+      142,
+      148,
+      1
+    ],
+    "atom": "/obj/item/radio/intercom{dir = 2;pixel_x = 0;pixel_y = -24}",
+    "area": "/area/station/telecomms/ulthor_145_147"
+  }
+]

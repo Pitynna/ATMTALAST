@@ -1,0 +1,17 @@
+[
+  {
+    "position": [
+      81,
+      134,
+      1
+    ],
+    "before": [
+      "/turf/space",
+      "/area/station/cargo/office"
+    ],
+    "after": [
+      "/turf/simulated/floor/plasteel",
+      "/area/station/cargo/office"
+    ]
+  }
+]

@@ -1,0 +1,10856 @@
+{
+  "/area/space": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/space/nearstation": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/solars/port/ulthor": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/solars/port/ulthor": {
+    "apc": [
+      [
+        62,
+        141,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        62,
+        141,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        62,
+        143,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        60,
+        141,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        58,
+        142,
+        1
+      ]
+    ],
+    "scrubber": [],
+    "light": [
+      [
+        61,
+        143,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/shuttle/ulthor_supply": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        64,
+        126,
+        1
+      ],
+      [
+        66,
+        130,
+        1
+      ],
+      [
+        66,
+        122,
+        1
+      ],
+      [
+        68,
+        126,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/secondary/entry": {
+    "apc": [
+      [
+        76,
+        95,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        65,
+        100,
+        1
+      ],
+      [
+        68,
+        107,
+        1
+      ],
+      [
+        69,
+        96,
+        1
+      ],
+      [
+        71,
+        100,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [
+      [
+        81,
+        109,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        75,
+        104,
+        1
+      ],
+      [
+        76,
+        95,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        80,
+        110,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        80,
+        109,
+        1
+      ]
+    ],
+    "light": [
+      [
+        67,
+        96,
+        1
+      ],
+      [
+        69,
+        96,
+        1
+      ],
+      [
+        81,
+        109,
+        1
+      ],
+      [
+        82,
+        112,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        85,
+        108,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        68,
+        105,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        71,
+        100,
+        1
+      ]
+    ],
+    "status_display": [
+      [
+        67,
+        97,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        80,
+        103,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        76,
+        109,
+        1
+      ],
+      [
+        77,
+        106,
+        1
+      ],
+      [
+        77,
+        105,
+        1
+      ],
+      [
+        77,
+        104,
+        1
+      ],
+      [
+        77,
+        103,
+        1
+      ],
+      [
+        78,
+        106,
+        1
+      ],
+      [
+        78,
+        103,
+        1
+      ],
+      [
+        79,
+        106,
+        1
+      ],
+      [
+        79,
+        103,
+        1
+      ],
+      [
+        80,
+        106,
+        1
+      ],
+      [
+        80,
+        103,
+        1
+      ]
+    ]
+  },
+  "/area/shuttle/ulthor_specops": {
+    "apc": [],
+    "camera": [
+      [
+        68,
+        91,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        67,
+        91,
+        1
+      ],
+      [
+        72,
+        89,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        66,
+        90,
+        1
+      ],
+      [
+        72,
+        91,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/ulthor_west_passage": {
+    "apc": [
+      [
+        72,
+        161,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        72,
+        166,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        72,
+        168,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        72,
+        167,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        72,
+        151,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_72_141": {
+    "apc": [
+      [
+        72,
+        141,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        73,
+        141,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        75,
+        149,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        75,
+        150,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        71,
+        145,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        75,
+        141,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        75,
+        150,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        74,
+        141,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        75,
+        151,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        73,
+        141,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_kitchen_coldroom": {
+    "apc": [
+      [
+        68,
+        140,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        69,
+        141,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        69,
+        142,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        69,
+        140,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        69,
+        141,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        69,
+        140,
+        1
+      ]
+    ],
+    "light": [
+      [
+        67,
+        143,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/shuttle/ulthor_admin": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        72,
+        81,
+        1
+      ],
+      [
+        72,
+        76,
+        1
+      ],
+      [
+        74,
+        85,
+        1
+      ],
+      [
+        74,
+        72,
+        1
+      ],
+      [
+        76,
+        80,
+        1
+      ],
+      [
+        78,
+        80,
+        1
+      ],
+      [
+        79,
+        85,
+        1
+      ],
+      [
+        79,
+        72,
+        1
+      ],
+      [
+        83,
+        80,
+        1
+      ],
+      [
+        85,
+        84,
+        1
+      ],
+      [
+        85,
+        74,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        76,
+        86,
+        1
+      ],
+      [
+        76,
+        84,
+        1
+      ],
+      [
+        83,
+        80,
+        1
+      ],
+      [
+        83,
+        80,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/ulthor_81_165": {
+    "apc": [
+      [
+        81,
+        165,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        80,
+        167,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        81,
+        166,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        81,
+        163,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        78,
+        162,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        77,
+        163,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        81,
+        163,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        81,
+        167,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        79,
+        164,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        76,
+        163,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        81,
+        162,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        81,
+        162,
+        1
+      ]
+    ]
+  },
+  "/area/station/maintenance/solars/port/aft": {
+    "apc": [
+      [
+        79,
+        192,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        79,
+        192,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        73,
+        188,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        73,
+        187,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        80,
+        196,
+        1
+      ]
+    ],
+    "scrubber": [],
+    "light": [
+      [
+        81,
+        193,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_82_155": {
+    "apc": [
+      [
+        82,
+        155,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        76,
+        160,
+        1
+      ],
+      [
+        83,
+        152,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        83,
+        154,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        81,
+        152,
+        1
+      ],
+      [
+        83,
+        153,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        74,
+        159,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        78,
+        152,
+        1
+      ],
+      [
+        81,
+        160,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        77,
+        152,
+        1
+      ],
+      [
+        80,
+        160,
+        1
+      ]
+    ],
+    "light": [
+      [
+        83,
+        155,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        81,
+        156,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        82,
+        153,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        75,
+        160,
+        1
+      ]
+    ],
+    "status_display": [
+      [
+        76,
+        160,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        81,
+        152,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        81,
+        159,
+        1
+      ],
+      [
+        81,
+        158,
+        1
+      ],
+      [
+        81,
+        157,
+        1
+      ],
+      [
+        81,
+        156,
+        1
+      ],
+      [
+        81,
+        155,
+        1
+      ],
+      [
+        81,
+        154,
+        1
+      ],
+      [
+        81,
+        153,
+        1
+      ],
+      [
+        81,
+        152,
+        1
+      ],
+      [
+        82,
+        159,
+        1
+      ],
+      [
+        83,
+        159,
+        1
+      ]
+    ]
+  },
+  "/area/station/cargo/office": {
+    "apc": [
+      [
+        73,
+        120,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        73,
+        121,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        73,
+        122,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        74,
+        119,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        83,
+        131,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        85,
+        126,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        85,
+        127,
+        1
+      ]
+    ],
+    "light": [
+      [
+        70,
+        120,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        70,
+        127,
+        1
+      ],
+      [
+        70,
+        125,
+        1
+      ],
+      [
+        72,
+        127,
+        1
+      ],
+      [
+        72,
+        125,
+        1
+      ],
+      [
+        79,
+        127,
+        1
+      ],
+      [
+        82,
+        130,
+        1
+      ],
+      [
+        84,
+        128,
+        1
+      ],
+      [
+        84,
+        127,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        73,
+        126,
+        1
+      ],
+      [
+        73,
+        126,
+        1
+      ],
+      [
+        77,
+        119,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        76,
+        119,
+        1
+      ]
+    ]
+  },
+  "/area/station/hallway/ulthor_service_south": {
+    "apc": [
+      [
+        85,
+        138,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        73,
+        133,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        74,
+        133,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        84,
+        138,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        75,
+        133,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        87,
+        145,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        85,
+        133,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        86,
+        141,
+        1
+      ],
+      [
+        87,
+        141,
+        1
+      ],
+      [
+        89,
+        139,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/ulthor_service_north": {
+    "apc": [
+      [
+        74,
+        167,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        74,
+        168,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        76,
+        169,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        74,
+        169,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        77,
+        171,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        77,
+        169,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        78,
+        169,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        84,
+        168,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/cargo/storage": {
+    "apc": [
+      [
+        79,
+        113,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        78,
+        113,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        79,
+        115,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        74,
+        112,
+        1
+      ],
+      [
+        77,
+        113,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        80,
+        112,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [
+      [
+        75,
+        113,
+        1
+      ],
+      [
+        77,
+        117,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        76,
+        118,
+        1
+      ],
+      [
+        76,
+        117,
+        1
+      ],
+      [
+        76,
+        116,
+        1
+      ],
+      [
+        76,
+        115,
+        1
+      ],
+      [
+        76,
+        114,
+        1
+      ],
+      [
+        76,
+        113,
+        1
+      ]
+    ]
+  },
+  "/area/station/solars/port/aft": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/ulthor_bedroom_west_north": {
+    "apc": [
+      [
+        77,
+        181,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        76,
+        181,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        78,
+        180,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        77,
+        180,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        78,
+        180,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        78,
+        181,
+        1
+      ]
+    ],
+    "light": [
+      [
+        78,
+        181,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        78,
+        180,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/ulthor_bedroom_west_south": {
+    "apc": [
+      [
+        77,
+        178,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        77,
+        177,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        76,
+        177,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        78,
+        177,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        77,
+        177,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        78,
+        178,
+        1
+      ]
+    ],
+    "light": [
+      [
+        78,
+        178,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        78,
+        177,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/cargo/ulthor_76_110": {
+    "apc": [
+      [
+        76,
+        110,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        76,
+        112,
+        1
+      ],
+      [
+        76,
+        111,
+        1
+      ],
+      [
+        76,
+        110,
+        1
+      ]
+    ]
+  },
+  "/area/station/commons/ulthor_85_173": {
+    "apc": [
+      [
+        85,
+        173,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        80,
+        173,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        80,
+        179,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        80,
+        178,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        80,
+        181,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        84,
+        173,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        85,
+        173,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        85,
+        176,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        82,
+        173,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_80_150": {
+    "apc": [
+      [
+        80,
+        150,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        84,
+        142,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        77,
+        142,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        81,
+        141,
+        1
+      ],
+      [
+        84,
+        149,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        78,
+        142,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        77,
+        142,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        85,
+        145,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        76,
+        146,
+        1
+      ],
+      [
+        76,
+        145,
+        1
+      ],
+      [
+        76,
+        142,
+        1
+      ],
+      [
+        76,
+        141,
+        1
+      ],
+      [
+        80,
+        140,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        85,
+        146,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        83,
+        150,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_bar_backroom": {
+    "apc": [
+      [
+        77,
+        136,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        78,
+        139,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        77,
+        139,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        77,
+        137,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        79,
+        139,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        79,
+        136,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        78,
+        139,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        78,
+        139,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/ulthor_service_passage": {
+    "apc": [
+      [
+        94,
+        138,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        99,
+        168,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        101,
+        168,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        100,
+        168,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/library": {
+    "apc": [
+      [
+        79,
+        97,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        88,
+        103,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/office/qm/ulthor": {
+    "apc": [
+      [
+        85,
+        125,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [
+      [
+        82,
+        121,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        79,
+        123,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/ulthor_eva_access": {
+    "apc": [
+      [
+        83,
+        161,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        83,
+        162,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        83,
+        164,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        83,
+        163,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        83,
+        161,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        83,
+        162,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        83,
+        168,
+        1
+      ],
+      [
+        83,
+        166,
+        1
+      ],
+      [
+        84,
+        166,
+        1
+      ],
+      [
+        85,
+        168,
+        1
+      ],
+      [
+        85,
+        166,
+        1
+      ],
+      [
+        86,
+        163,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/ulthor_service_center": {
+    "apc": [
+      [
+        84,
+        157,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        85,
+        151,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        85,
+        153,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        85,
+        152,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        85,
+        154,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        84,
+        158,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        84,
+        157,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        86,
+        150,
+        1
+      ],
+      [
+        87,
+        150,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/locker": {
+    "apc": [
+      [
+        91,
+        121,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        94,
+        121,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        92,
+        121,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        90,
+        121,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        88,
+        120,
+        1
+      ],
+      [
+        88,
+        119,
+        1
+      ],
+      [
+        88,
+        118,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        91,
+        119,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        95,
+        118,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        95,
+        118,
+        1
+      ]
+    ]
+  },
+  "/area/station/commons/storage/primary": {
+    "apc": [
+      [
+        93,
+        111,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        91,
+        112,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        90,
+        112,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        89,
+        112,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        92,
+        112,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [
+      [
+        93,
+        112,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        88,
+        111,
+        1
+      ],
+      [
+        88,
+        110,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        91,
+        112,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_86_180": {
+    "apc": [
+      [
+        86,
+        180,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        86,
+        182,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        86,
+        182,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        86,
+        181,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        89,
+        180,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        88,
+        178,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        86,
+        182,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        89,
+        178,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        89,
+        178,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        89,
+        178,
+        1
+      ]
+    ]
+  },
+  "/area/station/hallway/primary/port": {
+    "apc": [
+      [
+        116,
+        97,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        87,
+        108,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/ulthor_89_175": {
+    "apc": [
+      [
+        89,
+        175,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        87,
+        175,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        88,
+        176,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        89,
+        174,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        89,
+        176,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        88,
+        174,
+        1
+      ]
+    ],
+    "light": [
+      [
+        87,
+        176,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        87,
+        176,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/ulthor_87_165": {
+    "apc": [
+      [
+        87,
+        165,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        87,
+        162,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        91,
+        165,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        90,
+        161,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        87,
+        164,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        90,
+        162,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        91,
+        163,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        87,
+        164,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        89,
+        163,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        87,
+        161,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        87,
+        161,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        87,
+        161,
+        1
+      ]
+    ]
+  },
+  "/area/station/cargo/miningdock": {
+    "apc": [
+      [
+        94,
+        126,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        87,
+        124,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        87,
+        131,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        87,
+        125,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        87,
+        132,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        87,
+        126,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        87,
+        128,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        88,
+        128,
+        1
+      ],
+      [
+        88,
+        127,
+        1
+      ],
+      [
+        92,
+        127,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        93,
+        129,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_theatre": {
+    "apc": [
+      [
+        94,
+        140,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        94,
+        147,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        96,
+        140,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        95,
+        140,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        96,
+        143,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        88,
+        142,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        88,
+        143,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        88,
+        140,
+        1
+      ]
+    ],
+    "status_display": [
+      [
+        92,
+        142,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_mime_office": {
+    "apc": [
+      [
+        90,
+        159,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        89,
+        157,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        90,
+        157,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        89,
+        157,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        91,
+        159,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        89,
+        157,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        92,
+        157,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/ulthor_theatre_access": {
+    "apc": [
+      [
+        89,
+        155,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        90,
+        155,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        92,
+        155,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        92,
+        154,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        93,
+        154,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        89,
+        155,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        90,
+        155,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/toilet/locker_toilet": {
+    "apc": [
+      [
+        93,
+        114,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/ulthor_northwest_passage": {
+    "apc": [
+      [
+        98,
+        172,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        98,
+        173,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        92,
+        185,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        93,
+        183,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        92,
+        185,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        93,
+        183,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_91_176": {
+    "apc": [
+      [
+        91,
+        176,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        91,
+        177,
+        1
+      ],
+      [
+        96,
+        179,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        96,
+        180,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        91,
+        179,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        91,
+        181,
+        1
+      ],
+      [
+        93,
+        181,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        91,
+        178,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        92,
+        173,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_93_151": {
+    "apc": [
+      [
+        93,
+        151,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        90,
+        152,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        92,
+        150,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        91,
+        150,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        92,
+        152,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        91,
+        150,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        93,
+        152,
+        1
+      ],
+      [
+        93,
+        150,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/service/barber/ulthor": {
+    "apc": [
+      [
+        91,
+        134,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        92,
+        139,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        92,
+        139,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        92,
+        138,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        91,
+        134,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        90,
+        135,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        90,
+        136,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        90,
+        134,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/service/ulthor_costume_storage": {
+    "apc": [
+      [
+        94,
+        149,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        95,
+        151,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        96,
+        149,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        95,
+        152,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        95,
+        151,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        95,
+        150,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/commons/ulthor_96_166": {
+    "apc": [
+      [
+        96,
+        166,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        108,
+        181,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        96,
+        164,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        96,
+        165,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        96,
+        163,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        96,
+        164,
+        1
+      ],
+      [
+        98,
+        167,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        96,
+        165,
+        1
+      ],
+      [
+        98,
+        163,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        96,
+        165,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        97,
+        168,
+        1
+      ],
+      [
+        98,
+        168,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        96,
+        163,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/ulthor_service_east": {
+    "apc": [
+      [
+        99,
+        135,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        99,
+        149,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        99,
+        151,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        99,
+        150,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        99,
+        152,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        99,
+        160,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        100,
+        160,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/ulthor_100_175": {
+    "apc": [
+      [
+        100,
+        175,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        100,
+        176,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        100,
+        173,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        104,
+        175,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        100,
+        174,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        101,
+        175,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        103,
+        175,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        103,
+        172,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        104,
+        173,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        102,
+        174,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        100,
+        176,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/ulthor_eva": {
+    "apc": [
+      [
+        101,
+        166,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        100,
+        166,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        101,
+        165,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        101,
+        164,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        101,
+        167,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        100,
+        163,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/medical": {
+    "apc": [
+      [
+        107,
+        113,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        105,
+        113,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        108,
+        113,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        108,
+        111,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        105,
+        110,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        107,
+        111,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        108,
+        113,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/shuttle/ulthor_mining": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        102,
+        129,
+        1
+      ],
+      [
+        102,
+        125,
+        1
+      ],
+      [
+        104,
+        129,
+        1
+      ],
+      [
+        104,
+        125,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/ulthor_104_164": {
+    "apc": [
+      [
+        104,
+        164,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        106,
+        163,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        106,
+        163,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        105,
+        163,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        104,
+        163,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        104,
+        166,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        105,
+        167,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        104,
+        165,
+        1
+      ],
+      [
+        104,
+        165,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [
+      [
+        106,
+        167,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        107,
+        163,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_108_176": {
+    "apc": [
+      [
+        108,
+        176,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        107,
+        178,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [
+      [
+        108,
+        173,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        106,
+        173,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [
+      [
+        108,
+        175,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        109,
+        178,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        107,
+        178,
+        1
+      ],
+      [
+        115,
+        176,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        107,
+        178,
+        1
+      ],
+      [
+        108,
+        178,
+        1
+      ],
+      [
+        109,
+        178,
+        1
+      ],
+      [
+        110,
+        178,
+        1
+      ],
+      [
+        111,
+        178,
+        1
+      ],
+      [
+        112,
+        178,
+        1
+      ],
+      [
+        113,
+        178,
+        1
+      ],
+      [
+        114,
+        178,
+        1
+      ],
+      [
+        115,
+        176,
+        1
+      ]
+    ]
+  },
+  "/area/station/command/office/hop": {
+    "apc": [
+      [
+        112,
+        163,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        109,
+        168,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        110,
+        159,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        116,
+        161,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        117,
+        161,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        113,
+        162,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        114,
+        165,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        117,
+        165,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        108,
+        164,
+        1
+      ],
+      [
+        109,
+        162,
+        1
+      ],
+      [
+        111,
+        164,
+        1
+      ],
+      [
+        116,
+        162,
+        1
+      ],
+      [
+        118,
+        161,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        117,
+        165,
+        1
+      ],
+      [
+        117,
+        165,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        114,
+        164,
+        1
+      ],
+      [
+        115,
+        163,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        117,
+        163,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        116,
+        166,
+        1
+      ]
+    ]
+  },
+  "/area/station/command/ulthor_106_160": {
+    "apc": [
+      [
+        106,
+        160,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [
+      [
+        106,
+        159,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        107,
+        161,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/science/ulthor_123_191": {
+    "apc": [
+      [
+        123,
+        191,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        118,
+        191,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        121,
+        192,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        117,
+        189,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        118,
+        188,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        117,
+        189,
+        1
+      ],
+      [
+        118,
+        189,
+        1
+      ],
+      [
+        118,
+        188,
+        1
+      ],
+      [
+        133,
+        197,
+        1
+      ],
+      [
+        133,
+        196,
+        1
+      ],
+      [
+        133,
+        195,
+        1
+      ]
+    ]
+  },
+  "/area/station/medical/ulthor_113_186": {
+    "apc": [
+      [
+        113,
+        186,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        110,
+        186,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        113,
+        188,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        112,
+        186,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        111,
+        187,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        112,
+        188,
+        1
+      ]
+    ],
+    "light": [
+      [
+        109,
+        185,
+        1
+      ],
+      [
+        112,
+        188,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        111,
+        188,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        110,
+        186,
+        1
+      ],
+      [
+        114,
+        187,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        113,
+        186,
+        1
+      ]
+    ],
+    "status_display": [
+      [
+        112,
+        188,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        111,
+        187,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        111,
+        187,
+        1
+      ],
+      [
+        112,
+        187,
+        1
+      ],
+      [
+        113,
+        187,
+        1
+      ],
+      [
+        114,
+        187,
+        1
+      ]
+    ]
+  },
+  "/area/station/medical/ulthor_110_175": {
+    "apc": [
+      [
+        110,
+        175,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        111,
+        176,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        113,
+        174,
+        1
+      ],
+      [
+        114,
+        174,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/office/hos": {
+    "apc": [
+      [
+        110,
+        117,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        110,
+        115,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        113,
+        118,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        110,
+        115,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        112,
+        118,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        113,
+        116,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        110,
+        116,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        112,
+        114,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        110,
+        116,
+        1
+      ],
+      [
+        110,
+        116,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        112,
+        116,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        114,
+        118,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        110,
+        115,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        110,
+        115,
+        1
+      ],
+      [
+        112,
+        114,
+        1
+      ]
+    ]
+  },
+  "/area/station/security/hallway/execution": {
+    "apc": [
+      [
+        110,
+        110,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        110,
+        109,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        114,
+        110,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        110,
+        111,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        114,
+        111,
+        1
+      ]
+    ],
+    "light": [
+      [
+        114,
+        110,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        112,
+        110,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_118_183": {
+    "apc": [
+      [
+        118,
+        183,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        119,
+        186,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        115,
+        188,
+        1
+      ],
+      [
+        120,
+        186,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [
+      [
+        111,
+        184,
+        1
+      ],
+      [
+        111,
+        181,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        120,
+        184,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        118,
+        184,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        114,
+        183,
+        1
+      ],
+      [
+        114,
+        181,
+        1
+      ],
+      [
+        119,
+        182,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        115,
+        182,
+        1
+      ],
+      [
+        115,
+        182,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        119,
+        185,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        115,
+        187,
+        1
+      ],
+      [
+        115,
+        178,
+        1
+      ],
+      [
+        116,
+        189,
+        1
+      ],
+      [
+        116,
+        188,
+        1
+      ],
+      [
+        116,
+        186,
+        1
+      ],
+      [
+        116,
+        185,
+        1
+      ],
+      [
+        116,
+        184,
+        1
+      ],
+      [
+        116,
+        183,
+        1
+      ],
+      [
+        116,
+        182,
+        1
+      ],
+      [
+        116,
+        181,
+        1
+      ],
+      [
+        116,
+        179,
+        1
+      ],
+      [
+        116,
+        177,
+        1
+      ],
+      [
+        116,
+        176,
+        1
+      ],
+      [
+        117,
+        180,
+        1
+      ],
+      [
+        118,
+        180,
+        1
+      ],
+      [
+        119,
+        180,
+        1
+      ],
+      [
+        120,
+        180,
+        1
+      ]
+    ]
+  },
+  "/area/station/security/brig": {
+    "apc": [
+      [
+        128,
+        116,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        116,
+        119,
+        1
+      ],
+      [
+        118,
+        109,
+        1
+      ],
+      [
+        121,
+        115,
+        1
+      ],
+      [
+        122,
+        109,
+        1
+      ],
+      [
+        136,
+        109,
+        1
+      ],
+      [
+        140,
+        109,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        116,
+        119,
+        1
+      ],
+      [
+        128,
+        115,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        118,
+        122,
+        1
+      ],
+      [
+        133,
+        113,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        116,
+        110,
+        1
+      ],
+      [
+        120,
+        110,
+        1
+      ],
+      [
+        136,
+        110,
+        1
+      ],
+      [
+        140,
+        110,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        118,
+        109,
+        1
+      ],
+      [
+        121,
+        119,
+        1
+      ],
+      [
+        122,
+        109,
+        1
+      ],
+      [
+        132,
+        114,
+        1
+      ],
+      [
+        134,
+        109,
+        1
+      ],
+      [
+        138,
+        109,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        116,
+        119,
+        1
+      ],
+      [
+        117,
+        109,
+        1
+      ],
+      [
+        121,
+        109,
+        1
+      ],
+      [
+        128,
+        114,
+        1
+      ],
+      [
+        135,
+        109,
+        1
+      ],
+      [
+        139,
+        109,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        133,
+        113,
+        1
+      ],
+      [
+        133,
+        112,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        130,
+        117,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        118,
+        114,
+        1
+      ],
+      [
+        130,
+        114,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        128,
+        114,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        121,
+        122,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/shuttle/ulthor_laborcamp": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/prison/perma": {
+    "apc": [
+      [
+        116,
+        128,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        118,
+        144,
+        1
+      ],
+      [
+        126,
+        144,
+        1
+      ],
+      [
+        126,
+        132,
+        1
+      ],
+      [
+        132,
+        138,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        123,
+        133,
+        1
+      ],
+      [
+        123,
+        130,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        123,
+        132,
+        1
+      ],
+      [
+        128,
+        138,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        130,
+        144,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        124,
+        139,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        124,
+        143,
+        1
+      ]
+    ],
+    "light": [
+      [
+        119,
+        136,
+        1
+      ],
+      [
+        123,
+        139,
+        1
+      ],
+      [
+        123,
+        136,
+        1
+      ],
+      [
+        125,
+        145,
+        1
+      ],
+      [
+        131,
+        134,
+        1
+      ],
+      [
+        132,
+        148,
+        1
+      ],
+      [
+        135,
+        134,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        128,
+        144,
+        1
+      ],
+      [
+        132,
+        145,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [
+      [
+        121,
+        134,
+        1
+      ],
+      [
+        121,
+        134,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        124,
+        141,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        133,
+        145,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/bridge": {
+    "apc": [
+      [
+        124,
+        161,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        121,
+        163,
+        1
+      ],
+      [
+        128,
+        163,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        121,
+        163,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [
+      [
+        126,
+        164,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        123,
+        164,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        119,
+        168,
+        1
+      ],
+      [
+        119,
+        164,
+        1
+      ],
+      [
+        120,
+        168,
+        1
+      ],
+      [
+        120,
+        164,
+        1
+      ],
+      [
+        129,
+        168,
+        1
+      ],
+      [
+        129,
+        164,
+        1
+      ],
+      [
+        130,
+        168,
+        1
+      ],
+      [
+        130,
+        164,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        125,
+        165,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        126,
+        161,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        130,
+        161,
+        1
+      ]
+    ]
+  },
+  "/area/station/legal/office/magistrate": {
+    "apc": [
+      [
+        121,
+        100,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        117,
+        103,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        118,
+        99,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        117,
+        99,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        121,
+        102,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        120,
+        99,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        119,
+        99,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        121,
+        103,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        118,
+        101,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        121,
+        101,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_124_179": {
+    "apc": [
+      [
+        124,
+        179,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        123,
+        175,
+        1
+      ],
+      [
+        128,
+        188,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        131,
+        179,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        127,
+        179,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        127,
+        189,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        125,
+        178,
+        1
+      ],
+      [
+        126,
+        187,
+        1
+      ],
+      [
+        126,
+        178,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        122,
+        176,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        128,
+        189,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        121,
+        180,
+        1
+      ],
+      [
+        122,
+        180,
+        1
+      ],
+      [
+        123,
+        180,
+        1
+      ],
+      [
+        124,
+        180,
+        1
+      ],
+      [
+        125,
+        180,
+        1
+      ],
+      [
+        126,
+        180,
+        1
+      ],
+      [
+        127,
+        180,
+        1
+      ],
+      [
+        128,
+        180,
+        1
+      ],
+      [
+        129,
+        180,
+        1
+      ],
+      [
+        130,
+        180,
+        1
+      ],
+      [
+        131,
+        180,
+        1
+      ]
+    ]
+  },
+  "/area/station/legal/courtroom": {
+    "apc": [
+      [
+        122,
+        88,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        119,
+        95,
+        1
+      ],
+      [
+        125,
+        91,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        119,
+        95,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        119,
+        94,
+        1
+      ],
+      [
+        119,
+        89,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        121,
+        88,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        121,
+        91,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        121,
+        90,
+        1
+      ]
+    ],
+    "light": [
+      [
+        122,
+        97,
+        1
+      ],
+      [
+        124,
+        97,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        118,
+        91,
+        1
+      ],
+      [
+        118,
+        90,
+        1
+      ],
+      [
+        119,
+        93,
+        1
+      ],
+      [
+        125,
+        93,
+        1
+      ],
+      [
+        126,
+        97,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        120,
+        94,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        122,
+        92,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        119,
+        88,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_122_183": {
+    "apc": [
+      [
+        122,
+        183,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        122,
+        186,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        123,
+        186,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        122,
+        186,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        124,
+        186,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        123,
+        186,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        125,
+        184,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        124,
+        186,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/ai/upload/ulthor": {
+    "apc": [
+      [
+        125,
+        159,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/prison/lockers": {
+    "apc": [
+      [
+        124,
+        128,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        124,
+        128,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [
+      [
+        125,
+        128,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        126,
+        128,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        125,
+        126,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        126,
+        128,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        122,
+        127,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/hallway/armory": {
+    "apc": [
+      [
+        124,
+        122,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        123,
+        121,
+        1
+      ],
+      [
+        132,
+        121,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        132,
+        120,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        132,
+        121,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        123,
+        120,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        123,
+        121,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        128,
+        118,
+        1
+      ],
+      [
+        129,
+        118,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        130,
+        119,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/warden": {
+    "apc": [
+      [
+        123,
+        117,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        125,
+        118,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        125,
+        118,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        123,
+        118,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        126,
+        118,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        123,
+        118,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        126,
+        118,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        124,
+        117,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/lobby": {
+    "apc": [
+      [
+        124,
+        108,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        124,
+        110,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        123,
+        107,
+        1
+      ],
+      [
+        123,
+        106,
+        1
+      ],
+      [
+        123,
+        105,
+        1
+      ],
+      [
+        128,
+        111,
+        1
+      ],
+      [
+        129,
+        111,
+        1
+      ],
+      [
+        131,
+        111,
+        1
+      ],
+      [
+        131,
+        104,
+        1
+      ],
+      [
+        132,
+        111,
+        1
+      ],
+      [
+        132,
+        104,
+        1
+      ],
+      [
+        137,
+        107,
+        1
+      ],
+      [
+        137,
+        106,
+        1
+      ],
+      [
+        137,
+        105,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        126,
+        110,
+        1
+      ],
+      [
+        126,
+        110,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        130,
+        100,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/legal/office/law": {
+    "apc": [
+      [
+        123,
+        102,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        123,
+        103,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        128,
+        102,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        127,
+        102,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        125,
+        100,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        125,
+        99,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        124,
+        99,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        125,
+        99,
+        1
+      ],
+      [
+        129,
+        103,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        125,
+        102,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        123,
+        99,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        126,
+        102,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_131_183": {
+    "apc": [
+      [
+        131,
+        183,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        131,
+        186,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        130,
+        186,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        131,
+        186,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        129,
+        186,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        130,
+        186,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        128,
+        184,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        129,
+        186,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_135_192": {
+    "apc": [
+      [
+        135,
+        192,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        134,
+        193,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [
+      [
+        136,
+        191,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        130,
+        193,
+        1
+      ],
+      [
+        131,
+        188,
+        1
+      ],
+      [
+        135,
+        191,
+        1
+      ],
+      [
+        137,
+        188,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        130,
+        188,
+        1
+      ],
+      [
+        131,
+        193,
+        1
+      ],
+      [
+        133,
+        191,
+        1
+      ],
+      [
+        137,
+        187,
+        1
+      ]
+    ],
+    "light": [
+      [
+        130,
+        192,
+        1
+      ],
+      [
+        130,
+        189,
+        1
+      ],
+      [
+        136,
+        188,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        136,
+        189,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        134,
+        189,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        137,
+        190,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        133,
+        194,
+        1
+      ],
+      [
+        133,
+        193,
+        1
+      ],
+      [
+        133,
+        192,
+        1
+      ],
+      [
+        133,
+        191,
+        1
+      ],
+      [
+        133,
+        190,
+        1
+      ],
+      [
+        134,
+        190,
+        1
+      ],
+      [
+        135,
+        190,
+        1
+      ],
+      [
+        136,
+        190,
+        1
+      ],
+      [
+        137,
+        190,
+        1
+      ]
+    ]
+  },
+  "/area/station/security/podbay": {
+    "apc": [
+      [
+        133,
+        96,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        133,
+        97,
+        1
+      ],
+      [
+        134,
+        94,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        130,
+        97,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        130,
+        97,
+        1
+      ],
+      [
+        130,
+        91,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        130,
+        96,
+        1
+      ],
+      [
+        130,
+        92,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        134,
+        89,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        131,
+        97,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        133,
+        97,
+        1
+      ],
+      [
+        135,
+        92,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/teleporter": {
+    "apc": [
+      [
+        137,
+        164,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        134,
+        166,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        137,
+        167,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        135,
+        166,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        132,
+        169,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        131,
+        169,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        131,
+        171,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/meeting_room": {
+    "apc": [
+      [
+        132,
+        160,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        134,
+        160,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        136,
+        161,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        133,
+        161,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        131,
+        161,
+        1
+      ],
+      [
+        135,
+        164,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        134,
+        162,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        134,
+        163,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        131,
+        161,
+        1
+      ],
+      [
+        132,
+        161,
+        1
+      ],
+      [
+        133,
+        163,
+        1
+      ],
+      [
+        133,
+        162,
+        1
+      ],
+      [
+        133,
+        161,
+        1
+      ],
+      [
+        134,
+        163,
+        1
+      ]
+    ]
+  },
+  "/area/station/medical/ulthor_135_176": {
+    "apc": [
+      [
+        135,
+        176,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        138,
+        180,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [
+      [
+        137,
+        179,
+        1
+      ],
+      [
+        137,
+        174,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        135,
+        175,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        137,
+        175,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        135,
+        175,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        132,
+        178,
+        1
+      ],
+      [
+        133,
+        178,
+        1
+      ],
+      [
+        134,
+        174,
+        1
+      ],
+      [
+        136,
+        178,
+        1
+      ],
+      [
+        136,
+        173,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        135,
+        175,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        137,
+        179,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        132,
+        180,
+        1
+      ],
+      [
+        133,
+        180,
+        1
+      ],
+      [
+        134,
+        180,
+        1
+      ],
+      [
+        135,
+        180,
+        1
+      ],
+      [
+        136,
+        180,
+        1
+      ],
+      [
+        136,
+        178,
+        1
+      ],
+      [
+        136,
+        173,
+        1
+      ],
+      [
+        137,
+        180,
+        1
+      ],
+      [
+        138,
+        180,
+        1
+      ]
+    ]
+  },
+  "/area/station/command/ulthor_141_185": {
+    "apc": [
+      [
+        141,
+        185,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        133,
+        185,
+        1
+      ],
+      [
+        139,
+        186,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        141,
+        184,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        138,
+        183,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        138,
+        184,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        136,
+        186,
+        1
+      ],
+      [
+        140,
+        182,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        140,
+        184,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        141,
+        183,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        140,
+        180,
+        1
+      ],
+      [
+        141,
+        183,
+        1
+      ]
+    ]
+  },
+  "/area/station/security/main": {
+    "apc": [
+      [
+        140,
+        116,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        138,
+        116,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        140,
+        117,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        134,
+        117,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        135,
+        118,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        140,
+        115,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        134,
+        114,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        133,
+        116,
+        1
+      ],
+      [
+        133,
+        115,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        136,
+        118,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        136,
+        118,
+        1
+      ]
+    ]
+  },
+  "/area/station/security/detectives_office": {
+    "apc": [
+      [
+        140,
+        103,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        140,
+        103,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        141,
+        101,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        134,
+        103,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        134,
+        99,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        136,
+        101,
+        1
+      ],
+      [
+        139,
+        101,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        135,
+        101,
+        1
+      ],
+      [
+        139,
+        103,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        134,
+        103,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [
+      [
+        135,
+        99,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        135,
+        102,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        137,
+        99,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/science/robotics/ulthor": {
+    "apc": [
+      [
+        164,
+        174,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        162,
+        178,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [
+      [
+        160,
+        177,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        164,
+        177,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        164,
+        176,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        162,
+        167,
+        1
+      ],
+      [
+        163,
+        171,
+        1
+      ],
+      [
+        165,
+        173,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        164,
+        172,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        162,
+        178,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/command/office/captain/bedroom": {
+    "apc": [
+      [
+        138,
+        159,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        139,
+        157,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        138,
+        158,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        138,
+        157,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        140,
+        157,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        140,
+        159,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        139,
+        157,
+        1
+      ]
+    ],
+    "light": [
+      [
+        138,
+        159,
+        1
+      ],
+      [
+        142,
+        159,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        138,
+        159,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        137,
+        162,
+        1
+      ],
+      [
+        139,
+        160,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/ai/ulthor_141_152": {
+    "apc": [
+      [
+        141,
+        152,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        137,
+        155,
+        1
+      ],
+      [
+        141,
+        152,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        141,
+        153,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        140,
+        154,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        140,
+        151,
+        1
+      ],
+      [
+        140,
+        151,
+        1
+      ],
+      [
+        140,
+        151,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        140,
+        153,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        140,
+        151,
+        1
+      ]
+    ],
+    "status_display": [
+      [
+        139,
+        154,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_139_176": {
+    "apc": [
+      [
+        139,
+        176,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        139,
+        177,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        140,
+        176,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        140,
+        179,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        139,
+        177,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [
+      [
+        141,
+        176,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        139,
+        180,
+        1
+      ]
+    ]
+  },
+  "/area/station/command/office/captain": {
+    "apc": [
+      [
+        142,
+        161,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        146,
+        162,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        146,
+        162,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        146,
+        163,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        141,
+        164,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        145,
+        162,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        144,
+        164,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        143,
+        162,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        141,
+        166,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        138,
+        161,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        138,
+        162,
+        1
+      ],
+      [
+        138,
+        161,
+        1
+      ]
+    ]
+  },
+  "/area/station/telecomms/ulthor_145_147": {
+    "apc": [
+      [
+        145,
+        147,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        139,
+        148,
+        1
+      ],
+      [
+        144,
+        148,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        141,
+        148,
+        1
+      ],
+      [
+        145,
+        149,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        140,
+        148,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        142,
+        148,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        142,
+        149,
+        1
+      ],
+      [
+        144,
+        149,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        142,
+        150,
+        1
+      ],
+      [
+        144,
+        147,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        146,
+        148,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/ulthor_engineering_passage": {
+    "apc": [
+      [
+        161,
+        129,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        166,
+        145,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        165,
+        145,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        140,
+        119,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        163,
+        120,
+        1
+      ],
+      [
+        164,
+        139,
+        1
+      ],
+      [
+        164,
+        138,
+        1
+      ],
+      [
+        164,
+        120,
+        1
+      ],
+      [
+        165,
+        120,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        167,
+        141,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        167,
+        143,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        167,
+        139,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        167,
+        139,
+        1
+      ]
+    ]
+  },
+  "/area/station/security/processing": {
+    "apc": [
+      [
+        147,
+        112,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        142,
+        111,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        147,
+        111,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        145,
+        109,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        145,
+        114,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        145,
+        114,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        147,
+        110,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        141,
+        113,
+        1
+      ],
+      [
+        141,
+        112,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        142,
+        109,
+        1
+      ]
+    ],
+    "disposal_pipe": []
+  },
+  "/area/station/medical/ulthor_145_181": {
+    "apc": [
+      [
+        145,
+        181,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        143,
+        182,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [
+      [
+        145,
+        180,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        144,
+        180,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        142,
+        181,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/interrogation": {
+    "apc": [
+      [
+        143,
+        118,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        144,
+        116,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        144,
+        117,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        142,
+        116,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        142,
+        117,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        144,
+        118,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        142,
+        118,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        144,
+        116,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        142,
+        115,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        142,
+        118,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        143,
+        116,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/ai/ulthor_148_151": {
+    "apc": [
+      [
+        148,
+        151,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        148,
+        153,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        148,
+        152,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        146,
+        151,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        147,
+        151,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        147,
+        152,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        146,
+        152,
+        1
+      ]
+    ],
+    "light": [
+      [
+        145,
+        154,
+        1
+      ],
+      [
+        148,
+        155,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        147,
+        153,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/ulthor_149_129": {
+    "apc": [
+      [
+        149,
+        129,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        145,
+        128,
+        1
+      ],
+      [
+        145,
+        122,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        147,
+        129,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        150,
+        123,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        147,
+        121,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        147,
+        127,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        148,
+        125,
+        1
+      ]
+    ],
+    "light": [
+      [
+        145,
+        127,
+        1
+      ],
+      [
+        145,
+        124,
+        1
+      ],
+      [
+        148,
+        129,
+        1
+      ],
+      [
+        150,
+        124,
+        1
+      ],
+      [
+        150,
+        121,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        150,
+        128,
+        1
+      ],
+      [
+        150,
+        127,
+        1
+      ],
+      [
+        150,
+        126,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/storage/tech": {
+    "apc": [
+      [
+        156,
+        175,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        152,
+        176,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        150,
+        173,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        150,
+        174,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        154,
+        174,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        152,
+        175,
+        1
+      ]
+    ],
+    "light": [
+      [
+        150,
+        174,
+        1
+      ],
+      [
+        150,
+        172,
+        1
+      ],
+      [
+        153,
+        179,
+        1
+      ],
+      [
+        154,
+        176,
+        1
+      ],
+      [
+        156,
+        174,
+        1
+      ],
+      [
+        156,
+        172,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        152,
+        172,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        152,
+        167,
+        1
+      ],
+      [
+        153,
+        177,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        153,
+        178,
+        1
+      ],
+      [
+        153,
+        174,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        150,
+        172,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/ulthor_research_passage": {
+    "apc": [
+      [
+        150,
+        150,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        150,
+        151,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        150,
+        152,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        148,
+        156,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        161,
+        165,
+        1
+      ],
+      [
+        162,
+        165,
+        1
+      ],
+      [
+        163,
+        165,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/ulthor_ai_passage": {
+    "apc": [
+      [
+        147,
+        149,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        148,
+        149,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        151,
+        141,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        149,
+        149,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/ulthor_151_130": {
+    "apc": [
+      [
+        151,
+        130,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        153,
+        128,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        151,
+        135,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        154,
+        126,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        154,
+        127,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        151,
+        126,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        151,
+        128,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        152,
+        141,
+        1
+      ],
+      [
+        155,
+        125,
+        1
+      ],
+      [
+        155,
+        125,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        151,
+        129,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/evidence": {
+    "apc": [
+      [
+        147,
+        118,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        147,
+        116,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        146,
+        118,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        146,
+        118,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        150,
+        115,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        146,
+        116,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        146,
+        117,
+        1
+      ]
+    ],
+    "light": [
+      [
+        146,
+        117,
+        1
+      ],
+      [
+        148,
+        118,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        146,
+        116,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/ulthor_153_164": {
+    "apc": [
+      [
+        153,
+        164,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        150,
+        162,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        150,
+        162,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        153,
+        161,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        151,
+        164,
+        1
+      ]
+    ],
+    "light": [
+      [
+        152,
+        164,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        154,
+        161,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        150,
+        161,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        154,
+        164,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/command/ulthor_154_145": {
+    "apc": [
+      [
+        154,
+        145,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        150,
+        143,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        154,
+        146,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        150,
+        142,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        151,
+        145,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        152,
+        144,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        154,
+        144,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        154,
+        142,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [
+      [
+        150,
+        143,
+        1
+      ],
+      [
+        150,
+        143,
+        1
+      ],
+      [
+        150,
+        143,
+        1
+      ],
+      [
+        150,
+        143,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        152,
+        143,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        154,
+        144,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        154,
+        143,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        154,
+        143,
+        1
+      ]
+    ]
+  },
+  "/area/station/engineering/ulthor_152_122": {
+    "apc": [
+      [
+        152,
+        122,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        153,
+        121,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        154,
+        123,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        152,
+        123,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        154,
+        121,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        152,
+        123,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        154,
+        123,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/ulthor_monitoring": {
+    "apc": [
+      [
+        155,
+        140,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        156,
+        140,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        158,
+        140,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        157,
+        140,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        159,
+        140,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        159,
+        138,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        160,
+        137,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        160,
+        139,
+        1
+      ],
+      [
+        160,
+        138,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/ulthor_158_119": {
+    "apc": [
+      [
+        158,
+        119,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        161,
+        124,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        157,
+        119,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        156,
+        126,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        156,
+        122,
+        1
+      ],
+      [
+        161,
+        119,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        159,
+        126,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        160,
+        126,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        157,
+        127,
+        1
+      ],
+      [
+        158,
+        127,
+        1
+      ],
+      [
+        162,
+        124,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [
+      [
+        160,
+        126,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        156,
+        120,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        156,
+        120,
+        1
+      ]
+    ]
+  },
+  "/area/station/engineering/ulthor_tool_storage": {
+    "apc": [
+      [
+        159,
+        129,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        156,
+        128,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        159,
+        130,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        159,
+        128,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        157,
+        128,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        156,
+        128,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        157,
+        135,
+        1
+      ],
+      [
+        158,
+        135,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/engineering/ulthor_163_93": {
+    "apc": [
+      [
+        163,
+        93,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        159,
+        95,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        163,
+        90,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        163,
+        95,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        159,
+        95,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        159,
+        93,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        161,
+        93,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        162,
+        95,
+        1
+      ]
+    ],
+    "firedoor": [
+      [
+        160,
+        96,
+        1
+      ],
+      [
+        161,
+        96,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        158,
+        94,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [
+      [
+        158,
+        95,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        158,
+        92,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        158,
+        92,
+        1
+      ],
+      [
+        159,
+        92,
+        1
+      ],
+      [
+        160,
+        98,
+        1
+      ],
+      [
+        160,
+        97,
+        1
+      ],
+      [
+        160,
+        96,
+        1
+      ],
+      [
+        160,
+        95,
+        1
+      ],
+      [
+        160,
+        94,
+        1
+      ],
+      [
+        160,
+        93,
+        1
+      ],
+      [
+        160,
+        92,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/robotics/chargebay": {
+    "apc": [
+      [
+        160,
+        174,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        160,
+        175,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        158,
+        174,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        158,
+        173,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        158,
+        175,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        158,
+        172,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        158,
+        173,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        158,
+        171,
+        1
+      ],
+      [
+        159,
+        171,
+        1
+      ],
+      [
+        161,
+        173,
+        1
+      ],
+      [
+        161,
+        167,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        160,
+        172,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [
+      [
+        158,
+        175,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/security/checkpoint": {
+    "apc": [
+      [
+        169,
+        105,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        170,
+        107,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        168,
+        105,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        168,
+        107,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        160,
+        103,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        169,
+        109,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        169,
+        111,
+        1
+      ]
+    ],
+    "light": [
+      [
+        169,
+        116,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        163,
+        118,
+        1
+      ],
+      [
+        164,
+        118,
+        1
+      ],
+      [
+        165,
+        118,
+        1
+      ],
+      [
+        167,
+        115,
+        1
+      ],
+      [
+        167,
+        114,
+        1
+      ],
+      [
+        167,
+        113,
+        1
+      ],
+      [
+        167,
+        106,
+        1
+      ],
+      [
+        171,
+        115,
+        1
+      ],
+      [
+        171,
+        114,
+        1
+      ],
+      [
+        171,
+        113,
+        1
+      ],
+      [
+        171,
+        106,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        169,
+        111,
+        1
+      ],
+      [
+        169,
+        111,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        160,
+        99,
+        1
+      ],
+      [
+        165,
+        114,
+        1
+      ],
+      [
+        166,
+        114,
+        1
+      ],
+      [
+        167,
+        114,
+        1
+      ],
+      [
+        168,
+        114,
+        1
+      ],
+      [
+        169,
+        114,
+        1
+      ],
+      [
+        170,
+        114,
+        1
+      ],
+      [
+        171,
+        114,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/ulthor_coldroom": {
+    "apc": [
+      [
+        161,
+        149,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        162,
+        149,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        160,
+        148,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        161,
+        147,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        161,
+        149,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        161,
+        147,
+        1
+      ]
+    ],
+    "light": [
+      [
+        160,
+        148,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        162,
+        148,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/solars/starboard": {
+    "apc": [
+      [
+        171,
+        95,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        171,
+        94,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [
+      [
+        172,
+        91,
+        1
+      ]
+    ],
+    "scrubber": [],
+    "light": [
+      [
+        173,
+        94,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/maintenance/asmaint2": {
+    "apc": [
+      [
+        183,
+        147,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        188,
+        167,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        185,
+        169,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": [
+      [
+        184,
+        149,
+        1
+      ],
+      [
+        185,
+        149,
+        1
+      ],
+      [
+        186,
+        167,
+        1
+      ]
+    ]
+  },
+  "/area/station/command/office/rd": {
+    "apc": [
+      [
+        165,
+        162,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        167,
+        161,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        168,
+        166,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        168,
+        161,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        168,
+        162,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        165,
+        161,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        166,
+        161,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        163,
+        167,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        166,
+        164,
+        1
+      ],
+      [
+        166,
+        164,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        167,
+        163,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        168,
+        166,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        165,
+        165,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        165,
+        165,
+        1
+      ],
+      [
+        166,
+        165,
+        1
+      ],
+      [
+        167,
+        165,
+        1
+      ],
+      [
+        167,
+        164,
+        1
+      ],
+      [
+        167,
+        163,
+        1
+      ],
+      [
+        168,
+        163,
+        1
+      ],
+      [
+        169,
+        163,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/server": {
+    "apc": [
+      [
+        164,
+        149,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        164,
+        149,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        163,
+        147,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        164,
+        149,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        163,
+        149,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        163,
+        147,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        163,
+        149,
+        1
+      ]
+    ],
+    "light": [
+      [
+        163,
+        149,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        164,
+        147,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        163,
+        148,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/science/genetics": {
+    "apc": [
+      [
+        165,
+        158,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        167,
+        148,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        167,
+        152,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        170,
+        160,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        170,
+        161,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        166,
+        147,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        166,
+        150,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        164,
+        157,
+        1
+      ],
+      [
+        164,
+        156,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        165,
+        151,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        167,
+        158,
+        1
+      ],
+      [
+        167,
+        157,
+        1
+      ],
+      [
+        167,
+        156,
+        1
+      ],
+      [
+        167,
+        155,
+        1
+      ],
+      [
+        167,
+        153,
+        1
+      ],
+      [
+        167,
+        152,
+        1
+      ],
+      [
+        167,
+        151,
+        1
+      ],
+      [
+        168,
+        158,
+        1
+      ],
+      [
+        169,
+        158,
+        1
+      ],
+      [
+        170,
+        166,
+        1
+      ],
+      [
+        170,
+        165,
+        1
+      ],
+      [
+        170,
+        164,
+        1
+      ],
+      [
+        170,
+        158,
+        1
+      ],
+      [
+        171,
+        163,
+        1
+      ],
+      [
+        171,
+        158,
+        1
+      ],
+      [
+        172,
+        163,
+        1
+      ],
+      [
+        172,
+        158,
+        1
+      ],
+      [
+        173,
+        163,
+        1
+      ],
+      [
+        174,
+        163,
+        1
+      ],
+      [
+        175,
+        164,
+        1
+      ],
+      [
+        175,
+        163,
+        1
+      ]
+    ]
+  },
+  "/area/station/medical/break_room": {
+    "apc": [
+      [
+        170,
+        178,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        169,
+        178,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [
+      [
+        169,
+        176,
+        1
+      ],
+      [
+        173,
+        176,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        172,
+        178,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        171,
+        177,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        172,
+        177,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        166,
+        171,
+        1
+      ],
+      [
+        167,
+        171,
+        1
+      ],
+      [
+        168,
+        177,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        170,
+        177,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        170,
+        176,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        166,
+        177,
+        1
+      ],
+      [
+        166,
+        176,
+        1
+      ],
+      [
+        166,
+        175,
+        1
+      ],
+      [
+        166,
+        174,
+        1
+      ],
+      [
+        166,
+        173,
+        1
+      ],
+      [
+        166,
+        172,
+        1
+      ],
+      [
+        166,
+        171,
+        1
+      ],
+      [
+        166,
+        170,
+        1
+      ],
+      [
+        167,
+        177,
+        1
+      ],
+      [
+        168,
+        177,
+        1
+      ],
+      [
+        169,
+        177,
+        1
+      ],
+      [
+        170,
+        177,
+        1
+      ],
+      [
+        170,
+        176,
+        1
+      ]
+    ]
+  },
+  "/area/station/solars/starboard/ulthor": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/science/rnd": {
+    "apc": [
+      [
+        172,
+        172,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        170,
+        174,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        172,
+        170,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        169,
+        168,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        168,
+        173,
+        1
+      ],
+      [
+        170,
+        167,
+        1
+      ],
+      [
+        172,
+        167,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        169,
+        169,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [
+      [
+        169,
+        172,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        172,
+        168,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        170,
+        168,
+        1
+      ],
+      [
+        171,
+        168,
+        1
+      ],
+      [
+        172,
+        168,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/chem_lab": {
+    "apc": [
+      [
+        170,
+        153,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        173,
+        154,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        169,
+        155,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        171,
+        155,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        172,
+        155,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        168,
+        154,
+        1
+      ],
+      [
+        169,
+        154,
+        1
+      ],
+      [
+        170,
+        154,
+        1
+      ],
+      [
+        171,
+        154,
+        1
+      ],
+      [
+        172,
+        155,
+        1
+      ],
+      [
+        172,
+        154,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/xenobiology": {
+    "apc": [
+      [
+        169,
+        148,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        173,
+        151,
+        1
+      ],
+      [
+        176,
+        154,
+        1
+      ],
+      [
+        176,
+        147,
+        1
+      ],
+      [
+        180,
+        154,
+        1
+      ],
+      [
+        180,
+        147,
+        1
+      ],
+      [
+        181,
+        151,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        169,
+        147,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        170,
+        147,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [
+      [
+        171,
+        150,
+        1
+      ]
+    ],
+    "light": [
+      [
+        176,
+        154,
+        1
+      ],
+      [
+        176,
+        147,
+        1
+      ],
+      [
+        180,
+        154,
+        1
+      ],
+      [
+        180,
+        147,
+        1
+      ]
+    ],
+    "light_switch": [
+      [
+        169,
+        151,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [
+      [
+        174,
+        151,
+        1
+      ],
+      [
+        174,
+        150,
+        1
+      ],
+      [
+        178,
+        151,
+        1
+      ],
+      [
+        178,
+        150,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [
+      [
+        173,
+        148,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        181,
+        150,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        168,
+        149,
+        1
+      ],
+      [
+        169,
+        149,
+        1
+      ],
+      [
+        170,
+        150,
+        1
+      ],
+      [
+        170,
+        149,
+        1
+      ],
+      [
+        171,
+        150,
+        1
+      ],
+      [
+        172,
+        150,
+        1
+      ],
+      [
+        173,
+        150,
+        1
+      ],
+      [
+        174,
+        150,
+        1
+      ],
+      [
+        175,
+        150,
+        1
+      ],
+      [
+        175,
+        149,
+        1
+      ],
+      [
+        176,
+        150,
+        1
+      ],
+      [
+        177,
+        152,
+        1
+      ],
+      [
+        177,
+        150,
+        1
+      ],
+      [
+        178,
+        150,
+        1
+      ],
+      [
+        179,
+        150,
+        1
+      ],
+      [
+        179,
+        149,
+        1
+      ],
+      [
+        180,
+        150,
+        1
+      ],
+      [
+        181,
+        152,
+        1
+      ],
+      [
+        181,
+        150,
+        1
+      ]
+    ]
+  },
+  "/area/station/engineering/atmos": {
+    "apc": [
+      [
+        172,
+        143,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        182,
+        133,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        170,
+        145,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        169,
+        145,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        171,
+        145,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        170,
+        142,
+        1
+      ],
+      [
+        170,
+        139,
+        1
+      ],
+      [
+        170,
+        136,
+        1
+      ],
+      [
+        170,
+        132,
+        1
+      ],
+      [
+        184,
+        142,
+        1
+      ],
+      [
+        184,
+        139,
+        1
+      ],
+      [
+        184,
+        136,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        168,
+        122,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        168,
+        145,
+        1
+      ],
+      [
+        168,
+        144,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        177,
+        141,
+        1
+      ],
+      [
+        177,
+        130,
+        1
+      ]
+    ],
+    "requests_console": [
+      [
+        172,
+        124,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/hallway/secondary/exit": {
+    "apc": [
+      [
+        175,
+        105,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        173,
+        105,
+        1
+      ],
+      [
+        175,
+        114,
+        1
+      ],
+      [
+        178,
+        110,
+        1
+      ],
+      [
+        181,
+        118,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        176,
+        105,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        172,
+        112,
+        1
+      ]
+    ],
+    "intercom": [
+      [
+        181,
+        116,
+        1
+      ]
+    ],
+    "vent": [
+      [
+        174,
+        109,
+        1
+      ],
+      [
+        177,
+        118,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        174,
+        111,
+        1
+      ],
+      [
+        180,
+        117,
+        1
+      ]
+    ],
+    "light": [
+      [
+        180,
+        113,
+        1
+      ],
+      [
+        180,
+        107,
+        1
+      ],
+      [
+        181,
+        110,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [
+      [
+        176,
+        115,
+        1
+      ],
+      [
+        176,
+        115,
+        1
+      ],
+      [
+        177,
+        115,
+        1
+      ],
+      [
+        177,
+        115,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [
+      [
+        175,
+        110,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [
+      [
+        177,
+        118,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        174,
+        115,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        172,
+        114,
+        1
+      ],
+      [
+        173,
+        114,
+        1
+      ],
+      [
+        174,
+        115,
+        1
+      ],
+      [
+        174,
+        114,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/toxins/mixing": {
+    "apc": [
+      [
+        174,
+        169,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        177,
+        173,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        176,
+        173,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        174,
+        170,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        174,
+        168,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        176,
+        168,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        178,
+        173,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [
+      [
+        179,
+        170,
+        1
+      ]
+    ],
+    "disposal": [
+      [
+        178,
+        168,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        175,
+        168,
+        1
+      ],
+      [
+        175,
+        167,
+        1
+      ],
+      [
+        175,
+        166,
+        1
+      ],
+      [
+        175,
+        165,
+        1
+      ],
+      [
+        176,
+        168,
+        1
+      ],
+      [
+        177,
+        168,
+        1
+      ],
+      [
+        178,
+        168,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/explab": {
+    "apc": [
+      [
+        176,
+        156,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        174,
+        160,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        177,
+        156,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        174,
+        161,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        175,
+        161,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        173,
+        158,
+        1
+      ],
+      [
+        179,
+        158,
+        1
+      ],
+      [
+        180,
+        158,
+        1
+      ],
+      [
+        181,
+        158,
+        1
+      ]
+    ],
+    "door_control": [
+      [
+        176,
+        159,
+        1
+      ]
+    ],
+    "holopad": [],
+    "requests_console": [
+      [
+        178,
+        157,
+        1
+      ]
+    ],
+    "status_display": [],
+    "disposal": [
+      [
+        174,
+        156,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        173,
+        158,
+        1
+      ],
+      [
+        174,
+        158,
+        1
+      ],
+      [
+        174,
+        157,
+        1
+      ],
+      [
+        174,
+        156,
+        1
+      ]
+    ]
+  },
+  "/area/station/science/storage": {
+    "apc": [
+      [
+        178,
+        165,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [],
+    "scrubber": [],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/science/explab/chamber": {
+    "apc": [
+      [
+        178,
+        161,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        179,
+        161,
+        1
+      ]
+    ],
+    "airalarm": [],
+    "firealarm": [
+      [
+        178,
+        159,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        178,
+        159,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        179,
+        161,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [],
+    "firedoor": [
+      [
+        177,
+        160,
+        1
+      ]
+    ],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/shuttle/ulthor_emergency": {
+    "apc": [],
+    "camera": [],
+    "airalarm": [],
+    "firealarm": [],
+    "intercom": [
+      [
+        184,
+        116,
+        1
+      ],
+      [
+        184,
+        112,
+        1
+      ],
+      [
+        184,
+        106,
+        1
+      ],
+      [
+        187,
+        99,
+        1
+      ],
+      [
+        189,
+        120,
+        1
+      ],
+      [
+        190,
+        113,
+        1
+      ],
+      [
+        193,
+        113,
+        1
+      ],
+      [
+        193,
+        102,
+        1
+      ],
+      [
+        194,
+        120,
+        1
+      ],
+      [
+        199,
+        112,
+        1
+      ],
+      [
+        199,
+        106,
+        1
+      ]
+    ],
+    "vent": [],
+    "scrubber": [],
+    "light": [
+      [
+        184,
+        112,
+        1
+      ],
+      [
+        186,
+        118,
+        1
+      ],
+      [
+        187,
+        99,
+        1
+      ],
+      [
+        188,
+        99,
+        1
+      ],
+      [
+        189,
+        120,
+        1
+      ],
+      [
+        189,
+        113,
+        1
+      ],
+      [
+        194,
+        120,
+        1
+      ],
+      [
+        194,
+        113,
+        1
+      ],
+      [
+        195,
+        99,
+        1
+      ],
+      [
+        196,
+        99,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [],
+    "requests_console": [],
+    "status_display": [
+      [
+        190,
+        119,
+        1
+      ],
+      [
+        190,
+        104,
+        1
+      ],
+      [
+        193,
+        119,
+        1
+      ],
+      [
+        193,
+        104,
+        1
+      ],
+      [
+        197,
+        115,
+        1
+      ]
+    ],
+    "disposal": [],
+    "disposal_pipe": []
+  },
+  "/area/station/science/ulthor_186_169": {
+    "apc": [
+      [
+        186,
+        169,
+        1
+      ]
+    ],
+    "camera": [
+      [
+        186,
+        169,
+        1
+      ],
+      [
+        190,
+        166,
+        1
+      ]
+    ],
+    "airalarm": [
+      [
+        188,
+        169,
+        1
+      ]
+    ],
+    "firealarm": [],
+    "intercom": [],
+    "vent": [
+      [
+        188,
+        169,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        187,
+        169,
+        1
+      ]
+    ],
+    "light": [],
+    "light_switch": [
+      [
+        186,
+        169,
+        1
+      ]
+    ],
+    "firedoor": [],
+    "door_control": [],
+    "holopad": [
+      [
+        187,
+        168,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        186,
+        168,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        186,
+        168,
+        1
+      ]
+    ]
+  },
+  "/area/station/maintenance/turbine": {
+    "apc": [
+      [
+        187,
+        148,
+        1
+      ]
+    ],
+    "camera": [],
+    "airalarm": [
+      [
+        193,
+        147,
+        1
+      ]
+    ],
+    "firealarm": [
+      [
+        187,
+        147,
+        1
+      ]
+    ],
+    "intercom": [],
+    "vent": [
+      [
+        192,
+        146,
+        1
+      ],
+      [
+        193,
+        139,
+        1
+      ]
+    ],
+    "scrubber": [
+      [
+        190,
+        145,
+        1
+      ]
+    ],
+    "light": [
+      [
+        188,
+        143,
+        1
+      ],
+      [
+        191,
+        141,
+        1
+      ],
+      [
+        193,
+        141,
+        1
+      ]
+    ],
+    "light_switch": [],
+    "firedoor": [],
+    "door_control": [
+      [
+        191,
+        143,
+        1
+      ],
+      [
+        191,
+        143,
+        1
+      ]
+    ],
+    "holopad": [
+      [
+        190,
+        143,
+        1
+      ]
+    ],
+    "requests_console": [],
+    "status_display": [],
+    "disposal": [
+      [
+        193,
+        149,
+        1
+      ]
+    ],
+    "disposal_pipe": [
+      [
+        186,
+        149,
+        1
+      ],
+      [
+        187,
+        149,
+        1
+      ],
+      [
+        188,
+        149,
+        1
+      ],
+      [
+        189,
+        149,
+        1
+      ],
+      [
+        190,
+        149,
+        1
+      ],
+      [
+        191,
+        149,
+        1
+      ],
+      [
+        192,
+        149,
+        1
+      ],
+      [
+        193,
+        149,
+        1
+      ]
+    ]
+  }
+}

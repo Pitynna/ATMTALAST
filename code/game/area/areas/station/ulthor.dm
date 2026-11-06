@@ -1,4 +1,4 @@
-// Ulthor room areas keep their existing APC circuits and mapped footprints.
+// Ulthor areas follow physical rooms; corridors and maintenance have separate circuits.
 // Explicit editor states prevent inheriting /area's crossed-out "unknown" icon.
 
 /area/station/service/ulthor_72_141
@@ -42,12 +42,12 @@
 	icon_state = "chapel"
 
 /area/station/service/ulthor_93_151
-	name = "Ulthor Theatre"
-	icon_state = "Theatre"
+	name = "Ulthor Clown Office"
+	icon_state = "clown_office"
 
 /area/station/commons/ulthor_96_166
-	name = "Ulthor Fitness"
-	icon_state = "fitness"
+	name = "Ulthor Electrical Storage"
+	icon_state = "engine_storage"
 
 /area/station/command/ulthor_100_175
 	name = "Ulthor Gateway"
@@ -146,7 +146,7 @@
 	icon_state = "head_quarters"
 
 /area/station/engineering/ulthor_158_119
-	name = "Ulthor Engineering Lounge and Monitoring"
+	name = "Ulthor Engineering Lounge"
 	icon_state = "engine_monitoring"
 
 /area/station/engineering/ulthor_163_93
@@ -211,3 +211,97 @@
 /area/station/solars/starboard/ulthor
 	name = "Ulthor South-East Solar Array"
 	icon_state = "panelsS"
+
+// Room and passage boundaries reviewed against Ulthor geometry and Delta/Cyberiad.
+
+/area/station/commons/ulthor_bedroom_west_north
+	name = "Ulthor North-West Bedroom"
+	icon_state = "Sleep"
+
+/area/station/commons/ulthor_bedroom_west_south
+	name = "Ulthor West Bedroom"
+	icon_state = "Sleep"
+
+/area/station/engineering/ulthor_eva
+	name = "Ulthor EVA Storage"
+	icon_state = "eva"
+
+/area/station/engineering/ulthor_monitoring
+	name = "Ulthor Engineering Monitoring"
+	icon_state = "engine_monitoring"
+
+/area/station/engineering/ulthor_tool_storage
+	name = "Ulthor Engineering Equipment Storage"
+	icon_state = "engine_storage"
+
+/area/station/hallway/ulthor_eva_access
+	name = "Ulthor EVA Access Hallway"
+	icon_state = "hallF"
+
+/area/station/hallway/ulthor_service_center
+	name = "Ulthor Service Hallway"
+	icon_state = "hallF"
+
+/area/station/hallway/ulthor_service_east
+	name = "Ulthor Service East Hallway"
+	icon_state = "hallF"
+
+/area/station/hallway/ulthor_service_north
+	name = "Ulthor North-West Hallway"
+	icon_state = "hallF"
+
+/area/station/hallway/ulthor_service_south
+	name = "Ulthor Service South Hallway"
+	icon_state = "hallF"
+
+/area/station/hallway/ulthor_theatre_access
+	name = "Ulthor Theatre Hallway"
+	icon_state = "hallF"
+
+/area/station/maintenance/ulthor_ai_passage
+	name = "Ulthor AI Maintenance"
+	icon_state = "green"
+
+/area/station/maintenance/ulthor_engineering_passage
+	name = "Ulthor Engineering Maintenance"
+	icon_state = "green"
+
+/area/station/maintenance/ulthor_northwest_passage
+	name = "Ulthor North-West Maintenance"
+	icon_state = "fpmaint"
+
+/area/station/maintenance/ulthor_research_passage
+	name = "Ulthor Research Maintenance"
+	icon_state = "asmaint"
+
+/area/station/maintenance/ulthor_service_passage
+	name = "Ulthor Service Maintenance"
+	icon_state = "pmaint"
+
+/area/station/maintenance/ulthor_west_passage
+	name = "Ulthor West Maintenance"
+	icon_state = "pmaint"
+
+/area/station/service/barber/ulthor
+	name = "Ulthor Barbershop"
+	icon_state = "barber"
+
+/area/station/service/ulthor_bar_backroom
+	name = "Ulthor Bar Backroom"
+	icon_state = "barstation"
+
+/area/station/service/ulthor_costume_storage
+	name = "Ulthor Costume Storage"
+	icon_state = "Theatre"
+
+/area/station/service/ulthor_kitchen_coldroom
+	name = "Ulthor Kitchen Coldroom"
+	icon_state = "kitchen"
+
+/area/station/service/ulthor_mime_office
+	name = "Ulthor Mime Office"
+	icon_state = "mime_office"
+
+/area/station/service/ulthor_theatre
+	name = "Ulthor Theatre"
+	icon_state = "Theatre"

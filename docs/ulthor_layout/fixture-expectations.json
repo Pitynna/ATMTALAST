@@ -1,0 +1,2606 @@
+[
+  {
+    "x": 58,
+    "y": 142,
+    "area": "/area/station/maintenance/solars/port/ulthor",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/high_volume"
+  },
+  {
+    "x": 60,
+    "y": 141,
+    "area": "/area/station/maintenance/solars/port/ulthor",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 62,
+    "y": 143,
+    "area": "/area/station/maintenance/solars/port/ulthor",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 62,
+    "y": 141,
+    "area": "/area/station/maintenance/solars/port/ulthor",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 62,
+    "y": 141,
+    "area": "/area/station/maintenance/solars/port/ulthor",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 68,
+    "y": 140,
+    "area": "/area/station/service/ulthor_kitchen_coldroom",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 69,
+    "y": 142,
+    "area": "/area/station/service/ulthor_kitchen_coldroom",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 69,
+    "y": 141,
+    "area": "/area/station/service/ulthor_kitchen_coldroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 69,
+    "y": 141,
+    "area": "/area/station/service/ulthor_kitchen_coldroom",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 69,
+    "y": 140,
+    "area": "/area/station/service/ulthor_kitchen_coldroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 69,
+    "y": 140,
+    "area": "/area/station/service/ulthor_kitchen_coldroom",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 71,
+    "y": 145,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 72,
+    "y": 168,
+    "area": "/area/station/maintenance/ulthor_west_passage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 72,
+    "y": 167,
+    "area": "/area/station/maintenance/ulthor_west_passage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 72,
+    "y": 166,
+    "area": "/area/station/maintenance/ulthor_west_passage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 72,
+    "y": 161,
+    "area": "/area/station/maintenance/ulthor_west_passage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 72,
+    "y": 141,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 73,
+    "y": 188,
+    "area": "/area/station/maintenance/solars/port/aft",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 73,
+    "y": 187,
+    "area": "/area/station/maintenance/solars/port/aft",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 73,
+    "y": 141,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 73,
+    "y": 133,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 73,
+    "y": 122,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 73,
+    "y": 121,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 73,
+    "y": 120,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 74,
+    "y": 169,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 74,
+    "y": 168,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 74,
+    "y": 167,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 74,
+    "y": 159,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 74,
+    "y": 133,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 74,
+    "y": 119,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 75,
+    "y": 150,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 75,
+    "y": 150,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 75,
+    "y": 149,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 75,
+    "y": 141,
+    "area": "/area/station/service/ulthor_72_141",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 75,
+    "y": 133,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 76,
+    "y": 181,
+    "area": "/area/station/commons/ulthor_bedroom_west_north",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 76,
+    "y": 177,
+    "area": "/area/station/commons/ulthor_bedroom_west_south",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 76,
+    "y": 169,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 76,
+    "y": 160,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 77,
+    "y": 181,
+    "area": "/area/station/commons/ulthor_bedroom_west_north",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 77,
+    "y": 180,
+    "area": "/area/station/commons/ulthor_bedroom_west_north",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 77,
+    "y": 178,
+    "area": "/area/station/commons/ulthor_bedroom_west_south",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 77,
+    "y": 177,
+    "area": "/area/station/commons/ulthor_bedroom_west_south",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 77,
+    "y": 177,
+    "area": "/area/station/commons/ulthor_bedroom_west_south",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 77,
+    "y": 171,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 77,
+    "y": 169,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 77,
+    "y": 163,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 77,
+    "y": 152,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 77,
+    "y": 142,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 77,
+    "y": 142,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 77,
+    "y": 139,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 77,
+    "y": 137,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 77,
+    "y": 136,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 78,
+    "y": 181,
+    "area": "/area/station/commons/ulthor_bedroom_west_north",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 78,
+    "y": 180,
+    "area": "/area/station/commons/ulthor_bedroom_west_north",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 78,
+    "y": 180,
+    "area": "/area/station/commons/ulthor_bedroom_west_north",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 78,
+    "y": 178,
+    "area": "/area/station/commons/ulthor_bedroom_west_south",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 78,
+    "y": 177,
+    "area": "/area/station/commons/ulthor_bedroom_west_south",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 78,
+    "y": 169,
+    "area": "/area/station/hallway/ulthor_service_north",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 78,
+    "y": 162,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 78,
+    "y": 152,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 78,
+    "y": 142,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 78,
+    "y": 139,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 78,
+    "y": 139,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 79,
+    "y": 192,
+    "area": "/area/station/maintenance/solars/port/aft",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 79,
+    "y": 192,
+    "area": "/area/station/maintenance/solars/port/aft",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 79,
+    "y": 139,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 79,
+    "y": 136,
+    "area": "/area/station/service/ulthor_bar_backroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 80,
+    "y": 196,
+    "area": "/area/station/maintenance/solars/port/aft",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/high_volume"
+  },
+  {
+    "x": 80,
+    "y": 181,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 80,
+    "y": 179,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 80,
+    "y": 178,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 80,
+    "y": 173,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 80,
+    "y": 167,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 80,
+    "y": 160,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 80,
+    "y": 150,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 81,
+    "y": 166,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 81,
+    "y": 165,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 81,
+    "y": 163,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 81,
+    "y": 163,
+    "area": "/area/station/commons/ulthor_81_165",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 81,
+    "y": 160,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 81,
+    "y": 152,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 81,
+    "y": 141,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 82,
+    "y": 155,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 83,
+    "y": 164,
+    "area": "/area/station/hallway/ulthor_eva_access",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 83,
+    "y": 163,
+    "area": "/area/station/hallway/ulthor_eva_access",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 83,
+    "y": 162,
+    "area": "/area/station/hallway/ulthor_eva_access",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 83,
+    "y": 162,
+    "area": "/area/station/hallway/ulthor_eva_access",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 83,
+    "y": 161,
+    "area": "/area/station/hallway/ulthor_eva_access",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 83,
+    "y": 161,
+    "area": "/area/station/hallway/ulthor_eva_access",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 83,
+    "y": 154,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 83,
+    "y": 153,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 83,
+    "y": 152,
+    "area": "/area/station/service/ulthor_82_155",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 83,
+    "y": 131,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 84,
+    "y": 173,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 84,
+    "y": 158,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 84,
+    "y": 157,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 84,
+    "y": 157,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 84,
+    "y": 149,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 84,
+    "y": 142,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 84,
+    "y": 138,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 85,
+    "y": 173,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 85,
+    "y": 173,
+    "area": "/area/station/commons/ulthor_85_173",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 85,
+    "y": 154,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 85,
+    "y": 153,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 85,
+    "y": 152,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 85,
+    "y": 151,
+    "area": "/area/station/hallway/ulthor_service_center",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 85,
+    "y": 145,
+    "area": "/area/station/service/ulthor_80_150",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 85,
+    "y": 138,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 85,
+    "y": 133,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 85,
+    "y": 127,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 85,
+    "y": 126,
+    "area": "/area/station/cargo/office",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 86,
+    "y": 182,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 86,
+    "y": 182,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 86,
+    "y": 182,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 86,
+    "y": 181,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 86,
+    "y": 180,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 87,
+    "y": 175,
+    "area": "/area/station/commons/ulthor_89_175",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 87,
+    "y": 165,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 87,
+    "y": 164,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 87,
+    "y": 162,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 87,
+    "y": 145,
+    "area": "/area/station/hallway/ulthor_service_south",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 87,
+    "y": 132,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 87,
+    "y": 131,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 87,
+    "y": 128,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 87,
+    "y": 126,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 87,
+    "y": 125,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 87,
+    "y": 124,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 88,
+    "y": 178,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 88,
+    "y": 176,
+    "area": "/area/station/commons/ulthor_89_175",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 88,
+    "y": 174,
+    "area": "/area/station/commons/ulthor_89_175",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 88,
+    "y": 143,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 88,
+    "y": 142,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 89,
+    "y": 180,
+    "area": "/area/station/service/ulthor_86_180",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 89,
+    "y": 176,
+    "area": "/area/station/commons/ulthor_89_175",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 89,
+    "y": 175,
+    "area": "/area/station/commons/ulthor_89_175",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 89,
+    "y": 174,
+    "area": "/area/station/commons/ulthor_89_175",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 89,
+    "y": 157,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 89,
+    "y": 157,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 89,
+    "y": 157,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 89,
+    "y": 155,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 89,
+    "y": 155,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 90,
+    "y": 162,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 90,
+    "y": 161,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 90,
+    "y": 159,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 90,
+    "y": 157,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 90,
+    "y": 155,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 90,
+    "y": 155,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 90,
+    "y": 152,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 90,
+    "y": 136,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 90,
+    "y": 135,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 91,
+    "y": 181,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/item/radio/intercom/locked/confessional"
+  },
+  {
+    "x": 91,
+    "y": 179,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 91,
+    "y": 178,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 91,
+    "y": 177,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 91,
+    "y": 176,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 91,
+    "y": 165,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 91,
+    "y": 163,
+    "area": "/area/station/commons/ulthor_87_165",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 91,
+    "y": 159,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 91,
+    "y": 150,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 91,
+    "y": 150,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 91,
+    "y": 134,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 91,
+    "y": 134,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 92,
+    "y": 185,
+    "area": "/area/station/maintenance/ulthor_northwest_passage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 92,
+    "y": 185,
+    "area": "/area/station/maintenance/ulthor_northwest_passage",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 92,
+    "y": 173,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 92,
+    "y": 157,
+    "area": "/area/station/service/ulthor_mime_office",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 92,
+    "y": 155,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 92,
+    "y": 154,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 92,
+    "y": 152,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 92,
+    "y": 150,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 92,
+    "y": 139,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 92,
+    "y": 139,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 92,
+    "y": 138,
+    "area": "/area/station/service/barber/ulthor",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 93,
+    "y": 183,
+    "area": "/area/station/maintenance/ulthor_northwest_passage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 93,
+    "y": 183,
+    "area": "/area/station/maintenance/ulthor_northwest_passage",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 93,
+    "y": 181,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/item/radio/intercom/locked/confessional"
+  },
+  {
+    "x": 93,
+    "y": 154,
+    "area": "/area/station/hallway/ulthor_theatre_access",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 93,
+    "y": 152,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 93,
+    "y": 151,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 93,
+    "y": 150,
+    "area": "/area/station/service/ulthor_93_151",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 94,
+    "y": 149,
+    "area": "/area/station/service/ulthor_costume_storage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 94,
+    "y": 147,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 94,
+    "y": 140,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 94,
+    "y": 138,
+    "area": "/area/station/maintenance/ulthor_service_passage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 94,
+    "y": 126,
+    "area": "/area/station/cargo/miningdock",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 95,
+    "y": 152,
+    "area": "/area/station/service/ulthor_costume_storage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 95,
+    "y": 151,
+    "area": "/area/station/service/ulthor_costume_storage",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 95,
+    "y": 151,
+    "area": "/area/station/service/ulthor_costume_storage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 95,
+    "y": 150,
+    "area": "/area/station/service/ulthor_costume_storage",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 95,
+    "y": 140,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 96,
+    "y": 180,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 96,
+    "y": 179,
+    "area": "/area/station/service/ulthor_91_176",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 96,
+    "y": 166,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 96,
+    "y": 165,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 96,
+    "y": 165,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 96,
+    "y": 164,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 96,
+    "y": 164,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 96,
+    "y": 163,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 96,
+    "y": 149,
+    "area": "/area/station/service/ulthor_costume_storage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 96,
+    "y": 143,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 96,
+    "y": 140,
+    "area": "/area/station/service/ulthor_theatre",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 98,
+    "y": 173,
+    "area": "/area/station/maintenance/ulthor_northwest_passage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 98,
+    "y": 172,
+    "area": "/area/station/maintenance/ulthor_northwest_passage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 98,
+    "y": 167,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 98,
+    "y": 163,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 99,
+    "y": 168,
+    "area": "/area/station/maintenance/ulthor_service_passage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 99,
+    "y": 160,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 99,
+    "y": 152,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 99,
+    "y": 151,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 99,
+    "y": 150,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 99,
+    "y": 149,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 99,
+    "y": 135,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 100,
+    "y": 176,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 100,
+    "y": 175,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 100,
+    "y": 174,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 100,
+    "y": 173,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 100,
+    "y": 168,
+    "area": "/area/station/maintenance/ulthor_service_passage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 100,
+    "y": 166,
+    "area": "/area/station/engineering/ulthor_eva",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 100,
+    "y": 163,
+    "area": "/area/station/engineering/ulthor_eva",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 100,
+    "y": 160,
+    "area": "/area/station/hallway/ulthor_service_east",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 101,
+    "y": 175,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 101,
+    "y": 168,
+    "area": "/area/station/maintenance/ulthor_service_passage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 101,
+    "y": 167,
+    "area": "/area/station/engineering/ulthor_eva",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 101,
+    "y": 166,
+    "area": "/area/station/engineering/ulthor_eva",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 101,
+    "y": 165,
+    "area": "/area/station/engineering/ulthor_eva",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 101,
+    "y": 164,
+    "area": "/area/station/engineering/ulthor_eva",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 103,
+    "y": 175,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 104,
+    "y": 175,
+    "area": "/area/station/command/ulthor_100_175",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 104,
+    "y": 166,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 104,
+    "y": 164,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 104,
+    "y": 163,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 105,
+    "y": 167,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 105,
+    "y": 163,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 106,
+    "y": 163,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 106,
+    "y": 163,
+    "area": "/area/station/command/ulthor_104_164",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 108,
+    "y": 181,
+    "area": "/area/station/commons/ulthor_96_166",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 109,
+    "y": 168,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 110,
+    "y": 159,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 112,
+    "y": 163,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 113,
+    "y": 162,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 114,
+    "y": 165,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 116,
+    "y": 161,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 117,
+    "y": 161,
+    "area": "/area/station/command/office/hop",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 131,
+    "y": 171,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 131,
+    "y": 169,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 132,
+    "y": 169,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 134,
+    "y": 166,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 134,
+    "y": 117,
+    "area": "/area/station/security/main",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 134,
+    "y": 114,
+    "area": "/area/station/security/main",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 135,
+    "y": 166,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 135,
+    "y": 118,
+    "area": "/area/station/security/main",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 137,
+    "y": 167,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 137,
+    "y": 164,
+    "area": "/area/station/command/teleporter",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 137,
+    "y": 155,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 138,
+    "y": 159,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 138,
+    "y": 158,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 138,
+    "y": 157,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 138,
+    "y": 116,
+    "area": "/area/station/security/main",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 139,
+    "y": 157,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 139,
+    "y": 157,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 139,
+    "y": 148,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/camera/motion"
+  },
+  {
+    "x": 140,
+    "y": 159,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 140,
+    "y": 157,
+    "area": "/area/station/command/office/captain/bedroom",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 140,
+    "y": 154,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 140,
+    "y": 151,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/item/radio/intercom/custom"
+  },
+  {
+    "x": 140,
+    "y": 151,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/item/radio/intercom/private"
+  },
+  {
+    "x": 140,
+    "y": 151,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 140,
+    "y": 148,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 140,
+    "y": 119,
+    "area": "/area/station/maintenance/ulthor_engineering_passage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 140,
+    "y": 117,
+    "area": "/area/station/security/main",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 140,
+    "y": 116,
+    "area": "/area/station/security/main",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 140,
+    "y": 115,
+    "area": "/area/station/security/main",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 141,
+    "y": 164,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 141,
+    "y": 153,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 141,
+    "y": 152,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/machinery/camera/motion"
+  },
+  {
+    "x": 141,
+    "y": 152,
+    "area": "/area/station/ai/ulthor_141_152",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 141,
+    "y": 148,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 142,
+    "y": 161,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 142,
+    "y": 150,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 142,
+    "y": 149,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 142,
+    "y": 148,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 142,
+    "y": 118,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 142,
+    "y": 117,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 142,
+    "y": 116,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 143,
+    "y": 118,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 144,
+    "y": 164,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 144,
+    "y": 149,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 144,
+    "y": 148,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 144,
+    "y": 147,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 144,
+    "y": 118,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 144,
+    "y": 117,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 144,
+    "y": 116,
+    "area": "/area/station/security/interrogation",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 145,
+    "y": 162,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 145,
+    "y": 149,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 145,
+    "y": 147,
+    "area": "/area/station/telecomms/ulthor_145_147",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 145,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 145,
+    "y": 122,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 146,
+    "y": 163,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 146,
+    "y": 162,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 146,
+    "y": 162,
+    "area": "/area/station/command/office/captain",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 146,
+    "y": 152,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 146,
+    "y": 151,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 146,
+    "y": 118,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 146,
+    "y": 118,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 146,
+    "y": 117,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 146,
+    "y": 116,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 147,
+    "y": 152,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 147,
+    "y": 151,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 147,
+    "y": 149,
+    "area": "/area/station/maintenance/ulthor_ai_passage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 147,
+    "y": 129,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 147,
+    "y": 127,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 147,
+    "y": 121,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 147,
+    "y": 118,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 147,
+    "y": 116,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 148,
+    "y": 156,
+    "area": "/area/station/maintenance/ulthor_research_passage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 148,
+    "y": 153,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 148,
+    "y": 152,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 148,
+    "y": 151,
+    "area": "/area/station/ai/ulthor_148_151",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 148,
+    "y": 149,
+    "area": "/area/station/maintenance/ulthor_ai_passage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 148,
+    "y": 125,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 149,
+    "y": 149,
+    "area": "/area/station/maintenance/ulthor_ai_passage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 149,
+    "y": 129,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 150,
+    "y": 174,
+    "area": "/area/station/engineering/storage/tech",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 150,
+    "y": 173,
+    "area": "/area/station/engineering/storage/tech",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 150,
+    "y": 152,
+    "area": "/area/station/maintenance/ulthor_research_passage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 150,
+    "y": 151,
+    "area": "/area/station/maintenance/ulthor_research_passage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 150,
+    "y": 150,
+    "area": "/area/station/maintenance/ulthor_research_passage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 150,
+    "y": 143,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 150,
+    "y": 142,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 150,
+    "y": 123,
+    "area": "/area/station/engineering/ulthor_149_129",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 150,
+    "y": 115,
+    "area": "/area/station/security/evidence",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 151,
+    "y": 145,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 151,
+    "y": 141,
+    "area": "/area/station/maintenance/ulthor_ai_passage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 151,
+    "y": 135,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 151,
+    "y": 130,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 151,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 151,
+    "y": 126,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 152,
+    "y": 176,
+    "area": "/area/station/engineering/storage/tech",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 152,
+    "y": 175,
+    "area": "/area/station/engineering/storage/tech",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 152,
+    "y": 144,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 152,
+    "y": 123,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 152,
+    "y": 123,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 152,
+    "y": 122,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 153,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 153,
+    "y": 121,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 154,
+    "y": 174,
+    "area": "/area/station/engineering/storage/tech",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 154,
+    "y": 146,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 154,
+    "y": 145,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 154,
+    "y": 144,
+    "area": "/area/station/command/ulthor_154_145",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 154,
+    "y": 127,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 154,
+    "y": 126,
+    "area": "/area/station/engineering/ulthor_151_130",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 154,
+    "y": 123,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 154,
+    "y": 123,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 154,
+    "y": 121,
+    "area": "/area/station/engineering/ulthor_152_122",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 155,
+    "y": 140,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 156,
+    "y": 175,
+    "area": "/area/station/engineering/storage/tech",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 156,
+    "y": 140,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 156,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_tool_storage",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 156,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_tool_storage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 156,
+    "y": 126,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 156,
+    "y": 122,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 157,
+    "y": 140,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 157,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_tool_storage",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 157,
+    "y": 119,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 158,
+    "y": 175,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 158,
+    "y": 174,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 158,
+    "y": 173,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 158,
+    "y": 173,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 158,
+    "y": 172,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 158,
+    "y": 140,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 158,
+    "y": 119,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 159,
+    "y": 140,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 159,
+    "y": 138,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 159,
+    "y": 130,
+    "area": "/area/station/engineering/ulthor_tool_storage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 159,
+    "y": 129,
+    "area": "/area/station/engineering/ulthor_tool_storage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 159,
+    "y": 128,
+    "area": "/area/station/engineering/ulthor_tool_storage",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 159,
+    "y": 126,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 160,
+    "y": 175,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 160,
+    "y": 174,
+    "area": "/area/station/science/robotics/chargebay",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 160,
+    "y": 148,
+    "area": "/area/station/science/ulthor_coldroom",
+    "type": "/obj/machinery/alarm/server"
+  },
+  {
+    "x": 160,
+    "y": 137,
+    "area": "/area/station/engineering/ulthor_monitoring",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 160,
+    "y": 126,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 160,
+    "y": 103,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 161,
+    "y": 149,
+    "area": "/area/station/science/ulthor_coldroom",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 161,
+    "y": 149,
+    "area": "/area/station/science/ulthor_coldroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 161,
+    "y": 147,
+    "area": "/area/station/science/ulthor_coldroom",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 161,
+    "y": 147,
+    "area": "/area/station/science/ulthor_coldroom",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 161,
+    "y": 129,
+    "area": "/area/station/maintenance/ulthor_engineering_passage",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 161,
+    "y": 124,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 161,
+    "y": 119,
+    "area": "/area/station/engineering/ulthor_158_119",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 162,
+    "y": 149,
+    "area": "/area/station/science/ulthor_coldroom",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 163,
+    "y": 149,
+    "area": "/area/station/science/server",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 163,
+    "y": 149,
+    "area": "/area/station/science/server",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 163,
+    "y": 147,
+    "area": "/area/station/science/server",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 163,
+    "y": 147,
+    "area": "/area/station/science/server",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 164,
+    "y": 149,
+    "area": "/area/station/science/server",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 164,
+    "y": 149,
+    "area": "/area/station/science/server",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 164,
+    "y": 149,
+    "area": "/area/station/science/server",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 165,
+    "y": 162,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 165,
+    "y": 161,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 165,
+    "y": 158,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 165,
+    "y": 145,
+    "area": "/area/station/maintenance/ulthor_engineering_passage",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 166,
+    "y": 161,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 166,
+    "y": 150,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 166,
+    "y": 147,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 166,
+    "y": 145,
+    "area": "/area/station/maintenance/ulthor_engineering_passage",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 167,
+    "y": 161,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 167,
+    "y": 152,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 167,
+    "y": 148,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 168,
+    "y": 166,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 168,
+    "y": 162,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 168,
+    "y": 161,
+    "area": "/area/station/command/office/rd",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 168,
+    "y": 122,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 168,
+    "y": 107,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 168,
+    "y": 105,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 169,
+    "y": 145,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 169,
+    "y": 111,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/machinery/atmospherics/unary/vent_scrubber"
+  },
+  {
+    "x": 169,
+    "y": 109,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/on"
+  },
+  {
+    "x": 169,
+    "y": 105,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 170,
+    "y": 161,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 170,
+    "y": 160,
+    "area": "/area/station/science/genetics",
+    "type": "/obj/machinery/firealarm"
+  },
+  {
+    "x": 170,
+    "y": 145,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/alarm"
+  },
+  {
+    "x": 170,
+    "y": 142,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump"
+  },
+  {
+    "x": 170,
+    "y": 139,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump"
+  },
+  {
+    "x": 170,
+    "y": 136,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump"
+  },
+  {
+    "x": 170,
+    "y": 132,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump"
+  },
+  {
+    "x": 170,
+    "y": 107,
+    "area": "/area/station/security/checkpoint",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 171,
+    "y": 145,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/item/radio/intercom"
+  },
+  {
+    "x": 172,
+    "y": 143,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/power/apc"
+  },
+  {
+    "x": 182,
+    "y": 133,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/camera"
+  },
+  {
+    "x": 184,
+    "y": 142,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump/high_volume"
+  },
+  {
+    "x": 184,
+    "y": 139,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump"
+  },
+  {
+    "x": 184,
+    "y": 136,
+    "area": "/area/station/engineering/atmos",
+    "type": "/obj/machinery/atmospherics/unary/vent_pump"
+  }
+]
