@@ -361,22 +361,12 @@ SUBSYSTEM_DEF(tgui)
 /datum/controller/subsystem/tgui/OnConfigLoad()
 	var/storage_iframe = CONFIG_GET(string/storage_cdn_iframe)
 
-	if(storage_iframe && storage_iframe != /datum/config_entry/string/storage_cdn_iframe::default)
-		basehtml = replacetext(basehtml, "\[tgui:storagecdn\]", storage_iframe)
-		return
-
-	if(CONFIG_GET(string/asset_transport) == ASSET_TRANSPORT_WEBROOT)
+	if(!storage_iframe && CONFIG_GET(string/asset_transport) == ASSET_TRANSPORT_WEBROOT)
 		SSassets.apply_configuration()
-		var/datum/asset_transport/webroot/webroot = SSassets.transport
+		var/datum/asset_cache_item/item = SSassets.transport.register_asset("iframe.html", file("tgui/public/iframe.html"))
+		storage_iframe = SSassets.transport.get_asset_url(asset_cache_item = item)
 
-		var/datum/asset_cache_item/item = webroot.register_asset("iframe.html", file("tgui/public/iframe.html"))
-		basehtml = replacetext(basehtml, "\[tgui:storagecdn\]", "[CONFIG_GET(string/asset_cdn_url)][webroot.get_asset_suffex(item)]")
-		return
-
-	if(!storage_iframe)
-		return
-
-	basehtml = replacetext(basehtml, "\[tgui:storagecdn\]", storage_iframe)
+	basehtml = replacetext(basehtml, "\[tgui:storagecdn\]", storage_iframe || "")
 
 /**
  * public

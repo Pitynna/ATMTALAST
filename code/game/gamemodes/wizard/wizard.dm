@@ -154,7 +154,8 @@
 		messages.Add(span_danger("You are the Space Wizard!"))
 	messages.Add("<b>The Space Wizards Federation has given you the following tasks:</b>")
 	messages.Add(wizard.prepare_announce_objectives(title = FALSE))
-	messages.Add(span_motd("С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/Wizard\">Маг</a>"))
+	if(CONFIG_GET(string/wikiurl))
+		messages.Add(span_motd("С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/Wizard\">Маг</a>"))
 	to_chat(wizard.current, custom_boxed_message("red_box center", messages.Join("<br>")))
 	return
 

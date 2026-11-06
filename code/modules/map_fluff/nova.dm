@@ -15,4 +15,4 @@
 	company_name = "\"Нанотрейзен\""
 	company_short = "НТ"
 	starsys_name = "Эпсилон Лукуста"
-	webmap_url = "https://webmap.affectedarc07.co.uk/maps/ss1984/nova/"
+	webmap_url = null

@@ -37,7 +37,7 @@
   - del: '[April Fools] clown supremacy (#4759)"'
   - del: '[April Fools] Vodka Absolut, part Ы (#4753)"'
   - del: '[April Fools] New announcer voice (#4758)"'
-  - server: bump rustg version 3.0.0-ss220 -> 3.1.0-ss220
+  - server: bump rustg version 3.0.0 -> 3.1.0
   Den109G:
   - refactor: Species defines in masses (#4771)
   Honker9999999:

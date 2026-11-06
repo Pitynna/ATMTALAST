@@ -297,31 +297,31 @@
 	default = null
 
 /datum/config_entry/string/wikiurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/forumurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/rulesurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/githuburl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/donationsurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/repositoryurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/discordurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/discordforumurl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/discordbugreporturl
-	default = "http://example.org"
+	default = null
 
 /datum/config_entry/string/overflow_server_url
 	default = null

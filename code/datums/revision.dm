@@ -14,7 +14,7 @@ GLOBAL_PROTECT(revision_info) // Dont mess with this
 	// git rev-parse origin/master220
 	var/originmastercommit
 	// repo name
-	var/repo = "ss220-space/Paradise"
+	var/repo = "Pitynna/ATMTALAST"
 
 /datum/code_revision/New()
 	commit_hash = rustg_git_revparse("HEAD")
@@ -48,7 +48,10 @@ GAME_VERB_DESC(/client, get_revision_info, "Show Server Revision", "Retrieve tec
 
 	// Commit info
 	if(GLOB.revision_info.commit_hash && GLOB.revision_info.commit_date)
-		msg += "<b>Server Commit:</b> <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revision_info.commit_hash]'>[GLOB.revision_info.commit_hash]</a> (Date: [GLOB.revision_info.commit_date])"
+		if(CONFIG_GET(string/githuburl))
+			msg += "<b>Server Commit:</b> <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revision_info.commit_hash]'>[GLOB.revision_info.commit_hash]</a> (Date: [GLOB.revision_info.commit_date])"
+		else
+			msg += "<b>Server Commit:</b> [GLOB.revision_info.commit_hash] (Date: [GLOB.revision_info.commit_date])"
 	else
 		msg += "<b>Server Commit:</b> <i>Unable to determine</i>"
 

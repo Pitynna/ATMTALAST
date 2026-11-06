@@ -48,7 +48,7 @@
   - unknown: Basic Actions Modifiers (#5636)
 '2024-08-05':
   Aziz Chynaliev:
-  - server: bump rustg version 3.1.0-ss220 -> 3.3.0-ss220
+  - server: bump rustg version 3.1.0 -> 3.3.0
   FanTik-Ratge:
   - imageadd: and another inhand-fix (#5663)
   Sheya:

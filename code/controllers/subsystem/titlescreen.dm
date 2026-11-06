@@ -208,7 +208,6 @@ SUBSYSTEM_DEF(title)
 	var/datum/asset_cache_item/screen_image
 	/// Randow phrase for this round
 	var/random_phrase = "О нет, моя фраза!"
-	var/current_icon = "ss1984.gif"
 
 	var/list/color2tguitheme = list("#202020" = "dark", "#EEEEEE" = "light", "#1b2633" = "ntos", "#4d0202" = "syndicate", "#800448" = "paradise")
 
@@ -298,7 +297,6 @@ SUBSYSTEM_DEF(title)
 	var/list/html = list(html_text)
 	var/mob/new_player/player = user
 	var/screen_image_url = SSassets.transport.get_asset_url(asset_cache_item = screen_image)
-	var/icon_url = SSassets.transport.get_asset_url(asset_name = current_icon)
 
 	//hope that client won`t use custom theme
 	html += {"<body class="[current_theme][viewer?.prefs?.toggles2 & PREFTOGGLE_2_PIXELATED_MENU ? " pixelated" : ""]" style="background-image: [screen_image_url ? "url([screen_image_url])" : "" ];">"}
@@ -319,7 +317,7 @@ SUBSYSTEM_DEF(title)
 		<div class="container_logo">
 			<div class="random_title_message">[random_phrase]</div>
 			<div class="logo_and_preview">
-				<img class="logo" src="[icon_url]">
+				<div class="logo">ATMTA</div>
 				<div class="preview">
 					<img src="" alt="" id="preview" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/IsDkAAAAABJRU5ErkJggg=='">
 				</div>
@@ -352,7 +350,7 @@ SUBSYSTEM_DEF(title)
 		<a class="menu_button" href='byond://?src=[player.UID()];sound_options=1'>Настройки громкости</a>
 		<a class="menu_button" href='byond://?src=[player.UID()];poll_panel=1'>Открыть голосование</a>
 	"}
-	if(!viewer?.prefs.discord_id || (viewer?.prefs.discord_id && length(viewer?.prefs.discord_id) == 32))
+	if(CONFIG_GET(string/discordurl) && (!viewer?.prefs.discord_id || length(viewer?.prefs.discord_id) == 32))
 		html += {"<a class="menu_button" href='byond://?src=[player.UID()];connect_discord=1'>Привязка Discord</a>"}
 	if(GLOB.join_tos && !viewer.tos_consent)
 		html += {"<a class="menu_button" href='byond://?src=[player.UID()];tos=1'>Политика конфидициальности</a>"}
@@ -370,8 +368,8 @@ SUBSYSTEM_DEF(title)
 	html += {"<label class="hide_button" for="hide_menu"><i class="fas fa-angles-left"></i></label>"}
 	html += {"
 		<div class="container_links">
-			<a class="link_button" href='byond://?src=[player.UID()];wiki=1'><i class="fab fa-wikipedia-w"></i></a>
-			<a class="link_button" href='byond://?src=[player.UID()];discord=1'><i class="fab fa-discord"></i></a>
+			<a class="link_button" aria-disabled="true"><i class="fab fa-wikipedia-w"></i></a>
+			<a class="link_button" aria-disabled="true"><i class="fab fa-discord"></i></a>
 			<a class="link_button" title="Чейнджлог" href='byond://?src=[player.UID()];changelog=1'><i class="fas fa-newspaper"></i></a>
 		</div>
 	"}

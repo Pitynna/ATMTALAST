@@ -196,7 +196,7 @@ export class Changelog extends Component<unknown, State> {
 
     const header = (
       <Section>
-        <h1>Paradise Station</h1>
+        <h1>ATMTA</h1>
         <p>
           <b>Thanks to: </b>
           Baystation 12, /tg/station, /vg/station, NTstation, CDK Station devs,
@@ -204,13 +204,6 @@ export class Changelog extends Component<unknown, State> {
           developers and Radithor for the title image. Also a thanks to anybody
           who has contributed who is not listed here :( Ask to be added here on
           irc.
-        </p>
-        <p>
-          {'Recent GitHub contributors can be found '}
-          <a href="https://github.com/ss220-space/Paradise/pulse/monthly">
-            here
-          </a>
-          .
         </p>
 
         {dateDropdown}
@@ -258,7 +251,6 @@ export class Changelog extends Component<unknown, State> {
         </p>
       </Section>
     );
-    const prNumberMatcher = /#\d+/;
     const changes =
       typeof data === 'object' &&
       Object.keys(data).length > 0 &&
@@ -275,7 +267,6 @@ export class Changelog extends Component<unknown, State> {
                       {changes.map((c, index) => {
                         const changeTypes = Object.keys(c)[0];
                         const change = c[changeTypes];
-                        const prMatch = change.match(prNumberMatcher);
                         const icon = (
                           <Table.Cell
                             key={index}
@@ -303,30 +294,12 @@ export class Changelog extends Component<unknown, State> {
                         );
 
                         return (
-                          (prMatch !== null && (
-                            <Table.Row key={changeTypes + change}>
-                              {icon}
-                              <Table.Cell className="Changelog__Cell">
-                                <a
-                                  href={
-                                    'https://github.com/ss220-space/Paradise/pull/' +
-                                    prMatch[0].substring(1)
-                                  }
-                                >
-                                  {' '}
-                                  {change.charAt(0).toUpperCase() +
-                                    change.slice(1)}{' '}
-                                </a>
-                              </Table.Cell>
-                            </Table.Row>
-                          )) || (
-                            <Table.Row key={changeTypes + change}>
-                              {icon}
-                              <Table.Cell className="Changelog__Cell">
-                                {change}
-                              </Table.Cell>
-                            </Table.Row>
-                          )
+                          <Table.Row key={changeTypes + change}>
+                            {icon}
+                            <Table.Cell className="Changelog__Cell">
+                              {change}
+                            </Table.Cell>
+                          </Table.Row>
                         );
                       })}
                     </Table>

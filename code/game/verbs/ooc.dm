@@ -48,11 +48,10 @@ GAME_VERB(/client, ooc, VERB_OOC, VERB_CATEGORY_OOC)
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
 			return
 		if(findtext(msg, "https://") || findtext(msg, "http://"))
-			if(!findtext(msg, "ss220.space"))
-				to_chat(src, "<b>Advertising other sites is not allowed.</b>")
-				log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
-				message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
-				return
+			to_chat(src, "<b>Advertising other sites is not allowed.</b>")
+			log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
+			return
 
 	msg = handle_emojis(msg)
 
@@ -160,11 +159,10 @@ GAME_VERB_DESC(/client, looc, VERB_LOOC, "Local OOC, seen only by those in view.
 			message_admins("[key_name_admin(src)] has attempted to advertise in LOOC: [msg]")
 			return
 		if(findtext(msg, "https://") || findtext(msg, "http://"))
-			if(!findtext(msg, "ss220.space"))
-				to_chat(src, "<b>Advertising other sites is not allowed.</b>")
-				log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
-				message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
-				return
+			to_chat(src, "<b>Advertising other sites is not allowed.</b>")
+			log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
+			return
 
 	var/msg_runechat = msg
 	msg = handle_emojis(msg)

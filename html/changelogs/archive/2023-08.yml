@@ -191,7 +191,7 @@
   Bizzonium:
   - del: use and migrate old TTS cache"
   - bugfix: move play tts callback creation
-  - unknown: bump rust-g to 3.0.0-ss220
+  - unknown: bump rust-g to 3.0.0
   DeDerevce:
   - imageadd: holy constructs (#3347)
   Honker9999999:

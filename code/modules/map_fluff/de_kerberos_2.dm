@@ -9,7 +9,7 @@
 	company_name = "\"Нанотрейзен\""
 	company_short = "НТ"
 	starsys_name = "Эпсилон Лукуста"
-	webmap_url = "https://webmap.affectedarc07.co.uk/maps/ss1984/deltastation/"
+	webmap_url = null
 	admin_only = TRUE
 	linkage = SELFLOOPING
 	forced_mode = /datum/game_mode/de_kerberos_2

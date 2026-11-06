@@ -4,10 +4,10 @@ TARGET_DONATION 20000
 ## The amount of donations for server infrastructure
 
 ## Link to boosty
-BOOSTY_URL "https://boosty.to/ss220"
+# BOOSTY_URL https://example.org
 
 ## Link to kofi
-KOFI_URL "https://ko-fi.com/ss220"
+# KOFI_URL https://example.org
 
 ## Link to a Discord channel with detailed information
-DISCORD_URL "https://discord.com/channels/617003227182792704/952603671475155035/952696004367495188"
+# DISCORD_URL https://example.org

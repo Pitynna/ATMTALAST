@@ -70,17 +70,17 @@ export const Donations = (props: unknown) => {
               <Section fitted noTopPadding fill title="Поддержать сервер">
                 <Stack fill style={{ justifyContent: 'center' }}>
                   <Stack.Item>
-                    <a href={kofiRef}>
+                    <a href={kofiRef || undefined} aria-disabled={!kofiRef}>
                       <Box className="Donation_Image Kofi__Image" />
                     </a>
                   </Stack.Item>
                   <Stack.Item>
-                    <a href={boostyRef}>
+                    <a href={boostyRef || undefined} aria-disabled={!boostyRef}>
                       <Box className="Donation_Image Boosty__Image" />
                     </a>
                   </Stack.Item>
                   <Stack.Item>
-                    <a href={discordRef}>
+                    <a href={discordRef || undefined} aria-disabled={!discordRef}>
                       <Box className="Donation_Image Discord__Image" />
                     </a>
                   </Stack.Item>

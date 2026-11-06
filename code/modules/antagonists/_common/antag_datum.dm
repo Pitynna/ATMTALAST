@@ -160,7 +160,7 @@ GLOBAL_LIST_EMPTY(antagonists_datums)
 		messages.Add(owner.prepare_announce_objectives())
 	apply_innate_effects()
 	messages.Add(finalize_antag())
-	if(wiki_page_name)
+	if(wiki_page_name && CONFIG_GET(string/wikiurl))
 		messages.Add(span_motd("С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/[wiki_page_name]\">[russian_wiki_name]"))
 	to_chat(owner.current, custom_boxed_message("red_box center", messages.Join("<br>")))
 

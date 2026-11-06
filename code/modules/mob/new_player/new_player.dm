@@ -108,15 +108,8 @@
 	if(href_list["job_preferences"])
 		client.prefs.SetChoices(usr)
 
-	if(href_list["wiki"])
-		if(tgui_alert(usr, "Открыть вики проекта?", "Вики", list("Да", "Нет")) != "Да")
-			return
-		client << link(CONFIG_GET(string/wikiurl))
-
-	if(href_list["discord"])
-		if(tgui_alert(usr, "Перейти на Discord сервер?", "Discord", list("Да", "Нет")) != "Да")
-			return
-		client << link(CONFIG_GET(string/discordurl))
+	if(href_list["wiki"] || href_list["discord"])
+		return
 
 	if(href_list["changelog"])
 		client.changelog()

@@ -1,11 +1,4 @@
-<a align="center" href="#"><img src=".github/images/ss1984.gif" alt="Буквально SS1984"></a>
-# <p align="center"> Добро пожаловать в репозиторий проекта SS1984!</p>
-
-<p align="center">
-	<a href="https://github.com/ss220-space/Paradise/actions?query=workflow%3ACI"><img src="https://github.com/ss220-space/Paradise/workflows/CI/badge.svg" alt="CI"></a>
-	<a href="https://github.com/ss220-space/Paradise/actions?query=workflow%3A%22Render+Nanomaps%22"><img src="https://github.com/ss220-space/Paradise/workflows/Render%20Nanomaps/badge.svg" alt="Render Nanomaps"></a>
-</p>
-
+# <p align="center">ATMTA</p>
 
 <p align="center">
 	<img src=".github/images/badges/built-with-bugs.svg" alt="Bugs">
@@ -15,14 +8,10 @@
 
 | Вебсайт             | Ссылка                                                                                               |
 | ------------------- | ---------------------------------------------------------------------------------------------------- |
-| Code                | https://github.com/ss220-space/Paradise                                                              |
-| Wiki                | https://wiki.ss220.space/                                                                            |
-| Codedocs            | https://ss220-space.github.io/Paradise/                                                              |
-| Discord             | https://discord.ss220.space                                                                          |
-
-> [!TIP]
-> Некоторая полезная информация находится на нашем Discord-сервере в закрытых каналах разработки.<br>
-> Для получения доступа, посетите канал [#информация](https://discord.com/channels/617003227182792704/628271712097665025). В нём вы найдёте информацию о доступных ролях, их функциях и способах получения.<br>
+| Code                | https://github.com/Pitynna/ATMTALAST                                                              |
+| Wiki                | Не настроено |
+| Codedocs            | Не настроено |
+| Discord             | Не настроено |
 
 # Полезная документация
 

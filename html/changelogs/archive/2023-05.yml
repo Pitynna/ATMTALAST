@@ -65,7 +65,7 @@
 '2023-05-06':
   Bizzonium:
   - add: bump ubuntu-20.04 to ubuntu-22.04 in workflows
-  - add: update rust_g from 1.0.4-ss220 to 1.2.0-ss220
+  - add: update rust_g from 1.0.4 to 1.2.0
   - bugfix: libssl1.1:i386 on Ubuntu 22.04
   - bugfix: libssl1.1:i386 on Ubuntu 22.04 (2nd try)
   - bugfix: libssl1.1:i386 on Ubuntu 22.04 (3rd try)
@@ -259,7 +259,7 @@
   Bizzonium:
   - tweak: lower TTS RPS limit from 5 to 3
   - bugfix: temporarily disable TTS safety mechanisms
-  - add: update rust_g from 1.2.0-ss220 to 2.0.0-ss220
+  - add: update rust_g from 1.2.0 to 2.0.0
 '2023-05-27':
   Bizzonium:
   - add: make Silero TTS url configurable via config

@@ -210,7 +210,8 @@
 			messages.Add("<b>Вы неуязвимы и невидимы для всех, кроме других призраков. Большинство способностей раскроют вас, сделав уязвимым.</b>")
 			messages.Add("<b>Чтобы существовать, вы должны высасывать жизненную эссенцию из людей. Эта эссенции — ваш ресурс и здоровье, она питает все ваши способности.</b>")
 			messages.Add("<b><i>Вы не помните ничего из своих прошлых жизней, а также не будете помнить ничего из этой после своей смерти.</i></b>")
-			messages.Add(span_motd("С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/Revenant\">Ревенант</a>"))
+			if(CONFIG_GET(string/wikiurl))
+				messages.Add(span_motd("С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/Revenant\">Ревенант</a>"))
 			var/datum/objective/revenant/objective = new
 			objective.owner = mind
 			mind.objectives += objective

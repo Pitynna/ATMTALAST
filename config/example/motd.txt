@@ -1,6 +1,8 @@
-<h1>Добро пожаловать в Space Station 13!</h1>
-
-<i>Билд, используемый на данном сервере — форк билда <a href="https://www.paradisestation.org">Paradise</a>, разрабатываемый проектом SS1984.</i>
-<br>
-<strong>Наш GitHub:</strong> <a href="https://github.com/ss220-space/Paradise">https://github.com/ss220-space/Paradise</a>
-<br>
+<div class="motd-card">
+    <h1>Добро пожаловать на ATMTA!</h1>
+    <p>Наш сервер использует модифицированный билд Paradise Station.<br>Журнал обновлений доступен на титульном экране, во вкладке OOC и в Esc-меню.</p>
+    <div>
+        <strong>➤ <a aria-disabled="true">Discord</a></strong><br>
+        <strong>➤ <a aria-disabled="true">Wiki</a></strong>
+    </div>
+</div>

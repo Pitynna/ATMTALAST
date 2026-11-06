@@ -420,7 +420,8 @@
 	messages.Add(span_specialnotice("Если они коснутся вас, то ещё больше."))
 	messages.Add(span_specialnotice("Наконец, вы можете атаковать любой предмет или мёртвое существо, чтобы поглотить его — это 1/3 вашего максимального здоровья и добавят к вашему запасу пищи."))
 	messages.Add(span_specialnotice("Поедание предметов уменьшит ваш запас пищи.\n"))
-	messages.Add(span_motd("<b>С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/Morph\">Морф</a></b>\n"))
+	if(CONFIG_GET(string/wikiurl))
+		messages.Add(span_motd("<b>С полной информацией вы можете ознакомиться на вики: <a href=\"[CONFIG_GET(string/wikiurl)]/index.php/Morph\">Морф</a></b>\n"))
 
 	SEND_SOUND(src, sound('sound/magic/mutate.ogg'))
 	if(give_default_objectives)
