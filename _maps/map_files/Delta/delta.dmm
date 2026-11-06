@@ -27351,6 +27351,7 @@
 /area/station/medical/ward)
 "fTl" = (
 /obj/structure/flora/ausbushes/ywflowers,
+/mob/living/simple_animal/cock/Commandor,
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "fTr" = (
@@ -63805,13 +63806,6 @@
 	icon_state = "white"
 	},
 /area/station/science/research)
-"nxC" = (
-/mob/living/simple_animal/mouse/white{
-	desc = "Близкий друг психиатра. Не подпускать к Рантайму.";
-	name = "Бобби"
-	},
-/turf/simulated/floor/wood/fancy/light,
-/area/station/medical/psych)
 "nxL" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "arrival"
@@ -80132,10 +80126,7 @@
 /area/station/maintenance/asmaint3)
 "qOE" = (
 /obj/structure/cable,
-/mob/living/simple_animal/mouse/brown/Tom{
-	desc = "Главный помощник архитекторов станции.";
-	name = "Инспектор Мыш"
-	},
+/mob/living/simple_animal/mouse/brown/Tom,
 /turf/simulated/floor/plating,
 /area/station/maintenance/electrical)
 "qOF" = (
@@ -159977,7 +159968,7 @@ fdP
 uuI
 tjm
 set
-nxC
+pHn
 rYU
 uot
 oOH

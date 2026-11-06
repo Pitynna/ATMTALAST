@@ -37232,15 +37232,6 @@
 	},
 /turf/simulated/floor/shuttle/plating,
 /area/shuttle)
-"rlp" = (
-/mob/living/simple_animal/mouse/brown{
-	desc = "Секретная разработка \"Синдиката\". Сидит тут потому, что сам хочет";
-	name = "Мышедемон"
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "darkfull"
-	},
-/area/centcom/syndicate_base/prison)
 "rlw" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -76740,7 +76731,7 @@ tpQ
 xho
 sxc
 dfm
-rlp
+dfm
 xho
 ena
 wbG

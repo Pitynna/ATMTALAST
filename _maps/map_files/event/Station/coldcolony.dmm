@@ -35283,6 +35283,10 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/carpet/cold,
 /area/coldcolony/ruin/abandoned_banya)
+"oib" = (
+/mob/living/simple_animal/cock/Commandor,
+/turf/simulated/floor/grass,
+/area/coldcolony/malta/resid_serv/hydroponics)
 "oik" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -91055,7 +91059,7 @@ nKe
 wif
 wif
 enR
-bjt
+oib
 bjt
 kDj
 rSb

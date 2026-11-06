@@ -19586,6 +19586,10 @@
 	icon_state = "whiteblue"
 	},
 /area/station/command/office/cmo)
+"doz" = (
+/mob/living/simple_animal/cock/Commandor,
+/turf/simulated/floor/grass,
+/area/hydroponics)
 "doD" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/structure/disposalpipe/segment,
@@ -38329,10 +38333,7 @@
 /area/station/command/office/ce)
 "gGS" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/mouse/brown/Tom{
-	desc = "Главный помощник архитекторов станции.";
-	name = "Инспектор Мыш"
-	},
+/mob/living/simple_animal/mouse/brown/Tom,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -135577,10 +135578,6 @@
 	},
 /area/station/security/brig)
 "xfO" = (
-/mob/living/simple_animal/mouse/white{
-	desc = "Близкий друг психиатра. Не подпускать к Рантайму.";
-	name = "Бобби"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -167973,7 +167970,7 @@ kml
 gOM
 lvj
 swc
-jlS
+doz
 wRa
 gqP
 hdV

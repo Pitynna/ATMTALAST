@@ -58,7 +58,9 @@
 	)
 
 /mob/living/simple_animal/cock/Commandor
-	name = "Commandor Klucky"
+	// The old map named an ordinary chicken Commander Clucky.
+	parent_type = /mob/living/simple_animal/chicken
+	name = "Commander Clucky"
 	desc = "Его великая армия бесчисленна. Ко-ко-ко."
 	unique_pet = TRUE
 	gold_core_spawnable = NO_SPAWN

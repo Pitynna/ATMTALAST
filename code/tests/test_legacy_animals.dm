@@ -1,7 +1,7 @@
 /// Reclassified old pets must survive, while new named pets must disappear even on direct spawn.
 /datum/unit_test/legacy_animal_roster/Run()
 	var/turf/test_turf = locate(4, 4, 1)
-	for(var/animal_type in list(/mob/living/simple_animal/pet/dog/corgi/Ian, /mob/living/simple_animal/pet/dog/corgi/Lisa, /mob/living/simple_animal/pet/cat/Runtime, /mob/living/simple_animal/pet/cat/Proc, /mob/living/simple_animal/pet/dog/fox/Renault, /mob/living/simple_animal/pet/dog/pug, /mob/living/simple_animal/frog/toxic, /mob/living/simple_animal/hostile/retaliate/poison/snake, /mob/living/basic/cockroach))
+	for(var/animal_type in list(/mob/living/simple_animal/cow/Betsy, /mob/living/simple_animal/cock/Commandor, /mob/living/simple_animal/pet/dog/corgi/Ian, /mob/living/simple_animal/pet/dog/corgi/Lisa, /mob/living/simple_animal/pet/cat/Runtime, /mob/living/simple_animal/pet/cat/Proc, /mob/living/simple_animal/pet/dog/fox/Renault, /mob/living/simple_animal/pet/dog/pug, /mob/living/simple_animal/frog/toxic, /mob/living/simple_animal/hostile/retaliate/poison/snake, /mob/living/basic/cockroach))
 		var/mob/living/animal = allocate(animal_type, test_turf)
 		if(animal_type == /mob/living/simple_animal/pet/dog/corgi/Ian && QDELETED(animal))
 			// Persistent Ian becomes a puppy at age zero on a fresh server.
@@ -10,7 +10,7 @@
 			qdel(ian_puppy)
 		else
 			TEST_ASSERT_NOT(QDELETED(animal), "Old animal [animal_type] must remain usable after reclassification")
-	for(var/animal_type in list(/mob/living/simple_animal/pig/Sanya, /mob/living/simple_animal/cow/Betsy, /mob/living/simple_animal/chicken/Wife, /mob/living/simple_animal/cock/Commandor, /mob/living/simple_animal/goose/Scientist, /mob/living/simple_animal/pet/cat/fat/Iriska, /mob/living/simple_animal/pet/cat/white/Penny, /mob/living/simple_animal/pet/cat/birman/Crusher, /mob/living/simple_animal/mouse/wooly/rep, /mob/living/simple_animal/pet/library_owl, /mob/living/simple_animal/mouse/rat/white/Brain, /mob/living/simple_animal/mouse/rat/Ratatui, /mob/living/simple_animal/mouse/rat/irish/Remi, /mob/living/simple_animal/pet/dog/fox/fennec/Fenya, /mob/living/simple_animal/pet/dog/brittany/Psycho, /mob/living/simple_animal/pet/dog/pug/Frank, /mob/living/basic/mothroach))
+	for(var/animal_type in list(/mob/living/simple_animal/pig/Sanya, /mob/living/simple_animal/chicken/Wife, /mob/living/simple_animal/goose/Scientist, /mob/living/simple_animal/pet/cat/fat/Iriska, /mob/living/simple_animal/pet/cat/white/Penny, /mob/living/simple_animal/pet/cat/birman/Crusher, /mob/living/simple_animal/mouse/wooly/rep, /mob/living/simple_animal/pet/library_owl, /mob/living/simple_animal/mouse/rat/white/Brain, /mob/living/simple_animal/mouse/rat/Ratatui, /mob/living/simple_animal/mouse/rat/irish/Remi, /mob/living/simple_animal/pet/dog/fox/fennec/Fenya, /mob/living/simple_animal/pet/dog/brittany/Psycho, /mob/living/simple_animal/pet/dog/pug/Frank, /mob/living/basic/mothroach))
 		var/mob/living/animal = allocate(animal_type, test_turf)
 		TEST_ASSERT(QDELETED(animal), "New animal [animal_type] must not survive a direct spawn")
 

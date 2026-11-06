@@ -632,15 +632,6 @@
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/ruin/space/spacehotelv1/bar)
-"gd" = (
-/mob/living/simple_animal/hostile/retaliate/goat{
-	name = "Albert";
-	real_name = "Albert"
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/ruin/space/spacehotelv1/kitchen)
 "ge" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -2919,12 +2910,6 @@
 	icon_state = "white"
 	},
 /area/ruin/space/spacehotelv1/guestroom1)
-"Ah" = (
-/mob/living/simple_animal/mouse{
-	name = "Elliot"
-	},
-/turf/simulated/floor/plating,
-/area/ruin/space/spacehotelv1/forestarboardmaints)
 "Ap" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -5790,9 +5775,6 @@
 /area/ruin/space/spacehotelv1/bar)
 "YD" = (
 /obj/structure/sink/directional/west,
-/mob/living/simple_animal/mouse{
-	name = "Nicolas"
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -7765,7 +7747,7 @@ oZ
 Bs
 IV
 Sj
-gd
+VL
 FV
 Ol
 kK
@@ -9774,7 +9756,7 @@ Qp
 Qp
 Te
 aD
-Ah
+HX
 WV
 Av
 Wu

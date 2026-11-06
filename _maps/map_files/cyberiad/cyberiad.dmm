@@ -6224,14 +6224,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/station/commons/dorms)
-"aTJ" = (
-/mob/living/simple_animal/walrus{
-	name = "Джеди"
-	},
-/turf/simulated/floor/beach/water{
-	icon_state = "seadeep"
-	},
-/area/station/commons/dorms)
 "aTL" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -12372,6 +12364,7 @@
 	},
 /area/station/command/office/hop)
 "bHu" = (
+/mob/living/simple_animal/cock/Commandor,
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "bHA" = (
@@ -13209,6 +13202,9 @@
 	icon_state = "white"
 	},
 /area/station/science/robotics)
+"bLU" = (
+/turf/simulated/floor/grass,
+/area/hydroponics)
 "bMg" = (
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -72580,14 +72576,6 @@
 /obj/effect/spawner/random_spawners/girder_13,
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
-"uqe" = (
-/mob/living/simple_animal/lizard{
-	name = "Greentext"
-	},
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel,
-/area/station/security/prison/perma)
 "uqi" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access = list(12)
@@ -100897,7 +100885,7 @@ aRS
 aTA
 aXa
 qlG
-uqe
+eLl
 aXa
 aPC
 kkR
@@ -116594,7 +116582,7 @@ aOb
 bVb
 ydl
 aSD
-aTJ
+aTR
 aTR
 sIc
 gQJ
@@ -121746,7 +121734,7 @@ beb
 nUj
 bHu
 jZC
-bHu
+bLU
 ubN
 oPQ
 xyn

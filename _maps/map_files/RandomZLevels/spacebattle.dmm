@@ -5144,15 +5144,6 @@
 "qF" = (
 /turf/simulated/floor/plasteel,
 /area/awaymission/spacebattle/server)
-"qG" = (
-/mob/living/simple_animal/hostile/bear{
-	faction = list("hostile");
-	harm_intent_damage = 15;
-	health = 120;
-	name = "Winny"
-	},
-/turf/simulated/floor/wood,
-/area/awaymission/spacebattle)
 "qJ" = (
 /obj/structure/closet/crate/secure/weapon,
 /obj/item/clothing/suit/armor/vest,
@@ -69585,7 +69576,7 @@ aa
 GV
 MZ
 Dg
-qG
+Ia
 Ep
 MZ
 vG

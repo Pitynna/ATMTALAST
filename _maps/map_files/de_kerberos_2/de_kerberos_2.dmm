@@ -27248,6 +27248,7 @@
 /area/station/engineering/monitor)
 "fTl" = (
 /obj/structure/flora/ausbushes/ywflowers,
+/mob/living/simple_animal/cock/Commandor,
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "fTv" = (
@@ -49374,10 +49375,7 @@
 /area/station/service/library)
 "kED" = (
 /obj/structure/cable,
-/mob/living/simple_animal/mouse/brown/Tom{
-	desc = "Главный помощник архитекторов станции.";
-	name = "Инспектор Мыш"
-	},
+/mob/living/simple_animal/mouse/brown/Tom,
 /turf/simulated/floor/plating,
 /area/station/maintenance/electrical)
 "kEH" = (
@@ -65195,13 +65193,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/station/telecomms/chamber)
-"nYs" = (
-/mob/living/simple_animal/mouse/white{
-	desc = "Близкий друг психиатра. Не подпускать к Рантайму.";
-	name = "Бобби"
-	},
-/turf/simulated/floor/wood/fancy/light,
-/area/station/medical/psych)
 "nYt" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/turf_decal/delivery,
@@ -158261,7 +158252,7 @@ jEZ
 eTG
 oua
 vuu
-nYs
+wwt
 qDV
 vhY
 sKT
