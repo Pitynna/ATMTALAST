@@ -1,5 +1,6 @@
 /datum/unit_test/atmta_loadout_catalogue/Run()
 	var/count = 0
+	var/mob/living/carbon/human/wearer = allocate(/mob/living/carbon/human, locate(20, 20, 1))
 	for(var/gear_type in subtypesof(/datum/gear/atmta))
 		var/datum/gear/gear = new gear_type
 		TEST_ASSERT(gear.index_name in GLOB.gear_datums, "[gear_type] must be in the real loadout catalogue")
@@ -15,6 +16,10 @@
 		var/worn_icon = item.onmob_sheets[slot_bitfield_to_slot_string(gear.slot)]
 		TEST_ASSERT_NOTNULL(worn_icon, "[gear.path] must have a worn sheet for its slot")
 		TEST_ASSERT(state in icon_states(worn_icon), "[gear.path] must have a worn sprite: [state]")
+		TEST_ASSERT(wearer.equip_to_slot_if_possible(item, gear.slot, disable_warning = TRUE), "[gear.path] must equip through the real inventory API")
+		wearer.regenerate_icons()
+		fcopy(getFlatIcon(wearer), "wardrobe/[count].png")
+		qdel(item)
 		count++
 		qdel(gear)
 	TEST_ASSERT_EQUAL(count, 38, "The complete historical karma catalogue must be ported")

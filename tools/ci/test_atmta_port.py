@@ -61,8 +61,9 @@ def main():
         copy_file(path, runtime / path.name)
     # Only versioned configuration is copied; local credentials and data are excluded.
     for name_in_repo in tracked:
-        if name_in_repo.startswith(("_maps/", "config/", "strings/", "html/")):
+        if name_in_repo.startswith(("_maps/", "config/", "strings/", "html/", "icons/", "code/datums/greyscale/json_configs/")):
             copy_file(ROOT / name_in_repo, runtime / name_in_repo)
+    (runtime / "wardrobe").mkdir()
     result_path = runtime / "atmta-port-result.json"
     print(f"Starting isolated runtime: {runtime}", flush=True)
     startup = subprocess.STARTUPINFO()
@@ -82,11 +83,17 @@ def main():
                 report = json.loads(result_path.read_text(encoding="utf-8"))
                 runtime_log = runtime / report["runtime_log"]
                 errors = runtime_log.read_text(encoding="utf-8", errors="replace") if runtime_log.exists() else ""
-                report["runtime_errors"] = errors
+                error_lines = [line for line in errors.splitlines() if "Runtime in " in line or "runtime error:" in line.lower()]
+                report["runtime_errors"] = error_lines
+                (OUTPUT / "runtime.log").write_text(errors, encoding="utf-8")
                 report["runtime_directory"] = str(runtime)
+                previews = OUTPUT / "wardrobe"
+                previews.mkdir(exist_ok=True)
+                for preview in (runtime / "wardrobe").glob("*.png"):
+                    copy_file(preview, previews / preview.name)
                 (OUTPUT / "result.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
                 print(json.dumps(report, ensure_ascii=False), flush=True)
-                if report["passed"] != report["total"] or errors.strip() or not report["prison_parashas"] or report["ordinary_prison_toilets"]:
+                if report["passed"] != report["total"] or error_lines or not report["prison_parashas"] or report["ordinary_prison_toilets"]:
                     raise RuntimeError("ATMTA checks failed; inspect the saved report")
             finally:
                 if process.poll() is None:

@@ -4,6 +4,8 @@
 	desc = "A wooden frame with a cable noose. Drag someone onto it, then use harm intent to pull the lever. Wirecutters can cut the noose."
 	icon = 'icons/obj/atmta_gallows.dmi'
 	icon_state = "noose"
+	pixel_y = 16
+	layer = ABOVE_MOB_LAYER
 	anchored = TRUE
 	can_buckle = TRUE
 	buckle_lying = 0
@@ -54,7 +56,7 @@
 		return FALSE
 	var/mob/living/victim = buckled_mobs[1]
 	hanging = TRUE
-	victim.add_offsets(UID(), y_add = 8)
+	victim.add_offsets(UID(), y_add = 4)
 	playsound(src, 'sound/effects/atmta_noosed.ogg', 50, TRUE)
 	add_attack_logs(user, victim, "Pulled the gallows lever")
 	victim.visible_message(span_danger("The noose tightens around [victim]'s neck!"), span_userdanger("The noose tightens around your neck!"))

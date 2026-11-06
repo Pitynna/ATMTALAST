@@ -7,6 +7,9 @@ GLOBAL_DATUM_INIT(atmta_port_probe, /datum/atmta_port_probe, new)
 		run_tests()
 
 /datum/atmta_port_probe/proc/run_tests()
+	UNTIL(config)
+	CONFIG_SET(flag/hub, FALSE)
+	world.update_hub_visibility(FALSE)
 	UNTIL(SSatoms.initialized && SSserver_maint.initialized && SSticker.initialized)
 	// A sealed, breathable room in the otherwise unused map corner.
 	for(var/turf/ground in block(locate(19, 19, 1), locate(21, 21, 1)))
