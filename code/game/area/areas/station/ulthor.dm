@@ -309,3 +309,7 @@
 /area/station/maintenance/ulthor_asylum
 	name = "Ulthor Abandoned Ward"
 	icon_state = "fsmaint"
+
+/area/station/engineering/ulthor_burn_room
+	name = "Ulthor Burn Room"
+	icon_state = "atmos"
