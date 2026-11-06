@@ -205,7 +205,6 @@ class ChatRenderer {
       this.processBatch(this.queue, {
         suppressHighlightSound: true,
       });
-      this.processBatch(this.queue);
       this.queue = [];
     }
   }

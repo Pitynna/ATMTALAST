@@ -2,8 +2,9 @@ import { type StorageDiagnostic, storage } from 'common/storage';
 import DOMPurify from 'dompurify';
 import { useAtom, useAtomValue } from 'jotai';
 import { useEffect } from 'react';
+import { store } from '../events/store';
 import { settingsLoadedAtom } from '../settings/atoms';
-import { chatLoadedAtom, versionAtom } from './atom';
+import { chatLoadedAtom, currentPageAtom, versionAtom } from './atom';
 import { MESSAGE_SAVE_INTERVAL } from './constants';
 import { saveChatToStorage } from './helpers';
 import { startChatStateMigration } from './migration';
@@ -28,8 +29,14 @@ export function useChatPersistence() {
     if (!loaded && settingsLoaded) {
       async function fetchChat(): Promise<void> {
         console.log('Initializing chat');
-        await loadChatFromStorage();
+        try {
+          await loadChatFromStorage();
+        } catch (error) {
+          console.error('Failed to restore chat from storage:', error);
+        }
 
+        // Fresh or discarded storage still needs an active page before flushing.
+        chatRenderer.changePage(store.get(currentPageAtom));
         setLoaded(true);
         chatRenderer.onStateLoaded();
       }

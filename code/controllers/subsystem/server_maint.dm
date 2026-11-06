@@ -13,8 +13,8 @@ SUBSYSTEM_DEF(server_maint)
 	world.hub_password = "" //quickly! before the hubbies see us.
 
 /datum/controller/subsystem/server_maint/Initialize()
-	if(fexists("tmp/"))
-		fdel("tmp/")
+	// Never recursively delete tmp: development runtimes can contain junctions
+	// into the project. Each producer must clean up only its own temporary files.
 
 	if(CONFIG_GET(flag/hub))
 		world.update_hub_visibility(TRUE)
@@ -54,8 +54,7 @@ SUBSYSTEM_DEF(server_maint)
 			return
 
 /datum/controller/subsystem/server_maint/Shutdown()
-	if(fexists("tmp/"))
-		fdel("tmp/")
+	// Keep tmp intact for the same reason as Initialize().
 	kick_clients_in_lobby(span_boldannounceooc("The round came to an end with you in the lobby."), TRUE) //second parameter ensures only afk clients are kicked
 	var/server = CONFIG_GET(string/server)
 	for(var/client/user as anything in GLOB.clients)

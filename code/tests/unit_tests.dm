@@ -42,6 +42,7 @@
 #include "test_plane_dupe_detector.dm"
 #include "test_reagent_id_typos.dm"
 #include "test_security_levels.dm"
+#include "test_server_temp_cleanup.dm"
 #include "test_spawn_humans.dm"
 #include "test_spritesheets.dm"
 #include "test_sql.dm"
