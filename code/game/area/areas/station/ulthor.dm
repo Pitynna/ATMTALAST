@@ -305,3 +305,7 @@
 /area/station/service/ulthor_theatre
 	name = "Ulthor Theatre"
 	icon_state = "Theatre"
+
+/area/station/maintenance/ulthor_asylum
+	name = "Ulthor Abandoned Ward"
+	icon_state = "fsmaint"

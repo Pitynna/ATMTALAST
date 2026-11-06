@@ -25,3 +25,12 @@
 		if(dock.id == "admin_away")
 			dock.width = 19
 			dock.dwidth = 9
+
+/// Hand-made poster from the maintenance "micro-asylum" on the 2 May 2024 Ulthor layout.
+/// The sprite is taken from the author's StrongDMM screenshot, low resolution included.
+/obj/structure/sign/poster/contraband/ulthor_orderly
+	name = "Санитар"
+	desc = "Пережатый до неузнаваемости портрет санитара. Он следит, чтобы вы приняли таблетки."
+	icon = 'icons/obj/ulthor_posters.dmi'
+	icon_state = "orderly"
+	never_random = TRUE

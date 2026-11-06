@@ -1859,6 +1859,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/station/command/office/hop)
+"bdG" = (
+/obj/item/stack/rods{
+	amount = 3
+	},
+/turf/simulated/floor/plating,
+/area/station/commons/ulthor_96_166)
 "bdR" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -2600,6 +2606,15 @@
 	tag = "icon-whitehall (WEST)"
 	},
 /area/station/medical/ulthor_108_176)
+"bBq" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = 6;
+	pixel_y = -6
+	},
+/turf/simulated/floor/wood,
+/area/station/maintenance/ulthor_asylum)
 "bBK" = (
 /obj/machinery/light{
 	dir = 4
@@ -4049,6 +4064,9 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/station/ai/ulthor_141_152)
+"csC" = (
+/turf/simulated/floor/wood,
+/area/station/maintenance/ulthor_asylum)
 "csI" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -5619,6 +5637,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/station/cargo/ulthor_76_110)
+"dpF" = (
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = -6;
+	pixel_y = -10
+	},
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = 6;
+	pixel_y = -10
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken2"
+	},
+/area/station/maintenance/ulthor_asylum)
 "dpG" = (
 /obj/structure/table/wood,
 /obj/item/candle,
@@ -8333,6 +8365,10 @@
 	},
 /turf/simulated/floor/carpet/arcade,
 /area/station/commons/ulthor_81_165)
+"eKL" = (
+/obj/structure/sign/pods,
+/turf/simulated/wall,
+/area/station/maintenance/solars/port/aft)
 "eKQ" = (
 /obj/machinery/light{
 	dir = 4
@@ -8391,6 +8427,21 @@
 	icon_state = "tranquillite"
 	},
 /area/station/service/ulthor_93_151)
+"eMi" = (
+/obj/machinery/iv_drip,
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_y = -6
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/wood,
+/area/station/maintenance/ulthor_asylum)
 "eMq" = (
 /obj/structure/table,
 /obj/machinery/kitchen_machine/microwave{
@@ -8837,6 +8888,13 @@
 	tag = "icon-vault (NORTHEAST)"
 	},
 /area/station/telecomms/ulthor_145_147)
+"faw" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Abandoned Ward"
+	},
+/obj/structure/barricade/wooden,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_asylum)
 "faW" = (
 /obj/machinery/requests_console{
 	department = "Atmospherics";
@@ -9843,6 +9901,11 @@
 	icon_state = "white"
 	},
 /area/station/medical/ulthor_135_192)
+"fCM" = (
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken6"
+	},
+/area/station/maintenance/ulthor_asylum)
 "fCV" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters{
@@ -10601,6 +10664,10 @@
 /obj/structure/flora/rock,
 /turf/simulated/floor/grass,
 /area/station/service/library)
+"gcJ" = (
+/obj/machinery/portable_atmospherics/pump,
+/turf/simulated/floor/plating,
+/area/station/commons/ulthor_96_166)
 "gcL" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable,
@@ -11021,6 +11088,17 @@
 	icon_state = "dark"
 	},
 /area/station/security/warden)
+"gpv" = (
+/obj/structure/bed/roller,
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = 2;
+	pixel_y = -12
+	},
+/turf/simulated/floor/wood,
+/area/station/maintenance/ulthor_asylum)
 "gpx" = (
 /obj/structure/grille,
 /obj/structure/window/plasmareinforced{
@@ -11490,6 +11568,21 @@
 "gEr" = (
 /turf/simulated/wall,
 /area/station/security/processing)
+"gEu" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken5"
+	},
+/area/station/maintenance/ulthor_asylum)
 "gEz" = (
 /obj/machinery/light/spot,
 /turf/simulated/floor/shuttle,
@@ -12592,6 +12685,14 @@
 	},
 /turf/simulated/floor/carpet/arcade,
 /area/station/commons/ulthor_81_165)
+"hiZ" = (
+/obj/effect/decal/cleanable/cobweb2,
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = 6;
+	pixel_y = -6
+	},
+/turf/simulated/floor/wood,
+/area/station/maintenance/ulthor_asylum)
 "hjh" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8;
@@ -14382,6 +14483,13 @@
 	},
 /turf/simulated/wall,
 /area/station/medical/ulthor_124_179)
+"igA" = (
+/obj/machinery/atmospherics/unary/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/turf/simulated/floor/plating,
+/area/station/maintenance/solars/port/aft)
 "ihA" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -14927,6 +15035,15 @@
 	icon_state = "dark"
 	},
 /area/station/security/warden)
+"izI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel,
+/area/station/maintenance/solars/port/aft)
 "iAj" = (
 /obj/machinery/photocopier,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -16100,6 +16217,10 @@
 	icon_state = "darkred"
 	},
 /area/station/security/brig)
+"jjQ" = (
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/station/science/robotics/ulthor)
 "jjT" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
@@ -18365,6 +18486,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/solars/port/aft)
+"kxa" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/meter,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "kxc" = (
 /turf/simulated/wall,
 /area/station/medical/ulthor_124_179)
@@ -21371,6 +21497,12 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/cargo/miningdock)
+"mdi" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "mdm" = (
 /obj/machinery/smartfridge/secure/extract,
 /obj/machinery/door/window/eastright{
@@ -21868,6 +22000,10 @@
 	icon_state = "whiteyellowcorner"
 	},
 /area/station/medical/ulthor_110_175)
+"mut" = (
+/obj/machinery/atmospherics/binary/valve,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "muA" = (
 /obj/machinery/drone_fabricator,
 /turf/simulated/floor/plasteel,
@@ -23413,6 +23549,11 @@
 /obj/item/storage/firstaid/o2,
 /turf/simulated/floor/plasteel,
 /area/shuttle/ulthor_emergency)
+"nnb" = (
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken2"
+	},
+/area/station/maintenance/ulthor_asylum)
 "nns" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 2
@@ -25015,6 +25156,21 @@
 	icon_state = "vault"
 	},
 /area/station/command/ulthor_100_175)
+"oiz" = (
+/obj/structure/sign/poster/contraband/ulthor_orderly{
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/cobweb,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable,
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken3"
+	},
+/area/station/maintenance/ulthor_asylum)
 "ojb" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
@@ -25610,6 +25766,16 @@
 	icon_state = "white"
 	},
 /area/station/science/explab)
+"oyX" = (
+/obj/docking_port/stationary{
+	dwidth = 2;
+	height = 6;
+	id = "pod1_home";
+	name = "pod1 home dock";
+	width = 5
+	},
+/turf/space,
+/area/space)
 "ozc" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -26133,6 +26299,9 @@
 	icon_state = "darkred"
 	},
 /area/station/security/processing)
+"oOM" = (
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_asylum)
 "oOR" = (
 /obj/machinery/hydroponics/constructable,
 /obj/structure/sign/poster/contraband/ambrosia_vulgaris{
@@ -28697,6 +28866,14 @@
 	dir = 1
 	},
 /area/station/engineering/ulthor_152_122)
+"qgl" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/maintenance{
+	name = "Abandoned Ward"
+	},
+/obj/structure/barricade/wooden,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_asylum)
 "qgx" = (
 /obj/structure/cable,
 /turf/simulated/floor/plasteel{
@@ -32633,6 +32810,17 @@
 	icon_state = "darkred"
 	},
 /area/station/security/processing)
+"syD" = (
+/obj/effect/decal/cleanable/cobweb2,
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_y = 2
+	},
+/obj/item/storage/pill_bottle{
+	pixel_x = 8;
+	pixel_y = -8
+	},
+/turf/simulated/floor/wood,
+/area/station/maintenance/ulthor_asylum)
 "syH" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/simulated/floor/plasteel{
@@ -34893,6 +35081,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/service/ulthor_91_176)
+"tQg" = (
+/obj/item/tank/internals/oxygen/yellow,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "tQm" = (
 /obj/structure/closet/wardrobe/yellow,
 /turf/simulated/floor/shuttle,
@@ -35512,6 +35704,11 @@
 	icon_state = "dark"
 	},
 /area/station/commons/ulthor_96_166)
+"ujv" = (
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/station/science/ulthor_123_191)
 "ujF" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/metal{
@@ -35643,6 +35840,12 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/station/command/office/hop)
+"uoG" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "upg" = (
 /turf/simulated/wall/shuttle{
 	tag = "icon-swall7"
@@ -36540,6 +36743,13 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/security/prison/lockers)
+"uPh" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 8
+	},
+/obj/machinery/atmospherics/meter,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "uPl" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -37309,6 +37519,16 @@
 	icon_state = "darkblue"
 	},
 /area/station/medical/ulthor_113_186)
+"vnh" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/mob/living/carbon/human/lesser/monkey,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/station/medical/ulthor_135_192)
 "vnt" = (
 /obj/machinery/door/window/brigdoor{
 	dir = 1;
@@ -37666,6 +37886,17 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
+"vwX" = (
+/obj/machinery/door/airlock/external{
+	name = "Escape Pod Airlock"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/fans/tiny,
+/obj/effect/landmark/navigate_destination/dockescpod1,
+/turf/simulated/floor/plasteel,
+/area/station/maintenance/solars/port/aft)
 "vxw" = (
 /obj/structure/grille,
 /obj/structure/window/plasmareinforced{
@@ -38229,6 +38460,23 @@
 	tag = "icon-whitepurple (WEST)"
 	},
 /area/station/medical/break_room)
+"vLo" = (
+/obj/item/stack/rods{
+	amount = 2
+	},
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = -8;
+	pixel_y = -10
+	},
+/obj/machinery/camera{
+	c_tag = "Maintenance Abandoned Ward";
+	dir = 8;
+	start_active = 1
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken6"
+	},
+/area/station/maintenance/ulthor_asylum)
 "vLB" = (
 /obj/machinery/door/poddoor{
 	id_tag = "chapelgun";
@@ -39267,6 +39515,11 @@
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
 /area/station/service/ulthor_80_150)
+"woX" = (
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken5"
+	},
+/area/station/maintenance/ulthor_asylum)
 "woZ" = (
 /obj/structure/table,
 /turf/simulated/floor/plasteel{
@@ -40350,6 +40603,10 @@
 	icon_state = "white"
 	},
 /area/station/medical/ulthor_124_179)
+"wTq" = (
+/obj/item/tank/internals/oxygen,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "wTM" = (
 /obj/machinery/computer/atmos_alert,
 /turf/simulated/floor/plasteel{
@@ -40471,6 +40728,11 @@
 	icon_state = "white"
 	},
 /area/station/medical/ulthor_135_176)
+"wWV" = (
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken3"
+	},
+/area/station/maintenance/ulthor_asylum)
 "wWX" = (
 /turf/simulated/wall/shuttle{
 	tag = "icon-swall12"
@@ -68614,7 +68876,7 @@ agy
 agy
 agy
 agy
-agy
+mPn
 mPn
 fFC
 cTR
@@ -68870,9 +69132,9 @@ agy
 agy
 agy
 agy
-agy
-agy
-mPn
+oyX
+izI
+vwX
 fFC
 cTR
 fFC
@@ -69128,13 +69390,13 @@ agy
 agy
 agy
 agy
-agy
 mPn
+eKL
 fFC
 cTR
 fFC
-cnl
-cnl
+tQg
+wTq
 cnl
 cnl
 cnl
@@ -69390,11 +69652,11 @@ mPn
 fFC
 cTR
 fFC
-cnl
-cnl
-cnl
-cnl
-cnl
+uoG
+uPh
+mut
+kxa
+mdi
 cnl
 cnl
 bpA
@@ -69647,10 +69909,10 @@ mPn
 fFC
 cTR
 fFC
-fFC
-fFC
-utK
-utK
+igA
+igA
+bdG
+gcJ
 utK
 utK
 utK
@@ -70671,7 +70933,7 @@ agy
 agy
 uZR
 sEW
-sEW
+qpK
 sEW
 sEW
 qMf
@@ -70928,7 +71190,7 @@ agy
 uZR
 uZR
 sEW
-sEW
+qpK
 uZR
 qMf
 qMf
@@ -71185,7 +71447,7 @@ uZR
 uZR
 sEW
 sEW
-sEW
+qpK
 qMf
 boS
 jlw
@@ -71697,8 +71959,8 @@ uZR
 uZR
 sEW
 sEW
-sEW
-sEW
+qpK
+qpK
 qpK
 qMf
 vnf
@@ -71951,10 +72213,10 @@ agy
 agy
 agy
 uZR
-sEW
-sEW
-sEW
-sEW
+qpK
+qpK
+qpK
+qpK
 uZR
 kqX
 uzN
@@ -72208,9 +72470,9 @@ agy
 agy
 agy
 uZR
+qpK
 sEW
-sEW
-sEW
+qpK
 uZR
 uZR
 wHT
@@ -72465,9 +72727,9 @@ agy
 agy
 agy
 uZR
+qpK
 sEW
-sEW
-sEW
+qpK
 uZR
 qOX
 vpn
@@ -72722,7 +72984,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 uZR
@@ -72979,7 +73241,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 qeo
@@ -73236,7 +73498,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 iOI
@@ -73493,7 +73755,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 fDd
@@ -73750,7 +74012,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 pFk
@@ -74007,7 +74269,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 iOI
@@ -74264,7 +74526,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 qeo
@@ -74521,7 +74783,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 sEW
 uZR
 uZR
@@ -74778,11 +75040,11 @@ agy
 agy
 agy
 uZR
+qpK
 sEW
-sEW
-sEW
-sEW
-sEW
+uZR
+oiz
+gpv
 qSP
 iZZ
 bYl
@@ -75035,11 +75297,11 @@ agy
 agy
 agy
 uZR
-sEW
-sEW
-sEW
-sEW
-sEW
+qpK
+qpK
+qgl
+bBq
+dpF
 qSP
 mAT
 mAT
@@ -75292,11 +75554,11 @@ agy
 agy
 agy
 uZR
+qpK
 sEW
-sEW
-sEW
-sEW
-sEW
+uZR
+gEu
+syD
 qSP
 liy
 mAT
@@ -75549,11 +75811,11 @@ agy
 agy
 agy
 uZR
+qpK
 sEW
-sEW
-sEW
-sEW
-sEW
+uZR
+eMi
+vLo
 qSP
 tjS
 qtd
@@ -75806,7 +76068,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 guZ
 dmY
 dmY
@@ -76063,12 +76325,12 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 dmY
 tXI
 fCG
 fNx
-dcO
+vnh
 dnl
 wXu
 ioN
@@ -76320,7 +76582,7 @@ agy
 agy
 agy
 uZR
-sEW
+qpK
 dmY
 gTo
 biy
@@ -76577,7 +76839,7 @@ agy
 agy
 sEW
 uZR
-sEW
+qpK
 dmY
 fNx
 wvp
@@ -76834,7 +77096,7 @@ agy
 agy
 xEM
 vih
-wRE
+ujv
 nVz
 ibp
 qfv
@@ -77091,7 +77353,7 @@ agy
 agy
 vES
 dyj
-vES
+jjQ
 dmY
 uwQ
 ljf
@@ -77348,7 +77610,7 @@ agy
 agy
 agy
 dyj
-vES
+jjQ
 brI
 dmY
 uZO
@@ -77605,7 +77867,7 @@ agy
 agy
 agy
 dyj
-vES
+jjQ
 vES
 dmY
 oHy
@@ -77862,7 +78124,7 @@ agy
 agy
 agy
 dyj
-vES
+jjQ
 vES
 brI
 dmY
@@ -78119,7 +78381,7 @@ agy
 agy
 agy
 dyj
-vES
+jjQ
 vES
 vES
 vES
@@ -78376,12 +78638,12 @@ agy
 agy
 agy
 dyj
-vES
-vES
-vES
-vES
-vES
-vES
+jjQ
+jjQ
+jjQ
+jjQ
+jjQ
+jjQ
 vES
 vES
 mVK
@@ -78638,7 +78900,7 @@ vES
 vES
 vES
 vES
-vES
+jjQ
 vES
 vES
 mVK
@@ -78895,7 +79157,7 @@ dyj
 vES
 vES
 vES
-vES
+jjQ
 vES
 vES
 mVK
@@ -79152,7 +79414,7 @@ dyj
 dyj
 vES
 vES
-vES
+jjQ
 vES
 vES
 brI
@@ -79409,7 +79671,7 @@ agy
 dyj
 dyj
 vES
-vES
+jjQ
 vES
 vES
 vES
@@ -79666,7 +79928,7 @@ agy
 agy
 dyj
 dyj
-vES
+jjQ
 vES
 vES
 vES
