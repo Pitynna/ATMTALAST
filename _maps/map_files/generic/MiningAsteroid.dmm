@@ -26,10 +26,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -96,7 +95,7 @@
 /area/mine/laborcamp/security)
 "aH" = (
 /obj/structure/table,
-/obj/item/reagent_containers/ashtray/bronze,
+/obj/item/storage/ashtray/bronze,
 /obj/item/storage/fancy/cigarettes/cigpack_robust,
 /obj/machinery/status_display{
 	pixel_y = 32
@@ -159,21 +158,18 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -187,8 +183,8 @@
 /area/mine/laborcamp/security)
 "aV" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
@@ -205,10 +201,9 @@
 /obj/structure/table/glass,
 /obj/item/shovel/spade,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/item/cultivator,
 /turf/simulated/floor/plasteel{
@@ -217,11 +212,10 @@
 /area/mine/laborcamp)
 "aX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -248,9 +242,8 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production)
@@ -273,15 +266,13 @@
 /area/mine/laborcamp)
 "bo" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "green";
@@ -307,7 +298,7 @@
 /area/mine/laborcamp)
 "bw" = (
 /obj/machinery/biogenerator,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/cup/bucket,
 /obj/machinery/camera{
 	c_tag = "Labor Camp Garden";
 	network = list("Labor")
@@ -348,7 +339,7 @@
 "bR" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Break Room";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -385,19 +376,19 @@
 /area/mine/laborcamp)
 "bW" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/cup/soda_cans/beer,
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
 /area/mine/living_quarters)
 "cc" = (
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -422,11 +413,10 @@
 /area/mine/abandoned)
 "cn" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -459,9 +449,9 @@
 "cw" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
@@ -511,9 +501,8 @@
 /area/mine/explored)
 "cK" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
@@ -528,7 +517,7 @@
 /obj/machinery/door/airlock/external{
 	id_tag = "laborcamp_away";
 	name = "Labor Camp Airlock";
-	req_access_txt = "2"
+	req_access = list(2)
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
@@ -566,7 +555,7 @@
 /obj/machinery/door/airlock/external{
 	id_tag = "mining_away";
 	name = "Mining Dock Airlock";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /turf/simulated/floor/plating,
 /area/mine/lobby)
@@ -620,7 +609,10 @@
 	pixel_x = 1;
 	pixel_y = -23
 	},
-/obj/structure/cable,
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
+	},
 /turf/simulated/floor/plasteel,
 /area/mine/eva)
 "dx" = (
@@ -701,9 +693,8 @@
 /area/mine/west_outpost)
 "el" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -798,10 +789,9 @@
 /area/mine/laborcamp)
 "fc" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
@@ -851,11 +841,10 @@
 	},
 /obj/item/storage/box/lights/mixed,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_x = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
@@ -901,16 +890,14 @@
 /area/mine/abandoned)
 "fW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -922,10 +909,9 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/genericbush,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/grass,
 /area/mine/laborcamp/security)
@@ -946,14 +932,13 @@
 "gi" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Labor Camp Monitoring";
-	req_access_txt = "2"
+	req_access = list(2)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -962,16 +947,14 @@
 /area/mine/laborcamp/security)
 "gj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -1035,9 +1018,8 @@
 /area/mine/living_quarters)
 "gN" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -1092,16 +1074,14 @@
 /area/mine/laborcamp)
 "hp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -1312,8 +1292,7 @@
 	master_tag = "mining_west_airlock";
 	name = "interior access button";
 	pixel_x = -25;
-	pixel_y = -25;
-	req_access_txt = null
+	pixel_y = -25
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -1357,9 +1336,8 @@
 	pixel_x = 32
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	dir = 5;
@@ -1417,8 +1395,8 @@
 /area/mine/explored)
 "iK" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/apc{
 	dir = 4;
@@ -1498,9 +1476,8 @@
 /area/space)
 "jg" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
@@ -1513,10 +1490,6 @@
 /obj/structure/closet/secure_closet/brig,
 /turf/simulated/floor/plasteel,
 /area/mine/laborcamp)
-"js" = (
-/turf/space,
-/turf/simulated/wall/shuttle,
-/area/space)
 "jt" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1577,14 +1550,13 @@
 "jP" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station Loading Bay";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production)
@@ -1594,10 +1566,9 @@
 /area/mine/laborcamp/security)
 "jW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -1623,7 +1594,6 @@
 	tag_interior_door = "mining_west_inner";
 	pixel_x = 25;
 	pixel_y = 5;
-	req_access_txt = null;
 	tag_chamber_sensor = "mining_west_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -1635,10 +1605,9 @@
 /area/mine/living_quarters)
 "kg" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production{
@@ -1646,9 +1615,8 @@
 	})
 "ki" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
@@ -1659,14 +1627,13 @@
 "kj" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Labor Camp Maintenance";
-	req_access_txt = "2"
+	req_access = list(2)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -1697,10 +1664,9 @@
 	on = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -1736,10 +1702,9 @@
 /area/mine/explored)
 "kF" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -1766,13 +1731,12 @@
 "kK" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Maintenance";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
@@ -1793,10 +1757,9 @@
 /area/mine/laborcamp)
 "kQ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -1816,8 +1779,8 @@
 /area/mine/abandoned)
 "kX" = (
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/treadmill{
 	dir = 8
@@ -1849,10 +1812,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -1861,8 +1823,8 @@
 	anchored = 1
 	},
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
@@ -1912,10 +1874,9 @@
 /area/mine/laborcamp)
 "ls" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -1984,12 +1945,11 @@
 "lK" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Crew Area";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
@@ -2005,10 +1965,9 @@
 /area/mine/laborcamp)
 "lS" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/camera{
 	c_tag = "West Outpost";
@@ -2041,11 +2000,13 @@
 /area/mine/laborcamp)
 "lX" = (
 /obj/effect/spawner/window/reinforced,
-/obj/structure/cable,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
@@ -2059,8 +2020,8 @@
 "ma" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
@@ -2128,8 +2089,8 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -2176,12 +2137,11 @@
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/west_outpost)
 "ng" = (
-/obj/item/stool,
+/obj/structure/chair/stool,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -2197,15 +2157,13 @@
 /area/mine/west_outpost)
 "nk" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plasteel{
@@ -2230,9 +2188,8 @@
 	on = 1
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -2260,7 +2217,7 @@
 "nF" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Glass Airlock";
-	req_access_txt = "0"
+	req_access = list(0)
 	},
 /turf/simulated/floor/plasteel/airless{
 	dir = 5;
@@ -2332,9 +2289,8 @@
 /area/mine/abandoned)
 "ob" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -2368,7 +2324,6 @@
 	tag_interior_door = "mining_east_inner";
 	pixel_x = 0;
 	pixel_y = -25;
-	req_access_txt = null;
 	tag_chamber_sensor = "mining_east_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -2392,9 +2347,8 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production)
@@ -2442,10 +2396,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/laborcamp)
@@ -2460,8 +2413,7 @@
 	master_tag = "mining_east_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
-	pixel_y = -25;
-	req_access_txt = null
+	pixel_y = -25
 	},
 /turf/simulated/floor/plasteel/airless{
 	tag = "icon-asteroidwarning (EAST)";
@@ -2480,9 +2432,8 @@
 	icon_state = "intact"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
@@ -2502,16 +2453,14 @@
 /area/mine/laborcamp)
 "pq" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -2520,22 +2469,21 @@
 /area/mine/lobby)
 "ps" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/port_gen/pacman/upgraded,
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
 "pu" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station Mech Bay";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production{
@@ -2559,10 +2507,9 @@
 /area/mine/explored)
 "pC" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -2593,7 +2540,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = null;
 	name = "Infirmary";
-	req_access_txt = "0"
+	req_access = list(0)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -2611,8 +2558,8 @@
 	},
 /obj/machinery/light/small,
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
@@ -2640,9 +2587,8 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -2676,11 +2622,10 @@
 /area/mine/living_quarters)
 "qa" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -2730,12 +2675,11 @@
 "qx" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Communications";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -2744,16 +2688,15 @@
 /area/mine/maintenance)
 "qy" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station Bridge";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -2834,10 +2777,9 @@
 /area/mine/living_quarters)
 "rl" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	pixel_x = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel,
@@ -2858,8 +2800,7 @@
 	id_tag = "mining_east_inner";
 	locked = 1;
 	name = "Mining External Access";
-	req_access = null;
-	req_access_txt = null
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -2911,8 +2852,7 @@
 	id_tag = "mining_n1_inner";
 	locked = 1;
 	name = "Mining External Access";
-	req_access = null;
-	req_access_txt = null
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel,
@@ -3007,22 +2947,21 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
 "su" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
@@ -3046,8 +2985,8 @@
 	})
 "sF" = (
 /obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/smes{
 	charge = 5e+006
@@ -3056,17 +2995,8 @@
 /area/mine/north_outpost)
 "sG" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/living_quarters)
-"sP" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
@@ -3076,10 +3006,9 @@
 /area/mine/living_quarters)
 "sX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
@@ -3105,42 +3034,39 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
 "tc" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
 "tf" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station EVA";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3163,11 +3089,10 @@
 /area/mine/laborcamp)
 "to" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -3221,10 +3146,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -3248,7 +3172,7 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "tA" = (
-/obj/item/stool,
+/obj/structure/chair/stool,
 /obj/machinery/camera{
 	c_tag = "Labor Camp Prisoner Break Room";
 	dir = 1;
@@ -3282,9 +3206,8 @@
 /area/mine/eva)
 "tL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/item/storage/box/lights,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -3294,15 +3217,13 @@
 /area/mine/north_outpost)
 "tO" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -3310,10 +3231,9 @@
 /area/mine/laborcamp/security)
 "tQ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -3327,23 +3247,22 @@
 /obj/machinery/door/airlock/external{
 	id_tag = "laborcamp_away";
 	name = "Labor Camp Airlock";
-	req_access_txt = "2"
+	req_access = list(2)
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
 /area/mine/laborcamp/security)
 "tU" = (
-/obj/item/stool,
+/obj/structure/chair/stool,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -3351,7 +3270,7 @@
 /area/mine/laborcamp)
 "tV" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/cup/bucket,
 /obj/item/radio/intercom/locked/prison{
 	pixel_y = -28
 	},
@@ -3361,16 +3280,15 @@
 /area/mine/laborcamp)
 "tX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/laborcamp)
 "tZ" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/random/food_or_drink/booze,
+/obj/item/reagent_containers/cup/glass/bottle/whiskey,
 /obj/item/storage/box/survival,
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
@@ -3399,10 +3317,9 @@
 /area/mine/living_quarters)
 "uz" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/north_outpost)
@@ -3469,8 +3386,7 @@
 	master_tag = "mining_east_airlock";
 	name = "interior access button";
 	pixel_x = 25;
-	pixel_y = 25;
-	req_access_txt = null
+	pixel_y = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
@@ -3500,7 +3416,6 @@
 	id_tag = "mining_n1_airlock";
 	pixel_x = 25;
 	pixel_y = 5;
-	req_access_txt = null;
 	tag_airpump = "mining_n1_pump";
 	tag_chamber_sensor = "mining_n1_sensor";
 	tag_exterior_door = "mining_n1_outer";
@@ -3568,32 +3483,11 @@
 	icon_state = "darkred"
 	},
 /area/mine/laborcamp/security)
-"vI" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
 "vJ" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
 /area/mine/laborcamp/security)
-"vL" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
 "vP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -3612,10 +3506,9 @@
 /obj/structure/table/glass,
 /obj/item/plant_analyzer,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -3663,14 +3556,13 @@
 "wh" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
@@ -3680,19 +3572,6 @@
 /area/mine/production{
 	name = "Mining Station Mech Bay"
 	})
-"wl" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
 "wo" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/tobacco,
@@ -3711,17 +3590,15 @@
 /area/mine/laborcamp/security)
 "wr" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_x = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
@@ -3789,19 +3666,16 @@
 /area/mine/laborcamp/security)
 "wW" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
@@ -3832,10 +3706,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -3885,10 +3758,9 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -3901,9 +3773,8 @@
 	pixel_x = 32
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "red";
@@ -3970,11 +3841,10 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_x = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
@@ -3987,14 +3857,13 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/airlock/security/glass{
 	name = "Labor Camp Transfer Cell";
-	req_access_txt = "2"
+	req_access = list(2)
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -4037,9 +3906,8 @@
 /area/mine/west_outpost)
 "yj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production{
@@ -4121,10 +3989,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/effect/landmark{
 	name = "PermaPrisoner"
@@ -4157,9 +4024,8 @@
 /area/mine/lobby)
 "yW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -4225,9 +4091,9 @@
 	pixel_y = 25
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
@@ -4331,11 +4197,10 @@
 	pixel_y = -32
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_x = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -4353,11 +4218,10 @@
 /area/mine/lobby)
 "Ak" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
@@ -4420,9 +4284,8 @@
 	on = 1
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -4431,7 +4294,7 @@
 "Bd" = (
 /obj/machinery/door/airlock{
 	name = "Toilet";
-	req_access_txt = "0"
+	req_access = list(0)
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -4453,15 +4316,13 @@
 /area/mine/north_outpost)
 "Bl" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -4471,11 +4332,10 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -4485,9 +4345,9 @@
 /area/mine/lobby)
 "Bs" = (
 /obj/structure/cable{
-	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -4503,7 +4363,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station Mech Bay";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production{
@@ -4518,10 +4378,9 @@
 /area/mine/eva)
 "BL" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
@@ -4575,10 +4434,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -4586,9 +4444,8 @@
 /area/mine/laborcamp)
 "BW" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -4645,10 +4502,9 @@
 /area/mine/laborcamp)
 "Cy" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4782,7 +4638,7 @@
 "DA" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining West Outpost Airlock";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidfloor"
@@ -4905,11 +4761,10 @@
 /area/mine/north_outpost)
 "Ef" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -4931,7 +4786,6 @@
 	},
 /area/mine/laborcamp)
 "Eo" = (
-/turf/simulated/floor/plating/airless,
 /turf/simulated/wall/shuttle,
 /area/mine/abandoned)
 "Et" = (
@@ -4949,7 +4803,7 @@
 "Ex" = (
 /obj/machinery/door/airlock/external{
 	name = "External Airlock";
-	req_access_txt = "0"
+	req_access = list(0)
 	},
 /turf/simulated/floor/plasteel/airless{
 	dir = 5;
@@ -4997,11 +4851,10 @@
 /obj/structure/filingcabinet,
 /obj/machinery/light,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_x = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -5026,8 +4879,7 @@
 	id_tag = "mining_n1_outer";
 	locked = 1;
 	name = "Mining External Access";
-	req_access = null;
-	req_access_txt = null
+	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/mine/north_outpost)
@@ -5038,7 +4890,7 @@
 	},
 /area/mine/laborcamp/security)
 "Fe" = (
-/obj/item/stool,
+/obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -5153,8 +5005,8 @@
 	anchored = 1
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
@@ -5163,11 +5015,10 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/north_outpost)
@@ -5187,15 +5038,6 @@
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
 /area/mine/explored)
-"Gj" = (
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/structure/cable,
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
-/area/mine/laborcamp/security)
 "Gp" = (
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidwarning";
@@ -5218,9 +5060,8 @@
 /area/mine/abandoned)
 "GB" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/bluegrid,
 /area/mine/maintenance)
@@ -5250,7 +5091,7 @@
 /area/mine/laborcamp)
 "GO" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/glass/bottle/epinephrine_bottle,
+/obj/item/reagent_containers/cup/bottle/epinephrine,
 /obj/item/reagent_containers/syringe,
 /turf/simulated/floor/plasteel{
 	tag = "icon-whiteblue (NORTH)";
@@ -5282,8 +5123,8 @@
 	pixel_y = 2
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -5318,14 +5159,13 @@
 	})
 "Hx" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Station Bridge";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -5445,8 +5285,8 @@
 /area/mine/laborcamp)
 "Ij" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/apc{
 	dir = 4;
@@ -5473,9 +5313,8 @@
 "Ip" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel,
@@ -5525,8 +5364,8 @@
 	name = "Transfer Cell Lockdown";
 	pixel_x = 26;
 	pixel_y = 3;
-	range = 5;
-	req_access_txt = "2"
+	req_access = list(2);
+	safety_z_check = 1
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -5574,10 +5413,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "green";
@@ -5633,8 +5471,7 @@
 	id_tag = "mining_west_outer";
 	locked = 1;
 	name = "Mining External Access";
-	req_access = null;
-	req_access_txt = null
+	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
@@ -5731,14 +5568,13 @@
 "Kb" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
@@ -5768,16 +5604,14 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_x = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -5812,8 +5646,8 @@
 	pixel_y = 25
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production{
@@ -5856,7 +5690,7 @@
 "KF" = (
 /obj/machinery/door/airlock/mining{
 	name = "Mining Station Storage";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel,
@@ -5909,8 +5743,7 @@
 	master_tag = "mining_n1_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
-	pixel_y = 25;
-	req_access_txt = null
+	pixel_y = 25
 	},
 /turf/simulated/floor/plasteel/airless{
 	dir = 5;
@@ -5948,10 +5781,6 @@
 /area/mine/living_quarters{
 	name = "Mining Station Break Room"
 	})
-"Lp" = (
-/turf/simulated/floor/plating/airless,
-/turf/simulated/wall/shuttle,
-/area/space)
 "Lq" = (
 /obj/structure/table,
 /obj/machinery/kitchen_machine/microwave,
@@ -5983,10 +5812,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -6021,15 +5849,10 @@
 	icon_state = "barber"
 	},
 /area/mine/laborcamp)
-"LM" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable,
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
 "LR" = (
 /obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -6054,7 +5877,10 @@
 	name = "Mining Station Break Room"
 	})
 "LY" = (
-/obj/structure/cable,
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
+	},
 /obj/machinery/power/smes{
 	charge = 5e+006
 	},
@@ -6079,7 +5905,7 @@
 "Md" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Bridge";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidfloor"
@@ -6095,8 +5921,9 @@
 	normaldoorcontrol = 1;
 	pixel_x = 25;
 	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
+	specialfunctions = 4;
+	req_access = list(0);
+	safety_z_check = 1
 	},
 /turf/simulated/floor/carpet,
 /area/mine/living_quarters)
@@ -6125,7 +5952,7 @@
 "Mr" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom";
-	req_access_txt = "0"
+	req_access = list(0)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4;
@@ -6139,7 +5966,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = null;
 	name = "Infirmary";
-	req_access_txt = "0"
+	req_access = list(0)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -6152,10 +5979,9 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -6169,22 +5995,21 @@
 "MC" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
 "MI" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/glass/bottle/nutrient/ez,
-/obj/item/reagent_containers/glass/bottle/nutrient/ez,
-/obj/item/reagent_containers/glass/bottle/nutrient/ez,
+/obj/item/reagent_containers/cup/bottle/nutrient/ez,
+/obj/item/reagent_containers/cup/bottle/nutrient/ez,
+/obj/item/reagent_containers/cup/bottle/nutrient/ez,
 /obj/item/reagent_containers/spray/pestspray,
 /obj/item/reagent_containers/spray/pestspray,
 /obj/item/reagent_containers/spray/pestspray,
@@ -6214,10 +6039,9 @@
 /area/mine/lobby)
 "MM" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6247,7 +6071,7 @@
 /obj/machinery/door/airlock/external{
 	id_tag = "mining_away";
 	name = "Mining Dock Airlock";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -6275,15 +6099,6 @@
 	icon_state = "floorgrime"
 	},
 /area/mine/laborcamp)
-"Nk" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/lobby)
 "Nl" = (
 /obj/item/shard,
 /turf/simulated/floor/plasteel/airless{
@@ -6308,8 +6123,8 @@
 /area/mine/laborcamp)
 "Nw" = (
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
@@ -6319,7 +6134,7 @@
 "Ny" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining West Outpost Airlock";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
@@ -6359,9 +6174,8 @@
 /area/mine/laborcamp)
 "NG" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
@@ -6463,19 +6277,17 @@
 "Od" = (
 /obj/machinery/space_heater,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
 "Oe" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -6539,8 +6351,8 @@
 "Oz" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
@@ -6556,8 +6368,7 @@
 	id_tag = "mining_west_inner";
 	locked = 1;
 	name = "Mining External Access";
-	req_access = null;
-	req_access_txt = null
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel,
@@ -6588,14 +6399,13 @@
 /area/mine/laborcamp/security)
 "OQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Maintenance";
-	req_access_txt = "48"
+	req_access = list(48)
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
@@ -6611,9 +6421,8 @@
 	level = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
@@ -6629,8 +6438,8 @@
 	pixel_y = -23
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plasteel,
@@ -6652,14 +6461,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -6685,10 +6492,9 @@
 /area/mine/laborcamp)
 "PP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/production)
@@ -6708,9 +6514,8 @@
 /area/mine/laborcamp/security)
 "PV" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "red";
@@ -6773,11 +6578,10 @@
 	name = "Prison Fitness Room"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -6793,17 +6597,20 @@
 	normaldoorcontrol = 1;
 	pixel_x = 25;
 	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
+	specialfunctions = 4;
+	req_access = list(0);
+	safety_z_check = 1
 	},
 /turf/simulated/floor/carpet,
 /area/mine/living_quarters)
 "Qy" = (
-/obj/structure/cable,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
@@ -6853,9 +6660,8 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -6864,9 +6670,8 @@
 "QJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -6916,14 +6721,13 @@
 /area/mine/laborcamp)
 "QW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Maintenance";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plating,
 /area/mine/north_outpost)
@@ -6956,8 +6760,9 @@
 	normaldoorcontrol = 1;
 	pixel_x = 25;
 	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
+	specialfunctions = 4;
+	req_access = list(0);
+	safety_z_check = 1
 	},
 /turf/simulated/floor/carpet,
 /area/mine/living_quarters)
@@ -6973,9 +6778,8 @@
 	initialize_directions = 10
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -6988,9 +6792,8 @@
 "Rt" = (
 /obj/machinery/hydroponics/soil,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/item/seeds/orange,
 /obj/item/seeds/orange,
@@ -7013,8 +6816,7 @@
 	master_tag = "mining_west_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
-	pixel_y = 25;
-	req_access_txt = null
+	pixel_y = 25
 	},
 /turf/simulated/floor/plasteel/airless{
 	dir = 5;
@@ -7045,17 +6847,15 @@
 	})
 "RQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = "90Curve"
+	tag = "90Curve";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -7101,8 +6901,7 @@
 	id_tag = "mining_east_outer";
 	locked = 1;
 	name = "Mining External Access";
-	req_access = null;
-	req_access_txt = null
+	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/mine/eva)
@@ -7156,11 +6955,14 @@
 /area/mine/abandoned)
 "Sy" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/effect/spawner/window/reinforced,
-/obj/structure/cable,
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
+	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
 "SD" = (
@@ -7169,9 +6971,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
@@ -7322,11 +7123,10 @@
 /area/mine/laborcamp)
 "TI" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
 	pixel_y = 0;
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -7342,7 +7142,7 @@
 "TP" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Break Room";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
@@ -7372,7 +7172,7 @@
 	},
 /area/mine/laborcamp)
 "Ua" = (
-/obj/machinery/telecomms/relay/preset/mining,
+/obj/machinery/tcomms/relay/mining,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -7410,8 +7210,8 @@
 	charge = 5e+006
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
@@ -7460,9 +7260,8 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -7492,25 +7291,12 @@
 /area/mine/north_outpost)
 "Vb" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	pixel_x = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
-"Vc" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "bar"
-	},
-/area/mine/living_quarters{
-	name = "Mining Station Break Room"
-	})
 "Ve" = (
 /obj/structure/chair{
 	dir = 4
@@ -7598,8 +7384,7 @@
 	master_tag = "mining_n1_airlock";
 	name = "interior access button";
 	pixel_x = -25;
-	pixel_y = -25;
-	req_access_txt = null
+	pixel_y = -25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel{
@@ -7609,10 +7394,9 @@
 /area/mine/north_outpost)
 "VH" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel,
@@ -7675,19 +7459,6 @@
 /obj/item/clothing/mask/breath,
 /turf/simulated/floor/plasteel,
 /area/mine/eva)
-"Wj" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
 "Wk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -7735,8 +7506,8 @@
 	pixel_y = 25
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
@@ -7788,10 +7559,9 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -7822,9 +7592,9 @@
 /area/mine/unexplored)
 "Xe" = (
 /obj/structure/cable{
-	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -7857,10 +7627,9 @@
 	name = "Mining Break Room"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	pixel_y = 0;
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -7890,8 +7659,8 @@
 	pixel_y = 32
 	},
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/power/treadmill{
 	dir = 8
@@ -7948,9 +7717,8 @@
 /area/mine/lobby)
 "XG" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/north_outpost)
@@ -7985,10 +7753,9 @@
 	on = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/camera{
 	c_tag = "Labor Camp Security Hallway";
@@ -8018,9 +7785,8 @@
 /area/mine/living_quarters)
 "Ye" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plasteel,
@@ -8126,16 +7892,16 @@
 	charge = 5e+006
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
@@ -8170,7 +7936,7 @@
 "YX" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Bridge";
-	req_access_txt = "54"
+	req_access = list(54)
 	},
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidfloor"
@@ -8209,10 +7975,9 @@
 "Zk" = (
 /obj/machinery/hydroponics/soil,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/item/seeds/aloe,
 /turf/simulated/floor/grass,
@@ -8224,14 +7989,12 @@
 /area/mine/laborcamp/security)
 "Zv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	linked_dirs = 0;
+	banned_links = 15
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -8246,8 +8009,8 @@
 /area/mine/west_outpost)
 "ZC" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/beer,
-/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/cup/soda_cans/beer,
+/obj/item/reagent_containers/cup/soda_cans/beer,
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
@@ -8267,15 +8030,6 @@
 	icon_state = "floorgrime"
 	},
 /area/mine/laborcamp)
-"ZM" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plasteel,
-/area/mine/living_quarters)
 "ZN" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -8297,14 +8051,6 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "warning"
 	},
-/area/mine/living_quarters)
-"ZQ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "ZV" = (
 /obj/structure/disposalpipe/segment,
@@ -12507,8 +12253,8 @@ Nc
 cw
 MC
 Nc
-Wj
-LM
+lX
+ma
 aA
 aA
 aA
@@ -12523,7 +12269,7 @@ aA
 aA
 Qk
 Bs
-Gj
+cc
 rH
 rH
 rH
@@ -13531,7 +13277,7 @@ rH
 rH
 rH
 rH
-vI
+ma
 nU
 MB
 vQ
@@ -18674,12 +18420,12 @@ Nc
 Nc
 cw
 wh
-wl
-Nc
-Nc
-vL
 lX
-LM
+Nc
+Nc
+lX
+lX
+ma
 Nc
 Nc
 vp
@@ -28164,7 +27910,7 @@ rH
 rH
 rH
 yZ
-js
+WG
 rH
 Ra
 Xl
@@ -28678,7 +28424,7 @@ rH
 rH
 WG
 AN
-js
+WG
 Ra
 jd
 va
@@ -28935,7 +28681,7 @@ tC
 KU
 Eo
 Gx
-Lp
+WG
 ia
 dt
 bj
@@ -42423,10 +42169,10 @@ bB
 Me
 qH
 bB
-ZQ
+sG
 lK
 sG
-sP
+sG
 Rf
 oo
 Yt
@@ -42928,15 +42674,15 @@ HR
 Ua
 el
 qx
-ZM
-ZM
+Ye
+Ye
 yW
-ZM
-ZM
-ZM
+Ye
+Ye
+Ye
 yW
-ZM
-ZM
+Ye
+Ye
 Ye
 fn
 Yw
@@ -50913,11 +50659,11 @@ Ef
 fW
 hp
 lc
-Nk
-Nk
+ls
+ls
 Bl
-Nk
-Nk
+ls
+ls
 tv
 jP
 Cy
@@ -52200,7 +51946,7 @@ RV
 Vt
 yc
 aO
-Vc
+ki
 lZ
 lZ
 Xy
