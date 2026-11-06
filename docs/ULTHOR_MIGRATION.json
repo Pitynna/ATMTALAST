@@ -1,0 +1,1328 @@
+{
+  "renamed": {
+    "/area/solar/auxport -> /area/station/solars/port/aft": 111,
+    "/area/maintenance/auxsolarport -> /area/station/maintenance/solars/port/aft": 31,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/geneticist": 2,
+    "/mob/living/carbon/human/monkey -> /mob/living/carbon/human/lesser/monkey": 5,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/virologist": 1,
+    "/obj/item/reagent_containers/glass/bottle/reagent/formaldehyde -> /obj/item/reagent_containers/cup/bottle/reagent/formaldehyde": 1,
+    "/obj/effect/decal/warning_stripes/northwest -> /obj/effect/turf_decal/stripes/line": 5,
+    "/obj/effect/decal/warning_stripes/northeast -> /obj/effect/turf_decal/stripes/line": 9,
+    "/obj/effect/decal/warning_stripes/southwest -> /obj/effect/turf_decal/stripes/line": 6,
+    "/obj/effect/decal/warning_stripes/southeast -> /obj/effect/turf_decal/stripes/line": 8,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/revenant": 4,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/cmo": 1,
+    "/obj/structure/crematorium -> /obj/machinery/crematorium": 1,
+    "/obj/item/reagent_containers/food/drinks/tea -> /obj/item/reagent_containers/cup/glass/tea": 2,
+    "/area/maintenance/asmaint2 -> /area/station/maintenance/asmaint2": 174,
+    "/obj/machinery/atmospherics/unary/cold_sink/freezer -> /obj/machinery/atmospherics/unary/thermomachine/freezer": 6,
+    "/obj/item/toy/plushie/coffee_fox -> /obj/item/toy/plushie/fox/coffee": 1,
+    "/obj/item/reagent_containers/food/drinks/bottle/holywater -> /obj/item/reagent_containers/cup/glass/bottle/holywater": 1,
+    "/area/storage/tech -> /area/station/engineering/storage/tech": 68,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/chaplain": 1,
+    "/area/assembly/robotics -> /area/station/science/robotics": 56,
+    "/area/medical/research/restroom -> /area/station/medical/break_room": 46,
+    "/obj/item/reagent_containers/glass/beaker/cryoxadone -> /obj/item/reagent_containers/cup/beaker/cryoxadone": 2,
+    "/obj/item/reagent_containers/glass/bottle/morphine -> /obj/item/reagent_containers/cup/bottle/morphine": 1,
+    "/obj/item/reagent_containers/glass/bottle/epinephrine -> /obj/item/reagent_containers/cup/bottle/epinephrine": 2,
+    "/obj/item/reagent_containers/food/drinks/coffee -> /obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee": 1,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/psychiatrist": 1,
+    "/obj/effect/decal/warning_stripes/white/hollow -> /obj/effect/turf_decal/delivery/white/hollow": 7,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/late/gateway": 3,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/paramedic": 1,
+    "/obj/item/aiModule/reset -> /obj/item/ai_module/reset": 1,
+    "/obj/effect/decal/warning_stripes/east -> /obj/effect/turf_decal/stripes/line": 59,
+    "/obj/effect/decal/warning_stripes/north -> /obj/effect/turf_decal/stripes/line": 23,
+    "/area/toxins/mixing -> /area/station/science/toxins/mixing": 86,
+    "/obj/machinery/cryopod/right -> /obj/machinery/cryopod": 3,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/late/cryo": 3,
+    "/obj/item/tank/emergency_oxygen/engi/empty -> /obj/item/tank/internals/emergency_oxygen/engi/empty": 4,
+    "/obj/effect/decal/warning_stripes/west -> /obj/effect/turf_decal/stripes/line": 40,
+    "/area/assembly/chargebay -> /area/station/science/robotics/chargebay": 25,
+    "/area/toxins/lab -> /area/station/science/rnd": 52,
+    "/obj/structure/sign/redcross -> /obj/structure/sign/medbay": 2,
+    "/obj/vehicle/ambulance -> /obj/vehicle/ridden/ambulance": 1,
+    "/obj/effect/decal/warning_stripes/south -> /obj/effect/turf_decal/stripes/line": 16,
+    "/obj/item/reagent_containers/glass/beaker/large -> /obj/item/reagent_containers/cup/beaker/large": 18,
+    "/obj/machinery/vending/medical_public -> /obj/machinery/vending/wallmed": 1,
+    "/obj/structure/closet/walllocker/emerglocker/north -> /obj/structure/closet/walllocker/emerglocker": 8,
+    "/obj/effect/landmark -> /obj/effect/landmark/observer_start": 1,
+    "/obj/machinery/meter -> /obj/machinery/atmospherics/meter": 11,
+    "/obj/machinery/air_sensor -> /obj/machinery/atmospherics/air_sensor": 8,
+    "/obj/effect/decal/warning_stripes/yellow -> /obj/effect/turf_decal/stripes": 33,
+    "/obj/effect/decal/warning_stripes/northeastcorner -> /obj/effect/turf_decal/stripes/corner": 4,
+    "/area/bridge -> /area/station/command/bridge": 120,
+    "/obj/effect/decal/warning_stripes/yellow/partial -> /obj/effect/turf_decal/delivery/partial": 2,
+    "/obj/effect/decal/warning_stripes/arrow -> /obj/effect/turf_decal/arrow": 5,
+    "/obj/effect/decal/warning_stripes/yellow/hollow -> /obj/effect/turf_decal/delivery/hollow": 27,
+    "/area/teleporter -> /area/station/command/teleporter": 35,
+    "/obj/effect/decal/warning_stripes/southeastcorner -> /obj/effect/turf_decal/stripes/corner": 6,
+    "/obj/effect/decal/warning_stripes/southwestcorner -> /obj/effect/turf_decal/stripes/corner": 4,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/civilian": 9,
+    "/obj/effect/decal/warning_stripes/blue/hollow -> /obj/effect/turf_decal/delivery/blue/hollow": 11,
+    "/obj/effect/decal/warning_stripes/white -> /obj/effect/turf_decal/stripes/white": 2,
+    "/obj/item/reagent_containers/food/drinks/bottle/whiskey -> /obj/item/reagent_containers/cup/glass/bottle/whiskey": 2,
+    "/obj/item/reagent_containers/food/drinks/drinkingglass -> /obj/item/reagent_containers/cup/glass/drinkingglass": 7,
+    "/obj/item/radio/beacon -> /obj/item/beacon": 3,
+    "/obj/item/tank/oxygen -> /obj/item/tank/internals/oxygen": 4,
+    "/area/crew_quarters/captain -> /area/station/command/office/captain": 68,
+    "/area/crew_quarters/hor -> /area/station/command/office/rd": 48,
+    "/area/toxins/storage -> /area/station/science/storage": 32,
+    "/area/crew_quarters/heads -> /area/station/command/office/hop": 64,
+    "/area/medical/research -> /area/station/science/genetics": 81,
+    "/obj/machinery/computer/area_atmos -> /obj/machinery/computer/atmoscontrol": 1,
+    "/obj/vehicle/janicart -> /obj/vehicle/ridden/janicart": 1,
+    "/area/bridge/meeting_room -> /area/station/command/meeting_room": 46,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/research_director": 1,
+    "/obj/item/pen/multi/fountain -> /obj/item/pen/fountain": 1,
+    "/obj/structure/closet/secure_closet/freezer/money -> /obj/structure/closet/secure_closet/freezer": 1,
+    "/area/crew_quarters/captain/bedroom -> /area/station/command/office/captain/bedroom": 38,
+    "/area/toxins/explab -> /area/station/science/explab": 56,
+    "/area/toxins/explab_chamber -> /area/station/science/explab/chamber": 24,
+    "/obj/item/reagent_containers/glass/bucket -> /obj/item/reagent_containers/cup/bucket": 5,
+    "/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka -> /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka": 1,
+    "/obj/structure/closet/secure_closet/hop2 -> /obj/structure/closet/secure_closet/hop": 1,
+    "/area/turret_protected/ai_upload -> /area/station/ai/upload": 40,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/blob": 4,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/xeno": 1,
+    "/obj/machinery/computer/borgupload -> /obj/machinery/computer/aiupload/cyborg": 1,
+    "/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium -> /obj/item/reagent_containers/cup/glass/bottle/absinthe/premium": 1,
+    "/obj/item/reagent_containers/food/drinks/flask/gold -> /obj/item/reagent_containers/cup/glass/flask": 1,
+    "/area/toxins/misc_lab -> /area/station/science/chem_lab": 36,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/scientist": 2,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/late/cyborg": 1,
+    "/area/toxins/xenobiology -> /area/station/science/xenobiology": 114,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/cyborg": 2,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/ai": 1,
+    "/obj/machinery/slot_machine -> /obj/machinery/computer/slot_machine": 2,
+    "/area/toxins/server_coldroom -> /area/station/science/server": 15,
+    "/area/toxins/server -> /area/station/science/server": 20,
+    "/area/maintenance/turbine -> /area/station/maintenance/turbine": 105,
+    "/area/security/permabrig -> /area/station/security/prison/perma": 398,
+    "/area/solar/port -> /area/station/solars/port": 118,
+    "/obj/item/reagent_containers/food/condiment/enzyme -> /obj/item/reagent_containers/condiment/enzyme": 1,
+    "/obj/item/reagent_containers/food/drinks/bottle/cream -> /obj/item/reagent_containers/cup/glass/bottle/juice/cream": 1,
+    "/obj/structure/toilet/parasha -> /obj/structure/toilet": 3,
+    "/obj/machinery/vending/glass_shelf -> /obj/structure/rack": 1,
+    "/mob/living/carbon/human/monkey/punpun -> /mob/living/carbon/human/lesser/monkey/punpun": 1,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/carp": 2,
+    "/obj/item/reagent_containers/food/drinks/shaker -> /obj/item/reagent_containers/cup/glass/shaker": 3,
+    "/obj/item/ashtray/bronze -> /obj/item/storage/ashtray/bronze": 3,
+    "/area/atmos -> /area/station/engineering/atmos": 376,
+    "/area/maintenance/portsolar -> /area/station/maintenance/solars/port": 31,
+    "/obj/item/reagent_containers/glass/bottle/nutrient/ez -> /obj/item/reagent_containers/cup/bottle/nutrient/ez": 3,
+    "/obj/effect/decal/cleanable/blood/bubblegum -> /obj/effect/decal/cleanable/blood": 4,
+    "/obj/item/reagent_containers/food/condiment/peppermill -> /obj/item/reagent_containers/condiment/peppermill": 2,
+    "/obj/item/reagent_containers/food/condiment/saltshaker -> /obj/item/reagent_containers/condiment/saltshaker": 2,
+    "/obj/item/reagent_containers/glass/rag -> /obj/item/rag": 1,
+    "/mob/living/carbon/human/stirlitz_monkey -> /mob/living/carbon/human/lesser/monkey": 1,
+    "/obj/item/toy/cards/deck -> /obj/item/deck/cards": 1,
+    "/obj/machinery/party/turntable -> /obj/machinery/jukebox": 1,
+    "/area/civilian/barber -> /area/station/service/barber": 35,
+    "/obj/machinery/atmospherics/unary/heat_reservoir/heater -> /obj/machinery/atmospherics/unary/thermomachine/heater": 2,
+    "/obj/structure/closet/secure_closet/bar -> /obj/structure/closet/secure_closet/cabinet/bar": 1,
+    "/obj/item/storage/box/beanbag -> /obj/item/ammo_box/shotgun/beanbag": 1,
+    "/area/quartermaster/office -> /area/station/cargo/office": 173,
+    "/turf/simulated/shuttle/wall -> /turf/simulated/wall/shuttle": 324,
+    "/turf/simulated/shuttle/floor -> /turf/simulated/floor/shuttle": 365,
+    "/area/quartermaster/miningdock -> /area/station/cargo/miningdock": 102,
+    "/obj/effect/decal/warning_stripes/northwestcorner -> /obj/effect/turf_decal/stripes/corner": 1,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/cargo_technician": 1,
+    "/turf/simulated/shuttle/plating -> /turf/simulated/floor/shuttle/plating": 75,
+    "/obj/effect/decal/warning_stripes/red/hollow -> /obj/effect/turf_decal/delivery/red/hollow": 22,
+    "/obj/machinery/conveyor/south/ccw -> /obj/machinery/conveyor": 1,
+    "/area/security/prisonlockers -> /area/station/security/prison/lockers": 25,
+    "/obj/item/clothing/gloves/atmta/dio -> /obj/item/clothing/gloves/color/yellow": 1,
+    "/obj/item/clothing/head/atmta/dio -> /obj/item/clothing/head/that": 1,
+    "/obj/item/clothing/shoes/atmta/dio -> /obj/item/clothing/shoes/jackboots": 1,
+    "/obj/item/clothing/suit/atmta/dio -> /obj/item/clothing/suit/armor/vest": 1,
+    "/obj/structure/plasticflaps/mining -> /obj/structure/plasticflaps": 6,
+    "/obj/machinery/conveyor/east -> /obj/machinery/conveyor": 8,
+    "/obj/item/lighter/zippo/atmta/robust -> /obj/item/lighter/zippo": 1,
+    "/obj/item/clothing/shoes/orange -> /obj/item/clothing/shoes/color/orange": 1,
+    "/area/quartermaster/qm -> /area/station/command/office/qm": 36,
+    "/area/security/securearmoury -> /area/station/security/hallway/armory": 105,
+    "/obj/machinery/conveyor/west -> /obj/machinery/conveyor": 11,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/quartermaster": 1,
+    "/area/security/brig -> /area/station/security/brig": 219,
+    "/obj/item/tank/emergency_oxygen/engi -> /obj/item/tank/internals/emergency_oxygen/engi": 8,
+    "/turf/simulated/shuttle/wall/interior -> /turf/simulated/wall/shuttle": 2,
+    "/area/crew_quarters/locker -> /area/station/commons/locker": 53,
+    "/obj/item/storage/box/buck -> /obj/item/ammo_box/shotgun/buck": 2,
+    "/obj/item/storage/box/slug -> /obj/item/ammo_box/shotgun": 1,
+    "/obj/machinery/vending/clothing -> /obj/machinery/vending/clothesmate": 1,
+    "/obj/machinery/suit_storage_unit/security/secure -> /obj/machinery/suit_storage_unit/security": 2,
+    "/area/security/hos -> /area/station/command/office/hos": 42,
+    "/area/security/main -> /area/station/security/main": 50,
+    "/area/security/interrogation -> /area/station/security/interrogation": 20,
+    "/area/security/evidence -> /area/station/security/evidence": 24,
+    "/area/hallway/secondary/exit -> /area/station/hallway/secondary/exit": 167,
+    "/area/quartermaster/storage -> /area/station/cargo/storage": 31,
+    "/area/security/medbay -> /area/station/security/medical": 48,
+    "/area/security/warden -> /area/station/security/warden": 29,
+    "/turf/simulated/shuttle/floor4 -> /turf/simulated/floor/shuttle": 27,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/head_of_security": 1,
+    "/area/security/checkpoint -> /area/station/security/checkpoint": 70,
+    "/area/crew_quarters/locker/locker_toilet -> /area/station/commons/toilet/locker_toilet": 26,
+    "/obj/item/reagent_containers/food/drinks/mug/hos -> /obj/item/reagent_containers/cup/glass/mug": 1,
+    "/obj/item/spacepod_key -> /obj/item/spacepod_equipment/key": 2,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/security_officer": 4,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/warden": 1,
+    "/obj/item/clothing/head/atmta/dornan -> /obj/item/clothing/head/helmet": 1,
+    "/area/security/processing -> /area/station/security/processing": 55,
+    "/area/storage/primary -> /area/station/commons/storage/primary": 42,
+    "/obj/effect/decal/warning_stripes/red -> /obj/effect/turf_decal/stripes/red": 12,
+    "/obj/machinery/conveyor/southwest/ccw -> /obj/machinery/conveyor": 3,
+    "/area/security/execution -> /area/station/security/hallway/execution": 28,
+    "/area/security/lobby -> /area/station/security/lobby": 125,
+    "/obj/item/reagent_containers/glass/bottle/charcoal -> /obj/item/reagent_containers/cup/bottle/charcoal": 1,
+    "/area/hallway/secondary/entry -> /area/station/hallway/secondary/entry": 121,
+    "/area/hallway/primary/port -> /area/station/hallway/primary/port": 185,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/honk_squad": 10,
+    "/obj/effect/landmark -> /obj/effect/landmark/spawner/late/crew": 14,
+    "/area/library -> /area/station/service/library": 114,
+    "/area/magistrateoffice -> /area/station/legal/office/magistrate": 49,
+    "/area/lawoffice -> /area/station/legal/office/law": 44,
+    "/area/security/detectives_office -> /area/station/security/detectives_office": 73,
+    "/obj/structure/sign/greencross -> /obj/structure/sign/medbay": 1,
+    "/obj/machinery/vending/pizza -> /obj/machinery/vending/snack": 1,
+    "/obj/structure/reagent_dispensers/water_cooler/pizzaparty -> /obj/structure/reagent_dispensers/water_cooler": 1,
+    "/obj/structure/flora/junglebush/c -> /obj/structure/flora/junglebush": 1,
+    "/obj/item/clothing/under/atmta/clubskirt -> /obj/item/clothing/under/blackskirt": 1,
+    "/obj/machinery/vending/coffee/free -> /obj/machinery/vending/coffee": 1,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/lawyer": 2,
+    "/obj/item/book/codex_gigas -> /obj/item/toy/codex_gigas": 1,
+    "/obj/item/pen/multi/gold -> /obj/item/pen": 1,
+    "/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass -> /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass": 2,
+    "/obj/item/reagent_containers/food/drinks/flask/detflask -> /obj/item/reagent_containers/cup/glass/flask/detflask": 1,
+    "/obj/structure/closet/secure_closet/detective -> /obj/structure/closet/secure_closet/cabinet/detective": 1,
+    "/obj/structure/flora/junglebush/b -> /obj/structure/flora/junglebush": 1,
+    "/area/security/podbay -> /area/station/security/podbay": 90,
+    "/area/crew_quarters/courtroom -> /area/station/legal/courtroom": 98,
+    "/obj/item/reagent_containers/glass/beaker/waterbottle -> /obj/item/reagent_containers/cup/beaker/waterbottle": 2,
+    "/area/maintenance/starboardsolar -> /area/station/maintenance/solars/starboard": 31,
+    "/obj/effect/landmark/start -> /obj/effect/landmark/start/mechanic": 2,
+    "/obj/item/lighter/zippo/atmta/guessip -> /obj/item/lighter/zippo": 1,
+    "/turf/unsimulated/floor -> /turf/simulated/floor/plating": 3,
+    "/area/solar/starboard -> /area/station/solars/starboard": 114,
+    "/obj/item/ashtray/glass -> /obj/item/storage/ashtray/glass": 1
+  },
+  "removed": {
+    "/obj/structure/bed/noose": 2,
+    "/obj/machinery/computer/mob_healer_terminal": 1,
+    "/obj/item/cyberpapugkit": 1,
+    "/obj/structure/cult/archives": 1,
+    "/obj/machinery/portableowl/judgementowl": 1,
+    "/obj/item/vape": 1,
+    "/obj/effect/landmark/burnturf": 1
+  },
+  "obsolete_fields": {
+    "/obj/machinery/atmospherics/unary/vent_scrubber:scrub_N2O": 71,
+    "/obj/machinery/atmospherics/unary/vent_scrubber:scrub_Toxins": 71,
+    "/obj/machinery/atmospherics/unary/cold_sink/freezer:current_temperature": 2,
+    "/obj/machinery/power/emitter:state": 1,
+    "/obj/machinery/atmospherics/unary/vent_pump:pump_direction": 7,
+    "/obj/machinery/atmospherics/unary/vent_pump/high_volume:pump_direction": 1,
+    "/obj/machinery/ai_status_display:step_size": 1
+  },
+  "original_sha256": "daca1430a34d62439f11406b665801b8f60910ce3f08c2fa68298359f65b9b3d",
+  "size": [
+    255,
+    255,
+    1
+  ],
+  "geometry_changes": [
+    {
+      "position": [
+        135,
+        189,
+        1
+      ],
+      "before": "space",
+      "after": "floor"
+    }
+  ],
+  "added_job_starts": {
+    "captain": [
+      139,
+      157,
+      1
+    ],
+    "hop": [
+      114,
+      160,
+      1
+    ],
+    "chief_engineer": [
+      151,
+      143,
+      1
+    ],
+    "engineer": [
+      158,
+      133,
+      1
+    ],
+    "atmospheric": [
+      166,
+      135,
+      1
+    ],
+    "doctor": [
+      119,
+      184,
+      1
+    ],
+    "chemist": [
+      111,
+      174,
+      1
+    ],
+    "roboticist": [
+      165,
+      177,
+      1
+    ],
+    "detective": [
+      137,
+      100,
+      1
+    ],
+    "brig_physician": [
+      106,
+      113,
+      1
+    ],
+    "magistrate": [
+      123,
+      103,
+      1
+    ],
+    "nanotrasen_rep": [
+      107,
+      158,
+      1
+    ],
+    "blueshield": [
+      109,
+      167,
+      1
+    ],
+    "chef": [
+      71,
+      145,
+      1
+    ],
+    "bartender": [
+      78,
+      135,
+      1
+    ],
+    "botanist": [
+      83,
+      153,
+      1
+    ],
+    "shaft_miner": [
+      91,
+      131,
+      1
+    ],
+    "clown": [
+      92,
+      150,
+      1
+    ],
+    "mime": [
+      91,
+      157,
+      1
+    ],
+    "janitor": [
+      88,
+      164,
+      1
+    ],
+    "librarian": [
+      81,
+      149,
+      1
+    ]
+  },
+  "added_apcs": [
+    {
+      "area": "/area/station/hallway/secondary/entry",
+      "position": [
+        76,
+        95,
+        1
+      ],
+      "direction": 8,
+      "cable_spur": [
+        [
+          76,
+          95,
+          1
+        ]
+      ]
+    },
+    {
+      "area": "/area/station/cargo/office",
+      "position": [
+        84,
+        138,
+        1
+      ],
+      "direction": 1,
+      "cable_spur": [
+        [
+          84,
+          138,
+          1
+        ],
+        [
+          85,
+          138,
+          1
+        ]
+      ]
+    },
+    {
+      "area": "/area/station/cargo/storage",
+      "position": [
+        79,
+        113,
+        1
+      ],
+      "direction": 4,
+      "cable_spur": []
+    },
+    {
+      "area": "/area/station/command/office/qm",
+      "position": [
+        85,
+        125,
+        1
+      ],
+      "direction": 8,
+      "cable_spur": [
+        [
+          85,
+          125,
+          1
+        ],
+        [
+          85,
+          126,
+          1
+        ],
+        [
+          85,
+          127,
+          1
+        ],
+        [
+          86,
+          127,
+          1
+        ]
+      ]
+    },
+    {
+      "area": "/area/station/commons/storage/primary",
+      "position": [
+        93,
+        111,
+        1
+      ],
+      "direction": 4,
+      "cable_spur": []
+    },
+    {
+      "area": "/area/station/hallway/primary/port",
+      "position": [
+        116,
+        97,
+        1
+      ],
+      "direction": 1,
+      "cable_spur": []
+    },
+    {
+      "area": "/area/station/commons/toilet/locker_toilet",
+      "position": [
+        93,
+        114,
+        1
+      ],
+      "direction": 2,
+      "cable_spur": [
+        [
+          93,
+          114,
+          1
+        ],
+        [
+          93,
+          113,
+          1
+        ],
+        [
+          93,
+          112,
+          1
+        ]
+      ]
+    },
+    {
+      "area": "/area/station/security/prison/perma",
+      "position": [
+        116,
+        128,
+        1
+      ],
+      "direction": 8,
+      "cable_spur": []
+    },
+    {
+      "area": "/area/station/ai/upload",
+      "position": [
+        125,
+        159,
+        1
+      ],
+      "direction": 1,
+      "cable_spur": [
+        [
+          125,
+          159,
+          1
+        ],
+        [
+          125,
+          160,
+          1
+        ]
+      ]
+    },
+    {
+      "area": "/area/station/security/lobby",
+      "position": [
+        124,
+        108,
+        1
+      ],
+      "direction": 8,
+      "cable_spur": []
+    },
+    {
+      "area": "/area/station/maintenance/asmaint2",
+      "position": [
+        183,
+        147,
+        1
+      ],
+      "direction": 2,
+      "cable_spur": []
+    }
+  ],
+  "final_apcs": 98,
+  "final_job_starts": 55,
+  "smes_cable_ports": [
+    [
+      [
+        59,
+        142,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        60,
+        142,
+        1
+      ],
+      14,
+      1
+    ],
+    [
+      [
+        60,
+        141,
+        1
+      ],
+      1,
+      14
+    ],
+    [
+      [
+        61,
+        143,
+        1
+      ],
+      2,
+      13
+    ],
+    [
+      [
+        61,
+        142,
+        1
+      ],
+      9,
+      6
+    ],
+    [
+      [
+        62,
+        143,
+        1
+      ],
+      2,
+      13
+    ],
+    [
+      [
+        62,
+        142,
+        1
+      ],
+      7,
+      8
+    ],
+    [
+      [
+        62,
+        141,
+        1
+      ],
+      1,
+      14
+    ],
+    [
+      [
+        63,
+        142,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        64,
+        142,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        79,
+        194,
+        1
+      ],
+      4,
+      11
+    ],
+    [
+      [
+        79,
+        192,
+        1
+      ],
+      4,
+      11
+    ],
+    [
+      [
+        80,
+        195,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        80,
+        194,
+        1
+      ],
+      11,
+      4
+    ],
+    [
+      [
+        80,
+        193,
+        1
+      ],
+      5,
+      10
+    ],
+    [
+      [
+        80,
+        192,
+        1
+      ],
+      14,
+      1
+    ],
+    [
+      [
+        80,
+        191,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        80,
+        190,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        80,
+        189,
+        1
+      ],
+      13,
+      2
+    ],
+    [
+      [
+        81,
+        193,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        81,
+        192,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        81,
+        189,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        82,
+        189,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        138,
+        151,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        138,
+        150,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        138,
+        149,
+        1
+      ],
+      5,
+      10
+    ],
+    [
+      [
+        139,
+        152,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        139,
+        149,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        140,
+        153,
+        1
+      ],
+      7,
+      8
+    ],
+    [
+      [
+        140,
+        152,
+        1
+      ],
+      13,
+      2
+    ],
+    [
+      [
+        140,
+        149,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        141,
+        152,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        151,
+        128,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        152,
+        129,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        152,
+        128,
+        1
+      ],
+      13,
+      2
+    ],
+    [
+      [
+        153,
+        128,
+        1
+      ],
+      10,
+      5
+    ],
+    [
+      [
+        153,
+        127,
+        1
+      ],
+      7,
+      8
+    ],
+    [
+      [
+        153,
+        126,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        153,
+        125,
+        1
+      ],
+      7,
+      8
+    ],
+    [
+      [
+        153,
+        124,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        154,
+        127,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        154,
+        126,
+        1
+      ],
+      2,
+      13
+    ],
+    [
+      [
+        154,
+        125,
+        1
+      ],
+      13,
+      2
+    ],
+    [
+      [
+        155,
+        125,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        156,
+        125,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        157,
+        128,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        157,
+        127,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        157,
+        126,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        171,
+        95,
+        1
+      ],
+      4,
+      11
+    ],
+    [
+      [
+        171,
+        93,
+        1
+      ],
+      4,
+      11
+    ],
+    [
+      [
+        172,
+        96,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        172,
+        95,
+        1
+      ],
+      13,
+      2
+    ],
+    [
+      [
+        172,
+        94,
+        1
+      ],
+      6,
+      9
+    ],
+    [
+      [
+        172,
+        93,
+        1
+      ],
+      11,
+      4
+    ],
+    [
+      [
+        172,
+        92,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        173,
+        95,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        173,
+        94,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        189,
+        148,
+        1
+      ],
+      5,
+      10
+    ],
+    [
+      [
+        190,
+        148,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        191,
+        148,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        192,
+        148,
+        1
+      ],
+      12,
+      3
+    ],
+    [
+      [
+        192,
+        147,
+        1
+      ],
+      6,
+      9
+    ],
+    [
+      [
+        192,
+        146,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        192,
+        145,
+        1
+      ],
+      3,
+      12
+    ],
+    [
+      [
+        193,
+        148,
+        1
+      ],
+      8,
+      7
+    ],
+    [
+      [
+        193,
+        147,
+        1
+      ],
+      8,
+      7
+    ]
+  ],
+  "ai_smes_input": [
+    [
+      140,
+      148,
+      1
+    ],
+    [
+      141,
+      148,
+      1
+    ],
+    [
+      142,
+      148,
+      1
+    ],
+    [
+      142,
+      149,
+      1
+    ],
+    [
+      143,
+      149,
+      1
+    ],
+    [
+      144,
+      149,
+      1
+    ],
+    [
+      145,
+      149,
+      1
+    ],
+    [
+      146,
+      149,
+      1
+    ],
+    [
+      147,
+      149,
+      1
+    ],
+    [
+      148,
+      149,
+      1
+    ],
+    [
+      149,
+      149,
+      1
+    ],
+    [
+      150,
+      149,
+      1
+    ],
+    [
+      150,
+      150,
+      1
+    ],
+    [
+      150,
+      151,
+      1
+    ],
+    [
+      150,
+      152,
+      1
+    ],
+    [
+      150,
+      153,
+      1
+    ],
+    [
+      151,
+      153,
+      1
+    ],
+    [
+      151,
+      154,
+      1
+    ],
+    [
+      151,
+      155,
+      1
+    ],
+    [
+      151,
+      156,
+      1
+    ],
+    [
+      151,
+      157,
+      1
+    ],
+    [
+      151,
+      158,
+      1
+    ],
+    [
+      151,
+      159,
+      1
+    ],
+    [
+      151,
+      160,
+      1
+    ],
+    [
+      151,
+      161,
+      1
+    ],
+    [
+      151,
+      162,
+      1
+    ],
+    [
+      151,
+      163,
+      1
+    ],
+    [
+      151,
+      164,
+      1
+    ],
+    [
+      152,
+      164,
+      1
+    ]
+  ],
+  "engine_smes_isolation": [
+    {
+      "position": [
+        153,
+        125,
+        1
+      ],
+      "blocked_direction": 1
+    },
+    {
+      "position": [
+        153,
+        126,
+        1
+      ],
+      "blocked_direction": 2
+    },
+    {
+      "position": [
+        154,
+        125,
+        1
+      ],
+      "blocked_direction": 4
+    },
+    {
+      "position": [
+        155,
+        125,
+        1
+      ],
+      "blocked_direction": 8
+    }
+  ],
+  "final_map_sha256": "692d70b0a65f102271390a8ac49457346e25901f9bbcdfe7f61e665893364a31",
+  "engine_generator_spur": [
+    [
+      150,
+      123,
+      1
+    ],
+    [
+      151,
+      123,
+      1
+    ],
+    [
+      152,
+      123,
+      1
+    ]
+  ],
+  "initial_migration_map_sha256": "6dec29a77a0ae9f8bc8718011f69e94c520730fb32aa28705e89f8d78745e5c2",
+  "systems_followup": "docs/ULTHOR_SYSTEMS.json"
+}

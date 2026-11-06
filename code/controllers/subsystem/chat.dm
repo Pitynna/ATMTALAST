@@ -49,7 +49,7 @@ SUBSYSTEM_DEF(chat)
 		return
 
 	target.tgui_panel?.window?.send_message("chat/message", payload.into_message())
-	if(!(target.prefs?.toggles2 & PREFTOGGLE_2_OFF_LEGACY_OUTPUT_MESSAGES))
+	if(!target.tgui_panel?.is_ready() || !(target.prefs?.toggles2 & PREFTOGGLE_2_OFF_LEGACY_OUTPUT_MESSAGES))
 		SEND_TEXT(target, payload.get_content_as_html())
 
 /datum/controller/subsystem/chat/fire()

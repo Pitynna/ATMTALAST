@@ -9,27 +9,18 @@
  * tgui panel / chat troubleshooting verb
  */
 GAME_VERB(/client, fix_tgui_panel, "Починить чат", VERB_CATEGORY_SPECIALVERBS)
-	var/action
 	log_tgui(src, "Started fixing.")
-
 	nuke_chat()
-
-	// Failed to fix
-	action = alert(src, "Сработало?", "", "Да", "Нет, переключить на старый интерфейс")
-	if(action == "Нет, переключить на старый интерфейс")
-		winset(src, OUTPUT_SELECTOR_LEGACY_OUTPUT_SELECTOR, "left=output_legacy")
-		log_tgui(src, "Failed to fix.")
 
 /client/proc/nuke_chat()
 	// Catch all solution (kick the whole thing in the pants)
 	winset(src, OUTPUT_SELECTOR_LEGACY_OUTPUT_SELECTOR, "left=output_legacy")
+	to_chat(src, span_notice("Чат перезагружается. До завершения загрузки сообщения доступны в обычном окне."))
 	if(!tgui_panel || !istype(tgui_panel))
 		log_tgui(src, "tgui_panel datum is missing")
 		tgui_panel = new(src, "browseroutput")
 	tgui_panel.initialize(force = TRUE)
-	sleep(3 SECONDS)
-	// Force show the panel to see if there are any errors
-	winset(src, OUTPUT_SELECTOR_LEGACY_OUTPUT_SELECTOR, "left=output_browser")
+	// The frontend reveals itself after loading. Keep readable output until then.
 
 GAME_VERB(/client, refresh_tgui, "Обновить TGUI", VERB_CATEGORY_SPECIALVERBS)
 

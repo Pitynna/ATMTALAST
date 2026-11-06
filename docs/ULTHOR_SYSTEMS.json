@@ -1,0 +1,3516 @@
+{
+  "date": "2026-11-06",
+  "byond": "516.1688",
+  "static_audit": {
+    "size": [
+      255,
+      255,
+      1
+    ],
+    "tiles": 65025,
+    "sha256": "692d70b0a65f102271390a8ac49457346e25901f9bbcdfe7f61e665893364a31",
+    "apcs": 98,
+    "start_markers": 55,
+    "camera_count": 90,
+    "door_controls": 64,
+    "blast_doors": 155,
+    "jobs": {
+      "chef": 1,
+      "civilian": 9,
+      "bartender": 1,
+      "librarian": 1,
+      "quartermaster": 1,
+      "cargo_technician": 1,
+      "botanist": 1,
+      "chaplain": 1,
+      "janitor": 1,
+      "mime": 1,
+      "shaft_miner": 1,
+      "clown": 1,
+      "brig_physician": 1,
+      "nanotrasen_rep": 1,
+      "blueshield": 1,
+      "chemist": 1,
+      "head_of_security": 1,
+      "hop": 1,
+      "security_officer": 4,
+      "geneticist": 2,
+      "doctor": 1,
+      "magistrate": 1,
+      "lawyer": 2,
+      "warden": 1,
+      "virologist": 1,
+      "paramedic": 1,
+      "detective": 1,
+      "captain": 1,
+      "cmo": 1,
+      "psychiatrist": 1,
+      "ai": 1,
+      "cyborg": 2,
+      "chief_engineer": 1,
+      "engineer": 1,
+      "mechanic": 2,
+      "roboticist": 1,
+      "research_director": 1,
+      "atmospheric": 1,
+      "scientist": 2
+    },
+    "areas": {
+      "/area/space": 52510,
+      "/area/space/nearstation": 468,
+      "/area/station/solars/port": 118,
+      "/area/station/maintenance/solars/port": 166,
+      "/area/shuttle/ulthor_supply": 82,
+      "/area/station/hallway/secondary/entry": 315,
+      "/area/shuttle/ulthor_specops": 53,
+      "/area/station/service/ulthor_72_141": 85,
+      "/area/station/cargo/office": 248,
+      "/area/shuttle/ulthor_admin": 314,
+      "/area/station/commons/ulthor_81_165": 162,
+      "/area/station/maintenance/solars/port/aft": 369,
+      "/area/station/service/ulthor_82_155": 164,
+      "/area/station/cargo/storage": 67,
+      "/area/station/solars/port/aft": 111,
+      "/area/station/service/ulthor_80_150": 162,
+      "/area/station/cargo/ulthor_76_110": 9,
+      "/area/station/commons/ulthor_85_173": 110,
+      "/area/station/service/library": 231,
+      "/area/station/command/office/qm": 61,
+      "/area/station/commons/locker": 115,
+      "/area/station/commons/storage/primary": 79,
+      "/area/station/service/ulthor_86_180": 64,
+      "/area/station/commons/ulthor_87_165": 71,
+      "/area/station/service/ulthor_93_151": 108,
+      "/area/station/service/barber": 258,
+      "/area/station/hallway/primary/port": 401,
+      "/area/station/commons/ulthor_89_175": 17,
+      "/area/station/service/ulthor_91_176": 115,
+      "/area/station/cargo/miningdock": 137,
+      "/area/station/commons/toilet/locker_toilet": 46,
+      "/area/station/commons/ulthor_96_166": 223,
+      "/area/station/command/ulthor_100_175": 43,
+      "/area/station/security/medical": 109,
+      "/area/shuttle/ulthor_mining": 35,
+      "/area/station/command/ulthor_104_164": 31,
+      "/area/station/command/office/hop": 156,
+      "/area/station/medical/ulthor_108_176": 52,
+      "/area/station/command/ulthor_106_160": 22,
+      "/area/station/science/ulthor_123_191": 172,
+      "/area/station/medical/ulthor_113_186": 44,
+      "/area/station/medical/ulthor_110_175": 27,
+      "/area/station/command/office/hos": 42,
+      "/area/station/security/hallway/execution": 28,
+      "/area/station/medical/ulthor_118_183": 97,
+      "/area/station/security/brig": 221,
+      "/area/shuttle/ulthor_laborcamp": 45,
+      "/area/station/security/prison/perma": 398,
+      "/area/station/command/bridge": 175,
+      "/area/station/legal/office/magistrate": 49,
+      "/area/station/medical/ulthor_124_179": 155,
+      "/area/station/legal/courtroom": 98,
+      "/area/station/medical/ulthor_122_183": 23,
+      "/area/station/ai/upload": 40,
+      "/area/station/security/prison/lockers": 25,
+      "/area/station/security/hallway/armory": 105,
+      "/area/station/security/warden": 29,
+      "/area/station/security/lobby": 129,
+      "/area/station/legal/office/law": 44,
+      "/area/station/medical/ulthor_131_183": 28,
+      "/area/station/medical/ulthor_135_192": 67,
+      "/area/station/security/podbay": 125,
+      "/area/station/command/teleporter": 99,
+      "/area/station/command/meeting_room": 46,
+      "/area/station/medical/ulthor_135_176": 53,
+      "/area/station/command/ulthor_141_185": 52,
+      "/area/station/security/main": 50,
+      "/area/station/security/detectives_office": 232,
+      "/area/station/science/robotics": 279,
+      "/area/station/command/office/captain/bedroom": 62,
+      "/area/station/ai/ulthor_141_152": 36,
+      "/area/station/medical/ulthor_139_176": 24,
+      "/area/station/command/office/captain": 108,
+      "/area/station/security/processing": 164,
+      "/area/station/medical/ulthor_145_181": 24,
+      "/area/station/security/interrogation": 22,
+      "/area/station/telecomms/ulthor_145_147": 64,
+      "/area/station/engineering/ulthor_149_129": 67,
+      "/area/station/engineering/storage/tech": 120,
+      "/area/station/ai/ulthor_148_151": 87,
+      "/area/station/engineering/ulthor_151_130": 140,
+      "/area/station/security/evidence": 74,
+      "/area/station/command/ulthor_153_164": 42,
+      "/area/station/command/ulthor_154_145": 67,
+      "/area/station/engineering/ulthor_152_122": 33,
+      "/area/station/science/server": 109,
+      "/area/station/engineering/ulthor_158_119": 91,
+      "/area/station/engineering/ulthor_163_93": 75,
+      "/area/station/science/robotics/chargebay": 76,
+      "/area/station/security/checkpoint": 275,
+      "/area/station/engineering/atmos": 530,
+      "/area/station/science/ulthor_coldroom": 37,
+      "/area/station/command/office/rd": 84,
+      "/area/station/science/genetics": 107,
+      "/area/station/maintenance/solars/starboard": 97,
+      "/area/station/maintenance/asmaint2": 191,
+      "/area/station/medical/break_room": 48,
+      "/area/station/solars/starboard": 114,
+      "/area/station/science/rnd": 53,
+      "/area/station/science/chem_lab": 36,
+      "/area/station/science/xenobiology": 113,
+      "/area/station/hallway/secondary/exit": 193,
+      "/area/station/science/toxins/mixing": 86,
+      "/area/station/science/explab": 56,
+      "/area/station/science/storage": 32,
+      "/area/station/science/explab/chamber": 24,
+      "/area/shuttle/ulthor_emergency": 482,
+      "/area/station/science/ulthor_186_169": 13,
+      "/area/station/maintenance/turbine": 105
+    },
+    "failures": [],
+    "original_sha256": "daca1430a34d62439f11406b665801b8f60910ce3f08c2fa68298359f65b9b3d",
+    "geometry_changes": [
+      {
+        "position": [
+          135,
+          189,
+          1
+        ],
+        "before": "space",
+        "after": "floor"
+      }
+    ]
+  },
+  "runtime_runs": [
+    {
+      "directory": "tmp/ulthor-checks/20261106-023726-a1b2bd2e",
+      "clean_run": "Success!",
+      "pass": [
+        "PASS /datum/unit_test/ulthor_power 0.0875s",
+        "PASS /datum/unit_test/ulthor_atmos 0s",
+        "PASS /datum/unit_test/ulthor_lighting 0.03125s",
+        "PASS /datum/unit_test/ulthor_shuttles 5.9375s",
+        "PASS /datum/unit_test/ulthor_arrivals 0s",
+        "PASS /datum/unit_test/ulthor_door_controls 153.619s",
+        "PASS /datum/unit_test/ulthor_cameras 0.18125s",
+        "PASS /datum/unit_test/ulthor_telecomms 0.14375s"
+      ],
+      "system_results": [
+        "ULTHOR SYSTEMS: 64 door buttons dispatched to real doors",
+        "ULTHOR SYSTEMS: 90 cameras, 21 consoles, 816 actual frames",
+        "ULTHOR SYSTEMS: radio delivered station to mining and mining to station; offline core blocked delivery"
+      ],
+      "runtime_errors": 0
+    },
+    {
+      "directory": "tmp/ulthor-checks/20261106-024031-3fb4df5b",
+      "clean_run": "Success!",
+      "pass": [
+        "PASS /datum/unit_test/ulthor_power 0.0875s",
+        "PASS /datum/unit_test/ulthor_atmos 0s",
+        "PASS /datum/unit_test/ulthor_lighting 0.025s",
+        "PASS /datum/unit_test/ulthor_shuttles 5.86875s",
+        "PASS /datum/unit_test/ulthor_arrivals 0s",
+        "PASS /datum/unit_test/ulthor_cameras 0.1875s"
+      ],
+      "system_results": [
+        "ULTHOR SYSTEMS: 90 cameras, 21 consoles, 816 actual frames"
+      ],
+      "runtime_errors": 0
+    }
+  ],
+  "initial_system_repairs": {
+    "objects": [
+      {
+        "position": [
+          62,
+          141,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Aft Port Solar Control\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Aft Port Solar Control\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          65,
+          100,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle South West\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle South West\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          68,
+          126,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"QMLoaddoor2\";layer = 3;name = \"Loading Doors\";pixel_x = 24;pixel_y = 8}",
+        "after": "/obj/machinery/door_control{id = \"QMLoaddoor2\";layer = 3;name = \"Loading Doors\";pixel_x = 24;pixel_y = 8;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          68,
+          126,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"QMLoaddoor\";layer = 3;name = \"Loading Doors\";pixel_x = 24;pixel_y = -8}",
+        "after": "/obj/machinery/door_control{id = \"QMLoaddoor\";layer = 3;name = \"Loading Doors\";pixel_x = 24;pixel_y = -8;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          68,
+          107,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle North\";dir = 6}",
+        "after": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle North\";dir = 6;start_active = 1}"
+      },
+      {
+        "position": [
+          68,
+          91,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"CentComm Special Ops. Shuttle\";network = list(\"ERT\",\"CentComm\")}",
+        "after": "/obj/machinery/camera{c_tag = \"CentComm Special Ops. Shuttle\";network = list(\"ERT\",\"CentComm\");start_active = 1}"
+      },
+      {
+        "position": [
+          69,
+          96,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle South\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle South\";start_active = 1}"
+      },
+      {
+        "position": [
+          71,
+          100,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle South East\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Arrivals Shuttle South East\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          75,
+          113,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"Disposal Exit\";name = \"Disposal Vent Control\";pixel_y = 25;pixel_x = 8;req_access = list(12);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"trash\";name = \"Disposal Bay Door Control\";pixel_y = 25;pixel_x = 8;req_access = list(12);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          76,
+          160,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Hydroponics North\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Hydroponics North\";start_active = 1}"
+      },
+      {
+        "position": [
+          76,
+          86,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"adminshuttleblast\";name = \"blast door control\";pixel_x = -30;req_access = list(101);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"adminshuttleblast\";name = \"blast door control\";pixel_x = -30;req_access = list(101);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          76,
+          84,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"adminshuttleblast\";name = \"blast door control\";pixel_x = -30;req_access = list(101);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"adminshuttleblast\";name = \"blast door control\";pixel_x = -30;req_access = list(101);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          77,
+          119,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"qm_warehouse\";name = \"Warehouse Door Control\";pixel_x = -1;pixel_y = -24;req_access = list(31);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"qm_warehouse\";name = \"Warehouse Door Control\";pixel_x = -1;pixel_y = -24;req_access = list(31);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          77,
+          117,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"qm_warehouse\";name = \"Warehouse Door Control\";pixel_x = -1;pixel_y = 24;req_access = list(31);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"qm_warehouse\";name = \"Warehouse Door Control\";pixel_x = -1;pixel_y = 24;req_access = list(31);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          78,
+          180,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desiredstate = 1;id = \"cabin2\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_y = -25;specialfunctions = 4}",
+        "after": "/obj/machinery/door_control{desiredstate = 1;id = \"cabin2\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_y = -25;specialfunctions = 4;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          78,
+          177,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desiredstate = 1;id = \"cabin1\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_y = -25;specialfunctions = 4}",
+        "after": "/obj/machinery/door_control{desiredstate = 1;id = \"cabin1\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_y = -25;specialfunctions = 4;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          78,
+          139,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Bar Storage\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Bar Storage\";start_active = 1}"
+      },
+      {
+        "position": [
+          78,
+          113,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Disposals\";dir = 6}",
+        "after": "/obj/machinery/camera{c_tag = \"Disposals\";dir = 6;start_active = 1}"
+      },
+      {
+        "position": [
+          79,
+          192,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Fore Port Solar Control\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Fore Port Solar Control\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          80,
+          167,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Arcade\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Arcade\";start_active = 1}"
+      },
+      {
+        "position": [
+          83,
+          152,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Hydroponics South\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Hydroponics South\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          83,
+          80,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"adminshuttleblast\";name = \"Blast door control\";pixel_x = -5;pixel_y = 35;req_access = list(101)}",
+        "after": "/obj/machinery/door_control{id = \"adminshuttleblast\";name = \"Blast door control\";pixel_x = -5;pixel_y = 35;req_access = list(101);safety_z_check = 1}"
+      },
+      {
+        "position": [
+          83,
+          80,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"adminshuttleshutters\";name = \"Shutter control\";pixel_x = 5;pixel_y = 35;req_access = list(101)}",
+        "after": "/obj/machinery/door_control{id = \"adminshuttleshutters\";name = \"Shutter control\";pixel_x = 5;pixel_y = 35;req_access = list(101);safety_z_check = 1}"
+      },
+      {
+        "position": [
+          84,
+          142,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Bar South\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Bar South\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          86,
+          182,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Chapel Chaplain's Office\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Chapel Chaplain's Office\";start_active = 1}"
+      },
+      {
+        "position": [
+          87,
+          164,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"janitor\";name = \"Privacy Shutters Control\";pixel_x = -24;pixel_y = -7}",
+        "after": "/obj/machinery/door_control{id = \"janitor\";name = \"Privacy Shutters Control\";pixel_x = -24;pixel_y = -7;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          88,
+          103,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Library Study\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Library Study\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          89,
+          157,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Mime's Office\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Mime's Office\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          91,
+          177,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Chapel West\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Chapel West\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          91,
+          112,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Primary Tool Storage\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Primary Tool Storage\";start_active = 1}"
+      },
+      {
+        "position": [
+          92,
+          139,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Barber Shop\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Barber Shop\";start_active = 1}"
+      },
+      {
+        "position": [
+          96,
+          179,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Chapel South\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Chapel South\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          100,
+          176,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Gateway\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Gateway\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          104,
+          173,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"stationawaygate\";name = \"Gateway Shutters Access Control\";pixel_y = -24;req_access = list(62);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"stationawaygate\";name = \"Gateway Shutters Access Control\";pixel_y = -24;req_access = list(62);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          104,
+          165,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"blueshield\";name = \"Privacy Shutters Control\";pixel_x = -24;pixel_y = -7;req_access = list(67);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"blueshield\";name = \"Privacy Shutters Control\";pixel_x = -24;pixel_y = -7;req_access = list(67);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          104,
+          165,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"blueshieldofficedoor\";name = \"Office Door\";normaldoorcontrol = 1;pixel_x = -24;pixel_y = 2;req_access = list(67);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"blueshieldofficedoor\";name = \"Office Door\";normaldoorcontrol = 1;pixel_x = -24;pixel_y = 2;req_access = list(67);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          105,
+          113,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Medbay\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Medbay\";start_active = 1}"
+      },
+      {
+        "position": [
+          106,
+          163,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Blueshield's Office\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Blueshield's Office\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          107,
+          178,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Staff Room\";network = list(\"SS13\",\"Medical\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Staff Room\";network = list(\"SS13\",\"Medical\");start_active = 1}"
+      },
+      {
+        "position": [
+          110,
+          186,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Coroner's Office\";network = list(\"Medical\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Coroner's Office\";network = list(\"Medical\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          110,
+          116,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"Secure Gate\";name = \"Brig Lockdown\";pixel_x = -28;pixel_y = -3;req_access = list(2);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"Secure Gate\";name = \"Brig Lockdown\";pixel_x = -28;pixel_y = -3;req_access = list(2);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          110,
+          116,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch to lock down the prison wing's blast doors\";id = \"Prison Gate\";name = \"Prison Wing Lockdown\";pixel_x = -28;pixel_y = 7;req_access = list(2);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch to lock down the prison wing's blast doors\";id = \"Prison Gate\";name = \"Prison Wing Lockdown\";pixel_x = -28;pixel_y = 7;req_access = list(2);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          110,
+          115,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Head of Security's Office\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Head of Security's Office\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          113,
+          174,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control switch for the medbay foyer.\";id = \"imnotmakingyoulubepissoff\";name = \"Chemistry Privacy Shutter Control\";pixel_y = 26}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control switch for the medbay foyer.\";id = \"imnotmakingyoulubepissoff\";name = \"Chemistry Privacy Shutter Control\";pixel_y = 26;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          114,
+          174,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control switch for the medbay foyer.\";id = \"imnotmakingyoulubepissoff\";name = \"Chemistry Privacy Shutter Control\";pixel_y = 26}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control switch for the medbay foyer.\";id = \"imnotmakingyoulubepissoff\";name = \"Chemistry Privacy Shutter Control\";pixel_y = 26;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          115,
+          182,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desiredstate = 1;id = \"medcabin1\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_x = -26;pixel_y = -7;specialfunctions = 4}",
+        "after": "/obj/machinery/door_control{desiredstate = 1;id = \"medcabin1\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_x = -26;pixel_y = -7;specialfunctions = 4;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          115,
+          182,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desiredstate = 1;id = \"medcabin2\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_x = -26;pixel_y = 7;specialfunctions = 4}",
+        "after": "/obj/machinery/door_control{desiredstate = 1;id = \"medcabin2\";name = \"Door Bolt Control\";normaldoorcontrol = 1;pixel_x = -26;pixel_y = 7;specialfunctions = 4;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          116,
+          119,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Briefing Room West\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Briefing Room West\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          117,
+          165,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"hopqueue\";name = \"Queue Privacy Shutters Control\";pixel_x = -4;pixel_y = 25;req_access = list(28);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"hopqueue\";name = \"Queue Privacy Shutters Control\";pixel_x = -4;pixel_y = 25;req_access = list(28);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          117,
+          165,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"hop\";name = \"Privacy Shutters Control\";pixel_x = 6;pixel_y = 25;req_access = list(28);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"hop\";name = \"Privacy Shutters Control\";pixel_x = 6;pixel_y = 25;req_access = list(28);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          117,
+          103,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Magistrate Office North\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Magistrate Office North\";start_active = 1}"
+      },
+      {
+        "position": [
+          118,
+          144,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Permabrig West\";network = list(\"Prison\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Permabrig West\";network = list(\"Prison\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          118,
+          109,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Cell 1\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Cell 1\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          119,
+          186,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Medicine Storage\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Medicine Storage\";start_active = 1}"
+      },
+      {
+        "position": [
+          119,
+          95,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Courtroom \";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Courtroom\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          121,
+          163,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Bridge West\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Bridge West\";start_active = 1}"
+      },
+      {
+        "position": [
+          121,
+          134,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"Prison Lockdown 2\";name = \"Prison Cell 2 Lockdown\";pixel_x = 7;pixel_y = 38;req_access = list(2);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"Prison Lockdown 2\";name = \"Prison Cell 2 Lockdown\";pixel_x = 7;pixel_y = 38;req_access = list(2);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          121,
+          134,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"Prison Cell 1 Lockdown\";name = \"Prison Cell 1 Lockdown\";pixel_x = -5;pixel_y = 38;req_access = list(2);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"Prison Cell 1 Lockdown\";name = \"Prison Cell 1 Lockdown\";pixel_x = -5;pixel_y = 38;req_access = list(2);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          121,
+          115,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Briefing Room East\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Briefing Room East\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          121,
+          103,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"magistrate\";name = \"Privacy Shutters Control\";pixel_y = 28}",
+        "after": "/obj/machinery/door_control{id = \"magistrate\";name = \"Privacy Shutters Control\";pixel_y = 28;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          122,
+          186,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Surgery West\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Surgery West\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          122,
+          109,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Cell 2\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Cell 2\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          123,
+          175,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Cryogenics\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Cryogenics\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          123,
+          121,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Secure Armory West\";dir = 4;network = list(\"SS13\",\"Security\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Secure Armory West\";dir = 4;network = list(\"SS13\",\"Security\");start_active = 1}"
+      },
+      {
+        "position": [
+          123,
+          103,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Internal Affairs Office\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Internal Affairs Office\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          124,
+          186,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"surgeryobs1\";name = \"Privacy Shutters Control\";pixel_y = 25}",
+        "after": "/obj/machinery/door_control{id = \"surgeryobs1\";name = \"Privacy Shutters Control\";pixel_y = 25;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          124,
+          128,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Prisoner Lockers\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Prisoner Lockers\";start_active = 1}"
+      },
+      {
+        "position": [
+          125,
+          118,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Warden's Office\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Warden's Office\";start_active = 1}"
+      },
+      {
+        "position": [
+          125,
+          99,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"lawyer\";name = \"Internal Affairs Privacy Shutters Control\";pixel_x = 24}",
+        "after": "/obj/machinery/door_control{id = \"lawyer\";name = \"Internal Affairs Privacy Shutters Control\";pixel_x = 24;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          125,
+          91,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Courtroom Lobby\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Courtroom Lobby\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          126,
+          144,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Prison North\";dir = 6;network = list(\"Prison\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Prison North\";dir = 6;network = list(\"Prison\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          126,
+          132,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Prison South\";dir = 1;network = list(\"Prison\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Prison South\";dir = 1;network = list(\"Prison\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          126,
+          118,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"SecureArmory\";name = \"Secure Armory Shutters\";pixel_x = -6;pixel_y = 25;req_access = list(3);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"SecureArmory\";name = \"Secure Armory Shutters\";pixel_x = -6;pixel_y = 25;req_access = list(3);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          126,
+          110,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control switch for the brig foyer.\";id = \"BrigRight\";name = \"Brig Foyer Right Doors\";normaldoorcontrol = 1;pixel_x = 28;pixel_y = -2;req_access = list(63);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control switch for the brig foyer.\";id = \"BrigRight\";name = \"Brig Foyer Right Doors\";normaldoorcontrol = 1;pixel_x = 28;pixel_y = -2;req_access = list(63);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          126,
+          110,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control switch for the brig foyer.\";id = \"BrigLeft\";name = \"Brig Foyer Left Doors\";normaldoorcontrol = 1;pixel_x = 28;pixel_y = 8;req_access = list(63);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control switch for the brig foyer.\";id = \"BrigLeft\";name = \"Brig Foyer Left Doors\";normaldoorcontrol = 1;pixel_x = 28;pixel_y = 8;req_access = list(63);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          128,
+          188,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Surgery West Storage\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Surgery West Storage\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          128,
+          163,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Bridge East\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Bridge East\";start_active = 1}"
+      },
+      {
+        "position": [
+          128,
+          118,
+          1
+        ],
+        "before": "/obj/machinery/door/poddoor/multi_tile/two_tile_hor{armor = list(\"melee\" = 30, \"bullet\" = 30, \"laser\" = 20, \"energy\" = 20, \"bomb\" = 10, \"bio\" = 100, \"fire\" = 80, \"acid\" = 70)}",
+        "after": "/obj/machinery/door/poddoor/multi_tile/two_tile_hor{armor = list(\"melee\" = 30, \"bullet\" = 30, \"laser\" = 20, \"energy\" = 20, \"bomb\" = 10, \"bio\" = 100, \"fire\" = 80, \"acid\" = 70);id_tag = \"SecureArmory\";name = \"Secure Armory Blast Door\"}"
+      },
+      {
+        "position": [
+          129,
+          186,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"surgeryobs2\";name = \"Privacy Shutters Control\";pixel_y = 25}",
+        "after": "/obj/machinery/door_control{id = \"surgeryobs2\";name = \"Privacy Shutters Control\";pixel_y = 25;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          129,
+          103,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"lawyer\";name = \"Internal Affairs Privacy Shutters Control\";pixel_x = 24}",
+        "after": "/obj/machinery/door_control{id = \"lawyer\";name = \"Internal Affairs Privacy Shutters Control\";pixel_x = 24;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          130,
+          119,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"SecureArmory\";name = \"Secure Armory Shutters\";pixel_x = -6;pixel_y = -25;req_access = list(3);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"SecureArmory\";name = \"Secure Armory Shutters\";pixel_x = -6;pixel_y = -25;req_access = list(3);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          130,
+          117,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"SecureArmory\";name = \"Secure Armory Shutters\";pixel_x = -6;pixel_y = 25;req_access = list(3);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"SecureArmory\";name = \"Secure Armory Shutters\";pixel_x = -6;pixel_y = 25;req_access = list(3);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          131,
+          186,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Surgery East\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Surgery East\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          131,
+          87,
+          1
+        ],
+        "before": "/obj/machinery/door/poddoor/multi_tile/four_tile_hor",
+        "after": "/obj/machinery/door/poddoor/multi_tile/four_tile_hor{id_tag = \"secpodbay\";name = \"Security Pod Bay Blast Door\"}"
+      },
+      {
+        "position": [
+          132,
+          138,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Permabrig East\";dir = 1;network = list(\"Prison\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Permabrig East\";dir = 1;network = list(\"Prison\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          132,
+          121,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Secure Armory East\";dir = 8;network = list(\"SS13\",\"Security\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Secure Armory East\";dir = 8;network = list(\"SS13\",\"Security\");start_active = 1}"
+      },
+      {
+        "position": [
+          133,
+          97,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Pod Pilot's Office\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Pod Pilot's Office\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          134,
+          189,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"viroshutters\";name = \"Privacy Shutters Control\";pixel_x = 6;pixel_y = -30}",
+        "after": "/obj/machinery/door_control{id = \"viroshutters\";name = \"Privacy Shutters Control\";pixel_x = 6;pixel_y = -30;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          134,
+          94,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Podbay\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Podbay\";start_active = 1}"
+      },
+      {
+        "position": [
+          134,
+          89,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch for the pod doors.\";id = \"secpodbay\";name = \"Pod Door Control\";pixel_x = 29;req_access = list(71);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch for the pod doors.\";id = \"secpodbay\";name = \"Pod Door Control\";pixel_x = 29;req_access = list(71);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          135,
+          175,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"paramedic\";name = \"Garage Door Control\";pixel_x = -24;pixel_y = 1;req_access = list(66);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"paramedic\";name = \"Garage Door Control\";pixel_x = -24;pixel_y = 1;req_access = list(66);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          135,
+          99,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"brig_detprivacy\";name = \"Detective Privacy Shutters Control\";pixel_y = -28}",
+        "after": "/obj/machinery/door_control{id = \"brig_detprivacy\";name = \"Detective Privacy Shutters Control\";pixel_y = -28;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          136,
+          109,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Cell 3\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Cell 3\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          137,
+          155,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"AI Satellite Exterior South\";network = list(\"SS13\",\"MiniSat\")}",
+        "after": "/obj/machinery/camera{c_tag = \"AI Satellite Exterior South\";network = list(\"SS13\",\"MiniSat\");start_active = 1}"
+      },
+      {
+        "position": [
+          138,
+          180,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Medbay Secondary Hallway South\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Medbay Secondary Hallway South\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          139,
+          177,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"psychoffice\";name = \"Privacy Shutters Control\";pixel_x = 2}",
+        "after": "/obj/machinery/door_control{id = \"psychoffice\";name = \"Psych Office Door Control\";pixel_x = 2;safety_z_check = 1;normaldoorcontrol = 1}"
+      },
+      {
+        "position": [
+          139,
+          157,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Captain's Quarters\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Captain's Quarters\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          139,
+          148,
+          1
+        ],
+        "before": "/obj/machinery/camera/motion{c_tag = \"AI Core South\";network = list(\"SS13\",\"MiniSat\")}",
+        "after": "/obj/machinery/camera/motion{c_tag = \"AI Core South\";network = list(\"SS13\",\"MiniSat\");start_active = 1}"
+      },
+      {
+        "position": [
+          140,
+          179,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/medical{name = \"Psych Office\";req_access = list(64);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/medical{name = \"Psych Office\";req_access = list(64);check_one_access = 0;id_tag = \"psychoffice\"}"
+      },
+      {
+        "position": [
+          140,
+          109,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Cell 4\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Cell 4\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          140,
+          103,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Detective's Lab\";network = list(\"SS13\",\"Security\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Detective's Lab\";network = list(\"SS13\",\"Security\");start_active = 1}"
+      },
+      {
+        "position": [
+          142,
+          118,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"Interrogation\";name = \"Interrogation Privacy Shutter\";pixel_x = -28;pixel_y = -3;req_access = list(2);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"Interrogation\";name = \"Interrogation Privacy Shutter\";pixel_x = -28;pixel_y = -3;req_access = list(2);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          142,
+          111,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Brig Prisoner Processing West\";dir = 4;pixel_y = -22}",
+        "after": "/obj/machinery/camera{c_tag = \"Brig Prisoner Processing West\";dir = 4;pixel_y = -22;start_active = 1}"
+      },
+      {
+        "position": [
+          144,
+          148,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Telecommunications Core\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Telecommunications Core\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          145,
+          128,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Engineering Secure Storage North\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Engineering Secure Storage North\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          145,
+          122,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Engineering Secure Storage South\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Engineering Secure Storage South\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          146,
+          162,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Captain's Office\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Captain's Office\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          148,
+          153,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"AI Satellite Service Bay\";dir = 8;network = list(\"SS13\",\"MiniSat\")}",
+        "after": "/obj/machinery/camera{c_tag = \"AI Satellite Service Bay\";dir = 8;network = list(\"SS13\",\"MiniSat\");start_active = 1}"
+      },
+      {
+        "position": [
+          150,
+          162,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Vault\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Vault\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          150,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"atmos\";name = \"Atmospherics Lockdown\";pixel_x = 10;pixel_y = 24;req_access = list(24);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"UlthorAtmosLockdown\";name = \"Atmospherics Lockdown\";pixel_x = 10;pixel_y = 24;req_access = list(24);check_one_access = 0;safety_z_check = 1;normaldoorcontrol = 1;specialfunctions = 4;desiredstate = 1}"
+      },
+      {
+        "position": [
+          150,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch for the engineering security doors.\";id = \"Engineering\";name = \"Engineering Lockdown\";pixel_x = -10;pixel_y = 24;req_access = list(10);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch for the engineering security doors.\";id = \"UlthorEngineeringLockdown\";name = \"Engineering Lockdown\";pixel_x = -10;pixel_y = 24;req_access = list(10);check_one_access = 0;safety_z_check = 1;normaldoorcontrol = 1;specialfunctions = 4;desiredstate = 1}"
+      },
+      {
+        "position": [
+          150,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch for secure storage.\";id = \"Secure Storage\";name = \"Engineering Secure Storage\";pixel_y = 24;req_access = list(11);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch for secure storage.\";id = \"UlthorEngineeringLockdown\";name = \"Engineering Secure Storage\";pixel_y = 24;req_access = list(11);check_one_access = 0;safety_z_check = 1;normaldoorcontrol = 1;specialfunctions = 4;desiredstate = 1}"
+      },
+      {
+        "position": [
+          150,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"ceofficedoor\";name = \"Office Doors\";normaldoorcontrol = 1;pixel_x = 10;pixel_y = 37;req_access = list(56);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"UlthorEngineeringLockdown\";name = \"Office Doors\";normaldoorcontrol = 1;pixel_x = 10;pixel_y = 37;req_access = list(56);check_one_access = 0;safety_z_check = 1;specialfunctions = 4;desiredstate = 1}"
+      },
+      {
+        "position": [
+          150,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Engineering Chief Engineer's Office\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Engineering Chief Engineer's Office\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          151,
+          129,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch for secure storage.\";id = \"Secure Storage\";name = \"Engineering Secure Storage\";pixel_x = -24;req_access = list(56);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch for secure storage.\";id = \"Secure Storage\";name = \"Engineering Secure Storage\";pixel_x = -24;req_access = list(56);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          152,
+          176,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Tech Storage\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Tech Storage\";start_active = 1}"
+      },
+      {
+        "position": [
+          153,
+          124,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(11,24);check_one_access = 1}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(11,24);check_one_access = 1;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          155,
+          125,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          157,
+          135,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          157,
+          127,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          158,
+          135,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          158,
+          127,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          159,
+          95,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Mechanic's Workshop West\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Mechanic's Workshop West\";start_active = 1}"
+      },
+      {
+        "position": [
+          160,
+          172,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"mechbay\";name = \"Mech Bay Door Control\";pixel_x = -4;pixel_y = -28;req_access = list(29);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"mechbay\";name = \"Mech Bay Door Control\";pixel_x = -4;pixel_y = -28;req_access = list(29);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          160,
+          139,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          160,
+          138,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          162,
+          124,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/engineering/glass{name = \"Engineering\";req_access = list(32);check_one_access = 0;id_tag = \"UlthorEngineeringLockdown\"}"
+      },
+      {
+        "position": [
+          164,
+          172,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"robotics\";name = \"Robotics Lab Shutters Control\";pixel_x = 24;req_access = list(29);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"robotics\";name = \"Robotics Lab Shutters Control\";pixel_x = 24;req_access = list(29);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          164,
+          149,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Research Server Room\";network = list(\"Research\",\"SS13\");pixel_x = 22}",
+        "after": "/obj/machinery/camera{c_tag = \"Research Server Room\";network = list(\"Research\",\"SS13\");pixel_x = 22;start_active = 1}"
+      },
+      {
+        "position": [
+          164,
+          139,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0;id_tag = \"UlthorAtmosLockdown\"}"
+      },
+      {
+        "position": [
+          164,
+          138,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0;id_tag = \"UlthorAtmosLockdown\"}"
+      },
+      {
+        "position": [
+          166,
+          164,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"Biohazard\";name = \"Biohazard Shutter Control\";pixel_x = -4;pixel_y = 6;req_access = list(30);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"Biohazard\";name = \"Biohazard Shutter Control\";pixel_x = -4;pixel_y = 6;req_access = list(30);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          166,
+          164,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"rdofficedoor\";name = \"Office Door\";normaldoorcontrol = 1;pixel_x = -4;pixel_y = -4;req_access = list(30);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"rdofficedoor\";name = \"Office Door\";normaldoorcontrol = 1;pixel_x = -4;pixel_y = -4;req_access = list(30);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          166,
+          145,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Atmospherics Control Room\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Atmospherics Control Room\";start_active = 1}"
+      },
+      {
+        "position": [
+          167,
+          161,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Research Director's Office\";dir = 1;network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Research Director's Office\";dir = 1;network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          168,
+          145,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0;id_tag = \"UlthorAtmosLockdown\"}"
+      },
+      {
+        "position": [
+          168,
+          144,
+          1
+        ],
+        "before": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0}",
+        "after": "/obj/machinery/door/airlock/atmos{name = \"Atmospherics\";req_access = list(24);check_one_access = 0;id_tag = \"UlthorAtmosLockdown\"}"
+      },
+      {
+        "position": [
+          169,
+          178,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Research Break Room\";network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Research Break Room\";network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          169,
+          111,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch for the checkpoint doors.\";id = \"CPEX\";name = \"CP Exit Control\";pixel_x = 7;pixel_y = 26;req_access = list(63);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch for the checkpoint doors.\";id = \"CPEX\";name = \"CP Exit Control\";pixel_x = 7;pixel_y = 26;req_access = list(63);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          169,
+          111,
+          1
+        ],
+        "before": "/obj/machinery/door_control{desc = \"A remote control-switch for the checkpoint doors.\";id = \"CPIN\";name = \"CP Entry Control\";pixel_x = -7;pixel_y = 26;req_access = list(63);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{desc = \"A remote control-switch for the checkpoint doors.\";id = \"CPIN\";name = \"CP Entry Control\";pixel_x = -7;pixel_y = 26;req_access = list(63);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          170,
+          107,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Command Departure Checkpoint\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Command Departure Checkpoint\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          171,
+          94,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Aft Starboard Solar Control\";dir = 4}",
+        "after": "/obj/machinery/camera{c_tag = \"Aft Starboard Solar Control\";dir = 4;start_active = 1}"
+      },
+      {
+        "position": [
+          173,
+          151,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Xenobiology Module North\";network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Xenobiology Module North\";network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          173,
+          105,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Departure Lounge South\";dir = 1}",
+        "after": "/obj/machinery/camera{c_tag = \"Departure Lounge South\";dir = 1;start_active = 1}"
+      },
+      {
+        "position": [
+          174,
+          151,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"xeno4\";name = \"Containment Control\";pixel_y = 35;req_access = list(55);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"xeno4\";name = \"Containment Control\";pixel_y = 35;req_access = list(55);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          174,
+          150,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"xeno1\";name = \"Containment Control\";pixel_y = -28;req_access = list(55);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"xeno1\";name = \"Containment Control\";pixel_y = -28;req_access = list(55);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          175,
+          114,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Departure Lounge North\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Departure Lounge North\";start_active = 1}"
+      },
+      {
+        "position": [
+          176,
+          159,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"telescienceblast\";name = \"Test Chamber Blast Doors\";pixel_x = 25}",
+        "after": "/obj/machinery/door_control{id = \"telescienceblast\";name = \"Test Chamber Blast Doors\";pixel_x = 25;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          176,
+          154,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Xeno Containment 4\";network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Xeno Containment 4\";network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          176,
+          147,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Xeno Containment 1\";dir = 1;network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Xeno Containment 1\";dir = 1;network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          177,
+          173,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Research Toxins Mixing North\";network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Research Toxins Mixing North\";network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          178,
+          151,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"xeno5\";name = \"Containment Control\";pixel_y = 35;req_access = list(55);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"xeno5\";name = \"Containment Control\";pixel_y = 35;req_access = list(55);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          178,
+          150,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"xeno3\";name = \"Containment Control\";pixel_y = -28;req_access = list(55);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"xeno3\";name = \"Containment Control\";pixel_y = -28;req_access = list(55);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          178,
+          110,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Departure Lounge East\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Departure Lounge East\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          179,
+          161,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Research E.X.P.E.R.I-MENTOR Chamber\";network = list(\"Telepad\",\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Research E.X.P.E.R.I-MENTOR Chamber\";network = list(\"Telepad\",\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          180,
+          154,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Xeno Containment 5\";network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Xeno Containment 5\";network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          180,
+          147,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Xeno Containment 2\";dir = 1;network = list(\"Research\",\"SS13\")}",
+        "after": "/obj/machinery/camera{c_tag = \"Xeno Containment 2\";dir = 1;network = list(\"Research\",\"SS13\");start_active = 1}"
+      },
+      {
+        "position": [
+          181,
+          151,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Xenobiology Module North-East\";dir = 8;network = list(\"Research\",\"SS13\");pixel_y = -22}",
+        "after": "/obj/machinery/camera{c_tag = \"Xenobiology Module North-East\";dir = 8;network = list(\"Research\",\"SS13\");pixel_y = -22;start_active = 1}"
+      },
+      {
+        "position": [
+          181,
+          118,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Departure Lounge Security\"}",
+        "after": "/obj/machinery/camera{c_tag = \"Departure Lounge Security\";start_active = 1}"
+      },
+      {
+        "position": [
+          182,
+          133,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Atmospherics North-West\";dir = 8}",
+        "after": "/obj/machinery/camera{c_tag = \"Atmospherics North-West\";dir = 8;start_active = 1}"
+      },
+      {
+        "position": [
+          186,
+          169,
+          1
+        ],
+        "before": "/obj/machinery/camera{c_tag = \"Research Toxins Launch Room\";dir = 4;network = list(\"Research\",\"SS13\");pixel_y = -22}",
+        "after": "/obj/machinery/camera{c_tag = \"Research Toxins Launch Room\";dir = 4;network = list(\"Research\",\"SS13\");pixel_y = -22;start_active = 1}"
+      },
+      {
+        "position": [
+          191,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"auxiliaryturbinevent\";name = \"Auxiliary Vent\";pixel_x = 6;pixel_y = -24;req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"auxiliaryturbinevent\";name = \"Auxiliary Vent\";pixel_x = 6;pixel_y = -24;req_access = list(32);check_one_access = 0;safety_z_check = 1}"
+      },
+      {
+        "position": [
+          191,
+          143,
+          1
+        ],
+        "before": "/obj/machinery/door_control{id = \"turbinevent\";name = \"Turbine Vent\";pixel_x = -6;pixel_y = -24;req_access = list(32);check_one_access = 0}",
+        "after": "/obj/machinery/door_control{id = \"turbinevent\";name = \"Turbine Vent\";pixel_x = -6;pixel_y = -24;req_access = list(32);check_one_access = 0;safety_z_check = 1}"
+      }
+    ],
+    "areas": [
+      {
+        "position": [
+          72,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          72,
+          152,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          72,
+          160,
+          1
+        ],
+        "before": "/area/station/commons/ulthor_81_165",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          73,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          74,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          77,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          78,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          79,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          80,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          81,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          82,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          83,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          84,
+          151,
+          1
+        ],
+        "before": "/area/station/service/ulthor_80_150",
+        "after": "/area/station/service/ulthor_82_155"
+      },
+      {
+        "position": [
+          85,
+          156,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          85,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          85,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          85,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          85,
+          160,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          86,
+          156,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          86,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          86,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          86,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          86,
+          160,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          87,
+          156,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          87,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          87,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          87,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          87,
+          160,
+          1
+        ],
+        "before": "/area/station/commons/ulthor_87_165",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          88,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          88,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          88,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          88,
+          160,
+          1
+        ],
+        "before": "/area/station/commons/ulthor_87_165",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          89,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          89,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          89,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          89,
+          160,
+          1
+        ],
+        "before": "/area/station/commons/ulthor_87_165",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          90,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          90,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          90,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          90,
+          160,
+          1
+        ],
+        "before": "/area/station/commons/ulthor_87_165",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          91,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          91,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          91,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          91,
+          160,
+          1
+        ],
+        "before": "/area/station/commons/ulthor_87_165",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          92,
+          157,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          92,
+          158,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          92,
+          159,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          92,
+          160,
+          1
+        ],
+        "before": "/area/station/service/ulthor_82_155",
+        "after": "/area/station/service/ulthor_93_151"
+      },
+      {
+        "position": [
+          76,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          139,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          140,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          141,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          142,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          143,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          144,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          76,
+          145,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          139,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          140,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          141,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          142,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          143,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          77,
+          144,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          139,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          140,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          78,
+          141,
+          1
+        ],
+        "before": "/area/station/service/ulthor_72_141",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          139,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          79,
+          140,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          139,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          80,
+          140,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          81,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          81,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          81,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          81,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          81,
+          139,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          81,
+          140,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          82,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          82,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          82,
+          140,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          82,
+          141,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          82,
+          142,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          83,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          83,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          83,
+          140,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          83,
+          141,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          83,
+          142,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          83,
+          143,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          134,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          135,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          136,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          137,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          138,
+          1
+        ],
+        "before": "/area/station/cargo/office",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          139,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          140,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          141,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          142,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          143,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          84,
+          144,
+          1
+        ],
+        "before": "/area/station/service/barber",
+        "after": "/area/station/service/ulthor_80_150"
+      },
+      {
+        "position": [
+          118,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          118,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          118,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          118,
+          176,
+          1
+        ],
+        "before": "/area/station/medical/ulthor_118_183",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          118,
+          177,
+          1
+        ],
+        "before": "/area/station/medical/ulthor_118_183",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          119,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          119,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          119,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          119,
+          176,
+          1
+        ],
+        "before": "/area/station/medical/ulthor_118_183",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          119,
+          177,
+          1
+        ],
+        "before": "/area/station/medical/ulthor_118_183",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          120,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          120,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          120,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          121,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          121,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          122,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          122,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          123,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          123,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          123,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          124,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          124,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          124,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          124,
+          176,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          125,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          125,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          125,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          125,
+          176,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          125,
+          177,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          126,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          126,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          126,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          126,
+          176,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          126,
+          177,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          127,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          127,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          127,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          127,
+          176,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          128,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          128,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          128,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          129,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          129,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          129,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          130,
+          173,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          130,
+          174,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          130,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          130,
+          176,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          131,
+          173,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          131,
+          174,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          131,
+          175,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          131,
+          176,
+          1
+        ],
+        "before": "/area/station/command/bridge",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          132,
+          173,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          132,
+          174,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          132,
+          175,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          132,
+          176,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          132,
+          177,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          133,
+          173,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          133,
+          174,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          133,
+          175,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          133,
+          176,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          133,
+          177,
+          1
+        ],
+        "before": "/area/station/command/teleporter",
+        "after": "/area/station/medical/ulthor_124_179"
+      },
+      {
+        "position": [
+          165,
+          143,
+          1
+        ],
+        "before": "/area/station/science/ulthor_coldroom",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          165,
+          144,
+          1
+        ],
+        "before": "/area/station/science/ulthor_coldroom",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          165,
+          145,
+          1
+        ],
+        "before": "/area/station/science/ulthor_coldroom",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          165,
+          146,
+          1
+        ],
+        "before": "/area/station/science/server",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          166,
+          145,
+          1
+        ],
+        "before": "/area/station/science/ulthor_coldroom",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          166,
+          146,
+          1
+        ],
+        "before": "/area/station/science/ulthor_coldroom",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          167,
+          146,
+          1
+        ],
+        "before": "/area/station/science/genetics{name = \"Research Division\"}",
+        "after": "/area/station/engineering/atmos"
+      },
+      {
+        "position": [
+          168,
+          146,
+          1
+        ],
+        "before": "/area/station/science/xenobiology",
+        "after": "/area/station/engineering/atmos"
+      }
+    ]
+  },
+  "added_door_controls": [
+    [
+      [
+        140,
+        184,
+        1
+      ],
+      "Biohazard_medi",
+      "Medical Quarantine Control",
+      "40",
+      0
+    ],
+    [
+      [
+        120,
+        94,
+        1
+      ],
+      "courtroomshutters",
+      "Courtroom Privacy Control",
+      "38,74",
+      1
+    ],
+    [
+      [
+        169,
+        169,
+        1
+      ],
+      "rdlab",
+      "Research Lab Shutters",
+      "7,30",
+      1
+    ],
+    [
+      [
+        178,
+        173,
+        1
+      ],
+      "ToxinsVenting",
+      "Toxins Venting Bay Control",
+      "7",
+      0
+    ],
+    [
+      [
+        158,
+        94,
+        1
+      ],
+      "mechpodbayouter",
+      "Mechanic Pod Bay Control",
+      "70",
+      0
+    ]
+  ],
+  "additional_repairs": {
+    "loading_bay_controls": {
+      "from": [
+        68,
+        126,
+        1
+      ],
+      "to": [
+        73,
+        126,
+        1
+      ],
+      "count": 2
+    },
+    "cargo_office_apc": {
+      "from": [
+        84,
+        138,
+        1
+      ],
+      "to": [
+        85,
+        138,
+        1
+      ]
+    },
+    "toxins_camera": {
+      "position": [
+        190,
+        166,
+        1
+      ],
+      "network": "Toxins",
+      "c_tag": "Toxins External Test Range"
+    },
+    "camera_console_cache_reset": [
+      "on switch_camera",
+      "on unavailable active camera"
+    ],
+    "nanomap": "icons/_nanomaps/Ulthor_nanomap_z1.png"
+  },
+  "limitations": [
+    "Headless verification; no manual TGUI client walkthrough",
+    "No long-duration cooling or complete gameplay round test",
+    "No backup evacuation shuttle or pod1-pod4 home docks on the source layout"
+  ]
+}

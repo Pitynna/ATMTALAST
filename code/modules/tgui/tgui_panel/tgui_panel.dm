@@ -12,6 +12,9 @@
 	var/datum/tgui_window/window
 	var/broken = FALSE
 	var/initialized_at
+	/// Only the panel's ready handshake confirms that the chat application loaded.
+	var/ready = FALSE
+	var/initialization_id = 0
 	/// Dummy reference so BYOND includes the chat highlight sounds in the client resource pack, if it isn't included in any `.DM` file.
 	var/static/list/_chat_highlight_sounds = list('sound/misc/highlight_sounds/Beep.ogg')
 
@@ -40,7 +43,7 @@
  * TRUE if panel is initialized and ready to receive messages.
  */
 /datum/tgui_panel/proc/is_ready()
-	return !broken && window.is_ready()
+	return ready && !broken && window.is_ready()
 
 /**
  * public
@@ -49,9 +52,18 @@
  */
 /datum/tgui_panel/proc/initialize(force = FALSE)
 	set waitfor = FALSE
+	var/attempt = ++initialization_id
+	ready = FALSE
+	broken = FALSE
 	// Minimal sleep to defer initialization to after client constructor
 	sleep(1)
+	if(!client || attempt != initialization_id)
+		return
 	initialized_at = world.time
+	if(force)
+		// A failed download must not stay marked as delivered during recovery.
+		client.sent_assets = list()
+		window.message_queue = null
 	// Perform a clean initialization
 	window.initialize(
 		strict_mode = TRUE,
@@ -62,7 +74,7 @@
 	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/tgfont))
 	window.send_asset(get_asset_datum(/datum/asset/spritesheet_batched/chat))
 	request_telemetry()
-	addtimer(CALLBACK(src, PROC_REF(on_initialize_timed_out)), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(on_initialize_timed_out), attempt), 10 SECONDS)
 	window.send_message("testTelemetryCommand")
 
 /**
@@ -70,11 +82,13 @@
  *
  * Called when initialization has timed out.
  */
-/datum/tgui_panel/proc/on_initialize_timed_out()
-	// Currently does nothing but sending a message to old chat.
-	// Users often miss this text, thinking it is wiki-page, so this text should be BIG
-	SEND_TEXT(client, span_userdanger("<h1>Failed to load fancy chat, click <a href='byond://?src=[UID()];reload_tguipanel=1'>HERE</a> to attempt to reload it.<br>\
-	<a href='https://discord.com/channels/617003227182792704/756409070721957918/1435670788748607599'>ИНСТРУКЦИЯ</a> из Discord по восстановлению работы чата, если перезагрузка не помогает!</h1>"))
+/datum/tgui_panel/proc/on_initialize_timed_out(attempt)
+	if(!client || attempt != initialization_id || is_ready())
+		return
+	broken = TRUE
+	winset(client, OUTPUT_SELECTOR_LEGACY_OUTPUT_SELECTOR, "left=output_legacy")
+	log_tgui(client, "Chat initialization timed out; keeping legacy output.")
+	SEND_TEXT(client, span_warning("Чат не загрузился. Сообщения доступны в обычном окне. <a href='byond://?src=[UID()];reload_tguipanel=1'>Повторить загрузку чата</a>."))
 
 /**
  * private
@@ -83,6 +97,7 @@
  */
 /datum/tgui_panel/proc/on_message(type, payload)
 	if(type == "ready")
+		ready = TRUE
 		broken = FALSE
 		window.send_message("update", list(
 			"config" = list(
