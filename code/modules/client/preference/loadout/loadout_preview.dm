@@ -12,15 +12,26 @@
 	var/preview_show_job = TRUE
 	/// Направление взгляда куклы.
 	var/preview_dir = SOUTH
+	/// Серая плитка пола под куклой, ограничивает карту одним тайлом.
+	var/atom/movable/screen/preview_floor
 
 /datum/ui_module/loadout/Destroy(force)
-	QDEL_NULL(preview_view)
+	clear_preview()
 	try_on.Cut()
 	return ..()
 
 /datum/ui_module/loadout/ui_close(mob/user)
 	. = ..()
 	try_on.Cut()
+	clear_preview(user?.client)
+
+/// Убирает карту куклы с клиента и удаляет её.
+/datum/ui_module/loadout/proc/clear_preview(client/viewer)
+	if(QDELETED(preview_view))
+		preview_view = null
+		return
+	viewer?.clear_map(preview_view.assigned_map)
+	QDEL_NULL(preview_floor)
 	QDEL_NULL(preview_view)
 
 /datum/ui_module/loadout/proc/ensure_preview(mob/user, datum/tgui_window/window = null)
@@ -28,11 +39,22 @@
 		preview_view = new
 		preview_view.generate_view("loadout_preview_[UID()]")
 		rebuild_preview(user)
-	// Как в редакторе костюмов: повторно регистрируем карту при каждом обновлении,
-	// чтобы объект попал в уже созданный ByondUi-элемент окна.
 	preview_view.update_body()
-	if(user?.client)
-		preview_view.display_to(user, window)
+	// Регистрируем только сам объект, без popup plane-группы из display_to():
+	// её плашки освещения стоят в CENTER и растягивают рамку карты, а кукла
+	// в null space под освещением получается чёрной точкой. Без плейн-мастеров
+	// карта показывает один тайл куклы на весь элемент.
+	if(QDELETED(preview_floor))
+		preview_floor = new
+		preview_floor.icon = 'icons/turf/floors.dmi'
+		preview_floor.icon_state = "floor"
+		preview_floor.plane = FLOOR_PLANE
+		preview_floor.layer = TURF_LAYER
+		preview_floor.del_on_map_removal = FALSE
+		preview_floor.screen_loc = "[preview_view.assigned_map]:1,1"
+		preview_floor.assigned_map = preview_view.assigned_map
+	user?.client?.register_map_obj(preview_floor)
+	user?.client?.register_map_obj(preview_view)
 	return preview_view.assigned_map
 
 /// Профессия, выставленная игроком на высокий приоритет.

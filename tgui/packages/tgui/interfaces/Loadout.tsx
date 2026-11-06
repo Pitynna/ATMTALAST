@@ -204,7 +204,7 @@ const LoadoutGears = (props) => {
       {contents.map(({ key, gear }) => {
         const maxTextLength = 12;
         const selected = Object.keys(data.selected_gears).includes(key);
-        const tryingOn = data.try_on.includes(key);
+        const tryingOn = data.try_on.includes(gear.index_name);
         const cannotAdd =
           gear.gear_tier > user_tier ||
           (gear_slots + gear.cost > max_gear_slots && !selected);
