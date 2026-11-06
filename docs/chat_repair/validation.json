@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-06",
+  "dm_build": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "temp_test_build": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "temp_cleanup": {
+    "passed": 1,
+    "failures": null
+  },
+  "typescript": "PASS",
+  "tgui_build": "PASS",
+  "tgfont_build": "PASS",
+  "missing_tracked_files": 0,
+  "browser": {
+    "fresh": {
+      "pass": true,
+      "checks": {
+        "mounted": true,
+        "russianMessage": true,
+        "queuedOnce": true,
+        "deduplicated": true,
+        "resendRequested": true,
+        "recoveredMessage": true,
+        "panelActivated": true,
+        "noErrors": true
+      },
+      "errors": []
+    },
+    "obsolete": {
+      "pass": true,
+      "checks": {
+        "mounted": true,
+        "russianMessage": true,
+        "queuedOnce": true,
+        "deduplicated": true,
+        "resendRequested": true,
+        "recoveredMessage": true,
+        "panelActivated": true,
+        "noErrors": true
+      },
+      "errors": []
+    },
+    "invalid": {
+      "pass": true,
+      "checks": {
+        "mounted": true,
+        "russianMessage": true,
+        "queuedOnce": true,
+        "deduplicated": true,
+        "resendRequested": true,
+        "recoveredMessage": true,
+        "panelActivated": true,
+        "noErrors": true
+      },
+      "errors": []
+    },
+    "malformed": {
+      "pass": true,
+      "checks": {
+        "mounted": true,
+        "russianMessage": true,
+        "queuedOnce": true,
+        "deduplicated": true,
+        "resendRequested": true,
+        "recoveredMessage": true,
+        "panelActivated": true,
+        "noErrors": true
+      },
+      "errors": []
+    }
+  }
+}
