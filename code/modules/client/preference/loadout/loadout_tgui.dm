@@ -18,7 +18,7 @@ GLOBAL_LIST_EMPTY(gear_tgui_info)
 	var/list/data = list()
 	data["gear_slots"] = user?.client?.prefs.build_loadout()
 	data["selected_gears"] = user?.client?.prefs?.tgui_loadout_gear
-	data["character_preview_view"] = ensure_preview(user)
+	data["preview_image"] = ensure_preview(user)
 	data["try_on"] = try_on
 	data["show_job"] = preview_show_job
 	return data
@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(gear_tgui_info)
 	var/mob/user = usr
 	var/datum/preferences/prefs = user.client.prefs
 	. = handle_loadout_action(action, params, user, prefs)
-	if(.)
+	if(. && action != "rotate")
 		rebuild_preview(user)
 
 /datum/ui_module/loadout/proc/handle_loadout_action(action, list/params, mob/user, datum/preferences/prefs)
@@ -62,8 +62,8 @@ GLOBAL_LIST_EMPTY(gear_tgui_info)
 			return TRUE
 
 		if("rotate")
-			preview_rotate(params["clockwise"])
-			return FALSE // кукла уже обновлена, пересборка не нужна
+			preview_rotate(text2num("[params["clockwise"]]"))
+			return TRUE
 
 		if("toggle_gear")
 			var/datum/gear/gear = GLOB.gear_datums[params["gear"]]

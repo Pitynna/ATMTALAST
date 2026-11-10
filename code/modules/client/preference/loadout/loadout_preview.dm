@@ -2,18 +2,20 @@
 // Кукла собирается из настроек персонажа, при желании одевается в форму
 // профессии с высоким приоритетом, затем на неё надевается выбранный
 // лодаут и вещи на примерке (они вытесняют вещи того же слота).
+// В окно уходит плоская картинка куклы (base64), без карты ByondUi:
+// карта в лобби растягивалась и показывала куклу чёрной точкой.
 
 /datum/ui_module/loadout
-	/// Карта с куклой, показываемая в окне.
-	var/atom/movable/screen/map_view/character_preview/preview_view
+	/// Собранная кукла (в null space), из неё рисуются картинки.
+	var/mob/living/carbon/human/dummy/preview_dummy
+	/// Картинка куклы для окна, base64 PNG.
+	var/preview_image
 	/// index_name вещей, которые сейчас примеряются (не сохраняются).
 	var/list/try_on = list()
 	/// Показывать ли форму профессии под лодаутом.
 	var/preview_show_job = TRUE
 	/// Направление взгляда куклы.
 	var/preview_dir = SOUTH
-	/// Серая плитка пола под куклой, ограничивает карту одним тайлом.
-	var/atom/movable/screen/preview_floor
 
 /datum/ui_module/loadout/Destroy(force)
 	clear_preview()
@@ -23,39 +25,23 @@
 /datum/ui_module/loadout/ui_close(mob/user)
 	. = ..()
 	try_on.Cut()
-	clear_preview(user?.client)
+	clear_preview()
 
-/// Убирает карту куклы с клиента и удаляет её.
-/datum/ui_module/loadout/proc/clear_preview(client/viewer)
-	if(QDELETED(preview_view))
-		preview_view = null
-		return
-	viewer?.clear_map(preview_view.assigned_map)
-	QDEL_NULL(preview_floor)
-	QDEL_NULL(preview_view)
+/datum/ui_module/loadout/proc/clear_preview()
+	QDEL_NULL(preview_dummy)
+	preview_image = null
 
-/datum/ui_module/loadout/proc/ensure_preview(mob/user, datum/tgui_window/window = null)
-	if(QDELETED(preview_view))
-		preview_view = new
-		preview_view.generate_view("loadout_preview_[UID()]")
+/// Возвращает картинку куклы, собирая её при первом обращении.
+/datum/ui_module/loadout/proc/ensure_preview(mob/user)
+	if(QDELETED(preview_dummy))
 		rebuild_preview(user)
-	preview_view.update_body()
-	// Регистрируем только сам объект, без popup plane-группы из display_to():
-	// её плашки освещения стоят в CENTER и растягивают рамку карты, а кукла
-	// в null space под освещением получается чёрной точкой. Без плейн-мастеров
-	// карта показывает один тайл куклы на весь элемент.
-	if(QDELETED(preview_floor))
-		preview_floor = new
-		preview_floor.icon = 'icons/turf/floors.dmi'
-		preview_floor.icon_state = "floor"
-		preview_floor.plane = FLOOR_PLANE
-		preview_floor.layer = TURF_LAYER
-		preview_floor.del_on_map_removal = FALSE
-		preview_floor.screen_loc = "[preview_view.assigned_map]:1,1"
-		preview_floor.assigned_map = preview_view.assigned_map
-	user?.client?.register_map_obj(preview_floor)
-	user?.client?.register_map_obj(preview_view)
-	return preview_view.assigned_map
+	return preview_image
+
+/datum/ui_module/loadout/proc/render_preview()
+	if(QDELETED(preview_dummy))
+		preview_image = null
+		return
+	preview_image = icon2base64(getFlatIcon(preview_dummy, preview_dir, no_anim = TRUE))
 
 /// Профессия, выставленная игроком на высокий приоритет.
 /datum/preferences/proc/get_high_priority_job()
@@ -84,10 +70,9 @@
 	dummy.equip_to_slot_or_del(item, gear.slot)
 
 /datum/ui_module/loadout/proc/rebuild_preview(mob/user)
-	if(QDELETED(preview_view))
-		return
 	var/datum/preferences/prefs = user?.client?.prefs
-	QDEL_NULL(preview_view.dummy)
+	QDEL_NULL(preview_dummy)
+	preview_image = null
 	if(!prefs)
 		return
 
@@ -109,15 +94,12 @@
 		preview_equip_gear(dummy, prefs, GLOB.gear_datums[index], force_hands = TRUE)
 
 	dummy.move_to_null_space()
-	preview_view.dummy = dummy
-	preview_view.preview_direction = preview_dir
-	preview_view.update_body()
+	preview_dummy = dummy
+	render_preview()
 
 /datum/ui_module/loadout/proc/preview_rotate(clockwise)
 	var/static/list/order = list(SOUTH, WEST, NORTH, EAST)
 	var/pos = order.Find(preview_dir) || 1
 	pos = clockwise ? (pos % 4) + 1 : ((pos + 2) % 4) + 1
 	preview_dir = order[pos]
-	if(!QDELETED(preview_view))
-		preview_view.preview_direction = preview_dir
-		preview_view.update_body()
+	render_preview()

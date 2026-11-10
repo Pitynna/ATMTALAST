@@ -17,7 +17,6 @@ import { createSearch } from 'tgui-core/string';
 import { useBackend } from '../backend';
 import { JOBS_RU } from '../constants';
 import { Window } from '../layouts';
-import { CharacterPreview } from './common/CharacterPreview';
 
 type Data = {
   user_tier: number;
@@ -25,7 +24,7 @@ type Data = {
   max_gear_slots: number;
   selected_gears: string[];
   gears: Record<string, Record<string, Gear>>;
-  character_preview_view?: string;
+  preview_image?: string;
   try_on: string[];
   show_job: boolean;
 };
@@ -334,8 +333,17 @@ const LoadoutPreview = (props) => {
     >
       <Stack vertical fill>
         <Stack.Item grow>
-          {data.character_preview_view ? (
-            <CharacterPreview id={data.character_preview_view} height="440px" />
+          {data.preview_image ? (
+            <img
+              src={`data:image/png;base64,${data.preview_image}`}
+              width={192}
+              height={192}
+              style={{
+                display: 'block',
+                margin: '0 auto',
+                imageRendering: 'pixelated',
+              }}
+            />
           ) : (
             <Box color="label">Нет данных</Box>
           )}
