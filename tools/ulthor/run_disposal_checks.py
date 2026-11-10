@@ -47,6 +47,8 @@ def main():
         with (runtime / 'config/maps.txt').open('a', encoding='utf-8') as f:
             f.write('\nDISABLE_AWAY_MISSIONS\nDISABLE_SPACE_RUINS\n')
         config = runtime / 'config/config.txt'
+        if not config.exists():
+            copy(runtime / 'config/example/config.txt', config)
         config.write_text('\n'.join(line for line in config.read_text(encoding='utf-8-sig').splitlines()
                                     if line.strip().upper() != 'HUB') + '\n', encoding='utf-8')
         scan(runtime)
