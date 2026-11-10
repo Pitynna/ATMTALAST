@@ -42,8 +42,12 @@ def main():
         for dll in ROOT.glob('*.dll'):
             copy(dll, runtime / dll.name)
         for p in tracked:
-            if p.startswith(('_maps/', 'config/', 'strings/', 'html/')):
+            # Rust DMI metadata/spritesheet readers need real files, not only RSC.
+            if p.startswith(('_maps/', 'config/', 'strings/', 'html/', 'icons/', 'sound/', 'tgui/public/')):
                 copy(ROOT / p, runtime / p)
+        for example in (runtime / 'config/example').iterdir():
+            if example.is_file() and not (runtime / 'config' / example.name).exists():
+                copy(example, runtime / 'config' / example.name)
         with (runtime / 'config/maps.txt').open('a', encoding='utf-8') as f:
             f.write('\nDISABLE_AWAY_MISSIONS\nDISABLE_SPACE_RUINS\n')
         config = runtime / 'config/config.txt'
