@@ -28,6 +28,14 @@ GLOBAL_LIST_EMPTY(gear_tgui_info)
 	data["gears"] = GLOB.gear_tgui_info
 	data["max_gear_slots"] = user?.client?.prefs?.max_gear_slots
 	data["user_tier"] = user?.client?.donator_level
+	// Вещи, недоступные расе персонажа, в окне не показываем.
+	var/list/hidden = list()
+	var/species_name = user?.client?.prefs?.species
+	for(var/index in GLOB.gear_datums)
+		var/datum/gear/gear = GLOB.gear_datums[index]
+		if(istype(gear, /datum/gear/racial) && !gear.can_select(null, null, species_name, TRUE))
+			hidden += "[gear.type]"
+	data["hidden_gears"] = hidden
 	return data
 
 /datum/ui_module/loadout/ui_act(action, list/params)

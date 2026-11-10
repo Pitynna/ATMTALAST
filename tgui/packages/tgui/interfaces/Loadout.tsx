@@ -26,6 +26,7 @@ type Data = {
   gears: Record<string, Record<string, Gear>>;
   preview_image?: string;
   try_on: string[];
+  hidden_gears: string[];
   show_job: boolean;
 };
 
@@ -144,6 +145,7 @@ const LoadoutGears = (props) => {
     }));
   }
 
+  contents = contents.filter(({ key }) => !data.hidden_gears.includes(key));
   contents.sort(sortTypes[sortType]);
   if (sortReverse) {
     contents = contents.reverse();

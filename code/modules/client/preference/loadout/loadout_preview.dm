@@ -53,21 +53,27 @@
 	if(!gear || gear.implantable)
 		return
 	var/list/metadata = prefs.loadout_gear[gear.index_name] || list()
-	if(!gear.slot)
-		if(!force_hands)
-			return
-		var/obj/item/hand_item = gear.spawn_item(null, metadata)
-		if(istype(hand_item) && !dummy.put_in_hands(hand_item))
-			qdel(hand_item)
-		return
 	var/obj/item/item = gear.spawn_item(null, metadata)
 	if(!istype(item))
 		qdel(item)
 		return
-	var/obj/item/old_item = dummy.get_item_by_slot(gear.slot)
+	var/slot = gear.slot
+	if(!slot)
+		// В игре такие вещи кладутся в рюкзак; на кукле надеваем их в
+		// подходящий видимый слот, если он есть.
+		var/static/list/visible_slots = list(ITEM_SLOT_CLOTH_INNER, ITEM_SLOT_CLOTH_OUTER, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_MASK, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_NECK, ITEM_SLOT_BELT, ITEM_SLOT_BACK)
+		for(var/candidate in visible_slots)
+			if(item.slot_flags & candidate)
+				slot = candidate
+				break
+	if(!slot)
+		if(!force_hands || !dummy.put_in_hands(item))
+			qdel(item)
+		return
+	var/obj/item/old_item = dummy.get_item_by_slot(slot)
 	if(old_item)
 		qdel(old_item)
-	dummy.equip_to_slot_or_del(item, gear.slot)
+	dummy.equip_to_slot_or_del(item, slot)
 
 /datum/ui_module/loadout/proc/rebuild_preview(mob/user)
 	var/datum/preferences/prefs = user?.client?.prefs
