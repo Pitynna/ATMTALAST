@@ -54,6 +54,7 @@
 #include "test_tgui_create_message.dm"
 #include "test_timer_sanity.dm"
 #include "test_ulthor.dm"
+#include "test_ulthor_disposals.dm"
 #include "test_ulthor_systems.dm"
 
 #include "test_wall_disposal.dm"
