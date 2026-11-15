@@ -80,7 +80,7 @@
 	desc = "A densely stitched round patch of grey velvet with the Nanotrasen logo embroidered in yellow metallic thread. Look closely and you can see electricity flowing through the thread, producing tiny sparks."
 	icon_state = "t4cestrip"
 	item_state = "t4cestrip"
-	strip_ru_name = "Супер" + JOB_TITLE_RU_CHIEF_ENGINEER
+	strip_ru_name = "Grand " + JOB_TITLE_RU_CHIEF_ENGINEER
 
 /obj/item/clothing/accessory/head_strip/t4ce/get_bubble_override()
 	return "T4CE"

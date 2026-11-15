@@ -388,3 +388,15 @@ tgui после слияния не менялись. Отслеживаемые
 Незакоммиченная копия перевода в `claude/remove-ashwalker-tribal` убрана в
 stash («duplicate of claude/english-ui translation»). Сервер не запускался,
 в игре не проверялось.
+
+## 2026-11-16 — Профессии на английском
+
+Названия профессий, альт-названия и отделы в меню выбора профессии, на ID-картах
+и в записях переведены на английский (`job_titles_ru.dm`) по официальному
+Paradise: Civilian отображается как Assistant, Lawyer — Internal Affairs
+Agent, Solar Federation General — Trans-Solar Federation General, отделы —
+Command/Engineering/Security/Miscellaneous/Synthetic/Support / Service/
+Medical/Science/Supply. Внутренние ключи (`JOB_TITLE_*`) не менялись, поэтому
+сохранённые выборы профессий и джобаны остаются в силе; сохранённые старые
+русские альт-названия сбросятся на основное название. Также переведены ID-карты
+ОБР, заключённого и «Unassigned». Сборка 0 ошибок. Сервер не запускался.

@@ -24,109 +24,109 @@ GLOBAL_LIST_EMPTY(job_titles_ru_to_en)
 // MARK: Job titles
 
 // Command (Solo command, not department heads)
-#define JOB_TITLE_RU_CAPTAIN "Капитан"
-#define JOB_TITLE_RU_REPRESENTATIVE "Представитель \"Нанотрейзен\""
-#define JOB_TITLE_RU_BLUESHIELD "Офицер \"Синий Щит\""
+#define JOB_TITLE_RU_CAPTAIN JOB_TITLE_CAPTAIN
+#define JOB_TITLE_RU_REPRESENTATIVE JOB_TITLE_REPRESENTATIVE
+#define JOB_TITLE_RU_BLUESHIELD JOB_TITLE_BLUESHIELD
 
 // Engineeering
-#define JOB_TITLE_RU_CHIEF_ENGINEER "Главный инженер"
-#define JOB_TITLE_RU_ENGINEER "Инженер"
-#define JOB_TITLE_RU_ATMOSTECH "Атмосферный специалист"
-#define JOB_TITLE_RU_ENGINEER_TRAINEE "Инженер-стажёр"
+#define JOB_TITLE_RU_CHIEF_ENGINEER JOB_TITLE_CHIEF_ENGINEER
+#define JOB_TITLE_RU_ENGINEER JOB_TITLE_ENGINEER
+#define JOB_TITLE_RU_ATMOSTECH JOB_TITLE_ATMOSTECH
+#define JOB_TITLE_RU_ENGINEER_TRAINEE JOB_TITLE_ENGINEER_TRAINEE
 
 // Medical
-#define JOB_TITLE_RU_CMO "Главный врач"
-#define JOB_TITLE_RU_DOCTOR "Врач"
-#define JOB_TITLE_RU_CORONER "Патологоанатом"
-#define JOB_TITLE_RU_CHEMIST "Химик"
-#define JOB_TITLE_RU_GENETICIST "Генетик"
-#define JOB_TITLE_RU_VIROLOGIST "Вирусолог"
-#define JOB_TITLE_RU_PSYCHIATRIST "Психиатр"
-#define JOB_TITLE_RU_PARAMEDIC "Парамедик"
-#define JOB_TITLE_RU_MEDICAL_INTERN "Интерн"
+#define JOB_TITLE_RU_CMO JOB_TITLE_CMO
+#define JOB_TITLE_RU_DOCTOR JOB_TITLE_DOCTOR
+#define JOB_TITLE_RU_CORONER JOB_TITLE_CORONER
+#define JOB_TITLE_RU_CHEMIST JOB_TITLE_CHEMIST
+#define JOB_TITLE_RU_GENETICIST JOB_TITLE_GENETICIST
+#define JOB_TITLE_RU_VIROLOGIST JOB_TITLE_VIROLOGIST
+#define JOB_TITLE_RU_PSYCHIATRIST JOB_TITLE_PSYCHIATRIST
+#define JOB_TITLE_RU_PARAMEDIC JOB_TITLE_PARAMEDIC
+#define JOB_TITLE_RU_MEDICAL_INTERN JOB_TITLE_MEDICAL_INTERN
 
 // Science
-#define JOB_TITLE_RU_RD "Директор исследований"
-#define JOB_TITLE_RU_SCIENTIST "Учёный"
-#define JOB_TITLE_RU_ROBOTICIST "Робототехник"
-#define JOB_TITLE_RU_SPACEPOD_TECHNICIAN "Челнок-инженер"
-#define JOB_TITLE_RU_SCIENCE_STUDENT "Учёный-студент"
+#define JOB_TITLE_RU_RD JOB_TITLE_RD
+#define JOB_TITLE_RU_SCIENTIST JOB_TITLE_SCIENTIST
+#define JOB_TITLE_RU_ROBOTICIST JOB_TITLE_ROBOTICIST
+#define JOB_TITLE_RU_SPACEPOD_TECHNICIAN JOB_TITLE_SPACEPOD_TECHNICIAN
+#define JOB_TITLE_RU_SCIENCE_STUDENT JOB_TITLE_SCIENCE_STUDENT
 
 // Security
-#define JOB_TITLE_RU_HOS "Глава Службы Безопасности"
-#define JOB_TITLE_RU_WARDEN "Смотритель"
-#define JOB_TITLE_RU_DETECTIVE "Детектив"
-#define JOB_TITLE_RU_OFFICER "Офицер СБ"
-#define JOB_TITLE_RU_BRIGDOC "Бриг-медик"
-#define JOB_TITLE_RU_PILOT "Пилот СБ"
+#define JOB_TITLE_RU_HOS JOB_TITLE_HOS
+#define JOB_TITLE_RU_WARDEN JOB_TITLE_WARDEN
+#define JOB_TITLE_RU_DETECTIVE JOB_TITLE_DETECTIVE
+#define JOB_TITLE_RU_OFFICER JOB_TITLE_OFFICER
+#define JOB_TITLE_RU_BRIGDOC JOB_TITLE_BRIGDOC
+#define JOB_TITLE_RU_PILOT JOB_TITLE_PILOT
 
 // Legal
-#define JOB_TITLE_RU_MAGISTRATE "Магистрат"
-#define JOB_TITLE_RU_LAWYER "Адвокат"
+#define JOB_TITLE_RU_MAGISTRATE JOB_TITLE_MAGISTRATE
+#define JOB_TITLE_RU_LAWYER "Internal Affairs Agent"
 
 // Supply
-#define JOB_TITLE_RU_QUARTERMASTER "Квартирмейстер"
-#define JOB_TITLE_RU_CARGOTECH "Грузчик"
-#define JOB_TITLE_RU_MINER "Шахтёр"
-#define JOB_TITLE_RU_MINING_MEDIC "Шахтёрский врач"
+#define JOB_TITLE_RU_QUARTERMASTER JOB_TITLE_QUARTERMASTER
+#define JOB_TITLE_RU_CARGOTECH JOB_TITLE_CARGOTECH
+#define JOB_TITLE_RU_MINER JOB_TITLE_MINER
+#define JOB_TITLE_RU_MINING_MEDIC JOB_TITLE_MINING_MEDIC
 
 // Service
-#define JOB_TITLE_RU_HOP "Глава персонала"
-#define JOB_TITLE_RU_BARTENDER "Бармен"
-#define JOB_TITLE_RU_CHEF "Повар"
-#define JOB_TITLE_RU_BOTANIST "Ботаник"
-#define JOB_TITLE_RU_CHAPLAIN "Священник"
-#define JOB_TITLE_RU_CLOWN "Клоун"
-#define JOB_TITLE_RU_MIME "Мим"
-#define JOB_TITLE_RU_JANITOR "Уборщик"
-#define JOB_TITLE_RU_LIBRARIAN "Библиотекарь"
-#define JOB_TITLE_RU_EXPLORER "Исследователь врат"
+#define JOB_TITLE_RU_HOP JOB_TITLE_HOP
+#define JOB_TITLE_RU_BARTENDER JOB_TITLE_BARTENDER
+#define JOB_TITLE_RU_CHEF JOB_TITLE_CHEF
+#define JOB_TITLE_RU_BOTANIST JOB_TITLE_BOTANIST
+#define JOB_TITLE_RU_CHAPLAIN JOB_TITLE_CHAPLAIN
+#define JOB_TITLE_RU_CLOWN JOB_TITLE_CLOWN
+#define JOB_TITLE_RU_MIME JOB_TITLE_MIME
+#define JOB_TITLE_RU_JANITOR JOB_TITLE_JANITOR
+#define JOB_TITLE_RU_LIBRARIAN JOB_TITLE_LIBRARIAN
+#define JOB_TITLE_RU_EXPLORER JOB_TITLE_EXPLORER
 
 // Civilians
-#define JOB_TITLE_RU_CIVILIAN "Гражданский"
-#define JOB_TITLE_RU_PRISONER "Заключённый"
-#define JOB_TITLE_RU_INVESTOR "Инвестор"
+#define JOB_TITLE_RU_CIVILIAN "Assistant"
+#define JOB_TITLE_RU_PRISONER JOB_TITLE_PRISONER
+#define JOB_TITLE_RU_INVESTOR JOB_TITLE_INVESTOR
 
 // Silicons
-#define JOB_TITLE_RU_AI "Станционный ИИ"
-#define JOB_TITLE_RU_CYBORG "Киборг"
+#define JOB_TITLE_RU_AI JOB_TITLE_AI
+#define JOB_TITLE_RU_CYBORG JOB_TITLE_CYBORG
 
 // Central Command
-#define JOB_TITLE_RU_CCOFFICER "Офицер ЦК \"Нанотрейзен\""
-#define JOB_TITLE_RU_CCFIELD "Полевой офицер ЦК \"Нанотрейзен\""
-#define JOB_TITLE_RU_CCSPECOPS "Офицер специальных операций \"Нанотрейзен\""
-#define JOB_TITLE_RU_CCCAPTAIN "Капитан флота \"Нанотрейзен\""
-#define JOB_TITLE_RU_CCSOLGOV "Адмирал Солнечного Флота ТСФ"
+#define JOB_TITLE_RU_CCOFFICER JOB_TITLE_CCOFFICER
+#define JOB_TITLE_RU_CCFIELD JOB_TITLE_CCFIELD
+#define JOB_TITLE_RU_CCSPECOPS JOB_TITLE_CCSPECOPS
+#define JOB_TITLE_RU_CCCAPTAIN JOB_TITLE_CCCAPTAIN
+#define JOB_TITLE_RU_CCSOLGOV "Trans-Solar Federation General"
 
 // Emergency Response Team (ERT)
-#define JOB_TITLE_RU_ERT_MEMBER "Оперативник ОБР"
-#define JOB_TITLE_RU_ERT_LEADER "Командир ОБР"
-#define JOB_TITLE_RU_ERT_OFFICER "Штурмовик ОБР"
-#define JOB_TITLE_RU_ERT_ENGINEER "Инженер ОБР"
-#define JOB_TITLE_RU_ERT_MEDIC "Медик ОБР"
-#define JOB_TITLE_RU_ERT_INQUISITOR "Инквизитор ОБР"
-#define JOB_TITLE_RU_ERT_JANITOR "Клининг-специалист ОБР"
+#define JOB_TITLE_RU_ERT_MEMBER JOB_TITLE_ERT_MEMBER
+#define JOB_TITLE_RU_ERT_LEADER JOB_TITLE_ERT_LEADER
+#define JOB_TITLE_RU_ERT_OFFICER JOB_TITLE_ERT_OFFICER
+#define JOB_TITLE_RU_ERT_ENGINEER JOB_TITLE_ERT_ENGINEER
+#define JOB_TITLE_RU_ERT_MEDIC JOB_TITLE_ERT_MEDIC
+#define JOB_TITLE_RU_ERT_INQUISITOR JOB_TITLE_ERT_INQUISITOR
+#define JOB_TITLE_RU_ERT_JANITOR JOB_TITLE_ERT_JANITOR
 
 // Syndicate
-#define JOB_TITLE_RU_SYNDICATE_OFFICER "Офицер \"Синдиката\""
-#define JOB_TITLE_RU_SYNDICATE_OPERATIVE "Оперативник отряда \"Атом\""
-#define JOB_TITLE_RU_SYNDICATE_OPERATIVE_LEADER "Лидер отряда \"Атом\""
-#define JOB_TITLE_RU_SYNDICATE_AGENT "Агент \"Синдиката\""
-#define JOB_TITLE_RU_SYNDICATE_COMMANDO "Командир \"Синдиката\""
+#define JOB_TITLE_RU_SYNDICATE_OFFICER JOB_TITLE_SYNDICATE_OFFICER
+#define JOB_TITLE_RU_SYNDICATE_OPERATIVE JOB_TITLE_SYNDICATE_OPERATIVE
+#define JOB_TITLE_RU_SYNDICATE_OPERATIVE_LEADER JOB_TITLE_SYNDICATE_OPERATIVE_LEADER
+#define JOB_TITLE_RU_SYNDICATE_AGENT JOB_TITLE_SYNDICATE_AGENT
+#define JOB_TITLE_RU_SYNDICATE_COMMANDO JOB_TITLE_SYNDICATE_COMMANDO
 
 // Vox
-#define JOB_TITLE_RU_VOX_RAIDER "Вокс-рейдер"
-#define JOB_TITLE_RU_VOX_TRADER "Вокс-торговец"
+#define JOB_TITLE_RU_VOX_RAIDER JOB_TITLE_VOX_RAIDER
+#define JOB_TITLE_RU_VOX_TRADER JOB_TITLE_VOX_TRADER
 
 // Battle teams for `de_kerberos_2` game mode
-#define JOB_TITLE_RU_TEAM1 "Команда 1"
-#define JOB_TITLE_RU_TEAM2 "Команда 2"
-#define JOB_TITLE_RU_TEAM3 "Команда 3"
+#define JOB_TITLE_RU_TEAM1 JOB_TITLE_TEAM1
+#define JOB_TITLE_RU_TEAM2 JOB_TITLE_TEAM2
+#define JOB_TITLE_RU_TEAM3 JOB_TITLE_TEAM3
 
 
 // Special ones
-#define JOB_TITLE_RU_DEMOTED "Разжалован"
-#define JOB_TITLE_RU_TERMINATED "Контракт расторгнут"
+#define JOB_TITLE_RU_DEMOTED "Demoted"
+#define JOB_TITLE_RU_TERMINATED "Terminated"
 
 GLOBAL_LIST_INIT(job_titles_ru, list(
 // Command (Solo command, not department heads)
@@ -235,147 +235,147 @@ GLOBAL_LIST_INIT(job_titles_ru, list(
 // MARK: Alt job titles
 
 // Engineer
-#define ALT_JOB_TITLE_RU_CONSTRUCTION_WORKER "Монтажник"
-#define ALT_JOB_TITLE_RU_POWER_ENGINEER "Оператор реакторного зала"
-#define ALT_JOB_TITLE_RU_ELECTRICIAN "Электрик"
+#define ALT_JOB_TITLE_RU_CONSTRUCTION_WORKER "Maintenance Technician"
+#define ALT_JOB_TITLE_RU_POWER_ENGINEER "Engine Technician"
+#define ALT_JOB_TITLE_RU_ELECTRICIAN "Electrician"
 // Atmostech
-#define ALT_JOB_TITLE_RU_LIFE_SUPPORT_SPECIALIST "Специалист СЖО"
+#define ALT_JOB_TITLE_RU_LIFE_SUPPORT_SPECIALIST "Atmospheric Technician"
 // Trainee engineer
-#define ALT_JOB_TITLE_RU_ENGINEER_ASSISTANT "Инженерный ассистент"
+#define ALT_JOB_TITLE_RU_ENGINEER_ASSISTANT "Engineering Assistant"
 
 // Doctor
-#define ALT_JOB_TITLE_RU_SURGEON "Хирург"
-#define ALT_JOB_TITLE_RU_TRAUMATOLOGIST "Травматолог"
-#define ALT_JOB_TITLE_RU_RESUSCITATOR "Реаниматолог"
-#define ALT_JOB_TITLE_RU_THERAPIST "Терапевт"
+#define ALT_JOB_TITLE_RU_SURGEON "Surgeon"
+#define ALT_JOB_TITLE_RU_TRAUMATOLOGIST "Traumatologist"
+#define ALT_JOB_TITLE_RU_RESUSCITATOR "Resuscitator"
+#define ALT_JOB_TITLE_RU_THERAPIST "Physician"
 // Coroner
-#define ALT_JOB_TITLE_RU_THANATOLOGIST "Танатолог"
+#define ALT_JOB_TITLE_RU_THANATOLOGIST "Mortician"
 // Chemist
-#define ALT_JOB_TITLE_RU_PROVISOR "Провизор"
-#define ALT_JOB_TITLE_RU_PHARMACIST "Фармацевт"
+#define ALT_JOB_TITLE_RU_PROVISOR "Pharmacologist"
+#define ALT_JOB_TITLE_RU_PHARMACIST "Pharmacist"
 // Geneticist
-#define ALT_JOB_TITLE_RU_GENETIC_ENGINEER "Генный инженер"
-#define ALT_JOB_TITLE_RU_BIOENGINEER "Биоинженер"
-#define ALT_JOB_TITLE_RU_CLONING_SPECIALIST "Специалист по клонированию"
+#define ALT_JOB_TITLE_RU_GENETIC_ENGINEER "Genetic Researcher"
+#define ALT_JOB_TITLE_RU_BIOENGINEER "Bioengineer"
+#define ALT_JOB_TITLE_RU_CLONING_SPECIALIST "Cloning Specialist"
 // Virologist
-#define ALT_JOB_TITLE_RU_INFECTIOUS_DISEASE "Инфекционист"
-#define ALT_JOB_TITLE_RU_EPIDEMIOLOGIST "Эпидемиолог"
-#define ALT_JOB_TITLE_RU_MICROBIOLOGIST "Микробиолог"
-#define ALT_JOB_TITLE_RU_IMMUNOLOGIST "Иммунолог"
+#define ALT_JOB_TITLE_RU_INFECTIOUS_DISEASE "Infectious Disease Specialist"
+#define ALT_JOB_TITLE_RU_EPIDEMIOLOGIST "Epidemiologist"
+#define ALT_JOB_TITLE_RU_MICROBIOLOGIST "Microbiologist"
+#define ALT_JOB_TITLE_RU_IMMUNOLOGIST "Immunologist"
 // Psychiatrist
-#define ALT_JOB_TITLE_RU_PSYCHOLOGIST "Психолог"
-#define ALT_JOB_TITLE_RU_PSYCHOTHERAPIST "Психотерапевт"
-#define ALT_JOB_TITLE_RU_PSYCHOANALYST "Психоаналитик"
-#define ALT_JOB_TITLE_RU_PSYCHONEURO "Психоневролог"
+#define ALT_JOB_TITLE_RU_PSYCHOLOGIST "Psychologist"
+#define ALT_JOB_TITLE_RU_PSYCHOTHERAPIST "Therapist"
+#define ALT_JOB_TITLE_RU_PSYCHOANALYST "Psychoanalyst"
+#define ALT_JOB_TITLE_RU_PSYCHONEURO "Neuropsychiatrist"
 // Paramedic
-#define ALT_JOB_TITLE_RU_FELDSHER "Фельдшер"
+#define ALT_JOB_TITLE_RU_FELDSHER "Emergency Medical Technician"
 // Medical intern
-#define ALT_JOB_TITLE_RU_MEDICAL_TRAINEE "Врач-практикант"
+#define ALT_JOB_TITLE_RU_MEDICAL_TRAINEE "Medical Student"
 
 // Research director
-#define ALT_JOB_TITLE_RU_CHIEF_ENGINEER_RESEARCHER "Главный научный сотрудник"
+#define ALT_JOB_TITLE_RU_CHIEF_ENGINEER_RESEARCHER "Senior Researcher"
 // Scientist
-#define ALT_JOB_TITLE_RU_XENOARCHAEOLOGIST "Ксеноархеолог"
-#define ALT_JOB_TITLE_RU_ANOMALIST "Аномалист"
-#define ALT_JOB_TITLE_RU_PLASMOLOGIST "Исследователь плазмы"
-#define ALT_JOB_TITLE_RU_XENOBIOLOGIST "Ксенобиолог"
-#define ALT_JOB_TITLE_RU_RESEARCH_ASSOCIATE "Научный сотрудник"
-#define ALT_JOB_TITLE_RU_CHEMICAL_RESEARCHER "Химик-исследователь"
+#define ALT_JOB_TITLE_RU_XENOARCHAEOLOGIST "Xenoarcheologist"
+#define ALT_JOB_TITLE_RU_ANOMALIST "Anomalist"
+#define ALT_JOB_TITLE_RU_PLASMOLOGIST "Plasma Researcher"
+#define ALT_JOB_TITLE_RU_XENOBIOLOGIST "Xenobiologist"
+#define ALT_JOB_TITLE_RU_RESEARCH_ASSOCIATE "Research Associate"
+#define ALT_JOB_TITLE_RU_CHEMICAL_RESEARCHER "Chemical Researcher"
 // Roboticist
-#define ALT_JOB_TITLE_RU_BIONICS_SPECIALIST "Специалист по бионике"
-#define ALT_JOB_TITLE_RU_CYBERNETIC_ENGINEER "Кибернетический инженер"
+#define ALT_JOB_TITLE_RU_BIONICS_SPECIALIST "Biomechanical Engineer"
+#define ALT_JOB_TITLE_RU_CYBERNETIC_ENGINEER "Mechatronic Engineer"
 // Student scientist
-#define ALT_JOB_TITLE_RU_JUNIOR_RESEARCHER "Младший научный сотрудник"
+#define ALT_JOB_TITLE_RU_JUNIOR_RESEARCHER "Junior Researcher"
 // Explorer
-#define ALT_JOB_TITLE_RU_SPACE_EXPLORER "Исследователь космоса"
+#define ALT_JOB_TITLE_RU_SPACE_EXPLORER "Space Explorer"
 
 // Warden
-#define ALT_JOB_TITLE_RU_OVERSEER "Надзиратель"
-#define ALT_JOB_TITLE_RU_BRIG_COMMANDANT "Комендант брига"
+#define ALT_JOB_TITLE_RU_OVERSEER "Correctional Officer"
+#define ALT_JOB_TITLE_RU_BRIG_COMMANDANT "Brig Commandant"
 // Detective
-#define ALT_JOB_TITLE_RU_INVESTIGATOR "Следователь"
-#define ALT_JOB_TITLE_RU_CRIMINOLOGIST "Криминалист"
+#define ALT_JOB_TITLE_RU_INVESTIGATOR "Investigator"
+#define ALT_JOB_TITLE_RU_CRIMINOLOGIST "Forensic Technician"
 // Security officer
-#define ALT_JOB_TITLE_RU_PATROL_OFFICER "Патрульный СБ"
-#define ALT_JOB_TITLE_RU_SECURITY_CADET "Кадет СБ"
+#define ALT_JOB_TITLE_RU_PATROL_OFFICER "Patrol Officer"
+#define ALT_JOB_TITLE_RU_SECURITY_CADET "Security Cadet"
 // Brig medic
-#define ALT_JOB_TITLE_RU_SECURITY_MEDIC "Врач СБ"
-#define ALT_JOB_TITLE_RU_TACTICAL_MEDIC "Тактический медик"
+#define ALT_JOB_TITLE_RU_SECURITY_MEDIC "Security Medic"
+#define ALT_JOB_TITLE_RU_TACTICAL_MEDIC "Tactical Medic"
 // Pod pilot
-#define ALT_JOB_TITLE_RU_POD_OPERATOR "Оператор челнока СБ"
+#define ALT_JOB_TITLE_RU_POD_OPERATOR "Pod Operator"
 
 // Head of Personnel
-#define ALT_JOB_TITLE_RU_HR_DIRECTOR "Директор по персоналу"
-#define ALT_JOB_TITLE_RU_PERSONNEL_MANAGER "Кадровый менеджер"
+#define ALT_JOB_TITLE_RU_HR_DIRECTOR "Crew Relations Officer"
+#define ALT_JOB_TITLE_RU_PERSONNEL_MANAGER "Personnel Manager"
 // Bartender
-#define ALT_JOB_TITLE_RU_BARISTA "Бариста"
+#define ALT_JOB_TITLE_RU_BARISTA "Barista"
 // Chef
-#define ALT_JOB_TITLE_RU_SOUS_CHEF "Су-шеф"
-#define ALT_JOB_TITLE_RU_CHEF "Шеф"
-#define ALT_JOB_TITLE_RU_ART_CHEF "Арт-кулинар"
+#define ALT_JOB_TITLE_RU_SOUS_CHEF "Sous Chef"
+#define ALT_JOB_TITLE_RU_CHEF "Cook"
+#define ALT_JOB_TITLE_RU_ART_CHEF "Culinary Artist"
 // Botanist
-#define ALT_JOB_TITLE_RU_HYDROPONICS_TECH "Специалист по гидропонике"
-#define ALT_JOB_TITLE_RU_BOTANICAL_RESEARCHER "Ботанический исследователь"
-#define ALT_JOB_TITLE_RU_AGRONOMIST "Агроном"
-#define ALT_JOB_TITLE_RU_AGROBIOLOGIST "Агробиолог"
+#define ALT_JOB_TITLE_RU_HYDROPONICS_TECH "Hydroponicist"
+#define ALT_JOB_TITLE_RU_BOTANICAL_RESEARCHER "Botanical Researcher"
+#define ALT_JOB_TITLE_RU_AGRONOMIST "Farmer"
+#define ALT_JOB_TITLE_RU_AGROBIOLOGIST "Gardener"
 // Clown
-#define ALT_JOB_TITLE_RU_COMEDIAN "Комик"
-#define ALT_JOB_TITLE_RU_JESTER "Шут"
-#define ALT_JOB_TITLE_RU_COMEDIANT "Комедиант"
+#define ALT_JOB_TITLE_RU_COMEDIAN "Comedian"
+#define ALT_JOB_TITLE_RU_JESTER "Jester"
+#define ALT_JOB_TITLE_RU_COMEDIANT "Entertainer"
 // Mime
-#define ALT_JOB_TITLE_RU_PANTHOMIMIST "Пантомим"
+#define ALT_JOB_TITLE_RU_PANTHOMIMIST "Pantomime"
 // Janitor
-#define ALT_JOB_TITLE_RU_CLEANING_SPECIALIST "Клининг-специалист"
+#define ALT_JOB_TITLE_RU_CLEANING_SPECIALIST "Custodial Technician"
 // Librarian
-#define ALT_JOB_TITLE_RU_ARCHIVIST "Архивариус"
-#define ALT_JOB_TITLE_RU_JOURNALIST "Журналист"
-#define ALT_JOB_TITLE_RU_PRESS_SECRETARY "Пресс-секретарь"
-#define ALT_JOB_TITLE_RU_CORRESPONDENT "Корреспондент"
+#define ALT_JOB_TITLE_RU_ARCHIVIST "Curator"
+#define ALT_JOB_TITLE_RU_JOURNALIST "Journalist"
+#define ALT_JOB_TITLE_RU_PRESS_SECRETARY "News Anchor"
+#define ALT_JOB_TITLE_RU_CORRESPONDENT "Reporter"
 // Chaplain
-#define ALT_JOB_TITLE_RU_CHAPLAIN "Капеллан"
-#define ALT_JOB_TITLE_RU_PREACHER "Проповедник"
-#define ALT_JOB_TITLE_RU_REVEREND "Священнослужитель"
-#define ALT_JOB_TITLE_RU_THEOLOGIAN "Теолог"
-#define ALT_JOB_TITLE_RU_SPIRITUAL_MENTOR "Духовный наставник"
-#define ALT_JOB_TITLE_RU_EXORCIST "Экзорцист"
+#define ALT_JOB_TITLE_RU_CHAPLAIN "Priest"
+#define ALT_JOB_TITLE_RU_PREACHER "Pastor"
+#define ALT_JOB_TITLE_RU_REVEREND "Reverend"
+#define ALT_JOB_TITLE_RU_THEOLOGIAN "Cleric"
+#define ALT_JOB_TITLE_RU_SPIRITUAL_MENTOR "Monk"
+#define ALT_JOB_TITLE_RU_EXORCIST "Occult Specialist"
 
 // Quartermaster
-#define ALT_JOB_TITLE_RU_CHIEF_ENGINEER_SUPPLY_MANAGER "Главный менеджер по снабжению"
-#define ALT_JOB_TITLE_RU_LOGISTICS_DIRECTOR "Директор по логистике"
+#define ALT_JOB_TITLE_RU_CHIEF_ENGINEER_SUPPLY_MANAGER "Supply Director"
+#define ALT_JOB_TITLE_RU_LOGISTICS_DIRECTOR "Chief Logistics Officer"
 // Cargo technician
-#define ALT_JOB_TITLE_RU_LOGISTICS_SPECIALIST "Логист"
+#define ALT_JOB_TITLE_RU_LOGISTICS_SPECIALIST "Logistics Technician"
 
 // Nanotrasen representative
-#define ALT_JOB_TITLE_RU_NT_AUDITOR "Аудитор \"Нанотрейзен\""
-#define ALT_JOB_TITLE_RU_NT_INSPECTOR "Инспектор \"Нанотрейзен\""
-#define ALT_JOB_TITLE_RU_NT_CONSULTANT "Консультант \"Нанотрейзен\""
+#define ALT_JOB_TITLE_RU_NT_AUDITOR "Nanotrasen Auditor"
+#define ALT_JOB_TITLE_RU_NT_INSPECTOR "Inspector"
+#define ALT_JOB_TITLE_RU_NT_CONSULTANT "Nanotrasen Consultant"
 // Magistrate
-#define ALT_JOB_TITLE_RU_JUDGE "Судья"
+#define ALT_JOB_TITLE_RU_JUDGE "Judge"
 // Internal affairs agent
-#define ALT_JOB_TITLE_RU_LAWYER "Юрист"
+#define ALT_JOB_TITLE_RU_LAWYER "Human Resources Agent"
 
 // Silicons
-#define ALT_JOB_TITLE_RU_CYBORG "Робот"
+#define ALT_JOB_TITLE_RU_CYBORG "Robot"
 
 // Civilian
-#define ALT_JOB_TITLE_RU_TOURIST "Турист"
-#define ALT_JOB_TITLE_RU_ASSISTANT "Ассистент"
-#define ALT_JOB_TITLE_RU_WORKER "Разнорабочий"
-#define ALT_JOB_TITLE_RU_GENERAL_INTERN "Стажёр общего профиля"
+#define ALT_JOB_TITLE_RU_TOURIST "Tourist"
+#define ALT_JOB_TITLE_RU_ASSISTANT "Off-Duty"
+#define ALT_JOB_TITLE_RU_WORKER "Laborer"
+#define ALT_JOB_TITLE_RU_GENERAL_INTERN "Retired"
 // Prisoner
-#define ALT_JOB_TITLE_RU_ARRESTEE "Арестант"
-#define ALT_JOB_TITLE_RU_CONVICT "Осуждённый"
+#define ALT_JOB_TITLE_RU_ARRESTEE "Arrestee"
+#define ALT_JOB_TITLE_RU_CONVICT "Convict"
 
 // MARK: Department titles
 
-#define STATION_DEPARTMENT_RU_COMMAND "Командование"
-#define STATION_DEPARTMENT_RU_MEDICAL "Медицина"
-#define STATION_DEPARTMENT_RU_ENGINEERING "Инженерия"
-#define STATION_DEPARTMENT_RU_SCIENCE "Наука"
-#define STATION_DEPARTMENT_RU_SECURITY "Безопасность"
-#define STATION_DEPARTMENT_RU_SUPPLY "Снабжение"
-#define STATION_DEPARTMENT_RU_SERVICE "Обслуживание"
-#define STATION_DEPARTMENT_RU_LEGAL "Юриспруденция"
-#define STATION_DEPARTMENT_RU_SILICON "Синтетики"
-#define STATION_DEPARTMENT_RU_CIVILIAN "Гражданские"
-#define STATION_DEPARTMENT_RU_OTHER "Прочее"
+#define STATION_DEPARTMENT_RU_COMMAND "Command"
+#define STATION_DEPARTMENT_RU_MEDICAL "Medical"
+#define STATION_DEPARTMENT_RU_ENGINEERING "Engineering"
+#define STATION_DEPARTMENT_RU_SCIENCE "Science"
+#define STATION_DEPARTMENT_RU_SECURITY "Security"
+#define STATION_DEPARTMENT_RU_SUPPLY "Supply"
+#define STATION_DEPARTMENT_RU_SERVICE "Support / Service"
+#define STATION_DEPARTMENT_RU_LEGAL "Legal"
+#define STATION_DEPARTMENT_RU_SILICON "Synthetic"
+#define STATION_DEPARTMENT_RU_CIVILIAN "Civilian"
+#define STATION_DEPARTMENT_RU_OTHER "Miscellaneous"

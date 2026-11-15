@@ -3,8 +3,8 @@
 	desc = "You are a number, you are not a free man."
 	icon_state = "prisoner"
 	item_state = "orange-id"
-	registered_name = "Заключёный"
-	assignment = "Заключёный"
+	registered_name = "Prisoner"
+	assignment = "Prisoner"
 	/// Points goal for release
 	var/goal = 0
 	/// Current earned points
@@ -14,7 +14,7 @@
 
 /obj/item/card/id/prisoner/Initialize(mapload)
 	. = ..()
-	assignment = "Заключёный №[prisoner_number]"
+	assignment = "Prisoner #[prisoner_number]"
 	registered_name = assignment
 	update_label()
 
