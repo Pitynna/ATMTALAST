@@ -66,6 +66,7 @@
 	new /obj/item/mining_scanner(src)
 	new /obj/item/gun/energy/kinetic_accelerator(src)
 	new /obj/item/clothing/glasses/meson(src)
+	new /obj/item/ore_pipe_layer(src)
 
 /obj/structure/closet/secure_closet/mining_medic
 	name = "mining medic's equipment"

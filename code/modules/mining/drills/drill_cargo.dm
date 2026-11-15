@@ -21,6 +21,7 @@
 	cost = 50
 	contains = list(
 		/obj/item/mining_drill_module/ejector,
+		/obj/item/ore_pipe_layer,
 	)
 	loose_contains = list(
 		/obj/item/mining_drill_packed,

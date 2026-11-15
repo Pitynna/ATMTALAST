@@ -203,6 +203,88 @@ def draw_module_ejector():
     return img
 
 
+PIPE = (0x5E, 0x56, 0x4C)
+PIPE_LIGHT = (0x84, 0x7A, 0x6C)
+PIPE_DARK = (0x38, 0x33, 0x2D)
+PIPE_BAND = (0xA0, 0x6A, 0x2E)
+NORTH, SOUTH, EAST, WEST = 1, 2, 4, 8
+
+
+def pipe_run(img, direction, start, end):
+    """Tube 8px wide from `start` to `end` along the axis of `direction` (pixels measured from the edge)."""
+    vertical = direction in (NORTH, SOUTH)
+    for along in range(start, end + 1):
+        pos = along if direction in (NORTH, WEST) else SIZE - 1 - along
+        for across in range(12, 20):
+            if across in (12, 19):
+                color = OUTLINE
+            elif across == 13:
+                color = PIPE_LIGHT
+            elif across == 18:
+                color = PIPE_DARK
+            else:
+                color = PIPE
+            if along % 6 == 2 and across not in (12, 19):
+                color = PIPE_BAND
+            x, y = (across, pos) if vertical else (pos, across)
+            put(img, x, y, color)
+
+
+def draw_pipe(mask):
+    img = new_image()
+    straight = mask in (NORTH | SOUTH, EAST | WEST)
+    for direction in (NORTH, SOUTH, EAST, WEST):
+        if mask & direction:
+            pipe_run(img, direction, 0, 15)
+    if not straight:
+        # Joint housing where branches meet, or a capped end.
+        box(img, 10, 10, 21, 21, PIPE, PIPE_LIGHT, PIPE_DARK)
+        for x, y in ((12, 12), (19, 12), (12, 19), (19, 19)):
+            put(img, x, y, STEEL_EDGE)
+        rect(img, 14, 14, 17, 17, PIPE_DARK)
+    return img
+
+
+def draw_pipe_stub(direction):
+    img = new_image()
+    pipe_run(img, direction, 0, 7)
+    return img
+
+
+def draw_outlet(direction):
+    img = new_image()
+    box(img, 8, 8, 23, 23, STEEL, STEEL_LIGHT, STEEL_DARK)
+    rect(img, 11, 11, 20, 20, PIPE_DARK)
+    rect(img, 13, 13, 18, 18, HOLE)
+    # Mouth with a yellow lip on the facing side.
+    if direction == "S":
+        rect(img, 11, 22, 20, 25, HOLE)
+        rect(img, 10, 26, 21, 26, HAZARD)
+    elif direction == "N":
+        rect(img, 11, 6, 20, 9, HOLE)
+        rect(img, 10, 5, 21, 5, HAZARD)
+    elif direction == "E":
+        rect(img, 22, 11, 25, 20, HOLE)
+        rect(img, 26, 10, 26, 21, HAZARD)
+    else:
+        rect(img, 6, 11, 9, 20, HOLE)
+        rect(img, 5, 10, 5, 21, HAZARD)
+    return img
+
+
+def draw_pipe_layer():
+    img = new_image()
+    # Grip and body.
+    box(img, 6, 12, 20, 22, STEEL, STEEL_LIGHT, STEEL_DARK)
+    box(img, 8, 22, 13, 28, STEEL_DARK, STEEL, OUTLINE)
+    rect(img, 8, 14, 18, 14, HAZARD)
+    put(img, 17, 17, LIGHT_ON)
+    # Nozzle holding a short pipe piece.
+    box(img, 20, 13, 26, 19, PIPE, PIPE_LIGHT, PIPE_DARK)
+    rect(img, 22, 15, 24, 17, PIPE_BAND)
+    return img
+
+
 def drill_states():
     states = []
     idle = [draw_drill_tier1(d) for d in DIRS]
@@ -213,4 +295,10 @@ def drill_states():
     states.append(("drill1_packed", [draw_packed_tier1()], 1, 1, None))
     states.append(("module", [draw_module_base()], 1, 1, None))
     states.append(("module_ejector", [draw_module_ejector()], 1, 1, None))
+    for mask in range(16):
+        states.append((f"ore_pipe_{mask}", [draw_pipe(mask)], 1, 1, None))
+    for direction in (NORTH, SOUTH, EAST, WEST):
+        states.append((f"ore_pipe_stub_{direction}", [draw_pipe_stub(direction)], 1, 1, None))
+    states.append(("ore_pipe_outlet", [draw_outlet(d) for d in DIRS], 4, 1, None))
+    states.append(("pipe_layer", [draw_pipe_layer()], 1, 1, None))
     return states

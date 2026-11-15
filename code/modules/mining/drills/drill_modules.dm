@@ -7,7 +7,7 @@
  */
 /obj/item/mining_drill_module/ejector
 	name = "ore ejector module"
-	desc = "An output module for a stationary mining drill. Pushes mined ore out onto the tile the drill's arrow points at: into an ore box, onto a conveyor or onto the floor."
+	desc = "An output module for a stationary mining drill. Pushes mined ore out onto the tile the drill's arrow points at: into an ore pipe, an ore box, onto a conveyor or onto the floor."
 	icon_state = "module_ejector"
 	origin_tech = "materials=2;engineering=2"
 
@@ -27,6 +27,10 @@
 
 /// Where ejected ore goes on `target`, or null if there is nowhere to put it.
 /obj/item/mining_drill_module/ejector/proc/find_receiver(turf/target)
+	// An ore pipe takes the ore straight to its outlet, or keeps it in the buffer without one.
+	var/obj/structure/ore_pipe/pipe = locate() in target
+	if(pipe)
+		return pipe.get_output_receiver()
 	var/obj/structure/ore_box/box = locate() in target
 	if(box)
 		return box

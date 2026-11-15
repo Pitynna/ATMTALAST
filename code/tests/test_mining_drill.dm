@@ -36,3 +36,30 @@
 	TEST_ASSERT_NOTNULL(ejected, "Ejected ore must land on the output tile")
 	TEST_ASSERT_EQUAL(ejected.amount, 7, "All buffered ore must be ejected")
 	qdel(ejected)
+
+/// Ore handed to an ore pipe appears at once in front of the network's only outlet.
+/datum/unit_test/ore_pipe_network/Run()
+	var/obj/machinery/mining_drill/drill = allocate(/obj/machinery/mining_drill)
+	var/obj/item/mining_drill_module/ejector/ejector = allocate(/obj/item/mining_drill_module/ejector)
+	drill.module = ejector
+	ejector.forceMove(drill)
+	drill.setDir(EAST)
+	var/turf/first = get_step(drill, EAST)
+	var/turf/second = get_step(first, EAST)
+	var/turf/front = get_step(second, NORTH)
+	var/obj/structure/ore_pipe/pipe = allocate(/obj/structure/ore_pipe, first)
+	drill.buffer[/obj/item/stack/ore/iron] = 3
+	ejector.process_output(drill)
+	TEST_ASSERT_EQUAL(drill.buffer_total(), 3, "A network without an outlet must leave the ore in the buffer")
+	var/obj/structure/ore_pipe/outlet/outlet = allocate(/obj/structure/ore_pipe/outlet, second)
+	outlet.setDir(NORTH)
+	outlet.update_connections(TRUE)
+	TEST_ASSERT_EQUAL(length(pipe.get_network()), 2, "The pipe and the outlet must join into one network")
+	var/obj/item/ore_pipe_layer/layer = allocate(/obj/item/ore_pipe_layer)
+	TEST_ASSERT_NOT(layer.network_allows(get_step(first, SOUTH), TRUE, SOUTH), "A second outlet on the same network must be refused")
+	ejector.process_output(drill)
+	TEST_ASSERT_EQUAL(drill.buffer_total(), 0, "The pipe must take the whole buffer")
+	var/obj/item/stack/ore/iron/delivered = locate() in front
+	TEST_ASSERT_NOTNULL(delivered, "Ore must come out in front of the outlet")
+	TEST_ASSERT_EQUAL(delivered.amount, 3, "All the ore must arrive")
+	qdel(delivered)
