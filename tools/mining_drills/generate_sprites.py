@@ -10,6 +10,10 @@ States produced so far (stage 1, "Deposits"):
       neighbouring tiles of the same deposit. Joined sides run to the tile border with
       a fixed-width band, so adjacent tiles merge into one seam. The same sprites are
       shown by the mining scanner above hidden deposits.
+
+Stage 2, tier I drill (drill_sprites.py):
+  drill1 (4 dirs), drill1_on (4 dirs, 4 frames), drill1_panel, drill1_packed, module.
+  The yellow arrow marks the output side (the machine's dir).
 """
 import math
 import random
@@ -18,6 +22,9 @@ from pathlib import Path
 
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from drill_sprites import drill_states  # noqa: E402
 
 SIZE = 32
 ROOT = Path(__file__).resolve().parents[2]
@@ -166,18 +173,24 @@ def draw_deposit(ore, joins, variant):
 
 
 def write_dmi(states, output):
-    columns = min(len(states), 16)
-    rows = math.ceil(len(states) / columns)
+    """states: (name, images, dirs, frames, delay); images ordered frame by frame, S/N/E/W within a frame."""
+    images = [image for state in states for image in state[1]]
+    columns = 16
+    rows = math.ceil(len(images) / columns)
     sheet = Image.new("RGBA", (columns * SIZE, rows * SIZE), (0, 0, 0, 0))
-    lines = ["# BEGIN DMI", "version = 4.0", f"\twidth = {SIZE}", f"\theight = {SIZE}"]
-    for index, (name, image) in enumerate(states):
+    for index, image in enumerate(images):
         sheet.paste(image, ((index % columns) * SIZE, (index // columns) * SIZE))
-        lines += [f'state = "{name}"', "\tdirs = 1", "\tframes = 1"]
+    lines = ["# BEGIN DMI", "version = 4.0", f"\twidth = {SIZE}", f"\theight = {SIZE}"]
+    for name, state_images, dirs, frames, delay in states:
+        assert len(state_images) == dirs * frames, name
+        lines += [f'state = "{name}"', f"\tdirs = {dirs}", f"\tframes = {frames}"]
+        if delay:
+            lines.append("\tdelay = " + ",".join(str(value) for value in delay))
     lines.append("# END DMI")
     info = PngInfo()
     info.add_text("Description", "\n".join(lines) + "\n", zip=True)
     output.parent.mkdir(parents=True, exist_ok=True)
-    sheet.save(output, format="PNG", pnginfo=info)
+    sheet.save(output, format="PNG", pnginfo=info, optimize=True)
 
 
 def main():
@@ -186,7 +199,8 @@ def main():
     for ore in ORES:
         for joins in range(16):
             for variant in (1, 2):
-                states.append((f"deposit_{ore}_{joins}_{variant}", draw_deposit(ore, joins, variant)))
+                states.append((f"deposit_{ore}_{joins}_{variant}", [draw_deposit(ore, joins, variant)], 1, 1, None))
+    states += drill_states()
     write_dmi(states, output)
     print(f"Wrote {len(states)} states to {output}")
 
