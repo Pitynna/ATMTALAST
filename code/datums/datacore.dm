@@ -138,7 +138,7 @@ GLOBAL_VAR_INIT(record_id_num, 1001)
 		else if(H.job)
 			assignment = H.job
 		else
-			assignment = "Неназначенный"
+			assignment = "Unassigned"
 
 		var/id = num2hex(GLOB.record_id_num++, 6)
 
