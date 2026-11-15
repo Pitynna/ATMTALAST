@@ -144,22 +144,19 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 /obj/effect/ore_deposit_tile/singularity_pull(atom/singularity, current_size)
 	return
 
-/// Briefly shows the hidden deposit tiles around `center` through the rock above them.
+/**
+ * Briefly shows the hidden deposit tiles around `center` on the rock above them.
+ *
+ * Drawn as an overlay of the rock turf itself, exactly like the ore highlights:
+ * BYOND hides objects inside rock that is not in direct view, but meson vision
+ * (SEE_TURFS) shows turfs and their overlays deep inside the rock.
+ * The layer sits above the neighbouring oversized rock sprites so they do not cover it.
+ */
 /proc/ore_deposit_scan_pulse(turf/center, range = world.view)
 	for(var/obj/effect/ore_deposit_tile/tile in range(range, center))
 		if(!tile.deposit || !tile.is_covered())
 			continue
-		new /obj/effect/temp_visual/mining_overlay/ore_deposit(tile.loc, tile.icon_state)
-
-/// The deposit silhouette shown by a scanner pulse. Drawn above walls and darkness, fades out.
-/obj/effect/temp_visual/mining_overlay/ore_deposit
-	icon = 'icons/obj/mining_drills.dmi'
-	plane = ABOVE_LIGHTING_PLANE
-	layer = ABOVE_ALL_MOB_LAYER
-	pixel_x = 0
-	pixel_y = 0
-	randomdir = FALSE
-
-/obj/effect/temp_visual/mining_overlay/ore_deposit/Initialize(mapload, deposit_state)
-	icon_state = deposit_state
-	return ..()
+		var/turf/rock = tile.loc
+		var/image/deposit_overlay = image('icons/obj/mining_drills.dmi', icon_state = tile.icon_state, layer = ON_EDGED_TURF_LAYER)
+		rock.add_overlay(deposit_overlay)
+		addtimer(CALLBACK(rock, TYPE_PROC_REF(/atom, cut_overlay), deposit_overlay), 3.5 SECONDS)
