@@ -30,9 +30,9 @@
 /mob/new_player/proc/privacy_consent()
 	close_window(src, "playersetup")
 	var/output = GLOB.join_tos
-	output += "<p><a href='byond://?src=[UID()];consent_signed=SIGNED'>Я согласен</a>"
-	output += "<p><a href='byond://?src=[UID()];consent_rejected=NOTSIGNED'>Я НЕ согласен</a>"
-	var/datum/browser/popup = new(src, "privacy_consent", "<div align='center'>Политика Конфидициальности</div>", 500, 400)
+	output += "<p><a href='byond://?src=[UID()];consent_signed=SIGNED'>I agree</a>"
+	output += "<p><a href='byond://?src=[UID()];consent_rejected=NOTSIGNED'>I do NOT agree</a>"
+	var/datum/browser/popup = new(src, "privacy_consent", "<div align='center'>Privacy Policy</div>", 500, 400)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(0)
@@ -44,9 +44,9 @@
 
 	if(!(SSticker && SSticker.current_state == GAME_STATE_PREGAME && check_rights(R_ADMIN, FALSE, src)))
 		return .
-	status_tab_data[++status_tab_data.len] = list("Список игроков:", "")
+	status_tab_data[++status_tab_data.len] = list("Player list:", "")
 	for(var/mob/new_player/player in GLOB.player_list)
-		status_tab_data[++status_tab_data.len] = list("[player.key]", player.ready ? "(Готов)" : "(Не готов)")
+		status_tab_data[++status_tab_data.len] = list("[player.key]", player.ready ? "(Ready)" : "(Not ready)")
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)
@@ -64,7 +64,7 @@
 
 	if(href_list["consent_rejected"])
 		client.tos_consent = FALSE
-		to_chat(usr, span_warning("Прежде чем присоединиться, вы должны согласиться с политикой конфиденциальности!"))
+		to_chat(usr, span_warning("You must agree to the privacy policy before joining!"))
 		var/datum/db_query/query = SSdbcore.NewQuery("REPLACE INTO [format_table_name("privacy")] (ckey, datetime, consent) VALUES (:ckey, Now(), 0)", list(
 			"ckey" = ckey
 		))
@@ -79,7 +79,7 @@
 
 	if(href_list["ready"])
 		if(!client.tos_consent)
-			to_chat(usr, span_warning("Прежде чем присоединиться, вы должны согласиться с политикой конфиденциальности!"))
+			to_chat(usr, span_warning("You must agree to the privacy policy before joining!"))
 			privacy_consent()
 			return FALSE
 		if(client.version_blocked)
@@ -88,11 +88,11 @@
 		if(CONFIG_GET(number/minimum_byondacc_age) && client.byondacc_age <= CONFIG_GET(number/minimum_byondacc_age))
 			if(!client.prefs.discord_id || (client.prefs.discord_id && length(client.prefs.discord_id) == 32))
 				client.prefs.load_preferences(client)
-				to_chat(usr, span_danger("Вам необходимо привязать ваш профиль в Discord к аккаунту!"))
-				to_chat(usr, span_warning("Нажмите на кнопку \"Привязка Discord\" во вкладке \"Special Verbs\", чтобы получить необходимые инструкции."))
+				to_chat(usr, span_danger("You need to link your Discord profile to your account!"))
+				to_chat(usr, span_warning("Press the \"Link Discord Account\" button in the \"Special Verbs\" tab for instructions."))
 				return FALSE
 		if(!is_used_species_available(client.prefs.species))
-			to_chat(usr, span_warning("Вы не можете играть за выбранную расу персонажа, так как она в данный момент недоступна для вас! Пожалуйста, выберите другую расу."))
+			to_chat(usr, span_warning("You cannot play as the selected species, as it is currently unavailable to you! Please choose another species."))
 			return FALSE
 		ready = !ready
 		client << output(ready, "title_browser:ready")
@@ -133,7 +133,7 @@
 
 	if(href_list["observe"])
 		if(!client.tos_consent)
-			to_chat(usr, span_warning("Прежде чем присоединиться, вы должны согласиться с политикой конфиденциальности!"))
+			to_chat(usr, span_warning("You must agree to the privacy policy before joining!"))
 			privacy_consent()
 			return FALSE
 		if(client.version_blocked)
@@ -142,14 +142,14 @@
 		if(CONFIG_GET(number/minimum_byondacc_age) && client.byondacc_age <= CONFIG_GET(number/minimum_byondacc_age))
 			if(!client.prefs.discord_id || (client.prefs.discord_id && length(client.prefs.discord_id) == 32))
 				client.prefs.load_preferences(client)
-				to_chat(usr, span_danger("Вам необходимо привязать ваш профиль в Discord к аккаунту!"))
-				to_chat(usr, span_warning("Нажмите на кнопку \"Привязка Discord\" во вкладке \"Special Verbs\", чтобы получить необходимые инструкции."))
+				to_chat(usr, span_danger("You need to link your Discord profile to your account!"))
+				to_chat(usr, span_warning("Press the \"Link Discord Account\" button in the \"Special Verbs\" tab for instructions."))
 				return FALSE
 		if(!SSticker || SSticker.current_state == GAME_STATE_STARTUP)
-			to_chat(usr, span_warning("Пожалуйста, подождите, пока сервер полностью запустится, прежде чем присоединяться!"))
+			to_chat(usr, span_warning("Please wait for the server to finish starting up before joining!"))
 			return FALSE
 
-		if(tgui_alert(src,"Вы уверены что хотите стать наблюдателем?[(CONFIG_GET(flag/respawn_observer) ? "" : " Вы не сможете принять участие в этом раунде в качестве члена экипажа после этого!")]","Наблюдать", list("Да","Нет")) == "Да")
+		if(tgui_alert(src,"Are you sure you wish to observe?[(CONFIG_GET(flag/respawn_observer) ? "" : " You will not be able to join this round as a crew member afterwards!")]","Observe", list("Yes","No")) == "Yes")
 			if(!client)
 				return 1
 			var/mob/dead/observer/observer = new()
@@ -161,7 +161,7 @@
 			observer.started_as_observer = 1
 			close_spawn_windows()
 			var/obj/O = locate(/obj/effect/landmark/observer_start)
-			to_chat(src, span_notice("Телепортация."))
+			to_chat(src, span_notice("Now teleporting."))
 			observer.abstract_move(get_turf(O))
 			client.prefs.update_preview_icon(1)
 			observer.icon = client.prefs.preview_icon
@@ -184,7 +184,7 @@
 
 	if(href_list["late_join"])
 		if(!client.tos_consent)
-			to_chat(usr, span_warning("Прежде чем присоединиться, вы должны согласиться с политикой конфиденциальности!"))
+			to_chat(usr, span_warning("You must agree to the privacy policy before joining!"))
 			privacy_consent()
 			return FALSE
 		if(client.version_blocked)
@@ -193,14 +193,14 @@
 		if(CONFIG_GET(number/minimum_byondacc_age) && client.byondacc_age <= CONFIG_GET(number/minimum_byondacc_age))
 			if(!client.prefs.discord_id || (client.prefs.discord_id && length(client.prefs.discord_id) == 32))
 				client.prefs.load_preferences(client)
-				to_chat(usr, span_danger("Вам необходимо привязать ваш профиль в Discord к аккаунту!"))
-				to_chat(usr, span_warning("Нажмите на кнопку \"Привязка Discord\" во вкладке \"Special Verbs\", чтобы получить необходимые инструкции."))
+				to_chat(usr, span_danger("You need to link your Discord profile to your account!"))
+				to_chat(usr, span_warning("Press the \"Link Discord Account\" button in the \"Special Verbs\" tab for instructions."))
 				return FALSE
 		if(!SSticker || SSticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, span_warning("Раунд либо ещё не готов, либо в данный момент уже завершён..."))
+			to_chat(usr, span_warning("The round is either not ready, or has already finished..."))
 			return
 		if(!is_used_species_available(client.prefs.species))
-			to_chat(usr, span_warning("Вы не можете играть за выбранную расу персонажа, так как она в данный момент недоступна для вас! Пожалуйста, выберите другую расу."))
+			to_chat(usr, span_warning("You cannot play as the selected species, as it is currently unavailable to you! Please choose another species."))
 			return
 		if(SSticker?.mode?.late_join(src))
 			return
@@ -215,22 +215,22 @@
 	if(href_list["SelectedJob"])
 
 		if(!GLOB.enter_allowed)
-			to_chat(usr, span_notice("Вход в игру невозможен из-за блокировки администрацией!"))
+			to_chat(usr, span_notice("Joining is disabled by an administrator!"))
 			return
 
 		if(client.prefs.toggles2 & PREFTOGGLE_2_RANDOMSLOT)
 			client.prefs.load_random_character_slot(client)
 
 		if(!is_used_species_available(client.prefs.species))
-			to_chat(usr, span_warning("Вы не можете играть за выбранную расу персонажа, так как она в данный момент недоступна для вас! Пожалуйста, выберите другую расу."))
+			to_chat(usr, span_warning("You cannot play as the selected species, as it is currently unavailable to you! Please choose another species."))
 			return
 
 		//Prevents people rejoining as same character.
-		if(!is_admin(usr)) //Админам можно всё
+		if(!is_admin(usr)) //Admins can do anything
 			for(var/C in GLOB.human_names_list)
 				var/char_name = client.prefs.real_name
 				if(char_name == C)
-					to_chat (usr, span_danger("Уже существует персонаж с таким именем: <b>[C]</b>, пожалуйста, выберите другое имя."))
+					to_chat (usr, span_danger("A character with this name already exists: <b>[C]</b>, please choose another name."))
 					return
 		if(href_list["SelectedJob"] == JOB_TITLE_PRISONER)
 			client.prefs.spawnpoint = "Permabrig"
@@ -252,10 +252,10 @@
 	if(href_list["switch_server"])
 		var/selected_port = text2num(href_list["switch_server"])
 		if(selected_port == world.port)
-			to_chat(usr, span_warning("Вы уже подключены к данному серверу."))
+			to_chat(usr, span_warning("You are already connected to this server."))
 			return
 
-		to_chat(usr, span_warning("Подключение к новому серверу..."))
+		to_chat(usr, span_warning("Connecting to the new server..."))
 
 		// Formulate a connection URL
 		var/target = "byond://[world.internet_address]:[selected_port]"
@@ -357,53 +357,53 @@
 		return FALSE
 
 	if(!SSticker || SSticker.current_state != GAME_STATE_PLAYING)
-		to_chat(usr, span_warning("Раунд либо ещё не готов, либо уже завершился..."))
+		to_chat(usr, span_warning("The round is either not ready, or has already finished..."))
 		return FALSE
 
 	if(!GLOB.enter_allowed)
-		to_chat(usr, span_notice("Администратор заблокировал вход в игру!"))
+		to_chat(usr, span_notice("An administrator has disabled joining!"))
 		return FALSE
 
 	if("[client.prefs.default_slot]" in persistent_client.joined_as_slots)
-		tgui_alert(usr, span_warning("Вы уже играли за этого персонажа в этом раунде!"))
+		tgui_alert(usr, span_warning("You have already played as this character this round!"))
 		return FALSE
 
 	if(rank == "RandomJob")
 		rank = random_job()
 		if(!rank)
-			var/msg = "Нет свободных ролей. Пожалуйста, попробуйте позже."
+			var/msg = "There are no free roles. Please try again later."
 			to_chat(src, msg)
 			tgui_alert(usr, msg)
 			return FALSE
 
 	if(!IsJobAvailable(rank))
-		var/msg = "Должность [rank] недоступна. Пожалуйста, попробуйте другую."
+		var/msg = "The [rank] position is unavailable. Please try another."
 		to_chat(src, span_warning(msg))
 		tgui_alert(usr, msg)
 		return FALSE
 
 	var/datum/job/thisjob = SSjobs.GetJob(rank)
 	if(thisjob.barred_by_disability(client))
-		var/msg = "Должность [rank] недоступна в связи с инвалидностью персонажа. Пожалуйста, попробуйте другую."
+		var/msg = "The [rank] position is unavailable due to your character's disabilities. Please try another."
 		to_chat(src, span_warning(msg))
 		tgui_alert(usr, msg)
 		return FALSE
 
 	if(!thisjob.character_old_enough(client))
 		var/datum/species/species = GLOB.all_species[client?.prefs.species]
-		var/msg = "Должность [rank] недоступна в связи с недостаточным возрастом персонажа ([client?.prefs.age]). Минимальный возраст — [get_age_limits(species, thisjob.min_age_type)]"
+		var/msg = "The [rank] position is unavailable because your character is too young ([client?.prefs.age]). Minimum age: [get_age_limits(species, thisjob.min_age_type)]"
 		to_chat(src, span_warning(msg))
 		tgui_alert(usr, msg)
 		return FALSE
 
 	if(thisjob.species_in_blacklist(client))
-		var/msg = "Должность [rank] недоступна для данной расы. Пожалуйста, попробуйте другую."
+		var/msg = "The [rank] position is unavailable for this species. Please try another."
 		to_chat(src, span_warning(msg))
 		tgui_alert(usr, msg)
 		return FALSE
 
 	if(!thisjob.check_custom_requirements(client))
-		var/msg = "Должность [rank] доступна только после получения достижения \"Опора проекта\". Пожалуйста, попробуйте другую."
+		var/msg = "The [rank] position is only available after earning the \"Pillar of the Project\" achievement. Please try another."
 		to_chat(src, span_warning(msg))
 		tgui_alert(usr, msg)
 		return FALSE
@@ -419,7 +419,7 @@
 
 		// IsJobAvailable for AI checks that there is an empty core available in this list
 		ai_character.moveToEmptyCore()
-		AnnounceCyborg(ai_character, rank, "был загружен в пустое ядро в [get_area(ai_character)]")
+		AnnounceCyborg(ai_character, rank, "has been downloaded to an empty core in [get_area(ai_character)]")
 
 		SSticker.mode.latespawn(ai_character)
 		SSticker?.score?.save_silicon_laws(ai_character, additional_info = "latespawn", log_all_laws = TRUE)
@@ -440,7 +440,7 @@
 		else
 			character.forceMove(pick(GLOB.aroomwarp))
 
-		join_message = "прибыл"
+		join_message = "has arrived"
 
 	else
 		if(spawning_at)
@@ -452,18 +452,18 @@
 				join_message = spawnpoint.msg
 
 			else
-				to_chat(character, "Выбранная вами зона появления ([spawnpoint.display_name]) недоступна для выбранной вами профессии. Вместо этого мы отправляем вас на шаттл Прибытия.")
+				to_chat(character, "Your chosen spawnpoint ([spawnpoint.display_name]) is unavailable for your chosen job. Spawning you on the Arrivals shuttle instead.")
 				character.move_to_spawn(GLOB.latejoin)
-				join_message = "прибыл на станцию"
+				join_message = "has arrived on the station"
 
 		else
 			if(character.mind.assigned_role == JOB_TITLE_PRISONER && length(GLOB.latejoin_prisoner))
 				character.move_to_spawn(GLOB.latejoin_prisoner)
-				join_message = "очнулся от криогенного сна"
+				join_message = "has woken up from cryogenic sleep"
 
 			else
 				character.move_to_spawn(GLOB.latejoin)
-				join_message = "прибыл на станцию"
+				join_message = "has arrived on the station"
 
 	character.lastarea = get_area(loc)
 	character = character.spawn_equip(rank)
@@ -494,7 +494,7 @@
 
 	qdel(src)
 
-#define ARRIVALS_ANNOUNCEMENT_COMPUTER "Уведомитель о прибытии"
+#define ARRIVALS_ANNOUNCEMENT_COMPUTER "Arrivals Announcement Computer"
 
 /mob/new_player/proc/AnnounceArrival(mob/living/carbon/human/character, rank, join_message)
 	if(SSticker.current_state == GAME_STATE_PLAYING)
@@ -540,13 +540,13 @@
 			var/mob/living/silicon/ai/announcer = pick(ailist)
 			if(character.mind)
 				if(character.mind.assigned_role != character.mind.special_role)
-					var/arrivalmessage = "Новый [rank ? "[rank]" : "турист" ] [join_message ? join_message : "прибыл на станцию"]."
+					var/arrivalmessage = "[rank ? "[rank]" : "Visitor" ] [join_message ? join_message : "has arrived on the station"]."
 					announcer.say(";[arrivalmessage]", ignore_languages = TRUE)
 		else
 			if(character.mind)
 				if(character.mind.assigned_role != character.mind.special_role)
 					// can't use their name here, since cyborg namepicking is done post-spawn, so we'll just say "A new Cyborg has arrived"/"A new Android has arrived"/etc.
-					radio_announce("Новый [rank ? " [rank]" : " турист" ] [join_message ? join_message : "прибыл на станцию"].", ARRIVALS_ANNOUNCEMENT_COMPUTER, PUB_FREQ, follow_target_override = character)
+					radio_announce("[rank ? "[rank]" : "Visitor" ] [join_message ? join_message : "has arrived on the station"].", ARRIVALS_ANNOUNCEMENT_COMPUTER, PUB_FREQ, follow_target_override = character)
 
 #undef ARRIVALS_ANNOUNCEMENT_COMPUTER
 
@@ -557,16 +557,16 @@
 	var/hours = mills / 36000
 
 	var/dat = {"<html><meta charset="UTF-8"><body><center>"}
-	dat += "Продолжительность раунда: [round(hours)]h [round(mins)]m<br>"
-	dat += "<b>Уровень угрозы на станции: [SSsecurity_level.get_colored_current_security_level_name()]</b><br>"
+	dat += "Round duration: [round(hours)]h [round(mins)]m<br>"
+	dat += "<b>Current security level: [SSsecurity_level.get_colored_current_security_level_name()]</b><br>"
 
 	if(EMERGENCY_ESCAPED_OR_ENDGAMED)
-		dat += "<span style='color: red;'><b>Экипаж объекта был эвакуирован.</b></span><br>"
+		dat += "<span style='color: red;'><b>The station has been evacuated.</b></span><br>"
 	else if((SSshuttle.emergency?.mode == SHUTTLE_CALL) || EMERGENCY_AT_LEAST_DOCKED)
-		dat += "<span style='color: red;'>В настоящее время экипаж объекта проходит процедуру эвакуации.</span><br>"
+		dat += "<span style='color: red;'>The station is currently undergoing evacuation procedures.</span><br>"
 
 	if(length(SSjobs.prioritized_jobs))
-		dat += "<span style='color: lime;'>Объект отметил эти позиции как приоритетные: "
+		dat += "<span style='color: lime;'>The station has flagged these jobs as high priority: "
 		var/amt = length(SSjobs.prioritized_jobs)
 		var/amt_count
 		for(var/datum/job/a in SSjobs.prioritized_jobs)
@@ -615,7 +615,7 @@
 				categorizedJobs[STATION_DEPARTMENT_RU_OTHER]["jobs"] += job
 
 	if(num_jobs_available)
-		dat += "Выберите из следующих открытых позиций:<br><br>"
+		dat += "Choose from the following open positions:<br><br>"
 		dat += "<table><tr><td valign='top'>"
 		for(var/jobcat in categorizedJobs)
 			if(categorizedJobs[jobcat]["colBreak"])
@@ -626,19 +626,19 @@
 			dat += "<fieldset style='border: 2px solid [color]; display: inline'>"
 			dat += "<legend align='center' style='color: [color]'>[jobcat]</legend>"
 			if(jobcat == STATION_DEPARTMENT_RU_OTHER)
-				dat += "<a href='byond://?src=[UID()];SelectedJob=RandomJob'>Случайно (из доступных)</a><br>"
+				dat += "<a href='byond://?src=[UID()];SelectedJob=RandomJob'>Random (from available)</a><br>"
 			for(var/datum/job/job in categorizedJobs[jobcat]["jobs"])
 				if(job in SSjobs.prioritized_jobs)
-					dat += "<a href='byond://?src=[UID()];SelectedJob=[job.title]'><span style='color: lime;'><b>[get_job_title_ru(job.title)] ([job.current_positions]) (Активно: [activePlayers[job]])</b></span></a><br>"
+					dat += "<a href='byond://?src=[UID()];SelectedJob=[job.title]'><span style='color: lime;'><b>[get_job_title_ru(job.title)] ([job.current_positions]) (Active: [activePlayers[job]])</b></span></a><br>"
 				else
-					dat += "<a href='byond://?src=[UID()];SelectedJob=[job.title]'>[get_job_title_ru(job.title)] ([job.current_positions]) (Активно: [activePlayers[job]])</a><br>"
+					dat += "<a href='byond://?src=[UID()];SelectedJob=[job.title]'>[get_job_title_ru(job.title)] ([job.current_positions]) (Active: [activePlayers[job]])</a><br>"
 			dat += "</fieldset><br>"
 
 		dat += "</td></tr></table></center>"
 	else
-		dat += "<br><br><center>Открытые позиции отсутствуют.<br>Попробуйте снова через несколько минут.<br>Или зайдите за наблюдателя.</center>"
+		dat += "<br><br><center>There are no open positions.<br>Try again in a few minutes.<br>Or join as an observer.</center>"
 	// Added the new browser window method
-	var/datum/browser/popup = new(src, "latechoices", "Выбор должности", 1250, 600)
+	var/datum/browser/popup = new(src, "latechoices", "Choose a job", 1250, 600)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.add_script("delay_interactivity", 'html/browser/delay_interactivity.js')
 	popup.set_content(dat)

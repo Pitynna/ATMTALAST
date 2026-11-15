@@ -43,13 +43,13 @@ export function TextHighlightSettings(props) {
               icon="plus"
               onClick={() => addHighlight()}
             >
-              Добавить выделение текста
+              Add text highlight
             </Button>
             {highlightSettings.length >= WARN_AFTER_HIGHLIGHT_AMT && (
               <Box inline fontSize="0.9em" ml={1} color="red">
                 <Icon mr={1} name="triangle-exclamation" />
-                Большое количество выделений может вызвать проблемы с
-                производительностью!
+                A large number of highlights can cause performance
+                problems!
               </Box>
             )}
           </Box>
@@ -58,10 +58,10 @@ export function TextHighlightSettings(props) {
       <Divider />
       <Box>
         <Button icon="check" onClick={() => chatRenderer.rebuildChat()}>
-          Применить
+          Apply
         </Button>
         <Box inline fontSize="0.9em" ml={1} color="label">
-          Может заморозить чат на несколько секунд.
+          May freeze the chat for a few seconds.
         </Box>
       </Box>
     </Section>
@@ -159,7 +159,7 @@ function TextHighlightSetting(props) {
         <Stack.Item>
           <Button.Checkbox
             checked={highlightWholeMessage}
-            tooltip="Если эта опция включена, всё сообщение будет отмечено жёлтым."
+            tooltip="If enabled, the whole message will be highlighted in yellow."
             onClick={() =>
               updateHighlight({
                 id,
@@ -167,14 +167,14 @@ function TextHighlightSetting(props) {
               })
             }
           >
-            Целое сообщение
+            Whole message
           </Button.Checkbox>
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
             checked={matchWord}
             tooltipPosition="bottom-start"
-            tooltip="Если эта опция включена, только строгие совпадения (без символов до и после) будут отмечены. Несовместимо с пунктуацией. Перегружается при использовании регулярных выражений."
+            tooltip="If enabled, only exact matches (no characters before or after) will be highlighted. Not compatible with punctuation. Overridden when using regular expressions."
             disabled={!!highlightRegex}
             onClick={() =>
               updateHighlight({
@@ -183,12 +183,12 @@ function TextHighlightSetting(props) {
               })
             }
           >
-            Строго
+            Exact
           </Button.Checkbox>
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
-            tooltip="Если эта опция включена, выделение будет чувствительно к регистру."
+            tooltip="If enabled, highlighting will be case-sensitive."
             checked={matchCase}
             onClick={() =>
               updateHighlight({
@@ -197,7 +197,7 @@ function TextHighlightSetting(props) {
               })
             }
           >
-            Регистр
+            Case
           </Button.Checkbox>
         </Stack.Item>
       </Stack>
@@ -383,7 +383,7 @@ function TextHighlightSetting(props) {
         fluid
         height="3em"
         value={highlightText}
-        placeholder="Напишите сюда слова для выделения. Разделяйте их запятыми, например (слово1, слово2, слово3)."
+        placeholder="Put words to highlight here. Separate them with commas, e.g. (word1, word2, word3)."
         style={{ border: isRegexValid ? '' : '1px solid red' }}
         onBlur={(value) =>
           updateHighlight({

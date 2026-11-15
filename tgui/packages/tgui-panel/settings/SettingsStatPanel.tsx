@@ -17,7 +17,7 @@ import { useSettings } from './use-settings';
 const tabViews = ['default', 'classic', 'scrollable'];
 
 function LinkedToChat() {
-  return <NoticeBox color="red">Отвяжите стат. панель от чата!</NoticeBox>;
+  return <NoticeBox color="red">Unlink the stat panel from the chat!</NoticeBox>;
 }
 
 export function SettingsStatPanel(props) {
@@ -30,7 +30,7 @@ export function SettingsStatPanel(props) {
       <Stack fill vertical>
         <Stack.Item>
           <LabeledList>
-            <LabeledList.Item label="Стиль" verticalAlign="middle">
+            <LabeledList.Item label="Style" verticalAlign="middle">
               {tabViews.map((view) => (
                 <Button
                   key={view}
@@ -42,7 +42,7 @@ export function SettingsStatPanel(props) {
                 </Button>
               ))}
             </LabeledList.Item>
-            <LabeledList.Item label="Шрифт">
+            <LabeledList.Item label="Font">
               {statLinked ? (
                 <LinkedToChat />
               ) : (
@@ -59,7 +59,7 @@ export function SettingsStatPanel(props) {
                             setFreeStatFont(!freeStatFont);
                           }}
                         >
-                          Пользовательский шрифт
+                          Custom font
                         </Button>
                       }
                     >
@@ -98,14 +98,14 @@ export function SettingsStatPanel(props) {
                           setFreeStatFont(!freeStatFont);
                         }}
                       >
-                        Пользовательский шрифт
+                        Custom font
                       </Button>
                     </Stack>
                   )}
                 </Stack.Item>
               )}
             </LabeledList.Item>
-            <LabeledList.Item label="Размер шрифта">
+            <LabeledList.Item label="Font size">
               <Stack.Item grow>
                 {statLinked ? (
                   <LinkedToChat />
@@ -136,7 +136,7 @@ export function SettingsStatPanel(props) {
             color={statLinked ? 'bad' : 'good'}
             onClick={() => updateSettings({ statLinked: !statLinked })}
           >
-            {statLinked ? 'Отвязать от чата' : 'Привязать к чату'}
+            {statLinked ? 'Unlink from chat' : 'Link to chat'}
           </Button>
         </Stack.Item>
       </Stack>

@@ -1,6 +1,6 @@
 <div class="motd-card">
-    <h1>Добро пожаловать на ATMTA!</h1>
-    <p>Наш сервер использует модифицированный билд Paradise Station.<br>Журнал обновлений доступен на титульном экране, во вкладке OOC и в Esc-меню.</p>
+    <h1>Welcome to ATMTA!</h1>
+    <p>Our server runs a modified build of Paradise Station.<br>The changelog is available on the title screen, in the OOC tab and in the Esc menu.</p>
     <div>
         <strong>➤ <a aria-disabled="true">Discord</a></strong><br>
         <strong>➤ <a aria-disabled="true">Wiki</a></strong>

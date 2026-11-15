@@ -207,7 +207,7 @@ SUBSYSTEM_DEF(title)
 	/// The current title screen being displayed, as `/datum/asset_cache_item`
 	var/datum/asset_cache_item/screen_image
 	/// Randow phrase for this round
-	var/random_phrase = "О нет, моя фраза!"
+	var/random_phrase = "Oh no, my phrase!"
 
 	var/list/color2tguitheme = list("#202020" = "dark", "#EEEEEE" = "light", "#1b2633" = "ntos", "#4d0202" = "syndicate", "#800448" = "paradise")
 
@@ -324,7 +324,7 @@ SUBSYSTEM_DEF(title)
 			</div>
 			<div class="character_info">
 				<span class="character" id="character_slot">[viewer.prefs.real_name]</span>
-				<span class="character" id="arrival_message">[(player.ready || SSticker.current_state == GAME_STATE_PLAYING) ? "...отправляется на станцию" : "...остается дома"].</span>
+				<span class="character" id="arrival_message">[(player.ready || SSticker.current_state == GAME_STATE_PLAYING) ? "...is heading to the station" : "...is staying home"].</span>
 			</div>
 		</div>
 	"}
@@ -332,34 +332,34 @@ SUBSYSTEM_DEF(title)
 	html += {"<div class="container_buttons">"}
 
 	if(!SSticker || SSticker.current_state <= GAME_STATE_PREGAME)
-		html += {"<a class="menu_button bad" id="ready" href='byond://?src=[player.UID()];ready=1'>[player.ready ? "Готов" : "Не готов"]</a>"}
+		html += {"<a class="menu_button bad" id="ready" href='byond://?src=[player.UID()];ready=1'>[player.ready ? "Ready" : "Not ready"]</a>"}
 	else
 		html += {"
-			<a class="menu_button" href='byond://?src=[player.UID()];late_join=1'>Присоединиться</a>
-			<a class="menu_button" href='byond://?src=[player.UID()];manifest=1'>Список экипажа</a>
+			<a class="menu_button" href='byond://?src=[player.UID()];late_join=1'>Join game</a>
+			<a class="menu_button" href='byond://?src=[player.UID()];manifest=1'>Crew manifest</a>
 		"}
 
-	html += {"<a class="menu_button" href='byond://?src=[player.UID()];observe=1'>Наблюдать</a>"}
+	html += {"<a class="menu_button" href='byond://?src=[player.UID()];observe=1'>Observe</a>"}
 	html += {"
 		<hr>
-		<a class="menu_button good" id="be_antag" href='byond://?src=[player.UID()];skip_antag=1'>[viewer?.prefs.skip_antag ? "Антагонисты: Выкл." : "Антагонисты: Вкл."]</a>
-		<a class="menu_button" href='byond://?src=[player.UID()];show_preferences=1'>Настройка персонажа</a>
-		<a class="menu_button" href='byond://?src=[player.UID()];job_preferences=1'>Выбор профессии</a>
-		<a class="menu_button" href='byond://?src=[player.UID()];game_preferences=1'>Настройки игры</a>
+		<a class="menu_button good" id="be_antag" href='byond://?src=[player.UID()];skip_antag=1'>[viewer?.prefs.skip_antag ? "Antagonists: Off" : "Antagonists: On"]</a>
+		<a class="menu_button" href='byond://?src=[player.UID()];show_preferences=1'>Character setup</a>
+		<a class="menu_button" href='byond://?src=[player.UID()];job_preferences=1'>Job preferences</a>
+		<a class="menu_button" href='byond://?src=[player.UID()];game_preferences=1'>Game preferences</a>
 		<hr>
-		<a class="menu_button" href='byond://?src=[player.UID()];sound_options=1'>Настройки громкости</a>
-		<a class="menu_button" href='byond://?src=[player.UID()];poll_panel=1'>Открыть голосование</a>
+		<a class="menu_button" href='byond://?src=[player.UID()];sound_options=1'>Volume settings</a>
+		<a class="menu_button" href='byond://?src=[player.UID()];poll_panel=1'>Open polls</a>
 	"}
 	if(CONFIG_GET(string/discordurl) && (!viewer?.prefs.discord_id || length(viewer?.prefs.discord_id) == 32))
-		html += {"<a class="menu_button" href='byond://?src=[player.UID()];connect_discord=1'>Привязка Discord</a>"}
+		html += {"<a class="menu_button" href='byond://?src=[player.UID()];connect_discord=1'>Link Discord</a>"}
 	if(GLOB.join_tos && !viewer.tos_consent)
-		html += {"<a class="menu_button" href='byond://?src=[player.UID()];tos=1'>Политика конфидициальности</a>"}
+		html += {"<a class="menu_button" href='byond://?src=[player.UID()];tos=1'>Privacy policy</a>"}
 
 	if(check_rights(R_EVENT, FALSE, player))
 		html += {"
 			<hr>
-			<a class="menu_button admin" href='byond://?src=[player.UID()];change_picture=1'>Изменить изображение</a>
-			<a class="menu_button admin" href='byond://?src=[player.UID()];leave_notice=1'>Оставить уведомление</a>
+			<a class="menu_button admin" href='byond://?src=[player.UID()];change_picture=1'>Change picture</a>
+			<a class="menu_button admin" href='byond://?src=[player.UID()];leave_notice=1'>Leave notice</a>
 		"}
 
 	html += {"</div>"}
@@ -370,25 +370,25 @@ SUBSYSTEM_DEF(title)
 		<div class="container_links">
 			<a class="link_button" aria-disabled="true"><i class="fab fa-wikipedia-w"></i></a>
 			<a class="link_button" aria-disabled="true"><i class="fab fa-discord"></i></a>
-			<a class="link_button" title="Чейнджлог" href='byond://?src=[player.UID()];changelog=1'><i class="fas fa-newspaper"></i></a>
+			<a class="link_button" title="Changelog" href='byond://?src=[player.UID()];changelog=1'><i class="fas fa-newspaper"></i></a>
 		</div>
 	"}
 	html += {"</div>"}
 	html += {"<div class="status-box">
-			<div class="status-item">Режим: <span id="game-mode">extended</span></div>
-			<div class="status-item">До начала раунда: <div class="countdown" id="countdown-timer">00:00</div></div>
-			<div class="status-item">Игроков: <span id="players-count">0</span></div>
-			<div class="status-item">Готовых игроков: <span id="ready-players">0/0</span></div>
+			<div class="status-item">Mode: <span id="game-mode">extended</span></div>
+			<div class="status-item">Round starts in: <div class="countdown" id="countdown-timer">00:00</div></div>
+			<div class="status-item">Players: <span id="players-count">0</span></div>
+			<div class="status-item">Ready players: <span id="ready-players">0/0</span></div>
 	</div>"}
-	html += {"<label class="hide_button hide_lobby" for="hide_lobby">Лобби</label>"}
+	html += {"<label class="hide_button hide_lobby" for="hide_lobby">Lobby</label>"}
 	html += {"<div class="lobby-box"><div class="lobby-flex-box"></div></div>"}
 	html += {"
 		<script language="JavaScript">
 			let ready_int = 0;
 			const readyID = document.getElementById("ready");
 			const arrival_message = document.getElementById("arrival_message");
-			const ready_marks = \[ "Не готов", "Готов" \];
-			const arrival_marks = \[ "...остается дома.", "...отправляется на станцию."\];
+			const ready_marks = \[ "Not ready", "Ready" \];
+			const arrival_marks = \[ "...is staying home.", "...is heading to the station."\];
 			const ready_class = \[ "bad", "good" \];
 			function ready(setReady) {
 				if(setReady) {
@@ -409,7 +409,7 @@ SUBSYSTEM_DEF(title)
 			}
 			let antag_int = 0;
 			const antagID = document.getElementById("be_antag");
-			const antag_marks = \[ "Антагонисты: Вкл.", "Антагонисты: Выкл."\];
+			const antag_marks = \[ "Antagonists: On", "Antagonists: Off"\];
 			const antag_class = \[ "good", "bad" \];
 			function skip_antag(setAntag) {
 				if(setAntag) {
@@ -458,9 +458,9 @@ SUBSYSTEM_DEF(title)
 					const gameHTML = `
 						<div class="game-item">
 							<div class="game-name">${decodeURI(game.name).replaceAll("+", " ")}</div>
-							<div class="game-players"><i class="fas fa-users icon"></i> Игроки: ${game.players}</div>
-							<div class="game-state"><i class="fas fa-clock icon"></i> Время: ${game.round_time.replaceAll("%3a", ":")}</div>
-							<a class="game-button" href='byond://?src=[player.UID()];switch_server=${game.port}'><i class="fas fa-plug icon"></i> Подключиться</a>
+							<div class="game-players"><i class="fas fa-users icon"></i> Players: ${game.players}</div>
+							<div class="game-state"><i class="fas fa-clock icon"></i> Time: ${game.round_time.replaceAll("%3a", ":")}</div>
+							<a class="game-button" href='byond://?src=[player.UID()];switch_server=${game.port}'><i class="fas fa-plug icon"></i> Connect</a>
 						</div>`;
 					lobbyBox.innerHTML += gameHTML;
 				});
@@ -484,7 +484,7 @@ SUBSYSTEM_DEF(title)
 				playersCount.textContent = players;
 				const readyExist = (ready !== undefined && ready !== null);
 				readyPlayers.parentElement.style.display = readyExist? 'block' : 'none';
-				readyPlayers.textContent = (!readyExist || ready <= 0)? 'НЕТ' : ready + '/' + players;
+				readyPlayers.textContent = (!readyExist || ready <= 0)? 'NONE' : ready + '/' + players;
 			}
 
 			const character_name_slot = document.getElementById("character_slot");
