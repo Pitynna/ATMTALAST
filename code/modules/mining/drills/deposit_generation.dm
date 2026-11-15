@@ -171,4 +171,6 @@
 	var/datum/ore_deposit_generator/generator = new
 	generator.generate(z)
 	qdel(generator)
+	// The station is initialized by now; give cargo its round-start drill for these deposits.
+	spawn_cargo_mining_drill()
 	qdel(src)

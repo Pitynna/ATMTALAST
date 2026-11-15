@@ -385,6 +385,11 @@
 			A:amount = object.amount
 		slip.info += "<li>[A.declent_ru(NOMINATIVE)]</li>"	//add the item to the manifest (even if it was misplaced)
 
+	// Too large for the crate: delivered alongside it.
+	for(var/typepath in object.loose_contains)
+		var/atom/loose_item = new typepath(_loc)
+		slip.info += "<li>[loose_item.declent_ru(NOMINATIVE)]</li>"
+
 	if(istype(Crate, /obj/structure/closet/crate/critter)) // critter crates do not actually spawn mobs yet and have no contains var, but the manifest still needs to list them
 		var/obj/structure/closet/crate/critter/CritCrate = Crate
 		if(CritCrate.content_mob)

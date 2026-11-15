@@ -32,6 +32,22 @@ type MiningDrillData = {
   buffer: BufferEntry[];
   panel_open: boolean;
   module: string | null;
+  module_data: ModuleData | null;
+};
+
+type ModuleData = {
+  kind: string;
+  direction?: string;
+  blocked?: boolean;
+};
+
+const DIRECTIONS = ['north', 'south', 'east', 'west'];
+
+const DIRECTION_ICONS: Record<string, string> = {
+  north: 'arrow-up',
+  south: 'arrow-down',
+  east: 'arrow-right',
+  west: 'arrow-left',
 };
 
 const STATUS_COLORS: Record<string, string> = {
@@ -72,6 +88,7 @@ export const MiningDrill = (_props: unknown) => {
     buffer,
     panel_open,
     module,
+    module_data,
   } = data;
   return (
     <Window width={420} height={470}>
@@ -186,13 +203,56 @@ export const MiningDrill = (_props: unknown) => {
         </Section>
         <Section title="Module">
           <LabeledList>
-            <LabeledList.Item label="Installed">
+            <LabeledList.Item
+              label="Installed"
+              buttons={
+                panel_open &&
+                !!module && (
+                  <Button icon="eject" onClick={() => act('remove_module')}>
+                    Remove
+                  </Button>
+                )
+              }
+            >
               {module || 'None'}
             </LabeledList.Item>
-            <LabeledList.Item label="Service panel">
+            {module_data?.kind === 'ejector' && (
+              <LabeledList.Item label="Output side">
+                {DIRECTIONS.map((direction) => (
+                  <Button
+                    key={direction}
+                    icon={DIRECTION_ICONS[direction]}
+                    selected={module_data.direction === direction}
+                    tooltip={`Eject ore to the ${direction}`}
+                    onClick={() => act('set_direction', { direction })}
+                  />
+                ))}
+                {!!module_data.blocked && (
+                  <Box inline color="average" ml={1}>
+                    Blocked, ore stays in the buffer
+                  </Box>
+                )}
+              </LabeledList.Item>
+            )}
+            <LabeledList.Item
+              label="Service panel"
+              buttons={
+                panel_open &&
+                has_cell && (
+                  <Button icon="battery-empty" onClick={() => act('eject_cell')}>
+                    Remove cell
+                  </Button>
+                )
+              }
+            >
               {panel_open ? 'Open' : 'Closed'}
             </LabeledList.Item>
           </LabeledList>
+          {!module && (
+            <Box color="label" mt={1}>
+              Without a module, ore stays in the buffer until unloaded by hand.
+            </Box>
+          )}
         </Section>
       </Window.Content>
     </Window>

@@ -181,6 +181,28 @@ def draw_module_base():
     return img
 
 
+def draw_module_ejector():
+    """Module casing with an ore chute and a yellow output arrow."""
+    img = new_image()
+    box(img, 8, 10, 23, 22, STEEL, STEEL_LIGHT, STEEL_DARK)
+    # Chute on the right side.
+    box(img, 22, 13, 27, 19, STEEL_DARK, STEEL, OUTLINE)
+    rect(img, 24, 15, 26, 17, HOLE)
+    # Ore chunk dropping out of the chute.
+    put(img, 28, 18, (0xB0, 0x60, 0x3A))
+    put(img, 29, 19, (0xB0, 0x60, 0x3A))
+    put(img, 28, 19, (0x6E, 0x34, 0x20))
+    # Yellow arrow on the casing pointing at the chute.
+    for depth, (start, end) in enumerate(((13, 18), (14, 17), (15, 16))):
+        for along in range(start, end + 1):
+            put(img, 17 + depth, along, ARROW)
+    rect(img, 11, 15, 16, 16, ARROW)
+    # Contact strip.
+    for x in range(10, 22, 2):
+        put(img, x, 23, (0xC8, 0xA0, 0x40))
+    return img
+
+
 def drill_states():
     states = []
     idle = [draw_drill_tier1(d) for d in DIRS]
@@ -190,4 +212,5 @@ def drill_states():
     states.append(("drill1_panel", [draw_panel_overlay()], 1, 1, None))
     states.append(("drill1_packed", [draw_packed_tier1()], 1, 1, None))
     states.append(("module", [draw_module_base()], 1, 1, None))
+    states.append(("module_ejector", [draw_module_ejector()], 1, 1, None))
     return states

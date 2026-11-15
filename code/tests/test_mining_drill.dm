@@ -19,3 +19,20 @@
 	drill.on = TRUE
 	drill.update_status()
 	TEST_ASSERT_EQUAL(drill.status, "No ore deposit", "A drill off a deposit must say so")
+
+/// The ejector empties the buffer onto the tile the drill's arrow points at.
+/datum/unit_test/mining_drill_ejector/Run()
+	var/obj/machinery/mining_drill/drill = allocate(/obj/machinery/mining_drill)
+	var/obj/item/mining_drill_module/ejector/ejector = allocate(/obj/item/mining_drill_module/ejector)
+	drill.module = ejector
+	ejector.forceMove(drill)
+	drill.setDir(EAST)
+	var/turf/target = get_step(drill, EAST)
+	TEST_ASSERT(target && !target.is_blocked_turf(exclude_mobs = TRUE), "The test needs a free tile east of the drill")
+	drill.buffer[/obj/item/stack/ore/iron] = 7
+	ejector.process_output(drill)
+	TEST_ASSERT_EQUAL(drill.buffer_total(), 0, "The ejector must empty the buffer")
+	var/obj/item/stack/ore/iron/ejected = locate() in target
+	TEST_ASSERT_NOTNULL(ejected, "Ejected ore must land on the output tile")
+	TEST_ASSERT_EQUAL(ejected.amount, 7, "All buffered ore must be ejected")
+	qdel(ejected)

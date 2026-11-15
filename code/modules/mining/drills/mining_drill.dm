@@ -400,6 +400,26 @@
 				return FALSE
 			INVOKE_ASYNC(src, PROC_REF(pack_up), user)
 			return TRUE
+		if("eject_cell")
+			if(!panel_open || !cell || !istype(user) || !Adjacent(user))
+				return FALSE
+			var/obj/item/stock_parts/cell/removed = cell
+			cell = null
+			removed.forceMove(drop_location())
+			user.put_in_hands(removed)
+			to_chat(user, span_notice("You remove [removed] from [src]."))
+			update_status()
+			return TRUE
+		if("remove_module")
+			if(!panel_open || !module || !istype(user) || !Adjacent(user))
+				return FALSE
+			var/obj/item/mining_drill_module/removed = module
+			module = null
+			removed.on_uninstall(src)
+			removed.forceMove(drop_location())
+			user.put_in_hands(removed)
+			to_chat(user, span_notice("You remove [removed] from [src]."))
+			return TRUE
 	if(module)
 		return module.ui_act_module(action, params, src, user)
 

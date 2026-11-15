@@ -33,6 +33,8 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 /datum/supply_packs
 	var/name = null
 	var/list/contains = list()
+	/// Items too large for a crate. They are delivered next to it, not inside.
+	var/list/loose_contains = list()
 	var/manifest = ""
 	var/amount = null
 	var/cost = null
@@ -64,7 +66,7 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 /datum/supply_packs/New()
 	..()
 	manifest += "<ul>"
-	for(var/path in contains)
+	for(var/path in contains + loose_contains)
 		if(is_legacy_blocked_type(path))
 			continue
 		if(!path)

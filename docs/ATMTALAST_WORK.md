@@ -422,3 +422,14 @@ Deposit depleted. Плата `Mining Drill` (Circuit Imprinter) и предме�
 Спрайты тира I: `tools/mining_drills/drill_sprites.py`. Unit-тесты
 `test_mining_drill.dm` только компилировались. tgui собран (`rspack`), tsc без
 ошибок. Сервер не запускался.
+
+## 2026-11-15 — Буры, этап 3: эжектор и карго
+
+Ore Ejector Module (`drill_modules.dm`, протолат: materials 2, engineering 2,
+metal 4000, glass 1000) выгружает буфер бура по стрелке: в ящик для руды,
+на конвейер или на пол; на плотный тайл не выгружает. В tgui добавлены выбор
+стороны выгрузки, снятие батареи и модуля при открытой панели. Стартовый бур
+кладётся в Cargo Bay (`drill_cargo.dm`). Пак «Mining Drill Kit» за 50 очков.
+Паки получили поле `loose_contains` для предметов, которые доставляются рядом
+с ящиком (`supplypacks.dm`, `supply.dm`). Unit-тест эжектора только
+компилировался, tgui собран. Сервер не запускался.
