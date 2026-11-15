@@ -100,6 +100,14 @@ const MODE_COLORS: Record<Mode, string> = {
   Шепот: '#a2782a',
 };
 
+const MODE_LABELS: Record<Mode, string> = {
+  Command: 'Command',
+  Сказать: 'Say',
+  Эмоция: 'Emote',
+  Шепот: 'Whisper',
+  OOC: 'OOC',
+};
+
 type SuggestionState = {
   verbSuggestions: Verb[];
   typepathSuggestions: string[];
@@ -746,7 +754,7 @@ export function CommandBar() {
         type="button"
         style={{ color: MODE_COLORS[mode] }}
       >
-        {mode}
+        {MODE_LABELS[mode]}
       </button>
     </div>
   );

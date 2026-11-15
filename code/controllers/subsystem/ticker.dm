@@ -95,8 +95,8 @@ SUBSYSTEM_DEF(ticker)
 			// This is ran as soon as the MC starts firing, and should only run ONCE, unless startup fails
 			var/pregame_timestart = CONFIG_GET(number/pregame_timestart)
 			round_start_time = world.time + (pregame_timestart SECONDS)
-			to_chat(world, span_darkmblue("<b>Добро пожаловать в предыгровое лобби!</b>"))
-			to_chat(world, "Пожалуйста, настройте своего персонажа и выберите опцию <b>\"Готово\"</b>. Игра начнётся через [pregame_timestart] секунд[DECL_U_Y_0(pregame_timestart)].")
+			to_chat(world, span_darkmblue("<b>Welcome to the pre-game lobby!</b>"))
+			to_chat(world, "Please set up your character and select <b>\"Ready\"</b>. The game will start in [pregame_timestart] second\s.")
 			change_state(GAME_STATE_PREGAME)
 			fire() // TG says this is a good idea
 		if(GAME_STATE_PREGAME)
@@ -166,7 +166,7 @@ SUBSYSTEM_DEF(ticker)
 					else
 						SSmapping.next_map = SSmapping.map_datum
 			if(SSmapping.next_map)
-				to_chat(world, "<b>Следующая карта — [SSmapping.next_map.name]!</b>")
+				to_chat(world, "<b>Next map: [SSmapping.next_map.name]!</b>")
 
 			SSachievements.save_achievements_to_db()
 
@@ -206,7 +206,7 @@ SUBSYSTEM_DEF(ticker)
 	if(GLOB.master_mode == "random" || GLOB.master_mode == "secret")
 		runnable_modes = config.get_runnable_modes()
 		if(!length(runnable_modes))
-			to_chat(world, "<b>Не удалось выбрать игровой режим.</b> Возврат в предыгровое лобби.")
+			to_chat(world, "<b>Unable to choose a game mode.</b> Returning to the pre-game lobby.")
 			force_start = FALSE
 			change_state(GAME_STATE_PREGAME)
 			Master.SetRunLevel(RUNLEVEL_LOBBY)
@@ -224,7 +224,7 @@ SUBSYSTEM_DEF(ticker)
 		mode = config.pick_mode(GLOB.master_mode)
 
 	if(!mode.can_start())
-		to_chat(world, "<b>Не удалось начать [mode.name].</b> Для начала режима необходимо [CONFIG_GET(flag/enable_gamemode_player_limit) ? config.mode_required_players[mode.config_tag] : mode.required_enemies] игрок[DECL_0_A_OV(CONFIG_GET(flag/enable_gamemode_player_limit) ? config.mode_required_players[mode.config_tag] : mode.required_enemies)]. Возврат в предыгровое лобби.")
+		to_chat(world, "<b>Unable to start [mode.name].</b> This mode requires [CONFIG_GET(flag/enable_gamemode_player_limit) ? config.mode_required_players[mode.config_tag] : mode.required_enemies] player\s. Returning to the pre-game lobby.")
 		mode = null
 		change_state(GAME_STATE_PREGAME)
 		force_start = FALSE
@@ -253,8 +253,8 @@ SUBSYSTEM_DEF(ticker)
 
 		var/has_antags = (length(P.client.prefs.be_special) > 0)
 		if(!P.client.prefs.check_any_job())
-			to_chat(P, span_danger("Вы не выбрали ни одной роли, а также опцию возврата в лобби, если выбранные роли недоступны. \
-									Из-за этого вы не можете заполучить какую-либо роль с началом раунда. Пожалуйста, измените свой список предпочитаемых ролей.")
+			to_chat(P, span_danger("You have not selected any job, nor the option to return to the lobby if your preferred jobs are unavailable. \
+									Because of this you cannot receive any job at round start. Please update your job preferences.")
 			)
 			if(has_antags)
 				// We add these to a list so we can deal with them as a batch later
@@ -266,7 +266,7 @@ SUBSYSTEM_DEF(ticker)
 	can_continue = mode.pre_setup() //Setup special modes
 	if(!can_continue)
 		QDEL_NULL(mode)
-		to_chat(world, "<b>Не удалось подготовить [GLOB.master_mode].</b> Возврат в предыгровое лобби.")
+		to_chat(world, "<b>Unable to set up [GLOB.master_mode].</b> Returning to the pre-game lobby.")
 		change_state(GAME_STATE_PREGAME)
 		force_start = FALSE
 		SSjobs.ResetOccupations()
@@ -289,8 +289,8 @@ SUBSYSTEM_DEF(ticker)
 		for(var/datum/game_mode/M in runnable_modes)
 			modes += M.name
 		modes = sortList(modes)
-		to_chat(world, "<b>Текущий режим игры — Скрыт!</b>")
-		to_chat(world, "<b>Возможные варианты:</b> [russian_list(modes)]")
+		to_chat(world, "<b>The current game mode is: Secret!</b>")
+		to_chat(world, "<b>Possibilities:</b> [english_list(modes)]")
 	else
 		mode.announce()
 
@@ -371,7 +371,7 @@ SUBSYSTEM_DEF(ticker)
 			qdel(S)
 
 	SSdbcore.SetRoundStart()
-	to_chat(world, span_darkmblue(span_bold("Добро пожаловать на [station_name()], желаем вам приятного пребывания!")))
+	to_chat(world, span_darkmblue(span_bold("Welcome to [station_name()], enjoy your stay!")))
 	var/welcome_sound = SSstation.announcer.get_rand_welcome_sound()
 	for(var/client/client as anything in GLOB.clients)
 		SEND_SOUND(client, sound(
@@ -381,7 +381,7 @@ SUBSYSTEM_DEF(ticker)
 			))
 
 	if(SSholiday.holidays)
-		to_chat(world, span_darkmblue("и..."))
+		to_chat(world, span_darkmblue("and..."))
 		for(var/holiday_name, value in SSholiday.holidays)
 			var/datum/holiday/holiday = value
 			to_chat(world, "<h4>[holiday.greet()]</h4>")
@@ -559,7 +559,7 @@ SUBSYSTEM_DEF(ticker)
 		if(isnewplayer(mob))
 			return
 
-		to_chat(mob, "Никто не получил роль <b>Капитана станции</b>.")
+		to_chat(mob, "Nobody was assigned the role of <b>Station Captain</b>.")
 
 /datum/controller/subsystem/ticker/proc/send_tip_of_the_round()
 	var/m
@@ -572,7 +572,7 @@ SUBSYSTEM_DEF(ticker)
 			m = pick(memetips)
 
 	if(m)
-		to_chat(world, custom_boxed_message("purple_box", span_purple("<b>Совет раунда: </b>[html_encode(m)]")))
+		to_chat(world, custom_boxed_message("purple_box", span_purple("<b>Tip of the round: </b>[html_encode(m)]")))
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	GLOB.nologevent = TRUE //end of round murder and shenanigans are legal; there's no need to jam up  past this point.
@@ -709,7 +709,7 @@ SUBSYSTEM_DEF(ticker)
 	var/datum/feed_channel/newChannel = new /datum/feed_channel
 	newChannel.channel_name = NEWS_CHANNEL_STATION_LOG
 	newChannel.author = EDITOR_STATION
-	newChannel.description = "Автоматический журнал, записывающий новости смены."
+	newChannel.description = "Automatic log recording the news of the shift."
 	newChannel.icon = "bullhorn"
 	newChannel.frozen = TRUE
 	newChannel.admin_locked = TRUE
@@ -718,7 +718,7 @@ SUBSYSTEM_DEF(ticker)
 	newChannel = new /datum/feed_channel
 	newChannel.channel_name = NEWS_CHANNEL_STATION
 	newChannel.author = EDITOR_STATION
-	newChannel.description = "Публичный канал оповещений и рабочих объявлений для всех желающих."
+	newChannel.description = "Public channel for notices and work announcements, open to everyone."
 	newChannel.icon = "users"
 	newChannel.is_public = TRUE
 	GLOB.news_network.channels += newChannel
@@ -726,7 +726,7 @@ SUBSYSTEM_DEF(ticker)
 	newChannel = new /datum/feed_channel
 	newChannel.channel_name = NEWS_CHANNEL_NYX
 	newChannel.author = EDITOR_NYX
-	newChannel.description = "Новости \"Нанотрейзен\"!"
+	newChannel.description = "Nanotrasen news!"
 	newChannel.icon = "meteor"
 	newChannel.frozen = TRUE
 	newChannel.admin_locked = TRUE
@@ -735,7 +735,7 @@ SUBSYSTEM_DEF(ticker)
 	newChannel = new /datum/feed_channel
 	newChannel.channel_name = NEWS_CHANNEL_GIB
 	newChannel.author = EDITOR_GIB
-	newChannel.description = "ШОКИРУЮЩИЕ НОВОСТИ КАЖДЫЙ ЧАС! Вы не поверите!"
+	newChannel.description = "SHOCKING NEWS EVERY HOUR! You won't believe it!"
 	newChannel.icon = "star"
 	newChannel.frozen = TRUE
 	newChannel.admin_locked = TRUE
@@ -750,7 +750,7 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/reboot_helper(reason, end_string, delay)
 	// Admins delayed round end. Just alert and dont bother with anything else.
 	if(delay_end)
-		to_chat(world, span_boldannounceooc("Администрация отложила окончание раунда."))
+		to_chat(world, span_boldannounceooc("An admin has delayed the round end."))
 		return
 
 	if(!isnull(delay))
@@ -760,14 +760,14 @@ SUBSYSTEM_DEF(ticker)
 		// Use default restart timeout
 		delay = restart_timeout
 
-	to_chat(world, span_boldannounceooc("Перезагрузка мира через [delay/10] секунд[DECL_U_Y_0(delay/10)]. [reason]"))
+	to_chat(world, span_boldannounceooc("Rebooting world in [delay/10] second\s. [reason]"))
 
 	real_reboot_time = world.time + delay
 	UNTIL(world.time > real_reboot_time) // Hold it here
 
 	// And if we re-delayed, bail again
 	if(delay_end)
-		to_chat(world, span_boldannounceooc("Перезагрузка мира была отложена администрацией."))
+		to_chat(world, span_boldannounceooc("World reboot was delayed by an admin."))
 		return
 
 	if(end_string)
@@ -838,11 +838,11 @@ SUBSYSTEM_DEF(ticker)
 			font-weight: bold;\
 		}\
 	</style>"
-	parts += span_header("Получененные достижения!<br>")
-	parts += "В раунде получены следующие достижения([span_bold("[length(GLOB.achievements_unlocked)]")]):!<br>"
+	parts += span_header("Achievements unlocked!<br>")
+	parts += "The following achievements were unlocked this round ([span_bold("[length(GLOB.achievements_unlocked)]")]):<br>"
 	parts += "<ul class='playerlist'>"
 	for(var/datum/achievement_report/cheevo_report in GLOB.achievements_unlocked)
-		parts += "<br>[cheevo_report.winner_key] был(а) [span_bold(cheevo_report.winner)] и заработал(а) достижение [span_greentext("\"[cheevo_report.cheevo]\"")] в [cheevo_report.award_location]!<br>"
+		parts += "<br>[cheevo_report.winner_key] was [span_bold(cheevo_report.winner)] and earned the achievement [span_greentext("\"[cheevo_report.cheevo]\"")] at [cheevo_report.award_location]!<br>"
 	parts += "</ul>"
 	return "<div>[style]<div class='panel greenborder'><ul>[parts.Join()]</ul></div></div>"
 

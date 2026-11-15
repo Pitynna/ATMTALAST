@@ -50,7 +50,7 @@ export const Donations = (props: unknown) => {
             minValue={0}
             maxValue={maxValue}
             format={(value) =>
-              `${value} из ${maxValue} ₽ (${Math.round((value / maxValue) * 100)}%)`
+              `${value} of ${maxValue} ₽ (${Math.round((value / maxValue) * 100)}%)`
             }
             ranges={{
               bad: [0, middleValue],
@@ -67,7 +67,7 @@ export const Donations = (props: unknown) => {
               </NoticeBox>
             </Stack.Item>
             <Stack.Item style={{ textAlign: 'center' }}>
-              <Section fitted noTopPadding fill title="Поддержать сервер">
+              <Section fitted noTopPadding fill title="Support the server">
                 <Stack fill style={{ justifyContent: 'center' }}>
                   <Stack.Item>
                     <a href={kofiRef || undefined} aria-disabled={!kofiRef}>

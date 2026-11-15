@@ -55,6 +55,12 @@ function normalizePageById(input: Record<string, any>): {
       isMain: desiredId === mainPage.id ? true : page.isMain,
     };
 
+    // The main tab used to have a localized default name; restore English.
+    if (normalized.isMain && normalized.name === 'Основная вкладка') {
+      normalized.name = mainPage.name;
+      dirty = true;
+    }
+
     // If a duplicate exists, prefer the entry already under the correct key.
     if (pageById[desiredId]) {
       // Prefer whichever came from the correct key (stability).
