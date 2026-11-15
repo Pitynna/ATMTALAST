@@ -2514,7 +2514,6 @@
 #include "code\modules\client\preference\loadout\loadout.dm"
 #include "code\modules\client\preference\loadout\loadout_accessories.dm"
 #include "code\modules\client\preference\loadout\loadout_atmta.dm"
-#include "code\modules\client\preference\loadout\loadout_donor.dm"
 #include "code\modules\client\preference\loadout\loadout_general.dm"
 #include "code\modules\client\preference\loadout\loadout_glasses.dm"
 #include "code\modules\client\preference\loadout\loadout_gloves.dm"

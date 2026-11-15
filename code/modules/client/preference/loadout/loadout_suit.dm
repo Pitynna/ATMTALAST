@@ -1,7 +1,7 @@
 /datum/gear/suit
 	subtype_path = /datum/gear/suit
 	slot = ITEM_SLOT_CLOTH_OUTER
-	sort_category = "Верхняя одежда"
+	sort_category = "Suits"
 
 //WINTER COATS
 /datum/gear/suit/coat

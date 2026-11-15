@@ -1,7 +1,7 @@
 /datum/gear/hat
 	subtype_path = /datum/gear/hat
 	slot = ITEM_SLOT_HEAD
-	sort_category = "Головные уборы"
+	sort_category = "Hats"
 
 /datum/gear/hat/hhat
 	index_name = "hardhat, select"

@@ -1,7 +1,7 @@
 /datum/gear/gloves
 	subtype_path = /datum/gear/gloves
 	slot = ITEM_SLOT_GLOVES
-	sort_category = "Перчатки"
+	sort_category = "Gloves"
 
 /datum/gear/gloves/fingerless
 	index_name = "Fingerless Gloves"

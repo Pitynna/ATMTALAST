@@ -1,4 +1,3 @@
-import { declension_ru } from 'common/l10n';
 import { useState } from 'react';
 import {
   Box,
@@ -15,7 +14,6 @@ import {
 } from 'tgui-core/components';
 import { createSearch } from 'tgui-core/string';
 import { useBackend } from '../backend';
-import { JOBS_RU } from '../constants';
 import { Window } from '../layouts';
 
 type Data = {
@@ -49,10 +47,10 @@ type Tweak = {
 };
 
 const sortTypes = {
-  'По умолчанию': (a, b) => a.gear.gear_tier - b.gear.gear_tier,
-  'По алфавиту': (a, b) =>
+  'Default': (a, b) => a.gear.gear_tier - b.gear.gear_tier,
+  'Alphabetical': (a, b) =>
     a.gear.name.toLowerCase().localeCompare(b.gear.name.toLowerCase()),
-  'По стоимости': (a, b) => a.gear.cost - b.gear.cost,
+  'Cost': (a, b) => a.gear.cost - b.gear.cost,
 };
 
 export const Loadout = (props: unknown) => {
@@ -123,7 +121,7 @@ const LoadoutGears = (props) => {
   const { user_tier, gear_slots, max_gear_slots } = data;
   const { category, search, setSearch, searchText, setSearchText } = props;
 
-  const [sortType, setSortType] = useState('По умолчанию');
+  const [sortType, setSortType] = useState('Default');
   const [sortReverse, setsortReverse] = useState(false);
   const testSearch = createSearch<Gear>(searchText, (gear) => gear.name);
 
@@ -171,7 +169,7 @@ const LoadoutGears = (props) => {
               icon={
                 sortReverse ? 'arrow-down-wide-short' : 'arrow-down-short-wide'
               }
-              tooltip={sortReverse ? 'По возрастанию' : 'По убыванию'}
+              tooltip={sortReverse ? 'Ascending' : 'Descending'}
               tooltipPosition="bottom-end"
               onClick={() => setsortReverse(!sortReverse)}
             />
@@ -180,7 +178,7 @@ const LoadoutGears = (props) => {
             <Stack.Item>
               <Input
                 width={20}
-                placeholder="Поиск..."
+                placeholder="Search..."
                 value={searchText}
                 expensive
                 onChange={setSearchText}
@@ -191,7 +189,7 @@ const LoadoutGears = (props) => {
             <Button
               icon="magnifying-glass"
               selected={search}
-              tooltip="Включить поисковую строку"
+              tooltip="Toggle search"
               tooltipPosition="bottom-end"
               onClick={() => {
                 setSearch(!search);
@@ -210,15 +208,13 @@ const LoadoutGears = (props) => {
           gear.gear_tier > user_tier ||
           (gear_slots + gear.cost > max_gear_slots && !selected);
         const costText =
-          gear.cost === 1
-            ? `${gear.cost} Очк${declension_ru(gear.cost, 'о', 'а', 'ов')}`
-            : `${gear.cost} Очк${declension_ru(gear.cost, 'о', 'а', 'ов')}`;
+          gear.cost === 1 ? `${gear.cost} Point` : `${gear.cost} Points`;
         const tooltipText = (
           <Box>
             {gear.name.length > maxTextLength && <Box>{gear.name}</Box>}
             {gear.gear_tier > user_tier && (
               <Box mt={gear.name.length > maxTextLength && 1.5} textColor="red">
-                Недоступно на вашем текущем уровне пожертвований!
+                Not available at your current donator tier!
               </Box>
             )}
           </Box>
@@ -231,7 +227,7 @@ const LoadoutGears = (props) => {
               color={selected ? 'good' : 'transparent'}
               icon={selected ? 'check' : 'plus'}
               disabled={cannotAdd}
-              tooltip={selected ? 'Убрать из снаряжения' : 'Добавить в снаряжение'}
+              tooltip={selected ? 'Remove from loadout' : 'Add to loadout'}
               tooltipPosition="top"
               onClick={() => act('toggle_gear', { gear: gear.index_name })}
             />
@@ -241,10 +237,10 @@ const LoadoutGears = (props) => {
                 color="transparent"
                 icon="user"
                 tooltip={
-                  <Section m={-1} title="Разрешённые должности">
+                  <Section m={-1} title="Allowed roles">
                     {gear.allowed_roles.map((role) => (
                       <Box key={role}>
-                        {JOBS_RU[role] ? JOBS_RU[role] : role}
+                        {role}
                       </Box>
                     ))}
                   </Section>
@@ -283,7 +279,7 @@ const LoadoutGears = (props) => {
               color="gold"
               opacity={0.75}
             >
-              {gear.gear_tier > 0 && `Уровень ${gear.gear_tier}`}
+              {gear.gear_tier > 0 && `Tier ${gear.gear_tier}`}
             </Box>
             <Box fontSize={0.75} opacity={0.66}>
               {costText}
@@ -319,15 +315,22 @@ const LoadoutGears = (props) => {
 
 const LoadoutPreview = (props) => {
   const { act, data } = useBackend<Data>();
+  // Tried-on items that only some jobs can spawn with.
+  const restricted = Object.values(data.gears)
+    .flatMap((category) => Object.values(category))
+    .filter(
+      (gear) =>
+        data.try_on.includes(gear.index_name) && gear.allowed_roles?.length,
+    );
   return (
     <Section
       fill
-      title="Примерка"
+      title="Preview"
       buttons={
         <Button
           icon="eraser"
           disabled={!data.try_on.length}
-          tooltip="Снять примеряемые вещи"
+          tooltip="Take off tried-on items"
           tooltipPosition="bottom-end"
           onClick={() => act('clear_try_on')}
         />
@@ -347,7 +350,7 @@ const LoadoutPreview = (props) => {
               }}
             />
           ) : (
-            <Box color="label">Нет данных</Box>
+            <Box color="label">No data</Box>
           )}
         </Stack.Item>
         <Stack.Item>
@@ -355,7 +358,7 @@ const LoadoutPreview = (props) => {
             <Stack.Item>
               <Button
                 icon="rotate-left"
-                tooltip="Повернуть"
+                tooltip="Rotate"
                 onClick={() => act('rotate', { clockwise: 0 })}
               />
             </Stack.Item>
@@ -365,24 +368,33 @@ const LoadoutPreview = (props) => {
                 textAlign="center"
                 icon="user-tie"
                 selected={data.show_job}
-                tooltip="Показывать форму профессии с высоким приоритетом"
+                tooltip="Show the uniform of your high priority job"
                 onClick={() => act('toggle_job')}
               >
-                {data.show_job ? 'С формой' : 'Без формы'}
+                {data.show_job ? 'With uniform' : 'Without uniform'}
               </Button>
             </Stack.Item>
             <Stack.Item>
               <Button
                 icon="rotate-right"
-                tooltip="Повернуть"
+                tooltip="Rotate"
                 onClick={() => act('rotate', { clockwise: 1 })}
               />
             </Stack.Item>
           </Stack>
         </Stack.Item>
+        {restricted.length > 0 && (
+          <Stack.Item>
+            {restricted.map((gear) => (
+              <Box key={gear.index_name} color="average" fontSize={0.85}>
+                {gear.name} is only available for: {gear.allowed_roles.join(', ')}
+              </Box>
+            ))}
+          </Stack.Item>
+        )}
         <Stack.Item>
           <Box color="label" fontSize={0.85}>
-            Клик по вещи — примерить, «+» — добавить в снаряжение.
+            Click an item to try it on, «+» to add it to your loadout.
           </Box>
         </Stack.Item>
       </Stack>
@@ -408,11 +420,11 @@ const LoadoutEquipped = (props) => {
         <Section
           fill
           scrollable
-          title={'Выбранное снаряжение'}
+          title={'Selected loadout'}
           buttons={
             <Button.Confirm
               icon="trash"
-              tooltip={'Очистить список'}
+              tooltip={'Clear list'}
               tooltipPosition={'bottom-end'}
               onClick={() => act('clear_loadout')}
             />
@@ -471,7 +483,7 @@ const LoadoutEquipped = (props) => {
             }}
           >
             <Box textAlign="center">
-              Использовано очков {data.gear_slots}/{data.max_gear_slots}
+              Points used {data.gear_slots}/{data.max_gear_slots}
             </Box>
           </ProgressBar>
         </Section>
@@ -497,7 +509,7 @@ const GearTweak = (props) => {
             <Button
               color="red"
               icon="times"
-              tooltip="Закрыть"
+              tooltip="Close"
               tooltipPosition="top"
               onClick={() => setTweakedGear('')}
             />
@@ -526,7 +538,7 @@ const GearTweak = (props) => {
                         />
                       }
                     >
-                      {tweakInfo ? tweakInfo : 'По умолчанию'}
+                      {tweakInfo ? tweakInfo : 'Default'}
                       <Box
                         inline
                         ml={1}

@@ -1,7 +1,7 @@
 /datum/gear/implant
 	subtype_path = /datum/gear/implant
 	slot = null
-	sort_category = "Импланты"
+	sort_category = "Implants"
 	implantable = TRUE
 
 /datum/gear/implant/proc/resolve_implant_path(datum/outfit/job/job)

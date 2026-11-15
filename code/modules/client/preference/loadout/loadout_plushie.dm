@@ -1,5 +1,5 @@
 /datum/gear/plushie
-	sort_category = "Игрушки"
+	sort_category = "Toys"
 	subtype_path = /datum/gear/plushie
 
 /datum/gear/plushie/balloon

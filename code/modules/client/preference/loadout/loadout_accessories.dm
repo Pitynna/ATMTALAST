@@ -1,7 +1,7 @@
 /datum/gear/accessory
 	subtype_path = /datum/gear/accessory
 	slot = ITEM_SLOT_ACCESSORY
-	sort_category = "Аксессуары"
+	sort_category = "Accessories"
 
 /datum/gear/accessory/scarf
 	index_name = "scarf, select"

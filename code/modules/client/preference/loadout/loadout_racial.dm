@@ -1,5 +1,5 @@
 /datum/gear/racial
-	sort_category = "Расовое"
+	sort_category = "Racial"
 	subtype_path = /datum/gear/racial
 	var/list/whitelisted_species
 

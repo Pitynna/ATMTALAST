@@ -2,7 +2,7 @@
 /datum/gear/uniform
 	subtype_path = /datum/gear/uniform
 	slot = ITEM_SLOT_CLOTH_INNER
-	sort_category = "Униформа"
+	sort_category = "Uniforms"
 
 /datum/gear/uniform/suit
 	subtype_path = /datum/gear/uniform/suit

@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(gear_tgui_info)
 
 /datum/ui_module/loadout
-	name = "Выбор снаряжения"
+	name = "Loadout"
 
 /datum/ui_module/loadout/ui_state(mob/user)
 	return GLOB.always_state
@@ -80,7 +80,7 @@ GLOBAL_LIST_EMPTY(gear_tgui_info)
 				return TRUE
 
 			if(gear.donator_tier && user.client.donator_level < gear.donator_tier)
-				to_chat(user, span_warning("Недоступно на вашем текущем уровне пожертвований!"))
+				to_chat(user, span_warning("Not available at your current donator tier!"))
 				return FALSE
 
 			user.client.prefs.build_loadout(gear)

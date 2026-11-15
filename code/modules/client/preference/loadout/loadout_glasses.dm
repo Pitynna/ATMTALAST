@@ -1,7 +1,7 @@
 /datum/gear/glasses
 	subtype_path = /datum/gear/glasses
 	slot = ITEM_SLOT_EYES
-	sort_category = "Очки"
+	sort_category = "Glasses"
 
 /datum/gear/glasses/sunglasses
 	index_name = "cheap sunglasses"
