@@ -85,6 +85,8 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 	var/datum/ore_deposit/deposit
 	/// Which of the sprite variants this tile uses.
 	var/variant = 1
+	/// Cardinal directions joined to tiles of the same deposit.
+	var/joins = NONE
 
 /obj/effect/ore_deposit_tile/Initialize(mapload, datum/ore_deposit/new_deposit)
 	. = ..()
@@ -126,7 +128,7 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 
 /// Picks the sprite that merges with the neighbouring tiles of the same deposit.
 /obj/effect/ore_deposit_tile/proc/update_joins()
-	var/joins = NONE
+	joins = NONE
 	for(var/direction in GLOB.cardinal)
 		for(var/obj/effect/ore_deposit_tile/neighbour in get_step(src, direction))
 			if(neighbour.deposit == deposit)
@@ -157,6 +159,6 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 		if(!tile.deposit || !tile.is_covered())
 			continue
 		var/turf/rock = tile.loc
-		var/image/deposit_overlay = image('icons/obj/mining_drills.dmi', icon_state = tile.icon_state, layer = ON_EDGED_TURF_LAYER)
+		var/image/deposit_overlay = image('icons/obj/mining_drills.dmi', icon_state = "deposit_scan_[tile.deposit.ore_id]_[tile.joins]", layer = ON_EDGED_TURF_LAYER)
 		rock.add_overlay(deposit_overlay)
 		addtimer(CALLBACK(rock, TYPE_PROC_REF(/atom, cut_overlay), deposit_overlay), 3.5 SECONDS)

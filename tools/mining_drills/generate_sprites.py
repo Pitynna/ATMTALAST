@@ -9,7 +9,7 @@ States produced so far (stage 1, "Deposits"):
       <joins> is a BYOND cardinal bitmask (NORTH 1, SOUTH 2, EAST 4, WEST 8) of the
       neighbouring tiles of the same deposit. Joined sides run to the tile border with
       a fixed-width band, so adjacent tiles merge into one seam. The same sprites are
-      shown by the mining scanner above hidden deposits.
+      deposit_scan_<ore>_<joins> is the bright scanner highlight drawn on the rock above.
 
 Stage 2, tier I drill (drill_sprites.py):
   drill1 (4 dirs), drill1_on (4 dirs, 4 frames), drill1_panel, drill1_packed, module.
@@ -34,21 +34,24 @@ NORTH, SOUTH, EAST, WEST = 1, 2, 4, 8
 # Joined sides share this band, so both tiles meet with identical outlines.
 JOIN_FROM, JOIN_TO = 2.5, 28.5
 
-# ore id: (shadow, base, highlight, shape)
+# ore id: (shadow, base, highlight, shape). Colours follow the game's own ore item
+# sprites (icons/obj/mining.dmi, icons/obj/telescience.dmi), so a deposit reads as
+# the same ore players already know: grey iron, magenta plasma, white silver, etc.
 ORES = {
-    "iron": ((0x6E, 0x34, 0x20), (0xB0, 0x60, 0x3A), (0xE0, 0x96, 0x64), "nugget"),
-    "plasma": ((0x52, 0x1C, 0x78), (0x9B, 0x3F, 0xD0), (0xDE, 0x9C, 0xFF), "crystal"),
-    "silver": ((0x5E, 0x62, 0x70), (0xA4, 0xAA, 0xB8), (0xEE, 0xF0, 0xF6), "nugget"),
-    "gold": ((0x86, 0x5E, 0x0E), (0xDC, 0xAC, 0x2C), (0xFF, 0xEE, 0x8C), "nugget"),
-    "titanium": ((0x5E, 0x88, 0x94), (0xB4, 0xDA, 0xE2), (0xF2, 0xFF, 0xFF), "nugget"),
-    "uranium": ((0x2A, 0x66, 0x16), (0x5C, 0xBE, 0x38), (0xBC, 0xFF, 0x7C), "glowing"),
-    "diamond": ((0x40, 0x9C, 0xBE), (0xA4, 0xEC, 0xFF), (0xFF, 0xFF, 0xFF), "crystal"),
-    "bluespace": ((0x18, 0x26, 0x96), (0x38, 0x66, 0xFF), (0x9C, 0xD4, 0xFF), "crystal"),
+    "iron": ((0x4D, 0x54, 0x62), (0x7A, 0x85, 0x82), (0xB4, 0xBB, 0xB8), "nugget"),
+    "plasma": ((0x7B, 0x09, 0x67), (0xD3, 0x0E, 0xB0), (0xFF, 0x5E, 0xE2), "crystal"),
+    "silver": ((0x8C, 0x90, 0x98), (0xDC, 0xDC, 0xDC), (0xFF, 0xFF, 0xFF), "nugget"),
+    "gold": ((0x81, 0x4B, 0x03), (0xBC, 0x6F, 0x05), (0xF9, 0xB5, 0x15), "nugget"),
+    "titanium": ((0x6D, 0x7E, 0x8E), (0xC0, 0xCD, 0xDE), (0xDC, 0xE7, 0xF5), "nugget"),
+    "uranium": ((0x00, 0x59, 0x35), (0x00, 0x88, 0x22), (0x5E, 0xE0, 0x4A), "glowing"),
+    "diamond": ((0x32, 0x74, 0x80), (0x60, 0xB0, 0xBE), (0xA8, 0xF5, 0xF9), "crystal"),
+    "bluespace": ((0x33, 0x66, 0xFF), (0x53, 0xA9, 0xFF), (0x99, 0xCC, 0xFF), "crystal"),
 }
 
-ROCK_DARK = (0x22, 0x1E, 0x1B)
-ROCK_MID = (0x3A, 0x33, 0x2E)
-ROCK_LIGHT = (0x52, 0x49, 0x42)
+# Dark rock of the seam, taken from the rock around the ore item sprites.
+ROCK_DARK = (0x19, 0x1B, 0x1F)
+ROCK_MID = (0x2B, 0x2F, 0x36)
+ROCK_LIGHT = (0x39, 0x3E, 0x48)
 
 
 def put(img, x, y, color, alpha=255):
@@ -172,6 +175,36 @@ def draw_deposit(ore, joins, variant):
     return img
 
 
+def draw_deposit_scan(ore, joins):
+    """Bright scanner highlight of a hidden deposit tile: tinted silhouette with a glowing
+    outline and the ore pieces of variant 1, without the dark rock, so it stands out on a wall."""
+    palette = ORES[ore]
+    rng = random.Random(f"{ore}-{joins}-1")
+    img = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    mask = patch_mask(rng, joins)
+    draw_rock(Image.new("RGBA", (SIZE, SIZE)), rng, mask)  # keep the random sequence of variant 1
+    for (x, y), edge in mask.items():
+        if edge <= 1.6:
+            put(img, x, y, palette[2], 255)
+        elif edge <= 2.8:
+            put(img, x, y, palette[1], 190)
+        else:
+            put(img, x, y, palette[1], 70)
+    inner = [(x, y) for (x, y), edge in mask.items() if edge > 4 and 5 <= x <= 26 and 5 <= y <= 26]
+    spots = []
+    while len(spots) < rng.randint(5, 7) and inner:
+        candidate = rng.choice(inner)
+        if all(math.dist(candidate, other) >= 6 for other in spots):
+            spots.append(candidate)
+        inner.remove(candidate)
+    for cx, cy in spots:
+        if palette[3] == "crystal":
+            draw_crystal(img, rng, cx, cy, palette)
+        else:
+            draw_nugget(img, rng, cx, cy, palette)
+    return img
+
+
 def write_dmi(states, output):
     """states: (name, images, dirs, frames, delay); images ordered frame by frame, S/N/E/W within a frame."""
     images = [image for state in states for image in state[1]]
@@ -200,6 +233,7 @@ def main():
         for joins in range(16):
             for variant in (1, 2):
                 states.append((f"deposit_{ore}_{joins}_{variant}", [draw_deposit(ore, joins, variant)], 1, 1, None))
+            states.append((f"deposit_scan_{ore}_{joins}", [draw_deposit_scan(ore, joins)], 1, 1, None))
     states += drill_states()
     write_dmi(states, output)
     print(f"Wrote {len(states)} states to {output}")

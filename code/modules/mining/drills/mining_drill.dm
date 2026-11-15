@@ -469,6 +469,8 @@
 		. += span_notice("It holds [drill.buffer_total()] units of ore.")
 
 /obj/item/mining_drill_packed/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	if(isstorage(interacting_with) || (!isturf(interacting_with) && !isturf(interacting_with.loc)))
+		return NONE
 	var/turf/target = get_turf(interacting_with)
 	if(!target || !user.Adjacent(target))
 		return NONE

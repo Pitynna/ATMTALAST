@@ -197,6 +197,9 @@
 	return TRUE
 
 /obj/item/ore_pipe_layer/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	// Only work on the map: clicks on bags and other storage must still put the layer inside.
+	if(isstorage(interacting_with) || (!isturf(interacting_with) && !isturf(interacting_with.loc)))
+		return NONE
 	var/turf/target = get_turf(interacting_with)
 	if(!target || !user.Adjacent(target))
 		return NONE

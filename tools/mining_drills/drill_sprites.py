@@ -277,15 +277,29 @@ def draw_outlet(direction):
 
 
 def draw_pipe_layer():
+    """Handheld layer in the shape of a construction device: long body, nozzle, LEDs, grip and canister."""
     img = new_image()
-    # Grip and body.
-    box(img, 6, 12, 20, 22, STEEL, STEEL_LIGHT, STEEL_DARK)
-    box(img, 8, 22, 13, 28, STEEL_DARK, STEEL, OUTLINE)
-    rect(img, 8, 14, 18, 14, HAZARD)
-    put(img, 17, 17, LIGHT_ON)
-    # Nozzle holding a short pipe piece.
-    box(img, 20, 13, 26, 19, PIPE, PIPE_LIGHT, PIPE_DARK)
-    rect(img, 22, 15, 24, 17, PIPE_BAND)
+    # Main body.
+    box(img, 9, 11, 26, 17, STEEL, STEEL_LIGHT, STEEL_DARK)
+    rect(img, 26, 12, 27, 16, OUTLINE)
+    rect(img, 26, 13, 26, 15, STEEL)
+    # Top rail with status LEDs.
+    rect(img, 11, 10, 24, 10, OUTLINE)
+    for x, color in ((13, LIGHT_ON), (16, HAZARD), (19, PIPE_BAND), (22, LIGHT_ON_DIM)):
+        put(img, x, 12, color)
+        put(img, x + 1, 12, color)
+    rect(img, 11, 15, 24, 15, STEEL_DARK)
+    # Nozzle on the left with a short ore pipe piece.
+    box(img, 4, 12, 9, 16, PIPE, PIPE_LIGHT, PIPE_DARK)
+    rect(img, 2, 13, 3, 15, OUTLINE)
+    put(img, 6, 14, PIPE_BAND)
+    put(img, 7, 14, PIPE_BAND)
+    # Grip.
+    rect(img, 18, 17, 21, 23, OUTLINE)
+    rect(img, 19, 18, 20, 22, STEEL)
+    # Pipe canister under the body.
+    box(img, 12, 17, 17, 23, PIPE_BAND, (0xC8, 0x8A, 0x46), PIPE_DARK)
+    rect(img, 13, 20, 16, 20, PIPE_DARK)
     return img
 
 
