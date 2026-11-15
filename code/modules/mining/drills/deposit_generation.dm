@@ -54,9 +54,9 @@
 		var/placed = 0
 		while(placed < kind[2] && next_candidate <= length(candidates))
 			var/turf/start = candidates[next_candidate++]
-			if(!free_turfs[start])
+			if(!can_hold(start, kind[1]))
 				continue
-			var/list/shape = grow_shape(start)
+			var/list/shape = grow_shape(start, kind[1])
 			if(!shape)
 				continue
 			new /datum/ore_deposit(ore_id, kind[1], kind[3], rand(min_amount, max_amount), shape)
@@ -69,8 +69,15 @@
 	free_turfs = null
 	log_world("Ore deposits: [length(GLOB.ore_deposits)] placed ([report.Join(", ")]).")
 
-/// Grows a connected, non-rectangular group of free tiles from `start`. Returns null on failure.
-/datum/ore_deposit_generator/proc/grow_shape(turf/start)
+/// Whether a deposit of `ore_type` may lie under `target`: the tile is free and its rock
+/// is either plain or holds the same ore. A deposit never hides under another ore.
+/datum/ore_deposit_generator/proc/can_hold(turf/simulated/mineral/target, ore_type)
+	if(!free_turfs[target])
+		return FALSE
+	return !target.mineralType || target.mineralType == ore_type
+
+/// Grows a connected, non-rectangular group of suitable tiles from `start`. Returns null on failure.
+/datum/ore_deposit_generator/proc/grow_shape(turf/start, ore_type)
 	for(var/attempt in 1 to shape_attempts)
 		var/target_size = rand(min_size, max_size)
 		var/list/shape = list(start)
@@ -79,7 +86,7 @@
 			for(var/turf/member as anything in shape)
 				for(var/direction in GLOB.cardinal)
 					var/turf/neighbour = get_step(member, direction)
-					if(neighbour && free_turfs[neighbour] && !(neighbour in shape))
+					if(neighbour && can_hold(neighbour, ore_type) && !(neighbour in shape))
 						options |= neighbour
 			if(!length(options))
 				break

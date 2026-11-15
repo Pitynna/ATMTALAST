@@ -30,6 +30,9 @@
 			all_tiles[location] = deposit
 			for(var/obj/effect/ore_deposit_tile/tile in location)
 				TEST_ASSERT_EQUAL(!!tile.invisibility, ismineralturf(location), "Deposit tiles must be hidden exactly while rock covers them")
+			if(ismineralturf(location))
+				var/turf/simulated/mineral/rock = location
+				TEST_ASSERT(!rock.mineralType || rock.mineralType == deposit.ore_type, "[deposit.name] at [location.x]:[location.y] must not lie under another ore")
 	for(var/ore_id in list("diamond", "bluespace"))
 		TEST_ASSERT(counts[ore_id] >= rules.deposit_kinds[ore_id][2], "At least [rules.deposit_kinds[ore_id][2]] [ore_id] deposits are guaranteed")
 	for(var/turf/first as anything in all_tiles)
