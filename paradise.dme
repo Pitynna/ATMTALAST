@@ -3008,6 +3008,7 @@
 #include "code\modules\mining\drills\drill_cargo.dm"
 #include "code\modules\mining\drills\drill_designs.dm"
 #include "code\modules\mining\drills\drill_modules.dm"
+#include "code\modules\mining\drills\drill_tiers.dm"
 #include "code\modules\mining\drills\mining_drill.dm"
 #include "code\modules\mining\drills\ore_deposit.dm"
 #include "code\modules\mining\drills\ore_pipe.dm"

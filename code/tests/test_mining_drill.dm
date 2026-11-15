@@ -1,17 +1,23 @@
-/// A protolathe drill comes packed with tier I parts and no power cell.
+/// A protolathe drill of every tier comes packed with parts of its own tier and no power cell.
 /datum/unit_test/mining_drill_packed/Run()
-	var/obj/item/mining_drill_packed/packed = allocate(/obj/item/mining_drill_packed)
-	var/obj/machinery/mining_drill/drill = packed.drill
-	TEST_ASSERT_NOTNULL(drill, "The packed item must hold a drill")
-	TEST_ASSERT_EQUAL(drill.loc, packed, "The drill must travel inside the packed item")
-	TEST_ASSERT_NULL(drill.cell, "Drills never ship with a power cell")
-	TEST_ASSERT_EQUAL(packed.w_class, WEIGHT_CLASS_GIGANTIC, "The packed drill must not fit in any storage")
-	var/part_count = 0
-	for(var/obj/item/stock_parts/part in drill.component_parts)
-		part_count++
-		TEST_ASSERT_EQUAL(part.rating, drill.part_rating, "[part] must match the drill tier")
-	TEST_ASSERT_EQUAL(part_count, 5, "Tier I drills use five stock parts")
-	TEST_ASSERT_NOTNULL(locate(/obj/item/circuitboard/mining_drill) in drill.component_parts, "The drill must contain its board")
+	for(var/packed_type in typesof(/obj/item/mining_drill_packed))
+		var/obj/item/mining_drill_packed/packed = allocate(packed_type)
+		var/obj/machinery/mining_drill/drill = packed.drill
+		TEST_ASSERT_NOTNULL(drill, "[packed_type] must hold a drill")
+		TEST_ASSERT_EQUAL(drill.loc, packed, "The drill must travel inside the packed item")
+		TEST_ASSERT_NULL(drill.cell, "Drills never ship with a power cell")
+		TEST_ASSERT_EQUAL(packed.w_class, WEIGHT_CLASS_GIGANTIC, "The packed drill must not fit in any storage")
+		var/obj/item/circuitboard/mining_drill/board = locate() in drill.component_parts
+		TEST_ASSERT_NOTNULL(board, "[drill] must contain its board")
+		TEST_ASSERT_EQUAL(board.part_rating, drill.part_rating, "[drill] and its board must agree on the part tier")
+		var/part_count = 0
+		for(var/obj/item/stock_parts/part in drill.component_parts)
+			part_count++
+			TEST_ASSERT_EQUAL(part.rating, drill.part_rating, "[part] must match the tier of [drill]")
+			TEST_ASSERT(board.accepts_part(part), "[board] must accept its own [part]")
+		TEST_ASSERT_EQUAL(part_count, 5, "[drill] uses five stock parts")
+		var/obj/item/stock_parts/manipulator/wrong_tier = allocate(drill.part_rating == 1 ? /obj/item/stock_parts/manipulator/femto : /obj/item/stock_parts/manipulator)
+		TEST_ASSERT_NOT(board.accepts_part(wrong_tier), "[board] must refuse parts of another tier")
 
 /// A drill set up off a deposit reports it and does not run.
 /datum/unit_test/mining_drill_without_deposit/Run()

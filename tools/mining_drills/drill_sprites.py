@@ -124,24 +124,28 @@ def draw_drill_tier1(direction, frame=None):
     return img
 
 
-def draw_panel_overlay():
+def draw_panel_overlay(dx=0, dy=0):
+    """Open maintenance hatch with wiring; (dx, dy) shifts it onto each tier's housing."""
     img = new_image()
-    rect(img, 12, 8, 19, 14, OUTLINE)
-    rect(img, 13, 9, 18, 13, (0x1E, 0x22, 0x26))
+    rect(img, 12 + dx, 8 + dy, 19 + dx, 14 + dy, OUTLINE)
+    rect(img, 13 + dx, 9 + dy, 18 + dx, 13 + dy, (0x1E, 0x22, 0x26))
     for x, color in ((14, (0xD0, 0x30, 0x30)), (15, (0x30, 0x70, 0xE0)), (16, (0xE0, 0xC0, 0x30)), (17, (0x40, 0xC0, 0x40))):
         for y in range(10, 13):
             if (x + y) % 2:
-                put(img, x, y, color)
+                put(img, x + dx, y + dy, color)
     # Hatch door swung open to the side.
-    rect(img, 20, 8, 22, 14, OUTLINE)
-    rect(img, 21, 9, 21, 13, STEEL_LIGHT)
+    rect(img, 20 + dx, 8 + dy, 22 + dx, 14 + dy, OUTLINE)
+    rect(img, 21 + dx, 9 + dy, 21 + dx, 13 + dy, STEEL_LIGHT)
     return img
 
 
-def draw_packed_tier1():
+def draw_packed_tier1(lid=None, lid_light=None):
     img = new_image()
     # Folded case.
     box(img, 4, 12, 27, 26, STEEL, STEEL_LIGHT, STEEL_DARK)
+    if lid:
+        rect(img, 5, 13, 26, 15, lid)
+        rect(img, 5, 13, 26, 13, lid_light)
     rect(img, 5, 27, 26, 28, STEEL_DARK)
     rect(img, 4, 27, 4, 29, OUTLINE)
     rect(img, 27, 27, 27, 29, OUTLINE)
@@ -285,6 +289,114 @@ def draw_pipe_layer():
     return img
 
 
+RAIL = (0x7C, 0x84, 0x8C)
+RED = (0xA8, 0x28, 0x28)
+RED_LIGHT = (0xD8, 0x48, 0x48)
+RED_DARK = (0x6A, 0x16, 0x16)
+COOLANT = (0x2E, 0x8C, 0x8C)
+COOLANT_LIGHT = (0x5C, 0xC8, 0xC4)
+COOLANT_DARK = (0x1A, 0x52, 0x52)
+GLOW = (0x6E, 0xF4, 0xFF)
+GLOW_DIM = (0x2C, 0x7A, 0x88)
+BLUE = (0x2E, 0x5C, 0xA8)
+BLUE_LIGHT = (0x5A, 0x8C, 0xD8)
+
+
+def skid_plate(img, y0=18):
+    box(img, 3, y0, 28, y0 + 7, STEEL, STEEL_LIGHT, STEEL_DARK)
+    rect(img, 4, y0 + 8, 27, y0 + 9, STEEL_DARK)
+    rect(img, 3, y0 + 8, 3, y0 + 10, OUTLINE)
+    rect(img, 28, y0 + 8, 28, y0 + 10, OUTLINE)
+    rect(img, 3, y0 + 10, 28, y0 + 10, OUTLINE)
+    for x in range(5, 27, 3):
+        put(img, x, y0 + 9, HAZARD if (x // 3) % 2 else HAZARD_DARK)
+
+
+def draw_drill_tier2(direction, frame=None):
+    """Guide rails on both sides, a carriage that rides up and down, a heavy drill head."""
+    img = new_image()
+    working = frame is not None
+    skid_plate(img)
+    rect(img, 12, 21, 19, 24, HOLE)
+    # Rails with bolts.
+    for x0 in (5, 24):
+        rect(img, x0, 2, x0 + 2, 23, OUTLINE)
+        rect(img, x0 + 1, 3, x0 + 1, 22, RAIL)
+        for y in range(5, 22, 4):
+            put(img, x0 + 1, y, STEEL_EDGE)
+    box(img, 5, 1, 26, 4, STEEL, STEEL_EDGE, STEEL_DARK)
+    lift = (0, 1, 2, 1)[frame] if working else 0
+    # Drill head: a wide cone under the carriage.
+    head_top = 14 + lift
+    for row in range(8):
+        y = head_top + row
+        half = max(1, 4 - row // 2)
+        for x in range(16 - half, 16 + half):
+            spiral = (x + y + (frame or 0)) % 3
+            put(img, x, y, BIT if spiral else BIT_DARK)
+        put(img, 16 - half - 1, y, OUTLINE)
+        put(img, 16 + half, y, OUTLINE)
+    # Carriage riding on the rails.
+    box(img, 8, 7 + lift, 23, 14 + lift, STEEL, STEEL_LIGHT, STEEL_DARK)
+    rect(img, 9, 10 + lift, 22, 10 + lift, BLUE)
+    rect(img, 9, 9 + lift, 22, 9 + lift, BLUE_LIGHT)
+    rect(img, 7, 8 + lift, 7, 13 + lift, OUTLINE)
+    rect(img, 24, 8 + lift, 24, 13 + lift, OUTLINE)
+    # Status light.
+    light = (LIGHT_ON if frame % 2 == 0 else LIGHT_ON_DIM) if working else LIGHT_OFF
+    put(img, 15, 2, light)
+    put(img, 16, 2, light)
+    if working:
+        for x, y in [((10, 21), (21, 22)), ((11, 20), (20, 20)), ((9, 22), (22, 21)), ((10, 20), (21, 21))][frame]:
+            put(img, x, y, DUST)
+    arrow(img, direction)
+    return img
+
+
+def draw_drill_tier3(direction, frame=None):
+    """Compact dense casing with a red top, coolant pipes and a glowing core."""
+    img = new_image()
+    working = frame is not None
+    # Coolant pipes along the sides.
+    for x0 in (3, 27):
+        rect(img, x0, 9, x0 + 1, 25, COOLANT_DARK)
+        rect(img, x0, 9, x0, 25, COOLANT_LIGHT if x0 == 3 else COOLANT)
+        for y in (12, 22):
+            inner = range(x0 + 2, 6) if x0 == 3 else range(26, x0)
+            for x in inner:
+                put(img, x, y, COOLANT)
+                put(img, x, y + 1, COOLANT_DARK)
+    # Heavy body.
+    box(img, 5, 7, 26, 26, STEEL_DARK, STEEL, OUTLINE)
+    rect(img, 6, 23, 25, 25, (0x20, 0x22, 0x26))
+    for y in (24,):
+        for x in range(7, 25, 2):
+            put(img, x, y, STEEL)
+    # Red top.
+    rect(img, 6, 8, 25, 11, RED)
+    rect(img, 6, 8, 25, 8, RED_LIGHT)
+    rect(img, 6, 11, 25, 11, RED_DARK)
+    for x in (8, 23):
+        put(img, x, 9, STEEL_EDGE)
+    # Core window.
+    box(img, 11, 13, 20, 21, (0x10, 0x14, 0x18))
+    pulse = (0, 1, 2, 1)[frame] if working else 0
+    core = GLOW if working else GLOW_DIM
+    for y in range(15, 20):
+        for x in range(13, 19):
+            ring = max(abs(x - 15.5), abs(y - 17))
+            if ring <= 1 + pulse * 0.5:
+                put(img, x, y, core)
+            elif ring <= 2 + pulse * 0.5 and working:
+                put(img, x, y, GLOW_DIM)
+    # Side lights.
+    for x in (8, 23):
+        put(img, x, 15, GLOW if working and frame % 2 == 0 else GLOW_DIM if working else LIGHT_OFF)
+        put(img, x, 18, GLOW if working and frame % 2 == 1 else GLOW_DIM if working else LIGHT_OFF)
+    arrow(img, direction)
+    return img
+
+
 def drill_states():
     states = []
     idle = [draw_drill_tier1(d) for d in DIRS]
@@ -293,6 +405,14 @@ def drill_states():
     states.append(("drill1_on", working, 4, 4, (2, 2, 2, 2)))
     states.append(("drill1_panel", [draw_panel_overlay()], 1, 1, None))
     states.append(("drill1_packed", [draw_packed_tier1()], 1, 1, None))
+    for tier, draw, panel_offset, lid in (
+        (2, draw_drill_tier2, (0, 0), (BLUE, BLUE_LIGHT)),
+        (3, draw_drill_tier3, (0, 4), (RED, RED_LIGHT)),
+    ):
+        states.append((f"drill{tier}", [draw(d) for d in DIRS], 4, 1, None))
+        states.append((f"drill{tier}_on", [draw(d, frame) for frame in range(4) for d in DIRS], 4, 4, (2, 2, 2, 2)))
+        states.append((f"drill{tier}_panel", [draw_panel_overlay(*panel_offset)], 1, 1, None))
+        states.append((f"drill{tier}_packed", [draw_packed_tier1(*lid)], 1, 1, None))
     states.append(("module", [draw_module_base()], 1, 1, None))
     states.append(("module_ejector", [draw_module_ejector()], 1, 1, None))
     for mask in range(16):

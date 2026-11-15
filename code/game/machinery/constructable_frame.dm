@@ -248,7 +248,8 @@
 
 				//Assemble a list of current parts, then sort them by their rating!
 				for(var/obj/item/stock_parts/co in replacer)
-					part_list += co
+					if(circuit.accepts_part(co))
+						part_list += co
 
 				for(var/path in req_components)
 					while(req_components[path] > 0 && (locate(path) in part_list))
@@ -270,6 +271,9 @@
 				return ATTACK_CHAIN_PROCEED_SUCCESS
 
 			if(isitem(I))
+				if(!circuit.accepts_part(I))
+					to_chat(user, span_warning("[circuit.board_name] does not accept parts of this tier!"))
+					return ATTACK_CHAIN_BLOCKED_ALL
 				var/success = FALSE
 				for(var/path in req_components)
 					var/is_stack = isstack(I)
@@ -301,11 +305,19 @@
 
 /obj/machinery/constructable_frame/machine_frame/proc/apply_parts_from_construction_bag(obj/item/storage/bag/construction/bag, mob/user, count = 0)
 	for(var/path in req_components)
-		if(req_components[path] <= 0 || !(locate(path) in bag))
+		if(req_components[path] <= 0)
+			continue
+		var/obj/item/part
+		for(var/obj/item/candidate in bag)
+			if(istype(candidate, path) && circuit.accepts_part(candidate))
+				part = candidate
+				break
+		if(!part)
 			continue
 		if(!do_after(user, 0.7 SECONDS, src, interaction_key = bag, max_interact_count = 1))
 			return FALSE
-		var/obj/item/part = (locate(path) in bag)
+		if(QDELETED(part) || part.loc != bag)
+			return FALSE
 		bag.remove_from_storage(part, src)
 		req_components[path]--
 		components += part

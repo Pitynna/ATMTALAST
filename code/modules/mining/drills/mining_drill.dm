@@ -68,11 +68,15 @@
 /obj/machinery/mining_drill/Initialize(mapload)
 	. = ..()
 	component_parts = list()
-	component_parts += new board_type(null)
-	var/obj/item/circuitboard/board = component_parts[1]
+	var/obj/item/circuitboard/mining_drill/board = new board_type(null)
+	component_parts += board
 	for(var/part_type in board.req_components)
-		var/part_path = get_tier_part(part_type)
-		for(var/i in 1 to board.req_components[part_type])
+		var/count = board.req_components[part_type]
+		var/part_path = board.tier_parts[part_type] || part_type
+		if(ispath(part_path, /obj/item/stack))
+			component_parts += new part_path(null, count)
+			continue
+		for(var/i in 1 to count)
 			component_parts += new part_path(null)
 	RefreshParts()
 	find_deposit()
@@ -86,15 +90,6 @@
 
 /obj/machinery/mining_drill/get_cell()
 	return cell
-
-/// The concrete stock part of our tier for a generic part type from the board.
-/obj/machinery/mining_drill/proc/get_tier_part(part_type)
-	if(!ispath(part_type, /obj/item/stock_parts))
-		return part_type
-	for(var/obj/item/stock_parts/candidate as anything in typesof(part_type))
-		if(initial(candidate.rating) == part_rating)
-			return candidate
-	return part_type
 
 /obj/machinery/mining_drill/exchange_parts(mob/user, obj/item/storage/part_replacer/replacer)
 	if(!istype(replacer))
@@ -536,6 +531,29 @@
 		/obj/item/stock_parts/capacitor = 1,
 		/obj/item/stock_parts/matter_bin = 1,
 	)
+	/// Stock part rating of this tier. Frames refuse parts of any other rating.
+	var/part_rating = 1
+	/// The concrete part of this tier for each generic type in req_components.
+	var/list/tier_parts = list(
+		/obj/item/stock_parts/manipulator = /obj/item/stock_parts/manipulator,
+		/obj/item/stock_parts/micro_laser = /obj/item/stock_parts/micro_laser,
+		/obj/item/stock_parts/capacitor = /obj/item/stock_parts/capacitor,
+		/obj/item/stock_parts/matter_bin = /obj/item/stock_parts/matter_bin,
+	)
+
+/obj/item/circuitboard/mining_drill/examine(mob/user)
+	. = ..()
+	. += span_notice("It only accepts stock parts of rating [part_rating].")
+
+/obj/item/circuitboard/mining_drill/accepts_part(obj/item/part)
+	if(istype(part, /obj/item/stock_parts))
+		var/obj/item/stock_parts/stock_part = part
+		return stock_part.rating == part_rating
+	return TRUE
+
+/// Whether a machine frame holding this board may take `part`. Checked on top of req_components.
+/obj/item/circuitboard/proc/accepts_part(obj/item/part)
+	return TRUE
 
 #undef DRILL_STATUS_ACTIVE
 #undef DRILL_STATUS_OFF
