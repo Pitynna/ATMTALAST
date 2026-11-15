@@ -5,8 +5,11 @@ Writes icons/obj/mining_drills.dmi. Deterministic: rerunning produces the same f
     python tools/mining_drills/generate_sprites.py [output.dmi]
 
 States produced so far (stage 1, "Deposits"):
-  deposit_<ore>_<1..3>  open deposit tile drawn over the asteroid floor
-  deposit_scan_<ore>    mining scanner highlight drawn on the rock above a hidden deposit
+  deposit_<ore>_<joins>_<1..2>  deposit tile drawn over the asteroid floor.
+      <joins> is a BYOND cardinal bitmask (NORTH 1, SOUTH 2, EAST 4, WEST 8) of the
+      neighbouring tiles of the same deposit. Joined sides run to the tile border with
+      a fixed-width band, so adjacent tiles merge into one seam. The same sprites are
+      shown by the mining scanner above hidden deposits.
 """
 import math
 import random
@@ -19,6 +22,10 @@ from PIL.PngImagePlugin import PngInfo
 SIZE = 32
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUTPUT = ROOT / "icons" / "obj" / "mining_drills.dmi"
+
+NORTH, SOUTH, EAST, WEST = 1, 2, 4, 8
+# Joined sides share this band, so both tiles meet with identical outlines.
+JOIN_FROM, JOIN_TO = 2.5, 28.5
 
 # ore id: (shadow, base, highlight, shape)
 ORES = {
@@ -46,17 +53,27 @@ def blend(color_a, color_b, t):
     return tuple(round(a + (b - a) * t) for a, b in zip(color_a, color_b))
 
 
-def patch_mask(rng):
-    """Irregular blob that fills most of the tile, so neighbouring deposit tiles read as one seam."""
-    lobes = [(rng.uniform(0, math.tau), rng.uniform(0.6, 1.6), rng.randint(2, 5)) for _ in range(3)]
+def patch_mask(rng, joins):
+    """Irregular blob in the middle, plus a wide band running to every joined side."""
+    lobes = [(rng.uniform(0, math.tau), rng.uniform(0.4, 1.0), rng.randint(2, 5)) for _ in range(3)]
     mask = {}
     for y in range(SIZE):
         for x in range(SIZE):
             dx, dy = x - 15.5, y - 15.5
             angle = math.atan2(dy, dx)
-            radius = 14.2 + sum(amp * math.sin(freq * angle + phase) for phase, amp, freq in lobes)
+            radius = 12.6 + sum(amp * math.sin(freq * angle + phase) for phase, amp, freq in lobes)
             distance = math.hypot(dx, dy) * 0.85 + max(abs(dx), abs(dy)) * 0.15
             edge = radius - distance
+            across_x = min(x - JOIN_FROM, JOIN_TO - x)
+            across_y = min(y - JOIN_FROM, JOIN_TO - y)
+            if joins & NORTH and y <= 15:
+                edge = max(edge, across_x)
+            if joins & SOUTH and y >= 16:
+                edge = max(edge, across_x)
+            if joins & WEST and x <= 15:
+                edge = max(edge, across_y)
+            if joins & EAST and x >= 16:
+                edge = max(edge, across_y)
             if edge > 0:
                 mask[(x, y)] = edge
     return mask
@@ -120,13 +137,14 @@ def draw_crystal(img, rng, cx, cy, palette):
     put(img, cx + 1 - round(height * lean), cy + height, ROCK_DARK)
 
 
-def draw_deposit(ore, variant):
+def draw_deposit(ore, joins, variant):
     palette = ORES[ore]
-    rng = random.Random(f"{ore}-{variant}")
+    rng = random.Random(f"{ore}-{joins}-{variant}")
     img = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
-    mask = patch_mask(rng)
+    mask = patch_mask(rng, joins)
     draw_rock(img, rng, mask)
-    inner = [pos for pos, edge in mask.items() if edge > 4]
+    # Keep ore away from the tile border so nothing gets cut at a seam.
+    inner = [(x, y) for (x, y), edge in mask.items() if edge > 4 and 5 <= x <= 26 and 5 <= y <= 26]
     spots = []
     while len(spots) < rng.randint(5, 7) and inner:
         candidate = rng.choice(inner)
@@ -147,28 +165,8 @@ def draw_deposit(ore, variant):
     return img
 
 
-def draw_scan(ore):
-    """Corner brackets and a centre gem: clearly a deposit, distinct from the ore-in-wall overlay."""
-    shadow, base, light, _ = ORES[ore]
-    img = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
-    for corner_x, step_x in ((2, 1), (29, -1)):
-        for corner_y, step_y in ((2, 1), (29, -1)):
-            for i in range(6):
-                put(img, corner_x + step_x * i, corner_y, base, 230)
-                put(img, corner_x, corner_y + step_y * i, base, 230)
-                put(img, corner_x + step_x * i, corner_y + step_y, shadow, 160)
-                put(img, corner_x + step_x, corner_y + step_y * i, shadow, 160)
-            put(img, corner_x, corner_y, light)
-    for dy in range(-4, 5):
-        span = 4 - abs(dy)
-        for dx in range(-span, span + 1):
-            color = light if dx + dy < -1 else shadow if dx + dy > 1 else base
-            put(img, 15 + dx, 15 + dy, color, 220)
-    return img
-
-
 def write_dmi(states, output):
-    columns = min(len(states), 8)
+    columns = min(len(states), 16)
     rows = math.ceil(len(states) / columns)
     sheet = Image.new("RGBA", (columns * SIZE, rows * SIZE), (0, 0, 0, 0))
     lines = ["# BEGIN DMI", "version = 4.0", f"\twidth = {SIZE}", f"\theight = {SIZE}"]
@@ -186,9 +184,9 @@ def main():
     output = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_OUTPUT
     states = []
     for ore in ORES:
-        for variant in (1, 2, 3):
-            states.append((f"deposit_{ore}_{variant}", draw_deposit(ore, variant)))
-        states.append((f"deposit_scan_{ore}", draw_scan(ore)))
+        for joins in range(16):
+            for variant in (1, 2):
+                states.append((f"deposit_{ore}_{joins}_{variant}", draw_deposit(ore, joins, variant)))
     write_dmi(states, output)
     print(f"Wrote {len(states)} states to {output}")
 

@@ -33,6 +33,8 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 	initial_amount = amount
 	for(var/turf/location as anything in locations)
 		tiles += new /obj/effect/ore_deposit_tile(location, src)
+	for(var/obj/effect/ore_deposit_tile/tile as anything in tiles)
+		tile.update_joins()
 	GLOB.ore_deposits += src
 
 /datum/ore_deposit/Destroy(force)
@@ -73,7 +75,7 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 	name = "ore deposit"
 	desc = "A rich seam of ore running deep into the asteroid. A mining drill could work it for a long time."
 	icon = 'icons/obj/mining_drills.dmi'
-	icon_state = "deposit_iron_1"
+	icon_state = "deposit_iron_0_1"
 	plane = FLOOR_PLANE
 	layer = ABOVE_OPEN_TURF_LAYER
 	density = FALSE
@@ -81,6 +83,8 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	/// The deposit we belong to.
 	var/datum/ore_deposit/deposit
+	/// Which of the sprite variants this tile uses.
+	var/variant = 1
 
 /obj/effect/ore_deposit_tile/Initialize(mapload, datum/ore_deposit/new_deposit)
 	. = ..()
@@ -88,7 +92,8 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 		return INITIALIZE_HINT_QDEL
 	deposit = new_deposit
 	name = deposit.name
-	icon_state = "deposit_[deposit.ore_id]_[rand(1, 3)]"
+	variant = rand(1, 2)
+	update_joins()
 	// Turfs keep their signal registrations through ChangeTurf, so this follows the rock being dug.
 	RegisterSignal(loc, COMSIG_TURF_CHANGE, PROC_REF(on_turf_change))
 	update_cover()
@@ -119,6 +124,16 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 /obj/effect/ore_deposit_tile/proc/is_covered()
 	return ismineralturf(loc)
 
+/// Picks the sprite that merges with the neighbouring tiles of the same deposit.
+/obj/effect/ore_deposit_tile/proc/update_joins()
+	var/joins = NONE
+	for(var/direction in GLOB.cardinal)
+		for(var/obj/effect/ore_deposit_tile/neighbour in get_step(src, direction))
+			if(neighbour.deposit == deposit)
+				joins |= direction
+				break
+	icon_state = "deposit_[deposit.ore_id]_[joins]_[variant]"
+
 // Deposits are part of the asteroid itself: nothing but extraction removes them.
 /obj/effect/ore_deposit_tile/ex_act(severity, target)
 	return
@@ -129,12 +144,22 @@ GLOBAL_LIST_EMPTY(ore_deposits)
 /obj/effect/ore_deposit_tile/singularity_pull(atom/singularity, current_size)
 	return
 
-/// Briefly highlights the hidden deposit tiles around `center` on the rock above them.
+/// Briefly shows the hidden deposit tiles around `center` through the rock above them.
 /proc/ore_deposit_scan_pulse(turf/center, range = world.view)
 	for(var/obj/effect/ore_deposit_tile/tile in range(range, center))
 		if(!tile.deposit || !tile.is_covered())
 			continue
-		var/turf/rock = tile.loc
-		var/image/deposit_overlay = image('icons/obj/mining_drills.dmi', icon_state = "deposit_scan_[tile.deposit.ore_id]")
-		rock.add_overlay(deposit_overlay)
-		addtimer(CALLBACK(rock, TYPE_PROC_REF(/atom, cut_overlay), deposit_overlay), 3.5 SECONDS)
+		new /obj/effect/temp_visual/mining_overlay/ore_deposit(tile.loc, tile.icon_state)
+
+/// The deposit silhouette shown by a scanner pulse. Drawn above walls and darkness, fades out.
+/obj/effect/temp_visual/mining_overlay/ore_deposit
+	icon = 'icons/obj/mining_drills.dmi'
+	plane = ABOVE_LIGHTING_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
+	pixel_x = 0
+	pixel_y = 0
+	randomdir = FALSE
+
+/obj/effect/temp_visual/mining_overlay/ore_deposit/Initialize(mapload, deposit_state)
+	icon_state = deposit_state
+	return ..()
