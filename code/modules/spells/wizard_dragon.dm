@@ -29,7 +29,7 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	mouse_opacity = MOUSE_OPACITY_ICON
-	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/bone = 30)
+	butcher_results = list(/obj/item/stack/ore/diamond = 5)
 	var/swooping = NONE
 	var/player_cooldown = 0
 	var/recovery_time = 0

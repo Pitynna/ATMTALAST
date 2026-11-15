@@ -96,17 +96,6 @@
 	requires_sharpness = FALSE
 	claws_increment = 200
 
-/obj/item/whetstone/crab_shell
-	name = "sturdy crab shell"
-	desc = "A small ash crayfish shell suitable for sharpening weapons or claws. Sturdy enough to be used several times."
-	icon = 'icons/obj/lavaland/lava_fishing.dmi'
-	icon_state = "crab_shell"
-	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/fish_items_righthand.dmi'
-	item_state = "crab_shell"
-	increment = 2
-	uses = 2
-
 /obj/item/whetstone/anti
 	desc = "A stone block for dulling tools."
 	increment = -20

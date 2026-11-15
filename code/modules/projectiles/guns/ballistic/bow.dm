@@ -125,25 +125,6 @@
 	ready_to_fire = FALSE
 	update_state()
 
-// MARK: Bone
-/obj/item/gun/projectile/bow/ashen
-	name = "bone bow"
-	desc = "A primitive bow with a sinew bowstring. Typically used by tribal hunters and warriors. Due to the specific design of the bow, it's able to shoot only bone arrows."
-	icon_state = "ashenbow"
-	base_icon_state = "ashenbow"
-	item_state = "ashenbow"
-	fire_sound = 'sound/weapons/bows/bonebow_fire.ogg'
-	drop_sound = 'sound/weapons/bows/bonebow_drop.ogg'
-	draw_sound = 'sound/weapons/bows/bonebow_pull.ogg'
-	item_flags = NONE
-	flags = NONE
-	force = 10
-	slowdown_when_ready = 1
-	accuracy = GUN_ACCURACY_BOW_ADVANCED
-	speed_modifier = 0.8
-	range_modifier = 1.1
-	ready_to_fire_time = 1 SECONDS
-
 /obj/item/gun/projectile/bow/compound
 	name = "compound bow"
 	desc = "A composite bow for recreational hunting and competitions."
@@ -211,24 +192,6 @@
 		icon_state = "quiver_[clamp(length(contents), 1, 5)]"
 	else
 		icon_state = initial(icon_state)
-
-/obj/item/storage/backpack/quiver/weaver
-	name = "weaver chitin quiver"
-	desc = "A fireproof quiver made from the chitin of a marrow weaver. Used to hold arrows."
-	icon = 'icons/obj/clothing/belts.dmi'
-	icon_state = "quiver_weaver"
-	item_state = "quiver_weaver"
-	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
-	resistance_flags = FIRE_PROOF
-	storage_slots = 30
-
-/obj/item/storage/backpack/quiver/weaver/update_icon_state()
-	return
-
-/obj/item/storage/backpack/quiver/weaver/full/populate_contents()
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_casing/caseless/arrow/bone_tipped(src)
 
 /obj/item/storage/backpack/quiver/modern
 	name = "modern quiver"

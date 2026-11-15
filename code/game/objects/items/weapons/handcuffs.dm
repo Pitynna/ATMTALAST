@@ -108,16 +108,6 @@
 	if(trashtype && !dispense)
 		qdel(src)
 
-/obj/item/restraints/handcuffs/sinew
-	name = "sinew restraints"
-	desc = "A pair of restraints fashioned from long strands of flesh."
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "sinewcuff"
-	item_state = "sinewcuff"
-	breakout_time = 1 MINUTES
-	cuffsound = 'sound/weapons/cablecuff.ogg'
-	breakout_flags = DA_IGNORE_USER_LOC_CHANGE|DEFAULT_DOAFTER_IGNORE|DA_IGNORE_HELD_ITEM
-
 /obj/item/restraints/handcuffs/cable
 	name = "cable restraints"
 	desc = "Looks like some cables tied together. Could be used to tie something up."

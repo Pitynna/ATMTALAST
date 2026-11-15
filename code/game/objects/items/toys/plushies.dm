@@ -265,53 +265,6 @@
 	greyscale_colors = "#66ff33#000000"
 	flags = /obj/item/toy/plushie::flags|NO_NEW_GAGS_PREVIEW
 
-/obj/item/toy/plushie/ashwalkerplushie
-	name = "ash walker plushie"
-	desc = "A super-cool ash walker plushie."
-	icon_state = "plushie_ashwalker1"
-	attack_verb = list("порезал", "шлёпнул", "протаранил")
-	gender = MALE
-
-/obj/item/toy/plushie/ashwalkerplushie/Initialize(mapload)
-	. = ..()
-	if(prob(50))
-		icon_state = "plushie_ashwalker2"
-
-/obj/item/toy/plushie/ashwalkerplushie/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim = FALSE)
-	. = ..()
-	if(!ATTACK_CHAIN_SUCCESS_CHECK(.))
-		return .
-	switch(rand(1, 10))
-		if(1 to 6)
-			playsound(loc, 'sound/effects/unathihiss.ogg', 40, TRUE)
-		if(7 to 10)
-			playsound(loc, pick('sound/voice/unathi/roar.ogg', 'sound/voice/unathi/roar2.ogg', 'sound/voice/unathi/roar3.ogg',	\
-								'sound/voice/unathi/threat.ogg', 'sound/voice/unathi/threat2.ogg', 'sound/voice/unathi/whip_short.ogg'), 40, TRUE)
-
-/obj/item/toy/plushie/ashwalkerplushie/perform_special_interaction(mob/user)
-	switch(rand(1, 20))
-		if(1 to 12)
-			playsound(src, 'sound/effects/unathihiss.ogg', 40, TRUE)
-			user.visible_message("[get_examine_icon(viewers(user))] [span_notice("Hsss!")]")
-
-		if(13 to 19)
-			playsound(src, pick('sound/voice/unathi/roar.ogg', \
-								'sound/voice/unathi/roar2.ogg', \
-								'sound/voice/unathi/roar3.ogg', \
-								'sound/voice/unathi/threat.ogg', \
-								'sound/voice/unathi/threat2.ogg', \
-								'sound/voice/unathi/whip.ogg'), 40, TRUE)
-
-			user.visible_message("[get_examine_icon(viewers(user))] [span_notice("RAAAAAWR!")]")
-
-		if(20)
-			playsound(src, pick('sound/voice/unathi/rumble.ogg', \
-								'sound/voice/unathi/rumble2.ogg'), 40, TRUE)
-
-			user.visible_message("[get_examine_icon(viewers(user))] [span_notice("Пеплоходец выглядит расслабленным.")]")
-
-	return TRUE
-
 /obj/item/toy/plushie/nianplushie
 	name = "nian plushie"
 	desc = "A silky nian plushie, straight from the nebula. Pull its antenna to hear it buzz!"

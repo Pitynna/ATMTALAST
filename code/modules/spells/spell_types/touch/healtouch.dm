@@ -1,4 +1,4 @@
-//basic touch ability that heals basic damage types accessed by the ashwalker shaman
+// Basic touch ability that heals basic damage types.
 /datum/action/cooldown/spell/touch/healtouch
 	name = "Целебное касание"
 	desc = "Это заклинание заряжает вашу руку целительной энергиец, позволяя вам лечить некоторые повреждения."

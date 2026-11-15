@@ -165,7 +165,6 @@
 
 	backpack_contents = list(
 		/obj/item/flashlight/lantern = 1,
-		/obj/item/radio/weather_monitor = 1,
 		/obj/item/wormhole_jaunter = 1,
 	)
 	implant_variant = /obj/item/organ/internal/cyberimp/eyes/hud/medical

@@ -643,14 +643,6 @@
 
 	affecting.apply_splint()
 
-/obj/item/stack/medical/splint/tribal
-	name = "tribal splints"
-	desc = "A primitive medical splint made from two bones bound with watcher sinew. Used to immobilize broken limbs until proper care becomes available, if such care is even possible in the harsh conditions of Lazis."
-	icon_state = "tribal_splint"
-	self_delay = 10 SECONDS
-	use_duration = 5 SECONDS
-	merge_type = /obj/item/stack/medical/splint/tribal
-
 /obj/item/stack/medical/splint/makeshift
 	name = "makeshift splints"
 	desc = "Makeshift splint for fixing bones. Better than nothing and more based than others."

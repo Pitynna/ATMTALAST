@@ -1,18 +1,3 @@
-/obj/item/clothing/gloves/bracer
-	name = "bone bracers"
-	desc = "For when you're expecting to get slapped on the wrist. Offers modest protection to your arms."
-	icon_state = "bracers"
-	item_state = "bracers"
-	item_color = null	//So they don't wash.
-	transfer_prints = TRUE
-	strip_delay = 40
-	body_parts_covered = ARMS
-	cold_protection = ARMS
-	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-	resistance_flags = NONE
-	armor = list(MELEE = 10, BULLET = 15, LASER = 10, ENERGY = 10, BOMB = 15, BIO = 10, FIRE = 0, ACID = 0)
-
 /obj/item/clothing/gloves/fingerless/weaver
 	name = "weaver chitin gloves"
 	desc = "Grey gloves without fingertips made from the hide of a dead arachnid found on lavaland. Makes wearer stronger in disarming ability."

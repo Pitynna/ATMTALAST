@@ -129,7 +129,7 @@
 	atmos_mode = ATMOS_MODE_EXPOSED_TO_ENVIRONMENT
 	atmos_environment = ENVIRONMENT_LAVALAND
 
-/turf/simulated/floor/indestructible/boss/indoors //used for ashwalkers village
+/turf/simulated/floor/indestructible/boss/indoors
 	atmos_environment = ENVIRONMENT_TEMPERATE
 
 /turf/simulated/floor/indestructible/boss/air

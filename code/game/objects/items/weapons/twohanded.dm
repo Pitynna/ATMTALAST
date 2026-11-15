@@ -143,44 +143,6 @@
 			var/obj/structure/W = target
 			W.obj_destruction("fireaxe")
 
-/obj/item/twohanded/fireaxe/boneaxe  // Blatant imitation of the fireaxe, but made out of bone.
-	icon_state = "bone_axe0"
-	name = "bone axe"
-	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
-	force_wielded = 23
-	needs_permit = TRUE
-
-/obj/item/twohanded/fireaxe/boneaxe/update_icon_state()
-	icon_state = "bone_axe[HAS_TRAIT(src, TRAIT_WIELDED)]"
-
-/obj/item/twohanded/fireaxe/boneaxe/guillotine
-	name = "guillotine"
-	desc = "A large structure used to remove the heads of traitors and treasonists."
-	icon_state = "guillotine0"
-	hitsound = 'sound/weapons/circsawhit.ogg'
-	force_unwielded = 7
-	force_wielded = 25
-	throwforce = 20
-	armour_penetration = 30
-	lefthand_file = 'icons/mob/inhands/lavaland/lava_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/lava_items_righthand.dmi'
-	has_speed_harvest = TRUE
-
-/obj/item/twohanded/fireaxe/boneaxe/guillotine/ComponentInitialize()
-	. = ..()
-	AddComponent( \
-		/datum/component/cleave_attack, \
-		arc_size = 180, \
-		swing_speed_mod = 2, \
-		afterswing_slowdown = 0.25, \
-		slowdown_duration = 1 SECONDS, \
-		requires_wielded = TRUE, \
-		swing_sound = SFX_CHOP_SWING_HEAVY \
-	)
-
-/obj/item/twohanded/fireaxe/boneaxe/guillotine/update_icon_state()
-	icon_state = "guillotine[HAS_TRAIT(src, TRAIT_WIELDED)]"
-
 /obj/item/twohanded/fireaxe/energized
 	desc = "Someone with a love for fire axes decided to turn this one into a high-powered energy weapon. Seems excessive."
 	force_wielded = 30
@@ -439,49 +401,6 @@
 	if(explosive)
 		explosive.prime()
 		qdel(src)
-
-/obj/item/twohanded/spear/bonespear	//Blatant imitation of spear, but made out of bone. Not valid for explosive modification.
-	icon_state = "bone_spear0"
-	name = "bone spear"
-	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
-	force = 11
-	force_unwielded = 11
-	force_wielded = 20					//I have no idea how to balance
-	throwforce = 22
-	armour_penetration = 15				//Enhanced armor piercing
-	icon_prefix = "bone_spear"
-
-/obj/item/twohanded/spear/bonespear/chitinspear //like a mix of a bone spear and bone axe, but more like a bone spear. And better.
-	icon_state = "chitin_spear0"
-	name = "chitin spear"
-	desc = "A well constructed spear with a sharpened edge akin to a naginata, making it equally great for slicing and throwing."
-	force = 14
-	force_unwielded = 14
-	force_wielded = 24 // I have no idea about balance too
-	throwforce = 26
-	icon_prefix = "chitin_spear"
-
-/obj/item/twohanded/spear/bonespear/her_biting_embrace
-	name = "her biting embrace"
-	desc = "An expertly crafted spear decorated with ceremonial patterns and tipped with the tail of a bottom-dwelling eel. A true masterpiece of primitive weaponsmithing."
-	icon_state = "her_biting_embrace0"
-	icon_prefix = "her_biting_embrace"
-	lefthand_file = 'icons/mob/inhands/lavaland/lava_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/lava_items_righthand.dmi'
-	force = 16
-	force_unwielded = 16
-	force_wielded = 28 // I have no idea about balance too
-	throwforce = 45
-
-/obj/item/twohanded/spear/bonespear/her_biting_embrace/attack(mob/living/target, mob/living/user, params, def_zone, skip_attack_anim)
-	. = ..()
-	if(!ATTACK_CHAIN_SUCCESS_CHECK(.) || !HAS_TRAIT(src, TRAIT_WIELDED))
-		return .
-	var/datum/status_effect/saw_bleed/bloodletting/A = target.has_status_effect(STATUS_EFFECT_BLOODLETTING)
-	if(!A)
-		target.apply_status_effect(STATUS_EFFECT_BLOODLETTING)
-	else
-		A.add_bleed(6)
 
 /obj/item/twohanded/spear/plasma
 	name = "plasma spear"

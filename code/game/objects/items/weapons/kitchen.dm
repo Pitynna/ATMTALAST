@@ -341,25 +341,6 @@
 	force = 15
 	throwforce = 15
 
-/obj/item/kitchen/knife/combat/survival/bone
-	name = "bone dagger"
-	item_state = "bone_dagger"
-	icon_state = "bone_dagger"
-	belt_icon = "bone_dagger"
-	desc = "A knife carved from an animal bone. Despite the crude appearance, it holds a surprisingly sharp edge."
-	materials = list()
-	pickup_sound = 'sound/items/handling/pickup/bone_pickup.ogg'
-	drop_sound = 'sound/items/handling/drop/bone_drop.ogg'
-
-/obj/item/kitchen/knife/combat/survival/bone/eel
-	name = "eel sharpened tail"
-	desc = "The razor-sharp tail of a bottom-dwelling eel, carefully separated from the fish. It would make an excellent knife or spearhead."
-	icon = 'icons/obj/lavaland/lava_fishing.dmi'
-	icon_state = "eel_sharpened_tail"
-	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/fish_items_righthand.dmi'
-	item_state = "eel_sharpened_tail"
-
 /obj/item/kitchen/knife/combat/cyborg
 	name = "cyborg knife"
 	icon = 'icons/obj/items_cyborg.dmi'

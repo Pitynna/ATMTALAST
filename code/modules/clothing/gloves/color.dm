@@ -124,14 +124,6 @@
 		new_gloves.pickpocket = FALSE
 	qdel(src)
 
-/obj/item/clothing/gloves/color/black/goliath
-	name = "goliath gloves"
-	desc = "Rudimentary gloves that aid in carrying."
-	icon_state = "goligloves"
-	item_state = "goligloves"
-	armor = list(MELEE = 20, BULLET = 10, LASER = 10, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50)
-	can_be_cut = FALSE
-
 /obj/item/clothing/gloves/color/black/ballistic
 	name = "armored gloves"
 	desc = "Pair of gloves with some protection"

@@ -26,7 +26,6 @@
 		/obj/item/stack/ore/diamond, /obj/item/stack/ore/gold, /obj/item/stack/ore/silver,
 		/obj/item/stack/ore/uranium, /obj/item/stack/ore/titanium
 	)
-	jewelry_loot = /obj/item/gem/rupee
 	var/chase_time = 100
 	var/will_burrow = TRUE
 	var/max_loot = 15 // The maximum amount of ore that can be stored in this thing's gut

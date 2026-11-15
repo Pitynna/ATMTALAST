@@ -411,25 +411,6 @@
 		/datum/action/cooldown/spell/forcewall/greater,
 	)
 
-/datum/outfit/deathmatch_loadout/wizard/lizard
-	name = "Deathmatch: Lizard-Wizard"
-	display_name = "Волшебник (школа Лаваленда)"
-	desc = "Ящер, владеющий огромным количеством заклинаний. Жаль, правда, что они почти бесполезные."
-
-	species_override = /datum/species/unathi
-	uniform = /obj/item/clothing/under/ash_walker
-	gloves = /obj/item/clothing/gloves/color/black/goliath
-	suit = /obj/item/clothing/suit/hooded/goliath/wizard
-	l_hand = /obj/item/twohanded/spear/bonespear
-
-	spells_to_add = list(
-		/datum/action/cooldown/spell/conjure/legion_skulls,
-		/datum/action/cooldown/spell/pointed/goliath_tentacles,
-		/datum/action/cooldown/spell/pointed/goliath_dash,
-		/datum/action/cooldown/spell/pointed/projectile/watchers_look,
-		/datum/action/cooldown/spell/touch/healtouch,
-	)
-
 /datum/outfit/deathmatch_loadout/wizard/singulo
 	name = "Deathmatch: Singulo Wizard"
 	display_name = "Волшебник (школа сингулярности)"

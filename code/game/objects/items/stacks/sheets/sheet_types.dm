@@ -597,30 +597,6 @@ GLOBAL_LIST_INIT(cardboard_recipes, list(
 // MARK: BRASS
 
 
-// MARK: BONES
-/obj/item/stack/sheet/bone
-	name = "bones"
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "bone"
-	singular_name = "bone"
-	desc = "Someone's been drinking their milk."
-	force = 7
-	origin_tech = "materials=2;biotech=2"
-
-/obj/item/stack/sheet/razor_sharp_teeth
-	name = "razor sharp teeth"
-	desc = "Razor-sharp teeth taken from a lava predator's jaws. Perfect for arrows."
-	gender = PLURAL
-	icon = 'icons/obj/lavaland/lava_fishing.dmi'
-	icon_state = "razor_sharp_teeth"
-	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/fish_items_righthand.dmi'
-	item_state = "razor_sharp_teeth"
-	singular_name = "razor sharp tooth"
-	throw_range = 7
-	throwforce = 15
-	origin_tech = "materials=4;biotech=5"
-
 GLOBAL_LIST_INIT(plastic_recipes, list(
 	new /datum/stack_recipe_list("storage", list(
 		new /datum/stack_recipe("plastic bag", /obj/item/storage/bag/plasticbag, 3, on_floor = TRUE),

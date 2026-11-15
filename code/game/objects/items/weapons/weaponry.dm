@@ -454,30 +454,6 @@
 /obj/item/melee/baseball_bat/homerun/central_command/attack_self(mob/user)
 	toggle(user)
 
-/obj/item/melee/claymore/bone
-	name = "bone sword"
-	desc = "A curved blade made of sharpened bone and bound with sinew."
-	icon_state = "bone_sword"
-	item_state = "bone_sword"
-	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_BACK
-	force = 18
-	armour_penetration = 15
-	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/melee/claymore/bone/add_parry_component()
-	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.7, _parryable_attack_types = ALL_ATTACK_TYPES)
-
-/obj/item/melee/claymore/bone/ComponentInitialize()
-	. = ..()
-	AddComponent( \
-		/datum/component/cleave_attack, \
-		arc_size = 180, \
-		swing_speed_mod = 2, \
-		afterswing_slowdown = 0.25, \
-		slowdown_duration = 0.75 SECONDS, \
-		swing_sound = SFX_BLADE_SWING_LIGHT \
-	)
-
 /obj/item/melee/nutcracker
 	name = "nutcracker"
 	desc = "A simple bone club. The embodiment of primitive ingenuity and natural strength. A true classic."

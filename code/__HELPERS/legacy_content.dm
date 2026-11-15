@@ -315,7 +315,6 @@
 			/obj/item/gun/projectile/automatic/sniper_rifle/toy,
 			/obj/item/gun/projectile/automatic/toy/pistol/enforcer/riot,
 			/obj/item/gun/projectile/bombarda,
-			/obj/item/gun/projectile/bow/ashen,
 			/obj/item/gun/projectile/bow/compound,
 			/obj/item/gun/projectile/bow/handmade,
 			/obj/item/gun/projectile/bow/tactical,

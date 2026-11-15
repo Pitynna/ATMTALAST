@@ -279,8 +279,6 @@
 		/obj/item/pickaxe/drill/jackhammer = 1,
 		/obj/item/pickaxe/diamond = 1,
 		/obj/item/pickaxe/drill/diamonddrill = 1,
-		/obj/item/clothing/suit/hooded/goliath = 1,
-		/obj/item/twohanded/spear/bonespear = 1,
 		/obj/item/borg/upgrade/modkit/aoe/mobs = 1,
 	)
 

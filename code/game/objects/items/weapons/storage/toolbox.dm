@@ -378,30 +378,6 @@
 /obj/item/storage/toolbox/surgery/alien/empty/populate_contents()
 	return
 
-/obj/item/storage/toolbox/surgery/ashwalker
-	name = "surgery bag"
-	desc = "A small leather case for storing and transporting surgical instruments. It smells faintly of ash."
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "surgery_bag"
-	pickup_sound = 'sound/items/handling/pickup/backpack_pickup.ogg'
-	drop_sound = 'sound/items/handling/drop/backpack_drop.ogg'
-	flags = NONE
-	force = 2
-	throwforce = 4
-
-/obj/item/storage/toolbox/surgery/ashwalker/populate_contents()
-	new /obj/item/scalpel/primitive_scalpel(src)
-	new /obj/item/hemostat/primitive_hemostat(src)
-	new /obj/item/retractor/primitive_retractor(src)
-	new /obj/item/primitive_saw(src)
-	new /obj/item/cautery/primitive_cautery(src)
-	new /obj/item/bonegel/primitive_bonegel(src)
-	new /obj/item/FixOVein/primitive_FixOVein(src)
-	new /obj/item/bonesetter/primitive_bonesetter(src)
-
-/obj/item/storage/toolbox/surgery/ashwalker/empty/populate_contents()
-	return
-
 /obj/item/storage/toolbox/green
 	name = "artistic toolbox"
 	desc = "A metal container designed to hold various tools. This variety holds art supplies."

@@ -177,7 +177,7 @@ They're basically just lizards with all-around marginally better stats and fire 
 	speed_mod = -0.25			//beeing slightly faster
 	has_organ = list(
 		INTERNAL_ORGAN_HEART = /obj/item/organ/internal/heart/unathi,
-		INTERNAL_ORGAN_LUNGS = /obj/item/organ/internal/lungs/unathi/ash_walker,
+		INTERNAL_ORGAN_LUNGS = /obj/item/organ/internal/lungs/unathi/draconid,
 		INTERNAL_ORGAN_LIVER = /obj/item/organ/internal/liver/unathi,
 		INTERNAL_ORGAN_KIDNEYS = /obj/item/organ/internal/kidneys/unathi,
 		INTERNAL_ORGAN_BRAIN = /obj/item/organ/internal/brain/unathi,

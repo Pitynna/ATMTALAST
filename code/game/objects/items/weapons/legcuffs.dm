@@ -329,21 +329,3 @@
 	breakout_time = 4 SECONDS
 	reusable = FALSE
 	custom_price = PAYCHECK_MIN * 1.2
-
-/obj/item/restraints/legcuffs/bola/sinew
-	name = "skull bola"
-	desc = "A primitive bola made from the remains of your enemies. It doesn't look very reliable."
-	icon_state = "bola_watcher"
-	item_state = "bola_watcher"
-	reusable = FALSE
-
-/obj/item/restraints/legcuffs/bola/sinew/dropped(mob/living/carbon/user, slot, silent = FALSE)
-	. = ..()
-
-	if(!istype(user) || slot != ITEM_SLOT_LEGCUFFED)
-		return .
-
-	user.apply_damage(10, BRUTE, (pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)))
-	new /obj/item/restraints/handcuffs/sinew(user.loc)
-	new /obj/item/stack/sheet/bone(user.loc, 2)
-

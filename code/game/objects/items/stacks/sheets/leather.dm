@@ -160,26 +160,6 @@ GLOBAL_LIST_INIT(leather_recipes, list (
 	. = ..()
 	recipes = GLOB.leather_recipes
 
-/obj/item/stack/sheet/sinew
-	name = "watcher sinew"
-	icon = 'icons/obj/mining.dmi'
-	desc = "Long stringy filaments which presumably came from a watcher's wings."
-	singular_name = "watcher sinew"
-	icon_state = "sinew"
-	origin_tech = "biotech=4"
-
-GLOBAL_LIST_INIT(sinew_recipes, list ( \
-	new/datum/stack_recipe("sinew restraints", /obj/item/restraints/handcuffs/sinew, 1, on_floor = 1), \
-	new/datum/stack_recipe("cloth", /obj/item/stack/sheet/cloth, 1), \
-	))
-
-/obj/item/stack/sheet/sinew/Initialize(mapload, new_amount, merge = TRUE)
-	. = ..()
-	recipes = GLOB.sinew_recipes
-
-/obj/item/stack/sheet/sinew/five
-	amount = 5
-
 /obj/item/stack/sheet/animalhide/goliath_hide
 	name = "goliath hide plates"
 	desc = "Pieces of a goliath's rocky hide, these might be able to make your miner equipment such as suits, plasmaman helmets, borgs and Ripley class exosuits a bit more durable to attack from the local fauna."
@@ -279,29 +259,6 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 			use(1)
 		else
 			to_chat(user, span_warning("Вы больше не можете найти куда [name] пристраивается!"))
-
-/obj/item/stack/sheet/cartilage_plate
-	name = "thick cartilage plate"
-	desc = "A cartilage plate removed from a lava shellback. It has begun losing its distinctive blood-red color, but remains just as strong."
-
-	gender = FEMALE
-	icon = 'icons/obj/lavaland/lava_fishing.dmi'
-	icon_state = "thick_cartilage_plate"
-	lefthand_file = 'icons/mob/inhands/lavaland/fish_items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/lavaland/fish_items_righthand.dmi'
-	item_state = "thick_cartilage_plate"
-	singular_name = "cartilage plate"
-	item_flags = NOBLUDGEON
-	layer = MOB_LAYER
-
-/obj/item/stack/sheet/animalhide/ashdrake
-	name = "ash drake hide"
-	desc = "The strong, scaled hide of an ash drake. Can be attached to the mech itself, greatly enhancing its protective characteristics. Unfortunately, only working class exosuits have notches for such armor."
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "dragon_hide"
-	singular_name = "drake plate"
-	item_flags = NOBLUDGEON
-	layer = MOB_LAYER
 
 /obj/item/stack/sheet/animalhide/attackby(obj/item/I, mob/user, params)
 	if(I.sharp)

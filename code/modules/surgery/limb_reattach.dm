@@ -278,7 +278,6 @@
 	allowed_tools = list(
 		TOOL_HEMOSTAT = 100,
 		/obj/item/stack/cable_coil = 90,
-		/obj/item/stack/sheet/sinew = 90,
 		/obj/item/assembly/mousetrap = 25,
 	)
 	can_infect = TRUE

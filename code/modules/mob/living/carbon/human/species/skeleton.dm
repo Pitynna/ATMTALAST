@@ -23,7 +23,6 @@
 		TRAIT_RESIST_HEAT,
 	)
 	dies_at_threshold = TRUE
-	skinned_type = /obj/item/stack/sheet/bone
 
 	taste_sensitivity = TASTE_SENSITIVITY_NO_TASTE //skeletons can't taste anything
 
@@ -78,7 +77,4 @@
 
 /datum/species/skeleton/get_vision_organ(mob/living/carbon/human/user)
 	return NO_VISION_ORGAN
-
-/datum/species/skeleton/compressor_grind(location)
-	new /obj/item/stack/sheet/bone(location)
 

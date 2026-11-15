@@ -142,7 +142,6 @@
 		/datum/outfit/deathmatch_loadout/wizard,
 		/datum/outfit/deathmatch_loadout/wizard/pyro,
 		/datum/outfit/deathmatch_loadout/wizard/electro,
-		/datum/outfit/deathmatch_loadout/wizard/lizard,
 		/datum/outfit/deathmatch_loadout/wizard/singulo,
 		/datum/outfit/deathmatch_loadout/wizard/battlemage,
 		/datum/outfit/deathmatch_loadout/wizard/gunmancer,

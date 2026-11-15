@@ -1012,28 +1012,5 @@
 		return TRUE
 	return FALSE
 
-/obj/machinery/smartfridge/drying_rack/ash
-	name = "primitive drying rack"
-	desc = "A primitive homemade drying rack for plant products, food and leather."
-	gender = FEMALE
-	icon_state = "primitive-drying-rack"
-	use_power = NO_POWER_USE
-	can_dry = FALSE //trust me
-	drying = TRUE
-	idle_power_usage = 0
-	active_power_usage = 0
-	drying_timer = 8
-	primitive = TRUE
-
-/obj/machinery/smartfridge/drying_rack/ash/update_overlays()
-	overlays.Cut()
-	if(length(contents))
-		overlays += "primitive-drying-rack_leather"
-
-/obj/machinery/smartfridge/drying_rack/ash/on_deconstruction()
-	new /obj/item/stack/sheet/wood(loc, 2)
-	new /obj/item/stack/sheet/sinew(loc, 1)
-	..()
-
 /obj/machinery/smartfridge/create_logistics_adapter()
 	return new /datum/logistics_adapter/smartfridge(src)

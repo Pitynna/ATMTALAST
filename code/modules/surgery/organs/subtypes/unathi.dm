@@ -55,15 +55,9 @@
 	icon_name = "sogtail_s"
 	min_broken_damage = 20
 
-/obj/item/organ/internal/lungs/unathi/ash_walker
-	name = "ash walker lungs"
-	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to an ash walker."
-	safe_oxygen_min = 8 // can breathe on lavaland
+/obj/item/organ/internal/lungs/unathi/draconid
+	name = "draconid lungs"
+	desc = "Paired organs responsible for gas exchange between the environment and a humanoid's bloodstream. These belonged to a draconid."
+	safe_oxygen_min = 8
 	safe_co2_max = 30
 	safe_toxins_max = 1
-
-/obj/item/organ/internal/eyes/unathi/ash_walker
-	name = "ash walker eyes"
-	desc = "Paired organs responsible for sight: perceiving light and transforming it into visible images. These belonged to an ash walker."
-	vision_flags = SEE_TURFS
-	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE

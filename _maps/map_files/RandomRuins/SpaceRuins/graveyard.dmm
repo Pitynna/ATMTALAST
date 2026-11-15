@@ -1992,7 +1992,6 @@
 /turf/simulated/floor/carpet,
 /area/ruin/space/graveyard/church)
 "Uv" = (
-/obj/item/kitchen/knife/combat/survival/bone,
 /obj/effect/decal/cleanable/dust{
 	icon = 'icons/obj/rune.dmi';
 	icon_state = "blood_boil";

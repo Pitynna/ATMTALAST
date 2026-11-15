@@ -304,7 +304,6 @@
 		EQUIPMENT("Automatic Scanner", /obj/item/t_scanner/adv_mining_scanner/lesser, 800),
 		EQUIPMENT("Advanced Scanner", /obj/item/t_scanner/adv_mining_scanner, 3000),
 		EQUIPMENT("Explorer's Webbing", /obj/item/storage/belt/mining, 700),
-		EQUIPMENT("Mining Weather Radio", /obj/item/radio/weather_monitor, 700),
 		EQUIPMENT("Fulton Beacon", /obj/item/fulton_core, 500),
 		EQUIPMENT("Mining Conscription Kit", /obj/item/storage/backpack/duffel/mining_conscript, 2000),
 		EQUIPMENT("Jump Boots", /obj/item/clothing/shoes/bhop, 3000),
@@ -331,7 +330,6 @@
 		EQUIPMENT("Whetstone", /obj/item/whetstone, 500),
 		EQUIPMENT("Fulton Pack", /obj/item/extraction_pack, 1500),
 		EQUIPMENT("Jaunter", /obj/item/wormhole_jaunter, 2000),
-		EQUIPMENT("Chasm Jaunter Recovery Grenade", /obj/item/grenade/jaunter_grenade, 3000), // fishing rod supremacy
 		EQUIPMENT("Lazarus Injector", /obj/item/lazarus_injector, 600),
 		EQUIPMENT("Point Transfer Card (500)", /obj/item/card/mining_point_card, 500),
 		EQUIPMENT("Point Transfer Card (1000)", /obj/item/card/mining_point_card/thousand, 1000),

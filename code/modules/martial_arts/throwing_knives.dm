@@ -8,7 +8,6 @@
 		/obj/item/kitchen/knife,
 		/obj/item/kitchen/knife/combat,
 		/obj/item/kitchen/knife/combat/survival,
-		/obj/item/kitchen/knife/combat/survival/bone,
 		/obj/item/kitchen/knife/combat/throwing,
 		/obj/item/kitchen/knife/butcher,
 		/obj/item/kitchen/knife/butcher/meatcleaver,

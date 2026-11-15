@@ -609,7 +609,6 @@ GAME_VERB_SRC(/obj/item/storage/backpack/satchel, switch_strap, usr, "Перек
 
 /obj/item/storage/backpack/duffel/vendor_ext/populate_contents()
 	new /obj/item/extraction_pack(src)
-	new /obj/item/radio/weather_monitor(src)
 	new /obj/item/fulton_core(src)
 	new /obj/item/stack/marker_beacon/thirty(src)
 	new /obj/item/storage/box/minertracker(src)

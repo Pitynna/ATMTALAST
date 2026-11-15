@@ -18,7 +18,6 @@
 /obj/item/clothing/under/roman,
 /obj/item/shield/riot/roman,
 /obj/item/clothing/head/helmet/roman/legionaire,
-/obj/item/twohanded/spear/bonespear,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -101,7 +100,6 @@
 /area/centcom/admin_room)
 "aU" = (
 /obj/structure/table/wood,
-/obj/item/twohanded/fireaxe/boneaxe,
 /turf/simulated/floor/plasteel{
 	icon_state = "hierophant1"
 	},
@@ -337,7 +335,6 @@
 /area/centcom/admin_room)
 "dB" = (
 /obj/structure/table/wood,
-/obj/item/kitchen/knife/combat/survival/bone,
 /turf/simulated/floor/plasteel{
 	icon_state = "hierophant1"
 	},

@@ -390,3 +390,9 @@
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	density = FALSE
+
+/obj/item/ship_in_a_bottle
+	name = "ship in a bottle"
+	desc = "A tiny ship inside a bottle."
+	icon = 'icons/obj/lavaland/artefacts.dmi'
+	icon_state = "ship_bottle"

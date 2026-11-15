@@ -211,7 +211,6 @@
 		new /datum/magick_school.singulo,
 		new /datum/magick_school.blood,
 		new /datum/magick_school.necromantic,
-		new /datum/magick_school/lavaland,
 	)
 
 
@@ -529,24 +528,3 @@
 	. = ..()
 	owner.equip_or_collect(new /obj/item/clothing/suit/wizrobe/magusred(owner), ITEM_SLOT_CLOTH_OUTER)
 	owner.equip_or_collect(new /obj/item/clothing/head/wizard/magus(owner), ITEM_SLOT_HEAD)
-
-// --- SCHOOL OF LAVALAND ---
-/datum/magick_school/lavaland
-	name = "Школа Лазиса"
-	id = "lavaland"
-	desc = "Школа, использующая традиции магии пеплоходцев."
-	spells = list(
-		/datum/action/cooldown/spell/conjure/legion_skulls,
-		/datum/action/cooldown/spell/pointed/goliath_tentacles,
-		/datum/action/cooldown/spell/pointed/goliath_dash,
-		/datum/action/cooldown/spell/pointed/projectile/watchers_look,
-		/datum/action/cooldown/spell/touch/healtouch,
-	)
-
-/datum/magick_school/lavaland/kit()
-	owner.faction += "mining"
-	. = ..()
-	owner.equip_or_collect(new /obj/item/clothing/under/ash_walker(owner), ITEM_SLOT_CLOTH_INNER)
-	owner.equip_or_collect(new /obj/item/clothing/gloves/color/black/goliath(owner), ITEM_SLOT_GLOVES)
-	owner.equip_or_collect(new /obj/item/clothing/suit/hooded/goliath/wizard(owner), ITEM_SLOT_CLOTH_OUTER)
-	owner.equip_or_collect(new /obj/item/twohanded/spear/bonespear, ITEM_SLOT_HAND_RIGHT)

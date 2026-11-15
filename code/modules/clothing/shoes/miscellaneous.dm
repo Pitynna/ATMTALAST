@@ -435,24 +435,6 @@ GAME_VERB_SRC(/obj/item/clothing/shoes/workboots/mining, verb_remove_knife, usr,
 	if(paintable)
 		AddComponent(/datum/component/spraycan_paintable)
 
-/obj/item/clothing/shoes/footwraps/goliath
-	name = "goliath hide footwraps"
-	desc = "These wraps, made from goliath hide, make your feet feel snug and secure, while still being breathable and light."
-	icon_state = "footwraps_goliath"
-	item_state = "footwraps_goliath"
-	armor = list(MELEE = 10, BULLET = 10, LASER = 15, ENERGY = 5, BOMB = 10, BIO = 0, FIRE = 10, ACID = 0)
-	resistance_flags = FIRE_PROOF
-	paintable = FALSE
-
-/obj/item/clothing/shoes/footwraps/dragon
-	name = "ash drake hide footwraps"
-	desc = "These wraps, made from ash drake hide, make your feet feel snug and secure, while still being breathable and light."
-	icon_state = "footwraps_dragon"
-	item_state = "footwraps_dragon"
-	armor = list(MELEE = 10, BULLET = 10, LASER = 15, ENERGY = 10, BOMB = 0, BIO = 10, FIRE = 15, ACID = 0)
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	paintable = FALSE
-
 /obj/item/clothing/shoes/bhop
 	name = "jump boots"
 	desc = "A specialized pair of combat boots with a built-in propulsion system for rapid foward movement."

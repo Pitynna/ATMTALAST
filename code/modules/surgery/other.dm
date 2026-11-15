@@ -192,7 +192,6 @@
 	allowed_tools = list(
 		TOOL_FIXOVEIN = 100,
 		/obj/item/stack/cable_coil = 90,
-		/obj/item/stack/sheet/sinew = 90,
 	)
 	can_infect = TRUE
 	blood_level = SURGERY_BLOODSPREAD_HANDS

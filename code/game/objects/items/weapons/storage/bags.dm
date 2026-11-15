@@ -822,21 +822,3 @@ GAME_VERB_SRC(/obj/item/storage/bag/plants/portaseeder, dissolve_contents, usr, 
 	)
 	resistance_flags = FLAMMABLE
 
-////////////////////////////////////////
-// MARK:	Pouch
-//			(mostly for ashwalkers)
-////////////////////////////////////////
-
-/obj/item/storage/bag/medpouch
-	name = "medicinal pouch"
-	desc = "A small pouch for holding plants, poultices, resin, and pestles."
-	icon_state = "pouch_ash"
-	storage_slots = 40
-	max_combined_w_class = 200
-	can_hold = list(
-		/obj/item/reagent_containers/food/snacks/grown,
-		/obj/item/stack/medical,
-		/obj/item/stack/sheet/cartilage_plate,
-		/obj/item/stack/sheet/razor_sharp_teeth,
-	)
-	storage_with_item_size = WEIGHT_CLASS_NORMAL

@@ -254,8 +254,6 @@
 #define SPECIES_TAJARAN "Tajaran"
 
 #define SPECIES_UNATHI "Unathi"
-#define SPECIES_ASHWALKER_BASIC "Ash Walker"
-#define SPECIES_ASHWALKER_SHAMAN "Ash Walker Shaman"
 #define SPECIES_DRACONOID "Draconid"
 
 #define SPECIES_VOX "Vox"

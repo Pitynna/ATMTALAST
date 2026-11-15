@@ -95,19 +95,6 @@
 /obj/item/shield/riot/buckler/add_parry_component()
 	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.7, _parry_time_out_time = PARRY_SHIELD_TIMEOUT, _parryable_attack_types = ALL_ATTACK_TYPES, _parry_cooldown = (7 / 3) SECONDS) // 2.3333 seconds of cooldown for 30% uptime
 
-/obj/item/shield/riot/goliath
-	name = "goliath shield"
-	desc = "A shield made from interwoven plates of goliath hide."
-	icon_state = "goliath_shield"
-	item_state = "goliath_shield"
-	materials = list()
-	origin_tech = "materials=1;combat=3;biotech=2"
-	obj_integrity = 380
-	max_integrity = 380
-
-/obj/item/shield/riot/goliath/add_parry_component()
-	AddComponent(/datum/component/parry, _stamina_constant = 2, _stamina_coefficient = 0.55, _parry_time_out_time = PARRY_SHIELD_TIMEOUT, _parryable_attack_types = ALL_ATTACK_TYPES)
-
 /obj/item/shield/energy
 	name = "energy combat shield"
 	desc = "A shield that reflects almost all energy projectiles, but is useless against physical attacks. It can be retracted, expanded, and stored anywhere."

@@ -597,22 +597,6 @@
 	icon_state = "bling"
 	item_state = "bling"
 
-/obj/item/clothing/accessory/necklace/skullcodpiece
-	name = "skull codpiece"
-	desc = "A skull shaped ornament, intended to protect the important things in life."
-	icon_state = "skull"
-	item_state = "skull"
-	armor = list(MELEE = 5, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 10, BIO = 10, FIRE = 0, ACID = 15)
-	allow_duplicates = FALSE
-
-/obj/item/clothing/accessory/necklace/talisman
-	name = "bone talisman"
-	desc = "A hunter's talisman, some say the old gods smile on those who wear it."
-	icon_state = "talisman"
-	item_state = "talisman"
-	armor = list(MELEE = 5, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 10, BIO = 10, FIRE = 0, ACID = 15)
-	allow_duplicates = FALSE
-
 /obj/item/clothing/accessory/necklace/locket
 	name = "gold locket"
 	desc = "A gold locket that seems to have space for a photo within."

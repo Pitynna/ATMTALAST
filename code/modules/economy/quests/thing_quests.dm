@@ -159,8 +159,6 @@
 		/obj/item/organ/internal/lungs/slime = 350,
 		/obj/item/organ/internal/liver/grey = 350,
 		/obj/item/organ/internal/heart/slime = 350,
-		/obj/item/organ/internal/lungs/unathi/ash_walker = 350,
-		/obj/item/organ/internal/eyes/unathi/ash_walker = 350,
 
 	)
 	very_hard_items = list(
@@ -335,8 +333,6 @@
 		/obj/item/stack/sheet/mineral/plasma = list("reward" = 120, "amount" = 30),
 		/obj/item/stack/sheet/mineral/silver = list("reward" = 90, "amount" = 15),
 		/obj/item/stack/sheet/plasteel = list("reward" = 90, "amount" = 15),
-		/obj/item/stack/sheet/sinew = list("reward" = 100, "amount" = 5),
-		/obj/item/stack/sheet/bone = list("reward" = 100, "amount" = 5),
 	)
 	hard_items = list(
 		/obj/item/stack/sheet/plasmaglass = list("reward" = 200, "amount" = 50),
@@ -346,7 +342,6 @@
 		/obj/item/stack/sheet/mineral/uranium = list("reward" = 150, "amount" = 30),
 		/obj/item/stack/sheet/mineral/silver = list("reward" = 150, "amount" = 30),
 		/obj/item/stack/sheet/durathread = list("reward" = 150, "amount" = 10),
-		/obj/item/stack/sheet/cartilage_plate = list("reward" = 190, "amount" = 5),
 	)
 	very_hard_items = list(
 		/obj/item/stack/sheet/bluespace_crystal = list("reward" = 220, "amount" = 5),

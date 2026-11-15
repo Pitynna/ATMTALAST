@@ -176,21 +176,6 @@
 	set_vehicle_dir_offsets(EAST, -18, 0)
 	set_vehicle_dir_offsets(WEST, -18, 0)
 
-/datum/component/riding/vehicle/lavaboat
-	vehicle_move_delay = 3
-	keytype = /obj/item/oar
-	var/allowed_turf = /turf/simulated/floor/lava
-
-/datum/component/riding/vehicle/lavaboat/handle_specials()
-	. = ..()
-	set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(1, 2), TEXT_SOUTH = list(1, 2), TEXT_EAST = list(1, 2), TEXT_WEST = list(1, 2)))
-	set_vehicle_dir_layer(NORTH, ABOVE_MOB_LAYER)
-	allowed_turf_typecache = typecacheof(allowed_turf)
-
-/datum/component/riding/vehicle/lavaboat/dragonboat
-	vehicle_move_delay = 2
-	keytype = null
-
 /datum/component/riding/vehicle/car
 	vehicle_move_delay = 1.75
 	ride_check_flags = RIDER_NEEDS_LEGS | RIDER_NEEDS_ARMS | UNBUCKLE_DISABLED_RIDER

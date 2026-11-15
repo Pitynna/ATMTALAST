@@ -12,23 +12,6 @@
 	no_update_names = TRUE
 	no_update_desc = TRUE
 
-/obj/item/ammo_casing/caseless/arrow/bone_tipped
-	name = "bone-tipped arrow"
-	desc = "An arrow made from bone, wood, and sinew. Sturdy and sharp."
-	ammo_marking = "\"bone arrow\""
-	icon_state = "bone_arrow"
-	item_state = "bone_arrow"
-	force = 12
-	projectile_type = /obj/projectile/bullet/reusable/arrow/bone
-
-/obj/item/ammo_casing/caseless/arrow/jagged
-	name = "jagged-tipped arrow"
-	desc = "An arrow made from a predatory fish's teeth. Incredibly sharp and strong."
-	ammo_marking = "\"barbed arrow\""
-	icon_state = "jagged_arrow"
-	force = 16
-	projectile_type = /obj/projectile/bullet/reusable/arrow/jagged
-
 /obj/item/ammo_casing/caseless/arrow/modern
 	name = "modern arrow"
 	desc = "An arrow made from high-quality composite materials."

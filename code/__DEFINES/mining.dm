@@ -7,7 +7,6 @@
 	/obj/item/t_scanner/adv_mining_scanner, \
 	/obj/item/survivalcapsule, \
 	/obj/item/wormhole_jaunter, \
-	/obj/item/grenade/jaunter_grenade, \
 	/obj/item/extraction_pack, \
 	/obj/item/grenade/plastic/miningcharge, \
 	/obj/item/storage/bag/gem, \
@@ -21,7 +20,6 @@
 	/obj/item/twohanded/kinetic_crusher, \
 	/obj/item/kitchen/knife, \
 	/obj/item/twohanded/spear, \
-	/obj/item/twohanded/fireaxe/boneaxe, \
 	/obj/item/melee/energy/cleaving_saw, \
 	/obj/item/organ/internal/regenerative_core, \
 	/obj/item/nullrod, \

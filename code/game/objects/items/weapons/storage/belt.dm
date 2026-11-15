@@ -1142,8 +1142,6 @@
 		/obj/item/stack/marker_beacon,
 		/obj/item/kitchen/knife,
 		/obj/item/stack/sheet/animalhide,
-		/obj/item/stack/sheet/sinew,
-		/obj/item/stack/sheet/bone,
 		/obj/item/organ/internal/regenerative_core,
 		/obj/item/hivelordstabilizer,
 		/obj/item/storage/pill_bottle,
@@ -1165,34 +1163,6 @@
 /obj/item/storage/belt/mining/alt
 	icon_state = "explorer2"
 	item_state = "explorer2"
-
-/obj/item/storage/belt/mining/primitive
-	name = "hunter's belt"
-	desc = "A versatile belt, woven from sinew."
-	icon_state = "hunter_belt"
-	item_state = "ebelt"
-	use_item_overlays = TRUE
-	can_hold = list(
-		/obj/item/flashlight/lantern,
-		/obj/item/pickaxe,
-		/obj/item/shovel,
-		/obj/item/cultivator/wooden,
-		/obj/item/hatchet,
-		/obj/item/kitchen/knife,
-		/obj/item/stack/sheet/animalhide,
-		/obj/item/stack/sheet/sinew,
-		/obj/item/stack/sheet/bone,
-		/obj/item/organ/internal/regenerative_core,
-		/obj/item/hivelordstabilizer,
-		/obj/item/stack/ore,
-		/obj/item/reagent_containers/applicator,
-		/obj/item/reagent_containers/food/snacks/grown,
-		/obj/item/whetstone,
-		/obj/item/stack/sheet/cartilage_plate,
-		/obj/item/stack/sheet/razor_sharp_teeth,
-		/obj/item/t_scanner/adv_mining_scanner/bleary_eye,
-	)
-	cant_hold = list(/obj/item/pickaxe/drill)
 
 /obj/item/storage/belt/chef
 	name = "culinary tool apron"

@@ -64,7 +64,6 @@
 		TOOL_HEMOSTAT = 100,
 		/obj/item/scalpel/laser = 100,
 		/obj/item/stack/cable_coil = 90,
-		/obj/item/stack/sheet/sinew = 90,
 		/obj/item/assembly/mousetrap = 25,
 	)
 
@@ -109,7 +108,6 @@
 		TOOL_CAUTERY = 100,
 		/obj/item/scalpel/laser = 100,
 		/obj/item/stack/medical/suture = 100,
-		/obj/item/stack/sheet/sinew = 80,
 		/obj/item/stack/cable_coil = 75,
 		/obj/item/clothing/mask/cigarette = 75,
 		/obj/item/lighter = 60,

@@ -494,23 +494,6 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	resistance_flags = NONE
 
-/obj/item/clothing/under/ash_walker
-	name = "ash-walker uniform"
-	desc = ""
-	icon_state = "ash"
-	item_state = "ash"
-	item_color = "ash"
-	has_sensor = FALSE
-
-/obj/item/clothing/under/ash_walker_shaman
-	name = "shaman tribal rags"
-	desc = "Rags from Lavaland, drenched with ash, it has fine jewel coated bones sewn around the neck. This one seems to be for the shaman of a tribe."
-	icon_state = "shamanrags"
-	item_state = "shamanrags"
-	item_color = "shamanrags"
-	has_sensor = FALSE
-	species_restricted = list(SPECIES_UNATHI, SPECIES_DRACONOID)
-
 /obj/item/clothing/under/dress/dress_fire
 	name = "flame dress"
 	desc = "A small black dress with blue flames print on it."

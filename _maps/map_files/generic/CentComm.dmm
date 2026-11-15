@@ -9141,10 +9141,6 @@
 /area/centcom/central_command_areas/bridge)
 "eFk" = (
 /obj/structure/rack,
-/obj/item/oar{
-	desc = "It's rare to see an oar with a name. What is its secret? Why is it called that? Does it have something to do with an ancient legend? Or did its former boatman simply leave his signature on it? The answer is lost in the mists of time...";
-	name = "Miyamoto Musashi"
-	},
 /obj/effect/turf_decal/siding/wood,
 /turf/simulated/floor/wood{
 	icon_state = "fancy-wood-oak"
@@ -30337,7 +30333,6 @@
 /area/shuttle/siberia)
 "oha" = (
 /obj/structure/rack,
-/obj/item/oar,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
