@@ -3005,6 +3005,7 @@
 #include "code\modules\mining\satchel_ore_boxdm.dm"
 #include "code\modules\mining\shelters.dm"
 #include "code\modules\mining\drills\deposit_generation.dm"
+#include "code\modules\mining\drills\drill_bluespace.dm"
 #include "code\modules\mining\drills\drill_cargo.dm"
 #include "code\modules\mining\drills\drill_designs.dm"
 #include "code\modules\mining\drills\drill_modules.dm"

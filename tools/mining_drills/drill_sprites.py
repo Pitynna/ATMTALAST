@@ -397,6 +397,77 @@ def draw_drill_tier3(direction, frame=None):
     return img
 
 
+BS = (0x38, 0x66, 0xFF)
+BS_LIGHT = (0x9C, 0xD4, 0xFF)
+BS_DARK = (0x18, 0x26, 0x96)
+
+
+def bs_crystal(img, cx, cy, size, light=BS_LIGHT, base=BS, dark=BS_DARK):
+    for dy in range(-size, size + 1):
+        span = size - abs(dy)
+        for dx in range(-span, span + 1):
+            color = light if dx + dy < 0 else dark if dx + dy > 0 else base
+            put(img, cx + dx, cy + dy, color)
+
+
+def draw_module_transmitter():
+    img = new_image()
+    box(img, 8, 11, 23, 22, STEEL, STEEL_LIGHT, STEEL_DARK)
+    rect(img, 9, 21, 22, 21, BS)
+    bs_crystal(img, 15, 15, 3)
+    # Antenna.
+    rect(img, 21, 6, 21, 11, OUTLINE)
+    put(img, 21, 5, BS_LIGHT)
+    for x in range(10, 22, 2):
+        put(img, x, 23, (0xC8, 0xA0, 0x40))
+    return img
+
+
+def draw_receiver(glow=0, receiving=None):
+    """Bluespace pad on a heavy base. glow: 0 idle, 1..4 tuned animation; receiving: flash frame."""
+    img = new_image()
+    # Base.
+    box(img, 3, 14, 28, 26, STEEL, STEEL_LIGHT, STEEL_DARK)
+    rect(img, 4, 27, 27, 28, STEEL_DARK)
+    rect(img, 3, 27, 3, 29, OUTLINE)
+    rect(img, 28, 27, 28, 29, OUTLINE)
+    rect(img, 3, 29, 28, 29, OUTLINE)
+    for x in range(5, 27, 3):
+        put(img, x, 28, BS if (x // 3) % 2 else BS_DARK)
+    # Pad ring.
+    for y in range(15, 26):
+        for x in range(6, 26):
+            d = ((x - 15.5) / 9.5) ** 2 + ((y - 20) / 5) ** 2
+            if d <= 1:
+                put(img, x, y, OUTLINE if d > 0.8 else (0x20, 0x26, 0x3A))
+    # Emitter arms.
+    for x0 in (5, 25):
+        rect(img, x0, 4, x0 + 1, 15, OUTLINE)
+        rect(img, x0, 5, x0, 14, STEEL_LIGHT)
+        put(img, x0, 4, BS_LIGHT if glow else BS_DARK)
+    rect(img, 5, 3, 26, 4, OUTLINE)
+    rect(img, 6, 3, 25, 3, STEEL_EDGE)
+    if glow:
+        level = (0, 1, 2, 1)[(glow - 1) % 4]
+        for y in range(16, 25):
+            for x in range(8, 24):
+                d = ((x - 15.5) / 7) ** 2 + ((y - 20) / 3.6) ** 2
+                if d <= 0.3 + level * 0.15:
+                    put(img, x, y, BS)
+                elif d <= 0.55 + level * 0.15:
+                    put(img, x, y, BS_DARK)
+        put(img, 15, 20, BS_LIGHT)
+        put(img, 16, 20, BS_LIGHT)
+    if receiving is not None:
+        # A bright column and a crystal flash as ore arrives.
+        height = (12, 9, 6, 3)[receiving]
+        for y in range(20 - height, 21):
+            for x in range(14, 18):
+                put(img, x, y, BS_LIGHT if x in (15, 16) else BS, 230)
+        bs_crystal(img, 15, 20, 3 - receiving if receiving < 3 else 1, (255, 255, 255), BS_LIGHT, BS)
+    return img
+
+
 def drill_states():
     states = []
     idle = [draw_drill_tier1(d) for d in DIRS]
@@ -415,6 +486,11 @@ def drill_states():
         states.append((f"drill{tier}_packed", [draw_packed_tier1(*lid)], 1, 1, None))
     states.append(("module", [draw_module_base()], 1, 1, None))
     states.append(("module_ejector", [draw_module_ejector()], 1, 1, None))
+    states.append(("module_transmitter", [draw_module_transmitter()], 1, 1, None))
+    states.append(("bs_receiver", [draw_receiver()], 1, 1, None))
+    states.append(("bs_receiver_on", [draw_receiver(glow) for glow in range(1, 5)], 1, 4, (3, 3, 3, 3)))
+    states.append(("bs_receiver_receive", [draw_receiver(1, frame) for frame in range(4)], 1, 4, (1, 1, 1, 1)))
+    states.append(("bs_receiver_panel", [draw_panel_overlay(0, 7)], 1, 1, None))
     for mask in range(16):
         states.append((f"ore_pipe_{mask}", [draw_pipe(mask)], 1, 1, None))
     for direction in (NORTH, SOUTH, EAST, WEST):

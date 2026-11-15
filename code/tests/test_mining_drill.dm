@@ -69,3 +69,24 @@
 	TEST_ASSERT_NOTNULL(delivered, "Ore must come out in front of the outlet")
 	TEST_ASSERT_EQUAL(delivered.amount, 3, "All the ore must arrive")
 	qdel(delivered)
+
+/// One receiver per channel; transmitters deliver to it from anywhere and report a missing receiver.
+/datum/unit_test/bluespace_ore_channels/Run()
+	var/obj/machinery/bluespace_ore_receiver/first = allocate(/obj/machinery/bluespace_ore_receiver)
+	var/obj/machinery/bluespace_ore_receiver/second = allocate(/obj/machinery/bluespace_ore_receiver)
+	TEST_ASSERT(first.set_channel("unit test channel"), "A free channel must be accepted")
+	TEST_ASSERT_NOT(second.set_channel("unit test channel"), "A channel in use must be refused")
+	var/obj/machinery/mining_drill/drill = allocate(/obj/machinery/mining_drill)
+	var/obj/item/mining_drill_module/transmitter/transmitter = allocate(/obj/item/mining_drill_module/transmitter)
+	drill.module = transmitter
+	transmitter.forceMove(drill)
+	transmitter.channel = "unknown unit test channel"
+	TEST_ASSERT_NOT(transmitter.has_destination(drill), "A transmitter without a receiver must report it")
+	transmitter.channel = "unit test channel"
+	drill.buffer[/obj/item/stack/ore/gold] = 4
+	transmitter.process_output(drill)
+	TEST_ASSERT_EQUAL(drill.buffer_total(), 0, "The transmitter must send the whole buffer")
+	TEST_ASSERT_EQUAL(first.stored_ore()[/obj/item/stack/ore/gold], 4, "The receiver must store the ore")
+	first.release_channel()
+	TEST_ASSERT(second.set_channel("unit test channel"), "A released channel must be free again")
+	second.release_channel()

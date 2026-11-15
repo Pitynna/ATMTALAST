@@ -4,6 +4,7 @@
 #define DRILL_STATUS_BUFFER_FULL "Buffer full"
 #define DRILL_STATUS_NO_DEPOSIT "No ore deposit"
 #define DRILL_STATUS_DEPLETED "Deposit depleted"
+#define DRILL_STATUS_NO_RECEIVER "No receiver"
 
 /// Charge drawn from the cell per minute of active drilling, the same for every tier.
 #define DRILL_CHARGE_PER_MINUTE 1000
@@ -154,7 +155,13 @@
 		return DRILL_STATUS_NO_POWER
 	if(buffer_total() >= buffer_capacity)
 		return DRILL_STATUS_BUFFER_FULL
+	if(module && !module.has_destination(src))
+		return DRILL_STATUS_NO_RECEIVER
 	return DRILL_STATUS_ACTIVE
+
+/// Whether the drill is mining this tick. Without a receiver it still fills its buffer.
+/obj/machinery/mining_drill/proc/is_digging()
+	return status == DRILL_STATUS_ACTIVE || status == DRILL_STATUS_NO_RECEIVER
 
 /obj/machinery/mining_drill/proc/update_status()
 	var/new_status = get_status()
@@ -169,14 +176,14 @@
 		return
 	module?.process_output(src)
 	update_status()
-	if(status != DRILL_STATUS_ACTIVE)
+	if(!is_digging())
 		return
 	if(!cell.use(DRILL_CHARGE_PER_MINUTE * seconds_per_tick / 60))
 		cell.charge = 0
 		update_status()
 		return
 	dig_progress += seconds_per_tick SECONDS
-	while(dig_progress >= dig_time && status == DRILL_STATUS_ACTIVE)
+	while(dig_progress >= dig_time && is_digging())
 		dig_progress -= dig_time
 		dig_one()
 		update_status()
@@ -332,7 +339,7 @@
 // MARK: Icon
 
 /obj/machinery/mining_drill/update_icon_state()
-	icon_state = "[base_icon_state][status == DRILL_STATUS_ACTIVE ? "_on" : ""]"
+	icon_state = "[base_icon_state][is_digging() ? "_on" : ""]"
 
 /obj/machinery/mining_drill/update_overlays()
 	. = ..()
@@ -513,6 +520,10 @@
 /obj/item/mining_drill_module/proc/process_output(obj/machinery/mining_drill/drill)
 	return
 
+/// Whether the module currently has somewhere to send ore. FALSE shows "No receiver".
+/obj/item/mining_drill_module/proc/has_destination(obj/machinery/mining_drill/drill)
+	return TRUE
+
 /obj/item/mining_drill_module/proc/get_ui_data(obj/machinery/mining_drill/drill)
 	return null
 
@@ -561,5 +572,6 @@
 #undef DRILL_STATUS_BUFFER_FULL
 #undef DRILL_STATUS_NO_DEPOSIT
 #undef DRILL_STATUS_DEPLETED
+#undef DRILL_STATUS_NO_RECEIVER
 #undef DRILL_CHARGE_PER_MINUTE
 #undef DRILL_DEPLOY_TIME

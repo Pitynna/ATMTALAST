@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import {
   Box,
   Button,
+  Input,
   LabeledList,
   NoticeBox,
   ProgressBar,
@@ -39,6 +41,32 @@ type ModuleData = {
   kind: string;
   direction?: string;
   blocked?: boolean;
+  channel?: string | null;
+  connected?: boolean;
+};
+
+const ChannelSetter = (props: { current: string | null | undefined }) => {
+  const { act } = useBackend();
+  const [channel, setChannel] = useState('');
+  return (
+    <>
+      <Input
+        placeholder={props.current || 'Channel name'}
+        value={channel}
+        onChange={setChannel}
+      />
+      <Button
+        icon="satellite-dish"
+        disabled={!channel.trim()}
+        onClick={() => {
+          act('set_channel', { channel });
+          setChannel('');
+        }}
+      >
+        Tune
+      </Button>
+    </>
+  );
 };
 
 const DIRECTIONS = ['north', 'south', 'east', 'west'];
@@ -216,6 +244,19 @@ export const MiningDrill = (_props: unknown) => {
             >
               {module || 'None'}
             </LabeledList.Item>
+            {module_data?.kind === 'transmitter' && (
+              <>
+                <LabeledList.Item label="Channel">
+                  <Box mb={0.5}>{module_data.channel || 'Not set'}</Box>
+                  <ChannelSetter current={module_data.channel} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Receiver">
+                  <Box color={module_data.connected ? 'good' : 'average'}>
+                    {module_data.connected ? 'Connected' : 'No receiver'}
+                  </Box>
+                </LabeledList.Item>
+              </>
+            )}
             {module_data?.kind === 'ejector' && (
               <LabeledList.Item label="Output side">
                 {DIRECTIONS.map((direction) => (
