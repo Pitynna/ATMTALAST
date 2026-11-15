@@ -402,6 +402,7 @@ SUBSYSTEM_DEF(mapping)
 	caves.generate_terrain(Z_TURFS(mining_z_level))
 	qdel(caves)
 	new /obj/effect/landmark/xenoarch_initializer(locate(1, 1, mining_z_level))
+	new /obj/effect/landmark/ore_deposit_initializer(locate(1, 1, mining_z_level))
 	log_startup_progress("Loaded Mining Asteroid in [stop_watch(watch)]s")
 
 /datum/controller/subsystem/mapping/proc/seedRuins(list/z_levels = null, budget = 0, whitelist = /area/space, list/potentialRuins)

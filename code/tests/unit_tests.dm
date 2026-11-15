@@ -35,6 +35,7 @@
 #include "test_missing_icons.dm"
 #include "test_orphaned_genturf.dm"
 #include "test_mining_content.dm"
+#include "test_ore_deposits.dm"
 #include "test_xenoarchaeology.dm"
 #include "test_paintings.dm"
 #include "test_portagrav.dm"

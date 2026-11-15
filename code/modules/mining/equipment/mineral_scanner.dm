@@ -89,6 +89,7 @@
 			playsound(src, pick(soundone, soundtwo), 35)
 
 /proc/mineral_scan_pulse(turf/T, range = world.view)
+	ore_deposit_scan_pulse(T, range)
 	var/list/minerals = list()
 	for(var/turf/simulated/mineral/mineral in range(range, T))
 		if(!mineral.scan_state)
