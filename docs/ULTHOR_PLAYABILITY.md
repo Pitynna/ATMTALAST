@@ -12,7 +12,7 @@
 | `particle_accelerator` (пульт + 6 частей) | 0 | 1 | 1 | генератор сингулярности, 4 поля и 5 эмиттеров есть, а ускорителя нет — двигатель не запустить |
 | `message_server` | 0 | 1 | 1 | PDA-сообщения |
 | `blackbox_recorder` | 0 | 1 | 1 | логи раунда |
-| Доки капсул `pod1..pod4` | 1 | 4 | 4 | есть только `pod1_home` |
+| Доки капсул `pod1..pod4` | 3 | 4 | 4 | pod1, pod2 (запад), pod3 (юг); pod4 нет |
 | `ai_module/*` (набор законов) | 1 | 14 | 14 | в аплоаде ИИ только reset |
 | `landmark/spawner/late/prisoner`, `start/prisoner` | 0 | есть | есть | |
 | Старты `coroner, intern, explorer, trainee_engineer, student_sientist, security_pod_pilot` | 0 | есть | есть | профессии без точки появления |
