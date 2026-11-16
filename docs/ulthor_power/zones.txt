@@ -12,7 +12,7 @@
   /area/station/hallway/secondary/entry: [(244, (64, 99)), (1, (88, 109))]
   /area/station/hallway/ulthor_eva_access: [(26, (83, 159)), (1, (87, 166))]
   /area/station/maintenance/solars/port/fore: [(21, (78, 195)), (1, (102, 191))]
-  /area/station/maintenance/ulthor_engineering_passage: [(116, (156, 142)), (14, (167, 123)), (1, (162, 147))]
+  /area/station/maintenance/ulthor_engineering_passage: [(175, (156, 142)), (1, (162, 147))]
   /area/station/maintenance/ulthor_research_passage: [(173, (149, 154)), (2, (152, 166))]
   /area/station/maintenance/ulthor_west_passage: [(160, (70, 158)), (110, (62, 152))]
   /area/station/medical/break_room: [(20, (106, 173)), (1, (107, 180))]
@@ -20,19 +20,16 @@
   /area/station/medical/ward: [(97, (110, 177)), (4, (108, 180))]
   /area/station/science/genetics: [(30, (118, 188)), (3, (132, 197))]
   /area/station/science/toxins/mixing: [(55, (174, 166)), (1, (179, 175))]
-  /area/station/security/checkpoint: [(45, (166, 121)), (34, (167, 106))]
   /area/station/security/hallway/armory: [(38, (123, 120)), (16, (123, 124))]
   /area/station/security/lobby: [(37, (127, 90)), (7, (124, 108))]
-  /area/station/security/medical: [(142, (95, 109)), (2, (106, 121))]
+  /area/station/security/medical: [(32, (105, 109)), (2, (106, 121))]
   /area/station/security/podbay: [(49, (130, 90)), (4, (131, 86))]
   /area/station/security/prison/perma: [(290, (116, 124)), (3, (125, 130))]
-  /area/station/security/processing: [(86, (149, 109)), (42, (141, 112))]
   /area/station/service/theatre: [(87, (87, 141)), (1, (94, 140))]
 == tiny areas (< 6 floor tiles)
 == rooms (wall/door bounded) holding several areas
    661 (75, 88, 178, 118) [('hallway/primary/aft', 236), ('hallway/secondary/exit', 229), ('service/library', 99), ('hallway/secondary/entry', 97)]
    461 (77, 109, 97, 166) [('cargo/miningdock', 94), ('service/bar', 91), ('service/theatre', 84), ('commons/locker', 83), ('hallway/ulthor_service_south', 34), ('hallway/ulthor_theatre_access', 31), ('hallway/ulthor_eva_access', 22), ('hallway/ulthor_service_center', 21), ('command/office/qm', 1)]
-   126 (89, 109, 105, 124) [('security/medical', 109), ('commons/locker', 17)]
    178 (110, 109, 140, 122) [('security/brig', 136), ('security/hallway/armory', 28), ('security/hallway/execution', 14)]
    177 (156, 120, 165, 165) [('maintenance/ulthor_engineering_passage', 108), ('maintenance/ulthor_research_passage', 69)]
     86 (151, 125, 159, 140) [('engineering/storage', 56), ('engineering/ulthor_monitoring', 30)]
@@ -41,4 +38,4 @@
   1237 (70, 144, 185, 195) [('hallway/primary/fore', 355), ('maintenance/ulthor_northwest_passage', 299), ('maintenance/ulthor_northeast_passage', 226), ('maintenance/ulthor_west_passage', 158), ('medical/medbay', 137), ('medical/ward', 60), ('maintenance/ulthor_research_passage', 2)]
     20 (106, 158, 110, 161) [('command/office/ntrep', 12), ('command/office/hop', 8)]
 == station floor in non-station areas: 1 [(34, 148, '/area/space/nearstation')]
-problems: 28
+problems: 26

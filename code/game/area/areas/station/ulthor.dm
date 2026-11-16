@@ -151,3 +151,11 @@
 /area/station/maintenance/ulthor_northeast_passage
 	name = "Ulthor North-East Maintenance"
 	icon_state = "asmaint"
+
+/area/station/maintenance/ulthor_south_passage
+	name = "Ulthor South Maintenance"
+	icon_state = "smaint"
+
+/area/station/maintenance/ulthor_security_passage
+	name = "Ulthor Security Maintenance"
+	icon_state = "smaint"
