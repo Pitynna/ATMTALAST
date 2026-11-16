@@ -1,0 +1,36 @@
+cable tiles: 1514, networks: 1, main net #0 (1514 tiles, 5 SMES)
+APCs: 124, not on main net: 0
+cables on space: 91
+cables on wall: 0
+cables on window: 0
+generation (layer 1) nets: 5
+  gen net 0: 101 tiles; solar, terminal, tracker
+  gen net 1: 98 tiles; solar, terminal, tracker
+  gen net 2: 95 tiles; solar, terminal, tracker
+  gen net 3: 12 tiles; pacman, terminal
+  gen net 4: 12 tiles; compressor, terminal, turbine
+  machine (61, 143, 1) /obj/machinery/power/terminal net None gen 0
+  machine (62, 143, 1) /obj/machinery/power/smes grid 
+  machine (81, 192, 1) /obj/machinery/power/smes grid 
+  machine (81, 193, 1) /obj/machinery/power/terminal net None gen 2
+  machine (118, 109, 1) /obj/machinery/power/treadmill grid 
+  machine (122, 109, 1) /obj/machinery/power/treadmill grid 
+  machine (134, 109, 1) /obj/machinery/power/treadmill grid 
+  machine (138, 109, 1) /obj/machinery/power/treadmill grid 
+  machine (140, 148, 1) /obj/machinery/power/terminal grid 
+  machine (140, 149, 1) /obj/machinery/power/smes net None 
+  machine (140, 155, 1) /obj/machinery/power/emitter grid 
+  machine (145, 121, 1) /obj/machinery/power/emitter net None 
+  machine (145, 122, 1) /obj/machinery/power/emitter net None 
+  machine (146, 121, 1) /obj/machinery/power/emitter net None 
+  machine (146, 122, 1) /obj/machinery/power/emitter net None 
+  machine (148, 151, 1) /obj/machinery/power/port_gen/pacman grid 
+  machine (150, 123, 1) /obj/machinery/power/port_gen/pacman net None gen 3
+  machine (154, 126, 1) /obj/machinery/power/terminal net None gen 3
+  machine (154, 127, 1) /obj/machinery/power/smes grid 
+  machine (173, 94, 1) /obj/machinery/power/terminal net None gen 1
+  machine (173, 95, 1) /obj/machinery/power/smes grid 
+  machine (192, 137, 1) /obj/machinery/power/turbine net None gen 4
+  machine (192, 138, 1) /obj/machinery/power/compressor net None gen 4
+  machine (193, 147, 1) /obj/machinery/power/terminal net None gen 4
+  machine (193, 148, 1) /obj/machinery/power/smes grid 

@@ -11500,6 +11500,18 @@
 	icon_state = "dark"
 	},
 /area/station/security/podbay)
+"dQF" = (
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 6;
+	flipped = 1
+	},
+/obj/effect/turf_decal/stripes/red,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/cargo/storage)
 "dQG" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -32205,6 +32217,23 @@
 	icon_state = "green"
 	},
 /area/station/commons/ulthor_87_165)
+"kBj" = (
+/obj/structure/cable,
+/obj/machinery/power/apc{
+	name = "east bump";
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 9
+	},
+/obj/effect/turf_decal/stripes/red,
+/obj/structure/disposalpipe/junction/reversed{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/cargo/ulthor_76_110)
 "kBl" = (
 /obj/machinery/jukebox,
 /turf/simulated/floor/plasteel{
@@ -35820,6 +35849,20 @@
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plasteel,
 /area/station/engineering/ulthor_152_122)
+"lEP" = (
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 1
+	},
+/obj/structure/sign/vacuum{
+	pixel_x = -32
+	},
+/obj/effect/turf_decal/stripes/red,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/cargo/storage)
 "lFb" = (
 /obj/machinery/vending/cola,
 /turf/simulated/floor/wood,
@@ -37965,6 +38008,22 @@
 	dir = 1
 	},
 /area/station/engineering/ulthor_tool_storage)
+"mql" = (
+/obj/structure/cable,
+/obj/machinery/conveyor{
+	id = "garbage";
+	dir = 6;
+	flipped = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/red,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/station/cargo/storage)
 "mqq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 2
@@ -94143,9 +94202,9 @@ rss
 rss
 veQ
 wNL
-uEI
-gVF
-txN
+dQF
+lEP
+kBj
 vjW
 woq
 naI
@@ -94916,7 +94975,7 @@ bDz
 dxO
 cQI
 pOT
-hGD
+mql
 wNh
 woq
 naI
