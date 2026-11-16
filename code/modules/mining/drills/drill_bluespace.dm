@@ -86,7 +86,7 @@ GLOBAL_LIST_EMPTY(bluespace_ore_receivers)
  */
 /obj/machinery/bluespace_ore_receiver
 	name = "bluespace ore receiver"
-	desc = "A bluespace pad that catches ore sent by mining drills on its channel and stores any amount of it."
+	desc = "A bluespace-linked steel crate that catches ore sent by mining drills on its channel and holds any amount of it."
 	icon = 'icons/obj/mining_drills.dmi'
 	icon_state = "bs_receiver"
 	base_icon_state = "bs_receiver"

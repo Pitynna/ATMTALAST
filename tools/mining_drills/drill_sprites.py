@@ -4,6 +4,8 @@ Used by generate_sprites.py. Each function returns a list of states:
 (name, images, dirs, frames, delay). Images are ordered the BYOND way:
 for each frame, the directions SOUTH, NORTH, EAST, WEST.
 """
+from pathlib import Path
+
 from PIL import Image
 
 SIZE = 32
@@ -276,30 +278,54 @@ def draw_outlet(direction):
     return img
 
 
+def load_project_state(relative_path, state):
+    """First frame of `state` from one of the project's own DMI files."""
+    root = Path(__file__).resolve().parents[2]
+    sheet = Image.open(root / relative_path)
+    width = height = SIZE
+    index = 0
+    found = None
+    for line in sheet.info["Description"].splitlines():
+        line = line.strip()
+        if line.startswith("width"):
+            width = int(line.split("=")[1])
+        elif line.startswith("height"):
+            height = int(line.split("=")[1])
+        elif line.startswith("state"):
+            name = line.split('"')[1]
+            dirs = frames = 1
+            if name == state:
+                found = index
+        elif line.startswith("dirs"):
+            dirs = int(line.split("=")[1])
+        elif line.startswith("frames"):
+            frames = int(line.split("=")[1])
+            index += dirs * frames
+    columns = sheet.width // width
+    return sheet.crop(((found % columns) * width, (found // columns) * height, (found % columns + 1) * width, (found // columns + 1) * height)).convert("RGBA")
+
+
+# The ore pipe layer is the project's RCD sprite (icons/obj/tools.dmi) recoloured:
+# its blue cartridge becomes ore-pipe brown and the blue status lights turn amber,
+# so it reads as a sibling of the RCD with the same outline, size and greys.
+PIPE_LAYER_RECOLOUR = {
+    (0x20, 0x50, 0x73): (0x6E, 0x40, 0x16),
+    (0x4F, 0x8C, 0xB9): (0xB8, 0x74, 0x30),
+    (0x72, 0xAC, 0xD8): (0xE0, 0xA0, 0x58),
+    (0x33, 0xCC, 0xFF): (0xFF, 0xE0, 0x66),
+    (0x33, 0x99, 0xFF): (0xFF, 0xC0, 0x30),
+    (0x33, 0x66, 0xFF): (0xFF, 0x9A, 0x20),
+    (0x33, 0x00, 0xFF): (0xE0, 0x6A, 0x10),
+}
+
+
 def draw_pipe_layer():
-    """Handheld layer in the shape of a construction device: long body, nozzle, LEDs, grip and canister."""
-    img = new_image()
-    # Main body.
-    box(img, 9, 11, 26, 17, STEEL, STEEL_LIGHT, STEEL_DARK)
-    rect(img, 26, 12, 27, 16, OUTLINE)
-    rect(img, 26, 13, 26, 15, STEEL)
-    # Top rail with status LEDs.
-    rect(img, 11, 10, 24, 10, OUTLINE)
-    for x, color in ((13, LIGHT_ON), (16, HAZARD), (19, PIPE_BAND), (22, LIGHT_ON_DIM)):
-        put(img, x, 12, color)
-        put(img, x + 1, 12, color)
-    rect(img, 11, 15, 24, 15, STEEL_DARK)
-    # Nozzle on the left with a short ore pipe piece.
-    box(img, 4, 12, 9, 16, PIPE, PIPE_LIGHT, PIPE_DARK)
-    rect(img, 2, 13, 3, 15, OUTLINE)
-    put(img, 6, 14, PIPE_BAND)
-    put(img, 7, 14, PIPE_BAND)
-    # Grip.
-    rect(img, 18, 17, 21, 23, OUTLINE)
-    rect(img, 19, 18, 20, 22, STEEL)
-    # Pipe canister under the body.
-    box(img, 12, 17, 17, 23, PIPE_BAND, (0xC8, 0x8A, 0x46), PIPE_DARK)
-    rect(img, 13, 20, 16, 20, PIPE_DARK)
+    img = load_project_state("icons/obj/tools.dmi", "rcd")
+    for y in range(SIZE):
+        for x in range(SIZE):
+            r, g, b, a = img.getpixel((x, y))
+            if a and (r, g, b) in PIPE_LAYER_RECOLOUR:
+                img.putpixel((x, y), (*PIPE_LAYER_RECOLOUR[(r, g, b)], a))
     return img
 
 
@@ -437,48 +463,65 @@ def draw_module_transmitter():
     return img
 
 
+CRATE_TOP = (0x6E, 0x76, 0x80)
+CRATE_TOP_LIGHT = (0x92, 0x9A, 0xA4)
+CRATE_FRONT = (0x50, 0x57, 0x60)
+CRATE_FRONT_DARK = (0x3A, 0x40, 0x48)
+CRATE_EDGE = (0x24, 0x28, 0x2E)
+CRATE_BRACKET = (0xA8, 0xB0, 0xB8)
+
+
 def draw_receiver(glow=0, receiving=None):
-    """Bluespace pad on a heavy base. glow: 0 idle, 1..4 tuned animation; receiving: flash frame."""
+    """Steel crate in the proportions of an ore box: wide lid on top, front wall with a
+    bluespace window, corner brackets and side handles.
+    glow: 0 idle, 1..4 tuned animation; receiving: flash frame 0..3."""
     img = new_image()
-    # Base.
-    box(img, 3, 14, 28, 26, STEEL, STEEL_LIGHT, STEEL_DARK)
-    rect(img, 4, 27, 27, 28, STEEL_DARK)
-    rect(img, 3, 27, 3, 29, OUTLINE)
-    rect(img, 28, 27, 28, 29, OUTLINE)
-    rect(img, 3, 29, 28, 29, OUTLINE)
-    for x in range(5, 27, 3):
-        put(img, x, 28, BS if (x // 3) % 2 else BS_DARK)
-    # Pad ring.
-    for y in range(15, 26):
-        for x in range(6, 26):
-            d = ((x - 15.5) / 9.5) ** 2 + ((y - 20) / 5) ** 2
-            if d <= 1:
-                put(img, x, y, OUTLINE if d > 0.8 else (0x20, 0x26, 0x3A))
-    # Emitter arms.
-    for x0 in (5, 25):
-        rect(img, x0, 4, x0 + 1, 15, OUTLINE)
-        rect(img, x0, 5, x0, 14, STEEL_LIGHT)
-        put(img, x0, 4, BS_LIGHT if glow else BS_DARK)
-    rect(img, 5, 3, 26, 4, OUTLINE)
-    rect(img, 6, 3, 25, 3, STEEL_EDGE)
+    # Lid, seen from above.
+    rect(img, 3, 3, 28, 16, CRATE_EDGE)
+    rect(img, 4, 4, 27, 15, CRATE_TOP)
+    rect(img, 4, 4, 27, 4, CRATE_TOP_LIGHT)
+    rect(img, 4, 4, 4, 15, CRATE_TOP_LIGHT)
+    for x in (10, 21):
+        rect(img, x, 5, x, 15, CRATE_FRONT_DARK)
+    # Bluespace crystal set into the lid.
+    lit = glow or receiving is not None
+    bs_crystal(img, 15, 9, 3, BS_LIGHT if lit else (0x5A, 0x78, 0xB0), BS if lit else (0x30, 0x48, 0x88), BS_DARK)
+    # Front wall.
+    rect(img, 3, 17, 28, 29, CRATE_EDGE)
+    rect(img, 4, 18, 27, 28, CRATE_FRONT)
+    rect(img, 4, 28, 27, 28, CRATE_FRONT_DARK)
+    for x in (9, 15, 16, 22):
+        rect(img, x, 18, x, 27, CRATE_FRONT_DARK)
+    # Bluespace window across the front.
+    rect(img, 6, 21, 25, 24, CRATE_EDGE)
     if glow:
         level = (0, 1, 2, 1)[(glow - 1) % 4]
-        for y in range(16, 25):
-            for x in range(8, 24):
-                d = ((x - 15.5) / 7) ** 2 + ((y - 20) / 3.6) ** 2
-                if d <= 0.3 + level * 0.15:
-                    put(img, x, y, BS)
-                elif d <= 0.55 + level * 0.15:
-                    put(img, x, y, BS_DARK)
-        put(img, 15, 20, BS_LIGHT)
-        put(img, 16, 20, BS_LIGHT)
+        for x in range(7, 25):
+            wave = (x + level * 2) % 6
+            put(img, x, 22, BS_LIGHT if wave < 2 else BS)
+            put(img, x, 23, BS if wave < 3 else BS_DARK)
+    else:
+        rect(img, 7, 22, 24, 23, (0x1C, 0x24, 0x40))
+    # Corner brackets with rivets, like an ore box.
+    for x0, step in ((3, 1), (28, -1)):
+        for y0, ystep in ((3, 1), (29, -1)):
+            for i in range(3):
+                put(img, x0 + step * i, y0, CRATE_BRACKET)
+                put(img, x0, y0 + ystep * i, CRATE_BRACKET)
+            put(img, x0 + step, y0 + ystep, CRATE_EDGE)
+    # Side handles.
+    for x0, x1 in ((1, 2), (29, 30)):
+        rect(img, x0, 16, x1, 19, CRATE_EDGE)
+        rect(img, x0 if x0 == 1 else x1, 17, x0 if x0 == 1 else x1, 18, CRATE_BRACKET)
+    # Feet.
+    rect(img, 5, 30, 7, 30, CRATE_EDGE)
+    rect(img, 24, 30, 26, 30, CRATE_EDGE)
     if receiving is not None:
-        # A bright column and a crystal flash as ore arrives.
-        height = (12, 9, 6, 3)[receiving]
-        for y in range(20 - height, 21):
-            for x in range(14, 18):
-                put(img, x, y, BS_LIGHT if x in (15, 16) else BS, 230)
-        bs_crystal(img, 15, 20, 3 - receiving if receiving < 3 else 1, (255, 255, 255), BS_LIGHT, BS)
+        # Ore arriving: the lid crystal flares and sparks rise from it.
+        bs_crystal(img, 15, 9, 3 + (1 if receiving < 2 else 0), (255, 255, 255), BS_LIGHT, BS)
+        for i, (dx, dy) in enumerate(((-5, -2), (5, -3), (-3, 2), (4, 2))):
+            if i <= receiving:
+                put(img, 15 + dx, 9 + dy - receiving, BS_LIGHT)
     return img
 
 
@@ -504,7 +547,7 @@ def drill_states():
     states.append(("bs_receiver", [draw_receiver()], 1, 1, None))
     states.append(("bs_receiver_on", [draw_receiver(glow) for glow in range(1, 5)], 1, 4, (3, 3, 3, 3)))
     states.append(("bs_receiver_receive", [draw_receiver(1, frame) for frame in range(4)], 1, 4, (1, 1, 1, 1)))
-    states.append(("bs_receiver_panel", [draw_panel_overlay(0, 7)], 1, 1, None))
+    states.append(("bs_receiver_panel", [draw_panel_overlay(-2, 12)], 1, 1, None))
     for mask in range(16):
         states.append((f"ore_pipe_{mask}", [draw_pipe(mask)], 1, 1, None))
     for direction in (NORTH, SOUTH, EAST, WEST):
