@@ -313,3 +313,7 @@
 /area/station/engineering/ulthor_burn_room
 	name = "Ulthor Burn Room"
 	icon_state = "atmos"
+
+/area/station/maintenance/ulthor_departures_passage
+	name = "Ulthor Departures Maintenance"
+	icon_state = "asmaint"
