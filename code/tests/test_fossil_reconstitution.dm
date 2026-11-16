@@ -145,6 +145,6 @@
 		var/list/states = icon_states(initial(beast.icon))
 		TEST_ASSERT(initial(beast.icon_living) in states, "[mob_type] lacks a living sprite")
 		TEST_ASSERT(initial(beast.icon_dead) in states, "[mob_type] lacks a dead sprite")
-	var/list/tank_states = icon_states('icons/obj/xenoarchaeology.dmi')
-	for(var/state in list("cellbottomold", "cellbottom-pold", "celltopold", "celltop-pold", "celltop_1old"))
+	var/list/tank_states = icon_states('icons/obj/fossil_tank.dmi')
+	for(var/state in list("tank", "tank_growing", "tank_off"))
 		TEST_ASSERT(state in tank_states, "The growth tank lacks [state]")

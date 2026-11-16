@@ -6463,7 +6463,6 @@
 /area/research_outpost/hallway)
 "zU" = (
 /obj/structure/disposalpipe/segment,
-/mob/living/carbon/human/lesser/monkey,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},

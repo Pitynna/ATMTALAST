@@ -531,8 +531,9 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 /obj/machinery/fossil_incubator
 	name = "reconstitution growth tank"
 	desc = "A tall vat of nutrient gel. Feed it raw meat or monkey cubes and a fauna reconstitution console can grow a reconstructed creature inside."
-	icon = 'icons/obj/xenoarchaeology.dmi'
-	icon_state = "cellbottomold"
+	// 32x64: the glass column rises one tile above the base. Made by tools/xenoarch/tank_sprite.py.
+	icon = 'icons/obj/fossil_tank.dmi'
+	icon_state = "tank"
 	density = TRUE
 	anchored = TRUE
 	idle_power_usage = 200
@@ -572,18 +573,12 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 	update_icon()
 
 /obj/machinery/fossil_incubator/update_icon_state()
-	icon_state = (stat & NOPOWER) ? "cellbottom-pold" : "cellbottomold"
-
-/obj/machinery/fossil_incubator/update_overlays()
-	. = ..()
-	var/top_state = "celltopold"
 	if(stat & NOPOWER)
-		top_state = "celltop-pold"
+		icon_state = "tank_off"
 	else if(growing && growth_progress() >= 50)
-		top_state = "celltop_1old"
-	var/mutable_appearance/top = mutable_appearance(icon, top_state, ABOVE_MOB_LAYER)
-	top.pixel_y = 32
-	. += top
+		icon_state = "tank_growing"
+	else
+		icon_state = "tank"
 
 /obj/machinery/fossil_incubator/examine(mob/user)
 	. = ..()

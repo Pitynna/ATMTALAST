@@ -485,11 +485,12 @@ world
 			addY1 = min(flatY1, layer_image.pixel_y + layer_image.pixel_z + 1)
 			addY2 = max(flatY2, layer_image.pixel_y + layer_image.pixel_z + add.Height())
 
+			// Grow the canvas when the overlay sticks out on any side (tall sprites, offset overlays).
 			if(
 				addX1 != flatX1 \
-				&& addX2 != flatX2 \
-				&& addY1 != flatY1 \
-				&& addY2 != flatY2 \
+				|| addX2 != flatX2 \
+				|| addY1 != flatY1 \
+				|| addY2 != flatY2 \
 			)
 				// Resize the flattened icon so the new icon fits
 				flat.Crop(
@@ -500,8 +501,8 @@ world
 				)
 
 				flatX1 = addX1
-				flatX2 = addY1
-				flatY1 = addX2
+				flatX2 = addX2
+				flatY1 = addY1
 				flatY2 = addY2
 
 			// Blend the overlay into the flattened icon

@@ -686,6 +686,7 @@ def apply_patches(tiles):
     remove(T(162, 207), '/obj/structure/table')
     T(162, 207).append('/obj/machinery/computer/fossil_reconstitutor/flora')
     remove(T(165, 197), '/mob/living/carbon/human/lesser/monkey')
+    remove(T(165, 198), '/mob/living/carbon/human/lesser/monkey')  # the tank's glass column covers this cell
     T(165, 197).append('/obj/machinery/fossil_incubator')
     T(163, 198).append(make_atom('/obj/machinery/computer/fossil_reconstitutor/fauna', {'dir': '8'}))
     T(163, 197).append('/obj/item/storage/box/monkeycubes')
