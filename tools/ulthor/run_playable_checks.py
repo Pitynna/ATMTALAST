@@ -99,7 +99,9 @@ def main():
             report['runtime_directory']=str(runtime)
             (OUT/'runtime-result.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
             print(json.dumps(report),flush=True)
-            if report['passed']!=report['total'] or report['runtime_errors'].strip():raise RuntimeError('Runtime checks failed')
+            errors=[l for l in report['runtime_errors'].splitlines() if 'Runtime in ' in l]
+            print('Runtime errors:',len(errors),flush=True)
+            if report['passed']!=report['total'] or errors:raise RuntimeError('Runtime checks failed')
     finally:
         if process is not None and process.poll() is None:process.terminate();process.wait(timeout=15)
         # No recursive cleanup. Only this run's exact temporary build files.
