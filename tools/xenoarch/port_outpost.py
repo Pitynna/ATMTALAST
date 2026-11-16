@@ -680,11 +680,13 @@ def apply_patches(tiles):
     # No research shuttle docks here any more: seal its airlock.
     tiles[(147, 197)][0] = []
     tiles[(147, 197)][1] = '/turf/simulated/wall/r_wall'
+    # Atmospherics never had its own APC; the filters and thermomachines need one.
+    T(175, 206).append(make_atom('/obj/machinery/power/apc', {'dir': '8', 'name': q('Outpost Atmospherics APC'), 'pixel_x': '-24'}))
     # Fossil reconstitution: flora beside the soil trays, fauna and its growth tank at the old monkey pen.
     remove(T(162, 207), '/obj/structure/table')
     T(162, 207).append('/obj/machinery/computer/fossil_reconstitutor/flora')
-    remove(T(165, 198), '/mob/living/carbon/human/lesser/monkey')
-    T(165, 198).append('/obj/machinery/fossil_incubator')
+    remove(T(165, 197), '/mob/living/carbon/human/lesser/monkey')
+    T(165, 197).append('/obj/machinery/fossil_incubator')
     T(163, 198).append(make_atom('/obj/machinery/computer/fossil_reconstitutor/fauna', {'dir': '8'}))
     T(163, 197).append('/obj/item/storage/box/monkeycubes')
 

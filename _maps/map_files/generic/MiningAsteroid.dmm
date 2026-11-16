@@ -6456,14 +6456,14 @@
 /area/research_outpost/hallway)
 "zT" = (
 /obj/structure/disposalpipe/segment,
-/mob/living/carbon/human/lesser/monkey,
+/obj/machinery/fossil_incubator,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
 "zU" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/fossil_incubator,
+/mob/living/carbon/human/lesser/monkey,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -8270,7 +8270,7 @@
 /area/research_outpost/hallway)
 "DL" = (
 /obj/structure/cable{
-	banned_links = 13
+	banned_links = 12
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
@@ -8297,6 +8297,9 @@
 	},
 /area/mine/laborcamp)
 "DN" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	color = "#dd1010"
@@ -8313,6 +8316,9 @@
 	},
 /area/mine/abandoned)
 "DP" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -8368,6 +8374,9 @@
 /turf/simulated/floor/plasteel,
 /area/mine/production)
 "DU" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -8378,6 +8387,9 @@
 	},
 /area/research_outpost/hallway)
 "DV" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	color = "#dd1010"
@@ -8404,6 +8416,9 @@
 	},
 /area/mine/laborcamp)
 "DY" = (
+/obj/structure/cable{
+	banned_links = 9
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
@@ -8551,6 +8566,9 @@
 	},
 /area/mine/laborcamp)
 "Eu" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
 /obj/machinery/door/airlock/atmos{
 	name = "Outpost Atmospherics";
 	req_access = list(10,24,65)
@@ -8800,18 +8818,27 @@
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
 "EW" = (
+/obj/structure/cable{
+	banned_links = 6
+	},
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
 "EX" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
 /obj/machinery/atmospherics/unary/thermomachine/freezer{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
 "EY" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
 /obj/machinery/atmospherics/unary/thermomachine/heater{
 	dir = 4
 	},
@@ -8821,11 +8848,19 @@
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
 "EZ" = (
+/obj/structure/cable{
+	banned_links = 13
+	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 5
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "Outpost Atmospherics APC";
+	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)

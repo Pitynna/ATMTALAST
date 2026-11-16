@@ -669,10 +669,8 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 	growth_done = 0
 	update_use_power(IDLE_POWER_USE)
 	update_icon()
-	var/turf/exit = get_step(src, SOUTH)
-	if(!exit || exit.density)
-		exit = get_turf(src)
-	var/mob/living/creature = new genome.result_type(exit)
+	// Born inside the tank's own cell, so a tank in a pen keeps its creatures penned.
+	var/mob/living/creature = new genome.result_type(get_turf(src))
 	apply_fossil_fidelity(creature, genome.fidelity)
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE)
 	visible_message(span_notice("[src] drains with a gush and \a [creature] stumbles out!"))

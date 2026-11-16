@@ -115,15 +115,10 @@
 
 /obj/item/seeds/prehistoric
 	abstract_type = /obj/item/seeds/prehistoric
-	icon = 'icons/obj/hydroponics/prehistoric.dmi'
 	growing_icon = 'icons/obj/hydroponics/prehistoric.dmi'
 	rarity = 30
 	/// Grade of the genome this packet was synthesised from.
 	var/reconstitution_grade
-
-/obj/item/seeds/prehistoric/Initialize(mapload, nogenes)
-	icon_state = "seed-[species]"
-	return ..()
 
 /// Sample quality shifts the starting stats of the synthesised seeds.
 /obj/item/seeds/prehistoric/proc/apply_fidelity(fidelity)
@@ -148,6 +143,8 @@
 	name = "pack of telriis seeds"
 	desc = "Reconstituted seeds of an extinct grass. They grow into tough, wine-scented tufts."
 	species = "telriis"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-telriis"
 	plantname = "Telriis Grass"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/telriis
 	lifespan = 50
@@ -171,6 +168,8 @@
 	name = "pack of thaa'dra spores"
 	desc = "Reconstituted spores of an extinct lichen that thrived on frozen rock."
 	species = "thaadra"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-thaadra"
 	plantname = "Thaa'dra Lichen"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/thaadra
 	lifespan = 20
@@ -193,6 +192,8 @@
 	name = "pack of jurl'mah seeds"
 	desc = "Reconstituted seeds of an extinct reed with strange, pulsing pods."
 	species = "jurlmah"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-jurlmah"
 	plantname = "Jurl'mah Reeds"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/jurlmah
 	lifespan = 20
@@ -215,6 +216,8 @@
 	name = "pack of amauri seeds"
 	desc = "Reconstituted seeds of an extinct plant with fiercely hot fruit."
 	species = "amauri"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-amauri"
 	plantname = "Amauri Plant"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/amauri
 	lifespan = 30
@@ -237,6 +240,8 @@
 	name = "pack of gelthi seeds"
 	desc = "Reconstituted seeds of an extinct berry plant with numbing, fiery fruit."
 	species = "gelthi"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-gelthi"
 	plantname = "Gelthi Plant"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/gelthi
 	lifespan = 20
@@ -261,6 +266,8 @@
 	name = "pack of vale seeds"
 	desc = "Reconstituted seeds of an extinct medicinal shrub."
 	species = "vale"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-vale"
 	plantname = "Vale Bush"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/vale
 	lifespan = 25
@@ -285,6 +292,8 @@
 	name = "pack of surik seeds"
 	desc = "Reconstituted seeds of an extinct vine whose fruit calms the mind."
 	species = "surik"
+	icon = 'icons/obj/hydroponics/prehistoric.dmi'
+	icon_state = "seed-surik"
 	plantname = "Surik Vine"
 	product = /obj/item/reagent_containers/food/snacks/grown/prehistoric/surik
 	lifespan = 30
