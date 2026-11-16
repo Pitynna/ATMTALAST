@@ -131,7 +131,7 @@
 	for(var/obj/machinery/camera/camera as anything in cameras)
 		TEST_ASSERT(published[camera], "[camera.c_tag] must be reachable from at least one mapped console")
 	var/station_z = level_name_to_num(MAIN_STATION)
-	for(var/list/anchor in list(list(76,160,/area/station/service/ulthor_82_155), list(84,142,/area/station/service/ulthor_80_150), list(123,175,/area/station/medical/ulthor_124_179), list(166,145,/area/station/engineering/atmos)))
+	for(var/list/anchor in list(list(76,160,/area/hydroponics), list(84,142,/area/station/service/bar), list(123,175,/area/station/medical/medbay), list(166,145,/area/station/engineering/atmos)))
 		TEST_ASSERT(istype(get_area(locate(anchor[1],anchor[2],station_z)), anchor[3]), "Camera room at [anchor[1]]:[anchor[2]] must match its department")
 	log_world("ULTHOR SYSTEMS: [length(cameras)] cameras, [consoles] consoles, [frames] actual frames")
 

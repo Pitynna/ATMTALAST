@@ -1,5 +1,5 @@
-cable tiles: 1516, networks: 1, main net #0 (1516 tiles, 6 SMES)
-APCs: 124, not on main net: 0
+cable tiles: 1521, networks: 1, main net #0 (1521 tiles, 6 SMES)
+APCs: 122, not on main net: 0
 cables on space: 91
 cables on wall: 0
 cables on window: 0
