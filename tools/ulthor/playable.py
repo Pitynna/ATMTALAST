@@ -200,6 +200,11 @@ def fixups(M):
 ROOM_OVERRIDES = [
     ((166, 145), '/area/station/engineering/atmos'),  # atmospherics control room (camera, manuals)
 ]
+# Rooms that open onto a corridor without a door: tiles in the box that the
+# corridor took over go back to the room (x0, y0, x1, y1, area).
+RECT_OVERRIDES = [
+    (124, 174, 134, 177, '/area/station/medical/ulthor_124_179'),  # medbay waiting room off the north corridor
+]
 
 
 def rezone(M):
@@ -314,6 +319,11 @@ def rezone(M):
         if around:
             best = max(around.values())
             new[(x, y)] = a if around.get(a) == best else around.most_common(1)[0][0]
+    for x0, y0, x1, y1, a in RECT_OVERRIDES:
+        for x in range(x0, x1 + 1):
+            for y in range(y0, y1 + 1):
+                if '/hallway/' in new.get((x, y), ''):
+                    new[(x, y)] = a
     for p, a in apc.items():  # an APC always stays inside the area it powers
         new[p] = a
     changed = 0
