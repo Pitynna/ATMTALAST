@@ -38,6 +38,7 @@
 #include "test_mining_drill.dm"
 #include "test_ore_deposits.dm"
 #include "test_xenoarchaeology.dm"
+#include "test_fossil_reconstitution.dm"
 #include "test_paintings.dm"
 #include "test_portagrav.dm"
 #include "test_plane_double_transform.dm"

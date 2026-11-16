@@ -3821,6 +3821,8 @@
 #include "code\modules\research\xenoarchaeology\machines.dm"
 #include "code\modules\research\xenoarchaeology\areas.dm"
 #include "code\modules\research\xenoarchaeology\designs.dm"
+#include "code\modules\research\xenoarchaeology\prehistoric_life.dm"
+#include "code\modules\research\xenoarchaeology\reconstitution.dm"
 #include "code\modules\research\server.dm"
 #include "code\modules\research\designs\autolathe_designs.dm"
 #include "code\modules\research\designs\biogenerator_designs.dm"

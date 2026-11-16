@@ -1,0 +1,116 @@
+// Research outpost instruments: weathered sandstone with fossil-amber accents.
+.theme-xenoarch:root {
+  --xenoarch-color: hsl(32, 45%, 42%);
+
+  // Base
+  --color-base: hsl(28, 18%, 11%);
+  --color-primary: var(--xenoarch-color);
+  --color-label: hsl(36, 30%, 62%);
+  --color-border-primary: hsl(36, 70%, 70%);
+  --secondary-lightness-adjustment: -4;
+  --border-radius-unit: 0.17;
+  --base-gradient-spread: 5;
+
+  // Components
+  --button-color-transparent: hsla(36, 40%, 82%, 0.8);
+  --progress-bar-background: hsla(0, 0%, 0%, 0.45);
+  --tooltip-background-lightness: 22;
+}
+
+.theme-xenoarch .FossilReconstitutor__locus {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4.6em;
+  height: 3.4em;
+  margin: 0.1em;
+  border: 2px solid hsla(36, 30%, 60%, 0.35);
+  border-radius: 0.3em;
+  background: hsla(0, 0%, 0%, 0.35);
+  cursor: pointer;
+  vertical-align: middle;
+  transition: border-color 0.15s;
+}
+
+.theme-xenoarch .FossilReconstitutor__locus:hover {
+  border-color: hsl(36, 70%, 70%);
+}
+
+.theme-xenoarch .FossilReconstitutor__locus--match {
+  border-color: hsl(120, 55%, 45%);
+  background: hsla(120, 50%, 20%, 0.35);
+}
+
+.theme-xenoarch .FossilReconstitutor__locus--shift {
+  border-color: hsl(42, 90%, 55%);
+  background: hsla(42, 70%, 25%, 0.35);
+}
+
+.theme-xenoarch .FossilReconstitutor__locus--foreign {
+  border-color: hsl(0, 65%, 50%);
+  background: hsla(0, 60%, 22%, 0.35);
+}
+
+.theme-xenoarch .FossilReconstitutor__locus--target {
+  border-style: dashed;
+  border-color: hsl(36, 85%, 72%);
+}
+
+.theme-xenoarch .FossilReconstitutor__link {
+  display: inline-block;
+  width: 0.9em;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0.25;
+}
+
+.theme-xenoarch .FossilReconstitutor__link--joined {
+  opacity: 1;
+  color: hsl(120, 55%, 55%);
+}
+
+.theme-xenoarch .FossilReconstitutor__fragment {
+  display: inline-block;
+  padding: 0.15em 0.35em;
+  margin: 0.15em;
+  border: 1px solid hsla(36, 30%, 60%, 0.4);
+  border-radius: 0.25em;
+  background: hsla(0, 0%, 0%, 0.3);
+  cursor: pointer;
+}
+
+.theme-xenoarch .FossilReconstitutor__fragment:hover {
+  border-color: hsl(36, 70%, 70%);
+}
+
+.theme-xenoarch .FossilReconstitutor__fragment--selected {
+  border-color: hsl(36, 95%, 65%);
+  background: hsla(36, 80%, 35%, 0.55);
+}
+
+.theme-xenoarch .FossilReconstitutor__fragment--used {
+  opacity: 0.45;
+}
+
+.theme-xenoarch .FossilReconstitutor__bases {
+  font-family: Consolas, 'Courier New', monospace;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.theme-xenoarch .FossilReconstitutor__base--A {
+  color: hsl(120, 55%, 58%);
+}
+
+.theme-xenoarch .FossilReconstitutor__base--C {
+  color: hsl(205, 75%, 65%);
+}
+
+.theme-xenoarch .FossilReconstitutor__base--G {
+  color: hsl(48, 90%, 60%);
+}
+
+.theme-xenoarch .FossilReconstitutor__base--T {
+  color: hsl(0, 70%, 64%);
+}
