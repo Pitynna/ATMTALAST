@@ -803,7 +803,24 @@ def beacons(M):
 STAGES = [gravity_room, pipe_fixes, fixups, rezone, job_starts, cameras_stage, lighting, holopads, beacons]
 
 
+def guard_hand_edits():
+    """Refuse to overwrite the map when anyone edited it after this script's last output.
+
+    On 16 Nov 2026 a re-run wiped ten minutes of unsaved-to-git StrongDMM work. The
+    script rebuilds from BASE, so it may only replace a file that is exactly its own
+    previous output (hash kept in the report) and has no uncommitted changes.
+    """
+    import hashlib
+    current = hashlib.sha256((ROOT / MAP).read_bytes()).hexdigest()
+    last = json.loads(REPORT.read_text(encoding='utf-8')).get('output_sha256') if REPORT.exists() else None
+    if current != last:
+        sys.exit('REFUSED: Ulthor.dmm was changed after the last playable.py run (hand edits?). '
+                 'Do not rebuild over it: port the new stage to work on the current map instead.')
+
+
 def main():
+    if '--force-overwrite-hand-edits' not in sys.argv:
+        guard_hand_edits()
     raw = subprocess.check_output(['git', 'show', f'{BASE}:{MAP}'], cwd=ROOT)
     with tempfile.NamedTemporaryFile(suffix='.dmm', delete=False) as f:
         f.write(raw)
@@ -814,6 +831,8 @@ def main():
         stage(M)
         print('applied', stage.__name__)
     M.m.to_file(str(ROOT / MAP))
+    import hashlib
+    report['output_sha256'] = hashlib.sha256((ROOT / MAP).read_bytes()).hexdigest()
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, indent=1, ensure_ascii=False), encoding='utf-8')
     print(json.dumps({k: v for k, v in report.items() if k != 'job_starts'}, ensure_ascii=False)[:2000])
