@@ -75,7 +75,7 @@ def main():
         for ext in ['dmb','rsc']:copy(ROOT/(name+'.'+ext),runtime/(name+'.'+ext))
         for dll in ROOT.glob('*.dll'):copy(dll,runtime/dll.name)
         for p in tracked:
-            if p.startswith(('_maps/','config/','strings/','html/','icons/','sound/')):copy(ROOT/p,runtime/p)
+            if p.startswith(('_maps/','config/','strings/','html/','icons/','sound/','code/datums/greyscale/json_configs/')):copy(ROOT/p,runtime/p)
         write_targets(runtime/'ulthor-camera-targets.json')
         if os.environ.get('ULTHOR_MAP_OVERRIDE'):  # compare against another map revision
             copy(Path(os.environ['ULTHOR_MAP_OVERRIDE']), runtime/'_maps/map_files/Ulthor/Ulthor.dmm')
