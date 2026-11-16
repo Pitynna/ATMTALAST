@@ -140,6 +140,38 @@ def gravity_room(M):
     report['gravity_room'] = {'chamber': [151, 97, 155, 103], 'control': [157, 97, 158, 103], 'generator_main': [153, 99]}
 
 
+# ------------------------------------------------------------- pipe fixes
+# Vents mapped on top of a through-going pipe of their own network made the
+# neighbour receive two connections ("pipes stacking in one turf" runtime).
+# Each vent moves to the free side tile; the trunk tile becomes a manifold
+# (dir = closed side) opening toward it.
+VENT_MOVES = [  # trunk tile, network, vent type prefix, new vent tile, side (from trunk to vent)
+    ((75, 141), 'supply', '/obj/machinery/atmospherics/unary/vent_pump', (75, 142), 1),
+    ((78, 139), 'scrubbers', '/obj/machinery/atmospherics/unary/vent_scrubber', (78, 138), 2),
+    ((78, 181), 'scrubbers', '/obj/machinery/atmospherics/unary/vent_scrubber', (77, 181), 8),
+    ((100, 163), 'scrubbers', '/obj/machinery/atmospherics/unary/vent_scrubber', (101, 163), 4),
+]
+
+
+def pipe_fixes(M):
+    rev = {1: 2, 2: 1, 4: 8, 8: 4}
+    done = []
+    for trunk, net, vent_prefix, dest, side in VENT_MOVES:
+        t = M.get(*trunk)
+        vent = next(a for a in t if a.startswith(vent_prefix))
+        pipe = next(a for a in t if a.startswith('/obj/machinery/atmospherics/pipe/simple/hidden/' + net))
+        assert not any(a.startswith('/obj/machinery/atmospherics') for a in M.get(*dest)), dest
+        assert is_floor(M.tile(*dest)), dest
+        M.remove(*trunk, vent_prefix)
+        M.set(*trunk, [('/obj/machinery/atmospherics/pipe/manifold/hidden/%s{dir = %d}' % (net, rev[side])) if a == pipe else a
+                       for a in M.get(*trunk)])
+        new_vent = re.sub(r'(?<![a-z_])dir = \d+', 'dir = %d' % rev[side], vent) if 'dir = ' in vent else (
+            vent[:-1] + ';dir = %d}' % rev[side] if vent.endswith('}') else vent + '{dir = %d}' % rev[side])
+        M.add(*dest, new_vent)
+        done.append([list(trunk), list(dest)])
+    report['pipe_fixes'] = done
+
+
 # ------------------------------------------------------------------ fixups
 def fixups(M):
     """Small reliability fixes: every mapped camera starts working (no 3% random
@@ -758,7 +790,7 @@ def beacons(M):
                          'delivery': deliveries}
 
 
-STAGES = [gravity_room, fixups, rezone, job_starts, cameras_stage, lighting, holopads, beacons]
+STAGES = [gravity_room, pipe_fixes, fixups, rezone, job_starts, cameras_stage, lighting, holopads, beacons]
 
 
 def main():
