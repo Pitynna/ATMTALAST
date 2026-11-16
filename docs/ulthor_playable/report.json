@@ -17,6 +17,10 @@
    99
   ]
  },
+ "fixups": {
+  "cameras_start_active": 38,
+  "buttons_z_check": 1
+ },
  "rezone": {
   "changed_tiles": 2982,
   "subrooms": {

@@ -140,6 +140,29 @@ def gravity_room(M):
     report['gravity_room'] = {'chamber': [151, 97, 155, 103], 'control': [157, 97, 158, 103], 'generator_main': [153, 99]}
 
 
+# ------------------------------------------------------------------ fixups
+def fixups(M):
+    """Small reliability fixes: every mapped camera starts working (no 3% random
+    cut wires) and every door button stays on its own Z-level."""
+    cams = buttons = 0
+    for y in range(1, M.Y + 1):
+        for x in range(1, M.X + 1):
+            t = M.get(x, y)
+            new = []
+            for a in t:
+                if a.startswith('/obj/machinery/camera') and not a.startswith('/obj/machinery/camera_') and 'start_active' not in a:
+                    a = a[:-1] + ';start_active = 1}' if a.endswith('}') else a + '{start_active = 1}'
+                    cams += 1
+                if a.startswith('/obj/machinery/door_control') and 'safety_z_check' not in a:
+                    a = a[:-1] + ';safety_z_check = 1}' if a.endswith('}') else a + '{safety_z_check = 1}'
+                    buttons += 1
+                new.append(a)
+            if new != t:
+                M.set(x, y, new)
+    report['fixups'] = {'cameras_start_active': cams, 'buttons_z_check': buttons}
+    print('  fixups:', report['fixups'])
+
+
 # ------------------------------------------------------------------- zones
 def rezone(M):
     """Make area borders follow walls instead of straight-line distance to APCs.
@@ -721,7 +744,7 @@ def beacons(M):
                          'delivery': deliveries}
 
 
-STAGES = [gravity_room, rezone, job_starts, cameras_stage, lighting, holopads, beacons]
+STAGES = [gravity_room, fixups, rezone, job_starts, cameras_stage, lighting, holopads, beacons]
 
 
 def main():
