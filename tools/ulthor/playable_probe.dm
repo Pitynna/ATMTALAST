@@ -13,7 +13,7 @@ GLOBAL_DATUM_INIT(ulthor_playable_probe, /datum/ulthor_playable_probe, new)
 	UNTIL(SSatoms.initialized && SSticker.initialized && SSair.initialized)
 	var/list/results = list()
 	var/passed = 0
-	for(var/test_type in list(/datum/unit_test/ulthor_power, /datum/unit_test/ulthor_atmos, /datum/unit_test/ulthor_lighting, /datum/unit_test/ulthor_cameras, /datum/unit_test/ulthor_door_controls, /datum/unit_test/ulthor_telecomms, /datum/unit_test/ulthor_shuttles, /datum/unit_test/ulthor_arrivals, /datum/unit_test/ulthor_ai_vision, /datum/unit_test/ulthor_gravity, /datum/unit_test/ulthor_job_starts, /datum/unit_test/ulthor_navbeacons, /datum/unit_test/ulthor_light_power))
+	for(var/test_type in list(/datum/unit_test/ulthor_mining_diag, /datum/unit_test/ulthor_power, /datum/unit_test/ulthor_atmos, /datum/unit_test/ulthor_lighting, /datum/unit_test/ulthor_cameras, /datum/unit_test/ulthor_door_controls, /datum/unit_test/ulthor_telecomms, /datum/unit_test/ulthor_shuttles, /datum/unit_test/ulthor_arrivals, /datum/unit_test/ulthor_ai_vision, /datum/unit_test/ulthor_gravity, /datum/unit_test/ulthor_job_starts, /datum/unit_test/ulthor_navbeacons, /datum/unit_test/ulthor_light_power, /datum/unit_test/ulthor_mining_diag))
 		var/datum/unit_test/test = new test_type
 		try
 			test.Run()
@@ -106,3 +106,16 @@ GLOBAL_LIST_EMPTY(ulthor_playable_metrics)
 			dark["[zone.type]"] = (dark["[zone.type]"] || 0) + 1
 	GLOB.ulthor_playable_metrics["lights"] = list("total" = total, "powered" = powered, "unpowered_by_area" = dark)
 	TEST_ASSERT(powered >= total * 0.97, "Lights without area power: [total - powered] of [total]")
+
+/// Diagnostic only: why the mining shuttle round trip fails.
+/datum/unit_test/ulthor_mining_diag/Run()
+	var/obj/docking_port/mobile/miner = SSshuttle.getShuttle("mining")
+	var/obj/docking_port/stationary/away = SSshuttle.getDock("mining_away")
+	var/obj/docking_port/stationary/home = SSshuttle.getDock("mining_home")
+	GLOB.ulthor_playable_metrics["mining"] = list(
+		"docked" = miner?.getDockedId(),
+		"can_dock_away" = miner?.canDock(away),
+		"can_dock_home" = miner?.canDock(home),
+		"away" = away ? list(away.x, away.y, away.z, away.width, away.height, away.dwidth, away.dheight, away.dir) : null,
+		"ship" = miner ? list(miner.x, miner.y, miner.z, miner.width, miner.height, miner.dwidth, miner.dheight, miner.dir) : null,
+		"mode" = miner?.mode)

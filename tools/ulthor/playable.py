@@ -164,6 +164,12 @@ def fixups(M):
 
 
 # ------------------------------------------------------------------- zones
+# Hand corrections: the whole sub-room containing the tile becomes this area.
+ROOM_OVERRIDES = [
+    ((166, 145), '/area/station/engineering/atmos'),  # atmospherics control room (camera, manuals)
+]
+
+
 def rezone(M):
     """Make area borders follow walls instead of straight-line distance to APCs.
 
@@ -217,7 +223,17 @@ def rezone(M):
                     q.append(n)
 
     kinds = Counter()
+    forced = {}
+    for tile, a in ROOM_OVERRIDES:
+        for comp in subs:
+            if tile in comp:
+                forced[id(comp)] = a
     for comp in subs:
+        if id(comp) in forced:
+            for p in comp:
+                new[p] = forced[id(comp)]
+            kinds['override'] += 1
+            continue
         areas = Counter(old[p] for p in comp)
         hall = {p: old[p] for p in comp if '/hallway/' in old[p]}
         widths = sorted(local_width(M, *p) for p in comp)

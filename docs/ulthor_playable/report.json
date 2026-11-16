@@ -22,11 +22,12 @@
   "buttons_z_check": 1
  },
  "rezone": {
-  "changed_tiles": 2865,
+  "changed_tiles": 2913,
   "subrooms": {
-   "majority": 154,
+   "majority": 153,
    "corridor": 12,
-   "apc": 101
+   "apc": 101,
+   "override": 1
   },
   "apc_area_lost": [],
   "vanished_areas": [],
@@ -71,12 +72,12 @@
   ],
   "atmospheric": [
    [
-    172,
-    125
+    166,
+    142
    ],
    [
-    182,
-    145
+    172,
+    125
    ]
   ],
   "doctor": [
@@ -489,7 +490,7 @@
   ]
  },
  "cameras": {
-  "added": 44,
+  "added": 45,
   "left_blind": 66,
   "list": [
    [
@@ -613,6 +614,11 @@
     105
    ],
    [
+    "Atmospherics #4",
+    165,
+    132
+   ],
+   [
     "Heads of Staff Meeting Room",
     132,
     159
@@ -663,7 +669,7 @@
     121
    ],
    [
-    "Atmospherics #4",
+    "Atmospherics #5",
     179,
     129
    ],
@@ -716,8 +722,8 @@
  },
  "lighting": {
   "added": {
-   "/obj/machinery/light/small": 94,
-   "/obj/machinery/light": 120
+   "/obj/machinery/light/small": 92,
+   "/obj/machinery/light": 122
   },
   "switches": 65
  },
@@ -774,8 +780,8 @@
    ],
    [
     "Atmospherics",
-    167,
-    144
+    163,
+    138
    ],
    [
     "Tool Storage",
