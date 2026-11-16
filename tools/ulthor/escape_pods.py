@@ -75,7 +75,7 @@ def main():
         for y in (169, 170, 171):
             assert not objs((x, y)), ((x, y), t[(x, y)])
             put((x, y), [], FLOOR, FORE)
-    put((72, 171), ['/obj/machinery/light/small{dir = 1}'], FLOOR, FORE)
+    put((72, 171), ['/obj/machinery/light{dir = 1}'], FLOOR, FORE)
     put((71, 170), ['/obj/effect/turf_decal/stripes/line{dir = 8}'], FLOOR, FORE)
     # The maintenance air alarm sat on (72,168), which becomes wall.
     alarm = next(a for a in t[(72, 168)] if a.startswith('/obj/machinery/alarm'))
@@ -93,7 +93,7 @@ def main():
     put((99, 92), hatch(3, 2), '/turf/simulated/floor/plasteel', AFT)
     put((99, 91), [dock(3, 2)], SPACE, '/area/space')
     t[(98, 92)].insert(0, SIGN)
-    t[(100, 93)].insert(0, '/obj/machinery/light/small{dir = 2}')
+    t[(100, 93)].insert(0, '/obj/machinery/light{dir = 2}')
 
     for (x, y), tile in t.items():
         if tuple(tile) != m.get_tile((x, y, 1)):
