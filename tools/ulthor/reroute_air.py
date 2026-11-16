@@ -9,10 +9,10 @@ pipes as an incremental edit of the current map.
   pipe it is attached to. Vents with an id_tag/frequency (gas tanks, airlock
   cyclers) or attached to their own regular-pipe loop (server, turbine,
   perma) are left untouched.
-* Rooms get ceil(floor tiles / 30) vents and scrubbers (maintenance
-  ceil(tiles / 60)); gas chambers (rooms with an injector or tank vent) are
-  not counted. Missing ones are added far from the existing ones, preferring
-  tiles where an old pipe branch ended without a vent.
+* Rooms get ceil(floor tiles / 30) vents and scrubbers; gas chambers (rooms
+  with an injector or tank vent) are not counted. Maintenance passages get
+  none and lose their vents, scrubbers and air alarms (pipes may still pass).
+  Missing ones are added far from the existing ones.
 * Every area with vents or scrubbers gets an air alarm: an alarm controls the
   vents and scrubbers whose tile is in its own area
   (code/game/machinery/alarm.dm, alarm_area = get_area(src)).
@@ -48,7 +48,11 @@ RESERVED = {(x, y) for x in range(145, 150) for y in range(130, 142)}  # future 
 ROOTS = {'supply': ((175, 123), 1), 'scrubbers': ((178, 123), 1)}  # tile, forced dir to the adapter
 NO_NORM = ('/area/space', '/area/shuttle', '/area/station/solars', '/area/station/engineering/ulthor_engine_room')
 TILES_PER_PAIR = 30
-TILES_PER_PAIR_MAINT = 60
+# Maintenance passages have no vents, scrubbers or air alarms (user,
+# 2026-11-16); distro and waste pipes may still run through them. The turbine
+# room is a machine room, and airlock cycler vents (id_tag) stay.
+NO_AIR = '/area/station/maintenance'
+NO_AIR_EXCEPT = ('/area/station/maintenance/turbine',)
 DIR_BITS = (1, 2, 4, 8)
 WALL_MOUNT = ('/obj/machinery/light', '/obj/machinery/alarm', '/obj/machinery/firealarm', '/obj/machinery/power/apc',
               '/obj/machinery/camera', '/obj/machinery/light_switch', '/obj/machinery/status_display',
@@ -139,6 +143,17 @@ def main():
     M = Map()
     t = M.t
     report = []
+
+    def no_air(a):
+        return a.startswith(NO_AIR) and not a.startswith(NO_AIR_EXCEPT)
+
+    stripped = 0
+    for p, tile in t.items():
+        if no_air(M.area(p)):
+            keep = [a for a in tile if not (path(a).startswith('/obj/machinery/alarm') or
+                                            (path(a).startswith((VENT, SCRUB)) and 'id_tag' not in a))]
+            stripped += len(tile) - len(keep)
+            t[p] = keep
 
     # ---- inventory --------------------------------------------------------
     old_pipe = {'supply': set(), 'scrubbers': set()}
@@ -251,9 +266,9 @@ def main():
     added = {'supply': [], 'scrubbers': []}
     atom_new = {'supply': VENT + '/on', 'scrubbers': SCRUB + '/on'}
     for a, tiles in sorted(by_area.items()):
-        if not station(a) or a.startswith(NO_NORM):
+        if not station(a) or a.startswith(NO_NORM) or no_air(a):
             continue
-        per = TILES_PER_PAIR_MAINT if a.startswith('/area/station/maintenance') else TILES_PER_PAIR
+        per = TILES_PER_PAIR
         need = math.ceil(len(tiles) / per)
         cand = [p for p in tiles if free_tile(p, True)]
         by_door = {p for p in cand if not free_tile(p)}  # last resort in cramped rooms
@@ -282,7 +297,7 @@ def main():
             alarms[M.area(p)].append(p)
     added_alarms = []
     for a in sorted(set(M.area(p) for k in have for ar in have[k] for p in have[k][ar])):
-        if alarms[a] or not station(a):
+        if alarms[a] or not station(a) or no_air(a):
             continue
         tiles = by_area.get(a, [])
         if not tiles:
@@ -452,7 +467,8 @@ def main():
           f'scrubber pipes {len(old_pipe["scrubbers"])} -> {len(scr_bits)}')
     print(f'vents attached {len(sup_attach)}, added {len(added["supply"])}; '
           f'scrubbers attached {len(scr_attach)}, added {len(added["scrubbers"])}; '
-          f'air alarms added {len(added_alarms)}; fixed devices left alone {len(fixed)}')
+          f'air alarms added {len(added_alarms)}; fixed devices left alone {len(fixed)}; '
+          f'removed from maintenance {stripped}')
     for r in report:
         print('FAIL', r)
     return 1 if report else 0

@@ -2506,90 +2506,6 @@
    "missing_scrubbers": 0,
    "no_alarm": false
   },
-  "/area/station/maintenance/solars/port/fore": {
-   "tiles": 10,
-   "vents": [
-    [
-     80,
-     196,
-     "/obj/machinery/atmospherics/unary/vent_pump/high_volume"
-    ]
-   ],
-   "scrubbers": [
-    [
-     80,
-     193,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     79,
-     193,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/solars/port/ulthor": {
-   "tiles": 9,
-   "vents": [
-    [
-     58,
-     142,
-     "/obj/machinery/atmospherics/unary/vent_pump/high_volume"
-    ]
-   ],
-   "scrubbers": [
-    [
-     61,
-     142,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     62,
-     143,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/solars/starboard/aft": {
-   "tiles": 9,
-   "vents": [
-    [
-     172,
-     91,
-     "/obj/machinery/atmospherics/unary/vent_pump/high_volume"
-    ]
-   ],
-   "scrubbers": [
-    [
-     172,
-     94,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     171,
-     93,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
   "/area/station/maintenance/turbine": {
    "tiles": 52,
    "vents": [
@@ -2609,6 +2525,11 @@
      190,
      145,
      "/obj/machinery/atmospherics/unary/vent_scrubber"
+    ],
+    [
+     192,
+     147,
+     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ]
    ],
    "alarms": [
@@ -2618,500 +2539,7 @@
      "/obj/machinery/alarm"
     ]
    ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_ai_passage": {
-   "tiles": 21,
-   "vents": [
-    [
-     147,
-     149,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     148,
-     149,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     147,
-     146,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_asylum": {
-   "tiles": 8,
-   "vents": [
-    [
-     125,
-     192,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     126,
-     191,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     128,
-     192,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_departures_passage": {
-   "tiles": 101,
-   "vents": [
-    [
-     163,
-     103,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     175,
-     97,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     164,
-     103,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     175,
-     98,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     170,
-     97,
-     "/obj/machinery/alarm"
-    ]
-   ],
    "need": 2,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_engineering_passage": {
-   "tiles": 158,
-   "vents": [
-    [
-     161,
-     137,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     163,
-     123,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     174,
-     117,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     156,
-     147,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     160,
-     137,
-     "/obj/machinery/atmospherics/unary/vent_scrubber"
-    ],
-    [
-     168,
-     122,
-     "/obj/machinery/atmospherics/unary/vent_scrubber"
-    ]
-   ],
-   "alarms": [
-    [
-     164,
-     130,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 3,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_northeast_passage": {
-   "tiles": 226,
-   "vents": [
-    [
-     139,
-     174,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     156,
-     185,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     176,
-     180,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     185,
-     144,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     139,
-     173,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     155,
-     185,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     175,
-     180,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     185,
-     145,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     165,
-     180,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 4,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_northwest_passage": {
-   "tiles": 290,
-   "vents": [
-    [
-     80,
-     189,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     98,
-     172,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     112,
-     193,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     129,
-     195,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     145,
-     190,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     80,
-     188,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     98,
-     173,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     112,
-     192,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     128,
-     195,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     145,
-     189,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     107,
-     189,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 5,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_research_passage": {
-   "tiles": 155,
-   "vents": [
-    [
-     150,
-     157,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     162,
-     151,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     163,
-     164,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     150,
-     156,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     161,
-     151,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     163,
-     163,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     150,
-     152,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 3,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_security_passage": {
-   "tiles": 84,
-   "vents": [
-    [
-     149,
-     114,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     158,
-     109,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     149,
-     113,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     158,
-     110,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     154,
-     112,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 2,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_service_passage": {
-   "tiles": 33,
-   "vents": [
-    [
-     94,
-     139,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     94,
-     138,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     96,
-     140,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 1,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_south_passage": {
-   "tiles": 126,
-   "vents": [
-    [
-     89,
-     124,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     101,
-     121,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     103,
-     109,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     90,
-     124,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     102,
-     121,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     102,
-     109,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     97,
-     116,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 3,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/maintenance/ulthor_west_passage": {
-   "tiles": 238,
-   "vents": [
-    [
-     62,
-     152,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     72,
-     173,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     75,
-     135,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     79,
-     190,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     63,
-     152,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     73,
-     173,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     74,
-     135,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     78,
-     190,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     71,
-     166,
-     "/obj/machinery/alarm"
-    ],
-    [
-     73,
-     188,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 4,
    "missing_vents": 0,
    "missing_scrubbers": 0,
    "no_alarm": false
@@ -5127,13 +4555,6 @@
    ]
   },
   {
-   "area": "/area/station/maintenance/solars/starboard/aft",
-   "rooms": [
-    9,
-    1
-   ]
-  },
-  {
    "area": "/area/station/engineering/gravity_generator",
    "rooms": [
     35,
@@ -5204,14 +4625,6 @@
    ]
   },
   {
-   "area": "/area/station/maintenance/ulthor_engineering_passage",
-   "rooms": [
-    177,
-    43,
-    7
-   ]
-  },
-  {
    "area": "/area/station/cargo/office",
    "rooms": [
     110,
@@ -5219,14 +4632,6 @@
     1,
     1,
     1
-   ]
-  },
-  {
-   "area": "/area/station/maintenance/ulthor_research_passage",
-   "rooms": [
-    1171,
-    177,
-    133
    ]
   },
   {
@@ -5262,26 +4667,11 @@
    ]
   },
   {
-   "area": "/area/station/maintenance/ulthor_west_passage",
-   "rooms": [
-    1171,
-    103,
-    34
-   ]
-  },
-  {
    "area": "/area/station/maintenance/turbine",
    "rooms": [
     49,
     5,
     3
-   ]
-  },
-  {
-   "area": "/area/station/maintenance/solars/port/ulthor",
-   "rooms": [
-    9,
-    1
    ]
   },
   {
@@ -5431,14 +4821,6 @@
     29,
     3
    ]
-  },
-  {
-   "area": "/area/station/maintenance/solars/port/fore",
-   "rooms": [
-    9,
-    1,
-    1
-   ]
   }
  ],
  "rooms_multi_area": [
@@ -5567,5 +4949,6 @@
     "/area/station/command/office/hop": 8
    }
   }
- ]
+ ],
+ "maintenance_air": []
 }

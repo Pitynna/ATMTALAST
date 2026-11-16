@@ -28,7 +28,10 @@ from rooms import Station, CARD, area, turf, is_floor, is_boundary  # noqa: E402
 from check_pipes import parse, DELTA, REV  # noqa: E402
 
 TILES_PER_UNIT = 30
-TILES_PER_UNIT_MAINT = 60
+# Maintenance passages must have no vents, scrubbers or air alarms (airlock
+# cycler vents with an id_tag excepted); the turbine room is a machine room.
+NO_AIR = '/area/station/maintenance'
+NO_AIR_EXCEPT = ('/area/station/maintenance/turbine',)
 VENT = '/obj/machinery/atmospherics/unary/vent_pump'
 SCRUB = '/obj/machinery/atmospherics/unary/vent_scrubber'
 ALARM = '/obj/machinery/alarm'
@@ -152,11 +155,18 @@ def audit(path):
                         for q in adj[(x, y, i)])
                     report['detached'].append({'x': x, 'y': y, 'kind': kd, 'area': a, 'own_system': own,
                                                'net_size': sizes[comp[(x, y, i)]]})
+    report['maintenance_air'] = []
     for a, r in sorted(per_area.items()):
+        if a.startswith(NO_AIR) and not a.startswith(NO_AIR_EXCEPT):
+            for kd in ('vents', 'scrubbers', 'alarms'):
+                for x, y, typ in r[kd]:
+                    atoms = st.tile(x, y)
+                    if not any(b.startswith(typ) and 'id_tag' in b for b in atoms):
+                        report['maintenance_air'].append({'x': x, 'y': y, 'type': typ, 'area': a})
+            continue
         if a.startswith(SKIP) or not r['tiles']:
             continue
-        per = TILES_PER_UNIT_MAINT if a.startswith('/area/station/maintenance') else TILES_PER_UNIT
-        need = math.ceil(r['tiles'] / per)
+        need = math.ceil(r['tiles'] / TILES_PER_UNIT)
         r['need'] = need
         r['missing_vents'] = max(0, need - len(r['vents']))
         r['missing_scrubbers'] = max(0, need - len(r['scrubbers']))
@@ -198,6 +208,9 @@ def main():
     print('vents/scrubbers off the main network:', len(stray),
           f"(+{len(r['detached']) - len(stray)} on their own systems: tanks, airlocks, cooling loops)")
     for e in stray:
+        print('  ', e)
+    print('vents/scrubbers/air alarms in maintenance:', len(r['maintenance_air']))
+    for e in r['maintenance_air']:
         print('  ', e)
     bad = {a: v for a, v in r['areas'].items() if v['missing_vents'] or v['missing_scrubbers'] or v['no_alarm']}
     print('areas below norm or without alarm:', len(bad), 'of', len(r['areas']))

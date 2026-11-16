@@ -1,7 +1,8 @@
 open supply/scrubber pipe ends: 0
 vents/scrubbers off the main network: 0 (+11 on their own systems: tanks, airlocks, cooling loops)
-areas below norm or without alarm: 0 of 123
-areas split into several rooms: 45
+vents/scrubbers/air alarms in maintenance: 0
+areas below norm or without alarm: 0 of 109
+areas split into several rooms: 39
    security/podbay [36, 8, 4]
    hallway/primary/aft [661, 232]
    hallway/secondary/entry [661, 65, 6, 5, 5, 1, 1]
@@ -9,7 +10,6 @@ areas split into several rooms: 45
    legal/courtroom [34, 27]
    security/lobby [36, 6]
    security/detectives_office [89, 40]
-   maintenance/solars/starboard/aft [9, 1]
    engineering/gravity_generator [35, 14]
    cargo/storage [40, 26, 12]
    cargo/miningdock [461, 4]
@@ -19,14 +19,10 @@ areas split into several rooms: 45
    security/hallway/armory [178, 16]
    security/medical [16, 9, 1]
    commons/toilet/locker_toilet [4, 2, 2]
-   maintenance/ulthor_engineering_passage [177, 43, 7]
    cargo/office [110, 1, 1, 1, 1]
-   maintenance/ulthor_research_passage [1171, 177, 133]
    engineering/atmos [238, 42, 4, 4, 4, 4, 4, 4, 4, 1]
    security/prison/perma [124, 42, 25, 25, 9, 6, 4, 4, 4, 3, 1, 1]
-   maintenance/ulthor_west_passage [1171, 103, 34]
    maintenance/turbine [49, 5, 3]
-   maintenance/solars/port/ulthor [9, 1]
    hallway/primary/fore [1171, 6]
    medical/medbay [1171, 8]
    medical/ward [1171, 12, 6, 6, 4]
@@ -46,4 +42,3 @@ areas split into several rooms: 45
    medical/morgue [12, 9]
    medical/virology [19, 6, 4, 4]
    science/genetics [29, 3]
-   maintenance/solars/port/fore [9, 1, 1]
