@@ -11,6 +11,14 @@ GLOBAL_DATUM_INIT(ulthor_playable_probe, /datum/ulthor_playable_probe, new)
 	CONFIG_SET(flag/hub, FALSE)
 	world.update_hub_visibility(FALSE)
 	UNTIL(SSatoms.initialized && SSticker.initialized && SSair.initialized)
+	// Atmos (and with it every MILLA-synchronised action such as shuttle docking) only
+	// runs once a round is in progress, so start an empty extended round first.
+	GLOB.master_mode = "extended"
+	SSticker.force_start = TRUE
+	var/deadline = world.time + 180 SECONDS
+	UNTIL(SSticker.current_state == GAME_STATE_PLAYING || world.time > deadline)
+	GLOB.ulthor_playable_metrics["round_started"] = (SSticker.current_state == GAME_STATE_PLAYING)
+	sleep(10 SECONDS)
 	var/list/results = list()
 	var/passed = 0
 	for(var/test_type in list(/datum/unit_test/ulthor_mining_diag, /datum/unit_test/ulthor_power, /datum/unit_test/ulthor_atmos, /datum/unit_test/ulthor_lighting, /datum/unit_test/ulthor_cameras, /datum/unit_test/ulthor_door_controls, /datum/unit_test/ulthor_telecomms, /datum/unit_test/ulthor_shuttles, /datum/unit_test/ulthor_arrivals, /datum/unit_test/ulthor_ai_vision, /datum/unit_test/ulthor_gravity, /datum/unit_test/ulthor_job_starts, /datum/unit_test/ulthor_navbeacons, /datum/unit_test/ulthor_light_power, /datum/unit_test/ulthor_mining_late))
