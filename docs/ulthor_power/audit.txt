@@ -1,4 +1,4 @@
-cable tiles: 1514, networks: 1, main net #0 (1514 tiles, 5 SMES)
+cable tiles: 1516, networks: 1, main net #0 (1516 tiles, 6 SMES)
 APCs: 124, not on main net: 0
 cables on space: 91
 cables on wall: 0
@@ -18,7 +18,7 @@ generation (layer 1) nets: 5
   machine (134, 109, 1) /obj/machinery/power/treadmill grid 
   machine (138, 109, 1) /obj/machinery/power/treadmill grid 
   machine (140, 148, 1) /obj/machinery/power/terminal grid 
-  machine (140, 149, 1) /obj/machinery/power/smes net None 
+  machine (140, 149, 1) /obj/machinery/power/smes grid 
   machine (140, 155, 1) /obj/machinery/power/emitter grid 
   machine (145, 121, 1) /obj/machinery/power/emitter net None 
   machine (145, 122, 1) /obj/machinery/power/emitter net None 

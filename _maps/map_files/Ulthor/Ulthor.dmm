@@ -2812,6 +2812,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel,
 /area/station/maintenance/turbine)
+"aXa" = (
+/obj/structure/cable,
+/turf/simulated/wall,
+/area/station/ai/ulthor_141_152)
 "aXo" = (
 /obj/machinery/light{
 	dir = 4
@@ -40491,6 +40495,18 @@
 /obj/structure/lattice/catwalk,
 /turf/space,
 /area/station/solars/port/ulthor)
+"nfd" = (
+/obj/structure/cable,
+/obj/machinery/light_switch/directional/north,
+/obj/machinery/power/smes{
+	charge = 5e+006
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/telecomms/ulthor_145_147)
 "nff" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -110613,7 +110629,7 @@ fEq
 iAF
 pXP
 uQW
-sJo
+nfd
 bWU
 hUn
 agy
@@ -110870,7 +110886,7 @@ nTZ
 vrC
 tdi
 tdi
-tdi
+aXa
 atc
 hUn
 agy

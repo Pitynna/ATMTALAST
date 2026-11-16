@@ -16,6 +16,8 @@ sys.path.insert(0, str(ROOT / "tools/mapmerge2"))
 from dmm import DMM  # noqa: E402
 
 MAP = ROOT / "_maps/map_files/Ulthor/Ulthor.dmm"
+# AI core SMES output runs under this wall (its niche has no other open side).
+ALLOWED_WALL = {(141, 149, 1)}
 
 
 def path(atom):
@@ -90,7 +92,7 @@ def audit(tiles):
     for p, t in tiles.items():
         if any(cable_layer(a) for a in t):
             c = classify(t)
-            if c in bad:
+            if c in bad and not (c == "wall" and p in ALLOWED_WALL):
                 bad[c].append(p)
     return nets, owner, machines, apcs, bad, gen_nets
 
