@@ -181,7 +181,13 @@ def audit(path):
 
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    argv = sys.argv[1:]
+    out = None
+    if '--json' in argv:
+        i = argv.index('--json')
+        out = Path(argv[i + 1])
+        del argv[i:i + 2]
+    args = argv
     target = Path(args[0]) if args else ROOT / '_maps/map_files/Ulthor/Ulthor.dmm'
     r = audit(target)
     short = lambda a: a.replace('/area/station/', '')
@@ -200,8 +206,7 @@ def main():
     print('areas split into several rooms:', len(r['split_areas']))
     for s in r['split_areas']:
         print('  ', short(s['area']), s['rooms'])
-    if '--json' in sys.argv:
-        out = Path(sys.argv[sys.argv.index('--json') + 1])
+    if out:
         out.write_text(json.dumps(r, indent=1) + '\n', encoding='utf-8')
 
 
