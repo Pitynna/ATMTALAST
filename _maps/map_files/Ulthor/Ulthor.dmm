@@ -5958,7 +5958,6 @@
 	},
 /area/station/service/theatre)
 "dwA" = (
-/obj/effect/landmark/start/prisoner,
 /obj/structure/chair{
 	dir = 8
 	},
@@ -7579,7 +7578,6 @@
 	},
 /area/station/service/kitchen)
 "eoE" = (
-/obj/effect/landmark/start/magistrate,
 /obj/structure/bookcase,
 /obj/item/book/manual/sop_engineering,
 /obj/item/book/manual/sop_medical,
@@ -7861,14 +7859,6 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_service_center)
-"euW" = (
-/obj/structure/cable,
-/obj/effect/landmark/start/blueshield,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralfull"
-	},
-/area/station/hallway/primary/fore)
 "evv" = (
 /obj/effect/landmark/start/coroner,
 /obj/structure/chair/office/dark{
@@ -10931,10 +10921,11 @@
 /turf/space,
 /area/space/nearstation)
 "gmX" = (
-/obj/effect/landmark/start/roboticist,
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
-/area/station/science/robotics/ulthor)
+/obj/effect/landmark/start/blueshield,
+/turf/simulated/floor/plasteel{
+	icon_state = "bcarpet05"
+	},
+/area/station/command/office/blueshield)
 "gnB" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/research{
@@ -15211,6 +15202,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2
 	},
+/obj/effect/landmark/start/magistrate,
 /turf/simulated/floor/carpet,
 /area/station/legal/office/magistrate)
 "iEd" = (
@@ -25221,14 +25213,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/security/podbay)
-"ooU" = (
-/obj/effect/landmark/start/prisoner,
-/obj/structure/bed,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralfull"
-	},
-/area/station/security/prison/perma)
 "ooW" = (
 /obj/structure/rack{
 	dir = 8;
@@ -35360,6 +35344,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/landmark/start/roboticist,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -59866,10 +59851,10 @@ vRI
 vRI
 rXd
 vRI
-vRI
-vRI
-vRI
-vRI
+iGq
+iGq
+iGq
+iGq
 vRI
 iGq
 lvp
@@ -60126,7 +60111,7 @@ vRI
 pgh
 vRI
 vRI
-vRI
+iGq
 vRI
 iGq
 hgE
@@ -60869,8 +60854,8 @@ iGq
 iGq
 vRI
 cYb
-vRI
-vRI
+iGq
+iGq
 vRI
 vRI
 vRI
@@ -61126,7 +61111,7 @@ vRI
 vRI
 vRI
 vRI
-vRI
+iGq
 vRI
 vRI
 vRI
@@ -61381,8 +61366,8 @@ vRI
 vRI
 vRI
 vRI
-vRI
-vRI
+iGq
+iGq
 vRI
 vRI
 vRI
@@ -61630,7 +61615,7 @@ vRI
 vRI
 vRI
 vRI
-vRI
+iGq
 vRI
 vRI
 vRI
@@ -61885,8 +61870,8 @@ iGq
 vRI
 vRI
 vRI
-vRI
-vRI
+iGq
+iGq
 vRI
 vRI
 vRI
@@ -62140,7 +62125,7 @@ agy
 agy
 iGq
 vRI
-vRI
+iGq
 vRI
 vRI
 vRI
@@ -62911,9 +62896,9 @@ nPg
 eLa
 oBh
 vRI
-vRI
-vRI
-vRI
+iGq
+iGq
+iGq
 vRI
 iGq
 vRI
@@ -63170,7 +63155,7 @@ aif
 avg
 avg
 avg
-vRI
+iGq
 iGq
 iGq
 tUV
@@ -68824,12 +68809,12 @@ kqh
 sWr
 cnl
 avg
-cnl
-cnl
-cnl
-cnl
-cnl
-cnl
+hzL
+hzL
+hzL
+hzL
+hzL
+hzL
 cnl
 cnl
 bpA
@@ -69081,7 +69066,7 @@ hzL
 iRI
 cnl
 avg
-cnl
+hzL
 rIC
 rTd
 cnl
@@ -69338,7 +69323,7 @@ agy
 hzL
 cnl
 avg
-cnl
+hzL
 gio
 pnT
 wzu
@@ -69595,7 +69580,7 @@ agy
 hzL
 cnl
 avg
-cnl
+hzL
 loU
 loU
 pde
@@ -69616,7 +69601,7 @@ kql
 eBG
 epu
 tOQ
-oeA
+gmX
 xHc
 nIe
 eGr
@@ -70643,7 +70628,7 @@ dTN
 iuo
 hFD
 ifR
-euW
+hFD
 hFD
 hFD
 pnI
@@ -73243,7 +73228,7 @@ oGE
 oGE
 iPH
 nYm
-ooU
+jpj
 bxE
 uOn
 vFF
@@ -85025,7 +85010,7 @@ hpR
 hpR
 dyj
 dyj
-gmX
+qKp
 qKp
 qKp
 dyj
