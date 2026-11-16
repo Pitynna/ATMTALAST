@@ -4968,6 +4968,17 @@
 	},
 /turf/simulated/floor/engine/plasma,
 /area/station/engineering/atmos)
+"cTC" = (
+/obj/machinery/door/airlock/external{
+	name = "Escape Pod Airlock"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 2
+	},
+/obj/structure/fans/tiny,
+/obj/effect/landmark/navigate_destination/dockescpod3,
+/turf/simulated/floor/plasteel,
+/area/station/hallway/primary/aft)
 "cUc" = (
 /obj/machinery/door_control{
 	id = "SecureArmory";
@@ -7859,6 +7870,12 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_service_center)
+"euW" = (
+/obj/effect/landmark/start/blueshield,
+/turf/simulated/floor/plasteel{
+	icon_state = "bcarpet05"
+	},
+/area/station/command/office/blueshield)
 "evv" = (
 /obj/effect/landmark/start/coroner,
 /obj/structure/chair/office/dark{
@@ -10920,12 +10937,6 @@
 /obj/structure/grille/broken,
 /turf/space,
 /area/space/nearstation)
-"gmX" = (
-/obj/effect/landmark/start/blueshield,
-/turf/simulated/floor/plasteel{
-	icon_state = "bcarpet05"
-	},
-/area/station/command/office/blueshield)
 "gnB" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/research{
@@ -14840,6 +14851,15 @@
 	},
 /turf/simulated/floor/carpet/arcade,
 /area/station/commons/arcade)
+"isj" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/fore)
 "iso" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "darkred"
@@ -24881,6 +24901,10 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/maintenance/turbine)
+"ogw" = (
+/obj/structure/sign/pods,
+/turf/simulated/wall,
+/area/station/hallway/primary/aft)
 "ogJ" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
@@ -25642,6 +25666,10 @@
 	icon_state = "bar"
 	},
 /area/station/service/bar)
+"oDN" = (
+/obj/structure/sign/pods,
+/turf/simulated/wall,
+/area/station/maintenance/ulthor_west_passage)
 "oEv" = (
 /turf/simulated/floor/engine,
 /area/station/engineering/ulthor_burn_room)
@@ -27010,6 +27038,17 @@
 	icon_state = "dark"
 	},
 /area/station/command/eva)
+"pjV" = (
+/obj/machinery/door/airlock/external{
+	name = "Escape Pod Airlock"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/fans/tiny,
+/obj/effect/landmark/navigate_destination/dockescpod2,
+/turf/simulated/floor/plasteel,
+/area/station/hallway/primary/fore)
 "pkn" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -34015,6 +34054,15 @@
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/ulthor_laborcamp)
+"tlm" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Escape Pods"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/fore)
 "tlq" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/head/cakehat,
@@ -35479,6 +35527,13 @@
 	icon_state = "dark"
 	},
 /area/station/engineering/gravity_generator)
+"uev" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access = list(12);
+	check_one_access = 0
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_west_passage)
 "ueA" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/simulated/floor/shuttle/plating,
@@ -39729,6 +39784,17 @@
 "wuz" = (
 /turf/simulated/wall/r_wall,
 /area/station/command/office/rd)
+"wuB" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 6;
+	id = "pod2_home";
+	name = "pod2 home dock";
+	width = 5
+	},
+/turf/space,
+/area/space)
 "wuP" = (
 /obj/machinery/camera{
 	c_tag = "Arrivals Hallway";
@@ -42317,6 +42383,17 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
+"xYT" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 2;
+	height = 6;
+	id = "pod3_home";
+	name = "pod3 home dock";
+	width = 5
+	},
+/turf/space,
+/area/space)
 "xYV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -60345,7 +60422,7 @@ agy
 agy
 agy
 agy
-agy
+wuB
 agy
 agy
 agy
@@ -60602,7 +60679,7 @@ iGq
 iGq
 iGq
 iGq
-iGq
+pjV
 iGq
 iGq
 iGq
@@ -60857,13 +60934,13 @@ cYb
 iGq
 iGq
 vRI
+uev
+eXb
+isj
+eXb
+uev
 vRI
-vRI
-vRI
-vRI
-vRI
-vRI
-vRI
+rmJ
 cYb
 vRI
 cYb
@@ -61114,11 +61191,11 @@ vRI
 iGq
 vRI
 vRI
-vRI
-vRI
-vRI
-vRI
-haI
+iGq
+oMY
+eXb
+eXb
+iGq
 iMM
 cJA
 rXd
@@ -61372,8 +61449,8 @@ vRI
 vRI
 vRI
 iGq
-iGq
-iGq
+oDN
+tlm
 iGq
 iGq
 iGq
@@ -61630,7 +61707,7 @@ vRI
 vRI
 iGq
 pfW
-pfW
+eXb
 kNn
 gTV
 sXS
@@ -67876,7 +67953,7 @@ iwB
 iwB
 iwB
 iwB
-rDM
+ogw
 agy
 agy
 agy
@@ -68133,8 +68210,8 @@ iwB
 iwB
 iwB
 iwB
-rDM
-agy
+cTC
+xYT
 agy
 agy
 agy
@@ -68389,7 +68466,7 @@ iwB
 iwB
 iwB
 iwB
-iwB
+ucS
 rDM
 agy
 agy
@@ -69601,7 +69678,7 @@ kql
 eBG
 epu
 tOQ
-gmX
+euW
 xHc
 nIe
 eGr

@@ -49,6 +49,8 @@ def parse(atom):
         ct = {int(v) for v in m[1].split(',')}
     if '/heat_exchanging' in path:
         ct = {'he'}
+    if '/universal' in path:
+        ct = {1, 2, 3}
     return path, dirs, ct
 
 
