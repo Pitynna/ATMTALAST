@@ -140,6 +140,128 @@ def gravity_room(M):
     report['gravity_room'] = {'chamber': [151, 97, 155, 103], 'control': [157, 97, 158, 103], 'generator_main': [153, 99]}
 
 
+# ------------------------------------------------------------------- zones
+def rezone(M):
+    """Make area borders follow walls instead of straight-line distance to APCs.
+
+    Sub-rooms: floor split at walls, doors, windows, one-tile doorways and the
+    edge between plating and tiled floor. Inside a sub-room the area spreads by
+    walking distance from its APCs (one APC: the whole sub-room). Corridors take
+    the hallway areas found in them; sub-rooms without an APC take their
+    majority area. Doorways, doors and walls take the area of their neighbours.
+    """
+    from zones import pinch, local_width
+    pinches = {(x, y) for y in range(1, M.Y + 1) for x in range(1, M.X + 1) if pinch(M, x, y)}
+    plating = lambda p: 'plating' in turf(M.tile(*p))
+    apc = {}
+    for y in range(1, M.Y + 1):
+        for x in range(1, M.X + 1):
+            if any(a.startswith('/obj/machinery/power/apc') for a in M.get(x, y)):
+                apc[(x, y)] = area(M.tile(x, y))
+    before_apc_areas = Counter(apc.values())
+    old = {(x, y): area(M.tile(x, y)) for y in range(1, M.Y + 1) for x in range(1, M.X + 1)}
+    new = {}
+    seen = set(pinches)
+    subs = []
+    for y in range(1, M.Y + 1):
+        for x in range(1, M.X + 1):
+            if (x, y) in seen or not M.walkable(x, y):
+                continue
+            comp, q = [], deque([(x, y)])
+            seen.add((x, y))
+            while q:
+                p = q.popleft()
+                comp.append(p)
+                for dx, dy, _ in CARD:
+                    n = (p[0] + dx, p[1] + dy)
+                    if n not in seen and M.walkable(*n) and plating(n) == plating(p):
+                        seen.add(n)
+                        q.append(n)
+            subs.append(comp)
+
+    def spread(comp, seeds):
+        """Multi-source BFS inside comp; seeds: {tile: area}."""
+        cs = set(comp)
+        q = deque(seeds)
+        for p, a in seeds.items():
+            new[p] = a
+        while q:
+            p = q.popleft()
+            for dx, dy, _ in CARD:
+                n = (p[0] + dx, p[1] + dy)
+                if n in cs and n not in new:
+                    new[n] = new[p]
+                    q.append(n)
+
+    kinds = Counter()
+    for comp in subs:
+        areas = Counter(old[p] for p in comp)
+        hall = {p: old[p] for p in comp if '/hallway/' in old[p]}
+        widths = sorted(local_width(M, *p) for p in comp)
+        corridor = not plating(comp[0]) and (len(hall) > len(comp) / 2 or (len(comp) >= 25 and widths[len(widths) // 2] <= 3))
+        seeds = {p: apc[p] for p in comp if p in apc}
+        if corridor and hall:
+            hall_apcs = {p: a for p, a in seeds.items() if '/hallway/' in a}
+            for p, a in seeds.items():  # room APCs on a corridor wall keep their own tile
+                new[p] = a
+            spread(comp, hall_apcs or hall)
+            kinds['corridor'] += 1
+        elif seeds:
+            # an APC only claims floor for an area that already had a real share of this
+            # sub-room; one mounted on the far side of a wall keeps just its own tile
+            share = {a: n / len(comp) for a, n in areas.items()}
+            maint = plating(comp[0])
+            grow = {p: a for p, a in seeds.items() if share.get(a, 0) >= 0.25 or '/hallway/' in a or (maint and '/maintenance' in a)}
+            # big shares whose APC is elsewhere grow from the point nearest their centre
+            for a, sh in share.items():
+                if sh >= 0.25 and a not in grow.values():
+                    own = [p for p in comp if old[p] == a]
+                    cx = sum(p[0] for p in own) / len(own)
+                    cy = sum(p[1] for p in own) / len(own)
+                    grow[min(own, key=lambda p: ((p[0] - cx) ** 2 + (p[1] - cy) ** 2, p))] = a
+            for p, a in seeds.items():
+                new[p] = a
+            if grow:
+                spread(comp, grow)
+                kinds['apc'] += 1
+            else:
+                maj = areas.most_common(1)[0][0]
+                for p in comp:
+                    new.setdefault(p, maj)
+                kinds['majority'] += 1
+        else:
+            maj = areas.most_common(1)[0][0]
+            for p in comp:
+                new[p] = maj
+            kinds['majority'] += 1
+    for p in pinches:
+        around = Counter(new[n] for n in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if n in new)
+        new[p] = around.most_common(1)[0][0] if around else old[p]
+    # doors, windows, walls: majority of neighbouring floor (8-neighbourhood)
+    for (x, y), a in old.items():
+        if (x, y) in new or not a.startswith('/area/station'):
+            continue
+        around = Counter(new[(x + dx, y + dy)] for dx in (-1, 0, 1) for dy in (-1, 0, 1) if (x + dx, y + dy) in new)
+        if around:
+            best = max(around.values())
+            new[(x, y)] = a if around.get(a) == best else around.most_common(1)[0][0]
+    for p, a in apc.items():  # an APC always stays inside the area it powers
+        new[p] = a
+    changed = 0
+    for p, a in new.items():
+        if a != old[p]:
+            M.set_area(*p, a)
+            changed += 1
+    after = Counter(area(M.tile(*p)) for p in apc)
+    lost = [a for a in before_apc_areas if a not in after]
+    tiles_after = Counter(area(M.tile(x, y)) for y in range(1, M.Y + 1) for x in range(1, M.X + 1))
+    vanished = sorted(a for a in set(old.values()) if a not in tiles_after)
+    unpowered = sorted(a for a in tiles_after if a.startswith('/area/station') and a not in after)
+    report['rezone'] = {'changed_tiles': changed, 'subrooms': dict(kinds), 'apc_area_lost': lost,
+                        'vanished_areas': vanished, 'areas_without_apc': unpowered}
+    print('  rezone:', changed, 'tiles;', dict(kinds), 'vanished', vanished, 'unpowered', len(unpowered))
+
+
 # --------------------------------------------------------------- job starts
 CHAIR = ('/obj/structure/chair', '/obj/structure/bed', '/obj/structure/stool')
 FREE_OK = ('/obj/structure/cable', '/obj/machinery/atmospherics/pipe', '/obj/structure/disposalpipe', '/obj/effect/decal',
@@ -531,7 +653,7 @@ def beacons(M):
                          'delivery': deliveries}
 
 
-STAGES = [gravity_room, job_starts, lighting, holopads, beacons]
+STAGES = [gravity_room, rezone, job_starts, lighting, holopads, beacons]
 
 
 def main():
