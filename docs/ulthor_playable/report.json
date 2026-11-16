@@ -22,7 +22,7 @@
   "buttons_z_check": 1
  },
  "rezone": {
-  "changed_tiles": 2982,
+  "changed_tiles": 2865,
   "subrooms": {
    "majority": 154,
    "corridor": 12,
@@ -111,8 +111,8 @@
     184
    ],
    [
-    124,
-    181
+    119,
+    175
    ]
   ],
   "coroner": [
@@ -217,7 +217,7 @@
   ],
   "shaft_miner": [
    [
-    89,
+    80,
     126
    ],
    [
@@ -229,20 +229,20 @@
     126
    ],
    [
+    81,
+    126
+   ],
+   [
+    89,
+    126
+   ],
+   [
     99,
     127
    ],
    [
-    94,
-    127
-   ],
-   [
-    91,
+    85,
     130
-   ],
-   [
-    88,
-    128
    ]
   ],
   "botanist": [
@@ -339,10 +339,6 @@
    [
     76,
     181
-   ],
-   [
-    80,
-    126
    ],
    [
     79,
@@ -475,6 +471,10 @@
    [
     128,
     176
+   ],
+   [
+    76,
+    178
    ]
   ],
   "latejoin_prisoner": [
@@ -719,7 +719,7 @@
    "/obj/machinery/light/small": 94,
    "/obj/machinery/light": 120
   },
-  "switches": 66
+  "switches": 65
  },
  "holopads": 85,
  "beacons": {
@@ -730,7 +730,7 @@
    [
     "Bar",
     86,
-    151
+    140
    ],
    [
     "Kitchen",
@@ -769,8 +769,8 @@
    ],
    [
     "Engineering",
-    163,
-    124
+    152,
+    142
    ],
    [
     "Atmospherics",

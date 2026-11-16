@@ -235,13 +235,11 @@ def rezone(M):
             share = {a: n / len(comp) for a, n in areas.items()}
             maint = plating(comp[0])
             grow = {p: a for p, a in seeds.items() if share.get(a, 0) >= 0.25 or '/hallway/' in a or (maint and '/maintenance' in a)}
-            # big shares whose APC is elsewhere grow from the point nearest their centre
-            for a, sh in share.items():
-                if sh >= 0.25 and a not in grow.values():
-                    own = [p for p in comp if old[p] == a]
-                    cx = sum(p[0] for p in own) / len(own)
-                    cy = sum(p[1] for p in own) / len(own)
-                    grow[min(own, key=lambda p: ((p[0] - cx) ** 2 + (p[1] - cy) ** 2, p))] = a
+            big = {a for a, sh in share.items() if sh >= 0.25}
+            if not maint and len(big | set(grow.values())) >= 2:
+                # open-plan room shared by several real areas (bar and theatre): keep
+                # their hand-made borders, absorb only the small leftovers
+                grow = {p: old[p] for p in comp if old[p] in big | set(grow.values())}
             for p, a in seeds.items():
                 new[p] = a
             if grow:
