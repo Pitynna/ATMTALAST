@@ -355,6 +355,74 @@ def job_starts(M):
     report['job_starts'] = added
 
 
+# -------------------------------------------------------------------- cameras
+def area_names():
+    names = {}
+    for f in (ROOT / 'code/game/area').rglob('*.dm'):
+        cur = None
+        for line in f.read_text(encoding='utf-8', errors='replace').splitlines():
+            if line.startswith('/area'):
+                cur = line.split('//')[0].strip()
+            elif cur and re.match(r'	name = "', line):
+                names[cur] = re.search(r'name = "([^"]*)"', line)[1]
+    return names
+
+
+def cameras_stage(M):
+    """Add wall cameras until every watched room tile is seen (gain >= 5 per camera)."""
+    from camera_coverage import Vision, cameras, watched
+    names = area_names()
+    v = Vision(M)
+    seen = set()
+    for cx, cy in cameras(M.m):
+        seen |= v.sees(cx, cy)
+    targets, cand_tiles, room_area = set(), [], {}
+    for comp in M.rooms():
+        a = Counter(area(M.tile(*p)) for p in comp).most_common(1)[0][0]
+        for p in comp:
+            room_area[p] = a
+        plating = sum('plating' in turf(M.tile(*p)) for p in comp) / len(comp)
+        if not watched(a, comp, plating):
+            continue
+        blind = [p for p in comp if p not in seen]
+        if blind:
+            targets |= set(blind)
+            cand_tiles += comp
+    cover = {}
+    for p in cand_tiles:
+        if wall_faces_free(M, p) and not is_door(M.tile(*p)):
+            g = v.sees(*p, targets)
+            if len(g) >= 5:
+                cover[p] = g
+    used = Counter()
+    for t in M.m.dictionary.values():
+        for a in t:
+            m = re.search(r'c_tag = "([^"]*)"', a)
+            if m:
+                used[m[1]] += 1
+    added = []
+    while cover:
+        best = max(cover, key=lambda p: (len(cover[p] & targets), -p[1], -p[0]))
+        gain = cover[best] & targets
+        if len(gain) < 5:
+            break
+        face = wall_faces_free(M, best)[0]
+        a = Counter(area(M.tile(*q)) for q in cover[best] | {best} if q in room_area).most_common(1)[0][0]
+        base = names.get(a.split('{')[0], a.rsplit('/', 1)[-1].replace('_', ' ').title())
+        n = 1
+        while f'{base} #{n}' in used or (n == 1 and base in used):
+            n += 1
+        tag = base if n == 1 else f'{base} #{n}'
+        used[tag] += 1
+        back = {1: 2, 2: 1, 4: 8, 8: 4}[face]
+        M.add(*best, '/obj/machinery/camera{c_tag = "%s";dir = %d;start_active = 1}' % (tag, back))
+        added.append([tag, *best])
+        targets -= gain
+        del cover[best]
+    report['cameras'] = {'added': len(added), 'left_blind': len(targets), 'list': added}
+    print('  cameras: +%d, blind tiles left %d' % (len(added), len(targets)))
+
+
 # ------------------------------------------------------------------ lighting
 WALLMOUNT = ('/obj/machinery/power/apc', '/obj/machinery/alarm', '/obj/machinery/firealarm', '/obj/item/radio/intercom',
              '/obj/structure/extinguisher_cabinet', '/obj/machinery/newscaster', '/obj/machinery/status_display',
@@ -653,7 +721,7 @@ def beacons(M):
                          'delivery': deliveries}
 
 
-STAGES = [gravity_room, rezone, job_starts, lighting, holopads, beacons]
+STAGES = [gravity_room, rezone, job_starts, cameras_stage, lighting, holopads, beacons]
 
 
 def main():

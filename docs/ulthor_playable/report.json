@@ -484,10 +484,236 @@
    ]
   ]
  },
+ "cameras": {
+  "added": 44,
+  "left_blind": 66,
+  "list": [
+   [
+    "Library",
+    82,
+    98
+   ],
+   [
+    "Escape Shuttle Hallway",
+    160,
+    111
+   ],
+   [
+    "Atmospherics",
+    171,
+    130
+   ],
+   [
+    "West Primary Hallway",
+    115,
+    95
+   ],
+   [
+    "Mining Dock",
+    92,
+    132
+   ],
+   [
+    "Genetics Lab",
+    170,
+    162
+   ],
+   [
+    "Escape Shuttle Hallway #2",
+    150,
+    105
+   ],
+   [
+    "Locker Room",
+    88,
+    120
+   ],
+   [
+    "Atmospherics #2",
+    171,
+    144
+   ],
+   [
+    "Ulthor Robotics and Research Access",
+    164,
+    178
+   ],
+   [
+    "West Primary Hallway #2",
+    104,
+    107
+   ],
+   [
+    "Arrivals Hallway",
+    77,
+    94
+   ],
+   [
+    "West Primary Hallway #3",
+    132,
+    108
+   ],
+   [
+    "Head of Personnel's Office",
+    117,
+    165
+   ],
+   [
+    "Ulthor Genetics",
+    118,
+    188
+   ],
+   [
+    "Ulthor Virology",
+    136,
+    192
+   ],
+   [
+    "Perma Prison Wing",
+    119,
+    127
+   ],
+   [
+    "Ulthor Kitchen",
+    71,
+    154
+   ],
+   [
+    "Security Lobby",
+    127,
+    92
+   ],
+   [
+    "Atmospherics #3",
+    182,
+    143
+   ],
+   [
+    "Perma Prison Wing #2",
+    131,
+    132
+   ],
+   [
+    "Ulthor Representative Office",
+    106,
+    158
+   ],
+   [
+    "Research and Development",
+    172,
+    169
+   ],
+   [
+    "Arrivals Hallway #2",
+    80,
+    105
+   ],
+   [
+    "Heads of Staff Meeting Room",
+    132,
+    159
+   ],
+   [
+    "Toxins Storage",
+    177,
+    163
+   ],
+   [
+    "Escape Shuttle Hallway #3",
+    161,
+    103
+   ],
+   [
+    "Ulthor AI Upload",
+    122,
+    157
+   ],
+   [
+    "Execution",
+    110,
+    109
+   ],
+   [
+    "Secure Armory",
+    127,
+    124
+   ],
+   [
+    "Ulthor Service South Hallway",
+    85,
+    139
+   ],
+   [
+    "Cargo Bay",
+    74,
+    115
+   ],
+   [
+    "Research Testing Lab",
+    169,
+    156
+   ],
+   [
+    "Brig",
+    112,
+    121
+   ],
+   [
+    "Atmospherics #4",
+    179,
+    129
+   ],
+   [
+    "Perma Prison Wing #3",
+    127,
+    146
+   ],
+   [
+    "Ulthor Medical Hallway and Paramedic Office",
+    137,
+    176
+   ],
+   [
+    "Ulthor Bar",
+    79,
+    148
+   ],
+   [
+    "Cargo Office",
+    77,
+    133
+   ],
+   [
+    "Ulthor Cryosleep",
+    84,
+    177
+   ],
+   [
+    "Perma Prison Wing #4",
+    131,
+    147
+   ],
+   [
+    "Technical Storage",
+    152,
+    178
+   ],
+   [
+    "West Primary Hallway #4",
+    124,
+    109
+   ],
+   [
+    "Ulthor Psychiatry",
+    142,
+    176
+   ]
+  ]
+ },
  "lighting": {
   "added": {
    "/obj/machinery/light/small": 94,
-   "/obj/machinery/light": 119
+   "/obj/machinery/light": 120
   },
   "switches": 66
  },
