@@ -531,9 +531,10 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 /obj/machinery/fossil_incubator
 	name = "reconstitution growth tank"
 	desc = "A tall vat of nutrient gel. Feed it raw meat or monkey cubes and a fauna reconstitution console can grow a reconstructed creature inside."
-	// 32x64: the glass column rises one tile above the base. Made by tools/xenoarch/tank_sprite.py.
-	icon = 'icons/obj/fossil_tank.dmi'
-	icon_state = "tank"
+	// The cryo cell's tall glass pod: the growing creature floats inside like a cryo patient.
+	icon = 'icons/obj/machines/cryogenics.dmi'
+	icon_state = "pod0"
+	layer = ABOVE_WINDOW_LAYER
 	density = TRUE
 	anchored = TRUE
 	idle_power_usage = 200
@@ -544,6 +545,8 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 	/// Deciseconds of growth already done; paused without power.
 	var/growth_done = 0
 	var/last_process = 0
+	/// The silhouette of the creature floating in the gel, animated like a cryo cell occupant.
+	var/obj/effect/occupant_overlay
 
 /obj/machinery/fossil_incubator/Initialize(mapload)
 	. = ..()
@@ -559,6 +562,7 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 
 /obj/machinery/fossil_incubator/Destroy()
 	growing = null
+	QDEL_NULL(occupant_overlay)
 	return ..()
 
 /obj/machinery/fossil_incubator/RefreshParts()
@@ -573,12 +577,33 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 	update_icon()
 
 /obj/machinery/fossil_incubator/update_icon_state()
-	if(stat & NOPOWER)
-		icon_state = "tank_off"
-	else if(growing && growth_progress() >= 50)
-		icon_state = "tank_growing"
-	else
-		icon_state = "tank"
+	icon_state = (growing && !(stat & NOPOWER)) ? "pod1" : "pod0"
+
+/obj/machinery/fossil_incubator/update_overlays()
+	. = ..()
+	var/running = growing && !(stat & NOPOWER)
+	update_occupant()
+	. += "lid[running ? 1 : 0]"
+
+/// The forming creature: a dark silhouette that gains colour as it grows, bobbing in the gel.
+/obj/machinery/fossil_incubator/proc/update_occupant()
+	if(!growing)
+		QDEL_NULL(occupant_overlay)
+		return
+	var/mob/living/simple_animal/creature_type = growing.result_type
+	if(!occupant_overlay)
+		occupant_overlay = new(get_turf(src))
+		occupant_overlay.icon = initial(creature_type.icon)
+		occupant_overlay.icon_state = initial(creature_type.icon_living) || initial(creature_type.icon_state)
+		occupant_overlay.layer = layer + 0.01
+		occupant_overlay.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+		occupant_overlay.pixel_z = 22
+		occupant_overlay.transform = matrix() * 0.7
+		animate(occupant_overlay, time = 3 SECONDS, loop = -1, easing = QUAD_EASING, pixel_z = 28)
+		animate(time = 3 SECONDS, loop = -1, easing = QUAD_EASING, pixel_z = 22)
+	var/progress = growth_progress()
+	occupant_overlay.alpha = 90 + round(progress * 1.4)
+	occupant_overlay.color = progress >= 50 ? null : "#202830"
 
 /obj/machinery/fossil_incubator/examine(mob/user)
 	. = ..()
@@ -655,7 +680,7 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 		visible_message(span_notice("[src] [pick("gurgles", "bubbles", "hums", "hisses softly")]."))
 	if(growth_done >= growth_time)
 		finish_growth()
-	else if((before < 50) != (growth_progress() < 50))
+	else if(round(before / 10) != round(growth_progress() / 10))
 		update_icon()
 
 /obj/machinery/fossil_incubator/proc/finish_growth()
@@ -664,8 +689,11 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 	growth_done = 0
 	update_use_power(IDLE_POWER_USE)
 	update_icon()
-	// Born inside the tank's own cell, so a tank in a pen keeps its creatures penned.
-	var/mob/living/creature = new genome.result_type(get_turf(src))
+	// Born in front of the pod (south), or on the pod's own cell if that is blocked.
+	var/turf/exit = get_step(src, SOUTH)
+	if(!exit || exit.density || (locate(/obj/machinery) in exit))
+		exit = get_turf(src)
+	var/mob/living/creature = new genome.result_type(exit)
 	apply_fossil_fidelity(creature, genome.fidelity)
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE)
 	visible_message(span_notice("[src] drains with a gush and \a [creature] stumbles out!"))

@@ -42,3 +42,5 @@
 	name = "Research Outpost Auxiliary Storage"
 /area/research_outpost/maintstore2
 	name = "Research Outpost Maintenance Storage"
+/area/research_outpost/reconstitution
+	name = "Research Outpost Reconstitution Lab"

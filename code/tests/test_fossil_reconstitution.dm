@@ -145,6 +145,70 @@
 		var/list/states = icon_states(initial(beast.icon))
 		TEST_ASSERT(initial(beast.icon_living) in states, "[mob_type] lacks a living sprite")
 		TEST_ASSERT(initial(beast.icon_dead) in states, "[mob_type] lacks a dead sprite")
-	var/list/tank_states = icon_states('icons/obj/fossil_tank.dmi')
-	for(var/state in list("tank", "tank_growing", "tank_off"))
+	var/list/tank_states = icon_states('icons/obj/machines/cryogenics.dmi')
+	for(var/state in list("pod0", "pod1", "lid0", "lid1"))
 		TEST_ASSERT(state in tank_states, "The growth tank lacks [state]")
+
+/// Every transit tube on the asteroid joins its neighbours, and a pod can ride from the mining station to the outpost.
+/datum/unit_test/outpost_transit_line/Run()
+	var/z = level_name_to_num(MINING)
+	if(!z)
+		return
+	var/count = 0
+	for(var/obj/structure/transit_tube/tube in world)
+		if(tube.z != z || istype(tube, /obj/structure/transit_tube/cap))
+			continue
+		count++
+		for(var/direction in tube.directions())
+			var/turf/next = get_step(tube, direction)
+			var/joined = FALSE
+			for(var/obj/structure/transit_tube/other in next)
+				if(other.has_entrance(direction))
+					joined = TRUE
+					break
+			TEST_ASSERT(joined, "[tube.type] at [tube.x],[tube.y] leads [dir2text(direction)] into nothing")
+	TEST_ASSERT(count > 100, "The outpost must have its transit network")
+	var/obj/structure/transit_tube/station/lobby = locate() in locate(164, 76, z)
+	var/obj/structure/transit_tube/station/reception = locate() in locate(144, 193, z)
+	TEST_ASSERT_NOTNULL(lobby, "The mining station needs a tube terminus")
+	TEST_ASSERT_NOTNULL(reception, "The outpost reception needs a tube station")
+	TEST_ASSERT_EQUAL(ride(lobby, NORTH), reception, "A pod from the mining station must arrive at the outpost reception")
+	TEST_ASSERT_EQUAL(ride(reception, SOUTH), lobby, "A pod from the outpost reception must arrive at the mining station")
+
+/// Follows the tubes exactly as a pod does and returns the station it stops at.
+/datum/unit_test/outpost_transit_line/proc/ride(obj/structure/transit_tube/start, direction)
+	var/obj/structure/transit_tube/current = start
+	for(var/i in 1 to 600)
+		var/next_dir = current.get_exit(direction)
+		if(!next_dir)
+			return null
+		var/obj/structure/transit_tube/next
+		for(var/obj/structure/transit_tube/candidate in get_step(current, next_dir))
+			if(candidate.has_entrance(next_dir))
+				next = candidate
+				break
+		if(!next)
+			return null
+		direction = next_dir
+		current = next
+		if(istype(current, /obj/structure/transit_tube/station))
+			return current
+	return null
+
+/// The reconstitution lab is a real, powered room with both consoles and a penned tank.
+/datum/unit_test/reconstitution_lab/Run()
+	var/z = level_name_to_num(MINING)
+	if(!z)
+		return
+	var/obj/machinery/computer/fossil_reconstitutor/fauna/fauna = locate() in locate(148, 198, z)
+	var/obj/machinery/computer/fossil_reconstitutor/flora/flora = locate() in locate(148, 201, z)
+	var/obj/machinery/fossil_incubator/tank = locate() in locate(150, 199, z)
+	TEST_ASSERT_NOTNULL(fauna, "The lab needs a fauna console")
+	TEST_ASSERT_NOTNULL(flora, "The lab needs a flora console")
+	TEST_ASSERT_NOTNULL(tank, "The lab needs a growth tank")
+	TEST_ASSERT(istype(get_area(tank), /area/research_outpost/reconstitution), "The tank belongs to the reconstitution lab")
+	TEST_ASSERT_EQUAL(fauna.find_incubator(), tank, "The fauna console must reach the tank")
+	TEST_ASSERT_NOT(tank.stat & NOPOWER, "The lab must be powered")
+	TEST_ASSERT_NOT(fauna.stat & NOPOWER, "The fauna console must be powered")
+	var/turf/floor = get_turf(tank)
+	TEST_ASSERT(floor.get_readonly_air().return_pressure() > 70, "The lab must hold air")

@@ -30,6 +30,8 @@ NORTH, SOUTH, EAST, WEST = 1, 2, 4, 8
 DIRS = (NORTH, SOUTH, EAST, WEST)
 STEP = {NORTH: (0, 1), SOUTH: (0, -1), EAST: (1, 0), WEST: (-1, 0)}
 REVERSE = {NORTH: SOUTH, SOUTH: NORTH, EAST: WEST, WEST: EAST}
+CW = {NORTH: EAST, EAST: SOUTH, SOUTH: WEST, WEST: NORTH}   # BYOND turn(d, -90)
+CCW = {NORTH: WEST, WEST: SOUTH, SOUTH: EAST, EAST: NORTH}  # BYOND turn(d, 90)
 
 dropped = Counter()
 unknown = Counter()
@@ -445,6 +447,12 @@ def convert_turf(atom, ctx):
             out['name'] = v['name']
         return make_atom('/turf/simulated/floor/plasteel', out)
     if t == '/turf/simulated/floor/plating':
+        if unq(v.get('icon_state')) == 'warnplate':
+            # The plating icon has no 'warnplate' state (it rendered as a black hole): stripe decals instead.
+            d = int(v.get('dir', '2'))
+            for side in [x for x in (NORTH, SOUTH, EAST, WEST) if d & x] or [SOUTH]:
+                ctx.setdefault('decals', []).append(make_atom('/obj/effect/turf_decal/stripes/line', {'dir': str(side)} if side != SOUTH else {}))
+            return '/turf/simulated/floor/plating'
         out = keep(v, 'dir', 'icon_state')
         out.update(gas)
         return make_atom('/turf/simulated/floor/plating', out)
@@ -549,6 +557,7 @@ def main(old_path, base_path, out_path):
                 continue
             objs.extend(convert(a, ctx))
         turf = convert_turf(tile_turf(atoms), ctx)
+        objs[0:0] = ctx.get('decals', [])
         old_turf = atom_type(tile_turf(atoms))
         if ctx['anomaly']:
             if old_turf == '/turf/space':
@@ -604,6 +613,7 @@ def main(old_path, base_path, out_path):
         turf = '/turf/simulated/floor/plating/asteroid/airless' if 'wall' not in cur_turf else '/turf/simulated/mineral'
         tiles[(x, y)] = [[], turf, '/area/mine/explored']
     apply_patches(tiles)
+    build_reconstitution_lab(tiles, cur)
     route_apc_cables(tiles, cable_dirs)
     # Cables: one smart cable per tile, linked only where the old cables were.
     for (x, y), dirs in cable_dirs.items():
@@ -611,6 +621,7 @@ def main(old_path, base_path, out_path):
         tiles[(x, y)][0].insert(0, make_atom('/obj/structure/cable', {'banned_links': str(banned)} if banned else {}))
     # Transit tubes.
     tube_report = place_tubes(tiles, tubes)
+    build_mining_line(tiles, cur)
     # Fix vent scrubbers mapped without a direction: face the adjacent pipe.
     for (x, y), (objs, turf, area) in tiles.items():
         for i, a in enumerate(objs):
@@ -677,19 +688,13 @@ def apply_patches(tiles):
             T(155, 187).remove(a)
     T(155, 187).extend([make_atom('/obj/structure/disposalpipe/trunk', {'dir': '4'}),
                         make_atom('/obj/machinery/disposal/deliveryChute', {'dir': '8', 'name': q('pneumatic tube to mining')})])
-    # No research shuttle docks here any more: seal its airlock.
+    # No research shuttle docks here any more; its airlock now opens into the reconstitution lab.
     tiles[(147, 197)][0] = []
-    tiles[(147, 197)][1] = '/turf/simulated/wall/r_wall'
+    tiles[(147, 197)][1] = '/turf/simulated/floor/plasteel'
     # Atmospherics never had its own APC; the filters and thermomachines need one.
     T(175, 206).append(make_atom('/obj/machinery/power/apc', {'dir': '8', 'name': q('Outpost Atmospherics APC'), 'pixel_x': '-24'}))
-    # Fossil reconstitution: flora beside the soil trays, fauna and its growth tank at the old monkey pen.
-    remove(T(162, 207), '/obj/structure/table')
-    T(162, 207).append('/obj/machinery/computer/fossil_reconstitutor/flora')
-    remove(T(165, 197), '/mob/living/carbon/human/lesser/monkey')
-    remove(T(165, 198), '/mob/living/carbon/human/lesser/monkey')  # the tank's glass column covers this cell
-    T(165, 197).append('/obj/machinery/fossil_incubator')
-    T(163, 198).append(make_atom('/obj/machinery/computer/fossil_reconstitutor/fauna', {'dir': '8'}))
-    T(163, 197).append('/obj/item/storage/box/monkeycubes')
+    # Fossil reconstitution has its own laboratory (build_reconstitution_lab); the 2013 monkey pen stays a monkey pen.
+
 
 
 def route_apc_cables(tiles, cable_dirs):
@@ -797,7 +802,7 @@ def tube_dirs(atom):
         return flipped[d]
     if t.startswith('/obj/structure/transit_tube/station'):
         if t.endswith('reverse'):
-            return {{NORTH: WEST, SOUTH: EAST, EAST: NORTH, WEST: SOUTH}[d]}  # turn(dir, -90)
+            return {CW[d]}  # turn(dir, -90) is clockwise
         return {EAST, WEST} if d in (NORTH, SOUTH) else {NORTH, SOUTH}
     return set()
 
@@ -870,12 +875,8 @@ def place_tubes(tiles, tubes):
         else:
             # A terminus launches pods along turn(dir, -90); pick the orientation that faces the tube.
             want = linked[0] if linked else sides[0]
-            for nd in DIRS:
-                if {NORTH: WEST, SOUTH: EAST, EAST: NORTH, WEST: SOUTH}[nd] == want and nd in ((NORTH, SOUTH) if want in (EAST, WEST) else (EAST, WEST)):
-                    pass
-            # turn(dir,-90) == want  ->  dir = turn(want, 90)
-            nd = {NORTH: EAST, EAST: SOUTH, SOUTH: WEST, WEST: NORTH}[want]
-            # boarding side must stay the old one (opposite of dir): keep closest match
+            # BYOND turn(dir, -90) is clockwise, so dir is the counter-clockwise neighbour of want.
+            nd = CCW[want]
             placed[p] = make_atom('/obj/structure/transit_tube/station/reverse', {'dir': str(nd)} if nd != SOUTH else {})
     for p, a in placed.items():
         tiles[p][0].append(a)
@@ -889,6 +890,203 @@ def place_tubes(tiles, tubes):
             if not other or opposite(d) not in tube_dirs(other):
                 broken.append((p, d, atom_type(a)))
     return {'pieces': len(placed), 'stations': len(stations), 'broken_links': broken}
+
+
+LAB_AREA = '/area/research_outpost/reconstitution'
+ALL8 = (NORTH, SOUTH, EAST, WEST, NORTH | EAST, NORTH | WEST, SOUTH | EAST, SOUTH | WEST)
+
+
+def ensure(tiles, cur, p):
+    """Bring a tile of the base map into the edited set."""
+    if p not in tiles:
+        atoms = cur.tile(*p)
+        objs = [a for a in atoms if not atom_type(a).startswith(('/area', '/turf'))]
+        tiles[p] = [objs, tile_turf(atoms), tile_area(atoms)]
+    return tiles[p]
+
+
+def build_reconstitution_lab(tiles, cur):
+    """A dedicated room for fossil reconstitution where the research shuttle used to dock."""
+    for x in range(144, 151):
+        for y in range(198, 203):
+            t = ensure(tiles, cur, (x, y))
+            t[0] = []
+            t[2] = LAB_AREA
+            if x == 144 or y == 202:
+                t[1] = '/turf/simulated/wall/r_wall'
+            else:
+                t[1] = make_atom('/turf/simulated/floor/plasteel', {'icon_state': q('white')})
+    T = lambda x, y: tiles[(x, y)][0]  # noqa: E731
+    for x in (145, 146, 147):
+        tiles[(x, 201)][1] = '/turf/simulated/floor/grass'
+        T(x, 201).append('/obj/machinery/hydroponics/soil')
+    T(146, 201).append(make_atom('/obj/machinery/light', {'dir': '1'}))
+    T(148, 201).append('/obj/machinery/computer/fossil_reconstitutor/flora')
+    T(149, 201).extend(['/obj/structure/table', '/obj/item/plant_analyzer', '/obj/item/reagent_containers/cup/bottle/nutrient/ez'])
+    T(150, 201).append(make_atom('/obj/machinery/power/apc', {'dir': '1', 'name': q('Research Outpost Reconstitution Lab APC'), 'pixel_y': '24'}))
+    T(145, 200).append(make_atom('/obj/machinery/alarm', {'dir': '8', 'pixel_x': '-24'}))
+    T(145, 199).append(make_atom('/obj/machinery/light', {'dir': '8'}))
+    T(145, 198).append(make_atom('/obj/machinery/firealarm', {'dir': '8', 'pixel_x': '-24'}))
+    T(146, 198).extend(['/obj/structure/table', '/obj/item/storage/box/monkeycubes', '/obj/item/storage/box/monkeycubes'])
+    T(147, 198).append('/obj/machinery/atmospherics/unary/vent_pump/on')
+    T(148, 198).append(make_atom('/obj/machinery/computer/fossil_reconstitutor/fauna', {'dir': '4'}))
+    # Growth pen in the south-east corner: creatures are born on the cell south of the tank.
+    for x, y in ((149, 198), (150, 198), (149, 199), (150, 199)):
+        tiles[(x, y)][1] = make_atom('/turf/simulated/floor/plasteel', {'icon_state': q('bot')})
+    T(149, 198).append(make_atom('/obj/structure/window/reinforced', {'dir': '8'}))
+    T(149, 199).extend([make_atom('/obj/structure/window/reinforced', {'dir': '1'}),
+                        make_atom('/obj/machinery/door/window/westleft', {'name': q('Growth Pen'), 'req_access': 'list(65)'})])
+    T(150, 199).extend([make_atom('/obj/structure/window/reinforced', {'dir': '1'}), '/obj/machinery/fossil_incubator'])
+    T(150, 198).append(make_atom('/obj/machinery/light/small', {'dir': '4'}))
+    # Doors: the old shuttle airlock from reception, and one from the hallway windows.
+    for p in ((147, 197), (151, 200)):
+        t = ensure(tiles, cur, p)
+        t[0] = [a for a in t[0] if atom_type(a).startswith(('/obj/structure/cable', '/obj/machinery/atmospherics'))]
+        t[0].append(make_atom('/obj/machinery/door/airlock/research/glass', {'name': q('Reconstitution Lab'), 'req_access': 'list(65)'}))
+        t[1] = '/turf/simulated/floor/plasteel'
+    # Air: branch the reception supply line north into the lab.
+    rec = T(147, 195)
+    rec[:] = [a for a in rec if not atom_type(a).startswith('/obj/machinery/atmospherics/unary/vent_pump')]
+    rec.append(make_atom('/obj/machinery/atmospherics/pipe/manifold/hidden', {'dir': '4', 'color': q(PIPE_HEX['blue'])}))
+    T(146, 195).append(make_atom('/obj/machinery/atmospherics/unary/vent_pump/on', {'dir': '4'}))
+    T(147, 196).append('/obj/machinery/atmospherics/pipe/simple/hidden/blue')
+    T(147, 197).append('/obj/machinery/atmospherics/pipe/simple/hidden/blue')
+
+
+def tube_piece(c1, c2, crossing=False):
+    """Tube type and vars that connect directions c1 and c2."""
+    pair = {c1, c2}
+    if pair == {NORTH, SOUTH}:
+        return '/obj/structure/transit_tube/crossing' if crossing else '/obj/structure/transit_tube'
+    if pair == {EAST, WEST}:
+        return '/obj/structure/transit_tube/crossing/horizontal' if crossing else '/obj/structure/transit_tube/horizontal'
+    if pair == {NORTH | EAST, SOUTH | WEST}:
+        return '/obj/structure/transit_tube/diagonal/crossing' if crossing else '/obj/structure/transit_tube/diagonal'
+    if pair == {NORTH | WEST, SOUTH | EAST}:
+        return '/obj/structure/transit_tube/diagonal/crossing/topleft' if crossing else '/obj/structure/transit_tube/diagonal/topleft'
+    assert not crossing, 'curves cannot be crossings'
+    curved = {NORTH: {NORTH, SOUTH | WEST}, SOUTH: {SOUTH, NORTH | EAST}, EAST: {EAST, NORTH | WEST}, WEST: {SOUTH | EAST, WEST}}
+    flipped = {NORTH: {NORTH, SOUTH | EAST}, SOUTH: {SOUTH, NORTH | WEST}, EAST: {EAST, SOUTH | WEST}, WEST: {NORTH | EAST, WEST}}
+    for d, dirs in curved.items():
+        if dirs == pair:
+            return make_atom('/obj/structure/transit_tube/curved', {'dir': str(d)})
+    for d, dirs in flipped.items():
+        if dirs == pair:
+            return make_atom('/obj/structure/transit_tube/curved/flipped', {'dir': str(d)})
+    raise AssertionError(f'no tube piece joins {c1} and {c2}')
+
+
+def step_dir(a, b):
+    d = 0
+    d |= EAST if b[0] > a[0] else (WEST if b[0] < a[0] else 0)
+    d |= NORTH if b[1] > a[1] else (SOUTH if b[1] < a[1] else 0)
+    return d
+
+
+def angle_ok(d1, d2):
+    order = [NORTH, NORTH | EAST, EAST, SOUTH | EAST, SOUTH, SOUTH | WEST, WEST, NORTH | WEST]
+    i, j = order.index(d1), order.index(d2)
+    return min((i - j) % 8, (j - i) % 8) <= 1
+
+
+def build_mining_line(tiles, cur):
+    """Transit tube from the outpost reception to the mining station lobby (164,76)."""
+    import heapq
+    north = [(144, y) for y in range(193, 182, -1)]      # reception station, window, space pocket, bridge
+    south = [(164, 80), (164, 79), (164, 78), (164, 77), (164, 76)]  # into the lobby through its north wall
+
+    def cell(p):
+        if p in tiles:
+            objs, turf, area = tiles[p]
+        else:
+            atoms = cur.tile(*p)
+            objs = [a for a in atoms if not atom_type(a).startswith(('/area', '/turf'))]
+            turf, area = tile_turf(atoms), tile_area(atoms)
+        return objs, atom_type(turf), area
+
+    def cost(p):
+        if not (130 <= p[0] <= 190 and 70 <= p[1] <= 186):
+            return None
+        objs, turf, area = cell(p)
+        if area.startswith(OUTPOST_AREA):
+            return None
+        kinds = {atom_type(a) for a in objs}
+        if turf.startswith('/turf/simulated/mineral'):
+            return 1 if not kinds else None
+        if turf == '/turf/space':
+            return 1 if kinds <= {'/obj/structure/lattice'} else None
+        if 'asteroid' in turf or 'airless' in turf:
+            return 12 if not kinds else None   # open ground: allowed, but only for straight crossings
+        return None
+
+    start, goal = (144, 182), (164, 80)
+    frontier = [(0, start, SOUTH)]
+    best = {(start, SOUTH): 0}
+    came = {}
+    found = None
+    while frontier:
+        c, p, d = heapq.heappop(frontier)
+        if p == goal and d == SOUTH:
+            found = (p, d)
+            break
+        if best.get((p, d), 1e9) < c:
+            continue
+        here = cost(p) or 1
+        for nd in ALL8:
+            if not angle_ok(d, nd):
+                continue
+            if here > 1 and nd != d:
+                continue  # no curves on open ground
+            q_ = (p[0] + offset(nd)[0], p[1] + offset(nd)[1])
+            k = cost(q_)
+            if k is None:
+                continue
+            nc = c + k + (0 if nd == d else 0.3)
+            if nc < best.get((q_, nd), 1e9):
+                best[(q_, nd)] = nc
+                came[(q_, nd)] = (p, d)
+                heapq.heappush(frontier, (nc, q_, nd))
+    assert found, 'no route for the mining transit line'
+    path = []
+    node = found
+    while node:
+        path.append(node[0])
+        node = came.get(node)
+    path.reverse()
+    full = north + path + south[1:]
+    crossings = 0
+    for i in range(1, len(full) - 1):
+        p = full[i]
+        c1 = step_dir(p, full[i - 1])
+        c2 = step_dir(p, full[i + 1])
+        t = ensure(tiles, cur, p)
+        turf = atom_type(t[1])
+        kinds = [atom_type(a) for a in t[0]]
+        walkway = ('asteroid' in turf or 'airless' in turf or turf.endswith('/plasteel') or turf.endswith('/plating')) \
+            and not any('window' in k or 'grille' in k for k in kinds) and p != (164, 78)
+        if turf.startswith('/turf/simulated/mineral'):
+            t[1] = '/turf/simulated/floor/plating/asteroid/airless'
+            if t[2] == '/area/mine/unexplored':
+                t[2] = '/area/mine/explored'
+            walkway = False
+        if turf == '/turf/space':
+            walkway = False
+            if '/obj/structure/lattice' not in kinds:
+                t[0].append('/obj/structure/lattice')
+        if p == (164, 78):
+            t[1] = '/turf/simulated/floor/plating'
+            t[0].append('/obj/effect/spawner/window/reinforced')
+        crossings += walkway
+        t[0].append(tube_piece(c1, c2, walkway))
+    # Stations: reception becomes a through station, the lobby gets a terminus with a pod.
+    rec = tiles[(144, 193)][0]
+    rec[:] = [a for a in rec if not atom_type(a).startswith('/obj/structure/transit_tube/station')]
+    rec.append(make_atom('/obj/structure/transit_tube/station', {'dir': '4'}))
+    lobby = ensure(tiles, cur, (164, 76))[0]
+    lobby.extend([make_atom('/obj/structure/transit_tube/station/reverse/flipped', {'dir': '8'}),
+                  '/obj/structure/transit_tube_pod'])
+    print(f'mining line: {len(full)} cells, {crossings} walkable crossings: {[p for p in full if False]}')
+    return full
 
 
 if __name__ == '__main__':

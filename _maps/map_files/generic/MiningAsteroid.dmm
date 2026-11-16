@@ -2818,11 +2818,12 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/transit_tube,
 /turf/simulated/floor/plating,
 /area/research_outpost/entry)
 "sa" = (
 /obj/structure/transit_tube_pod,
-/obj/structure/transit_tube/station/reverse{
+/obj/structure/transit_tube/station{
 	dir = 4
 	},
 /turf/simulated/floor/plasteel{
@@ -2862,24 +2863,24 @@
 "sf" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/entry)
 "sg" = (
-/turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
-"sh" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
+/area/research_outpost/entry)
+"sh" = (
+/turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
 "si" = (
 /obj/structure/table,
@@ -2896,32 +2897,32 @@
 	},
 /area/mine/explored)
 "sk" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/research_outpost/entry)
+"sl" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/light,
 /turf/simulated/floor/plasteel{
 	icon_state = "bluecorner"
 	},
 /area/research_outpost/entry)
-"sl" = (
-/turf/simulated/wall,
-/area/research_outpost/gearstore)
 "sm" = (
-/obj/structure/closet/emcloset,
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 5
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 2;
-	pixel_y = -25
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "arrival"
-	},
-/area/research_outpost/entry)
-"sn" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
+"sn" = (
+/turf/simulated/wall,
+/area/research_outpost/gearstore)
 "so" = (
 /obj/machinery/power/terminal{
 	icon_state = "term";
@@ -2934,26 +2935,39 @@
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
 "sp" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/plasteel,
+/obj/structure/closet/emcloset,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	dir = 2;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "arrival"
+	},
 /area/research_outpost/entry)
 "sq" = (
-/turf/simulated/wall/r_wall,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
 "sr" = (
-/obj/machinery/xenoarch/suspension,
-/turf/simulated/floor/plasteel,
-/area/research_outpost/gearstore)
-"ss" = (
-/turf/simulated/floor/plasteel,
-/area/research_outpost/gearstore)
-"st" = (
-/obj/structure/closet{
-	name = "excavation equipment closet"
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4;
+	color = "#1010dd"
 	},
-/obj/item/storage/box/excavation,
-/obj/item/storage/belt/archaeology,
-/obj/item/xenoarch_tool/depth_scanner,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/entry)
+"ss" = (
+/obj/machinery/door/airlock/research/glass{
+	name = "Reconstitution Lab";
+	req_access = list(65)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/entry)
+"st" = (
+/obj/machinery/xenoarch/suspension,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
 "su" = (
@@ -2970,6 +2984,25 @@
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
 "sv" = (
+/turf/simulated/floor/plasteel,
+/area/research_outpost/gearstore)
+"sw" = (
+/obj/structure/closet/crate/can,
+/obj/effect/decal/cleanable/generic,
+/turf/simulated/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/mine/laborcamp)
+"sx" = (
+/obj/structure/closet{
+	name = "excavation equipment closet"
+	},
+/obj/item/storage/box/excavation,
+/obj/item/storage/belt/archaeology,
+/obj/item/xenoarch_tool/depth_scanner,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/gearstore)
+"sy" = (
 /obj/machinery/camera{
 	dir = 1;
 	c_tag = "Research Mining Dock";
@@ -2983,40 +3016,13 @@
 	icon_state = "arrival"
 	},
 /area/research_outpost/entry)
-"sw" = (
-/obj/structure/closet/crate/can,
-/obj/effect/decal/cleanable/generic,
-/turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
-	},
-/area/mine/laborcamp)
-"sx" = (
+"sz" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidplating"
 	},
-/area/research_outpost/gearstore)
-"sy" = (
-/obj/machinery/mech_bay_recharge_port,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel/airless{
-	icon_state = "asteroidfloor"
-	},
-/area/research_outpost/gearstore)
-"sz" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
 /area/research_outpost/gearstore)
 "sA" = (
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -3030,22 +3036,49 @@
 	name = "Mining Station Break Room"
 	})
 "sB" = (
+/obj/machinery/mech_bay_recharge_port,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel/airless{
+	icon_state = "asteroidfloor"
+	},
+/area/research_outpost/gearstore)
+"sC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/gearstore)
+"sD" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"sC" = (
+"sE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"sD" = (
+"sG" = (
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"sH" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"sE" = (
+"sI" = (
 /obj/structure/cable{
 	banned_links = 14
 	},
@@ -3062,14 +3095,7 @@
 	icon_state = "cmo"
 	},
 /area/research_outpost/entry)
-"sG" = (
-/obj/structure/cable{
-	linked_dirs = 0;
-	banned_links = 15
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/living_quarters)
-"sH" = (
+"sJ" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -3083,21 +3109,21 @@
 	icon_state = "arrival"
 	},
 /area/research_outpost/entry)
-"sI" = (
+"sK" = (
 /obj/structure/cable{
 	banned_links = 9
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
-"sJ" = (
+"sL" = (
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidplating"
 	},
 /area/research_outpost/gearstore)
-"sK" = (
+"sM" = (
 /turf/simulated/floor/mech_bay_recharge_floor,
 /area/research_outpost/gearstore)
-"sL" = (
+"sN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -3108,19 +3134,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/gearstore)
-"sM" = (
+"sO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"sN" = (
+"sP" = (
 /obj/structure/rack,
 /obj/item/storage/belt/archaeology,
 /obj/item/clothing/mask/breath,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"sO" = (
+"sQ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3133,29 +3159,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/research_outpost/entry)
-"sP" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/entry)
-"sQ" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/door/airlock/research/glass{
-	name = "Research Shuttle Dock";
-	req_access = list(65)
-	},
-/turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
 "sR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -3167,12 +3170,35 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/entry)
+"sT" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/door/airlock/research/glass{
+	name = "Research Shuttle Dock";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/entry)
+"sU" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/entry)
-"sT" = (
+"sV" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3182,35 +3208,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/entry)
-"sU" = (
+"sW" = (
 /obj/machinery/computer/mech_bay_power_console,
 /turf/simulated/floor/plasteel/airless{
 	icon_state = "asteroidfloor"
 	},
-/area/research_outpost/gearstore)
-"sV" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/gearstore)
-"sW" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
 /area/research_outpost/gearstore)
 "sX" = (
 /obj/structure/cable{
@@ -3237,14 +3239,15 @@
 	},
 /area/mine/living_quarters)
 "sZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/airlock/mining/glass{
-	name = "Equipment storage";
-	req_access = list(65)
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plating,
 /area/research_outpost/gearstore)
 "ta" = (
 /obj/machinery/power/terminal{
@@ -3258,16 +3261,18 @@
 /turf/simulated/floor/plating,
 /area/mine/laborcamp/security)
 "tb" = (
-/obj/structure/closet/emcloset,
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 2;
-	pixel_y = -25
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/gearstore)
 "tc" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
@@ -3286,14 +3291,25 @@
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
 "td" = (
-/obj/structure/cable{
-	banned_links = 3
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/machinery/door/airlock/mining/glass{
+	name = "Equipment storage";
+	req_access = list(65)
 	},
 /turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
+/area/research_outpost/gearstore)
 "te" = (
-/obj/structure/sign/science,
-/turf/simulated/wall,
+/obj/structure/closet/emcloset,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 2;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
 "tf" = (
 /obj/structure/cable{
@@ -3320,26 +3336,15 @@
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "th" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/structure/cable{
+	banned_links = 3
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/research_outpost/hallway)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/entry)
 "ti" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/hallway)
+/obj/structure/sign/science,
+/turf/simulated/wall,
+/area/research_outpost/entry)
 "tj" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -3348,9 +3353,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/hallway)
 "tk" = (
@@ -3361,23 +3364,26 @@
 	},
 /area/mine/laborcamp)
 "tl" = (
-/obj/structure/transit_tube/curved/flipped{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall,
-/area/research_outpost/spectro)
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/hallway)
 "tm" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/machinery/door/airlock/research/glass{
+	name = "Reconstitution Lab";
+	req_access = list(65)
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/research_outpost/spectro)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
 "tn" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -3386,7 +3392,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/research_outpost/spectro)
+/area/research_outpost/hallway)
 "to" = (
 /obj/structure/cable{
 	pixel_y = 0;
@@ -3431,10 +3437,10 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/research_outpost/spectro)
+/area/research_outpost/hallway)
 "ts" = (
 /obj/structure/transit_tube/curved/flipped{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/spectro)
@@ -3472,9 +3478,16 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "tw" = (
-/obj/structure/dispenser/oxygen,
-/turf/simulated/floor/plasteel,
-/area/research_outpost/gearstore)
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/research_outpost/spectro)
 "tx" = (
 /obj/item/clothing/mask/facehugger{
 	icon_state = "facehugger_dead";
@@ -3495,11 +3508,15 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "tz" = (
-/obj/structure/cable{
-	banned_links = 10
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/gearstore)
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/spectro)
 "tA" = (
 /obj/structure/chair/stool,
 /obj/machinery/camera{
@@ -3512,11 +3529,18 @@
 	},
 /area/mine/laborcamp)
 "tB" = (
-/obj/structure/cable{
-	banned_links = 12
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/gearstore)
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/spectro)
 "tC" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -3528,31 +3552,21 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "tD" = (
-/obj/structure/cable{
-	banned_links = 12
+/obj/structure/transit_tube/curved/flipped{
+	dir = 1
 	},
-/obj/machinery/door/airlock/mining/glass{
-	name = "Expedition Prep";
-	req_access = list(65)
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/entry)
+/turf/simulated/wall/r_wall,
+/area/research_outpost/spectro)
 "tE" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	color = "#1010dd"
-	},
+/obj/structure/dispenser/oxygen,
 /turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
+/area/research_outpost/gearstore)
 "tF" = (
 /obj/structure/cable{
-	banned_links = 8
+	banned_links = 10
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
+/area/research_outpost/gearstore)
 "tG" = (
 /turf/simulated/floor/plasteel/airless{
 	dir = 5;
@@ -3562,15 +3576,19 @@
 /area/mine/explored)
 "tH" = (
 /obj/structure/cable{
-	banned_links = 4
+	banned_links = 12
 	},
 /turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
+/area/research_outpost/gearstore)
 "tI" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
-/turf/simulated/floor/plasteel,
+/obj/machinery/door/airlock/mining/glass{
+	name = "Expedition Prep";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plating,
 /area/research_outpost/entry)
 "tJ" = (
 /obj/machinery/atmospherics/unary/portables_connector,
@@ -3581,24 +3599,24 @@
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/door/airlock/research/glass{
-	name = "Outpost Primary Access";
-	req_access = list(65)
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	color = "#1010dd"
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
 "tM" = (
 /obj/structure/cable{
-	banned_links = 12
+	banned_links = 8
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plasteel,
-/area/research_outpost/hallway)
+/area/research_outpost/entry)
 "tN" = (
 /obj/structure/cable{
-	banned_links = 9
+	banned_links = 4
 	},
 /turf/simulated/floor/plasteel,
-/area/research_outpost/hallway)
+/area/research_outpost/entry)
 "tO" = (
 /obj/structure/cable{
 	linked_dirs = 0;
@@ -3614,12 +3632,11 @@
 	},
 /area/mine/laborcamp/security)
 "tP" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = 24
+/obj/structure/cable{
+	banned_links = 12
 	},
 /turf/simulated/floor/plasteel,
-/area/research_outpost/hallway)
+/area/research_outpost/entry)
 "tQ" = (
 /obj/structure/cable{
 	pixel_y = 0;
@@ -3635,8 +3652,15 @@
 	},
 /area/mine/living_quarters)
 "tR" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/spectro)
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/research/glass{
+	name = "Outpost Primary Access";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/entry)
 "tS" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "laborcamp_away";
@@ -3648,13 +3672,11 @@
 	},
 /area/mine/laborcamp/security)
 "tT" = (
-/obj/structure/transit_tube/curved{
-	dir = 1
+/obj/structure/cable{
+	banned_links = 12
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "delivery"
-	},
-/area/research_outpost/spectro)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
 "tU" = (
 /obj/structure/chair/stool,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -3681,14 +3703,11 @@
 	},
 /area/mine/laborcamp)
 "tW" = (
-/obj/structure/transit_tube/station{
-	dir = 4
+/obj/structure/cable{
+	banned_links = 1
 	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "bot"
-	},
-/area/research_outpost/spectro)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
 "tX" = (
 /obj/structure/cable{
 	tag = "";
@@ -3698,13 +3717,12 @@
 /turf/simulated/floor/plasteel,
 /area/mine/laborcamp)
 "tY" = (
-/obj/structure/transit_tube/curved/flipped{
-	dir = 2
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 24
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "delivery"
-	},
-/area/research_outpost/spectro)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
 "tZ" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/glass/bottle/whiskey,
@@ -3719,6 +3737,34 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "ub" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/spectro)
+"uc" = (
+/obj/structure/transit_tube/curved{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/research_outpost/spectro)
+"ud" = (
+/obj/structure/transit_tube/station{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "bot"
+	},
+/area/research_outpost/spectro)
+"ue" = (
+/obj/structure/transit_tube/curved/flipped{
+	dir = 2
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/research_outpost/spectro)
+"uf" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -3728,20 +3774,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/spectro)
-"uc" = (
+"ug" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"ud" = (
+"uh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	color = "#1010dd"
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"ue" = (
+"ui" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -3751,7 +3797,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"uf" = (
+"uj" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = 24
@@ -3765,18 +3811,11 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"ug" = (
+"uk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/wall,
 /area/research_outpost/entry)
-"uh" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	color = "#1010dd"
-	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/entry)
-"ui" = (
+"ul" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -3785,42 +3824,20 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
-"uj" = (
+"um" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Outpost Primary Access";
 	req_access = list(65)
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/entry)
-"uk" = (
+"un" = (
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"ul" = (
+"uo" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"um" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/hallway)
-"un" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/spectro)
-"uo" = (
-/obj/machinery/door/window/westleft{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/spectro)
 "up" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/light/small,
@@ -3828,10 +3845,32 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "uq" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
+"ur" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/spectro)
+"us" = (
+/obj/machinery/door/window/westleft{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/spectro)
+"ut" = (
 /obj/structure/xenoarch_chamber,
 /turf/simulated/floor/plating/airless,
 /area/research_outpost/spectro)
-"ur" = (
+"uu" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3839,7 +3878,14 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/spectro)
-"us" = (
+"uv" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/eva)
+"uw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/machinery/access_button{
 	command = "cycle_interior";
@@ -3851,11 +3897,14 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"ut" = (
+"ux" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"uu" = (
+"uy" = (
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"uA" = (
 /obj/structure/cable{
 	banned_links = 6
 	},
@@ -3874,14 +3923,11 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"uv" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/eva)
-"uw" = (
+"uB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/mine/laborcamp)
+"uC" = (
 /obj/structure/cable{
 	banned_links = 9
 	},
@@ -3894,13 +3940,10 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"ux" = (
+"uD" = (
 /turf/simulated/wall,
 /area/research_outpost/hallway)
-"uy" = (
-/turf/simulated/floor/plating,
-/area/mine/living_quarters)
-"uA" = (
+"uE" = (
 /obj/structure/window/full/reinforced,
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -3909,11 +3952,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"uB" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
-"uC" = (
+"uF" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -3929,7 +3968,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"uD" = (
+"uG" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Medbay";
 	req_access = list(65)
@@ -3941,17 +3980,23 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"uE" = (
+"uH" = (
 /obj/structure/bookcase,
 /obj/item/book/manual/xenoarchaeology,
 /obj/item/book/manual/xenoarchaeology,
 /turf/simulated/floor/wood,
 /area/research_outpost/hallway)
-"uF" = (
+"uI" = (
 /obj/structure/table,
 /turf/simulated/floor/wood,
 /area/research_outpost/hallway)
-"uG" = (
+"uJ" = (
+/obj/machinery/light,
+/turf/simulated/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/mine/laborcamp)
+"uK" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -3960,7 +4005,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"uH" = (
+"uL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -3969,31 +4014,37 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"uI" = (
+"uM" = (
 /obj/structure/table,
 /obj/machinery/light/small,
 /turf/simulated/floor/plasteel{
 	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"uJ" = (
-/obj/machinery/light,
-/turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
-	},
-/area/mine/laborcamp)
-"uK" = (
+"uN" = (
+/obj/spacepod/random,
+/turf/space,
+/area/space)
+"uO" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/spectro)
-"uL" = (
+"uP" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'HIGH VOLTAGE'";
+	icon_state = "shock";
+	name = "HIGH VOLTAGE"
+	},
+/turf/simulated/wall,
+/area/mine/west_outpost)
+"uQ" = (
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/spectro)
-"uM" = (
+"uR" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -4004,11 +4055,7 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/spectro)
-"uN" = (
-/obj/spacepod/random,
-/turf/space,
-/area/space)
-"uO" = (
+"uS" = (
 /obj/item/storage/box/excavation,
 /obj/item/pickaxe,
 /obj/structure/disposalpipe/trunk{
@@ -4020,15 +4067,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"uP" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'HIGH VOLTAGE'";
-	icon_state = "shock";
-	name = "HIGH VOLTAGE"
-	},
-/turf/simulated/wall,
-/area/mine/west_outpost)
-"uQ" = (
+"uT" = (
 /obj/structure/table,
 /obj/item/storage/box/excavation,
 /obj/item/pickaxe,
@@ -4037,14 +4076,14 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"uR" = (
+"uU" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"uS" = (
+"uV" = (
 /turf/simulated/wall,
 /area/research_outpost/tempstorage)
-"uT" = (
+"uW" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -4057,7 +4096,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/tempstorage)
-"uU" = (
+"uX" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
@@ -4066,7 +4105,7 @@
 	icon_state = "warnwhite"
 	},
 /area/research_outpost/med)
-"uV" = (
+"uZ" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -4077,29 +4116,6 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"uW" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/med)
-"uX" = (
-/obj/structure/table,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/toxin,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/med)
-"uZ" = (
-/obj/structure/table,
-/obj/machinery/alarm{
-	dir = 2;
-	pixel_y = -25
-	},
-/obj/item/camera,
-/obj/item/stamp,
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
 "va" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -4112,49 +4128,35 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "vb" = (
-/obj/structure/chair,
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
-"vc" = (
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
-"vd" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/hallway)
-"ve" = (
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/obj/machinery/camera{
-	c_tag = "Research Outpost Lobby";
-	network = list("Research","SS13")
-	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "greencorner"
+	icon_state = "white"
 	},
-/area/research_outpost/hallway)
-"vf" = (
+/area/research_outpost/med)
+"vc" = (
+/obj/structure/table,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/toxin,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/med)
+"vd" = (
+/obj/structure/table,
 /obj/machinery/alarm{
 	dir = 2;
 	pixel_y = -25
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "whitegreen"
-	},
-/area/research_outpost/spectro)
+/obj/item/camera,
+/obj/item/stamp,
+/turf/simulated/floor/wood,
+/area/research_outpost/hallway)
+"ve" = (
+/obj/structure/chair,
+/turf/simulated/floor/wood,
+/area/research_outpost/hallway)
+"vf" = (
+/turf/simulated/floor/wood,
+/area/research_outpost/hallway)
 "vg" = (
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidfloor"
@@ -4176,11 +4178,17 @@
 /turf/simulated/floor/plasteel,
 /area/mine/eva)
 "vi" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
+/obj/structure/cable{
+	banned_links = 3
 	},
-/area/research_outpost/spectro)
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
 "vj" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
@@ -4203,18 +4211,30 @@
 	},
 /area/mine/abandoned)
 "vn" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
 	},
-/obj/machinery/xenoarch/spectrometer,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/machinery/camera{
+	c_tag = "Research Outpost Lobby";
+	network = list("Research","SS13")
+	},
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	dir = 4;
+	icon_state = "greencorner"
+	},
+/area/research_outpost/hallway)
+"vo" = (
+/obj/machinery/alarm{
+	dir = 2;
+	pixel_y = -25
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"vo" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
-/area/research_outpost/gearstore)
 "vp" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "red";
@@ -4235,12 +4255,31 @@
 	},
 /area/mine/laborcamp)
 "vr" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/spectro)
+"vs" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/xenoarch/spectrometer,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/spectro)
+"vt" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall,
+/area/research_outpost/gearstore)
+"vu" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c"
 	},
 /turf/simulated/wall,
 /area/research_outpost/tempstorage)
-"vs" = (
+"vv" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -4249,14 +4288,14 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/tempstorage)
-"vt" = (
+"vw" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "warnwhite"
 	},
 /area/research_outpost/med)
-"vu" = (
+"vx" = (
 /obj/structure/cable{
 	banned_links = 7
 	},
@@ -4269,7 +4308,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"vv" = (
+"vy" = (
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -4278,7 +4317,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"vw" = (
+"vz" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/o2{
 	pixel_x = 2;
@@ -4296,7 +4335,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/med)
-"vx" = (
+"vA" = (
 /obj/structure/cable{
 	banned_links = 14
 	},
@@ -4316,41 +4355,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/research_outpost/hallway)
-"vy" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
-"vz" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
-"vA" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
 "vB" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	color = "#1010dd"
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "whitegreen"
-	},
+/turf/simulated/floor/wood,
 /area/research_outpost/hallway)
 "vC" = (
 /obj/machinery/vending/coffee,
@@ -4364,15 +4373,11 @@
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/door/airlock/research{
-	name = "Anomaly Secure Storage";
-	req_access = list(65)
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/spectro)
+/turf/simulated/floor/wood,
+/area/research_outpost/hallway)
 "vE" = (
 /obj/structure/chair{
 	dir = 4
@@ -4382,14 +4387,14 @@
 	},
 /area/mine/living_quarters)
 "vF" = (
-/obj/structure/cable{
-	banned_links = 12
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
-	icon_state = "whitegreen"
+	icon_state = "white"
 	},
-/area/research_outpost/spectro)
+/area/research_outpost/hallway)
 "vG" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -4400,14 +4405,21 @@
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	color = "#1010dd"
 	},
-/area/research_outpost/spectro)
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whitegreen"
+	},
+/area/research_outpost/hallway)
 "vI" = (
 /obj/structure/cable{
-	banned_links = 9
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/research{
+	name = "Anomaly Secure Storage";
+	req_access = list(65)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
@@ -4420,40 +4432,44 @@
 	},
 /area/mine/laborcamp/security)
 "vK" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
 "vL" = (
-/obj/machinery/xenoarch/spectrometer,
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/spectro)
 "vM" = (
-/obj/machinery/disposal/deliveryChute{
-	dir = 1
+/obj/structure/cable{
+	banned_links = 9
 	},
-/obj/structure/disposalpipe/trunk,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
+	icon_state = "white"
 	},
-/area/research_outpost/tempstorage)
+/area/research_outpost/spectro)
 "vN" = (
-/obj/machinery/conveyor{
-	id = "anominerals"
-	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
+	icon_state = "white"
 	},
-/area/research_outpost/tempstorage)
+/area/research_outpost/spectro)
 "vO" = (
-/obj/machinery/mineral/unloading_machine,
+/obj/machinery/xenoarch/spectrometer,
 /turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
+	icon_state = "white"
 	},
-/area/research_outpost/tempstorage)
+/area/research_outpost/spectro)
 "vP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -4481,12 +4497,12 @@
 	},
 /area/mine/laborcamp)
 "vR" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "anominerals";
-	pixel_y = 16
+/obj/machinery/disposal/deliveryChute{
+	dir = 1
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/plasteel{
-	icon_state = "loadingarea"
+	icon_state = "floorgrime"
 	},
 /area/research_outpost/tempstorage)
 "vS" = (
@@ -4496,21 +4512,18 @@
 	},
 /area/mine/laborcamp)
 "vT" = (
-/obj/structure/cable{
-	banned_links = 7
+/obj/machinery/conveyor{
+	id = "anominerals"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
+/turf/simulated/floor/plasteel{
+	icon_state = "floorgrime"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "Temporary Storage APC";
-	pixel_y = 24
-	},
-/turf/simulated/floor/plasteel,
 /area/research_outpost/tempstorage)
 "vU" = (
-/turf/simulated/wall/r_wall,
+/obj/machinery/mineral/unloading_machine,
+/turf/simulated/floor/plasteel{
+	icon_state = "floorgrime"
+	},
 /area/research_outpost/tempstorage)
 "vV" = (
 /obj/structure/disposaloutlet{
@@ -4528,44 +4541,37 @@
 	},
 /area/mine/production)
 "vW" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/hallway)
-"vX" = (
-/obj/machinery/vending/coffee,
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
-"vY" = (
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/vending/snack,
-/turf/simulated/floor/wood,
-/area/research_outpost/hallway)
-"vZ" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	color = "#dd1010"
+/obj/machinery/conveyor_switch/oneway{
+	id = "anominerals";
+	pixel_y = 16
 	},
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	icon_state = "loadingarea"
 	},
-/area/research_outpost/hallway)
-"wa" = (
+/area/research_outpost/tempstorage)
+"vX" = (
+/obj/structure/cable{
+	banned_links = 7
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/structure/sign/science{
-	name = "\improper MASS SPECTROMETRY";
-	desc = "A warning sign which reads 'MASS SPECTROMETRY'";
-	pixel_y = 32
-	},
-/turf/simulated/floor/plasteel{
+/obj/machinery/power/apc{
 	dir = 1;
-	icon_state = "whitegreencorner"
+	name = "Temporary Storage APC";
+	pixel_y = 24
 	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/tempstorage)
+"vY" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/tempstorage)
+"vZ" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/hallway)
+"wa" = (
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/wood,
 /area/research_outpost/hallway)
 "wb" = (
 /obj/docking_port/stationary{
@@ -4581,10 +4587,61 @@
 /turf/space,
 /area/space)
 "wc" = (
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/vending/snack,
+/turf/simulated/floor/wood,
+/area/research_outpost/hallway)
+"wd" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	color = "#dd1010"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"we" = (
+/turf/simulated/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/mine/abandoned)
+"wf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/structure/sign/science{
+	name = "\improper MASS SPECTROMETRY";
+	desc = "A warning sign which reads 'MASS SPECTROMETRY'";
+	pixel_y = 32
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whitegreencorner"
+	},
+/area/research_outpost/hallway)
+"wg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/wall/r_wall,
 /area/research_outpost/spectro)
-"wd" = (
+"wh" = (
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/obj/structure/cable{
+	pixel_y = 1;
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/turf/simulated/floor/plating,
+/area/mine/laborcamp)
+"wi" = (
 /obj/structure/chair/stool,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
@@ -4592,12 +4649,13 @@
 	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"we" = (
-/turf/simulated/floor/plasteel/airless{
-	icon_state = "floorscorched1"
-	},
-/area/mine/abandoned)
-"wf" = (
+"wj" = (
+/obj/machinery/mineral/equipment_vendor,
+/turf/simulated/floor/plasteel,
+/area/mine/production{
+	name = "Mining Station Mech Bay"
+	})
+"wk" = (
 /obj/structure/table,
 /obj/machinery/light/small{
 	dir = 4
@@ -4616,7 +4674,7 @@
 	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"wg" = (
+"wl" = (
 /obj/structure/cable{
 	banned_links = 7
 	},
@@ -4639,33 +4697,14 @@
 	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"wh" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable{
-	linked_dirs = 0;
-	banned_links = 15
-	},
-/obj/structure/cable{
-	pixel_y = 1;
-	linked_dirs = 0;
-	banned_links = 15
-	},
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
-"wi" = (
+"wm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"wj" = (
-/obj/machinery/mineral/equipment_vendor,
-/turf/simulated/floor/plasteel,
-/area/mine/production{
-	name = "Mining Station Mech Bay"
-	})
-"wk" = (
+"wn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/firealarm{
 	dir = 4;
@@ -4676,32 +4715,6 @@
 	icon_state = "whitegreen"
 	},
 /area/research_outpost/spectro)
-"wl" = (
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitegreen"
-	},
-/area/research_outpost/spectro)
-"wm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 9
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "warning"
-	},
-/area/research_outpost/tempstorage)
-"wn" = (
-/obj/machinery/door/airlock/research{
-	name = "Temporary Storage Loading";
-	req_access = list(65)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/tempstorage)
 "wo" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/tobacco,
@@ -4719,12 +4732,11 @@
 	},
 /area/mine/laborcamp/security)
 "wq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
+	dir = 4;
+	icon_state = "whitegreen"
 	},
-/area/research_outpost/tempstorage)
+/area/research_outpost/spectro)
 "wr" = (
 /obj/structure/cable{
 	tag = "";
@@ -4747,6 +4759,33 @@
 	},
 /area/mine/laborcamp/security)
 "ws" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 9
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "warning"
+	},
+/area/research_outpost/tempstorage)
+"wt" = (
+/obj/machinery/door/airlock/research{
+	name = "Temporary Storage Loading";
+	req_access = list(65)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/tempstorage)
+"wu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/tempstorage)
+"wv" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -4761,13 +4800,13 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/tempstorage)
-"wt" = (
+"ww" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "vault"
 	},
 /area/research_outpost/tempstorage)
-"wu" = (
+"wx" = (
 /obj/structure/closet/secure_closet/xenoarchaeologist,
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -4777,7 +4816,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"wv" = (
+"wy" = (
 /obj/machinery/door/window/westleft{
 	name = "Locker room";
 	req_access = list(65)
@@ -4787,7 +4826,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"ww" = (
+"wz" = (
 /obj/structure/closet/secure_closet/xenoarchaeologist,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
@@ -4803,7 +4842,14 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"wx" = (
+"wA" = (
+/obj/item/stack/rods,
+/obj/structure/door_assembly/door_assembly_ext{
+	name = "Broken External Airlock"
+	},
+/turf/simulated/floor/plasteel/airless,
+/area/mine/abandoned)
+"wB" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -4814,7 +4860,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"wy" = (
+"wC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
@@ -4826,7 +4872,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"wz" = (
+"wD" = (
 /obj/machinery/door/airlock/research{
 	name = "Anomaly Secure Storage";
 	req_access = list(65)
@@ -4835,35 +4881,38 @@
 	icon_state = "white"
 	},
 /area/research_outpost/spectro)
-"wA" = (
-/obj/item/stack/rods,
-/obj/structure/door_assembly/door_assembly_ext{
-	name = "Broken External Airlock"
-	},
-/turf/simulated/floor/plasteel/airless,
-/area/mine/abandoned)
-"wB" = (
+"wE" = (
 /turf/simulated/wall/r_wall,
 /area/research_outpost/maintstore1)
-"wC" = (
+"wF" = (
 /turf/simulated/wall/r_wall,
 /area/research_outpost/maint)
-"wD" = (
+"wG" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /obj/machinery/door/airlock/maintenance{
 	req_access = list(65)
 	},
-/turf/simulated/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
+/turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"wE" = (
-/turf/simulated/floor/plating{
-	dir = 9;
-	icon_state = "warnplate"
+"wH" = (
+/obj/structure/rack,
+/obj/item/storage/backpack/satchel,
+/obj/item/pickaxe,
+/obj/item/storage/belt/utility,
+/turf/simulated/floor/plasteel,
+/area/mine/eva)
+"wI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
 /area/research_outpost/tempstorage)
-"wF" = (
+"wJ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	color = "#1010dd"
 	},
@@ -4872,7 +4921,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/tempstorage)
-"wG" = (
+"wK" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plasteel{
 	dir = 1;
@@ -4883,14 +4932,7 @@
 	name = "Mainframe floor"
 	},
 /area/research_outpost/tempstorage)
-"wH" = (
-/obj/structure/rack,
-/obj/item/storage/backpack/satchel,
-/obj/item/pickaxe,
-/obj/item/storage/belt/utility,
-/turf/simulated/floor/plasteel,
-/area/mine/eva)
-"wI" = (
+"wL" = (
 /obj/machinery/alarm{
 	dir = 2;
 	pixel_y = -25
@@ -4900,42 +4942,12 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/hallway)
-"wJ" = (
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "warning"
-	},
-/area/research_outpost/hallway)
-"wK" = (
-/obj/machinery/door/window/westleft{
-	dir = 1;
-	name = "Locker room";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "warning"
-	},
-/area/research_outpost/hallway)
-"wL" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = 24
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
 "wM" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/sample)
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "warning"
+	},
+/area/research_outpost/hallway)
 "wN" = (
 /obj/machinery/light{
 	dir = 4;
@@ -4955,17 +4967,32 @@
 	},
 /area/mine/living_quarters)
 "wP" = (
-/obj/machinery/chem_master,
-/turf/simulated/floor/plasteel{
-	icon_state = "whiteblue"
+/obj/machinery/door/window/westleft{
+	dir = 1;
+	name = "Locker room";
+	req_access = list(65)
 	},
-/area/research_outpost/sample)
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "warning"
+	},
+/area/research_outpost/hallway)
 "wQ" = (
-/obj/structure/table,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
-/area/research_outpost/sample)
+/area/research_outpost/hallway)
 "wR" = (
 /obj/machinery/vending/cigarette,
 /turf/simulated/floor/plasteel{
@@ -4975,11 +5002,7 @@
 	name = "Mining Station Break Room"
 	})
 "wS" = (
-/obj/structure/table,
-/obj/machinery/reagentgrinder,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/simulated/wall/r_wall,
 /area/research_outpost/sample)
 "wT" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -4988,8 +5011,9 @@
 	},
 /area/mine/living_quarters)
 "wU" = (
+/obj/machinery/chem_master,
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	icon_state = "whiteblue"
 	},
 /area/research_outpost/sample)
 "wV" = (
@@ -5017,6 +5041,30 @@
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "wX" = (
+/obj/structure/table,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"wY" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"wZ" = (
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"xa" = (
+/obj/structure/alien/weeds,
+/turf/simulated/floor/plating/airless{
+	icon_state = "floorscorched1"
+	},
+/area/mine/abandoned)
+"xb" = (
 /obj/structure/closet/crate/hydroponics,
 /obj/item/shovel/spade,
 /obj/item/reagent_containers/cup/bucket,
@@ -5028,7 +5076,15 @@
 /obj/item/reagent_containers/cup/bottle/nutrient/ez,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore1)
-"wY" = (
+"xd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"xe" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/metal{
 	pixel_x = 5;
@@ -5041,7 +5097,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore1)
-"wZ" = (
+"xf" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/emergency{
 	pixel_x = 5;
@@ -5053,13 +5109,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore1)
-"xa" = (
-/obj/structure/alien/weeds,
-/turf/simulated/floor/plating/airless{
-	icon_state = "floorscorched1"
-	},
-/area/mine/abandoned)
-"xb" = (
+"xg" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "anotempload"
@@ -5067,46 +5117,6 @@
 /obj/structure/plasticflaps,
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"xd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/lobby)
-"xe" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "anotempload"
-	},
-/turf/simulated/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
-/area/research_outpost/maint)
-"xf" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "anotempload"
-	},
-/turf/simulated/floor/plating{
-	dir = 8;
-	icon_state = "warnplate"
-	},
-/area/research_outpost/tempstorage)
-"xg" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/machinery/disposal/deliveryChute{
-	dir = 8
-	},
-/turf/simulated/floor/plating{
-	dir = 1;
-	icon_state = "warnplate"
-	},
-/area/research_outpost/tempstorage)
 "xh" = (
 /obj/structure/table,
 /obj/item/dice/d20,
@@ -5128,14 +5138,15 @@
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
 "xj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+/obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "anotempload"
 	},
-/area/research_outpost/tempstorage)
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
 "xk" = (
 /obj/structure/rack,
 /obj/machinery/light{
@@ -5152,6 +5163,37 @@
 	},
 /area/mine/abandoned)
 "xm" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/conveyor{
+	dir = 9;
+	id = "anotempload"
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/tempstorage)
+"xn" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/deliveryChute{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/tempstorage)
+"xo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/tempstorage)
+"xp" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/bio_suit/scientist,
 /obj/item/clothing/head/bio_hood/scientist,
@@ -5162,7 +5204,7 @@
 	icon_state = "delivery"
 	},
 /area/research_outpost/hallway)
-"xn" = (
+"xq" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/bio_suit/scientist,
 /obj/item/clothing/head/bio_hood/scientist,
@@ -5181,7 +5223,17 @@
 	icon_state = "delivery"
 	},
 /area/research_outpost/hallway)
-"xo" = (
+"xr" = (
+/obj/structure/extinguisher_cabinet,
+/turf/simulated/wall,
+/area/mine/production{
+	name = "Mining Station Mech Bay"
+	})
+"xs" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/plasteel,
+/area/mine/eva)
+"xt" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/bio_suit/scientist,
 /obj/item/clothing/head/bio_hood/scientist,
@@ -5198,7 +5250,7 @@
 	icon_state = "delivery"
 	},
 /area/research_outpost/hallway)
-"xp" = (
+"xu" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -5212,7 +5264,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"xq" = (
+"xv" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1;
 	color = "#1010dd"
@@ -5225,17 +5277,7 @@
 	icon_state = "whitebluecorner"
 	},
 /area/research_outpost/hallway)
-"xr" = (
-/obj/structure/extinguisher_cabinet,
-/turf/simulated/wall,
-/area/mine/production{
-	name = "Mining Station Mech Bay"
-	})
-"xs" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden,
-/turf/simulated/floor/plasteel,
-/area/mine/eva)
-"xt" = (
+"xw" = (
 /obj/structure/table,
 /obj/item/reagent_containers/cup/beaker/large,
 /obj/item/reagent_containers/dropper{
@@ -5245,27 +5287,12 @@
 	icon_state = "whiteblue"
 	},
 /area/research_outpost/sample)
-"xu" = (
+"xx" = (
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/sample)
-"xv" = (
-/obj/structure/sign/nosmoking_2{
-	pixel_y = 32
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/sample)
-"xw" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore1)
-"xx" = (
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore1)
 "xy" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -5276,22 +5303,17 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/explored)
 "xz" = (
-/obj/structure/extinguisher_cabinet{
+/obj/structure/sign/nosmoking_2{
 	pixel_y = 32
 	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"xA" = (
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore1)
-"xA" = (
-/obj/structure/sign/securearea{
-	name = "\improper MOVING PARTS";
-	desc = "A warning sign which reads 'MOVING PARTS'.";
-	pixel_y = 32
-	},
-/turf/simulated/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
-/area/research_outpost/maint)
 "xB" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5309,11 +5331,8 @@
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "xC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/research_outpost/tempstorage)
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore1)
 "xD" = (
 /obj/machinery/status_display{
 	pixel_x = 32
@@ -5328,6 +5347,45 @@
 	},
 /area/mine/laborcamp)
 "xE" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore1)
+"xF" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/sign/securearea{
+	name = "\improper MOVING PARTS";
+	desc = "A warning sign which reads 'MOVING PARTS'.";
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
+"xG" = (
+/obj/machinery/conveyor_switch{
+	id = "mining_west"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/airless{
+	icon_state = "asteroidwarning";
+	dir = 1
+	},
+/area/mine/west_outpost)
+"xH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/research_outpost/tempstorage)
+"xI" = (
+/obj/structure/lattice,
+/turf/space,
+/area/mine/abandoned)
+"xJ" = (
 /obj/machinery/door/airlock/research{
 	name = "Temporary Storage";
 	req_access = list(65)
@@ -5340,7 +5398,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/tempstorage)
-"xF" = (
+"xK" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -5355,19 +5413,10 @@
 	icon_state = "whitebluecorner"
 	},
 /area/research_outpost/hallway)
-"xG" = (
-/obj/machinery/conveyor_switch{
-	id = "mining_west"
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating/airless{
-	icon_state = "asteroidwarning";
-	dir = 1
-	},
-/area/mine/west_outpost)
-"xH" = (
+"xL" = (
+/turf/simulated/floor/plating/asteroid/airless,
+/area/space)
+"xM" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -5380,15 +5429,11 @@
 	icon_state = "barber"
 	},
 /area/research_outpost/hallway)
-"xI" = (
-/obj/structure/lattice,
-/turf/space,
-/area/mine/abandoned)
-"xJ" = (
+"xN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/wall/r_wall,
 /area/research_outpost/sample)
-"xK" = (
+"xO" = (
 /obj/structure/table,
 /obj/machinery/camera{
 	dir = 1;
@@ -5400,37 +5445,6 @@
 	icon_state = "whiteblue"
 	},
 /area/research_outpost/sample)
-"xL" = (
-/turf/simulated/floor/plating/asteroid/airless,
-/area/space)
-"xM" = (
-/obj/structure/table,
-/obj/item/storage/box/beakers{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/sample)
-"xN" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore1)
-"xO" = (
-/obj/structure/table,
-/obj/item/plant_analyzer,
-/obj/item/stock_parts/cell,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore1)
 "xP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -5468,6 +5482,34 @@
 	},
 /area/mine/laborcamp)
 "xU" = (
+/obj/structure/table,
+/obj/item/storage/box/beakers{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"xV" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore1)
+"xW" = (
+/obj/structure/table,
+/obj/item/plant_analyzer,
+/obj/item/stock_parts/cell,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore1)
+"xX" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "anosample"
@@ -5475,48 +5517,16 @@
 /obj/structure/plasticflaps,
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"xV" = (
+"xY" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "anosample"
 	},
-/turf/simulated/floor/plating{
-	dir = 4;
-	icon_state = "warnplate"
-	},
-/area/research_outpost/maint)
-"xW" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id = "anosample"
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"xX" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 5
-	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "whitehall"
-	},
-/area/research_outpost/hallway)
-"xY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "whitehall"
-	},
-/area/research_outpost/hallway)
 "xZ" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -5564,17 +5574,15 @@
 	name = "Mining Station Break Room"
 	})
 "yd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/camera{
-	dir = 4;
-	c_tag = "Research Outpost Hallway Central";
-	network = list("Research","SS13")
-	},
-/turf/simulated/floor/plasteel{
+/obj/machinery/conveyor{
 	dir = 5;
-	icon_state = "whitehall"
+	id = "anosample"
 	},
-/area/research_outpost/hallway)
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
 "ye" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -5592,9 +5600,11 @@
 	},
 /area/mine/eva)
 "yg" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8;
-	color = "#dd1010"
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 5
 	},
 /turf/simulated/floor/plasteel{
 	dir = 5;
@@ -5602,10 +5612,10 @@
 	},
 /area/research_outpost/hallway)
 "yh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "whitehall"
@@ -5628,31 +5638,34 @@
 	})
 "yk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+/obj/machinery/camera{
+	dir = 4;
+	c_tag = "Research Outpost Hallway Central";
+	network = list("Research","SS13")
 	},
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	dir = 5;
+	icon_state = "whitehall"
 	},
 /area/research_outpost/hallway)
 "yl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8;
+	color = "#dd1010"
+	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitebluecorner"
+	dir = 5;
+	icon_state = "whitehall"
 	},
 /area/research_outpost/hallway)
 "ym" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "barber"
+	dir = 5;
+	icon_state = "whitehall"
 	},
 /area/research_outpost/hallway)
 "yo" = (
@@ -5670,12 +5683,13 @@
 	},
 /area/mine/west_outpost)
 "yq" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	color = "#1010dd"
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
 /turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "barber"
+	icon_state = "white"
 	},
 /area/research_outpost/hallway)
 "yr" = (
@@ -5696,6 +5710,34 @@
 	},
 /area/mine/laborcamp)
 "yt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whitebluecorner"
+	},
+/area/research_outpost/hallway)
+"yu" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 10
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "barber"
+	},
+/area/research_outpost/hallway)
+"yv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	color = "#1010dd"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "barber"
+	},
+/area/research_outpost/hallway)
+"yw" = (
 /obj/machinery/door/airlock/research{
 	name = "Anomaly Secure Storage";
 	req_access = list(65)
@@ -5705,29 +5747,10 @@
 	icon_state = "white"
 	},
 /area/research_outpost/sample)
-"yu" = (
+"yx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
 	icon_state = "whiteblue"
-	},
-/area/research_outpost/sample)
-"yv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/sample)
-"yw" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/sample)
-"yx" = (
-/obj/machinery/computer/fossil_reconstitutor/flora,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitebluecorner"
 	},
 /area/research_outpost/sample)
 "yy" = (
@@ -5747,6 +5770,25 @@
 	name = "Mining Station Break Room"
 	})
 "yz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"yA" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
+"yB" = (
+/obj/structure/table,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whitebluecorner"
+	},
+/area/research_outpost/sample)
+"yC" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Auxiliary Storage";
 	req_access = list(65)
@@ -5755,24 +5797,6 @@
 	icon_state = "white"
 	},
 /area/research_outpost/maintstore1)
-"yA" = (
-/turf/simulated/wall,
-/area/research_outpost/maintstore1)
-"yB" = (
-/obj/structure/transit_tube/diagonal/topleft,
-/turf/simulated/wall/r_wall,
-/area/research_outpost/maintstore1)
-"yC" = (
-/obj/machinery/conveyor_switch{
-	id = "anosample"
-	},
-/turf/simulated/floor/plating{
-	dir = 1;
-	icon_state = "warnplate";
-	oxygen = 0.01;
-	nitrogen = 0.01
-	},
-/area/research_outpost/maint)
 "yD" = (
 /turf/simulated/floor/plasteel/airless{
 	icon_state = "asteroidwarning";
@@ -5780,6 +5804,22 @@
 	},
 /area/mine/explored)
 "yE" = (
+/turf/simulated/wall,
+/area/research_outpost/maintstore1)
+"yF" = (
+/obj/structure/transit_tube/diagonal/topleft,
+/turf/simulated/wall/r_wall,
+/area/research_outpost/maintstore1)
+"yG" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/conveyor_switch{
+	id = "anosample"
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
+"yH" = (
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "anosample"
@@ -5791,38 +5831,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"yF" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "whitehall"
-	},
-/area/research_outpost/hallway)
-"yG" = (
-/obj/structure/cable{
-	banned_links = 10
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	color = "#1010dd"
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"yH" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
 "yI" = (
 /turf/simulated/floor/plasteel/airless{
 	dir = 5;
@@ -5846,16 +5854,15 @@
 /turf/simulated/floor/plasteel,
 /area/mine/laborcamp)
 "yK" = (
-/obj/structure/cable{
-	banned_links = 12
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
 	},
-/obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/plasteel{
-	icon_state = "white"
+	dir = 5;
+	icon_state = "whitehall"
 	},
 /area/research_outpost/hallway)
 "yL" = (
@@ -5869,14 +5876,10 @@
 /area/mine/laborcamp)
 "yM" = (
 /obj/structure/cable{
-	banned_links = 12
+	banned_links = 10
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
 	color = "#1010dd"
-	},
-/obj/machinery/computer/fossil_reconstitutor/fauna{
-	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -5887,12 +5890,8 @@
 	banned_links = 12
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitebluecorner"
+	icon_state = "white"
 	},
 /area/research_outpost/hallway)
 "yO" = (
@@ -5915,6 +5914,43 @@
 	banned_links = 12
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"yQ" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4;
+	color = "#1010dd"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"yR" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whitebluecorner"
+	},
+/area/research_outpost/hallway)
+"yS" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/structure/sign/science{
 	name = "\improper ANOMALOUS MATERIALS";
 	desc = "A warning sign which reads 'ANOMALOUS MATERIALS'";
@@ -5925,7 +5961,7 @@
 	icon_state = "barber"
 	},
 /area/research_outpost/hallway)
-"yQ" = (
+"yT" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
@@ -5933,7 +5969,7 @@
 	icon_state = "barber"
 	},
 /area/research_outpost/hallway)
-"yR" = (
+"yU" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -5950,43 +5986,11 @@
 	icon_state = "barber"
 	},
 /area/research_outpost/hallway)
-"yS" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/turf/simulated/wall/r_wall,
-/area/research_outpost/sample)
-"yT" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "whiteblue"
-	},
-/area/research_outpost/sample)
-"yU" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "Sample Preparation APC";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/sample)
 "yV" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/simulated/wall/r_wall,
 /area/research_outpost/sample)
 "yW" = (
 /obj/structure/cable{
@@ -6003,27 +6007,26 @@
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/door/window/westleft{
-	dir = 1;
-	name = "Sample Preparation Loading";
-	req_access = list(65)
-	},
 /turf/simulated/floor/plasteel{
-	dir = 1;
 	icon_state = "whiteblue"
 	},
 /area/research_outpost/sample)
 "yY" = (
 /obj/structure/cable{
-	banned_links = 13
+	banned_links = 12
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 8;
-	name = "Auxiliary Storage APC";
-	pixel_x = -24
+	dir = 4;
+	name = "Sample Preparation APC";
+	pixel_x = 24
 	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/maintstore1)
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/sample)
 "yZ" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
@@ -6038,17 +6041,27 @@
 /turf/simulated/floor/plating/airless,
 /area/space)
 "za" = (
-/turf/simulated/floor/plasteel,
-/area/research_outpost/maintstore1)
-"zb" = (
-/obj/structure/table,
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/cable{
+	banned_links = 12
 	},
 /turf/simulated/floor/plasteel{
-	icon_state = "delivery"
+	icon_state = "white"
 	},
-/area/research_outpost/maintstore1)
+/area/research_outpost/sample)
+"zb" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/window/westleft{
+	dir = 1;
+	name = "Sample Preparation Loading";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whiteblue"
+	},
+/area/research_outpost/sample)
 "zc" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -6057,11 +6070,16 @@
 /turf/simulated/floor/plating,
 /area/mine/explored)
 "zd" = (
-/obj/machinery/atmospherics/unary/thermomachine/freezer{
-	dir = 1
+/obj/structure/cable{
+	banned_links = 13
 	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maint)
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "Auxiliary Storage APC";
+	pixel_x = -24
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/maintstore1)
 "ze" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
@@ -6082,11 +6100,8 @@
 	},
 /area/mine/abandoned)
 "zg" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 6
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maint)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/maintstore1)
 "zh" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -6099,23 +6114,24 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "zi" = (
-/obj/machinery/atmospherics/unary/portables_connector{
-	dir = 4
+/obj/structure/table,
+/obj/machinery/light/small{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maint)
+/turf/simulated/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/research_outpost/maintstore1)
 "zj" = (
-/obj/structure/cable{
-	banned_links = 11
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "Maintenance APC";
-	pixel_x = -24
+/obj/machinery/atmospherics/unary/thermomachine/freezer{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
 "zk" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
 "zl" = (
@@ -6133,17 +6149,21 @@
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "zm" = (
-/obj/machinery/disposal/deliveryChute{
-	dir = 8
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
+/obj/machinery/atmospherics/unary/portables_connector{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
 "zn" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/wall/r_wall,
+/obj/structure/cable{
+	banned_links = 11
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "Maintenance APC";
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
 /area/research_outpost/maint)
 "zo" = (
 /obj/machinery/camera{
@@ -6154,6 +6174,22 @@
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "zp" = (
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
+"zq" = (
+/obj/machinery/disposal/deliveryChute{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
+"zr" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/research_outpost/maint)
+"zs" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
@@ -6169,7 +6205,7 @@
 	icon_state = "whitehall"
 	},
 /area/research_outpost/hallway)
-"zq" = (
+"zt" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -6187,44 +6223,6 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"zr" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"zs" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/mob/living/carbon/human/lesser/monkey,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"zt" = (
-/obj/machinery/door/window/westleft{
-	name = "Monkey Pen";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/mob/living/carbon/human/lesser/monkey,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
 "zu" = (
 /obj/machinery/camera{
 	c_tag = "Crew Area Hallway";
@@ -6237,8 +6235,18 @@
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
 "zv" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/anomaly)
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
 "zw" = (
 /obj/structure/table/wood,
 /obj/item/stack/medical/bruise_pack,
@@ -6246,6 +6254,54 @@
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
 "zx" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/mob/living/carbon/human/lesser/monkey,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"zy" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating/airless,
+/area/mine/abandoned)
+"zz" = (
+/turf/simulated/mineral/random/labormineral,
+/area/mine/explored)
+"zA" = (
+/obj/machinery/door/window/westleft{
+	name = "Monkey Pen";
+	req_access = list(65)
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/mob/living/carbon/human/lesser/monkey,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"zB" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/anomaly)
+"zC" = (
+/obj/structure/alien/weeds,
+/turf/simulated/floor/plasteel/airless{
+	icon_state = "damaged2"
+	},
+/area/mine/abandoned)
+"zD" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -6263,21 +6319,15 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"zy" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
+"zE" = (
+/obj/structure/table,
+/obj/structure/bedsheetbin,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "barber"
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating/airless,
-/area/mine/abandoned)
-"zz" = (
-/turf/simulated/mineral/random/labormineral,
-/area/mine/explored)
-"zA" = (
+/area/mine/laborcamp)
+"zF" = (
 /obj/machinery/door/airlock/research{
 	name = "Anomalous Materials Sample Preparation";
 	req_access = list(65)
@@ -6286,19 +6336,13 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"zB" = (
+"zG" = (
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "bot"
 	},
 /area/research_outpost/sample)
-"zC" = (
-/obj/structure/alien/weeds,
-/turf/simulated/floor/plasteel/airless{
-	icon_state = "damaged2"
-	},
-/area/mine/abandoned)
-"zD" = (
+"zH" = (
 /obj/structure/closet/crate,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -6316,34 +6360,6 @@
 	icon_state = "bluecorner"
 	},
 /area/research_outpost/sample)
-"zE" = (
-/obj/structure/table,
-/obj/structure/bedsheetbin,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "barber"
-	},
-/area/mine/laborcamp)
-"zF" = (
-/obj/structure/transit_tube/curved{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "delivery"
-	},
-/area/research_outpost/maintstore1)
-"zG" = (
-/obj/machinery/atmospherics/unary/thermomachine/heater{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maint)
-"zH" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maint)
 "zI" = (
 /obj/item/clothing/under/rank/miner,
 /obj/effect/decal/remains/human,
@@ -6366,6 +6382,26 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "zL" = (
+/obj/structure/transit_tube/curved{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/research_outpost/maintstore1)
+"zM" = (
+/obj/machinery/atmospherics/unary/thermomachine/heater{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
+"zN" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maint)
+"zO" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
 	},
@@ -6375,7 +6411,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"zM" = (
+"zP" = (
 /obj/structure/cable{
 	banned_links = 6
 	},
@@ -6388,7 +6424,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"zN" = (
+"zQ" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -6397,13 +6433,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"zO" = (
+"zR" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"zP" = (
+"zS" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -6412,7 +6448,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maint)
-"zQ" = (
+"zT" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -6427,7 +6463,7 @@
 	icon_state = "whitehall"
 	},
 /area/research_outpost/hallway)
-"zR" = (
+"zU" = (
 /obj/structure/cable{
 	banned_links = 1
 	},
@@ -6438,31 +6474,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"zS" = (
-/obj/machinery/door/window/westleft{
-	dir = 2;
-	name = "Monkey Pen";
-	req_access = list(65)
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"zT" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/fossil_incubator,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"zU" = (
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -6482,6 +6493,25 @@
 	},
 /area/mine/laborcamp/security)
 "zX" = (
+/obj/machinery/door/window/westleft{
+	dir = 2;
+	name = "Monkey Pen";
+	req_access = list(65)
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"zY" = (
+/obj/structure/disposalpipe/segment,
+/mob/living/carbon/human/lesser/monkey,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"zZ" = (
 /obj/machinery/door/airlock/research{
 	name = "Anomalous Materials";
 	req_access = list(65)
@@ -6495,13 +6525,13 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"zY" = (
+"Aa" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"zZ" = (
+"Ab" = (
 /obj/structure/cable{
 	banned_links = 6
 	},
@@ -6510,7 +6540,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Aa" = (
+"Ac" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -6524,7 +6554,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Ab" = (
+"Ad" = (
 /obj/structure/cable{
 	banned_links = 13
 	},
@@ -6541,17 +6571,6 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Ac" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/wall/r_wall,
-/area/research_outpost/anomaly)
-"Ad" = (
-/obj/structure/disposaloutlet{
-	dir = 8
-	},
-/obj/structure/disposalpipe/trunk,
-/turf/simulated/wall/r_wall,
-/area/research_outpost/maintstore1)
 "Ae" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
@@ -6560,16 +6579,15 @@
 /turf/space,
 /area/mine/explored)
 "Af" = (
-/obj/machinery/hydroponics/soil,
-/obj/structure/window/reinforced{
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/research_outpost/anomaly)
+"Ag" = (
+/obj/structure/disposaloutlet{
 	dir = 8
 	},
-/turf/simulated/floor/grass,
-/area/research_outpost/maintstore1)
-"Ag" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "warning"
-	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/wall/r_wall,
 /area/research_outpost/maintstore1)
 "Ah" = (
 /obj/structure/extinguisher_cabinet{
@@ -6618,15 +6636,17 @@
 	},
 /area/mine/explored)
 "Am" = (
-/obj/structure/transit_tube/station,
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "bot"
+/obj/machinery/hydroponics/soil,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
+/turf/simulated/floor/grass,
 /area/research_outpost/maintstore1)
 "An" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/iso1)
+/turf/simulated/floor/plasteel{
+	icon_state = "warning"
+	},
+/area/research_outpost/maintstore1)
 "Ao" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -6640,24 +6660,34 @@
 	},
 /area/mine/laborcamp)
 "Ap" = (
+/obj/structure/transit_tube/station,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "bot"
+	},
+/area/research_outpost/maintstore1)
+"Aq" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/iso1)
+"Ar" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 5
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso1)
-"Aq" = (
+"As" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 1
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso1)
-"Ar" = (
+"At" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso1)
-"As" = (
+"Au" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -6668,7 +6698,7 @@
 	icon_state = "whitepurplecorner"
 	},
 /area/research_outpost/hallway)
-"At" = (
+"Av" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -6679,22 +6709,6 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"Au" = (
-/obj/structure/sign/nosmoking_2{
-	pixel_y = -32
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/anomaly)
-"Av" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/anomaly)
 "Aw" = (
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/plasteel{
@@ -6702,21 +6716,22 @@
 	},
 /area/mine/laborcamp)
 "Ax" = (
+/obj/structure/sign/nosmoking_2{
+	pixel_y = -32
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
 "Ay" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
 "Az" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = 25
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -6728,10 +6743,25 @@
 	},
 /area/mine/laborcamp)
 "AB" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/anomaly)
+"AC" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = 25
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/anomaly)
+"AD" = (
 /obj/machinery/hydroponics/soil,
 /turf/simulated/floor/grass,
 /area/research_outpost/maintstore1)
-"AC" = (
+"AE" = (
 /obj/structure/transit_tube/curved/flipped{
 	dir = 8
 	},
@@ -6739,7 +6769,7 @@
 	icon_state = "delivery"
 	},
 /area/research_outpost/maintstore1)
-"AD" = (
+"AF" = (
 /obj/structure/chair{
 	dir = 1
 	},
@@ -6752,7 +6782,7 @@
 	name = "Mainframe floor"
 	},
 /area/research_outpost/iso1)
-"AE" = (
+"AG" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1
 	},
@@ -6761,7 +6791,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/iso1)
-"AF" = (
+"AH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
 	dir = 1
 	},
@@ -6769,7 +6799,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/iso1)
-"AG" = (
+"AI" = (
 /obj/structure/chair{
 	dir = 1
 	},
@@ -6784,7 +6814,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso1)
-"AH" = (
+"AJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/machinery/light/small{
 	dir = 1
@@ -6792,11 +6822,11 @@
 /obj/structure/table,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso1)
-"AI" = (
+"AK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso1)
-"AJ" = (
+"AL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -6813,7 +6843,17 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"AK" = (
+"AM" = (
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plating,
+/area/mine/explored)
+"AN" = (
+/obj/structure/alien/weeds{
+	icon_state = "weeds"
+	},
+/turf/simulated/floor/plasteel/airless,
+/area/space)
+"AO" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -6828,7 +6868,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"AL" = (
+"AP" = (
 /obj/machinery/door/window/westleft{
 	dir = 4;
 	name = "laser testing";
@@ -6838,41 +6878,6 @@
 	icon_state = "delivery"
 	},
 /area/research_outpost/anomaly)
-"AM" = (
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
-/area/mine/explored)
-"AN" = (
-/obj/structure/alien/weeds{
-	icon_state = "weeds"
-	},
-/turf/simulated/floor/plasteel/airless,
-/area/space)
-"AO" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating{
-	dir = 6;
-	icon_state = "warnplate"
-	},
-/area/research_outpost/anomaly)
-"AP" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/power/emitter,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/turf/simulated/floor/plating{
-	dir = 5;
-	icon_state = "warnplate";
-	oxygen = 0.01;
-	nitrogen = 0.01
-	},
-/area/research_outpost/anomaly)
 "AQ" = (
 /obj/effect/gibspawner/robot,
 /turf/simulated/floor/plasteel/airless{
@@ -6880,12 +6885,39 @@
 	},
 /area/mine/abandoned)
 "AR" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/anomaly)
+"AS" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/power/emitter,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/anomaly)
+"AT" = (
 /obj/structure/table,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"AS" = (
+"AU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	color = "#1010dd"
 	},
@@ -6894,27 +6926,12 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"AT" = (
+"AV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "whitepurplecorner"
 	},
-/area/research_outpost/anomaly)
-"AU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitepurple"
-	},
-/area/research_outpost/anomaly)
-"AV" = (
-/obj/machinery/door/airlock/research{
-	name = "Anomalous Materials Loading";
-	req_access = list(65)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel,
 /area/research_outpost/anomaly)
 "AW" = (
 /obj/machinery/light{
@@ -6932,11 +6949,26 @@
 "AX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whitepurple"
+	},
+/area/research_outpost/anomaly)
+"AY" = (
+/obj/machinery/door/airlock/research{
+	name = "Anomalous Materials Loading";
+	req_access = list(65)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/anomaly)
+"AZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "warning"
 	},
 /area/research_outpost/maintstore1)
-"AY" = (
+"Ba" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -6946,7 +6978,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/maintstore1)
-"AZ" = (
+"Bb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/structure/sign/botany{
 	pixel_x = 32
@@ -6956,7 +6988,7 @@
 	icon_state = "warningcorner"
 	},
 /area/research_outpost/maintstore1)
-"Ba" = (
+"Bc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/camera{
 	dir = 8;
@@ -6964,14 +6996,6 @@
 	network = list("Research","SS13")
 	},
 /turf/simulated/floor/plasteel,
-/area/research_outpost/maintstore1)
-"Bb" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/plasteel,
-/area/research_outpost/maintstore1)
-"Bc" = (
-/obj/structure/transit_tube/diagonal,
-/turf/simulated/wall/r_wall,
 /area/research_outpost/maintstore1)
 "Bd" = (
 /obj/machinery/door/airlock{
@@ -6983,10 +7007,18 @@
 	},
 /area/mine/laborcamp)
 "Be" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/maintstore1)
+"Bf" = (
+/obj/structure/transit_tube/diagonal,
+/turf/simulated/wall/r_wall,
+/area/research_outpost/maintstore1)
+"Bh" = (
 /obj/structure/xenoarch_scanpad,
 /turf/simulated/floor/bluegrid,
 /area/research_outpost/iso1)
-"Bf" = (
+"Bi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1
 	},
@@ -6995,7 +7027,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/iso1)
-"Bh" = (
+"Bj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
@@ -7004,7 +7036,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/iso1)
-"Bi" = (
+"Bk" = (
 /obj/machinery/door/airlock/external{
 	name = "Access Airlock";
 	id_tag = "riso1";
@@ -7015,27 +7047,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel,
-/area/research_outpost/iso1)
-"Bj" = (
-/obj/structure/cable{
-	banned_links = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8;
-	pressure_checks = 0
-	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/iso1)
-"Bk" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8;
-	color = "#dd1010"
-	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso1)
 "Bl" = (
@@ -7052,34 +7063,25 @@
 /area/mine/lobby)
 "Bm" = (
 /obj/structure/cable{
-	banned_links = 12
+	banned_links = 10
 	},
-/obj/machinery/door/airlock/research{
-	name = "Isolation Room one";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8;
+	pressure_checks = 0
+	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso1)
 "Bn" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1;
+	dir = 8;
 	color = "#dd1010"
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "whitepurple"
-	},
-/area/research_outpost/hallway)
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso1)
 "Bo" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -7099,6 +7101,36 @@
 /area/mine/lobby)
 "Bp" = (
 /obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/research{
+	name = "Isolation Room one";
+	req_access = list(65)
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso1)
+"Bq" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	color = "#dd1010"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "whitepurple"
+	},
+/area/research_outpost/hallway)
+"Br" = (
+/obj/structure/cable{
 	banned_links = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
@@ -7114,7 +7146,16 @@
 	icon_state = "whiteredcorner"
 	},
 /area/research_outpost/hallway)
-"Bq" = (
+"Bs" = (
+/obj/structure/cable{
+	pixel_y = 1;
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plating,
+/area/mine/laborcamp/security)
+"Bt" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -7122,7 +7163,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Br" = (
+"Bu" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -7134,16 +7175,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Bs" = (
-/obj/structure/cable{
-	pixel_y = 1;
-	linked_dirs = 0;
-	banned_links = 15
-	},
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
-/area/mine/laborcamp/security)
-"Bt" = (
+"Bv" = (
 /obj/structure/table,
 /obj/item/paper_bin{
 	pixel_x = -2;
@@ -7157,26 +7189,11 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Bu" = (
+"Bw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1;
 	color = "#1010dd"
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/anomaly)
-"Bv" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "whitepurple"
-	},
-/area/research_outpost/anomaly)
-"Bw" = (
-/obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -7189,6 +7206,21 @@
 	},
 /area/mine/unexplored)
 "By" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whitepurple"
+	},
+/area/research_outpost/anomaly)
+"Bz" = (
+/obj/structure/chair/stool,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/anomaly)
+"BA" = (
 /obj/structure/table,
 /obj/item/lighter,
 /obj/item/crowbar,
@@ -7196,30 +7228,9 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Bz" = (
+"BB" = (
 /obj/machinery/xenoarch/analyser,
 /turf/simulated/floor/bluegrid,
-/area/research_outpost/iso1)
-"BA" = (
-/obj/structure/table,
-/obj/item/flashlight/lamp,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/iso1)
-"BB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
-	},
-/obj/machinery/camera{
-	dir = 8;
-	c_tag = "Isolation Room One";
-	network = list("Isolation")
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "warning"
-	},
 /area/research_outpost/iso1)
 "BC" = (
 /obj/machinery/door/firedoor,
@@ -7232,6 +7243,34 @@
 	name = "Mining Station Mech Bay"
 	})
 "BD" = (
+/obj/structure/table,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/iso1)
+"BE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/machinery/camera{
+	dir = 8;
+	c_tag = "Isolation Room One";
+	network = list("Isolation")
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "warning"
+	},
+/area/research_outpost/iso1)
+"BF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/eva)
+"BG" = (
 /obj/structure/cable{
 	banned_links = 7
 	},
@@ -7249,7 +7288,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso1)
-"BE" = (
+"BH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -7263,14 +7302,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso1)
-"BF" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/eva)
-"BG" = (
+"BI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -7285,7 +7317,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"BH" = (
+"BJ" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -7298,7 +7330,7 @@
 	icon_state = "whitered"
 	},
 /area/research_outpost/hallway)
-"BI" = (
+"BK" = (
 /obj/machinery/door/airlock/research{
 	name = "Spectroscopy";
 	req_access = list(65)
@@ -7309,21 +7341,6 @@
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
-	},
-/area/research_outpost/anomaly)
-"BJ" = (
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitered"
-	},
-/area/research_outpost/anomaly)
-"BK" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whitered"
 	},
 /area/research_outpost/anomaly)
 "BL" = (
@@ -7339,6 +7356,21 @@
 	name = "Mining Station Break Room"
 	})
 "BM" = (
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whitered"
+	},
+/area/research_outpost/anomaly)
+"BN" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whitered"
+	},
+/area/research_outpost/anomaly)
+"BO" = (
 /obj/machinery/door/window/westleft{
 	dir = 1;
 	name = "Spectroscopy";
@@ -7352,21 +7384,6 @@
 	icon_state = "whiteredcorner"
 	},
 /area/research_outpost/anomaly)
-"BN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/anomaly)
-"BO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/anomaly)
 "BP" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/airless{
@@ -7375,24 +7392,16 @@
 	},
 /area/mine/explored)
 "BQ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1;
-	color = "#dd1010"
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "whitepurple"
+	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
 "BR" = (
-/obj/structure/table,
-/obj/item/reagent_containers/cup/beaker,
-/obj/item/reagent_containers/dropper{
-	pixel_y = -4
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
 	},
-/obj/item/reagent_containers/cup/bottle/toxin,
-/obj/item/reagent_containers/cup/beaker,
-/obj/item/reagent_containers/cup/beaker,
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -7457,10 +7466,40 @@
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
 "BX" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	color = "#dd1010"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whitepurple"
+	},
+/area/research_outpost/anomaly)
+"BY" = (
+/obj/structure/table,
+/obj/item/reagent_containers/cup/beaker,
+/obj/item/reagent_containers/dropper{
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/cup/bottle/toxin,
+/obj/item/reagent_containers/cup/beaker,
+/obj/item/reagent_containers/cup/beaker,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/anomaly)
+"BZ" = (
 /obj/machinery/xenoarch/analyser,
 /turf/simulated/floor/bluegrid,
 /area/research_outpost/anomaly)
-"BY" = (
+"Ca" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/west_outpost)
+"Cc" = (
 /obj/machinery/shower{
 	dir = 4
 	},
@@ -7468,7 +7507,7 @@
 	icon_state = "showroomfloor"
 	},
 /area/research_outpost/hallway)
-"BZ" = (
+"Cd" = (
 /obj/structure/sink{
 	pixel_y = 30
 	},
@@ -7479,32 +7518,25 @@
 	icon_state = "showroomfloor"
 	},
 /area/research_outpost/hallway)
-"Ca" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	level = 1
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/west_outpost)
-"Cc" = (
+"Cf" = (
 /obj/structure/table,
 /turf/simulated/floor/carpet,
 /area/research_outpost/hallway)
-"Cd" = (
+"Cg" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
 /turf/simulated/floor/carpet,
 /area/research_outpost/hallway)
-"Cf" = (
+"Ci" = (
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso2)
-"Cg" = (
+"Cj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso2)
-"Ci" = (
+"Ck" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -7519,7 +7551,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"Cj" = (
+"Cl" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -7536,13 +7568,19 @@
 	icon_state = "whiteredcorner"
 	},
 /area/research_outpost/hallway)
-"Ck" = (
+"Cm" = (
+/obj/structure/table/wood,
+/obj/item/stack/medical/splint,
+/obj/item/storage/firstaid/brute,
+/turf/simulated/floor/plating,
+/area/mine/laborcamp)
+"Cn" = (
 /obj/machinery/xenoarch/spectrometer,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Cl" = (
+"Co" = (
 /obj/machinery/light{
 	dir = 4
 	},
@@ -7551,13 +7589,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Cm" = (
-/obj/structure/table/wood,
-/obj/item/stack/medical/splint,
-/obj/item/storage/firstaid/brute,
-/turf/simulated/floor/plating,
-/area/mine/laborcamp)
-"Cn" = (
+"Cp" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -7568,7 +7600,7 @@
 	icon_state = "whitered"
 	},
 /area/research_outpost/anomaly)
-"Co" = (
+"Cq" = (
 /obj/machinery/camera{
 	dir = 8;
 	c_tag = "Research Outpost Anomalous Materials Lab";
@@ -7578,7 +7610,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Cp" = (
+"Cr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
@@ -7586,7 +7618,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Cq" = (
+"Cs" = (
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -7599,7 +7631,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/anomaly)
-"Cr" = (
+"Ct" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -7607,11 +7639,11 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"Cs" = (
+"Cu" = (
 /obj/structure/xenoarch_scanpad,
 /turf/simulated/floor/bluegrid,
 /area/research_outpost/anomaly)
-"Ct" = (
+"Cv" = (
 /obj/machinery/door_control{
 	id = "rbath";
 	name = "door bolt control";
@@ -7623,7 +7655,7 @@
 	icon_state = "showroomfloor"
 	},
 /area/research_outpost/hallway)
-"Cu" = (
+"Cw" = (
 /obj/structure/toilet{
 	dir = 8
 	},
@@ -7634,35 +7666,9 @@
 	icon_state = "showroomfloor"
 	},
 /area/research_outpost/hallway)
-"Cv" = (
-/turf/simulated/floor/carpet,
-/area/research_outpost/hallway)
-"Cw" = (
-/obj/machinery/door_control{
-	id = "rdorm1";
-	name = "door bolt control";
-	normaldoorcontrol = 1;
-	specialfunctions = 4;
-	pixel_x = 25
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/research_outpost/hallway)
 "Cx" = (
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault";
-	oxygen = 0;
-	nitrogen = 100;
-	temperature = 80;
-	name = "Mainframe floor"
-	},
-/area/research_outpost/iso2)
+/turf/simulated/floor/carpet,
+/area/research_outpost/hallway)
 "Cy" = (
 /obj/structure/cable{
 	tag = "";
@@ -7675,6 +7681,32 @@
 /turf/simulated/floor/plasteel,
 /area/mine/production)
 "Cz" = (
+/obj/machinery/door_control{
+	id = "rdorm1";
+	name = "door bolt control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4;
+	pixel_x = 25
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/research_outpost/hallway)
+"CA" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "vault";
+	oxygen = 0;
+	nitrogen = 100;
+	temperature = 80;
+	name = "Mainframe floor"
+	},
+/area/research_outpost/iso2)
+"CB" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1
 	},
@@ -7683,7 +7715,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/iso2)
-"CA" = (
+"CC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
 	dir = 1
 	},
@@ -7691,7 +7723,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/iso2)
-"CB" = (
+"CD" = (
 /obj/structure/chair{
 	dir = 1
 	},
@@ -7706,18 +7738,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso2)
-"CC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/table,
-/turf/simulated/floor/plasteel,
-/area/research_outpost/iso2)
-"CD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/wall/r_wall,
-/area/research_outpost/iso2)
 "CE" = (
 /obj/structure/table,
 /obj/item/taperecorder,
@@ -7729,6 +7749,18 @@
 	},
 /area/mine/laborcamp/security)
 "CF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/table,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso2)
+"CG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/wall/r_wall,
+/area/research_outpost/iso2)
+"CH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -7745,7 +7777,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"CG" = (
+"CI" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -7757,7 +7789,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"CH" = (
+"CJ" = (
 /obj/machinery/door/airlock/research{
 	name = "Anomalous Materials";
 	req_access = list(65)
@@ -7775,13 +7807,13 @@
 	icon_state = "white"
 	},
 /area/research_outpost/anomaly)
-"CI" = (
+"CK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/anomaly)
-"CJ" = (
+"CL" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom";
 	id_tag = "rbath"
@@ -7790,7 +7822,7 @@
 	icon_state = "showroomfloor"
 	},
 /area/research_outpost/hallway)
-"CK" = (
+"CM" = (
 /obj/machinery/door/airlock{
 	name = "Dorm 1";
 	id_tag = "rminingdorm1"
@@ -7799,19 +7831,6 @@
 	icon_state = "carpet"
 	},
 /area/research_outpost/hallway)
-"CL" = (
-/obj/structure/xenoarch_scanpad,
-/turf/simulated/floor/bluegrid,
-/area/research_outpost/iso2)
-"CM" = (
-/obj/machinery/atmospherics/unary/vent_scrubber{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/iso2)
 "CN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -7824,13 +7843,8 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "CO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel{
-	icon_state = "warning"
-	},
+/obj/structure/xenoarch_scanpad,
+/turf/simulated/floor/bluegrid,
 /area/research_outpost/iso2)
 "CP" = (
 /obj/structure/lattice,
@@ -7840,17 +7854,13 @@
 /turf/space,
 /area/space)
 "CQ" = (
-/obj/machinery/door/airlock/external{
-	name = "Access Airlock";
-	id_tag = "riso2";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
 /area/research_outpost/iso2)
 "CR" = (
 /obj/structure/toilet{
@@ -7865,6 +7875,28 @@
 /turf/space,
 /area/mine/explored)
 "CT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plasteel{
+	icon_state = "warning"
+	},
+/area/research_outpost/iso2)
+"CU" = (
+/obj/machinery/door/airlock/external{
+	name = "Access Airlock";
+	id_tag = "riso2";
+	req_access = list(65)
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso2)
+"CV" = (
 /obj/structure/cable{
 	banned_links = 10
 	},
@@ -7875,7 +7907,16 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso2)
-"CU" = (
+"CW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/vending/cola,
+/turf/simulated/floor/plasteel{
+	icon_state = "bar"
+	},
+/area/mine/living_quarters{
+	name = "Mining Station Break Room"
+	})
+"CX" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -7885,7 +7926,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso2)
-"CV" = (
+"CY" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -7900,16 +7941,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso2)
-"CW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/vending/cola,
-/turf/simulated/floor/plasteel{
-	icon_state = "bar"
-	},
-/area/mine/living_quarters{
-	name = "Mining Station Break Room"
-	})
-"CX" = (
+"CZ" = (
+/obj/structure/table,
+/turf/simulated/floor/plasteel/airless,
+/area/mine/abandoned)
+"Da" = (
 /obj/structure/cable{
 	banned_links = 1
 	},
@@ -7920,24 +7956,20 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"CY" = (
+"Db" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"CZ" = (
-/obj/structure/table,
-/turf/simulated/floor/plasteel/airless,
-/area/mine/abandoned)
-"Da" = (
+"Dc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"Db" = (
+"Dd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8;
 	color = "#1010dd"
@@ -7946,7 +7978,13 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"Dc" = (
+"De" = (
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"Df" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 4
@@ -7960,7 +7998,7 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"Dd" = (
+"Dg" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8;
 	color = "#1010dd"
@@ -7975,13 +8013,7 @@
 	icon_state = "whitepurplecorner"
 	},
 /area/research_outpost/hallway)
-"De" = (
-/obj/machinery/alarm{
-	pixel_y = 24
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/living_quarters)
-"Df" = (
+"Dh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	color = "#1010dd"
@@ -7991,7 +8023,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"Dg" = (
+"Di" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -8001,7 +8033,7 @@
 	icon_state = "whitepurplecorner"
 	},
 /area/research_outpost/hallway)
-"Dh" = (
+"Dk" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8;
 	color = "#1010dd"
@@ -8014,32 +8046,11 @@
 	icon_state = "cafeteria"
 	},
 /area/research_outpost/hallway)
-"Di" = (
+"Dl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
-/area/research_outpost/hallway)
-"Dj" = (
-/turf/simulated/floor/plasteel{
-	dir = 9;
-	icon_state = "warning"
-	},
-/area/mine/lobby)
-"Dk" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
-/area/research_outpost/hallway)
-"Dl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -8051,21 +8062,19 @@
 /turf/simulated/floor/plasteel/airless,
 /area/mine/abandoned)
 "Do" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/obj/structure/closet/walllocker/emerglocker{
-	pixel_x = -32
+/obj/machinery/light{
+	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/floor/plasteel{
-	icon_state = "whitecorner"
+	icon_state = "cafeteria"
 	},
 /area/research_outpost/hallway)
 "Dp" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/floor/plasteel{
+	icon_state = "cafeteria"
 	},
-/turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
 "Dq" = (
 /obj/machinery/recharger/wallcharger{
@@ -8096,6 +8105,23 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "Dt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "whitecorner"
+	},
+/area/research_outpost/hallway)
+"Du" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
+"Dv" = (
 /obj/machinery/camera{
 	dir = 4;
 	c_tag = "Research Outpost Hallway Fore";
@@ -8103,28 +8129,13 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/hallway)
-"Du" = (
+"Dw" = (
 /obj/structure/transit_tube/station,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "bot"
 	},
 /area/research_outpost/hallway)
-"Dv" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/research_outpost/hallway)
-"Dw" = (
-/obj/machinery/xenoarch/analyser,
-/turf/simulated/floor/bluegrid,
-/area/research_outpost/iso2)
 "Dx" = (
 /obj/docking_port/stationary{
 	dir = 8;
@@ -8139,13 +8150,16 @@
 /turf/space,
 /area/space)
 "Dy" = (
-/obj/structure/table,
-/obj/item/flashlight/lamp,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/area/research_outpost/iso2)
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/research_outpost/hallway)
 "Dz" = (
 /obj/structure/closet/walllocker/emerglocker{
 	dir = 4
@@ -8164,6 +8178,32 @@
 	},
 /area/mine/west_outpost)
 "DB" = (
+/obj/machinery/xenoarch/analyser,
+/turf/simulated/floor/bluegrid,
+/area/research_outpost/iso2)
+"DC" = (
+/obj/structure/table,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/iso2)
+"DE" = (
+/obj/machinery/camera{
+	c_tag = "Communications Relay";
+	dir = 8;
+	network = list("MINE")
+	},
+/turf/simulated/floor/bluegrid,
+/area/mine/maintenance)
+"DF" = (
+/turf/simulated/floor/plasteel{
+	icon_state = "red";
+	dir = 4
+	},
+/area/mine/laborcamp)
+"DG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
@@ -8176,7 +8216,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/iso2)
-"DC" = (
+"DH" = (
 /obj/structure/cable{
 	banned_links = 7
 	},
@@ -8194,21 +8234,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso2)
-"DE" = (
-/obj/machinery/camera{
-	c_tag = "Communications Relay";
-	dir = 8;
-	network = list("MINE")
-	},
-/turf/simulated/floor/bluegrid,
-/area/mine/maintenance)
-"DF" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "red";
-	dir = 4
-	},
-/area/mine/laborcamp)
-"DG" = (
+"DI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -8222,7 +8248,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso2)
-"DH" = (
+"DJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -8233,7 +8259,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"DI" = (
+"DK" = (
 /obj/structure/cable{
 	banned_links = 2
 	},
@@ -8245,41 +8271,12 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"DJ" = (
+"DL" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"DK" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8;
-	color = "#dd1010"
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
-"DL" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "Outpost Hallways APC";
-	pixel_x = 24
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -8300,12 +8297,11 @@
 	banned_links = 12
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
+	dir = 8;
 	color = "#dd1010"
 	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteyellowcorner"
+	icon_state = "white"
 	},
 /area/research_outpost/hallway)
 "DO" = (
@@ -8319,12 +8315,16 @@
 	banned_links = 12
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "Outpost Hallways APC";
+	pixel_x = 24
 	},
 /turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteyellow"
+	icon_state = "white"
 	},
 /area/research_outpost/hallway)
 "DQ" = (
@@ -8376,22 +8376,22 @@
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4;
+	color = "#dd1010"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
 	dir = 4;
-	icon_state = "whiteyellow"
+	icon_state = "whiteyellowcorner"
 	},
 /area/research_outpost/hallway)
 "DV" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	color = "#dd1010"
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -8416,6 +8416,32 @@
 /area/mine/laborcamp)
 "DY" = (
 /obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whiteyellow"
+	},
+/area/research_outpost/hallway)
+"DZ" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4;
+	color = "#dd1010"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "whiteyellow"
+	},
+/area/research_outpost/hallway)
+"Ea" = (
+/obj/structure/cable{
 	banned_links = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
@@ -8427,21 +8453,6 @@
 	icon_state = "whiteyellow"
 	},
 /area/research_outpost/hallway)
-"DZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
-/area/research_outpost/hallway)
-"Ea" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
-/area/research_outpost/hallway)
 "Eb" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt,
@@ -8450,18 +8461,18 @@
 	},
 /area/mine/laborcamp)
 "Ed" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8;
-	color = "#dd1010"
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
 /area/research_outpost/hallway)
 "Ee" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
-	icon_state = "whitecorner"
+	icon_state = "cafeteria"
 	},
 /area/research_outpost/hallway)
 "Ef" = (
@@ -8474,10 +8485,13 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "Eg" = (
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8;
+	color = "#dd1010"
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	icon_state = "cafeteria"
+	},
 /area/research_outpost/hallway)
 "Eh" = (
 /obj/machinery/vending/snack,
@@ -8497,12 +8511,24 @@
 	},
 /area/mine/laborcamp)
 "Ej" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/plasteel{
+	icon_state = "whitecorner"
+	},
+/area/research_outpost/hallway)
+"Ek" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/hallway)
+"El" = (
 /obj/structure/transit_tube/horizontal,
 /turf/simulated/floor/plasteel{
 	icon_state = "delivery"
 	},
 /area/research_outpost/hallway)
-"Ek" = (
+"Em" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -8510,16 +8536,19 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/hallway)
-"El" = (
+"En" = (
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso3)
-"Em" = (
+"Eo" = (
+/turf/simulated/wall/shuttle,
+/area/mine/abandoned)
+"Ep" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso3)
-"En" = (
+"Eq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -8530,30 +8559,14 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"Eo" = (
-/turf/simulated/wall/shuttle,
-/area/mine/abandoned)
-"Ep" = (
+"Er" = (
 /turf/simulated/wall/r_wall,
 /area/research_outpost/power)
-"Eq" = (
+"Es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
-/area/research_outpost/power)
-"Er" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/research_outpost/power)
-"Es" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Outpost Power";
-	req_access = list(10,24,65)
-	},
-/turf/simulated/floor/plating,
 /area/research_outpost/power)
 "Et" = (
 /obj/machinery/light{
@@ -8565,21 +8578,18 @@
 	},
 /area/mine/laborcamp)
 "Eu" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/door/airlock/atmos{
-	name = "Outpost Atmospherics";
-	req_access = list(10,24,65)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/research_outpost/atmos)
-"Ev" = (
 /turf/simulated/wall/r_wall,
-/area/research_outpost/atmos)
+/area/research_outpost/power)
+"Ev" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Outpost Power";
+	req_access = list(10,24,65)
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
 "Ew" = (
 /turf/simulated/floor/plasteel,
 /area/mine/laborcamp)
@@ -8599,10 +8609,17 @@
 /turf/simulated/floor/plasteel/airless,
 /area/mine/abandoned)
 "Ez" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/door/airlock/atmos{
+	name = "Outpost Atmospherics";
+	req_access = list(10,24,65)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/floor/plating,
 /area/research_outpost/atmos)
 "EA" = (
 /obj/structure/window/reinforced,
@@ -8610,6 +8627,15 @@
 /turf/simulated/floor/plasteel,
 /area/mine/production)
 "EB" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/atmos)
+"EC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/research_outpost/atmos)
+"ED" = (
 /obj/machinery/door/airlock{
 	name = "Dorm 2";
 	id_tag = "rdorm2"
@@ -8618,7 +8644,7 @@
 	icon_state = "carpet"
 	},
 /area/research_outpost/hallway)
-"EC" = (
+"EE" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -8630,7 +8656,7 @@
 /obj/structure/transit_tube/horizontal,
 /turf/simulated/floor/plating,
 /area/research_outpost/hallway)
-"ED" = (
+"EF" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -8640,30 +8666,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/hallway)
-"EE" = (
+"EG" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "vault"
-	},
-/area/research_outpost/iso3)
-"EF" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/iso3)
-"EG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 10
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "warning"
 	},
 /area/research_outpost/iso3)
 "EH" = (
@@ -8676,19 +8685,13 @@
 	},
 /area/mine/laborcamp/security)
 "EI" = (
-/obj/structure/chair{
+/obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1
 	},
-/obj/machinery/computer/security/telescreen{
-	name = "isolation room telescreen";
-	desc = "Used for watching the isolation room cameras.";
-	network = list("Isolation");
-	pixel_x = -32
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 5
-	},
-/turf/simulated/floor/plasteel,
 /area/research_outpost/iso3)
 "EK" = (
 /obj/machinery/camera{
@@ -8705,6 +8708,29 @@
 	},
 /area/mine/laborcamp/security)
 "EL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "warning"
+	},
+/area/research_outpost/iso3)
+"EM" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/computer/security/telescreen{
+	name = "isolation room telescreen";
+	desc = "Used for watching the isolation room cameras.";
+	network = list("Isolation");
+	pixel_x = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 5
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso3)
+"EN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /obj/machinery/light/small{
 	dir = 1
@@ -8712,11 +8738,11 @@
 /obj/structure/table,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso3)
-"EM" = (
+"EO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/wall/r_wall,
 /area/research_outpost/iso3)
-"EN" = (
+"EP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -8733,7 +8759,20 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"EO" = (
+"EQ" = (
+/obj/structure/filingcabinet,
+/obj/machinery/light,
+/obj/structure/cable{
+	pixel_x = 0;
+	tag = "";
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/mine/laborcamp/security)
+"ER" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -8749,7 +8788,7 @@
 	icon_state = "whiteyellowcorner"
 	},
 /area/research_outpost/hallway)
-"EP" = (
+"ES" = (
 /obj/machinery/portable_atmospherics/canister/toxins,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -8757,27 +8796,14 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"EQ" = (
-/obj/structure/filingcabinet,
-/obj/machinery/light,
-/obj/structure/cable{
-	pixel_x = 0;
-	tag = "";
-	linked_dirs = 0;
-	banned_links = 15
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/mine/laborcamp/security)
-"ER" = (
+"ET" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"ES" = (
+"EU" = (
 /obj/structure/cable{
 	banned_links = 11
 	},
@@ -8786,21 +8812,6 @@
 	dir = 8;
 	name = "Outpost Power APC";
 	pixel_x = -24
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/power)
-"ET" = (
-/turf/simulated/floor/plating,
-/area/research_outpost/power)
-"EU" = (
-/obj/structure/cable{
-	banned_links = 11
-	},
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
-/obj/machinery/light/small{
-	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
@@ -8817,6 +8828,21 @@
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
 "EW" = (
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
+"EX" = (
+/obj/structure/cable{
+	banned_links = 11
+	},
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
+"EY" = (
 /obj/structure/cable{
 	banned_links = 6
 	},
@@ -8825,7 +8851,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"EX" = (
+"EZ" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -8834,7 +8860,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"EY" = (
+"Fa" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -8846,7 +8872,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"EZ" = (
+"Fc" = (
+/obj/machinery/vending/cola,
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/mine/laborcamp/security)
+"Fd" = (
 /obj/structure/cable{
 	banned_links = 13
 	},
@@ -8863,7 +8895,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"Fa" = (
+"Fe" = (
+/obj/structure/chair/stool,
+/turf/simulated/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/mine/laborcamp)
+"Ff" = (
 /obj/machinery/atmospherics/trinary/filter{
 	dir = 4;
 	filter_type = "nitrogen";
@@ -8872,13 +8910,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"Fc" = (
-/obj/machinery/vending/cola,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/mine/laborcamp/security)
-"Fd" = (
+"Fg" = (
 /obj/machinery/door_control{
 	id = "rdorm2";
 	name = "door bolt control";
@@ -8891,13 +8923,7 @@
 	},
 /turf/simulated/floor/carpet,
 /area/research_outpost/hallway)
-"Fe" = (
-/obj/structure/chair/stool,
-/turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
-	},
-/area/mine/laborcamp)
-"Ff" = (
+"Fh" = (
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "vault";
@@ -8907,7 +8933,7 @@
 	name = "Mainframe floor"
 	},
 /area/research_outpost/iso3)
-"Fg" = (
+"Fi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1
 	},
@@ -8916,35 +8942,11 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/iso3)
-"Fh" = (
+"Fj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel{
 	icon_state = "warning"
 	},
-/area/research_outpost/iso3)
-"Fi" = (
-/obj/machinery/door/airlock/external{
-	name = "Access Airlock";
-	id_tag = "riso3";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/plasteel,
-/area/research_outpost/iso3)
-"Fj" = (
-/obj/structure/cable{
-	banned_links = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8;
-	pressure_checks = 0
-	},
-/turf/simulated/floor/plasteel,
 /area/research_outpost/iso3)
 "Fk" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -8962,28 +8964,27 @@
 	},
 /area/mine/laborcamp)
 "Fm" = (
-/obj/structure/cable{
-	banned_links = 12
+/obj/machinery/door/airlock/external{
+	name = "Access Airlock";
+	id_tag = "riso3";
+	req_access = list(65)
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8;
-	color = "#dd1010"
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso3)
 "Fn" = (
 /obj/structure/cable{
-	banned_links = 12
+	banned_links = 10
 	},
-/obj/machinery/door/airlock/research{
-	name = "Isolation Room Three";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8;
+	pressure_checks = 0
+	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso3)
 "Fo" = (
@@ -9010,6 +9011,37 @@
 	},
 /area/mine/laborcamp)
 "Fr" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8;
+	color = "#dd1010"
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso3)
+"Fs" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/research{
+	name = "Isolation Room Three";
+	req_access = list(65)
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso3)
+"Ft" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
+"Fu" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
@@ -9019,7 +9051,7 @@
 	icon_state = "whiteyellow"
 	},
 /area/research_outpost/hallway)
-"Fs" = (
+"Fv" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -9029,33 +9061,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Ft" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/production)
-"Fu" = (
+"Fw" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/power)
-"Fv" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/power)
-"Fw" = (
-/obj/structure/cable{
-	banned_links = 1
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
@@ -9073,6 +9084,21 @@
 /area/mine/laborcamp)
 "Fy" = (
 /obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
+"Fz" = (
+/obj/structure/cable{
+	banned_links = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
+"FA" = (
+/obj/structure/cable{
 	banned_links = 3
 	},
 /obj/machinery/power/port_gen/pacman{
@@ -9083,18 +9109,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Fz" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/blue,
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/meter,
-/turf/simulated/floor/plating,
-/area/research_outpost/atmos)
-"FA" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/blue{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/atmos)
 "FB" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
@@ -9104,6 +9118,18 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "FC" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/blue,
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/meter,
+/turf/simulated/floor/plating,
+/area/research_outpost/atmos)
+"FD" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/atmos)
+"FE" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/blue{
 	dir = 4
 	},
@@ -9112,13 +9138,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"FD" = (
+"FF" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible{
 	color = "#1010dd"
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"FE" = (
+"FG" = (
 /obj/machinery/atmospherics/trinary/filter{
 	dir = 4;
 	filter_type = "oxygen";
@@ -9127,29 +9153,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"FF" = (
+"FH" = (
 /obj/structure/bed,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "vault"
-	},
-/area/research_outpost/iso3)
-"FG" = (
-/obj/structure/table,
-/obj/item/flashlight/lamp,
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/iso3)
-"FH" = (
-/obj/machinery/camera{
-	dir = 8;
-	c_tag = "Isolation Room Three";
-	network = list("Isolation")
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "warning"
 	},
 /area/research_outpost/iso3)
 "FI" = (
@@ -9160,6 +9168,36 @@
 	},
 /area/mine/explored)
 "FJ" = (
+/obj/structure/table,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/iso3)
+"FK" = (
+/obj/machinery/camera{
+	dir = 8;
+	c_tag = "Isolation Room Three";
+	network = list("Isolation")
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "warning"
+	},
+/area/research_outpost/iso3)
+"FL" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/mine/laborcamp)
+"FM" = (
 /obj/structure/cable{
 	banned_links = 7
 	},
@@ -9177,44 +9215,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/iso3)
-"FK" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = 24
-	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/iso3)
-"FL" = (
-/obj/structure/table,
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	on = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "floorgrime"
-	},
-/area/mine/laborcamp)
-"FM" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "whiteyellowcorner"
-	},
-/area/research_outpost/hallway)
 "FN" = (
 /obj/structure/alien/weeds,
 /turf/simulated/floor/plasteel/airless,
@@ -9230,25 +9230,51 @@
 	},
 /area/mine/living_quarters)
 "FP" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/iso3)
+"FQ" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whiteyellowcorner"
+	},
+/area/research_outpost/hallway)
+"FR" = (
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "archgunc"
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"FQ" = (
+"FS" = (
 /obj/machinery/conveyor_switch{
 	id = "archgunc"
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"FR" = (
+"FT" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"FS" = (
+"FU" = (
 /obj/structure/cable{
 	banned_links = 14
 	},
@@ -9256,25 +9282,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/research_outpost/power)
-"FT" = (
-/obj/structure/cable{
-	banned_links = 5
-	},
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/power)
-"FU" = (
-/obj/machinery/door/airlock/atmos/glass{
-	name = "Outpost Atmospherics";
-	req_access = list(10,24,65)
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 5
-	},
-/turf/simulated/floor/plasteel,
 /area/research_outpost/power)
 "FV" = (
 /turf/simulated/floor/plasteel{
@@ -9285,35 +9292,41 @@
 	name = "Mining Station Mech Bay"
 	})
 "FW" = (
+/obj/structure/cable{
+	banned_links = 5
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
+"FX" = (
+/obj/machinery/door/airlock/atmos/glass{
+	name = "Outpost Atmospherics";
+	req_access = list(10,24,65)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 5
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/power)
+"FY" = (
 /obj/machinery/atmospherics/binary/pump,
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"FX" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/atmos)
-"FY" = (
-/obj/machinery/atmospherics/meter,
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/atmos)
 "FZ" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
 "Ga" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10
+/obj/machinery/atmospherics/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
@@ -9328,17 +9341,12 @@
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
 "Gd" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "whitepurplecorner"
-	},
-/area/research_outpost/hallway)
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/floor/plating,
+/area/research_outpost/atmos)
 "Ge" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 0;
@@ -9356,6 +9364,24 @@
 /turf/simulated/floor/plating,
 /area/mine/explored)
 "Gg" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/atmos)
+"Gh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "whitepurplecorner"
+	},
+/area/research_outpost/hallway)
+"Gi" = (
 /obj/structure/sign/deathsposal{
 	pixel_x = 32
 	},
@@ -9367,25 +9393,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Gh" = (
+"Gj" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Gi" = (
+"Gk" = (
 /obj/structure/cable{
 	banned_links = 6
 	},
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Gj" = (
+"Gl" = (
 /obj/structure/cable{
 	banned_links = 4
 	},
 /obj/machinery/power/smes,
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Gk" = (
+"Gm" = (
 /obj/structure/cable{
 	banned_links = 13
 	},
@@ -9395,14 +9421,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/power)
-"Gl" = (
+"Gn" = (
 /obj/machinery/atmospherics/pipe/cap/visible{
 	dir = 8;
 	color = "#dd1010"
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/power)
-"Gm" = (
+"Go" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 8
 	},
@@ -9410,20 +9436,6 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
-/area/research_outpost/atmos)
-"Gn" = (
-/obj/machinery/atmospherics/unary/portables_connector{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister,
-/turf/simulated/floor/plating,
-/area/research_outpost/atmos)
-"Go" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plasteel,
 /area/research_outpost/atmos)
 "Gp" = (
 /turf/simulated/floor/plating/airless{
@@ -9438,10 +9450,24 @@
 	},
 /area/mine/laborcamp)
 "Gr" = (
+/obj/machinery/atmospherics/unary/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister,
+/turf/simulated/floor/plating,
+/area/research_outpost/atmos)
+"Gs" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/atmos)
+"Gt" = (
 /obj/machinery/door/window/westleft,
 /turf/simulated/floor/plasteel,
 /area/research_outpost/atmos)
-"Gs" = (
+"Gu" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -9450,7 +9476,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/atmos)
-"Gt" = (
+"Gv" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -9461,17 +9487,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"Gu" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/maintstore2)
-"Gv" = (
-/obj/structure/rack,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/reagent_containers/spray/cleaner,
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore2)
 "Gw" = (
 /obj/structure/alien/weeds/node,
 /turf/simulated/floor/plating/airless,
@@ -9481,23 +9496,19 @@
 /turf/simulated/floor/plasteel/airless,
 /area/mine/abandoned)
 "Gy" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -32
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/wall/r_wall,
 /area/research_outpost/maintstore2)
 "Gz" = (
-/obj/structure/closet/walllocker/emerglocker{
-	pixel_x = -32
-	},
+/obj/structure/rack,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
 "GA" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
@@ -9509,47 +9520,32 @@
 /turf/simulated/floor/bluegrid,
 /area/mine/maintenance)
 "GC" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore2)
+"GD" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore2)
+"GE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
-"GD" = (
+"GF" = (
 /obj/structure/cable{
 	banned_links = 10
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
-"GE" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/door/airlock/maintenance{
-	name = "Maintenance Storage";
-	req_access = list(65)
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore2)
-"GF" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "white"
-	},
-/area/research_outpost/hallway)
 "GG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -9576,6 +9572,36 @@
 /area/mine/laborcamp)
 "GJ" = (
 /obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/maintenance{
+	name = "Maintenance Storage";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore2)
+"GK" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
+"GL" = (
+/obj/structure/cable{
 	banned_links = 1
 	},
 /obj/machinery/door/firedoor/border_only{
@@ -9594,14 +9620,14 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"GK" = (
+"GM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/power)
-"GL" = (
+"GN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -9612,27 +9638,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
-/area/research_outpost/power)
-"GM" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/research_outpost/power)
-"GN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/wall/r_wall,
 /area/research_outpost/power)
 "GO" = (
 /obj/structure/table/glass,
@@ -9645,13 +9650,19 @@
 	},
 /area/mine/laborcamp/security)
 "GP" = (
-/obj/structure/transit_tube/curved/flipped{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "delivery"
-	},
-/area/research_outpost/atmos)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/research_outpost/power)
 "GQ" = (
 /obj/item/rack_parts,
 /turf/simulated/floor/plasteel/airless{
@@ -9669,27 +9680,27 @@
 	},
 /area/mine/laborcamp/security)
 "GS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/wall/r_wall,
+/area/research_outpost/power)
+"GT" = (
+/obj/structure/transit_tube/curved/flipped{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/research_outpost/atmos)
+"GU" = (
 /obj/structure/transit_tube/station{
 	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bot"
 	},
-/area/research_outpost/atmos)
-"GT" = (
-/obj/structure/transit_tube,
-/turf/simulated/floor/plasteel{
-	icon_state = "delivery"
-	},
-/area/research_outpost/atmos)
-"GU" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/transit_tube,
-/turf/simulated/floor/plating,
 /area/research_outpost/atmos)
 "GV" = (
 /obj/machinery/power/apc{
@@ -9705,6 +9716,21 @@
 /turf/simulated/floor/plasteel,
 /area/mine/lobby)
 "GW" = (
+/obj/structure/transit_tube,
+/turf/simulated/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/research_outpost/atmos)
+"GX" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/transit_tube,
+/turf/simulated/floor/plating,
+/area/research_outpost/atmos)
+"GY" = (
 /obj/structure/rack,
 /obj/item/storage/box/lights{
 	pixel_x = 5;
@@ -9715,26 +9741,6 @@
 	pixel_y = 5
 	},
 /obj/item/storage/box/lights/mixed,
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore2)
-"GX" = (
-/obj/structure/cable{
-	banned_links = 14
-	},
-/obj/structure/rack,
-/obj/item/storage/box/gloves,
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "Maintenance Storage APC";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/maintstore2)
-"GY" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/structure/dispenser,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
 "GZ" = (
@@ -9753,6 +9759,26 @@
 	})
 "Hb" = (
 /obj/structure/cable{
+	banned_links = 14
+	},
+/obj/structure/rack,
+/obj/item/storage/box/gloves,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "Maintenance Storage APC";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore2)
+"Hc" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/structure/dispenser,
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore2)
+"Hd" = (
+/obj/structure/cable{
 	banned_links = 12
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
@@ -9761,7 +9787,7 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
-"Hc" = (
+"He" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -9771,7 +9797,7 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
-"Hd" = (
+"Hf" = (
 /obj/structure/cable{
 	banned_links = 5
 	},
@@ -9779,11 +9805,18 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
 /area/research_outpost/maintstore2)
-"He" = (
+"Hg" = (
+/obj/machinery/atmospherics/meter,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"Hh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/wall/r_wall,
 /area/research_outpost/maintstore2)
-"Hf" = (
+"Hi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -9799,19 +9832,12 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
-"Hg" = (
-/obj/machinery/atmospherics/meter,
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/mine/living_quarters)
-"Hh" = (
+"Hj" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "delivery"
 	},
 /area/research_outpost/hallway)
-"Hi" = (
+"Hk" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -9825,7 +9851,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/hallway)
-"Hj" = (
+"Hl" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -9836,7 +9862,7 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"Hk" = (
+"Hm" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -9846,7 +9872,7 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"Hl" = (
+"Hn" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -9856,20 +9882,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/research_outpost/atmos)
-"Hm" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/longtermstorage)
-"Hn" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	color = "#1010dd"
-	},
-/turf/simulated/wall/r_wall,
-/area/research_outpost/longtermstorage)
 "Ho" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/longtermstorage)
 "Hp" = (
@@ -9881,10 +9894,23 @@
 	name = "Mining Station Break Room"
 	})
 "Hq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	color = "#1010dd"
+	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/longtermstorage)
 "Hr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/research_outpost/longtermstorage)
+"Hs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/wall/r_wall,
+/area/research_outpost/longtermstorage)
+"Ht" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
@@ -9899,7 +9925,7 @@
 	icon_state = "whitepurplecorner"
 	},
 /area/research_outpost/hallway)
-"Hs" = (
+"Hu" = (
 /obj/structure/transit_tube/curved{
 	dir = 4
 	},
@@ -9907,7 +9933,7 @@
 	icon_state = "delivery"
 	},
 /area/research_outpost/hallway)
-"Ht" = (
+"Hv" = (
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "vault";
@@ -9917,36 +9943,10 @@
 	name = "Mainframe floor"
 	},
 /area/research_outpost/longtermstorage)
-"Hu" = (
+"Hw" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/longtermstorage)
-"Hv" = (
-/obj/structure/cable{
-	banned_links = 10
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/longtermstorage)
-"Hw" = (
-/obj/structure/cable{
-	banned_links = 12
-	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "vault"
@@ -9983,6 +9983,32 @@
 /area/mine/laborcamp)
 "Hz" = (
 /obj/structure/cable{
+	banned_links = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/longtermstorage)
+"HA" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/longtermstorage)
+"HB" = (
+/obj/structure/cable{
 	banned_links = 12
 	},
 /obj/structure/disposalpipe/segment,
@@ -9995,7 +10021,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/longtermstorage)
-"HA" = (
+"HC" = (
 /obj/structure/cable{
 	banned_links = 12
 	},
@@ -10010,7 +10036,7 @@
 	icon_state = "whitepurple"
 	},
 /area/research_outpost/hallway)
-"HB" = (
+"HD" = (
 /obj/structure/cable{
 	banned_links = 1
 	},
@@ -10031,30 +10057,6 @@
 	dir = 4;
 	icon_state = "whitepurple"
 	},
-/area/research_outpost/hallway)
-"HC" = (
-/obj/structure/sign/securearea{
-	name = "INTERNALS REQUIRED";
-	desc = "A warning sign which reads 'INTERNALS REQUIRED'.";
-	pixel_x = 32;
-	pixel_y = 32
-	},
-/obj/structure/transit_tube/station,
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "bot"
-	},
-/area/research_outpost/hallway)
-"HD" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
 /area/research_outpost/hallway)
 "HE" = (
 /obj/structure/curtain/open/shower,
@@ -10077,15 +10079,18 @@
 	},
 /area/mine/living_quarters)
 "HG" = (
+/obj/structure/sign/securearea{
+	name = "INTERNALS REQUIRED";
+	desc = "A warning sign which reads 'INTERNALS REQUIRED'.";
+	pixel_x = 32;
+	pixel_y = 32
+	},
+/obj/structure/transit_tube/station,
 /turf/simulated/floor/plasteel{
 	dir = 1;
-	icon_state = "vault";
-	oxygen = 0;
-	nitrogen = 100;
-	temperature = 80;
-	name = "Mainframe floor"
+	icon_state = "bot"
 	},
-/area/research_outpost/longtermstorage)
+/area/research_outpost/hallway)
 "HH" = (
 /obj/effect/decal/remains/xeno,
 /turf/simulated/floor/plasteel/airless{
@@ -10099,26 +10104,24 @@
 	},
 /area/mine/west_outpost)
 "HJ" = (
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/longtermstorage)
-"HK" = (
-/obj/structure/cable{
-	banned_links = 7
-	},
-/obj/structure/disposalpipe/segment{
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "Long Term Storage APC";
-	pixel_y = 24
+/obj/structure/window/reinforced{
+	dir = 1
 	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/research_outpost/hallway)
+"HK" = (
 /turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
+	dir = 1;
+	icon_state = "vault";
+	oxygen = 0;
+	nitrogen = 100;
+	temperature = 80;
+	name = "Mainframe floor"
 	},
 /area/research_outpost/longtermstorage)
 "HL" = (
@@ -10135,24 +10138,28 @@
 	},
 /area/mine/laborcamp)
 "HN" = (
-/turf/simulated/wall/r_wall,
-/area/research_outpost/harvesting)
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/longtermstorage)
 "HO" = (
-/obj/machinery/door/airlock/research{
-	name = "Exotic Particles Collection";
-	req_access = list(65)
+/obj/structure/cable{
+	banned_links = 7
 	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "Long Term Storage APC";
+	pixel_y = 24
 	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/harvesting)
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/longtermstorage)
 "HP" = (
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/plating,
@@ -10169,19 +10176,23 @@
 /turf/simulated/wall/r_wall,
 /area/mine/maintenance)
 "HS" = (
-/obj/structure/cable{
-	banned_links = 3
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/harvesting)
 "HT" = (
-/obj/structure/transit_tube/curved/flipped{
+/obj/machinery/door/airlock/research{
+	name = "Exotic Particles Collection";
+	req_access = list(65)
+	},
+/obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
-/turf/simulated/wall/r_wall,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
 /area/research_outpost/harvesting)
 "HU" = (
 /obj/item/shard{
@@ -10190,26 +10201,19 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "HV" = (
-/obj/structure/disposalpipe/segment{
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 4
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/research_outpost/longtermstorage)
+/turf/simulated/wall/r_wall,
+/area/research_outpost/harvesting)
 "HW" = (
-/obj/machinery/alarm{
-	dir = 2;
-	pixel_y = -25
+/obj/structure/transit_tube/curved/flipped{
+	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/wall/r_wall,
 /area/research_outpost/harvesting)
 "HX" = (
 /obj/structure/disposalpipe/segment{
@@ -10221,6 +10225,28 @@
 /turf/simulated/floor/plasteel,
 /area/mine/eva)
 "HY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/research_outpost/longtermstorage)
+"HZ" = (
+/obj/machinery/alarm{
+	dir = 2;
+	pixel_y = -25
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/harvesting)
+"Ia" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1;
 	color = "#dd1010"
@@ -10230,7 +10256,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/harvesting)
-"HZ" = (
+"Ib" = (
 /obj/structure/cable{
 	banned_links = 3
 	},
@@ -10242,20 +10268,26 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/harvesting)
-"Ia" = (
+"Ic" = (
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "bot"
 	},
 /area/research_outpost/longtermstorage)
-"Ib" = (
+"Id" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	on = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"Ie" = (
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/longtermstorage)
-"Ic" = (
+"If" = (
 /obj/machinery/firealarm{
 	dir = 2;
 	pixel_y = -24
@@ -10265,13 +10297,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/harvesting)
-"Id" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	on = 1
-	},
-/turf/simulated/floor/plasteel,
-/area/mine/living_quarters)
-"Ie" = (
+"Ig" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
@@ -10281,7 +10307,7 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/harvesting)
-"If" = (
+"Ih" = (
 /obj/structure/cable{
 	banned_links = 7
 	},
@@ -10295,28 +10321,6 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/plasteel,
-/area/research_outpost/harvesting)
-"Ig" = (
-/obj/machinery/door/airlock/external{
-	name = "Primary Access";
-	req_access = list(65)
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel,
-/area/research_outpost/harvesting)
-"Ih" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
 /area/research_outpost/harvesting)
 "Ii" = (
 /obj/structure/curtain/open/shower,
@@ -10335,6 +10339,28 @@
 	},
 /area/mine/laborcamp)
 "Ik" = (
+/obj/machinery/door/airlock/external{
+	name = "Primary Access";
+	req_access = list(65)
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/harvesting)
+"Il" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/research_outpost/harvesting)
+"Im" = (
 /obj/structure/sign/nosmoking_2{
 	pixel_y = -32
 	},
@@ -10348,33 +10374,15 @@
 	icon_state = "warning"
 	},
 /area/research_outpost/harvesting)
-"Il" = (
+"In" = (
+/turf/simulated/wall,
+/area/mine/laborcamp)
+"Io" = (
 /obj/structure/sign/securearea{
 	name = "RADIOACTIVE AREA";
 	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
 	icon_state = "radiation";
 	pixel_x = -32
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "warning"
-	},
-/area/research_outpost/harvesting)
-"Im" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "warning"
-	},
-/area/research_outpost/harvesting)
-"In" = (
-/turf/simulated/wall,
-/area/mine/laborcamp)
-"Io" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -10396,6 +10404,29 @@
 	name = "Mining Station Mech Bay"
 	})
 "Ir" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "warning"
+	},
+/area/research_outpost/harvesting)
+"Is" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "warning"
+	},
+/area/research_outpost/harvesting)
+"It" = (
+/obj/structure/table,
+/obj/machinery/kitchen_machine/microwave,
+/turf/simulated/floor/plasteel,
+/area/mine/west_outpost)
+"Iu" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -10409,7 +10440,7 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/research_outpost/harvesting)
-"Is" = (
+"Iv" = (
 /obj/machinery/alarm{
 	dir = 2;
 	pixel_y = -24
@@ -10419,18 +10450,13 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/harvesting)
-"It" = (
-/obj/structure/table,
-/obj/machinery/kitchen_machine/microwave,
-/turf/simulated/floor/plasteel,
-/area/mine/west_outpost)
-"Iu" = (
+"Iw" = (
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "vault"
 	},
 /area/research_outpost/harvesting)
-"Iv" = (
+"Ix" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -10438,15 +10464,6 @@
 	dir = 8;
 	icon_state = "vault"
 	},
-/area/research_outpost/harvesting)
-"Iw" = (
-/obj/structure/xenoarch_scanpad,
-/obj/machinery/light/small,
-/turf/simulated/floor/bluegrid,
-/area/research_outpost/harvesting)
-"Ix" = (
-/obj/structure/xenoarch_scanpad,
-/turf/simulated/floor/bluegrid,
 /area/research_outpost/harvesting)
 "Iy" = (
 /turf/simulated/mineral/random,
@@ -10458,10 +10475,34 @@
 	},
 /area/mine/abandoned)
 "IA" = (
-/obj/machinery/xenoarch/harvester,
+/obj/structure/xenoarch_scanpad,
+/obj/machinery/light/small,
 /turf/simulated/floor/bluegrid,
 /area/research_outpost/harvesting)
 "IB" = (
+/obj/structure/xenoarch_scanpad,
+/turf/simulated/floor/bluegrid,
+/area/research_outpost/harvesting)
+"IC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating/airless{
+	icon_state = "asteroidplating"
+	},
+/area/mine/explored)
+"ID" = (
+/obj/machinery/xenoarch/harvester,
+/turf/simulated/floor/bluegrid,
+/area/research_outpost/harvesting)
+"IE" = (
+/obj/structure/girder/displaced,
+/turf/simulated/floor/plating/airless{
+	icon_state = "asteroidplating";
+	tag = ""
+	},
+/area/mine/abandoned)
+"IF" = (
 /obj/structure/table,
 /obj/item/xenoarch_battery{
 	pixel_x = -6;
@@ -10487,15 +10528,7 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/harvesting)
-"IC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating/airless{
-	icon_state = "asteroidplating"
-	},
-/area/mine/explored)
-"ID" = (
+"IG" = (
 /obj/structure/table,
 /obj/item/xenoarch_utilizer{
 	pixel_x = 3;
@@ -10507,23 +10540,6 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/harvesting)
-"IE" = (
-/obj/structure/girder/displaced,
-/turf/simulated/floor/plating/airless{
-	icon_state = "asteroidplating";
-	tag = ""
-	},
-/area/mine/abandoned)
-"IF" = (
-/obj/structure/transit_tube/curved/flipped{
-	dir = 4
-	},
-/turf/simulated/floor/plating/asteroid/airless,
-/area/mine/explored)
-"IG" = (
-/obj/structure/transit_tube/horizontal,
-/turf/simulated/floor/plating/asteroid/airless,
-/area/mine/explored)
 "IH" = (
 /obj/machinery/flasher_button{
 	id = "transferflash";
@@ -10543,8 +10559,8 @@
 	},
 /area/mine/laborcamp/security)
 "IJ" = (
-/obj/structure/transit_tube/curved{
-	dir = 8
+/obj/structure/transit_tube/curved/flipped{
+	dir = 4
 	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
@@ -10555,27 +10571,27 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/explored)
 "IL" = (
-/obj/structure/transit_tube/diagonal,
+/obj/structure/transit_tube/horizontal,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IM" = (
-/obj/structure/transit_tube/diagonal/topleft,
+/obj/structure/transit_tube/curved{
+	dir = 8
+	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IN" = (
-/obj/structure/transit_tube/curved{
-	dir = 2
-	},
+/obj/structure/transit_tube/diagonal,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IO" = (
-/obj/structure/transit_tube/curved/flipped{
-	dir = 2
-	},
+/obj/structure/transit_tube/diagonal/topleft,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IP" = (
-/obj/structure/transit_tube,
+/obj/structure/transit_tube/curved{
+	dir = 2
+	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IQ" = (
@@ -10588,16 +10604,12 @@
 /turf/simulated/wall,
 /area/mine/west_outpost)
 "IT" = (
-/obj/structure/transit_tube/curved{
-	dir = 4
+/obj/structure/transit_tube/curved/flipped{
+	dir = 2
 	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IU" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/structure/disposaloutlet,
 /obj/structure/transit_tube,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
@@ -10609,30 +10621,46 @@
 /area/mine/west_outpost)
 "IW" = (
 /obj/structure/transit_tube/curved{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IX" = (
-/obj/structure/transit_tube/curved/flipped{
+/obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/structure/disposaloutlet,
+/obj/structure/transit_tube,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IY" = (
-/obj/structure/transit_tube/station/reverse,
+/obj/structure/transit_tube/curved{
+	dir = 1
+	},
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
 "IZ" = (
 /turf/simulated/mineral/random/labormineral,
 /area/mine/unexplored)
 "Ja" = (
+/obj/structure/transit_tube/curved/flipped{
+	dir = 8
+	},
+/turf/simulated/floor/plating/asteroid/airless,
+/area/mine/explored)
+"Jb" = (
+/obj/structure/transit_tube/station/reverse{
+	dir = 1
+	},
+/turf/simulated/floor/plating/asteroid/airless,
+/area/mine/explored)
+"Jc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plasteel{
 	icon_state = "warning"
 	},
 /area/research_outpost/gearstore)
-"Jb" = (
+"Jd" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
 	icon_state = "space";
@@ -10649,21 +10677,6 @@
 /turf/simulated/floor/plasteel{
 	icon_state = "warning"
 	},
-/area/research_outpost/gearstore)
-"Jc" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "mining_n1_outer";
-	locked = 1;
-	name = "Mining External Access";
-	req_access = null
-	},
-/turf/simulated/floor/plating,
-/area/research_outpost/gearstore)
-"Jd" = (
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
 /area/research_outpost/gearstore)
 "Je" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -10707,13 +10720,12 @@
 /obj/machinery/door/airlock/external{
 	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "mining_n1_inner";
+	id_tag = "mining_n1_outer";
 	locked = 1;
 	name = "Mining External Access";
 	req_access = null
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plating,
 /area/research_outpost/gearstore)
 "Jj" = (
 /obj/structure/chair/office/dark{
@@ -10726,6 +10738,27 @@
 	},
 /area/mine/laborcamp/security)
 "Jl" = (
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plating,
+/area/research_outpost/gearstore)
+"Jm" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "mining_n1_inner";
+	locked = 1;
+	name = "Mining External Access";
+	req_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/gearstore)
+"Jn" = (
+/obj/effect/decal/remains/human,
+/obj/structure/alien/weeds,
+/turf/simulated/floor/plating/airless,
+/area/mine/abandoned)
+"Jo" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -10752,7 +10785,7 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/research_outpost/gearstore)
-"Jm" = (
+"Jp" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	frequency = 1379;
@@ -10763,18 +10796,13 @@
 	icon_state = "floorgrime"
 	},
 /area/research_outpost/gearstore)
-"Jn" = (
-/obj/effect/decal/remains/human,
-/obj/structure/alien/weeds,
-/turf/simulated/floor/plating/airless,
-/area/mine/abandoned)
-"Jo" = (
+"Jq" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
 	},
 /area/research_outpost/gearstore)
-"Jp" = (
+"Jr" = (
 /obj/machinery/camera{
 	c_tag = "Mining Outpost Port Exterior Airlock";
 	dir = 4;
@@ -10800,6 +10828,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/mine/living_quarters)
+"Jt" = (
+/obj/structure/transit_tube/crossing,
+/turf/simulated/floor/plating/asteroid/airless,
+/area/mine/explored)
 "Ju" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
@@ -10807,6 +10839,9 @@
 	},
 /turf/space,
 /area/mine/explored)
+"Jv" = (
+/turf/simulated/wall/r_wall,
+/area/research_outpost/reconstitution)
 "Jx" = (
 /turf/simulated/floor/plasteel/airless{
 	icon_state = "floorgrime"
@@ -10820,6 +10855,15 @@
 	icon_state = "damaged5"
 	},
 /area/mine/abandoned)
+"Jz" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
 "JA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10827,6 +10871,40 @@
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
 /area/mine/west_outpost)
+"JB" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
+"JC" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
+"JD" = (
+/obj/machinery/hydroponics/soil,
+/turf/simulated/floor/grass,
+/area/research_outpost/reconstitution)
+"JE" = (
+/obj/structure/table,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
+"JF" = (
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
 "JG" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Break Room"
@@ -10840,15 +10918,50 @@
 	icon_state = "white"
 	},
 /area/mine/laborcamp/security)
+"JI" = (
+/obj/machinery/hydroponics/soil,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/grass,
+/area/research_outpost/reconstitution)
+"JJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
 "JK" = (
 /turf/simulated/floor/plasteel,
 /area/mine/living_quarters)
+"JM" = (
+/obj/machinery/computer/fossil_reconstitutor/fauna{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
+"JN" = (
+/obj/machinery/computer/fossil_reconstitutor/flora,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
 "JO" = (
 /obj/structure/alien/weeds,
 /turf/simulated/floor/plating/airless{
 	icon_state = "damaged2"
 	},
 /area/mine/abandoned)
+"JP" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/research_outpost/reconstitution)
 "JQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -10873,6 +10986,56 @@
 	icon_state = "asteroidplating"
 	},
 /area/mine/explored)
+"JU" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/westleft{
+	name = "Growth Pen";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/research_outpost/reconstitution)
+"JV" = (
+/obj/structure/table,
+/obj/item/plant_analyzer,
+/obj/item/reagent_containers/cup/bottle/nutrient/ez,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
+"JW" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/research_outpost/reconstitution)
+"JX" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/fossil_incubator,
+/turf/simulated/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/research_outpost/reconstitution)
+"JY" = (
+/obj/structure/cable{
+	banned_links = 11
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "Research Outpost Reconstitution Lab APC";
+	pixel_y = 24
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/reconstitution)
 "JZ" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
@@ -10880,6 +11043,11 @@
 	},
 /turf/space,
 /area/mine/explored)
+"Ka" = (
+/obj/structure/lattice,
+/obj/structure/transit_tube,
+/turf/space,
+/area/space)
 "Kb" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
@@ -10893,12 +11061,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/mine/laborcamp)
+"Kc" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/transit_tube,
+/turf/simulated/floor/plating/airless,
+/area/mine/explored)
 "Kd" = (
 /obj/item/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/plasteel/airless,
 /area/mine/abandoned)
+"Ke" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/transit_tube,
+/turf/space,
+/area/mine/explored)
 "Kf" = (
 /obj/structure/table,
 /obj/item/storage/backpack/satchel,
@@ -10913,6 +11097,29 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/mine/west_outpost)
+"Kg" = (
+/obj/structure/lattice,
+/obj/structure/transit_tube/curved{
+	dir = 1
+	},
+/turf/space,
+/area/space)
+"Kh" = (
+/obj/structure/lattice,
+/obj/structure/transit_tube/diagonal,
+/turf/space,
+/area/space)
+"Ki" = (
+/obj/structure/transit_tube/curved/flipped{
+	dir = 1
+	},
+/turf/simulated/floor/plating/asteroid/airless,
+/area/mine/explored)
+"Kj" = (
+/obj/structure/lattice,
+/obj/structure/transit_tube/diagonal/topleft,
+/turf/space,
+/area/space)
 "Kk" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -10932,6 +11139,11 @@
 	icon_state = "dark"
 	},
 /area/mine/laborcamp/security)
+"Kl" = (
+/obj/effect/spawner/window/reinforced,
+/obj/structure/transit_tube,
+/turf/simulated/floor/plating,
+/area/mine/lobby)
 "Km" = (
 /obj/structure/fans/tiny,
 /obj/machinery/light/small{
@@ -10941,6 +11153,22 @@
 /area/mine/laborcamp/security)
 "Kn" = (
 /turf/simulated/wall/r_wall,
+/area/mine/lobby)
+"Ko" = (
+/obj/effect/spawner/window/reinforced,
+/obj/machinery/door/firedoor,
+/obj/structure/transit_tube,
+/turf/simulated/floor/plating,
+/area/mine/lobby)
+"Kp" = (
+/obj/structure/transit_tube/station/reverse/flipped{
+	dir = 8
+	},
+/obj/structure/transit_tube_pod,
+/turf/simulated/floor/plasteel{
+	dir = 9;
+	icon_state = "warning"
+	},
 /area/mine/lobby)
 "Ku" = (
 /turf/simulated/floor/plasteel/airless{
@@ -48741,50 +48969,50 @@ Iy
 Iy
 Iy
 Iy
-Ya
-Ya
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-rH
-rH
-rH
-Ya
-Ya
-Ya
-Ya
-Ya
-Ya
-Iy
-Iy
-Iy
+IP
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+Ka
+Ka
+Ka
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+Ki
 Iy
 Iy
 Iy
@@ -48997,7 +49225,7 @@ Ya
 Ya
 Iy
 Iy
-Ya
+IN
 Ya
 Ya
 Iy
@@ -49042,7 +49270,7 @@ Ya
 Iy
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -49253,7 +49481,7 @@ Ya
 Ya
 Ya
 Ya
-Ya
+IN
 Ya
 Ya
 rH
@@ -49300,7 +49528,7 @@ Ya
 Iy
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -49509,7 +49737,7 @@ rH
 rH
 rH
 Ya
-Ya
+IN
 Ya
 Ya
 rH
@@ -49558,7 +49786,7 @@ Iy
 Iy
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -49717,12 +49945,12 @@ Iy
 Iy
 Iy
 tg
-IN
 IP
-IP
-IP
-IP
-IP
+IU
+IU
+IU
+IU
+IU
 rY
 rX
 rW
@@ -49765,7 +49993,7 @@ Iy
 rH
 rH
 rH
-Ra
+Kh
 cd
 Ra
 rH
@@ -49816,7 +50044,7 @@ Ya
 Iy
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -49973,37 +50201,76 @@ Iy
 Iy
 Iy
 Iy
-IF
+IJ
 tg
-Iy
-Iy
-Iy
-Iy
-Ya
-rZ
+Jv
+Jv
+Jv
+Jv
+Jv
+sf
 sd
 sd
 sc
 sa
 rZ
-rH
-rH
-rH
-rH
-rH
+Ka
+Ka
+Ka
+Ka
+Ka
+Ka
+Jt
+Kc
+Ke
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+IU
+Ka
+Ka
+Kg
 Ra
-tg
-jt
-Ju
-Kx
-Kx
-Kx
-Kx
-Kx
-Kx
-Kx
-Kx
-Kx
+cd
+Ra
+rH
+rH
+rH
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -50028,45 +50295,6 @@ Ra
 rH
 rH
 rH
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-Iy
-rH
-rH
-rH
-Ra
-cd
-Ra
-rH
-rH
-rH
 Ya
 Ya
 Ya
@@ -50074,7 +50302,7 @@ Ya
 Ya
 Iy
 Iy
-Iy
+IO
 Iy
 Ya
 Ya
@@ -50230,19 +50458,19 @@ Iy
 Iy
 Iy
 Iy
-IG
+IL
 Iy
-Iy
-Iy
-Iy
-Iy
-Ya
-sf
+Jv
+JD
+JC
+JB
+Jz
 sg
+sh
+sh
+sh
+sh
 sg
-sg
-sg
-sf
 rH
 rH
 rH
@@ -50332,7 +50560,7 @@ Ya
 Ya
 Iy
 Iy
-Ya
+IO
 Ya
 Ya
 Ya
@@ -50487,19 +50715,19 @@ Iy
 Iy
 Iy
 Iy
-IG
+IL
 Iy
-Iy
-Iy
-Iy
-Iy
-Ya
-sh
-sg
-sg
-sg
+Jv
+JI
+JF
+JF
+JE
 sk
 sh
+sm
+sh
+sl
+sk
 Ra
 Ra
 Ra
@@ -50590,7 +50818,7 @@ Ya
 Ya
 Ya
 Ya
-Ya
+IO
 Ya
 Ya
 rH
@@ -50744,25 +50972,25 @@ Iy
 Iy
 Iy
 Iy
-IG
+IL
 Iy
-Iy
-Iy
-Iy
-Iy
-Ya
+Jv
+JD
+JF
+JF
+JJ
+ss
 sq
-sg
+sr
+sq
 sp
-sn
-sm
 rT
-sl
-sl
-sl
-sl
-sl
-sl
+sn
+sn
+sn
+sn
+sn
+sn
 tg
 tg
 tg
@@ -50848,7 +51076,7 @@ Ya
 Ya
 Ya
 Ya
-Ya
+IO
 Ra
 rH
 rH
@@ -51001,25 +51229,25 @@ Iy
 Iy
 Iy
 Iy
-IG
+IL
 Iy
-Iy
-Iy
-Iy
-Iy
-Ya
-rZ
-sg
-sg
-sg
-sv
+Jv
+JN
+JF
+JF
+JM
+sf
+sh
+sh
+sh
+sy
 rT
+sx
+sx
+sx
+sv
 st
-st
-st
-ss
-sr
-sl
+sn
 tg
 tg
 tg
@@ -51106,7 +51334,7 @@ Ya
 Ya
 Ra
 cd
-Ra
+Kj
 rH
 rH
 rH
@@ -51258,27 +51486,27 @@ Iy
 Iy
 Iy
 Iy
-IJ
+IM
 tg
-Iy
-Iy
-Iy
-Iy
-Ya
-sf
+Jv
+JV
+JF
+JU
+JP
 sg
+sh
+sK
+sJ
 sI
-sH
-sE
 rT
+sH
+sv
+sE
+sv
 sD
-ss
 sC
-ss
 sB
 sz
-sy
-sx
 tg
 tg
 Kx
@@ -51364,7 +51592,7 @@ rH
 Ra
 cd
 Ra
-rH
+Kj
 rH
 rH
 Iy
@@ -51516,26 +51744,26 @@ Iy
 Iy
 Iy
 tg
-IT
-Iy
-Iy
-Iy
-Iy
-Ya
+IW
+Jv
+JY
+JF
+JX
+JW
+sV
+sU
 sT
 sS
 sQ
+rT
+sP
 sP
 sO
-rT
-sN
+sv
+sD
 sN
 sM
-ss
-sB
 sL
-sK
-sJ
 tg
 tg
 tg
@@ -51622,7 +51850,7 @@ Ra
 cd
 Ra
 rH
-rH
+Kj
 rH
 Iy
 Iy
@@ -51766,9 +51994,13 @@ Iy
 Iy
 Iy
 tg
-IN
 IP
-IP
+IU
+IU
+tD
+tB
+tz
+tw
 ts
 tr
 tn
@@ -51776,23 +52008,19 @@ tm
 tl
 tj
 ti
-ti
-ti
+sh
 th
+sh
 te
-sg
-td
-sg
-tb
 rT
-sW
-sV
+tb
 sZ
+td
+tb
+sZ
+sn
 sW
-sV
-sl
-sU
-sJ
+sL
 tg
 tg
 tg
@@ -51880,7 +52108,7 @@ cd
 Ra
 rH
 rH
-rH
+Kj
 Iy
 Iy
 Iy
@@ -52022,35 +52250,35 @@ Iy
 Iy
 Iy
 tg
-IL
+IN
+uf
+tz
+tw
 ub
-tn
-tm
-tR
+ue
+ud
+uc
+ub
 tY
 tW
+tT
+tT
 tT
 tR
 tP
 tN
 tM
-tM
-tM
 tK
 tI
 tH
 tF
+sO
+sv
 tE
-tD
-tB
-tz
-sM
-ss
-tw
-sl
-sl
-sl
-sl
+sn
+sn
+sn
+sn
 tg
 tg
 tg
@@ -52138,7 +52366,7 @@ Ra
 rH
 rH
 rH
-Iy
+IO
 Iy
 Iy
 Iy
@@ -52278,36 +52506,36 @@ Iy
 Iy
 Iy
 tg
-IL
+IN
 tg
+uu
+ut
+ut
+ub
 ur
-uq
-uq
-tR
+us
+ur
+ub
 un
+uq
 uo
 un
-tR
-uk
+un
 um
+sh
+sh
 ul
-uk
+sr
 uk
 uj
-sg
-sg
 ui
 uh
 ug
-uf
-ue
-ud
-uc
-ss
-sl
-Jm
+sv
+sn
 Jp
-sl
+Jr
+sn
 co
 Yy
 tg
@@ -52396,7 +52624,7 @@ rH
 rH
 rH
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -52534,37 +52762,37 @@ Ya
 Iy
 Iy
 Iy
-IF
+IJ
 tg
 Iy
+uR
+uQ
+uO
+ut
+ut
+uO
 uM
+ub
 uL
 uK
-uq
-uq
-uK
 uI
-tR
+uI
 uH
+uD
+uE
 uG
 uF
-uF
 uE
-ux
-uA
 uD
 uC
 uA
 ux
+ux
 uw
-uu
-ut
-ut
-us
-Ji
-Jo
-Ja
+Jm
+Jq
 Jc
+Ji
 KX
 eO
 tg
@@ -52654,7 +52882,7 @@ rH
 rH
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -52791,37 +53019,37 @@ Ya
 Iy
 Iy
 Iy
-IG
+IL
 Ud
 Iy
-tR
+ub
+vs
+uO
+ut
+ut
+vr
+vo
+ub
 vn
-uK
-uq
-uq
 vi
 vf
-tR
 ve
 vd
+uD
 vc
 vb
 uZ
-ux
 uX
+uD
 uW
 uV
 uU
-ux
 uT
 uS
-uR
-uQ
-uO
+Jl
+Jo
 Jd
 Jl
-Jb
-Jd
 oK
 eO
 tg
@@ -52912,7 +53140,7 @@ rH
 Iy
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Iy
@@ -53048,12 +53276,15 @@ Ya
 Iy
 Iy
 Iy
-IG
+IL
 Iy
 Iy
-tR
+ub
+vO
+uO
+vN
+vM
 vL
-uK
 vK
 vI
 vH
@@ -53061,24 +53292,21 @@ vF
 vD
 vB
 vA
+uD
 vz
 vy
 vx
-ux
 vw
+uD
 vv
+uV
+uV
+uV
 vu
 vt
-ux
-vs
-uS
-uS
-uS
-vr
-vo
-vo
-vo
-vo
+vt
+vt
+vt
 Mj
 BP
 vl
@@ -53170,7 +53398,7 @@ Iy
 Iy
 Iy
 Iy
-Iy
+IO
 Iy
 Iy
 Kx
@@ -53305,10 +53533,13 @@ Ya
 Iy
 Iy
 Iy
-IG
+IL
 Iy
 Iy
-tR
+ub
+wq
+wn
+wm
 wl
 wk
 wi
@@ -53316,22 +53547,19 @@ wg
 wf
 wd
 wc
+vf
 wa
 vZ
 vY
-vc
+vY
+vY
+vY
+vY
 vX
 vW
 vU
-vU
-vU
-vU
-vU
 vT
 vR
-vO
-vN
-vM
 zc
 zc
 zc
@@ -53428,7 +53656,7 @@ Iy
 Iy
 Iy
 Iy
-Kx
+IO
 Kx
 Kx
 Kx
@@ -53562,33 +53790,33 @@ Ya
 Iy
 Iy
 Iy
-IG
+IL
+wE
+wE
+ub
+ub
+ub
+wD
+ub
+ub
+ub
+ub
+wC
 wB
-wB
-tR
-tR
-tR
 wz
-tR
-tR
-tR
-tR
 wy
 wx
+vZ
 ww
 wv
 wu
-vW
+wu
 wt
 ws
-wq
-wq
-wn
-wm
-vU
-vU
-vU
-vU
+vY
+vY
+vY
+vY
 tg
 tg
 tg
@@ -53686,7 +53914,7 @@ Kx
 Kx
 Kx
 Kx
-Kx
+IO
 Kx
 Kx
 Kx
@@ -53819,15 +54047,19 @@ Ya
 Iy
 Iy
 Iy
-IG
-wB
+IL
+wE
+xf
+xe
+xb
+wS
 wZ
 wY
 wX
-wM
 wU
 wS
 wQ
+wd
 wP
 wM
 wL
@@ -53835,14 +54067,10 @@ vZ
 wK
 wJ
 wI
-vW
+ww
+wF
 wG
 wF
-wE
-wt
-wC
-wD
-wC
 tg
 tg
 tg
@@ -53944,7 +54172,7 @@ Kx
 Kx
 Kx
 Kx
-Kx
+IO
 Kx
 Kx
 Kx
@@ -54076,30 +54304,30 @@ Iy
 Iy
 Iy
 Iy
-IG
-wB
+IL
+wE
+xE
+xC
+xA
+wS
 xz
+wZ
 xx
 xw
-wM
+wS
 xv
-wU
 xu
 xt
-wM
 xq
 xp
+vZ
+ww
 xo
 xn
 xm
-vW
-wt
+xg
 xj
 xg
-xf
-xb
-xe
-xb
 tg
 tg
 tg
@@ -54202,7 +54430,7 @@ Kx
 Kx
 Kx
 Kx
-Kx
+IO
 Kx
 Kx
 Kx
@@ -54333,30 +54561,30 @@ Iy
 Iy
 Iy
 Iy
-IJ
-wB
+IM
+wE
+xW
+xV
+xC
+wS
+xU
+wZ
+wZ
 xO
 xN
-xx
-wM
 xM
-wU
-wU
 xK
+vZ
+vZ
+vZ
+vZ
+vY
 xJ
 xH
+wF
+wF
 xF
-vW
-vW
-vW
-vW
-vU
-xE
-xC
-wC
-wC
-xA
-wC
+wF
 tg
 tg
 tg
@@ -54460,7 +54688,7 @@ kx
 kx
 kx
 kx
-kx
+IO
 kx
 Kx
 Kx
@@ -54591,11 +54819,14 @@ Iy
 Iy
 Iy
 tg
+yF
+wE
+yE
+yC
+wS
 yB
-wB
 yA
 yz
-wM
 yx
 yw
 yv
@@ -54607,13 +54838,10 @@ yl
 yk
 yh
 yg
+wF
 yd
 xY
 xX
-wC
-xW
-xV
-xU
 tg
 tg
 tg
@@ -54718,7 +54946,7 @@ kx
 kx
 kx
 kx
-kx
+IO
 Kx
 Kx
 Kx
@@ -54849,7 +55077,10 @@ Iy
 Iy
 Iy
 tg
-yB
+yF
+zi
+zg
+zd
 zb
 za
 yY
@@ -54864,17 +55095,14 @@ yP
 yN
 yM
 yK
+wF
 yH
 yG
-yF
-wC
-yE
-yC
-wC
-wC
-wC
-wC
-wC
+wF
+wF
+wF
+wF
+wF
 tg
 tg
 tg
@@ -54976,7 +55204,7 @@ Kx
 Kx
 Kx
 Kx
-Kx
+IO
 Kx
 Kx
 tg
@@ -55106,18 +55334,21 @@ Iy
 Iy
 Iy
 Iy
-wB
+wE
+zL
+zg
+zg
+zH
+zG
+zB
 zF
-za
-za
+zB
+zB
 zD
 zB
-zv
+zB
 zA
-zv
-zv
 zx
-zv
 zv
 zt
 zs
@@ -55128,10 +55359,7 @@ zn
 zm
 zk
 zj
-zi
-zg
-zd
-wC
+wF
 tg
 tg
 tg
@@ -55234,14 +55462,14 @@ Kx
 Kx
 Kx
 Kx
-Kx
-tg
-tg
-tg
-tg
-Kn
-qm
-Dj
+IT
+Jt
+Jt
+Jt
+Jt
+Kl
+Ko
+Kp
 to
 Tk
 qm
@@ -55363,17 +55591,20 @@ Iy
 Iy
 Iy
 Iy
-wB
+wE
+Ap
+zg
+An
 Am
-za
 Ag
 Af
+Aa
 Ad
 Ac
-zY
 Ab
 Aa
 zZ
+zY
 zY
 zX
 zU
@@ -55385,10 +55616,7 @@ zP
 zO
 zN
 zM
-zL
-zH
-zG
-wC
+wF
 UT
 tg
 tg
@@ -55620,32 +55848,32 @@ Iy
 Iy
 Iy
 Iy
-wB
+wE
+AE
+zg
+An
+AD
+AD
+zB
 AC
-za
-Ag
 AB
-AB
-zv
 Az
 Ay
 Ax
+zB
+zB
+zB
+zB
 Av
 Au
-zv
-zv
-zv
-zv
+Aq
+Aq
 At
 As
-An
-An
 Ar
 Aq
-Ap
-An
-An
-An
+Aq
+Aq
 Kx
 Kx
 tg
@@ -55877,32 +56105,32 @@ Iy
 Iy
 Iy
 tg
+Bf
+Be
 Bc
 Bb
 Ba
 AZ
 AY
 AX
+AX
 AV
-AU
 AU
 AT
 AS
 AR
 AP
+zB
 AO
 AL
-zv
 AK
 AJ
 AI
+Aq
 AH
 AG
-An
 AF
-AE
-AD
-An
+Aq
 Kx
 Kx
 tg
@@ -56133,23 +56361,25 @@ Iy
 Iy
 Iy
 Iy
-IF
-vW
-ux
-ux
-ux
-ux
-ux
-zv
+IJ
+vZ
+uD
+uD
+uD
+uD
+uD
+zB
+BA
+Bz
 By
 Bw
 Bv
 Bu
 Bt
+Az
+zB
 Br
 Bq
-Ax
-zv
 Bp
 Bn
 Bm
@@ -56157,9 +56387,7 @@ Bk
 Bj
 Bi
 Bh
-Bf
-Be
-An
+Aq
 Kx
 Kx
 tg
@@ -56390,14 +56618,16 @@ Iy
 Iy
 Iy
 Ud
-IG
-vW
+IL
+vZ
+Cg
+Cf
+uD
 Cd
 Cc
-ux
+zB
 BZ
 BY
-zv
 BX
 BR
 BQ
@@ -56407,16 +56637,14 @@ BM
 BK
 BJ
 BI
+Aq
 BH
 BG
-An
+Aq
 BE
 BD
-An
 BB
-BA
-Bz
-An
+Aq
 kx
 kx
 tg
@@ -56647,33 +56875,33 @@ Iy
 Iy
 Iy
 Iy
-IG
-vW
+IL
+vZ
+Cz
+Cx
+uD
 Cw
 Cv
-ux
+zB
 Cu
 Ct
-zv
 Cs
 Cr
 Cq
 Cp
 Co
 Cn
+zB
 Cl
 Ck
-zv
+Ci
+Ci
+Ci
+Ci
 Cj
 Ci
-Cf
-Cf
-Cf
-Cf
-Cg
-Cf
-Cf
-Cf
+Ci
+Ci
 kx
 kx
 tg
@@ -56904,33 +57132,33 @@ Iy
 Iy
 Iy
 Iy
-IG
-vW
-ux
+IL
+vZ
+uD
+CM
+uD
+uD
+CL
+zB
+zB
+zB
 CK
-ux
-ux
 CJ
-zv
-zv
-zv
+zB
+zB
+zB
+zB
+zB
 CI
 CH
-zv
-zv
-zv
-zv
-zv
 CG
 CF
 CD
+Ci
 CC
 CB
-Cf
 CA
-Cz
-Cx
-Cf
+Ci
 kx
 kx
 tg
@@ -57160,11 +57388,13 @@ Ya
 Iy
 Iy
 Iy
+Dy
+Dw
+un
 Dv
+un
 Du
-uk
 Dt
-uk
 Dp
 Do
 Dl
@@ -57177,17 +57407,15 @@ Dd
 Dc
 Db
 Da
+Bq
 CY
 CX
-Bn
 CV
 CU
 CT
 CQ
 CO
-CM
-CL
-Cf
+Ci
 kx
 kx
 tg
@@ -57417,14 +57645,16 @@ Ya
 Iy
 Iy
 Iy
+Em
+El
 Ek
+un
+un
 Ej
 Eg
-uk
-uk
+Ee
 Ee
 Ed
-Ea
 Ea
 DZ
 DY
@@ -57435,16 +57665,14 @@ DN
 DL
 DK
 DJ
+Ci
 DI
 DH
-Cf
+Ci
 DG
 DC
-Cf
 DB
-Dy
-Dw
-Cf
+Ci
 kx
 kx
 tg
@@ -57674,34 +57902,34 @@ Ya
 Iy
 Iy
 Iy
+EF
+EE
+vZ
+uD
 ED
-EC
-vW
-ux
 EB
-Ev
+EC
+EB
+EB
+EB
 Ez
-Ev
-Ev
-Ev
-Eu
-Ep
-Ep
-Es
-Ep
 Er
+Er
+Ev
+Er
+Eu
+Es
+Er
+Av
 Eq
-Ep
-At
 En
-El
-El
-El
-El
-Em
-El
-El
-El
+En
+En
+En
+Ep
+En
+En
+En
 SW
 kx
 tg
@@ -57932,33 +58160,33 @@ Iy
 Iy
 Iy
 Iy
-IG
-vW
+IL
+vZ
+Fg
+Cx
+EB
+Ff
 Fd
-Cv
-Ev
 Fa
 EZ
 EY
+Er
 EX
 EW
-Ep
 EU
 ET
 ES
+Er
 ER
 EP
-Ep
 EO
 EN
 EM
+En
 EL
 EI
-El
 EG
-EF
-EE
-El
+En
 nD
 nD
 SW
@@ -58189,33 +58417,33 @@ Iy
 Iy
 Iy
 Iy
-IG
-vW
-Cd
-Cc
-Ev
+IL
+vZ
+Cg
+Cf
+EB
+FG
+FF
 FE
 FD
 FC
+Er
 FA
+EW
 Fz
-Ep
 Fy
-ET
 Fw
 Fv
 Fu
+Bq
 Fs
 Fr
-Bn
 Fn
 Fm
 Fj
 Fi
 Fh
-Fg
-Ff
-El
+En
 nD
 XD
 SW
@@ -58446,11 +58674,13 @@ Ya
 Ya
 Ya
 Ya
-IJ
-vW
-vW
-vW
-Ev
+IM
+vZ
+vZ
+vZ
+EB
+Gg
+Gd
 Ga
 FZ
 FY
@@ -58460,19 +58690,17 @@ FU
 FT
 FS
 FR
+Er
 FQ
+Eq
+En
 FP
-Ep
 FM
 En
-El
 FK
 FJ
-El
 FH
-FG
-FF
-El
+En
 SW
 SW
 SW
@@ -58704,9 +58932,11 @@ Ya
 Ya
 Ya
 tg
-IM
+IO
 tg
 Iy
+Gv
+Gu
 Gt
 Gs
 Gr
@@ -58717,22 +58947,20 @@ Gl
 Gk
 Gj
 Gi
+Er
+Av
 Gh
-Gg
-Ep
-At
-Gd
-El
-El
-El
-El
-El
-El
-El
-El
+En
+En
+En
+En
+En
+En
+En
+En
 kx
 kx
-IY
+Jb
 kx
 kx
 kx
@@ -58962,21 +59190,23 @@ Ya
 Ya
 Ya
 tg
-IO
-IP
+IT
+IU
+GX
+GW
 GU
 GT
+EB
+EB
+Er
+Er
 GS
 GP
-Ev
-Ev
-Ep
-Ep
 GN
 GM
+Er
 GL
 GK
-Ep
 GJ
 GF
 GE
@@ -58985,11 +59215,9 @@ GC
 GA
 Gz
 Gy
-Gv
-Gu
 kx
 tg
-IX
+Ja
 kx
 kx
 kx
@@ -59221,31 +59449,31 @@ Ya
 Ya
 Ya
 Ya
+Hn
+Hm
+Hm
 Hl
-Hk
+IT
+IU
+IU
+IU
+IX
+IU
+IU
 Hk
 Hj
-IO
-IP
-IP
-IP
-IU
-IP
-IP
+Av
 Hi
 Hh
-At
 Hf
 He
 Hd
 Hc
 Hb
 GY
-GX
-GW
-Gu
+Gy
 tg
-IL
+IN
 tg
 kx
 kx
@@ -59489,19 +59717,19 @@ Iy
 Iy
 Iy
 kx
-Ek
+Em
+Hu
+CI
+Ht
 Hs
-CG
+Hs
 Hr
 Hq
-Hq
 Ho
-Hn
-Hm
-Gu
-Gu
-Gu
-IL
+Gy
+Gy
+Gy
+IN
 tg
 kx
 kx
@@ -59746,6 +59974,8 @@ Iy
 Iy
 Iy
 kx
+HJ
+HG
 HD
 HC
 HB
@@ -59753,11 +59983,9 @@ HA
 Hz
 Hw
 Hv
-Hu
-Ht
-Hm
+Ho
 kx
-IF
+IJ
 tg
 kx
 kx
@@ -60003,18 +60231,18 @@ Ya
 Kx
 Kx
 Kx
-vW
+vZ
+HW
+HV
 HT
 HS
+Ho
 HO
 HN
-Hm
 HK
-HJ
-HG
-Hm
+Ho
 kx
-IG
+IL
 kx
 kx
 kx
@@ -60260,18 +60488,18 @@ Ya
 Ya
 Kx
 Kx
-IF
-HN
+IJ
+HS
+Ib
+Ia
 HZ
+HS
 HY
-HW
 HN
-HV
-HJ
-Ht
-Hm
+Hv
+Ho
 kx
-IG
+IL
 kx
 kx
 kx
@@ -60517,18 +60745,18 @@ Iy
 Iy
 Iy
 Kx
-IG
-HN
+IL
+HS
+Ih
+Ig
 If
+HS
 Ie
 Ic
-HN
-Ib
-Ia
-HG
-Hm
+HK
+Ho
 tg
-IX
+Ja
 kx
 kx
 kx
@@ -60774,17 +61002,17 @@ Iy
 Iy
 Iy
 Iy
-IG
-HN
-Ih
-Ig
-HN
-HN
-HN
-Hm
-Hm
-Hm
 IL
+HS
+Il
+Ik
+HS
+HS
+HS
+Ho
+Ho
+Ho
+IN
 tg
 kx
 kx
@@ -61031,16 +61259,16 @@ Iy
 Iy
 Iy
 Iy
-IG
+IL
+Iu
+Is
 Ir
 Io
 Im
-Il
-Ik
-HN
+HS
 tg
-IN
-IW
+IP
+IY
 tg
 Kx
 Kx
@@ -61288,14 +61516,14 @@ Iy
 Iy
 Iy
 Iy
-IG
-HN
+IL
+HS
+Ix
+Iw
+Iw
 Iv
-Iu
-Iu
-Is
-HN
-IF
+HS
+IJ
 tg
 Kx
 Kx
@@ -61545,14 +61773,14 @@ Iy
 Iy
 Iy
 Iy
-IG
-HN
-Ix
-Iu
-Iu
+IL
+HS
+IB
 Iw
-HN
-IG
+Iw
+IA
+HS
+IL
 Kx
 Kx
 Kx
@@ -61802,14 +62030,14 @@ Iy
 Iy
 Iy
 Iy
-IG
-HN
-IA
+IL
+HS
 ID
-IB
-IA
-HN
 IG
+IF
+ID
+HS
+IL
 Kx
 Kx
 Kx
@@ -62059,14 +62287,14 @@ Iy
 Iy
 Iy
 Iy
-IJ
-HN
-HN
-HN
-HN
-HN
-HN
-IX
+IM
+HS
+HS
+HS
+HS
+HS
+HS
+Ja
 Iy
 Kx
 Kx
@@ -62317,12 +62545,12 @@ Iy
 Iy
 Iy
 tg
-IO
-IP
-IP
-IP
-IP
-IW
+IT
+IU
+IU
+IU
+IU
+IY
 tg
 Iy
 Iy
