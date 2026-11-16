@@ -59,7 +59,7 @@ type Data = {
   fossils_processed: number;
   species_total: number;
   genome_length: number;
-  exhausted: boolean;
+  exhausted: boolean | number;
   incubator?: Incubator;
   seed_cooldown?: number;
 };
@@ -226,7 +226,7 @@ const StatusBar = () => {
           Access denied: research or xenoarchaeology clearance required.
         </NoticeBox>
       )}
-      {data.exhausted && (
+      {!!data.exhausted && (
         <NoticeBox info mt={1}>
           Every recoverable fragment has been extracted. Remaining fossils are
           better spent in the destructive analyser.
