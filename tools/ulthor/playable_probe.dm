@@ -13,6 +13,10 @@ GLOBAL_DATUM_INIT(ulthor_playable_probe, /datum/ulthor_playable_probe, new)
 	UNTIL(SSatoms.initialized && SSticker.initialized && SSair.initialized)
 	// Atmos (and with it every MILLA-synchronised action such as shuttle docking) only
 	// runs once a round is in progress, so start an empty extended round first.
+	// Start landmarks are consumed at round start: count them while still in the lobby.
+	for(var/obj/effect/landmark/start/mark in GLOB.landmarks_list)
+		if(is_station_level(mark.z))
+			GLOB.ulthor_lobby_starts[mark.name] = (GLOB.ulthor_lobby_starts[mark.name] || 0) + 1
 	GLOB.master_mode = "extended"
 	SSticker.force_start = TRUE
 	var/deadline = world.time + 180 SECONDS
@@ -34,6 +38,7 @@ GLOBAL_DATUM_INIT(ulthor_playable_probe, /datum/ulthor_playable_probe, new)
 	rustlib_file_write(json_encode(list("passed" = passed, "total" = length(results), "tests" = results, "metrics" = GLOB.ulthor_playable_metrics, "runtime_log" = GLOB.world_runtime_log)), "ulthor-playable-result.json")
 
 GLOBAL_LIST_EMPTY(ulthor_playable_metrics)
+GLOBAL_LIST_EMPTY(ulthor_lobby_starts)
 
 /// What the AI eye can actually see: the cameranet's own chunks over the watched rooms.
 /datum/unit_test/ulthor_ai_vision/Run()
@@ -68,10 +73,7 @@ GLOBAL_LIST_EMPTY(ulthor_playable_metrics)
 	GLOB.ulthor_playable_metrics["gravity"] = list("charge" = gen.charge_count, "state" = gen.charging_state)
 
 /datum/unit_test/ulthor_job_starts/Run()
-	var/list/counts = list()
-	for(var/obj/effect/landmark/start/mark in GLOB.landmarks_list)
-		if(is_station_level(mark.z))
-			counts[mark.name] = (counts[mark.name] || 0) + 1
+	var/list/counts = GLOB.ulthor_lobby_starts
 	var/list/report = list()
 	for(var/datum/job/job as anything in SSjobs.occupations)
 		if(job.admin_only || job.hidden_from_job_prefs || job.spawn_positions <= 0)
