@@ -13,7 +13,7 @@ GLOBAL_DATUM_INIT(ulthor_playable_probe, /datum/ulthor_playable_probe, new)
 	UNTIL(SSatoms.initialized && SSticker.initialized && SSair.initialized)
 	var/list/results = list()
 	var/passed = 0
-	for(var/test_type in list(/datum/unit_test/ulthor_mining_diag, /datum/unit_test/ulthor_power, /datum/unit_test/ulthor_atmos, /datum/unit_test/ulthor_lighting, /datum/unit_test/ulthor_cameras, /datum/unit_test/ulthor_door_controls, /datum/unit_test/ulthor_telecomms, /datum/unit_test/ulthor_shuttles, /datum/unit_test/ulthor_arrivals, /datum/unit_test/ulthor_ai_vision, /datum/unit_test/ulthor_gravity, /datum/unit_test/ulthor_job_starts, /datum/unit_test/ulthor_navbeacons, /datum/unit_test/ulthor_light_power, /datum/unit_test/ulthor_mining_diag))
+	for(var/test_type in list(/datum/unit_test/ulthor_mining_diag, /datum/unit_test/ulthor_power, /datum/unit_test/ulthor_atmos, /datum/unit_test/ulthor_lighting, /datum/unit_test/ulthor_cameras, /datum/unit_test/ulthor_door_controls, /datum/unit_test/ulthor_telecomms, /datum/unit_test/ulthor_shuttles, /datum/unit_test/ulthor_arrivals, /datum/unit_test/ulthor_ai_vision, /datum/unit_test/ulthor_gravity, /datum/unit_test/ulthor_job_starts, /datum/unit_test/ulthor_navbeacons, /datum/unit_test/ulthor_light_power, /datum/unit_test/ulthor_mining_late))
 		var/datum/unit_test/test = new test_type
 		try
 			test.Run()
@@ -119,3 +119,12 @@ GLOBAL_LIST_EMPTY(ulthor_playable_metrics)
 		"away" = away ? list(away.x, away.y, away.z, away.width, away.height, away.dwidth, away.dheight, away.dir) : null,
 		"ship" = miner ? list(miner.x, miner.y, miner.z, miner.width, miner.height, miner.dwidth, miner.dheight, miner.dir) : null,
 		"mode" = miner?.mode)
+
+/// Diagnostic only: where the mining shuttle ends up after the round-trip test, given more time.
+/datum/unit_test/ulthor_mining_late/Run()
+	var/obj/docking_port/mobile/miner = SSshuttle.getShuttle("mining")
+	var/list/seen = list()
+	for(var/i in 1 to 30)
+		seen += "[miner.getDockedId()]"
+		sleep(1 SECONDS)
+	GLOB.ulthor_playable_metrics["mining_late"] = list("timeline" = seen, "mode" = miner.mode, "x" = miner.x, "z" = miner.z)

@@ -77,6 +77,8 @@ def main():
         for p in tracked:
             if p.startswith(('_maps/','config/','strings/','html/')):copy(ROOT/p,runtime/p)
         write_targets(runtime/'ulthor-camera-targets.json')
+        if os.environ.get('ULTHOR_MAP_OVERRIDE'):  # compare against another map revision
+            copy(Path(os.environ['ULTHOR_MAP_OVERRIDE']), runtime/'_maps/map_files/Ulthor/Ulthor.dmm')
         config=runtime/'config/maps.txt'
         with config.open('a',encoding='utf-8') as f:f.write('\nDISABLE_AWAY_MISSIONS\nDISABLE_SPACE_RUINS\n')
         config=runtime/'config/config.txt'
