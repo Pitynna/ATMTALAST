@@ -212,3 +212,13 @@
 	TEST_ASSERT_NOT(fauna.stat & NOPOWER, "The fauna console must be powered")
 	var/turf/floor = get_turf(tank)
 	TEST_ASSERT(floor.get_readonly_air().return_pressure() > 70, "The lab must hold air")
+	var/datum/fossil_genome/genome = get_fossil_genebank(FOSSIL_KIND_FAUNA).genomes[2]
+	var/list/saved = list(genome.completed, tank.biomass)
+	genome.completed = TRUE
+	tank.biomass = FOSSIL_INCUBATOR_COST
+	TEST_ASSERT_NULL(tank.start_growth(genome), "The lab tank must start growing")
+	var/mob/living/creature = tank.finish_growth()
+	TEST_ASSERT_EQUAL(get_turf(creature), get_step(tank, SOUTH), "Creatures are born in the pen in front of the tank")
+	qdel(creature)
+	genome.completed = saved[1]
+	tank.biomass = saved[2]

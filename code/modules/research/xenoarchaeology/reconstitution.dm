@@ -691,8 +691,13 @@ GLOBAL_LIST_EMPTY(fossil_genebanks)
 	update_icon()
 	// Born in front of the pod (south), or on the pod's own cell if that is blocked.
 	var/turf/exit = get_step(src, SOUTH)
-	if(!exit || exit.density || (locate(/obj/machinery) in exit))
+	if(!exit || exit.density)
 		exit = get_turf(src)
+	else
+		for(var/atom/movable/blocker in exit)
+			if(blocker.density)
+				exit = get_turf(src)
+				break
 	var/mob/living/creature = new genome.result_type(exit)
 	apply_fossil_fidelity(creature, genome.fidelity)
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE)

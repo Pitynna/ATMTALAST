@@ -622,6 +622,7 @@ def main(old_path, base_path, out_path):
     # Transit tubes.
     tube_report = place_tubes(tiles, tubes)
     build_mining_line(tiles, cur)
+    carve_diagonal_corners(tiles, cur)
     # Fix vent scrubbers mapped without a direction: face the adjacent pipe.
     for (x, y), (objs, turf, area) in tiles.items():
         for i, a in enumerate(objs):
@@ -790,6 +791,14 @@ def tube_dirs(atom):
         return {NORTH, SOUTH}
     if t == '/obj/structure/transit_tube/horizontal':
         return {EAST, WEST}
+    if t == '/obj/structure/transit_tube/crossing':
+        return {NORTH, SOUTH}
+    if t == '/obj/structure/transit_tube/crossing/horizontal':
+        return {EAST, WEST}
+    if t == '/obj/structure/transit_tube/diagonal/crossing':
+        return {NE, SW}
+    if t == '/obj/structure/transit_tube/diagonal/crossing/topleft':
+        return {NW, SE}
     if t == '/obj/structure/transit_tube/diagonal':
         return {NE, SW}
     if t == '/obj/structure/transit_tube/diagonal/topleft':
@@ -1087,6 +1096,27 @@ def build_mining_line(tiles, cur):
                   '/obj/structure/transit_tube_pod'])
     print(f'mining line: {len(full)} cells, {crossings} walkable crossings: {[p for p in full if False]}')
     return full
+
+
+def carve_diagonal_corners(tiles, cur):
+    """Diagonal tubes are drawn across tile corners: clear the rock under those corners too."""
+    carved = 0
+    for (x, y), (objs, turf, area) in list(tiles.items()):
+        for a in objs:
+            if not atom_type(a).startswith('/obj/structure/transit_tube'):
+                continue
+            for d in tube_dirs(a):
+                if d in (NORTH, SOUTH, EAST, WEST):
+                    continue
+                dx, dy = offset(d)
+                for p in ((x + dx, y), (x, y + dy)):
+                    t = ensure(tiles, cur, p)
+                    if atom_type(t[1]).startswith('/turf/simulated/mineral') and not t[0]:
+                        t[1] = '/turf/simulated/floor/plating/asteroid/airless'
+                        if t[2] == '/area/mine/unexplored':
+                            t[2] = '/area/mine/explored'
+                        carved += 1
+    print('carved diagonal corners:', carved)
 
 
 if __name__ == '__main__':
