@@ -4,7 +4,9 @@ Judged on the map, not by area names: bare plating, no fittings, and every
 entrance is a maintenance airlock.
 * aft plating hall x90-114 y88-104 (escape pod 3 dock) -> south maintenance;
 * plating passage between the service rooms (hallway/ulthor_service_east)
-  -> service maintenance; its APC (99,135) goes, the passage APC stays.
+  -> service maintenance; its APC (99,135) goes, the passage APC stays;
+* plating hall behind the detective's office x135-149 y90-103, entered by the
+  "Detective Maintenance" airlock (user confirmed) -> security maintenance.
 Incremental and idempotent: only area paths and that one APC change.
 """
 import sys
@@ -22,6 +24,8 @@ SERVICE_EAST = '/area/station/hallway/ulthor_service_east'
 SOUTH_MAINT = '/area/station/maintenance/ulthor_south_passage'
 SERVICE_MAINT = '/area/station/maintenance/ulthor_service_passage'
 DROP_APC = (99, 135, 1)
+DETECTIVE = '/area/station/security/detectives_office'
+SECURITY_MAINT = '/area/station/maintenance/ulthor_security_passage'
 
 
 def main():
@@ -37,6 +41,8 @@ def main():
             new = SOUTH_MAINT
         elif a == SERVICE_EAST:
             new = SERVICE_MAINT
+        elif a == DETECTIVE and 135 <= x <= 149 and 90 <= y <= 103 and 'plating' in turf and not is_wall(tile)                 and not any(t.startswith('/obj/machinery/door') for t in tile):
+            new = SECURITY_MAINT
         if p == DROP_APC:
             tile = [t for t in tile if not t.startswith('/obj/machinery/power/apc')]
         if new != a or tuple(tile) != m.get_tile(p):

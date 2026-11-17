@@ -4518,6 +4518,12 @@
 /obj/effect/turf_decal/stripes/red,
 /turf/simulated/floor/plating,
 /area/station/maintenance/disposal)
+"ciY" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "cjw" = (
 /obj/structure/table,
 /obj/item/stack/sheet/glass{
@@ -10521,6 +10527,13 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/secondary/exit)
+"feo" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "fes" = (
 /turf/simulated/wall,
 /area/station/medical/virology)
@@ -22585,6 +22598,12 @@
 	icon_state = "darkred"
 	},
 /area/station/hallway/secondary/exit)
+"lfS" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "lgb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -25834,6 +25853,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/station/command/meeting_room)
+"mDC" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "mDN" = (
 /obj/structure/cable,
 /obj/machinery/navbeacon{
@@ -28052,6 +28077,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/station/medical/psych)
+"nHJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "nIa" = (
 /obj/machinery/processor,
 /obj/structure/disposalpipe/segment{
@@ -34708,6 +34739,12 @@
 	icon_state = "whiteyellowcorner"
 	},
 /area/station/medical/chemistry)
+"qPq" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "qPt" = (
 /obj/structure/cable,
 /obj/machinery/hologram/holopad,
@@ -37571,6 +37608,15 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/secondary/exit)
+"ssS" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "stM" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -42994,6 +43040,13 @@
 /obj/machinery/door/airlock/public/glass,
 /turf/simulated/floor/shuttle,
 /area/shuttle/ulthor_admin)
+"vbz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "vbF" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -43149,6 +43202,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/engineering/ulthor_engine_room)
+"vgz" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "vhc" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
@@ -43841,6 +43901,13 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/secondary/entry)
+"vxI" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "vxP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -83942,8 +84009,8 @@ tyT
 dZJ
 wCA
 lqk
-lSU
-lSU
+agJ
+agJ
 dpa
 qMD
 qMD
@@ -84199,10 +84266,10 @@ xCq
 ogJ
 xxS
 lqk
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
 dpa
 qMD
 qMD
@@ -84456,14 +84523,14 @@ ogJ
 mLd
 qXQ
 lqk
-lSU
-lSU
-lSU
-lSU
-lSU
-gmW
-xvv
-pxP
+agJ
+agJ
+agJ
+agJ
+agJ
+lfS
+mDC
+ssS
 aKy
 agy
 nUc
@@ -84713,13 +84780,13 @@ qlw
 rAh
 lqk
 lqk
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 aKy
 rwI
@@ -84969,13 +85036,13 @@ bYb
 dAF
 gkh
 lqk
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 lqk
 agy
@@ -85226,13 +85293,13 @@ bAF
 xgJ
 vjg
 lqk
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 agy
 agy
@@ -85483,12 +85550,12 @@ bAF
 eSi
 lqk
 lqk
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 lqk
 agy
@@ -85739,12 +85806,12 @@ fgC
 bAF
 bwX
 lqk
-lSU
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 lqk
 agy
@@ -85996,10 +86063,10 @@ cpc
 dKF
 eGo
 lqk
-lSU
-lSU
-lSU
-lSU
+agJ
+agJ
+agJ
+agJ
 lqk
 lqk
 lqk
@@ -86253,9 +86320,9 @@ lqk
 iOr
 lqk
 lqk
-lNZ
-lSU
-lSU
+ciY
+agJ
+agJ
 lqk
 lqk
 agy
@@ -86506,13 +86573,13 @@ cHE
 kab
 mxh
 rDM
-xvv
-jxP
-lSU
-lSU
-lSU
-lSU
-lSU
+mDC
+vbz
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 agy
 agy
@@ -86763,13 +86830,13 @@ cHE
 kab
 gIb
 rDM
-mDd
-tJO
-lSU
-lSU
-lSU
-lSU
-lSU
+nHJ
+vgz
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 agy
 agy
@@ -87020,13 +87087,13 @@ cHE
 kab
 fOC
 rDM
-lSU
-jae
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+aPK
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 agy
 agy
@@ -87277,13 +87344,13 @@ gnX
 iwf
 lqR
 rDM
-lSU
-jae
-lSU
-lSU
-lSU
-lSU
-lSU
+agJ
+aPK
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 agy
 agy
@@ -87534,13 +87601,13 @@ dWI
 oHM
 xwW
 nkc
-kGH
-bZs
-kGH
-kGH
-kGH
-vRB
-qJb
+teR
+vxI
+teR
+teR
+teR
+feo
+qPq
 lqk
 agy
 agy
