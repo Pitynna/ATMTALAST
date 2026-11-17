@@ -20,7 +20,7 @@ MAP = ROOT / '_maps/map_files/Ulthor/Ulthor.dmm'
 DROP_APC = (85, 138, 1)
 QM_APC = (80, 122, 1)
 QM_AREA = '/area/station/command/office/qm'
-WEST_APC = '/obj/machinery/power/apc{\n\tdir = 8;\n\tpixel_x = -26;\n\tpixel_y = 0\n\t}'
+WEST_APC = '/obj/machinery/power/apc{dir = 8;pixel_x = -26;pixel_y = 0}'
 
 
 def is_apc(atom):

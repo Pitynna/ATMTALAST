@@ -8938,6 +8938,16 @@
 	icon_state = "neutralfull"
 	},
 /area/station/maintenance/ulthor_engineering_passage)
+"eti" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -26;
+	pixel_y = 0
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "etX" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -68247,7 +68257,7 @@ oZq
 sVY
 uod
 vud
-bfC
+eti
 kIQ
 awM
 tSj
