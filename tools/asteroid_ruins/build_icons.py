@@ -165,6 +165,43 @@ def draw_poster():
     return image
 
 
+def draw_chalkboard():
+    """A school chalkboard two tiles wide, covered in the theory of the ancient schizos."""
+    board = Image.new("RGBA", (64, 32))
+    draw = ImageDraw.Draw(board)
+    draw.rectangle((1, 5, 62, 27), fill=(120, 78, 40, 255))          # wooden frame
+    draw.rectangle((3, 7, 60, 25), fill=(38, 74, 52, 255))           # green slate
+    draw.line((3, 25, 60, 25), fill=(150, 104, 58, 255))             # chalk ledge
+    draw.line((2, 26, 61, 26), fill=(96, 62, 30, 255))
+    chalk = (226, 230, 222, 255)
+    faint = (150, 170, 156, 255)
+    # 2^n
+    draw.line((6, 10, 8, 10), fill=chalk); draw.point([(8, 11), (7, 12), (6, 13)], fill=chalk); draw.line((6, 14, 8, 14), fill=chalk)
+    draw.point([(10, 9), (11, 8), (12, 9), (10, 10), (12, 10)], fill=chalk)
+    # 1 / 2^n
+    draw.line((7, 17, 7, 19), fill=chalk); draw.line((5, 20, 13, 20), fill=chalk)
+    draw.line((6, 22, 8, 22), fill=chalk); draw.point([(8, 23)], fill=chalk); draw.line((6, 24, 8, 24), fill=chalk)
+    draw.point([(10, 21), (11, 21), (12, 21)], fill=chalk)
+    # the sphere of the allrod with its chain of electro-atoms
+    draw.ellipse((17, 8, 34, 24), outline=chalk)
+    draw.ellipse((19, 12, 26, 20), outline=faint)
+    draw.ellipse((25, 12, 32, 20), outline=faint)
+    for x in range(18, 34, 2):
+        draw.point((x, 16), fill=chalk)
+    # the count, as ticks with circles around the wrong numbers
+    for index in range(10):
+        x = 38 + (index % 5) * 4
+        y = 10 + (index // 5) * 6
+        draw.line((x, y, x, y + 3), fill=chalk)
+        if index in (3, 4, 7):
+            draw.point([(x - 1, y - 1), (x + 1, y - 1), (x - 1, y + 4), (x + 1, y + 4)], fill=(230, 120, 120, 255))
+    draw.line((37, 22, 58, 22), fill=chalk)                          # underlined twice
+    draw.line((38, 24, 57, 24), fill=faint)
+    draw.point([(58, 8), (59, 9), (58, 10)], fill=chalk)              # "!"
+    draw.line((44, 25, 46, 25), fill=(250, 250, 250, 255))           # a stick of chalk on the ledge
+    return board.crop((0, 0, 32, 32)), board.crop((32, 0, 64, 32))
+
+
 def build_objects():
     source = _cache.get(POSTERS) or dmi.read(POSTERS)[2]
     poster = dmi.State("schizo_poster")
@@ -181,7 +218,12 @@ def build_objects():
     setting_source = dmi.find(source, "poster_being_set")
     setting = dmi.State("poster_being_set", dirs=setting_source.dirs, frames=setting_source.frames, delay=setting_source.delay, extra=setting_source.extra)
     setting.images = list(setting_source.images)
-    dmi.write("icons/obj/asteroid_ruins.dmi", 32, 32, [poster, rolled, setting])
+    left, right = draw_chalkboard()
+    board_left = dmi.State("chalkboard_left")
+    board_left.images = [left]
+    board_right = dmi.State("chalkboard_right")
+    board_right.images = [right]
+    dmi.write("icons/obj/asteroid_ruins.dmi", 32, 32, [poster, rolled, setting, board_left, board_right])
 
 
 def preview(path):

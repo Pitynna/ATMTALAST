@@ -51,23 +51,39 @@ SADDAM_KEY = {
 
 STUDIO = "/area/ruin/asteroid/schizo_room"
 WOOD = "/turf/simulated/floor/wood"
+CARPET = "/turf/simulated/floor/carpet/red"
 
+# A studio set: the guests behind a long table with the chalkboard at their backs,
+# the camera on the carpet in front of them, books and papers around.
+# The room is unpowered, so the light comes from desk lamps.
+# The holofirelock in the doorway keeps the air in while the door stands open.
 SCHIZO_LAYOUT = """
-######
-#.RB.#
-#.Tt.#
-#..K.#
-###D##
+#########
+#BF.RYLP#
+#k.TMQT.#
+#.ccccc.#
+#.ccKcc.#
+#g.....r#
+####D####
 """
 SCHIZO_KEY = {
     "#": ("/turf/simulated/wall", STUDIO),
     ".": (WOOD, STUDIO),
-    "R": ("/obj/structure/chair/wood", "/mob/living/simple_animal/schizo/rybnikov", WOOD, STUDIO),
-    "B": ("/obj/structure/chair/wood", "/mob/living/simple_animal/schizo/boyarshinov", WOOD, STUDIO),
-    "T": ("/obj/structure/table/wood", WOOD, STUDIO),
-    "t": ("/obj/structure/table/wood", "/obj/item/poster/schizo_count", WOOD, STUDIO),
-    "K": ("/obj/structure/tripod/schizo_studio", WOOD, STUDIO),
-    "D": ("/obj/structure/mineral_door/wood", WOOD, STUDIO),
+    "c": (CARPET, STUDIO),
+    "B": ("/obj/structure/bookcase/random", WOOD, STUDIO),
+    "k": ("/obj/structure/bookcase/random", "/obj/item/paper/crumpled", WOOD, STUDIO),
+    "F": ("/obj/structure/filingcabinet", "/obj/item/flashlight/lamp/green", WOOD, STUDIO),
+    "R": ("/obj/structure/chair/wood", "/obj/structure/sign/schizo_chalkboard", "/mob/living/simple_animal/schizo/rybnikov", WOOD, STUDIO),
+    "Y": ("/obj/structure/chair/wood", "/obj/structure/sign/schizo_chalkboard/right", "/mob/living/simple_animal/schizo/boyarshinov", WOOD, STUDIO),
+    "L": ("/obj/item/flashlight/lamp", WOOD, STUDIO),
+    "P": ("/obj/item/twohanded/required/kirbyplants", WOOD, STUDIO),
+    "T": ("/obj/structure/table/wood", "/obj/item/paper_bin", "/obj/item/pen", CARPET, STUDIO),
+    "M": ("/obj/structure/table/wood", "/obj/item/flashlight/lamp/green", "/obj/item/reagent_containers/cup/glass/mug", CARPET, STUDIO),
+    "Q": ("/obj/structure/table/wood", "/obj/item/poster/schizo_count", "/obj/item/reagent_containers/cup/glass/tea", CARPET, STUDIO),
+    "K": ("/obj/structure/tripod/schizo_studio", CARPET, STUDIO),
+    "g": ("/obj/item/twohanded/required/kirbyplants/dead", WOOD, STUDIO),
+    "r": ("/obj/item/paper/crumpled", "/obj/item/trash/can", WOOD, STUDIO),
+    "D": ("/obj/structure/mineral_door/wood", "/obj/structure/holosign/barrier/atmos", WOOD, STUDIO),
 }
 
 
@@ -90,9 +106,13 @@ def tgm(layout, key):
 
 
 def main():
+    # --force NAME.dmm resets that one map; plain --force resets both.
     force = "--force" in sys.argv
+    only = [arg for arg in sys.argv[1:] if arg.endswith(".dmm")]
     os.makedirs(OUT, exist_ok=True)
     for name, layout, key in (("saddam_hideout.dmm", SADDAM_LAYOUT, SADDAM_KEY), ("schizo_room.dmm", SCHIZO_LAYOUT, SCHIZO_KEY)):
+        if only and name not in only:
+            continue
         path = f"{OUT}/{name}"
         if os.path.exists(path) and not force:
             print(f"{path} exists, left alone")

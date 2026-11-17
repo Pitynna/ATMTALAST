@@ -233,3 +233,17 @@ GLOBAL_LIST_INIT(schizo_count, list(
 /obj/structure/tripod/schizo_studio/Initialize(mapload)
 	. = ..()
 	tripod_item.attach_camera(new /obj/item/broadcast_camera(tripod_item))
+
+// MARK: The chalkboard
+
+/// A chalkboard two tiles wide that hangs on the wall behind the guests. Map the halves side by side under the wall.
+/obj/structure/sign/schizo_chalkboard
+	name = "chalkboard"
+	desc = "Two to the power of n, one over two to the power of n, a bubble full of beads and ten tally marks, three of them circled in red and underlined twice. Someone has clearly been explaining something very important."
+	icon = 'icons/obj/asteroid_ruins.dmi'
+	icon_state = "chalkboard_left"
+	pixel_y = 32
+	buildable_sign = FALSE
+
+/obj/structure/sign/schizo_chalkboard/right
+	icon_state = "chalkboard_right"

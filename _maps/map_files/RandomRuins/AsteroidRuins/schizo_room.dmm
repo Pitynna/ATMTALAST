@@ -6,30 +6,76 @@
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "c" = (
-/obj/structure/chair/wood,
-/mob/living/simple_animal/schizo/boyarshinov,
+/obj/structure/bookcase/random,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "d" = (
 /obj/structure/mineral_door/wood,
+/obj/structure/holosign/barrier/atmos,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "e" = (
-/obj/structure/tripod/schizo_studio,
+/obj/structure/filingcabinet,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "f" = (
-/obj/structure/chair/wood,
-/mob/living/simple_animal/schizo/rybnikov,
-/turf/simulated/floor/wood,
+/obj/structure/tripod/schizo_studio,
+/turf/simulated/floor/carpet/red,
 /area/ruin/asteroid/schizo_room)
 "g" = (
-/obj/structure/table/wood,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "h" = (
 /obj/structure/table/wood,
+/obj/item/flashlight/lamp/green,
+/obj/item/reagent_containers/cup/glass/mug,
+/turf/simulated/floor/carpet/red,
+/area/ruin/asteroid/schizo_room)
+"i" = (
+/obj/item/twohanded/required/kirbyplants,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"j" = (
+/obj/structure/table/wood,
 /obj/item/poster/schizo_count,
+/obj/item/reagent_containers/cup/glass/tea,
+/turf/simulated/floor/carpet/red,
+/area/ruin/asteroid/schizo_room)
+"k" = (
+/obj/structure/chair/wood,
+/obj/structure/sign/schizo_chalkboard,
+/mob/living/simple_animal/schizo/rybnikov,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"l" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/simulated/floor/carpet/red,
+/area/ruin/asteroid/schizo_room)
+"m" = (
+/obj/structure/chair/wood,
+/obj/structure/sign/schizo_chalkboard/right,
+/mob/living/simple_animal/schizo/boyarshinov,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"n" = (
+/turf/simulated/floor/carpet/red,
+/area/ruin/asteroid/schizo_room)
+"o" = (
+/obj/item/twohanded/required/kirbyplants/dead,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"p" = (
+/obj/structure/bookcase/random,
+/obj/item/paper/crumpled,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"q" = (
+/obj/item/paper/crumpled,
+/obj/item/trash/can,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 
@@ -39,36 +85,75 @@ a
 a
 a
 a
+a
+a
 "}
 (2,1,1) = {"
 a
+c
+p
 b
 b
-b
+o
 a
 "}
 (3,1,1) = {"
 a
-f
-g
+e
+b
+n
+n
 b
 a
 "}
 (4,1,1) = {"
 a
-c
-h
-e
-d
+b
+l
+n
+n
+b
+a
 "}
 (5,1,1) = {"
 a
+k
+h
+n
+f
 b
-b
+d
+"}
+(6,1,1) = {"
+a
+m
+j
+n
+n
 b
 a
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+a
+g
+l
+n
+n
+b
+a
+"}
+(8,1,1) = {"
+a
+i
+b
+b
+b
+q
+a
+"}
+(9,1,1) = {"
+a
+a
 a
 a
 a
