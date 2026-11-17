@@ -1,10 +1,9 @@
 open supply/scrubber pipe ends: 0
 vents/scrubbers off the main network: 0 (+11 on their own systems: tanks, airlocks, cooling loops)
 vents/scrubbers/air alarms in maintenance: 0
-areas below norm or without alarm: 0 of 108
-areas split into several rooms: 37
+areas below norm or without alarm: 0 of 107
+areas split into several rooms: 36
    security/podbay [36, 8, 4]
-   hallway/primary/aft [661, 232]
    hallway/secondary/entry [661, 65, 6, 5, 5, 1, 1]
    hallway/secondary/exit [661, 21, 6, 2, 2, 2]
    legal/courtroom [34, 27]

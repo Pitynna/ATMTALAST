@@ -8,7 +8,7 @@
   vault, execution, emergency storage), shuttles, the turbine room and solar
   substations.
 * Maintenance passages are dark: lamps added there since the original map
-  (commit ORIGINAL) are removed; the original ones stay.
+  (commit ORIGINAL) are removed; the original ones stay as they were.
 """
 import hashlib
 import subprocess
@@ -48,7 +48,8 @@ def main():
                                    capture_output=True, check=True).stdout)
     orig = DMM.from_file(str(tmp))
     tmp.unlink()
-    orig_lamps = {(x, y) for (x, y, z), k in orig.grid.items() if any(is_lamp(a) for a in orig.dictionary[k])}
+    orig_lamps = {(x, y): [a for a in orig.dictionary[k] if is_lamp(a)]
+                  for (x, y, z), k in orig.grid.items() if any(is_lamp(a) for a in orig.dictionary[k])}
     room_size = {}
     for comp in Station(m).rooms():
         for p in comp:
@@ -61,8 +62,11 @@ def main():
         for a in tile:
             if not is_lamp(a):
                 new.append(a)
-            elif area.startswith(PASSAGES) and (x, y) not in orig_lamps:
-                changed['removed'] += 1
+            elif area.startswith(PASSAGES):
+                if (x, y) not in orig_lamps:
+                    changed['removed'] += 1
+                elif orig_lamps[(x, y)]:  # original lamp, as it was
+                    new.append(orig_lamps[(x, y)].pop(0))
             elif a.startswith(SMALL) and not any(d in area for d in DARK) \
                     and (room_size.get((x, y), 99) > SMALL_ROOM or area.startswith(HALLWAY)):
                 new.append('/obj/machinery/light' + a[len(SMALL):])
