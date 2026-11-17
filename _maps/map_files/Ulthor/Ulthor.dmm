@@ -11035,6 +11035,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/ulthor_west_passage)
+"fBw" = (
+/obj/structure/table,
+/obj/machinery/kitchen_machine/microwave{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/station/medical/virology)
 "fBO" = (
 /obj/effect/turf_decal/delivery/hollow,
 /obj/effect/turf_decal/stripes,
@@ -17970,6 +17983,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/ulthor_engineering_passage)
+"iXM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/station/medical/virology)
 "iXV" = (
 /obj/structure/closet/firecloset,
 /obj/effect/turf_decal/delivery/hollow,
@@ -43064,6 +43088,12 @@
 "vQV" = (
 /turf/simulated/wall,
 /area/station/hallway/primary/fore)
+"vQY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northwest_passage)
 "vRG" = (
 /obj/structure/table/glass,
 /obj/machinery/light{
@@ -81506,9 +81536,9 @@ agy
 agy
 agy
 agy
-cQo
-pSw
-xxa
+cnl
+hzL
+cnl
 bpA
 rlx
 lkg
@@ -81765,7 +81795,7 @@ agy
 agy
 vOi
 qVc
-ofS
+vQY
 tls
 ltY
 seC
@@ -82020,12 +82050,12 @@ agy
 agy
 agy
 agy
-fWU
-dLw
-bZJ
-bmj
-oBp
-eHR
+cnl
+hzL
+cnl
+bpA
+fBw
+iXM
 gvv
 pEE
 muT
