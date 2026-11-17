@@ -3408,7 +3408,7 @@
    "no_alarm": false
   },
   "/area/station/security/detectives_office": {
-   "tiles": 129,
+   "tiles": 40,
    "vents": [
     [
      136,
@@ -3416,23 +3416,8 @@
      "/obj/machinery/atmospherics/unary/vent_pump/on"
     ],
     [
-     137,
-     90,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
      139,
      101,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     146,
-     103,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     149,
-     97,
      "/obj/machinery/atmospherics/unary/vent_pump/on"
     ]
    ],
@@ -3443,24 +3428,9 @@
      "/obj/machinery/atmospherics/unary/vent_scrubber"
     ],
     [
-     137,
-     91,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
      139,
      103,
      "/obj/machinery/atmospherics/unary/vent_scrubber"
-    ],
-    [
-     145,
-     103,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     149,
-     98,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ]
    ],
    "alarms": [
@@ -3470,7 +3440,7 @@
      "/obj/machinery/alarm"
     ]
    ],
-   "need": 5,
+   "need": 2,
    "missing_vents": 0,
    "missing_scrubbers": 0,
    "no_alarm": false
@@ -4397,13 +4367,6 @@
    "rooms": [
     36,
     6
-   ]
-  },
-  {
-   "area": "/area/station/security/detectives_office",
-   "rooms": [
-    89,
-    40
    ]
   },
   {
