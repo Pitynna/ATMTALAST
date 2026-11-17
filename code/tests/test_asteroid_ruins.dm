@@ -1,38 +1,44 @@
-/// Finds a placed asteroid ruin and returns its turfs, or null when the mine was not loaded.
-/datum/unit_test/proc/asteroid_ruin_turfs(ruin_type)
-	for(var/obj/effect/landmark/ruin/landmark as anything in GLOB.ruin_landmarks)
-		if(istype(landmark.ruin_template, ruin_type))
-			return landmark.ruin_template.get_affected_turfs(get_turf(landmark), TRUE)
-	return null
+/// Returns the turfs of a placed asteroid ruin by its area, or null when the mine was not loaded.
+/// Ruin landmarks are created before atoms initialize and lose their template, so the area is the reliable handle.
+/datum/unit_test/proc/asteroid_ruin_turfs(area_type)
+	var/mining_z = level_name_to_num(MINING)
+	if(!mining_z)
+		return null // Minimal test maps and SKIP_MINING deliberately omit the mine.
+	var/list/turfs = get_area_turfs(area_type, mining_z, TRUE)
+	if(!length(turfs))
+		TEST_FAIL("[area_type] was not placed on the asteroid")
+		return null
+	return turfs
 
 /// Both asteroid ruins must be seeded into solid rock and stay buried after the caves are carved.
 /datum/unit_test/asteroid_ruins_placement/Run()
 	var/mining_z = level_name_to_num(MINING)
 	if(!mining_z)
-		return // Minimal test maps and SKIP_MINING deliberately omit the mine.
-	for(var/ruin_type in subtypesof(/datum/map_template/ruin/asteroid))
-		var/found = FALSE
-		for(var/obj/effect/landmark/ruin/landmark as anything in GLOB.ruin_landmarks)
-			if(!istype(landmark.ruin_template, ruin_type))
+		return
+	TEST_ASSERT(length(GLOB.asteroid_ruins_templates) >= 2, "The asteroid ruin templates were not preloaded")
+	for(var/area_type in list(/area/ruin/asteroid/saddam_hideout, /area/ruin/asteroid/schizo_room))
+		var/list/turfs = asteroid_ruin_turfs(area_type)
+		if(!turfs)
+			continue
+		var/min_x = world.maxx
+		var/min_y = world.maxy
+		var/max_x = 1
+		var/max_y = 1
+		for(var/turf/tile as anything in turfs)
+			min_x = min(min_x, tile.x)
+			min_y = min(min_y, tile.y)
+			max_x = max(max_x, tile.x)
+			max_y = max(max_y, tile.y)
+		// One copy only, and nothing but rock in the ring around it.
+		TEST_ASSERT(max_x - min_x < 12 && max_y - min_y < 12, "[area_type] must be placed exactly once")
+		for(var/turf/around as anything in block(min_x - 1, min_y - 1, mining_z, max_x + 1, max_y + 1, mining_z))
+			if(around.x >= min_x && around.x <= max_x && around.y >= min_y && around.y <= max_y)
 				continue
-			found = TRUE
-			TEST_ASSERT_EQUAL(landmark.z, mining_z, "[ruin_type] must be placed on the mining level")
-			var/datum/map_template/ruin/template = landmark.ruin_template
-			var/half_width = round(template.width / 2)
-			var/half_height = round(template.height / 2)
-			var/min_x = landmark.x - half_width - 1
-			var/min_y = landmark.y - half_height - 1
-			var/max_x = min_x + template.width + 1
-			var/max_y = min_y + template.height + 1
-			for(var/turf/around as anything in block(min_x, min_y, mining_z, max_x, max_y, mining_z))
-				if(around.x > min_x && around.x < max_x && around.y > min_y && around.y < max_y)
-					continue
-				TEST_ASSERT(ismineralturf(around), "[ruin_type] must stay buried, but [around.type] at [around.x],[around.y] touches it")
-		TEST_ASSERT(found, "[ruin_type] was not placed on the asteroid")
+			TEST_ASSERT(ismineralturf(around), "[area_type] must stay buried, but [around.type] at [around.x],[around.y] touches it")
 
 /// The rune takes a living creature that stays on it, opens the sealed wall, and Saddam drops his briefcase.
 /datum/unit_test/asteroid_saddam_hideout/Run()
-	var/list/turfs = asteroid_ruin_turfs(/datum/map_template/ruin/asteroid/saddam_hideout)
+	var/list/turfs = asteroid_ruin_turfs(/area/ruin/asteroid/saddam_hideout)
 	if(!turfs)
 		return
 	var/obj/effect/saddam_rune/rune
@@ -70,7 +76,8 @@
 	corpse.forceMove(aside)
 
 	// Stepping off in time saves the creature and keeps the wall shut.
-	var/mob/living/simple_animal/mouse/coward = allocate(/mob/living/simple_animal/mouse, aside)
+	// A human, because a mouse wanders off the rune on its own.
+	var/mob/living/carbon/human/coward = allocate(/mob/living/carbon/human, aside)
 	coward.forceMove(rune_turf)
 	sleep(rune.charge_time * 0.5)
 	coward.forceMove(aside)
@@ -98,7 +105,7 @@
 
 /// The studio guests talk without errors and the hung poster makes people who see it count out loud.
 /datum/unit_test/asteroid_schizo_room/Run()
-	var/list/turfs = asteroid_ruin_turfs(/datum/map_template/ruin/asteroid/schizo_room)
+	var/list/turfs = asteroid_ruin_turfs(/area/ruin/asteroid/schizo_room)
 	if(!turfs)
 		return
 	var/mob/living/simple_animal/schizo/rybnikov/rybnikov
