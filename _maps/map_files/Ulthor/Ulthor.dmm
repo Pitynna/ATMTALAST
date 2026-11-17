@@ -1755,6 +1755,12 @@
 	icon_state = "white"
 	},
 /area/station/medical/ward)
+"aUp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/engine,
+/area/station/security/podbay)
 "aUG" = (
 /obj/machinery/alarm{
 	dir = 2;
@@ -2346,6 +2352,14 @@
 	tag = "icon-whitehall (WEST)"
 	},
 /area/station/medical/medbay)
+"blc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "rampbottom";
+	tag = "icon-stage_stairs"
+	},
+/area/station/security/podbay)
 "bld" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -9480,6 +9494,21 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/station/engineering/ulthor_burn_room)
+"ezE" = (
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/obj/item/clothing/glasses/welding,
+/obj/item/stock_parts/cell/high/plus,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 10
+	},
+/turf/simulated/floor/engine,
+/area/station/security/podbay)
+"ezH" = (
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/engine,
+/area/station/security/podbay)
 "ezU" = (
 /obj/structure/filingcabinet,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10306,6 +10335,15 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/fore)
+"eXs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/station/security/podbay)
 "eXC" = (
 /obj/machinery/flasher{
 	id = "permaflash1";
@@ -11596,6 +11634,13 @@
 /obj/machinery/pipedispenser,
 /turf/simulated/floor/plating,
 /area/station/engineering/storage/secure)
+"fIk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_security_passage)
 "fIx" = (
 /obj/effect/landmark/start/student_sientist,
 /turf/simulated/floor/engine,
@@ -15739,6 +15784,15 @@
 	dir = 1
 	},
 /area/station/science/robotics/chargebay)
+"hDs" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 2
+	},
+/turf/simulated/floor/plasteel,
+/area/station/security/podbay)
 "hDF" = (
 /obj/effect/landmark/start/clown,
 /obj/machinery/alarm{
@@ -22714,6 +22768,12 @@
 	tag = "icon-whitebluefull"
 	},
 /area/station/medical/ward)
+"lin" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/engine,
+/area/station/security/podbay)
 "lir" = (
 /obj/structure/chair/stool,
 /obj/structure/disposalpipe/segment{
@@ -38146,6 +38206,15 @@
 	icon_state = "darkred"
 	},
 /area/station/security/main)
+"sIs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/security/podbay)
 "sIL" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -42790,6 +42859,12 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/cargo/storage)
+"uUR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/engine,
+/area/station/security/podbay)
 "uVg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -82985,8 +83060,8 @@ epJ
 kfZ
 gtI
 nlr
-ghy
-jaW
+eXs
+hDs
 wLI
 wLI
 wLI
@@ -83242,10 +83317,10 @@ rHg
 gDE
 bDC
 qVO
-krG
-cnp
-niu
-sVK
+sIs
+blc
+ezH
+uUR
 weT
 wLI
 jKZ
@@ -83502,7 +83577,7 @@ nlr
 nlr
 lye
 wLI
-eUZ
+lin
 wLI
 wLI
 jKZ
@@ -83759,7 +83834,7 @@ ylW
 nlr
 eDh
 wLI
-wzJ
+aUp
 ntK
 oHO
 jKZ
@@ -84016,7 +84091,7 @@ qMD
 qMD
 ckO
 mBw
-nfq
+ezE
 qMD
 qMD
 qMD
@@ -84273,7 +84348,7 @@ agJ
 dpa
 qMD
 qMD
-jQz
+qMD
 aKy
 agy
 agy
@@ -84529,8 +84604,8 @@ agJ
 agJ
 agJ
 lfS
-mDC
-ssS
+agJ
+agJ
 aKy
 agy
 nUc
@@ -86573,8 +86648,8 @@ cHE
 kab
 mxh
 rDM
-mDC
-vbz
+agJ
+aPK
 agJ
 agJ
 agJ
@@ -86830,8 +86905,8 @@ cHE
 kab
 gIb
 rDM
-nHJ
-vgz
+agJ
+aPK
 agJ
 agJ
 agJ
@@ -87602,12 +87677,12 @@ oHM
 xwW
 nkc
 teR
-vxI
-teR
-teR
-teR
-feo
-qPq
+fIk
+agJ
+agJ
+agJ
+agJ
+agJ
 lqk
 agy
 agy
