@@ -20,7 +20,10 @@
 	icon_state = "explored"
 	outdoors = TRUE
 
+/// The studio still runs on whatever powered the broadcast: its lights never go out without an APC.
 /area/ruin/asteroid/schizo_room
 	name = "Studio"
 	icon_state = "purple"
+	requires_power = FALSE
+	always_unpowered = FALSE
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR

@@ -31,9 +31,11 @@ GLOBAL_LIST_INIT(schizo_count, list(
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	gold_core_spawnable = NO_SPAWN
 	/// Pause between the remarks this guest makes on his own.
-	var/speech_cooldown_min = 90 SECONDS
-	var/speech_cooldown_max = 180 SECONDS
+	var/speech_cooldown_min = 45 SECONDS
+	var/speech_cooldown_max = 90 SECONDS
 	COOLDOWN_DECLARE(speech_cooldown)
+	/// Until when the studio belongs to whoever is talking. Shared, so the two guests never talk over each other.
+	var/static/floor_taken_until = 0
 
 /mob/living/simple_animal/schizo/Initialize(mapload)
 	. = ..()
@@ -57,8 +59,16 @@ GLOBAL_LIST_INIT(schizo_count, list(
 /mob/living/simple_animal/schizo/handle_automated_speech(override)
 	if(!override && !COOLDOWN_FINISHED(src, speech_cooldown))
 		return
+	// Somebody else has the floor: try again shortly after they are done.
+	if(world.time < floor_taken_until)
+		COOLDOWN_START(src, speech_cooldown, floor_taken_until - world.time + rand(3 SECONDS, 8 SECONDS))
+		return
 	COOLDOWN_START(src, speech_cooldown, rand(speech_cooldown_min, speech_cooldown_max))
 	speak_up()
+
+/// Keeps the floor for this long from now, so the other guest waits.
+/mob/living/simple_animal/schizo/proc/take_floor(duration)
+	floor_taken_until = max(floor_taken_until, world.time + duration)
 
 /// What the guest does when his turn to talk comes.
 /mob/living/simple_animal/schizo/proc/speak_up()
@@ -68,6 +78,7 @@ GLOBAL_LIST_INIT(schizo_count, list(
 /mob/living/simple_animal/schizo/proc/say_line(line)
 	if(QDELETED(src) || stat != CONSCIOUS)
 		return FALSE
+	take_floor(2 SECONDS)
 	say(line)
 	return TRUE
 
@@ -98,9 +109,12 @@ GLOBAL_LIST_INIT(schizo_count, list(
 		return
 	if(prob(40))
 		if(say_line(pick(rants)))
-			ask_for_reaction(2 SECONDS)
+			take_floor(5 SECONDS)
+			ask_for_reaction(2.5 SECONDS)
 		return
 	lecturing = TRUE
+	// The whole count, the closing rant and the host's reaction.
+	take_floor(count_step * (length(GLOB.schizo_count) + 8))
 	say_line("Каждый уважающий себя математик должен знать счёт древних шизов.")
 	addtimer(CALLBACK(src, PROC_REF(count_on), 1), count_step * 2)
 
@@ -134,8 +148,8 @@ GLOBAL_LIST_INIT(schizo_count, list(
 	icon_dead = "boyarshinov_dead"
 	speak_emote = list("nods and says", "says thoughtfully")
 	deathmessage = "slides under the table. Thank him very much."
-	speech_cooldown_min = 150 SECONDS
-	speech_cooldown_max = 300 SECONDS
+	speech_cooldown_min = 60 SECONDS
+	speech_cooldown_max = 120 SECONDS
 	var/static/list/remarks = list(
 		"Это сильно.",
 		"Так.",

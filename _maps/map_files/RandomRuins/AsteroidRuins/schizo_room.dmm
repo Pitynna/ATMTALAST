@@ -11,12 +11,12 @@
 /area/ruin/asteroid/schizo_room)
 "d" = (
 /obj/structure/mineral_door/wood,
-/obj/structure/holosign/barrier/atmos,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "e" = (
 /obj/structure/filingcabinet,
-/obj/item/flashlight/lamp/green,
+/obj/machinery/light/small/directional/north,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "f" = (
@@ -24,58 +24,62 @@
 /turf/simulated/floor/carpet/red,
 /area/ruin/asteroid/schizo_room)
 "g" = (
-/obj/item/flashlight/lamp,
-/turf/simulated/floor/wood,
-/area/ruin/asteroid/schizo_room)
-"h" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
 /obj/item/reagent_containers/cup/glass/mug,
 /turf/simulated/floor/carpet/red,
 /area/ruin/asteroid/schizo_room)
-"i" = (
+"h" = (
 /obj/item/twohanded/required/kirbyplants,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
-"j" = (
+"i" = (
 /obj/structure/table/wood,
 /obj/item/poster/schizo_count,
 /obj/item/reagent_containers/cup/glass/tea,
 /turf/simulated/floor/carpet/red,
 /area/ruin/asteroid/schizo_room)
-"k" = (
+"j" = (
 /obj/structure/chair/wood,
 /obj/structure/sign/schizo_chalkboard,
 /mob/living/simple_animal/schizo/rybnikov,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
-"l" = (
+"k" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/simulated/floor/carpet/red,
 /area/ruin/asteroid/schizo_room)
-"m" = (
+"l" = (
 /obj/structure/chair/wood,
 /obj/structure/sign/schizo_chalkboard/right,
 /mob/living/simple_animal/schizo/boyarshinov,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
-"n" = (
+"m" = (
 /turf/simulated/floor/carpet/red,
 /area/ruin/asteroid/schizo_room)
-"o" = (
+"n" = (
 /obj/item/twohanded/required/kirbyplants/dead,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
-"p" = (
+"o" = (
 /obj/structure/bookcase/random,
 /obj/item/paper/crumpled,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"p" = (
+/obj/machinery/light/small/directional/north,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 "q" = (
 /obj/item/paper/crumpled,
 /obj/item/trash/can,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"r" = (
+/obj/machinery/light/small/directional/south,
 /turf/simulated/floor/wood,
 /area/ruin/asteroid/schizo_room)
 
@@ -91,60 +95,60 @@ a
 (2,1,1) = {"
 a
 c
-p
-b
-b
 o
+b
+b
+n
 a
 "}
 (3,1,1) = {"
 a
 e
 b
-n
-n
-b
+m
+m
+r
 a
 "}
 (4,1,1) = {"
 a
 b
-l
-n
-n
+k
+m
+m
 b
 a
 "}
 (5,1,1) = {"
 a
-k
-h
-n
+j
+g
+m
 f
 b
 d
 "}
 (6,1,1) = {"
 a
+l
+i
 m
-j
-n
-n
+m
 b
 a
 "}
 (7,1,1) = {"
 a
-g
-l
-n
-n
-b
+p
+k
+m
+m
+r
 a
 "}
 (8,1,1) = {"
 a
-i
+h
 b
 b
 b

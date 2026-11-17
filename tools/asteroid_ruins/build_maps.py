@@ -55,15 +55,16 @@ CARPET = "/turf/simulated/floor/carpet/red"
 
 # A studio set: the guests behind a long table with the chalkboard at their backs,
 # the camera on the carpet in front of them, books and papers around.
-# The room is unpowered, so the light comes from desk lamps.
-# The holofirelock in the doorway keeps the air in while the door stands open.
+# The studio area needs no power (see /area/ruin/asteroid/schizo_room), so the wall bulbs
+# always shine; one green lamp stays on the table. The tiny fan under the door keeps
+# the air in while the door stands open.
 SCHIZO_LAYOUT = """
 #########
-#BF.RYLP#
+#BF.RYnP#
 #k.TMQT.#
 #.ccccc.#
 #.ccKcc.#
-#g.....r#
+#gs...sr#
 ####D####
 """
 SCHIZO_KEY = {
@@ -72,10 +73,11 @@ SCHIZO_KEY = {
     "c": (CARPET, STUDIO),
     "B": ("/obj/structure/bookcase/random", WOOD, STUDIO),
     "k": ("/obj/structure/bookcase/random", "/obj/item/paper/crumpled", WOOD, STUDIO),
-    "F": ("/obj/structure/filingcabinet", "/obj/item/flashlight/lamp/green", WOOD, STUDIO),
+    "F": ("/obj/structure/filingcabinet", "/obj/machinery/light/small/directional/north", WOOD, STUDIO),
+    "n": ("/obj/machinery/light/small/directional/north", WOOD, STUDIO),
+    "s": ("/obj/machinery/light/small/directional/south", WOOD, STUDIO),
     "R": ("/obj/structure/chair/wood", "/obj/structure/sign/schizo_chalkboard", "/mob/living/simple_animal/schizo/rybnikov", WOOD, STUDIO),
     "Y": ("/obj/structure/chair/wood", "/obj/structure/sign/schizo_chalkboard/right", "/mob/living/simple_animal/schizo/boyarshinov", WOOD, STUDIO),
-    "L": ("/obj/item/flashlight/lamp", WOOD, STUDIO),
     "P": ("/obj/item/twohanded/required/kirbyplants", WOOD, STUDIO),
     "T": ("/obj/structure/table/wood", "/obj/item/paper_bin", "/obj/item/pen", CARPET, STUDIO),
     "M": ("/obj/structure/table/wood", "/obj/item/flashlight/lamp/green", "/obj/item/reagent_containers/cup/glass/mug", CARPET, STUDIO),
@@ -83,7 +85,7 @@ SCHIZO_KEY = {
     "K": ("/obj/structure/tripod/schizo_studio", CARPET, STUDIO),
     "g": ("/obj/item/twohanded/required/kirbyplants/dead", WOOD, STUDIO),
     "r": ("/obj/item/paper/crumpled", "/obj/item/trash/can", WOOD, STUDIO),
-    "D": ("/obj/structure/mineral_door/wood", "/obj/structure/holosign/barrier/atmos", WOOD, STUDIO),
+    "D": ("/obj/structure/mineral_door/wood", "/obj/structure/fans/tiny", WOOD, STUDIO),
 }
 
 
