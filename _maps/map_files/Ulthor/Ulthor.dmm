@@ -226,6 +226,10 @@
 "agy" = (
 /turf/space,
 /area/space)
+"agG" = (
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plating,
+/area/station/maintenance/disposal)
 "agJ" = (
 /turf/simulated/floor/plating,
 /area/station/maintenance/ulthor_security_passage)
@@ -484,6 +488,10 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/aft)
+"ann" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/wall,
+/area/station/maintenance/disposal)
 "ant" = (
 /obj/structure/cable,
 /obj/structure/table/reinforced,
@@ -827,6 +835,9 @@
 	icon_state = "whiteyellowcorner"
 	},
 /area/station/medical/chemistry)
+"awM" = (
+/turf/simulated/wall,
+/area/station/maintenance/disposal)
 "awO" = (
 /turf/space,
 /area/station/science/toxins/mixing)
@@ -1778,9 +1789,6 @@
 "aWk" = (
 /turf/simulated/wall/r_wall,
 /area/station/science/explab)
-"aWl" = (
-/turf/simulated/floor/plating,
-/area/station/maintenance/disposal)
 "aWP" = (
 /obj/item/coin/silver{
 	pixel_x = 7;
@@ -10459,10 +10467,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/ulthor_drone_bay)
-"fiR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/wall,
-/area/station/maintenance/disposal)
 "fjf" = (
 /turf/simulated/floor/plasteel{
 	icon_state = "showroomfloor"
@@ -15059,10 +15063,6 @@
 	icon_state = "white"
 	},
 /area/shuttle/ulthor_emergency)
-"hsk" = (
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
-/area/station/maintenance/disposal)
 "hso" = (
 /obj/structure/closet,
 /obj/machinery/alarm{
@@ -17375,6 +17375,15 @@
 	tag = "icon-cult"
 	},
 /area/station/legal/office/law)
+"izM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/hallway/ulthor_service_south)
 "iAd" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 2
@@ -20699,9 +20708,6 @@
 "ksE" = (
 /turf/simulated/floor/shuttle,
 /area/station/hallway/secondary/entry)
-"ksV" = (
-/turf/simulated/wall,
-/area/station/maintenance/disposal)
 "ksW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -39746,6 +39752,9 @@
 	icon_state = "freezerfloor"
 	},
 /area/station/commons/toilet/locker_toilet)
+"tSj" = (
+/turf/simulated/floor/plating,
+/area/station/maintenance/disposal)
 "tSk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -40112,13 +40121,6 @@
 	tag = "icon-cafeteria (NORTHEAST)"
 	},
 /area/station/service/kitchen)
-"ucS" = (
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralfull"
-	},
-/area/station/cargo/storage)
 "ucZ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -41101,6 +41103,13 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/aft)
+"uyJ" = (
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/cargo/storage)
 "uyV" = (
 /obj/machinery/door/poddoor/shutters{
 	density = 0;
@@ -45392,15 +45401,6 @@
 	icon_state = "dark"
 	},
 /area/station/security/warden)
-"wKR" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralfull"
-	},
-/area/station/hallway/ulthor_service_south)
 "wKU" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plasteel{
@@ -66977,10 +66977,10 @@ vdx
 vdx
 vdx
 vdx
-ksV
-hsk
+awM
+agG
 vkd
-ksV
+awM
 nls
 nls
 nls
@@ -67234,10 +67234,10 @@ vdx
 mnX
 iKK
 aln
-ksV
+awM
 mxL
 bAX
-ksV
+awM
 agy
 nls
 lcI
@@ -67491,11 +67491,11 @@ vdx
 xIk
 uQj
 uoY
-ksV
+awM
 oxJ
 ciL
-ksV
-ksV
+awM
+awM
 woq
 woq
 uUb
@@ -68005,10 +68005,10 @@ vdx
 sNS
 pUj
 gCM
-ksV
+awM
 lAQ
-aWl
-aWl
+tSj
+tSj
 bZS
 iSM
 woq
@@ -68262,10 +68262,10 @@ vdx
 vdx
 vdx
 vdx
-ksV
+awM
 fvp
-aWl
-aWl
+tSj
+tSj
 bZS
 mfy
 woq
@@ -68517,7 +68517,7 @@ vdx
 foo
 vdx
 myv
-aWl
+tSj
 jgs
 bDz
 dxO
@@ -68770,14 +68770,14 @@ uod
 vud
 bfC
 kIQ
-ksV
+awM
 hHO
-aWl
-aWl
-aWl
-aWl
-ksV
-ksV
+tSj
+tSj
+tSj
+tSj
+awM
+awM
 nId
 wJU
 tOO
@@ -69027,16 +69027,16 @@ tjH
 pka
 qmO
 ngh
-ksV
+awM
 hHO
-aWl
-aWl
-aWl
-aWl
+tSj
+tSj
+tSj
+tSj
 hjc
-ksV
-aWl
-aWl
+awM
+tSj
+tSj
 inO
 seq
 woq
@@ -69284,18 +69284,18 @@ uxa
 hKy
 lrt
 qKV
-ksV
+awM
 rSD
-aWl
-aWl
-aWl
-aWl
-aWl
-ksV
+tSj
+tSj
+tSj
+tSj
+tSj
+awM
 kra
-aWl
+tSj
 inO
-aWl
+tSj
 woq
 mbc
 kti
@@ -69541,16 +69541,16 @@ bAD
 obv
 wdZ
 ezU
-fiR
+ann
 mzc
-aWl
-aWl
-aWl
-aWl
-aWl
-ksV
+tSj
+tSj
+tSj
+tSj
+tSj
+awM
 imm
-aWl
+tSj
 inO
 bon
 woq
@@ -69792,24 +69792,24 @@ vdx
 pFx
 koy
 jXT
-ucS
+uyJ
 wbq
 wbq
 sVY
 sVY
 wbq
-ksV
-ksV
-ksV
-ksV
-ksV
-ksV
-ksV
-ksV
-ksV
-ksV
+awM
+awM
+awM
+awM
+awM
+awM
+awM
+awM
+awM
+awM
 hVy
-ksV
+awM
 woq
 mbc
 kti
@@ -70314,7 +70314,7 @@ fNy
 sDe
 jrK
 sDe
-wKR
+izM
 sDe
 sDe
 sDe
@@ -70559,7 +70559,7 @@ sDe
 sDe
 xcE
 qmN
-wKR
+izM
 vpk
 iXm
 jrK
@@ -70571,7 +70571,7 @@ sDe
 sDe
 jrK
 sDe
-wKR
+izM
 hzw
 sDe
 sDe

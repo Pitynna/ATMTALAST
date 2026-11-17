@@ -1,8 +1,8 @@
 open supply/scrubber pipe ends: 0
 vents/scrubbers off the main network: 0 (+11 on their own systems: tanks, airlocks, cooling loops)
 vents/scrubbers/air alarms in maintenance: 0
-areas below norm or without alarm: 0 of 109
-areas split into several rooms: 39
+areas below norm or without alarm: 0 of 108
+areas split into several rooms: 37
    security/podbay [36, 8, 4]
    hallway/primary/aft [661, 232]
    hallway/secondary/entry [661, 65, 6, 5, 5, 1, 1]
@@ -11,15 +11,13 @@ areas split into several rooms: 39
    security/lobby [36, 6]
    security/detectives_office [89, 40]
    engineering/gravity_generator [35, 14]
-   cargo/storage [40, 26, 12]
+   cargo/storage [461, 110, 12, 1, 1, 1, 1]
    cargo/miningdock [461, 4]
-   command/office/qm [461, 16]
    service/theatre [461, 159]
    security/brig [178, 10, 6, 6, 6, 6]
    security/hallway/armory [178, 16]
    security/medical [16, 9, 1]
    commons/toilet/locker_toilet [4, 2, 2]
-   cargo/office [110, 1, 1, 1, 1]
    engineering/atmos [238, 42, 4, 4, 4, 4, 4, 4, 4, 1]
    security/prison/perma [124, 42, 25, 25, 9, 6, 4, 4, 4, 3, 1, 1]
    maintenance/turbine [49, 5, 3]

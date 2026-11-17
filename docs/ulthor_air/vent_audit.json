@@ -267,21 +267,11 @@
    "no_alarm": false
   },
   "/area/station/cargo/miningdock": {
-   "tiles": 98,
+   "tiles": 57,
    "vents": [
     [
-     85,
-     126,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     87,
-     129,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     87,
-     126,
+     89,
+     127,
      "/obj/machinery/atmospherics/unary/vent_pump/on"
     ],
     [
@@ -292,18 +282,8 @@
    ],
    "scrubbers": [
     [
-     80,
-     129,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     87,
-     128,
-     "/obj/machinery/atmospherics/unary/vent_scrubber"
-    ],
-    [
-     87,
-     125,
+     90,
+     127,
      "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ],
     [
@@ -314,19 +294,24 @@
    ],
    "alarms": [
     [
-     87,
-     131,
+     93,
+     129,
      "/obj/machinery/alarm"
     ]
    ],
-   "need": 4,
+   "need": 2,
    "missing_vents": 0,
    "missing_scrubbers": 0,
    "no_alarm": false
   },
-  "/area/station/cargo/office": {
-   "tiles": 114,
+  "/area/station/cargo/storage": {
+   "tiles": 144,
    "vents": [
+    [
+     74,
+     116,
+     "/obj/machinery/atmospherics/unary/vent_pump/on"
+    ],
     [
      76,
      129,
@@ -355,6 +340,11 @@
      "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ],
     [
+     75,
+     115,
+     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
+    ],
+    [
      76,
      122,
      "/obj/machinery/atmospherics/unary/vent_scrubber/on"
@@ -362,6 +352,11 @@
     [
      76,
      120,
+     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
+    ],
+    [
+     80,
+     129,
      "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ],
     [
@@ -382,55 +377,7 @@
      "/obj/machinery/alarm"
     ]
    ],
-   "need": 4,
-   "missing_vents": 0,
-   "missing_scrubbers": 0,
-   "no_alarm": false
-  },
-  "/area/station/cargo/storage": {
-   "tiles": 78,
-   "vents": [
-    [
-     74,
-     116,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     80,
-     110,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     83,
-     119,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ]
-   ],
-   "scrubbers": [
-    [
-     75,
-     115,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     80,
-     109,
-     "/obj/machinery/atmospherics/unary/vent_scrubber"
-    ],
-    [
-     82,
-     119,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ]
-   ],
-   "alarms": [
-    [
-     79,
-     115,
-     "/obj/machinery/alarm"
-    ]
-   ],
-   "need": 3,
+   "need": 5,
    "missing_vents": 0,
    "missing_scrubbers": 0,
    "no_alarm": false
@@ -842,7 +789,7 @@
    "no_alarm": false
   },
   "/area/station/command/office/qm": {
-   "tiles": 17,
+   "tiles": 16,
    "vents": [
     [
      82,
@@ -1030,16 +977,11 @@
    "no_alarm": false
   },
   "/area/station/commons/locker": {
-   "tiles": 83,
+   "tiles": 38,
    "vents": [
     [
-     85,
-     123,
-     "/obj/machinery/atmospherics/unary/vent_pump/on"
-    ],
-    [
-     86,
-     109,
+     89,
+     120,
      "/obj/machinery/atmospherics/unary/vent_pump/on"
     ],
     [
@@ -1050,13 +992,8 @@
    ],
    "scrubbers": [
     [
-     85,
-     122,
-     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
-    ],
-    [
-     86,
-     110,
+     89,
+     119,
      "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ],
     [
@@ -1072,7 +1009,7 @@
      "/obj/machinery/alarm"
     ]
    ],
-   "need": 3,
+   "need": 2,
    "missing_vents": 0,
    "missing_scrubbers": 0,
    "no_alarm": false
@@ -2327,11 +2264,36 @@
    "no_alarm": false
   },
   "/area/station/hallway/ulthor_service_south": {
-   "tiles": 34,
+   "tiles": 103,
    "vents": [
     [
      85,
      134,
+     "/obj/machinery/atmospherics/unary/vent_pump/on"
+    ],
+    [
+     85,
+     126,
+     "/obj/machinery/atmospherics/unary/vent_pump/on"
+    ],
+    [
+     85,
+     123,
+     "/obj/machinery/atmospherics/unary/vent_pump/on"
+    ],
+    [
+     86,
+     109,
+     "/obj/machinery/atmospherics/unary/vent_pump/on"
+    ],
+    [
+     87,
+     129,
+     "/obj/machinery/atmospherics/unary/vent_pump/on"
+    ],
+    [
+     87,
+     126,
      "/obj/machinery/atmospherics/unary/vent_pump/on"
     ],
     [
@@ -2347,8 +2309,28 @@
      "/obj/machinery/atmospherics/unary/vent_scrubber"
     ],
     [
+     85,
+     122,
+     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
+    ],
+    [
+     86,
+     110,
+     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
+    ],
+    [
      87,
      140,
+     "/obj/machinery/atmospherics/unary/vent_scrubber/on"
+    ],
+    [
+     87,
+     128,
+     "/obj/machinery/atmospherics/unary/vent_scrubber"
+    ],
+    [
+     87,
+     125,
      "/obj/machinery/atmospherics/unary/vent_scrubber/on"
     ]
    ],
@@ -2357,9 +2339,14 @@
      85,
      136,
      "/obj/machinery/alarm"
+    ],
+    [
+     87,
+     131,
+     "/obj/machinery/alarm"
     ]
    ],
-   "need": 2,
+   "need": 4,
    "missing_vents": 0,
    "missing_scrubbers": 0,
    "no_alarm": false
@@ -4564,9 +4551,13 @@
   {
    "area": "/area/station/cargo/storage",
    "rooms": [
-    40,
-    26,
-    12
+    461,
+    110,
+    12,
+    1,
+    1,
+    1,
+    1
    ]
   },
   {
@@ -4574,13 +4565,6 @@
    "rooms": [
     461,
     4
-   ]
-  },
-  {
-   "area": "/area/station/command/office/qm",
-   "rooms": [
-    461,
-    16
    ]
   },
   {
@@ -4622,16 +4606,6 @@
     4,
     2,
     2
-   ]
-  },
-  {
-   "area": "/area/station/cargo/office",
-   "rooms": [
-    110,
-    1,
-    1,
-    1,
-    1
    ]
   },
   {
@@ -4846,10 +4820,10 @@
     166
    ],
    "areas": {
-    "/area/station/commons/locker": 83,
-    "/area/station/cargo/miningdock": 94,
-    "/area/station/command/office/qm": 1,
-    "/area/station/hallway/ulthor_service_south": 34,
+    "/area/station/hallway/ulthor_service_south": 103,
+    "/area/station/commons/locker": 38,
+    "/area/station/cargo/storage": 18,
+    "/area/station/cargo/miningdock": 53,
     "/area/station/service/theatre": 84,
     "/area/station/service/bar": 91,
     "/area/station/hallway/ulthor_theatre_access": 31,
