@@ -1,0 +1,77 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall,
+/area/ruin/asteroid/schizo_room)
+"b" = (
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"c" = (
+/obj/structure/chair/wood,
+/mob/living/simple_animal/schizo/boyarshinov,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"d" = (
+/obj/structure/mineral_door/wood,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"e" = (
+/obj/structure/tripod/schizo_studio,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"f" = (
+/obj/structure/chair/wood,
+/mob/living/simple_animal/schizo/rybnikov,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"g" = (
+/obj/structure/table/wood,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+"h" = (
+/obj/structure/table/wood,
+/obj/item/poster/schizo_count,
+/turf/simulated/floor/wood,
+/area/ruin/asteroid/schizo_room)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+b
+b
+b
+a
+"}
+(3,1,1) = {"
+a
+f
+g
+b
+a
+"}
+(4,1,1) = {"
+a
+c
+h
+e
+d
+"}
+(5,1,1) = {"
+a
+b
+b
+b
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+"}

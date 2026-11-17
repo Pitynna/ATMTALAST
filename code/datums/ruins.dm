@@ -40,6 +40,10 @@
 /datum/map_template/ruin/proc/check_specials()
 	return
 
+/// Extra per-turf condition for try_to_place(), on top of the area whitelist and NO_RUINS.
+/datum/map_template/ruin/proc/can_place_on(turf/check)
+	return TRUE
+
 /datum/map_template/ruin/proc/try_to_place(z, allowed_areas)
 	var/sanity = PLACEMENT_TRIES
 	while(sanity > 0)
@@ -51,7 +55,7 @@
 
 		for(var/turf/check in get_affected_turfs(central_turf,1))
 			var/area/new_area = get_area(check)
-			if(!(istype(new_area, allowed_areas)) || check.turf_flags & NO_RUINS)
+			if(!(istype(new_area, allowed_areas)) || check.turf_flags & NO_RUINS || !can_place_on(check))
 				valid = FALSE
 				break
 

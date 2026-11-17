@@ -81,6 +81,7 @@ last: Transit
 //Ruin Generation
 
 #define SPACERUIN_MAP_EDGE_PAD 15
+#define ASTEROID_RUINS_BUDGET 10 //Ruin budget of the mining asteroid. Every asteroid ruin costs 1 and appears once at most
 #define PLACEMENT_TRIES 100 //How many times we try to fit the ruin somewhere until giving up (really should just swap to some packing algo)
 
 #define PLACE_DEFAULT "random"

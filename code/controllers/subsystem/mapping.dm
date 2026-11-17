@@ -398,6 +398,9 @@ SUBSYSTEM_DEF(mapping)
 	var/trait_list = list(ORE_LEVEL, REACHABLE, STATION_CONTACT, AI_OK, ZTRAIT_BASETURF = /turf/space)
 	var/mining_z_level = GLOB.space_manager.add_new_zlevel(MINING, linkage = CROSSLINKED, traits = trait_list)
 	GLOB.maploader.load_map(file(map_datum.mining_path), z_offset = mining_z_level)
+	// Ruins go in before the caves: the tunnels only dig through unexplored rock and so leave them buried.
+	if(length(GLOB.asteroid_ruins_templates))
+		seedRuins(list(mining_z_level), ASTEROID_RUINS_BUDGET, /area/mine/unexplored, GLOB.asteroid_ruins_templates)
 	var/datum/map_generator/asteroid_tunnels/caves = new
 	caves.generate_terrain(Z_TURFS(mining_z_level))
 	qdel(caves)

@@ -120,7 +120,9 @@
 			var/datum/map_template/T = new(path = "[path][map]", rename = "[map]")
 			GLOB.map_templates[T.name] = T
 
-	if(!CONFIG_GET(flag/disable_space_ruins) && !(SSmapping.map_datum.disables & DISABLE_SPACE_RUINS)) // so we don't unnecessarily clutter start-up
+	var/space_ruins_enabled = !CONFIG_GET(flag/disable_space_ruins) && !(SSmapping.map_datum.disables & DISABLE_SPACE_RUINS)
+	var/mining_enabled = !CONFIG_GET(flag/disable_mining) && !(SSmapping.map_datum.disables & DISABLE_MINING)
+	if(space_ruins_enabled || mining_enabled) // so we don't unnecessarily clutter start-up
 		preloadRuinTemplates()
 	preloadShelterTemplates()
 	preloadShuttleTemplates()
@@ -148,6 +150,8 @@
 
 		if(istype(R, /datum/map_template/ruin/space))
 			GLOB.space_ruins_templates[R.name] = R
+		else if(istype(R, /datum/map_template/ruin/asteroid))
+			GLOB.asteroid_ruins_templates[R.name] = R
 
 /proc/preloadShelterTemplates()
 	for(var/item in subtypesof(/datum/map_template/shelter))

@@ -99,6 +99,7 @@ GLOBAL_LIST_EMPTY(awaydestinations) //a list of landmarks that the warpgate can 
 GLOBAL_LIST_EMPTY(map_templates)
 GLOBAL_LIST_EMPTY(ruins_templates)
 GLOBAL_LIST_EMPTY(space_ruins_templates)
+GLOBAL_LIST_EMPTY(asteroid_ruins_templates)
 GLOBAL_LIST_EMPTY(shelter_templates)
 GLOBAL_LIST_EMPTY(shuttle_templates)
 
