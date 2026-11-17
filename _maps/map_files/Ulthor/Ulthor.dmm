@@ -12649,6 +12649,19 @@
 	icon_state = "solarpanel"
 	},
 /area/station/solars/port/ulthor)
+"grf" = (
+/obj/structure/cable,
+/obj/structure/disposalpipe/junction/reversed{
+	dir = 2
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "grs" = (
 /obj/structure/cable,
 /obj/machinery/hologram/holopad,
@@ -26487,6 +26500,14 @@
 	icon_state = "white"
 	},
 /area/station/science/genetics)
+"nrf" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "nrv" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -28705,6 +28726,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/bluegrid,
 /area/station/engineering/storage/tech)
+"ovu" = (
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "ovx" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -31972,6 +32008,17 @@
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
 /area/station/engineering/storage/tech)
+"pYV" = (
+/obj/structure/cable,
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -26;
+	pixel_y = 0
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "pZt" = (
 /obj/machinery/light{
 	dir = 1
@@ -39371,6 +39418,25 @@
 	dir = 1
 	},
 /area/station/engineering/ulthor_tool_storage)
+"tWv" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/mining/glass{
+	name = "Quartermaster";
+	req_access = list(41);
+	check_one_access = 0
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "tWE" = (
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -44312,6 +44378,13 @@
 	tag = "icon-swall_f6"
 	},
 /area/shuttle/ulthor_supply)
+"wwG" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "wwN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -66714,7 +66787,7 @@ omF
 jFV
 omF
 uIk
-jFV
+dkc
 nOb
 nXu
 nXu
@@ -66971,7 +67044,7 @@ rPq
 nXu
 rPq
 bKm
-nXu
+hFc
 oES
 nXu
 nXu
@@ -67228,7 +67301,7 @@ czr
 sCG
 rPq
 bKm
-wPg
+wwG
 oke
 wPg
 upU
@@ -67485,7 +67558,7 @@ ezq
 aGp
 aGp
 aGp
-bTd
+nrf
 lZf
 lQH
 lZf
@@ -67742,7 +67815,7 @@ lFi
 jFV
 jFV
 bre
-uwI
+grf
 iHD
 rBr
 lya
@@ -67999,7 +68072,7 @@ bXO
 vdx
 vdx
 vdx
-pWX
+tWv
 vdx
 vdx
 vdx
@@ -68256,8 +68329,8 @@ jsP
 oZq
 sVY
 uod
-vud
-eti
+ovu
+pYV
 kIQ
 awM
 tSj
