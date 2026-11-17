@@ -44,9 +44,9 @@
 /obj/effect/saddam_rune/examine(mob/user)
 	. = ..()
 	if(spent)
-		. += span_notice("Руна потускнела: плату она уже получила.")
+		. += span_notice("The rune has gone dull. It has already been paid.")
 	else
-		. += span_warning("Руна едва заметно пульсирует, будто ждёт кого-то живого.")
+		. += span_warning("The rune pulses faintly, as if it is waiting for someone alive.")
 
 /obj/effect/saddam_rune/proc/on_entered(datum/source, mob/living/arrived, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER
@@ -56,8 +56,8 @@
 	if(arrived in pending)
 		return
 	LAZYADD(pending, arrived)
-	visible_message(span_danger("Руна вспыхивает под [arrived]!"))
-	to_chat(arrived, span_userdanger("Руна под вами наливается жаром. Что-то подсказывает: стоять здесь не стоит!"))
+	visible_message(span_danger("The rune flares up under [arrived]!"))
+	to_chat(arrived, span_userdanger("The rune under you grows hot. Something tells you not to stay here!"))
 	playsound(src, 'sound/magic/blind.ogg', 50, TRUE)
 	animate(src, color = "#ff5a3c", time = charge_time)
 	addtimer(CALLBACK(src, PROC_REF(take_payment), arrived), charge_time)
@@ -74,7 +74,7 @@
 	spent = TRUE
 	pending = null
 	var/turf/our_turf = get_turf(src)
-	visible_message(span_userdanger("Руна забирает плату: [victim] разлетается на куски! Где-то рядом скрежещет камень."))
+	visible_message(span_userdanger("The rune takes its payment: [victim] is torn to pieces! Stone grinds somewhere nearby."))
 	add_attack_logs(victim, victim, "Gibbed by the rune of Saddam's hideout")
 	victim.gib()
 	for(var/i in 1 to 4)
@@ -124,7 +124,7 @@
 	return TRUE
 
 /obj/structure/falsewall/saddam/rcd_deconstruct_act(mob/user, obj/item/rcd/our_rcd)
-	balloon_alert(user, "нельзя деконструировать!")
+	balloon_alert(user, "can't deconstruct!")
 	return RCD_NO_ACT
 
 /obj/structure/falsewall/saddam/dismantle(mob/user, disassembled = TRUE)
@@ -148,7 +148,7 @@
 		return
 	unsealed = TRUE
 	opening = TRUE
-	visible_message(span_warning("Участок стены со скрежетом уходит в сторону!"))
+	visible_message(span_warning("A section of the wall grinds aside!"))
 	playsound(src, 'sound/effects/stonedoor_openclose.ogg', 100, TRUE)
 	do_the_flick()
 	addtimer(CALLBACK(src, PROC_REF(finish_unsealing)), 0.4 SECONDS)
@@ -178,11 +178,11 @@
 	wander = FALSE
 	stop_automated_movement = TRUE
 	turns_per_move = 0
-	response_help = "тычет"
-	response_disarm = "толкает"
-	response_harm = "бьёт"
-	speak_emote = list("хрипит", "бормочет")
-	emote_see = list("лежит строго по схеме", "поворачивается к вентилятору", "ворочается в яме")
+	response_help = "pokes"
+	response_disarm = "shoves"
+	response_harm = "hits"
+	speak_emote = list("wheezes", "mutters")
+	emote_see = list("lies exactly as the diagram shows", "turns towards the fan", "shifts in the hole")
 	speak = list(
 		"السلام عليكم.",
 		"أنا صدام حسين، رئيس جمهورية العراق!",
@@ -197,7 +197,7 @@
 	)
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	gold_core_spawnable = NO_SPAWN
-	deathmessage = "хрипит что-то напоследок и затихает. Из него выпадает чемодан."
+	deathmessage = "wheezes something one last time and goes still. A briefcase falls out of him."
 	loot = list(/obj/item/storage/briefcase/saddam)
 	/// Pause between his remarks.
 	var/speech_cooldown_min = 25 SECONDS
@@ -206,6 +206,9 @@
 
 /mob/living/simple_animal/saddam/Initialize(mapload)
 	. = ..()
+	// Without a language nobody understands him and his lines get garbled.
+	add_language(LANGUAGE_GALACTIC_COMMON)
+	default_language = GLOB.all_languages[LANGUAGE_GALACTIC_COMMON]
 	ADD_TRAIT(src, TRAIT_NO_BREATH, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_IMMOBILIZED, INNATE_TRAIT)
 

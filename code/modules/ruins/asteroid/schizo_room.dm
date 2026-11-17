@@ -25,9 +25,9 @@ GLOBAL_LIST_INIT(schizo_count, list(
 	wander = FALSE
 	stop_automated_movement = TRUE
 	turns_per_move = 0
-	response_help = "тычет"
-	response_disarm = "толкает"
-	response_harm = "бьёт"
+	response_help = "pokes"
+	response_disarm = "shoves"
+	response_harm = "hits"
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	gold_core_spawnable = NO_SPAWN
 	/// Pause between the remarks this guest makes on his own.
@@ -37,6 +37,10 @@ GLOBAL_LIST_INIT(schizo_count, list(
 
 /mob/living/simple_animal/schizo/Initialize(mapload)
 	. = ..()
+	// Simple mobs speak no language by default, and listeners who do not understand
+	// a simple mob without a `speak` list hear its words as asterisks.
+	add_language(LANGUAGE_GALACTIC_COMMON)
+	default_language = GLOB.all_languages[LANGUAGE_GALACTIC_COMMON]
 	ADD_TRAIT(src, TRAIT_NO_BREATH, INNATE_TRAIT)
 	// The broadcast should not start the very second somebody digs in.
 	COOLDOWN_START(src, speech_cooldown, rand(10 SECONDS, 30 SECONDS))
@@ -75,8 +79,8 @@ GLOBAL_LIST_INIT(schizo_count, list(
 	icon_state = "rybnikov"
 	icon_living = "rybnikov"
 	icon_dead = "rybnikov_dead"
-	speak_emote = list("вещает", "чеканит")
-	deathmessage = "роняет голову на стол. Счёт древних шизов оборвался."
+	speak_emote = list("proclaims", "declares")
+	deathmessage = "drops his head onto the table. The count of the ancient schizos is cut short."
 	/// Things he shouts between the lectures.
 	var/static/list/rants = list(
 		"А нам навязывают ложную математику, чтобы грабить нас, шизов!",
@@ -128,8 +132,8 @@ GLOBAL_LIST_INIT(schizo_count, list(
 	icon_state = "boyarshinov"
 	icon_living = "boyarshinov"
 	icon_dead = "boyarshinov_dead"
-	speak_emote = list("кивает и говорит", "задумчиво произносит")
-	deathmessage = "сползает под стол. Спасибо ему огромное."
+	speak_emote = list("nods and says", "says thoughtfully")
+	deathmessage = "slides under the table. Thank him very much."
 	speech_cooldown_min = 150 SECONDS
 	speech_cooldown_max = 300 SECONDS
 	var/static/list/remarks = list(
@@ -150,7 +154,7 @@ GLOBAL_LIST_INIT(schizo_count, list(
 		return
 	if(prob(30))
 		flick("boyarshinov_roof", src)
-		custom_emote(EMOTE_VISIBLE, "складывает руки домиком над головой")
+		custom_emote(EMOTE_VISIBLE, "folds his hands into a little roof over his head")
 		return
 	say_line(pick(remarks))
 
@@ -218,7 +222,7 @@ GLOBAL_LIST_INIT(schizo_count, list(
 
 /obj/structure/sign/poster/contraband/schizo_count/proc/make_shout(mob/living/carbon/human/viewer, line, explain)
 	if(explain)
-		to_chat(viewer, span_warning("Вы не можете оторвать взгляд от постера. Губы сами складывают слова..."))
+		to_chat(viewer, span_warning("You can't tear your eyes off the poster. Your lips form the words on their own..."))
 	viewer.say(line, ignore_speech_problems = TRUE)
 
 // MARK: The camera
