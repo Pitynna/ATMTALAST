@@ -66,24 +66,35 @@ def main():
             changed[p] = pick(side)
         else:
             corners.append(p)
+    # Corner walls touch rooms only diagonally. One that still continues a wall
+    # line of its own area (junction of rooms) keeps it; one cut off from its
+    # own walls (a step of a stepped outer edge) takes the area of the wall
+    # lines it joins. Decided walls only, so stale steps cannot confirm each
+    # other's old area.
     cur.update(changed)
-    for _ in range(3):  # corners follow neighbouring walls
-        for p in corners:
-            c = Counter(cur[(p[0] + dx, p[1] + dy)] for dx, dy in N8
-                        if (p[0] + dx, p[1] + dy) in cur and solid(st.tile(p[0] + dx, p[1] + dy))
-                        and station(cur[(p[0] + dx, p[1] + dy)]))
-            if c and cur[p] not in c:
+    undecided = set(corners)
+    for _ in range(6):
+        for p in sorted(undecided):
+            ns = [q for q in ((p[0] + dx, p[1] + dy) for dx, dy in N4)
+                  if q in cur and solid(st.tile(*q)) and station(cur[q])]
+            if any(cur[q] == cur[p] and q not in undecided for q in ns):
+                undecided.discard(p)
+                continue
+            c = Counter(cur[q] for q in ns if q not in undecided)
+            if c and not any(cur[q] == cur[p] for q in ns):
+                undecided.discard(p)
                 cur[p] = changed[p] = pick(c)
     before = {p: area(m.get_tile((p[0], p[1], 1))) for p in changed}
     for (x, y), a in changed.items():
         tile = list(m.get_tile((x, y, 1)))
         tile[-1] = a
         m.set_tile((x, y, 1), tuple(tile))
-    m.to_file(str(MAP))
+    if '--check' not in sys.argv:
+        m.to_file(str(MAP))
     print('walls re-assigned:', len(changed))
     moves = Counter((before[p].split('station/')[-1], a.split('station/')[-1]) for p, a in changed.items())
     for (a, b), n in moves.most_common():
-        print(f'  {n:3} {a} -> {b}')
+        print(f'  {n:3} {a} -> {b}', sorted(p for p in changed if (before[p].split('station/')[-1], changed[p].split('station/')[-1]) == (a, b))[:6])
 
 
 if __name__ == '__main__':
