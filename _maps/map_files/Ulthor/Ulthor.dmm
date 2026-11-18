@@ -820,6 +820,22 @@
 "axN" = (
 /turf/simulated/wall/r_wall,
 /area/station/maintenance/ulthor_ai_passage)
+"axQ" = (
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone{
+	pixel_x = -8
+	},
+/obj/machinery/recharger{
+	pixel_y = 2
+	},
+/obj/machinery/firealarm/directional/west,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/station/security/main)
 "axT" = (
 /obj/machinery/light{
 	dir = 4
@@ -3468,6 +3484,16 @@
 /obj/effect/decal/cleanable/fungus,
 /turf/simulated/wall/r_wall,
 /area/station/maintenance/ulthor_northwest_passage)
+"bNA" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/reagent_containers/cup/bucket,
+/obj/machinery/landline_phone/wall/directional/north,
+/turf/simulated/floor/plasteel{
+	icon_state = "whitegreenfull";
+	tag = "icon-whitebluefull"
+	},
+/area/hydroponics)
 "bNV" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -3992,6 +4018,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/station/command/office/ntrep)
+"ccb" = (
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/trash/pistachios,
+/obj/item/soap/nanotrasen,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "greencorner"
+	},
+/area/janitor)
 "ccK" = (
 /obj/machinery/light{
 	dir = 8
@@ -4743,6 +4781,17 @@
 	icon_state = "white"
 	},
 /area/station/science/explab)
+"cvs" = (
+/obj/structure/cable,
+/obj/structure/table/wood,
+/obj/machinery/landline_phone,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "bcarpet05"
+	},
+/area/station/command/office/blueshield)
 "cvz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9313,6 +9362,18 @@
 	icon_state = "white"
 	},
 /area/station/medical/medbay)
+"eKZ" = (
+/obj/structure/cable,
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellow"
+	},
+/area/station/command/office/ce)
 "eLa" = (
 /obj/structure/cable,
 /obj/machinery/camera{
@@ -11744,6 +11805,14 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/station/engineering/storage/tech)
+"gdM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/taperecorder,
+/turf/simulated/floor/carpet,
+/area/station/legal/office/magistrate)
 "gef" = (
 /obj/item/radio/intercom/directional/north{
 	name = "Station Intercom (General)"
@@ -11829,6 +11898,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plasteel,
 /area/station/medical/virology)
+"gfM" = (
+/obj/machinery/computer/security/telescreen{
+	desc = "Used for watching the RD's goons from the safety of his office.";
+	name = "Research Monitor";
+	network = list("Research","Research Outpost","RD");
+	pixel_y = 2
+	},
+/obj/structure/table/glass,
+/obj/machinery/landline_phone,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "cafeteria";
+	tag = "icon-cafeteria (NORTHEAST)"
+	},
+/area/station/command/office/rd)
 "gfP" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/junction/reversed{
@@ -17287,6 +17373,11 @@
 /obj/machinery/the_singularitygen,
 /turf/simulated/floor/plating,
 /area/station/engineering/storage/secure)
+"iSY" = (
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/carpet,
+/area/station/service/bar)
 "iTp" = (
 /obj/structure/closet/walllocker/emerglocker/directional/west,
 /obj/structure/chair/comfy/shuttle{
@@ -18949,6 +19040,15 @@
 	},
 /turf/simulated/floor/grass,
 /area/station/service/library)
+"jTK" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/folder/blue,
+/obj/item/stamp/captain,
+/turf/simulated/floor/wood,
+/area/station/command/office/captain)
 "jTM" = (
 /obj/machinery/vending/coffee,
 /turf/simulated/floor/shuttle,
@@ -19478,6 +19578,25 @@
 /obj/machinery/vending/medical,
 /turf/simulated/floor/shuttle,
 /area/shuttle/ulthor_admin)
+"kkA" = (
+/obj/machinery/alarm/directional/south,
+/obj/structure/table/glass,
+/obj/machinery/landline_phone{
+	pixel_x = 8
+	},
+/obj/machinery/reagentgrinder,
+/obj/machinery/door_control{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "imnotmakingyoulubepissoff";
+	name = "Chemistry Privacy Shutter Control";
+	safety_z_check = 1;
+	pixel_x = 26
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "whiteyellowcorner"
+	},
+/area/station/medical/chemistry)
 "kkQ" = (
 /obj/machinery/atmospherics/binary/valve,
 /turf/simulated/floor/plasteel,
@@ -20252,6 +20371,19 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
+"kEp" = (
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "yellowfull"
+	},
+/area/station/engineering/engine)
 "kEw" = (
 /obj/machinery/vending/snack,
 /turf/simulated/floor/wood,
@@ -20443,6 +20575,15 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/commons/dorms)
+"kID" = (
+/obj/structure/table,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "whiteblue";
+	tag = "icon-whiteblue (NORTH)"
+	},
+/area/station/medical/medbay)
 "kIQ" = (
 /obj/machinery/light_switch/directional/south,
 /obj/structure/closet/secure_closet/quartermaster,
@@ -23151,6 +23292,13 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/carpet,
 /area/station/service/bar)
+"mcx" = (
+/obj/structure/table,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/station/science/robotics/ulthor)
 "mcA" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock{
@@ -26987,6 +27135,22 @@
 	tag = "icon-whitebluefull"
 	},
 /area/hydroponics)
+"nWO" = (
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone{
+	pixel_x = -8
+	},
+/obj/machinery/recharger{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/radio{
+	pixel_x = 6
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "darkred"
+	},
+/area/station/security/checkpoint)
 "nXe" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/directional/east{
@@ -27031,6 +27195,16 @@
 "nYm" = (
 /turf/simulated/wall/r_wall,
 /area/station/security/prison/perma)
+"nYy" = (
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/healthanalyzer,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/station/science/research/lobby)
 "nYI" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -28578,6 +28752,23 @@
 /obj/machinery/computer/communications,
 /turf/simulated/floor/shuttle,
 /area/shuttle/ulthor_admin)
+"oQB" = (
+/obj/machinery/firealarm/directional/west,
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -8
+	},
+/obj/machinery/recharger,
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 4;
+	name = "standard air scrubber";
+	on = 1;
+	scrub = 28
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/station/security/warden)
 "oQE" = (
 /obj/machinery/photocopier,
 /obj/machinery/light_switch/directional/east,
@@ -30304,6 +30495,14 @@
 /obj/structure/table/wood,
 /turf/simulated/floor/wood,
 /area/station/service/library)
+"pIL" = (
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/bridge)
 "pJp" = (
 /obj/structure/chair/comfy/black,
 /turf/simulated/floor/carpet,
@@ -33109,6 +33308,16 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/fore)
+"rdx" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone{
+	pixel_x = 8
+	},
+/obj/machinery/photocopier/faxmachine/longrange{
+	department = "NT Representative's Office"
+	},
+/turf/simulated/floor/wood,
+/area/station/command/office/ntrep)
 "rdH" = (
 /obj/structure/chair/office/light{
 	dir = 8
@@ -34669,6 +34878,21 @@
 	icon_state = "dark"
 	},
 /area/station/engineering/mechanic_workshop)
+"sbZ" = (
+/obj/structure/table/reinforced,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/condiment/enzyme{
+	layer = 5;
+	pixel_y = 14
+	},
+/obj/item/stack/packageWrap,
+/turf/simulated/floor/plasteel{
+	icon_state = "cafeteria";
+	tag = "icon-cafeteria (NORTHEAST)"
+	},
+/area/station/service/kitchen)
 "sci" = (
 /obj/structure/cable,
 /turf/simulated/floor/plasteel{
@@ -35585,6 +35809,11 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_eva_access)
+"sFm" = (
+/obj/structure/table,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "sGX" = (
 /obj/structure/chair{
 	dir = 8
@@ -37022,6 +37251,21 @@
 	tag = "icon-whiteblue (NORTH)"
 	},
 /area/station/medical/ward)
+"tti" = (
+/obj/machinery/camera{
+	c_tag = "Atmospherics Control Room";
+	start_active = 1
+	},
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/book/manual/atmospipes,
+/obj/item/multitool{
+	pixel_x = 5
+	},
+/turf/simulated/floor/plasteel,
+/area/station/engineering/atmos)
 "ttj" = (
 /obj/machinery/flasher{
 	id = "Cell 1";
@@ -37695,6 +37939,17 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/aft)
+"tKl" = (
+/obj/structure/table/glass,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/storage/belt/utility,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/station/science/rnd)
 "tKM" = (
 /obj/machinery/vending/medical,
 /turf/simulated/floor/plasteel{
@@ -37907,6 +38162,16 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/station/engineering/atmos)
+"tRR" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/station/security/detectives_office)
 "tSi" = (
 /obj/machinery/light_switch/directional/south,
 /turf/simulated/floor/plasteel{
@@ -39944,6 +40209,21 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_service_south)
+"uSe" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/cup/glass/mug{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/keycard_auth,
+/turf/simulated/floor/carpet,
+/area/station/command/office/hos)
 "uSw" = (
 /obj/machinery/camera{
 	c_tag = "Heads of Staff Meeting Room";
@@ -40232,6 +40512,22 @@
 /obj/machinery/door/airlock/public/glass,
 /turf/simulated/floor/shuttle,
 /area/shuttle/ulthor_admin)
+"vbB" = (
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/folder/yellow,
+/obj/item/pen{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/pen/red{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/turf/simulated/floor/plasteel,
+/area/station/command/office/qm)
 "vbF" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -40439,6 +40735,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/service/chapel)
+"viD" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/wood,
+/area/station/command/office/hop)
 "vja" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 2
@@ -40540,6 +40841,13 @@
 	icon_state = "white"
 	},
 /area/station/science/storage)
+"vkN" = (
+/obj/structure/table,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/engineering/ulthor_monitoring)
 "vkV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -42060,6 +42368,11 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/station/engineering/mechanic_workshop)
+"wcF" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone,
+/turf/simulated/floor/carpet/black,
+/area/station/service/library)
 "wcO" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
@@ -44641,6 +44954,14 @@
 "xwx" = (
 /turf/simulated/wall/r_wall,
 /area/station/security/checkpoint)
+"xwT" = (
+/obj/structure/table/wood,
+/obj/machinery/landline_phone{
+	pixel_x = 6
+	},
+/obj/item/lighter/zippo/black,
+/turf/simulated/floor/carpet/black,
+/area/station/service/chapel/office)
 "xwW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -45879,6 +46200,15 @@
 	tag = "icon-cult"
 	},
 /area/station/hallway/primary/aft)
+"ydS" = (
+/obj/structure/table,
+/obj/machinery/landline_phone{
+	pixel_x = -6
+	},
+/obj/item/folder/yellow,
+/obj/item/pen,
+/turf/simulated/floor/plasteel,
+/area/station/cargo/miningdock)
 "yeb" = (
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=4";
@@ -46135,6 +46465,24 @@
 	icon_state = "whiteyellowcorner"
 	},
 /area/station/medical/chemistry)
+"yld" = (
+/obj/structure/cable,
+/obj/machinery/door_control{
+	id = "Biohazard_medi";
+	name = "Medical Quarantine Control";
+	req_access = list(40);
+	check_one_access = 0;
+	safety_z_check = 1
+	},
+/obj/structure/table/glass,
+/obj/machinery/landline_phone,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/station/command/office/cmo)
 "ylg" = (
 /obj/structure/closet/wardrobe/medic_white,
 /obj/item/clothing/head/surgery/blue,
@@ -64545,7 +64893,7 @@ nzU
 fjj
 bJo
 qhU
-lDf
+sbZ
 utR
 tpK
 qhU
@@ -66332,7 +66680,7 @@ bJE
 mFs
 lir
 vAF
-oJP
+bNA
 qyR
 wUo
 rYC
@@ -66882,7 +67230,7 @@ nXu
 nXu
 wqh
 sVY
-tjH
+vbB
 pka
 qmO
 ngh
@@ -67115,7 +67463,7 @@ mZm
 vAF
 qzP
 tGa
-pWl
+iSY
 pWl
 tep
 tep
@@ -67162,7 +67510,7 @@ pZC
 nmw
 xUv
 gGH
-bEQ
+wcF
 tUa
 mJn
 sQp
@@ -67387,7 +67735,7 @@ agy
 agy
 gDe
 nXu
-bzn
+sFm
 wTB
 mfs
 vdx
@@ -68113,7 +68461,7 @@ neR
 jdS
 nje
 vOU
-rAP
+xwT
 vtX
 vtX
 vtX
@@ -68897,7 +69245,7 @@ hFD
 eXb
 eXb
 gtt
-rfF
+ccb
 afs
 cSd
 nlN
@@ -70730,7 +71078,7 @@ lrZ
 lrZ
 oTf
 jnZ
-btA
+ydS
 pZT
 wob
 aPm
@@ -73010,7 +73358,7 @@ sMz
 tOQ
 euW
 xHc
-nIe
+cvs
 eGr
 vXX
 fBY
@@ -73786,7 +74134,7 @@ bbS
 kBC
 bun
 qwh
-cQN
+rdx
 qbf
 kBC
 agy
@@ -74043,7 +74391,7 @@ pmD
 oRn
 uCg
 ixj
-wqF
+viD
 ruo
 rSB
 agy
@@ -75114,7 +75462,7 @@ uBH
 hjP
 loH
 ekH
-hrx
+uSe
 uQC
 hjP
 orH
@@ -75314,7 +75662,7 @@ qol
 coy
 coy
 qNc
-awo
+kkA
 iIF
 mxT
 iuo
@@ -76670,7 +77018,7 @@ fke
 cHE
 vco
 ozP
-soi
+gdM
 jqV
 fSx
 ufL
@@ -77619,7 +77967,7 @@ tsH
 sky
 kVD
 oVG
-rxo
+kID
 qoq
 okv
 lbN
@@ -77682,7 +78030,7 @@ bZe
 uwD
 gVR
 hXJ
-gFd
+oQB
 vFV
 ggo
 fzB
@@ -78150,7 +78498,7 @@ jfJ
 xjV
 azp
 vuP
-mIE
+pIL
 ePB
 svW
 jxJ
@@ -80510,7 +80858,7 @@ hWt
 esu
 gXA
 nTu
-xXO
+axQ
 pon
 evw
 sPp
@@ -81040,7 +81388,7 @@ cHE
 pUp
 pir
 gZf
-xCq
+tRR
 ogJ
 xxS
 lqk
@@ -81985,7 +82333,7 @@ pUU
 bwT
 pme
 tlE
-vLl
+yld
 iQB
 cyX
 bbV
@@ -82776,7 +83124,7 @@ eXb
 gqu
 lPh
 qHt
-cwG
+jTK
 vJf
 fkN
 tPg
@@ -85109,7 +85457,7 @@ jtH
 dNX
 led
 vHm
-edr
+eKZ
 ieJ
 tdZ
 vrf
@@ -86915,7 +87263,7 @@ lSw
 iKn
 odu
 dCC
-qkG
+vkN
 coX
 gjR
 xKR
@@ -87190,7 +87538,7 @@ dDq
 khE
 vsU
 rja
-rjS
+kEp
 csf
 rgh
 wjd
@@ -88162,7 +88510,7 @@ dyj
 sCM
 cjw
 xzY
-woZ
+mcx
 vWt
 dpB
 pmc
@@ -88430,7 +88778,7 @@ uaJ
 kGv
 aCt
 eTp
-nLk
+gfM
 gNJ
 sMl
 dEs
@@ -88441,7 +88789,7 @@ azY
 hPG
 uFc
 ntS
-kfq
+nYy
 wcO
 qLA
 onp
@@ -88706,7 +89054,7 @@ cRc
 tPj
 lmY
 ctT
-erU
+tti
 hiF
 fhN
 sRA
@@ -89768,7 +90116,7 @@ aQI
 dlf
 skp
 kIR
-oyf
+nWO
 tme
 ujV
 jzx
@@ -89962,7 +90310,7 @@ jvs
 lwj
 hSH
 jlO
-pRO
+tKl
 dgw
 wUu
 dyh
