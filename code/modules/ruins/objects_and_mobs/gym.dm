@@ -52,6 +52,27 @@
 		new material_drop(loc, material_drop_amount)
 	qdel(src)
 
+/obj/structure/punching_bag/syndicate
+	desc = "A punching bag with a picture of a mean old syndicate agent on it."
+	icon_state = "punchingbagsyndie"
+
+/obj/structure/punching_bag/captain
+	desc = "A punching bag with a picture of a dumb-looking station captain on it."
+	icon_state = "punchingbagcaptain"
+
+/obj/structure/punching_bag/wizard
+	desc = "A punching bag with a picture of a weird wizard on it."
+	icon_state = "punchingbagwizard"
+
+/obj/structure/punching_bag/clown
+	name = "clown bop bag"
+	desc = "A bop bag in the shape of a goofy clown. It honks back."
+	icon_state = "bopbag"
+
+/obj/structure/punching_bag/clown/attack_hand(mob/living/user, obj/item/item)
+	. = ..()
+	playsound(loc, 'sound/items/bikehorn.ogg', 50, TRUE, -1)
+
 /obj/structure/weightmachine
 	name = "weight machine"
 	desc = "Just looking at this thing makes you feel tired."

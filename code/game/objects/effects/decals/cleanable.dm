@@ -30,6 +30,9 @@
 	if(is_mopped)
 		ADD_TRAIT(src, TRAIT_MOPABLE, INNATE_TRAIT)
 
+	if(!mapload)
+		stain_clothing()
+
 	var/turf/our_turf = get_turf(src)
 	if(our_turf && is_station_level(our_turf.z))
 		SSblackbox.record_feedback("tally", "station_mess_created", 1, name)

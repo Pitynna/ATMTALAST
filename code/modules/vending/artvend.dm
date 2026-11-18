@@ -58,6 +58,7 @@
 				/obj/item/pen/blue = 5,
 				/obj/item/pen/red = 5,
 				/obj/item/storage/box/pen_case = 5,
+				/obj/item/storage/box/business_cards = 5,
 				///obj/item/stack/pipe_cleaner_coil/random = 10,
 			),
 		),

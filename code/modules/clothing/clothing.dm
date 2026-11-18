@@ -246,6 +246,8 @@
 	if(clean_types & CLEAN_TYPE_FIBERS)
 		gunshot_residue = null
 		. |= COMPONENT_CLEANED
+	if(clean_stains())
+		. |= COMPONENT_CLEANED
 
 /obj/item/clothing/proc/can_use(mob/user)
 	if(isliving(user) && !user.incapacitated() && !HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))
