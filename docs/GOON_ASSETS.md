@@ -12,6 +12,7 @@
 | `icons/obj/goon_cabinet.dmi` | `icons/obj/furniture/cabinet.dmi` | `tools/goon_ports/decor.py` |
 | `icons/obj/goon_misc.dmi`, `icons/mob/inhands/goon_misc_{left,right}hand.dmi` | `icons/obj/furniture/swingsign.dmi`, `icons/obj/writing.dmi` | `tools/goon_ports/extras.py` |
 | `icons/goonstation/objects/fitness.dmi` (скины груши) | `icons/obj/gym_objs.dmi` | `tools/goon_ports/extras.py` |
+| `icons/obj/goon_phones.dmi`, `sound/goonstation/phones/*.ogg` | `icons/obj/machines/phones.dmi`, `sound/machines/phones/` | `tools/goon_ports/extras.py` |
 
 Скрипт читает исходный чекаут Goonstation (по умолчанию `..\goonstation-master`) и
 перезаписывает только перечисленные файлы. Состояния из листов табличек, постеров и знаков ISO

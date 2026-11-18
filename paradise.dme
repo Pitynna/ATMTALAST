@@ -1343,6 +1343,7 @@
 #include "code\game\machinery\igniter.dm"
 #include "code\game\machinery\iv_drip.dm"
 #include "code\game\machinery\jukebox.dm"
+#include "code\game\machinery\landline_phone.dm"
 #include "code\game\machinery\lightswitch.dm"
 #include "code\game\machinery\machinery.dm"
 #include "code\game\machinery\magnet.dm"

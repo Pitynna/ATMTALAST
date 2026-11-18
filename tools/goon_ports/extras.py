@@ -4,11 +4,12 @@ Sprites: Goonstation 13, CC BY-NC-SA 3.0 (see docs/GOON_ASSETS.md).
 
 Usage: python -I tools/goon_ports/extras.py [path-to-goonstation-checkout]
 
-Writes icons/obj/goon_misc.dmi and icons/mob/inhands/goon_misc_{left,right}hand.dmi,
-and adds the missing punching bag skins to icons/goonstation/objects/fitness.dmi
+Writes icons/obj/goon_misc.dmi, icons/obj/goon_phones.dmi, icons/mob/inhands/goon_misc_{left,right}hand.dmi,
+copies the landline sounds to sound/goonstation/phones/, and adds the missing punching bag skins to icons/goonstation/objects/fitness.dmi
 (states that already exist there are left alone).
 """
 import os
+import shutil
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -36,7 +37,25 @@ def copy(dst, src, name, new_name=None):
 	st.delays = list(s.delays) if s.delays else [1] * (len(s.frames) // s.dirs)
 
 
+PHONE_SOUNDS = ["dial.ogg", "hang_up.ogg", "phone_busy.ogg", "pick_up.ogg", "remote_answer.ogg",
+	"remote_hangup.ogg", "ring_incoming.ogg", "ring_outgoing.ogg"]
+
+
+def build_phones():
+	src = sheet("obj", "machines", "phones.dmi")
+	out = Dmi(32, 32)
+	for s in src.states:
+		if not s.name.startswith("cellphone"):
+			copy(out, src, s.name)
+	out.to_file(os.path.join(ROOT, "icons", "obj", "goon_phones.dmi"))
+	dst = os.path.join(ROOT, "sound", "goonstation", "phones")
+	os.makedirs(dst, exist_ok=True)
+	for name in PHONE_SOUNDS:
+		shutil.copyfile(os.path.join(GOON, "sound", "machines", "phones", name), os.path.join(dst, name))
+
+
 def main():
+	build_phones()
 	swing = sheet("obj", "furniture", "swingsign.dmi")
 	out = Dmi(32, 32)
 	for name, new in [("blank", "swingsign"), ("written", "swingsign_written"), ("folded", "swingsign_folded"),
