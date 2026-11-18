@@ -77,6 +77,7 @@
 
 	buy(S1)
 	deliver_mail(S1)
+	SStrade.deliver_orders(src, S1)
 	sell(S1)
 
 /obj/docking_port/mobile/supply/proc/buy(obj/docking_port/stationary/destination)
@@ -252,6 +253,8 @@
 				crate.quest.id.robo_bounty = null
 				crate.quest = null
 
+		// Crates with a consignment note are bought by that trader first.
+		SStrade.process_consignment(MA, msg)
 		export_item_and_contents(MA, apply_elastic = TRUE, dry_run = FALSE, external_report = report)
 
 		qdel(MA, force = TRUE)

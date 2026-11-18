@@ -4,6 +4,7 @@ import {
   Button,
   Chart,
   NoticeBox,
+  NumberInput,
   Section,
   Stack,
   Table,
@@ -31,8 +32,43 @@ type Market = {
   quest_max: number;
 };
 
+type Offer = {
+  ref: string;
+  name: string;
+  selling: boolean;
+  price: number;
+  stock: number;
+  bundle: number;
+  haggled: boolean;
+  in_demand: boolean;
+};
+
+type Trader = {
+  id: string;
+  name: string;
+  title: string;
+  desc: string;
+  icon: string;
+  color: string;
+  message: string;
+  patience: number;
+  contraband: boolean;
+  selling: Offer[];
+  buying: Offer[];
+};
+
 type Data = {
   market: Market;
+  traders: Trader[];
+  away_count: number;
+  pending_orders: number;
+  status: string | null;
+  logged_in: boolean;
+  owner?: string;
+  balance?: number;
+  cargo_access?: boolean;
+  use_department?: boolean;
+  department_balance?: number;
 };
 
 const formatTime = (seconds: number) => {
@@ -42,22 +78,272 @@ const formatTime = (seconds: number) => {
 };
 
 export const TradeConsole = () => {
-  const [tab, setTab] = useState(0);
+  const { data } = useBackend<Data>();
+  const [tab, setTab] = useState(1);
   return (
-    <Window width={760} height={600} title="Trade Console">
+    <Window width={900} height={640} title="Trade Console">
       <Window.Content>
         <Stack fill vertical>
+          <Stack.Item>
+            <AccountBar />
+          </Stack.Item>
+          {!!data.status && (
+            <Stack.Item>
+              <NoticeBox info>{data.status}</NoticeBox>
+            </Stack.Item>
+          )}
           <Stack.Item>
             <Tabs>
               <Tabs.Tab selected={tab === 0} onClick={() => setTab(0)}>
                 Market
               </Tabs.Tab>
+              <Tabs.Tab selected={tab === 1} onClick={() => setTab(1)}>
+                Traders ({data.traders.length})
+              </Tabs.Tab>
             </Tabs>
           </Stack.Item>
-          <Stack.Item grow>{tab === 0 && <MarketTab />}</Stack.Item>
+          <Stack.Item grow>
+            {tab === 0 && <MarketTab />}
+            {tab === 1 && <TradersTab />}
+          </Stack.Item>
         </Stack>
       </Window.Content>
     </Window>
+  );
+};
+
+const AccountBar = () => {
+  const { act, data } = useBackend<Data>();
+  if (!data.logged_in) {
+    return (
+      <Section>
+        <Stack align="center">
+          <Stack.Item grow color="label">
+            Log in with your ID to buy. Cargo staff can also spend the supply
+            budget and sell to traders.
+          </Stack.Item>
+          <Stack.Item>
+            <Button icon="id-card" onClick={() => act('login')}>
+              Log in
+            </Button>
+          </Stack.Item>
+        </Stack>
+      </Section>
+    );
+  }
+  return (
+    <Section>
+      <Stack align="center">
+        <Stack.Item grow>
+          <Box inline bold mr={2}>
+            {data.owner}
+          </Box>
+          <Box inline color="label" mr={1}>
+            Paying from:
+          </Box>
+          <Box inline bold color="good">
+            {data.use_department
+              ? `supply budget, ${data.department_balance} cr`
+              : `personal account, ${data.balance} cr`}
+          </Box>
+          {data.pending_orders > 0 && (
+            <Box inline color="label" ml={2}>
+              Orders waiting for the shuttle: {data.pending_orders}
+            </Box>
+          )}
+        </Stack.Item>
+        <Stack.Item>
+          {!!data.cargo_access && (
+            <Button.Checkbox
+              checked={!!data.use_department}
+              onClick={() => act('toggle_department')}
+            >
+              Supply budget
+            </Button.Checkbox>
+          )}
+          <Button icon="sign-out-alt" onClick={() => act('logout')}>
+            Log out
+          </Button>
+        </Stack.Item>
+      </Stack>
+    </Section>
+  );
+};
+
+const TradersTab = () => {
+  const { data } = useBackend<Data>();
+  const [selected, setSelected] = useState<string | null>(null);
+  const trader =
+    data.traders.find((entry) => entry.id === selected) || data.traders[0];
+  return (
+    <Stack fill>
+      <Stack.Item width="28%">
+        <Section fill scrollable title="In contact">
+          {data.traders.map((entry) => (
+            <Button
+              key={entry.id}
+              fluid
+              icon={entry.icon}
+              color={entry.contraband ? 'red' : undefined}
+              selected={trader?.id === entry.id}
+              onClick={() => setSelected(entry.id)}
+            >
+              {entry.name}
+            </Button>
+          ))}
+          {data.away_count > 0 && (
+            <Box color="label" mt={1}>
+              {data.away_count} more trader{data.away_count > 1 ? 's' : ''} may
+              come back after the next market shift.
+            </Box>
+          )}
+        </Section>
+      </Stack.Item>
+      <Stack.Item grow>
+        {trader ? (
+          <TraderPanel trader={trader} />
+        ) : (
+          <NoticeBox>No traders are in contact right now.</NoticeBox>
+        )}
+      </Stack.Item>
+    </Stack>
+  );
+};
+
+const TraderPanel = (props: { trader: Trader }) => {
+  const { act, data } = useBackend<Data>();
+  const { trader } = props;
+  const [amounts, setAmounts] = useState<Record<string, number>>({});
+  return (
+    <Stack fill vertical>
+      <Stack.Item>
+        <Section
+          title={trader.name}
+          buttons={
+            data.cargo_access ? (
+              <Button
+                icon="print"
+                onClick={() => act('consignment', { ref: trader.id })}
+              >
+                Print consignment note
+              </Button>
+            ) : undefined
+          }
+        >
+          <Box color="label" italic>
+            {trader.title}. {trader.desc}
+          </Box>
+          <Box mt={1} p={1} backgroundColor="rgba(0, 0, 0, 0.3)">
+            <Box inline bold color={trader.color} mr={1}>
+              {trader.name}:
+            </Box>
+            &quot;{trader.message}&quot;
+          </Box>
+          <Box mt={0.5} color={trader.patience > 1 ? 'label' : 'bad'}>
+            {trader.patience > 0
+              ? `Will haggle ${trader.patience} more time${trader.patience > 1 ? 's' : ''}.`
+              : 'Will not haggle any more. One more try and they leave.'}
+          </Box>
+        </Section>
+      </Stack.Item>
+      <Stack.Item grow>
+        <Section fill scrollable title="For sale">
+          <Table>
+            <Table.Row header>
+              <Table.Cell>Goods</Table.Cell>
+              <Table.Cell textAlign="right">Price</Table.Cell>
+              <Table.Cell textAlign="right">Left</Table.Cell>
+              <Table.Cell textAlign="right">Amount</Table.Cell>
+              <Table.Cell />
+            </Table.Row>
+            {trader.selling.map((offer) => {
+              const amount = Math.min(
+                amounts[offer.ref] || 1,
+                offer.stock < 0 ? 99 : offer.stock,
+              );
+              return (
+                <Table.Row key={offer.ref} className="candystripe">
+                  <Table.Cell>{offer.name}</Table.Cell>
+                  <Table.Cell textAlign="right" color={offer.haggled ? 'good' : undefined}>
+                    {offer.price} cr
+                  </Table.Cell>
+                  <Table.Cell textAlign="right">
+                    {offer.stock < 0 ? '-' : offer.stock}
+                  </Table.Cell>
+                  <Table.Cell textAlign="right">
+                    <NumberInput
+                      width="50px"
+                      value={amount}
+                      minValue={1}
+                      maxValue={offer.stock < 0 ? 99 : Math.max(offer.stock, 1)}
+                      step={1}
+                      onChange={(value) =>
+                        setAmounts({ ...amounts, [offer.ref]: Math.round(value) })
+                      }
+                    />
+                  </Table.Cell>
+                  <Table.Cell textAlign="right" collapsing>
+                    <Button
+                      icon="cart-plus"
+                      disabled={!data.logged_in}
+                      onClick={() => act('buy', { ref: offer.ref, amount })}
+                    >
+                      Buy for {offer.price * amount}
+                    </Button>
+                    <Button
+                      icon="comments-dollar"
+                      disabled={!data.logged_in}
+                      onClick={() => act('haggle', { ref: offer.ref })}
+                    >
+                      Haggle
+                    </Button>
+                  </Table.Cell>
+                </Table.Row>
+              );
+            })}
+          </Table>
+        </Section>
+      </Stack.Item>
+      <Stack.Item height="35%">
+        <Section fill scrollable title="Buying from the station">
+          <Table>
+            <Table.Row header>
+              <Table.Cell>Goods</Table.Cell>
+              <Table.Cell textAlign="right">Pays</Table.Cell>
+              <Table.Cell textAlign="right">Wants</Table.Cell>
+              <Table.Cell />
+            </Table.Row>
+            {trader.buying.map((offer) => (
+              <Table.Row key={offer.ref} className="candystripe">
+                <Table.Cell>
+                  {offer.name}
+                  {offer.in_demand && (
+                    <Box inline ml={1} color="good" bold>
+                      IN DEMAND
+                    </Box>
+                  )}
+                </Table.Cell>
+                <Table.Cell textAlign="right" color={offer.haggled ? 'good' : undefined}>
+                  {offer.price} cr
+                </Table.Cell>
+                <Table.Cell textAlign="right">
+                  {offer.stock < 0 ? 'any' : offer.stock}
+                </Table.Cell>
+                <Table.Cell textAlign="right" collapsing>
+                  <Button
+                    icon="comments-dollar"
+                    disabled={!data.cargo_access}
+                    onClick={() => act('haggle', { ref: offer.ref })}
+                  >
+                    Haggle
+                  </Button>
+                </Table.Cell>
+              </Table.Row>
+            ))}
+          </Table>
+        </Section>
+      </Stack.Item>
+    </Stack>
   );
 };
 

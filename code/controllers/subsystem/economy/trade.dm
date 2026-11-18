@@ -12,11 +12,17 @@ SUBSYSTEM_DEF(trade)
 	var/next_shift = 0
 	/// How many shifts happened this round.
 	var/shift_count = 0
+	/// NPC traders, present or away.
+	var/list/datum/trader/traders = list()
+	/// Bought goods waiting for the shuttle.
+	var/list/datum/trade_order/pending_orders = list()
 
 /datum/controller/subsystem/trade/Initialize()
 	for(var/commodity_type in subtypesof(/datum/commodity))
 		commodities[commodity_type] = new commodity_type
 	market_shift(announce = FALSE)
+	for(var/trader_type in subtypesof(/datum/trader))
+		traders += new trader_type
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/trade/fire(resumed)
@@ -31,6 +37,7 @@ SUBSYSTEM_DEF(trade)
 		commodity.shift(hot_chance)
 	shift_count++
 	next_shift = world.time + rand(MARKET_SHIFT_MIN, MARKET_SHIFT_MAX)
+	shift_traders()
 	if(!announce)
 		return
 	var/list/hot = list()
