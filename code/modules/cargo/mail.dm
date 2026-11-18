@@ -6,7 +6,7 @@
 // picked from their department's list half of the time. Cargo gets paid for every package its owner opens.
 // Anyone else can force a package open with something sharp, which tears it up and is logged as mail fraud.
 
-#define MAIL_INTERVAL (15 MINUTES)
+#define MAIL_INTERVAL (30 MINUTES)
 /// Share of the living crew that gets a package in each delivery (Goon aims for about three per player per hour).
 #define MAIL_CREW_SHARE 0.375
 #define MAIL_MAX_PER_DELIVERY 40
@@ -46,7 +46,6 @@ GLOBAL_LIST_INIT(mail_gifts_by_department, list(
 		/obj/item/storage/fancy/donut_box = 4,
 		/obj/item/reagent_containers/cup/glass/coffee_cup/small/coffee = 3,
 		/obj/item/reagent_containers/cup/soda_cans/energy = 3,
-		/obj/item/flash = 2,
 		/obj/item/stack/medical/bruise_pack = 1,
 	),
 	"engineering" = list(
