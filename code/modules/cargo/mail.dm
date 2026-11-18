@@ -15,6 +15,9 @@
 #define MAIL_PAYOUT_STEP 10
 #define MAIL_PAYOUT_MAX 500
 
+/// Mail is switched off: no timers, no deliveries. The packages, bag and crate still exist for admins and mappers.
+/// Set to TRUE (in code or with View Variables) to bring deliveries back.
+GLOBAL_VAR_INIT(mail_enabled, FALSE)
 /// mind -> world.time when that person's next package is due
 GLOBAL_LIST_EMPTY(mail_next_due)
 GLOBAL_VAR_INIT(mail_opened, 0)
@@ -255,10 +258,14 @@ GLOBAL_LIST_INIT(mail_department_colors, list(
 
 /obj/docking_port/mobile/supply/proc/start_mail_timer(datum/source, datum/job/job, mob/living/spawned)
 	SIGNAL_HANDLER
+	if(!GLOB.mail_enabled)
+		return
 	if(spawned?.mind && isnull(GLOB.mail_next_due[spawned.mind]))
 		GLOB.mail_next_due[spawned.mind] = world.time + rand(MAIL_PERSONAL_MIN, MAIL_PERSONAL_MAX)
 
 /obj/docking_port/mobile/supply/proc/deliver_mail(obj/docking_port/stationary/destination)
+	if(!GLOB.mail_enabled)
+		return
 	// timers start for new arrivals on every docking, wherever the shuttle is
 	var/list/due = mail_due_recipients()
 	if(!is_station_level(destination.z) || !length(due))
