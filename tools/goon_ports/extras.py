@@ -1,4 +1,4 @@
-"""Builds the Goonstation sprites for the swing sign, business cards and punching bag skins.
+"""Builds the Goonstation sprites for the swing sign, business cards, mail, phones and punching bag skins.
 
 Sprites: Goonstation 13, CC BY-NC-SA 3.0 (see docs/GOON_ASSETS.md).
 
@@ -65,6 +65,9 @@ def main():
 	writing = sheet("obj", "writing.dmi")
 	for name in CARDS:
 		copy(out, writing, name)
+	items = sheet("obj", "items", "items.dmi")
+	for name in ["mail-1", "mail-2", "mail-3", "mail-1-b", "mail-2-b", "mail-3-b", "mailsatchel"]:
+		copy(out, items, name)
 	out.to_file(os.path.join(ROOT, "icons", "obj", "goon_misc.dmi"))
 
 	for side, suffix in (("left", "L"), ("right", "R")):

@@ -76,6 +76,7 @@
 		return .
 
 	buy(S1)
+	deliver_mail(S1)
 	sell(S1)
 
 /obj/docking_port/mobile/supply/proc/buy(obj/docking_port/stationary/destination)

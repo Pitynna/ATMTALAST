@@ -2496,6 +2496,7 @@
 #include "code\modules\cargo\centcom_podlauncher.dm"
 #include "code\modules\cargo\supplypod.dm"
 #include "code\modules\cargo\exports.dm"
+#include "code\modules\cargo\mail.dm"
 #include "code\modules\cargo\exports\discs.dm"
 #include "code\modules\cargo\exports\documents.dm"
 #include "code\modules\cargo\exports\gems.dm"
