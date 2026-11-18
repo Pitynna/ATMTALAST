@@ -1,20 +1,22 @@
 // Station mail, an idea from Goonstation 13. Sprites are CC BY-NC-SA 3.0 (docs/GOON_ASSETS.md),
 // built by tools/goon_ports/extras.py; the code is our own.
 //
-// Every MAIL_INTERVAL the next supply shuttle to dock at the station brings a crate of mail.
+// Every crew member has their own mail timer: a package for them is due 45-60 minutes after the last one
+// (or after we first saw them), so mail trickles in instead of arriving for everyone at once.
+// Due packages ride the next supply shuttle that docks at the station, in a mail crate.
 // Each package is addressed to a living crew member and DNA-locked to them. Inside is a small gift,
 // picked from their department's list half of the time. Cargo gets paid for every package its owner opens.
 // Anyone else can force a package open with something sharp, which tears it up and is logged as mail fraud.
 
-#define MAIL_INTERVAL (30 MINUTES)
-/// Share of the living crew that gets a package in each delivery (Goon aims for about three per player per hour).
-#define MAIL_CREW_SHARE 0.375
+#define MAIL_PERSONAL_MIN (45 MINUTES)
+#define MAIL_PERSONAL_MAX (60 MINUTES)
 #define MAIL_MAX_PER_DELIVERY 40
 #define MAIL_PAYOUT_BASE 50
 #define MAIL_PAYOUT_STEP 10
 #define MAIL_PAYOUT_MAX 500
 
-GLOBAL_VAR_INIT(next_mail_delivery, MAIL_INTERVAL)
+/// mind -> world.time when that person's next package is due
+GLOBAL_LIST_EMPTY(mail_next_due)
 GLOBAL_VAR_INIT(mail_opened, 0)
 
 GLOBAL_LIST_INIT(mail_gifts_everyone, list(
@@ -113,29 +115,30 @@ GLOBAL_LIST_INIT(mail_department_colors, list(
 		return "service"
 	return null
 
-/// Makes up to `amount` packages for living crew, at `where`. Returns the packages.
-/proc/create_station_mail(atom/where, amount)
+/// Living crew on the station whose package is due. Starts a timer for anyone we haven't seen yet.
+/proc/mail_due_recipients()
 	. = list()
-	var/list/crew = list()
 	for(var/mob/living/carbon/human/person as anything in GLOB.human_list)
 		if(!person.client || person.stat == DEAD || !person.mind?.assigned_role || !person.dna)
 			continue
 		if(!is_station_level(person.z))
 			continue
-		crew += person
-	if(!length(crew))
-		return
-	var/list/already_picked = list()
-	for(var/i in 1 to amount)
-		var/mob/living/carbon/human/recipient = pick(crew)
-		var/retries = 10
-		while(already_picked[recipient] && retries-- > 0)
-			recipient = pick(crew)
-		already_picked[recipient] = TRUE
+		var/datum/mind/mind = person.mind
+		if(isnull(GLOB.mail_next_due[mind]))
+			GLOB.mail_next_due[mind] = world.time + rand(MAIL_PERSONAL_MIN, MAIL_PERSONAL_MAX)
+			continue
+		if(world.time >= GLOB.mail_next_due[mind])
+			. += person
+
+/// Makes one package for each recipient at `where` and restarts their timers. Returns the packages.
+/proc/create_station_mail(atom/where, list/recipients)
+	. = list()
+	for(var/mob/living/carbon/human/recipient as anything in recipients)
 		var/department = mail_department_of(recipient.mind.assigned_role)
 		var/list/gifts = (department && prob(50)) ? GLOB.mail_gifts_by_department[department] : GLOB.mail_gifts_everyone
 		var/obj/item/mail_package/package = new(where)
 		package.address(recipient, pickweight(gifts), department)
+		GLOB.mail_next_due[recipient.mind] = world.time + rand(MAIL_PERSONAL_MIN, MAIL_PERSONAL_MAX)
 		. += package
 
 // MARK: Package
@@ -241,8 +244,24 @@ GLOBAL_LIST_INIT(mail_department_colors, list(
 
 // MARK: Delivery on the supply shuttle
 
+/obj/docking_port/mobile/supply/Initialize(mapload)
+	. = ..()
+	// start each crew member's mail timer when they arrive, not when the shuttle first docks
+	RegisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN, PROC_REF(start_mail_timer))
+
+/obj/docking_port/mobile/supply/Destroy(force)
+	UnregisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN)
+	return ..()
+
+/obj/docking_port/mobile/supply/proc/start_mail_timer(datum/source, datum/job/job, mob/living/spawned)
+	SIGNAL_HANDLER
+	if(spawned?.mind && isnull(GLOB.mail_next_due[spawned.mind]))
+		GLOB.mail_next_due[spawned.mind] = world.time + rand(MAIL_PERSONAL_MIN, MAIL_PERSONAL_MAX)
+
 /obj/docking_port/mobile/supply/proc/deliver_mail(obj/docking_port/stationary/destination)
-	if(!is_station_level(destination.z) || world.time < GLOB.next_mail_delivery)
+	// timers start for new arrivals on every docking, wherever the shuttle is
+	var/list/due = mail_due_recipients()
+	if(!is_station_level(destination.z) || !length(due))
 		return
 	var/turf/spot
 	for(var/turf/simulated/floor in areaInstance)
@@ -258,25 +277,20 @@ GLOBAL_LIST_INIT(mail_department_colors, list(
 			break
 	if(!spot)
 		return
-	var/living_crew = 0
-	for(var/mob/living/carbon/human/person as anything in GLOB.human_list)
-		if(person.client && person.stat != DEAD && is_station_level(person.z))
-			living_crew++
-	var/amount = min(MAIL_MAX_PER_DELIVERY, CEILING(living_crew * MAIL_CREW_SHARE, 1))
-	if(amount < 1)
-		return
+	// anyone over the limit simply waits for the next shuttle
+	if(length(due) > MAIL_MAX_PER_DELIVERY)
+		due.Cut(MAIL_MAX_PER_DELIVERY + 1)
 	var/obj/structure/closet/crate/mail/crate = new(spot)
-	var/list/packages = create_station_mail(crate, amount)
+	var/list/packages = create_station_mail(crate, due)
 	if(!length(packages))
 		qdel(crate)
 		return
 	if(length(packages) > 5)
 		new /obj/item/storage/bag/mail(crate)
-	GLOB.next_mail_delivery = world.time + MAIL_INTERVAL
 	log_game("Mail: [length(packages)] package\s delivered on the supply shuttle.")
 
-#undef MAIL_INTERVAL
-#undef MAIL_CREW_SHARE
+#undef MAIL_PERSONAL_MIN
+#undef MAIL_PERSONAL_MAX
 #undef MAIL_MAX_PER_DELIVERY
 #undef MAIL_PAYOUT_BASE
 #undef MAIL_PAYOUT_STEP
