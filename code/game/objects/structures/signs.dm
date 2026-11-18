@@ -58,6 +58,7 @@
 	var/obj/item/sign/S = new(src.loc)
 	S.name = name
 	S.desc = desc
+	S.icon = icon
 	S.icon_state = icon_state
 	//var/icon/I = icon('icons/obj/decals.dmi', icon_state)
 	//S.icon = I.Scale(24, 24)
@@ -95,6 +96,7 @@
 			return TRUE // We dont want to stab it or place it, so we return
 	sign.name = name
 	sign.desc = desc
+	sign.icon = icon
 	sign.icon_state = sign_state
 	balloon_alert(user, "прикручено")
 	qdel(src)
