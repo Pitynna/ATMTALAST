@@ -57,6 +57,8 @@
 		if(cargo_quest)
 			current_quests += cargo_quest
 
+	// Goods that are in demand on the commodity market pay more.
+	reward = round(reward * SStrade.quest_modifier(src))
 	if(SSsecurity_level.get_current_level_as_number() > SEC_LEVEL_RED)
 		reward *= 2
 	customer.change_reward(src)
