@@ -2,7 +2,7 @@
 
 /obj/machinery/computer/trade_console
 	name = "trade console"
-	desc = "Shows prices on the galactic commodity market and puts you in touch with travelling traders. Swipe your ID to buy."
+	desc = "Shows prices on the galactic commodity market and puts you in touch with travelling traders. Swipe your ID to buy with your own credits, or with your department's budget if you run it."
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	circuit = /obj/item/circuitboard/trade_console
@@ -10,10 +10,12 @@
 	/// Who is logged in. Anyone else sees the console as logged out.
 	var/datum/weakref/logged_user
 	var/datum/money_account/logged_account
-	/// Logged in user has cargo access and may spend the supply budget.
+	/// Logged in user has cargo access: may sell to traders and haggle over what they pay.
 	var/cargo_access = FALSE
-	/// Spend the supply budget instead of the personal account.
-	var/use_department = FALSE
+	/// Departments whose budget the logged in user may spend.
+	var/list/payable_departments = list()
+	/// Department paying for purchases, or null for the personal account.
+	var/paying_department
 	var/status_message
 	/// Stops note printing spam.
 	COOLDOWN_DECLARE(print_cooldown)
@@ -56,8 +58,8 @@
 /obj/machinery/computer/trade_console/proc/paying_account(mob/user)
 	if(!session_account(user))
 		return null
-	if(use_department && cargo_access)
-		return GLOB.department_accounts[STATION_DEPARTMENT_SUPPLY]
+	if(paying_department && (paying_department in payable_departments))
+		return GLOB.department_accounts[paying_department]
 	return logged_account
 
 /obj/machinery/computer/trade_console/proc/visible_traders()
@@ -88,9 +90,13 @@
 		data["owner"] = account.owner_name
 		data["balance"] = account.money
 		data["cargo_access"] = cargo_access
-		data["use_department"] = use_department && cargo_access
-		var/datum/money_account/cargo_account = GLOB.department_accounts[STATION_DEPARTMENT_SUPPLY]
-		data["department_balance"] = cargo_account.money
+		var/list/payers = list(list("id" = null, "name" = "Personal account", "balance" = account.money))
+		for(var/department in payable_departments)
+			var/datum/money_account/budget = GLOB.department_accounts[department]
+			if(budget)
+				payers += list(list("id" = department, "name" = "[department] budget", "balance" = budget.money))
+		data["payers"] = payers
+		data["paying_department"] = paying_department
 	return data
 
 /obj/machinery/computer/trade_console/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -110,17 +116,19 @@
 			logged_user = null
 			logged_account = null
 			cargo_access = FALSE
-			use_department = FALSE
+			payable_departments = list()
+			paying_department = null
 			status_message = null
-		if("toggle_department")
-			use_department = cargo_access && !use_department
+		if("set_payer")
+			var/department = params["department"]
+			paying_department = (department in payable_departments) ? department : null
 		if("buy")
 			var/datum/trade_offer/offer = locateUID(params["ref"])
 			if(!istype(offer) || !offer.selling || !(offer.trader in visible_traders()))
 				return
 			var/datum/money_account/payer = paying_account(user)
-			var/department = payer != account
-			status_message = SStrade.purchase(offer, text2num(params["amount"]), payer, department ? null : account.owner_name)
+			var/department = payer != account ? paying_department : null
+			status_message = SStrade.purchase(offer, text2num(params["amount"]), payer, account.owner_name, department)
 			if(!status_message)
 				status_message = "Ordered from [offer.trader?.name]. It arrives on the next trade freighter."
 				playsound(src, 'sound/machines/twobeep.ogg', 30, TRUE)
@@ -175,8 +183,15 @@
 		return
 	logged_account = account
 	logged_user = WEAKREF(user)
-	cargo_access = (ACCESS_CARGO in id.GetAccess()) || (ACCESS_QM in id.GetAccess())
-	use_department = FALSE
+	var/list/access = id.GetAccess()
+	cargo_access = (ACCESS_CARGO in access) || (ACCESS_QM in access)
+	payable_departments = list()
+	for(var/department in GLOB.trade_department_spenders)
+		for(var/needed in GLOB.trade_department_spenders[department])
+			if(needed in access)
+				payable_departments += department
+				break
+	paying_department = null
 	status_message = "Welcome, [account.owner_name]."
 
 /// Called by SStrade when prices change.

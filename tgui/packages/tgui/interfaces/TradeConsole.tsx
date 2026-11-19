@@ -69,8 +69,14 @@ type Data = {
   owner?: string;
   balance?: number;
   cargo_access?: boolean;
-  use_department?: boolean;
-  department_balance?: number;
+  payers?: Payer[];
+  paying_department?: string | null;
+};
+
+type Payer = {
+  id: string | null;
+  name: string;
+  balance: number;
 };
 
 const formatTime = (seconds: number) => {
@@ -121,7 +127,7 @@ const AccountBar = () => {
       <Section>
         <Stack align="center">
           <Stack.Item grow color="label">
-            Log in with your ID to buy. Cargo staff can also spend the supply
+            Log in with your ID to buy. Heads of staff can spend their department budget, cargo staff the supply
             budget and sell to traders.
           </Stack.Item>
           <Stack.Item>
@@ -133,6 +139,8 @@ const AccountBar = () => {
       </Section>
     );
   }
+  const payers = data.payers || [];
+  const current = data.paying_department || null;
   return (
     <Section>
       <Stack align="center">
@@ -140,34 +148,32 @@ const AccountBar = () => {
           <Box inline bold mr={2}>
             {data.owner}
           </Box>
-          <Box inline color="label" mr={1}>
-            Paying from:
-          </Box>
-          <Box inline bold color="good">
-            {data.use_department
-              ? `supply budget, ${data.department_balance} cr`
-              : `personal account, ${data.balance} cr`}
-          </Box>
           {data.pending_orders > 0 && (
-            <Box inline color="label" ml={2}>
-              Orders waiting for the shuttle: {data.pending_orders}
+            <Box inline color="label">
+              Orders waiting for delivery: {data.pending_orders}
             </Box>
           )}
         </Stack.Item>
         <Stack.Item>
-          {!!data.cargo_access && (
-            <Button.Checkbox
-              checked={!!data.use_department}
-              onClick={() => act('toggle_department')}
-            >
-              Supply budget
-            </Button.Checkbox>
-          )}
           <Button icon="sign-out-alt" onClick={() => act('logout')}>
             Log out
           </Button>
         </Stack.Item>
       </Stack>
+      <Box mt={1}>
+        <Box inline color="label" mr={1}>
+          Pay from:
+        </Box>
+        {payers.map((payer) => (
+          <Button
+            key={payer.id || 'personal'}
+            selected={payer.id === current}
+            onClick={() => act('set_payer', { department: payer.id })}
+          >
+            {payer.name}, {payer.balance} cr
+          </Button>
+        ))}
+      </Box>
     </Section>
   );
 };
