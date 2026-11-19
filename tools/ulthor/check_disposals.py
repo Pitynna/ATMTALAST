@@ -26,6 +26,7 @@ REVERSE = {1: 2, 2: 1, 4: 8, 8: 4}
 RIGHT = {1: 4, 4: 2, 2: 8, 8: 1}
 LEFT = {v: k for k, v in RIGHT.items()}
 MAIN = (76, 109, 1)
+CHUTE = (80, 133, 1)  # cargo delivery chute
 SPECIAL = {(64, 161, 1): (60, 159, 1),
            (137, 190, 1): (133, 197, 1),
            (186, 168, 1): (186, 167, 1)}
@@ -90,8 +91,10 @@ def wall_appearance(tiles, p):
     return {1: (1, 16), 2: (2, 0), 4: (8, 0), 8: (4, 0)}[wall_direction(tiles, p)]
 
 
-def trace(pipes, start, outlets, tag=0):
-    """Route of an item from bin start; tag is its destinationTag (0 = untagged)."""
+def trace(pipes, start, outlets, tag=1, bins=()):
+    """Route of an item from bin start. tag is the holder's destinationTag: a
+    bin set to waste gives its trash tag 1 ("Disposals"). Mail (tag > 1) may
+    end at a bin, which expels it."""
     p = start
     incoming = 16  # DOWN, as in disposalholder.start()
     visited = set()
@@ -110,19 +113,24 @@ def trace(pipes, start, outlets, tag=0):
             raise ValueError(f'Zero pipe direction at {p}')
         if typ == PIPE + 'trunk':
             if incoming != 16:
-                if p not in outlets:
+                if p not in outlets and not (tag > 1 and p in bins):
                     raise ValueError(f'Route returns to another bin at {p}')
                 return route
             exit_dir = d
+        elif '/sortjunction' in typ:
+            # pipe_sorting.dm: anything not arriving from the sort side whose
+            # tag matches leaves through the side, the rest follows dir
+            side = ports & ~(d | REVERSE[d])
+            if incoming != side and int(values.get('sortType', '0')) == tag:
+                exit_dir = side
+            elif incoming == REVERSE[d]:
+                raise ValueError(f'Item bounces at sort junction {p}')
+            else:
+                exit_dir = d
         elif '/junction' in typ:
             if REVERSE[incoming] == d:
                 raise ValueError(f'Random junction routing at {p}')
             exit_dir = d
-        elif '/sortjunction' in typ:
-            side = ports & ~(d | REVERSE[d])
-            if incoming == REVERSE[d]:
-                raise ValueError(f'Item enters sort junction {p} against the flow')
-            exit_dir = side if tag and incoming != side and int(values.get('sortType', '0')) == tag else d
         else:
             exit_dir = ports & ~REVERSE[incoming]
         if exit_dir not in DELTA:
@@ -155,17 +163,29 @@ def audit(m):
     used = set()
     mail = {}
     for entry in routes:
-        route = trace(pipes, entry['start'], outlets)
-        used.update(route)
-        for q in route:
-            if '/sortjunction' in pipes[q][0]:
-                tag = int(pipes[q][1].get('sortType', '0'))
-                try:
-                    tagged = trace(pipes, entry['start'], outlets, tag)
-                    used.update(tagged)
-                    mail[q] = tagged[-1]
-                except (ValueError, KeyError) as error:
-                    failures.append(f'{entry["start"]} tagged {tag}: {error}')
+        used.update(trace(pipes, entry['start'], outlets))
+    # every sort junction: mail with its tag from the cargo delivery chute
+    # and from every bin on the main network must end at the same receiver
+    senders = [r['start'] for r in routes if r['outlet'] == MAIN]
+    for q, (typ, values) in sorted(pipes.items()):
+        if '/sortjunction' not in typ:
+            continue
+        tag = int(values.get('sortType', '0'))
+        for start in [CHUTE] + senders:
+            try:
+                route = trace(pipes, start, outlets, tag, bins)
+            except (ValueError, KeyError) as error:
+                failures.append(f'{start} tagged {tag}: {error}')
+                continue
+            used.update(route)
+            if tag > 1:
+                if route[-1] == MAIN:
+                    failures.append(f'tag {tag} from {start} ends in the disposal outlet')
+                mail.setdefault(tag, route[-1])
+                if mail[tag] != route[-1]:
+                    failures.append(f'tag {tag}: {start} reaches {route[-1]}, the chute {mail[tag]}')
+            elif route[-1] != MAIN:
+                failures.append(f'tag {tag} from {start} misses the disposal outlet')
     for p, (typ, values) in pipes.items():
         if not int(values.get('dir', '0')):
             failures.append(f'{p}: zero direction')
@@ -186,7 +206,7 @@ def audit(m):
                 failures.append(f'{p}: {count} exact copies of {a}')
     return {'bins': len(bins), 'wall_bins': sum(t.startswith(WALL) for t, v in bins.values()),
             'pipes': len(pipes), 'outlets': len(outlets), 'routes': routes,
-            'mail': {str(k): v for k, v in mail.items()}, 'failures': failures}
+            'mail': {str(k): v[:2] for k, v in sorted(mail.items())}, 'failures': failures}
 
 
 def repair(m):
