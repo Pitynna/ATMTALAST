@@ -21980,6 +21980,17 @@
 	dir = 1
 	},
 /area/station/command/office/hop)
+"luk" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 4;
+	height = 8;
+	id = "trade_freighter_home";
+	name = "trade bay";
+	width = 6
+	},
+/turf/space,
+/area/space)
 "luw" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Solitary Confinement";
@@ -26485,6 +26496,11 @@
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
 /area/station/science/research/lobby)
+"nIV" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/external/trade_bay,
+/turf/simulated/floor/plating,
+/area/station/cargo/storage)
 "nIY" = (
 /obj/structure/chair/comfy/brown{
 	dir = 1
@@ -64925,7 +64941,7 @@ vdx
 vdx
 vdx
 agy
-agy
+luk
 agy
 agy
 agy
@@ -65182,7 +65198,7 @@ dLl
 jqG
 vdx
 vdx
-vdx
+nIV
 vdx
 awM
 agG

@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Chart,
+  Icon,
   NoticeBox,
   NumberInput,
   Section,
@@ -62,6 +63,7 @@ type Data = {
   traders: Trader[];
   away_count: number;
   pending_orders: number;
+  freighter: string;
   status: string | null;
   logged_in: boolean;
   owner?: string;
@@ -175,6 +177,27 @@ const TradersTab = () => {
   const [selected, setSelected] = useState<string | null>(null);
   const trader =
     data.traders.find((entry) => entry.id === selected) || data.traders[0];
+  return (
+    <Stack fill vertical>
+      <Stack.Item>
+        <NoticeBox info>
+          <Icon name="shuttle-van" mr={1} />
+          {data.freighter}
+        </NoticeBox>
+      </Stack.Item>
+      <Stack.Item grow>
+        <TradersList trader={trader} setSelected={setSelected} />
+      </Stack.Item>
+    </Stack>
+  );
+};
+
+const TradersList = (props: {
+  trader: Trader | undefined;
+  setSelected: (id: string) => void;
+}) => {
+  const { data } = useBackend<Data>();
+  const { trader, setSelected } = props;
   return (
     <Stack fill>
       <Stack.Item width="28%">

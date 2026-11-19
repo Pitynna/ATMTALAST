@@ -29,7 +29,7 @@
 /// Put this in a crate on the supply shuttle to sell its contents to a trader.
 /obj/item/paper/trade_consignment
 	name = "consignment note"
-	desc = "Put it in a crate with the goods and send the crate away on the supply shuttle."
+	desc = "Put it in a crate with the goods and leave the crate aboard the trade freighter. Stations without a trade bay send it on the supply shuttle."
 	var/trader_type
 
 /obj/item/paper/trade_consignment/proc/setup(datum/trader/trader)
@@ -98,12 +98,18 @@
 		trader.selling -= offer
 		qdel(offer)
 
-/// Unloads pending orders onto the shuttle when it reaches the station.
-/datum/controller/subsystem/trade/proc/deliver_orders(obj/docking_port/mobile/supply/shuttle, obj/docking_port/stationary/destination)
-	if(!length(pending_orders) || !is_station_level(destination.z))
+/// Supply shuttle fallback for maps without a trade bay.
+/datum/controller/subsystem/trade/proc/deliver_by_supply(obj/docking_port/mobile/supply/shuttle, obj/docking_port/stationary/destination)
+	if(freighter_available() || !is_station_level(destination.z))
+		return
+	deliver_orders(shuttle.areaInstance)
+
+/// Unloads pending orders onto free floor of a shuttle area.
+/datum/controller/subsystem/trade/proc/deliver_orders(area/cargo_area)
+	if(!length(pending_orders))
 		return
 	var/list/spots = list()
-	for(var/turf/simulated/floor in shuttle.areaInstance)
+	for(var/turf/simulated/floor in cargo_area)
 		if(floor.density)
 			continue
 		var/blocked = FALSE

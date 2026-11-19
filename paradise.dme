@@ -2676,6 +2676,7 @@
 #include "code\modules\economy\subscriptions\subscriptions\station_donations.dm"
 #include "code\modules\economy\trade\commodities.dm"
 #include "code\modules\economy\trade\delivery.dm"
+#include "code\modules\economy\trade\freighter.dm"
 #include "code\modules\economy\trade\trade_console.dm"
 #include "code\modules\economy\trade\trader.dm"
 #include "code\modules\economy\trade\traders.dm"

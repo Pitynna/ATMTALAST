@@ -77,7 +77,7 @@
 
 	buy(S1)
 	deliver_mail(S1)
-	SStrade.deliver_orders(src, S1)
+	SStrade.deliver_by_supply(src, S1)
 	sell(S1)
 
 /obj/docking_port/mobile/supply/proc/buy(obj/docking_port/stationary/destination)

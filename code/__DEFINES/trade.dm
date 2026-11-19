@@ -19,3 +19,10 @@
 #define COMMODITY_TEXTILES "Textiles"
 #define COMMODITY_SCIENCE "Science"
 #define COMMODITY_CONTRABAND "Contraband"
+
+/// Trade freighter shuttle id.
+#define TRADE_FREIGHTER_ID "trade_freighter"
+/// Trade bay on the station.
+#define TRADE_FREIGHTER_HOME "trade_freighter_home"
+/// Where the freighter waits off-station.
+#define TRADE_FREIGHTER_AWAY "trade_freighter_away"

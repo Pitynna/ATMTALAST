@@ -80,6 +80,7 @@
 			away_count++
 	data["away_count"] = away_count
 	data["pending_orders"] = length(SStrade.pending_orders)
+	data["freighter"] = SStrade.freighter_status()
 	data["status"] = status_message
 	var/datum/money_account/account = session_account(user)
 	data["logged_in"] = !!account
@@ -121,7 +122,7 @@
 			var/department = payer != account
 			status_message = SStrade.purchase(offer, text2num(params["amount"]), payer, department ? null : account.owner_name)
 			if(!status_message)
-				status_message = "Ordered from [offer.trader?.name]. It arrives on the next supply shuttle."
+				status_message = "Ordered from [offer.trader?.name]. It arrives on the next trade freighter."
 				playsound(src, 'sound/machines/twobeep.ogg', 30, TRUE)
 		if("haggle")
 			var/datum/trade_offer/offer = locateUID(params["ref"])
@@ -150,7 +151,7 @@
 			var/obj/item/paper/trade_consignment/note = new(loc)
 			note.setup(trader)
 			playsound(src, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, TRUE)
-			status_message = "Consignment note printed. Put it in a crate with the goods and send the crate on the supply shuttle."
+			status_message = "Consignment note printed. Put it in a crate with the goods and leave the crate aboard the trade freighter."
 
 /obj/machinery/computer/trade_console/proc/login(mob/user)
 	if(issilicon(user))

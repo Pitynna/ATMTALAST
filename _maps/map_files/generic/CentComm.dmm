@@ -3901,6 +3901,12 @@
 	icon_state = "dark"
 	},
 /area/centcom/central_command_areas/supply)
+"cgW" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle,
+/area/shuttle/trade_freighter)
 "chj" = (
 /obj/structure/bookcase,
 /obj/item/book/manual,
@@ -6795,6 +6801,15 @@
 /obj/machinery/light/small/directional/west,
 /turf/simulated/floor/mineral/plastitanium/nitrogen/orange,
 /area/shuttle/vox)
+"dAa" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/turf/simulated/floor/shuttle/plating,
+/area/shuttle/trade_freighter)
 "dAt" = (
 /obj/effect/mapping_helpers/turfs/damage,
 /turf/simulated/floor/mineral/plastitanium/nitrogen/yellow,
@@ -7149,6 +7164,19 @@
 	icon_state = "darkgreencorners"
 	},
 /area/centcom/central_command_areas/special_operations)
+"dIy" = (
+/obj/machinery/door/airlock/external/trade_freighter,
+/obj/docking_port/mobile/trade_freighter,
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 4;
+	height = 8;
+	id = "trade_freighter_away";
+	name = "trade freighter bay";
+	width = 6
+	},
+/turf/simulated/floor/shuttle,
+/area/shuttle/trade_freighter)
 "dIE" = (
 /obj/machinery/computer/syndicate_depot/teleporter{
 	lifespan = 0
@@ -8760,6 +8788,12 @@
 	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_base/control)
+"ewu" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/simulated/floor/shuttle/plating,
+/area/shuttle/trade_freighter)
 "ewA" = (
 /obj/structure/dresser,
 /obj/structure/window/reinforced{
@@ -14232,6 +14266,9 @@
 	},
 /turf/simulated/floor/carpet/black,
 /area/centcom/central_command_areas/zone/three)
+"hbC" = (
+/turf/simulated/floor/shuttle,
+/area/shuttle/trade_freighter)
 "hbV" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/railing,
@@ -18995,6 +19032,9 @@
 	name = "floor"
 	},
 /area/centcom/syndicate_base/outside)
+"jqi" = (
+/turf/simulated/wall/shuttle,
+/area/shuttle/trade_freighter)
 "jqj" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -50346,6 +50386,10 @@
 /obj/item/pen/fountain,
 /turf/simulated/floor/carpet/black,
 /area/centcom/central_command_areas/zone/two)
+"xgV" = (
+/obj/machinery/light/spot,
+/turf/simulated/floor/shuttle,
+/area/shuttle/trade_freighter)
 "xhc" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
@@ -110369,10 +110413,10 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
+ewu
+ewu
+ewu
+ewu
 mVX
 mVX
 mVX
@@ -110625,12 +110669,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+dAa
+dAa
+dAa
+dAa
+jqi
 mVX
 mVX
 mVX
@@ -110882,12 +110926,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+hbC
+hbC
+hbC
+hbC
+jqi
 mVX
 mVX
 mVX
@@ -111139,12 +111183,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+hbC
+hbC
+hbC
+hbC
+jqi
 mVX
 mVX
 mVX
@@ -111396,12 +111440,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+cgW
+hbC
+hbC
+xgV
+jqi
 mVX
 mVX
 mVX
@@ -111653,12 +111697,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+hbC
+hbC
+hbC
+hbC
+jqi
 mVX
 mVX
 mVX
@@ -111910,12 +111954,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+hbC
+hbC
+hbC
+hbC
+jqi
 mVX
 mVX
 mVX
@@ -112167,12 +112211,12 @@ mVX
 mVX
 mVX
 mVX
-mVX
-mVX
-mVX
-mVX
-mVX
-mVX
+jqi
+dIy
+jqi
+jqi
+jqi
+jqi
 mVX
 mVX
 mVX

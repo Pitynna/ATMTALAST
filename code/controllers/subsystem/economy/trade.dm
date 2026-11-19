@@ -28,6 +28,8 @@ SUBSYSTEM_DEF(trade)
 /datum/controller/subsystem/trade/fire(resumed)
 	if(world.time >= next_shift)
 		market_shift()
+		call_freighter()
+	process_freighter()
 
 /datum/controller/subsystem/trade/proc/market_shift(announce = TRUE)
 	// Some shifts are hot and many goods are wanted, some are quiet.
