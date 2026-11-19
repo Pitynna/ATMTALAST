@@ -50,19 +50,16 @@ def room_free(M, p, area):
     for a in M.tile(p):
         b = H.base(a)
         if b.startswith(('/turf', '/area', '/obj/effect/turf_decal', '/obj/structure/cable', '/obj/machinery/atmospherics/pipe',
-                         '/obj/structure/disposalpipe', '/obj/machinery/light', '/obj/structure/sign', '/obj/machinery/camera')):
+                         '/obj/structure/disposalpipe', '/obj/machinery/light/', '/obj/structure/sign', '/obj/machinery/camera')) or b == '/obj/machinery/light':
             continue
-        if '/directional/' in b or H.re.search(r'pixel_[xy] = -?(2[0-9]|3[0-9])', a):
-            continue
+        if '/directional/' in b or H.re.search(r'pixel_[xy] = -?(1[6-9]|[2-3][0-9])', a):
+            return False  # something hangs on the wall here: keep its spot clear
         return False
     return True
 
 
 def sign_face(M, p, d):
-    """Like face_free, but a door sign may also hang on a window (shop-window neon)."""
-    w = H.nb(p, d)
-    if M.window(w) and not M.door(w):
-        return not any(H.base(a).startswith(('/obj/structure/sign', '/obj/machinery')) for a in M.tile(w)) and             not any(f'{H.PIX[d]}' in a for a in M.tile(p))
+    """Door signs hang on solid wall only, never on a window."""
     return H.face_free(M, p, d)
 
 
@@ -122,11 +119,14 @@ def decorate(M, area, cfg):
                 if not M.door(door) or not M.hall(out) or not M.floor(out):
                     continue
                 # hang it on the room's wall right beside the door, seen from the corridor
-                for sd in (('E', 'W') if d in 'NS' else ('N', 'S')):
-                    q = H.nb(out, sd)
-                    if M.floor(q) and M.hall(q) and sign_face(M, q, H.OPP[d]):
-                        M.add(q, f'{cfg["outside"]}{{{H.PIX[H.OPP[d]]}}}', 'door signs')
-                        return
+                for dist in (1, 2, 3):  # nearest solid wall beside the door, seen from the corridor
+                    for sd in (('E', 'W') if d in 'NS' else ('N', 'S')):
+                        q = out
+                        for _ in range(dist):
+                            q = H.nb(q, sd)
+                        if M.floor(q) and M.hall(q) and sign_face(M, q, H.OPP[d]):
+                            M.add(q, f'{cfg["outside"]}{{{H.PIX[H.OPP[d]]}}}', 'door signs')
+                            return
 
 
 def main():

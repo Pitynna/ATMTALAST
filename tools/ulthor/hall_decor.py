@@ -156,10 +156,10 @@ def free_floor(M, p):
     for a in M.tile(p):
         b = base(a)
         if b.startswith(('/turf', '/area', '/obj/effect/turf_decal', '/obj/structure/cable', '/obj/machinery/atmospherics/pipe',
-                         '/obj/structure/disposalpipe', '/obj/machinery/light', '/obj/structure/sign', '/obj/machinery/camera')):
+                         '/obj/structure/disposalpipe', '/obj/machinery/light/', '/obj/structure/sign', '/obj/machinery/camera')) or b == '/obj/machinery/light':
             continue
-        if '/directional/' in b or re.search(r'pixel_[xy] = -?(2[0-9]|3[0-9])', a):
-            continue
+        if '/directional/' in b or re.search(r'pixel_[xy] = -?(1[6-9]|[2-3][0-9])', a):
+            return False  # something hangs on the wall here: keep its spot clear
         return False
     return True
 
