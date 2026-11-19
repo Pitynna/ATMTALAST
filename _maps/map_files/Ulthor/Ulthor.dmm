@@ -11135,6 +11135,21 @@
 	oxygen = 0.01
 	},
 /area/station/engineering/atmos)
+"fIO" = (
+/obj/machinery/computer/security/mining,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "fIP" = (
 /obj/structure/cable,
 /obj/structure/table,
@@ -16128,6 +16143,18 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/ulthor_tool_storage)
+"ieO" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "ifq" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -23399,6 +23426,19 @@
 	dir = 1
 	},
 /area/station/ai/upload/chamber)
+"lSP" = (
+/obj/structure/chair/office/dark,
+/obj/effect/landmark/start/quartermaster,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "lSW" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plasteel,
@@ -25853,6 +25893,15 @@
 	icon_state = "bluefull"
 	},
 /area/station/hallway/primary/fore)
+"net" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/megaphone,
+/turf/simulated/floor/plasteel,
+/area/station/command/office/qm)
 "neJ" = (
 /obj/structure/rack{
 	dir = 8;
@@ -30027,6 +30076,17 @@
 	icon_state = "red"
 	},
 /area/station/legal/courtroom)
+"phO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "pid" = (
 /turf/simulated/floor/engine,
 /area/station/science/xenobiology)
@@ -46406,6 +46466,16 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/cargo/storage)
+"xFR" = (
+/obj/machinery/disposal,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/command/office/qm)
 "xGj" = (
 /obj/structure/table/wood,
 /obj/item/instrument/violin,
@@ -67915,8 +67985,8 @@ kOM
 jsP
 oZq
 sVY
-uod
-daB
+net
+ieO
 pYV
 kIQ
 awM
@@ -68173,7 +68243,7 @@ nXu
 wqh
 sVY
 vbB
-hZk
+lSP
 qmO
 ngh
 awM
@@ -68430,7 +68500,7 @@ nXu
 vCK
 wbq
 uxa
-brS
+phO
 qKP
 qKV
 awM
@@ -68687,8 +68757,8 @@ eXR
 lkq
 wbq
 bAD
-dFk
-xlU
+fIO
+xFR
 gIm
 awM
 tSj
