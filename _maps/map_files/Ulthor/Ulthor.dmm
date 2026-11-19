@@ -8870,6 +8870,17 @@
 	icon_state = "neutralfull"
 	},
 /area/station/maintenance/ulthor_engineering_passage)
+"edG" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 12;
+	id = "ferry_home";
+	name = "port bay 3";
+	width = 5
+	},
+/turf/space,
+/area/space)
 "edN" = (
 /obj/effect/spawner/window/reinforced,
 /turf/simulated/floor/plating,
@@ -22030,6 +22041,17 @@
 	icon_state = "white"
 	},
 /area/station/medical/ward)
+"kdm" = (
+/obj/machinery/door/airlock/external{
+	id_tag = "ferry_home";
+	locked = 1;
+	name = "Ferry Dock"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/hallway/secondary/entry)
 "kdI" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/disposalpipe/segment{
@@ -69157,7 +69179,7 @@ agy
 agy
 agy
 agy
-agy
+edG
 agy
 agy
 agy
@@ -69414,7 +69436,7 @@ agy
 vfr
 vfr
 vfr
-mZB
+kdm
 vfr
 tHe
 tHe
