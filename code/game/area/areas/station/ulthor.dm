@@ -167,3 +167,11 @@
 /area/station/maintenance/ulthor_security_passage
 	name = "Ulthor Security Maintenance"
 	icon_state = "smaint"
+
+/area/station/hallway/ulthor_commons
+	name = "Commons Hallway"
+	icon_state = "hallA"
+
+/area/station/commons/storage/tools
+	name = "Auxiliary Tool Storage"
+	icon_state = "auxstorage"
