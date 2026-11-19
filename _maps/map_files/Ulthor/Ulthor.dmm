@@ -17169,6 +17169,14 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/aft)
+"hTg" = (
+/obj/machinery/door/airlock/external{
+	id_tag = "trade_dock";
+	locked = 1;
+	name = "Trade Dock"
+	},
+/turf/simulated/floor/plating,
+/area/station/hallway/ulthor_commons)
 "hTn" = (
 /turf/simulated/wall,
 /area/janitor)
@@ -20342,6 +20350,18 @@
 	icon_state = "neutralfull"
 	},
 /area/station/security/prison/perma)
+"jps" = (
+/obj/docking_port/stationary{
+	dheight = 1;
+	dir = 2;
+	dwidth = 7;
+	height = 18;
+	id = "trade_dock";
+	name = "trade dock at Ulthor";
+	width = 15
+	},
+/turf/space,
+/area/space)
 "jqf" = (
 /obj/machinery/computer/arcade,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -79439,8 +79459,8 @@ qOs
 tzo
 sXp
 sXp
-gvV
-jHk
+hTg
+agy
 agy
 agy
 agy
@@ -79696,8 +79716,8 @@ idN
 tzo
 sXp
 sXp
-gvV
-jHk
+hTg
+jps
 agy
 agy
 agy
