@@ -95,6 +95,8 @@ type Data = {
   owner?: string;
   balance?: number;
   portfolio?: Portfolio;
+  acting_for?: string | null;
+  payers?: { id: string | null; name: string }[];
 };
 
 const formatTime = (seconds: number) => {
@@ -160,7 +162,7 @@ const AccountBar = () => {
         <Stack align="center">
           <Stack.Item grow color="label">
             Prices are public. Log in with your ID to trade with your own
-            credits.
+            credits. Heads of staff can also invest their department budget.
           </Stack.Item>
           <Stack.Item>
             <Button icon="id-card" onClick={() => act('login')}>
@@ -180,7 +182,7 @@ const AccountBar = () => {
             {data.owner}
           </Box>
           <Box inline color="label" mr={1}>
-            Balance:
+            {data.acting_for ? `${data.acting_for} budget:` : 'Balance:'}
           </Box>
           <Box inline bold color="good">
             {data.balance} cr
@@ -197,6 +199,22 @@ const AccountBar = () => {
           </Button>
         </Stack.Item>
       </Stack>
+      {(data.payers?.length || 0) > 1 && (
+        <Box mt={1}>
+          <Box inline color="label" mr={1}>
+            Trade for:
+          </Box>
+          {data.payers?.map((payer) => (
+            <Button
+              key={payer.id || 'personal'}
+              selected={payer.id === (data.acting_for || null)}
+              onClick={() => act('set_payer', { department: payer.id })}
+            >
+              {payer.name}
+            </Button>
+          ))}
+        </Box>
+      )}
     </Section>
   );
 };
