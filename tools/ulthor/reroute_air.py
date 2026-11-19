@@ -17,8 +17,8 @@ pipes as an incremental edit of the current map.
   vents and scrubbers whose tile is in its own area
   (code/game/machinery/alarm.dm, alarm_area = get_area(src)).
 
-Routing prefers old pipe runs, maintenance and corridors; walls, windows and
-other rooms are expensive. Scrubbers prefer tiles that already carry distro,
+Routing prefers old pipe runs, maintenance and corridors; pipes enter rooms
+through doors and windows, and a solid wall is a last resort. Scrubbers prefer tiles that already carry distro,
 so both lines run together. Refuses to run over uncommitted map edits that
 are not its own previous output (the user may be editing in StrongDMM).
 """
@@ -48,6 +48,7 @@ RESERVED = {(x, y) for x in range(145, 150) for y in range(130, 142)}  # future 
 ROOTS = {'supply': ((175, 123), 1), 'scrubbers': ((178, 123), 1)}  # tile, forced dir to the adapter
 NO_NORM = ('/area/space', '/area/shuttle', '/area/station/solars', '/area/station/engineering/ulthor_engine_room')
 TILES_PER_PAIR = 30
+WALL_COST = 1000.0
 # Maintenance passages have no vents, scrubbers or air alarms (user,
 # 2026-11-16); distro and waste pipes may still run through them. The turbine
 # room is a machine room, and airlock cycler vents (id_tag) stay.
@@ -340,10 +341,12 @@ def main():
             tile = t[p]
             a = M.area(p)
             if is_wall(tile):
-                v = 5.0
+                # Utilities enter rooms through doors or windows, never through
+                # solid walls (user, 2026-11-19); a wall only as a last resort.
+                v = WALL_COST
             elif any(b.startswith(('/obj/effect/spawner/window', '/obj/structure/window', '/obj/structure/grille'))
                      for b in tile):
-                v = 6.0
+                v = 3.0
             elif is_door(tile):
                 v = 1.5
             elif a.startswith('/area/station/maintenance'):
