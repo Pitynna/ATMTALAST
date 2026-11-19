@@ -1,8 +1,8 @@
 // Galactic stock exchange (idea from Goonstation 13, code written anew).
 
 /// Name of the newscaster channel that carries market news.
-#define NEWS_CHANNEL_STOCKS "Galactic Exchange Wire"
-	#define EDITOR_STOCKS "Exchange Wire newsroom"
+#define NEWS_CHANNEL_STOCKS "Галактическая биржевая лента"
+	#define EDITOR_STOCKS "Редакция биржевой ленты"
 
 /// How many price points each company keeps for its chart.
 #define STOCK_HISTORY_LENGTH 90

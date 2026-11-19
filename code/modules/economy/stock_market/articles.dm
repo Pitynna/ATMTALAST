@@ -27,18 +27,20 @@
 	var/static/list/outlets
 	if(!outlets)
 		outlets = list()
-		var/list/places = list("Tau Ceti", "Kepler", "Proxima", "Vega", "Altair", "Sirius", "Barnard", "Gliese", "Luyten", "Ross", "Epsilon", "Lagrange")
-		var/list/papers = list("Ledger", "Courier", "Dispatch", "Gazette", "Observer", "Sentinel", "Bulletin", "Chronicle", "Wire", "Register")
-		var/list/adjectives = list("Orbital", "Frontier", "Interstellar", "Commercial", "Evening", "Free", "Independent")
+		// Places in the genitive case.
+		var/list/places = list("Тау Кита", "Кеплера", "Проксимы", "Веги", "Альтаира", "Сириуса", "Барнарда", "Глизе", "Лейтена", "Росса", "Эпсилона", "Лагранжа")
+		var/list/papers = list("Вестник", "Курьер", "Обозреватель", "Бюллетень", "Страж", "Телеграф", "Меркурий", "Глашатай")
+		var/list/papers_lower = list("вестник", "курьер", "обозреватель", "бюллетень", "страж", "телеграф", "меркурий", "глашатай")
+		var/list/adjectives = list("Орбитальный", "Межзвёздный", "Коммерческий", "Вечерний", "Свободный", "Независимый", "Деловой")
 		for(var/i in 1 to 6)
 			var/outlet_name
 			switch(rand(1, 3))
 				if(1)
-					outlet_name = "The [pick(places)] [pick(papers)]"
+					outlet_name = "[pick(papers)] [pick(places)]"
 				if(2)
-					outlet_name = "[pick(adjectives)] [pick(papers)]"
+					outlet_name = "[pick(adjectives)] [pick(papers_lower)]"
 				if(3)
-					outlet_name = "[pick(places)] [pick(adjectives)] [pick(papers)]"
+					outlet_name = "[pick(adjectives)] [pick(papers_lower)] [pick(places)]"
 			outlets[outlet_name] = list()
 	return pick(outlets)
 
@@ -49,9 +51,9 @@
 		authors = list()
 		authors_by_outlet[outlet_name] = authors
 	if(length(authors) < 3 && (!length(authors) || prob(40)))
-		var/full_name = random_news_name()
+		var/full_name = random_name(pick(MALE, FEMALE))
 		var/list/parts = splittext(full_name, " ")
-		authors += length(parts) > 1 ? "[copytext(parts[1], 1, 2)]. [parts[length(parts)]]" : full_name
+		authors += length(parts) > 1 ? "[copytext_char(parts[1], 1, 2)]. [parts[length(parts)]]" : full_name
 	return pick(authors)
 
 /datum/stock_article/proc/ui_entry()

@@ -19,8 +19,8 @@ GLOBAL_LIST_EMPTY(allNewscasters)
 #define NEWS_CHANNEL_STATION "Публичные станционные оповещения"
 	#define EDITOR_STATION "Автоматический листинг оповещений"
 /// Nyx Daily - everyday-ish news about NT
-#define NEWS_CHANNEL_NYX "Nyx Daily"
-	#define EDITOR_NYX "Nanotrasen Media Department"
+#define NEWS_CHANNEL_NYX "Никс Дейли"
+	#define EDITOR_NYX "Отдел Медиа \"Нанотрейзен\""
 /// Gibson Gazette - everyhour-ish news about clickbait-worthy topics
 #define NEWS_CHANNEL_GIB "Газета Гибсона"
 	#define EDITOR_GIB "Редактор Майк Хаммерс"

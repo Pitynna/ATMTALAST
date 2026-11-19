@@ -19,13 +19,13 @@
 	if(!length(gainers) && !length(losers))
 		return
 	var/datum/stock_article/article = new
-	article.headline = "Markets react to news from [place]"
-	article.subtitle = "Nyx Daily report moves [length(gainers) + length(losers)] stock\s"
+	article.headline = "Рынки реагируют на события: [place]"
+	article.subtitle = "Сообщение «[NEWS_CHANNEL_NYX]» сдвинуло котировки"
 	var/list/lines = list()
 	if(length(gainers))
-		lines += "Traders are buying [english_list(gainers)] on hopes of higher demand."
+		lines += "Трейдеры скупают [english_list(gainers, and_text = " и ")] в надежде на рост спроса."
 	if(length(losers))
-		lines += "[english_list(losers)] slide[length(losers) == 1 ? "s" : ""] as prices for their goods fall."
+		lines += "[english_list(losers, and_text = " и ")] дешеве[length(losers) == 1 ? "ет" : "ют"] вслед за ценами на их товары."
 	article.body = lines.Join(" ")
 	article.opinion = length(gainers) >= length(losers) ? 1 : -1
 	publish(article)
@@ -68,20 +68,20 @@
 	if(QDELETED(company) || company.bankrupt)
 		return
 	var/static/list/scandal_lines = list(
-		"Whispers from the boardroom: someone very high up at %company% may soon be having a chat with the corporate police. You didn't hear it from us!",
-		"Our mole at %company% says the shredders have been running all night. What are they hiding?",
-		"Is a %company% bigwig about to take a fall? Three separate sources say yes. %company% says no comment!",
+		"Шёпот из переговорной: кое-кому на самом верху в %company% скоро предстоит беседа с корпоративной полицией. Вы этого от нас не слышали!",
+		"Наш крот в %company% сообщает: шредеры работали всю ночь. Что они скрывают?",
+		"Большой начальник из %company% вот-вот слетит с кресла? Три независимых источника говорят — да! В %company% от комментариев отказались!",
 	)
 	var/static/list/bankruptcy_lines = list(
-		"Are the lights about to go out at %company%? Insiders say the creditors are circling and the coffers are EMPTY!",
-		"Bailiffs spotted outside %company% headquarters! Our sources say the company can't pay its bills!",
-		"Rumour has it %company% has been borrowing to pay its staff. How long can it last?",
+		"В %company% скоро погасят свет? Инсайдеры говорят: кредиторы кружат, а касса ПУСТА!",
+		"У штаб-квартиры %company% замечены судебные приставы! Наши источники уверяют: компании нечем платить по счетам!",
+		"Говорят, %company% берёт в долг, чтобы выплатить зарплаты. Долго ли так протянется?",
 	)
 	var/text = pick(kind == RUMOUR_BANKRUPTCY ? bankruptcy_lines : scandal_lines)
 	text = replacetext(text, "%company%", "[company.name] ([company.ticker])")
 	var/datum/feed_message/message = new
-	message.author = pick("An anonymous tipster", "Our source in the know", EDITOR_GIB)
-	message.title = pick("RUMOUR MILL", "YOU HEARD IT HERE FIRST", "INSIDE SCOOP", "WHISPERS")
+	message.author = pick("Анонимный информатор", "Наш осведомлённый источник", EDITOR_GIB)
+	message.title = pick("СЛУХИ", "ВЫ УСЛЫШАЛИ ЭТО ПЕРВЫМИ", "ИЗ ДОСТОВЕРНЫХ ИСТОЧНИКОВ", "ШЁПОТОМ")
 	message.body = text
 	message.admin_locked = TRUE
 	var/datum/feed_channel/channel = GLOB.news_network.get_channel_by_name(NEWS_CHANNEL_GIB)

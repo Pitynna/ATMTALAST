@@ -55,7 +55,7 @@ SUBSYSTEM_DEF(stock_market)
 	var/datum/stock_company/company = new(industry)
 	company.name = generate_company_name(industry)
 	company.ticker = generate_ticker(company.name)
-	company.desc = "[company.name] works in the [industry.field] business and sells to [pick(industry.customers)]. Known for [english_list(company.products)]."
+	company.desc = "Компания [company.name] работает в сфере [industry.field]. Основные клиенты — [pick(industry.customers)]. Известна продуктами: [english_list(company.products, and_text = " и ")]."
 	company.id = "[next_company_id++]"
 	companies += company
 	return company
@@ -146,9 +146,9 @@ SUBSYSTEM_DEF(stock_market)
 	for(var/j in 1 to 10)
 		newcomer.tick(TRUE)
 	var/datum/stock_article/article = new(newcomer)
-	article.headline = "[newcomer.name] lists on the exchange"
-	article.subtitle = "Shares of [newcomer.ticker] open at [newcomer.price] cr"
-	article.body = "[newcomer.name], a [newcomer.industry.field] company, takes the place of [company.name] on the exchange. [newcomer.desc]"
+	article.headline = "[newcomer.name] выходит на биржу"
+	article.subtitle = "Акции [newcomer.ticker] открылись по [newcomer.price] кр."
+	article.body = "Компания [newcomer.name] из сферы [newcomer.industry.field] занимает на бирже место [company.name]. [newcomer.desc]"
 	article.opinion = 1
 	article.importance = STOCK_NEWS_POSTED
 	publish(article)
@@ -181,7 +181,7 @@ SUBSYSTEM_DEF(stock_market)
 	channel = new
 	channel.channel_name = NEWS_CHANNEL_STOCKS
 	channel.author = EDITOR_STOCKS
-	channel.description = "Market news from across the galaxy: product launches, scandals and crashes."
+	channel.description = "Биржевые новости со всей галактики: новинки, скандалы и крахи."
 	channel.icon = "chart-line"
 	channel.frozen = TRUE
 	channel.admin_locked = TRUE
