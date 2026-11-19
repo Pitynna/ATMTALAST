@@ -84,8 +84,12 @@ def main():
         areas[zones[0]] += 1
         if zones[0] in ("/area", "/area/space") and turfs[0].startswith("/turf/simulated/floor"):
             failures.append(f"{pos}: interior floor painted as farspace")
-        cable_count = sum(typ.startswith("/obj/structure/cable") for typ, _ in parsed)
-        if cable_count > 1:
+        # Layered cables: one cable per layer per tile; different layers may
+        # cross (e.g. the gravity generator's SMES output under the grid line).
+        layers = Counter(
+            1 if typ.startswith("/obj/structure/cable/layer1") else 3 if typ.startswith("/obj/structure/cable/layer3") else 2
+            for typ, _ in parsed if typ.startswith("/obj/structure/cable"))
+        if any(n > 1 for n in layers.values()):
             failures.append(f"{pos}: stacked old cable segments")
         for typ, variables in parsed:
             if typ.startswith("/obj/effect/landmark/start/"):
