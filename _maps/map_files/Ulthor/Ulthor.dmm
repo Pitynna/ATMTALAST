@@ -277,6 +277,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
+"aib" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "aif" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
@@ -13594,6 +13604,25 @@
 	icon_state = "showroomfloor"
 	},
 /area/station/service/ulthor_kitchen_coldroom)
+"fZE" = (
+/obj/machinery/conveyor{
+	id = "ulthor_mail";
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "gae" = (
 /turf/simulated/wall,
 /area/station/commons/toilet/locker_toilet)
@@ -16665,6 +16694,13 @@
 	dir = 1
 	},
 /area/station/command/bridge)
+"hph" = (
+/obj/effect/turf_decal/delivery/hollow,
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "hps" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/directional/south{
@@ -18991,6 +19027,12 @@
 	icon_state = "white"
 	},
 /area/station/medical/virology)
+"isz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "isH" = (
 /turf/simulated/wall,
 /area/station/maintenance/ulthor_research_passage)
@@ -37922,6 +37964,16 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
+"qEu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 2;
+	sortType = 2
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "qEy" = (
 /turf/simulated/wall/shuttle,
 /area/shuttle/ulthor_specops)
@@ -42141,6 +42193,14 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/secondary/entry)
+"sGL" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/turf_decal/delivery/hollow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "sGX" = (
 /obj/structure/chair{
 	dir = 8
@@ -47140,6 +47200,15 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_service_south)
+"uLJ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/simulated/floor/plasteel,
+/area/station/cargo/storage)
 "uLM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -73690,7 +73759,7 @@ iGq
 msR
 uNS
 nXu
-kIV
+isz
 jFV
 tTU
 omF
@@ -73945,12 +74014,12 @@ vRI
 vRI
 iGq
 aGX
-klB
-wxc
-nHD
-wdW
-noE
-rPq
+fZE
+jFV
+jFV
+uLJ
+tTU
+hph
 nXu
 rPq
 bKm
@@ -74207,7 +74276,7 @@ nXu
 nXu
 twu
 noE
-czr
+sGL
 sCG
 rPq
 bKm
@@ -74464,7 +74533,7 @@ aGp
 aGp
 wJc
 aGp
-ezq
+aib
 aGp
 aGp
 aGp
@@ -74721,7 +74790,7 @@ nXu
 nXu
 nXu
 wao
-lFi
+qEu
 jFV
 jFV
 bre

@@ -68,6 +68,10 @@ def mask(typ, d):
         return d | REVERSE[d] | RIGHT[d]
     if typ == PIPE + 'junction/reversed':
         return d | REVERSE[d] | LEFT[d]
+    if typ == PIPE + 'sortjunction':  # untagged items keep going along dir
+        return d | REVERSE[d] | RIGHT[d]
+    if typ == PIPE + 'sortjunction/reversed':
+        return d | REVERSE[d] | LEFT[d]
     if typ == PIPE + 'junction/yjunction':
         return d | LEFT[d] | RIGHT[d]
     raise ValueError(typ)
@@ -86,7 +90,8 @@ def wall_appearance(tiles, p):
     return {1: (1, 16), 2: (2, 0), 4: (8, 0), 8: (4, 0)}[wall_direction(tiles, p)]
 
 
-def trace(pipes, start, outlets):
+def trace(pipes, start, outlets, tag=0):
+    """Route of an item from bin start; tag is its destinationTag (0 = untagged)."""
     p = start
     incoming = 16  # DOWN, as in disposalholder.start()
     visited = set()
@@ -113,6 +118,11 @@ def trace(pipes, start, outlets):
             if REVERSE[incoming] == d:
                 raise ValueError(f'Random junction routing at {p}')
             exit_dir = d
+        elif '/sortjunction' in typ:
+            side = ports & ~(d | REVERSE[d])
+            if incoming == REVERSE[d]:
+                raise ValueError(f'Item enters sort junction {p} against the flow')
+            exit_dir = side if tag and incoming != side and int(values.get('sortType', '0')) == tag else d
         else:
             exit_dir = ports & ~REVERSE[incoming]
         if exit_dir not in DELTA:
@@ -143,8 +153,19 @@ def audit(m):
         except (ValueError, KeyError) as error:
             failures.append(f'{p}: {error}')
     used = set()
+    mail = {}
     for entry in routes:
-        used.update(trace(pipes, entry['start'], outlets))
+        route = trace(pipes, entry['start'], outlets)
+        used.update(route)
+        for q in route:
+            if '/sortjunction' in pipes[q][0]:
+                tag = int(pipes[q][1].get('sortType', '0'))
+                try:
+                    tagged = trace(pipes, entry['start'], outlets, tag)
+                    used.update(tagged)
+                    mail[q] = tagged[-1]
+                except (ValueError, KeyError) as error:
+                    failures.append(f'{entry["start"]} tagged {tag}: {error}')
     for p, (typ, values) in pipes.items():
         if not int(values.get('dir', '0')):
             failures.append(f'{p}: zero direction')
@@ -164,7 +185,8 @@ def audit(m):
             if count > 1 and a.startswith(('/obj/machinery', '/obj/structure')):
                 failures.append(f'{p}: {count} exact copies of {a}')
     return {'bins': len(bins), 'wall_bins': sum(t.startswith(WALL) for t, v in bins.values()),
-            'pipes': len(pipes), 'outlets': len(outlets), 'routes': routes, 'failures': failures}
+            'pipes': len(pipes), 'outlets': len(outlets), 'routes': routes,
+            'mail': {str(k): v for k, v in mail.items()}, 'failures': failures}
 
 
 def repair(m):
