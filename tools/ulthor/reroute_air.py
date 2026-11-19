@@ -9,7 +9,7 @@ pipes as an incremental edit of the current map.
   pipe it is attached to. Vents with an id_tag/frequency (gas tanks, airlock
   cyclers) or attached to their own regular-pipe loop (server, turbine,
   perma) are left untouched.
-* Rooms get ceil(floor tiles / 30) vents and scrubbers; gas chambers (rooms
+* Rooms get the Delta/Cyberiad number of vents and scrubbers (thin_air.target); gas chambers (rooms
   with an injector or tank vent) are not counted. Maintenance passages get
   none and lose their vents, scrubbers and air alarms (pipes may still pass).
   Missing ones are added far from the existing ones.
@@ -37,6 +37,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmm import DMM  # noqa: E402
 from rooms import Station, is_floor, is_boundary, is_wall, is_door  # noqa: E402
 from check_pipes import parse, DELTA, REV  # noqa: E402
+from thin_air import target  # noqa: E402
 
 MAP = ROOT / '_maps/map_files/Ulthor/Ulthor.dmm'
 STAMP = ROOT / 'docs/ulthor_air/last_output.sha256'
@@ -270,7 +271,7 @@ def main():
         if not station(a) or a.startswith(NO_NORM) or no_air(a):
             continue
         per = TILES_PER_PAIR
-        need = math.ceil(len(tiles) / per)
+        need = target(a, len(tiles))  # Delta/Cyberiad norm, see thin_air.py
         cand = [p for p in tiles if free_tile(p, True)]
         by_door = {p for p in cand if not free_tile(p)}  # last resort in cramped rooms
         for k, other in (('supply', 'scrubbers'), ('scrubbers', 'supply')):

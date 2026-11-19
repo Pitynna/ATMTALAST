@@ -4,7 +4,8 @@ Reports:
   * open ends of supply/scrubber pipes (a branch with no vent or scrubber);
   * vents/scrubbers that are not on the main distro / waste network;
   * per area: floor tiles, vents, scrubbers, air alarms and the norm
-    ceil(tiles / 30) vents and scrubbers;
+    Delta/Cyberiad norm (thin_air.target: one pair per ~55 hallway or ~45
+    room tiles, at least one);
   * area/alarm binding: an air alarm drives every vent and scrubber whose
     tile is in the alarm's own area (code/game/machinery/alarm.dm,
     alarm_area = get_area(src)), so areas with vents need an alarm, and an
@@ -27,7 +28,8 @@ from dmm import DMM  # noqa: E402
 from rooms import Station, CARD, area, turf, is_floor, is_boundary  # noqa: E402
 from check_pipes import parse, DELTA, REV  # noqa: E402
 
-TILES_PER_UNIT = 30
+TILES_PER_UNIT = 30  # old norm, kept for reference
+from thin_air import target  # noqa: E402
 # Maintenance passages must have no vents, scrubbers or air alarms (airlock
 # cycler vents with an id_tag excepted); the turbine room is a machine room.
 NO_AIR = '/area/station/maintenance'
@@ -166,7 +168,7 @@ def audit(path):
             continue
         if a.startswith(SKIP) or not r['tiles']:
             continue
-        need = math.ceil(r['tiles'] / TILES_PER_UNIT)
+        need = target(a, r['tiles'])
         r['need'] = need
         r['missing_vents'] = max(0, need - len(r['vents']))
         r['missing_scrubbers'] = max(0, need - len(r['scrubbers']))
