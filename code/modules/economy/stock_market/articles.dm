@@ -49,7 +49,7 @@
 		authors = list()
 		authors_by_outlet[outlet_name] = authors
 	if(length(authors) < 3 && (!length(authors) || prob(40)))
-		var/full_name = "[pick(GLOB.trader_first_names)] [pick(GLOB.trader_last_names)]"
+		var/full_name = random_news_name()
 		var/list/parts = splittext(full_name, " ")
 		authors += length(parts) > 1 ? "[copytext(parts[1], 1, 2)]. [parts[length(parts)]]" : full_name
 	return pick(authors)

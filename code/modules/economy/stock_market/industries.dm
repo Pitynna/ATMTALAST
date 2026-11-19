@@ -17,11 +17,14 @@
 	var/list/customers = list("consumers")
 	/// How base volatility of companies in this field is scaled.
 	var/volatility_mult = 1
+	/// Nyx Daily economic news about these goods moves the field: dearer goods help it, cheaper goods hurt it.
+	var/list/news_topics = list()
 
 /datum/stock_industry/proc/generate_product_name()
 	return "[pick(product_prefixes)][pick(product_nouns)][pick(product_models)]"
 
 /datum/stock_industry/medical
+	news_topics = list(BIOMEDICAL, EMERGENCY)
 	name = "Medical"
 	field = "pharmaceutical"
 	company_words = list("Pharmaceuticals", "Biomedical", "Health", "Life Sciences", "Clinics")
@@ -30,6 +33,7 @@
 	customers = list("hospitals", "frontier clinics", "insurance providers", "station medbays")
 
 /datum/stock_industry/mining
+	news_topics = list(MINERALS)
 	name = "Mining"
 	field = "mining"
 	company_words = list("Mining", "Minerals", "Ore Works", "Extraction", "Metals")
@@ -39,6 +43,7 @@
 	volatility_mult = 1.2
 
 /datum/stock_industry/plasma
+	news_topics = list(EGAS, ELECTRICAL)
 	name = "Energy"
 	field = "plasma energy"
 	company_words = list("Energy", "Power", "Plasma", "Fuel", "Reactors")
@@ -48,6 +53,7 @@
 	volatility_mult = 1.4
 
 /datum/stock_industry/engineering
+	news_topics = list(ROBOTICS, MAINTENANCE, ELECTRICAL)
 	name = "Engineering"
 	field = "robotics and engineering"
 	company_words = list("Robotics", "Machines", "Dynamics", "Engineering", "Systems")
@@ -56,6 +62,7 @@
 	customers = list("factories", "construction crews", "station engineers", "shipyards")
 
 /datum/stock_industry/agriculture
+	news_topics = list(FOOD, ANIMALS)
 	name = "Agriculture"
 	field = "food and agriculture"
 	company_words = list("Farms", "Foods", "Agro", "Harvest", "Ranches")
@@ -65,6 +72,7 @@
 	volatility_mult = 0.8
 
 /datum/stock_industry/communications
+	news_topics = list(ADMINISTRATIVE)
 	name = "Communications"
 	field = "communications"
 	company_words = list("Communications", "Networks", "Media", "Telecom", "Signal")
@@ -73,6 +81,7 @@
 	customers = list("subscribers", "advertisers", "news outlets", "station crews")
 
 /datum/stock_industry/consumer
+	news_topics = list(CLOTHING, GEAR_EVA)
 	name = "Consumer goods"
 	field = "consumer goods"
 	company_words = list("Stores", "Brands", "Wholesale", "Outlets", "Trading")
@@ -82,6 +91,7 @@
 	volatility_mult = 0.9
 
 /datum/stock_industry/shipping
+	news_topics = list(SECURITY, EMERGENCY)
 	name = "Logistics"
 	field = "shipping and logistics"
 	company_words = list("Logistics", "Freight", "Shipping", "Lines", "Transit")

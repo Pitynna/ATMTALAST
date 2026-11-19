@@ -2670,6 +2670,7 @@
 #include "code\modules\economy\stock_market\company.dm"
 #include "code\modules\economy\stock_market\events.dm"
 #include "code\modules\economy\stock_market\industries.dm"
+#include "code\modules\economy\stock_market\news_links.dm"
 #include "code\modules\economy\stock_market\portfolio.dm"
 #include "code\modules\economy\stock_market\stock_console.dm"
 #include "code\modules\economy\subscriptions\subscription.dm"

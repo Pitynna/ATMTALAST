@@ -3,6 +3,10 @@
 GLOBAL_LIST_INIT(trader_first_names, list("Ada", "Bram", "Cass", "Dorian", "Edda", "Finn", "Greta", "Hugo", "Ines", "Jory", "Kit", "Lev", "Mira", "Nils", "Orla", "Piet", "Rhea", "Sol", "Tamsin", "Vik"))
 GLOBAL_LIST_INIT(trader_last_names, list("Ashby", "Brannock", "Corwin", "Dunmore", "Ellery", "Fenwick", "Garrow", "Hale", "Ivers", "Kell", "Lowry", "Marlow", "Norcross", "Osgood", "Penhallow", "Quint", "Rook", "Sallow", "Tremaine", "Voss"))
 
+/// English name for people in galactic news. The station's own name lists are in Russian.
+/proc/random_news_name()
+	return "[pick(GLOB.trader_first_names)] [pick(GLOB.trader_last_names)]"
+
 // MARK: Medical
 /datum/trader/medical
 	title = "mobile clinic supplier"

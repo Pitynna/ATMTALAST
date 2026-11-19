@@ -28,6 +28,8 @@
 	var/reagent_quests = FALSE
 	/// Not shown on the public market. Only some traders deal in it.
 	var/hidden = FALSE
+	/// Nyx Daily economic news about these topics makes the goods dearer or cheaper until the next shift.
+	var/list/news_topics = list()
 
 	var/list/item_cache
 	var/list/exclude_cache
@@ -87,24 +89,28 @@
 
 // MARK: Minerals
 /datum/commodity/metal
+	news_topics = list(MINERALS)
 	name = "Metal"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/metal)
 	base_price = 5
 
 /datum/commodity/glass
+	news_topics = list(MINERALS)
 	name = "Glass"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/glass)
 	base_price = 4
 
 /datum/commodity/plasteel
+	news_topics = list(MINERALS)
 	name = "Plasteel"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/plasteel)
 	base_price = 16
 
 /datum/commodity/plasma
+	news_topics = list(MINERALS, EGAS)
 	name = "Plasma"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/mineral/plasma)
@@ -113,18 +119,21 @@
 	lower_fluc = 0.5
 
 /datum/commodity/silver
+	news_topics = list(MINERALS)
 	name = "Silver"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/mineral/silver)
 	base_price = 22
 
 /datum/commodity/gold
+	news_topics = list(MINERALS)
 	name = "Gold"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/mineral/gold)
 	base_price = 30
 
 /datum/commodity/uranium
+	news_topics = list(MINERALS)
 	name = "Uranium"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/mineral/uranium)
@@ -132,12 +141,14 @@
 	upper_fluc = 0.7
 
 /datum/commodity/titanium
+	news_topics = list(MINERALS)
 	name = "Titanium"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/mineral/titanium)
 	base_price = 25
 
 /datum/commodity/diamond
+	news_topics = list(MINERALS)
 	name = "Diamond"
 	unit = "sheet"
 	item_types = list(/obj/item/stack/sheet/mineral/diamond)
@@ -145,6 +156,7 @@
 	upper_fluc = 0.6
 
 /datum/commodity/bluespace
+	news_topics = list(MINERALS)
 	name = "Bluespace crystal"
 	unit = "crystal"
 	item_types = list(/obj/item/stack/sheet/bluespace_crystal, /obj/item/stack/ore/bluespace_crystal)
@@ -166,6 +178,7 @@
 
 // MARK: Ores
 /datum/commodity/ore
+	news_topics = list(MINERALS)
 	name = "Raw ore"
 	desc = "Any unrefined ore except diamonds and bluespace."
 	category = COMMODITY_ORES
@@ -176,6 +189,7 @@
 	upper_fluc = 0.6
 
 /datum/commodity/ore_diamond
+	news_topics = list(MINERALS)
 	name = "Diamond ore"
 	category = COMMODITY_ORES
 	unit = "ore"
@@ -183,6 +197,7 @@
 	base_price = 55
 
 /datum/commodity/gem
+	news_topics = list(MINERALS)
 	name = "Rare gems"
 	category = COMMODITY_ORES
 	unit = "gem"
@@ -193,6 +208,7 @@
 
 // MARK: Food
 /datum/commodity/produce
+	news_topics = list(FOOD)
 	name = "Fresh produce"
 	category = COMMODITY_FOOD
 	item_types = list(/obj/item/reagent_containers/food/snacks/grown)
@@ -200,6 +216,7 @@
 	upper_fluc = 0.7
 
 /datum/commodity/meat
+	news_topics = list(FOOD, ANIMALS)
 	name = "Meat"
 	category = COMMODITY_FOOD
 	unit = "cut"
@@ -207,6 +224,7 @@
 	base_price = 8
 
 /datum/commodity/meals
+	news_topics = list(FOOD)
 	name = "Prepared meals"
 	desc = "Anything cooked or baked."
 	category = COMMODITY_FOOD
@@ -217,6 +235,7 @@
 	upper_fluc = 0.6
 
 /datum/commodity/seeds
+	news_topics = list(FOOD)
 	name = "Seeds"
 	category = COMMODITY_FOOD
 	unit = "packet"
@@ -225,6 +244,7 @@
 
 // MARK: Medical
 /datum/commodity/medical_stacks
+	news_topics = list(BIOMEDICAL, EMERGENCY)
 	name = "Bandages and gauze"
 	category = COMMODITY_MEDICAL
 	unit = "use"
@@ -232,6 +252,7 @@
 	base_price = 4
 
 /datum/commodity/pills
+	news_topics = list(BIOMEDICAL)
 	name = "Pills and patches"
 	category = COMMODITY_MEDICAL
 	unit = "pill"
@@ -240,6 +261,7 @@
 	upper_fluc = 0.6
 
 /datum/commodity/organs
+	news_topics = list(BIOMEDICAL)
 	name = "Organs"
 	category = COMMODITY_MEDICAL
 	unit = "organ"
@@ -249,6 +271,7 @@
 	lower_fluc = 0.5
 
 /datum/commodity/chemicals
+	news_topics = list(BIOMEDICAL)
 	name = "Chemicals"
 	desc = "Reagents ordered by CentCom chemistry requests."
 	category = COMMODITY_MEDICAL
@@ -259,6 +282,7 @@
 
 // MARK: Engineering
 /datum/commodity/stock_parts
+	news_topics = list(ROBOTICS, MAINTENANCE)
 	name = "Machine parts"
 	category = COMMODITY_ENGINEERING
 	unit = "part"
@@ -266,6 +290,7 @@
 	base_price = 15
 
 /datum/commodity/circuitboards
+	news_topics = list(ROBOTICS)
 	name = "Circuit boards"
 	category = COMMODITY_ENGINEERING
 	unit = "board"
@@ -273,6 +298,7 @@
 	base_price = 40
 
 /datum/commodity/cable
+	news_topics = list(ELECTRICAL, MAINTENANCE)
 	name = "Cable"
 	category = COMMODITY_ENGINEERING
 	unit = "length"
@@ -281,6 +307,7 @@
 
 // MARK: Textiles
 /datum/commodity/cloth
+	news_topics = list(CLOTHING)
 	name = "Cloth"
 	category = COMMODITY_TEXTILES
 	unit = "sheet"
@@ -288,6 +315,7 @@
 	base_price = 6
 
 /datum/commodity/leather
+	news_topics = list(CLOTHING, ANIMALS)
 	name = "Leather and hides"
 	category = COMMODITY_TEXTILES
 	unit = "sheet"
@@ -295,6 +323,7 @@
 	base_price = 14
 
 /datum/commodity/durathread
+	news_topics = list(CLOTHING)
 	name = "Durathread"
 	category = COMMODITY_TEXTILES
 	unit = "sheet"
@@ -302,6 +331,7 @@
 	base_price = 25
 
 /datum/commodity/clothing
+	news_topics = list(CLOTHING)
 	name = "Jumpsuits"
 	category = COMMODITY_TEXTILES
 	unit = "suit"
@@ -310,6 +340,7 @@
 
 // MARK: Science
 /datum/commodity/slime_extract
+	news_topics = list(BIOMEDICAL)
 	name = "Slime extracts"
 	category = COMMODITY_SCIENCE
 	unit = "extract"

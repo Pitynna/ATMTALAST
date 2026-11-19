@@ -145,8 +145,9 @@
 	var/guilty = FALSE
 
 /datum/stock_event/scandal/setup()
-	next_phase = world.time + rand(1, 5) MINUTES
-	executive = "[pick(GLOB.trader_first_names)] [pick(GLOB.trader_last_names)]"
+	next_phase = world.time + rand(4, 8) MINUTES
+	SSstock_market.maybe_leak(src, "scandal")
+	executive = random_news_name()
 	position = pick("chief executive", "chief financial officer", "head of research", "board chair", "head of sales")
 	crime = pick("insider trading", "bribing a customs inspector", "smuggling contraband", "cooking the books", "selling trade secrets to a rival", "skipping safety inspections", "tax evasion on three planets")
 	guilty = prob(60)
@@ -176,7 +177,8 @@
 	var/bailout_millions
 
 /datum/stock_event/bankruptcy/setup()
-	next_phase = world.time + rand(1, 4) MINUTES
+	next_phase = world.time + rand(4, 8) MINUTES
+	SSstock_market.maybe_leak(src, "bankruptcy")
 	bailout_millions = rand(70, 190)
 
 /datum/stock_event/bankruptcy/transition()

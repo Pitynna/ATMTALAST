@@ -1,0 +1,95 @@
+// Links between the exchange and other news: Nyx Daily economic events move prices,
+// and the Gibson Gazette prints rumours about trouble before it is public.
+
+// MARK: Nyx Daily economic events
+
+/// Companies whose goods became dearer gain, those whose goods became cheaper lose.
+/datum/controller/subsystem/stock_market/proc/economic_news(list/dearer, list/cheaper, place)
+	var/list/gainers = list()
+	var/list/losers = list()
+	for(var/datum/stock_company/company as anything in companies)
+		var/score = length(company.industry.news_topics & dearer) - length(company.industry.news_topics & cheaper)
+		if(!score)
+			continue
+		company.affect_opinion(score * rand(10, 25) / 10)
+		if(score > 0)
+			gainers += company.ticker
+		else
+			losers += company.ticker
+	if(!length(gainers) && !length(losers))
+		return
+	var/datum/stock_article/article = new
+	article.headline = "Markets react to news from [place]"
+	article.subtitle = "Nyx Daily report moves [length(gainers) + length(losers)] stock\s"
+	var/list/lines = list()
+	if(length(gainers))
+		lines += "Traders are buying [english_list(gainers)] on hopes of higher demand."
+	if(length(losers))
+		lines += "[english_list(losers)] slide[length(losers) == 1 ? "s" : ""] as prices for their goods fall."
+	article.body = lines.Join(" ")
+	article.opinion = length(gainers) >= length(losers) ? 1 : -1
+	publish(article)
+
+/// Goods in the news get dearer or cheaper until the next market shift.
+/datum/controller/subsystem/trade/proc/economic_news(list/dearer, list/cheaper)
+	for(var/commodity_type in commodities)
+		var/datum/commodity/commodity = commodities[commodity_type]
+		var/score = length(commodity.news_topics & dearer) - length(commodity.news_topics & cheaper)
+		if(!score)
+			continue
+		var/mult = score > 0 ? rand(115, 140) / 100 : rand(70, 88) / 100
+		commodity.price = max(1, round(commodity.price * mult, commodity.base_price < 10 ? 0.1 : 1))
+		if(length(commodity.history))
+			commodity.history[length(commodity.history)] = commodity.price
+		for(var/datum/trader/trader as anything in traders)
+			for(var/datum/trade_offer/offer as anything in trader.buying)
+				if(offer.commodity_type == commodity_type && !offer.haggled)
+					offer.reprice()
+
+// MARK: Gibson Gazette rumours
+
+#define RUMOUR_SCANDAL "scandal"
+#define RUMOUR_BANKRUPTCY "bankruptcy"
+
+/// Most hidden troubles leak to the tabloids before they become news.
+/datum/controller/subsystem/stock_market/proc/maybe_leak(datum/stock_event/event, kind)
+	if(!prob(65))
+		return
+	var/delay = max(30 SECONDS, (event.next_phase - world.time) * rand(20, 70) / 100)
+	addtimer(CALLBACK(src, PROC_REF(post_rumour), event.company, kind), delay)
+
+/// Now and then the tabloids get it wrong.
+/datum/controller/subsystem/stock_market/proc/maybe_false_rumour()
+	if(!prob(3) || !length(companies))
+		return
+	post_rumour(pick(companies), pick(RUMOUR_SCANDAL, RUMOUR_BANKRUPTCY))
+
+/datum/controller/subsystem/stock_market/proc/post_rumour(datum/stock_company/company, kind)
+	if(QDELETED(company) || company.bankrupt)
+		return
+	var/static/list/scandal_lines = list(
+		"Whispers from the boardroom: someone very high up at %company% may soon be having a chat with the corporate police. You didn't hear it from us!",
+		"Our mole at %company% says the shredders have been running all night. What are they hiding?",
+		"Is a %company% bigwig about to take a fall? Three separate sources say yes. %company% says no comment!",
+	)
+	var/static/list/bankruptcy_lines = list(
+		"Are the lights about to go out at %company%? Insiders say the creditors are circling and the coffers are EMPTY!",
+		"Bailiffs spotted outside %company% headquarters! Our sources say the company can't pay its bills!",
+		"Rumour has it %company% has been borrowing to pay its staff. How long can it last?",
+	)
+	var/text = pick(kind == RUMOUR_BANKRUPTCY ? bankruptcy_lines : scandal_lines)
+	text = replacetext(text, "%company%", "[company.name] ([company.ticker])")
+	var/datum/feed_message/message = new
+	message.author = pick("An anonymous tipster", "Our source in the know", EDITOR_GIB)
+	message.title = pick("RUMOUR MILL", "YOU HEARD IT HERE FIRST", "INSIDE SCOOP", "WHISPERS")
+	message.body = text
+	message.admin_locked = TRUE
+	var/datum/feed_channel/channel = GLOB.news_network.get_channel_by_name(NEWS_CHANNEL_GIB)
+	if(!channel)
+		return
+	channel.add_message(message)
+	for(var/obj/machinery/newscaster/newscaster as anything in GLOB.allNewscasters)
+		newscaster.alert_news(NEWS_CHANNEL_GIB)
+
+#undef RUMOUR_SCANDAL
+#undef RUMOUR_BANKRUPTCY

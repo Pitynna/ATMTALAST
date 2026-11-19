@@ -45,6 +45,7 @@ SUBSYSTEM_DEF(stock_market)
 		process_shorts(portfolio)
 		process_loan(portfolio)
 		portfolio.collect_overdue()
+	maybe_false_rumour()
 
 // MARK: Companies
 
