@@ -194,9 +194,13 @@ def face_free(M, p, d):
         py = int(py[1]) if py else 0
         if d == 'N' and py >= 16 or d == 'S' and py <= -16 or d == 'E' and px >= 16 or d == 'W' and px <= -16:
             return False
-        if b.startswith('/obj/machinery/light'):
+        if b == '/obj/machinery/light' or b.startswith('/obj/machinery/light/'):
             dm = re.search(r'dir = (\d+)', a)
             if (int(dm[1]) if dm else 2) == SIDE_DIR[d]:
+                return False
+        if b.startswith('/obj/machinery/camera') and not px and not py:
+            dm = re.search(r'dir = (\d+)', a)  # a camera in the wall looks away from it
+            if (int(dm[1]) if dm else 2) == SIDE_DIR[OPP[d]]:
                 return False
     return True
 

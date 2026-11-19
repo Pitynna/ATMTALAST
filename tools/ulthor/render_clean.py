@@ -66,6 +66,10 @@ def render(mapfile, box, out):
                     continue
                 items.append((layer_key(a), -y, x, a))
     for k, ny, x, a in sorted(items, key=lambda i: (i[0], i[1], i[2])):
+        side = re.search(r'/directional/(north|south|east|west)', a.split('{')[0])
+        if side and 'dir =' not in a:  # the helper macro sets dir; render_layout cannot see it
+            num = {'north': 1, 'south': 2, 'east': 4, 'west': 8}[side[1]]
+            a = a.split('{')[0] + '{dir = %d%s' % (num, (';' + a.split('{', 1)[1]) if '{' in a else '}')
         s = R.sprite(a)
         if not s:
             continue
