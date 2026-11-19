@@ -53,6 +53,9 @@ TARGETS = {
 ALTERNATIVES = {9: [(128, 189)]}
 # HoS: the office's only exit (door 112,114) already carries the security
 # branch and the ring turns right behind it, so no sort junction fits there.
+# Fixed by hand afterwards: the ring makes a detour (112,113)-(113,113)-
+# (113,112)-(112,112), so (112,113) is straight and carries tag 7, and the
+# office fork (112,115) sorts tag 7 to the HoS bin.
 KNOWN_UNSERVED = {7}
 # Outlet branch at the disposal room: ring cells (78,110) and (79,110) are
 # sort junctions flowing east with their side to the south.
@@ -79,6 +82,9 @@ def main():
         sys.exit('Ulthor.dmm has uncommitted edits (StrongDMM?) - commit them first.')
     m = DMM.from_file(str(MAP))
     tiles, pipes, bins, outlets = inventory(m)
+    if any(t.endswith('sortjunction') and v.get('sortType') == '1' for t, v in pipes.values()):
+        sys.exit('The mail ring is already built (one-shot script; HoS was then joined by hand). '
+                 'Audit it with check_disposals.py instead.')
     ends = set(bins) | outlets
 
     # ---- graph of the connected main network ---------------------------------

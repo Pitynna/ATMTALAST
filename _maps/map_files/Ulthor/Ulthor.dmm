@@ -24611,6 +24611,18 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/engineering/atmos)
+"jJE" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/sortjunction/reversed{
+	dir = 4;
+	sortType = 7
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "darkred"
+	},
+/area/station/security/brig)
 "jJO" = (
 /obj/machinery/camera{
 	c_tag = "Ulthor Medical Hallway and Paramedic Office";
@@ -33161,6 +33173,18 @@
 	icon_state = "darkredfull"
 	},
 /area/station/security/processing)
+"nbC" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/sortjunction{
+	dir = 2;
+	sortType = 7
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/station/command/office/hos)
 "nbE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -35996,6 +36020,17 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_service_south)
+"ofE" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "darkred"
+	},
+/area/station/security/brig)
 "ofF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -44269,6 +44304,15 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_service_center)
+"rpZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "darkred"
+	},
+/area/station/security/brig)
 "rqa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2
@@ -89968,10 +90012,10 @@ hjP
 eaY
 ldt
 esb
-vLz
+nbC
 jgy
-aHI
-lOQ
+jJE
+uWn
 ajD
 veB
 lgY
@@ -90227,8 +90271,8 @@ ekH
 uSe
 uQC
 hjP
-orH
-nPz
+ofE
+rpZ
 bSr
 poD
 aBK
