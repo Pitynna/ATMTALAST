@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--
+  Browser preview of the stock exchange and trade console tgui interfaces.
+  Loads the real tgui bundle and fakes the BYOND server with sample data,
+  so buttons work without running the game.
+  Serve the repository root over http and open
+  /tools/tgui_preview/economy.html?ui=stock or ?ui=trade
+-->
+<meta id="tgui:windowId" content="preview" />
+<meta id="tgui:strictMode" content="0" />
+<meta id="tgui:storagecdn" content="" />
+<title>Economy consoles preview</title>
+<script src="../../tgui/public/helpers.min.js"></script>
+<script>
+// ---------- Fake BYOND bridge ----------
+Byond.call = function () {};
+Byond.winset = function () {};
+Byond.winget = function () { return Promise.resolve({}); };
+Byond.command = function () {};
+Byond.sendMessage = function (type, payload) {
+  var msg = typeof type === 'string' ? { type: type, payload: payload } : type;
+  setTimeout(function () { Mock.receive(msg.type, msg.payload); }, 0);
+};
+
+// ---------- Helpers ----------
+function rnd(a, b) { return a + Math.random() * (b - a); }
+function irnd(a, b) { return Math.floor(rnd(a, b + 1)); }
+function pick(list) { return list[irnd(0, list.length - 1)]; }
+function round2(v) { return Math.round(v * 100) / 100; }
+function clock() {
+  var d = new Date();
+  return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2);
+}
+var uid = 1;
+function ref() { return '[0x' + (uid++).toString(16) + ']'; }
+
+// ---------- Stock exchange mock ----------
+var Stock = {
+  balance: 2500,
+  dept: { Medical: 18000 },
+  acting: null,
+  logged: false,
+  status: null,
+  portfolios: {},
+  companies: [],
+  offers: [],
+  news: [],
+  init: function () {
+    var defs = [
+      ['1', 'Halvorsen Mining', 'HM', 'Mining', 'горнодобычи', 'астероидные колонии', 'Deepdrill Pro, Corecrusher'],
+      ['2', 'Nova Pharmaceuticals', 'NP', 'Medical', 'фармацевтики', 'больницы', 'Curazine, Hemopatch X'],
+      ['3', 'Tau Ceti Energy Group', 'TCEG', 'Energy', 'плазменной энергетики', 'исследовательские станции', 'Fluxcell, Ioncore 3000'],
+      ['4', 'Quill & Marsh', 'QM', 'Consumer goods', 'потребительских товаров', 'семьи', 'Comfybox, Snuglamp'],
+      ['5', 'Vector Robotics', 'VR', 'Engineering', 'робототехники и машиностроения', 'верфи', 'Servoarm Lite, Gearframe'],
+      ['6', 'Kepler Foods Inc.', 'KFI', 'Agriculture', 'продовольствия и сельского хозяйства', 'фудкорты', 'Goldengrain, Crisppod'],
+      ['7', 'Zenith Networks', 'ZN', 'Communications', 'связи и медиа', 'подписчики', 'Hypernet, Echocast'],
+      ['8', 'Swift Freight Lines', 'SFL', 'Logistics', 'грузоперевозок и логистики', 'колонисты', 'Starhauler, Bulklane'],
+    ];
+    var self = this;
+    defs.forEach(function (d) {
+      var price = rnd(20, 160);
+      var history = [];
+      for (var i = 0; i < 90; i++) {
+        price = Math.max(1, price * Math.exp(rnd(-0.03, 0.03)));
+        history.push(round2(price));
+      }
+      self.companies.push({
+        id: d[0], name: d[1], ticker: d[2], industry: d[3],
+        desc: 'Компания ' + d[1] + ' работает в сфере ' + d[4] + '. Основные клиенты — ' + d[5] + '. Известна продуктами: ' + d[6] + '.',
+        price: history[89], last_price: history[88], change: 0, history: history,
+        bankrupt: false, events: [],
+      });
+    });
+    this.companies[1].events.push({ title: 'Презентация нового продукта', desc: 'Компания Nova Pharmaceuticals представит новинку в сфере фармацевтики в 14:20 по станционному времени.' });
+    this.companies[0].events.push({ title: 'Суд: Иван Петров', desc: 'Финансовый директор компании Halvorsen Mining обвиняется в контрабанде. Приговор ожидается в 14:32 по станционному времени.' });
+    this.news = [
+      { headline: 'Арестован топ-менеджер Halvorsen Mining', subtitle: 'Иван Петров обвиняют в контрабанде', body: 'Сегодня утром корпоративная полиция задержала Иван Петров (финансовый директор, Halvorsen Mining). Обвинение — в контрабанде. В компании Halvorsen Mining заявляют, что полностью сотрудничают со следствием.', author: 'А. Смирнова', outlet: 'Вестник Тау Кита', time: '14:02', opinion: -3, ticker: 'HM' },
+      { headline: 'Рынки реагируют на события: «Бизель»', subtitle: 'Сообщение «Никс Дейли» сдвинуло котировки', body: 'Трейдеры скупают NP в надежде на рост спроса. KFI дешевеет вслед за ценами на их товары.', author: 'К. Орлов', outlet: 'Вечерний курьер Проксимы', time: '13:55', opinion: 1, ticker: null },
+      { headline: 'Vector Robotics превзошла прогнозы', subtitle: 'Квартальная прибыль — 41,3 млн кредитов', body: 'Компания Vector Robotics отчиталась о квартальной прибыли в 41,3 млн кредитов, выше ожиданий аналитиков. Спрос держится: верфи продолжают закупки.', author: 'М. Белова', outlet: 'Деловой обозреватель', time: '13:41', opinion: 2, ticker: 'VR' },
+    ];
+    this.offers = [
+      this.offer('Ashgrove Securities', this.companies[0], 500, 35),
+      this.offer('Crane & Thorne', this.companies[3], 300, 60),
+    ];
+    this.recalc();
+  },
+  offer: function (broker, c, shares, rate) {
+    return { ref: ref(), broker: broker, company: c.id, ticker: c.ticker, shares: shares, debt_shares: shares,
+      deposit: Math.round(rate / 100 * c.price * shares), deposit_rate: rate, lease_minutes: 20, grace_minutes: 5,
+      offer_left: irnd(400, 800), lease_left: 0, grace_left: 0 };
+  },
+  pf: function () {
+    var key = this.acting || 'personal';
+    if (!this.portfolios[key]) this.portfolios[key] = { holdings: {}, cost: {}, shorts: [], loan_debt: 0, overdue: 0, log: [] };
+    return this.portfolios[key];
+  },
+  money: function (v) {
+    if (v === undefined) return this.acting ? this.dept[this.acting] : this.balance;
+    if (this.acting) this.dept[this.acting] = v; else this.balance = v;
+  },
+  company: function (id) { return this.companies.find(function (c) { return c.id === id; }); },
+  recalc: function () {
+    this.companies.forEach(function (c) {
+      var old = c.history[Math.max(0, c.history.length - 11)];
+      c.change = round2((c.price - old) / old * 100);
+    });
+  },
+  tick: function () {
+    this.companies.forEach(function (c) {
+      c.last_price = c.price;
+      c.price = round2(Math.max(1, c.price * Math.exp(rnd(-0.025, 0.026))));
+      c.history.push(c.price);
+      if (c.history.length > 90) c.history.shift();
+    });
+    this.offers.forEach(function (o) { o.offer_left = Math.max(0, o.offer_left - 5); });
+    var p = this.pf();
+    p.shorts.forEach(function (s) { if (s.lease_left > 0) s.lease_left = Math.max(0, s.lease_left - 5); else s.grace_left = Math.max(0, s.grace_left - 5); });
+    if (p.loan_debt > 0) p.loan_debt *= 1.001;
+    this.recalc();
+  },
+  collateral: function () {
+    var p = this.pf(), self = this, sum = 0;
+    Object.keys(p.holdings).forEach(function (id) {
+      var borrowed = p.shorts.filter(function (s) { return s.company === id; }).reduce(function (a, s) { return a + s.debt_shares; }, 0);
+      sum += Math.max(0, p.holdings[id] - borrowed) * self.company(id).price;
+    });
+    return Math.round(sum);
+  },
+  log: function (text) {
+    var p = this.pf();
+    p.log.unshift(clock() + ' ' + text + (this.acting ? ' By Alex Ward.' : ''));
+    p.log = p.log.slice(0, 20);
+  },
+  act: function (action, params) {
+    var p = this.pf();
+    if (action === 'login') { this.logged = true; this.status = 'Welcome, Alex Ward.'; return; }
+    if (!this.logged) { this.status = 'Please log in first.'; return; }
+    if (action === 'logout') { this.logged = false; this.acting = null; this.status = null; return; }
+    if (action === 'set_payer') { this.acting = params.department || null; this.status = null; return; }
+    if (action === 'buy' || action === 'sell') {
+      var c = this.company(params.id), n = Math.round(params.amount);
+      var total = Math.round(n * c.price), fee = Math.max(5, Math.round(total * 0.015));
+      if (action === 'buy') {
+        if (this.money() < total + fee) { this.status = 'Not enough credits: ' + (total + fee) + ' cr needed.'; return; }
+        this.money(this.money() - total - fee);
+        p.holdings[c.id] = (p.holdings[c.id] || 0) + n; p.cost[c.id] = (p.cost[c.id] || 0) + total;
+        c.price = round2(c.price * (1 + n / 50000 * 0.5));
+        this.log('Bought ' + n + ' ' + c.ticker + ' for ' + total + ' cr (fee ' + fee + ' cr).');
+        this.status = 'Bought ' + n + ' shares of ' + c.ticker + '.';
+      } else {
+        if ((p.holdings[c.id] || 0) < n) { this.status = 'You only hold ' + (p.holdings[c.id] || 0) + ' shares of ' + c.ticker + '.'; return; }
+        this.money(this.money() + total - fee);
+        p.cost[c.id] = Math.round(p.cost[c.id] * (p.holdings[c.id] - n) / p.holdings[c.id]);
+        p.holdings[c.id] -= n; if (!p.holdings[c.id]) { delete p.holdings[c.id]; delete p.cost[c.id]; }
+        c.price = round2(c.price * (1 - n / 50000 * 0.5));
+        this.log('Sold ' + n + ' ' + c.ticker + ' for ' + total + ' cr (fee ' + fee + ' cr).');
+        this.status = 'Sold ' + n + ' shares of ' + c.ticker + '.';
+      }
+      return;
+    }
+    if (action === 'take_short') {
+      var o = this.offers.find(function (x) { return x.ref === params.ref; });
+      if (!o) return;
+      if (this.money() < o.deposit) { this.status = 'Not enough credits: the deposit is ' + o.deposit + ' cr.'; return; }
+      this.money(this.money() - o.deposit);
+      this.offers.splice(this.offers.indexOf(o), 1);
+      o.lease_left = o.lease_minutes * 60; o.grace_left = o.grace_minutes * 60; o.offer_left = 0;
+      p.shorts.push(o);
+      p.holdings[o.company] = (p.holdings[o.company] || 0) + o.shares;
+      p.cost[o.company] = (p.cost[o.company] || 0) + Math.round(o.shares * this.company(o.company).price);
+      this.log('Borrowed ' + o.shares + ' ' + o.ticker + ' from ' + o.broker + ', deposit ' + o.deposit + ' cr.');
+      this.status = 'Borrowed ' + o.shares + ' shares of ' + o.ticker + '.';
+      return;
+    }
+    if (action === 'return_short') {
+      var s = p.shorts.find(function (x) { return x.ref === params.ref; });
+      if (!s) return;
+      var have = p.holdings[s.company] || 0, give = Math.min(have, s.debt_shares);
+      p.holdings[s.company] = have - give; if (!p.holdings[s.company]) delete p.holdings[s.company];
+      s.debt_shares -= give;
+      if (s.debt_shares > 0) { this.status = 'You do not hold enough shares of ' + s.ticker + ' to return all of them.'; return; }
+      p.shorts.splice(p.shorts.indexOf(s), 1);
+      this.money(this.money() + s.deposit);
+      this.log('Short from ' + s.broker + ' closed, deposit of ' + s.deposit + ' cr returned.');
+      this.status = 'Short position on ' + s.ticker + ' closed.';
+      return;
+    }
+    if (action === 'loan') {
+      var limit = Math.max(0, Math.min(100000, Math.round(this.collateral() * 0.5)) - Math.round(p.loan_debt));
+      if (params.amount > limit) { this.status = 'You can borrow at most ' + limit + ' cr against your shares.'; return; }
+      p.loan_debt += params.amount; this.money(this.money() + params.amount);
+      this.log('Took a margin loan of ' + params.amount + ' cr.'); this.status = 'Margin loan granted.';
+      return;
+    }
+    if (action === 'repay') {
+      var amt = Math.min(params.amount, Math.ceil(p.loan_debt));
+      if (amt <= 0) { this.status = 'Nothing to repay.'; return; }
+      if (this.money() < amt) { this.status = 'Not enough credits.'; return; }
+      this.money(this.money() - amt); p.loan_debt = Math.max(0, p.loan_debt - amt);
+      this.log('Repaid ' + amt + ' cr of debt.'); this.status = 'Debt repaid.';
+    }
+  },
+  data: function () {
+    var self = this, p = this.pf();
+    var d = {
+      companies: this.companies, offers: this.offers, news: this.news,
+      fee_percent: 1.5, min_fee: 5, max_order: 5000, ltv_percent: 50, margin_call_percent: 75, interest_percent: 0.1,
+      status: this.status, logged_in: this.logged,
+    };
+    if (this.logged) {
+      d.owner = 'Alex Ward';
+      d.acting_for = this.acting;
+      d.balance = Math.round(this.money());
+      d.payers = [{ id: null, name: 'Personal account' }, { id: 'Medical', name: 'Medical budget' }];
+      d.portfolio = {
+        holdings: Object.keys(p.holdings).map(function (id) {
+          var c = self.company(id), n = p.holdings[id];
+          return { id: id, ticker: c.ticker, name: c.name, shares: n,
+            borrowed: p.shorts.filter(function (s) { return s.company === id; }).reduce(function (a, s) { return a + s.debt_shares; }, 0),
+            value: Math.round(n * c.price), avg_price: round2(p.cost[id] / n) };
+        }),
+        shorts: p.shorts, loan_debt: Math.round(p.loan_debt),
+        max_loan: Math.max(0, Math.min(100000, Math.round(this.collateral() * 0.5)) - Math.round(p.loan_debt)),
+        collateral: this.collateral(), overdue: 0, log: p.log,
+      };
+    }
+    return d;
+  },
+};
+
+// ---------- Trade console mock ----------
+var Trade = {
+  logged: false,
+  status: null,
+  payer: null,
+  balance: 1200,
+  budgets: { Medical: 18000, Supply: 9500 },
+  pending: 0,
+  nextShift: 900,
+  commodities: [],
+  traders: [],
+  init: function () {
+    var defs = [
+      ['Metal', 'Minerals', 'sheet', 5], ['Glass', 'Minerals', 'sheet', 4], ['Plasteel', 'Minerals', 'sheet', 16],
+      ['Plasma', 'Minerals', 'sheet', 30], ['Gold', 'Minerals', 'sheet', 30], ['Diamond', 'Minerals', 'sheet', 80],
+      ['Bluespace crystal', 'Minerals', 'crystal', 140], ['Raw ore', 'Ores', 'ore', 3], ['Rare gems', 'Ores', 'gem', 200],
+      ['Fresh produce', 'Food', 'piece', 6], ['Meat', 'Food', 'cut', 8], ['Prepared meals', 'Food', 'dish', 15],
+      ['Pills and patches', 'Medical', 'pill', 12], ['Organs', 'Medical', 'organ', 120], ['Machine parts', 'Engineering', 'part', 15],
+      ['Circuit boards', 'Engineering', 'board', 40], ['Cloth', 'Textiles', 'sheet', 6], ['Leather and hides', 'Textiles', 'sheet', 14],
+      ['Slime extracts', 'Science', 'extract', 60],
+    ];
+    var self = this;
+    defs.forEach(function (d, i) {
+      var history = [];
+      for (var k = 0; k < 12; k++) history.push(Math.max(1, Math.round(d[3] * rnd(0.7, 1.5))));
+      var demand = Math.random() < 0.2;
+      var price = demand ? Math.round(d[3] * rnd(1.6, 2.5)) : history[11];
+      history[11] = price;
+      self.commodities.push({ id: 'c' + i, name: d[0], desc: '', category: d[1], unit: d[2], price: price, base_price: d[3], in_demand: demand, history: history });
+    });
+    function sell(name, price, stock) { return { ref: ref(), name: name, selling: true, price: price, stock: stock, bundle: 1, haggled: false, in_demand: false }; }
+    function buy(name, price, stock, hot) { return { ref: ref(), name: name, selling: false, price: price, stock: stock, bundle: 1, haggled: false, in_demand: !!hot }; }
+    this.traders = [
+      { id: ref(), name: 'Dr. Penhallow', title: 'mobile clinic supplier', icon: 'briefcase-medical', color: 'teal', contraband: false, patience: 4,
+        desc: 'Runs a hospital ship between frontier colonies. Polite, precise and never in a hurry.',
+        message: 'Good day. Our pharmacy is open, please browse at your leisure.',
+        selling: [sell('advanced first-aid kit', 74, 4), sell('charcoal autoinjector', 33, 7), sell('advanced health analyzer', 151, 2), sell('defibrillator', 296, 1), sell('cybernetic heart', 318, 1)],
+        buying: [buy('Organs (per organ)', 160, 9, true), buy('Pills and patches (per pill)', 14, 120), buy('Bandages and gauze (per use)', 5, 80)] },
+      { id: ref(), name: 'Mira "Rivet" Corwin', title: 'salvage engineer', icon: 'tools', color: 'yellow', contraband: false, patience: 5,
+        desc: 'Strips derelict stations for parts and sells them with a grin. Haggling is half the fun for them.',
+        message: "Hey! Fresh haul from a derelict, barely scorched. Have a look!",
+        selling: [sell('high-capacity power cell', 62, 5), sell('full utility belt', 88, 2), sell('insulated gloves', 165, 2), sell('magboots', 254, 1), sell('super capacitor', 68, 4)],
+        buying: [buy('Metal (per sheet)', 6, 140), buy('Plasteel (per sheet)', 19, 60), buy('Circuit boards (per board)', 48, 12)] },
+      { id: ref(), name: 'Prospector Garrow', title: 'asteroid prospector', icon: 'gem', color: 'orange', contraband: false, patience: 3,
+        desc: 'A tough old miner from the belt. Pays well for good rock and has no time for small talk.',
+        message: 'Got rock? I pay for rock.',
+        selling: [sell('mining scanner', 41, 3), sell('mining drill', 107, 2), sell('proto-kinetic accelerator', 330, 1), sell('diamond x5', 560, 2)],
+        buying: [buy('Raw ore (per ore)', 4, 150), buy('Rare gems (per gem)', 250, 8, true), buy('Plasma (per sheet)', 35, 90), buy('Gold (per sheet)', 33, 70)] },
+    ];
+    this.shady = { id: ref(), name: '"Velvet"', title: '"independent importer"', icon: 'user-secret', color: 'red', contraband: true, patience: 3,
+      desc: 'Nobody knows where they come from. The goods are real, the paperwork is not.',
+      message: "Psst. You didn't see me, I didn't see you. Now, shopping.",
+      selling: [sell('balaclava', 31, 3), sell('Syndicate cigarettes', 92, 3), sell('knuckle dusters', 108, 1), sell('chameleon mask', 455, 1)],
+      buying: [buy('Organs (per organ)', 192, 6), buy('Rare gems (per gem)', 300, 5)] };
+    this.emagged = false;
+  },
+  visible: function () { return this.emagged ? this.traders.concat([this.shady]) : this.traders; },
+  findOffer: function (r) {
+    var all = this.visible(), found = null;
+    all.forEach(function (t) { t.selling.concat(t.buying).forEach(function (o) { if (o.ref === r) found = { trader: t, offer: o }; }); });
+    return found;
+  },
+  payerMoney: function (v) {
+    if (v === undefined) return this.payer ? this.budgets[this.payer] : this.balance;
+    if (this.payer) this.budgets[this.payer] = v; else this.balance = v;
+  },
+  tick: function () { this.nextShift = Math.max(0, this.nextShift - 5); },
+  act: function (action, params) {
+    if (action === 'login') { this.logged = true; this.status = 'Welcome, Alex Ward.'; return; }
+    if (action === 'emag') { this.emagged = true; this.status = 'Trade filters disabled. Unlisted contacts available.'; return; }
+    if (!this.logged) { this.status = 'Please log in first.'; return; }
+    if (action === 'logout') { this.logged = false; this.payer = null; this.status = null; return; }
+    if (action === 'set_payer') { this.payer = params.department || null; return; }
+    var f;
+    if (action === 'buy') {
+      f = this.findOffer(params.ref); if (!f) return;
+      var n = Math.round(params.amount), total = f.offer.price * n;
+      if (n > f.offer.stock) { this.status = f.trader.name + ' only has ' + f.offer.stock + ' left.'; return; }
+      if (this.payerMoney() < total) { this.status = 'Not enough credits: ' + total + ' cr needed.'; return; }
+      this.payerMoney(this.payerMoney() - total);
+      f.offer.stock -= n; if (!f.offer.stock) f.trader.selling.splice(f.trader.selling.indexOf(f.offer), 1);
+      this.pending++;
+      f.trader.message = pick(['Pleasure doing business. It ships on the next supply run.', 'Done! It goes on your next freighter.']);
+      this.status = 'Ordered from ' + f.trader.name + '. It arrives on the next trade freighter.';
+      return;
+    }
+    if (action === 'haggle') {
+      f = this.findOffer(params.ref); if (!f) return;
+      if (!f.offer.selling && this.payer !== 'Supply') { this.status = 'Only cargo staff can negotiate what traders pay the station.'; return; }
+      var t = f.trader, o = f.offer;
+      var asking = Number(window.prompt('Haggle with ' + t.name + '\nCurrent price: ' + o.price + ' cr. What price do you propose?', o.price));
+      if (!asking || asking === o.price) return;
+      if (t.patience <= 0) { t.message = "This is going nowhere. I'm out."; t.away = true; this.traders = this.traders.filter(function (x) { return x !== t; }); this.status = null; return; }
+      var crewBuys = o.selling;
+      if (crewBuys ? asking > o.price : asking < o.price) {
+        if (t.contraband) { o.price = asking; o.haggled = true; t.message = 'Heh. Pleasure doing business.'; }
+        else { t.patience--; t.message = 'No, that will not work.'; }
+        this.status = null; return;
+      }
+      t.patience--;
+      if (Math.abs(asking - o.price) / o.price * 100 >= 25) { t.message = t.patience > 0 ? "No. That's not a serious offer." : 'We are done haggling.'; this.status = null; return; }
+      var mid = (o.price + asking) / 2, gap = Math.round(Math.abs(o.price - mid));
+      var np = Math.round(crewBuys ? mid + irnd(0, gap) : mid - irnd(0, gap));
+      if (np === o.price) np += crewBuys ? -1 : 1;
+      o.price = Math.max(1, np); o.haggled = true;
+      t.message = t.patience > 0 ? 'Alright, how about this?' : 'That is my final offer.';
+      this.status = null; return;
+    }
+    if (action === 'consignment') {
+      this.status = 'Consignment note printed. Put it in a crate with the goods and leave the crate aboard the trade freighter.';
+    }
+  },
+  data: function () {
+    var d = {
+      market: { commodities: this.commodities, next_shift: this.nextShift, quest_min: 0.75, quest_max: 1.3 },
+      traders: this.visible(), away_count: 2 - (this.emagged ? 0 : 0), pending_orders: this.pending,
+      freighter: 'The freighter is docked at the trade bay. It departs in 4 minutes.',
+      status: this.status, logged_in: this.logged,
+    };
+    if (this.logged) {
+      d.owner = 'Alex Ward';
+      d.cargo_access = this.payer === 'Supply';
+      d.paying_department = this.payer;
+      d.payers = [
+        { id: null, name: 'Personal account', balance: this.balance },
+        { id: 'Medical', name: 'Medical budget', balance: this.budgets.Medical },
+        { id: 'Supply', name: 'Supply budget', balance: this.budgets.Supply },
+      ];
+    }
+    return d;
+  },
+};
+
+// ---------- Server loop ----------
+var Mock = {
+  ui: new URLSearchParams(location.search).get('ui') === 'trade' ? 'trade' : 'stock',
+  model: function () { return this.ui === 'trade' ? Trade : Stock; },
+  push: function () {
+    var isTrade = this.ui === 'trade';
+    Byond.injectMessage('update', {
+      config: {
+        title: isTrade ? 'trade console' : 'stock exchange console',
+        status: 2,
+        interface: { name: isTrade ? 'TradeConsole' : 'StockExchange', layout: 'nanotrasen' },
+        refreshing: 0,
+        window: { key: 'preview', size: isTrade ? [900, 640] : [920, 660], fancy: 0, locked: 0, scale: 0 },
+        client: { ckey: 'preview', address: '127.0.0.1', computer_id: '0' },
+        user: { name: 'Alex Ward', observer: 0 },
+        map: '',
+      },
+      data: this.model().data(),
+      static_data: {},
+    });
+  },
+  receive: function (type, payload) {
+    if (type === 'ready') { this.push(); return; }
+    if (type && type.indexOf('act/') === 0) {
+      var params = typeof payload === 'string' ? JSON.parse(payload) : (payload || {});
+      this.model().act(type.slice(4), params);
+      this.push();
+    }
+  },
+};
+Stock.init();
+Trade.init();
+setInterval(function () { Stock.tick(); Trade.tick(); Mock.push(); }, 5000);
+</script>
+<link rel="stylesheet" href="../../tgui/public/tgui.bundle.css" />
+<style>
+  #preview-bar { position: fixed; right: 8px; bottom: 8px; z-index: 99999; font: 12px sans-serif; background: rgba(0,0,0,.75); color: #ddd; padding: 6px 8px; border-radius: 4px; }
+  #preview-bar a, #preview-bar button { color: #8cf; margin-left: 6px; background: none; border: 1px solid #8cf; border-radius: 3px; cursor: pointer; padding: 1px 6px; font: inherit; text-decoration: none; }
+</style>
+</head>
+<body style="background-color: var(--color-base)">
+<div id="react-root"></div>
+<div id="FatalError" class="FatalError"><div id="FatalError__stack" class="FatalError__stack"></div></div>
+<div id="preview-bar">
+  Preview:
+  <a href="?ui=stock">Stock exchange</a>
+  <a href="?ui=trade">Trade console</a>
+  <button onclick="Trade.act('emag', {}); Mock.push();">Emag trade console</button>
+</div>
+<script src="../../tgui/public/tgui.bundle.js"></script>
+<script>Byond.sendMessage('ready');</script>
+</body>
+</html>
