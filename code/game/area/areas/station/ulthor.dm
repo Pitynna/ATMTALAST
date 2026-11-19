@@ -81,8 +81,16 @@
 	icon_state = "hallF"
 
 /area/station/hallway/ulthor_theatre_access
-	name = "Ulthor Theatre Hallway"
+	name = "Service Hallway"
 	icon_state = "hallF"
+
+/area/station/hallway/ulthor_legal
+	name = "Legal Hallway"
+	icon_state = "hallA"
+
+/area/station/hallway/ulthor_security
+	name = "Security Hallway"
+	icon_state = "hallA"
 
 /area/station/maintenance/ulthor_ai_passage
 	name = "Ulthor AI Maintenance"
