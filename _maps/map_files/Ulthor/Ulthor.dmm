@@ -853,6 +853,17 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/primary/fore)
+"axn" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1450;
+	id_tag = "sci_inner";
+	locked = 1;
+	name = "External Access";
+	req_access = list(13)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_south_passage)
 "axD" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/shuttle,
@@ -2745,6 +2756,10 @@
 	icon_state = "neutralfull"
 	},
 /area/station/security/prison/perma)
+"bxG" = (
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_south_passage)
 "bxR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -3874,6 +3889,33 @@
 /obj/effect/turf_decal/delivery/hollow,
 /turf/simulated/floor/grass,
 /area/station/hallway/secondary/garden)
+"bZl" = (
+/obj/machinery/airlock_sensor{
+	frequency = 1450;
+	id_tag = "sci_sensor";
+	layer = 3.3;
+	pixel_x = -25;
+	pixel_y = 12
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1450;
+	id_tag = "sci_pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	frequency = 1450;
+	id_tag = "sci_maint";
+	layer = 3.3;
+	pixel_x = -25;
+	pixel_y = -6;
+	req_access = list(13);
+	tag_airpump = "sci_pump";
+	tag_chamber_sensor = "sci_sensor";
+	tag_exterior_door = "sci_outer";
+	tag_interior_door = "sci_inner"
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_south_passage)
 "bZu" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/iv_bag/blood/random,
@@ -6489,6 +6531,15 @@
 	tag = "icon-swall_f10"
 	},
 /area/shuttle/ulthor_laborcamp)
+"dqe" = (
+/obj/machinery/camera{
+	c_tag = "Bar Stage";
+	network = list("SS13");
+	start_active = 1;
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/station/service/bar)
 "dqo" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/insulated{
@@ -8627,6 +8678,16 @@
 	icon_state = "neutralfull"
 	},
 /area/station/security/prison/perma)
+"epd" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1450;
+	id_tag = "sci_outer";
+	locked = 1;
+	name = "External Access";
+	req_access = list(13)
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_south_passage)
 "epi" = (
 /obj/machinery/computer/rdconsole/core,
 /obj/effect/turf_decal/stripes/line{
@@ -10896,6 +10957,22 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/station/cargo/storage)
+"fEo" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/camera{
+	c_tag = "Bar Wardrobe";
+	network = list("SS13");
+	start_active = 1;
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/station/service/bar)
 "fED" = (
 /obj/structure/cable,
 /obj/machinery/hologram/holopad,
@@ -24067,6 +24144,10 @@
 	icon_state = "yellowfull"
 	},
 /area/station/engineering/engine)
+"mlz" = (
+/obj/machinery/light,
+/turf/simulated/floor/plating,
+/area/station/maintenance/disposal)
 "mlA" = (
 /obj/structure/toilet/parasha{
 	dir = 2
@@ -28930,6 +29011,17 @@
 	icon_state = "red"
 	},
 /area/station/security/prison/perma)
+"oPj" = (
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "darkred"
+	},
+/area/station/security/checkpoint)
 "oPo" = (
 /obj/item/radio/intercom/directional/north,
 /obj/structure/chair/sofa,
@@ -34478,6 +34570,13 @@
 	tag = "icon-whiteblue (WEST)"
 	},
 /area/station/medical/break_room)
+"rGs" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_south_passage)
 "rGA" = (
 /obj/structure/chair{
 	dir = 8
@@ -36163,6 +36262,15 @@
 	},
 /turf/simulated/floor/engine/insulated,
 /area/station/maintenance/turbine)
+"sKl" = (
+/obj/item/reagent_containers/food/pill/haloperidol{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood-broken5"
+	},
+/area/station/maintenance/ulthor_asylum)
 "sKB" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Hydroponics Maintenance";
@@ -41055,6 +41163,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/station/service/library)
+"vdl" = (
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/station/service/bar)
 "vdx" = (
 /turf/simulated/wall,
 /area/station/cargo/storage)
@@ -41586,6 +41698,14 @@
 	tag = "icon-whitebluefull"
 	},
 /area/station/medical/ward)
+"vrO" = (
+/obj/structure/cable/layer1,
+/obj/machinery/power/solar_control{
+	id = "portsolar";
+	name = "Aft Port Solar Control"
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/solars/port/ulthor)
 "vsg" = (
 /obj/structure/cable,
 /obj/machinery/hologram/holopad,
@@ -46852,6 +46972,10 @@
 	tag = "icon-cafeteria (NORTHEAST)"
 	},
 /area/station/service/kitchen)
+"ykp" = (
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_ai_passage)
 "ykA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -62232,7 +62356,7 @@ agy
 pzA
 gxF
 iDA
-oXh
+vrO
 pzA
 agy
 agy
@@ -65290,7 +65414,7 @@ mxT
 eXb
 eXb
 iGq
-iMM
+vRI
 cJA
 rXd
 rXd
@@ -65527,7 +65651,7 @@ iGq
 vRI
 vRI
 vRI
-atq
+vRI
 vRI
 vRI
 vRI
@@ -67661,7 +67785,7 @@ awM
 tSj
 tSj
 vqD
-seq
+mlz
 rDM
 eBx
 kab
@@ -70964,14 +71088,14 @@ hZa
 hZa
 xBT
 wol
-qos
+dqe
 amt
 amt
 amt
 amt
 kzU
 hZa
-wOq
+vdl
 pdG
 qBP
 lrZ
@@ -71217,7 +71341,7 @@ hlA
 msO
 uKj
 kTL
-pVJ
+fEo
 pou
 xBT
 wol
@@ -71228,7 +71352,7 @@ amt
 amt
 xGj
 hZa
-wIj
+pdG
 lrZ
 lrZ
 lrZ
@@ -71476,7 +71600,7 @@ hZa
 oLs
 lsM
 tUw
-egh
+oLs
 wol
 oHc
 mJX
@@ -72244,9 +72368,9 @@ pdG
 pdG
 pdG
 pdG
-eFV
 pdG
-yff
+pdG
+pdG
 pdG
 pdG
 pdG
@@ -75137,10 +75261,10 @@ jAq
 jAq
 gRt
 uyl
-gsv
-gsv
-gsv
-gsv
+bxG
+bxG
+bxG
+bxG
 igm
 agy
 agy
@@ -75394,10 +75518,10 @@ jAq
 jAq
 gRt
 qlv
-fHM
-wXB
-fkc
-tJl
+axn
+rGs
+bZl
+epd
 qjf
 agy
 agy
@@ -75651,10 +75775,10 @@ jAq
 jAq
 gRt
 bML
-gsv
-gsv
-gsv
-gsv
+bxG
+bxG
+bxG
+bxG
 igm
 agy
 agy
@@ -79400,7 +79524,7 @@ hzL
 cnl
 cnl
 hzL
-rVq
+sKl
 kgi
 xXv
 wBc
@@ -85097,7 +85221,7 @@ oNo
 oNo
 oNo
 oNo
-grD
+ykp
 nfJ
 iQI
 iQI
@@ -85388,7 +85512,7 @@ hcx
 lRw
 vOZ
 lRw
-dev
+agJ
 agJ
 agJ
 agJ
@@ -90275,7 +90399,7 @@ lGO
 gYG
 mNk
 ifN
-gtg
+oPj
 urj
 bAE
 kvf
