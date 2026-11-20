@@ -53673,25 +53673,6 @@
 "aak" = (
 /turf/simulated/floor/beach/water,
 /area/station/commons/ulthor_pool)
-"aal" = (
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
-"aan" = (
-/obj/structure/weightmachine/weightlifter,
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
-"aao" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
-"aap" = (
-/obj/structure/chair/sofa/bench/solo{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
 "aaq" = (
 /obj/machinery/light{
 	dir = 1
@@ -53700,20 +53681,6 @@
 	icon_state = "white"
 	},
 /area/station/commons/ulthor_pool)
-"aar" = (
-/obj/structure/punching_bag,
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
-"aas" = (
-/obj/machinery/light{
-	dir = 2
-	},
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
-"aat" = (
-/obj/effect/spawner/window/reinforced,
-/turf/simulated/floor/plating,
-/area/station/commons/fitness)
 "aau" = (
 /obj/machinery/poolcontroller{
 	pixel_y = -25
@@ -53725,119 +53692,6 @@
 "aav" = (
 /turf/simulated/floor/plating,
 /area/station/maintenance/ulthor_south_passage)
-"aaw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aax" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aay" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aaz" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aaA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 5
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aaB" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aaC" = (
-/turf/simulated/wall,
-/area/station/commons/fitness)
-"aaD" = (
-/obj/machinery/alarm/directional/south,
-/turf/simulated/floor/wood,
-/area/station/commons/fitness)
-"aaE" = (
-/obj/structure/window/reinforced{
-	dir = 2
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"aaF" = (
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"aaG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"aaH" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"aaI" = (
-/obj/structure/grille,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"aaJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"aaK" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/directional/south,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
 "aaL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -53852,79 +53706,6 @@
 	icon_state = "white"
 	},
 /area/station/commons/ulthor_pool)
-"aaN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"aaO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"aaP" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"aaQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"aaR" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"aaS" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"aaT" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/public/glass{
-	name = "Fitness Room"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plasteel,
-/area/station/commons/fitness)
 "aaU" = (
 /obj/machinery/alarm/directional/north,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -53967,44 +53748,6 @@
 "aaZ" = (
 /turf/simulated/wall,
 /area/station/maintenance/ulthor_south_passage)
-"aba" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/engine{
-	name = "Holodeck Projector Floor"
-	},
-/area/holodeck/alphadeck)
-"abb" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Holodeck"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel,
-/area/station/commons/fitness)
-"abc" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"abd" = (
-/obj/machinery/firealarm/directional/south,
-/obj/structure/cable,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
 "abe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -54014,29 +53757,6 @@
 	},
 /turf/simulated/wall,
 /area/station/commons/ulthor_pool)
-"abf" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"abg" = (
-/obj/machinery/computer/HolodeckControl,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"abj" = (
-/obj/structure/cable,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
 "abk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -54046,28 +53766,6 @@
 	},
 /turf/space,
 /area/space)
-"abl" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"abm" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
-"abn" = (
-/obj/machinery/light{
-	dir = 2
-	},
-/obj/structure/cable,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/fitness)
 "abo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -54085,35 +53783,6 @@
 /obj/structure/cable,
 /turf/simulated/floor/plasteel,
 /area/station/commons/ulthor_pool)
-"abq" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"abr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
-"abs" = (
-/obj/machinery/power/apc/directional/east,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/simulated/floor/plating,
-/area/station/maintenance/ulthor_south_passage)
 "abt" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access = list(12);
@@ -54261,15 +53930,6 @@
 /obj/structure/cable,
 /turf/simulated/floor/wood,
 /area/station/commons/ulthor_exchange)
-"abJ" = (
-/obj/machinery/power/apc/directional/west,
-/obj/structure/cable,
-/turf/simulated/floor/wood,
-/area/station/commons/ulthor_exchange)
-"abK" = (
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/wood,
-/area/station/commons/ulthor_exchange)
 "abL" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -54283,17 +53943,6 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plasteel,
-/area/station/commons/ulthor_exchange)
-"abN" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/station/commons/ulthor_exchange)
-"abO" = (
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
 /area/station/commons/ulthor_exchange)
 "abP" = (
 /obj/structure/reagent_dispensers/watertank/high,
@@ -54314,13 +53963,6 @@
 	icon_state = "neutralfull"
 	},
 /area/station/hallway/ulthor_commons)
-"abS" = (
-/obj/machinery/firealarm/directional/east,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/station/commons/ulthor_exchange)
 "abT" = (
 /obj/machinery/light{
 	dir = 4
@@ -54328,12 +53970,96 @@
 /obj/machinery/computer/trade_console,
 /turf/simulated/floor/wood,
 /area/station/commons/ulthor_exchange)
-"abV" = (
-/obj/machinery/alarm/directional/east,
+"abX" = (
+/obj/structure/cable,
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plasteel,
+/area/station/commons/storage/tools)
+"abY" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plasteel,
+/area/station/commons/storage/tools)
+"abZ" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plasteel,
+/area/station/commons/storage/tools)
+"aca" = (
+/obj/machinery/power/apc/directional/west,
+/obj/structure/cable,
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/station/commons/ulthor_exchange)
-"abW" = (
-/obj/structure/closet/firecloset,
+"acb" = (
+/obj/item/twohanded/required/kirbyplants,
+/turf/simulated/floor/wood,
+/area/station/commons/ulthor_exchange)
+"acc" = (
+/turf/simulated/floor/carpet/green,
+/area/station/commons/ulthor_exchange)
+"acd" = (
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/green,
+/area/station/commons/ulthor_exchange)
+"ace" = (
+/turf/simulated/wall,
+/area/station/commons/ulthor_exchange)
+"acf" = (
+/turf/simulated/floor/wood,
+/area/station/commons/ulthor_exchange)
+"acg" = (
+/obj/structure/table/wood/fancy/green,
+/obj/item/goon_vase/daffodil,
+/turf/simulated/floor/carpet/green,
+/area/station/commons/ulthor_exchange)
+"ach" = (
+/obj/effect/spawner/window/reinforced,
+/turf/simulated/floor/plating,
+/area/station/commons/ulthor_exchange)
+"aci" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/station/commons/ulthor_exchange)
+"acj" = (
+/obj/structure/chair/comfy/brown{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 2
+	},
+/turf/simulated/floor/carpet/green,
+/area/station/commons/ulthor_exchange)
+"ack" = (
+/obj/structure/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/station/commons/ulthor_exchange)
+"acl" = (
+/obj/machinery/firealarm/directional/east,
+/turf/simulated/floor/wood,
+/area/station/commons/ulthor_exchange)
+"acm" = (
+/obj/machinery/alarm/directional/east,
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/station/commons/ulthor_exchange)
+"acn" = (
+/obj/structure/table/wood,
+/obj/item/folder/blue{
+	pixel_x = -4
+	},
+/obj/item/pen{
+	pixel_x = 7;
+	pixel_y = -3
+	},
 /turf/simulated/floor/wood,
 /area/station/commons/ulthor_exchange)
 
@@ -78639,10 +78365,10 @@ rar
 rBW
 tSi
 jWZ
-aal
-aan
-aao
-aap
+jAq
+jAq
+kRo
+jAq
 rDM
 rGG
 kab
@@ -78896,17 +78622,17 @@ jWZ
 jWZ
 jWZ
 jWZ
-aar
-aal
-aao
-aas
-aat
+jAq
+jAq
+kRo
+jAq
+rDM
 rGG
 kab
 rbd
 hVd
-moR
-wIt
+abX
+abY
 wIt
 lXE
 fbm
@@ -79143,20 +78869,20 @@ sCw
 oTf
 jWZ
 jWZ
-aav
-aaw
-aax
-aay
-aaz
-aaz
-aaA
-aaB
-aaB
-aaB
-aaC
-aal
-aao
-aaD
+jWZ
+dEP
+tBl
+dVR
+jos
+jos
+vHE
+jAq
+jAq
+jAq
+jAq
+jAq
+kRo
+jAq
 rDM
 rGG
 kab
@@ -79400,20 +79126,20 @@ lSW
 mMZ
 agy
 jWZ
-aaE
-aaF
-aaF
-aaG
-aaF
-aaF
-aaH
-aaF
-aaF
-aaF
-aaF
-aaI
-aaJ
-aaK
+jAq
+jAq
+jAq
+nLj
+jAq
+jAq
+kxs
+jAq
+jAq
+jAq
+jAq
+jAq
+kRo
+pBc
 rDM
 rGG
 kab
@@ -79657,26 +79383,26 @@ nlP
 mMZ
 agy
 jWZ
-aaE
-aaF
-aaF
-aaN
-aaO
-aaO
-aaP
-aaO
-aaO
-aaO
-aaO
-aaQ
-aaR
-aaS
-aaT
+jWZ
+jAq
+jAq
+dEP
+tBl
+tBl
+ekc
+tBl
+tBl
+tBl
+tBl
+tBl
+hJD
+aYO
+vIc
 uPb
 kab
 amu
 rDM
-wIt
+abZ
 wIt
 wIt
 cQG
@@ -79913,21 +79639,21 @@ wfx
 mYo
 mMZ
 agy
-aaZ
-aaE
-aaF
-aaF
-aaF
-aaF
-aaF
-aba
-aaF
-aaF
-aaF
-aaF
-abb
-abc
-abd
+agy
+jWZ
+jAq
+jAq
+jAq
+jAq
+jAq
+jOF
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
 rDM
 amu
 kab
@@ -80170,22 +79896,22 @@ crD
 hYR
 blU
 blU
-aaZ
-aaE
-aaF
-aaF
-aaF
-aaF
-aaF
-aba
-aaF
-aaF
-aaF
-aaF
-abf
-abg
-abj
-aat
+agy
+jWZ
+jAq
+jAq
+jAq
+jAq
+jAq
+jOF
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
+rDM
 oko
 gOt
 nqk
@@ -80427,21 +80153,21 @@ nVQ
 ldf
 cGd
 blU
-aaZ
-aaE
-aaF
-aaF
-aaF
-aaF
-aaF
-aba
-aaF
-aaF
-aaF
-aaF
-abl
-abm
-abn
+agy
+jWZ
+jAq
+jAq
+jAq
+jAq
+jAq
+jOF
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
 rDM
 amu
 kab
@@ -80684,22 +80410,22 @@ nVQ
 ldf
 ifq
 ueA
-aaZ
-aav
-abq
-abq
-abq
-abq
-abq
-abr
-abq
-abq
-abq
-abq
-abq
-abq
-abs
-abt
+agy
+jWZ
+jAq
+jAq
+jAq
+jAq
+jAq
+jOF
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
+jAq
+rDM
 amu
 kab
 amu
@@ -81487,11 +81213,11 @@ abF
 abG
 abH
 abI
-abJ
-abK
-eWJ
-agy
-agy
+aca
+acb
+acc
+acd
+ace
 agy
 agy
 agy
@@ -81742,13 +81468,13 @@ qUU
 qOs
 qOs
 abM
-abN
-abN
-abN
-abO
-eWJ
-agy
-agy
+acf
+acf
+acf
+acf
+acc
+acg
+ach
 agy
 agy
 agy
@@ -81999,13 +81725,13 @@ abQ
 abR
 abR
 abQ
-abS
-abT
-abV
-abW
-eWJ
-agy
-agy
+aci
+acf
+acf
+acf
+acc
+acj
+ace
 agy
 agy
 agy
@@ -82255,12 +81981,12 @@ fpV
 qUU
 qOs
 qOs
-jWZ
-jWZ
-jWZ
-jWZ
-jWZ
-jWZ
+ach
+acf
+acf
+acf
+ack
+ace
 jWZ
 jWZ
 agy
@@ -82513,11 +82239,11 @@ jEn
 mDJ
 qOs
 jWZ
-jAq
-jAq
-jAq
-jAq
-jAq
+acl
+abT
+acm
+acn
+ace
 gRt
 uyl
 bxG
@@ -82770,10 +82496,10 @@ jEn
 cXA
 cXA
 jWZ
-jAq
-jWZ
-jAq
-jAq
+ace
+ace
+ace
+ace
 jAq
 gRt
 qlv
