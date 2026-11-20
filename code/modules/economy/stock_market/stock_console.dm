@@ -7,8 +7,10 @@
 	icon_screen = "comm_logs"
 	circuit = /obj/item/circuitboard/stock_exchange
 	light_color = LIGHT_COLOR_GREEN
-	/// Account currently logged in.
+	/// Personal account of the logged in user. May be null: heads without one can still invest department budgets.
 	var/datum/money_account/logged_account
+	/// Name on the ID that logged in.
+	var/logged_name
 	/// Who logged in. Anyone else sees the login screen.
 	var/datum/weakref/logged_user
 	/// Last error or result shown in the UI.
@@ -38,17 +40,28 @@
 		ui = new(user, src, "StockExchange", name)
 		ui.open()
 
-/obj/machinery/computer/stock_exchange/proc/session_account(mob/user)
-	if(!logged_account || logged_user?.resolve() != user)
-		return null
-	return logged_account
+/// TRUE if this user is the one logged in.
+/obj/machinery/computer/stock_exchange/proc/session_ok(mob/user)
+	return logged_user && logged_user.resolve() == user && (logged_account || length(payable_departments))
 
 /// Account the deals go through: the personal one or a department budget.
 /obj/machinery/computer/stock_exchange/proc/acting_account(mob/user)
-	var/datum/money_account/account = session_account(user)
-	if(account && acting_department && (acting_department in payable_departments))
-		return GLOB.department_accounts[acting_department] || account
-	return account
+	if(!session_ok(user))
+		return null
+	if(acting_department && (acting_department in payable_departments) && GLOB.department_accounts[acting_department])
+		return GLOB.department_accounts[acting_department]
+	if(logged_account)
+		return logged_account
+	// No personal account: fall back to the first budget the user runs.
+	acting_department = payable_departments[1]
+	return GLOB.department_accounts[acting_department]
+
+/obj/machinery/computer/stock_exchange/proc/logout()
+	logged_account = null
+	logged_name = null
+	logged_user = null
+	payable_departments = list()
+	acting_department = null
 
 /obj/machinery/computer/stock_exchange/ui_data(mob/user)
 	var/list/data = list()
@@ -71,18 +84,18 @@
 	data["margin_call_percent"] = STOCK_LOAN_MARGIN_CALL * 100
 	data["interest_percent"] = STOCK_LOAN_INTEREST
 	data["status"] = status_message
-	var/datum/money_account/personal = session_account(user)
-	data["logged_in"] = !!personal
-	if(personal)
+	data["logged_in"] = session_ok(user)
+	if(session_ok(user))
 		var/datum/money_account/account = acting_account(user)
-		data["owner"] = personal.owner_name
-		data["acting_for"] = account == personal ? null : acting_department
+		data["owner"] = logged_name
+		data["acting_for"] = account == logged_account ? null : acting_department
 		data["balance"] = account.money
 		data["portfolio"] = SSstock_market.get_portfolio(account).ui_entry()
-		var/list/payers = list(list("id" = null, "name" = "Personal account"))
+		var/list/payers = list()
+		if(logged_account)
+			payers += list(list("id" = null, "name" = "Personal account"))
 		for(var/department in payable_departments)
-			if(GLOB.department_accounts[department])
-				payers += list(list("id" = department, "name" = "[department] budget"))
+			payers += list(list("id" = department, "name" = "[department] budget"))
 		data["payers"] = payers
 	return data
 
@@ -94,28 +107,27 @@
 	if(action == "login")
 		login(user)
 		return
-	var/datum/money_account/personal = session_account(user)
-	if(!personal)
+	if(!session_ok(user))
 		status_message = "Please log in first."
 		return
 	var/datum/money_account/account = acting_account(user)
-	var/for_department = account != personal
+	var/for_department = account != logged_account
 	// Department deals show who made them in the account's transaction log.
-	var/terminal = for_department ? "Galactic Exchange terminal ([personal.owner_name])" : "Galactic Exchange terminal"
+	var/terminal = for_department ? "Galactic Exchange terminal ([logged_name])" : "Galactic Exchange terminal"
 	var/list/old_log = SSstock_market.get_portfolio(account).trade_log
 	var/old_first = length(old_log) ? old_log[1] : null
 	var/result
 	switch(action)
 		if("logout")
-			logged_account = null
-			logged_user = null
-			payable_departments = list()
-			acting_department = null
+			logout()
 			status_message = null
 			return
 		if("set_payer")
 			var/department = params["department"]
-			acting_department = (department in payable_departments) ? department : null
+			if(department in payable_departments)
+				acting_department = department
+			else if(logged_account)
+				acting_department = null
 			status_message = null
 			return
 		if("buy", "sell")
@@ -152,7 +164,7 @@
 	if(for_department)
 		var/datum/stock_portfolio/portfolio = SSstock_market.get_portfolio(account)
 		if(length(portfolio.trade_log) && portfolio.trade_log[1] != old_first)
-			portfolio.trade_log[1] += " By [personal.owner_name]."
+			portfolio.trade_log[1] += " By [logged_name]."
 
 /obj/machinery/computer/stock_exchange/proc/login(mob/user)
 	if(issilicon(user))
@@ -162,29 +174,26 @@
 	if(!istype(id))
 		status_message = "No ID card found. Wear or hold your ID."
 		return
+	var/list/departments = trade_payable_departments(id.GetAccess())
 	var/datum/money_account/account = attempt_account_access_nosec(id.associated_account_number)
-	if(!account)
-		status_message = "No bank account is linked to this ID."
-		return
-	if(account.security_level)
+	if(account?.suspended)
+		account = null
+	if(account?.security_level)
 		var/pin = tgui_input_number(user, "Enter the PIN of your account", "Galactic Exchange", 0, 999999, 0)
 		if(isnull(pin) || !attempt_account_access(account.account_number, pin, 2))
 			status_message = "Incorrect PIN."
 			return
-	if(account.suspended)
-		status_message = "This account is suspended."
+	// The ID's access is enough to invest department budgets, even without a personal account.
+	if(!account && !length(departments))
+		status_message = "No usable bank account is linked to this ID, and it gives no access to department budgets."
 		return
+	logout()
 	logged_account = account
+	logged_name = id.registered_name || account?.owner_name || "Unknown"
 	logged_user = WEAKREF(user)
-	var/list/access = id.GetAccess()
-	payable_departments = list()
-	for(var/department in GLOB.trade_department_spenders)
-		for(var/needed in GLOB.trade_department_spenders[department])
-			if(needed in access)
-				payable_departments += department
-				break
-	acting_department = null
-	status_message = "Welcome, [account.owner_name]."
+	payable_departments = departments
+	acting_department = account ? null : departments[1]
+	status_message = account ? "Welcome, [logged_name]." : "Welcome, [logged_name]. No personal account found: only department budgets are available."
 
 /obj/item/circuitboard/stock_exchange
 	board_name = "Stock Exchange Console"

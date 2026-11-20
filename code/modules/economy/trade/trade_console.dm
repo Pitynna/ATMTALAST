@@ -9,7 +9,10 @@
 	light_color = LIGHT_COLOR_BROWN
 	/// Who is logged in. Anyone else sees the console as logged out.
 	var/datum/weakref/logged_user
+	/// Personal account of the logged in user. May be null: heads without one can still spend department budgets.
 	var/datum/money_account/logged_account
+	/// Name on the ID that logged in.
+	var/logged_name
 	/// Logged in user has cargo access: may sell to traders and haggle over what they pay.
 	var/cargo_access = FALSE
 	/// Departments whose budget the logged in user may spend.
@@ -49,18 +52,29 @@
 		ui = new(user, src, "TradeConsole", name)
 		ui.open()
 
-/obj/machinery/computer/trade_console/proc/session_account(mob/user)
-	if(!logged_account || logged_user?.resolve() != user)
-		return null
-	return logged_account
+/// TRUE if this user is the one logged in.
+/obj/machinery/computer/trade_console/proc/session_ok(mob/user)
+	return logged_user && logged_user.resolve() == user && (logged_account || length(payable_departments))
 
 /// Account that pays for purchases right now.
 /obj/machinery/computer/trade_console/proc/paying_account(mob/user)
-	if(!session_account(user))
+	if(!session_ok(user))
 		return null
 	if(paying_department && (paying_department in payable_departments))
 		return GLOB.department_accounts[paying_department]
-	return logged_account
+	if(logged_account)
+		return logged_account
+	// No personal account: fall back to the first budget the user runs.
+	paying_department = payable_departments[1]
+	return GLOB.department_accounts[paying_department]
+
+/obj/machinery/computer/trade_console/proc/logout()
+	logged_user = null
+	logged_account = null
+	logged_name = null
+	cargo_access = FALSE
+	payable_departments = list()
+	paying_department = null
 
 /obj/machinery/computer/trade_console/proc/visible_traders()
 	. = list()
@@ -84,13 +98,15 @@
 	data["pending_orders"] = length(SStrade.pending_orders)
 	data["freighter"] = SStrade.freighter_status()
 	data["status"] = status_message
-	var/datum/money_account/account = session_account(user)
-	data["logged_in"] = !!account
-	if(account)
-		data["owner"] = account.owner_name
-		data["balance"] = account.money
+	data["logged_in"] = session_ok(user)
+	if(session_ok(user))
+		var/datum/money_account/payer = paying_account(user)
+		data["owner"] = logged_name
+		data["balance"] = payer?.money
 		data["cargo_access"] = cargo_access
-		var/list/payers = list(list("id" = null, "name" = "Personal account", "balance" = account.money))
+		var/list/payers = list()
+		if(logged_account)
+			payers += list(list("id" = null, "name" = "Personal account", "balance" = logged_account.money))
 		for(var/department in payable_departments)
 			var/datum/money_account/budget = GLOB.department_accounts[department]
 			if(budget)
@@ -107,28 +123,29 @@
 	if(action == "login")
 		login(user)
 		return
-	var/datum/money_account/account = session_account(user)
-	if(!account)
+	if(!session_ok(user))
 		status_message = "Please log in first."
 		return
 	switch(action)
 		if("logout")
-			logged_user = null
-			logged_account = null
-			cargo_access = FALSE
-			payable_departments = list()
-			paying_department = null
+			logout()
 			status_message = null
 		if("set_payer")
 			var/department = params["department"]
-			paying_department = (department in payable_departments) ? department : null
+			if(department in payable_departments)
+				paying_department = department
+			else if(logged_account)
+				paying_department = null
 		if("buy")
 			var/datum/trade_offer/offer = locateUID(params["ref"])
 			if(!istype(offer) || !offer.selling || !(offer.trader in visible_traders()))
 				return
 			var/datum/money_account/payer = paying_account(user)
-			var/department = payer != account ? paying_department : null
-			status_message = SStrade.purchase(offer, text2num(params["amount"]), payer, account.owner_name, department)
+			if(!payer)
+				status_message = "No account to pay from."
+				return
+			var/department = payer != logged_account ? paying_department : null
+			status_message = SStrade.purchase(offer, text2num(params["amount"]), payer, logged_name, department)
 			if(!status_message)
 				status_message = "Ordered from [offer.trader?.name]. It arrives on the next trade freighter."
 				playsound(src, 'sound/machines/twobeep.ogg', 30, TRUE)
@@ -141,7 +158,7 @@
 				return
 			var/datum/trader/trader = offer.trader
 			var/asking = tgui_input_number(user, "Current price: [offer.price] cr. What price do you propose?", "Haggle with [trader.name]", offer.price, 1000000, 1)
-			if(isnull(asking) || QDELETED(offer) || session_account(user) != account)
+			if(isnull(asking) || QDELETED(offer) || !session_ok(user))
 				return
 			trader.haggle(offer, asking)
 			status_message = null
@@ -169,30 +186,28 @@
 	if(!istype(id))
 		status_message = "No ID card found. Wear or hold your ID."
 		return
+	var/list/access = id.GetAccess()
+	var/list/departments = trade_payable_departments(access)
 	var/datum/money_account/account = attempt_account_access_nosec(id.associated_account_number)
-	if(!account)
-		status_message = "No bank account is linked to this ID."
-		return
-	if(account.security_level)
+	if(account?.suspended)
+		account = null
+	if(account?.security_level)
 		var/pin = tgui_input_number(user, "Enter the PIN of your account", "Trade console", 0, 999999, 0)
 		if(isnull(pin) || !attempt_account_access(account.account_number, pin, 2))
 			status_message = "Incorrect PIN."
 			return
-	if(account.suspended)
-		status_message = "This account is suspended."
+	// The ID's access is enough to spend department budgets, even without a personal account.
+	if(!account && !length(departments))
+		status_message = "No usable bank account is linked to this ID, and it gives no access to department budgets."
 		return
+	logout()
 	logged_account = account
+	logged_name = id.registered_name || account?.owner_name || "Unknown"
 	logged_user = WEAKREF(user)
-	var/list/access = id.GetAccess()
 	cargo_access = (ACCESS_CARGO in access) || (ACCESS_QM in access)
-	payable_departments = list()
-	for(var/department in GLOB.trade_department_spenders)
-		for(var/needed in GLOB.trade_department_spenders[department])
-			if(needed in access)
-				payable_departments += department
-				break
-	paying_department = null
-	status_message = "Welcome, [account.owner_name]."
+	payable_departments = departments
+	paying_department = account ? null : departments[1]
+	status_message = account ? "Welcome, [logged_name]." : "Welcome, [logged_name]. No personal account found: only department budgets are available."
 
 /// Called by SStrade when prices change.
 /obj/machinery/computer/trade_console/proc/market_shifted(list/hot)
@@ -219,3 +234,14 @@
 	materials = list(MAT_GLASS = 1000)
 	build_path = /obj/item/circuitboard/trade_console
 	category = list(CIRCUIT_IMPRINTER_CATEGORY_COMPUTER)
+
+/// Departments whose budget an ID with this access may spend.
+/proc/trade_payable_departments(list/access)
+	. = list()
+	for(var/department in GLOB.trade_department_spenders)
+		if(!GLOB.department_accounts[department])
+			continue
+		for(var/needed in GLOB.trade_department_spenders[department])
+			if(needed in access)
+				. += department
+				break
