@@ -1,6 +1,16 @@
 // Ulthor areas follow physical rooms; corridors and maintenance have separate circuits.
 // Explicit editor states prevent inheriting /area's crossed-out "unknown" icon.
 
+/area/station/commons/ulthor_exchange
+	name = "Commons Exchange"
+	desc = "A public trading lounge overlooking the Commons."
+	icon_state = "blue"
+
+/area/station/commons/ulthor_pool
+	name = "Library Baths"
+	desc = "A timber-lined station pool beside the library reading room."
+	icon_state = "fitness"
+
 /area/station/commons/ulthor_96_166
 	name = "Ulthor Electrical Storage"
 	icon_state = "engine_storage"
