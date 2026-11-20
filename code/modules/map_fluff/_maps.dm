@@ -37,6 +37,9 @@
 
 	var/datum/game_mode/forced_mode
 
+	/// Whether this station uses the additional objectives console and shuttle.
+	var/addition_goals_enabled = TRUE
+
 	/// Used to disable ruins, mining, etc. for a specific map.
 	var/disables = NONE
 

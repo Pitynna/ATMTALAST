@@ -41,6 +41,9 @@ SUBSYSTEM_DEF(addition_goals)
 
 /// Initialization
 /datum/controller/subsystem/addition_goals/Initialize()
+	if(!SSmapping.map_datum.addition_goals_enabled)
+		can_fire = FALSE
+		return SS_INIT_NO_NEED
 	init_goal_types()
 	init_shuttle()
 	refresh_available_goals(force = TRUE)

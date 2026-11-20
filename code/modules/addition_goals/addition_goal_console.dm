@@ -18,6 +18,8 @@
 
 /obj/machinery/computer/addition_goals/Initialize(mapload, obj/structure/computerframe/frame)
 	. = ..()
+	if(SSmapping.map_datum && !SSmapping.map_datum.addition_goals_enabled)
+		return INITIALIZE_HINT_QDEL
 	SSaddition_goals.console_list += src
 
 /obj/machinery/computer/addition_goals/Destroy()
