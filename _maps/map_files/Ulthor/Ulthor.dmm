@@ -13310,9 +13310,6 @@
 /area/space)
 "fRr" = (
 /obj/structure/curtain/black,
-/obj/structure/goon_candelabra/lit{
-	pixel_x = -32
-	},
 /turf/simulated/floor/wood,
 /area/station/service/bar)
 "fRA" = (
@@ -23158,9 +23155,6 @@
 "koh" = (
 /obj/structure/rack,
 /obj/item/storage/fancy/candle_box/full,
-/obj/structure/goon_candelabra/lit{
-	pixel_y = 32
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -36546,9 +36540,6 @@
 	},
 /area/station/medical/medbay)
 "qov" = (
-/obj/structure/goon_candelabra/lit{
-	pixel_y = 32
-	},
 /turf/simulated/floor/grass,
 /area/station/service/library)
 "qoz" = (
@@ -37666,9 +37657,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/goon_candelabra/lit{
-	pixel_y = 32
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "bar"
 	},
@@ -38069,9 +38057,6 @@
 	},
 /area/station/security/brig)
 "qWS" = (
-/obj/structure/goon_candelabra/lit{
-	pixel_y = 32
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -38527,9 +38512,6 @@
 	},
 /area/station/hallway/primary/port)
 "rgw" = (
-/obj/structure/goon_candelabra/lit{
-	pixel_y = -32
-	},
 /turf/simulated/floor/carpet/black,
 /area/station/service/chapel/office)
 "rgR" = (
@@ -43459,9 +43441,6 @@
 /turf/simulated/floor/wood,
 /area/station/command/meeting_room)
 "tFU" = (
-/obj/structure/goon_candelabra/lit{
-	pixel_x = 32
-	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "chapel"
@@ -53603,6 +53582,63 @@
 	tag = "icon-cafeteria (NORTHEAST)"
 	},
 /area/station/service/kitchen)
+"aaa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/sign/directions/security{
+	dir = 4;
+	pixel_y = -25
+	},
+/obj/structure/sign/directions/cargo{
+	dir = 1;
+	pixel_y = -39
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/aft)
+"aab" = (
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 39
+	},
+/obj/structure/sign/directions/evac{
+	dir = 4;
+	pixel_y = 25
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/aft)
+"aac" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/directions/science{
+	dir = 4;
+	pixel_y = 39
+	},
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_y = 25
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/fore)
 
 (1,1,1) = {"
 agy
@@ -75600,7 +75636,7 @@ kTG
 nBX
 jAA
 oEx
-amu
+aaa
 rDM
 fMU
 lOq
@@ -93782,7 +93818,7 @@ sij
 sij
 eTo
 iIF
-qUq
+aac
 uxQ
 fSq
 vQV
@@ -94102,7 +94138,7 @@ agJ
 agJ
 agJ
 rDM
-cHE
+aab
 oHe
 cdr
 kXJ
