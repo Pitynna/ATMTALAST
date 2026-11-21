@@ -470,6 +470,8 @@ window "tgui_say"
 		saved-params = ""
 		statusbar = false
 		can-minimize = false
+		can-resize = false
+		titlebar = false
 	elem "browser"
 		type = BROWSER
 		pos = 0,0

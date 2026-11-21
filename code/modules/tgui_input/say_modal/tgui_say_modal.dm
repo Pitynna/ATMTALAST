@@ -36,10 +36,10 @@
 	var/list/alter_phrases
 
 /** Creates the new input window to exist in the background. */
-/datum/tgui_say/New(client/client, id)
+/datum/tgui_say/New(client/client)
 	src.client = client
-	window = new(client, id)
-	winset(client, SKIN_TGUISAY, "size=1,1;is-visible=0;")
+	// Load the browser control directly so browse() leaves its parent window hidden.
+	window = new(client, SKIN_TGUISAY_BROWSER)
 	window.subscribe(src, PROC_REF(on_message))
 	window.is_browser = TRUE
 
