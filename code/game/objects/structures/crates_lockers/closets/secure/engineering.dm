@@ -69,7 +69,7 @@
 /obj/structure/closet/secure_closet/engineering_personal
 	name = "engineer's locker"
 	req_access = list(ACCESS_ENGINE_EQUIP)
-	icon_state = "toolcloset"
+	icon_state = "eng"
 
 /obj/structure/closet/secure_closet/engineering_personal/populate_contents()
 	if(prob(50))

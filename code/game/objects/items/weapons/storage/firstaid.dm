@@ -299,6 +299,7 @@
 	gender = MALE
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "duffel-med"
+	item_state = "duffel-med"
 	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
 	pickup_sound = 'sound/items/handling/pickup/backpack_pickup.ogg'

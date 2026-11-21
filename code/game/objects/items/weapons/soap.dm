@@ -161,7 +161,7 @@
 /obj/item/soap/homemade_milk
 	desc = "A homemade bar of soap. Smells of milk"
 	icon_state = "soapmilk"
-	icon_state = "soapmilk"
+	item_state = "soapmilk"
 	cleanspeed = 45 // a little faster to reward chemists for going to the effort
 
 /obj/item/soap/homemade_orange
@@ -173,6 +173,7 @@
 /obj/item/soap/homemade_pineapple
 	desc = "A homemade bar of soap. Smells of pineapple"
 	icon_state = "soappineapple"
+	item_state = "soappineapple"
 	cleanspeed = 45 // a little faster to reward chemists for going to the effort
 
 /obj/item/soap/ducttape

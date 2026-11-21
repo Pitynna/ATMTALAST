@@ -69,10 +69,10 @@
 	if(broken)
 		return .
 
-	if(locked)
-		. += mutable_appearance(icon, overlay_locked, CLOSET_OLAY_LAYER_LOCK_INDICATOR)
-	else
-		. += mutable_appearance(icon, overlay_unlocked, CLOSET_OLAY_LAYER_LOCK_INDICATOR)
+	var/door_state = custom_door_overlay ? custom_door_overlay : icon_state
+	var/door_indicator = "[door_state]_[locked ? "locked" : "unlocked"]"
+	var/indicator = icon_exists(icon, door_indicator) ? door_indicator : (locked ? overlay_locked : overlay_unlocked)
+	. += mutable_appearance(icon, indicator, CLOSET_OLAY_LAYER_LOCK_INDICATOR)
 
 /obj/structure/closet/secure_closet/update_desc(updates = ALL)
 	. = ..()
