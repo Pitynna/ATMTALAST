@@ -35,7 +35,7 @@
 	var/datum/space_level/mining_level = GLOB.space_manager.levels_by_name[MINING]
 	if(!mining_level)
 		return
-	var/turf/landing_hatch = locate(159, 184, mining_level.zpos)
+	var/turf/landing_hatch = locate(160, 183, mining_level.zpos)
 	if(!landing_hatch)
 		return
 	// The shuttle restores the same turf and area throughout the footprint on departure.
@@ -51,7 +51,7 @@
 	id = "ulthor_research_away"
 	name = "Research Outpost Landing Zone (EVA)"
 	desc = "An open landing zone east of the research outpost's exterior airlock."
-	dir = EAST
+	dir = NORTH
 	width = 5
 	dwidth = 2
 	height = 4

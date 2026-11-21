@@ -76,19 +76,31 @@
 		var/docking_status = ship.canDock(home)
 		TEST_ASSERT(docking_status == SHUTTLE_CAN_DOCK || docking_status == SHUTTLE_ALREADY_DOCKED, "The authored [id] ship must fit its home dock")
 	// A real round trip exercises the copied hull, contents and docking geometry.
-	for(var/id in list("mining", "ulthor_research"))
-		var/obj/docking_port/mobile/ship = SSshuttle.getShuttle(id)
-		for(var/destination in list("[id]_away", "[id]_home"))
-			var/obj/docking_port/stationary/dock = SSshuttle.getDock(destination)
-			TEST_ASSERT_NOTNULL(dock, "The [id] route must have both endpoints")
-			ship.dock(dock)
-			for(var/attempt in 1 to 100)
-				if(ship.getDockedId() == destination)
-					break
-				sleep(1)
-			TEST_ASSERT_EQUAL(ship.getDockedId(), destination, "The [id] shuttle must actually complete its trip")
+	var/obj/docking_port/mobile/miner = SSshuttle.getShuttle("mining")
+	for(var/destination in list("mining_away", "mining_home"))
+		var/obj/docking_port/stationary/dock = SSshuttle.getDock(destination)
+		TEST_ASSERT_NOTNULL(dock, "The mining route must have both endpoints")
+		miner.dock(dock)
+		for(var/attempt in 1 to 100)
+			if(miner.getDockedId() == destination)
+				break
+			sleep(1)
+		TEST_ASSERT_EQUAL(miner.getDockedId(), destination, "The mining shuttle must actually complete its trip")
 
+	var/obj/docking_port/mobile/research = SSshuttle.getShuttle("ulthor_research")
 	var/obj/docking_port/stationary/landing = SSshuttle.getDock("ulthor_research_away")
+	TEST_ASSERT_NOTNULL(landing, "The asteroid outpost must have a landing zone")
+	for(var/destination in list("ulthor_research_away", "ulthor_research_home"))
+		TEST_ASSERT_EQUAL(SSshuttle.moveShuttle(research.id, destination, TRUE), 0, "The research shuttle must accept a flight to [destination]")
+		var/deadline = world.time + 30 SECONDS
+		while(world.time < deadline && (research.getDockedId() != destination || research.mode != SHUTTLE_IDLE))
+			sleep(1)
+		TEST_ASSERT_EQUAL(research.getDockedId(), destination, "The research shuttle must arrive at [destination]")
+		TEST_ASSERT_EQUAL(research.mode, SHUTTLE_IDLE, "The research shuttle must be ready to depart [destination]")
+		var/turf/console_turf = get_step(get_step(research, research.dir), research.dir)
+		var/obj/machinery/computer/shuttle/science/ulthor/console = locate() in console_turf
+		TEST_ASSERT_NOTNULL(console, "The research shuttle must carry its flight console to [destination]")
+
 	for(var/turf/tile as anything in landing.return_turfs())
 		TEST_ASSERT_EQUAL(tile.type, landing.turf_type, "Research shuttle departure must restore the asteroid floor")
 		var/area/landing_area = get_area(tile)

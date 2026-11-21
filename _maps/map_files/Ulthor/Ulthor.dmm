@@ -47893,17 +47893,17 @@
 /area/shuttle/research/station)
 "bSC" = (
 /obj/docking_port/mobile{
-	dir = 4;
+	dir = 1;
 	dwidth = 2;
 	height = 4;
 	id = "ulthor_research";
 	name = "Research Shuttle";
 	port_direction = 1;
-	preferred_direction = 8;
+	preferred_direction = 2;
 	width = 5
 	},
 /obj/docking_port/stationary{
-	dir = 4;
+	dir = 1;
 	dwidth = 2;
 	height = 4;
 	id = "ulthor_research_home";
@@ -47921,7 +47921,7 @@
 /area/shuttle/research/station)
 "bSD" = (
 /obj/structure/chair/comfy/shuttle{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/research/station)
@@ -47930,7 +47930,7 @@
 /area/shuttle/research/station)
 "bSF" = (
 /obj/structure/chair/comfy/shuttle{
-	dir = 8
+	dir = 2
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/research/station)
@@ -47940,13 +47940,13 @@
 /area/shuttle/research/station)
 "bSH" = (
 /obj/machinery/light/small{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/research/station)
 "bSI" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8
+	dir = 2
 	},
 /turf/simulated/wall/shuttle,
 /area/shuttle/research/station)
@@ -92739,13 +92739,13 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
+bSA
+bSA
+bSA
+bSA
 agy
 tRP
-hpR
+bSw
 hpR
 hpR
 hpR
@@ -92996,13 +92996,13 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
+bSI
+bSH
+bSF
+bSB
 tRP
-hpR
+tRP
+bSu
 hpR
 hpR
 hpR
@@ -93253,12 +93253,12 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
-tRP
+bSA
+bSG
+bSE
+bSC
+bSy
+bSx
 hpR
 hpR
 hpR
@@ -93510,13 +93510,13 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
+bSI
+bSD
+bSD
+bSB
 tRP
-hpR
+tRP
+bSv
 hpR
 hpR
 hpR
@@ -93767,10 +93767,10 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
+bSA
+bSA
+bSA
+bSA
 agy
 tRP
 hpR
@@ -94803,7 +94803,7 @@ agy
 agy
 agy
 tRP
-bSw
+hpR
 hpR
 hpR
 hpR
@@ -95061,8 +95061,8 @@ agy
 agy
 tRP
 tRP
-bSu
-bSv
+hpR
+hpR
 hpR
 hpR
 hpR
@@ -95318,7 +95318,7 @@ agy
 agy
 agy
 tRP
-bSx
+tRP
 tRP
 tRP
 tRP
@@ -95574,9 +95574,9 @@ agy
 agy
 agy
 agy
-tRP
-bSy
-tRP
+agy
+agy
+agy
 agy
 agy
 agy
@@ -95830,11 +95830,11 @@ agy
 agy
 agy
 agy
-bSA
-bSB
-bSC
-bSB
-bSA
+agy
+agy
+agy
+agy
+agy
 agy
 agy
 agy
@@ -96087,11 +96087,11 @@ agy
 agy
 agy
 agy
-bSA
-bSF
-bSE
-bSD
-bSA
+agy
+agy
+agy
+agy
+agy
 agy
 agy
 agy
@@ -96344,11 +96344,11 @@ agy
 agy
 agy
 agy
-bSA
-bSH
-bSG
-bSD
-bSA
+agy
+agy
+agy
+agy
+agy
 agy
 agy
 agy
@@ -96601,11 +96601,11 @@ agy
 agy
 agy
 agy
-bSA
-bSI
-bSA
-bSI
-bSA
+agy
+agy
+agy
+agy
+agy
 agy
 agy
 agy
