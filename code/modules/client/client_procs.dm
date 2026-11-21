@@ -254,7 +254,7 @@
 	//kill old tgui panel
 	winset(src, OUTPUT_SELECTOR_LEGACY_OUTPUT_SELECTOR, "left=output_legacy")
 	tgui_panel = new(src, "browseroutput")
-	tgui_say = new(src)
+	tgui_say = new(src, SKIN_TGUISAY)
 
 	initialize_commandbar_spy()
 

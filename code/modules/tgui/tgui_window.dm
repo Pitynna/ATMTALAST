@@ -5,6 +5,8 @@
 
 /datum/tgui_window
 	var/id
+	/// Optional browser control to load without showing the containing window.
+	var/browse_target
 	var/client/client
 	var/pooled
 	var/pool_index
@@ -115,7 +117,7 @@
 		inline_css = "<style>\n[isfile(inline_css) ? file2text(inline_css) : inline_css]\n</style>"
 		html = replacetextEx(html, "<!-- tgui:inline-css -->", inline_css)
 	// Open the window
-	client << browse(html, "window=[id];[options]")
+	client << browse(html, "window=[browse_target || id];[options]")
 	// Detect whether the control is a browser
 	is_browser = winexists(client, id) == "BROWSER"
 	// Instruct the client to signal UI when the window is closed. Winexists sleeps, so we need one more client check.

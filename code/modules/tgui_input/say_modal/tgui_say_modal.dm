@@ -36,12 +36,12 @@
 	var/list/alter_phrases
 
 /** Creates the new input window to exist in the background. */
-/datum/tgui_say/New(client/client)
+/datum/tgui_say/New(client/client, id)
 	src.client = client
+	window = new(client, id)
 	// Load the browser control directly so browse() leaves its parent window hidden.
-	window = new(client, SKIN_TGUISAY_BROWSER)
+	window.browse_target = SKIN_TGUISAY_BROWSER
 	window.subscribe(src, PROC_REF(on_message))
-	window.is_browser = TRUE
 
 /**
  * After a brief period, injects the scripts into
@@ -51,10 +51,21 @@
 	set waitfor = FALSE
 	// Sleep to defer initialization to after client constructor
 	sleep(3 SECONDS)
+	// The bundle can call into BYOND storage. Wait for the browser to finish parsing the page first.
+	var/say_script = file2text("tgui/public/tgui-say.bundle.js")
+	var/start_script = {"
+setTimeout(function loadSpeechInput() {
+	if (document.readyState === 'loading') {
+		setTimeout(loadSpeechInput, 20);
+		return;
+	}
+	[say_script]
+}, 0);
+"}
 	window.initialize(
 			strict_mode = TRUE,
 			inline_css = file("tgui/public/tgui-say.bundle.css"),
-			inline_js = file("tgui/public/tgui-say.bundle.js"),
+			inline_js = start_script,
 	);
 
 /**

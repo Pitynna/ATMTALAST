@@ -1,16 +1,14 @@
-import { createRoot, type Root } from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 
 import { TguiSay } from './TguiSay';
 
-let reactRoot: Root | null = null;
+function mount() {
+  const root = document.getElementById('react-root');
+  if (root) createRoot(root).render(<TguiSay />);
+}
 
-document.onreadystatechange = () => {
-  if (document.readyState !== 'complete') return;
-
-  if (!reactRoot) {
-    const root = document.getElementById('react-root');
-    reactRoot = createRoot(root!);
-  }
-
-  reactRoot.render(<TguiSay />);
-};
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', mount, { once: true });
+} else {
+  mount();
+}
