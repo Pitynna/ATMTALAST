@@ -10,9 +10,9 @@
 3. Wall planters (Goon ppot1-5, /kirbyplants/goon and /goon/pot2-5) hang on a
    wall: dir by the wall side as their sprites are drawn - wall east 4, west 8,
    north 1, south 2. One standing free in a room becomes a floor plant.
-4. Wall disposal bins use the frame of their wall (as test_ulthor_disposals):
-   north 1 lifted by pixel_y 16, south 2, east 8, west 4; no pixel_x. Wall
-   mounts on the bin's wall face move to the next free face of the same wall.
+4. Wall disposal bins face their mounting side. East and west shift by
+   pixel_x +24 and -24 respectively, north lifts by pixel_y 16, and south
+   stays at its default offset. Wall mounts on the bin's face move along the wall.
 5. Posters: random and most Goon posters become concrete Nanotrasen posters
    (contraband in the bar, arcade, theatre and similar), so the map shows
    what hangs where; department Goon signs stay.
@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools/mapmerge2'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmm import DMM  # noqa: E402
+from check_disposals import WALL_BIN_APPEARANCE  # noqa: E402
 from rooms import MAP, is_wall, is_floor, is_boundary  # noqa: E402
 
 DECOR_COMMIT = '1eb6608c'
@@ -284,7 +285,6 @@ def mount_face(a):
 
 
 def fix_bins(M):
-    frame = {'N': 1, 'S': 2, 'E': 8, 'W': 4}
     for (x, y, z) in list(M.m.grid):
         if z != 1:
             continue
@@ -297,8 +297,10 @@ def fix_bins(M):
             if not side:
                 print('wall bin without a wall', p)
                 continue
-            new = setvars('/obj/machinery/disposal/wall' + a[len(base(a)):], dir=(frame[side] if side != 'S' else None),
-                          pixel_x=None, pixel_y=(16 if side == 'N' else None))
+            direction, pixel_x, pixel_y = WALL_BIN_APPEARANCE[NDIR[side]]
+            new = setvars('/obj/machinery/disposal/wall' + a[len(base(a)):],
+                          dir=direction if side != 'S' else None,
+                          pixel_x=pixel_x or None, pixel_y=pixel_y or None)
             if new != a:
                 tile[i] = new
                 M.set(p, tile)

@@ -22,6 +22,9 @@ BIN = '/obj/machinery/disposal'
 WALL = BIN + '/wall'
 OUTLET = '/obj/structure/disposaloutlet'
 DELTA = {1: (0, 1), 2: (0, -1), 4: (1, 0), 8: (-1, 0)}
+# Wall side -> (dir, pixel_x, pixel_y). The east and west frames start at
+# the opposite edge of the icon, so shift them across to the mounting side.
+WALL_BIN_APPEARANCE = {1: (1, 0, 16), 2: (2, 0, 0), 4: (4, 24, 0), 8: (8, -24, 0)}
 REVERSE = {1: 2, 2: 1, 4: 8, 8: 4}
 RIGHT = {1: 4, 4: 2, 2: 8, 8: 1}
 LEFT = {v: k for k, v in RIGHT.items()}
@@ -86,9 +89,7 @@ def wall_direction(tiles, p):
 
 
 def wall_appearance(tiles, p):
-    # DMI EAST sits on the LEFT edge, WEST on the RIGHT edge. NORTH's
-    # front-facing frame occupies rows 15..31 and needs lifting to the wall.
-    return {1: (1, 16), 2: (2, 0), 4: (8, 0), 8: (4, 0)}[wall_direction(tiles, p)]
+    return WALL_BIN_APPEARANCE[wall_direction(tiles, p)]
 
 
 def trace(pipes, start, outlets, tag=1, bins=()):
@@ -147,10 +148,10 @@ def audit(m):
     failures, routes = [], []
     for p, (typ, values) in bins.items():
         if typ.startswith(WALL):
-            expected_dir, expected_y = wall_appearance(tiles, p)
+            expected_dir, expected_x, expected_y = wall_appearance(tiles, p)
             if int(values.get('dir', '2')) != expected_dir:
                 failures.append(f'{p}: wall bin faces away from wall')
-            if int(values.get('pixel_x', '0')) or int(values.get('pixel_y', '0')) != expected_y:
+            if (int(values.get('pixel_x', '0')), int(values.get('pixel_y', '0'))) != (expected_x, expected_y):
                 failures.append(f'{p}: incorrect wall bin pixel offset')
         try:
             route = trace(pipes, p, outlets)
@@ -334,8 +335,10 @@ def repair(m):
             seen.add(a)
             if typ.startswith(WALL):
                 values = {k: v for k, v in values.items() if k not in ('pixel_x', 'pixel_y')}
-                d, py = wall_appearance(tiles, p)
+                d, px, py = wall_appearance(tiles, p)
                 values['dir'] = str(d)
+                if px:
+                    values['pixel_x'] = str(px)
                 if py:
                     values['pixel_y'] = str(py)
                 a = atom(typ, values)

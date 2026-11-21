@@ -23,11 +23,12 @@ def main():
                 x, y = (dx + 1) * 32, (1 - dy) * 32
                 pd.rectangle((x, y, x + 31, y + 31), fill='#8e9ca7' if wall else '#414c55', outline='#222c34')
         _, values = bins[p]
-        direction = int(values['dir'])
+        direction = int(values.get('dir', '2'))
         index = {2: 0, 1: 1, 4: 2, 8: 3}[direction]
+        x = 32 + int(values.get('pixel_x', '0'))
         y = 32 - int(values.get('pixel_y', '0'))
         for state in ['disposal', 'disposal-handle', 'disposal-ready']:
-            panel.alpha_composite(frames[state][index], (32, y))
+            panel.alpha_composite(frames[state][index], (x, y))
         sheet.paste(panel.resize((192, 192), Image.Resampling.NEAREST), (i * 240 + 20, 38))
         draw.text((i * 240 + 20, 12), f'{p[0]},{p[1]}  dir={direction}', fill='white')
     draw.text((20, 240), 'Actual DMI + mapped offsets; schematic walls/floors (not an in-game screenshot)', fill='#d0d7de')

@@ -1628,7 +1628,8 @@
 /area/station/science/robotics/chargebay)
 "aHy" = (
 /obj/machinery/disposal/wall{
-	dir = 4
+	dir = 8;
+	pixel_x = -24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -8258,7 +8259,8 @@
 /area/hydroponics)
 "dPa" = (
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -10532,7 +10534,8 @@
 /area/station/engineering/storage/tech)
 "eTp" = (
 /obj/machinery/disposal/wall{
-	dir = 4
+	dir = 8;
+	pixel_x = -24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -12444,7 +12447,8 @@
 /area/station/service/library)
 "fYP" = (
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 2
@@ -15553,7 +15557,8 @@
 /area/station/commons/storage/tools)
 "hAk" = (
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -17617,7 +17622,8 @@
 "iGk" = (
 /obj/structure/cable,
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -19734,7 +19740,8 @@
 /area/station/engineering/atmos)
 "jJo" = (
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 2
@@ -27529,7 +27536,8 @@
 "nEY" = (
 /obj/structure/cable,
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -39501,7 +39509,8 @@
 	dir = 8
 	},
 /obj/machinery/disposal/wall{
-	dir = 4
+	dir = 8;
+	pixel_x = -24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -40690,7 +40699,8 @@
 /area/station/legal/courtroom)
 "uAF" = (
 /obj/machinery/disposal/wall{
-	dir = 8
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
