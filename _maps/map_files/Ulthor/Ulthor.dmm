@@ -47849,6 +47849,107 @@
 	tag = "icon-cafeteria (NORTHEAST)"
 	},
 /area/station/service/kitchen)
+"bSu" = (
+/obj/structure/sign/science{
+	desc = "The Ulthor research shuttle lands outside the asteroid research outpost. Bring EVA gear.";
+	name = "Research Shuttle";
+	pixel_y = 28
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northeast_passage)
+"bSv" = (
+/obj/machinery/computer/shuttle/science/ulthor,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northeast_passage)
+"bSw" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northeast_passage)
+"bSx" = (
+/obj/machinery/door/airlock/research/glass{
+	name = "Research Shuttle Bay";
+	req_access = list(65)
+	},
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northeast_passage)
+"bSy" = (
+/obj/machinery/door/airlock/external{
+	id_tag = "ulthor_research_home";
+	name = "Research Shuttle Dock Airlock";
+	req_access = list(65)
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/simulated/floor/plating,
+/area/station/maintenance/ulthor_northeast_passage)
+"bSA" = (
+/turf/simulated/wall/shuttle,
+/area/shuttle/research/station)
+"bSB" = (
+/obj/structure/window/full/shuttle,
+/obj/structure/grille,
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSC" = (
+/obj/docking_port/mobile{
+	dir = 4;
+	dwidth = 2;
+	height = 4;
+	id = "ulthor_research";
+	name = "Research Shuttle";
+	port_direction = 1;
+	preferred_direction = 8;
+	width = 5
+	},
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 2;
+	height = 4;
+	id = "ulthor_research_home";
+	name = "Ulthor Research Shuttle Bay";
+	turf_type = /turf/space;
+	width = 5
+	},
+/obj/machinery/door/airlock/shuttle/glass{
+	id_tag = "s_docking_airlock";
+	name = "Research Shuttle Hatch";
+	req_access = list(65)
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSD" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSE" = (
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSF" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSG" = (
+/obj/machinery/computer/shuttle/science/ulthor,
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSH" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle,
+/area/shuttle/research/station)
+"bSI" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/simulated/wall/shuttle,
+/area/shuttle/research/station)
 
 (1,1,1) = {"
 agy
@@ -94702,7 +94803,7 @@ agy
 agy
 agy
 tRP
-hpR
+bSw
 hpR
 hpR
 hpR
@@ -94960,8 +95061,8 @@ agy
 agy
 tRP
 tRP
-hpR
-hpR
+bSu
+bSv
 hpR
 hpR
 hpR
@@ -95217,7 +95318,7 @@ agy
 agy
 agy
 tRP
-tRP
+bSx
 tRP
 tRP
 tRP
@@ -95473,9 +95574,9 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
+tRP
+bSy
+tRP
 agy
 agy
 agy
@@ -95729,11 +95830,11 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
+bSA
+bSB
+bSC
+bSB
+bSA
 agy
 agy
 agy
@@ -95986,11 +96087,11 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
+bSA
+bSF
+bSE
+bSD
+bSA
 agy
 agy
 agy
@@ -96243,11 +96344,11 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
+bSA
+bSH
+bSG
+bSD
+bSA
 agy
 agy
 agy
@@ -96500,11 +96601,11 @@ agy
 agy
 agy
 agy
-agy
-agy
-agy
-agy
-agy
+bSA
+bSI
+bSA
+bSI
+bSA
 agy
 agy
 agy

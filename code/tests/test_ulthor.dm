@@ -67,7 +67,7 @@
 	for(var/obj/docking_port/mobile/ship in SSshuttle.mobile)
 		TEST_ASSERT_NOT(ids[ship.id], "Mobile shuttle ID [ship.id] must be registered once")
 		ids[ship.id] = TRUE
-	for(var/id in list("supply", "emergency", "admin", "specops", "mining", "laborcamp"))
+	for(var/id in list("supply", "emergency", "admin", "specops", "mining", "laborcamp", "ulthor_research"))
 		var/obj/docking_port/mobile/ship = SSshuttle.getShuttle(id)
 		TEST_ASSERT_NOTNULL(ship, "Ulthor must retain its [id] shuttle")
 		TEST_ASSERT_NOTNULL(ship.areaInstance, "Each ship needs a dedicated shuttle area")
@@ -76,16 +76,23 @@
 		var/docking_status = ship.canDock(home)
 		TEST_ASSERT(docking_status == SHUTTLE_CAN_DOCK || docking_status == SHUTTLE_ALREADY_DOCKED, "The authored [id] ship must fit its home dock")
 	// A real round trip exercises the copied hull, contents and docking geometry.
-	var/obj/docking_port/mobile/miner = SSshuttle.getShuttle("mining")
-	for(var/destination in list("mining_away", "mining_home"))
-		var/obj/docking_port/stationary/dock = SSshuttle.getDock(destination)
-		TEST_ASSERT_NOTNULL(dock, "The mining route must have both endpoints")
-		miner.dock(dock)
-		for(var/attempt in 1 to 100)
-			if(miner.getDockedId() == destination)
-				break
-			sleep(1)
-		TEST_ASSERT_EQUAL(miner.getDockedId(), destination, "The mining shuttle must actually complete its trip")
+	for(var/id in list("mining", "ulthor_research"))
+		var/obj/docking_port/mobile/ship = SSshuttle.getShuttle(id)
+		for(var/destination in list("[id]_away", "[id]_home"))
+			var/obj/docking_port/stationary/dock = SSshuttle.getDock(destination)
+			TEST_ASSERT_NOTNULL(dock, "The [id] route must have both endpoints")
+			ship.dock(dock)
+			for(var/attempt in 1 to 100)
+				if(ship.getDockedId() == destination)
+					break
+				sleep(1)
+			TEST_ASSERT_EQUAL(ship.getDockedId(), destination, "The [id] shuttle must actually complete its trip")
+
+	var/obj/docking_port/stationary/landing = SSshuttle.getDock("ulthor_research_away")
+	for(var/turf/tile as anything in landing.return_turfs())
+		TEST_ASSERT_EQUAL(tile.type, landing.turf_type, "Research shuttle departure must restore the asteroid floor")
+		var/area/landing_area = get_area(tile)
+		TEST_ASSERT_EQUAL(landing_area.type, landing.area_type, "Research shuttle departure must restore the asteroid area")
 
 /datum/unit_test/ulthor_arrivals/Run()
 	if(!istype(SSmapping.map_datum, /datum/map/ulthor))
