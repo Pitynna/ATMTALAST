@@ -139,19 +139,18 @@
 /obj/item/clothing/suit/apron/greenhouse_druid
 	actions_types = list(/datum/action/item_action/atmta_druid_speak, /datum/action/item_action/atmta_druid_select)
 	COOLDOWN_DECLARE(voice_cooldown)
-	var/selected_phrase = "Грядки, подъём!"
+	var/selected_phrase = "Меня будить?"
 	var/static/list/voice_lines = list(
-		"Грядки, подъём!" = 'sound/voice/atmta_druid/wakeup.ogg',
-		"Кто потревожил мой мох?" = 'sound/voice/atmta_druid/moss.ogg',
-		"До полива остались секунды." = 'sound/voice/atmta_druid/water.ogg',
-		"Не заставляй меня рычать на рассаду." = 'sound/voice/atmta_druid/seedlings.ogg',
-		"Уже окучиваю!" = 'sound/voice/atmta_druid/hilling.ogg',
-		"Как велит перегной." = 'sound/voice/atmta_druid/compost.ogg',
-		"За грядки затопчу!" = 'sound/voice/atmta_druid/weeds.ogg',
-		"Р-р-р! Фотосинтез!" = 'sound/voice/atmta_druid/growl.ogg',
-		"И тут я пошёл на него с лейкой." = 'sound/voice/atmta_druid/can.ogg',
-		"Сначала бы перекусить." = 'sound/voice/atmta_druid/snack.ogg',
-		"Кому помочь с пересадкой?" = 'sound/voice/atmta_druid/transplant.ogg',
+		"Меня будить?" = 'sound/voice/atmta_druid/why_wake_me.ogg',
+		"Когда начинать?" = 'sound/voice/atmta_druid/when_to_start.ogg',
+		"Конечно." = 'sound/voice/atmta_druid/of_course.ogg',
+		"У нас мало времени." = 'sound/voice/atmta_druid/little_time.ogg',
+		"Ну что?.." = 'sound/voice/atmta_druid/well_then.ogg',
+		"А я без сна…" = 'sound/voice/atmta_druid/without_sleep.ogg',
+		"Зашибу!" = 'sound/voice/atmta_druid/smash.ogg',
+		"И тут я…" = 'sound/voice/atmta_druid/and_then_i.ogg',
+		"Лучше бы дал поесть…" = 'sound/voice/atmta_druid/let_me_eat.ogg',
+		"Не валяй дурака!" = 'sound/voice/atmta_druid/stop_fooling_around.ogg',
 	)
 
 /obj/item/clothing/suit/apron/greenhouse_druid/item_action_slot_check(slot, mob/user, datum/action/action)
