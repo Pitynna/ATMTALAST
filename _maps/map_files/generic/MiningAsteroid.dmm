@@ -15030,6 +15030,383 @@
 	icon_state = "white"
 	},
 /area/research_outpost/hallway)
+"eI" = (
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "Mining West Outpost APC";
+	pixel_x = 1;
+	pixel_y = -23
+	},
+/obj/structure/cable{
+	banned_links = 11
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plasteel,
+/area/mine/west_outpost)
+"eL" = (
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/structure/cable{
+	banned_links = 11
+	},
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eM" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/camera{
+	c_tag = "West Outpost";
+	dir = 1;
+	network = list("MINE")
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/west_outpost)
+"eP" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/obj/structure/cable{
+	banned_links = 7
+	},
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eQ" = (
+/obj/structure/cable{
+	banned_links = 10
+	},
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eR" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Maintenance";
+	req_access = list(54)
+	},
+/obj/structure/cable{
+	banned_links = 12
+	},
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eS" = (
+/obj/structure/cable{
+	banned_links = 5
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/west_outpost)
+"eT" = (
+/obj/structure/cable{
+	banned_links = 14
+	},
+/obj/machinery/power/smes{
+	charge = 5e+006
+	},
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eU" = (
+/obj/structure/cable{
+	banned_links = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30;
+	dir = 1
+	},
+/obj/item/storage/box/lights,
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eV" = (
+/obj/structure/cable{
+	banned_links = 10
+	},
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"eW" = (
+/obj/machinery/power/terminal{
+	icon_state = "term";
+	dir = 1
+	},
+/obj/structure/cable{
+	banned_links = 13
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"eX" = (
+/obj/machinery/power/smes{
+	charge = 5e+006
+	},
+/obj/structure/cable{
+	banned_links = 11
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"eY" = (
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
+/obj/structure/cable{
+	banned_links = 7
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"eZ" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/storage/box/lights/mixed,
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"fb" = (
+/obj/structure/cable{
+	banned_links = 6
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"fd" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Maintenance";
+	req_access = list(48)
+	},
+/turf/simulated/floor/plating,
+/area/mine/living_quarters)
+"fe" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"fh" = (
+/obj/structure/cable{
+	banned_links = 9
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"fi" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"fj" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"fl" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "warning"
+	},
+/area/mine/living_quarters)
+"fm" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/door/airlock/mining/glass{
+	name = "Mining Station Bridge";
+	req_access = list(48)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"fp" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "warning"
+	},
+/area/mine/living_quarters)
+"fq" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"fs" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fu" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/mining/glass{
+	name = "Mining Station Bridge";
+	req_access = list(48)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fv" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fw" = (
+/obj/structure/cable{
+	banned_links = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "warning"
+	},
+/area/mine/lobby)
+"fy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	banned_links = 10
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
+"fz" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
+"fB" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	banned_links = 12
+	},
+/obj/machinery/door/airlock/mining/glass{
+	name = "Mining Station Loading Bay";
+	req_access = list(54)
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
+"fC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	banned_links = 12
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fD" = (
+/obj/structure/cable{
+	banned_links = 12
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	level = 1
+	},
+/obj/structure/cable{
+	banned_links = 12
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fF" = (
+/obj/structure/cable{
+	banned_links = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/lobby)
+"fG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/obj/structure/cable{
+	banned_links = 3
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
+"fH" = (
+/obj/structure/cable{
+	banned_links = 6
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
+"fI" = (
+/obj/structure/cable{
+	banned_links = 13
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "Mining Station Loading Bay APC";
+	pixel_x = 1;
+	pixel_y = 25
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/production)
 
 (1,1,1) = {"
 rH
@@ -30117,7 +30494,7 @@ Ou
 IV
 hn
 Fk
-Pr
+eI
 aa
 dc
 nj
@@ -30374,10 +30751,10 @@ pU
 IV
 hn
 Ca
-lS
+eM
 uP
 SR
-Gb
+eL
 IR
 tg
 tg
@@ -30631,10 +31008,10 @@ xk
 IV
 hn
 vj
-NG
-kK
-cK
-pR
+eS
+eR
+eQ
+eP
 IR
 tg
 tg
@@ -30890,8 +31267,8 @@ hn
 hn
 hn
 IR
-eB
-LY
+eU
+eT
 IR
 tg
 tg
@@ -49653,9 +50030,9 @@ Yw
 rl
 Mm
 bB
-Uv
-so
-Qy
+eX
+eW
+eV
 bB
 tg
 tg
@@ -49910,9 +50287,9 @@ bf
 Vb
 Rf
 yr
-kF
+eZ
 uy
-lf
+eY
 bB
 Yy
 tg
@@ -50164,10 +50541,10 @@ fZ
 eN
 bB
 zl
-wW
-jW
-OQ
-jg
+fh
+fe
+fd
+fb
 uy
 ZE
 bB
@@ -50421,7 +50798,7 @@ JK
 JK
 bB
 eC
-fc
+fi
 dg
 iD
 sR
@@ -50678,7 +51055,7 @@ JK
 zo
 bB
 JK
-fc
+fi
 nq
 bB
 Ky
@@ -50935,7 +51312,7 @@ JK
 JK
 bB
 Id
-VH
+fj
 Mm
 bB
 bB
@@ -51192,7 +51569,7 @@ Id
 Yw
 KF
 Yw
-VH
+fj
 Mm
 bB
 bp
@@ -51449,7 +51826,7 @@ oo
 oo
 bB
 JK
-fc
+fi
 im
 OE
 wT
@@ -51706,7 +52083,7 @@ tg
 tg
 bB
 JK
-fc
+fi
 Rf
 oo
 jY
@@ -51963,7 +52340,7 @@ tg
 tg
 oo
 rj
-tQ
+fl
 kn
 bB
 bB
@@ -52220,7 +52597,7 @@ tg
 tg
 oo
 oo
-Hx
+fm
 oo
 oo
 tg
@@ -52477,7 +52854,7 @@ tg
 tg
 tg
 oo
-pC
+fp
 oo
 tg
 tg
@@ -52734,7 +53111,7 @@ tg
 tg
 tg
 oo
-Hx
+fm
 oo
 tg
 tg
@@ -52991,7 +53368,7 @@ tg
 tg
 rH
 iB
-xB
+fq
 rF
 tg
 tg
@@ -53248,7 +53625,7 @@ tg
 rH
 rH
 gI
-xB
+fq
 rF
 rH
 tg
@@ -53505,7 +53882,7 @@ rH
 rH
 rH
 gI
-xB
+fq
 rF
 rH
 tg
@@ -53762,7 +54139,7 @@ rH
 rH
 rH
 gI
-xB
+fq
 rF
 rH
 rH
@@ -54019,7 +54396,7 @@ rH
 rH
 rH
 gI
-xB
+fq
 rF
 rH
 rH
@@ -54276,7 +54653,7 @@ rH
 rH
 rH
 gI
-xB
+fq
 rF
 Ra
 Ra
@@ -54533,7 +54910,7 @@ rH
 rH
 rH
 gI
-xB
+fq
 rF
 rH
 rH
@@ -54790,7 +55167,7 @@ rH
 rH
 rH
 lB
-Bo
+fs
 Li
 Ra
 Ra
@@ -55047,7 +55424,7 @@ rH
 rH
 rH
 lB
-Bo
+fs
 Li
 rH
 Ra
@@ -55304,7 +55681,7 @@ tg
 rH
 rH
 lB
-Bo
+fs
 Li
 rH
 Ra
@@ -55561,7 +55938,7 @@ tg
 rH
 rH
 lB
-Bo
+fs
 Li
 rH
 Ra
@@ -55818,7 +56195,7 @@ tg
 tg
 rH
 lB
-Bo
+fs
 Li
 rH
 Ra
@@ -56075,7 +56452,7 @@ tg
 tg
 rH
 lB
-Bo
+fs
 Li
 rH
 Ra
@@ -56332,7 +56709,7 @@ tg
 tg
 tg
 qm
-qy
+fu
 qm
 Ra
 Ra
@@ -56589,7 +56966,7 @@ tg
 tg
 tg
 qm
-qa
+fv
 qm
 rH
 Ra
@@ -56846,7 +57223,7 @@ tg
 tg
 qm
 qm
-qy
+fu
 qm
 qm
 Ra
@@ -57103,7 +57480,7 @@ Jt
 Kl
 Ko
 Kp
-to
+fw
 Tk
 qm
 KJ
@@ -57360,7 +57737,7 @@ tg
 Kn
 cM
 HL
-qa
+fv
 HL
 HL
 rL
@@ -57617,21 +57994,21 @@ tg
 Kn
 Yj
 ls
-pq
-Ef
-Ef
-fW
-hp
-lc
-ls
-ls
-Bl
-ls
-ls
-tv
-jP
-Cy
-oB
+fF
+fD
+fD
+fD
+fD
+fE
+fD
+fD
+fD
+fD
+fD
+fC
+fB
+fz
+fy
 EA
 nP
 hu
@@ -57888,7 +58265,7 @@ du
 ds
 dr
 dq
-dp
+fG
 MJ
 nP
 hu
@@ -58144,8 +58521,8 @@ ML
 BS
 KJ
 hu
-LR
-PP
+fI
+fH
 hI
 nP
 hu
