@@ -8,6 +8,8 @@
 
 /area/research_outpost/hallway
 	name = "Research Outpost Hallway"
+/area/research_outpost/shuttle_berth
+	name = "Research Shuttle Berth"
 /area/research_outpost/gearstore
 	name = "Research Outpost Expedition Preparation"
 /area/research_outpost/power
