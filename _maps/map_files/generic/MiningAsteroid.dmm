@@ -14949,6 +14949,87 @@
 	icon_state = "vault"
 	},
 /area/research_outpost/harvesting)
+"eB" = (
+/obj/structure/cable{
+	linked_dirs = 0;
+	banned_links = 15
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30;
+	dir = 1
+	},
+/obj/item/storage/box/lights,
+/turf/simulated/floor/plating,
+/area/mine/west_outpost)
+"eC" = (
+/obj/machinery/camera{
+	c_tag = "Crew Area Hallway";
+	network = list("MINE")
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30;
+	dir = 1
+	},
+/turf/simulated/floor/plasteel,
+/area/mine/living_quarters)
+"eD" = (
+/obj/structure/cable{
+	banned_links = 9
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30;
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel,
+/area/research_outpost/gearstore)
+"eE" = (
+/obj/machinery/door/airlock/external/research_berth,
+/obj/structure/fans/tiny/invisible,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "warning"
+	},
+/area/research_outpost/shuttle_berth)
+"eF" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32;
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore1)
+"eG" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -32;
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/research_outpost/maintstore2)
+"eH" = (
+/obj/structure/cable{
+	banned_links = 1
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	color = "#1010dd"
+	},
+/obj/machinery/camera{
+	c_tag = "Research Outpost Hallway Starboard";
+	network = list("Research","SS13");
+	pixel_y = 24
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "white"
+	},
+/area/research_outpost/hallway)
 
 (1,1,1) = {"
 rH
@@ -30809,7 +30890,7 @@ hn
 hn
 hn
 IR
-BW
+eB
 LY
 IR
 tg
@@ -50339,7 +50420,7 @@ Yb
 JK
 JK
 bB
-zu
+eC
 fc
 dg
 iD
@@ -54336,7 +54417,7 @@ uG
 uF
 uE
 uD
-uC
+eD
 uA
 ux
 ux
@@ -55858,7 +55939,7 @@ Iy
 Iy
 IL
 wE
-xE
+eF
 xC
 xA
 wS
@@ -55887,7 +55968,7 @@ tg
 tg
 tg
 tg
-bP
+eE
 bO
 bN
 bF
@@ -60757,14 +60838,14 @@ ep
 eo
 ek
 Er
-GL
+eH
 GK
 GJ
 GF
 GE
 GD
 GC
-GA
+eG
 Gz
 Gy
 kx

@@ -90,6 +90,14 @@
 	var/obj/docking_port/mobile/research = SSshuttle.getShuttle("ulthor_research")
 	var/obj/docking_port/stationary/landing = SSshuttle.getDock("ulthor_research_away")
 	TEST_ASSERT_NOTNULL(landing, "The asteroid outpost must have a landing zone")
+	var/obj/machinery/door/airlock/external/research_berth/berth_door = locate() in get_step(landing, SOUTH)
+	TEST_ASSERT(berth_door?.locked && berth_door.density, "The empty berth must start sealed")
+	var/obj/machinery/computer/shuttle/science/ulthor/console
+	for(var/turf/deck as anything in research.return_turfs())
+		console = locate() in deck
+		if(console)
+			break
+	TEST_ASSERT_NOTNULL(console, "The research shuttle needs a flight console")
 	for(var/destination in list("ulthor_research_away", "ulthor_research_home"))
 		TEST_ASSERT_EQUAL(SSshuttle.moveShuttle(research.id, destination, TRUE), 0, "The research shuttle must accept a flight to [destination]")
 		var/deadline = world.time + 30 SECONDS
@@ -97,10 +105,21 @@
 			sleep(1)
 		TEST_ASSERT_EQUAL(research.getDockedId(), destination, "The research shuttle must arrive at [destination]")
 		TEST_ASSERT_EQUAL(research.mode, SHUTTLE_IDLE, "The research shuttle must be ready to depart [destination]")
-		var/turf/console_turf = get_step(get_step(research, research.dir), research.dir)
-		var/obj/machinery/computer/shuttle/science/ulthor/console = locate() in console_turf
-		TEST_ASSERT_NOTNULL(console, "The research shuttle must carry its flight console to [destination]")
+		TEST_ASSERT_EQUAL(get_area(console), research.areaInstance, "The console must stay aboard")
+		TEST_ASSERT_EQUAL(console.z, research.z, "The console must travel to [destination]")
+		if(destination == landing.id)
+			TEST_ASSERT(!berth_door.locked, "Arrival must unlock the docking door")
+			var/obj/machinery/door/airlock/shuttle_hatch = locate() in get_turf(research)
+			TEST_ASSERT_NOTNULL(shuttle_hatch, "The berth must align with the shuttle hatch")
+			shuttle_hatch.open()
+			berth_door.open()
+			sleep(4 SECONDS)
+			TEST_ASSERT(!shuttle_hatch.density && !berth_door.density, "The docked route must open")
+			var/turf/gangway = get_step(berth_door, SOUTH)
+			var/datum/gas_mixture/air = gangway.get_readonly_air()
+			TEST_ASSERT(air.return_pressure() >= 80 && air.oxygen() / air.total_moles() >= 0.18, "The open gangway must be breathable")
 
+	TEST_ASSERT(berth_door.locked && berth_door.density, "The dock door must close and lock on departure")
 	for(var/turf/tile as anything in landing.return_turfs())
 		TEST_ASSERT_EQUAL(tile.type, landing.turf_type, "Research shuttle departure must restore the asteroid floor")
 		var/area/landing_area = get_area(tile)

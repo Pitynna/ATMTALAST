@@ -58,6 +58,39 @@
 	turf_type = /turf/simulated/floor/plating/asteroid/airless
 	area_type = /area/mine/explored
 
+/obj/machinery/door/airlock/external/research_berth
+	name = "Research Shuttle Dock Airlock"
+	desc = "A docking airlock that opens when the research shuttle is berthed."
+	id_tag = "ulthor_research_away"
+	req_access = list(ACCESS_XENOARCH)
+	locked = TRUE
+
+/obj/machinery/door/airlock/external/research_berth/proc/has_berthed_shuttle()
+	var/obj/docking_port/mobile/shuttle = locate() in get_step(src, NORTH)
+	return shuttle?.id == "ulthor_research" && (shuttle.mode == SHUTTLE_IDLE || shuttle.mode == SHUTTLE_RECHARGING)
+
+/obj/machinery/door/airlock/external/research_berth/open(forced = 0)
+	if(!has_berthed_shuttle())
+		return FALSE
+	return ..()
+
+/obj/machinery/door/airlock/external/research_berth/CanAllowThrough(atom/movable/mover, border_dir)
+	return has_berthed_shuttle() && ..()
+
+/obj/machinery/door/airlock/external/research_berth/lock(forced = FALSE)
+	if(!density || operating == DOOR_CLOSING)
+		// The shuttle asks for bolts before the asynchronous close animation ends.
+		addtimer(CALLBACK(src, PROC_REF(secure_empty_berth)), 1 SECONDS, TIMER_UNIQUE)
+		return FALSE
+	return ..()
+
+/obj/machinery/door/airlock/external/research_berth/proc/secure_empty_berth()
+	if(has_berthed_shuttle())
+		return
+	if(!density)
+		close()
+	lock()
+
 /obj/machinery/computer/shuttle/science/ulthor
 	name = "Research Shuttle Console"
 	desc = "Controls the research shuttle between Ulthor and the asteroid research outpost's pressurized berth."
