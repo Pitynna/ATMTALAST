@@ -84,3 +84,89 @@
 /obj/item/bedsheet/kaminacape/Destroy()
 	clear_spiral()
 	return ..()
+
+/obj/item/clothing/neck/inner_voice_tie
+	var/whisper_timer
+	var/static/list/whispers = list(
+		"Братан, ссора закрыта. Дело передано в отдел плясок.",
+		"Ты молодец. Поставь стакан. С такими уликами сначала фотографируются.",
+		"Кончай хандрить. У нас ещё ни одна плохая идея не оформлена официально.",
+		"Нам пора сваливать, братан. Для алиби прихвати закуску.",
+		"Братан! Срочно! Я забыл зачем.",
+		"Приём, это узел связи. Тот, который у тебя на шее.",
+		"Если бумажки так важны, пусть они сами себя допросят.",
+		"Он говорит «улика». А я вижу чудесный повод остаться до закрытия.",
+		"В правилах одни буквы. А у тебя, между прочим, характер.",
+		"Давай, братан. Подпись потом придумаем.",
+	)
+
+/obj/item/clothing/neck/inner_voice_tie/equipped(mob/living/user, slot, initial = FALSE)
+	. = ..()
+	if(slot == ITEM_SLOT_NECK && !whisper_timer)
+		schedule_whisper()
+
+/obj/item/clothing/neck/inner_voice_tie/dropped(mob/user, slot, silent = FALSE)
+	stop_whispers()
+	return ..()
+
+/obj/item/clothing/neck/inner_voice_tie/Destroy()
+	stop_whispers()
+	return ..()
+
+/obj/item/clothing/neck/inner_voice_tie/proc/schedule_whisper()
+	whisper_timer = addtimer(CALLBACK(src, PROC_REF(whisper)), rand(1, 5) MINUTES, TIMER_STOPPABLE)
+
+/obj/item/clothing/neck/inner_voice_tie/proc/stop_whispers()
+	if(whisper_timer)
+		deltimer(whisper_timer)
+		whisper_timer = null
+
+/obj/item/clothing/neck/inner_voice_tie/proc/whisper()
+	whisper_timer = null
+	var/mob/living/wearer = loc
+	if(!isliving(wearer) || wearer.get_item_by_slot(ITEM_SLOT_NECK) != src)
+		return
+	if(wearer.client && wearer.stat != DEAD)
+		to_chat(wearer, span_notice("<i>Галстук: [pick(whispers)]</i>"))
+	schedule_whisper()
+
+/datum/action/item_action/atmta_druid_speak
+	name = "Druid: speak"
+
+/datum/action/item_action/atmta_druid_select
+	name = "Druid: choose phrase"
+
+/obj/item/clothing/suit/apron/greenhouse_druid
+	actions_types = list(/datum/action/item_action/atmta_druid_speak, /datum/action/item_action/atmta_druid_select)
+	COOLDOWN_DECLARE(voice_cooldown)
+	var/selected_phrase = "Грядки, подъём!"
+	var/static/list/voice_lines = list(
+		"Грядки, подъём!" = 'sound/voice/atmta_druid/wakeup.ogg',
+		"Кто потревожил мой мох?" = 'sound/voice/atmta_druid/moss.ogg',
+		"До полива остались секунды." = 'sound/voice/atmta_druid/water.ogg',
+		"Не заставляй меня рычать на рассаду." = 'sound/voice/atmta_druid/seedlings.ogg',
+		"Уже окучиваю!" = 'sound/voice/atmta_druid/hilling.ogg',
+		"Как велит перегной." = 'sound/voice/atmta_druid/compost.ogg',
+		"За грядки затопчу!" = 'sound/voice/atmta_druid/weeds.ogg',
+		"Р-р-р! Фотосинтез!" = 'sound/voice/atmta_druid/growl.ogg',
+		"И тут я пошёл на него с лейкой." = 'sound/voice/atmta_druid/can.ogg',
+		"Сначала бы перекусить." = 'sound/voice/atmta_druid/snack.ogg',
+		"Кому помочь с пересадкой?" = 'sound/voice/atmta_druid/transplant.ogg',
+	)
+
+/obj/item/clothing/suit/apron/greenhouse_druid/item_action_slot_check(slot, mob/user, datum/action/action)
+	return slot == ITEM_SLOT_CLOTH_OUTER
+
+/obj/item/clothing/suit/apron/greenhouse_druid/ui_action_click(mob/living/user, datum/action/action, leftclick)
+	if(user.get_item_by_slot(ITEM_SLOT_CLOTH_OUTER) != src || user.incapacitated())
+		return
+	if(istype(action, /datum/action/item_action/atmta_druid_select))
+		var/choice = tgui_input_list(user, "Choose a druid voice line.", name, voice_lines)
+		if(choice && user.get_item_by_slot(ITEM_SLOT_CLOTH_OUTER) == src && !user.incapacitated())
+			selected_phrase = choice
+		return
+	if(!COOLDOWN_FINISHED(src, voice_cooldown))
+		return
+	COOLDOWN_START(src, voice_cooldown, 5 SECONDS)
+	playsound(src, voice_lines[selected_phrase], 60, FALSE)
+	user.visible_message(span_boldwarning("[user] growls: [selected_phrase]"))

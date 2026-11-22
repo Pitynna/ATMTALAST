@@ -243,3 +243,21 @@
 	icon_state = "slastena"
 	item_state = "slastena"
 	item_color = "slastena"
+
+/obj/item/clothing/neck/inner_voice_tie
+	name = "loud necktie"
+	desc = "A loud tie in every sense of the word. The knot looks like it has opinions."
+	icon = 'icons/obj/clothing/atmta/role_outfits.dmi'
+	icon_state = "inner_voice_tie"
+	item_state = "inner_voice_tie"
+	sprite_sheets = null
+	onmob_sheets = list(ITEM_SLOT_NECK_STRING = 'icons/mob/clothing/atmta/role_outfits.dmi')
+
+/obj/item/clothing/suit/apron/greenhouse_druid
+	name = "greenhouse druid cloak"
+	desc = "A blue and brown work cloak with a branching antler hood and a clasp that carries your voice."
+	icon = 'icons/obj/clothing/atmta/role_outfits.dmi'
+	icon_state = "druid_cloak"
+	item_state = "druid_cloak"
+	sprite_sheets = null
+	onmob_sheets = list(ITEM_SLOT_CLOTH_OUTER_STRING = 'icons/mob/clothing/atmta/role_outfits.dmi')

@@ -282,3 +282,19 @@
 	cost = 5
 	slot = ITEM_SLOT_CLOTH_INNER
 	allowed_roles = list(JOB_TITLE_LAWYER)
+
+/datum/gear/atmta/inner_voice_tie
+	index_name = "ATMTA: loud necktie"
+	display_name = "loud necktie"
+	path = /obj/item/clothing/neck/inner_voice_tie
+	cost = 1
+	slot = ITEM_SLOT_NECK
+	allowed_roles = list(JOB_TITLE_DETECTIVE)
+
+/datum/gear/atmta/druid_cloak
+	index_name = "ATMTA: greenhouse druid cloak"
+	display_name = "greenhouse druid cloak"
+	path = /obj/item/clothing/suit/apron/greenhouse_druid
+	cost = 2
+	slot = ITEM_SLOT_CLOTH_OUTER
+	allowed_roles = list(JOB_TITLE_BOTANIST)

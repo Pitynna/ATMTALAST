@@ -24,7 +24,7 @@
 		qdel(item)
 		count++
 		qdel(gear)
-	TEST_ASSERT_EQUAL(count, 38, "The complete historical karma catalogue must be ported")
+	TEST_ASSERT_EQUAL(count, 40, "The ATMTA loadout catalogue must include the legacy gear, necktie and druid cloak")
 	rustlib_file_write(json_encode(previews), "wardrobe/index.json")
 
 /datum/unit_test/atmta_loadout_role_access/Run()
