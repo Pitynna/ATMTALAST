@@ -4056,8 +4056,6 @@
 /turf/simulated/floor/plating,
 /area/research_outpost/spectro)
 "uS" = (
-/obj/item/storage/box/excavation,
-/obj/item/pickaxe,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -8161,13 +8159,10 @@
 /turf/simulated/floor/plating,
 /area/research_outpost/hallway)
 "Dz" = (
-/obj/structure/closet/walllocker/emerglocker{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "loadingarea"
-	},
-/area/mine/production)
+/obj/item/storage/box/excavation,
+/obj/item/pickaxe,
+/turf/simulated/floor/plasteel,
+/area/research_outpost/gearstore)
 "DA" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining West Outpost Airlock";
@@ -10209,12 +10204,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/research_outpost/harvesting)
-"HW" = (
-/obj/structure/transit_tube/curved/flipped{
-	dir = 8
-	},
-/turf/simulated/wall/r_wall,
-/area/research_outpost/harvesting)
 "HX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10633,27 +10622,9 @@
 /obj/structure/transit_tube,
 /turf/simulated/floor/plating/asteroid/airless,
 /area/mine/explored)
-"IY" = (
-/obj/structure/transit_tube/curved{
-	dir = 1
-	},
-/turf/simulated/floor/plating/asteroid/airless,
-/area/mine/explored)
 "IZ" = (
 /turf/simulated/mineral/random/labormineral,
 /area/mine/unexplored)
-"Ja" = (
-/obj/structure/transit_tube/curved/flipped{
-	dir = 8
-	},
-/turf/simulated/floor/plating/asteroid/airless,
-/area/mine/explored)
-"Jb" = (
-/obj/structure/transit_tube/station/reverse{
-	dir = 1
-	},
-/turf/simulated/floor/plating/asteroid/airless,
-/area/mine/explored)
 "Jc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plasteel{
@@ -52273,7 +52244,7 @@ tI
 tH
 tF
 sO
-sv
+Dz
 tE
 sn
 sn
@@ -57161,7 +57132,7 @@ CA
 Ci
 kx
 kx
-tg
+kx
 kx
 kx
 kx
@@ -57284,7 +57255,7 @@ Xy
 yc
 hs
 lJ
-Dz
+hs
 hu
 hu
 tg
@@ -57418,7 +57389,7 @@ CO
 Ci
 kx
 kx
-tg
+kx
 kx
 kx
 kx
@@ -57675,7 +57646,7 @@ DB
 Ci
 kx
 kx
-tg
+kx
 kx
 kx
 kx
@@ -57932,7 +57903,7 @@ En
 En
 SW
 kx
-tg
+kx
 kx
 kx
 kx
@@ -58960,7 +58931,7 @@ En
 En
 kx
 kx
-Jb
+kx
 kx
 kx
 kx
@@ -59216,8 +59187,8 @@ GA
 Gz
 Gy
 kx
-tg
-Ja
+kx
+kx
 kx
 kx
 kx
@@ -59472,9 +59443,9 @@ Hc
 Hb
 GY
 Gy
-tg
-IN
-tg
+kx
+kx
+kx
 kx
 kx
 kx
@@ -59729,8 +59700,8 @@ Ho
 Gy
 Gy
 Gy
-IN
 tg
+kx
 kx
 kx
 kx
@@ -59985,7 +59956,7 @@ Hw
 Hv
 Ho
 kx
-IJ
+tg
 tg
 kx
 kx
@@ -60232,7 +60203,7 @@ Kx
 Kx
 Kx
 vZ
-HW
+HS
 HV
 HT
 HS
@@ -60242,7 +60213,7 @@ HN
 HK
 Ho
 kx
-IL
+tg
 kx
 kx
 kx
@@ -60488,7 +60459,7 @@ Ya
 Ya
 Kx
 Kx
-IJ
+tg
 HS
 Ib
 Ia
@@ -60499,7 +60470,7 @@ HN
 Hv
 Ho
 kx
-IL
+tg
 kx
 kx
 kx
@@ -60745,7 +60716,7 @@ Iy
 Iy
 Iy
 Kx
-IL
+tg
 HS
 Ih
 Ig
@@ -60756,7 +60727,7 @@ Ic
 HK
 Ho
 tg
-Ja
+tg
 kx
 kx
 kx
@@ -61002,7 +60973,7 @@ Iy
 Iy
 Iy
 Iy
-IL
+tg
 HS
 Il
 Ik
@@ -61012,7 +60983,7 @@ HS
 Ho
 Ho
 Ho
-IN
+tg
 tg
 kx
 kx
@@ -61259,7 +61230,7 @@ Iy
 Iy
 Iy
 Iy
-IL
+tg
 Iu
 Is
 Ir
@@ -61267,8 +61238,8 @@ Io
 Im
 HS
 tg
-IP
-IY
+tg
+tg
 tg
 Kx
 Kx
@@ -61516,14 +61487,14 @@ Iy
 Iy
 Iy
 Iy
-IL
+tg
 HS
 Ix
 Iw
 Iw
 Iv
 HS
-IJ
+tg
 tg
 Kx
 Kx
@@ -61773,14 +61744,14 @@ Iy
 Iy
 Iy
 Iy
-IL
+tg
 HS
 IB
 Iw
 Iw
 IA
 HS
-IL
+tg
 Kx
 Kx
 Kx
@@ -62030,14 +62001,14 @@ Iy
 Iy
 Iy
 Iy
-IL
+tg
 HS
 ID
 IG
 IF
 ID
 HS
-IL
+tg
 Kx
 Kx
 Kx
@@ -62287,14 +62258,14 @@ Iy
 Iy
 Iy
 Iy
-IM
+tg
 HS
 HS
 HS
 HS
 HS
 HS
-Ja
+tg
 Iy
 Kx
 Kx
@@ -62545,12 +62516,12 @@ Iy
 Iy
 Iy
 tg
-IT
-IU
-IU
-IU
-IU
-IY
+tg
+tg
+tg
+tg
+tg
+tg
 tg
 Iy
 Iy
