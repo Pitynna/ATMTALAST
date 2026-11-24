@@ -305,7 +305,7 @@
 	allow_duplicate_results = FALSE
 	var/make_floor = TRUE
 
-/obj/effect/particle_effect/fluid/foam/metal/make_result() //Smart foam adheres to area borders for walls
+/obj/effect/particle_effect/fluid/foam/metal/make_result()
 	var/turf/simulated/location = loc
 	if(make_floor && is_space_or_openspace(location) && !istype(location, /turf/space/transit))
 		location.ChangeTurf(/turf/simulated/floor/plating/metalfoam)
@@ -323,28 +323,7 @@
 	make_floor = FALSE
 	cares_about_temperature = FALSE
 
-/// A variant of resin foam that is created from halon combustion. It does not dissolve in heat to allow the gas to spread before foaming.
-/// A variant of metal foam which only produces walls at area boundaries.
-/obj/effect/particle_effect/fluid/foam/metal/smart
-	name = "smart foam"
-
-/// A factory which produces smart aluminium metal foam.
-/datum/effect_system/fluid_spread/foam/metal/smart
-	effect_type = /obj/effect/particle_effect/fluid/foam/metal/smart
-
-/obj/effect/particle_effect/fluid/foam/metal/smart/make_result() //Smart foam adheres to area borders for walls
-	var/turf/simulated/location = loc
-	var/area/location_area = get_area(location)
-	if(isspaceturf(location) || isopenspaceturf(location))
-		location.ChangeTurf(/turf/simulated/floor/plating/metalfoam)
-
-	for(var/cardinal in GLOB.cardinal)
-		var/turf/cardinal_turf = get_step(location, cardinal)
-		if(get_area(cardinal_turf) != location_area)
-			return ..()
-	return null
-
-/// A factory which produces smart aluminium metal foam.
+/// A factory which produces aluminium foam.
 /datum/effect_system/fluid_spread/foam/metal
 	effect_type = /obj/effect/particle_effect/fluid/foam/metal
 

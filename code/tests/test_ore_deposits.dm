@@ -1,6 +1,6 @@
 /// Round-start ore deposits must follow the agreed layout rules (docs/MINING_DRILLS.md).
 /datum/unit_test/ore_deposit_layout/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return // Minimal test maps and SKIP_MINING deliberately omit the mine.
 	var/static/datum/ore_deposit_generator/rules = new // Only read for its settings.

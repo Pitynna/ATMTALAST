@@ -67,6 +67,10 @@
 	for(var/obj/docking_port/mobile/ship in SSshuttle.mobile)
 		TEST_ASSERT_NOT(ids[ship.id], "Mobile shuttle ID [ship.id] must be registered once")
 		ids[ship.id] = TRUE
+	for(var/id in list("pod1", "pod2"))
+		var/obj/docking_port/mobile/pod = SSshuttle.getShuttle(id)
+		TEST_ASSERT_EQUAL(pod?.getDockedId(), "[id]_home", "Ulthor's escape pods must start at their home docks")
+	TEST_ASSERT(!ids["pod3"] && !ids["pod4"], "Ulthor operates only escape pods 1 and 2")
 	for(var/id in list("supply", "emergency", "admin", "specops", "mining", "laborcamp", "ulthor_research"))
 		var/obj/docking_port/mobile/ship = SSshuttle.getShuttle(id)
 		TEST_ASSERT_NOTNULL(ship, "Ulthor must retain its [id] shuttle")

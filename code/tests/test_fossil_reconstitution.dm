@@ -151,7 +151,7 @@
 
 /// Every transit tube on the asteroid joins its neighbours, and a pod can ride from the mining station to the outpost.
 /datum/unit_test/outpost_transit_line/Run()
-	var/z = level_name_to_num(MINING)
+	var/z = get_optional_mining_z()
 	if(!z)
 		return
 	var/count = 0
@@ -197,7 +197,7 @@
 
 /// The reconstitution lab is a real, powered room with both consoles and a penned tank.
 /datum/unit_test/reconstitution_lab/Run()
-	var/z = level_name_to_num(MINING)
+	var/z = get_optional_mining_z()
 	if(!z)
 		return
 	var/obj/machinery/computer/fossil_reconstitutor/fauna/fauna = locate() in locate(148, 198, z)

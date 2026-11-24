@@ -704,10 +704,12 @@ SUBSYSTEM_DEF(air)
 /datum/controller/subsystem/air/proc/setup_turfs(turf/low_corner = locate(1, 1, 1), turf/high_corner = locate(world.maxx, world.maxy, world.maxz))
 	for(var/turf/turf as anything in block(low_corner, high_corner))
 		turf.Initialize_Atmos(milla_tick)
+		CHECK_TICK
 	milla_load_turfs(low_corner, high_corner)
 	for(var/turf/turf as anything in block(low_corner, high_corner))
 		turf.milla_data.len = 0
 		turf.milla_data = null
+		CHECK_TICK
 
 /datum/controller/subsystem/air/proc/setup_atmos_machinery(list/machines_to_init)
 	var/watch = start_watch()

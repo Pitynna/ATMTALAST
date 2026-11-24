@@ -20,14 +20,14 @@
 		TEST_ASSERT_NOT(board.accepts_part(wrong_tier), "[board] must refuse parts of another tier")
 
 /// A drill set up off a deposit reports it and does not run.
-/datum/unit_test/mining_drill_without_deposit/Run()
+/datum/unit_test/room_test/mining_drill_without_deposit/Run()
 	var/obj/machinery/mining_drill/drill = allocate(/obj/machinery/mining_drill)
 	drill.on = TRUE
 	drill.update_status()
 	TEST_ASSERT_EQUAL(drill.status, "No ore deposit", "A drill off a deposit must say so")
 
 /// The ejector empties the buffer onto the tile the drill's arrow points at.
-/datum/unit_test/mining_drill_ejector/Run()
+/datum/unit_test/room_test/mining_drill_ejector/Run()
 	var/obj/machinery/mining_drill/drill = allocate(/obj/machinery/mining_drill)
 	var/obj/item/mining_drill_module/ejector/ejector = allocate(/obj/item/mining_drill_module/ejector)
 	drill.module = ejector
@@ -44,7 +44,7 @@
 	qdel(ejected)
 
 /// Ore handed to an ore pipe appears at once in front of the network's only outlet.
-/datum/unit_test/ore_pipe_network/Run()
+/datum/unit_test/room_test/ore_pipe_network/Run()
 	var/obj/machinery/mining_drill/drill = allocate(/obj/machinery/mining_drill)
 	var/obj/item/mining_drill_module/ejector/ejector = allocate(/obj/item/mining_drill_module/ejector)
 	drill.module = ejector

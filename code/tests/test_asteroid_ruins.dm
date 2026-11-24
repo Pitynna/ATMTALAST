@@ -1,7 +1,7 @@
 /// Returns the turfs of a placed asteroid ruin by its area, or null when the mine was not loaded.
 /// Ruin landmarks are created before atoms initialize and lose their template, so the area is the reliable handle.
 /datum/unit_test/proc/asteroid_ruin_turfs(area_type)
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return null // Minimal test maps and SKIP_MINING deliberately omit the mine.
 	var/list/turfs = get_area_turfs(area_type, mining_z, TRUE)
@@ -12,7 +12,7 @@
 
 /// Both asteroid ruins must be seeded into solid rock and stay buried after the caves are carved.
 /datum/unit_test/asteroid_ruins_placement/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	TEST_ASSERT(length(GLOB.asteroid_ruins_templates) >= 2, "The asteroid ruin templates were not preloaded")

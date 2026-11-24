@@ -33,6 +33,7 @@
 /obj/item/clothing/suit/atmta/space
 	abstract_type = /obj/item/clothing/suit/atmta/space
 	parent_type = /obj/item/clothing/suit/space
+	icon_state = null
 	icon = 'icons/obj/clothing/atmta/suits.dmi'
 	sprite_sheets = null
 	onmob_sheets = list(ITEM_SLOT_CLOTH_OUTER_STRING = 'icons/mob/clothing/atmta/suit.dmi')

@@ -1,6 +1,5 @@
 import { type Key, type ReactNode, useState } from 'react';
 import {
-  Box,
   Button,
   Icon,
   Input,

@@ -332,7 +332,7 @@
 		return
 	if(!istype(I))
 		return
-	if(!has_organ_for_slot(slot))
+	if(!has_organ_for_slot(slot) || (slot == ITEM_SLOT_BACKPACK && !isstorage(back)))
 		return
 
 	if(I == l_hand)
@@ -457,14 +457,8 @@
 			update_suit_storage()
 
 		if(ITEM_SLOT_BACKPACK)
-			if(isstorage(back))
-				if(get_active_hand() == I)
-					temporarily_remove_item_from_inventory(I)
-				I.forceMove(back)
-			I.item_flags &= ~IN_STORAGE
-			I.forceMove(drop_location())
-
-			I.item_flags |= IN_STORAGE
+			I.forceMove(back)
+			I.on_enter_storage(back)
 
 		if(ITEM_SLOT_ACCESSORY)
 			var/obj/item/clothing/under/uniform = w_uniform

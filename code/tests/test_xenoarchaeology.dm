@@ -1,6 +1,6 @@
 /// Check the mapped utility circuits, rather than just the APCs' starting batteries.
 /datum/unit_test/xenoarch_outpost_utilities/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	var/obj/machinery/power/smes/upper = locate() in locate(178, 201, mining_z)
@@ -78,7 +78,7 @@
 	TEST_ASSERT(discharged && delivered > 0, "Stored power must actually reach the outpost distribution circuit")
 
 /datum/unit_test/xenoarch_outpost_atmos/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	for(var/x in 175 to 176)
@@ -143,7 +143,7 @@
 
 /// Validate the live asteroid and the complete excavation -> laboratory -> R&D loop.
 /datum/unit_test/xenoarch_outpost/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	TEST_ASSERT(length(GLOB.xenoarch_sites) >= 80, "The asteroid must generate archaeological digsites")
@@ -243,7 +243,7 @@
 	TEST_ASSERT_NULL(locate(/obj/machinery/xenoarch_artifact) in location, "Broken matrix cannot produce an artifact")
 
 /datum/unit_test/xenoarch_lab_cycle/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	var/turf/location = locate(163, 194, mining_z)
@@ -330,7 +330,7 @@
 
 /// Exercise the actual item/rock attack chain, including timed tool use and sampling.
 /datum/unit_test/xenoarch_field_work/Run()
-	if(!level_name_to_num(MINING))
+	if(!get_optional_mining_z())
 		return
 	var/turf/simulated/mineral/rock
 	var/turf/standing

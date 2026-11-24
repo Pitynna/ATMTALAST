@@ -9406,6 +9406,7 @@
 /obj/machinery/door_control{
 	desc = "A remote control-switch for the pod doors.";
 	id = "escapepodbay";
+	safety_z_check = 1;
 	name = "Pod Door Control";
 	req_access = list(13);
 	pixel_x = 24;
@@ -11025,6 +11026,7 @@
 "fbN" = (
 /obj/machinery/door_control{
 	id = "hangar";
+	safety_z_check = 1;
 	name = "Hangar Doors Control";
 	pixel_y = -8;
 	req_access = list(18,48,70,71)
@@ -32949,7 +32951,7 @@
 	req_access = list(13)
 	},
 /turf/space,
-/area/space)
+/area/station/maintenance/ulthor_south_passage)
 "qjJ" = (
 /obj/structure/chair/stool,
 /turf/simulated/floor/plasteel{

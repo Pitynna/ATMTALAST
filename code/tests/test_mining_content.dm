@@ -8,7 +8,7 @@
 
 /// The actual loaded mining map must be an ore-bearing asteroid with a safe outpost.
 /datum/unit_test/mining_asteroid_layout/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return // Minimal test maps and SKIP_MINING deliberately omit the mine.
 	TEST_ASSERT_NOT(is_station_level(mining_z), "Mining must use a separate Z-level")
@@ -93,7 +93,7 @@
 
 /// Exercise both real transport routes, including cargo retention and vacated docking pads.
 /datum/unit_test/mining_asteroid_shuttles/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	for(var/shuttle_id in list("mining", "laborcamp"))
@@ -136,7 +136,7 @@
 		TEST_ASSERT_NULL(text2path(retired_path), "[retired_path] must not remain spawnable")
 
 /datum/unit_test/mining_asteroid_ore_processing/Run()
-	var/mining_z = level_name_to_num(MINING)
+	var/mining_z = get_optional_mining_z()
 	if(!mining_z)
 		return
 	var/turf/simulated/mineral/iron/deposit

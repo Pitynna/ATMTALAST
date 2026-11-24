@@ -82,7 +82,8 @@ def main():
             failures.append(f"{pos}: expected one turf and one area")
             continue
         areas[zones[0]] += 1
-        if zones[0] in ("/area", "/area/space") and turfs[0].startswith("/turf/simulated/floor"):
+        exterior_plating = zones[0] == "/area/space" and turfs[0] == "/turf/simulated/floor/plating/airless"
+        if zones[0] in ("/area", "/area/space") and turfs[0].startswith("/turf/simulated/floor") and not exterior_plating:
             failures.append(f"{pos}: interior floor painted as farspace")
         # Layered cables: one cable per layer per tile; different layers may
         # cross (e.g. the gravity generator's SMES output under the grid line).

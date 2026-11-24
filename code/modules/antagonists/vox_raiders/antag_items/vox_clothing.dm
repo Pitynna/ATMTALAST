@@ -73,6 +73,7 @@
 	index_name = "vox work jumpsuit"
 	description = "These loose clothes are optimized for the labors of the lower castes onboard the arkships. Large openings in the top allow for breathability while the pants are durable yet flexible enough to not restrict movement."
 	path = /obj/item/clothing/under/vox/jumpsuit
+	whitelisted_species = list(SPECIES_VOX)
 	slot = ITEM_SLOT_CLOTH_INNER
 
 /datum/gear/racial/vox_jumpsuit/red

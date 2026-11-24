@@ -109,6 +109,10 @@ GLOBAL_LIST_EMPTY(unit_test_tguis)
 
 	LAZYADD(fail_reasons, list(list(reason, file, line)))
 
+/datum/unit_test/proc/get_optional_mining_z()
+	var/datum/space_level/mining = GLOB.space_manager.levels_by_name[MINING]
+	return mining?.zpos
+
 /datum/unit_test/proc/get_available_turfs()
 	return get_area_turfs(findEventArea())
 

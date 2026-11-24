@@ -16,8 +16,8 @@
 	insurance_type = INSURANCE_TYPE_NONE
 	allow_bureaucratic_error = FALSE
 
-/datum/job/ai/equip(mob/living/carbon/human/H)
-	if(!H)
+/datum/job/ai/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE)
+	if(!H || visualsOnly)
 		return 0
 
 /datum/job/ai/is_position_available()
@@ -41,8 +41,8 @@
 		ALT_JOB_TITLE_RU_CYBORG,
 	)
 
-/datum/job/cyborg/equip(mob/living/carbon/human/H)
-	if(!H)
+/datum/job/cyborg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE)
+	if(!H || visualsOnly)
 		return FALSE
 	var/mob/living/silicon/robot/new_robot = H.Robotize()
 	if(new_robot)
