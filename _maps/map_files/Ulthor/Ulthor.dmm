@@ -48243,6 +48243,19 @@
 	tag = "icon-cafeteria (NORTHEAST)"
 	},
 /area/station/service/kitchen)
+"aal" = (
+/obj/machinery/power/apc/directional/west,
+/obj/structure/cable,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/engineering/ulthor_engine_room)
+"aam" = (
+/obj/structure/cable,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/station/engineering/ulthor_engine_room)
 
 (1,1,1) = {"
 agy
@@ -85889,7 +85902,7 @@ cZF
 vks
 vks
 xzm
-vks
+aal
 vks
 vks
 hgT
@@ -86146,7 +86159,7 @@ cZF
 vks
 vks
 vks
-vks
+aam
 vks
 vks
 hgT
@@ -86403,7 +86416,7 @@ cZF
 vks
 vks
 vks
-vks
+aam
 vks
 vks
 hgT
@@ -86660,7 +86673,7 @@ cZF
 mXG
 mXG
 vks
-vks
+aam
 mXG
 mXG
 aso
@@ -86917,7 +86930,7 @@ eTq
 eTq
 eTq
 eTq
-eTq
+tCF
 eTq
 eTq
 eTq
@@ -87174,7 +87187,7 @@ tCF
 tCF
 eTq
 eTq
-eTq
+tCF
 eTq
 eTq
 eTq
