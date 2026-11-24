@@ -48256,6 +48256,121 @@
 	dir = 1
 	},
 /area/station/engineering/ulthor_engine_room)
+"aan" = (
+/obj/structure/cable/layer3,
+/obj/machinery/light_switch/directional/north,
+/obj/machinery/power/smes{
+	charge = 5e+006
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
+"aao" = (
+/obj/structure/cable/layer3,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
+"aap" = (
+/obj/structure/cable/layer3,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
+"aar" = (
+/obj/structure/cable/layer3,
+/obj/machinery/power/emitter{
+	anchored = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/bluegrid,
+/area/station/ai/ulthor_core)
+"aas" = (
+/obj/structure/cable/layer3,
+/turf/simulated/wall,
+/area/station/ai/ulthor_core)
+"aat" = (
+/obj/structure/cable/layer3,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/camera/motion{
+	c_tag = "AI Core";
+	dir = 1;
+	network = list("SS13","MiniSat");
+	start_active = 1
+	},
+/obj/machinery/power/apc/directional/south{
+	cell_type = 5000;
+	name = "south bump Important Area"
+	},
+/turf/simulated/floor/bluegrid,
+/area/station/ai/ulthor_core)
+"aaw" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/structure/cable/layer3,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
+"aax" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1;
+	name = "standard air scrubber";
+	on = 1;
+	scrub = 28
+	},
+/obj/structure/cable,
+/obj/structure/cable/layer3,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
+"aay" = (
+/obj/structure/cable,
+/obj/structure/cable/layer3,
+/obj/machinery/alarm/directional/west,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
+"aaz" = (
+/obj/structure/cable,
+/obj/structure/cable/layer3,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "dark";
+	tag = "icon-vault (NORTHEAST)"
+	},
+/area/station/ai/ulthor_core)
 
 (1,1,1) = {"
 agy
@@ -84081,13 +84196,13 @@ hEA
 pNb
 mgS
 iIB
-vqu
-kln
-oMW
+aar
+aap
+aao
 dmZ
 rVV
 xPm
-hye
+aan
 uyk
 iIB
 agy
@@ -84340,11 +84455,11 @@ ayv
 iIB
 xHh
 mRT
-kln
-dKs
+aap
+aat
 xPm
 xPm
-nTQ
+aas
 vaJ
 iIB
 agy
@@ -84598,10 +84713,10 @@ iIB
 dOe
 mRT
 jRj
-xAN
-jeY
-dMQ
-lyB
+aaz
+aay
+aax
+aaw
 gpc
 iIB
 agy

@@ -25,6 +25,29 @@
 		TEST_ASSERT_NOTNULL(smes.powernet, "SMES at [smes.x]:[smes.y] needs an output network")
 		TEST_ASSERT_NOTEQUAL(smes.terminal.powernet, smes.powernet, "SMES at [smes.x]:[smes.y] input must remain separate from its output")
 
+	var/station_z = level_name_to_num(MAIN_STATION)
+	var/obj/machinery/power/smes/core_backup = locate() in locate(140, 149, station_z)
+	var/obj/machinery/power/emitter/core_emitter = locate() in locate(140, 155, station_z)
+	var/obj/machinery/power/apc/passage_apc = locate() in locate(147, 149, station_z)
+	TEST_ASSERT_NOTNULL(core_backup, "The AI core needs its backup SMES")
+	var/area/core = get_area(core_backup)
+	var/obj/machinery/power/apc/core_apc = core.get_apc()
+	var/datum/powernet/grid = core_backup.terminal.powernet
+	var/datum/powernet/reserve = core_backup.powernet
+	TEST_ASSERT_EQUAL(passage_apc?.terminal?.powernet, grid, "The station grid must charge the AI reserve")
+	TEST_ASSERT_EQUAL(core_apc?.terminal?.powernet, reserve, "The reserve must supply the AI core APC")
+	TEST_ASSERT_EQUAL(core_emitter?.powernet, reserve, "The reserve must supply the core emitter")
+	for(var/obj/machinery/power/consumer in reserve.nodes)
+		TEST_ASSERT_EQUAL(get_area(consumer), core, "Only equipment in the AI core may draw from its reserve")
+
+	var/previous_supply = grid.avail
+	var/previous_output = reserve.newavail
+	var/previous_charge = core_backup.charge
+	grid.avail = 0
+	core_backup.process()
+	grid.avail = previous_supply
+	TEST_ASSERT(core_backup.charge < previous_charge && reserve.newavail > previous_output, "With station generation offline, the battery must discharge into the AI core")
+
 
 /datum/unit_test/ulthor_atmos/Run()
 	if(!istype(SSmapping.map_datum, /datum/map/ulthor))
