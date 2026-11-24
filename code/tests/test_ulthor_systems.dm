@@ -71,15 +71,17 @@
 			continue
 		TEST_ASSERT(camera.c_tag && !tags[camera.c_tag], "Camera names must be nonempty and unique: [camera.c_tag]")
 		tags[camera.c_tag] = TRUE
-		TEST_ASSERT(camera.can_use(), "[camera.c_tag] must start operational")
+		if(!camera.can_use())
+			TEST_ASSERT(!camera.start_active && !camera.status && camera.wires.is_all_cut(), "[camera.c_tag] may start offline only with the normal round-start wire fault")
 		TEST_ASSERT(camera.powered(), "[camera.c_tag] must have area power")
 		var/area/zone = get_area(camera)
 		TEST_ASSERT_EQUAL(camera.myArea, zone, "Camera [camera.c_tag] must use its real room")
-		TEST_ASSERT(camera.UID() in zone.cameras, "Camera [camera.c_tag] must register in the room camera list")
+		TEST_ASSERT_EQUAL((camera.UID() in zone.cameras), !!camera.can_use(), "Room camera registration must match the state of [camera.c_tag]")
 		TEST_ASSERT(length(camera.camera_see()), "Camera [camera.c_tag] must see actual map contents")
 		cameras += camera
 	var/consoles = 0
 	var/frames = 0
+	var/tested_repair = FALSE
 	var/list/published = list()
 	for(var/obj/machinery/computer/security/console in world)
 		if(!is_ulthor_mapped_fixture(console))
@@ -113,21 +115,30 @@
 			published[camera] = TRUE
 			console.active_camera = camera
 			console.last_camera_turf = null
-			console.update_active_camera_screen()
-			TEST_ASSERT(length(console.cam_screen.vis_contents), "Console must draw [camera.c_tag]'s visible turfs")
-			frames++
-			if(frames == 1)
-				camera.toggle_cam(null, FALSE)
+			var/started_offline = !camera.can_use()
+			if(started_offline || (!tested_repair && !camera.start_active))
+				if(!started_offline)
+					camera.wires.cut_all()
 				console.update_active_camera_screen()
 				var/showed_static = !length(console.cam_screen.vis_contents)
-				camera.toggle_cam(null, FALSE)
+				for(var/wire in camera.wires.cut_wires.Copy())
+					camera.wires.cut(wire) // Mend through the camera's normal wire callbacks.
 				console.update_active_camera_screen()
-				TEST_ASSERT(showed_static, "Disabling a camera must replace its frame with static")
-				TEST_ASSERT(length(console.cam_screen.vis_contents), "Re-enabling the same camera must restore its image without switching away")
+				var/restored_image = camera.can_use() && length(console.cam_screen.vis_contents)
+				if(started_offline)
+					camera.wires.cut_all()
+				TEST_ASSERT(showed_static, "A camera with cut wires must show static")
+				TEST_ASSERT(restored_image, "Mending [camera.c_tag]'s wires must restore the image on the same console")
+				tested_repair = TRUE
+			else
+				console.update_active_camera_screen()
+				TEST_ASSERT(length(console.cam_screen.vis_contents), "Console must draw [camera.c_tag]'s visible turfs")
+			frames++
 		console.active_camera = old_camera
 		console.last_camera_turf = null
 		console.update_active_camera_screen()
 		consoles++
+	TEST_ASSERT(tested_repair, "Ulthor must retain cameras eligible for round-start faults and repair")
 	for(var/obj/machinery/camera/camera as anything in cameras)
 		TEST_ASSERT(published[camera], "[camera.c_tag] must be reachable from at least one mapped console")
 	var/station_z = level_name_to_num(MAIN_STATION)

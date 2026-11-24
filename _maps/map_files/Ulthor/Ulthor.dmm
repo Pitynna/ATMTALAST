@@ -11643,8 +11643,7 @@
 /obj/machinery/light_switch/directional/south,
 /obj/machinery/camera{
 	c_tag = "Messaging Server";
-	dir = 1;
-	start_active = 1
+	dir = 1
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -15024,8 +15023,7 @@
 	armor = list("melee"=50,"bullet"=20,"laser"=20,"energy"=20,"bomb"=100,"bio"=0,"fire"=90,"acid"=50);
 	c_tag = "Research Toxins Test Chamber West";
 	dir = 8;
-	network = list("Toxins","Research","SS13");
-	start_active = 1
+	network = list("Toxins","Research","SS13")
 	},
 /turf/simulated/floor/plasteel/airless/indestructible,
 /area/station/science/toxins/test)
@@ -18118,8 +18116,7 @@
 	armor = list("melee"=50,"bullet"=20,"laser"=20,"energy"=20,"bomb"=100,"bio"=0,"fire"=90,"acid"=50);
 	c_tag = "Research Toxins Test Chamber South";
 	dir = 1;
-	network = list("Toxins","Research","SS13");
-	start_active = 1
+	network = list("Toxins","Research","SS13")
 	},
 /obj/machinery/light,
 /turf/simulated/floor/plasteel/airless,
@@ -22812,8 +22809,7 @@
 /area/station/hallway/primary/aft)
 "ldx" = (
 /obj/machinery/camera{
-	c_tag = "Departure Lounge Podbay";
-	start_active = 1
+	c_tag = "Departure Lounge Podbay"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
@@ -28598,8 +28594,7 @@
 "nVY" = (
 /obj/machinery/camera{
 	c_tag = "Gravity Generator Room South";
-	dir = 8;
-	start_active = 1
+	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -32495,8 +32490,7 @@
 /obj/machinery/camera{
 	armor = list("melee"=50,"bullet"=20,"laser"=20,"energy"=20,"bomb"=100,"bio"=0,"fire"=90,"acid"=50);
 	c_tag = "Research Toxins Test Chamber North";
-	network = list("Toxins","Research","SS13");
-	start_active = 1
+	network = list("Toxins","Research","SS13")
 	},
 /obj/machinery/light{
 	dir = 1
@@ -43600,8 +43594,7 @@
 "vOI" = (
 /obj/machinery/camera{
 	c_tag = "Gravity Generator Room North";
-	dir = 8;
-	start_active = 1
+	dir = 8
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -47545,8 +47538,7 @@
 	armor = list("melee"=50,"bullet"=20,"laser"=20,"energy"=20,"bomb"=100,"bio"=0,"fire"=90,"acid"=50);
 	c_tag = "Research Toxins Test Chamber East";
 	dir = 8;
-	network = list("Toxins","Research","SS13");
-	start_active = 1
+	network = list("Toxins","Research","SS13")
 	},
 /obj/machinery/light{
 	dir = 4
