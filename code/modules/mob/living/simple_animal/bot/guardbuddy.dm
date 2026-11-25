@@ -126,6 +126,7 @@
 	bot_core_type = /obj/machinery/bot_core/guardbuddy
 	bot_purpose = "assist the station crew"
 	window_name = "Guardbuddy"
+	base_speed = 4
 	allow_pai = FALSE
 	on = FALSE
 	light_on = FALSE
@@ -345,7 +346,7 @@
 		failed_routes = 0
 		tries = 0
 		set_path(null)
-	else if(length(path) && bot_move(path[length(path)], 1))
+	else if(length(path) && bot_move(path[length(path)]))
 		return
 	if(++failed_routes > 3)
 		stop_mission(failure_reason)
@@ -358,10 +359,16 @@
 		return
 	set_path(result)
 	navigation_pending = FALSE
+	if(length(path))
+		bot_move(path[length(path)])
 
 /mob/living/simple_animal/bot/guardbuddy/bot_step()
 	if(!on)
 		return FALSE
+	if(program == "escort" && mode == BOT_MOVING)
+		var/mob/living/carbon/human/target = get_escort_target()
+		if(!target || Adjacent(target))
+			return FALSE
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/get_mode()
