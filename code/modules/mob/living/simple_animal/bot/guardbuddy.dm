@@ -130,9 +130,19 @@
 	var/obj/item/guardbuddy_chassis/chassis
 	var/obj/item/stock_parts/cell/cell
 	var/obj/item/guardbuddy_module/tool_module
+	var/obj/machinery/guardbuddy_dock/home_dock
+	var/program = "standby"
+	var/stop_reason = "Waiting for assignment."
+	var/obj/machinery/navbeacon/current_beacon
+	var/turf/navigation_target
+	var/navigation_pending = FALSE
+	/// Invalidates path callbacks when a newer command supersedes a route.
+	var/navigation_revision = 0
+	var/failed_routes = 0
 
 /mob/living/simple_animal/bot/guardbuddy/Initialize(mapload, obj/item/guardbuddy_chassis/new_chassis)
 	. = ..()
+	access_card.access |= ACCESS_RESEARCH
 	prev_access = access_card.access.Copy()
 	chassis = new_chassis
 	if(chassis)
@@ -144,6 +154,8 @@
 	update_icon()
 
 /mob/living/simple_animal/bot/guardbuddy/Destroy()
+	if(home_dock)
+		home_dock.unbind()
 	var/turf/drop_turf = get_turf(src)
 	if(drop_turf)
 		tool_module?.forceMove(drop_turf)
@@ -174,9 +186,176 @@
 		. += mutable_appearance(icon, "lights-on")
 
 /mob/living/simple_animal/bot/guardbuddy/handle_automated_action()
-	if(on && !cell?.use(istype(tool_module, /obj/item/guardbuddy_module/lamp) ? 2 : 1))
+	if(on && (!cell || cell.charge < 1))
+		stop_reason = "Battery depleted. Return the unit by hand or replace its cell."
 		turn_off()
 		return FALSE
+	if(on)
+		if(cell.percent() <= 20 && mode != BOT_GO_HOME)
+			if(!recall("Low battery."))
+				stop_mission("Low battery. Home dock unavailable.")
+				return FALSE
+		var/draw = istype(tool_module, /obj/item/guardbuddy_module/lamp) ? 2 : 1
+		cell.use(min(draw, cell.charge))
+	if(!..() || !on || client)
+		return FALSE
+	if(mode == BOT_GO_HOME)
+		if(!home_dock || !home_dock.is_operational() || home_dock.z != z)
+			stop_mission("Home dock is unavailable.")
+		else if(home_dock.on_pad(src))
+			turn_off()
+		else if(home_dock.pad_blocked(src))
+			if(++failed_routes >= 3)
+				stop_mission("The charging pad is occupied.")
+		else
+			navigate_to(get_turf(home_dock), "Could not reach the home dock.")
+	else if(program == "patrol")
+		patrol_beacons()
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/proc/dispatch()
+	if(!home_dock?.on_pad(src) || !home_dock.is_operational() || !cell || cell.percent() <= 20 || open)
+		return FALSE
+	bot_reset()
+	if(!turn_on())
+		return FALSE
+	stop_reason = program == "standby" ? "Waiting for assignment." : null
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/proc/recall(reason)
+	if(!home_dock || home_dock.z != z)
+		return FALSE
+	if(home_dock.on_pad(src))
+		stop_reason = reason
+		turn_off()
+		return TRUE
+	if(!home_dock.is_operational() || !turn_on())
+		return FALSE
+	bot_reset()
+	mode = BOT_GO_HOME
+	stop_reason = reason
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/proc/stop_mission(reason)
+	stop_reason = reason
+	turn_off()
+
+/mob/living/simple_animal/bot/guardbuddy/bot_reset()
+	. = ..()
+	current_beacon = null
+	navigation_target = null
+	navigation_pending = FALSE
+	navigation_revision++
+	failed_routes = 0
+
+/mob/living/simple_animal/bot/guardbuddy/proc/patrol_beacons()
+	var/list/beacons = GLOB.navbeacons["[z]"]
+	if(current_beacon && (!(current_beacon in beacons) || QDELETED(current_beacon)))
+		stop_mission("The patrol beacon is missing.")
+		return
+	if(!current_beacon)
+		var/closest_distance = INFINITY
+		for(var/obj/machinery/navbeacon/beacon in beacons)
+			var/distance = get_dist(src, beacon)
+			if(!beacon.codes["next_patrol"] || distance >= closest_distance)
+				continue
+			current_beacon = beacon
+			closest_distance = distance
+		if(!current_beacon)
+			stop_mission("No patrol beacons found.")
+			return
+
+	mode = BOT_PATROL
+	if(loc == current_beacon.loc)
+		var/next_beacon = current_beacon.codes["next_patrol"]
+		current_beacon = null
+		for(var/obj/machinery/navbeacon/beacon in beacons)
+			if(beacon.location == next_beacon)
+				current_beacon = beacon
+				break
+		if(!current_beacon)
+			stop_mission("The next patrol beacon is missing.")
+			return
+	navigate_to(get_turf(current_beacon), "Could not reach the patrol beacon.")
+
+/mob/living/simple_animal/bot/guardbuddy/proc/navigate_to(turf/target, failure_reason)
+	if(!target || target.z != z)
+		stop_mission(failure_reason)
+		return
+	if(navigation_pending)
+		return
+	if(target != navigation_target)
+		navigation_target = target
+		failed_routes = 0
+		tries = 0
+		set_path(null)
+	else if(length(path) && bot_move(target, 1))
+		return
+	if(++failed_routes > 3)
+		stop_mission(failure_reason)
+		return
+	navigation_pending = TRUE
+	tries = 0
+	var/revision = ++navigation_revision
+	var/list/result = get_path_to(src, target, max_distance = 150, access = prev_access, diagonal_handling = DIAGONAL_REMOVE_ALL)
+	if(QDELETED(src) || revision != navigation_revision)
+		return
+	set_path(result)
+	navigation_pending = FALSE
+
+/mob/living/simple_animal/bot/guardbuddy/bot_step()
+	if(!on)
+		return FALSE
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/get_mode()
+	if(mode == BOT_GO_HOME)
+		return "Returning to dock"
+	if(home_dock?.on_pad(src) && !on)
+		return "Docked"
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/call_bot(requester, turf/waypoint, message = TRUE)
+	if(remote_disabled || !is_valid_z_level(get_turf(src), waypoint) || !cell || cell.percent() <= 20 || open || mode == BOT_GO_HOME)
+		if(message)
+			to_chat(requester, span_warning("[src] is unavailable for a waypoint call."))
+		return FALSE
+	if(calling_ai && calling_ai != requester)
+		return FALSE
+	// The stock call grants temporary AI access. Reserve the command while its path is calculated.
+	bot_reset()
+	mode = BOT_RESPONDING
+	calling_ai = requester
+	ai_waypoint = waypoint
+	navigation_pending = TRUE
+	var/revision = navigation_revision
+	if(!all_access)
+		all_access = new /obj/item/card/id
+		all_access.access = get_all_accesses()
+	var/list/result = get_path_to(src, waypoint, max_distance = 200, access = all_access.GetAccess())
+	if(QDELETED(src) || navigation_revision != revision)
+		return FALSE
+	navigation_pending = FALSE
+	if(!length(result) || remote_disabled || !turn_on())
+		calling_ai = null
+		bot_reset()
+		if(message)
+			to_chat(requester, span_warning("[src] could not reach that waypoint."))
+		return FALSE
+	access_card.access = all_access.GetAccess()
+	set_path(result)
+	if(message)
+		to_chat(requester, span_notice("[src] is heading to [get_area_name(waypoint)]."))
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/call_mode()
+	if(navigation_pending)
+		return
+	if(loc == ai_waypoint)
+		to_chat(calling_ai, span_notice("[src] has arrived at the waypoint."))
+		calling_ai = null
+		bot_reset()
+		return
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/examine(mob/user)

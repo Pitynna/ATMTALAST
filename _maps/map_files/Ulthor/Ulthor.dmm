@@ -48372,6 +48372,30 @@
 	},
 /area/station/ai/ulthor_core)
 
+"aaA" = (
+/obj/machinery/guardbuddy_dock,
+/turf/simulated/floor/plasteel{icon_state = "white"
+	},
+/area/station/science/robotics/ulthor)
+"aaB" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Fore Robotics East";
+	location = "Fore Robotics West"
+	},
+/turf/simulated/floor/plasteel{dir = 8;icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/fore)
+"aaC" = (
+/obj/structure/cable,
+/obj/structure/disposalpipe/sortjunction{dir = 1;sortType = 12},
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=Fore Robotics West";
+	location = "Fore Robotics East"
+	},
+/turf/simulated/floor/plasteel{dir = 8;icon_state = "neutralfull"
+	},
+/area/station/hallway/primary/fore)
+
 (1,1,1) = {"
 agy
 agy
@@ -89321,7 +89345,7 @@ tVM
 bxD
 shG
 iIF
-eXb
+aaB
 hFD
 aWe
 vQV
@@ -90084,7 +90108,7 @@ tRP
 hpR
 hpR
 tsG
-uuv
+aaA
 hQA
 nKc
 tLb
@@ -90864,7 +90888,7 @@ wgt
 gxt
 jMU
 tPI
-ocW
+aaC
 mRe
 nlo
 aXK
