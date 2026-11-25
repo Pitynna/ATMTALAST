@@ -58,6 +58,30 @@
 	construction_time = 20 SECONDS
 	category = list(MECH_FAB_CATEGORY_CYBORG)
 
+/datum/design/guardbuddy_chassis
+	id = "guardbuddy_chassis"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_chassis
+	materials = list(MAT_METAL = 4000)
+	construction_time = 12 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG)
+
+/datum/design/guardbuddy_board
+	id = "guardbuddy_board"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_board
+	materials = list(MAT_METAL = 1000, MAT_GLASS = 1500)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG)
+
+/datum/design/guardbuddy_lamp
+	id = "guardbuddy_lamp"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_module/lamp
+	materials = list(MAT_METAL = 500, MAT_GLASS = 500)
+	construction_time = 5 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
 /datum/design/synthetic_flash
 	id = "sflash"
 	build_type = MECHFAB

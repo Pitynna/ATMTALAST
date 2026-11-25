@@ -1,0 +1,260 @@
+/obj/item/guardbuddy_board
+	name = "Guardbuddy control board"
+	desc = "The control circuitry for a PR-6 Guardbuddy."
+	icon = 'icons/obj/guardbuddy/parts.dmi'
+	icon_state = "robuddy_core-6"
+	item_state = "electronic"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/guardbuddy_chassis
+	name = "Guardbuddy chassis"
+	desc = "A PR-6 shell with slots for a control board, a power cell and a cyborg arm."
+	icon = 'icons/obj/guardbuddy/pr-6.dmi'
+	icon_state = "frame-1"
+	item_state = "electronic"
+	w_class = WEIGHT_CLASS_BULKY
+	var/obj/item/guardbuddy_board/board
+	var/obj/item/stock_parts/cell/cell
+	var/obj/item/robot_parts/arm
+	var/unit_name = "Guardbuddy"
+
+/obj/item/guardbuddy_chassis/update_icon_state()
+	if(arm)
+		icon_state = "body"
+	else if(cell)
+		icon_state = "frame-3"
+	else if(board)
+		icon_state = "frame-2"
+	else
+		icon_state = "frame-1"
+
+/obj/item/guardbuddy_chassis/examine(mob/user)
+	. = ..()
+	. += span_notice("Name: [unit_name]. Use a pen to change it.")
+	if(arm)
+		. += span_notice("Use a screwdriver on the chassis on the floor to finish assembly.")
+	else
+		. += span_notice("Next part: [cell ? "left or right cyborg arm" : board ? "power cell" : "Guardbuddy control board"].")
+	if(board)
+		. += span_notice("Use a crowbar to remove the last installed part.")
+
+/obj/item/guardbuddy_chassis/attackby(obj/item/part, mob/user, params)
+	if(istype(part, /obj/item/pen))
+		var/new_name = tgui_input_text(user, "Enter a name for the robot.", "Guardbuddy", unit_name, MAX_NAME_LEN)
+		if(new_name && !QDELETED(src) && user.Adjacent(src) && !user.incapacitated())
+			unit_name = new_name
+		return ATTACK_CHAIN_BLOCKED_ALL
+
+	if(istype(part, /obj/item/guardbuddy_board))
+		if(!board && user.drop_transfer_item_to_loc(part, src))
+			board = part
+	else if(istype(part, /obj/item/stock_parts/cell))
+		if(board && !cell && user.drop_transfer_item_to_loc(part, src))
+			cell = part
+	else if(istype(part, /obj/item/robot_parts/l_arm) || istype(part, /obj/item/robot_parts/r_arm))
+		if(cell && !arm && user.drop_transfer_item_to_loc(part, src))
+			arm = part
+	else
+		return ..()
+
+	if(part.loc == src)
+		to_chat(user, span_notice("You install [part] in [src]."))
+		update_icon()
+	else
+		to_chat(user, span_warning("The chassis is unready for that part. Examine it to see the next step."))
+	return ATTACK_CHAIN_BLOCKED_ALL
+
+/obj/item/guardbuddy_chassis/crowbar_act(mob/living/user, obj/item/tool)
+	var/obj/item/part = arm ? arm : cell ? cell : board
+	if(!part)
+		return FALSE
+	if(!tool.use_tool(src, user, volume = tool.tool_volume))
+		return TRUE
+	part.forceMove(get_turf(src))
+	user.put_in_hands(part)
+	to_chat(user, span_notice("You remove [part] from [src]."))
+	return TRUE
+
+/obj/item/guardbuddy_chassis/Exited(atom/movable/gone, direction)
+	. = ..()
+	if(gone == arm)
+		arm = null
+	if(gone == cell)
+		cell = null
+	if(gone == board)
+		board = null
+	update_icon()
+
+/obj/item/guardbuddy_chassis/screwdriver_act(mob/living/user, obj/item/tool)
+	if(!board || !cell || !arm || !isturf(loc))
+		to_chat(user, span_warning("Set a fully fitted chassis on the floor first."))
+		return TRUE
+	if(!tool.use_tool(src, user, volume = tool.tool_volume))
+		return TRUE
+	var/mob/living/simple_animal/bot/guardbuddy/bot = new(loc, src)
+	user.visible_message(span_notice("[user] finishes assembling [bot]."), span_notice("You finish assembling [bot]."))
+	return TRUE
+
+/obj/item/guardbuddy_module
+	name = "Guardbuddy tool module"
+	desc = "A replaceable tool for a Guardbuddy's manipulator."
+	icon = 'icons/obj/guardbuddy/parts.dmi'
+	icon_state = "tool_generic"
+	item_state = "electronic"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/guardbuddy_module/lamp
+	name = "Guardbuddy lamp"
+	desc = "A lamp that lights the way for a working Guardbuddy."
+	icon_state = "pdamod_light"
+
+/obj/machinery/bot_core/guardbuddy
+	req_access = list(ACCESS_ROBOTICS)
+
+/mob/living/simple_animal/bot/guardbuddy
+	name = "Guardbuddy"
+	desc = "A PR-6 station companion with a replaceable tool and a rechargeable power cell."
+	icon = 'icons/obj/guardbuddy/pr-6.dmi'
+	icon_state = "body"
+	model = "PR-6"
+	bot_type = "Guardbuddy"
+	bot_core_type = /obj/machinery/bot_core/guardbuddy
+	bot_purpose = "assist the station crew"
+	window_name = "Guardbuddy"
+	allow_pai = FALSE
+	on = FALSE
+	light_on = FALSE
+	light_range = 4
+	light_power = 1
+	light_color = COLOR_WHITE
+	var/obj/item/guardbuddy_chassis/chassis
+	var/obj/item/stock_parts/cell/cell
+	var/obj/item/guardbuddy_module/tool_module
+
+/mob/living/simple_animal/bot/guardbuddy/Initialize(mapload, obj/item/guardbuddy_chassis/new_chassis)
+	. = ..()
+	prev_access = access_card.access.Copy()
+	chassis = new_chassis
+	if(chassis)
+		name = chassis.unit_name
+		bot_name = name
+		cell = chassis.cell
+		chassis.forceMove(src)
+		cell?.forceMove(src)
+	update_icon()
+
+/mob/living/simple_animal/bot/guardbuddy/Destroy()
+	var/turf/drop_turf = get_turf(src)
+	if(drop_turf)
+		tool_module?.forceMove(drop_turf)
+		cell?.forceMove(drop_turf)
+		chassis?.forceMove(drop_turf)
+	tool_module = null
+	cell = null
+	chassis = null
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/turn_on()
+	if(open || !cell || cell.charge < 1)
+		return FALSE
+	. = ..()
+	if(.)
+		update_lamp()
+
+/mob/living/simple_animal/bot/guardbuddy/proc/update_lamp()
+	set_light_on(on && istype(tool_module, /obj/item/guardbuddy_module/lamp))
+
+/mob/living/simple_animal/bot/guardbuddy/update_icon_state()
+	icon_state = "body"
+
+/mob/living/simple_animal/bot/guardbuddy/update_overlays()
+	. = ..()
+	if(on)
+		. += mutable_appearance(icon, cell?.percent() <= 20 ? "face-battery" : "face-neutral")
+		. += mutable_appearance(icon, "lights-on")
+
+/mob/living/simple_animal/bot/guardbuddy/handle_automated_action()
+	if(on && !cell?.use(istype(tool_module, /obj/item/guardbuddy_module/lamp) ? 2 : 1))
+		turn_off()
+		return FALSE
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/examine(mob/user)
+	. = ..()
+	. += span_notice("Cell: [cell ? "[round(cell.percent())]%" : "missing"]. Tool: [tool_module ? tool_module.name : "empty"].")
+	if(!locked)
+		. += span_notice("Open the service panel with a screwdriver while the unit is off. Use a crowbar to remove fitted parts.")
+
+/mob/living/simple_animal/bot/guardbuddy/proc/can_service(mob/user)
+	return open && !on && !locked && bot_core.allowed(user) && user.Adjacent(src) && !user.incapacitated()
+
+/mob/living/simple_animal/bot/guardbuddy/screwdriver_act(mob/living/user, obj/item/tool)
+	if(user.a_intent == INTENT_HARM)
+		return FALSE
+	if(on || !bot_core.allowed(user))
+		to_chat(user, span_warning("You need robotics access and the unit must be switched off."))
+		return TRUE
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/attackby(obj/item/part, mob/user, params)
+	if(user.a_intent == INTENT_HARM || (!istype(part, /obj/item/guardbuddy_module) && !istype(part, /obj/item/stock_parts/cell)))
+		return ..()
+	if(!can_service(user))
+		to_chat(user, span_warning("Unlock and open the service panel before installing a part."))
+		return ATTACK_CHAIN_BLOCKED_ALL
+	if(istype(part, /obj/item/guardbuddy_module))
+		if(!tool_module && user.drop_transfer_item_to_loc(part, src))
+			tool_module = part
+	else if(!cell && user.drop_transfer_item_to_loc(part, src))
+		cell = part
+	if(part.loc == src)
+		to_chat(user, span_notice("You install [part] in [src]."))
+		update_controls()
+	else
+		to_chat(user, span_warning("Remove the installed part first."))
+	return ATTACK_CHAIN_BLOCKED_ALL
+
+/mob/living/simple_animal/bot/guardbuddy/crowbar_act(mob/living/user, obj/item/tool)
+	if(user.a_intent == INTENT_HARM)
+		return FALSE
+	if(!can_service(user))
+		to_chat(user, span_warning("Unlock and open the service panel before removing a part."))
+		return TRUE
+	if(!tool.use_tool(src, user, volume = tool.tool_volume))
+		return TRUE
+	if(tool_module)
+		user.put_in_hands(remove_tool())
+	else if(cell)
+		var/obj/item/stock_parts/cell/old_cell = cell
+		cell = null
+		old_cell.forceMove(get_turf(src))
+		user.put_in_hands(old_cell)
+	else if(chassis)
+		chassis.forceMove(get_turf(src))
+		chassis = null
+		qdel(src)
+		return TRUE
+	update_controls()
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/proc/remove_tool()
+	var/obj/item/guardbuddy_module/old_tool = tool_module
+	tool_module = null
+	old_tool?.forceMove(get_turf(src))
+	update_lamp()
+	return old_tool
+
+/mob/living/simple_animal/bot/guardbuddy/get_controls(mob/user)
+	var/dat = "<b>[name]</b><br>"
+	dat += "Power: [on ? "On" : "Off"]<br>"
+	dat += "Cell: [cell ? "[round(cell.percent())]%" : "Missing"]<br>"
+	dat += "Tool: [tool_module ? tool_module.name : "Empty"]<br>"
+	if(!topic_denied(user) && bot_core.allowed(user))
+		dat += "<a href='byond://?src=[UID()];power=1'>Toggle power</a><br>"
+		dat += hack(user)
+	return dat
+
+/mob/living/simple_animal/bot/guardbuddy/Topic(href, list/href_list)
+	if(!href_list["close"] && !bot_core.allowed(usr))
+		return TRUE
+	return ..()
