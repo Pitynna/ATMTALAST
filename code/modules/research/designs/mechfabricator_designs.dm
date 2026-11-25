@@ -90,6 +90,84 @@
 	construction_time = 5 SECONDS
 	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
 
+/datum/design/guardbuddy_flash
+	id = "guardbuddy_flash"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_module/flash
+	materials = list(MAT_METAL = 1000, MAT_GLASS = 1000)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_taser
+	id = "guardbuddy_taser"
+	build_type = MECHFAB
+	req_tech = list(RESEARCH_TREE_COMBAT = 2)
+	build_path = /obj/item/guardbuddy_module/taser
+	materials = list(MAT_METAL = 1500, MAT_GLASS = 1000)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_arc
+	id = "guardbuddy_arc"
+	build_type = MECHFAB
+	req_tech = list(RESEARCH_TREE_COMBAT = 3, RESEARCH_TREE_MAGNETS = 3)
+	build_path = /obj/item/guardbuddy_module/arc
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 1000, MAT_SILVER = 500)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_medicator
+	id = "guardbuddy_medicator"
+	build_type = MECHFAB
+	req_tech = list(RESEARCH_TREE_BIOTECH = 2)
+	build_path = /obj/item/guardbuddy_module/reagent/medicator
+	materials = list(MAT_METAL = 1500, MAT_GLASS = 1000)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_smoker
+	id = "guardbuddy_smoker"
+	build_type = MECHFAB
+	req_tech = list(RESEARCH_TREE_BIOTECH = 2)
+	build_path = /obj/item/guardbuddy_module/reagent/smoker
+	materials = list(MAT_METAL = 1500, MAT_GLASS = 1500)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_pie
+	id = "guardbuddy_pie"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_module/launcher/pie
+	materials = list(MAT_METAL = 1000, MAT_GLASS = 500)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_snowball
+	id = "guardbuddy_snowball"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_module/launcher/snowball
+	materials = list(MAT_METAL = 1000, MAT_GLASS = 500)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_weapon_mount
+	id = "guardbuddy_weapon_mount"
+	build_type = MECHFAB
+	req_tech = list(RESEARCH_TREE_COMBAT = 2)
+	build_path = /obj/item/guardbuddy_module/weapon
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 1000)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
+/datum/design/guardbuddy_bulletbuddy
+	id = "guardbuddy_bulletbuddy"
+	build_type = MECHFAB
+	req_tech = list(RESEARCH_TREE_COMBAT = 3, RESEARCH_TREE_PROGRAMMING = 2)
+	build_path = /obj/item/guardbuddy_bulletbuddy
+	materials = list(MAT_METAL = 3000, MAT_GLASS = 1000, MAT_SILVER = 1000)
+	construction_time = 8 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
 /datum/design/synthetic_flash
 	id = "sflash"
 	build_type = MECHFAB

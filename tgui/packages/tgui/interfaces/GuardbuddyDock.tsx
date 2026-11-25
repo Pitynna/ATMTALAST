@@ -21,6 +21,8 @@ interface DockData {
 	charge: number | null;
 	cell: boolean;
 	tool: string | null;
+	mixture: string | null;
+	tool_error: string | null;
 	zone: string | null;
 	mode: string | null;
 	reason: string | null;
@@ -47,6 +49,8 @@ export const GuardbuddyDock = () => {
 		charge,
 		cell,
 		tool,
+		mixture,
+		tool_error,
 		zone,
 		mode,
 		reason,
@@ -121,6 +125,16 @@ export const GuardbuddyDock = () => {
 							{program && (
 								<LabeledList.Item label="Module">
 									{tool ?? 'Empty'}
+								</LabeledList.Item>
+							)}
+							{mixture && (
+								<LabeledList.Item label="Reagents">
+									{mixture}
+								</LabeledList.Item>
+							)}
+							{tool_error && (
+								<LabeledList.Item label="Module status">
+									{tool_error}
 								</LabeledList.Item>
 							)}
 							{target && (

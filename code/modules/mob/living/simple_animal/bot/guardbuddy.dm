@@ -147,6 +147,8 @@
 	var/navigation_revision = 0
 	var/failed_routes = 0
 	COOLDOWN_DECLARE(help_call)
+	COOLDOWN_DECLARE(tool_cycle)
+	var/tool_service_revision = 0
 
 /mob/living/simple_animal/bot/guardbuddy/Initialize(mapload, obj/item/guardbuddy_chassis/new_chassis)
 	. = ..()
@@ -181,6 +183,10 @@
 	if(.)
 		update_lamp()
 
+/mob/living/simple_animal/bot/guardbuddy/turn_off()
+	tool_service_revision++
+	return ..()
+
 /mob/living/simple_animal/bot/guardbuddy/proc/update_lamp()
 	set_light_on(on && istype(tool_module, /obj/item/guardbuddy_module/lamp))
 
@@ -207,6 +213,9 @@
 		cell.use(min(draw, cell.charge))
 	if(!..() || !on || client)
 		return FALSE
+	var/obj/item/guardbuddy_module/weapon/weapon_mount = tool_module
+	if(istype(weapon_mount) && mode != BOT_GO_HOME && cell.percent() > 20)
+		weapon_mount.fabricate(src)
 	if(mode == BOT_GO_HOME)
 		if(!home_dock || !home_dock.is_operational() || home_dock.z != z)
 			stop_mission("Home dock is unavailable.")
@@ -432,6 +441,48 @@
 /mob/living/simple_animal/bot/guardbuddy/proc/can_service(mob/user)
 	return open && !on && !locked && bot_core.allowed(user) && user.Adjacent(src) && !user.incapacitated()
 
+/mob/living/simple_animal/bot/guardbuddy/proc/can_use_module(mob/user)
+	return on && tool_module?.use_range && !locked && bot_core.allowed(user) && user.Adjacent(src) && !user.incapacitated() && (!tool_module.security_tool || (ACCESS_SECURITY in user.get_access()))
+
+/mob/living/simple_animal/bot/guardbuddy/proc/use_module(atom/target)
+	var/obj/item/guardbuddy_module/module = tool_module
+	if(!module || !on || mode == BOT_GO_HOME || !module.use_range || QDELETED(target) || target == src || !COOLDOWN_FINISHED(src, tool_cycle))
+		return FALSE
+	module.tool_error = null
+	if(!(target in view(module.use_range, src)) || !module.can_apply(src, target))
+		return FALSE
+	if(!cell || cell.charge < module.battery_cost)
+		module.tool_error = "Insufficient battery charge."
+		return FALSE
+	if(!module.apply(src, target))
+		return FALSE
+	cell.use(module.battery_cost)
+	COOLDOWN_START(src, tool_cycle, module.use_delay)
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/can_use_guns(obj/item/gun/gun)
+	var/obj/item/guardbuddy_module/weapon/mount = tool_module
+	if(istype(mount) && mount.weapon == gun)
+		return !HAS_TRAIT(src, TRAIT_HANDS_BLOCKED)
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/proc/manual_tool_use(mob/user)
+	if(!can_use_module(user))
+		return
+	var/obj/item/guardbuddy_module/module = tool_module
+	var/revision = tool_service_revision
+	var/list/targets = list()
+	for(var/mob/living/target in view(module.use_range, src))
+		if(target != src && target.stat != DEAD)
+			targets += target
+	var/mob/living/selected = tgui_input_list(user, "Choose a visible target within tool range.", module.name, targets)
+	if(!selected || QDELETED(src) || tool_service_revision != revision || tool_module != module || !can_use_module(user))
+		return
+	if(!use_module(selected))
+		to_chat(user, span_warning(module.tool_error ? module.tool_error : "The tool cannot apply right now."))
+	else if(module.security_tool || istype(module, /obj/item/guardbuddy_module/reagent))
+		add_attack_logs(user, selected, "Used [module.name] via [src]")
+
 /mob/living/simple_animal/bot/guardbuddy/screwdriver_act(mob/living/user, obj/item/tool)
 	if(user.a_intent == INTENT_HARM)
 		return FALSE
@@ -441,6 +492,13 @@
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/attackby(obj/item/part, mob/user, params)
+	var/obj/item/guardbuddy_module/reagent/reagent_module = tool_module
+	if(user.a_intent != INTENT_HARM && istype(reagent_module) && istype(part, /obj/item/reagent_containers/cup/beaker))
+		if(home_dock?.on_pad(src) && can_service(user))
+			reagent_module.insert_beaker(part, user)
+		else
+			to_chat(user, span_warning("Open the service panel on the charging pad before fitting a beaker."))
+		return ATTACK_CHAIN_BLOCKED_ALL
 	if(user.a_intent == INTENT_HARM || (!istype(part, /obj/item/guardbuddy_module) && !istype(part, /obj/item/stock_parts/cell)))
 		return ..()
 	if(!can_service(user))
@@ -493,6 +551,13 @@
 	dat += "Power: [on ? "On" : "Off"]<br>"
 	dat += "Cell: [cell ? "[round(cell.percent())]%" : "Missing"]<br>"
 	dat += "Tool: [tool_module ? tool_module.name : "Empty"]<br>"
+	var/obj/item/guardbuddy_module/reagent/reagent_module = tool_module
+	if(istype(reagent_module))
+		dat += "[reagent_module.mixture_description()]<br>"
+		if(reagent_module.beaker && home_dock?.on_pad(src) && can_service(user))
+			dat += "<a href='byond://?src=[UID()];guardbuddy=eject_beaker'>Eject beaker</a><br>"
+	if(can_use_module(user))
+		dat += "<a href='byond://?src=[UID()];guardbuddy=apply'>Use module</a><br>"
 	if(can_contact_escort(user))
 		if(istype(tool_module, /obj/item/guardbuddy_module/announcer))
 			dat += "<a href='byond://?src=[UID()];guardbuddy=help'>Call for help</a><br>"
@@ -504,14 +569,19 @@
 
 /mob/living/simple_animal/bot/guardbuddy/Topic(href, list/href_list)
 	if(href_list["guardbuddy"])
-		if(!can_contact_escort(usr))
-			return TRUE
 		switch(href_list["guardbuddy"])
+			if("apply")
+				manual_tool_use(usr)
+			if("eject_beaker")
+				var/obj/item/guardbuddy_module/reagent/reagent_module = tool_module
+				if(istype(reagent_module) && home_dock?.on_pad(src) && can_service(usr))
+					reagent_module.eject_beaker(usr)
 			if("help")
 				request_help(usr)
 			if("cancel")
-				set_assignment("standby", null)
-				stop_reason = "Escort ended by [usr]."
+				if(can_contact_escort(usr))
+					set_assignment("standby", null)
+					stop_reason = "Escort ended by [usr]."
 		update_controls()
 		return TRUE
 	if(!href_list["close"] && !bot_core.allowed(usr))

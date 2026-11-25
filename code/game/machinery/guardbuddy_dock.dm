@@ -82,6 +82,7 @@
 			if(person.stat != DEAD && isturf(person.loc))
 				candidates += list(list("value" = person.UID(), "displayText" = person.name))
 	var/mob/living/carbon/human/target = assigned?.get_escort_target()
+	var/obj/item/guardbuddy_module/reagent/reagent_module = assigned?.tool_module
 	return list(
 		"powered" = is_operational(),
 		"authorized" = allowed(user),
@@ -99,6 +100,8 @@
 		"reason" = docked || has_link ? assigned.stop_reason : null,
 		"target" = docked || has_link ? target?.name : null,
 		"candidates" = candidates,
+		"mixture" = (docked || has_link) && istype(reagent_module) ? reagent_module.mixture_description() : null,
+		"tool_error" = docked || has_link ? assigned.tool_module?.tool_error : null,
 	)
 
 /obj/machinery/guardbuddy_dock/proc/dock_status()
