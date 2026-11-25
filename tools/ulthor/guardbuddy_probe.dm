@@ -6,14 +6,14 @@ GLOBAL_DATUM_INIT(ulthor_guardbuddy_probe, /datum/ulthor_guardbuddy_probe, new)
 
 /datum/ulthor_guardbuddy_probe/New()
 	..()
-	INVOKE_ASYNC(src, PROC_REF(run))
+	INVOKE_ASYNC(src, PROC_REF(run_checks))
 
 /datum/ulthor_guardbuddy_probe/proc/check(label, outcome)
 	checks += list(list("check" = label, "passed" = !!outcome))
 	log_world("Guardbuddy check: [label]: [outcome ? "pass" : "FAIL"]")
 	return outcome
 
-/datum/ulthor_guardbuddy_probe/proc/run()
+/datum/ulthor_guardbuddy_probe/proc/run_checks()
 	UNTIL(SSatoms.initialized && SSair.initialized && SSticker.initialized)
 	CONFIG_SET(flag/hub, FALSE)
 	world.update_hub_visibility(FALSE)
@@ -81,7 +81,7 @@ GLOBAL_DATUM_INIT(ulthor_guardbuddy_probe, /datum/ulthor_guardbuddy_probe, new)
 		return
 	frame.crowbar_act(technician, crowbar)
 	check("unfitting returns the exact left arm", !frame.arm && !QDELETED(left_arm) && left_arm.loc != frame)
-	technician.drop_item_to_ground(left_arm)
+	technician.drop_item_ground(left_arm)
 	if(!check("right arm fits in the same chassis", fit(right_arm, frame, technician)))
 		return
 	frame.unit_name = "Ulthor Buddy"
@@ -134,7 +134,7 @@ GLOBAL_DATUM_INIT(ulthor_guardbuddy_probe, /datum/ulthor_guardbuddy_probe, new)
 	bot.screwdriver_act(technician, screwdriver)
 	bot.crowbar_act(technician, crowbar)
 	check("service returns the original lamp", !bot.tool_module && lamp.loc != bot)
-	technician.drop_item_to_ground(lamp)
+	technician.drop_item_ground(lamp)
 	technician.put_in_hands(announcer)
 	bot.attackby(announcer, technician)
 	bot.screwdriver_act(technician, screwdriver)
