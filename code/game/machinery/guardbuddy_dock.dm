@@ -76,6 +76,12 @@
 /obj/machinery/guardbuddy_dock/ui_data(mob/user)
 	var/docked = on_pad(assigned)
 	var/has_link = connected()
+	var/list/candidates = list()
+	if(docked && allowed(user))
+		for(var/mob/living/carbon/human/person in view(3, src))
+			if(person.stat != DEAD && isturf(person.loc))
+				candidates += list(list("value" = person.UID(), "displayText" = person.name))
+	var/mob/living/carbon/human/target = assigned?.get_escort_target()
 	return list(
 		"powered" = is_operational(),
 		"authorized" = allowed(user),
@@ -91,6 +97,8 @@
 		"zone" = docked || has_link ? get_area_name(assigned) : null,
 		"mode" = docked || has_link ? dock_status() : null,
 		"reason" = docked || has_link ? assigned.stop_reason : null,
+		"target" = docked || has_link ? target?.name : null,
+		"candidates" = candidates,
 	)
 
 /obj/machinery/guardbuddy_dock/proc/dock_status()
@@ -107,6 +115,8 @@
 			return "Responding to AI waypoint"
 		if(BOT_SUMMON)
 			return "Responding to PDA"
+		if(BOT_MOVING)
+			return "Escorting"
 	return "Standing by"
 
 /obj/machinery/guardbuddy_dock/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -136,13 +146,18 @@
 	switch(action)
 		if("program")
 			var/selection = params["program"]
-			if(!(selection in list("standby", "patrol")))
+			if(!istext(selection) || !(selection in list("standby", "patrol", "escort")))
 				return FALSE
-			assigned.program = selection
-			assigned.stop_mission("Ready for dispatch.")
+			var/mob/living/carbon/human/target
+			if(selection == "escort")
+				target = locateUID(params["target"])
+				if(!istype(target) || target.stat == DEAD || !isturf(target.loc) || !(target in view(3, src)))
+					to_chat(user, span_warning("Select a nearby crewmember."))
+					return TRUE
+			assigned.set_assignment(selection, target)
 		if("dispatch")
 			if(!assigned.dispatch())
-				to_chat(user, span_warning("Close the service panel and charge the cell above 20% before dispatch."))
+				to_chat(user, span_warning("Close the service panel, check the assignment and charge the cell above 20% before dispatch."))
 		if("unpair")
 			assigned.stop_mission("Home dock unpaired.")
 			unbind()

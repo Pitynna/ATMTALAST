@@ -108,6 +108,11 @@
 	desc = "A lamp that lights the way for a working Guardbuddy."
 	icon_state = "pdamod_light"
 
+/obj/item/guardbuddy_module/announcer
+	name = "Guardbuddy annunciator"
+	desc = "A radio module that lets an escorted crewmember call for help."
+	icon_state = "pdamod_alert"
+
 /obj/machinery/bot_core/guardbuddy
 	req_access = list(ACCESS_ROBOTICS)
 
@@ -132,6 +137,7 @@
 	var/obj/item/guardbuddy_module/tool_module
 	var/obj/machinery/guardbuddy_dock/home_dock
 	var/program = "standby"
+	var/datum/weakref/assignment_target
 	var/stop_reason = "Waiting for assignment."
 	var/obj/machinery/navbeacon/current_beacon
 	var/turf/navigation_target
@@ -139,6 +145,7 @@
 	/// Invalidates path callbacks when a newer command supersedes a route.
 	var/navigation_revision = 0
 	var/failed_routes = 0
+	COOLDOWN_DECLARE(help_call)
 
 /mob/living/simple_animal/bot/guardbuddy/Initialize(mapload, obj/item/guardbuddy_chassis/new_chassis)
 	. = ..()
@@ -211,15 +218,64 @@
 			navigate_to(get_turf(home_dock), "Could not reach the home dock.")
 	else if(program == "patrol")
 		patrol_beacons()
+	else if(program == "escort")
+		escort()
 	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/proc/set_assignment(new_program, mob/living/carbon/human/target)
+	program = new_program
+	assignment_target = target ? WEAKREF(target) : null
+	stop_mission("Ready for dispatch.")
 
 /mob/living/simple_animal/bot/guardbuddy/proc/dispatch()
 	if(!home_dock?.on_pad(src) || !home_dock.is_operational() || !cell || cell.percent() <= 20 || open)
+		return FALSE
+	if(program == "escort" && !get_escort_target())
 		return FALSE
 	bot_reset()
 	if(!turn_on())
 		return FALSE
 	stop_reason = program == "standby" ? "Waiting for assignment." : null
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/proc/get_escort_target()
+	var/mob/living/carbon/human/target = assignment_target?.resolve()
+	if(target && target.stat != DEAD && isturf(target.loc) && target.z == z)
+		return target
+	return null
+
+/mob/living/simple_animal/bot/guardbuddy/proc/escort()
+	var/mob/living/carbon/human/target = get_escort_target()
+	if(!target)
+		stop_mission("Escort lost contact with its crewmember.")
+		return
+	mode = BOT_MOVING
+	if(Adjacent(target))
+		if(length(path) || navigation_pending)
+			set_path(null)
+			navigation_pending = FALSE
+			navigation_revision++
+		navigation_target = null
+		failed_routes = 0
+		tries = 0
+		return
+	navigate_to(get_turf(target), "Could not reach the escorted crewmember.", 1)
+
+/mob/living/simple_animal/bot/guardbuddy/proc/can_contact_escort(mob/user)
+	return on && program == "escort" && mode != BOT_GO_HOME && get_escort_target() == user && Adjacent(user) && !user.incapacitated()
+
+/mob/living/simple_animal/bot/guardbuddy/proc/request_help(mob/user)
+	if(!istype(tool_module, /obj/item/guardbuddy_module/announcer) || !can_contact_escort(user))
+		return FALSE
+	if(!COOLDOWN_FINISHED(src, help_call))
+		to_chat(user, span_warning("The annunciator is waiting to send another call."))
+		return FALSE
+	if(!cell?.use(5))
+		to_chat(user, span_warning("The annunciator needs more battery charge."))
+		return FALSE
+	COOLDOWN_START(src, help_call, 30 SECONDS)
+	speak("[user] requests assistance in [get_area_name(user)].", radio_channel)
+	to_chat(user, span_notice("[src] broadcasts your location on the common channel."))
 	return TRUE
 
 /mob/living/simple_animal/bot/guardbuddy/proc/recall(reason)
@@ -278,7 +334,7 @@
 			return
 	navigate_to(get_turf(current_beacon), "Could not reach the patrol beacon.")
 
-/mob/living/simple_animal/bot/guardbuddy/proc/navigate_to(turf/target, failure_reason)
+/mob/living/simple_animal/bot/guardbuddy/proc/navigate_to(turf/target, failure_reason, minimum_distance = 0)
 	if(!target || target.z != z)
 		stop_mission(failure_reason)
 		return
@@ -289,7 +345,7 @@
 		failed_routes = 0
 		tries = 0
 		set_path(null)
-	else if(length(path) && bot_move(target, 1))
+	else if(length(path) && bot_move(path[length(path)], 1))
 		return
 	if(++failed_routes > 3)
 		stop_mission(failure_reason)
@@ -297,7 +353,7 @@
 	navigation_pending = TRUE
 	tries = 0
 	var/revision = ++navigation_revision
-	var/list/result = get_path_to(src, target, max_distance = 150, access = prev_access, diagonal_handling = DIAGONAL_REMOVE_ALL)
+	var/list/result = get_path_to(src, target, max_distance = 150, mintargetdist = minimum_distance, access = prev_access, diagonal_handling = DIAGONAL_REMOVE_ALL)
 	if(QDELETED(src) || revision != navigation_revision)
 		return
 	set_path(result)
@@ -313,6 +369,8 @@
 		return "Returning to dock"
 	if(home_dock?.on_pad(src) && !on)
 		return "Docked"
+	if(on && mode == BOT_MOVING && program == "escort")
+		return "Escorting"
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/call_bot(requester, turf/waypoint, message = TRUE)
@@ -428,12 +486,27 @@
 	dat += "Power: [on ? "On" : "Off"]<br>"
 	dat += "Cell: [cell ? "[round(cell.percent())]%" : "Missing"]<br>"
 	dat += "Tool: [tool_module ? tool_module.name : "Empty"]<br>"
+	if(can_contact_escort(user))
+		if(istype(tool_module, /obj/item/guardbuddy_module/announcer))
+			dat += "<a href='byond://?src=[UID()];guardbuddy=help'>Call for help</a><br>"
+		dat += "<a href='byond://?src=[UID()];guardbuddy=cancel'>End escort</a><br>"
 	if(!topic_denied(user) && bot_core.allowed(user))
 		dat += "<a href='byond://?src=[UID()];power=1'>Toggle power</a><br>"
 		dat += hack(user)
 	return dat
 
 /mob/living/simple_animal/bot/guardbuddy/Topic(href, list/href_list)
+	if(href_list["guardbuddy"])
+		if(!can_contact_escort(usr))
+			return TRUE
+		switch(href_list["guardbuddy"])
+			if("help")
+				request_help(usr)
+			if("cancel")
+				set_assignment("standby", null)
+				stop_reason = "Escort ended by [usr]."
+		update_controls()
+		return TRUE
 	if(!href_list["close"] && !bot_core.allowed(usr))
 		return TRUE
 	return ..()

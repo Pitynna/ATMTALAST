@@ -82,6 +82,14 @@
 	construction_time = 5 SECONDS
 	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
 
+/datum/design/guardbuddy_announcer
+	id = "guardbuddy_announcer"
+	build_type = MECHFAB
+	build_path = /obj/item/guardbuddy_module/announcer
+	materials = list(MAT_METAL = 750, MAT_GLASS = 500)
+	construction_time = 5 SECONDS
+	category = list(MECH_FAB_CATEGORY_CYBORG_EQUIPMENT)
+
 /datum/design/synthetic_flash
 	id = "sflash"
 	build_type = MECHFAB
