@@ -12,6 +12,11 @@ import { Window } from '../layouts';
 interface DockData {
 	powered: boolean;
 	authorized: boolean;
+	security: boolean;
+	command: boolean;
+	order_zone: string | null;
+	last_threat: string | null;
+	threat_age: number | null;
 	assigned: boolean;
 	docked: boolean;
 	connected: boolean;
@@ -28,6 +33,7 @@ interface DockData {
 	reason: string | null;
 	target: string | null;
 	candidates: { value: string; displayText: string }[];
+	zones: { value: string; displayText: string }[];
 }
 
 const programs = [
@@ -35,11 +41,26 @@ const programs = [
 	{ key: 'patrol', name: 'Patrol' },
 ];
 
+const assignments: Record<string, string> = {
+	standby: 'Standby',
+	patrol: 'Patrol',
+	escort: 'Escort',
+	secure: 'Hold post',
+	areaguard: 'Guard area',
+	bodyguard: 'Bodyguard',
+	purge: 'Purge',
+};
+
 export const GuardbuddyDock = () => {
 	const { act, data } = useBackend<DockData>();
 	const {
 		powered,
 		authorized,
+		security,
+		command,
+		order_zone,
+		last_threat,
+		threat_age,
 		assigned,
 		docked,
 		connected,
@@ -56,9 +77,19 @@ export const GuardbuddyDock = () => {
 		reason,
 		target,
 		candidates,
+		zones,
 	} = data;
-	const canControl = powered && authorized;
-	const canDispatch = canControl && docked && !blocked;
+	const canControl = powered && (authorized || security);
+	const canConfigure = canControl && docked && !blocked;
+	const canDispatch =
+		canConfigure &&
+		(program === 'purge'
+			? command
+			: program === 'secure' ||
+				  program === 'areaguard' ||
+				  program === 'bodyguard'
+				? security
+				: authorized);
 
 	return (
 		<Window width={460} height={340}>
@@ -66,7 +97,7 @@ export const GuardbuddyDock = () => {
 				{!powered && (
 					<NoticeBox danger>Dock power unavailable.</NoticeBox>
 				)}
-				{!authorized && (
+				{!authorized && !security && (
 					<NoticeBox>
 						Robotics access required for controls.
 					</NoticeBox>
@@ -85,7 +116,7 @@ export const GuardbuddyDock = () => {
 						) : (
 							<Button
 								icon="link"
-								disabled={!canControl || !blocked}
+								disabled={!powered || !authorized || !blocked}
 								onClick={() => act('pair')}
 							>
 								Pair
@@ -138,8 +169,19 @@ export const GuardbuddyDock = () => {
 								</LabeledList.Item>
 							)}
 							{target && (
-								<LabeledList.Item label="Escort">
+								<LabeledList.Item label="Crewmember">
 									{target}
+								</LabeledList.Item>
+							)}
+							{program && (
+								<LabeledList.Item label="Assignment">
+									{assignments[program]}
+									{order_zone && ' — ' + order_zone}
+								</LabeledList.Item>
+							)}
+							{last_threat && (
+								<LabeledList.Item label="Last detected threat">
+									{last_threat} ({threat_age}s ago)
 								</LabeledList.Item>
 							)}
 							{reason && (
@@ -156,13 +198,13 @@ export const GuardbuddyDock = () => {
 							<Button
 								key={key}
 								selected={program === key}
-								disabled={!canDispatch}
+								disabled={!canConfigure || !authorized}
 								onClick={() => act('program', { program: key })}
 							>
 								{name}
 							</Button>
 						))}
-						{canDispatch && (
+						{canConfigure && authorized && (
 							<Dropdown
 								options={candidates}
 								placeholder="Select a crewmember to escort"
@@ -173,6 +215,49 @@ export const GuardbuddyDock = () => {
 									})
 								}
 							/>
+						)}
+						{canConfigure && security && (
+							<Section title="Security orders">
+								<Button
+									onClick={() =>
+										act('program', { program: 'secure' })
+									}
+								>
+									Hold my position
+								</Button>
+								<Dropdown
+									options={candidates}
+									placeholder="Select a crewmember to protect"
+									onSelected={(target) =>
+										act('program', {
+											program: 'bodyguard',
+											target,
+										})
+									}
+								/>
+								<Dropdown
+									options={zones}
+									placeholder="Select an area to guard"
+									onSelected={(target) =>
+										act('program', {
+											program: 'areaguard',
+											target,
+										})
+									}
+								/>
+								{command && (
+									<Dropdown
+										options={zones}
+										placeholder="Select an area to purge"
+										onSelected={(target) =>
+											act('program', {
+												program: 'purge',
+												target,
+											})
+										}
+									/>
+								)}
+							</Section>
 						)}
 						<Button
 							icon="play"
@@ -185,7 +270,7 @@ export const GuardbuddyDock = () => {
 						</Button>
 						<Button
 							icon="unlink"
-							disabled={!canDispatch}
+							disabled={!canConfigure || !authorized}
 							onClick={() => act('unpair')}
 						>
 							Unpair

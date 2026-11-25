@@ -122,10 +122,11 @@
 	icon = 'icons/obj/guardbuddy/pr-6.dmi'
 	icon_state = "body"
 	model = "PR-6"
-	bot_type = "Guardbuddy"
+	bot_type = "Guardbuddy PR-6"
 	bot_core_type = /obj/machinery/bot_core/guardbuddy
 	bot_purpose = "assist the station crew"
 	window_name = "Guardbuddy"
+	radio_config = list(AI_FREQ_NAME = 1, PUB_FREQ_NAME = 1, SEC_FREQ_NAME = 1)
 	base_speed = 4
 	allow_pai = FALSE
 	on = FALSE
@@ -164,6 +165,7 @@
 	update_icon()
 
 /mob/living/simple_animal/bot/guardbuddy/Destroy()
+	monitor_ward(null)
 	if(home_dock)
 		home_dock.unbind()
 	var/turf/drop_turf = get_turf(src)
@@ -185,6 +187,7 @@
 
 /mob/living/simple_animal/bot/guardbuddy/turn_off()
 	tool_service_revision++
+	monitor_ward(null)
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/proc/update_lamp()
@@ -227,25 +230,34 @@
 		else
 			navigate_to(get_turf(home_dock), "Could not reach the home dock.")
 	else if(program == "patrol")
+		var/mob/living/threat = scan_threats()
+		if(threat)
+			record_threat(threat)
 		patrol_beacons()
 	else if(program == "escort")
 		escort()
+	else if(is_security_assignment())
+		guard_assignment()
 	return TRUE
 
-/mob/living/simple_animal/bot/guardbuddy/proc/set_assignment(new_program, mob/living/carbon/human/target)
+/mob/living/simple_animal/bot/guardbuddy/proc/set_assignment(new_program, mob/living/carbon/human/target, turf/post)
 	program = new_program
 	assignment_target = target ? WEAKREF(target) : null
+	guard_post = post
+	guard_area = post ? get_area(post) : null
 	stop_mission("Ready for dispatch.")
 
 /mob/living/simple_animal/bot/guardbuddy/proc/dispatch()
 	if(!home_dock?.on_pad(src) || !home_dock.is_operational() || !cell || cell.percent() <= 20 || open)
 		return FALSE
-	if(program == "escort" && !get_escort_target())
+	if(program in list("escort", "bodyguard") && !get_escort_target())
 		return FALSE
 	bot_reset()
 	if(!turn_on())
 		return FALSE
 	stop_reason = program == "standby" ? "Waiting for assignment." : null
+	if(program == "bodyguard")
+		monitor_ward(get_escort_target())
 	return TRUE
 
 /mob/living/simple_animal/bot/guardbuddy/proc/get_escort_target()
@@ -298,6 +310,7 @@
 	if(!home_dock.is_operational() || !turn_on())
 		return FALSE
 	bot_reset()
+	monitor_ward(null)
 	mode = BOT_GO_HOME
 	stop_reason = reason
 	return TRUE
@@ -313,6 +326,8 @@
 	navigation_pending = FALSE
 	navigation_revision++
 	failed_routes = 0
+	incident_attacker = null
+	incident_until = 0
 
 /mob/living/simple_animal/bot/guardbuddy/proc/patrol_beacons()
 	var/list/beacons = GLOB.navbeacons["[z]"]
@@ -390,7 +405,7 @@
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/call_bot(requester, turf/waypoint, message = TRUE)
-	if(remote_disabled || !is_valid_z_level(get_turf(src), waypoint) || !cell || cell.percent() <= 20 || open || mode == BOT_GO_HOME)
+	if(remote_disabled || !waypoint || waypoint.z != z || !cell || cell.percent() <= 20 || open || mode == BOT_GO_HOME)
 		if(message)
 			to_chat(requester, span_warning("[src] is unavailable for a waypoint call."))
 		return FALSE
@@ -431,6 +446,47 @@
 		bot_reset()
 		return
 	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/proc/pda_call(turf/target, list/user_access, mob/user)
+	if(remote_disabled || emagged == 2 || !target || target.z != z || !cell || cell.percent() <= 20 || open || mode == BOT_GO_HOME || mode == BOT_RESPONDING || !turn_on())
+		return FALSE
+	if(loc == target)
+		bot_reset()
+		return TRUE
+	var/datum/signal/command = new()
+	command.data = list("command" = "summon", "active" = src, "target" = target, "useraccess" = user_access, "user" = user)
+	receive_signal(command)
+	qdel(command)
+	return TRUE
+
+/mob/living/simple_animal/bot/guardbuddy/calc_summon_path(turf/avoid)
+	if(navigation_pending)
+		return
+	var/revision = ++navigation_revision
+	navigation_pending = TRUE
+	var/list/route = get_path_to(src, summon_target, max_distance = 150, access = access_card.GetAccess(), exclude = avoid, diagonal_handling = DIAGONAL_REMOVE_ALL)
+	if(QDELETED(src) || revision != navigation_revision)
+		return
+	navigation_pending = FALSE
+	if(!length(route))
+		bot_reset()
+		stop_reason = "Could not reach the PDA caller."
+		return
+	set_path(route)
+
+/mob/living/simple_animal/bot/guardbuddy/bot_summon()
+	if(navigation_pending)
+		return
+	if(loc == summon_target)
+		bot_reset()
+		return
+	if(!bot_move(summon_target))
+		if(++failed_routes > 3)
+			bot_reset()
+			stop_reason = "Could not reach the PDA caller."
+		else
+			tries = 0
+			calc_summon_path()
 
 /mob/living/simple_animal/bot/guardbuddy/examine(mob/user)
 	. = ..()
@@ -492,6 +548,8 @@
 	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/attackby(obj/item/part, mob/user, params)
+	if(user.a_intent == INTENT_HARM && part.force > 0)
+		observe_attack(src, user)
 	var/obj/item/guardbuddy_module/reagent/reagent_module = tool_module
 	if(user.a_intent != INTENT_HARM && istype(reagent_module) && istype(part, /obj/item/reagent_containers/cup/beaker))
 		if(home_dock?.on_pad(src) && can_service(user))
@@ -515,6 +573,16 @@
 	else
 		to_chat(user, span_warning("Remove the installed part first."))
 	return ATTACK_CHAIN_BLOCKED_ALL
+
+/mob/living/simple_animal/bot/guardbuddy/attack_hand(mob/living/carbon/human/user)
+	if(user.a_intent == INTENT_HARM)
+		observe_attack(src, user)
+	return ..()
+
+/mob/living/simple_animal/bot/guardbuddy/bullet_act(obj/projectile/shot)
+	if(shot.damage > 0 && shot.damage_type != STAMINA && isliving(shot.firer))
+		observe_attack(src, shot.firer)
+	return ..()
 
 /mob/living/simple_animal/bot/guardbuddy/crowbar_act(mob/living/user, obj/item/tool)
 	if(user.a_intent == INTENT_HARM)

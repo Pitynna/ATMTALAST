@@ -277,6 +277,45 @@
 			if(pda.cartridge && istype(pda.cartridge.radio, /obj/item/integrated_radio/beepsky))
 				pda.cartridge.radio.Topic(null, list(op = "summon"))
 
+/datum/data/pda/app/guardbuddy_control
+	name = "Guardbuddy locator"
+	icon = "robot"
+	template = "pda_guardbuddy"
+	category = "Robotics"
+
+/datum/data/pda/app/guardbuddy_control/update_ui(mob/user, list/data)
+	var/list/buddies = list()
+	var/turf/pda_turf = get_turf(pda)
+	if(ACCESS_ROBOTICS in user.get_access())
+		for(var/mob/living/simple_animal/bot/guardbuddy/bot in GLOB.bots_list)
+			if(!bot.remote_disabled && bot.z == pda_turf?.z)
+				buddies += list(list(
+					"uid" = bot.UID(),
+					"name" = bot.name,
+					"zone" = get_area_name(bot),
+					"summoned" = bot.mode == BOT_SUMMON,
+					"recalling" = bot.mode == BOT_GO_HOME,
+				))
+	data["guardbuddies"] = buddies
+
+/datum/data/pda/app/guardbuddy_control/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	if(..() || !(ACCESS_ROBOTICS in ui.user.get_access()))
+		return FALSE
+	var/mob/living/simple_animal/bot/guardbuddy/bot = locateUID(params["uid"])
+	var/turf/destination = get_turf(pda)
+	if(!istype(bot) || bot.remote_disabled || !destination || destination.z != bot.z)
+		return FALSE
+	switch(action)
+		if("summon")
+			if(!bot.pda_call(destination, pda.GetAccess(), ui.user))
+				to_chat(ui.user, span_warning("[bot] is unavailable for a PDA call."))
+			return TRUE
+		if("cancel")
+			if(bot.mode == BOT_SUMMON)
+				bot.bot_reset()
+			return TRUE
+	return FALSE
+
 /datum/data/pda/app/mule_control
 	name = "Боты Снабжения"
 	icon = "truck"

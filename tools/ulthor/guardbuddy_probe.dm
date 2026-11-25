@@ -127,6 +127,7 @@ GLOBAL_DATUM_INIT(ulthor_guardbuddy_probe, /datum/ulthor_guardbuddy_probe, new)
 	if(!check("manual recall returns the unit to the pad", wait_for_dock(dock, bot)))
 		log_world("Guardbuddy stopped at [COORD(bot)] with [bot.stop_reason]")
 		return
+	cell.charge = min(cell.charge, cell.maxcharge - 100)
 	var/recalled_charge = cell.charge
 	sleep(4 SECONDS)
 	check("powered pad replenishes the same cell", cell.charge > recalled_charge)

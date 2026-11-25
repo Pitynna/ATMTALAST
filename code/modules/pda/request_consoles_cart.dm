@@ -97,7 +97,10 @@
 
 /obj/item/cartridge/request_console/roboticist
 	name = "Roboticist Request"
-	programs = list(new /datum/data/pda/app/request_console/roboticist)
+	programs = list(
+		new /datum/data/pda/app/request_console/roboticist,
+		new /datum/data/pda/app/guardbuddy_control,
+	)
 
 /obj/item/cartridge/request_console/chef
 	name = "Chef Request"

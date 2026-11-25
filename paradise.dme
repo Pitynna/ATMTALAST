@@ -3304,6 +3304,7 @@
 #include "code\modules\mob\living\simple_animal\bot\guardbuddy.dm"
 #include "code\game\machinery\guardbuddy_dock.dm"
 #include "code\modules\mob\living\simple_animal\bot\guardbuddy_tools.dm"
+#include "code\modules\mob\living\simple_animal\bot\guardbuddy_security.dm"
 #include "code\modules\mob\living\simple_animal\bot\griefsky.dm"
 #include "code\modules\mob\living\simple_animal\bot\honkbot.dm"
 #include "code\modules\mob\living\simple_animal\bot\medbot.dm"
